@@ -2177,7 +2177,7 @@ html[data-theme="dark"] {
   --res-blue-soft: rgba(37, 99, 235, 0.22);
   --res-ink: var(--color-text);
   --res-muted: var(--color-text-muted);
-  --res-line: rgba(255, 255, 255, 0.1);
+  --res-line: transparent;
   --res-white: var(--card-bg);
   --res-shadow: var(--card-shadow);
 
@@ -2191,44 +2191,115 @@ html[data-theme="dark"] .resource-page {
   color: var(--color-text);
 }
 
-html[data-theme="dark"] .res-heading h1 {
+/* Typography & Headings */
+html[data-theme="dark"] .res-heading h1,
+html[data-theme="dark"] .res-promo-card h2,
+html[data-theme="dark"] .res-stats-card h2,
+html[data-theme="dark"] .res-recent-card h2,
+html[data-theme="dark"] .res-resource-info h2,
+html[data-theme="dark"] .res-recent-item strong,
+html[data-theme="dark"] .res-dialog-shell h2,
+html[data-theme="dark"] .res-detail-heading h2,
+html[data-theme="dark"] .res-detail-body h3,
+html[data-theme="dark"] .res-upload-title h2,
+html[data-theme="dark"] .res-stats-card li b,
+html[data-theme="dark"] .res-key-grid strong,
+html[data-theme="dark"] .res-related-row strong,
+html[data-theme="dark"] .res-drop-zone strong,
+html[data-theme="dark"] #edit-original-filename,
+html[data-theme="dark"] #delete-dialog h2 {
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .res-heading p:not(.res-eyebrow),
+html[data-theme="dark"] .res-promo-card div > span,
+html[data-theme="dark"] .res-card-title p,
+html[data-theme="dark"] .res-resource-info p,
+html[data-theme="dark"] .res-recent-item span,
+html[data-theme="dark"] .res-detail-heading p:last-child,
+html[data-theme="dark"] .res-detail-body p,
+html[data-theme="dark"] .res-upload-title p:last-child,
+html[data-theme="dark"] .res-sort,
+html[data-theme="dark"] .res-result-caption,
+html[data-theme="dark"] .res-key-grid span,
+html[data-theme="dark"] .res-related-row span,
+html[data-theme="dark"] .res-drop-zone span,
+html[data-theme="dark"] .res-drop-zone small,
+html[data-theme="dark"] #delete-dialog p {
+  color: var(--color-text-muted) !important;
+}
+
+html[data-theme="dark"] .res-eyebrow,
+html[data-theme="dark"] .res-promo-card p,
+html[data-theme="dark"] .res-preview-sheet h3 {
+  color: var(--accent-bright) !important;
+}
+
+/* Primary, Secondary & Action Buttons */
+html[data-theme="dark"] .res-primary-button {
+  color: var(--color-on-accent);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
+  border: none !important;
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+html[data-theme="dark"] .res-secondary-button {
+  background: rgba(255, 255, 255, 0.08);
+  border: none !important;
   color: var(--color-text);
 }
 
-html[data-theme="dark"] .res-heading p:not(.res-eyebrow) {
-  color: var(--color-text-muted);
+html[data-theme="dark"] .res-secondary-button:hover {
+  background: rgba(56, 189, 248, 0.15);
+  color: #ffffff;
 }
 
-html[data-theme="dark"] .res-eyebrow {
-  color: var(--accent-bright);
+/* Category Tabs (All, Documents, Code, Templates, Datasets) */
+html[data-theme="dark"] .res-tabs button {
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none !important;
 }
 
-/* Cards & containers */
+html[data-theme="dark"] .res-tabs button:hover {
+  color: #ffffff;
+  background: rgba(56, 189, 248, 0.12);
+}
+
+html[data-theme="dark"] .res-tabs button.is-active {
+  color: var(--color-on-accent);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
+  border: none !important;
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+/* Sort dropdown */
+html[data-theme="dark"] .res-sort select {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .res-sort select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-bright);
+}
+
+/* Main Cards - XÓA BỎ BORDER TRẮNG THEO YÊU CẦU */
 html[data-theme="dark"] .res-library-card,
 html[data-theme="dark"] .res-promo-card,
 html[data-theme="dark"] .res-stats-card,
 html[data-theme="dark"] .res-recent-card {
-  background: var(--card-bg);
-  border-color: var(--card-border);
-  box-shadow: var(--card-shadow);
+  background: var(--card-bg) !important;
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
   color: var(--color-text);
 }
 
-html[data-theme="dark"] .res-promo-card h2,
-html[data-theme="dark"] .res-stats-card h2,
-html[data-theme="dark"] .res-recent-card h2 {
-  color: var(--color-text);
-}
-
-html[data-theme="dark"] .res-stats-card li {
-  border-bottom-color: rgba(255, 255, 255, 0.08);
-  color: var(--color-text-secondary);
-}
-
-/* Search & Filters */
+/* Search bar & Filter button in Library Card */
 html[data-theme="dark"] .res-resource-search {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: none !important;
   color: var(--color-text);
 }
 
@@ -2241,15 +2312,21 @@ html[data-theme="dark"] #resource-search::placeholder {
 }
 
 html[data-theme="dark"] .res-filter-button {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: none !important;
   color: var(--color-text-secondary);
 }
 
+html[data-theme="dark"] .res-filter-button:hover {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: #ffffff;
+}
+
 html[data-theme="dark"] .res-filter-panel {
-  background: rgba(10, 22, 44, 0.85);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(10, 22, 44, 0.95) !important;
+  border: none !important;
   color: var(--color-text);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
 }
 
 html[data-theme="dark"] .res-filter-panel legend,
@@ -2262,107 +2339,298 @@ html[data-theme="dark"] .res-filter-panel fieldset label {
 }
 
 html[data-theme="dark"] .res-filter-panel select {
-  background: rgba(15, 23, 42, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.8) !important;
+  border: none !important;
   color: var(--color-text);
 }
 
-/* Resource Items */
+/* Resource Item Card */
 html[data-theme="dark"] .res-resource-item {
-  background: var(--card-bg);
-  border-color: var(--card-border);
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+  box-shadow: none !important;
   color: var(--color-text);
 }
 
 html[data-theme="dark"] .res-resource-item:hover {
-  background: rgba(15, 30, 60, 0.85);
-  border-color: var(--accent-bright);
-}
-
-html[data-theme="dark"] .res-resource-info h2 {
-  color: var(--color-text);
-}
-
-html[data-theme="dark"] .res-resource-info p {
-  color: var(--color-text-muted);
+  background: rgba(15, 30, 60, 0.85) !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
 }
 
 html[data-theme="dark"] .res-resource-subject {
-  color: var(--accent-bright);
-  background: rgba(56, 189, 248, 0.15);
-  border-color: var(--accent-glow);
+  color: var(--accent-bright) !important;
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: none !important;
 }
 
-html[data-theme="dark"] .res-download-button {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
-  color: var(--accent-bright);
+/* Action Buttons inside item card (Download, Star, Arrow) */
+html[data-theme="dark"] .res-download-button,
+html[data-theme="dark"] .res-arrow-button,
+html[data-theme="dark"] .res-favorite-card-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: none !important;
+  color: var(--accent-bright) !important;
 }
 
-html[data-theme="dark"] .res-download-button:hover {
-  background: rgba(56, 189, 248, 0.15);
-  border-color: var(--accent-bright);
-}
-
-html[data-theme="dark"] .res-arrow-button {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
-  color: var(--color-text-muted);
-}
-
+html[data-theme="dark"] .res-download-button:hover,
 html[data-theme="dark"] .res-arrow-button:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--color-text);
+  background: rgba(56, 189, 248, 0.2) !important;
+  color: #ffffff !important;
 }
 
 html[data-theme="dark"] .res-favorite-card-btn {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
-  color: var(--color-text-muted);
+  color: var(--color-text-muted) !important;
 }
 
 html[data-theme="dark"] .res-favorite-card-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: #f59e0b;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #f59e0b !important;
 }
 
 html[data-theme="dark"] .res-favorite-card-btn.is-favorited {
-  background: rgba(245, 158, 11, 0.15);
-  border-color: #f59e0b;
-  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.18) !important;
+  border: none !important;
+  color: #f59e0b !important;
 }
 
-/* Dialogs & Buttons */
-html[data-theme="dark"] .res-dialog-shell {
-  background: rgba(10, 22, 44, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: var(--color-text);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+/* Right Sidebar: Promo Art, Top Categories & Recent Uploads */
+html[data-theme="dark"] .res-promo-art {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: var(--accent-bright) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
-html[data-theme="dark"] .res-dialog-shell h2 {
-  color: var(--color-text);
+html[data-theme="dark"] .res-stats-card li {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+  color: var(--color-text-secondary) !important;
 }
 
-html[data-theme="dark"] .res-primary-button {
-  color: var(--color-on-accent);
-  background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
-  box-shadow: 0 4px 12px var(--accent-glow);
+html[data-theme="dark"] .res-card-title > span {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: var(--accent-bright) !important;
+  border: none !important;
 }
 
-html[data-theme="dark"] .res-secondary-button {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-  color: var(--color-text);
+html[data-theme="dark"] .res-recent-item {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+  color: var(--color-text) !important;
 }
 
+html[data-theme="dark"] .res-recent-item:hover {
+  background: rgba(15, 30, 60, 0.8) !important;
+}
+
+/* File Icons (Đồng bộ Dark Theme Glass Tiles) */
+html[data-theme="dark"] .res-file-icon {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="dark"] .res-file-icon[data-kind="document"] {
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.35), rgba(185, 28, 28, 0.2)) !important;
+  color: #f87171 !important;
+  border: 1px solid rgba(248, 113, 113, 0.3) !important;
+}
+
+html[data-theme="dark"] .res-file-icon[data-kind="code"] {
+  background: linear-gradient(145deg, rgba(20, 184, 166, 0.35), rgba(15, 118, 110, 0.2)) !important;
+  color: #2dd4bf !important;
+  border: 1px solid rgba(45, 212, 191, 0.3) !important;
+}
+
+html[data-theme="dark"] .res-file-icon[data-kind="template"] {
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.35), rgba(29, 78, 216, 0.2)) !important;
+  color: #60a5fa !important;
+  border: 1px solid rgba(96, 165, 250, 0.3) !important;
+}
+
+html[data-theme="dark"] .res-file-icon[data-kind="dataset"] {
+  background: linear-gradient(145deg, rgba(168, 85, 247, 0.35), rgba(126, 34, 206, 0.2)) !important;
+  color: #c084fc !important;
+  border: 1px solid rgba(192, 132, 252, 0.3) !important;
+}
+
+html[data-theme="dark"] .res-type-tag[data-kind="document"] {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+html[data-theme="dark"] .res-type-tag[data-kind="code"] {
+  background: rgba(20, 184, 166, 0.2);
+  color: #2dd4bf;
+}
+
+html[data-theme="dark"] .res-type-tag[data-kind="template"] {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] .res-type-tag[data-kind="dataset"] {
+  background: rgba(168, 85, 247, 0.2);
+  color: #c084fc;
+}
+
+/* Empty, Loading & Error States */
+html[data-theme="dark"] .res-empty-icon {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: var(--accent-bright) !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] .res-empty-state h2,
+html[data-theme="dark"] .res-error-state h2 {
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .res-empty-state p,
+html[data-theme="dark"] .res-error-state p,
+html[data-theme="dark"] .res-loading-state p {
+  color: var(--color-text-muted) !important;
+}
+
+/* Load more button */
 html[data-theme="dark"] .res-load-more-btn {
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+  border: none !important;
   color: var(--color-text);
 }
 
 html[data-theme="dark"] .res-load-more-btn:hover {
   background: rgba(56, 189, 248, 0.15);
-  border-color: var(--accent-bright);
+  color: #ffffff;
+}
+
+/* Dialogs & Modal Details */
+html[data-theme="dark"] .res-dialog-shell {
+  background: rgba(10, 22, 44, 0.98) !important;
+  border: none !important;
+  color: var(--color-text);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+}
+
+html[data-theme="dark"] .res-dialog-close {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .res-dialog-close:hover {
+  background: rgba(56, 189, 248, 0.2) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .res-detail-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .res-detail-tabs button {
+  color: var(--color-text-muted) !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] .res-detail-tabs button.is-active {
+  color: var(--accent-bright) !important;
+  background: rgba(56, 189, 248, 0.12) !important;
+  box-shadow: inset 0 -2px var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .res-detail-body > section,
+html[data-theme="dark"] .res-detail-body > aside {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .res-key-grid div {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] .res-related-row {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .res-related-row:hover {
+  background: rgba(15, 30, 60, 0.8) !important;
+}
+
+html[data-theme="dark"] .res-preview-sheet {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .res-preview-sheet li {
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-theme="dark"] .res-preview-table th {
+  background: rgba(6, 15, 34, 0.6) !important;
+  color: var(--color-text-muted) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+html[data-theme="dark"] .res-preview-table td {
+  color: var(--color-text) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Upload Dialog Form Elements */
+html[data-theme="dark"] .res-drop-zone {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 2px dashed rgba(255, 255, 255, 0.15) !important;
+  color: var(--color-text-muted) !important;
+}
+
+html[data-theme="dark"] .res-drop-zone:hover,
+html[data-theme="dark"] .res-drop-zone.is-dragging {
+  background: rgba(56, 189, 248, 0.08) !important;
+  border-color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .res-selected-file {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  color: #34d399 !important;
+}
+
+html[data-theme="dark"] .res-form-grid input,
+html[data-theme="dark"] .res-form-grid select,
+html[data-theme="dark"] .res-form-grid textarea,
+html[data-theme="dark"] .res-select-trigger,
+html[data-theme="dark"] #edit-type {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .res-form-field label {
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-theme="dark"] .res-custom-dropdown-menu {
+  background: rgba(10, 22, 44, 0.98) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .res-custom-dropdown-item {
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .res-custom-dropdown-item:hover,
+html[data-theme="dark"] .res-custom-dropdown-item.is-selected {
+  background: rgba(56, 189, 248, 0.15) !important;
+}
+
+html[data-theme="dark"] #edit-dialog div[style*="background"] {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+  color: var(--color-text-muted) !important;
 }
