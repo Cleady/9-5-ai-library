@@ -2402,3 +2402,154 @@ html[data-theme="dark"] .prc-toast {
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
+
+/* ===== ICONS & THUMBNAILS (DARK THEME) ===== */
+
+/* Continue Practicing Thumbnail */
+html[data-theme="dark"] .prc-continue-thumb svg rect {
+  fill: rgba(30, 58, 138, 0.45);
+  stroke: rgba(56, 189, 248, 0.3);
+  stroke-width: 1px;
+}
+
+html[data-theme="dark"] .prc-continue-thumb svg path {
+  fill: var(--accent-bright);
+  stroke: var(--accent-bright);
+}
+
+/* Subject Icon Tiles - Rich dark translucent glass with glowing tinted accents */
+html[data-theme="dark"] .prc-subject-icon-tile {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .prc-subject-icon-tile .subject-icon {
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] .prc-icon-blue {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.55), rgba(37, 99, 235, 0.25));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+html[data-theme="dark"] .prc-icon-teal {
+  background: linear-gradient(135deg, rgba(19, 78, 74, 0.55), rgba(20, 184, 166, 0.25));
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.25);
+}
+
+html[data-theme="dark"] .prc-icon-purple {
+  background: linear-gradient(135deg, rgba(76, 29, 149, 0.55), rgba(124, 58, 237, 0.25));
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25);
+}
+
+html[data-theme="dark"] .prc-icon-orange {
+  background: linear-gradient(135deg, rgba(124, 45, 18, 0.55), rgba(234, 88, 12, 0.25));
+  border: 1px solid rgba(251, 146, 60, 0.35);
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.25);
+}
+
+html[data-theme="dark"] .prc-icon-rose {
+  background: linear-gradient(135deg, rgba(136, 19, 55, 0.55), rgba(225, 29, 72, 0.25));
+  border: 1px solid rgba(251, 113, 133, 0.35);
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.25);
+}
+
+html[data-theme="dark"] .prc-icon-pink {
+  background: linear-gradient(135deg, rgba(131, 24, 67, 0.55), rgba(219, 39, 119, 0.25));
+  border: 1px solid rgba(244, 114, 182, 0.35);
+  box-shadow: 0 4px 14px rgba(219, 39, 119, 0.25);
+}
+
+html[data-theme="dark"] .prc-icon-sky {
+  background: linear-gradient(135deg, rgba(12, 74, 110, 0.55), rgba(14, 165, 233, 0.25));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
+}
+
+/* Favorite Star Buttons on Practice Subject Cards */
+html[data-theme="dark"] .subject-fav-btn {
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .subject-fav-btn:hover {
+  background-color: rgba(30, 41, 59, 0.9);
+}
+
+html[data-theme="dark"] .subject-fav-btn.is-favorited {
+  background-color: rgba(30, 41, 59, 0.9);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+}
+
+/* Quiz Row Icons & Flashcard Icons in Subject Page */
+html[data-theme="dark"] .prc-quiz-row-icon svg rect {
+  fill: rgba(30, 58, 138, 0.4);
+  stroke: rgba(56, 189, 248, 0.3);
+  stroke-width: 1px;
+}
+
+html[data-theme="dark"] .prc-quiz-row-icon svg path {
+  stroke: var(--accent-bright);
+}
+
+html[data-theme="dark"] .prc-flashcard-icon svg > rect:first-child {
+  fill: rgba(30, 58, 138, 0.45);
+  stroke: rgba(56, 189, 248, 0.35);
+  stroke-width: 1.5px;
+}
+
+html[data-theme="dark"] .prc-flashcard-icon svg > rect:nth-child(2) {
+  fill: rgba(56, 189, 248, 0.25);
+}
+
+html[data-theme="dark"] .prc-flashcard-icon svg > rect:nth-child(3) {
+  fill: var(--accent-bright);
+}
+
+html[data-theme="dark"] .prc-flashcard-icon svg > path {
+  stroke: var(--color-on-accent);
+}
+
+/* Quiz Intro Illustration */
+html[data-theme="dark"] .prc-quiz-intro-illustration circle:nth-child(1) {
+  fill: rgba(30, 58, 138, 0.35);
+}
+
+html[data-theme="dark"] .prc-quiz-intro-illustration circle:nth-child(2) {
+  fill: rgba(30, 58, 138, 0.55);
+}
+
+html[data-theme="dark"] .prc-quiz-intro-illustration path {
+  stroke: var(--accent-bright);
+}
+
+html[data-theme="dark"] .prc-quiz-intro-illustration circle:not(:nth-child(1)):not(:nth-child(2)) {
+  fill: var(--accent-bright);
+}
+
+/* Quiz Meta Icons & Timer Icon */
+html[data-theme="dark"] .prc-quiz-meta-icon svg path,
+html[data-theme="dark"] .prc-quiz-meta-icon svg rect,
+html[data-theme="dark"] .prc-quiz-meta-icon svg circle {
+  stroke: var(--accent-bright);
+}
+
+html[data-theme="dark"] .prc-quiz-timer-icon circle,
+html[data-theme="dark"] .prc-quiz-timer-icon path {
+  stroke: var(--accent-bright);
+}
+
+/* Trophy Icon on Result Page */
+html[data-theme="dark"] .prc-trophy-icon svg > circle {
+  fill: rgba(30, 58, 138, 0.45);
+  stroke: rgba(56, 189, 248, 0.35);
+  stroke-width: 1.5px;
+}
+
+/* History Table Type Icon */
+html[data-theme="dark"] .prc-type-icon {
+  filter: brightness(1.2) drop-shadow(0 0 4px var(--accent-glow));
+}
