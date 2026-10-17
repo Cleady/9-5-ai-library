@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Review your learning activity and progress." />
+    <title>History - 9.5 AI CLUB</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/history.css" />
+    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png" />
+</head>
+
+<body>
+    <!-- Dùng lại khung chung của index; phần History nằm trong file riêng -->
+    <div class="app history-app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Logo + tiêu đề slogan -->
+            <a href="../home_page/home_page.html" class="sidebar-brand">
+                <span class="brand-logo"></span>
+                <div class="brand-text">
+                    <strong>9.5 AI CLUB</strong>
+                    <small>Learn · Build · Grow</small>
+                </div>
+            </a>
+
+            <!-- Menu trang chủ -->
+            <nav class="sidebar-nav" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="../home_page/home_page.html" class="nav-link">
+                            <span class="nav-icon home-icon"></span>
+                            <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="lectures/lectures.html" class="nav-link">
+                            <span class="nav-icon lectures-icon"></span>
+                            <span class="nav-label">Lectures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practice/practice.html" class="nav-link">
+                            <span class="nav-icon practice-icon"></span>
+                            <span class="nav-label">Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="history.html" class="nav-link is-active" aria-current="page">
+                            <span class="nav-icon history-icon"></span>
+                            <span class="nav-label">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Nhóm phụ, tách khỏi nhóm chính bằng đường kẻ (CSS sẽ vẽ) -->
+            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Secondary Navigation">
+                <ul>
+                    <li>
+                        <a href="favorites.html" class="nav-link">
+                            <span class="nav-icon favorites-icon"></span>
+                            <span class="nav-label">Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="lectures/resources.html" class="nav-link">
+                            <span class="nav-icon resources-icon"></span>
+                            <span class="nav-label">Resources</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="community/community-feed.html" class="nav-link">
+                            <span class="nav-icon community-icon"></span>
+                            <span class="nav-label">Community</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings/settings.html" class="nav-link">
+                            <span class="nav-icon settings-icon"></span>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Slogan ở đáy sidebar -->
+            <a href="#" class="sidebar-promo">
+                <p>Knowledge for a better tomorrow</p>
+                <span class="promo-arrow" aria-hidden="true"></span>
+            </a>
+
+        </aside>
+
+        <main class="main">
+            <!-- Thanh trên cùng giữ class chung để style.css và main.js dùng lại -->
+            <header class="topbar">
+                <form class="search" role="search" action="#" method="get">
+                    <span class="search-icon" aria-hidden="true"></span>
+
+                    <label for="site-search" class="visually-hidden">Search lectures, topics, documents</label>
+                    <input type="search" id="site-search" name="q" class="search-input"
+                        placeholder="Search lectures, topics, or resources..." autocomplete="off" />
+
+                    <span class="search-shortcut" aria-hidden="true">
+                        <kbd>Ctrl</kbd>
+                        <kbd>K</kbd>
+                    </span>
+                </form>
+
+                <!-- Chuông thông báo và cái menu người dùng-->
+                <div class="topbar-actions">
+
+                    <!-- Chuông thông báo -->
+                    <div class="notification">
+                        <button type="button" class="icon-button" aria-label="Notifications (có 2 thông báo mới)"
+                            aria-expanded="false" aria-controls="notification-panel">
+                            <span class="bell-icon" aria-hidden="true"></span>
+                            <span class="notification-dot" aria-hidden="true"></span>
+                        </button>
+
+                        <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                            <header class="notification-header">
+                                <p class="notification-title">Notifications</p>
+                                <button type="button" class="notification-clear">Mark as read</button>
+                            </header>
+                            <ul class="notification-list">
+                                <li class="notification-item is-unread"><span class="notification-item-icon"
+                                        aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Your learning history is up to date.</p><time
+                                            class="notification-time">Today</time>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="notification-footer">View all notifications</a>
+                        </section>
+                    </div>
+
+                    <div class="user-menu">
+                        <button type="button" class="user-menu-toggle" aria-haspopup="menu" aria-expanded="false"
+                            aria-controls="user-menu-list">
+                            <span class="user-avatar" aria-hidden="true">A</span>
+                            <span class="user-name">Alex</span>
+                            <span class="user-chevron" aria-hidden="true"></span>
+                            <span class="role-badge">Member</span>
+                        </button>
+                        <ul class="user-menu-list" id="user-menu-list" role="menu" hidden>
+                            <li role="none"><a href="settings/settings.html#profile" role="menuitem"><span
+                                        class="menu-icon profile-icon" aria-hidden="true"></span>Profile</a></li>
+                            <li role="none"><a href="settings.html#account" role="menuitem"><span
+                                        class="menu-icon password-icon" aria-hidden="true"></span>Account settings</a>
+                            </li>
+                            <li role="none"><a href="login.html" role="menuitem"><span class="menu-icon logout-icon"
+                                        aria-hidden="true"></span>Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="his-page">
+                <header class="his-heading">
+                    <div>
+                        <p class="his-eyebrow">YOUR LEARNING JOURNEY</p>
+                        <h1>History</h1>
+                        <p class="his-subtitle">Track your learning journey and see what you’ve accomplished.</p>
+                    </div>
+                    <button type="button" class="his-export-button" id="his-export-button">
+                        <span aria-hidden="true">↓</span> Export history
+                    </button>
+                </header>
+
+                <!-- Các màn trong mockup được gom thành các view trong một trang -->
+                <nav class="his-view-nav" aria-label="History sections">
+                    <button type="button" class="his-view-button is-active" data-view-target="activity"
+                        aria-pressed="true">All
+                        activity</button>
+                    <button type="button" class="his-view-button" data-view-target="quizzes" aria-pressed="false">Quiz
+                        history</button>
+                    <button type="button" class="his-view-button" data-view-target="progress"
+                        aria-pressed="false">Learning
+                        progress</button>
+                    <button type="button" class="his-view-button" data-view-target="calendar"
+                        aria-pressed="false">Calendar</button>
+                    <button type="button" class="his-view-button" data-view-target="timeline"
+                        aria-pressed="false">Activity
+                        timeline</button>
+                </nav>
+
+                <section class="his-view" id="his-view-activity" data-view-panel="activity"
+                    aria-label="All learning activity">
+                    <div class="his-toolbar">
+                        <div class="his-filter-list" role="group" aria-label="Filter activity type">
+                            <button type="button" class="his-filter is-active" data-activity-filter="all"
+                                aria-pressed="true">All</button>
+                            <button type="button" class="his-filter" data-activity-filter="lecture"
+                                aria-pressed="false">Lectures</button>
+                            <button type="button" class="his-filter" data-activity-filter="quiz"
+                                aria-pressed="false">Quizzes</button>
+                            <button type="button" class="his-filter" data-activity-filter="practice"
+                                aria-pressed="false">Practices</button>
+                        </div>
+                        <label class="his-sort-label" for="his-sort">Sort by
+                            <select id="his-sort" class="his-select">
+                                <option value="newest">Newest</option>
+                                <option value="oldest">Oldest</option>
+                                <option value="score">Highest score</option>
+                            </select>
+                        </label>
+                    </div>
+                    <p class="his-result-count" id="his-activity-count" aria-live="polite"></p>
+                    <div class="his-activity-list" id="his-activity-list"></div>
+                    <p class="his-empty-state" id="his-activity-empty" hidden>No activities match your search.</p>
+                </section>
+
+                <section class="his-view" id="his-view-quizzes" data-view-panel="quizzes" aria-label="Quiz history"
+                    hidden>
+                    <div class="his-section-heading">
+                        <div>
+                            <h2>Quiz history</h2>
+                            <p>Review your past quiz attempts and results.</p>
+                        </div>
+                        <div class="his-filter-list" role="group" aria-label="Filter quiz status">
+                            <button type="button" class="his-filter is-active" data-quiz-filter="all"
+                                aria-pressed="true">All</button>
+                            <button type="button" class="his-filter" data-quiz-filter="Completed"
+                                aria-pressed="false">Completed</button>
+                            <button type="button" class="his-filter" data-quiz-filter="In progress"
+                                aria-pressed="false">In
+                                progress</button>
+                            <button type="button" class="his-filter" data-quiz-filter="Failed"
+                                aria-pressed="false">Failed</button>
+                        </div>
+                    </div>
+                    <div class="his-table-wrap">
+                        <table class="his-quiz-table">
+                            <caption class="visually-hidden">Quiz attempts, subjects, dates, scores and status</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Quiz</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Score</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col"><span class="visually-hidden">Details</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="his-quiz-table-body"></tbody>
+                        </table>
+                    </div>
+                    <p class="his-empty-state" id="his-quiz-empty" hidden>No quiz attempts match this filter.</p>
+                </section>
+
+                <section class="his-view" id="his-view-progress" data-view-panel="progress"
+                    aria-label="Learning progress" hidden>
+                    <div class="his-section-heading">
+                        <div>
+                            <h2>Learning progress</h2>
+                            <p>See how much you’ve learned and your overall progress.</p>
+                        </div>
+                        <label class="his-sort-label" for="his-progress-subject">Subject
+                            <select id="his-progress-subject" class="his-select">
+                                <option>All subjects</option>
+                                <option>Subject 1</option>
+                                <option>Subject 2</option>
+                                <option>Subject 3</option>
+                                <option>Subject 4</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="his-progress-layout">
+                        <section class="his-card his-progress-summary" aria-label="Overall learning progress">
+                            <div class="his-progress-top">
+                                <div class="his-ring" role="img" aria-label="68 percent overall progress">
+                                    <span>68%</span></div>
+                                <div>
+                                    <h3>Overall progress</h3>
+                                    <p>Total time spent</p><strong>42 h 30 min</strong>
+                                </div>
+                            </div>
+                            <div class="his-progress-stats">
+                                <div><span class="his-stat-icon his-stat-lecture"
+                                        aria-hidden="true">▶</span><span>Lectures</span><strong>24 /
+                                        36</strong><small>67%</small></div>
+                                <div><span class="his-stat-icon his-stat-quiz"
+                                        aria-hidden="true">▤</span><span>Quizzes</span><strong>18
+                                        / 24</strong><small>75%</small></div>
+                                <div><span class="his-stat-icon his-stat-practice"
+                                        aria-hidden="true">‹/›</span><span>Practices</span><strong>9 /
+                                        12</strong><small>75%</small></div>
+                            </div>
+                        </section>
+                        <section class="his-card his-progress-detail">
+                            <div class="his-card-heading">
+                                <div>
+                                    <h3>Your progress</h3>
+                                    <p>Last 30 days</p>
+                                </div><span class="his-trend">↗ +12%</span>
+                            </div>
+                            <figure class="his-chart">
+                                <svg viewBox="0 0 600 190" role="img" aria-labelledby="his-chart-title his-chart-desc"
+                                    preserveAspectRatio="none">
+                                    <title id="his-chart-title">Learning progress trend</title>
+                                    <desc id="his-chart-desc">Progress rises steadily from 35 percent to 68 percent over
+                                        the last 30 days.
+                                    </desc>
+                                    <defs>
+                                        <linearGradient id="his-chart-fill" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#3b82f6" stop-opacity=".22" />
+                                            <stop offset="1" stop-color="#3b82f6" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path class="his-chart-area"
+                                        d="M34 151 L118 128 L202 115 L286 93 L370 72 L454 80 L538 54 L578 32 L578 170 L34 170 Z" />
+                                    <path class="his-chart-line"
+                                        d="M34 151 L118 128 L202 115 L286 93 L370 72 L454 80 L538 54 L578 32" />
+                                    <g class="his-chart-points">
+                                        <circle cx="34" cy="151" r="4" />
+                                        <circle cx="118" cy="128" r="4" />
+                                        <circle cx="202" cy="115" r="4" />
+                                        <circle cx="286" cy="93" r="4" />
+                                        <circle cx="370" cy="72" r="4" />
+                                        <circle cx="454" cy="80" r="4" />
+                                        <circle cx="538" cy="54" r="4" />
+                                        <circle cx="578" cy="32" r="4" />
+                                    </g>
+                                </svg>
+                                <figcaption><span>Sep 8</span><span>Sep 10</span><span>Sep 12</span><span>Sep
+                                        14</span><span>Sep
+                                        16</span></figcaption>
+                            </figure>
+                            <div class="his-subject-breakdown">
+                                <h3>Subject breakdown</h3>
+                                <div class="his-subject-progress"><span>Subject 1 · Artificial
+                                        Intelligence</span><progress value="75" max="100"
+                                        aria-label="Subject 1 progress 75 percent"></progress><strong>75%</strong></div>
+                                <div class="his-subject-progress"><span>Subject 2 · Mathematics</span><progress
+                                        value="45" max="100"
+                                        aria-label="Subject 2 progress 45 percent"></progress><strong>45%</strong></div>
+                                <div class="his-subject-progress"><span>Subject 3 · Programming</span><progress
+                                        value="60" max="100"
+                                        aria-label="Subject 3 progress 60 percent"></progress><strong>60%</strong></div>
+                                <div class="his-subject-progress"><span>Subject 4 · Data Science</span><progress
+                                        value="30" max="100"
+                                        aria-label="Subject 4 progress 30 percent"></progress><strong>30%</strong></div>
+                                <div class="his-subject-progress"><span>Subject 5 · Computer Networks</span><progress
+                                        value="50" max="100"
+                                        aria-label="Subject 5 progress 50 percent"></progress><strong>50%</strong></div>
+                                <div class="his-subject-progress"><span>Subject 6 · Software Engineering</span><progress
+                                        value="20" max="100"
+                                        aria-label="Subject 6 progress 20 percent"></progress><strong>20%</strong></div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="his-view" id="his-view-calendar" data-view-panel="calendar"
+                    aria-label="Learning calendar" hidden>
+                    <div class="his-section-heading">
+                        <div>
+                            <h2>Calendar</h2>
+                            <p>View your learning schedule and activity by date.</p>
+                        </div>
+                    </div>
+                    <div class="his-calendar-layout">
+                        <section class="his-card his-calendar-card" aria-label="Activity calendar">
+                            <header class="his-calendar-header"><button type="button" class="his-icon-button"
+                                    id="his-month-prev" aria-label="Previous month">‹</button>
+                                <h3 id="his-calendar-month">September 2025</h3><button type="button"
+                                    class="his-icon-button" id="his-month-next" aria-label="Next month">›</button>
+                            </header>
+                            <div class="his-calendar-grid his-weekdays" aria-hidden="true">
+                                <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                            </div>
+                            <div class="his-calendar-grid" id="his-calendar-grid" role="group"
+                                aria-label="Choose a date"></div>
+                            <p class="his-calendar-legend"><span aria-hidden="true"></span> Learning activity</p>
+                        </section>
+                        <section class="his-card his-schedule-card">
+                            <header class="his-card-heading">
+                                <div>
+                                    <h3>Schedule</h3>
+                                    <p id="his-selected-date">Activities for Sep 14, 2025</p>
+                                </div><button type="button" class="his-text-button"
+                                    id="his-calendar-today">Today</button>
+                            </header>
+                            <div id="his-schedule-list" class="his-schedule-list"></div>
+                            <p class="his-empty-state" id="his-schedule-empty" hidden>No scheduled activities for this
+                                date.</p>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="his-view" id="his-view-timeline" data-view-panel="timeline"
+                    aria-label="Activity timeline" hidden>
+                    <div class="his-section-heading">
+                        <div>
+                            <h2>Activity timeline</h2>
+                            <p>A complete record of your learning journey.</p>
+                        </div>
+                    </div>
+                    <div class="his-timeline" id="his-timeline"></div>
+                </section>
+
+                <!-- Details mở tại chỗ để người dùng quay lại đúng danh sách trước đó -->
+                <section class="his-view" id="his-view-detail" data-view-panel="detail" aria-label="Activity details"
+                    hidden>
+                    <button type="button" class="his-back-button" id="his-detail-back"><span aria-hidden="true">←</span>
+                        Back to
+                        history</button>
+                    <div class="his-detail-layout">
+                        <div class="his-detail-main">
+                            <article class="his-card his-record-header">
+                                <span class="his-type-icon" id="his-detail-icon" aria-hidden="true">▶</span>
+                                <div class="his-record-heading">
+                                    <h2 id="his-detail-title">Learning activity</h2>
+                                    <p id="his-detail-meta"></p>
+                                    <div class="his-record-meta"><span id="his-detail-duration"></span><span
+                                            id="his-detail-date"></span>
+                                    </div>
+                                </div>
+                                <span class="his-status" id="his-detail-status">Completed</span>
+                            </article>
+                            <nav class="his-detail-tabs" id="his-detail-tabs" role="tablist"
+                                aria-label="Activity details">
+                                <button type="button" class="his-detail-tab is-active" id="his-tab-overview" role="tab"
+                                    data-detail-tab="overview" aria-controls="his-detail-overview" aria-selected="true"
+                                    tabindex="0">Overview</button>
+                                <button type="button" class="his-detail-tab" id="his-tab-notes" role="tab"
+                                    data-detail-tab="notes" aria-controls="his-detail-notes" aria-selected="false"
+                                    tabindex="-1">Notes</button>
+                                <button type="button" class="his-detail-tab" id="his-tab-resources" role="tab"
+                                    data-detail-tab="resources" aria-controls="his-detail-resources"
+                                    aria-selected="false" tabindex="-1">Related resources</button>
+                            </nav>
+                            <section class="his-card his-detail-panel" id="his-detail-overview"
+                                data-detail-panel="overview" role="tabpanel" aria-labelledby="his-tab-overview"
+                                tabindex="0">
+                                <h3>What you learned</h3>
+                                <p id="his-detail-description"></p>
+                                <h4>Key takeaways</h4>
+                                <ul class="his-takeaways" id="his-detail-takeaways"></ul>
+                            </section>
+                            <section class="his-card his-detail-panel" id="his-detail-notes" data-detail-panel="notes"
+                                role="tabpanel" aria-labelledby="his-tab-notes" tabindex="0" hidden>
+                                <label class="his-notes-label" for="his-note-editor">Your notes</label>
+                                <textarea id="his-note-editor" class="his-note-editor" rows="9"
+                                    placeholder="Write a note about this activity..."></textarea>
+                                <p class="his-save-status" id="his-note-status" aria-live="polite">Notes are saved on
+                                    this device.</p>
+                            </section>
+                            <section class="his-card his-detail-panel" id="his-detail-resources"
+                                data-detail-panel="resources" role="tabpanel" aria-labelledby="his-tab-resources"
+                                tabindex="0" hidden>
+                                <h3>Related resources</h3>
+                                <div class="his-resource-list" id="his-detail-resources-list"></div>
+                            </section>
+                        </div>
+                        <aside class="his-detail-aside">
+                            <section class="his-card his-detail-progress">
+                                <h3>Progress</h3>
+                                <div class="his-detail-progress-row">
+                                    <div class="his-ring his-ring-small" id="his-detail-ring" role="img"
+                                        aria-label="100 percent complete"><span id="his-detail-percent">100%</span>
+                                    </div>
+                                    <div><strong id="his-detail-progress-label">Completed</strong>
+                                        <p id="his-detail-progress-meta">12 min watched</p>
+                                    </div>
+                                </div><button type="button" class="his-secondary-button" id="his-certificate-button">↓
+                                    &nbsp; Download
+                                    certificate</button>
+                            </section>
+                            <section class="his-card">
+                                <h3>Related activity</h3>
+                                <div id="his-related-activity" class="his-related-list"></div>
+                            </section>
+                        </aside>
+                    </div>
+                </section>
+
+                <footer class="footer">
+                    <div class="footer-left"><a href="index.html" class="footer-brand"><span class="footer-logo"
+                                aria-hidden="true"></span>9.5 AI CLUB</a><span class="footer-divider"
+                            aria-hidden="true"></span>
+                        <p class="footer-tagline">9.5 AI Club · FPT University</p>
+                    </div>
+                    <div class="footer-right">
+                        <nav class="footer-nav" aria-label="Footer links">
+                            <ul>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav><span class="footer-divider" aria-hidden="true"></span>
+                        <p class="footer-note">Members only</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+    <div class="his-toast" id="his-toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/practice-data.js"></script>
+    <script src="/js/practice-core.js"></script>
+    <script src="/js/history.js"></script>
+    <script src="../js/syncProfile.js"></script>
+</body>
+
+</html>

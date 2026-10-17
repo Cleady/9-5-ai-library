@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+backend/node_modules/
+
+# Environment and sensitive configuration files
+.env
+backend/.env
+
+# Resources physical storage (uploaded files outside static zone)
+backend/storage/resources/
+
+# Temporary and backup files
+*.bak
+*.log

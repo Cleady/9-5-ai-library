@@ -1,0 +1,492 @@
+/* Màu chung của toàn bộ trang */
+:root {
+    --color-primary: #1d4ed8;
+    --color-primary-light: #3b82f6;
+    --color-primary-soft: #eff6ff;
+    --color-bg: #f5f8ff;
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-white: #ffffff;
+    --color-nav-text: #475569;
+}
+
+/* Quy tắc nền tảng */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Body - Background và Front */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    /* biến body thành thẻ cha của flex */
+    align-items: center;
+    /* căn giữa các con theo chiều dọc */
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, san-serif;
+    color: var(--color-text);
+    line-height: 1.5;
+
+    /* background ko load được thì hiện màu này*/
+    background-color: var(--color-bg);
+
+    /* ảnh nền */
+    background-image: url("../assets/theme/scene2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    /* trái : phải */
+    gap: 24px;
+    /*align-items: center;                /* khung phải nằm giữa theo chiều dọc */
+
+    margin: 0 auto;
+    /* Khung tự tính chiều cao theo tỷ lệ của ảnh */
+    width: min(1100px, 92vw, calc((100vh - 40px) * 1.405));
+    aspect-ratio: 670 / 480;
+
+    background-image: url("../assets/theme/login_page.png");
+    background-size: 100% 100%;
+    /* ảnh khít đúng khung, vì tỷ lệ đã khớp */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 24px;
+    overflow: hidden;
+    /* bo góc luôn cả ảnh nền */
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* sidebar */
+.sidebar {
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+}
+
+/* 9.5 AI Logo */
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 17px;
+    padding: 0 9px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.brand-logo {
+    width: 67px;
+    height: 67px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-image: url("../assets/icon/cool_book.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.brand-text strong {
+    font-size: 23px;
+    color: var(--color-text);
+}
+
+.brand-text small {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+}
+
+/* welcome back */
+.welcome {
+    width: 260px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: var(--color-text);
+}
+
+.highlight {
+    color: var(--color-primary-light);
+}
+
+.slogan {
+    width: 270px;
+    margin-top: -10px;
+    margin-left: 10px;
+    color: var(--color-text-muted);
+}
+
+/* advantage */
+.sidebar-nav {
+    margin-top: 30px;
+}
+
+.sidebar-nav .nav-link {
+    color: var(--color-text-muted);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 9px 14px;
+    border-radius: 14px;
+
+    color: var(--color-text-muted);
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+    color: var(--color-nav-text);
+}
+
+
+/* chỗ giữ cho icon: có kích thước cố định để chữ luôn thẳng hàng */
+.nav-icon {
+    margin-top: 1px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+.future-icon {
+    background-image: url("../assets/icon/Better_Icon/rocket.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.progress-icon {
+    background-image: url("../assets/icon/Better_Icon/writing3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.access-icon {
+    background-image: url("../assets/icon/Better_Icon/file2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Khung trắng bên phải */
+.auth-card {
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(29, 78, 216, 0.1);
+}
+
+.auth-title {
+    margin: 0 0 4px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.auth-subtitle {
+    margin: 0 0 20px;
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.auth-note {
+    margin: 20px 0 0;
+    font-size: 13px;
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+/* infor box */
+/* 1. KHUNG THẺ ĐĂNG NHẬP (CARD) */
+.auth-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Nền trắng hơi trong suốt */
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+}
+
+/* 2. TIÊU ĐỀ & PHỤ ĐỀ */
+.auth-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 8px 0;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 24px 0;
+}
+
+/* form infor  */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* Để các ô nhập tự giãn ra 100% chiều ngang */
+    gap: 16px;
+    /* Khoảng cách đều giữa các ô */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 8px 16px;
+    height: 56px;
+    transition: border 0.2s;
+}
+
+.input-container:focus-within {
+    border-color: #3b82f6;
+    /* Đổi màu viền sang xanh khi click vào */
+}
+
+.icon-left {
+    width: 20px;
+    height: 20px;
+    color: #3b82f6;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-social:hover {
+    background-color: #f4f4f4;
+}
+
+.email-icon {
+    background-image: url("../assets/icon/Better_Icon/mail.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.password-icon {
+    background-image: url("../assets/icon/Better_Icon/lock.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.input-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* Chiếm hết phần không gian còn lại */
+}
+
+.input-content label {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 2px;
+}
+
+.input-content input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #111827;
+    padding: 0;
+}
+
+.btn-toggle-password {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* thanh chứng năng */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    /* Đẩy 2 cụm ra hai góc */
+    align-items: center;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.remember-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.remember-group input[type="checkbox"] {
+    accent-color: #3b82f6;
+    /* Đổi màu ô tích thành xanh dương */
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.forgot-link,
+.signup-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* nút đăng nhập/đăng ký */
+.btn-login {
+    width: 100%;
+    background: linear-gradient(to right, #7fb4ff, #3176f2);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.btn-login:hover {
+    box-shadow: 0 4px 12px rgba(49, 118, 242, 0.25);
+    transition: all 0.3s ease;
+    background-color: #2563eb;
+}
+
+/* line */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* Tạo đường kẻ mỏng 2 bên chữ */
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.divider::before {
+    margin-right: 16px;
+}
+
+.divider::after {
+    margin-left: 16px;
+}
+
+/* đăng nhập bằng google hoặc apple */
+.social-login-group {
+    display: flex;
+    gap: 16px;
+    /* Khoảng cách giữa nút Google và Apple */
+}
+
+.btn-social {
+    flex: 1;
+    /* Chia đôi không gian cho 2 nút */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+}
+
+/* ghi chú cuối trang */
+.auth-note {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* google facebook icon */
+.icon-google {
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/icon/Better_Icon/search.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-facebook {
+    width: 23px;
+    height: 23px;
+    background-image: url("../assets/icon/Better_Icon/communication.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* show/hide password toggle */
+.btn-toggle-password {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    /* Màu xám nhạt */
+    cursor: pointer;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.btn-toggle-password:hover {
+    color: #374151;
+    /* Đổi màu đậm hơn khi hover */
+}

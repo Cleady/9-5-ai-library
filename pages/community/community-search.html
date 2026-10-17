@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tìm members, nhóm và chủ đề trong cộng đồng 9.5 AI CLUB">
+    <title>Search Community | 9.5 AI CLUB</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Logo + tiêu đề slogan -->
+            <a href="../../home_page/home_page.html" class="sidebar-brand">
+                <span class="brand-logo"></span>
+                <div class="brand-text">
+                    <strong>9.5 AI CLUB</strong>
+                    <small>Learn · Build · Grow</small>
+                </div>
+            </a>
+
+            <!-- Menu trang chủ -->
+            <nav class="sidebar-nav" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="../../home_page/home_page.html" class="nav-link">
+                            <span class="nav-icon home-icon"></span>
+                            <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../lectures/lectures.html" class="nav-link">
+                            <span class="nav-icon lectures-icon"></span>
+                            <span class="nav-label">Lectures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../practice/practice.html" class="nav-link">
+                            <span class="nav-icon practice-icon"></span>
+                            <span class="nav-label">Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../history.html" class="nav-link">
+                            <span class="nav-icon history-icon"></span>
+                            <span class="nav-label">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Nhóm phụ, tách khỏi nhóm chính bằng đường kẻ (CSS sẽ vẽ) -->
+            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Secondary Navigation">
+                <ul>
+                    <li>
+                        <a href="../favorites.html" class="nav-link">
+                            <span class="nav-icon favorites-icon"></span>
+                            <span class="nav-label">Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../lectures/resources.html" class="nav-link">
+                            <span class="nav-icon resources-icon"></span>
+                            <span class="nav-label">Resources</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../community/community-feed.html" class="nav-link is-active" aria-current="page">
+                            <span class="nav-icon community-icon"></span>
+                            <span class="nav-label">Community</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../settings/settings.html" class="nav-link">
+                            <span class="nav-icon settings-icon"></span>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <!-- Slogan ở đáy sidebar -->
+            <a href="#" class="sidebar-promo">
+                <p>Knowledge for a better tomorrow</p>
+                <span class="promo-arrow" aria-hidden="true"></span>
+            </a>
+
+        </aside>
+        <main class="main com-main">
+            <header class="topbar">
+                <form class="search" role="search" action="/pages/community/community-search.html" method="get" data-com-search>
+                    <span class="search-icon" aria-hidden="true"></span>
+
+                    <label for="site-search" class="visually-hidden">Search lectures, topics, documents</label>
+                    <input type="search" id="site-search" name="q" class="search-input"
+                        placeholder="Search lectures, topics, or resources..." autocomplete="off" />
+
+                    <span class="search-shortcut" aria-hidden="true">
+                        <kbd>Ctrl</kbd>
+                        <kbd>K</kbd>
+                    </span>
+                </form>
+
+                <!-- Chuông thông báo và cái menu người dùng-->
+                <div class="topbar-actions">
+
+                    <!-- Chuông thông báo -->
+                    <div class="notification">
+                        <button type="button" class="icon-button" aria-label="Notifications (có 2 thông báo mới)"
+                            aria-expanded="false" aria-controls="notification-panel">
+                            <span class="bell-icon" aria-hidden="true"></span>
+                            <span class="notification-dot" aria-hidden="true"></span>
+                        </button>
+
+                        <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                            <header class="notification-header">
+                                <p class="notification-title">Notifications</p>
+                                <button type="button" class="notification-clear">Mark as read</button>
+                            </header>
+                            <ul class="notification-list">
+                                <li class="notification-item is-unread"><span class="notification-item-icon"
+                                        aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Sarah Nguyen mentioned you in a post</p><time
+                                            class="notification-time">2 hours ago</time>
+                                    </div>
+                                </li>
+                            </ul><a href="community-notifications.html" class="notification-footer">View tất cả thông
+                                báo</a>
+                        </section>
+                    </div>
+                    <div class="user-menu"><button type="button" class="user-menu-toggle" aria-haspopup="menu"
+                            aria-expanded="false" aria-controls="user-menu-list"><span class="user-avatar"
+                                aria-hidden="true">A</span><span class="user-name">Alex</span><span class="user-chevron"
+                                aria-hidden="true"></span><span class="role-badge">Member</span></button>
+                        <ul class="user-menu-list" id="user-menu-list" role="menu" hidden>
+                            <li role="none"><a href="/pages/settings/settings.html?tab=profile" role="menuitem">Profile</a></li>
+                            <li role="none"><a href="/pages/settings/settings.html" role="menuitem">Cài đặt</a></li>
+                            <li role="none"><a href="/pages/auth/login.html" role="menuitem" data-com-logout>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <section class="com-page-head">
+                <div>
+                    <h1>Search</h1>
+                    <p>Find people, groups, discussions, and more.</p>
+                </div>
+            </section>
+            <div class="com-layout">
+                <section class="com-feed-column">
+                    <section class="com-card com-search-panel">
+                        <form class="com-search-form" data-com-search-form role="search"><label
+                                class="com-visually-hidden" for="com-search-query">Tìm trong cộng đồng</label><span
+                                aria-hidden="true">⌕</span><input id="com-search-query" name="q" type="search"
+                                placeholder="Search for users, groups, or topics..." autocomplete="off"><span
+                                class="search-shortcut" aria-hidden="true"><kbd>Ctrl</kbd><kbd>K</kbd></span></form>
+                        <nav class="com-filter-tabs" role="tablist" aria-label="Loại kết quả"><button class="is-active"
+                                type="button" role="tab" aria-selected="true"
+                                data-com-result-filter="all">All</button><button type="button" role="tab"
+                                aria-selected="false" data-com-result-filter="members">Members</button><button
+                                type="button" role="tab" aria-selected="false"
+                                data-com-result-filter="groups">Groups</button><button type="button" role="tab"
+                                aria-selected="false" data-com-result-filter="discussions">Discussions</button><button
+                                type="button" role="tab" aria-selected="false"
+                                data-com-result-filter="topics">Topics</button></nav>
+                        <h2 class="com-results-title" data-com-results-title>Popular searches</h2>
+                        <div class="com-search-results" data-com-search-results aria-live="polite"></div>
+                        <section class="com-no-results" data-com-no-results hidden><strong>Not sure what to
+                                search?</strong>
+                            <p>Explore trending topics or browse the community.</p><a
+                                class="com-button com-button--primary" href="community-feed.html">Browse community</a>
+                            <div class="com-no-results-art" aria-hidden="true">♧</div>
+                        </section>
+                    </section>
+                </section>
+                <aside class="com-aside">
+                    <section class="com-card com-widget">
+                        <div class="com-widget-heading">
+                            <h2>Popular searches</h2>
+                        </div>
+                        <div class="com-topic-pills" data-com-topic-pills></div>
+                    </section>
+                    <section class="com-aside-promo"><span class="com-aside-promo-icon"
+                            aria-hidden="true">♧</span><strong>A community that learns together, grows
+                            together.</strong></section>
+                </aside>
+            </div>
+            <div class="com-toast" data-com-toast role="status" aria-live="polite"></div>
+        </main>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/community-data.js"></script>
+    <script src="/js/community-core.js"></script>
+    <script src="/js/community-nav.js"></script>
+    <script src="/js/community-notifications.js"></script>
+    <script src="../../js/syncProfile.js"></script>
+</body>
+
+</html>

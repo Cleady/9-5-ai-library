@@ -1,0 +1,3267 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{xcolor}
+
+\begin{document}
+
+\title{PFP191 - Python Programming Fundamentals - Categorized Questions}
+\date{}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Chapter 1: Python Basics & Syntax}
+
+\textbf{Question 1:} Which of the following is a comment in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] // This is a test
+    \item[\textbf{B.}] /* This is a test */
+    \item[\textbf{C.}] \textcolor{red}{\textbf{# This is a test}}
+    \item[\textbf{D.}] $ This is a test
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 2:} What is the result of this statement?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+print(ord('foo'))\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 102
+    \item[\textbf{B.}] \textcolor{red}{\textbf{It raises an exception}}
+    \item[\textbf{C.}] 102 111 111
+    \item[\textbf{D.}] 324
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 3:} Once again consider this dictionary:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+d = 'foo': 100, 'bar': 200, 'baz': 300\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+What is the result of this statement:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+d['bar':'baz']\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{It raises an exception}}
+    \item[\textbf{B.}] 200 300
+    \item[\textbf{C.}] [200, 300]
+    \item[\textbf{D.}] (200, 300)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 4:} What will the following Python code print out?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+friends = [ 'Joseph', 'Glenn', 'Sally' ]\newline
+\newline
+friends.sort()\newline
+\newline
+print friends[1]\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] Glenn
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Joseph}}
+    \item[\textbf{C.}] Sally
+    \item[\textbf{D.}] Friends
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 5:} How do you insert something on a new line in a file?
+
+\begin{itemize}
+    \item[\textbf{A.}] write.newline('x')
+    \item[\textbf{B.}] \textcolor{red}{\textbf{n}}
+    \item[\textbf{C.}] You cannot do this
+    \item[\textbf{D.}] type the content on the line below
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 6:} What is the incorrect ways to create a function in Python? (Choose all the apply.)
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{create myFunction():}}
+    \item[\textbf{B.}] def myFunction():
+    \item[\textbf{C.}] \textcolor{red}{\textbf{func myfunction():}}
+    \item[\textbf{D.}] \textcolor{red}{\textbf{def function myfunction():}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 7:} Which collection does not allow duplicate members?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{SET}}
+    \item[\textbf{B.}] DICTIONARY
+    \item[\textbf{C.}] TUPLE
+    \item[\textbf{D.}] LIST
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 8:} What is the name of this symbol (>>>)?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Chevrons}}
+    \item[\textbf{B.}] Hash tags
+    \item[\textbf{C.}] Colon
+    \item[\textbf{D.}] Semi Colon
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 9:} What is the value of the following expression? 45 % 10
+
+\begin{itemize}
+    \item[\textbf{A.}] 4
+    \item[\textbf{B.}] 2
+    \item[\textbf{C.}] \textcolor{red}{\textbf{5}}
+    \item[\textbf{D.}] 0.42
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 10:} What is the purpose of the following Python code?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+fhand = open('mbox.txt')\newline
+\newline
+x = 0\newline
+\newline
+for line in fhand:\newline
+\newline
+    x = x + 1\newline
+\newline
+print x\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] Remove the leading and trailing spaces from each line in mbox.txt
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Count the lines in the file 'mbox.txt'}}
+    \item[\textbf{C.}] Convert the lines in mbox.txt to upper case
+    \item[\textbf{D.}] Reverse the order of the lines in mbox.txt
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 11:} What is the output of the following code?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+class Pokemon():\newline
+\newline
+\newline
+\newline
+    def __init__(self, name, type):\newline
+\newline
+        self.name = name\newline
+\newline
+        self.type = type\newline
+\newline
+\newline
+\newline
+    def stringPokemon(self):\newline
+\newline
+        print(f"Pokemon name is self.name and type is self.type")\newline
+\newline
+\newline
+\newline
+class GrassType(Pokemon):\newline
+\newline
+\newline
+\newline
+    # overrides the stringPokemon() function on 'Pokemon' class\newline
+\newline
+    def stringPokemon(self):\newline
+\newline
+        print(f"Grass type pokemon name is self.name")\newline
+\newline
+\newline
+\newline
+poke1 = GrassType('Bulbasaur', 'Grass')\newline
+\newline
+poke1.stringPokemon\newline
+\newline
+poke1.stringPokemon()\newline
+\newline
+poke2 = Pokemon('Charizard', 'Fire')\newline
+\newline
+poke2.stringPokemon\newline
+\newline
+poke2.stringPokemon()\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Grass type pokemon name is Bulbasaur Pokemon name is Charizard and type is Fire}}
+    \item[\textbf{B.}] Pokemon name is Bulbasaur and type is Grass Pokemon name is Charizard and type is Fire
+    \item[\textbf{C.}] Grass type pokemon name is Bulbasaur Grass type pokemon name is Charizard
+    \item[\textbf{D.}] Error because the extending class has a stringPokemon() function which already exists.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 12:} Assume x and y are assigned as follows:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = 5\newline
+\newline
+y = -5\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+What is the effect of this statement:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x, y = (y, x)[::-1]\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{The values of x and y are unchanged}}
+    \item[\textbf{B.}] Both x and y are -5
+    \item[\textbf{C.}] Both x and y are 5
+    \item[\textbf{D.}] The values of x and y are swapped
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 13:} What's the output of the following code snippet?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+>>> class Dog:\newline
+\newline
+...     def walk(self):\newline
+\newline
+...         return "*walking*"\newline
+\newline
+...\newline
+\newline
+...     def speak(self):\newline
+\newline
+...         return "Woof!"\newline
+\newline
+...\newline
+\newline
+>>> class JackRussellTerrier(Dog):\newline
+\newline
+...     def speak(self):\newline
+\newline
+...         return "Arff!"\newline
+\newline
+...\newline
+\newline
+>>> bobo = JackRussellTerrier()\newline
+\newline
+>>> bobo.walk()\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] Arff!
+    \item[\textbf{B.}] \textcolor{red}{\textbf{*walking*}}
+    \item[\textbf{C.}] AttributeError: 'JackRussellTerrier' object has no attribute 'walk'
+    \item[\textbf{D.}] Woof!
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 14:} Which of the following code uses the inheritance feature of Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] Class Foo: Pass
+    \item[\textbf{B.}] Class Foo(object): passclass Hoo(object): pass
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Class Foo: passclass Hoo(Foo): pass}}
+    \item[\textbf{D.}] None of the above code.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 15:} What will be the value of x when the following statement is executed:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = int(98.6)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 100
+    \item[\textbf{B.}] 6
+    \item[\textbf{C.}] \textcolor{red}{\textbf{98}}
+    \item[\textbf{D.}] 99
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 16:} What will the following program print out:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+>>> x = 15\newline
+\newline
+>>> x = x + 10\newline
+\newline
+>>> print(x)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{25}}
+    \item[\textbf{B.}] 5
+    \item[\textbf{C.}] 15
+    \item[\textbf{D.}] "print x"
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 17:} What does the following Python sequence print out?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = 'From: Using the : character'\newline
+\newline
+y = re.findall('^F.+:', x)\newline
+\newline
+print(y)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] ^F.+:
+    \item[\textbf{B.}] \textcolor{red}{\textbf{['From: Using the :']}}
+    \item[\textbf{C.}] ['From:']
+    \item[\textbf{D.}] From:
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 18:} Given a code,\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+class People():\newline
+\newline
+    def __init__(self, name):\newline
+\newline
+        self.name = name\newline
+\newline
+\newline
+\newline
+    def namePrint(self):\newline
+\newline
+        print(self.name)\newline
+\newline
+\newline
+\newline
+person1 = People("Sally")\newline
+\newline
+person2 = People("Louise")\newline
+\newline
+person1.namePrint()\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+What is correct answer?
+
+\begin{itemize}
+    \item[\textbf{A.}] person1 and person2 are two different instances of the People class.
+    \item[\textbf{B.}] \textcolor{red}{\textbf{The __init__ method is used to set initial values for attributes.}}
+    \item[\textbf{C.}] 'self' is not needed in def namePrint(self):
+    \item[\textbf{D.}] person2 has a different value for 'name' than person1.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 19:} For the following code, which of the following statements is true?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+def printHello():\newline
+\newline
+    print("Hello")\newline
+\newline
+\newline
+\newline
+a = printHello()\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{PrintHello() is a function and a is a variable. None of them are objects.}}
+    \item[\textbf{B.}] Both printHello() and a refer to the same object.
+    \item[\textbf{C.}] PrintHello() and a refer to different objects.
+    \item[\textbf{D.}] Syntax error! You cannot assign function to a variable in Python.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 20:} Which of the following elements of a mathematical expression in Python is evaluated first?
+
+\begin{itemize}
+    \item[\textbf{A.}] Addition +
+    \item[\textbf{B.}] Multiplication *
+    \item[\textbf{C.}] Subtraction -
+    \item[\textbf{D.}] \textcolor{red}{\textbf{Parentheses ( )}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 21:} Which of the following variables is the "most mnemonic"?
+
+\begin{itemize}
+    \item[\textbf{A.}] var_173
+    \item[\textbf{B.}] x1q3z9ocd
+    \item[\textbf{C.}] xyz
+    \item[\textbf{D.}] \textcolor{red}{\textbf{days}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 22:} What is the difference between the "+" and "*" character in regular expressions?
+
+\begin{itemize}
+    \item[\textbf{A.}] The "+" matches upper case characters and the "*" matches lowercase characters
+    \item[\textbf{B.}] The "+" matches the beginning of a line and the "*" matches the end of a line
+    \item[\textbf{C.}] The "+" matches the actual plus character and the "*" matches any character
+    \item[\textbf{D.}] \textcolor{red}{\textbf{The "+" matches at least one character and the "*" matches zero or more characters}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 23:} What is a correct syntax to return the third character in a string?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{x = "Hello"[2]}}
+    \item[\textbf{B.}] x = sub("Hello",0,2)
+    \item[\textbf{C.}] x = "Hello".sub(0,2)
+    \item[\textbf{D.}] x = sub "Hello"
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 24:} Which of the following will result in an error?
+
+\begin{itemize}
+    \item[\textbf{A.}] print(str1[2])
+    \item[\textbf{B.}] \textcolor{red}{\textbf{str1[1]="x"}}
+    \item[\textbf{C.}] print(str1[0:9])
+    \item[\textbf{D.}] Both (b) and (c)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 25:} How do you start writing a for loop in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] for x = 1 to y:
+    \item[\textbf{B.}] for x > y:
+    \item[\textbf{C.}] for each x in y:
+    \item[\textbf{D.}] \textcolor{red}{\textbf{for x in y:}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 26:} What does the following Python code print out?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+a = [1, 2, 3, 8]\newline
+\newline
+b = [4, 5, 6]\newline
+\newline
+c = a + b\newline
+\newline
+print(c)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 28
+    \item[\textbf{B.}] \textcolor{red}{\textbf{[1, 2, 3, 8, 4, 5, 6]}}
+    \item[\textbf{C.}] It raises an exception
+    \item[\textbf{D.}] 7
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 27:} You look at the following text:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+if x == 6 :\newline
+\newline
+    print('Is 6')\newline
+\newline
+    print('Is Still 6')\newline
+\newline
+    print('Third 6')\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+It looks perfect but Python is giving you an 'Indentation Error' on the second print statement. What is the most likely reason?
+
+\begin{itemize}
+    \item[\textbf{A.}] In order to make humans feel inadequate, Python randomly emits 'Indentation Errors' on perfectly good code - after about an hour the error will just go away without any changes to your program
+    \item[\textbf{B.}] Python has reached its limit on the largest Python program that can be run
+    \item[\textbf{C.}] Python thinks 'Still' is a mis-spelled word in the string
+    \item[\textbf{D.}] \textcolor{red}{\textbf{You have mixed tabs and spaces in the file}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 28:} Which of the parts of a computer actually executes the program instructions?
+
+\begin{itemize}
+    \item[\textbf{A.}] RAM
+    \item[\textbf{B.}] \textcolor{red}{\textbf{CPU}}
+    \item[\textbf{C.}] Input/Output Devices
+    \item[\textbf{D.}] Secondary Memory
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 29:} Which of the following slicing operations will produce the list [12, 3]?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+t = [9, 41, 12, 3, 74, 15]\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] t[1:3]
+    \item[\textbf{B.}] t[2:2]
+    \item[\textbf{C.}] t[:]
+    \item[\textbf{D.}] \textcolor{red}{\textbf{t[2:4]}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 30:} Python scripts (files) have names that end with:
+
+\begin{itemize}
+    \item[\textbf{A.}] .exe
+    \item[\textbf{B.}] \textcolor{red}{\textbf{.py}}
+    \item[\textbf{C.}] .png
+    \item[\textbf{D.}] .doc
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 31:} Which of the following are valid ways to specify the string literal foo'bar in Python:
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{"foo'bar"}}
+    \item[\textbf{B.}] 'foo"bar'
+    \item[\textbf{C.}] """"foo'bar""""
+    \item[\textbf{D.}] 'foo'bar'
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 32:} Which of the following statement about Python is not correct?
+
+\begin{itemize}
+    \item[\textbf{A.}] The python ecosystem is very rich and provides easy to use tools for data science
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Due to its proprietary nature, database access from python is not available for many database}}
+    \item[\textbf{C.}] There are libraries and APIs available to access many of the popular databases from python
+    \item[\textbf{D.}] Python is a popular scripting language for connecting and accessing databases
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 33:} How do you start writing an if statement in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{if x > y:}}
+    \item[\textbf{B.}] if (x > y)
+    \item[\textbf{C.}] if x > y then:
+    \item[\textbf{D.}] x > y?:
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 34:} ```python\newline
+\newline
+class Dog:\newline
+\newline
+    def __init__(self, name, age):\newline
+\newline
+        self.name = name\newline
+\newline
+        self.age = age\newline
+\newline
+\newline
+\newline
+class JackRussellTerrier(Dog):\newline
+\newline
+    pass\newline
+\newline
+\newline
+\newline
+class Dachshund(Dog):\newline
+\newline
+    pass\newline
+\newline
+\newline
+\newline
+class Bulldog(Dog):\newline
+\newline
+    pass\newline
+\newline
+\newline
+\newline
+miles = JackRussellTerrier("Miles", 4)\newline
+\newline
+buddy = Dachshund("Buddy", 9)\newline
+\newline
+jack = Bulldog("Jack", 3)\newline
+\newline
+jim = Bulldog("Jim", 5)\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+Given the above code snippet, which of the following REPL outputs are correct? (Select all that apply.)
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{isinstance(jack, Dog)}}
+    \item[\textbf{B.}] \textcolor{red}{\textbf{isinstance(miles, Dog)}}
+    \item[\textbf{C.}] isinstance(jack, Dachshund)
+    \item[\textbf{D.}] isinstance(miles, Bulldog)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 35:} Which of the following functions do you use to write data in the binary format?
+
+\begin{itemize}
+    \item[\textbf{A.}] write
+    \item[\textbf{B.}] output
+    \item[\textbf{C.}] \textcolor{red}{\textbf{dump}}
+    \item[\textbf{D.}] send
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 36:} In Python, a class is .... for a concrete object.
+
+\begin{itemize}
+    \item[\textbf{A.}] nuisance
+    \item[\textbf{B.}] instance
+    \item[\textbf{C.}] \textcolor{red}{\textbf{blueprint}}
+    \item[\textbf{D.}] distraction
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 37:} Which method can be used to return a string in upper case letters?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{upper()}}
+    \item[\textbf{B.}] uppercase()
+    \item[\textbf{C.}] toUpperCase()
+    \item[\textbf{D.}] upperCase()
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 38:} If you a class is derived from two different classes, it's called _______
+
+\begin{itemize}
+    \item[\textbf{A.}] Multilevel Inheritance
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Multiple Inheritance}}
+    \item[\textbf{C.}] Hierarchical Inheritance
+    \item[\textbf{D.}] Python Inheritance
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 39:} You have the following dictionary definition:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+d = 'foo': 100, 'bar': 200, 'baz': 300\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+What method call will delete the entry whose value is 200?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{d.pop("bar")}}
+    \item[\textbf{B.}] d.remove("bar")
+    \item[\textbf{C.}] d.remove("200")
+    \item[\textbf{D.}] d.pop("200")
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 40:} What does the following Python code print out?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+a = [1, 2, 3]\newline
+\newline
+b = [4, 5, 6]\newline
+\newline
+c = a + b\newline
+\newline
+print len(c)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 21
+    \item[\textbf{B.}] [4, 5, 6]
+    \item[\textbf{C.}] 15
+    \item[\textbf{D.}] \textcolor{red}{\textbf{6}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section{Chapter 2: Control Flow & Loops}
+
+\textbf{Question 41:} What Python function would you use if you wanted to prompt the user for a file name to open?
+
+\begin{itemize}
+    \item[\textbf{A.}] file_input()
+    \item[\textbf{B.}] read()
+    \item[\textbf{C.}] \textcolor{red}{\textbf{input()}}
+    \item[\textbf{D.}] cin
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 42:} Which of these collections defines a SET?
+
+\begin{itemize}
+    \item[\textbf{A.}] "name": "apple", "color": "green"
+    \item[\textbf{B.}] ["apple", "banana", "cherry"]
+    \item[\textbf{C.}] \textcolor{red}{\textbf{"apple", "banana", "cherry"}}
+    \item[\textbf{D.}] ("apple", "banana", "cherry")
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 43:} Find the output of the given Python program\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+a = 25\newline
+\newline
+if a < 15:\newline
+\newline
+    print("Hi")\newline
+\newline
+if a <= 30:\newline
+\newline
+    print("Hello")\newline
+\newline
+else:\newline
+\newline
+    print("Know Program")\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] Hi
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Hello}}
+    \item[\textbf{C.}] Hi
+    \item[\textbf{D.}] Hi
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 44:} Which of the following elements of a mathematical expression in Python is evaluated last?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Addition}}
+    \item[\textbf{B.}] Multiplication
+    \item[\textbf{C.}] Parentheses
+    \item[\textbf{D.}] Division
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 45:} Given the file dog_breeds.txt, which of the following is the correct way to open the file for reading as a text file? Select all that apply.
+
+\begin{itemize}
+    \item[\textbf{A.}] open('dog_breeds.txt', 'wb')
+    \item[\textbf{B.}] open('dog_breeds.txt', 'rb')
+    \item[\textbf{C.}] \textcolor{red}{\textbf{open('dog_breeds.txt', 'r')}}
+    \item[\textbf{D.}] open('dog_breeds.txt', 'w')
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 46:} A bytes object is immutable. If you want a binary sequence that can be modified, you should use a bytearray.\newline
+\newline
+\newline
+\newline
+Is it possible to create a bytearray object directly from a bytes object, as shown below:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+array_of_bytes = bytearray(b'15x 80a#')\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Yes}}
+    \item[\textbf{B.}] No
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 47:} How would you use string slicing [:] to print out 'uct' from the following string?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = 'From marquard@uct.ac.za'\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] print(x[14/17])
+    \item[\textbf{B.}] \textcolor{red}{\textbf{print(x[14:17])}}
+    \item[\textbf{C.}] print(x[14:3])
+    \item[\textbf{D.}] print(x[14+3])
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 48:} ```python\newline
+\newline
+class Sales:\newline
+\newline
+    def __init__(self, id):\newline
+\newline
+        self.id = id\newline
+\newline
+        id = 100\newline
+\newline
+\newline
+\newline
+val = Sales(123)\newline
+\newline
+print (val.id)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] SyntaxError, this program will not run
+    \item[\textbf{B.}] 100
+    \item[\textbf{C.}] \textcolor{red}{\textbf{123}}
+    \item[\textbf{D.}] None of the above
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 49:} The _________ keyword defines a template indicating the data that will be in an object of the class and the functions that can be called on an object of the class.
+
+\begin{itemize}
+    \item[\textbf{A.}] Class
+    \item[\textbf{B.}] object
+    \item[\textbf{C.}] \textcolor{red}{\textbf{class}}
+    \item[\textbf{D.}] instance
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 50:} Which of the following commands can be used to read the next line in a file using the file object ?
+
+\begin{itemize}
+    \item[\textbf{A.}] tmpfile.read(n)
+    \item[\textbf{B.}] tmpfile.read()
+    \item[\textbf{C.}] \textcolor{red}{\textbf{tmpfile.readline()}}
+    \item[\textbf{D.}] tmpfile.readlines()
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 51:} What is "self" typically used for in a Python method within a class?
+
+\begin{itemize}
+    \item[\textbf{A.}] To terminate a loop
+    \item[\textbf{B.}] To set the residual value in an expression where the method is used
+    \item[\textbf{C.}] The number of parameters to the method
+    \item[\textbf{D.}] \textcolor{red}{\textbf{To refer to the instance in which the method is being called}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 52:} What would the following Python code print out?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+stuff = dict()\newline
+\newline
+print(stuff.get('candy',-1))\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{-1}}
+    \item[\textbf{B.}] The program would fail with a traceback
+    \item[\textbf{C.}] 0
+    \item[\textbf{D.}] 'candy'
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 53:} Which of the following reserved keyword is used to end a function, return generator?
+
+\begin{itemize}
+    \item[\textbf{A.}] break
+    \item[\textbf{B.}] switch
+    \item[\textbf{C.}] Return
+    \item[\textbf{D.}] \textcolor{red}{\textbf{yield}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 54:} What will be the value of x when the following statement is executed:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = round (98.6)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 100
+    \item[\textbf{B.}] 6
+    \item[\textbf{C.}] 98
+    \item[\textbf{D.}] \textcolor{red}{\textbf{99}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 55:} What does the Python dir() function show when we pass an object into it as a parameter?
+
+\begin{itemize}
+    \item[\textbf{A.}] It shows the parent class
+    \item[\textbf{B.}] It shows the number of parameters to the constructor
+    \item[\textbf{C.}] \textcolor{red}{\textbf{It shows the methods and attributes of the object}}
+    \item[\textbf{D.}] It shows the type of the object
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 56:} When Python is running in the interactive mode and displaying the chevron prompt (>>>) - what question is Python asking you?
+
+\begin{itemize}
+    \item[\textbf{A.}] What Python script would you like me to run?
+    \item[\textbf{B.}] What is the next machine language instruction to run?
+    \item[\textbf{C.}] What is your favorite color?
+    \item[\textbf{D.}] \textcolor{red}{\textbf{What Python statement would you like me to run?}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 57:} When you have multiple lines in an if block, how do you indicate the end of the if block?
+
+\begin{itemize}
+    \item[\textbf{A.}] You omit the semicolon ; on the last line of the if block
+    \item[\textbf{B.}] \textcolor{red}{\textbf{You de-indent the next line past the if block to the same level of indent as the original if statement}}
+    \item[\textbf{C.}] You put the colon : character on a line by itself to indicate we are done with the if block
+    \item[\textbf{D.}] You use a curly brace  after the last line of the if block
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 58:} Identify the data structure we use in the code given below?\newline
+\newline
+# Code starts\newline
+\newline
+\newline
+\newline
+asthetic1 = 'quizOrbit'\newline
+\newline
+asthetic2 = 'QuizOrbit'\newline
+\newline
+\newline
+\newline
+print(asthetic1!=asthetic2)\newline
+\newline
+\newline
+\newline
+# Code Ends
+
+\begin{itemize}
+    \item[\textbf{A.}] HashMap
+    \item[\textbf{B.}] Tree
+    \item[\textbf{C.}] Dictionary
+    \item[\textbf{D.}] \textcolor{red}{\textbf{True}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 59:} What keyword is used to indicate the start of a method in a Python class?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{def}}
+    \item[\textbf{B.}] break
+    \item[\textbf{C.}] function
+    \item[\textbf{D.}] continue
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 60:} What is the value of the following expression? 42 % 10
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{2}}
+    \item[\textbf{B.}] 420
+    \item[\textbf{C.}] 4210
+    \item[\textbf{D.}] 42
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 61:} What is the iteration variable in the following Python code?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+for letter in 'banana' :\newline
+\newline
+    print(letter)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 'banana'
+    \item[\textbf{B.}] for
+    \item[\textbf{C.}] \textcolor{red}{\textbf{letter}}
+    \item[\textbf{D.}] print
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 62:} What do we use the second parameter of the open() call to indicate
+
+\begin{itemize}
+    \item[\textbf{A.}] How large we expect the file to be
+    \item[\textbf{B.}] The list of folders to be searched to find the file we want to open
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Whether we want to read data from the file or write data to the file}}
+    \item[\textbf{D.}] What disk drive the file is stored on
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 63:} A list of lines is returned if using the method of .....
+
+\begin{itemize}
+    \item[\textbf{A.}] <readable()>
+    \item[\textbf{B.}] <readnines()>
+    \item[\textbf{C.}] \textcolor{red}{\textbf{<readlines()>}}
+    \item[\textbf{D.}] <readline()>
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 64:} Which of the following is not a Python reserved word?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{iterate}}
+    \item[\textbf{B.}] continue
+    \item[\textbf{C.}] else
+    \item[\textbf{D.}] break
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 65:} In which of the following does the CricketFan class correctly inherit from the PartyAnimal class?
+
+\begin{itemize}
+    \item[\textbf{A.}] from party import PartyAnimal
+    \item[\textbf{B.}] \textcolor{red}{\textbf{class CricketFan(PartyAnimal)}}
+    \item[\textbf{C.}] an = PartyAnimal()
+    \item[\textbf{D.}] CricketFan = PartyAnimal()
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 66:} In the following code (numbers added) - which will be the last line to execute successfully?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+(1)  astr = 'Hello Bob'\newline
+\newline
+(2)  istr = int(astr)\newline
+\newline
+(3)  print('First', istr)\newline
+\newline
+(4)  astr = '123'\newline
+\newline
+(5)  istr = int(astr)\newline
+\newline
+(6)  print('Second', istr)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 2
+    \item[\textbf{B.}] \textcolor{red}{\textbf{1}}
+    \item[\textbf{C.}] 6
+    \item[\textbf{D.}] 3
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 67:} For the following code:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+astr = 'Hello Bob'\newline
+\newline
+istr = 0\newline
+\newline
+try:\newline
+\newline
+    istr = int(astr)\newline
+\newline
+except:\newline
+\newline
+    istr = -1\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+What will the value be for istr variable after this code executes?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{-1}}
+    \item[\textbf{B.}] It will be the 'Not a number' value (i.e. NaN)
+    \item[\textbf{C.}] It will be a random number depending on the operating system the program runs on
+    \item[\textbf{D.}] false
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 68:} What is the result of the following statement:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+list((b'abcde' + 'fghi')[3:6])\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] [b'd', b'e', b'f']
+    \item[\textbf{B.}] b'def'
+    \item[\textbf{C.}] [100, 101, 102]
+    \item[\textbf{D.}] \textcolor{red}{\textbf{It raises an exception}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 69:} What are the names of the two types of mode that are used in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Interactive mode & Script mode}}
+    \item[\textbf{B.}] Interactive mode & Scratch mode
+    \item[\textbf{C.}] Interactive mode & Imperial mode
+    \item[\textbf{D.}] Imperial mode & Script mode
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 70:} Assume the variable x has been initialized to an integer value (e.g., x = 3). What does the following statement do?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = x + 2\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] This would fail as it is a syntax error
+    \item[\textbf{B.}] Produce the value "false" because "x" can never equal "x+2"
+    \item[\textbf{C.}] Create a function called "x" and put the value 2 in the function
+    \item[\textbf{D.}] \textcolor{red}{\textbf{Retrieve the current value for x, add two to it and put the sum back into x}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 71:} What does the following code print out?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+print("123" + "abc")\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{123abc}}
+    \item[\textbf{B.}] 123+abc
+    \item[\textbf{C.}] This is a syntax error because you cannot add strings
+    \item[\textbf{D.}] hello world
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 72:} Which of these collections defines a DICTIONARY?
+
+\begin{itemize}
+    \item[\textbf{A.}] ("apple", "banana", "cherry")
+    \item[\textbf{B.}] \textcolor{red}{\textbf{"name": "apple", "color": "green"}}
+    \item[\textbf{C.}] "apple", "banana", "cherry"
+    \item[\textbf{D.}] ["apple", "banana", "cherry"]
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 73:} What is output of the sample code?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+class A:\newline
+\newline
+    def __init__(self):\newline
+\newline
+        self.calcI(30)\newline
+\newline
+\newline
+\newline
+    def calcI(self, i):\newline
+\newline
+        self.i = 2 * i\newline
+\newline
+\newline
+\newline
+class B(A):\newline
+\newline
+    def __init__(self):\newline
+\newline
+        super().__init__()\newline
+\newline
+        print("i from B is", self.i)\newline
+\newline
+\newline
+\newline
+    def calcI(self, i):\newline
+\newline
+        self.i = 3 * i\newline
+\newline
+\newline
+\newline
+b = B()\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] The __init__ method of only class B gets invoked.
+    \item[\textbf{B.}] The __init__ method of class A gets invoked and it displays "i from B is 0".
+    \item[\textbf{C.}] The __init__ method of class A gets invoked and it displays "i from B is 60"
+    \item[\textbf{D.}] \textcolor{red}{\textbf{The __init__ method of class A gets invoked and it displays "i from B is 90".}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 74:} The following code sequence fails with a traceback when the user enters a file that does not exist. How would you avoid the traceback and make it so you could print out your own error message when a bad file name was entered?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+fname = raw_input('Enter the file name: ')\newline
+\newline
+fhand = open(fname)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{try / except}}
+    \item[\textbf{B.}] signal handlers
+    \item[\textbf{C.}] try / catch / finally
+    \item[\textbf{D.}] on error resume next
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 75:} What is the type of the return value of the re.findall() method?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{A list of strings}}
+    \item[\textbf{B.}] An integer
+    \item[\textbf{C.}] A boolean
+    \item[\textbf{D.}] A single character
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 76:} For the following list, how would you print out 'Sally'?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+friends = ['Joseph', 'Glenn', 'Sally']\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] print(friends['Sally'])
+    \item[\textbf{B.}] print(friends[2:1])
+    \item[\textbf{C.}] \textcolor{red}{\textbf{print(friends[2])}}
+    \item[\textbf{D.}] print friends[3]
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 77:} What would the following Python code print out?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+fruit = 'Banana'\newline
+\newline
+fruit[0] = 'b'\newline
+\newline
+print(fruit)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] b
+    \item[\textbf{B.}] B
+    \item[\textbf{C.}] banana
+    \item[\textbf{D.}] \textcolor{red}{\textbf{Nothing would print - the program fails with a traceback error}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 78:} What is the output of the following code?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+class Point:\newline
+\newline
+    def __init__(self, x = 0, y = 0):\newline
+\newline
+        self.x = x+1\newline
+\newline
+        self.y = y+1\newline
+\newline
+\newline
+\newline
+p1 = Point()\newline
+\newline
+print(p1.x, p1.y)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] None None
+    \item[\textbf{B.}] Initializes the class for use.
+    \item[\textbf{C.}] 0 0
+    \item[\textbf{D.}] \textcolor{red}{\textbf{1 1}}
+    \item[\textbf{E.}] X y
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 79:} What is the output from this print() function call:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+print(\newline
+\newline
+    '100 200 300'.count(''),\newline
+\newline
+    '100 200 300'.count('', 5, 10),\newline
+\newline
+    '100 200 300'.count('', 5)\newline
+\newline
+)\newline
+\newline
+```\newline
+\newline
+*(Lưu ý: Trong đề thi gốc, do chuỗi chứa các ký tự `$` nên hệ thống web đã tự động render thành các thẻ KaTeX/MathML `<span class="katex">...`)*
+
+\begin{itemize}
+    \item[\textbf{A.}] 310
+    \item[\textbf{B.}] 311
+    \item[\textbf{C.}] 321
+    \item[\textbf{D.}] \textcolor{red}{\textbf{312}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 80:} What does this Python statement do if PartyAnimal is a class? zap = PartyAnimal()
+
+\begin{itemize}
+    \item[\textbf{A.}] Clear out all the data in the PartyAnimal variable and put the old values for the data in zap
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Use the PartyAnimal template to make a new object and assign it to zap}}
+    \item[\textbf{C.}] Subtract the value of the zap variable from the value in the PartyAnimal variable and put the difference in zap
+    \item[\textbf{D.}] Copy the value from the PartyAnimal variable to the variable zap
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section{Chapter 3: Functions & Modules}
+
+\textbf{Question 81:} When reading a file using the file object, what method is best for reading the entire file into a single string?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{.read()}}
+    \item[\textbf{B.}] .readline()
+    \item[\textbf{C.}] .readlines()
+    \item[\textbf{D.}] .read_file_to_str()
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 82:} How would you use the index operator [] to print out the letter q from the following string? x = 'From marquard@uct.ac.za'
+
+\begin{itemize}
+    \item[\textbf{A.}] print x[10]
+    \item[\textbf{B.}] \textcolor{red}{\textbf{print(x[8])}}
+    \item[\textbf{C.}] print(x[9])
+    \item[\textbf{D.}] print(x[q])
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 83:} What is true about the following code segment:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+if x == 5:\newline
+\newline
+    print('Is 5')\newline
+\newline
+    print('Is Still 5')\newline
+\newline
+    print('Third 5')\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] The string 'Is 5' will never print out regardless of the value for x.
+    \item[\textbf{B.}] The string 'Is 5' will always print out regardless of the value for x.
+    \item[\textbf{C.}] Only two of the three print statements will print out if the value of x is less than zero.
+    \item[\textbf{D.}] \textcolor{red}{\textbf{Depending on the value of x, either all three of the print statements will execute or none of the statements will execute}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 84:} Which came first, the instance or the class?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Class}}
+    \item[\textbf{B.}] Method
+    \item[\textbf{C.}] Function
+    \item[\textbf{D.}] Instance
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 85:} When you have multiple lines in an if block, how do you indicate the end of the if block?
+
+\begin{itemize}
+    \item[\textbf{A.}] You use a curly brace  after the last line of the if block
+    \item[\textbf{B.}] You omit the semicolon ; on the last line of the if block
+    \item[\textbf{C.}] You put the colon : character on a line by itself to indicate we are done with the if block
+    \item[\textbf{D.}] \textcolor{red}{\textbf{You de-indent the next line past the if block to the same level of indent as the original if statement}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 86:} Which of these operators is not a comparison / logical operator?
+
+\begin{itemize}
+    \item[\textbf{A.}] ==
+    \item[\textbf{B.}] >=
+    \item[\textbf{C.}] <=
+    \item[\textbf{D.}] \textcolor{red}{\textbf{=}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 87:} Which of these words is a reserved word in Python ?
+
+\begin{itemize}
+    \item[\textbf{A.}] payroll
+    \item[\textbf{B.}] pizza
+    \item[\textbf{C.}] \textcolor{red}{\textbf{while}}
+    \item[\textbf{D.}] names
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 88:} Which of the following can be used to invoke the __init__ method in B from A, where A is a subclass of B?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{super().__init__()}}
+    \item[\textbf{B.}] B.__init__()
+    \item[\textbf{C.}] super().__init__(self)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 89:} Which statement is used to stop a loop?
+
+\begin{itemize}
+    \item[\textbf{A.}] exit
+    \item[\textbf{B.}] return
+    \item[\textbf{C.}] stop
+    \item[\textbf{D.}] \textcolor{red}{\textbf{break}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 90:} You want to create a bytes object consisting of five null (0x00) bytes. All of the following will work except one. Select the one that doesn't work:
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{bytes(0, 0, 0, 0, 0)}}
+    \item[\textbf{B.}] bytes(5)
+    \item[\textbf{C.}] bytes([0] * 5)
+    \item[\textbf{D.}] bytes('x 00x 00x 00x 00x 00', 'utf-8')
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 91:} You want to create a bytes object consisting of five null (0x00) bytes. Choose all the apply.
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{bytes('x 00x 00x 00x 00x 00', 'utf-8')}}
+    \item[\textbf{B.}] bytes(0, 0, 0, 0, 0)
+    \item[\textbf{C.}] bytes[0:5]
+    \item[\textbf{D.}] \textcolor{red}{\textbf{bytes(5)}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 92:} Which of the following statement about Python is not correct?
+
+\begin{itemize}
+    \item[\textbf{A.}] There are libraries and APIs available to access many of the popular databases from python
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Due to its proprietary nature, database access from python is not available for many database}}
+    \item[\textbf{C.}] Python is a popular scripting language for connecting and accessing databases
+    \item[\textbf{D.}] The python ecosystem is very rich and provides easy to use tools for data science
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 93:} What is the output of print list[1:3] if list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]?
+
+\begin{itemize}
+    \item[\textbf{A.}] [ 'abcd', 786 , 2.23, 'john', 70.2 ]
+    \item[\textbf{B.}] None of the above.
+    \item[\textbf{C.}] \textcolor{red}{\textbf{[786, 2.23]}}
+    \item[\textbf{D.}] abcd
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 94:} In the following code, x = 9 What is x?
+
+\begin{itemize}
+    \item[\textbf{A.}] A pointer
+    \item[\textbf{B.}] \textcolor{red}{\textbf{A variable}}
+    \item[\textbf{C.}] A parameter
+    \item[\textbf{D.}] A constant
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 95:} ```python\newline
+\newline
+class Person:\newline
+\newline
+    def __init__(self, name, age):\newline
+\newline
+        self.name = name\newline
+\newline
+        self.age = age\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+The correct way to instantiate the above Person class is:
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Person ("Rufus", 3)}}
+    \item[\textbf{B.}] Person ()
+    \item[\textbf{C.}] Person.create("Rufus", 3)
+    \item[\textbf{D.}] Person.init("Rufus", 3)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 96:} Which of the following data structures in python are immutable?
+
+\begin{itemize}
+    \item[\textbf{A.}] Linked List
+    \item[\textbf{B.}] All of the above
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Tuple}}
+    \item[\textbf{D.}] Tree
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 97:} Which data structure is the output of the code given below?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+# Code starts\newline
+\newline
+col = (2,4,6,3,5,8,7,6,4,3,0,9)\newline
+\newline
+l = list(col)\newline
+\newline
+\newline
+\newline
+finalAns = list(set(col))\newline
+\newline
+print(type(finalAns))\newline
+\newline
+# Code Ends\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{List}}
+    \item[\textbf{B.}] Set
+    \item[\textbf{C.}] Dictionary
+    \item[\textbf{D.}] Tree
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 98:} In Python, a function within a class definition is called a:
+
+\begin{itemize}
+    \item[\textbf{A.}] a class function
+    \item[\textbf{B.}] an operation
+    \item[\textbf{C.}] a callable
+    \item[\textbf{D.}] a factory
+    \item[\textbf{E.}] \textcolor{red}{\textbf{a method}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 99:} What is the syntax to look up the fullname attribute in an object stored in the variable colleen?
+
+\begin{itemize}
+    \item[\textbf{A.}] colleen::fullname
+    \item[\textbf{B.}] \textcolor{red}{\textbf{colleen.fullname}}
+    \item[\textbf{C.}] colleen->fullname
+    \item[\textbf{D.}] colleen['fullname']
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 100:} Python strings have a property called "immutability." What does this mean?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Strings in Python can't be changed}}
+    \item[\textbf{B.}] You can update a string in Python with concatenation
+    \item[\textbf{C.}] Strings in Python can be represented as arrays of chars
+    \item[\textbf{D.}] Strings can't be divided by numbers
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 101:} What is the best way to think about a "Syntax Error" while programming?
+
+\begin{itemize}
+    \item[\textbf{A.}] The computer is overheating and just wants you to stop to let it cool down
+    \item[\textbf{B.}] The computer needs to have its software upgraded
+    \item[\textbf{C.}] The computer has used GPS to find your location and hates everyone from your town
+    \item[\textbf{D.}] \textcolor{red}{\textbf{The computer did not understand the statement that you entered}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 102:} How are Python dictionaries different from Python lists?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Python lists are indexed using integers and dictionaries can use strings as indexes}}
+    \item[\textbf{B.}] Python lists can store strings and dictionaries can only store words
+    \item[\textbf{C.}] Python lists store multiple values and dictionaries store a single value
+    \item[\textbf{D.}] Python dictionaries are a collection and lists are not a collection
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 103:} For the following code\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = 1\newline
+\newline
+if x < 2:\newline
+\newline
+    print('Below 2')\newline
+\newline
+elif x >= 2:\newline
+\newline
+    print('Two or more')\newline
+\newline
+else:\newline
+\newline
+    print('Something else')\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+What is the output?
+
+\begin{itemize}
+    \item[\textbf{A.}] x = 2.0
+    \item[\textbf{B.}] x = -2.0
+    \item[\textbf{C.}] \textcolor{red}{\textbf{It will print out "Below 2"}}
+    \item[\textbf{D.}] x = -22
+    \item[\textbf{E.}] This code will never print 'Something else' regardless of the value for 'x'
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 104:} Predict the output of the code given below?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+# Code starts\newline
+\newline
+collection1 = ('QuizOrbit', 'Meha', 26, 'India')\newline
+\newline
+collection2 = ('QuizOrbit', 'Divika', 23, 'India')\newline
+\newline
+print(collection1 > collection2)\newline
+\newline
+# Code Ends\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] None of These
+    \item[\textbf{B.}] Error
+    \item[\textbf{C.}] False
+    \item[\textbf{D.}] \textcolor{red}{\textbf{True}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 105:} Whenever possible, what is the recommended way to ensure that a file object is properly closed after usage?
+
+\begin{itemize}
+    \item[\textbf{A.}] By using the try/finally block
+    \item[\textbf{B.}] It doesn't matter
+    \item[\textbf{C.}] \textcolor{red}{\textbf{By using the with statement}}
+    \item[\textbf{D.}] Making sure that you use the .close() method before the end of the script
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 106:} What is the output of the following code?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+class Foo:\newline
+\newline
+    def printLine(self, line='Python'):\newline
+\newline
+        print(line)\newline
+\newline
+\newline
+\newline
+o1 = Foo()\newline
+\newline
+o1.printLine('Java')\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Java}}
+    \item[\textbf{B.}] Java
+    \item[\textbf{C.}] Python
+    \item[\textbf{D.}] Line
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 107:} True or False? In order to extend a class, the new class should have access to all the data and inner workings of the parent class.
+
+\begin{itemize}
+    \item[\textbf{A.}] True
+    \item[\textbf{B.}] \textcolor{red}{\textbf{False}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 108:} What is the last action that must be performed on a file?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Close}}
+    \item[\textbf{B.}] Save
+    \item[\textbf{C.}] End
+    \item[\textbf{D.}] Write
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 109:} In the following code, print(98.6) What is "98.6"?
+
+\begin{itemize}
+    \item[\textbf{A.}] A variable
+    \item[\textbf{B.}] \textcolor{red}{\textbf{A constant}}
+    \item[\textbf{C.}] A parameter
+    \item[\textbf{D.}] A pointer
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 110:} Which of the following is NOT a good synonym for "class" in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{direction}}
+    \item[\textbf{B.}] blueprint
+    \item[\textbf{C.}] pattern
+    \item[\textbf{D.}] template
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 111:} Which of the following statements is not true about object-oriented programming?
+
+\begin{itemize}
+    \item[\textbf{A.}] One of the benefits of object-oriented programming is that it can hide complexity.
+    \item[\textbf{B.}] A class contains functions as well as the data that is used by those functions.
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Constructor methods are required to initialize an object and destructor methods are required to destroy the object when no longer required.}}
+    \item[\textbf{D.}] A powerful feature of object-oriented programming is the ability to create a new class by extending an existing class.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 112:} Which of the following would separate a string input_string on the first 2 occurences of the letter "e"?
+
+\begin{itemize}
+    \item[\textbf{A.}] 'e'.split(input_string, 1)
+    \item[\textbf{B.}] 'e'.split(input_string, 2)
+    \item[\textbf{C.}] 'e'.split(input_string, maxsplit=2)
+    \item[\textbf{D.}] \textcolor{red}{\textbf{input_string.split('e', maxsplit=2)}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 113:} Which method can be used to replace parts of a string?
+
+\begin{itemize}
+    \item[\textbf{A.}] replaceString()
+    \item[\textbf{B.}] repl()
+    \item[\textbf{C.}] switch()
+    \item[\textbf{D.}] \textcolor{red}{\textbf{replace()}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 114:} List a is defined as follows: a = [1, 2, 3, 4, 5] Select all of the following statements that remove the middle element 3 from a so that it equals [1, 2, 4, 5]:
+
+\begin{itemize}
+    \item[\textbf{A.}] a[2:2] = []
+    \item[\textbf{B.}] a[2] = []
+    \item[\textbf{C.}] \textcolor{red}{\textbf{del a[2]}}
+    \item[\textbf{D.}] \textcolor{red}{\textbf{a.remove(3)}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 115:} How would you express the constant floating-point value 3.2 times 10^-3 in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] 3.2e-3
+    \item[\textbf{B.}] \textcolor{red}{\textbf{3.2e3}}
+    \item[\textbf{C.}] 0.32
+    \item[\textbf{D.}] 32e-3
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 116:} If we open a file as follows:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+xfile = open('mbox.txt')\newline
+\newline
+```\newline
+\newline
+\newline
+\newline
+What statement would we use to read the file one line at a time?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{for line in xfile:}}
+    \item[\textbf{B.}] while ( getline (xfile,line) )
+    \item[\textbf{C.}] READ xfile INTO LINE
+    \item[\textbf{D.}] READ (xfile,*,END=10) line
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 117:} _______ is not a keyword, but by convention it is used to refer to the current instance (object) of a class.
+
+\begin{itemize}
+    \item[\textbf{A.}] class
+    \item[\textbf{B.}] def
+    \item[\textbf{C.}] \textcolor{red}{\textbf{self}}
+    \item[\textbf{D.}] init
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 118:} Which of the following does not correctly create an object instance?
+
+\begin{itemize}
+    \item[\textbf{A.}] puppy = Dog("Jamie")
+    \item[\textbf{B.}] dog = Dog("Jamie")
+    \item[\textbf{C.}] jamie = Dog()
+    \item[\textbf{D.}] \textcolor{red}{\textbf{pupper = new Dog("Jamie")}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 119:} What extension must you add to the end of a file when saving?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{.py}}
+    \item[\textbf{B.}] .ppt
+    \item[\textbf{C.}] .ipynb
+    \item[\textbf{D.}] .txt
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 120:} What will be the value of x after the following statement executes: x = 1 + 2 * 3 - 8 / 4
+
+\begin{itemize}
+    \item[\textbf{A.}] 3.0
+    \item[\textbf{B.}] 15
+    \item[\textbf{C.}] 4
+    \item[\textbf{D.}] \textcolor{red}{\textbf{5.0}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section{Chapter 4: Data Structures & Collections}
+
+\textbf{Question 121:} Which of the following is the correct way to define an initializer method?
+
+\begin{itemize}
+    \item[\textbf{A.}] def __init__(title, author):
+    \item[\textbf{B.}] \textcolor{red}{\textbf{def __init__(self, title, author):}}
+    \item[\textbf{C.}] def __init__():
+    \item[\textbf{D.}] __init__(self, title, author):
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 122:} Which of the following Python statements would print out the length of a list stored in the variable data?
+
+\begin{itemize}
+    \item[\textbf{A.}] print(length(data))
+    \item[\textbf{B.}] print(data.length())
+    \item[\textbf{C.}] \textcolor{red}{\textbf{print(len(data))}}
+    \item[\textbf{D.}] print(data.length)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 123:} class People():\newline
+\newline
+    def __init__(self, name):\newline
+\newline
+        self.name = name\newline
+\newline
+\newline
+\newline
+    def namePrint(self):\newline
+\newline
+        print(self.name)\newline
+\newline
+\newline
+\newline
+person1 = People("Sally")\newline
+\newline
+person2 = People("Louise")\newline
+\newline
+person1.namePrint()
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Sally}}
+    \item[\textbf{B.}] Louise
+    \item[\textbf{C.}] Sally Louise
+    \item[\textbf{D.}] person1
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 124:} What is the Python reserved word that we use in two-way if tests to indicate the block of code that is to be executed if the logical test is false?
+
+\begin{itemize}
+    \item[\textbf{A.}] break
+    \item[\textbf{B.}] switch
+    \item[\textbf{C.}] \textcolor{red}{\textbf{else}}
+    \item[\textbf{D.}] toggle
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 125:} What is the most common Unicode encoding when moving data between systems?
+
+\begin{itemize}
+    \item[\textbf{A.}] UTF-128
+    \item[\textbf{B.}] \textcolor{red}{\textbf{UTF-8}}
+    \item[\textbf{C.}] UTF-32
+    \item[\textbf{D.}] UTF-64
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 126:} Which one is NOT a legal variable name?
+
+\begin{itemize}
+    \item[\textbf{A.}] _myvar
+    \item[\textbf{B.}] Myvar
+    \item[\textbf{C.}] My_var
+    \item[\textbf{D.}] \textcolor{red}{\textbf{My-var}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 127:} What will the following code print out?\newline
+\newline
+\newline
+\newline
+x = 0\newline
+\newline
+if x < 2:\newline
+\newline
+    print('Small')\newline
+\newline
+elif x < 10:\newline
+\newline
+    print('Medium')\newline
+\newline
+else:\newline
+\newline
+    print('LARGE')\newline
+\newline
+print('All done')
+
+\begin{itemize}
+    \item[\textbf{A.}] LARGE
+    \item[\textbf{B.}] Small
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Small}}
+    \item[\textbf{D.}] Small
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 128:} Which data structure is being put to use in the code given below?\newline
+\newline
+\newline
+\newline
+# Code starts\newline
+\newline
+org = 'QuizOrbit'\newline
+\newline
+count = \newline
+\newline
+for i in org:\newline
+\newline
+    if i in count:\newline
+\newline
+        count[i]+=1\newline
+\newline
+    else:\newline
+\newline
+        count[i]=1\newline
+\newline
+print(count)\newline
+\newline
+# Code Ends
+
+\begin{itemize}
+    \item[\textbf{A.}] String
+    \item[\textbf{B.}] List
+    \item[\textbf{C.}] Tuple
+    \item[\textbf{D.}] \textcolor{red}{\textbf{Dictionary}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 129:} What would the following Python code print out?\newline
+\newline
+\newline
+\newline
+stuff = dict()\newline
+\newline
+print(stuff['candy'])
+
+\begin{itemize}
+    \item[\textbf{A.}] -1
+    \item[\textbf{B.}] 0
+    \item[\textbf{C.}] \textcolor{red}{\textbf{The program would fail with a traceback}}
+    \item[\textbf{D.}] candy
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 130:} Which of the following statements is true?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{A class is blueprint for the object.}}
+    \item[\textbf{B.}] You can only make a single object from the given class.
+    \item[\textbf{C.}] Both statements are true.
+    \item[\textbf{D.}] Neither statement is true.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 131:} Object and class attributes are accessed using ___ notation in Python.
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Dot notation}}
+    \item[\textbf{B.}] Arrrow notation
+    \item[\textbf{C.}] Plus notation
+    \item[\textbf{D.}] And notation
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 132:} Which method can be used to return a string in lower case letters?
+
+\begin{itemize}
+    \item[\textbf{A.}] toLower()
+    \item[\textbf{B.}] \textcolor{red}{\textbf{lower()}}
+    \item[\textbf{C.}] lowercase()
+    \item[\textbf{D.}] lowerCase()
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 133:} How would you use the index operator [] to print out the letter q from the following string?\newline
+\newline
+\newline
+\newline
+x = 'From marquard@uct.ac.za'
+
+\begin{itemize}
+    \item[\textbf{A.}] print(x[q])
+    \item[\textbf{B.}] print x[10]
+    \item[\textbf{C.}] print(x[9])
+    \item[\textbf{D.}] \textcolor{red}{\textbf{print(x[8])}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 134:} What is a correct syntax to output "Hello World" in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] echo "Hello World"
+    \item[\textbf{B.}] p("Hello World")
+    \item[\textbf{C.}] \textcolor{red}{\textbf{print("Hello World")}}
+    \item[\textbf{D.}] echo("Hello World");
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 135:} What does the following Python code do?\newline
+\newline
+\newline
+\newline
+fhand = open('mbox-short.txt')\newline
+\newline
+inp = fhand.read()
+
+\begin{itemize}
+    \item[\textbf{A.}] Checks to see if the file exists and can be written
+    \item[\textbf{B.}] Turns the text in the file into a graphic image like a PNG or JPG
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Reads the entire file into the variable inp as a string}}
+    \item[\textbf{D.}] Prompts the user for a file name
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 136:} What is the purpose of the newline character in text files?
+
+\begin{itemize}
+    \item[\textbf{A.}] It adds a new network connection to retrieve files from the network
+    \item[\textbf{B.}] \textcolor{red}{\textbf{It indicates the end of one line of text and the beginning of another line of text}}
+    \item[\textbf{C.}] It enables random movement throughout the file
+    \item[\textbf{D.}] It allows us to open more than one files and read them in a synchronized manner
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 137:} If you write a Python program to read a text file and you see extra blank lines in the output that are not present in the file input as shown below, what Python string function will likely solve the problem?\newline
+\newline
+\newline
+\newline
+From: stephen.marquard@uct.ac.za\newline
+\newline
+\newline
+\newline
+From: louis@media.berkeley.edu\newline
+\newline
+\newline
+\newline
+From: zqian@umich.edu\newline
+\newline
+\newline
+\newline
+From: rjlowe@iupui.edu\newline
+\newline
+\newline
+\newline
+...
+
+\begin{itemize}
+    \item[\textbf{A.}] find()
+    \item[\textbf{B.}] startswith()
+    \item[\textbf{C.}] \textcolor{red}{\textbf{rstrip()}}
+    \item[\textbf{D.}] split()
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 138:} Which of the following statements assigns the value 100 to the variable x in Python:
+
+\begin{itemize}
+    \item[\textbf{A.}] x := 100
+    \item[\textbf{B.}] let x = 100
+    \item[\textbf{C.}] x << 100
+    \item[\textbf{D.}] \textcolor{red}{\textbf{x = 100}}
+    \item[\textbf{E.}] x == 100
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 139:} What is the output of the following python code snippet?\newline
+\newline
+\newline
+\newline
+# Code starts\newline
+\newline
+emp1 = ('Ajay',25,10000)\newline
+\newline
+emp2 = ('Sidhi',23,15000)\newline
+\newline
+\newline
+\newline
+emp1[2] = 20000\newline
+\newline
+\newline
+\newline
+print(emp1[2]+emp2[2])\newline
+\newline
+# Code Ends
+
+\begin{itemize}
+    \item[\textbf{A.}] 35000
+    \item[\textbf{B.}] 25000
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Type Error}}
+    \item[\textbf{D.}] None of the above.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 140:} Find the output of the code given below?\newline
+\newline
+\newline
+\newline
+# Code starts\newline
+\newline
+\newline
+\newline
+content = (21, 26, 37, 94)\newline
+\newline
+content.append( (75, 62, 79) )\newline
+\newline
+print(len(content))\newline
+\newline
+\newline
+\newline
+# Code Ends
+
+\begin{itemize}
+    \item[\textbf{A.}] 7
+    \item[\textbf{B.}] 2
+    \item[\textbf{C.}] 1
+    \item[\textbf{D.}] \textcolor{red}{\textbf{Error}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 141:} What is the correct way to create a function in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] def function()
+    \item[\textbf{B.}] define function()
+    \item[\textbf{C.}] function()
+    \item[\textbf{D.}] creat function()
+    \item[\textbf{E.}] \textcolor{red}{\textbf{def function():}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 142:} What is the result of the following statement:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+list((b'abcde' + b'fghi')[3:6])\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] [b'd', b'e', b'f']
+    \item[\textbf{B.}] b'def'
+    \item[\textbf{C.}] [100, 101, 102]
+    \item[\textbf{D.}] \textcolor{red}{\textbf{It raises an exception}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 143:} Which of these collections defines a LIST?
+
+\begin{itemize}
+    \item[\textbf{A.}] "name": "apple", "color": "green"
+    \item[\textbf{B.}] \textcolor{red}{\textbf{["apple", "banana", "cherry"]}}
+    \item[\textbf{C.}] "apple", "banana", "cherry"
+    \item[\textbf{D.}] ("apple", "banana", "cherry")
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 144:} If you want to transform a list of strings input_list into a single string with a comma between each item, which of the following would you give as the input to join()?
+
+\begin{itemize}
+    \item[\textbf{A.}] ','
+    \item[\textbf{B.}] string
+    \item[\textbf{C.}] \textcolor{red}{\textbf{input_list}}
+    \item[\textbf{D.}] str
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 145:} What do we do to a Python statement that is immediately after an if statement to indicate that the statement is to be executed only when the if statement is true?
+
+\begin{itemize}
+    \item[\textbf{A.}] Underline all of the conditional code
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Indent the line below the if statement}}
+    \item[\textbf{C.}] Start the statement with a "#" character
+    \item[\textbf{D.}] Begin the statement with a curly brace
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 146:} What will be the value of x after the following statement executes:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = 2 * 3 - 8 / 4 % 2\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 1
+    \item[\textbf{B.}] 2
+    \item[\textbf{C.}] 4
+    \item[\textbf{D.}] \textcolor{red}{\textbf{6}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 147:} Which of the following Python statements would print out the length of a list stored in the variable data?
+
+\begin{itemize}
+    \item[\textbf{A.}] print(length(data))
+    \item[\textbf{B.}] print(data.length())
+    \item[\textbf{C.}] \textcolor{red}{\textbf{print(len(data))}}
+    \item[\textbf{D.}] print(data.length)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 148:} What is true about the following code segment:\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+if x == 5:\newline
+\newline
+    print('Is 5')\newline
+\newline
+    print('Is Still 5')\newline
+\newline
+    print('Third 5')\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Depending on the value of x, either all three of the print statements will execute or none of the statements will execute}}
+    \item[\textbf{B.}] The string 'Is 5' will always print out regardless of the value for x.
+    \item[\textbf{C.}] The string 'Is 5' will never print out regardless of the value for x.
+    \item[\textbf{D.}] Only two of the three print statements will print out if the value of x is less than zero.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 149:} ```python\newline
+\newline
+class Person:\newline
+\newline
+    def __init__(self, id):\newline
+\newline
+        self.id = id\newline
+\newline
+\newline
+\newline
+sam = Person(100)\newline
+\newline
+sam.__dict__['age'] = 49\newline
+\newline
+print (sam.age + len(sam.__dict__))\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 49
+    \item[\textbf{B.}] 50
+    \item[\textbf{C.}] \textcolor{red}{\textbf{51}}
+    \item[\textbf{D.}] 48
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 150:} What's the output of the following code snippet?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+>>> class Dog:\newline
+\newline
+...     def walk(self):\newline
+\newline
+...         return "*walking*"\newline
+\newline
+...\newline
+\newline
+...     def speak(self):\newline
+\newline
+...         return "Woof!"\newline
+\newline
+...\newline
+\newline
+>>> class JackRussellTerrier(Dog):\newline
+\newline
+...     def talk(self):\newline
+\newline
+...         return super().speak()\newline
+\newline
+...\newline
+\newline
+>>> bobo = JackRussellTerrier()\newline
+\newline
+>>> bobo.talk()\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Woof!}}
+    \item[\textbf{B.}] walking
+    \item[\textbf{C.}] CanineError: Tail curvature exceeded
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 151:} What would the following mean in a regular expression? [a-z0-9]
+
+\begin{itemize}
+    \item[\textbf{A.}] Match any number of lowercase letters followed by any number of digits
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Match a lowercase letter or a digit}}
+    \item[\textbf{C.}] Match an entire line as long as it is lowercase letters or digits
+    \item[\textbf{D.}] Match any text that is surrounded by square braces
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 152:} What does the following Python Program print out?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+str1 = "Hello"\newline
+\newline
+str2 = 'there'\newline
+\newline
+bob = str1 + str2\newline
+\newline
+print(bob)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] Hello
+    \item[\textbf{B.}] 0
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Hellothere}}
+    \item[\textbf{D.}] Hello
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 153:} Which method can be used to remove any whitespace from both the beginning and the end of a string?
+
+\begin{itemize}
+    \item[\textbf{A.}] ltrip()
+    \item[\textbf{B.}] \textcolor{red}{\textbf{strip()}}
+    \item[\textbf{C.}] ptrip()
+    \item[\textbf{D.}] strim()
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 154:} What is the output for: 'Tutorials Point' [100:200]?
+
+\begin{itemize}
+    \item[\textbf{A.}] Index error.
+    \item[\textbf{B.}] \textcolor{red}{\textbf{''}}
+    \item[\textbf{C.}] 'Tutorials Point'
+    \item[\textbf{D.}] Syntax error
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 155:} Which of the following command is used to open a file "c:temp .txt" in write-mode only?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{outfile = open("c:temp .txt", "w")}}
+    \item[\textbf{B.}] outfile = open("c: temp.txt", "w")
+    \item[\textbf{C.}] outfile = open(file = "c:temp .txt", "w+")
+    \item[\textbf{D.}] outfile = open(file = "c: temp.txt", "w+")
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 156:} Which operator can be used to compare two values?
+
+\begin{itemize}
+    \item[\textbf{A.}] <>
+    \item[\textbf{B.}] =
+    \item[\textbf{C.}] ><
+    \item[\textbf{D.}] \textcolor{red}{\textbf{==}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 157:} What is the proper way to say "good-bye" to Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{quit()}}
+    \item[\textbf{B.}] stop()
+    \item[\textbf{C.}] exit()
+    \item[\textbf{D.}] end()
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 158:} A USB memory stick is an example of which of the following components of computer architecture?
+
+\begin{itemize}
+    \item[\textbf{A.}] Central Processing Unit
+    \item[\textbf{B.}] Main Memory
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Secondary Memory}}
+    \item[\textbf{D.}] None of these
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 159:} How would you express the constant floating-point value 3.2 × 10³ in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] 3.2e-3
+    \item[\textbf{B.}] \textcolor{red}{\textbf{3.2e3}}
+    \item[\textbf{C.}] 0.32
+    \item[\textbf{D.}] 32e-3
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 160:} What is the output of the following code?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+class Point:\newline
+\newline
+    def __init__(self, x = 0, y = 0):\newline
+\newline
+        self.x = x\newline
+\newline
+        self.y = y\newline
+\newline
+\newline
+\newline
+    def __sub__(self, other):\newline
+\newline
+        x = self.x + other.x\newline
+\newline
+        y = self.y + other.y\newline
+\newline
+        return Point(x,y)\newline
+\newline
+\newline
+\newline
+p1 = Point(3, 4)\newline
+\newline
+p2 = Point(1, 2)\newline
+\newline
+result = p1-p2\newline
+\newline
+print(result.x, result.y)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] 2 2
+    \item[\textbf{B.}] \textcolor{red}{\textbf{4 6}}
+    \item[\textbf{C.}] 0 0
+    \item[\textbf{D.}] 1 1
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section{Chapter 5: Strings, Files & Advanced Python}
+
+\textbf{Question 161:} What does the __init__() the function do in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] Initializes the class for use.
+    \item[\textbf{B.}] \textcolor{red}{\textbf{This function is called when a new object is instantiated.}}
+    \item[\textbf{C.}] Initializes all the data attributes to zero when called.
+    \item[\textbf{D.}] None of the above.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 162:} List a is defined as follows: a = ['a', 'b', 'c'] Which of the following statements adds 'd' and 'e' to the end of a, so that it then equals ['a', 'b', 'c', 'd', 'e']:
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{a.extend(['d', 'e'])}}
+    \item[\textbf{B.}] a += ['d', 'e']
+    \item[\textbf{C.}] a += 'de'
+    \item[\textbf{D.}] a[len(a):] = ['d', 'e']
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 163:} How do you create a variable x with the numeric value 5?
+
+\begin{itemize}
+    \item[\textbf{A.}] x = 5
+    \item[\textbf{B.}] x = int(5)
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Both the answers A and B are correct}}
+    \item[\textbf{D.}] Both the answers A and B are incorrect
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 164:} What is the correct syntax to output the type of a variable or object in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] print(typeof(x))
+    \item[\textbf{B.}] \textcolor{red}{\textbf{print(type(x))}}
+    \item[\textbf{C.}] print(typeof x)
+    \item[\textbf{D.}] print(typeOf(x))
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 165:} In Object Oriented Programming, what is another name for the "attributes" of an object?
+
+\begin{itemize}
+    \item[\textbf{A.}] forms
+    \item[\textbf{B.}] methods
+    \item[\textbf{C.}] portions
+    \item[\textbf{D.}] messages
+    \item[\textbf{E.}] \textcolor{red}{\textbf{fields}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 166:} Which of the following is rarely used in Object Oriented Programming?
+
+\begin{itemize}
+    \item[\textbf{A.}] Method
+    \item[\textbf{B.}] Constructor
+    \item[\textbf{C.}] Attribute
+    \item[\textbf{D.}] \textcolor{red}{\textbf{Destructor}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 167:} What is the "wild card" character in a regular expression (i.e., the character that matches any character)?
+
+\begin{itemize}
+    \item[\textbf{A.}] ?
+    \item[\textbf{B.}] *
+    \item[\textbf{C.}] \textcolor{red}{\textbf{.}}
+    \item[\textbf{D.}] $
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 168:} What is output for:\newline
+\newline
+\newline
+\newline
+b = [11,13,15,17,19,21]\newline
+\newline
+print(b[::2])
+
+\begin{itemize}
+    \item[\textbf{A.}] [19,21]
+    \item[\textbf{B.}] [11,15]
+    \item[\textbf{C.}] \textcolor{red}{\textbf{[11,15,19]}}
+    \item[\textbf{D.}] [13,17,21]
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 169:} Which of these collections defines a TUPLE?
+
+\begin{itemize}
+    \item[\textbf{A.}] ["apple", "banana", "cherry"]
+    \item[\textbf{B.}] "apple", "banana", "cherry"
+    \item[\textbf{C.}] "name": "apple", "color": "green"
+    \item[\textbf{D.}] \textcolor{red}{\textbf{("apple", "banana", "cherry")}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 170:} The readlines() method returns ...
+
+\begin{itemize}
+    \item[\textbf{A.}] str
+    \item[\textbf{B.}] \textcolor{red}{\textbf{a list of lines}}
+    \item[\textbf{C.}] a list of single characters
+    \item[\textbf{D.}] a list of integers
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 171:} What does 'strip' do?
+
+\begin{itemize}
+    \item[\textbf{A.}] Removes the contents of the whole file
+    \item[\textbf{B.}] \textcolor{red}{\textbf{Removes extra data at the beginning and end of a string}}
+    \item[\textbf{C.}] Adds in metadata
+    \item[\textbf{D.}] Splits the file
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 172:} What is stored in a "file handle" that is returned from a successful open() call?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{The handle is a connection to the file's data}}
+    \item[\textbf{B.}] The handle contains the first 10 lines of a file
+    \item[\textbf{C.}] The handle has a list of all of the files in a particular folder on the hard drive
+    \item[\textbf{D.}] All the data from the file is read into memory and stored in the handle
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 173:} Which of the following is not a method of opening files?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Replace}}
+    \item[\textbf{B.}] Append
+    \item[\textbf{C.}] Read
+    \item[\textbf{D.}] Write
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 174:} What is the output of the following program?\newline
+\newline
+\newline
+\newline
+def outerFunction():\newline
+\newline
+    global a\newline
+\newline
+    a = 20\newline
+\newline
+    def innerFunction():\newline
+\newline
+        global a\newline
+\newline
+        a = 30\newline
+\newline
+        print('a =', a)\newline
+\newline
+a = 10\newline
+\newline
+outerFunction()\newline
+\newline
+print('a =', a)
+
+\begin{itemize}
+    \item[\textbf{A.}] a = 10 a = 30
+    \item[\textbf{B.}] a = 10
+    \item[\textbf{C.}] \textcolor{red}{\textbf{a = 20}}
+    \item[\textbf{D.}] a = 30
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 175:} What is the output of print list if list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{[ 'abcd', 786 , 2.23, 'john', 70.2 ]}}
+    \item[\textbf{B.}] list
+    \item[\textbf{C.}] Error
+    \item[\textbf{D.}] None of the above
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 176:} What does the Python input() function do?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Pause the program and read data from the user}}
+    \item[\textbf{B.}] Connect to the network and retrieve a web page.
+    \item[\textbf{C.}] Read the memory of the running program
+    \item[\textbf{D.}] Take a screen shot from an area of the screen
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 177:} Which of these statements is used to indicate that class A will inherit all the features of class B?
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{class A(B) :}}
+    \item[\textbf{B.}] class A extends B :
+    \item[\textbf{C.}] class A inherits B :
+    \item[\textbf{D.}] A=B++;
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 178:} What is a correct syntax to output "Hello World" in Python?
+
+\begin{itemize}
+    \item[\textbf{A.}] echo "Hello World"
+    \item[\textbf{B.}] p("Hello World")
+    \item[\textbf{C.}] \textcolor{red}{\textbf{print("Hello World")}}
+    \item[\textbf{D.}] echo("Hello World");
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 179:} How are Python dictionaries different from Python lists?
+
+\begin{itemize}
+    \item[\textbf{A.}] Python lists store multiple values and dictionaries store a single value
+    \item[\textbf{B.}] Python dictionaries are a collection and lists are not a collection
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Python lists are indexed using integers and dictionaries can use strings as indexes}}
+    \item[\textbf{D.}] Python lists can store strings and dictionaries can only store words
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 180:} To read the entire remaining contents of the file as a string from a file object infile, we use?
+
+\begin{itemize}
+    \item[\textbf{A.}] infile.read(2)
+    \item[\textbf{B.}] \textcolor{red}{\textbf{infile.read()}}
+    \item[\textbf{C.}] infile.readline()
+    \item[\textbf{D.}] infile.readlines()
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 181:} Suppose you are given a set(s1=1,2,3) then what is the output for the code - 2 * s1?
+
+\begin{itemize}
+    \item[\textbf{A.}] (1,1,2,2,3,3)
+    \item[\textbf{B.}] [1,1,2,2,3,3]
+    \item[\textbf{C.}] \textcolor{red}{\textbf{Illegal}}
+    \item[\textbf{D.}] (1,2,3,1,2,3)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 182:} What is the output of the following code?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+class Point:\newline
+\newline
+    def __init__(self, x = 0, y = 0):\newline
+\newline
+        self.x = x\newline
+\newline
+        self.y = y\newline
+\newline
+\newline
+\newline
+    def __sub__(self, other):\newline
+\newline
+        x = self.x - other.x\newline
+\newline
+        y = self.y - other.y\newline
+\newline
+        return Point(x,y)\newline
+\newline
+\newline
+\newline
+p1 = Point(3, 4)\newline
+\newline
+p2 = Point(1, 2)\newline
+\newline
+result = p1-p2\newline
+\newline
+print(result.x, result.y)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{2 2}}
+    \item[\textbf{B.}] 4 6
+    \item[\textbf{C.}] 0 0
+    \item[\textbf{D.}] 1 1
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 183:} Which collection is ordered, changeable, and allows duplicate members?
+
+\begin{itemize}
+    \item[\textbf{A.}] SET
+    \item[\textbf{B.}] DICTIONARY
+    \item[\textbf{C.}] TUPLE
+    \item[\textbf{D.}] \textcolor{red}{\textbf{LIST}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 184:} Which of the following slicing operations will produce the list [12, 3]? t = [9, 41, 12, 3, 74, 15]
+
+\begin{itemize}
+    \item[\textbf{A.}] t[1:3]
+    \item[\textbf{B.}] t[2:2]
+    \item[\textbf{C.}] t[:]
+    \item[\textbf{D.}] \textcolor{red}{\textbf{t[2:4]}}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 185:} What does the following Python program print out?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = '40'\newline
+\newline
+y = int(x) + 2\newline
+\newline
+print(y)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] int402
+    \item[\textbf{B.}] 402
+    \item[\textbf{C.}] \textcolor{red}{\textbf{42}}
+    \item[\textbf{D.}] x2
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 186:} What is a correct syntax to return the first character in a string?
+
+\begin{itemize}
+    \item[\textbf{A.}] x = "Hello".sub(0, 1)
+    \item[\textbf{B.}] x = "Hello"[1]
+    \item[\textbf{C.}] \textcolor{red}{\textbf{x = "Hello"[0]}}
+    \item[\textbf{D.}] x = sub("Hello", 0, 1)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 187:} Consider this assignment statement: a, b, c = (1, 2, 3, 4, 5, 6, 7, 8, 9)[1::3] Following execution of this statement, what is the value of b:
+
+\begin{itemize}
+    \item[\textbf{A.}] 2
+    \item[\textbf{B.}] 4
+    \item[\textbf{C.}] \textcolor{red}{\textbf{5}}
+    \item[\textbf{D.}] 6
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 188:} What's the output of the following code snippet?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+>>> class Dog:\newline
+\newline
+...     def walk(self):\newline
+\newline
+...         return "*walking*"\newline
+\newline
+...\newline
+\newline
+...     def speak(self):\newline
+\newline
+...         return "Woof!"\newline
+\newline
+...\newline
+\newline
+>>> class JackRussellTerrier(Dog):\newline
+\newline
+...     def speak(self):\newline
+\newline
+...         return "Arff!"\newline
+\newline
+...\newline
+\newline
+>>> bobo = JackRussellTerrier()\newline
+\newline
+>>> bobo.speak()\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{Arff!}}
+    \item[\textbf{B.}] walking
+    \item[\textbf{C.}] Woof!
+    \item[\textbf{D.}] Incorrect
+    \item[\textbf{E.}] CanineError: Dog malfunction
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 189:} How would you use string slicing [:] to print out 'uct' from the following string?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+x = 'From marquard@uct.ac.za'\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] print(x[14/17])
+    \item[\textbf{B.}] \textcolor{red}{\textbf{print(x[14:17])}}
+    \item[\textbf{C.}] print(x[14:3])
+    \item[\textbf{D.}] print(x[14+3])
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 190:} What is the ASCII character that is associated with the decimal value 42?
+
+\begin{itemize}
+    \item[\textbf{A.}] !
+    \item[\textbf{B.}] \textcolor{red}{\textbf{*}}
+    \item[\textbf{C.}] ^
+    \item[\textbf{D.}] /
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 191:} What will be the output of the following Python code?\newline
+\newline
+\newline
+\newline
+```python\newline
+\newline
+f = None\newline
+\newline
+for i in range (5):\newline
+\newline
+    with open("data.txt", "w") as f:\newline
+\newline
+        if i > 2:\newline
+\newline
+            break\newline
+\newline
+print(f.closed)\newline
+\newline
+```
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{True}}
+    \item[\textbf{B.}] False
+    \item[\textbf{C.}] None
+    \item[\textbf{D.}] Error
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 192:} You want to create a bytes object consisting of five null (0x00) bytes. Choose all the apply.
+
+\begin{itemize}
+    \item[\textbf{A.}] \textcolor{red}{\textbf{bytes(5)}}
+    \item[\textbf{B.}] bytes(0, 0, 0, 0, 0)
+    \item[\textbf{C.}] \textcolor{red}{\textbf{bytes('x 00x 00x 00x 00x 00', 'utf-8')}}
+    \item[\textbf{D.}] bytes[0:5]
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Question 193:} Which of the following define the set 'a', 'b', 'c':
+
+\begin{itemize}
+    \item[\textbf{A.}] s = set(['a', 'b', 'c'])
+    \item[\textbf{B.}] \textcolor{red}{\textbf{s = 'a', 'b', 'c'}}
+    \item[\textbf{C.}] s = ('a', 'b', 'c')
+    \item[\textbf{D.}] s = set('a', 'b', 'c')
+\end{itemize}
+
+\vspace{0.5cm}
+
+\end{document}

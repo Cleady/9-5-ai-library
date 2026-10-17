@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Practice quizzes and exercises for a specific subject on 9.5 AI CLUB." />
+    <title>Subject Practice – 9.5 AI CLUB</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/practice.css" />
+    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png" />
+</head>
+
+<body>
+    <!-- Bao ngoài toàn bộ ứng dụng -->
+    <div class="app">
+
+        <!-- Sidebar — Practice là mục active -->
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Logo + tiêu đề slogan -->
+            <a href="../../home_page/home_page.html" class="sidebar-brand">
+                <span class="brand-logo"></span>
+                <div class="brand-text">
+                    <strong>9.5 AI CLUB</strong>
+                    <small>Learn · Build · Grow</small>
+                </div>
+            </a>
+
+            <!-- Menu trang chủ -->
+            <nav class="sidebar-nav" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="../../home_page/home_page.html" class="nav-link">
+                            <span class="nav-icon home-icon"></span>
+                            <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../lectures/lectures.html" class="nav-link">
+                            <span class="nav-icon lectures-icon"></span>
+                            <span class="nav-label">Lectures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../practice/practice.html" class="nav-link is-active" aria-current="page">
+                            <span class="nav-icon practice-icon"></span>
+                            <span class="nav-label">Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../history.html" class="nav-link">
+                            <span class="nav-icon history-icon"></span>
+                            <span class="nav-label">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Slogan ở đáy sidebar -->
+            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Secondary Navigation">
+                <ul>
+                    <li><a href="../favorites.html" class="nav-link"><span class="nav-icon favorites-icon"></span><span class="nav-label">Favorites</span></a></li>
+                    <li><a href="../lectures/resources.html" class="nav-link"><span class="nav-icon resources-icon"></span><span class="nav-label">Resources</span></a></li>
+                    <li><a href="../community/community-feed.html" class="nav-link"><span class="nav-icon community-icon"></span><span class="nav-label">Community</span></a></li>
+                    <li><a href="../settings/settings.html" class="nav-link"><span class="nav-icon settings-icon"></span><span class="nav-label">Settings</span></a></li>
+                </ul>
+            </nav>
+            <a href="#" class="sidebar-promo">
+                <p>Knowledge for a better tomorrow</p>
+                <span class="promo-arrow" aria-hidden="true"></span>
+            </a>
+
+        </aside>
+
+        <!-- Content chính -->
+        <main class="main">
+            <!-- Topbar -->
+            <header class="topbar">
+                <form class="search" role="search" action="#" method="get">
+                    <span class="search-icon" aria-hidden="true"></span>
+
+                    <label for="site-search" class="visually-hidden">Search lectures, topics, documents</label>
+                    <input type="search" id="site-search" name="q" class="search-input"
+                        placeholder="Search lectures, topics, or resources..." autocomplete="off" />
+
+                    <span class="search-shortcut" aria-hidden="true">
+                        <kbd>Ctrl</kbd>
+                        <kbd>K</kbd>
+                    </span>
+                </form>
+
+                <!-- Chuông thông báo và cái menu người dùng-->
+                <div class="topbar-actions">
+
+                    <!-- Chuông thông báo -->
+                    <div class="notification">
+                        <button type="button" class="icon-button" aria-label="Notifications (có 2 thông báo mới)"
+                            aria-expanded="false" aria-controls="notification-panel">
+                            <span class="bell-icon" aria-hidden="true"></span>
+                            <span class="notification-dot" aria-hidden="true"></span>
+                        </button>
+
+                        <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                            <header class="notification-header">
+                                <p class="notification-title">Notifications</p>
+                                <button type="button" class="notification-clear">Mark as read</button>
+                            </header>
+                            <ul class="notification-list">
+                                <li class="notification-item is-unread">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">New lecture: Machine Learning Basics, Lecture 4
+                                        </p>
+                                        <time class="notification-time" datetime="2025-09-14T09:00">2 hours ago</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item is-unread">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Quiz 3 of Subject 3 is now open</p>
+                                        <time class="notification-time" datetime="2025-09-13T15:30">Yesterday</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">You scored 85% ở Quiz 2, Subject 1</p>
+                                        <time class="notification-time" datetime="2025-09-12T10:00">2 days ago</time>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="notification-footer">View all notifications</a>
+                        </section>
+                    </div>
+
+                    <!-- Menu người dùng -->
+                    <div class="user-menu">
+                        <button type="button" class="user-menu-toggle" aria-haspopup="menu" aria-expanded="false"
+                            aria-controls="user-menu-list">
+                            <span class="user-avatar" aria-hidden="true">A</span>
+                            <span class="user-name">Alex</span>
+                            <span class="user-chevron" aria-hidden="true"></span>
+                            <span class="role-badge">Member</span>
+                        </button>
+
+                        <ul class="user-menu-list" id="user-menu-list" role="menu" hidden>
+                            <li role="none">
+                                <a href="../settings/settings.html#profile" role="menuitem"><span class="menu-icon profile-icon"
+                                        aria-hidden="true"></span>Profile</a>
+                            </li>
+                            <li role="none">
+                                <a href="reset_pass.html" role="menuitem"><span class="menu-icon password-icon"
+                                        aria-hidden="true"></span>Change Password</a>
+                            </li>
+                            <li role="none">
+                                <a href="login.html" role="menuitem"><span class="menu-icon logout-icon"
+                                        aria-hidden="true"></span>Đăng
+                                    xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Trang Subject Practice — JS dùng id này để nhận diện -->
+            <div id="prc-subject-page" class="prc-page">
+
+                <!-- Back link quay lại trang Practice -->
+                <a href="practice.html" class="prc-back-link">
+                    <span class="prc-back-arrow" aria-hidden="true"></span>
+                    Back to Practice
+                </a>
+
+                <!-- Subject header — JS render tiêu đề vào đây -->
+                <div class="prc-subject-header">
+                    <h1 class="prc-subject-header-title" id="prc-subject-title">Subject</h1>
+                    <p class="prc-subject-header-subtitle" id="prc-subject-subtitle">Test your knowledge with quizzes
+                        and
+                        exercises.</p>
+                </div>
+
+                <!-- Tabs: Quizzes / Exercises / Flashcards -->
+                <!-- JS dùng id prc-subject-tabs và data-tab -->
+                <div class="prc-filter-row">
+                    <div id="prc-subject-tabs" class="prc-tab-list" role="tablist" aria-label="Chọn loại bài tập">
+                        <button type="button" class="prc-tab prc-tab-active" role="tab" data-tab="quizzes"
+                            aria-selected="true" aria-controls="prc-panel-quizzes">Quizzes</button>
+                        <button type="button" class="prc-tab" role="tab" data-tab="exercises" aria-selected="false"
+                            aria-controls="prc-panel-exercises">Exercises</button>
+                        <button type="button" class="prc-tab" role="tab" data-tab="flashcards" aria-selected="false"
+                            aria-controls="prc-panel-flashcards">Flashcards</button>
+                    </div>
+                </div>
+
+                <!-- Tab panels -->
+                <!-- Panel Quizzes — JS render danh sách quiz vào đây -->
+                <div id="prc-panel-quizzes" class="prc-tab-panel" role="tabpanel">
+                    <div id="prc-quiz-list"></div>
+                </div>
+
+                <!-- Panel Exercises — JS render danh sách exercise vào đây -->
+                <div id="prc-panel-exercises" class="prc-tab-panel" role="tabpanel" hidden>
+                    <div id="prc-exercise-list"></div>
+                </div>
+
+                <!-- Panel Flashcards — JS render link flashcards vào đây -->
+                <div id="prc-panel-flashcards" class="prc-tab-panel" role="tabpanel" hidden>
+                    <div id="prc-flashcard-panel"></div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-left">
+                    <a href="index.html" class="footer-brand">
+                        <span class="footer-logo" aria-hidden="true"></span>
+                        9.5 AI CLUB
+                    </a>
+                    <span class="footer-divider" aria-hidden="true"></span>
+                    <p class="footer-tagline">9.5 AI Club · FPT University</p>
+                </div>
+                <div class="footer-right">
+                    <nav class="footer-nav" aria-label="Footer Links">
+                        <ul>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <span class="footer-divider" aria-hidden="true"></span>
+                    <p class="footer-note">Members only</p>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/practice-data.js"></script>
+    <script src="/js/practice-core.js"></script>
+    <script src="/js/practice-list.js"></script>
+    <script src="../../js/syncProfile.js"></script>
+</body>
+
+</html>

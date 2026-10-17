@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Favorites" />
+    <title>Your Favorites - 9.5 AI CLUB</title>
+
+    <!-- CSS TOÀN CỤC (Read-only reference) -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- CSS RIÊNG CỦA MODULE FAVORITES -->
+    <link rel="stylesheet" href="/css/favorites.css" />
+
+    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png" />
+</head>
+
+<body>
+    <!-- BAO NGOÀI ỨNG DỤNG -->
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Logo + tiêu đề slogan -->
+            <a href="/home_page/home_page.html" class="sidebar-brand">
+                <span class="brand-logo"></span>
+                <div class="brand-text">
+                    <strong>9.5 AI CLUB</strong>
+                    <small>Learn · Build · Grow</small>
+                </div>
+            </a>
+
+            <!-- Menu trang chủ -->
+            <nav class="sidebar-nav" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="/home_page/home_page.html" class="nav-link">
+                            <span class="nav-icon home-icon"></span>
+                            <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/lectures/lectures.html" class="nav-link">
+                            <span class="nav-icon lectures-icon"></span>
+                            <span class="nav-label">Lectures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/practice/practice.html" class="nav-link">
+                            <span class="nav-icon practice-icon"></span>
+                            <span class="nav-label">Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/history.html" class="nav-link">
+                            <span class="nav-icon history-icon"></span>
+                            <span class="nav-label">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Nhóm phụ, tách khỏi nhóm chính bằng đường kẻ (CSS sẽ vẽ) -->
+            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Secondary Navigation">
+                <ul>
+                    <li>
+                        <a href="/pages/favorites.html" class="nav-link is-active" aria-current="page">
+                            <span class="nav-icon favorites-icon"></span>
+                            <span class="nav-label">Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/lectures/resources.html" class="nav-link">
+                            <span class="nav-icon resources-icon"></span>
+                            <span class="nav-label">Resources</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/community/community-feed.html" class="nav-link">
+                            <span class="nav-icon community-icon"></span>
+                            <span class="nav-label">Community</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/settings/settings.html" class="nav-link">
+                            <span class="nav-icon settings-icon"></span>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Slogan ở đáy sidebar -->
+            <a href="/home_page/home_page.html" class="sidebar-promo">
+                <p>Knowledge for a better tomorrow</p>
+                <span class="promo-arrow" aria-hidden="true"></span>
+            </a>
+
+        </aside>
+
+        <!-- NỘI DUNG CHÍNH -->
+        <main class="main">
+            <header class="topbar">
+                <form class="search" role="search" action="#" method="get">
+                    <span class="search-icon" aria-hidden="true"></span>
+
+                    <label for="site-search" class="visually-hidden">Search favorites by title, subject, or code</label>
+                    <input type="search" id="site-search" name="q" class="search-input"
+                        placeholder="Search favorites by name, subject, or code..." autocomplete="off" />
+
+                    <span class="search-shortcut" aria-hidden="true">
+                        <kbd>Ctrl</kbd>
+                        <kbd>K</kbd>
+                    </span>
+                </form>
+
+                <!-- Chuông thông báo và cái menu người dùng-->
+                <div class="topbar-actions">
+
+                    <!-- Chuông thông báo -->
+                    <div class="notification">
+                        <button type="button" class="icon-button" aria-label="Notifications (có 2 thông báo mới)"
+                            aria-expanded="false" aria-controls="notification-panel">
+                            <span class="bell-icon" aria-hidden="true"></span>
+                            <span class="notification-dot" aria-hidden="true"></span>
+                        </button>
+
+                        <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                            <header class="notification-header">
+                                <p class="notification-title">Notifications</p>
+                                <button type="button" class="notification-clear">Mark as read</button>
+                            </header>
+                            <ul class="notification-list">
+                                <li class="notification-item is-unread">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">New lecture: Machine Learning Basics, Lecture 4
+                                        </p>
+                                        <time class="notification-time" datetime="2025-09-14T09:00">2 hours ago</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item is-unread">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Quiz 3 of Subject 3 is now open</p>
+                                        <time class="notification-time" datetime="2025-09-13T15:30">Yesterday</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">You scored 85% ở Quiz 2, Subject 1</p>
+                                        <time class="notification-time" datetime="2025-09-12T10:00">2 days ago</time>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a href="/pages/community/community-notifications.html" class="notification-footer">View all notifications</a>
+                        </section>
+                    </div>
+
+                    <!-- Menu người dùng -->
+                    <div class="user-menu">
+                        <button type="button" class="user-menu-toggle" aria-haspopup="menu" aria-expanded="false"
+                            aria-controls="user-menu-list">
+                            <span class="user-avatar" aria-hidden="true">A</span>
+                            <span class="user-name">Alex</span>
+                            <span class="user-chevron" aria-hidden="true"></span>
+                            <span class="role-badge">Member</span>
+                        </button>
+
+                        <ul class="user-menu-list" id="user-menu-list" role="menu" hidden>
+                            <li role="none">
+                                <a href="/pages/settings/settings.html#profile" role="menuitem"><span class="menu-icon profile-icon"
+                                        aria-hidden="true"></span>Profile</a>
+                            </li>
+                            <li role="none">
+                                <a href="/pages/auth/reset_pass.html" role="menuitem"><span class="menu-icon password-icon"
+                                        aria-hidden="true"></span>Change Password</a>
+                            </li>
+                            <li role="none">
+                                <a href="/pages/auth/login.html" id="user-logout-link" role="menuitem"><span class="menu-icon logout-icon"
+                                        aria-hidden="true"></span>Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- KHU VỰC FAVORITES MODULE -->
+            <div class="fav-container">
+
+                <!-- Header của Favorites -->
+                <header class="fav-header">
+                    <div class="fav-header-text">
+                        <h1 class="fav-title">Your Favorites</h1>
+                        <p class="fav-subtitle">All your saved lectures, quizzes, and resources in one place.</p>
+                    </div>
+                </header>
+
+                <!-- Thanh công cụ: Tabs và Sort -->
+                <div class="fav-toolbar">
+                    <nav class="fav-tabs" aria-label="Lọc danh sách yêu thích">
+                        <button class="fav-tab is-active" type="button" data-tab="All">All <span class="fav-tab-count">(0)</span></button>
+                        <button class="fav-tab" type="button" data-tab="Practices">Practices <span class="fav-tab-count">(0)</span></button>
+                        <button class="fav-tab" type="button" data-tab="Lectures">Lectures <span class="fav-tab-count">(0)</span></button>
+                        <button class="fav-tab" type="button" data-tab="Resources">Resources <span class="fav-tab-count">(0)</span></button>
+                    </nav>
+
+                    <div class="fav-actions">
+                        <label class="fav-sort" for="fav-sort-select">
+                            <span class="fav-sort-label">Sort by:</span>
+                            <div class="fav-select-wrapper">
+                                <select id="fav-sort-select" class="fav-select">
+                                    <option value="newest">Newest</option>
+                                    <option value="oldest">Oldest</option>
+                                    <option value="az">A-Z</option>
+                                </select>
+                                <svg class="fav-select-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- MÀN HÌNH CHÍNH: LƯỚI DANH SÁCH (Grid View) -->
+                <!-- JS sẽ gen HTML thật vào đây -->
+                <div class="fav-grid" id="fav-grid-container">
+                    <!-- Được render bởi js/favorites-ui.js -->
+                </div>
+
+                <!-- TRẠNG THÁI TRỐNG (Empty State) -->
+                <div class="fav-empty" id="fav-empty-state" hidden>
+                    <div class="fav-empty-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                            <polygon points="12 11 15 13 14 17 12 15 10 17 9 13 12 11" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h2 class="fav-empty-title">No favorites yet</h2>
+                    <p class="fav-empty-desc">Save your favorite lectures, quizzes, and resources to access them quickly
+                        later.</p>
+                    <button type="button" class="fav-btn-primary">
+                        Browse content
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- TRẠNG THÁI LỖI (Error State) -->
+                <div class="fav-error" id="fav-error-state" hidden>
+                    <div class="fav-error-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                    </div>
+                    <h2 class="fav-error-title">Không thể tải danh sách yêu thích</h2>
+                    <p class="fav-error-desc">Đã có lỗi xảy ra khi kết nối máy chủ. Vui lòng kiểm tra kết nối mạng và thử lại.</p>
+                    <button type="button" class="fav-btn-primary" id="fav-btn-retry">
+                        Thử lại
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL: REMOVE CONFIRMATION -->
+    <div class="fav-modal" id="fav-modal-remove" role="dialog" aria-modal="true" aria-labelledby="fav-modal-title"
+        hidden>
+        <div class="fav-modal-backdrop"></div>
+        <div class="fav-modal-content">
+            <header class="fav-modal-header">
+                <h2 class="fav-modal-title" id="fav-modal-title">Remove from favorites</h2>
+                <p class="fav-modal-desc">Are you sure you want to remove <br /><strong>"Machine Learning
+                        Basics"</strong> from your favorites?</p>
+            </header>
+
+            <div class="fav-modal-body">
+                <!-- Mini card inside modal to show what is being removed -->
+                <div class="fav-mini-card">
+                    <div class="fav-mini-thumb fav-thumb-lecture"></div>
+                    <div class="fav-mini-info">
+                        <h4 class="fav-mini-title">Machine Learning Basics</h4>
+                        <p class="fav-mini-subtitle">Subject 1 - Lecture 3 · 12 min</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="fav-modal-footer">
+                <button type="button" class="fav-btn-outline" id="fav-btn-cancel">Cancel</button>
+                <button type="button" class="fav-btn-danger" id="fav-btn-confirm">Remove</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/practice-data.js"></script>
+    <script src="/js/practice-core.js"></script>
+    <script src="/js/lectures-data.js"></script>
+    <script src="/js/lectures-core.js"></script>
+    <script src="/js/favorites-ui.js"></script>
+    <script src="/js/favorites-logic.js"></script>
+    <script src="/js/syncProfile.js"></script>
+</body>
+
+</html>

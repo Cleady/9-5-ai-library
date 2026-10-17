@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kho tài liệu học tập của 9.5 AI CLUB" />
+    <title>Resources | 9.5 AI CLUB</title>
+    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png" />
+    <!-- CSS riêng của Resources, không dùng chung class với style.css để đỡ ghi đè nhau -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/resources.css" />
+</head>
+
+<body class="resource-page">
+
+    <!-- Khung app chung: sidebar và nội dung chính nằm cạnh nhau như index.html -->
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Logo + tiêu đề slogan -->
+            <a href="../../home_page/home_page.html" class="sidebar-brand">
+                <span class="brand-logo"></span>
+                <div class="brand-text">
+                    <strong>9.5 AI CLUB</strong>
+                    <small>Learn · Build · Grow</small>
+                </div>
+            </a>
+
+            <!-- Menu trang chủ -->
+            <nav class="sidebar-nav" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="../../home_page/home_page.html" class="nav-link">
+                            <span class="nav-icon home-icon"></span>
+                            <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../lectures/lectures.html" class="nav-link">
+                            <span class="nav-icon lectures-icon"></span>
+                            <span class="nav-label">Lectures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../practice/practice.html" class="nav-link">
+                            <span class="nav-icon practice-icon"></span>
+                            <span class="nav-label">Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../history.html" class="nav-link">
+                            <span class="nav-icon history-icon"></span>
+                            <span class="nav-label">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Nhóm phụ, tách khỏi nhóm chính bằng đường kẻ (CSS sẽ vẽ) -->
+            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Secondary Navigation">
+                <ul>
+                    <li>
+                        <a href="../favorites.html" class="nav-link">
+                            <span class="nav-icon favorites-icon"></span>
+                            <span class="nav-label">Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../lectures/resources.html" class="nav-link is-active" aria-current="page">
+                            <span class="nav-icon resources-icon"></span>
+                            <span class="nav-label">Resources</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../community/community-feed.html" class="nav-link">
+                            <span class="nav-icon community-icon"></span>
+                            <span class="nav-label">Community</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../settings/settings.html" class="nav-link">
+                            <span class="nav-icon settings-icon"></span>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Slogan ở đáy sidebar -->
+            <a href="#" class="sidebar-promo">
+                <p>Knowledge for a better tomorrow</p>
+                <span class="promo-arrow" aria-hidden="true"></span>
+            </a>
+
+        </aside>
+
+
+        <main class="main">
+            <!-- Topbar tái sử dụng từ index.html để các trang nhìn và chạy giống nhau -->
+            <header class="topbar">
+                <form class="search" role="search" action="#" method="get">
+                    <span class="search-icon" aria-hidden="true"></span>
+
+                    <label for="site-search" class="visually-hidden">Search lectures, topics, documents</label>
+                    <input type="search" id="site-search" name="q" class="search-input"
+                        placeholder="Search lectures, topics, or resources..." autocomplete="off" />
+
+                    <span class="search-shortcut" aria-hidden="true">
+                        <kbd>Ctrl</kbd>
+                        <kbd>K</kbd>
+                    </span>
+                </form>
+
+                <!-- Chuông thông báo và cái menu người dùng-->
+                <div class="topbar-actions">
+
+                    <!-- Chuông thông báo -->
+                    <div class="notification">
+                        <button type="button" class="icon-button" aria-label="Notifications (có 2 thông báo mới)"
+                            aria-expanded="false" aria-controls="notification-panel">
+                            <span class="bell-icon" aria-hidden="true"></span>
+                            <span class="notification-dot" aria-hidden="true"></span>
+                        </button>
+
+                        <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                            <header class="notification-header">
+                                <p class="notification-title">Notifications</p>
+                                <button type="button" class="notification-clear">Mark as read</button>
+                            </header>
+
+                            <ul class="notification-list">
+                                <li class="notification-item is-unread">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Tài liệu mới: Machine Learning – Cheat Sheet</p>
+                                        <time class="notification-time" datetime="2025-09-14T09:00">2 hours ago</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item is-unread">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Python for Data Science đã sẵn sàng tải xuống</p>
+                                        <time class="notification-time" datetime="2025-09-13T15:30">Yesterday</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">4 tài liệu mới được thêm vào thư viện</p>
+                                        <time class="notification-time" datetime="2025-09-12T10:00">2 days ago</time>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="notification-footer">View all notifications</a>
+                        </section>
+                    </div>
+
+                    <!-- Menu profile: giữ nguyên cấu trúc từ index.html -->
+                    <div class="user-menu">
+                        <button type="button" class="user-menu-toggle" aria-haspopup="menu" aria-expanded="false"
+                            aria-controls="user-menu-list">
+                            <span class="user-avatar" aria-hidden="true">A</span>
+                            <span class="user-name">Alex</span>
+                            <span class="user-chevron" aria-hidden="true"></span>
+                            <span class="role-badge">Member</span>
+                        </button>
+
+                        <ul class="user-menu-list" id="user-menu-list" role="menu" hidden>
+                            <li role="none">
+                                <a href="/pages/settings/settings.html#profile" role="menuitem"><span class="menu-icon profile-icon"
+                                        aria-hidden="true"></span>Hồ sơ cá nhân</a>
+                            </li>
+                            <li role="none">
+                                <a href="/pages/settings/settings.html#security" role="menuitem"><span class="menu-icon password-icon"
+                                        aria-hidden="true"></span>Change Password</a>
+                            </li>
+                            <li role="none">
+                                <a href="/pages/auth/login.html" id="logout-button" role="menuitem"><span class="menu-icon logout-icon"
+                                        aria-hidden="true"></span>Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Heading + nút upload là điểm bắt đầu của nội dung -->
+            <section class="res-heading">
+                <div>
+                    <p class="res-eyebrow">LEARNING LIBRARY</p>
+                    <h1>Resources</h1>
+                    <p>Useful documents, materials, and tools to support your learning journey.</p>
+                </div>
+                <button class="res-primary-button" id="open-upload-button" type="button">
+                    <svg aria-hidden="true">
+                        <use href="#icon-upload"></use>
+                    </svg> Upload resource
+                </button>
+            </section>
+
+            <!-- Thanh loại tài liệu và sắp xếp -->
+            <section class="res-toolbar" aria-label="Bộ lọc nhanh">
+                <div class="res-tabs" role="tablist" aria-label="Loại tài liệu">
+                    <button class="is-active" type="button" role="tab" data-category="all">All</button>
+                    <button type="button" role="tab" data-category="document">Documents</button>
+                    <button type="button" role="tab" data-category="code">Code</button>
+                    <button type="button" role="tab" data-category="template">Templates</button>
+                    <button type="button" role="tab" data-category="dataset">Datasets</button>
+                </div>
+                <label class="res-sort">Sort by:
+                    <select id="sort-select" aria-label="Sắp xếp tài liệu">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="name">Name A–Z</option>
+                        <option value="size">File size</option>
+                    </select>
+                </label>
+            </section>
+
+            <section class="res-content-grid">
+                <div class="res-library-card">
+                    <div class="res-list-tools">
+                        <label class="res-resource-search" for="resource-search">
+                            <svg aria-hidden="true">
+                                <use href="#icon-search"></use>
+                            </svg>
+                            <input id="resource-search" type="search" placeholder="Search resources..."
+                                autocomplete="off" />
+                        </label>
+                        <button class="res-filter-button" id="filter-button" type="button" aria-expanded="false">
+                            <svg aria-hidden="true">
+                                <use href="#icon-filter"></use>
+                            </svg> Filters <span id="filter-count" hidden>0</span>
+                        </button>
+                    </div>
+
+                    <!-- Bộ lọc mở rộng: JS bật/tắt bằng thuộc tính hidden -->
+                    <form class="res-filter-panel" id="filter-panel" hidden>
+                        <fieldset id="filter-subject-fieldset">
+                            <legend>Subjects</legend>
+                            <label><input type="checkbox" name="subject" value="Machine Learning" /> Machine
+                                Learning</label>
+                            <label><input type="checkbox" name="subject" value="Mathematics" /> Mathematics</label>
+                            <label><input type="checkbox" name="subject" value="Programming" /> Programming</label>
+                            <label><input type="checkbox" name="subject" value="Data Science" /> Data Science</label>
+                        </fieldset>
+                        <label>File type
+                            <select name="extension" id="filter-extension-select">
+                                <option value="all">All file types</option>
+                                <option value="PDF">PDF</option>
+                                <option value="ZIP">ZIP</option>
+                                <option value="CSV">CSV</option>
+                                <option value="DOCX">DOCX</option>
+                            </select>
+                        </label>
+                        <div class="res-filter-actions">
+                            <button class="res-text-button" id="clear-filter-button" type="button">Clear</button>
+                            <button class="res-primary-button" type="submit">Apply filters</button>
+                        </div>
+                    </form>
+
+                    <div class="res-result-caption"><span id="result-count">0 resources</span><span
+                            id="search-caption"></span>
+                    </div>
+                    <div class="res-resource-list" id="resource-list" aria-live="polite"></div>
+
+                    <!-- Trạng thái đang tải (Loading) -->
+                    <div class="res-loading-state" id="loading-state" hidden>
+                        <div class="res-spinner"></div>
+                        <p>Đang tải tài liệu học tập...</p>
+                    </div>
+
+                    <!-- Trạng thái báo lỗi kết nối máy chủ (Error State) -->
+                    <div class="res-error-state" id="error-state" hidden>
+                        <div class="res-error-icon">⚠️</div>
+                        <h2>Không thể tải danh sách tài liệu</h2>
+                        <p id="error-message">Đã có lỗi xảy ra khi kết nối máy chủ.</p>
+                        <button class="res-primary-button" id="retry-button" type="button">Thử lại</button>
+                    </div>
+
+                    <!-- Chỉ hiện khi tìm kiếm không có kết quả hoặc thư viện trống (Empty State) -->
+                    <div class="res-empty-state" id="empty-state" hidden>
+                        <div class="res-empty-icon"><svg aria-hidden="true">
+                                <use href="#icon-folder"></use>
+                            </svg></div>
+                        <h2 id="empty-title">No resources found</h2>
+                        <p id="empty-desc">Try another keyword or clear your filters.</p>
+                        <button class="res-primary-button" id="empty-action-button" type="button">Browse all resources</button>
+                    </div>
+
+                    <!-- Phân trang: Nút Load more -->
+                    <div class="res-pagination-container" id="pagination-container" hidden>
+                        <button class="res-load-more-btn" id="load-more-button" type="button">
+                            <span>Xem thêm tài liệu</span>
+                            <span>↓</span>
+                        </button>
+                    </div>
+                </div>
+
+                <aside class="res-side-column">
+                    <article class="res-promo-card">
+                        <div>
+                            <p>Better resources</p>
+                            <h2>Brighter future</h2><span>Access quality materials<br />to boost your skills.</span>
+                        </div>
+                        <div class="res-promo-art"><svg aria-hidden="true">
+                                <use href="#icon-books"></use>
+                            </svg></div>
+                        <button class="res-primary-button" id="explore-button" type="button">Explore now
+                            <span>→</span></button>
+                    </article>
+
+                    <article class="res-stats-card">
+                        <h2>Top categories</h2>
+                        <ul id="category-stats"></ul>
+                    </article>
+
+                    <article class="res-recent-card">
+                        <div class="res-card-title"><span><svg aria-hidden="true">
+                                    <use href="#icon-clock"></use>
+                                </svg></span>
+                            <div>
+                                <h2>Recent uploads</h2>
+                                <p>Fresh from the community</p>
+                            </div>
+                        </div>
+                        <div id="recent-list"></div>
+                    </article>
+                </aside>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal xem chi tiết tài liệu -->
+    <dialog class="res-dialog res-detail-dialog" id="detail-dialog">
+        <div class="res-dialog-shell">
+            <button class="res-dialog-close" data-close-dialog="detail-dialog" type="button"
+                aria-label="Đóng">×</button>
+            <div class="res-detail-heading">
+                <div class="res-file-icon" id="detail-icon">PDF</div>
+                <div>
+                    <p class="res-eyebrow" id="detail-type">DOCUMENT</p>
+                    <h2 id="detail-title">Resource title</h2>
+                    <p id="detail-meta"></p>
+                </div>
+                <div class="res-detail-actions-top" style="display: flex; align-items: center; gap: 8px;">
+                    <button class="res-icon-action-btn" id="detail-favorite-button" type="button" aria-label="Yêu thích tài liệu" title="Thêm vào yêu thích">
+                        <svg class="star-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </button>
+                    <button class="res-secondary-button" id="detail-edit-button" type="button" style="padding: 8px 12px; font-size: 13px; font-weight: 600;" hidden>
+                        ✏️ Sửa
+                    </button>
+                    <button class="res-secondary-button" id="detail-delete-button" type="button" style="padding: 8px 12px; font-size: 13px; font-weight: 600; color: #dc2626; border-color: #fca5a5;" hidden>
+                        🗑️ Xóa
+                    </button>
+                    <button class="res-primary-button" id="detail-download-button" type="button">
+                        <svg aria-hidden="true"><use href="#icon-download"></use></svg> Download
+                    </button>
+                </div>
+            </div>
+            <div class="res-detail-tabs" role="tablist">
+                <button class="is-active" type="button" data-detail-tab="overview">Overview</button>
+                <button type="button" data-detail-tab="preview">Preview</button>
+                <button type="button" data-detail-tab="related">Related</button>
+            </div>
+            <div class="res-detail-body">
+                <section id="detail-content"></section>
+                <aside>
+                    <h3>Related resources</h3>
+                    <div id="related-list"></div>
+                </aside>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Modal sửa thông tin tài liệu -->
+    <dialog class="res-dialog" id="edit-dialog">
+        <form class="res-dialog-shell" id="edit-form">
+            <button class="res-dialog-close" data-close-dialog="edit-dialog" type="button" aria-label="Đóng">×</button>
+            <div class="res-upload-title">
+                <p class="res-eyebrow">EDIT RESOURCE</p>
+                <h2>Chỉnh sửa tài liệu</h2>
+                <p>Cập nhật tiêu đề, môn học, phân loại và phần mô tả.</p>
+            </div>
+            <div style="background: rgba(241, 245, 249, 0.8); border: 1px solid var(--res-line); border-radius: 10px; padding: 10px 14px; margin-bottom: 16px; font-size: 12px; color: #475569;">
+                <span>Tập tin đính kèm: </span><strong id="edit-original-filename" style="color: #0f172a;"></strong>
+                <small style="display: block; color: #94a3b8; margin-top: 2px;">(Không thể thay đổi file vật lý sau khi tải lên để bảo vệ tính toàn vẹn dữ liệu)</small>
+            </div>
+            <div class="res-form-grid">
+                <div class="res-form-field">
+                    <label for="edit-title">Title</label>
+                    <input id="edit-title" name="title" type="text" required />
+                </div>
+                <div class="res-form-field">
+                    <label for="edit-type">Type</label>
+                    <select id="edit-type" name="type" style="width: 100%; height: 44px; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--res-line); background: #fff; font: inherit;" required>
+                        <option value="document">Document (DOC)</option>
+                        <option value="code">Code &amp; Notebooks (CODE)</option>
+                        <option value="template">Template &amp; Slides (PPT)</option>
+                        <option value="dataset">Dataset (DATA)</option>
+                    </select>
+                </div>
+                <div class="res-form-field">
+                    <label for="edit-subject">Subject</label>
+                    <input id="edit-subject" name="subject" type="text" placeholder="e.g. CSD203, Mathematics..." required />
+                </div>
+                <div class="res-form-field res-field-full">
+                    <label for="edit-description">Description</label>
+                    <textarea id="edit-description" name="description" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="res-dialog-actions">
+                <button class="res-secondary-button" data-close-dialog="edit-dialog" type="button">Cancel</button>
+                <button class="res-primary-button" id="edit-submit-button" type="submit">Lưu thay đổi</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Modal xác nhận xóa tài liệu -->
+    <dialog class="res-dialog" id="delete-dialog">
+        <div class="res-dialog-shell" style="max-width: 440px; text-align: center;">
+            <button class="res-dialog-close" data-close-dialog="delete-dialog" type="button" aria-label="Đóng">×</button>
+            <div style="font-size: 40px; margin-bottom: 8px;">🗑️</div>
+            <h2 style="font-size: 18px; color: #0f172a; margin: 0 0 8px;">Xác nhận xóa tài liệu</h2>
+            <p style="font-size: 13px; color: #64748b; margin: 0 0 18px; line-height: 1.5;">Bạn có chắc chắn muốn xóa tài liệu <strong id="delete-resource-title" style="color: #0f172a;"></strong> không? Hành động này sẽ xóa vĩnh viễn dữ liệu trên máy chủ.</p>
+            <div class="res-dialog-actions" style="justify-content: center; gap: 12px;">
+                <button class="res-secondary-button" data-close-dialog="delete-dialog" type="button">Hủy</button>
+                <button class="res-primary-button" id="confirm-delete-button" type="button" style="background: #dc2626; border-color: #dc2626;">Xóa vĩnh viễn</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Modal upload: Gửi file thật lên máy chủ -->
+    <dialog class="res-dialog res-upload-dialog" id="upload-dialog">
+        <form class="res-dialog-shell" id="upload-form">
+            <button class="res-dialog-close" data-close-dialog="upload-dialog" type="button"
+                aria-label="Đóng">×</button>
+            <div class="res-upload-title">
+                <p class="res-eyebrow">SHARE KNOWLEDGE</p>
+                <h2>Upload a resource</h2>
+                <p>Add useful material to your learning library.</p>
+            </div>
+
+            <label class="res-drop-zone" id="drop-zone" for="resource-file">
+                <svg aria-hidden="true">
+                    <use href="#icon-upload"></use>
+                </svg>
+                <strong>Drag and drop your file here</strong><span>or</span><b>Choose file</b>
+                <small>PDF, DOCX, ZIP, PPTX, XLSX, CSV · Max 20 MB</small>
+                <input id="resource-file" name="file" type="file"
+                    accept=".pdf,.doc,.docx,.zip,.ppt,.pptx,.xls,.xlsx,.csv" required />
+            </label>
+            <p class="res-selected-file" id="selected-file" hidden></p>
+
+            <div class="res-form-grid">
+                <div class="res-form-field">
+                    <label for="upload-title">Title</label>
+                    <input id="upload-title" name="title" type="text" placeholder="Resource title..." required />
+                </div>
+
+                <div class="res-form-field">
+                    <label>Type</label>
+                    <div class="res-custom-select" id="custom-type-select">
+                        <button type="button" class="res-select-trigger" id="custom-type-trigger" aria-haspopup="listbox" aria-expanded="false">
+                            <span class="res-select-selected">
+                                <span class="res-type-tag" data-kind="document">DOC</span>
+                                <span class="res-select-text">Document</span>
+                            </span>
+                            <svg class="res-select-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <ul class="res-custom-dropdown-menu" id="custom-type-menu" role="listbox" hidden>
+                            <li role="option" data-value="document" class="is-selected">
+                                <div class="res-opt-left">
+                                    <span class="res-type-tag" data-kind="document">DOC</span>
+                                    <div class="res-opt-text">
+                                        <strong>Document</strong>
+                                        <small>PDF, DOCX, TXT, Slides</small>
+                                    </div>
+                                </div>
+                                <svg class="res-opt-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </li>
+                            <li role="option" data-value="code">
+                                <div class="res-opt-left">
+                                    <span class="res-type-tag" data-kind="code">CODE</span>
+                                    <div class="res-opt-text">
+                                        <strong>Code &amp; Notebooks</strong>
+                                        <small>Python, Jupyter, C++, ZIP</small>
+                                    </div>
+                                </div>
+                                <svg class="res-opt-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </li>
+                            <li role="option" data-value="template">
+                                <div class="res-opt-left">
+                                    <span class="res-type-tag" data-kind="template">PPT</span>
+                                    <div class="res-opt-text">
+                                        <strong>Template &amp; Slides</strong>
+                                        <small>PowerPoint, Presentations</small>
+                                    </div>
+                                </div>
+                                <svg class="res-opt-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </li>
+                            <li role="option" data-value="dataset">
+                                <div class="res-opt-left">
+                                    <span class="res-type-tag" data-kind="dataset">DATA</span>
+                                    <div class="res-opt-text">
+                                        <strong>Dataset</strong>
+                                        <small>CSV, Excel, JSON tables</small>
+                                    </div>
+                                </div>
+                                <svg class="res-opt-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </li>
+                        </ul>
+                        <input type="hidden" name="type" id="real-type-input" value="document" required />
+                    </div>
+                </div>
+
+                <div class="res-form-field">
+                    <label for="resource-subject">Subject</label>
+                    <div class="res-custom-combobox" id="custom-subject-combobox">
+                        <div class="res-input-box">
+                            <input name="subject" id="resource-subject" type="text"
+                                placeholder="e.g. CSD203, Mathematics, Machine Learning..." autocomplete="off" required />
+                            <button type="button" class="res-combobox-arrow-btn" id="subject-dropdown-toggle"
+                                aria-label="Mở danh sách gợi ý môn học" tabindex="-1">
+                                <svg class="res-select-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="res-custom-dropdown-menu res-combobox-dropdown" id="subject-dropdown-menu" hidden>
+                            <div class="res-dropdown-header">
+                                <span>GỢI Ý MÔN HỌC</span>
+                                <small>Nhấp để chọn hoặc tự nhập</small>
+                            </div>
+                            <ul class="res-subject-options-list" id="subject-options-list" role="listbox">
+                                <!-- Populated dynamically by JS -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="res-form-field res-field-full">
+                    <label for="upload-description">Description</label>
+                    <textarea id="upload-description" name="description" rows="3"
+                        placeholder="Provide a short description..."></textarea>
+                </div>
+            </div>
+            <div id="upload-progress-container" style="margin: 12px 0 4px; text-align: left;" hidden>
+                <div style="height: 5px; background: #e2e8f0; border-radius: 4px; overflow: hidden;">
+                    <div id="upload-progress-bar" style="height: 100%; width: 0%; background: var(--res-blue); transition: width 0.25s ease;"></div>
+                </div>
+                <p id="upload-progress-text" style="font-size: 11px; color: var(--res-blue); font-weight: 600; margin: 4px 0 0;">Đang xử lý tải lên...</p>
+            </div>
+            <div class="res-dialog-actions">
+                <button class="res-secondary-button" data-close-dialog="upload-dialog" type="button">Cancel</button>
+                <button class="res-primary-button" id="upload-submit-button" type="submit">Upload</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Modal báo tải xuống, mô phỏng đúng trạng thái trong design -->
+    <dialog class="res-dialog res-success-dialog" id="success-dialog">
+        <div class="res-dialog-shell">
+            <button class="res-dialog-close" data-close-dialog="success-dialog" type="button"
+                aria-label="Đóng">×</button>
+            <div class="res-success-mark">✓</div>
+            <h2>Download started!</h2>
+            <p>Your file will be downloaded shortly.</p>
+            <button class="res-primary-button" data-close-dialog="success-dialog" type="button">Done</button>
+        </div>
+    </dialog>
+
+    <div class="res-toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Sprite icon gọn nhẹ: không cần cài thêm thư viện icon -->
+    <svg class="res-svg-sprite" aria-hidden="true">
+        <symbol id="icon-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4-4"></path>
+        </symbol>
+        <symbol id="icon-bell" viewBox="0 0 24 24">
+            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+            <path d="M10 21h4"></path>
+        </symbol>
+        <symbol id="icon-upload" viewBox="0 0 24 24">
+            <path d="M12 16V4m0 0L7 9m5-5 5 5"></path>
+            <path d="M5 15v4h14v-4"></path>
+        </symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24">
+            <path d="M12 4v12m0 0 5-5m-5 5-5-5"></path>
+            <path d="M5 20h14"></path>
+        </symbol>
+        <symbol id="icon-filter" viewBox="0 0 24 24">
+            <path d="M4 6h16M7 12h10m-7 6h4"></path>
+        </symbol>
+        <symbol id="icon-folder" viewBox="0 0 24 24">
+            <path d="M3 7h7l2 2h9v10H3z"></path>
+        </symbol>
+        <symbol id="icon-books" viewBox="0 0 24 24">
+            <path d="M4 5h7v14H4zM13 5h7v14h-7z"></path>
+            <path d="M7 8h2m7 0h2M7 11h2m7 0h2"></path>
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 7v5l3 2"></path>
+        </symbol>
+    </svg>
+    <script src="/js/resources.js"></script>
+    <script src="../../js/syncProfile.js"></script>
+</body>
+
+</html>

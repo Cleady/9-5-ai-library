@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Trang gửi email xác nhận đặt lại mật khẩu" />
+    <title>Check your email - 9.5 AI CLUB</title>
+    <link rel="stylesheet" href="/css/pass_recovery.css" />
+    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png" />
+</head>
+
+<body>
+    <main class="main">
+
+
+        <!-- KHỐI THẺ TRUNG TÂM: Displaying thông báo gửi email và nút hành động -->
+        <section class="card auth-card" aria-labelledby="email-title">
+            <!-- ICON: Hình tròn với icon envelope và paper plane, dùng inline SVG -->
+            <div class="icon-container" role="img" aria-label="Icon email">
+                <span class="email_sent_logo"></span>
+            </div>
+
+            <!-- TIÊU ĐỀ: Câu hỏi chính, dùng h2 để đúng ngữ nghĩa -->
+            <h2 class="auth-title" id="email-title">Check your email</h2>
+
+            <!-- NỘI DUNG: Mô tả hành động đã thực hiện -->
+            <p class="auth-subtitle">We've sent a password reset link to</p>
+
+            <!-- EMAIL: Địa chỉ email động, giữ id/class cho JS nếu cần, không đổi tên -->
+            <p class="email-address" id="email-display">alex@gmail.com</p>
+
+            <!-- NÚT CHÍNH: Quay lại trang đăng nhập, không có arrow, dùng button cho action -->
+            <a href="login.html" class="btn-primary" id="back-btn" style="text-decoration: none;">
+                Back to login
+            </a>
+
+            <!-- KHỐI GỬI LẠI: Mô tả và link gửi lại email -->
+            <p class="resend-hint">Didn't receive the email?</p>
+
+            <!-- Resend block với id dành cho JS đếm ngược, không đổi tên -->
+            <p class="resend-block">
+                <span id="resend-timer">60</span>s
+                <a href="#" class="resend-link" id="resend-btn" aria-disabled="true">Resend</a>
+            </p>
+        </section>
+    </main>
+    <script src="../../js/syncProfile.js"></script>
+</body>
+
+</html>

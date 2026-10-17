@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn, practice, and grow with the 9.5 AI CLUB community.">
+    <meta name="theme-color" content="#f5f8ff">
+    <title>9.5 AI Club - Learn, Build, Grow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icon/cool_book.png">
+    <link rel="stylesheet" href="css/home_page.css">
+    <link rel="stylesheet" href="css/auth-guard.css">
+</head>
+
+<body class="home-page">
+    <!-- Header nổi phía trên hero, dùng menu thu gọn trên màn hình nhỏ. -->
+    <header class="home-page__header" data-home-header>
+        <div class="home-page__header-inner">
+            <a class="home-page__brand" href="index.html" aria-label="9.5 AI CLUB — Home">
+                <img class="home-page__brand-icon" src="assets/icon/cool_book.png" alt="">
+                <span class="home-page__brand-copy"><strong>9.5 AI CLUB</strong><small>Learn · Build ·
+                        Grow</small></span>
+            </a>
+
+            <nav class="home-page__nav" id="home-navigation" aria-label="Main navigation" data-home-nav>
+                <a class="home-page__nav-link home-page__nav-link--active" href="index.html" aria-current="page">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" />
+                    </svg><span>Home</span>
+                </a>
+                <a class="home-page__nav-link" href="pages/lectures/lectures.html">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="16" rx="2" />
+                        <path d="m10 9 5 3-5 3z" />
+                    </svg><span>Lectures</span>
+                </a>
+                <a class="home-page__nav-link" href="pages/practice/practice.html">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" />
+                    </svg><span>Practice</span>
+                </a>
+                <a class="home-page__nav-link" href="pages/history.html">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M3 12a9 9 0 1 0 2.6-6.4L3 8" />
+                        <path d="M3 3v5h5m4-1v5l3 2" />
+                    </svg><span>History</span>
+                </a>
+            </nav>
+
+            <form class="home-page__search" role="search" data-home-search>
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="7" />
+                    <path d="m16 16 4 4" />
+                </svg>
+                <label class="home-page__visually-hidden" for="home-search">Search lectures, topics, or
+                    resources</label>
+                <input id="home-search" name="q" type="search" placeholder="Search lectures, topics, or resources..."
+                    autocomplete="off">
+                <span class="home-page__keyboard-hint" aria-hidden="true"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+            </form>
+
+            <div class="home-page__actions">
+                <div class="home-page__notification-wrap">
+                    <button class="home-page__icon-button" type="button" data-home-notifications
+                        aria-label="Notifications" aria-expanded="false" aria-controls="home-notification-panel">
+                        <span class="home-page__bell-icon" aria-hidden="true"></span>
+                        <span class="home-page__notification-dot" aria-hidden="true"></span>
+                    </button>
+                    <section class="home-page__notification-panel" id="home-notification-panel"
+                        aria-label="Notifications" hidden>
+                        <header class="home-page__notification-header">
+                            <strong>Notifications</strong>
+                            <span>2 new</span>
+                        </header>
+                        <ul class="home-page__notification-list">
+                            <li class="home-page__notification-item is-unread">
+                                <span class="home-page__notification-mark" aria-hidden="true"></span>
+                                <div>
+                                    <p>New lecture: Machine Learning Basics, Lecture 4</p><time>2 hours ago</time>
+                                </div>
+                            </li>
+                            <li class="home-page__notification-item is-unread">
+                                <span class="home-page__notification-mark" aria-hidden="true"></span>
+                                <div>
+                                    <p>Your practice feedback is ready to review.</p><time>Yesterday</time>
+                                </div>
+                            </li>
+                            <li class="home-page__notification-item">
+                                <span class="home-page__notification-mark" aria-hidden="true"></span>
+                                <div>
+                                    <p>Welcome to the 9.5 AI CLUB community!</p><time>Sep 20, 2025</time>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="home-page__guest-wrap">
+                    <button class="home-page__guest-button" type="button" data-home-guest aria-expanded="false"
+                        aria-controls="guest-menu">
+                        <span class="home-page__guest-avatar" aria-hidden="true"><svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="8" r="3.5" />
+                                <path d="M5 20a7 7 0 0 1 14 0" />
+                            </svg></span>
+                        <span>Guest</span><svg class="home-page__chevron" aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="m7 10 5 5 5-5" />
+                        </svg>
+                    </button>
+                    <div class="home-page__guest-menu" id="guest-menu" data-home-guest-menu hidden>
+                        <a href="pages/auth/login.html">Log in</a>
+                        <a href="pages/auth/signup.html">Create account</a>
+
+                    </div>
+                </div>
+                <button class="home-page__menu-button" type="button" data-home-menu aria-expanded="false"
+                    aria-controls="home-navigation" aria-label="Open navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero: nền dùng ảnh sẵn có trong assets/theme. -->
+        <section class="home-page__hero" aria-labelledby="hero-title">
+            <div class="home-page__hero-wash" aria-hidden="true"></div>
+            <div class="home-page__hero-content">
+                <p class="home-page__hero-badge"><svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="m12 3 2.2 5.2L20 10l-5.8 1.8L12 17l-2.2-5.2L4 10l5.8-1.8z" />
+                        <path d="m19 16 .8 1.8L22 18.5l-2.2.7L19 21l-.8-1.8-2.2-.7 2.2-.7z" />
+                    </svg>Your AI Learning Hub</p>
+                <h1 class="home-page__hero-title" id="hero-title"><span>9.5</span> AI CLUB</h1>
+                <p class="home-page__hero-description">Learn from curated resources, practice with real problems,<br
+                        class="home-page__desktop-break"> and grow together with your AI community.</p>
+                <a class="home-page__button home-page__button--primary" href="home_page/home_page.html">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M5 12h14m-6-6 6 6-6 6" />
+                    </svg>Get Started
+                </a>
+            </div>
+
+            <a class="home-page__float-card home-page__float-card--learn" href="pages/lectures/lectures.html"
+                data-home-float>
+                <span class="home-page__float-icon home-page__float-icon--blue"><svg aria-hidden="true"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12 5c-2-2-5-2-8-1v14c3-1 6-1 8 1m0-14c2-2 5-2 8-1v14c-3-1-6-1-8 1zm0 0v14M6 7h3m-3 3h3m6-3h3m-3 3h3" />
+                    </svg></span>
+                <span class="home-page__float-copy"><strong>Learn</strong><small>High-quality lectures<br>and
+                        materials</small></span><span class="home-page__float-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="home-page__float-card home-page__float-card--practice" href="pages/practice/practice.html"
+                data-home-float>
+                <span class="home-page__float-icon home-page__float-icon--violet"><svg aria-hidden="true"
+                        viewBox="0 0 24 24">
+                        <path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 5l-4 14" />
+                    </svg></span>
+                <span class="home-page__float-copy"><strong>Practice</strong><small>Hands-on exercises<br>and
+                        projects</small></span><span class="home-page__float-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="home-page__float-card home-page__float-card--community"
+                href="pages/community/community-feed.html" data-home-float>
+                <span class="home-page__float-icon home-page__float-icon--teal"><svg aria-hidden="true"
+                        viewBox="0 0 24 24">
+                        <circle cx="9" cy="8" r="3" />
+                        <circle cx="17" cy="9" r="2.5" />
+                        <path d="M3 20a6 6 0 0 1 12 0m1-5a5 5 0 0 1 5 5" />
+                    </svg></span>
+                <span class="home-page__float-copy"><strong>Community</strong><small>Study, share, and<br>grow
+                        together</small></span><span class="home-page__float-arrow" aria-hidden="true">→</span>
+            </a>
+        </section>
+
+        <!-- About: giới thiệu nền tảng và bốn giá trị chính. -->
+        <section class="home-page__about" aria-labelledby="about-title">
+            <div class="home-page__about-inner">
+                <div class="home-page__about-copy home-page__reveal">
+                    <p class="home-page__eyebrow"><span></span>About 9.5 AI CLUB</p>
+                    <h2 id="about-title">More than just a library,<br><span>it’s your AI learning journey.</span></h2>
+                    <p class="home-page__about-description">9.5 AI CLUB is a members-only platform designed for
+                        university
+                        students and AI enthusiasts. Here you can find structured lectures, practical exercises, useful
+                        resources
+                        and connect with like-minded friends — all in one place.</p>
+                </div>
+
+                <div class="home-page__features-wrap home-page__reveal">
+                    <div class="home-page__features">
+                        <article class="home-page__feature">
+                            <span class="home-page__feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 5c-2-2-5-2-8-1v14c3-1 6-1 8 1m0-14c2-2 5-2 8-1v14c-3-1-6-1-8 1zm0 0v14" />
+                                </svg></span>
+                            <h3>Quality Lectures</h3>
+                            <p>Well-structured materials from basic to advanced.</p>
+                        </article>
+                        <article class="home-page__feature">
+                            <span class="home-page__feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 5l-4 14" />
+                                </svg></span>
+                            <h3>Hands-on Practice</h3>
+                            <p>Real-world projects and coding exercises.</p>
+                        </article>
+                        <article class="home-page__feature">
+                            <span class="home-page__feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 3a3 3 0 0 0-3 3v1a3 3 0 0 0 0 6v1a3 3 0 0 0 6 0v-1a3 3 0 0 0 0-6V6a3 3 0 0 0-3-3zM6 9H4m16 0h-2M6 15H4m16 0h-2M12 1v2m0 18v2" />
+                                </svg></span>
+                            <h3>AI Tools &amp; Resources</h3>
+                            <p>Curated tools, datasets and learning paths.</p>
+                        </article>
+                        <article class="home-page__feature">
+                            <span class="home-page__feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <circle cx="17" cy="9" r="2.5" />
+                                    <path d="M3 20a6 6 0 0 1 12 0m1-5a5 5 0 0 1 5 5" />
+                                </svg></span>
+                            <h3>Supportive Community</h3>
+                            <p>Share knowledge, get help, grow together.</p>
+                        </article>
+                    </div>
+                    <p class="home-page__motto"><svg aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="m12 3 2 5 5 2-5 2-2 5-2-5-5-2 5-2z" />
+                        </svg>For students <span>·</span> For builders <span>·</span> For a better tomorrow</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events: các thẻ minh họa hoạt động học tập sắp và vừa diễn ra. -->
+        <section class="home-page__events" id="events" aria-labelledby="events-title">
+            <div class="home-page__section-heading home-page__reveal">
+                <h2 class="home-page__section-title" id="events-title"><span></span>Recent Events</h2>
+                <a class="home-page__text-link" href="pages/lectures/lectures.html">View all events <span
+                        aria-hidden="true">→</span></a>
+            </div>
+            <div class="home-page__event-grid">
+                <article class="home-page__event-card home-page__reveal">
+                    <div class="home-page__event-art home-page__event-art--lecture"><svg aria-hidden="true"
+                            viewBox="0 0 48 48">
+                            <path
+                                d="M24 9c-5-4-11-4-17-2v29c6-2 12-2 17 2m0-29c5-4 11-4 17-2v29c-6-2-12-2-17 2zm0 0v29" />
+                        </svg></div>
+                    <div class="home-page__event-content"><span
+                            class="home-page__event-tag home-page__event-tag--blue">Lecture</span>
+                        <h3>Machine Learning Basics</h3>
+                        <p>From linear regression to neural networks – a complete beginner’s guide.</p>
+                        <div class="home-page__event-meta"><span><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <rect x="3" y="5" width="18" height="16" rx="2" />
+                                    <path d="M16 3v4M8 3v4M3 10h18" />
+                                </svg>Sep 14, 2025</span><span><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3 20a6 6 0 0 1 12 0m2-11a3 3 0 0 1 0 6m1 1a5 5 0 0 1 3 4" />
+                                </svg>120+ attending</span></div>
+                    </div>
+                </article>
+                <article class="home-page__event-card home-page__reveal">
+                    <div class="home-page__event-art home-page__event-art--workshop"><svg aria-hidden="true"
+                            viewBox="0 0 48 48">
+                            <path d="m16 15-9 9 9 9m16-18 9 9-9 9M28 10l-8 28" />
+                        </svg></div>
+                    <div class="home-page__event-content"><span
+                            class="home-page__event-tag home-page__event-tag--purple">Workshop</span>
+                        <h3>Build Your First AI App</h3>
+                        <p>Hands-on workshop: create a simple AI app with Python and OpenAI API.</p>
+                        <div class="home-page__event-meta"><span><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <rect x="3" y="5" width="18" height="16" rx="2" />
+                                    <path d="M16 3v4M8 3v4M3 10h18" />
+                                </svg>Sep 18, 2025</span><span><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3 20a6 6 0 0 1 12 0m2-11a3 3 0 0 1 0 6m1 1a5 5 0 0 1 3 4" />
+                                </svg>85+ attending</span></div>
+                    </div>
+                </article>
+                <article class="home-page__event-card home-page__reveal">
+                    <div class="home-page__event-art home-page__event-art--community"><svg aria-hidden="true"
+                            viewBox="0 0 48 48">
+                            <circle cx="18" cy="16" r="6" />
+                            <circle cx="33" cy="18" r="5" />
+                            <path d="M5 40a13 13 0 0 1 26 0m3-10a10 10 0 0 1 9 10" />
+                        </svg></div>
+                    <div class="home-page__event-content"><span
+                            class="home-page__event-tag home-page__event-tag--green">Community</span>
+                        <h3>Study &amp; Share</h3>
+                        <p>Weekly meetup for discussions, problem solving and resource sharing.</p>
+                        <div class="home-page__event-meta"><span><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <rect x="3" y="5" width="18" height="16" rx="2" />
+                                    <path d="M16 3v4M8 3v4M3 10h18" />
+                                </svg>Sep 20, 2025</span><span><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3 20a6 6 0 0 1 12 0m2-11a3 3 0 0 1 0 6m1 1a5 5 0 0 1 3 4" />
+                                </svg>60+ attending</span></div>
+                    </div>
+                </article>
+                <article class="home-page__event-card home-page__reveal">
+                    <div class="home-page__event-art home-page__event-art--career"><svg aria-hidden="true"
+                            viewBox="0 0 48 48">
+                            <rect x="17" y="6" width="14" height="25" rx="7" />
+                            <path d="M11 22a13 13 0 0 0 26 0M24 35v7m-9 0h18" />
+                        </svg></div>
+                    <div class="home-page__event-content"><span
+                            class="home-page__event-tag home-page__event-tag--pink">Event</span>
+                        <h3>AI Career Talk</h3>
+                        <p>Insights from real-world AI engineers and career tips for students.</p>
+                        <div class="home-page__event-meta"><span><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <rect x="3" y="5" width="18" height="16" rx="2" />
+                                    <path d="M16 3v4M8 3v4M3 10h18" />
+                                </svg>Sep 25, 2025</span><span><svg aria-hidden="true" viewBox="0 0 24 24">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3 20a6 6 0 0 1 12 0m2-11a3 3 0 0 1 0 6m1 1a5 5 0 0 1 3 4" />
+                                </svg>150+ attending</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: liên hệ và mạng xã hội của thư viện. -->
+    <footer class="home-page__footer">
+        <div class="home-page__footer-main">
+            <a class="home-page__footer-brand" href="index.html">
+                <img src="assets/icon/cool_book.png" alt=""><span><strong>9.5 AI CLUB</strong><small>Learn · Build ·
+                        Grow</small></span>
+            </a>
+            <address class="home-page__contact">
+                <strong>Contact us</strong>
+                <a href="mailto:9.5library@fpt.edu.vn"><svg aria-hidden="true" viewBox="0 0 24 24">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="m4 7 8 6 8-6" />
+                    </svg>9.5library@fpt.edu.vn</a>
+                <a href="https://9.5library.vn" target="_blank" rel="noreferrer"><svg aria-hidden="true"
+                        viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M3 12h18m-9-9a15 15 0 0 1 0 18m0-18a15 15 0 0 0 0 18" />
+                    </svg>https://9.5library.vn</a>
+                <span><svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                        <circle cx="12" cy="10" r="2.5" />
+                    </svg>Ho Chi Minh City, Vietnam</span>
+            </address>
+            <div class="home-page__socials">
+                <strong>Follow us</strong>
+                <div>
+                    <!-- TODO: thay các dấu # bằng liên kết mạng xã hội chính thức của CLB. -->
+                    <a href="#" aria-label="Discord"><svg aria-hidden="true" viewBox="0 0 24 24">
+                            <path
+                                d="M7 6a16 16 0 0 1 10 0l2 3a17 17 0 0 1 1 9 14 14 0 0 1-4 2l-1-2m-6 0-1 2a14 14 0 0 1-4-2 17 17 0 0 1 1-9z" />
+                            <path d="M9 13h.01M15 13h.01" />
+                        </svg></a>
+                    <a href="#" aria-label="GitHub"><svg aria-hidden="true" viewBox="0 0 24 24">
+                            <path
+                                d="M9 19c-4 1-4-2-6-2m12 4v-3.5a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6A4.7 4.7 0 0 0 18.5 6a4.3 4.3 0 0 0-.1-3S17.3 2.7 15 4a12 12 0 0 0-6 0C6.7 2.7 5.6 3 5.6 3A4.3 4.3 0 0 0 5.5 6a4.7 4.7 0 0 0-1.2 3.2c0 4.7 2.8 5.7 5.5 6A3 3 0 0 0 9 17.5V21" />
+                        </svg></a>
+                    <a href="#" aria-label="YouTube"><svg aria-hidden="true" viewBox="0 0 24 24">
+                            <rect x="3" y="5" width="18" height="14" rx="4" />
+                            <path d="m10 9 5 3-5 3z" />
+                        </svg></a>
+                    <a href="#" aria-label="X"><svg aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="M5 4h4l10 16h-4zM19 4 5 20" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-page__footer-bottom"><span>© 2025 9.5 AI CLUB. All rights reserved.</span><span>Better Learning
+                <i>·</i> Better You</span></div>
+    </footer>
+    <script src="js/home_page.js" defer></script>
+    <script src="js/auth-guard.js"></script>
+</body>
+
+</html>

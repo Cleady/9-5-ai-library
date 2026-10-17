@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="login page" />
+    <title>Login - 9.5 AI CLUB</title>
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png" />
+</head>
+
+<body>
+    <main class="main">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Logo + tiêu đề slogan -->
+            <a href="../../home_page/home_page.html" class="sidebar-brand">
+                <span class="brand-logo"></span>
+                <div class="brand-text">
+                    <strong>9.5 AI CLUB</strong>
+                    <small>Learn · Build · Grow</small>
+                </div>
+            </a>
+
+            <!-- Welcome back -->
+            <h2 class="welcome">Welcome back,<br>to <span class="highlight">9.5 AI CLUB!</span></h2>
+            <p class="slogan">Continue your learning journey and achieve your goals.</p>
+
+            <!-- advantage -->
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon access-icon"></span>
+                            <span class="nav-label">Acess quality learning resources</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon progress-icon"></span>
+                            <span class="nav-label">Track your progress</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon future-icon"></span>
+                            <span class="nav-label">Build a better future</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+
+
+
+
+        <!--login-->
+        <section class="card auth-card" aria-labelledby="login-title">
+            <h2 class="auth-title" id="login-title">Login</h2>
+            <p class="auth-subtitle">Enter your email and password to continue.</p>
+
+            <form class="auth-form" action="#" method="post" novalidate>
+
+                <!-- nhập Email -->
+                <div class="input-container">
+                    <span class="icon-left email-icon"></span>
+                    <div class="input-content">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="alex@example.com" required>
+                    </div>
+                </div>
+
+                <!-- nhập Password -->
+                <div class="input-container">
+                    <span class="icon-left password-icon"></span>
+                    <div class="input-content">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••••••" required>
+                    </div>
+                    <button type="button" class="btn-toggle-password"></button>
+
+                    <!-- nút ẩn/hiện mật khẩu -->
+                    <button type="button" class="btn-toggle-password" id="togglePassword">
+                        <!-- SVG Mắt mở mặc định -->
+                        <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Nhóm chức năng phụ -->
+                <div class="form-actions">
+                    <div class="remember-group">
+                        <input type="checkbox" id="remember" name="remember" checked>
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="forgot_pass.html" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <!-- Nút Log in -->
+                <button type="submit" class="btn-login">
+                    Log in
+                    <span class="icon-arrow">→</span>
+                </button>
+            </form>
+
+            <!-- Đường phân cách -->
+            <div class="divider">
+                <span>Or continue with</span>
+            </div>
+
+            <!-- Nút Social Login -->
+            <div class="social-login-group">
+                <button type="button" class="btn-social">
+                    <span class="icon-google"></span> Google
+                </button>
+                <button type="button" class="btn-social">
+                    <span class="icon-facebook"></span> Facebook
+                </button>
+            </div>
+
+            <p class="auth-note">
+                Don't have an account? <a href="signup.html" class="signup-link">Sign up</a>
+            </p>
+        </section>
+    </main>
+    <script src="/js/login.js"></script>
+    <script src="../../js/auth.js?v=2"></script>
+    <script src="../../js/syncProfile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 6,
+    "kind": "multiple-answer",
+    "likelyInconsistent": false,
+    "reason": "Câu hỏi chọn nhiều đáp án hợp lệ cho tên biến Python: A, C, D đều hợp lệ."
+  },
+  {
+    "id": 34,
+    "kind": "multiple-answer",
+    "likelyInconsistent": false,
+    "reason": "Câu hỏi chọn nhiều đáp án: A và B."
+  },
+  {
+    "id": 79,
+    "kind": "syntax-notation",
+    "likelyInconsistent": false,
+    "reason": "Câu hỏi về toán tử lũy thừa trong Python (toán tử **). Đã giải thích chi tiết."
+  },
+  {
+    "id": 91,
+    "kind": "multiple-answer",
+    "likelyInconsistent": false,
+    "reason": "Câu hỏi chọn nhiều đáp án: A và D."
+  },
+  {
+    "id": 114,
+    "kind": "multiple-answer",
+    "likelyInconsistent": false,
+    "reason": "Câu hỏi chọn nhiều đáp án: C và D."
+  },
+  {
+    "id": 115,
+    "kind": "syntax-notation",
+    "likelyInconsistent": false,
+    "reason": "Câu hỏi về biểu diễn số thực dạng khoa học (e-notation / float)."
+  },
+  {
+    "id": 192,
+    "kind": "multiple-answer",
+    "likelyInconsistent": false,
+    "reason": "Câu hỏi chọn nhiều đáp án: A và C."
+  }
+]

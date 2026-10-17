@@ -1,0 +1,152 @@
+[
+  {
+    "id": 28,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "The instruction has 14 bits total and a 6-bit operand specifier, leaving 8 opcode bits. That supports 2^8 = 256 one-operand opcodes (option A), while answers.txt marks E (64). The answer key remains E; verify the source key."
+  },
+  {
+    "id": 96,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "A word found in faster memory is a hit (option B); a miss means it is not found. The answer file marks A (miss)."
+  },
+  {
+    "id": 104,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "DOS INT 21h/AH=01h reads a character with echo and returns it in AL (option B), not AH (key D)."
+  },
+  {
+    "id": 149,
+    "kind": "needs-context",
+    "likelyInconsistent": false,
+    "reason": "Both immediate and register addressing can obtain an operand without an additional memory access beyond instruction fetch. The key marks B (immediate), but option C (register) also matches the stated advantage."
+  },
+  {
+    "id": 152,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "Branch targets are conventionally formed by PC-relative addressing (option B), whereas immediate mode ordinarily supplies a literal operand. The answer file marks D (immediate)."
+  },
+  {
+    "id": 205,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "The statement that a silicon wafer is divided into chips containing gates/memory cells and I/O connections appears factually true, while answers.txt marks B (False). Keep the source key unchanged and verify the source wording/key."
+  },
+  {
+    "id": 219,
+    "kind": "needs-context",
+    "likelyInconsistent": false,
+    "reason": "The source has placeholder text in all answer choices for this duplicated load-and-store question, so the keyed B cannot be matched to an actual option."
+  },
+  {
+    "id": 229,
+    "kind": "needs-context",
+    "likelyInconsistent": false,
+    "reason": "The source has placeholder text in all answer choices for this duplicated immediate-addressing question, so the keyed B cannot be matched to an actual option."
+  },
+  {
+    "id": 276,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "AB + AB′ simplifies to A, giving table outputs 1,1,0,0 in the stated row order. None of the listed options has that sequence; the key marks A."
+  },
+  {
+    "id": 321,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "The stated Hamming word does not yield answer A (0110) under the usual conventions: reading parity positions 1, 2, 4, and 8 from the right gives 1010, and recomputing even-parity checks also does not give 0110. The bit-order/parity convention is unstated, so verify the stem and key. The answer key remains A."
+  },
+  {
+    "id": 361,
+    "kind": "needs-context",
+    "likelyInconsistent": false,
+    "reason": "A direct-mapped cache tag width also depends on the cache block size (the address offset width). The question gives main-memory and cache capacities but no block size, so the marked 9-bit tag cannot be verified from the supplied text."
+  },
+  {
+    "id": 381,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "The interrupt arrives at the start of operand fetch. The current instruction must finish: 3 cycles to fetch the operand + 3 to add 1 + 3 to store = 9 cycles (option D), while answers.txt marks E (10). The answer key remains E; verify the source key."
+  },
+  {
+    "id": 413,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "The wording naturally completes as “Memory can exchange data directly with the processor ... it can also read/write an I/O module,” matching option E, while the key marks A (I/O module / Memory). The prompt is awkward and both resources do exchange data, so verify intended blanks/key."
+  },
+  {
+    "id": 418,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "64 in decimal is 1000000 in binary because 64 = 2^6. None of the listed choices is 1000000; the key marks A (100000), which equals 32. Keep the source key unchanged and verify the question/options."
+  },
+  {
+    "id": 434,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "Using standard even-parity Hamming encoding, with parity positions 1, 2, 4, and 8 numbered from the right, the data word 00100101010 yields codeword 001001001011001 (option B), not option D. The answer key remains D; verify the expected bit ordering/parity convention."
+  },
+  {
+    "id": 435,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "A non-inverting buffer passes its input unchanged, but no buffer option is listed. Option B is a NOT gate, which inverts the signal. The key marks B."
+  },
+  {
+    "id": 442,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "The expression (A′+B+C)(A+B′+C′) is not constant: at 100 it evaluates to 0, while at 000 it evaluates to 1. Option D (depends on inputs) fits, but the key marks A (1)."
+  },
+  {
+    "id": 443,
+    "kind": "needs-context",
+    "likelyInconsistent": false,
+    "reason": "Both the two-level AND-OR structure (A, ignoring inverters) and the AND/OR implementation statement (B) can describe SOP. The answer choices may need clarification."
+  },
+  {
+    "id": 445,
+    "kind": "needs-context",
+    "likelyInconsistent": false,
+    "reason": "The logic-circuit figure needed to derive the output expression is absent from the extracted source, so the marked answer cannot be verified."
+  },
+  {
+    "id": 452,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "All four options are valid Boolean identities (absorption, XOR expansion, De Morgan, and complement). No choice is invalid, but the key marks D."
+  },
+  {
+    "id": 453,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "Using standard even-parity Hamming encoding, placing the 11 data bits in non-parity positions and numbering parity positions 1, 2, 4, and 8 from the right gives check bits 0101 (option A), not 1100 (option C). The answer key remains C; verify the source key and bit-order convention."
+  },
+  {
+    "id": 463,
+    "kind": "needs-context",
+    "likelyInconsistent": false,
+    "reason": "The question refers to a Venn diagram and four data bits, but the diagram/data values are absent from the supplied LaTeX text. The marked answer A cannot be independently recomputed from the available source."
+  },
+  {
+    "id": 464,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "For the 12-bit stored word 101001011101, Hamming parity positions 1, 2, 4, and 8 counted from the right leave data bits 10101011, which is option C. answers.txt marks E (none of these). The answer key remains E; verify the source key."
+  },
+  {
+    "id": 494,
+    "kind": "answer-key-check",
+    "likelyInconsistent": true,
+    "reason": "The marked K-map cells simplify to C′D + A′BC + AB′C, but none of the offered SOP choices is equivalent. The key marks A; verify the map and answer choices."
+  },
+  {
+    "id": 501,
+    "kind": "needs-context",
+    "likelyInconsistent": false,
+    "reason": "Both implementation complexity (A) and potentially slower execution for complex instructions (C) are cited CISC disadvantages; “primary” is ambiguous, while the key marks C."
+  }
+]

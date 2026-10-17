@@ -1,0 +1,384 @@
+/* ========================================
+   1. KHAI BÁO BIẾN MÀU (CSS CUSTOM PROPERTIES)
+   ========================================
+   Định nghĩa các biến màu dùng chung cho toàn bộ trang,
+   giúp dễ dàng bảo trì và thay đổi theme sau này.
+   Giá trị màu được lấy từ thiết kế mẫu (Image 1).
+*/
+:root {
+    /* Màu chính - navy đậm cho text tiêu đề và nhấn mạnh */
+    --color-navy: #0F1B3D;
+    /* Màu navy nhạt hơn cho link */
+    --color-navy-link: #2563EB;
+    /* Màu xám nhạt cho text phụ, hint */
+    --color-text-muted: #64748B;
+    /* Màu nền trắng cho card */
+    --color-white: #FFFFFF;
+    /* Màu nền trang */
+    --color-bg: #F5F8FF;
+    /* Màu nền cho icon container */
+    --color-icon-bg: #DBEAFE;
+    /* Màu xanh gradient cho button */
+    --color-gradient-start: #60A5FA;
+    --color-gradient-end: #3B82F6;
+    /* Độ mờ shadow cho card */
+    --shadow-card: 0 8px 32px rgba(15, 27, 61, 0.1);
+    /* Bo góc cho card */
+    --radius-card: 24px;
+    /* Bo góc cho button */
+    --radius-btn: 12px;
+}
+
+/* ========================================
+   2. RESET & BASE STYLES
+   ========================================
+   Reset các thuộc tính mặc định của trình duyệt
+   để đảm bảo giao diện nhất quán trên mọi nền tảng.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    color: var(--color-navy);
+    line-height: 1.5;
+    background-color: var(--color-bg);
+
+    /* Image nền của trang - giữ nguyên như yêu cầu */
+    background-image: url("../assets/theme/scene2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ========================================
+   3. KHUNG CHÍNH (MAIN CONTENT)
+   ========================================
+   Khung chứa card trung tâm, căn giữa cả chiều dọc và ngang.
+   Giữ nguyên background pattern của trang.
+*/
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* ========================================
+   4. KHUNG THẺ (CARD) - STYLE MỚI
+   ========================================
+   Card có hiệu ứng kính mờ (frosted glass) với:
+   - Nền trong suốt, backdrop-filter blur
+   - Viền trắng trong suốt
+   - Shadow mềm
+   - Bo góc lớn
+   - Padding phù hợp
+   - Chiều cao tự động theo nội dung (không có khoảng trống dưới)
+*/
+.auth-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+}
+
+/* ========================================
+   5. ICON CONTAINER
+   ========================================
+   Khung chứa icon SVG, tạo hình tròn với padding
+   và màu nền xanh nhạt theo thiết kế.
+   Icon SVG được chèn trực tiếp vào HTML.
+*/
+.icon-container {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: var(--color-icon-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.email_sent_logo {
+    width: 50px;
+    height: 50px;
+    background: url("../assets/icon/Better_Icon/mail_sent.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ========================================
+   6. TYPOGRAPHY - CẤU TRÚC VĂN BẢN
+   ========================================
+   Styles cho tiêu đề, subtitle, email address,
+   và các text hints trong card.
+   Sử dụng spacing đều theo design system.
+*/
+
+/* Tiêu đề chính - Bold, navy đậm, kích thước lớn */
+.auth-title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-navy);
+    line-height: 1.2;
+}
+
+/* Subtitle mô tả - Muted blue-gray, font trung bình */
+.auth-subtitle {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+/* Địa chỉ email - Bold, navy đậm để nhấn mạnh */
+.email-address {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-gradient-start);
+    line-height: 1.4;
+    word-break: break-all;
+}
+
+/* ========================================
+   7. NÚT CHÍNH (PRIMARY BUTTON)
+   ========================================
+   Nút "Back to login":
+   - Full width của card
+   - Height 48px
+   - Gradient xanh (#60A5FA -> #3B82F6)
+   - Text trắng, font semi-bold
+   - Shadow xanh nhạt
+   - Hover effect tăng shadow
+   - Không có arrow symbol
+*/
+.btn-primary {
+    width: 100%;
+    height: 48px;
+    background: linear-gradient(to right, #7fb4ff, #3176f2);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-btn);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* ========================================
+   8. KHỐI GỬI LẠI EMAIL (RESEND BLOCK)
+   ========================================
+   Gồm 2 phần:
+   - Text "Didn't receive the email?"
+   - Link "Resend" + đếm ngược timer
+   - Timer dùng id="resend-timer", link dùng id="resend-btn"
+     để JS có thể thao tác
+*/
+.resend-hint {
+    margin: 0;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.resend-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-gradient-end);
+}
+
+/* Timer đếm ngược, giữ id cho JS */
+#resend-timer {
+    font-weight: 600;
+    color: #3B82F6;
+}
+
+/* Link gửi lại, giữ id cho JS */
+.resend-link {
+    color: var(--color-navy-link);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.resend-link:hover {
+    text-decoration: underline;
+}
+
+/* Status disabled khi đang đếm ngược */
+.resend-link[aria-disabled="true"] {
+    color: var(--color-text-muted);
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.resend-link[aria-disabled="true"]:hover {
+    text-decoration: none;
+}
+
+/* ========================================
+   9. RESPONSIVE - XỬ LÝ CÁC MÀN HÌNH KHÁC NHAU
+   ========================================
+   - Desktop (≥1024px): card rộng max 400px, padding 40px
+   - Tablet (768px - 1023px): card rộng 90%, padding 32px
+   - Mobile (≤480px): card rộng 90%, padding 24px, font nhỏ hơn
+*/
+@media screen and (max-width: 1023px) {
+    .auth-card {
+        padding: 32px;
+        max-width: 90%;
+    }
+
+    .icon-container {
+        width: 64px;
+        height: 64px;
+    }
+
+    .auth-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .auth-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .icon-container {
+        width: 56px;
+        height: 56px;
+        padding: 10px;
+    }
+
+    .icon-container svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .auth-title {
+        font-size: 22px;
+    }
+
+    .auth-subtitle {
+        font-size: 14px;
+    }
+
+    .email-address {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        height: 44px;
+        font-size: 15px;
+    }
+
+    .resend-block {
+        font-size: 13px;
+    }
+
+    .resend-hint {
+        font-size: 12px;
+    }
+}
+
+/* ========================================
+   10. UTILITIES - XÓA CÁC RULE CŨ KHÔNG DÙNG NỮA
+   ========================================
+   Xóa các styles cũ từ file CSS gốc không còn áp dụng
+   cho trang này để tránh xung đột và giữ code sạch sẽ.
+*/
+/* Xóa sidebar và các element liên quan không dùng */
+.sidebar,
+.sidebar-brand,
+.brand-logo,
+.brand-text,
+.welcome,
+.slogan,
+.sidebar-nav,
+.nav-link,
+.nav-icon,
+.future-icon,
+.progress-icon,
+.access-icon {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Xóa các rules cũ của auth-card */
+/* (Đã được ghi đè bằng style mới ở trên) */
+
+/* Xóa form và input styles cũ không dùng */
+.auth-form,
+.input-container,
+.form-actions,
+.remember-group,
+.btn-social,
+.email-icon,
+.input-content {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Xóa các rule cũ không cần thiết */
+.login-link {
+    color: inherit;
+}
+
+/* Xóa height cố định của card - để card tự co giãn theo nội dung */
+.auth-card {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* Xóa margin cũ */
+.auth-note {
+    display: none !important;
+}

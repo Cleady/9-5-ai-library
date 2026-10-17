@@ -1,0 +1,2630 @@
+/* =====================================================================
+   lectures.css — Toàn bộ style cho phần Lectures
+   =====================================================================
+   File này chỉ thêm/ghi đè style cho module Lectures.
+   style.css được load trước nên các biến CSS, .card, .progress, .score-ring
+   đã có sẵn. Mọi class mới dùng prefix "lec-".
+   ===================================================================== */
+
+/* ==============================
+   BIẾN BỔ SUNG
+   Chỉ thêm biến mà style.css chưa có
+   ============================== */
+:root {
+  /* Màu trạng thái bài giảng */
+  --lec-color-completed: #16a34a;
+  --lec-color-completed-bg: #dcfce7;
+  --lec-color-inprogress: #2563eb;
+  --lec-color-inprogress-bg: #dbeafe;
+  --lec-color-locked: #94a3b8;
+  --lec-color-locked-bg: #f1f5f9;
+
+  /* Khoảng cách chung cho module */
+  --lec-gap: 16px;
+  --lec-radius: 18px;
+  --lec-radius-sm: 12px;
+}
+
+/* ==============================
+   BỐ CỤC TRANG — page content wrapper
+   ============================== */
+.lec-page-title {
+  margin: 0 0 4px;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.lec-page-subtitle {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+/* ==============================
+   THẺ TIẾN ĐỘ SUBJECT (đầu trang lectures.html)
+   ============================== */
+.lec-subject-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 24px;
+  margin-bottom: var(--lec-gap);
+}
+
+.lec-subject-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.lec-subject-badge {
+  flex-shrink: 0;
+}
+
+.lec-subject-icon {
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+}
+
+.lec-subject-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.lec-subject-name {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.lec-subject-meta {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.lec-subject-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+/* ==============================
+   THANH CÔNG CỤ (search + filter + sort)
+   ============================== */
+.lec-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: var(--lec-gap);
+}
+
+/* Ô tìm kiếm riêng cho lectures */
+.lec-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  min-width: 180px;
+  max-width: 260px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.05);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.lec-search-box:focus-within {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.lec-search-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.lec-search-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.lec-search-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Filter tabs (All / Completed / In progress / Locked) */
+.lec-filter-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
+
+.lec-filter-tab {
+  padding: 6px 16px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.lec-filter-tab:hover {
+  color: var(--color-primary);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.lec-filter-tab[aria-selected="true"] {
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
+}
+
+.lec-filter-tab:focus-visible {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: 2px;
+}
+
+/* Sort dropdown */
+.lec-sort-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  /* đẩy sang phải */
+}
+
+.lec-sort-label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.lec-sort-select {
+  padding: 6px 28px 6px 12px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.05);
+  cursor: pointer;
+  appearance: none;
+  /* Mũi tên tùy chỉnh bằng SVG inline */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2364748b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+.lec-sort-select:focus {
+  border-color: var(--color-primary-light);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.lec-result-count {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* ==============================
+   HÀNG BÀI GIẢNG (lecture row)
+   ============================== */
+.lec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lec-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: inherit;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--lec-radius);
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+
+  transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s;
+}
+
+.lec-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.12);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Hàng bị khóa: giảm opacity, bỏ hiệu ứng hover */
+.lec-row--locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.lec-row--locked:hover {
+  transform: none;
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+/* Thumbnail nhỏ ở đầu hàng */
+.lec-row-thumb {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--lec-radius-sm);
+  /* Gradient được đặt inline từ JS */
+  display: grid;
+  place-items: center;
+}
+
+/* Badge loại bài giảng (video/quiz/reading) trên thumbnail */
+.lec-row-type-badge {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 6px rgba(29, 78, 216, 0.1);
+}
+
+.lec-type-svg {
+  width: 16px;
+  height: 16px;
+}
+
+.lec-badge--video .lec-type-svg {
+  color: var(--color-primary);
+}
+
+.lec-badge--quiz .lec-type-svg {
+  color: var(--lec-color-completed);
+}
+
+.lec-badge--reading .lec-type-svg {
+  color: #f59e0b;
+  /* vàng cam */
+}
+
+/* Phần thân: tiêu đề + meta */
+.lec-row-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.lec-row-title {
+  margin: 0 0 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lec-row-meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* Thanh tiến độ nhỏ trên hàng in-progress */
+.lec-row-progress {
+  margin-top: 6px;
+  max-width: 200px;
+}
+
+/* Phần cuối hàng: status + chevron */
+.lec-row-end {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* Nhãn trạng thái (Completed / In progress / Locked) */
+.lec-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.lec-status-svg {
+  width: 14px;
+  height: 14px;
+}
+
+.lec-status--completed {
+  color: var(--lec-color-completed);
+  background: var(--lec-color-completed-bg);
+}
+
+.lec-status--in-progress {
+  color: var(--lec-color-inprogress);
+  background: var(--lec-color-inprogress-bg);
+}
+
+.lec-status--locked {
+  color: var(--lec-color-locked);
+  background: var(--lec-color-locked-bg);
+}
+
+/* Mũi tên ">" ở cuối hàng */
+.lec-row-chevron {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.lec-row-chevron::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid var(--color-text-muted);
+  border-right: 2px solid var(--color-text-muted);
+  transform: translate(-65%, -50%) rotate(45deg);
+}
+
+/* ==============================
+   TRẠNG THÁI RỖNG (khi search/filter không tìm thấy)
+   ============================== */
+.lec-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.lec-empty-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-text-muted);
+  opacity: 0.4;
+}
+
+.lec-empty-text {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+/* ==============================
+   TOAST THÔNG BÁO (thay thế alert)
+   ============================== */
+.lec-toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.lec-toast {
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-white);
+  border-radius: 12px;
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.lec-toast--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lec-toast--hiding {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.lec-toast--info {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+}
+
+.lec-toast--warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.lec-toast--success {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.lec-toast--error {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* ==============================
+   TRANG SUBJECT DETAIL (subject.html — screen 3)
+   ============================== */
+.lec-subj-header {
+  margin-bottom: var(--lec-gap);
+}
+
+.lec-subj-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.lec-subj-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.lec-subj-info .lec-subject-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+}
+
+.lec-subj-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.lec-subj-subtitle {
+  margin: 2px 0 8px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.lec-subj-completed {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.lec-subj-ring {
+  flex-shrink: 0;
+}
+
+/* Quick stats grid */
+.lec-quick-stats {
+  padding-top: 16px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.lec-quick-title {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.lec-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.lec-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--lec-radius-sm);
+  text-align: center;
+}
+
+.lec-stat-icon {
+  font-size: 22px;
+}
+
+.lec-stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.lec-stat-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* ==============================
+   NEXT LECTURES (next-lectures.html — screen 7)
+   ============================== */
+.lec-next-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lec-next-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--lec-radius);
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.lec-next-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.12);
+}
+
+.lec-next-row.lec-row--locked {
+  opacity: 0.55;
+}
+
+.lec-next-row.lec-row--locked:hover {
+  transform: none;
+}
+
+.lec-next-date {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* Nút Start / Locked */
+.lec-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.15s;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+
+.lec-btn--start {
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+}
+
+.lec-btn--start:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.35);
+}
+
+.lec-btn--locked {
+  color: var(--lec-color-locked);
+  background: var(--lec-color-locked-bg);
+  cursor: not-allowed;
+}
+
+/* Encouragement banner ở cuối trang next lectures */
+.lec-encourage {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--lec-radius);
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+}
+
+.lec-encourage-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.lec-encourage-text h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.lec-encourage-text p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.lec-encourage-arrow {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.lec-encourage-arrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid var(--color-primary);
+  border-right: 2px solid var(--color-primary);
+  transform: translate(-65%, -50%) rotate(45deg);
+}
+
+/* ==============================
+   VIDEO PLAYER (lecture.html — screen 2)
+   ============================== */
+.lec-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.lec-breadcrumb a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.lec-breadcrumb a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.lec-breadcrumb-sep {
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.lec-lecture-title {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.lec-lecture-meta {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* Bố cục 2 cột: player/tabs bên trái, sidebar bên phải */
+.lec-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Container video player */
+.lec-player-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* tỉ lệ 16:9 */
+  border-radius: var(--lec-radius);
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.lec-player-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: transparent;
+}
+
+/* Nút play lớn giữa video (overlay khi tạm dừng) */
+.lec-player-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.lec-player-overlay[hidden] {
+  display: none;
+}
+
+.lec-play-big {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s;
+}
+
+.lec-play-big:hover {
+  transform: scale(1.08);
+}
+
+.lec-play-big svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary);
+  margin-left: 3px;
+  /* căn quang học cho icon play */
+}
+
+/* Thanh điều khiển custom ở dưới video */
+.lec-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.lec-ctrl-btn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-white);
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.lec-ctrl-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lec-ctrl-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Seek bar */
+.lec-seek {
+  flex: 1;
+  height: 4px;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
+}
+
+.lec-seek::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.lec-seek::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.lec-time-display {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.lec-speed-btn {
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 28px;
+}
+
+/* ==============================
+   TABS (Overview / Resources / Notes)
+   ============================== */
+.lec-tabs {
+  display: flex;
+  gap: 0;
+  margin-top: 16px;
+  border-bottom: 2px solid rgba(15, 23, 42, 0.08);
+}
+
+.lec-tab {
+  padding: 10px 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.lec-tab:hover {
+  color: var(--color-primary);
+}
+
+.lec-tab[aria-selected="true"] {
+  color: var(--color-primary);
+  font-weight: 600;
+  border-bottom-color: var(--color-primary);
+}
+
+.lec-tab:focus-visible {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: -2px;
+}
+
+/* Tab panels */
+.lec-tabpanel {
+  padding: 20px 0;
+}
+
+.lec-tabpanel[hidden] {
+  display: none;
+}
+
+/* About this lecture (Overview tab) */
+.lec-about-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.lec-about-desc {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.lec-takeaway-title {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.lec-takeaway-list {
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+/* Sidebar phải: Your progress, Next lecture, Course materials, Quote */
+.lec-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lec-sidebar-card {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--lec-radius);
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+}
+
+.lec-sidebar-title {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Your progress card */
+.lec-progress-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.lec-progress-text {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* Next lecture card */
+.lec-next-card-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(239, 246, 255, 0.5);
+  border-radius: var(--lec-radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.lec-next-card-item:hover {
+  background: rgba(219, 234, 254, 0.6);
+}
+
+.lec-next-card-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.lec-next-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.lec-next-card-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lec-next-card-meta {
+  margin: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* Course materials */
+.lec-material-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.lec-material-item+.lec-material-item {
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.lec-material-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.lec-material-icon--pdf {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.lec-material-icon--csv {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.lec-material-icon--link {
+  background: #dbeafe;
+  color: var(--color-primary);
+}
+
+.lec-material-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.lec-material-name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.lec-material-size {
+  margin: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.lec-material-dl {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.lec-material-dl:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.lec-material-dl svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Quote card ở sidebar */
+.lec-quote-card {
+  padding: 20px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--lec-radius);
+  text-align: center;
+}
+
+.lec-quote-text {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-text);
+}
+
+.lec-quote-sub {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* ==============================
+   MINI PLAYER (floating — screen 8)
+   ============================== */
+.lec-mini-player {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  width: 380px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--lec-radius);
+  box-shadow: 0 12px 40px rgba(29, 78, 216, 0.15);
+
+  transform: translateY(120%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lec-mini-player--visible {
+  transform: translateY(0);
+}
+
+.lec-mini-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.lec-mini-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lec-mini-time {
+  margin: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.lec-mini-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.lec-mini-btn {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: background 0.15s;
+}
+
+.lec-mini-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.lec-mini-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.lec-mini-btn--play {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  color: var(--color-white);
+}
+
+.lec-mini-btn--play:hover {
+  background: linear-gradient(135deg, var(--color-primary), #1e40af);
+}
+
+.lec-mini-close {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-text-muted);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-left: 4px;
+}
+
+.lec-mini-close:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.lec-mini-close svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ==============================
+   QUIZ (quiz.html — screen 4)
+   ============================== */
+.lec-quiz-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  align-items: start;
+}
+
+.lec-quiz-card {
+  padding: 28px 32px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--lec-radius);
+  box-shadow: 0 6px 24px rgba(29, 78, 216, 0.07);
+}
+
+.lec-quiz-question-num {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.lec-quiz-question {
+  margin: 0 0 20px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* Danh sách lựa chọn */
+.lec-quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lec-quiz-option {
+  position: relative;
+}
+
+.lec-quiz-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.lec-quiz-option-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: var(--lec-radius-sm);
+  border: 2px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.15s;
+}
+
+.lec-quiz-option-label:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  background: rgba(239, 246, 255, 0.5);
+}
+
+/* Radio tùy chỉnh */
+.lec-quiz-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  transition: all 0.15s;
+}
+
+.lec-quiz-radio::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+
+/* Status được chọn */
+.lec-quiz-option input:checked+.lec-quiz-option-label {
+  border-color: var(--color-primary-light);
+  background: rgba(219, 234, 254, 0.4);
+}
+
+.lec-quiz-option input:checked+.lec-quiz-option-label .lec-quiz-radio {
+  border-color: var(--color-primary);
+}
+
+.lec-quiz-option input:checked+.lec-quiz-option-label .lec-quiz-radio::after {
+  transform: scale(1);
+}
+
+/* Focus visible cho accessibility */
+.lec-quiz-option input:focus-visible+.lec-quiz-option-label {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: 2px;
+}
+
+/* Status đúng / sai (dùng cho review) */
+.lec-quiz-option--correct .lec-quiz-option-label {
+  border-color: var(--lec-color-completed);
+  background: rgba(220, 252, 231, 0.4);
+}
+
+.lec-quiz-option--incorrect .lec-quiz-option-label {
+  border-color: #ef4444;
+  background: rgba(254, 226, 226, 0.4);
+}
+
+/* Nút Back / Next */
+.lec-quiz-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.lec-quiz-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+}
+
+.lec-quiz-btn--back {
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.lec-quiz-btn--back:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.lec-quiz-btn--next {
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+}
+
+.lec-quiz-btn--next:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.35);
+}
+
+.lec-quiz-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Sidebar quiz: Progress ring + Time remaining */
+.lec-quiz-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lec-quiz-progress-card {
+  padding: 24px;
+  text-align: center;
+}
+
+.lec-quiz-progress-label {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.lec-quiz-timer-card {
+  padding: 18px;
+  text-align: center;
+}
+
+.lec-quiz-timer-icon {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.lec-quiz-timer {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.lec-quiz-timer--warning {
+  color: #ef4444;
+}
+
+/* Màn hình kết quả quiz */
+.lec-quiz-result {
+  text-align: center;
+  padding: 32px;
+}
+
+.lec-quiz-result-score {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 16px 0 8px;
+}
+
+.lec-quiz-result-text {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  margin: 0 0 24px;
+}
+
+/* Review list */
+.lec-quiz-review {
+  text-align: left;
+  margin-top: 16px;
+}
+
+.lec-quiz-review-item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.lec-quiz-review-q {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.lec-quiz-review-a {
+  font-size: 13px;
+  margin: 0;
+}
+
+.lec-quiz-review-a--correct {
+  color: var(--lec-color-completed);
+}
+
+.lec-quiz-review-a--incorrect {
+  color: #ef4444;
+}
+
+/* ==============================
+   NOTES TAB (lecture.html — screen 5)
+   ============================== */
+.lec-notes-editor {
+  border: 2px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--lec-radius);
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+/* Toolbar cho note editor */
+.lec-notes-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 12px;
+  background: rgba(239, 246, 255, 0.5);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.lec-notes-tool-btn {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.lec-notes-tool-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+}
+
+.lec-notes-tool-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.lec-notes-sep {
+  width: 1px;
+  height: 20px;
+  margin: 0 6px;
+  background: rgba(15, 23, 42, 0.1);
+}
+
+/* Vùng soạn thảo */
+.lec-notes-area {
+  min-height: 200px;
+  padding: 16px;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.lec-notes-area:empty::before {
+  content: attr(data-placeholder);
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+/* Footer: character count + auto saved */
+.lec-notes-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.lec-notes-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lec-notes-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lec-color-completed);
+}
+
+.lec-notes-status--saving .lec-notes-status-dot {
+  background: #f59e0b;
+  animation: lec-pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes lec-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Related notes */
+.lec-related-notes {
+  margin-top: 20px;
+}
+
+.lec-related-title {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.lec-related-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lec-related-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--lec-radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.lec-related-item:hover {
+  background: rgba(239, 246, 255, 0.5);
+}
+
+.lec-related-item-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(219, 234, 254, 0.6);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.lec-related-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.lec-related-item-name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.lec-related-item-date {
+  margin: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* ==============================
+   RESOURCES PAGE (resources.html — screen 6)
+   ============================== */
+.lec-resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lec-resource-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--lec-radius);
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.lec-resource-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.12);
+}
+
+.lec-resource-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.lec-resource-icon--pdf {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.lec-resource-icon--csv {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.lec-resource-icon--link {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.lec-resource-icon--note {
+  background: #dbeafe;
+  color: var(--color-primary);
+}
+
+.lec-resource-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.lec-resource-name {
+  margin: 0 0 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.lec-resource-meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.lec-resource-action {
+  flex-shrink: 0;
+}
+
+.lec-resource-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid var(--color-primary-light);
+  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.lec-resource-btn:hover {
+  background: var(--color-primary-soft);
+}
+
+.lec-resource-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ==============================
+   BREADCRUMB cho lecture detail
+   ============================== */
+.lec-breadcrumb-current {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* ==============================
+   RESPONSIVE — 1366px
+   ============================== */
+@media (max-width: 1400px) {
+  .lec-detail-layout {
+    grid-template-columns: 1fr 260px;
+  }
+
+  .lec-quiz-layout {
+    grid-template-columns: 1fr 240px;
+  }
+}
+
+/* ==============================
+   RESPONSIVE — Tablet (≤ 1024px)
+   ============================== */
+@media (max-width: 1024px) {
+  .lec-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lec-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .lec-sidebar-card {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .lec-quiz-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lec-quiz-sidebar {
+    flex-direction: row;
+  }
+
+  .lec-quiz-sidebar .lec-sidebar-card {
+    flex: 1;
+  }
+
+  .lec-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==============================
+   RESPONSIVE — Mobile (≤ 480px)
+   Sidebar collapses (xử lý bởi style.css chung),
+   cards stack, không có cuộn ngang
+   ============================== */
+@media (max-width: 480px) {
+  .lec-page-title {
+    font-size: 22px;
+  }
+
+  .lec-subject-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .lec-subject-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lec-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lec-search-box {
+    max-width: 100%;
+  }
+
+  .lec-filter-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* cuộn mượt trên iOS */
+  }
+
+  .lec-sort-group {
+    margin-left: 0;
+  }
+
+  .lec-row {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .lec-row-body {
+    min-width: calc(100% - 82px);
+    /* đảm bảo xuống dòng */
+  }
+
+  .lec-row-end {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lec-row-title {
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .lec-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lec-sidebar {
+    flex-direction: column;
+  }
+
+  .lec-tabs {
+    overflow-x: auto;
+  }
+
+  .lec-tab {
+    padding: 10px 16px;
+    white-space: nowrap;
+  }
+
+  .lec-quiz-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lec-quiz-sidebar {
+    flex-direction: column;
+  }
+
+  .lec-quiz-card {
+    padding: 20px;
+  }
+
+  .lec-quiz-option-label {
+    padding: 12px 14px;
+  }
+
+  .lec-mini-player {
+    width: calc(100% - 32px);
+    left: 16px;
+    right: 16px;
+  }
+
+  .lec-subj-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lec-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lec-next-row {
+    flex-wrap: wrap;
+  }
+
+  .lec-encourage {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lec-encourage-arrow {
+    margin-left: 0;
+  }
+
+  /* Resources */
+  .lec-resource-row {
+    flex-wrap: wrap;
+  }
+
+  .lec-resource-action {
+    width: 100%;
+  }
+
+  .lec-resource-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==============================
+   SIDEBAR MOBILE — ẩn sidebar khi ≤ 768px
+   (Bổ sung cho style.css nếu chưa có)
+   ============================== */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .app {
+    padding: 0 12px 12px;
+  }
+}
+
+/* =========================================================
+   FEYNMAN OVERVIEW & STRUCTURED LECTURE NOTES STYLING
+   ========================================================= */
+
+.lec-feynman-container {
+  margin-top: 24px;
+}
+
+.lec-feynman-banner {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+  border: 1px solid #bae6fd;
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.05);
+}
+
+.lec-feynman-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 11px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #0284c7;
+  background: white;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.1);
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.lec-feynman-headline {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.lec-feynman-desc {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* Section Cards */
+.lec-section-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.lec-section-card:hover {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.lec-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid #f1f5f9;
+}
+
+.lec-section-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0284c7;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 750;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.lec-section-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 750;
+  color: #0f172a;
+}
+
+.lec-section-subtitle {
+  margin: 3px 0 0;
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+/* Concept & Formula Boxes */
+.lec-concept-box {
+  background: #f8fafc;
+  border-left: 4px solid #38bdf8;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.lec-concept-box h4 {
+  margin: 0 0 5px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0369a1;
+}
+
+.lec-concept-box p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.lec-formula-card {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.lec-formula-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0284c7;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lec-math-display {
+  font-size: 16px;
+  color: #0f172a;
+  overflow-x: auto;
+  padding: 4px 0;
+}
+
+.lec-formula-rules {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.lec-badge-rule {
+  background: white;
+  border: 1px solid #bae6fd;
+  color: #0369a1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.lec-subcard {
+  background: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.lec-subcard-title {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #292524;
+}
+
+.lec-breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.lec-breakdown-item {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.lec-math-calc {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 8px 0;
+  font-size: 14.5px;
+  color: #0f172a;
+  overflow-x: auto;
+}
+
+.lec-calc-sub {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.lec-note-list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Example Cards */
+.lec-example-card {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.lec-example-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.lec-example-tag {
+  background: #fef08a;
+  color: #854d0e;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+
+/* Rule Blocks & Algorithms */
+.lec-rule-block {
+  margin-bottom: 18px;
+}
+
+.lec-rule-title {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.lec-rule-summary {
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  color: #475569;
+}
+
+.lec-algorithm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.lec-algo-card {
+  background: white;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lec-algo-badge {
+  font-size: 12px;
+  font-weight: 750;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.integer-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.fraction-badge {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.lec-step-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.lec-step-list li {
+  margin-bottom: 6px;
+}
+
+.lec-read-direction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: auto;
+  font-size: 12px;
+}
+
+.up-direction {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.down-direction {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.direction-icon {
+  font-size: 18px;
+}
+
+.lec-read-direction strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.lec-read-direction p {
+  margin: 0;
+  font-size: 11.5px;
+  opacity: 0.9;
+}
+
+/* Nibble & Hex Table */
+.lec-nibble-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.lec-nibble-card h4 {
+  margin: 0 0 6px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.lec-hex-letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.lec-hex-letters span {
+  background: white;
+  border: 1px solid #cbd5e1;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0284c7;
+}
+
+.lec-table-title {
+  margin: 18px 0 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.lec-table-responsive {
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.lec-hex-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lec-hex-table th {
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 700;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1.5px solid #cbd5e1;
+}
+
+.lec-hex-table td {
+  padding: 9px 14px;
+  color: #1e293b;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.lec-hex-table tr:last-child td {
+  border-bottom: none;
+}
+
+.lec-hex-table tr:hover td {
+  background: #f8fafc;
+}
+
+.lec-example-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.lec-step-item {
+  background: white;
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #fde68a;
+}
+
+/* =====================================================================
+   COURSE SUBJECTS GRID (Lựa chọn môn học đồng bộ giao diện toàn trang)
+   ===================================================================== */
+.lec-subjects-container {
+  margin-bottom: 24px;
+}
+
+.lec-subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lec-course-wrapper {
+  position: relative;
+  list-style: none;
+}
+
+.lec-course-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.lec-course-card:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.lec-course-card.is-active {
+  background: #ffffff;
+  border-color: rgba(226, 232, 240, 0.95);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+.lec-course-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.lec-course-card-body {
+  flex: 1;
+  min-width: 0;
+  padding-right: 32px; /* Dành khoảng trống cho nút favorite */
+}
+
+.lec-course-top-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.lec-course-code {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.lec-course-active-pill {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(29, 78, 216, 0.08);
+  padding: 1px 6px;
+  border-radius: 99px;
+  display: none;
+}
+
+.lec-course-card.is-active .lec-course-active-pill {
+  display: inline-block;
+}
+
+.lec-course-title {
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lec-course-meta {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Nút ngôi sao yêu thích ở góc phải thẻ môn học */
+.subject-fav-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  z-index: 5;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subject-fav-btn:hover {
+  transform: scale(1.15);
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+}
+
+.subject-fav-btn .star-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #94a3b8;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all 0.2s ease;
+}
+
+.subject-fav-btn:hover .star-icon {
+  stroke: #f59e0b;
+}
+
+.subject-fav-btn.is-favorited {
+  background-color: #ffffff;
+  border-color: #fde68a;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.28);
+}
+
+.subject-fav-btn.is-favorited .star-icon {
+  fill: #f59e0b;
+  stroke: #d97706;
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse all lectures in your learning journey at 9.5 AI CLUB" />
+    <title>Lectures – 9.5 AI CLUB</title>
+    <!-- CSS chung của toàn trang, load trước để lectures.css chỉ thêm/ghi đè -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/lectures.css" />
+    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png" />
+</head>
+
+<body>
+    <!-- Bao ngoài toàn bộ ứng dụng: CSS dùng nó chia 2 cột (sidebar + nội dung) -->
+    <div class="app">
+
+        <!-- ======================== SIDEBAR ======================== -->
+        <!-- Copy từ index.html, đổi is-active sang Lectures -->
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Logo + tiêu đề slogan -->
+            <a href="../../home_page/home_page.html" class="sidebar-brand">
+                <span class="brand-logo"></span>
+                <div class="brand-text">
+                    <strong>9.5 AI CLUB</strong>
+                    <small>Learn · Build · Grow</small>
+                </div>
+            </a>
+
+            <!-- Menu trang chủ -->
+            <nav class="sidebar-nav" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="../../home_page/home_page.html" class="nav-link">
+                            <span class="nav-icon home-icon"></span>
+                            <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../lectures/lectures.html" class="nav-link is-active" aria-current="page">
+                            <span class="nav-icon lectures-icon"></span>
+                            <span class="nav-label">Lectures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../practice/practice.html" class="nav-link">
+                            <span class="nav-icon practice-icon"></span>
+                            <span class="nav-label">Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../history.html" class="nav-link">
+                            <span class="nav-icon history-icon"></span>
+                            <span class="nav-label">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Nhóm phụ, tách khỏi nhóm chính bằng đường kẻ (CSS sẽ vẽ) -->
+            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Secondary Navigation">
+                <ul>
+                    <li>
+                        <a href="../favorites.html" class="nav-link">
+                            <span class="nav-icon favorites-icon"></span>
+                            <span class="nav-label">Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../lectures/resources.html" class="nav-link">
+                            <span class="nav-icon resources-icon"></span>
+                            <span class="nav-label">Resources</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../community/community-feed.html" class="nav-link">
+                            <span class="nav-icon community-icon"></span>
+                            <span class="nav-label">Community</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../settings/settings.html" class="nav-link">
+                            <span class="nav-icon settings-icon"></span>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Slogan ở đáy sidebar -->
+            <a href="#" class="sidebar-promo">
+                <p>Knowledge for a better tomorrow</p>
+                <span class="promo-arrow" aria-hidden="true"></span>
+            </a>
+
+        </aside>
+
+        <!-- ======================== NỘI DUNG CHÍNH ======================== -->
+        <main class="main">
+            <!-- Topbar: thanh tìm kiếm toàn trang, thông báo, menu user -->
+            <header class="topbar">
+                <form class="search" role="search" action="#" method="get">
+                    <span class="search-icon" aria-hidden="true"></span>
+
+                    <label for="site-search" class="visually-hidden">Search lectures, topics, documents</label>
+                    <input type="search" id="site-search" name="q" class="search-input"
+                        placeholder="Search lectures, topics, or resources..." autocomplete="off" />
+
+                    <span class="search-shortcut" aria-hidden="true">
+                        <kbd>Ctrl</kbd>
+                        <kbd>K</kbd>
+                    </span>
+                </form>
+
+                <!-- Chuông thông báo và cái menu người dùng-->
+                <div class="topbar-actions">
+
+                    <!-- Chuông thông báo -->
+                    <div class="notification">
+                        <button type="button" class="icon-button" aria-label="Notifications (có 2 thông báo mới)"
+                            aria-expanded="false" aria-controls="notification-panel">
+                            <span class="bell-icon" aria-hidden="true"></span>
+                            <span class="notification-dot" aria-hidden="true"></span>
+                        </button>
+
+                        <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                            <header class="notification-header">
+                                <p class="notification-title">Notifications</p>
+                                <button type="button" class="notification-clear">Mark as read</button>
+                            </header>
+                            <ul class="notification-list">
+                                <li class="notification-item is-unread">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">New lecture: Machine Learning Basics, Lecture 4
+                                        </p>
+                                        <time class="notification-time" datetime="2025-09-14T09:00">2 hours ago</time>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="notification-footer">View all notifications</a>
+                        </section>
+                    </div>
+
+                    <div class="user-menu">
+                        <button type="button" class="user-menu-toggle" aria-haspopup="menu" aria-expanded="false"
+                            aria-controls="user-menu-list">
+                            <span class="user-avatar" aria-hidden="true">A</span>
+                            <span class="user-name">Alex</span>
+                            <span class="user-chevron" aria-hidden="true"></span>
+                            <span class="role-badge">Member</span>
+                        </button>
+                        <ul class="user-menu-list" id="user-menu-list" role="menu" hidden>
+                            <li role="none">
+                                <a href="../settings/settings.html#profile" role="menuitem"><span class="menu-icon profile-icon"
+                                        aria-hidden="true"></span>Hồ sơ cá
+                                    nhân</a>
+                            </li>
+                            <li role="none">
+                                <a href="#" role="menuitem"><span class="menu-icon password-icon"
+                                        aria-hidden="true"></span>Đổi mật
+                                    khẩu</a>
+                            </li>
+                            <li role="none">
+                                <a href="login.html" role="menuitem"><span class="menu-icon logout-icon"
+                                        aria-hidden="true"></span>Đăng
+                                    xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ======================== PHẦN LECTURES ======================== -->
+            <!-- Tiêu đề trang -->
+            <h1 class="lec-page-title">Lectures</h1>
+            <p class="lec-page-subtitle">Continue your learning journey, one lecture at a time.</p>
+
+            <!-- DANH SÁCH MÔN HỌC (COURSE SUBJECTS) TỰ ĐỘNG CẬP NHẬT TỪ HỆ THỐNG -->
+            <section class="lec-subjects-container" aria-label="Course Subjects">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <h2 style="font-size: 16px; font-weight: 700; color: #0f172a; margin: 0; display: flex; align-items: center; gap: 6px;">
+                            <span>📚</span> Khóa học &amp; Môn học
+                        </h2>
+                        <span id="lec-subjects-count-badge" class="tag" style="background: rgba(29,78,216,0.08); color: var(--color-primary); font-weight: 600; font-size: 11px; padding: 2px 8px; border-radius: 99px;">Đang tải...</span>
+                    </div>
+                    <span style="font-size: 12px; color: #64748b;">Chọn môn để xem danh sách bài giảng video</span>
+                </div>
+                <div id="lec-subjects-grid" class="lec-subjects-grid">
+                    <!-- Danh sách môn học load từ Backend -->
+                </div>
+            </section>
+
+            <!-- Thẻ tiến độ Subject — JS render nội dung vào đây -->
+            <!-- JS dùng id "lec-subject-progress", không đổi tên -->
+            <div id="lec-subject-progress"></div>
+
+            <!-- Thanh công cụ: tìm kiếm + filter tabs + sort -->
+            <div class="lec-toolbar">
+                <!-- Ô tìm kiếm riêng cho lectures -->
+                <div class="lec-search-box">
+                    <svg class="lec-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                    <!-- JS dùng id "lec-search" để gắn sự kiện tìm kiếm -->
+                    <input type="search" id="lec-search" class="lec-search-input" placeholder="Search lectures..."
+                        autocomplete="off" aria-label="Tìm kiếm bài giảng" />
+                </div>
+
+                <!-- Filter tabs — JS dùng id "lec-filter-tabs" -->
+                <div id="lec-filter-tabs" class="lec-filter-tabs" role="tablist" aria-label="Lọc theo trạng thái">
+                    <button type="button" class="lec-filter-tab" role="tab" aria-selected="true"
+                        data-filter="all">All</button>
+                    <button type="button" class="lec-filter-tab" role="tab" aria-selected="false"
+                        data-filter="completed">Completed</button>
+                    <button type="button" class="lec-filter-tab" role="tab" aria-selected="false"
+                        data-filter="in-progress">In
+                        progress</button>
+                    <button type="button" class="lec-filter-tab" role="tab" aria-selected="false"
+                        data-filter="locked">Locked</button>
+                </div>
+
+                <!-- Sort + số lượng kết quả -->
+                <div class="lec-sort-group">
+                    <span class="lec-sort-label">Sort by:</span>
+                    <!-- JS dùng id "lec-sort" để gắn sự kiện sắp xếp -->
+                    <select id="lec-sort" class="lec-sort-select" aria-label="Sắp xếp bài giảng">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="a-z">A–Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Số lượng kết quả — JS cập nhật nội dung -->
+            <p id="lec-result-count" class="lec-result-count"></p>
+
+            <!-- Danh sách bài giảng — JS render các hàng vào đây -->
+            <!-- JS dùng id "lec-list", không đổi tên -->
+            <div id="lec-list" class="lec-list" role="list" aria-label="Danh sách bài giảng"></div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-left">
+                    <a href="index.html" class="footer-brand">
+                        <span class="footer-logo" aria-hidden="true"></span>
+                        9.5 AI CLUB
+                    </a>
+                    <span class="footer-divider" aria-hidden="true"></span>
+                    <p class="footer-tagline">9.5 AI Club · FPT University</p>
+                </div>
+                <div class="footer-right">
+                    <nav class="footer-nav" aria-label="Footer Links">
+                        <ul>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <span class="footer-divider" aria-hidden="true"></span>
+                    <p class="footer-note">Members only</p>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+
+    <!-- JS: load theo thứ tự: data → core → list, rồi main cho sidebar/topbar -->
+    <script src="/js/main.js"></script>
+    <script src="/js/lectures-data.js"></script>
+    <script src="/js/lectures-core.js"></script>
+    <script src="/js/lectures-list.js"></script>
+    <script>
+        /* Khởi tạo trang danh sách bài giảng */
+        Lib95.lectures.list.initLecturesPage();
+    </script>
+    <script src="../../js/syncProfile.js"></script>
+</body>
+
+</html>

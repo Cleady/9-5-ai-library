@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+<script>
+    // Kiểm tra quyền truy cập Admin Dashboard
+    const userStr = localStorage.getItem('user');
+    if (!userStr) {
+        window.location.href = '../../index.html';
+    } else {
+        const user = JSON.parse(userStr);
+        if (user.role === 'member') {
+            alert('You không có quyền truy cập trang Quản trị!');
+            window.location.href = '../../index.html';
+        }
+    }
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f8ff">
+    <title>Admin Dashboard | 9.5 AI CLUB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="../../assets/icon/cool_book.png">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/lectures.css">
+    <style>
+        /* Tinh chỉnh Placeholder: không in đậm, màu xám nhạt dịu mắt */
+        input::placeholder,
+        textarea::placeholder,
+        .lesson-form input::placeholder,
+        .lesson-form textarea::placeholder,
+        #modal-course input::placeholder,
+        #modal-course textarea::placeholder {
+            color: #94a3b8 !important;
+            font-weight: 400 !important;
+            font-style: normal !important;
+            opacity: 0.75 !important;
+            -webkit-text-fill-color: #94a3b8;
+        }
+        .lesson-form input,
+        .lesson-form select,
+        .lesson-form textarea,
+        #modal-course input,
+        #modal-course textarea {
+            font-weight: 400 !important;
+            color: #1e293b;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    <script src="../../js/admin.js" defer></script>
+</head>
+
+<body>
+    <div class="app admin-app">
+        <aside class="sidebar" id="admin-sidebar" aria-label="Điều hướng quản trị">
+            <a href="../../home_page/home_page.html" class="sidebar-brand" aria-label="9.5 AI CLUB Admin">
+                <span class="brand-logo" aria-hidden="true"></span>
+                <span class="brand-text"><strong>9.5 AI CLUB</strong><small>Learn · Build · Grow</small></span>
+            </a>
+            <nav class="sidebar-nav" aria-label="Các trang quản trị">
+                <ul>
+                    <li><a href="#page-dashboard" class="nav-link is-active" data-page-target="dashboard"
+                            aria-current="page"><span class="nav-icon dashboard-icon" aria-hidden="true"></span><span
+                                class="nav-label">Dashboard</span></a></li>
+                    <li><a href="#page-lms" class="nav-link" data-page-target="lms"><span class="nav-icon lms-icon"
+                                aria-hidden="true"></span><span class="nav-label">LMS Manager</span></a></li>
+                    <li><a href="#page-community" class="nav-link" data-page-target="community"><span
+                                class="nav-icon community-icon" aria-hidden="true"></span><span
+                                class="nav-label">Community Moderation</span></a></li>
+                </ul>
+            </nav>
+            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Manage tài khoản và cài đặt">
+                <ul>
+                    <li><a href="#page-users" class="nav-link" data-page-target="users"><span
+                                class="nav-icon users-icon" aria-hidden="true"></span><span class="nav-label">User
+                                Management</span></a></li>
+                    <li><a href="#page-settings" class="nav-link" data-page-target="settings"><span
+                                class="nav-icon settings-icon" aria-hidden="true"></span><span
+                                class="nav-label">Settings</span></a></li>
+                </ul>
+            </nav>
+            <a href="#" class="sidebar-promo">
+                <p>Better Learning<br>Brighter Dreams</p><span class="promo-arrow" aria-hidden="true"></span>
+            </a>
+        </aside>
+
+        <main class="main main-area">
+            <header class="topbar">
+                <button class="sidebar-toggle" type="button" aria-label="Mở hoặc thu gọn thanh bên"
+                    aria-expanded="false" aria-controls="admin-sidebar"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg></button>
+                <form class="search" role="search" action="#" method="get">
+                    <span class="search-icon" aria-hidden="true"></span>
+                    <label for="admin-search" class="visually-hidden">Tìm kiếm trong trang quản trị</label>
+                    <input type="search" id="admin-search" name="q" class="search-input"
+                        placeholder="Search anything..." autocomplete="off">
+                    <span class="search-shortcut" aria-hidden="true"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+                </form>
+                <div class="topbar-actions">
+                    <div class="notification">
+                        <button type="button" class="icon-button" aria-label="Notifications (có 3 thông báo mới)"
+                            aria-expanded="false" aria-controls="notification-panel"><span class="bell-icon"
+                                aria-hidden="true"></span><span class="notification-dot"
+                                aria-hidden="true"></span></button>
+                        <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                            <header class="notification-header">
+                                <p class="notification-title">Notifications</p><button type="button"
+                                    class="notification-clear">Mark as read</button>
+                            </header>
+                            <ul class="notification-list">
+                                <li class="notification-item is-unread"><span class="notification-item-icon"
+                                        aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Có 12 posts đang chờ kiểm duyệt.</p><time
+                                            class="notification-time">5 phút trước</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item is-unread"><span class="notification-item-icon"
+                                        aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Thành viên mới đã đăng ký vào hệ thống.</p><time
+                                            class="notification-time">18 phút trước</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item"><span class="notification-item-icon"
+                                        aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Reports hoạt động tuần đã sẵn sàng.</p><time
+                                            class="notification-time">1 hours ago</time>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#notifications" class="notification-footer">View all notifications</a>
+                        </section>
+                    </div>
+                    <button class="icon-button theme-button" type="button" aria-label="Appearance sáng"><svg
+                            viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4" />
+                            <path
+                                d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                        </svg></button>
+                    <div class="user-menu">
+                        <button type="button" class="user-menu-toggle" aria-haspopup="menu" aria-expanded="false"
+                            aria-controls="user-menu-list"><span class="user-avatar" aria-hidden="true">A</span><span
+                                class="user-name">Admin</span><span class="user-chevron" aria-hidden="true"></span><span
+                                class="role-badge">Administrator</span></button>
+                        <ul class="user-menu-list" id="user-menu-list" role="menu" hidden>
+                            <li role="none"><a href="../settings/settings.html#profile" role="menuitem"><span class="menu-icon profile-icon"
+                                        aria-hidden="true"></span>Profile</a></li>
+                            <li role="none"><a href="#security" role="menuitem"><span class="menu-icon password-icon"
+                                        aria-hidden="true"></span>Security tài khoản</a></li>
+                            <li role="none"><a href="#signout" role="menuitem"><span class="menu-icon logout-icon"
+                                        aria-hidden="true"></span>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-stack">
+                <section class="admin-page is-visible" id="page-dashboard" data-page-panel="dashboard"
+                    aria-labelledby="dashboard-title">
+                    <div class="page-heading">
+                        <div>
+                            <p class="eyebrow">OVERVIEW</p>
+                            <h1 id="dashboard-title">Chào mừng trở lại, Admin <span aria-hidden="true">👋</span></h1>
+                            <p class="page-subtitle">Dưới đây là tổng quan hoạt động của 9.5 AI CLUB trong thời gian gần
+                                đây.</p>
+                        </div><button class="select-button" type="button"><span class="select-cal-icon"></span> 7 ngày qua <span>⌄</span></button>
+                    </div>
+                    <div class="metric-grid">
+                        <article class="metric-card"><span class="metric-icon blue metric-users-icon"></span><span
+                                class="metric-label">Tổng người dùng</span><strong>2,486</strong><small
+                                class="trend up">↑ 12% <span>so với tuần trước</span></small></article>
+                        <article class="metric-card"><span class="metric-icon violet metric-courses-icon"></span><span
+                                class="metric-label">Tổng khóa học</span><strong>48</strong><small class="trend up">↑ 8%
+                                <span>so với tuần trước</span></small></article>
+                        <article class="metric-card"><span class="metric-icon cyan metric-pending-icon"></span><span
+                                class="metric-label">Pending Posts</span><strong>12</strong><small
+                                class="trend down">↓ 3% <span>so với tuần trước</span></small></article>
+                        <article class="metric-card"><span class="metric-icon red metric-report-icon"></span><span
+                                class="metric-label">Reported Posts</span><strong>5</strong><small
+                                class="trend down">↓ 44% <span>so với tuần trước</span></small></article>
+                    </div>
+                    <div class="dashboard-charts">
+                        <article class="panel chart-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <h2>Active người dùng</h2>
+                                    <p>Số lượng người dùng mới trong 7 ngày qua</p>
+                                </div><button class="mini-select" type="button">7 ngày qua⌄</button>
+                            </div>
+                            <div class="line-chart">
+                                <div class="chart-y">
+                                    <span>200</span><span>150</span><span>100</span><span>50</span><span>0</span></div>
+                                <svg viewBox="0 0 600 190" role="img"
+                                    aria-label="Biểu đồ hoạt động người dùng tăng dần">
+                                    <defs>
+                                        <linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#3b82f6" stop-opacity=".22" />
+                                            <stop offset="1" stop-color="#3b82f6" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path class="chart-area"
+                                        d="M20 155 105 132 190 145 275 123 360 96 445 94 530 70 580 48V180H20Z" />
+                                    <path class="chart-line"
+                                        d="M20 155 105 132 190 145 275 123 360 96 445 94 530 70 580 48" />
+                                    <g class="chart-points">
+                                        <circle cx="20" cy="155" r="4" />
+                                        <circle cx="105" cy="132" r="4" />
+                                        <circle cx="190" cy="145" r="4" />
+                                        <circle cx="275" cy="123" r="4" />
+                                        <circle cx="360" cy="96" r="4" />
+                                        <circle cx="445" cy="94" r="4" />
+                                        <circle cx="530" cy="70" r="4" />
+                                        <circle cx="580" cy="48" r="4" />
+                                    </g>
+                                    <path class="chart-grid"
+                                        d="M20 20H580M20 60H580M20 100H580M20 140H580M20 180H580" />
+                                </svg>
+                                <div class="chart-x"><span>Sep 14</span><span>Sep 15</span><span>Sep 16</span><span>Sep
+                                        17</span><span>Sep 18</span><span>Sep 19</span><span>Sep 20</span></div>
+                            </div>
+                        </article>
+                        <article class="panel roles-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <h2>Phân bố vai trò</h2>
+                                    <p>Tổng quan members</p>
+                                </div>
+                            </div>
+                            <div class="role-content">
+                                <div class="donut">
+                                    <div><strong>2,486</strong><span>Tổng người dùng</span></div>
+                                </div>
+                                <ul class="legend-list">
+                                    <li><i class="legend-blue"></i>Sinh viên <b>68%</b></li>
+                                    <li><i class="legend-cyan"></i>Instructor <b>12%</b></li>
+                                    <li><i class="legend-violet"></i>Admin <b>8%</b></li>
+                                    <li><i class="legend-orange"></i>Khác <b>12%</b></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <article class="panel activity-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h2>Active gần đây</h2>
+                            </div><a href="#activity">View tất cả <span>→</span></a>
+                        </div>
+                        <ul class="activity-list">
+                            <li><span class="activity-icon green act-bookmark-icon"></span><span>Nguyễn Văn A đã đăng ký
+                                    khóa học <b>“Machine Learning Basics”</b></span><time>5 phút trước</time></li>
+                            <li><span class="activity-icon green act-writing-icon"></span><span>Trần Thị B đã bình luận
+                                    trong posts <b>“Học Python có khó không?”</b></span><time>18 phút trước</time>
+                            </li>
+                            <li><span class="activity-icon blue act-user-icon"></span><span>Lê Minh C đã gửi yêu cầu
+                                    tham gia cộng đồng</span><time>42 phút trước</time></li>
+                            <li><span class="activity-icon red act-report-icon"></span><span>Bài viết <b>“Review tài
+                                        liệu AI”</b> đang chờ duyệt</span><time>1 hours ago</time></li>
+                            <li><span class="activity-icon red act-report-icon"></span><span>Nguyễn Thảo Vũ đã báo cáo
+                                    một posts</span><time>2 hours ago</time></li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section class="admin-page" id="page-lms" data-page-panel="lms" aria-labelledby="lms-title" hidden>
+                    <div class="page-heading">
+                        <div>
+                            <p class="eyebrow">LEARNING MANAGEMENT</p>
+                            <h1 id="lms-title">Manage khóa học &amp; Bài giảng</h1>
+                            <p class="page-subtitle">Tạo và quản lý các khóa học, bài giảng, tài liệu học tập trên nền tảng (Dành riêng cho Owner, Admin và Staff).</p>
+                        </div>
+                        <button class="button-primary" id="lms-btn-open-create-course" type="button">＋ Thêm khóa học</button>
+                    </div>
+                    <article class="panel table-panel">
+                        <div class="table-toolbar">
+                            <div class="search-control"><span>⌕</span>
+                                <input id="lms-course-search" aria-label="Tìm khóa học" placeholder="Tìm kiếm theo mã môn hoặc tên khóa học...">
+                            </div>
+                            <span id="lms-course-count-badge" class="tag" style="background: rgba(29,78,216,0.08); color: var(--color-primary); font-weight: 600;">Đang tải...</span>
+                        </div>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Mã / Cover</th>
+                                        <th>Khóa học (Course Name)</th>
+                                        <th>Học kỳ (Term)</th>
+                                        <th>Số bài giảng</th>
+                                        <th>Trạng thái</th>
+                                        <th style="text-align: right;">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="lms-course-tbody">
+                                    <tr><td colspan="6" style="text-align: center; padding: 24px;">Đang tải dữ liệu khóa học...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <!-- Lower Grid: Form Thêm/Sửa & Danh sách bài giảng -->
+                    <div class="lms-lower-grid" style="grid-template-columns: 1.15fr 0.85fr; gap: 16px;">
+                        <!-- Cột Trái: Form Thêm / Sửa bài giảng -->
+                        <article class="panel editor-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <h2 id="lms-editor-title">Thêm bài giảng mới</h2>
+                                    <p id="lms-editor-sub">Điền thông tin chương bài giảng, video và nội dung tổng quan</p>
+                                </div>
+                                <button type="button" id="lms-btn-reset-form" class="mini-select" style="cursor: pointer;">＋ Tạo mới</button>
+                            </div>
+                            <form class="lesson-form" id="lms-lecture-form" onsubmit="return false;">
+                                <input type="hidden" id="lms-lec-id" value="">
+                                
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                    <label>Khóa học
+                                        <select id="lms-lec-course-select" required></select>
+                                    </label>
+                                    <label>Thứ tự chương (Order)
+                                        <input type="number" id="lms-lec-order" min="1" value="1" required>
+                                    </label>
+                                </div>
+
+                                <label>Tên bài giảng / Tên chương
+                                    <input type="text" id="lms-lec-title" placeholder="VD: Computer Organization and Architecture: Number Systems" required>
+                                </label>
+
+                                <!-- KHU VỰC TẢI LÊN VIDEO BÀI GIẢNG -->
+                                <div class="wide-field" style="margin-bottom: 8px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                        <label style="font-weight: 600; margin: 0; font-size: 13.5px; color: #1e293b;">Video bài giảng</label>
+                                        <div id="lms-duration-badge-container" style="display: flex; align-items: center; gap: 6px;">
+                                            <span style="font-size: 12px; color: #64748b;">Thời lượng:</span>
+                                            <span id="lms-duration-auto-badge" style="background: #f1f5f9; color: #64748b; font-weight: 600; font-size: 12px; padding: 4px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 5px; border: 1px solid #e2e8f0; transition: all .2s ease;">
+                                                <span>⏱️</span> <span id="lms-duration-text">Tự động nhận diện khi có video</span>
+                                            </span>
+                                            <input type="hidden" id="lms-lec-duration" value="0">
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Upload Card chính: Click để chọn video từ máy hoặc kéo thả -->
+                                    <div id="lms-video-upload-area" style="border: 2px dashed #93c5fd; border-radius: 12px; background: rgba(59,130,246,0.03); padding: 18px 14px; text-align: center; cursor: pointer; transition: all .2s ease; position: relative;">
+                                        <input type="file" id="lms-video-file-input" accept="video/mp4,video/webm,video/quicktime,video/x-matroska" style="display: none;">
+                                        
+                                        <!-- State 1: Chưa chọn video -->
+                                        <div id="lms-video-upload-empty" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                                            <div style="width: 44px; height: 44px; border-radius: 50%; background: #eff6ff; display: flex; align-items: center; justify-content: center; font-size: 22px;">📁</div>
+                                            <strong style="color: var(--color-primary); font-size: 14px;">Bấm để Tải lên Video từ máy tính</strong>
+                                            <small style="color: #64748b; font-size: 12px;">Hỗ trợ tệp MP4, WEBM, MOV (Tự động tính thời lượng video)</small>
+                                        </div>
+
+                                        <!-- State 2: Đã có video được chọn / gán -->
+                                        <div id="lms-video-upload-selected" style="display: none; flex-direction: column; gap: 10px; background: #fff; padding: 12px 14px; border-radius: 8px; border: 1px solid #bfdbfe; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+                                            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                                                <div style="display: flex; align-items: center; gap: 10px; text-align: left; overflow: hidden;">
+                                                    <span style="font-size: 24px; flex-shrink: 0;">🎬</span>
+                                                    <div style="overflow: hidden;">
+                                                        <strong id="lms-video-display-name" style="font-size: 13px; color: #0f172a; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Tên_video.mp4</strong>
+                                                        <div style="font-size: 11px; color: #64748b; display: flex; gap: 8px; margin-top: 2px;">
+                                                            <span id="lms-video-display-size">0 MB</span>
+                                                            <span>•</span>
+                                                            <span id="lms-video-display-dur" style="color: var(--color-primary); font-weight: 600;">15 phút</span>
+                                                            <span class="tag" style="background: #ecfdf5; color: #10b981; font-weight: 600; font-size: 10px; padding: 1px 6px;">✓ Đã sẵn sàng</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display: flex; gap: 6px; flex-shrink: 0; margin-left: 10px;">
+                                                    <button type="button" id="lms-btn-change-video" class="mini-select" style="font-size: 12px; cursor: pointer;">Đổi video</button>
+                                                    <button type="button" id="lms-btn-remove-video" class="mini-select" style="font-size: 12px; color: #ef4444; border-color: rgba(239,68,68,0.2); cursor: pointer;">✕ Xóa</button>
+                                                </div>
+                                            </div>
+                                            <!-- Video preview để admin xem trước -->
+                                            <video id="lms-video-preview" controls preload="metadata" style="display: none; width: 100%; max-height: 220px; border-radius: 6px; background: #000;"></video>
+                                        </div>
+
+                                        <!-- Thanh tiến trình Upload -->
+                                        <div id="lms-video-upload-progress" style="display: none; margin-top: 10px;">
+                                            <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; margin-bottom: 4px;">
+                                                <span style="color: var(--color-primary);">Đang tải lên video lên thư mục hệ thống...</span>
+                                                <span id="lms-upload-percent-text">0%</span>
+                                            </div>
+                                            <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 99px; overflow: hidden;">
+                                                <div id="lms-upload-percent-bar" style="width: 0%; height: 100%; background: var(--color-primary); transition: width .15s ease;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tùy chọn: Chọn video có sẵn trong document/Lectures -->
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 12px; background: #f8fafc; padding: 6px 10px; border-radius: 6px; border: 1px solid #f1f5f9;">
+                                        <span style="color: #64748b; font-weight: 500;">📁 Hoặc chọn video có sẵn trên máy:</span>
+                                        <select id="lms-lec-video-detected" style="max-width: 65%; padding: 4px 8px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background: #fff;">
+                                            <option value="">-- Quét thư mục document/Lectures --</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Hidden input lưu URL video thực tế -->
+                                    <input type="hidden" id="lms-lec-video-url" value="">
+                                </div>
+
+                                <label class="wide-field">Mô tả ngắn (Short Description)
+                                    <textarea id="lms-lec-desc" rows="2" placeholder="Tóm tắt ngắn gọn nội dung bài học..."></textarea>
+                                </label>
+
+                                <label class="wide-field">Điểm cốt lõi cần nhớ (Key takeaways - Mỗi ý một dòng)
+                                    <textarea id="lms-lec-takeaways" rows="3" placeholder="Hệ thống số theo vị trí: Cơ số r, trọng số r^i&#10;Quy tắc chuyển đổi cơ số: chia lặp và nhân lặp&#10;Hệ Hexadecimal: gom nhóm 4-bit (Nibble)"></textarea>
+                                </label>
+
+                                <div class="wide-field" style="margin-top: 6px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                                        <label style="font-weight: 600; margin: 0;">Nội dung tổng quan (Overview - Hỗ trợ Feynman &amp; KaTeX)</label>
+                                        <div style="display: flex; gap: 6px;">
+                                            <button type="button" id="lms-btn-feynman-template" class="mini-select" style="background: rgba(29,78,216,0.1); color: var(--color-primary); font-weight: 600; border-color: rgba(29,78,216,0.2); cursor: pointer;">⚡ Chèn mẫu Feynman</button>
+                                            <button type="button" id="lms-btn-preview-overview" class="mini-select" style="cursor: pointer;">👁️ Xem trước KaTeX</button>
+                                        </div>
+                                    </div>
+                                    <textarea id="lms-lec-overview" rows="8" placeholder="Soạn nội dung chi tiết bài giảng, công thức toán dạng $x^2$, $$\dots$$ hoặc dán mã HTML/Feynman..." style="font-family: monospace; font-size: 13px;"></textarea>
+                                    <div id="lms-lec-overview-preview" class="panel" style="display: none; margin-top: 8px; padding: 14px; background: #fff; max-height: 400px; overflow-y: auto;"></div>
+                                </div>
+
+                                <div class="wide-field" style="margin-top: 6px;">
+                                    <label style="font-weight: 600; margin-bottom: 6px;">Tài liệu đính kèm (Resources)</label>
+                                    <div id="lms-lec-resources-container">
+                                        <!-- Danh sách resources động -->
+                                    </div>
+                                    <button type="button" id="lms-btn-add-resource" class="mini-select" style="margin-top: 6px; cursor: pointer;">＋ Thêm tệp tài liệu (PDF, Slide, ZIP)</button>
+                                </div>
+
+                                <div style="display: flex; gap: 10px; margin-top: 14px;">
+                                    <button class="button-primary" id="lms-btn-save-lecture" type="button" style="flex: 1;">💾 Lưu bài giảng</button>
+                                    <button class="select-button" id="lms-btn-cancel-edit" type="button" style="display: none;">Hủy sửa</button>
+                                </div>
+                            </form>
+                        </article>
+
+                        <!-- Cột Phải: Danh sách bài giảng của khóa học được chọn -->
+                        <article class="panel lesson-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <h2>Danh sách bài giảng</h2>
+                                    <p id="lms-current-course-label">Đang xem: CEA201</p>
+                                </div>
+                                <button class="button-primary small" id="lms-btn-new-lecture-for-course" type="button">＋ Thêm bài giảng</button>
+                            </div>
+                            <div style="margin-bottom: 12px;">
+                                <label style="font-size: 12px; font-weight: 600; color: var(--color-text-muted);">Chọn môn học để xem:</label>
+                                <select id="lms-course-filter-select" style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.12); margin-top: 4px;"></select>
+                            </div>
+                            <ol class="lesson-list" id="lms-lecture-list">
+                                <!-- Render từ js/admin-lms.js -->
+                            </ol>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="admin-page" id="page-community" data-page-panel="community"
+                    aria-labelledby="community-title" hidden>
+                    <div class="page-heading">
+                        <div>
+                            <p class="eyebrow">COMMUNITY SAFETY</p>
+                            <h1 id="community-title">Community Moderation</h1>
+                            <p class="page-subtitle">View và xử lý các posts, báo cáo vi phạm hoặc bình luận cần được
+                                duyệt.</p>
+                        </div>
+                    </div>
+                    <div class="moderation-tabs"><button class="moderation-tab active" type="button">Pending
+                            <span>12</span></button><button class="moderation-tab" type="button">Reports
+                            <span>5</span></button></div>
+                    <article class="panel moderation-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h2>Pending Posts</h2>
+                                <p>12 posts awaiting review</p>
+                            </div>
+                            <div class="search-control compact-search"><span>⌕</span><input aria-label="Search posts"
+                                    placeholder="Search posts..."></div>
+                        </div>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Author</th>
+                                        <th>Content</th>
+                                        <th>Time</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="person-cell"><i class="person-avatar avatar-one">NA</i>Nguyễn
+                                                Minh Anh</span></td>
+                                        <td>Sharing Machine Learning documents...</td>
+                                        <td>2 hours ago</td>
+                                        <td><button class="button-approve">Approve</button><button
+                                                class="button-reject">Reject</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="person-cell"><i class="person-avatar avatar-two">HL</i>Lê Hoàng
+                                                Nam</span></td>
+                                        <td>I think Python is the easiest language...</td>
+                                        <td>4 hours ago</td>
+                                        <td><button class="button-approve">Approve</button><button
+                                                class="button-reject">Reject</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="person-cell"><i class="person-avatar avatar-three">PT</i>Phạm
+                                                Thị Lan</span></td>
+                                        <td>Does anyone know how to make an AI project?</td>
+                                        <td>6 hours ago</td>
+                                        <td><button class="button-approve">Approve</button><button
+                                                class="button-reject">Reject</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="person-cell"><i class="person-avatar avatar-four">TD</i>Trần
+                                                Đức Huy</span></td>
+                                        <td>Data Science course review (highly recommended)</td>
+                                        <td>8 hours ago</td>
+                                        <td><button class="button-approve">Approve</button><button
+                                                class="button-reject">Reject</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="person-cell"><i class="person-avatar avatar-five">BN</i>Hoàng
+                                                Bảo Ngọc</span></td>
+                                        <td>Looking for React study buddy in HCM</td>
+                                        <td>10 hours ago</td>
+                                        <td><button class="button-approve">Approve</button><button
+                                                class="button-reject">Reject</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-footer"><span>Displaying 5 / 12 posts</span>
+                            <div class="pagination"><button>‹</button><button
+                                    class="selected">1</button><button>2</button><button>3</button><button>›</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel reports-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h2>Reported Posts</h2>
+                                <p>Content flagged by members</p>
+                            </div><button class="mini-select" type="button">Newest⌄</button>
+                        </div>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Author</th>
+                                        <th>Content</th>
+                                        <th>Report Reason</th>
+                                        <th>Time</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Đặng Quốc Việt</td>
+                                        <td>Post contains inappropriate content...</td>
+                                        <td>Spam</td>
+                                        <td>1 days ago</td>
+                                        <td><button class="button-view">View</button><button
+                                                class="button-primary small">Resolve</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngọc Thanh Tâm</td>
+                                        <td>Sharing link with unknown source...</td>
+                                        <td>Malicious content</td>
+                                        <td>1 days ago</td>
+                                        <td><button class="button-view">View</button><button
+                                                class="button-primary small">Resolve</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vũ Minh Khang</td>
+                                        <td>Offensive comment towards other members</td>
+                                        <td>Personal attack</td>
+                                        <td>2 days ago</td>
+                                        <td><button class="button-view">View</button><button
+                                                class="button-primary small">Resolve</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="admin-page" id="page-users" data-page-panel="users" aria-labelledby="users-title"
+                    hidden>
+                    <div class="page-heading">
+                        <div>
+                            <p class="eyebrow">PEOPLE</p>
+                            <h1 id="users-title">User Management</h1>
+                            <p class="page-subtitle">Manage user accounts, roles, and permissions.</p>
+                        </div>
+                    </div>
+                    <article class="panel users-panel">
+                        <div class="table-toolbar">
+                            <div class="search-control"><span>⌕</span><input aria-label="Search users"
+                                    placeholder="Search users..."></div><div class="custom-global-filter" style="position: relative; display: inline-block; min-width: 140px; user-select: none;">
+    <div class="cg-trigger" style="display: flex; align-items: center; justify-content: space-between; height: 38px; padding: 0 12px; border: 1px solid #dce8f7; border-radius: 7px; background: rgba(255, 255, 255, 0.58); color: #334e71; font-weight: 500; font-size: 12px; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+        <span id="cg-display">All roles</span>
+        <span style="font-size: 10px; color: #6e8db4; margin-left: 8px;">▼</span>
+    </div>
+    <div class="cg-options" style="display: none; position: absolute; top: 110%; right: 0; min-width: 100%; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(16px); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); border: 1px solid #dce8f7; z-index: 100; padding: 4px; animation: dropdownFadeIn 0.2s ease;">
+        <div class="cg-opt" data-value="all" style="padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 12px; color: #334e71; transition: 0.2s; white-space: nowrap;">All roles</div>
+        <div class="cg-opt" data-value="owner" style="padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 12px; color: #334e71; transition: 0.2s; white-space: nowrap;">Owner</div>
+        <div class="cg-opt" data-value="admin" style="padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 12px; color: #334e71; transition: 0.2s; white-space: nowrap;">Admin</div>
+        <div class="cg-opt" data-value="staff" style="padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 12px; color: #334e71; transition: 0.2s; white-space: nowrap;">Staff</div>
+        <div class="cg-opt" data-value="member" style="padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 12px; color: #334e71; transition: 0.2s; white-space: nowrap;">Member</div>
+    </div>
+</div>
+                        </div>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Avatar</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-users-tbody">
+                                      <!-- JS Render -->
+                                  </tbody>
+                            </table>
+                        </div>
+                        <div class="table-footer"><span>Displaying 8 / 245 members</span>
+                            <div class="pagination"><button>‹</button><button
+                                    class="selected">1</button><button>2</button><button>3</button><button>4</button><button>›</button>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="user-tools-grid">
+                        <article class="panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <h2>Quick Role Change</h2>
+                                    <p>Select members to update permissions</p>
+                                </div>
+                            </div>
+                            <div class="inline-tool"><select aria-label="Select role">
+                                    <option>Select role</option>
+                                    <option>Instructor</option>
+                                    <option>Admin</option>
+                                </select><button class="button-primary">Apply</button></div>
+                        </article>
+                                                <article class="panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <h2>Ban / Unban Account</h2>
+                                    <p>Enter the exact email or username of the member</p>
+                                </div>
+                            </div>
+                            <div class="inline-tool">
+                                <input id="ban-input" placeholder="Enter email or username" style="flex: 1;">
+                                <button id="btn-ban" class="button-danger" style="min-width: 80px;">Ban</button>
+                                <button id="btn-unban" class="button-secondary" style="min-width: 80px;">Unban</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="admin-page" id="page-settings" data-page-panel="settings"
+                    aria-labelledby="settings-title" hidden>
+                    <div class="page-heading">
+                        <div>
+                            <p class="eyebrow">CONFIGURATION</p>
+                            <h1 id="settings-title">System Settings</h1>
+                            <p class="page-subtitle">Configure general information and options for the website.</p>
+                        </div>
+                    </div>
+                    <article class="panel settings-panel">
+                        <nav class="settings-tabs" aria-label="Settings Groups"><button class="selected"
+                                type="button">General Information</button><button type="button">Appearance</button><button
+                                type="button">Email</button><button type="button">Security</button></nav>
+                        <form class="settings-form">
+                            <h2>General Information</h2><label>Website Name<input
+                                    value="9.5 AI CLUB"></label><label>Short Description<input
+                                    value="AI Learning Platform & Community for Students"></label>
+                            <div class="logo-settings"><strong>Logo</strong>
+                                <div class="logo-option"><img src="../../assets/icon/cool_book.png"
+                                        alt="Logo 9.5 AI CLUB"><button type="button">Upload</button><small>Kích thước
+                                        tối ưu: 64×64px</small></div>
+                                <div class="logo-option"><span class="favicon-preview">9.5</span><button
+                                        type="button">Upload</button><small>Optimal size: 32×32px</small></div>
+                            </div>
+                            <h2>Social Links</h2><label class="social-field"><span
+                                    class="social-mark facebook">f</span><span>Facebook</span><input
+                                    value="https://facebook.com/9.5library"></label><label class="social-field"><span
+                                    class="social-mark discord">◈</span><span>Discord</span><input
+                                    value="https://discord.gg/9.5library"></label><label class="social-field"><span
+                                    class="social-mark youtube">▶</span><span>YouTube</span><input
+                                    value="https://youtube.com/@9.5library"></label><label class="social-field"><span
+                                    class="social-mark twitter">𝕏</span><span>Twitter (X)</span><input
+                                    value="https://x.com/9.5library"></label>
+                            <div class="form-actions"><button class="button-primary" type="button">Save Changes</button>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+            </div>
+            <footer class="admin-footer"><span>© 2025 9.5 AI CLUB Admin</span><span>Better Learning · Brighter
+                    Future</span></footer>
+        </main>
+    </div>
+
+    <!-- Modal Thêm / Sửa môn học -->
+    <div id="modal-course" style="display: none; position: fixed; inset: 0; background: rgba(15,23,42,0.5); backdrop-filter: blur(4px); z-index: 999; align-items: center; justify-content: center;">
+        <div class="panel" style="width: 100%; max-width: 520px; background: #fff; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); padding: 24px; position: relative;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h2 id="modal-course-title" style="margin: 0; font-size: 18px; font-weight: 700;">Thêm môn học mới</h2>
+                <button type="button" id="modal-course-close" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #64748b;">✕</button>
+            </div>
+            <form id="modal-course-form" onsubmit="return false;">
+                <input type="hidden" id="modal-course-id" value="">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; display: block; margin-bottom: 4px;">Mã môn (Course Code)</label>
+                        <input type="text" id="modal-course-code" placeholder="VD: CEA201, CSD201" required style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                    </div>
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; display: block; margin-bottom: 4px;">Học kỳ (Term)</label>
+                        <select id="modal-course-term" style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                            <option value="Kỳ I">Kỳ I</option>
+                            <option value="Kỳ II" selected>Kỳ II</option>
+                            <option value="Kỳ III">Kỳ III</option>
+                            <option value="Kỳ IV">Kỳ IV</option>
+                            <option value="Kỳ V">Kỳ V</option>
+                            <option value="Kỳ VI">Kỳ VI</option>
+                            <option value="Kỳ VII">Kỳ VII</option>
+                            <option value="Kỳ VIII">Kỳ VIII</option>
+                            <option value="Kỳ IX">Kỳ IX</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                    <label style="font-size: 12px; font-weight: 600; display: block; margin-bottom: 4px;">Tên môn học (Title)</label>
+                    <input type="text" id="modal-course-title-input" placeholder="VD: Computer Organization and Architecture" required style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                    <label style="font-size: 12px; font-weight: 600; display: block; margin-bottom: 4px;">Mô tả môn học</label>
+                    <textarea id="modal-course-desc" rows="2" placeholder="Mô tả tóm tắt nội dung môn học..." style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid #cbd5e1;"></textarea>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; display: block; margin-bottom: 4px;">Màu Gradient Bắt đầu</label>
+                        <input type="color" id="modal-course-grad-from" value="#38bdf8" style="width: 100%; height: 38px; padding: 2px; border-radius: 8px; border: 1px solid #cbd5e1; cursor: pointer;">
+                    </div>
+                    <div>
+                        <label style="font-size: 12px; font-weight: 600; display: block; margin-bottom: 4px;">Màu Gradient Kết thúc</label>
+                        <input type="color" id="modal-course-grad-to" value="#0284c7" style="width: 100%; height: 38px; padding: 2px; border-radius: 8px; border: 1px solid #cbd5e1; cursor: pointer;">
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                    <button type="button" id="modal-course-btn-cancel" class="select-button">Hủy</button>
+                    <button type="button" id="modal-course-btn-save" class="button-primary">Lưu môn học</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../../js/syncProfile.js?v=3"></script>
+    <script src="../../js/admin-users.js?v=14"></script>
+    <script src="../../js/admin-lms.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

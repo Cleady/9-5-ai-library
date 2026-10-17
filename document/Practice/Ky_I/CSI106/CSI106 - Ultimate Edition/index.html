@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0284c7">
+  <meta name="description" content="Học và luyện câu hỏi Nhập môn Khoa học Máy tính (CSI106) bằng nội dung văn bản.">
+  <title>CSI106 Study Hub — Học và luyện đề</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero { min-height: 300px; }
+    .hero-visual { align-items: center; }
+    .dashboard-grid { grid-template-columns: minmax(0, 1.7fr) minmax(260px, .8fr); }
+    .setup-card, .insight-card, .topic-summary, .topic-browser { padding: 24px; }
+    .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .form-grid select, .form-grid input, .report-form select, .report-form textarea, .search-input {
+      width: 100%; min-height: 46px; border: 1px solid var(--line); border-radius: 12px;
+      background: var(--surface); color: var(--text); padding: 10px 12px;
+    }
+    .form-grid label { color: var(--muted); font-size: 12px; font-weight: 700; }
+    .form-grid select { display: block; margin-top: 6px; }
+    .segmented button { min-height: 64px; }
+    .pool-preview { margin: 14px 0; }
+    .pool-count { font-weight: 800; color: var(--accent); }
+    .study-tip { padding: 15px; border-radius: 14px; background: var(--surface-soft); line-height: 1.6; }
+    .study-tip p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+    .lesson-step { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .lesson-step:last-child { border-bottom: 0; }
+    .step-number { flex: 0 0 28px; height: 28px; display: grid; place-items: center; border-radius: 9px; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 900; }
+    .lesson-step strong, .lesson-step small { display: block; }
+    .lesson-step small { margin-top: 3px; color: var(--muted); line-height: 1.45; }
+    .resume-card { margin: 0 0 18px; }
+    .resume-card.hidden { display: none !important; }
+    .save-chip { white-space: nowrap; }
+    .save-chip span { display: inline-block; width: 7px; height: 7px; margin-right: 5px; border-radius: 50%; background: var(--good); }
+    .save-chip.temporary span { background: var(--warn); }
+    .search-row { display: flex; gap: 8px; align-items: center; margin: 14px 0; }
+    .search-row .search-input { margin: 0; }
+    .search-results { display: grid; gap: 8px; max-height: 52vh; overflow: auto; margin-top: 12px; }
+    .search-result { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 12px; text-align: left; cursor: pointer; }
+    .search-result strong, .search-result small { display: block; }
+    .search-result small { margin-top: 4px; color: var(--muted); line-height: 1.45; }
+    .question-surface { min-width: 0; }
+    .question-heading { margin-bottom: 16px; }
+    .question-number { display: inline-block; }
+    .topic-pill { display: inline-block; margin-left: 8px; padding: 5px 9px; border-radius: 999px; background: var(--surface-soft); color: var(--muted); font-size: 11px; }
+    .plain-question { font-size: 18px; line-height: 1.75; white-space: pre-wrap; overflow-wrap: anywhere; margin: 14px 0 4px; }
+    .answer-options { grid-template-columns: 1fr; }
+    .answer-option { display: flex; align-items: flex-start; gap: 12px; min-height: auto; padding: 14px 16px; text-align: left; font-size: 15px; line-height: 1.6; font-weight: 600; }
+    .answer-option .option-key { flex: 0 0 30px; color: var(--accent); font-weight: 900; }
+    .answer-option.correct .option-key, .answer-option.wrong .option-key { color: inherit; }
+    .answer-feedback { font-weight: 500; line-height: 1.6; }
+    .answer-feedback strong { display: block; margin-bottom: 5px; }
+    .answer-feedback p { margin: 0; }
+    .ai-badge { display: inline-block; margin-left: 8px; padding: 3px 8px; border: 1px solid var(--warn); border-radius: 999px; color: var(--warn); font-size: 10px; font-weight: 800; vertical-align: middle; }
+    .answer-key { color: var(--good); font-weight: 900; }
+    .question-actions { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .question-actions .button { min-width: 0; }
+    .question-surface .report-trigger { margin-top: 10px; }
+    .report-form { display: grid; grid-template-columns: minmax(160px, .7fr) 1.5fr auto; align-items: end; gap: 10px; margin-top: 16px; }
+    .report-form label { display: block; color: var(--muted); font-size: 12px; font-weight: 700; }
+    .report-form select, .report-form textarea { display: block; margin-top: 5px; }
+    .report-form textarea { min-height: 78px; resize: vertical; }
+    .report-status { min-height: 1.4em; margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+    .question-grid { grid-template-columns: repeat(6, 1fr); }
+    .question-jump { aspect-ratio: 1; }
+    .progress-track { overflow: hidden; }
+    .progress-track span { display: block; height: 100%; width: 0; background: var(--accent); border-radius: inherit; transition: width .2s ease; }
+    .result-score { line-height: 1.05; }
+    .review-item { grid-template-columns: 42px minmax(0, 1fr) auto; }
+    .review-item .review-question { min-width: 0; }
+    .review-item .review-question p { margin: 6px 0; font-weight: 500; line-height: 1.55; }
+    .review-item .review-answer { color: var(--good); font-weight: 800; }
+    .review-item .review-explanation { color: var(--muted); font-size: 12px; line-height: 1.5; }
+    .review-item details { grid-column: 2 / -1; }
+    .empty-state { color: var(--muted); padding: 20px 12px; text-align: center; }
+    .data-status { color: var(--muted); font-size: 12px; line-height: 1.5; }
+    .data-actions { display: grid; gap: 9px; margin-top: 16px; }
+    .data-actions input[type="file"] { display: none; }
+    .footer-note { padding: 24px 0 6px; text-align: center; color: var(--muted); font-size: 11px; }
+    .hidden { display: none !important; }
+    @media (max-width: 1050px) {
+      .dashboard-grid { grid-template-columns: 1fr; }
+      .question-grid { grid-template-columns: repeat(8, 1fr); }
+    }
+    @media (max-width: 820px) {
+      .question-grid { grid-template-columns: repeat(10, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .app-shell { padding: 0 14px 36px; }
+      .setup-card, .insight-card, .topic-summary { padding: 18px; }
+      .form-grid { grid-template-columns: 1fr 1fr; gap: 12px 8px; }
+      .form-grid label { font-size: 11px; }
+      .hero { padding: 28px 22px; }
+      .hero h1 { font-size: 39px; }
+      .hero-visual { grid-template-columns: 1.3fr 1fr; }
+      .question-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .report-form { grid-template-columns: 1fr; }
+      .question-grid { grid-template-columns: repeat(6, 1fr); }
+      .review-item { grid-template-columns: 34px minmax(0, 1fr); }
+      .review-item details { grid-column: 2; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <button class="brand" id="homeBtn" type="button" aria-label="Về trang học">
+        <span class="brand-mark">CS</span>
+        <span><strong>CSI106</strong><small>Study Hub</small></span>
+      </button>
+      <nav class="header-actions" aria-label="Công cụ">
+        <button class="icon-button" id="searchToggleBtn" type="button" title="Tìm trong câu hỏi">⌕<span>Tìm câu</span></button>
+        <button class="icon-button" id="historyBtn" type="button" title="Xem câu sai">↻<span>Câu cần ôn</span></button>
+        <button class="icon-button" id="themeBtn" type="button" title="Đổi giao diện">☾<span>Giao diện</span></button>
+        <button class="avatar-button" id="dataBtn" type="button" title="Sao lưu tiến độ">JSON</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="dashboardView" class="view">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">Không cần đăng nhập · Học ngay trên máy</span>
+            <h1>Học chắc từng câu.</h1>
+            <p>Ôn Nhập môn Khoa học Máy tính (CSI106) bằng câu hỏi và lựa chọn dạng văn bản. Làm xong, xem đáp án cùng giải thích ngay tại đây.</p>
+            <div class="hero-actions">
+              <button class="button primary" id="quickStartBtn" type="button">Bắt đầu học</button>
+              <button class="button secondary" id="quickExamBtn" type="button">Làm đề thử</button>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Tổng quan học tập">
+            <div class="score-ring" id="accuracyRing"><span id="accuracyValue">--</span><small>độ chính xác</small></div>
+            <div class="mini-stat"><strong id="attemptedValue">0</strong><span>lượt trả lời</span></div>
+            <div class="mini-stat"><strong id="mistakeValue">0</strong><span>câu cần ôn</span></div>
+          </div>
+        </div>
+
+        <section id="resumeCard" class="resume-card surface hidden" aria-live="polite">
+          <div class="resume-icon">↗</div>
+          <div><span class="eyebrow">Bài đang làm dở</span><h2 id="resumeTitle">Tiếp tục bài học</h2><p id="resumeMeta"></p></div>
+          <div class="resume-actions">
+            <button class="button primary" id="resumeBtn" type="button">Tiếp tục</button>
+            <button class="button ghost" id="discardResumeBtn" type="button">Bỏ bài</button>
+          </div>
+        </section>
+
+        <div class="dashboard-grid">
+          <section class="surface setup-card">
+            <div class="section-heading">
+              <div><span class="eyebrow">Tạo phiên học</span><h2>Bạn muốn học thế nào?</h2></div>
+              <span class="save-chip" id="saveChip"><span></span><span id="saveLabel">Tự động lưu</span></span>
+            </div>
+            <div class="segmented" id="modeControl" role="group" aria-label="Chọn cách học">
+              <button type="button" data-mode="practice" class="active"><strong>Học từng câu</strong><small>Kiểm tra và xem giải thích</small></button>
+              <button type="button" data-mode="exam"><strong>Thi thử</strong><small>Chấm điểm sau khi nộp</small></button>
+            </div>
+            <div class="form-grid">
+              <label>Chương
+                <select id="chapterSelect"><option value="all">Tất cả chương</option></select>
+              </label>
+              <label>Lấy câu từ
+                <select id="sourceSelect"><option value="all">Toàn bộ câu hỏi</option><option value="mistakes">Câu đã làm sai</option><option value="bookmarks">Câu đã đánh dấu</option></select>
+              </label>
+              <label>Số câu
+                <select id="countSelect"><option value="10">10 câu</option><option value="20" selected>20 câu</option><option value="50">50 câu</option><option value="all">Tất cả câu phù hợp</option></select>
+              </label>
+              <label>Thứ tự câu
+                <select id="shuffleSelect"><option value="no">Theo thứ tự chương</option><option value="yes">Trộn ngẫu nhiên</option></select>
+              </label>
+              <label id="timerSetting">Thời gian thi thử
+                <select id="minutesSelect"><option value="0">Không giới hạn</option><option value="15">15 phút</option><option value="30" selected>30 phút</option><option value="60">60 phút</option><option value="90">90 phút</option></select>
+              </label>
+              <label>Đảo thứ tự đáp án
+                <select id="shuffleAnswers"><option value="no">Không</option><option value="yes">Có</option></select>
+              </label>
+            </div>
+            <div class="pool-preview"><span class="pool-count" id="poolCount">455 câu hỏi</span><span>Chọn chương hoặc bộ câu cần ôn.</span></div>
+            <button class="button primary wide" id="startBtn" type="button">Bắt đầu phiên học</button>
+          </section>
+
+          <aside class="insights-column">
+            <section class="surface insight-card">
+              <div class="section-heading compact"><div><span class="eyebrow">Cách dùng</span><h2>Ba bước là xong</h2></div></div>
+              <div class="lesson-step"><span class="step-number">1</span><span><strong>Chọn chương</strong><small>Hoặc học toàn bộ câu hỏi.</small></span></div>
+              <div class="lesson-step"><span class="step-number">2</span><span><strong>Chọn câu trả lời</strong><small>Có thể quay lại câu trước trong phiên.</small></span></div>
+              <div class="lesson-step"><span class="step-number">3</span><span><strong>Xem giải thích</strong><small>Các giải thích do AI viết có nhãn riêng.</small></span></div>
+            </section>
+            <section class="surface topic-summary">
+              <div class="section-heading compact"><div><span class="eyebrow">Ngân hàng đề</span><h2 id="bankHeading">Câu hỏi văn bản</h2></div></div>
+              <div class="subject-row"><span class="subject-dot calculus"></span><div><strong id="questionTotal">455 câu</strong><small id="chapterTotal">13 chương</small></div><span>CSI106</span></div>
+              <p class="data-status">Nội dung được đọc từ file câu hỏi đã chuyển đổi. Trang này không dùng ảnh chụp đề.</p>
+            </section>
+          </aside>
+        </div>
+        <p class="footer-note">CSI106 Study Hub · Tiến độ và báo cáo được lưu trên trình duyệt này.</p>
+      </section>
+
+      <section id="quizView" class="view hidden">
+        <div class="quiz-header">
+          <div><button class="back-link" id="exitQuizBtn" type="button">← Trang chọn bài</button><span class="quiz-title" id="quizTitle">Học từng câu</span></div>
+          <div class="quiz-status"><span class="autosave-status" id="autosaveStatus">✓ Đã lưu</span><span class="timer hidden" id="timer">--:--</span><button class="button danger small" id="submitBtn" type="button">Nộp bài</button></div>
+        </div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+        <div class="quiz-metrics">
+          <span><b id="positionStat">1/20</b> Câu hiện tại</span><span><b id="doneStat">0</b> Đã trả lời</span><span><b id="correctStat">0</b> Đã đúng</span><span><b id="markedStat">0</b> Đánh dấu</span>
+        </div>
+        <div class="quiz-layout">
+          <article class="surface question-surface">
+            <div class="question-heading">
+              <div><span class="question-number" id="questionNumber">Câu</span><span class="topic-pill" id="questionTopic"></span></div>
+              <button class="mark-button" id="markBtn" type="button" aria-pressed="false">☆ Đánh dấu</button>
+            </div>
+            <div class="plain-question" id="questionText" aria-live="polite"></div>
+            <div id="answerOptions" class="answer-options" aria-label="Các lựa chọn"></div>
+            <div id="answerFeedback" class="answer-feedback hidden" role="status" aria-live="polite"></div>
+            <div class="question-actions">
+              <button class="button secondary" id="prevBtn" type="button">← Câu trước</button>
+              <button class="button secondary" id="showAnswerBtn" type="button">Hiện đáp án</button>
+              <button class="button primary" id="checkBtn" type="button">Kiểm tra</button>
+              <button class="button secondary" id="nextBtn" type="button">Câu sau →</button>
+            </div>
+            <button class="button ghost wide report-trigger" id="openReportBtn" type="button">Báo câu hỏi hoặc giải thích sai</button>
+            <details id="reportDetails" class="report-details hidden">
+              <form id="reportForm" class="report-form">
+                <label>Loại báo cáo
+                  <select id="reportType"><option value="wrong-answer">Đáp án sai</option><option value="wrong-explanation">Giải thích sai</option><option value="question-text">Nội dung câu hỏi sai/thiếu</option><option value="other">Vấn đề khác</option></select>
+                </label>
+                <label>Ghi chú thêm (không bắt buộc)
+                  <textarea id="reportNote" placeholder="Ghi ngắn gọn phần cần kiểm tra"></textarea>
+                </label>
+                <button class="button secondary" type="submit">Lưu báo cáo</button>
+              </form>
+              <p class="report-status" id="reportStatus" role="status" aria-live="polite"></p>
+            </details>
+          </article>
+          <aside class="surface question-navigator">
+            <div class="navigator-heading"><div><span class="eyebrow">Trong phiên này</span><h2>Danh sách câu</h2></div></div>
+            <div class="navigator-legend"><span><i class="answered"></i>Đã chọn</span><span><i class="current"></i>Hiện tại</span><span><i class="marked"></i>Đánh dấu</span></div>
+            <div class="question-grid" id="questionGrid" aria-label="Chọn câu"></div>
+          </aside>
+        </div>
+        <button class="navigator-fab" id="navigatorFab" type="button">▦ Danh sách câu</button>
+      </section>
+
+      <section id="resultsView" class="view hidden">
+        <div class="results-card surface">
+          <span class="eyebrow">Hoàn thành phiên học</span><h1 id="resultHeading">Kết quả</h1><div class="result-score" id="resultScore">0%</div><p id="resultMessage"></p>
+          <div class="result-stats"><div><strong id="resultCorrect">0</strong><span>Đúng</span></div><div><strong id="resultWrong">0</strong><span>Sai</span></div><div><strong id="resultUnanswered">0</strong><span>Chưa làm</span></div><div><strong id="resultDuration">0p</strong><span>Thời gian</span></div></div>
+          <div class="result-actions"><button class="button primary" id="retryWrongBtn" type="button">Ôn lại câu sai</button><button class="button secondary" id="newSessionBtn" type="button">Chọn bài khác</button></div>
+        </div>
+        <section class="surface review-section"><div class="section-heading"><div><span class="eyebrow">Bài vừa làm</span><h2>Xem lại câu trả lời</h2></div></div><div id="reviewList" class="review-list"></div></section>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="searchModal">
+    <section class="modal search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="modal-heading"><div><span class="eyebrow">Tìm trong ngân hàng đề</span><h2 id="searchTitle">Tìm câu hỏi</h2></div><button type="button" data-close-modal="searchModal" aria-label="Đóng">×</button></div>
+      <div class="search-row"><input id="searchInput" class="search-input" type="search" placeholder="Nhập số câu hoặc từ khóa" autocomplete="off"></div>
+      <div id="searchResults" class="search-results"></div>
+    </section>
+  </div>
+  <div class="modal-backdrop hidden" id="historyModal">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
+      <div class="modal-heading"><div><span class="eyebrow">Sổ ôn tập</span><h2 id="historyTitle">Câu từng làm sai</h2></div><button type="button" data-close-modal="historyModal" aria-label="Đóng">×</button></div>
+      <div id="historyList" class="history-list"></div>
+    </section>
+  </div>
+  <div class="modal-backdrop hidden" id="dataModal">
+    <section class="modal compact-modal" role="dialog" aria-modal="true" aria-labelledby="dataTitle">
+      <div class="modal-heading"><div><span class="eyebrow">Dữ liệu trên thiết bị</span><h2 id="dataTitle">Sao lưu tiến độ</h2></div><button type="button" data-close-modal="dataModal" aria-label="Đóng">×</button></div>
+      <p class="data-status">Bản sao gồm tiến độ, câu đánh dấu, câu sai, lịch sử, ghi chú và báo cáo câu hỏi.</p>
+      <div class="data-actions"><button class="button primary" id="exportBtn" type="button">Tải bản sao JSON</button><button class="button secondary" id="importBtn" type="button">Khôi phục từ JSON</button><input id="importFile" type="file" accept="application/json,.json"><button class="button danger-outline" id="clearDataBtn" type="button">Xóa tiến độ trên thiết bị</button></div>
+    </section>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data/questions.js"></script>
+  <script>
+    (() => {
+      'use strict';
+
+      const QUESTIONS = Array.isArray(window.EXAM_QUESTIONS) ? window.EXAM_QUESTIONS : [];
+      const STORE_KEY = 'csi106-study-hub-v1';
+      const $ = id => document.getElementById(id);
+      const DEFAULTS = { schemaVersion: 1, progress: {}, mistakes: [], bookmarks: [], notes: {}, history: [], reports: [], currentSession: null, theme: 'light' };
+      let storageWorks = true;
+      let data = loadData();
+      let session = [];
+      let position = 0;
+      let mode = 'practice';
+      let selected = {};
+      let checked = {};
+      let revealed = {};
+      let recorded = {};
+      let optionOrder = {};
+      let startedAt = 0;
+      let secondsAllowed = 0;
+      let timerHandle = null;
+      let submitted = false;
+      let lastResultQuestions = [];
+      let toastTimer = null;
+
+      function loadData() {
+        try {
+          const raw = localStorage.getItem(STORE_KEY);
+          if (!raw) return structuredClone(DEFAULTS);
+          const saved = JSON.parse(raw);
+          return { ...structuredClone(DEFAULTS), ...saved,
+            progress: saved.progress && typeof saved.progress === 'object' ? saved.progress : {},
+            mistakes: Array.isArray(saved.mistakes) ? saved.mistakes : [],
+            bookmarks: Array.isArray(saved.bookmarks) ? saved.bookmarks : [],
+            notes: saved.notes && typeof saved.notes === 'object' ? saved.notes : {},
+            history: Array.isArray(saved.history) ? saved.history : [],
+            reports: Array.isArray(saved.reports) ? saved.reports : [] };
+        } catch {
+          storageWorks = false;
+          return structuredClone(DEFAULTS);
+        }
+      }
+      function saveData() {
+        try { localStorage.setItem(STORE_KEY, JSON.stringify(data)); storageWorks = true; }
+        catch { storageWorks = false; }
+        $('saveChip').classList.toggle('temporary', !storageWorks);
+        $('saveLabel').textContent = storageWorks ? 'Tự động lưu' : 'Chỉ lưu trong phiên';
+        $('autosaveStatus').textContent = storageWorks ? '✓ Đã lưu' : 'Chỉ lưu trong phiên';
+      }
+      function toast(message) {
+        const el = $('toast'); el.textContent = message; el.classList.add('show');
+        clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 2500);
+      }
+      function escapeText(value) { return String(value ?? ''); }
+      function keysFor(question) { return Array.isArray(question.answer) ? [...question.answer].sort() : []; }
+      function isCorrect(question) {
+        const chosen = [...(selected[question.id] || [])].sort();
+        const answer = keysFor(question);
+        return chosen.length === answer.length && chosen.every((key, i) => key === answer[i]);
+      }
+      function chapterName(question) { return question.chapterTitle || (question.chapter ? `Chương ${question.chapter}` : 'Chưa phân chương'); }
+      function currentQuestion() { return session[position]; }
+      function persistSession() {
+        if (!session.length || submitted) { data.currentSession = null; saveData(); return; }
+        data.currentSession = { ids: session.map(q => q.id), position, mode, selected, checked, revealed, recorded, optionOrder, startedAt, secondsAllowed };
+        saveData();
+        updateResumeCard();
+      }
+      function showView(id) {
+        ['dashboardView', 'quizView', 'resultsView'].forEach(view => $(view).classList.toggle('hidden', view !== id));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      function setMode(nextMode) {
+        mode = nextMode;
+        document.querySelectorAll('#modeControl [data-mode]').forEach(button => button.classList.toggle('active', button.dataset.mode === mode));
+        $('timerSetting').classList.toggle('hidden', mode !== 'exam');
+        $('startBtn').textContent = mode === 'exam' ? 'Tạo đề thi thử' : 'Bắt đầu phiên học';
+      }
+      function fillChapters() {
+        const chapters = new Map();
+        for (const q of QUESTIONS) if (q.chapter != null) chapters.set(String(q.chapter), q.chapterTitle || `Chương ${q.chapter}`);
+        const select = $('chapterSelect');
+        for (const [id, title] of chapters) {
+          const option = document.createElement('option'); option.value = id; option.textContent = `Chương ${id} · ${title}`; select.appendChild(option);
+        }
+        $('questionTotal').textContent = `${QUESTIONS.length.toLocaleString('vi-VN')} câu`;
+        $('chapterTotal').textContent = `${chapters.size} chương`;
+        $('poolCount').textContent = `${QUESTIONS.length.toLocaleString('vi-VN')} câu phù hợp`;
+        $('bankHeading').textContent = 'Câu hỏi văn bản';
+      }
+      function poolForSetup() {
+        let pool = QUESTIONS;
+        const chapter = $('chapterSelect').value;
+        if (chapter !== 'all') pool = pool.filter(q => String(q.chapter) === chapter);
+        const source = $('sourceSelect').value;
+        if (source === 'mistakes') pool = pool.filter(q => data.mistakes.includes(q.id));
+        if (source === 'bookmarks') pool = pool.filter(q => data.bookmarks.includes(q.id));
+        return pool;
+      }
+      function updatePoolCount() {
+        const total = poolForSetup().length;
+        $('poolCount').textContent = `${total.toLocaleString('vi-VN')} câu phù hợp`;
+        if (!total && $('sourceSelect').value === 'mistakes') $('poolCount').textContent = 'Chưa có câu sai để ôn';
+        else if (!total && $('sourceSelect').value === 'bookmarks') $('poolCount').textContent = 'Chưa có câu được đánh dấu';
+      }
+      function dashboardStats() {
+        const entries = Object.values(data.progress);
+        const attempts = entries.reduce((sum, item) => sum + (item.attempts || 0), 0);
+        const right = entries.reduce((sum, item) => sum + (item.correct || 0), 0);
+        const percent = attempts ? Math.round(right / attempts * 100) : null;
+        $('accuracyValue').textContent = percent == null ? '—' : `${percent}%`;
+        $('attemptedValue').textContent = attempts.toLocaleString('vi-VN');
+        $('mistakeValue').textContent = data.mistakes.length.toLocaleString('vi-VN');
+        $('accuracyRing').style.setProperty('--score', `${percent || 0}%`);
+        $('historyBtn').querySelector('span').textContent = `Câu cần ôn (${data.mistakes.length})`;
+      }
+      function updateResumeCard() {
+        const saved = data.currentSession;
+        const found = saved && Array.isArray(saved.ids) ? saved.ids.filter(id => QUESTIONS.some(q => q.id === id)) : [];
+        $('resumeCard').classList.toggle('hidden', !found.length);
+        if (!found.length) return;
+        $('resumeTitle').textContent = saved.mode === 'exam' ? 'Tiếp tục đề thi thử' : 'Tiếp tục phiên học';
+        $('resumeMeta').textContent = `${found.length} câu · Đang ở câu ${Math.min((saved.position || 0) + 1, found.length)}`;
+      }
+      function shuffle(list) {
+        const copy = [...list];
+        for (let i = copy.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [copy[i], copy[j]] = [copy[j], copy[i]]; }
+        return copy;
+      }
+      function startSession(poolOverride = null) {
+        let pool = poolOverride || poolForSetup();
+        if (!pool.length) { toast('Không có câu hỏi trong lựa chọn này.'); return; }
+        if ($('shuffleSelect').value === 'yes' && !poolOverride) pool = shuffle(pool);
+        const requested = $('countSelect').value === 'all' ? pool.length : Math.max(1, Number($('countSelect').value) || 20);
+        session = pool.slice(0, requested);
+        position = 0; selected = {}; checked = {}; revealed = {}; recorded = {}; optionOrder = {};
+        startedAt = Date.now(); submitted = false;
+        secondsAllowed = mode === 'exam' ? Math.max(0, Number($('minutesSelect').value) || 0) * 60 : 0;
+        if ($('shuffleAnswers').value === 'yes') for (const q of session) optionOrder[q.id] = shuffle(q.options || []).map(o => o.key);
+        if (timerHandle) clearInterval(timerHandle);
+        $('quizTitle').textContent = mode === 'exam' ? 'Thi thử' : 'Học từng câu';
+        $('timer').classList.toggle('hidden', mode !== 'exam' || secondsAllowed === 0);
+        $('submitBtn').classList.toggle('hidden', mode !== 'exam');
+        showView('quizView'); renderQuestion(); renderGrid(); updateTimer();
+        if (mode === 'exam' && secondsAllowed) timerHandle = setInterval(updateTimer, 500);
+        persistSession();
+      }
+      function resumeSession() {
+        const saved = data.currentSession;
+        if (!saved) return;
+        const byId = new Map(QUESTIONS.map(q => [q.id, q]));
+        session = (saved.ids || []).map(id => byId.get(id)).filter(Boolean);
+        if (!session.length) { data.currentSession = null; saveData(); updateResumeCard(); return; }
+        position = Math.min(saved.position || 0, session.length - 1);
+        mode = saved.mode === 'exam' ? 'exam' : 'practice';
+        selected = saved.selected || {}; checked = saved.checked || {}; revealed = saved.revealed || {}; recorded = saved.recorded || {}; optionOrder = saved.optionOrder || {};
+        startedAt = saved.startedAt || Date.now(); secondsAllowed = saved.secondsAllowed || 0; submitted = false;
+        $('quizTitle').textContent = mode === 'exam' ? 'Thi thử' : 'Học từng câu';
+        $('timer').classList.toggle('hidden', mode !== 'exam' || secondsAllowed === 0);
+        $('submitBtn').classList.toggle('hidden', mode !== 'exam');
+        showView('quizView'); renderQuestion(); renderGrid(); updateTimer();
+        if (mode === 'exam' && secondsAllowed) timerHandle = setInterval(updateTimer, 500);
+      }
+      function optionList(question) {
+        const options = [...(question.options || [])];
+        const order = optionOrder[question.id];
+        return order?.length ? order.map(key => options.find(option => option.key === key)).filter(Boolean) : options;
+      }
+      function revealExplanation(question, correct, label = '') {
+        const box = $('answerFeedback'); box.classList.remove('hidden', 'good', 'bad');
+        box.classList.add(correct ? 'good' : 'bad'); box.replaceChildren();
+        const heading = document.createElement('strong');
+        heading.textContent = label || (correct ? 'Chính xác!' : 'Chưa đúng — hãy xem đáp án.');
+        const key = document.createElement('span'); key.className = 'answer-key'; key.textContent = `Đáp án: ${keysFor(question).join(', ') || 'Chưa có'}`;
+        const explanationHeading = document.createElement('strong'); explanationHeading.style.marginTop = '9px';
+        explanationHeading.textContent = 'Giải thích';
+        if (question.explanationSource === 'ai') {
+          const badge = document.createElement('span'); badge.className = 'ai-badge'; badge.textContent = 'AI tạo'; explanationHeading.appendChild(badge);
+        }
+        const body = document.createElement('p'); body.textContent = question.explanation || 'Chưa có giải thích cho câu này.';
+        box.append(heading, key, explanationHeading, body);
+      }
+      function renderQuestion() {
+        if (!session.length) return;
+        const q = currentQuestion();
+        const answered = selected[q.id] || [];
+        const showResult = mode === 'practice' ? !!(checked[q.id] || revealed[q.id]) : submitted;
+        $('questionNumber').textContent = `Câu ${q.id}`;
+        $('questionTopic').textContent = `${q.chapter ? `Chương ${q.chapter}` : ''}${q.chapter ? ' · ' : ''}${chapterName(q)}`;
+        $('questionText').textContent = q.question || '(Câu hỏi chưa có nội dung văn bản)';
+        $('markBtn').classList.toggle('active', data.bookmarks.includes(q.id));
+        $('markBtn').setAttribute('aria-pressed', String(data.bookmarks.includes(q.id)));
+        $('markBtn').textContent = data.bookmarks.includes(q.id) ? '★ Đã đánh dấu' : '☆ Đánh dấu';
+        const options = $('answerOptions'); options.replaceChildren();
+        for (const option of optionList(q)) {
+          const button = document.createElement('button'); button.type = 'button'; button.className = 'answer-option';
+          const key = document.createElement('span'); key.className = 'option-key'; key.textContent = `${option.key}.`;
+          const text = document.createElement('span'); text.textContent = option.text;
+          button.append(key, text);
+          const isSelected = answered.includes(option.key);
+          if (isSelected) button.classList.add('selected');
+          if (showResult && keysFor(q).includes(option.key)) button.classList.add('correct');
+          if (showResult && isSelected && !keysFor(q).includes(option.key)) button.classList.add('wrong');
+          button.setAttribute('aria-pressed', String(isSelected));
+          button.disabled = submitted || (mode === 'practice' && !!checked[q.id]);
+          button.addEventListener('click', () => chooseAnswer(q, option.key));
+          options.appendChild(button);
+        }
+        const feedback = $('answerFeedback');
+        feedback.classList.add('hidden'); feedback.replaceChildren();
+        if (showResult) revealExplanation(q, isCorrect(q), mode === 'exam' ? 'Kết quả câu này' : '');
+        $('prevBtn').disabled = position === 0;
+        $('nextBtn').textContent = position === session.length - 1 ? 'Kết thúc →' : 'Câu sau →';
+        $('checkBtn').classList.toggle('hidden', mode !== 'practice');
+        $('showAnswerBtn').classList.toggle('hidden', mode !== 'practice');
+        $('checkBtn').disabled = !!checked[q.id] || submitted;
+        $('checkBtn').textContent = checked[q.id] ? 'Đã kiểm tra' : 'Kiểm tra';
+        $('positionStat').textContent = `${position + 1}/${session.length}`;
+        $('doneStat').textContent = session.filter(item => (selected[item.id] || []).length).length;
+        $('correctStat').textContent = session.filter(item => checked[item.id] && isCorrect(item)).length;
+        $('markedStat').textContent = session.filter(item => data.bookmarks.includes(item.id)).length;
+        $('progressBar').style.width = `${((position + 1) / session.length) * 100}%`;
+        $('reportDetails').classList.add('hidden'); $('reportDetails').open = false;
+        $('reportNote').value = ''; $('reportStatus').textContent = '';
+        renderGrid();
+      }
+      function chooseAnswer(question, key) {
+        if (submitted || checked[question.id]) return;
+        const current = [...(selected[question.id] || [])];
+        if (question.type === 'multiple-answer' || keysFor(question).length > 1) {
+          selected[question.id] = current.includes(key) ? current.filter(item => item !== key) : [...current, key].sort();
+        } else selected[question.id] = [key];
+        persistSession(); renderQuestion();
+      }
+      function recordQuestion(question) {
+        if (recorded[question.id]) return;
+        const ok = isCorrect(question);
+        const item = data.progress[question.id] || { attempts: 0, correct: 0 };
+        item.attempts += 1; if (ok) item.correct += 1; item.lastAnsweredAt = new Date().toISOString();
+        data.progress[question.id] = item; recorded[question.id] = true;
+        if (ok) data.mistakes = data.mistakes.filter(id => id !== question.id);
+        else if (!data.mistakes.includes(question.id)) data.mistakes.unshift(question.id);
+        saveData(); dashboardStats();
+      }
+      function checkCurrent() {
+        if (!session.length || submitted) return;
+        const q = currentQuestion();
+        if (!(selected[q.id] || []).length) { toast('Chọn đáp án trước khi kiểm tra.'); return; }
+        checked[q.id] = true; recordQuestion(q); persistSession(); renderQuestion();
+      }
+      function showAnswer() {
+        if (!session.length || mode !== 'practice') return;
+        const q = currentQuestion(); revealed[q.id] = true; renderQuestion();
+      }
+      function moveQuestion(delta) {
+        if (!session.length) return;
+        const next = position + delta;
+        if (next < 0) return;
+        if (next >= session.length) { finishSession(); return; }
+        position = next; $('reportDetails').open = false; persistSession(); renderQuestion();
+      }
+      function toggleBookmark() {
+        const id = currentQuestion()?.id; if (id == null) return;
+        data.bookmarks = data.bookmarks.includes(id) ? data.bookmarks.filter(value => value !== id) : [...data.bookmarks, id];
+        saveData(); dashboardStats(); renderQuestion();
+      }
+      function updateTimer() {
+        if (!startedAt || !secondsAllowed || submitted) return;
+        const remaining = Math.max(0, secondsAllowed - Math.floor((Date.now() - startedAt) / 1000));
+        const minutes = Math.floor(remaining / 60), seconds = remaining % 60;
+        $('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        $('timer').classList.toggle('urgent', remaining <= 300);
+        if (remaining <= 0) finishSession(true);
+      }
+      function finishSession(timeExpired = false) {
+        if (!session.length || submitted) return;
+        const unanswered = session.filter(q => !(selected[q.id] || []).length);
+        if (!timeExpired && mode === 'exam' && unanswered.length && !window.confirm(`Còn ${unanswered.length} câu chưa trả lời. Bạn vẫn muốn nộp bài?`)) return;
+        submitted = true;
+        if (timerHandle) clearInterval(timerHandle);
+        for (const q of session) {
+          if (mode === 'exam') { checked[q.id] = true; if ((selected[q.id] || []).length) recordQuestion(q); }
+          else if ((selected[q.id] || []).length && !checked[q.id]) { checked[q.id] = true; recordQuestion(q); }
+        }
+        const correct = session.filter(q => isCorrect(q) && (selected[q.id] || []).length).length;
+        const wrong = session.filter(q => (selected[q.id] || []).length && !isCorrect(q)).length;
+        const elapsed = Math.max(0, Math.floor((Date.now() - startedAt) / 1000));
+        const result = { mode, total: session.length, correct, wrong, unanswered: unanswered.length, elapsed, createdAt: new Date().toISOString(), ids: session.map(q => q.id) };
+        data.history.unshift(result); data.history = data.history.slice(0, 100); data.currentSession = null; saveData(); dashboardStats(); updateResumeCard();
+        renderResults(result, timeExpired); showView('resultsView');
+      }
+      function renderResults(result, timeExpired) {
+        const score = result.total ? Math.round(result.correct / result.total * 100) : 0;
+        $('resultHeading').textContent = timeExpired ? 'Hết giờ' : 'Phiên học hoàn tất';
+        $('resultScore').textContent = `${score}%`;
+        $('resultMessage').textContent = `${result.correct} đúng · ${result.wrong} sai · ${result.unanswered} chưa làm`;
+        $('resultCorrect').textContent = result.correct; $('resultWrong').textContent = result.wrong; $('resultUnanswered').textContent = result.unanswered;
+        $('resultDuration').textContent = `${Math.floor(result.elapsed / 60)}p ${result.elapsed % 60}s`;
+        lastResultQuestions = session.filter(q => !(selected[q.id] || []).length || !isCorrect(q));
+        $('retryWrongBtn').classList.toggle('hidden', !lastResultQuestions.length);
+        const list = $('reviewList'); list.replaceChildren();
+        for (const q of session) {
+          const item = document.createElement('article'); item.className = 'review-item';
+          const icon = document.createElement('span'); icon.textContent = (selected[q.id] || []).length ? (isCorrect(q) ? '✓' : '×') : '—';
+          const body = document.createElement('div'); body.className = 'review-question';
+          const title = document.createElement('strong'); title.textContent = `Câu ${q.id} · ${chapterName(q)}`;
+          const questionText = document.createElement('p'); questionText.textContent = q.question;
+          const answer = document.createElement('small'); answer.className = 'review-answer'; answer.textContent = `Đáp án: ${keysFor(q).join(', ') || 'Chưa có'}`;
+          body.append(title, questionText, answer);
+          const details = document.createElement('details');
+          const summary = document.createElement('summary'); summary.textContent = 'Xem giải thích';
+          const explanation = document.createElement('p'); explanation.className = 'review-explanation'; explanation.textContent = q.explanation || 'Chưa có giải thích.';
+          if (q.explanationSource === 'ai') { const badge = document.createElement('span'); badge.className = 'ai-badge'; badge.textContent = 'AI tạo'; details.append(summary, badge, explanation); }
+          else details.append(summary, explanation);
+          item.append(icon, body, details); list.appendChild(item);
+        }
+      }
+      function renderGrid() {
+        const grid = $('questionGrid'); grid.replaceChildren();
+        session.forEach((q, index) => {
+          const button = document.createElement('button'); button.type = 'button'; button.className = 'question-jump'; button.textContent = q.id;
+          button.setAttribute('aria-label', `Đi đến câu ${q.id}`);
+          if (index === position) button.classList.add('current');
+          if ((selected[q.id] || []).length) button.classList.add('answered');
+          if (data.bookmarks.includes(q.id)) button.classList.add('marked');
+          button.addEventListener('click', () => { position = index; persistSession(); renderQuestion(); });
+          grid.appendChild(button);
+        });
+      }
+      function openModal(id) { $(id).classList.remove('hidden'); if (id === 'searchModal') setTimeout(() => $('searchInput').focus(), 0); }
+      function closeModal(id) { $(id).classList.add('hidden'); }
+      function searchQuestions() {
+        const query = $('searchInput').value.trim().toLocaleLowerCase();
+        const results = $('searchResults'); results.replaceChildren();
+        if (!query) return;
+        const matches = QUESTIONS.filter(q => String(q.id) === query || `${q.question} ${q.options.map(o => o.text).join(' ')} ${chapterName(q)}`.toLocaleLowerCase().includes(query)).slice(0, 24);
+        if (!matches.length) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = 'Không tìm thấy câu phù hợp.'; results.appendChild(empty); return; }
+        for (const q of matches) {
+          const button = document.createElement('button'); button.type = 'button'; button.className = 'search-result';
+          const title = document.createElement('strong'); title.textContent = `Câu ${q.id} · ${chapterName(q)}`;
+          const text = document.createElement('small'); text.textContent = q.question;
+          button.append(title, text); button.addEventListener('click', () => { closeModal('searchModal'); setMode('practice'); startSession([q]); }); results.appendChild(button);
+        }
+      }
+      function openMistakes() {
+        const list = $('historyList'); list.replaceChildren();
+        if (!data.mistakes.length) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = 'Chưa có câu sai. Làm một phiên học để tạo danh sách ôn tập.'; list.appendChild(empty); }
+        else {
+          for (const id of data.mistakes.slice(0, 100)) {
+            const q = QUESTIONS.find(item => item.id === id); if (!q) continue;
+            const button = document.createElement('button'); button.type = 'button'; button.className = 'search-result';
+            const title = document.createElement('strong'); title.textContent = `Câu ${q.id} · ${chapterName(q)}`;
+            const text = document.createElement('small'); text.textContent = q.question;
+            button.append(title, text); button.addEventListener('click', () => { closeModal('historyModal'); setMode('practice'); startSession([q]); }); list.appendChild(button);
+          }
+        }
+        openModal('historyModal');
+      }
+      function saveReport(event) {
+        event.preventDefault();
+        const q = currentQuestion(); if (!q) return;
+        data.reports.unshift({ questionId: q.id, question: q.question, kind: $('reportType').value, details: $('reportNote').value.trim(), answerKey: keysFor(q), createdAt: new Date().toISOString() });
+        saveData(); $('reportStatus').textContent = storageWorks ? 'Đã lưu báo cáo trên thiết bị.' : 'Đã giữ báo cáo trong phiên này; hãy xuất JSON để không mất.';
+        $('reportNote').value = ''; $('reportDetails').open = false; toast('Đã lưu báo cáo câu hỏi.');
+      }
+      function exportBackup() {
+        const blob = new Blob([JSON.stringify({ ...data, exportedAt: new Date().toISOString() }, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob); const link = document.createElement('a');
+        link.href = url; link.download = `csi106-study-backup-${new Date().toISOString().slice(0, 10)}.json`; document.body.appendChild(link); link.click(); link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000); closeModal('dataModal');
+      }
+      function importBackup(file) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+          try {
+            const incoming = JSON.parse(String(reader.result));
+            if (!incoming || typeof incoming !== 'object' || !incoming.progress || !Array.isArray(incoming.reports || [])) throw new Error('bad backup');
+            if (!window.confirm('Khôi phục bản sao và thay thế tiến độ hiện tại?')) return;
+            data = { ...structuredClone(DEFAULTS), ...incoming, currentSession: incoming.currentSession || null };
+            saveData(); dashboardStats(); updateResumeCard(); closeModal('dataModal'); toast('Đã khôi phục dữ liệu.');
+          } catch { toast('Không đọc được tệp sao lưu JSON.'); }
+          $('importFile').value = '';
+        };
+        reader.readAsText(file);
+      }
+      function clearData() {
+        if (!window.confirm('Xóa tiến độ, câu đánh dấu, lịch sử và báo cáo đang lưu trên thiết bị này?')) return;
+        data = structuredClone(DEFAULTS); saveData(); dashboardStats(); updateResumeCard(); closeModal('dataModal'); toast('Đã xóa dữ liệu học tập.');
+      }
+      function setTheme() {
+        const next = data.theme === 'dark' ? 'light' : 'dark'; data.theme = next;
+        document.documentElement.dataset.theme = next; $('themeBtn').innerHTML = next === 'dark' ? '☀<span>Giao diện</span>' : '☾<span>Giao diện</span>';
+        saveData();
+      }
+
+      document.querySelectorAll('#modeControl [data-mode]').forEach(button => button.addEventListener('click', () => setMode(button.dataset.mode)));
+      ['chapterSelect', 'sourceSelect'].forEach(id => $(id).addEventListener('change', updatePoolCount));
+      $('startBtn').addEventListener('click', () => startSession());
+      $('quickStartBtn').addEventListener('click', () => { setMode('practice'); $('countSelect').value = '20'; $('sourceSelect').value = 'all'; startSession(); });
+      $('quickExamBtn').addEventListener('click', () => { setMode('exam'); $('countSelect').value = '20'; $('sourceSelect').value = 'all'; startSession(); });
+      $('prevBtn').addEventListener('click', () => moveQuestion(-1)); $('nextBtn').addEventListener('click', () => moveQuestion(1));
+      $('checkBtn').addEventListener('click', checkCurrent); $('showAnswerBtn').addEventListener('click', showAnswer);
+      $('markBtn').addEventListener('click', toggleBookmark); $('submitBtn').addEventListener('click', () => finishSession());
+      $('exitQuizBtn').addEventListener('click', () => { if (timerHandle) clearInterval(timerHandle); persistSession(); showView('dashboardView'); dashboardStats(); });
+      $('homeBtn').addEventListener('click', () => { if (session.length && !submitted) persistSession(); showView('dashboardView'); });
+      $('newSessionBtn').addEventListener('click', () => showView('dashboardView'));
+      $('retryWrongBtn').addEventListener('click', () => { setMode('practice'); startSession(lastResultQuestions); });
+      $('resumeBtn').addEventListener('click', resumeSession);
+      $('discardResumeBtn').addEventListener('click', () => { data.currentSession = null; saveData(); updateResumeCard(); toast('Đã bỏ phiên đang làm dở.'); });
+      $('searchToggleBtn').addEventListener('click', () => openModal('searchModal'));
+      $('searchInput').addEventListener('input', searchQuestions);
+      $('historyBtn').addEventListener('click', openMistakes);
+      $('themeBtn').addEventListener('click', setTheme);
+      $('dataBtn').addEventListener('click', () => openModal('dataModal'));
+      $('exportBtn').addEventListener('click', exportBackup);
+      $('importBtn').addEventListener('click', () => $('importFile').click());
+      $('importFile').addEventListener('change', event => importBackup(event.target.files?.[0]));
+      $('clearDataBtn').addEventListener('click', clearData);
+      $('openReportBtn').addEventListener('click', () => { $('reportDetails').classList.remove('hidden'); $('reportDetails').open = !$('reportDetails').open; if ($('reportDetails').open) $('reportType').focus(); });
+      $('reportForm').addEventListener('submit', saveReport);
+      $('navigatorFab').addEventListener('click', () => document.querySelector('.question-navigator').classList.toggle('open'));
+      document.querySelectorAll('[data-close-modal]').forEach(button => button.addEventListener('click', () => closeModal(button.dataset.closeModal)));
+      document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.addEventListener('click', event => { if (event.target === backdrop) closeModal(backdrop.id); }));
+      document.addEventListener('keydown', event => {
+        if (event.target.matches('input,textarea,select') || event.target.isContentEditable) return;
+        if (event.key === 'Escape') document.querySelectorAll('.modal-backdrop').forEach(modal => modal.classList.add('hidden'));
+        if ($('quizView').classList.contains('hidden')) return;
+        const key = event.key.toUpperCase();
+        if ('ABCDEF'.includes(key) && key.length === 1) { const q = currentQuestion(); if (q?.options.some(option => option.key === key)) chooseAnswer(q, key); }
+        else if (event.key === 'ArrowRight') moveQuestion(1);
+        else if (event.key === 'ArrowLeft') moveQuestion(-1);
+        else if (event.key === 'Enter' && mode === 'practice') checkCurrent();
+      });
+
+      if (!QUESTIONS.length) {
+        $('questionTotal').textContent = 'Chưa nạp được dữ liệu'; $('poolCount').textContent = 'Chưa nạp được câu hỏi';
+        $('startBtn').disabled = true; $('quickStartBtn').disabled = true; $('quickExamBtn').disabled = true;
+        toast('Không tìm thấy data/questions.js. Hãy chạy scripts/build-data.mjs trước.');
+      }
+      fillChapters(); updatePoolCount(); dashboardStats(); updateResumeCard();
+      document.documentElement.dataset.theme = data.theme || 'light';
+      $('themeBtn').innerHTML = data.theme === 'dark' ? '☀<span>Giao diện</span>' : '☾<span>Giao diện</span>';
+      saveData();
+    })();
+  </script>
+</body>
+</html>

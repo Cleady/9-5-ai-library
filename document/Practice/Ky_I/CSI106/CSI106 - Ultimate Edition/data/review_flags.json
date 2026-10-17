@@ -1,0 +1,8 @@
+[
+  {
+    "id": 94,
+    "kind": "option-mismatch",
+    "likelyInconsistent": true,
+    "reason": "Answer key contains key(s) E not present in options (A-D). Answer key kept to valid choices."
+  }
+]

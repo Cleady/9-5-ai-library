@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lecture detail – watch video, view resources, and take notes" />
+    <title>Lecture – 9.5 AI CLUB</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/lectures.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png" />
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- ======================== SIDEBAR ======================== -->
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Logo + tiêu đề slogan -->
+            <a href="../../home_page/home_page.html" class="sidebar-brand">
+                <span class="brand-logo"></span>
+                <div class="brand-text">
+                    <strong>9.5 AI CLUB</strong>
+                    <small>Learn · Build · Grow</small>
+                </div>
+            </a>
+
+            <!-- Menu trang chủ -->
+            <nav class="sidebar-nav" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="../../home_page/home_page.html" class="nav-link">
+                            <span class="nav-icon home-icon"></span>
+                            <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../lectures/lectures.html" class="nav-link is-active" aria-current="page">
+                            <span class="nav-icon lectures-icon"></span>
+                            <span class="nav-label">Lectures</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../practice/practice.html" class="nav-link">
+                            <span class="nav-icon practice-icon"></span>
+                            <span class="nav-label">Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../history.html" class="nav-link">
+                            <span class="nav-icon history-icon"></span>
+                            <span class="nav-label">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Nhóm phụ, tách khỏi nhóm chính bằng đường kẻ (CSS sẽ vẽ) -->
+            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Secondary Navigation">
+                <ul>
+                    <li>
+                        <a href="../favorites.html" class="nav-link">
+                            <span class="nav-icon favorites-icon"></span>
+                            <span class="nav-label">Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../lectures/resources.html" class="nav-link">
+                            <span class="nav-icon resources-icon"></span>
+                            <span class="nav-label">Resources</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../community/community-feed.html" class="nav-link">
+                            <span class="nav-icon community-icon"></span>
+                            <span class="nav-label">Community</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../settings/settings.html" class="nav-link">
+                            <span class="nav-icon settings-icon"></span>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Slogan ở đáy sidebar -->
+            <a href="#" class="sidebar-promo">
+                <p>Knowledge for a better tomorrow</p>
+                <span class="promo-arrow" aria-hidden="true"></span>
+            </a>
+
+        </aside>
+
+        <!-- ======================== NỘI DUNG CHÍNH ======================== -->
+        <main class="main">
+            <!-- Topbar -->
+            <header class="topbar">
+                <form class="search" role="search" action="#" method="get">
+                    <span class="search-icon" aria-hidden="true"></span>
+
+                    <label for="site-search" class="visually-hidden">Search lectures, topics, documents</label>
+                    <input type="search" id="site-search" name="q" class="search-input"
+                        placeholder="Search lectures, topics, or resources..." autocomplete="off" />
+
+                    <span class="search-shortcut" aria-hidden="true">
+                        <kbd>Ctrl</kbd>
+                        <kbd>K</kbd>
+                    </span>
+                </form>
+
+                <!-- Chuông thông báo và cái menu người dùng-->
+                <div class="topbar-actions">
+
+                    <!-- Chuông thông báo -->
+                    <div class="notification">
+                        <button type="button" class="icon-button" aria-label="Notifications (có 2 thông báo mới)"
+                            aria-expanded="false" aria-controls="notification-panel">
+                            <span class="bell-icon" aria-hidden="true"></span>
+                            <span class="notification-dot" aria-hidden="true"></span>
+                        </button>
+
+                        <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                            <header class="notification-header">
+                                <p class="notification-title">Notifications</p>
+                                <button type="button" class="notification-clear">Mark as read</button>
+                            </header>
+
+                            <ul class="notification-list">
+                                <li class="notification-item is-unread">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">New lecture: Machine Learning Basics, Lecture 4
+                                        </p>
+                                        <time class="notification-time" datetime="2025-09-14T09:00">2 hours ago</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item is-unread">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">Quiz 3 of Subject 3 is now open</p>
+                                        <time class="notification-time" datetime="2025-09-13T15:30">Yesterday</time>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <span class="notification-item-icon" aria-hidden="true"></span>
+                                    <div>
+                                        <p class="notification-text">You scored 85% ở Quiz 2, Subject 1</p>
+                                        <time class="notification-time" datetime="2025-09-12T10:00">2 days ago</time>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="notification-footer">View all notifications</a>
+                        </section>
+                    </div>
+
+                    <!-- Menu người dùng -->
+                    <div class="user-menu">
+                        <button type="button" class="user-menu-toggle" aria-haspopup="menu" aria-expanded="false"
+                            aria-controls="user-menu-list">
+                            <span class="user-avatar" aria-hidden="true">A</span>
+                            <span class="user-name">Alex</span>
+                            <span class="user-chevron" aria-hidden="true"></span>
+                            <span class="role-badge">Member</span>
+                        </button>
+
+                        <ul class="user-menu-list" id="user-menu-list" role="menu" hidden>
+                            <li role="none">
+                                <a href="../settings/settings.html#profile" role="menuitem"><span class="menu-icon profile-icon"
+                                        aria-hidden="true"></span>Profile</a>
+                            </li>
+                            <li role="none">
+                                <a href="reset_pass.html" role="menuitem"><span class="menu-icon password-icon"
+                                        aria-hidden="true"></span>Change Password</a>
+                            </li>
+                            <li role="none">
+                                <a href="login.html" role="menuitem"><span class="menu-icon logout-icon"
+                                        aria-hidden="true"></span>Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Breadcrumb -->
+            <nav class="lec-breadcrumb" aria-label="Breadcrumb">
+                <a href="lectures.html">Lectures</a>
+                <span class="lec-breadcrumb-sep" aria-hidden="true">›</span>
+                <a href="#" id="lec-nav-subject">Subject</a>
+                <span class="lec-breadcrumb-sep" aria-hidden="true">›</span>
+                <span class="lec-breadcrumb-current" id="lec-nav-title">Lecture</span>
+            </nav>
+
+            <!-- Bố cục chính 2 cột: Trái (Player + Tabs) - Phải (Sidebar) -->
+            <div class="lec-detail-layout">
+
+                <!-- CỘT TRÁI -->
+                <div class="lec-detail-main">
+                    <h1 class="lec-lecture-title" id="lec-detail-title">Lecture</h1>
+                    <p class="lec-lecture-meta" id="lec-detail-meta">Video</p>
+
+                    <!-- Video Player Container -->
+                    <div class="lec-player-wrapper" id="lec-player-wrapper">
+                        <!-- Video mẫu, dùng poster gradient (ảnh placeholder) -->
+                        <video id="lec-video" class="lec-player-video" src=""
+                            poster="/assets/theme/scene.png" preload="metadata"></video>
+
+                        <!-- Overlay nút Play to ở giữa -->
+                        <div class="lec-player-overlay" id="lec-player-overlay">
+                            <button class="lec-play-big" id="lec-btn-play-big" aria-label="Phát video">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Thanh điều khiển bên dưới -->
+                        <div class="lec-controls">
+                            <!-- Nút Play/Pause nhỏ -->
+                            <button class="lec-ctrl-btn" id="lec-btn-play" aria-label="Phát/Tạm dừng">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </button>
+
+                            <!-- Thanh Seek -->
+                            <input type="range" id="lec-seek" class="lec-seek" min="0" max="100" value="0"
+                                aria-label="Tua video" />
+
+                            <!-- Time -->
+                            <span class="lec-time-display" id="lec-time-display">0:00 / 0:00</span>
+
+                            <!-- Nút đổi tốc độ -->
+                            <button class="lec-ctrl-btn lec-speed-btn" id="lec-btn-speed"
+                                aria-label="Đổi tốc độ phát">1x</button>
+
+                            <!-- Nút Fullscreen -->
+                            <button class="lec-ctrl-btn" id="lec-btn-fullscreen" aria-label="Toàn màn hình">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- TABS (Overview, Resources, Notes, Discussion) -->
+                    <div class="lec-tabs" role="tablist">
+                        <button class="lec-tab" role="tab" aria-selected="true"
+                            aria-controls="tab-overview">Overview</button>
+                        <button class="lec-tab" role="tab" aria-selected="false"
+                            aria-controls="tab-resources">Resources</button>
+                        <button class="lec-tab" role="tab" aria-selected="false"
+                            aria-controls="tab-notes">Notes</button>
+                        <button class="lec-tab" role="tab" aria-selected="false"
+                            aria-controls="tab-discussion">Discussion</button>
+                    </div>
+
+                    <!-- TAB CONTENT -->
+                    <div class="lec-tab-content">
+
+                        <!-- OVERVIEW TAB -->
+                        <div class="lec-tabpanel" id="tab-overview" role="tabpanel">
+                            <h3 class="lec-about-title">About this lecture</h3>
+                            <p class="lec-about-desc" id="lec-about-desc"></p>
+
+                            <h3 class="lec-takeaway-title">Key takeaways:</h3>
+                            <ul class="lec-takeaway-list" id="lec-takeaway-list"></ul>
+
+                            <!-- Chi tiết nội dung bài giảng phương pháp Feynman -->
+                            <div class="lec-overview-article" id="lec-overview-article"></div>
+                        </div>
+
+                        <!-- RESOURCES TAB -->
+                        <div class="lec-tabpanel" id="tab-resources" role="tabpanel" hidden>
+                            <!-- Render từ JS -->
+                            <div id="lec-tab-resources"></div>
+                        </div>
+
+                        <!-- NOTES TAB (Screen 5) -->
+                        <div class="lec-tabpanel" id="tab-notes" role="tabpanel" hidden>
+                            <div class="lec-notes-editor">
+                                <!-- Toolbar -->
+                                <div class="lec-notes-toolbar">
+                                    <button class="lec-notes-tool-btn" data-action="bold"
+                                        title="Bold (Ctrl+B)">B</button>
+                                    <button class="lec-notes-tool-btn" data-action="italic" title="Italic (Ctrl+I)"
+                                        style="font-style:italic;">I</button>
+                                    <button class="lec-notes-tool-btn" data-action="underline"
+                                        title="Underline (Ctrl+U)" style="text-decoration:underline;">U</button>
+                                    <div class="lec-notes-sep"></div>
+                                    <button class="lec-notes-tool-btn" data-action="list" title="Bullet List">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm4-10h12v2H8zm0 5h12v2H8zm0 5h12v2H8z" />
+                                        </svg>
+                                    </button>
+                                    <button class="lec-notes-tool-btn" data-action="link" title="Insert Link">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71m-5.66 9.9a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
+                                        </svg>
+                                    </button>
+                                    <div class="lec-notes-sep"></div>
+                                    <button class="lec-notes-tool-btn" data-action="clear" title="Clear notes">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Vùng soạn thảo -->
+                                <div class="lec-notes-area" id="lec-notes-editor-area" contenteditable="true"
+                                    data-placeholder="Type your notes here..."></div>
+                                <!-- Footer trạng thái -->
+                                <div class="lec-notes-footer">
+                                    <div class="lec-notes-status" id="lec-notes-status">
+                                        <span class="lec-notes-status-dot"></span>
+                                        <span id="lec-notes-status-text">Auto saved</span>
+                                    </div>
+                                    <span>Markdown not supported</span>
+                                </div>
+                            </div>
+
+                            <!-- Related notes -->
+                            <div class="lec-related-notes">
+                                <h3 class="lec-related-title">Related notes</h3>
+                                <div class="lec-related-list" id="lec-related-notes-list"></div>
+                            </div>
+                        </div>
+
+                        <!-- DISCUSSION / COMMENTS TAB -->
+                        <div class="lec-tabpanel" id="tab-discussion" role="tabpanel" hidden>
+                            <div class="lec-discussion-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                                <h3 class="lec-about-title" style="margin: 0;">Thảo luận &amp; Hỏi đáp bài học</h3>
+                                <span id="lec-comments-count" style="font-size: 13px; font-weight: 600; color: #64748b;">0 bình luận</span>
+                            </div>
+
+                            <!-- Form gửi bình luận -->
+                            <div class="lec-comment-box" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px; margin-bottom: 20px;">
+                                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                                    <div id="lec-my-avatar" style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #38bdf8, #0284c7); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">U</div>
+                                    <div style="flex: 1;">
+                                        <textarea id="lec-comment-input" rows="3" placeholder="Đặt câu hỏi hoặc chia sẻ ý kiến về bài học này..." style="width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid #cbd5e1; font-family: inherit; font-size: 14px; resize: vertical; box-sizing: border-box;"></textarea>
+                                        <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+                                            <button type="button" id="lec-btn-submit-comment" class="lec-resource-btn" style="border: none; cursor: pointer; padding: 8px 18px; border-radius: 8px; background: var(--color-primary, #1d4ed8); color: #fff; font-weight: 600;">Gửi thảo luận</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Danh sách bình luận -->
+                            <div id="lec-comments-list">
+                                <p style="color: #64748b; font-size: 14px;">Đang tải bình luận...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CỘT PHẢI (SIDEBAR) -->
+                <div class="lec-sidebar">
+
+                    <!-- Your progress -->
+                    <div class="lec-sidebar-card lec-progress-card">
+                        <h3 class="lec-sidebar-title">Your progress</h3>
+                        <div id="lec-sidebar-progress"></div>
+                    </div>
+
+                    <!-- Next lecture -->
+                    <div class="lec-sidebar-card">
+                        <h3 class="lec-sidebar-title">Next lecture</h3>
+                        <div id="lec-sidebar-next"></div>
+                    </div>
+
+                    <!-- Course materials -->
+                    <div class="lec-sidebar-card">
+                        <h3 class="lec-sidebar-title">Course materials</h3>
+                        <div id="lec-sidebar-materials"></div>
+                    </div>
+
+                    <!-- Quote -->
+                    <div class="lec-quote-card">
+                        <p class="lec-quote-text">Small steps today,<br>greater you tomorrow.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MINI PLAYER OVERLAY (ẩn theo mặc định, trượt lên khi cuộn) -->
+            <div class="lec-mini-player" id="lec-mini-player">
+                <div class="lec-mini-info">
+                    <h4 class="lec-mini-title" id="lec-mini-title">Lecture</h4>
+                    <p class="lec-mini-time" id="lec-mini-time">0:00 / 0:00</p>
+                </div>
+                <div class="lec-mini-controls">
+                    <button class="lec-mini-btn lec-mini-btn--play" id="lec-mini-play" aria-label="Phát">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+                    <button class="lec-mini-close" id="lec-mini-close" aria-label="Đóng">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-left">
+                    <a href="index.html" class="footer-brand">
+                        <span class="footer-logo" aria-hidden="true"></span>
+                        9.5 AI CLUB
+                    </a>
+                    <span class="footer-divider" aria-hidden="true"></span>
+                    <p class="footer-tagline">9.5 AI Club · FPT University</p>
+                </div>
+                <div class="footer-right">
+                    <nav class="footer-nav" aria-label="Footer Links">
+                        <ul>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <span class="footer-divider" aria-hidden="true"></span>
+                    <p class="footer-note">Members only</p>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/lectures-data.js"></script>
+    <script src="/js/lectures-core.js"></script>
+    <script src="/js/lecture-player.js"></script>
+    <script src="/js/lecture-notes.js"></script>
+    <script>
+        /* Khởi tạo trang bài giảng (Player, Tabs, Notes) */
+        Lib95.lectures.player.initPage();
+        Lib95.lectures.notes.initNotesTab();
+    </script>
+    <script src="../../js/syncProfile.js"></script>
+</body>
+
+</html>
