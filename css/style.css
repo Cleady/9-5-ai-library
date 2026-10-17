@@ -10,6 +10,10 @@
     --color-nav-text: #475569;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
 /* Quy tắc nền tảng */
 *,
 *::before,

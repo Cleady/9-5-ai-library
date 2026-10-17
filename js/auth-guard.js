@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     // Đổi menu thành nút Logout duy nhất
                     let menuHtml = '';
                     if (['owner', 'admin', 'staff'].includes(user.role)) {
-                        menuHtml += '<a href="pages/admin/admin.html" style="font-weight: 500; color: #0d6efd; display: flex; align-items: center;"><img src="assets/icon/Better_Icon/settings.png" alt="Manage" style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;">Manage</a>';
+                        menuHtml += '<a href="pages/admin/admin.html" style="font-weight: 500; color: #0d6efd; display: flex; align-items: center;"><img src="/assets/icon/Better_Icon/settings.png" alt="Manage" style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;">Manage</a>';
                     }
                     menuHtml += '<a href="#" id="index-logout-btn" style="color: #dc3545; font-weight: 500;">Logout</a>';
                     guestMenu.innerHTML = menuHtml;

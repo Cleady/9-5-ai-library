@@ -21,7 +21,12 @@
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
         if (raw) {
-          return JSON.parse(raw);
+          const parsed = JSON.parse(raw);
+          if (parsed && parsed.user) {
+            delete parsed.user;
+            this.saveData(parsed);
+          }
+          return parsed;
         }
       } catch (err) {
         console.error("Failed to parse settings data from localStorage", err);

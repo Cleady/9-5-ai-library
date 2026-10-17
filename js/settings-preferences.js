@@ -87,8 +87,13 @@
 
   if(formDelete) {
     formDelete.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const userEmail = S.core.getData().user.email;
+      let userEmail = "";
+      try {
+        const localUser = JSON.parse(localStorage.getItem("user") || "{}");
+        userEmail = localUser.username || "";
+      } catch (err) {
+        console.error("Failed to parse user from localStorage", err);
+      }
       
       if(inputDelEmail.value !== userEmail) {
         delError.textContent = "Email xác nhận không khớp.";

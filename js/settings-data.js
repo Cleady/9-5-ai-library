@@ -11,13 +11,6 @@
 
   // Dữ liệu mock ban đầu dựa theo design
   const defaultData = {
-    user: {
-      name: "Alex",
-      email: "alex@example.com",
-      bio: "A passionate learner, building a better future.",
-      avatarDataUrl: null, // Sẽ chứa base64 khi người dùng upload ảnh
-      role: "Member"
-    },
     settings: {
       appearance: {
         theme: "light", // light, dark, auto
@@ -81,17 +74,7 @@
   window.Lib95.settings.data = {
     getDefault: function () {
       // Dùng parse/stringify để deep copy, tránh tham chiếu
-      let data = JSON.parse(JSON.stringify(defaultData));
-      const localUser = localStorage.getItem("user");
-      if (localUser) {
-        const u = JSON.parse(localUser);
-        data.user.name = u.full_name || u.username.split('@')[0];
-        data.user.email = u.username;
-        data.user.bio = u.bio || "";
-        data.user.avatarDataUrl = u.avatar_url || null;
-        data.user.role = u.role;
-      }
-      return data;
+      return JSON.parse(JSON.stringify(defaultData));
     }
   };
 })();

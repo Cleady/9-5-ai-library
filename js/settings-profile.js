@@ -257,7 +257,7 @@
           btnSave.disabled = true;
 
           try {
-              const res = await fetch("http://localhost:3000/api/users/profile", {
+              const res = await fetch("/api/users/profile", {
                   method: "PUT",
                   headers: { 
                       "Content-Type": "application/json",
@@ -279,8 +279,12 @@
                   
                   initialData.name = inputName.value;
                   initialData.bio = inputBio.value;
-                  setDirty(false);
-                  if (S && S.core) if (S && S.core) S.core.openModal("set-overlay-saved"); else document.getElementById("set-overlay-saved").hidden = false;
+                  if (S && S.core) {
+                      S.core.openModal("set-overlay-saved");
+                  } else {
+                      const overlay = document.getElementById("set-overlay-saved");
+                      if (overlay) overlay.hidden = false;
+                  }
               } else {
                   alert(data.error || "Lỗi lưu cấu hình");
               }
