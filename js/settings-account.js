@@ -90,9 +90,10 @@
   }
 
   if (formPwd) {
-    formPwd.addEventListener("submit", (e) => {
+    formPwd.addEventListener("submit", async (e) => {
       e.preventDefault();
       
+      const pCurrent = pwdCurrent.value;
       const pNew = pwdNew.value;
       const pConfirm = pwdConfirm.value;
       
@@ -106,14 +107,48 @@
         return;
       }
       
-      if (pNew === pwdCurrent.value) {
+      if (pNew === pCurrent) {
         pwdError.textContent = "Password mới phải khác mật khẩu hiện tại.";
         return;
       }
 
-      // TẠM THỜI - sẽ gọi API PHP để xử lý password, không lưu ở frontend
-      S.core.closeModal("modal-password");
-      S.core.showToast("Đã lưu (TẠM THỜI - sẽ gọi API PHP)", 3000);
+      const token = localStorage.getItem("token");
+      if (!token) {
+        pwdError.textContent = "Vui lòng đăng nhập lại để đổi mật khẩu.";
+        return;
+      }
+
+      const submitBtn = formPwd.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const res = await fetch("/api/users/change-password", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+          },
+          body: JSON.stringify({
+            current_password: pCurrent,
+            new_password: pNew
+          })
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          pwdError.textContent = data.error || data.message || "Đổi mật khẩu thất bại.";
+          return;
+        }
+
+        S.core.closeModal("modal-password");
+        formPwd.reset();
+        S.core.showToast("Đổi mật khẩu thành công!", 3000);
+      } catch (err) {
+        console.error("Change password error:", err);
+        pwdError.textContent = "Lỗi kết nối máy chủ. Vui lòng thử lại sau.";
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 

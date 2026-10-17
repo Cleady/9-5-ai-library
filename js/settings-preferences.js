@@ -86,7 +86,8 @@
   }
 
   if(formDelete) {
-    formDelete.addEventListener("submit", (e) => {
+    formDelete.addEventListener("submit", async (e) => {
+      e.preventDefault();
       let userEmail = "";
       try {
         const localUser = JSON.parse(localStorage.getItem("user") || "{}");
@@ -95,20 +96,54 @@
         console.error("Failed to parse user from localStorage", err);
       }
       
-      if(inputDelEmail.value !== userEmail) {
+      const confirmEmail = inputDelEmail.value.trim();
+      if(confirmEmail.toLowerCase() !== userEmail.toLowerCase()) {
         delError.textContent = "Email xác nhận không khớp.";
         return;
       }
 
-      // Xóa thành công (mock)
-      localStorage.removeItem("lib95:settings:data");
-      S.core.closeModal("modal-delete");
-      
-      // Chuyển về trang chủ
-      S.core.showToast("Tài khoản đã bị xoá! Đang chuyển hướng... (TẠM THỜI)", 3000);
-      setTimeout(() => {
-        window.location.href = "index.html";
-      }, 1500);
+      const token = localStorage.getItem("token");
+      if (!token) {
+        delError.textContent = "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.";
+        return;
+      }
+
+      const submitBtn = formDelete.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const res = await fetch("/api/users/me", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+          },
+          body: JSON.stringify({ confirm_email: confirmEmail })
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          delError.textContent = data.error || data.message || "Xoá tài khoản thất bại.";
+          return;
+        }
+
+        // Xoá sạch toàn bộ dữ liệu phiên và cài đặt
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        localStorage.removeItem("lib95:settings:data");
+        sessionStorage.clear();
+
+        S.core.closeModal("modal-delete");
+        S.core.showToast("Tài khoản đã bị xoá vĩnh viễn! Đang chuyển hướng...", 3000);
+        setTimeout(() => {
+          window.location.href = "/pages/auth/login.html";
+        }, 1500);
+      } catch (err) {
+        console.error("Delete account error:", err);
+        delError.textContent = "Lỗi kết nối máy chủ. Vui lòng thử lại sau.";
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 

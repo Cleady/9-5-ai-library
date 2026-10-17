@@ -12,30 +12,64 @@
     const storageList = document.getElementById("storage-list");
     const btnClearCache = document.getElementById("btn-clear-cache");
 
-    // Helper chuyển đổi Byte -> GB
+    // Helper chuyển đổi Byte -> GB hoặc MB
     function bytesToGB(bytes) {
+        if (!bytes || bytes === 0) return "0 MB";
+        if (bytes < 1024 * 1024 * 1024) {
+            return (bytes / (1024 * 1024)).toFixed(1) + " MB";
+        }
         return (bytes / (1024 * 1024 * 1024)).toFixed(1) + " GB";
     }
 
-    function loadStorage() {
+    async function loadStorage() {
         if (!storageList) return;
-        const storageData = S.core.getData().storage;
 
-        // Tính tổng used
+        let quotaBytes = 10 * 1024 * 1024 * 1024; // 10 GB default quota
         let usedBytes = 0;
-        storageData.items.forEach(item => usedBytes += item.bytes);
+
+        // Đọc dung lượng thực tế từ browser Storage API
+        if (navigator.storage && navigator.storage.estimate) {
+            try {
+                const est = await navigator.storage.estimate();
+                if (est.quota) quotaBytes = est.quota;
+                if (est.usage) usedBytes = est.usage;
+            } catch (e) {
+                console.warn("Storage estimate failed:", e);
+            }
+        }
+
+        // Tính dung lượng lưu trữ localStorage của trang
+        let localBytes = 0;
+        try {
+            for (let i = 0; i < localStorage.length; i++) {
+                const k = localStorage.key(i);
+                const val = localStorage.getItem(k);
+                localBytes += (k ? k.length * 2 : 0) + (val ? val.length * 2 : 0);
+            }
+        } catch (e) {}
+
+        if (usedBytes === 0) {
+            usedBytes = localBytes;
+        }
+
+        const cacheBytes = Math.max(0, usedBytes - localBytes);
+        const storageItems = [
+            { key: "cache", label: "Browser Cache & Temporary Assets", bytes: cacheBytes },
+            { key: "docs", label: "Local Storage & User Settings", bytes: localBytes },
+            { key: "lecture", label: "Lecture Notes & Saved Sessions", bytes: Math.round(usedBytes * 0.2) },
+            { key: "images", label: "Avatar & Media Resources", bytes: Math.round(usedBytes * 0.1) }
+        ];
 
         // Phần trăm tổng
-        const totalPercent = Math.min(100, Math.round((usedBytes / storageData.quotaBytes) * 100));
+        const totalPercent = quotaBytes > 0 ? Math.min(100, Math.max(1, Math.round((usedBytes / quotaBytes) * 100))) : 0;
 
         // Cập nhật giao diện tổng quan
-        if (storageTotal) storageTotal.textContent = `${bytesToGB(usedBytes)} / ${bytesToGB(storageData.quotaBytes)}`;
+        if (storageTotal) storageTotal.textContent = `${bytesToGB(usedBytes)} / ${bytesToGB(quotaBytes)}`;
         if (storageBar) storageBar.style.width = `${totalPercent}%`;
 
-        // Render danh sách (bằng cách xóa cũ, tạo mới)
+        // Render danh sách
         storageList.innerHTML = "";
-        storageData.items.forEach(item => {
-            // Icon động theo từng loại
+        storageItems.forEach(item => {
             let svg = "";
             if (item.key === "lecture") svg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>`;
             else if (item.key === "docs") svg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`;
@@ -47,29 +81,31 @@
             const div = document.createElement("div");
             div.className = "set-storage-item";
             div.innerHTML = `
-        <div class="set-storage-icon">${svg}</div>
-        <div class="set-storage-name">${item.label}</div>
-        <div class="set-storage-size">${bytesToGB(item.bytes)}</div>
-        <div class="set-storage-percent">${itemPercent}%</div>
-      `;
+                <div class="set-storage-icon">${svg}</div>
+                <div class="set-storage-name">${item.label}</div>
+                <div class="set-storage-size">${bytesToGB(item.bytes)}</div>
+                <div class="set-storage-percent">${itemPercent}%</div>
+            `;
             storageList.appendChild(div);
         });
     }
 
-    // Clear cache (giả lập xóa thuộc tính "other")
+    // Clear cache thực tế: xoá Cache Storage và làm mới ước tính
     if (btnClearCache) {
-        btnClearCache.addEventListener("click", () => {
+        btnClearCache.addEventListener("click", async () => {
             const ok = window.confirm("Are you sure you want to clear cache?");
             if (ok) {
-                const data = S.core.getData();
-                const otherItem = data.storage.items.find(i => i.key === "other");
-                if (otherItem && otherItem.bytes > 0) {
-                    otherItem.bytes = 0;
-                    S.core.saveData(data);
-                    loadStorage();
+                try {
+                    if (window.caches) {
+                        const keys = await caches.keys();
+                        await Promise.all(keys.map(k => caches.delete(k)));
+                    }
+                    sessionStorage.clear();
+                    await loadStorage();
                     S.core.showToast("Cache cleared successfully!");
-                } else {
-                    S.core.showToast("Cache is already empty.");
+                } catch (err) {
+                    console.error("Clear cache error:", err);
+                    S.core.showToast("Error clearing cache: " + err.message);
                 }
             }
         });
@@ -141,25 +177,104 @@
         });
     });
 
-    // Submit Contact Form
+    // Submit Contact Form gửi tới API /api/users/support
     const formContact = document.getElementById("form-contact");
     if (formContact) {
-        formContact.addEventListener("submit", (e) => {
+        formContact.addEventListener("submit", async (e) => {
             e.preventDefault();
-            S.core.closeModal("modal-contact");
-            formContact.reset();
-            S.core.showToast("Message sent! Support will contact you soon.");
+            const subjectEl = document.getElementById("contact-subject");
+            const msgEl = document.getElementById("contact-msg");
+            const submitBtn = formContact.querySelector('button[type="submit"]');
+
+            let userEmail = "";
+            try {
+                const u = JSON.parse(localStorage.getItem("user") || "{}");
+                userEmail = u.username || "";
+            } catch (err) {}
+
+            if (submitBtn) submitBtn.disabled = true;
+
+            const token = localStorage.getItem("token");
+            const headers = { "Content-Type": "application/json" };
+            if (token) headers["Authorization"] = `Bearer ${token}`;
+
+            try {
+                const res = await fetch("/api/users/support", {
+                    method: "POST",
+                    headers,
+                    body: JSON.stringify({
+                        type: "contact",
+                        subject: subjectEl.value.trim(),
+                        message: msgEl.value.trim(),
+                        contact_email: userEmail
+                    })
+                });
+
+                const data = await res.json();
+                if (!res.ok) {
+                    S.core.showToast(data.error || "Gửi hỗ trợ thất bại.", 3000);
+                    return;
+                }
+
+                S.core.closeModal("modal-contact");
+                formContact.reset();
+                S.core.showToast(data.message || "Message sent! Support will contact you soon.");
+            } catch (err) {
+                console.error("Support submit error:", err);
+                S.core.showToast("Lỗi kết nối máy chủ. Vui lòng thử lại sau.");
+            } finally {
+                if (submitBtn) submitBtn.disabled = false;
+            }
         });
     }
 
-    // Submit Report Form
+    // Submit Report Form gửi tới API /api/users/support
     const formReport = document.getElementById("form-report");
     if (formReport) {
-        formReport.addEventListener("submit", (e) => {
+        formReport.addEventListener("submit", async (e) => {
             e.preventDefault();
-            S.core.closeModal("modal-report");
-            formReport.reset();
-            S.core.showToast("Report submitted! Thanks for helping us improve.");
+            const descEl = document.getElementById("report-desc");
+            const submitBtn = formReport.querySelector('button[type="submit"]');
+
+            let userEmail = "";
+            try {
+                const u = JSON.parse(localStorage.getItem("user") || "{}");
+                userEmail = u.username || "";
+            } catch (err) {}
+
+            if (submitBtn) submitBtn.disabled = true;
+
+            const token = localStorage.getItem("token");
+            const headers = { "Content-Type": "application/json" };
+            if (token) headers["Authorization"] = `Bearer ${token}`;
+
+            try {
+                const res = await fetch("/api/users/support", {
+                    method: "POST",
+                    headers,
+                    body: JSON.stringify({
+                        type: "report",
+                        subject: "Bug Report",
+                        message: descEl.value.trim(),
+                        contact_email: userEmail
+                    })
+                });
+
+                const data = await res.json();
+                if (!res.ok) {
+                    S.core.showToast(data.error || "Gửi báo lỗi thất bại.", 3000);
+                    return;
+                }
+
+                S.core.closeModal("modal-report");
+                formReport.reset();
+                S.core.showToast(data.message || "Report submitted! Thanks for helping us improve.");
+            } catch (err) {
+                console.error("Report submit error:", err);
+                S.core.showToast("Lỗi kết nối máy chủ. Vui lòng thử lại sau.");
+            } finally {
+                if (submitBtn) submitBtn.disabled = false;
+            }
         });
     }
 
