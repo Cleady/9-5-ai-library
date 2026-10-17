@@ -1833,8 +1833,8 @@ html[data-theme="dark"] .com-page-head p {
 
 /* Tabs */
 html[data-theme="dark"] .com-tabs {
-    background: rgba(6, 13, 31, 0.5);
-    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(6, 13, 31, 0.5) !important;
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-tabs a {
@@ -1852,32 +1852,40 @@ html[data-theme="dark"] .com-tabs a.is-active {
     box-shadow: 0 2px 10px var(--accent-glow);
 }
 
-/* Cards & Composer */
-html[data-theme="dark"] .com-card {
-    background: var(--card-bg);
-    border-color: var(--card-border);
-    box-shadow: var(--card-shadow);
+/* Cards & Containers - XÓA BỎ BORDER TRẮNG THEO YÊU CẦU */
+html[data-theme="dark"] .com-card,
+html[data-theme="dark"] .com-leaderboard-board,
+html[data-theme="dark"] .com-group-card,
+html[data-theme="dark"] .com-search-panel,
+html[data-theme="dark"] .com-detail-card,
+html[data-theme="dark"] .com-aside-promo,
+html[data-theme="dark"] .com-notif-full-item {
+    background: var(--card-bg) !important;
+    border: none !important;
+    box-shadow: var(--card-shadow) !important;
 }
 
+/* Composer & Textarea */
 html[data-theme="dark"] .com-composer textarea {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: none !important;
     color: var(--color-text);
 }
 
 html[data-theme="dark"] .com-composer textarea:focus,
 html[data-theme="dark"] .com-comment-form input:focus {
-    border-color: var(--accent-bright);
-    box-shadow: 0 0 0 3px var(--accent-glow);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-bright);
 }
 
 html[data-theme="dark"] .com-composer-attachment {
-    background: rgba(15, 23, 42, 0.65);
-    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(15, 23, 42, 0.65) !important;
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-tool-button {
     color: var(--color-text-secondary);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-tool-button span {
@@ -1886,18 +1894,20 @@ html[data-theme="dark"] .com-tool-button span {
 
 html[data-theme="dark"] .com-tool-button:hover,
 html[data-theme="dark"] .com-tool-button[aria-pressed="true"] {
-    color: var(--accent-bright);
-    background: rgba(56, 189, 248, 0.1);
+    color: #ffffff;
+    background: rgba(56, 189, 248, 0.15);
 }
 
 html[data-theme="dark"] .com-button--primary {
     color: var(--color-on-accent);
     background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
+    border: none !important;
     box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 html[data-theme="dark"] .com-button--soft {
     background: rgba(255, 255, 255, 0.08);
+    border: none !important;
     color: var(--color-text);
 }
 
@@ -1917,14 +1927,14 @@ html[data-theme="dark"] .com-post-stats {
 }
 
 html[data-theme="dark"] .com-post-menu {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: none !important;
     color: var(--color-text-secondary);
 }
 
 html[data-theme="dark"] .com-post-menu:hover {
     color: var(--color-text);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(56, 189, 248, 0.18);
 }
 
 html[data-theme="dark"] .com-post-content {
@@ -1934,11 +1944,12 @@ html[data-theme="dark"] .com-post-content {
 html[data-theme="dark"] .com-tag {
     background: rgba(56, 189, 248, 0.15);
     color: var(--accent-bright);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-post-preview {
     background: rgba(15, 23, 42, 0.7);
-    border-color: rgba(255, 255, 255, 0.1);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-preview-copy strong {
@@ -1950,11 +1961,12 @@ html[data-theme="dark"] .com-preview-copy span {
 }
 
 html[data-theme="dark"] .com-post-actions {
-    border-top-color: rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 html[data-theme="dark"] .com-action-button {
     color: var(--color-text-muted);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-action-button:hover {
@@ -1970,7 +1982,7 @@ html[data-theme="dark"] .com-action-button[aria-pressed="true"] {
 /* Comments */
 html[data-theme="dark"] .com-comment-form input {
     background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
+    border: none !important;
     color: var(--color-text);
 }
 
@@ -1994,9 +2006,9 @@ html[data-theme="dark"] .com-reply-delete-btn:hover {
 
 /* Post Dropdown Menu & Edit */
 html[data-theme="dark"] .com-post-dropdown {
-    background: rgba(10, 22, 44, 0.96);
-    border-color: rgba(255, 255, 255, 0.14);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+    background: rgba(10, 22, 44, 0.98);
+    border: none !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
 }
 
 html[data-theme="dark"] .com-post-dropdown button {
@@ -2017,13 +2029,13 @@ html[data-theme="dark"] .com-post-dropdown button.com-dropdown-danger:hover {
 
 html[data-theme="dark"] .com-post-edit-box textarea {
     background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
+    border: none !important;
     color: var(--color-text);
 }
 
 html[data-theme="dark"] .com-filter-chip-bar {
     background: rgba(6, 13, 31, 0.5);
-    border-color: rgba(255, 255, 255, 0.08);
+    border: none !important;
 }
 
 /* Aside Widgets */
@@ -2056,28 +2068,33 @@ html[data-theme="dark"] .com-contributor-copy span {
     color: var(--color-text-muted);
 }
 
-html[data-theme="dark"] .com-aside-promo {
-    background: linear-gradient(145deg, rgba(14, 27, 54, 0.8), rgba(10, 20, 40, 0.85));
-    border-color: rgba(56, 189, 248, 0.16);
-    color: var(--color-text-secondary);
-}
-
 html[data-theme="dark"] .com-aside-promo-icon {
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--accent-bright);
+    background: rgba(56, 189, 248, 0.15) !important;
+    border: 1px solid rgba(56, 189, 248, 0.3) !important;
+    color: var(--accent-bright) !important;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25) !important;
 }
 
 html[data-theme="dark"] .com-aside-promo strong {
     color: var(--color-text);
 }
 
-/* Filter Tabs & Search in Discussions / Search Page */
+html[data-theme="dark"] .com-widget ul[style*="color"] {
+    color: var(--color-text-secondary) !important;
+}
+
+html[data-theme="dark"] .com-widget ul strong {
+    color: var(--color-text) !important;
+}
+
+/* Filter Tabs & Search in Discussions / Search Page / Leaderboard */
 html[data-theme="dark"] .com-filter-tabs {
-    border-bottom-color: rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 html[data-theme="dark"] .com-filter-tabs button {
     color: var(--color-text-muted);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-filter-tabs button:hover {
@@ -2086,13 +2103,14 @@ html[data-theme="dark"] .com-filter-tabs button:hover {
 }
 
 html[data-theme="dark"] .com-filter-tabs button.is-active {
-    color: var(--accent-bright);
-    background: rgba(56, 189, 248, 0.12);
+    color: var(--color-on-accent);
+    background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
+    box-shadow: 0 2px 8px var(--accent-glow);
 }
 
 html[data-theme="dark"] .com-discussion-search {
     background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
+    border: none !important;
     color: var(--color-text-muted);
 }
 
@@ -2108,7 +2126,7 @@ html[data-theme="dark"] .com-search-form input::placeholder {
 
 /* Discussion Rows */
 html[data-theme="dark"] .com-discussion-row {
-    border-bottom-color: rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
 }
 
 html[data-theme="dark"] .com-discussion-row:hover {
@@ -2116,9 +2134,10 @@ html[data-theme="dark"] .com-discussion-row:hover {
 }
 
 html[data-theme="dark"] .com-discussion-icon {
-    background: rgba(56, 189, 248, 0.12);
-    border-color: rgba(56, 189, 248, 0.2);
-    color: var(--accent-bright);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.45), rgba(37, 99, 235, 0.2)) !important;
+    border: 1px solid rgba(56, 189, 248, 0.25) !important;
+    color: var(--accent-bright) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 html[data-theme="dark"] .com-discussion-copy strong {
@@ -2134,6 +2153,7 @@ html[data-theme="dark"] .com-discussion-count small {
 html[data-theme="dark"] .com-discussion-tag {
     background: rgba(56, 189, 248, 0.15);
     color: var(--accent-bright);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-discussion-count {
@@ -2171,7 +2191,7 @@ html[data-theme="dark"] .com-detail-body {
 
 html[data-theme="dark"] .com-detail-preview {
     background: rgba(15, 23, 42, 0.7);
-    border-color: rgba(255, 255, 255, 0.1);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-detail-preview strong {
@@ -2196,7 +2216,7 @@ html[data-theme="dark"] .com-detail-comment-copy time {
 
 html[data-theme="dark"] .com-detail-reply input {
     background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
+    border: none !important;
     color: var(--color-text);
 }
 
@@ -2213,17 +2233,12 @@ html[data-theme="dark"] .com-related-link:hover {
 }
 
 /* Search Page & Topics */
-html[data-theme="dark"] .com-search-panel {
-    background: var(--card-bg);
-    border-color: var(--card-border);
-}
-
 html[data-theme="dark"] .com-results-title {
     color: var(--color-text);
 }
 
 html[data-theme="dark"] .com-search-result {
-    border-bottom-color: rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
 }
 
 html[data-theme="dark"] .com-search-result:hover {
@@ -2240,14 +2255,13 @@ html[data-theme="dark"] .com-result-copy span {
 
 html[data-theme="dark"] .com-topic-pill {
     background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
+    border: none !important;
     color: var(--color-text-secondary);
 }
 
 html[data-theme="dark"] .com-topic-pill:hover {
-    background: rgba(56, 189, 248, 0.12);
+    background: rgba(56, 189, 248, 0.15);
     color: var(--accent-bright);
-    border-color: var(--accent-bright);
 }
 
 html[data-theme="dark"] .com-no-results strong {
@@ -2264,13 +2278,13 @@ html[data-theme="dark"] .com-modal {
 }
 
 html[data-theme="dark"] .com-modal-card {
-    background: rgba(10, 22, 44, 0.96);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    box-shadow: var(--card-shadow);
+    background: rgba(10, 22, 44, 0.98);
+    border: none !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
 }
 
 html[data-theme="dark"] .com-modal-header {
-    border-bottom-color: rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 html[data-theme="dark"] .com-modal-header h2 {
@@ -2279,6 +2293,7 @@ html[data-theme="dark"] .com-modal-header h2 {
 
 html[data-theme="dark"] .com-modal-close {
     color: var(--color-text-muted);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-modal-close:hover {
@@ -2288,7 +2303,7 @@ html[data-theme="dark"] .com-modal-close:hover {
 
 html[data-theme="dark"] .com-modal-footer {
     background: rgba(6, 13, 31, 0.5);
-    border-top-color: rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 html[data-theme="dark"] .com-form-group label {
@@ -2298,29 +2313,19 @@ html[data-theme="dark"] .com-form-group label {
 html[data-theme="dark"] .com-form-group input,
 html[data-theme="dark"] .com-form-group select,
 html[data-theme="dark"] .com-form-group textarea {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: none !important;
     color: var(--color-text);
 }
 
 html[data-theme="dark"] .com-form-group input:focus,
 html[data-theme="dark"] .com-form-group select:focus,
 html[data-theme="dark"] .com-form-group textarea:focus {
-    border-color: var(--accent-bright);
-    box-shadow: 0 0 0 3px var(--accent-glow);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-bright);
 }
 
 /* Groups */
-html[data-theme="dark"] .com-group-card {
-    background: var(--card-bg);
-    border-color: var(--card-border);
-    box-shadow: var(--card-shadow);
-}
-
-html[data-theme="dark"] .com-group-card:hover {
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
-}
-
 html[data-theme="dark"] .com-group-title {
     color: var(--color-text);
 }
@@ -2331,23 +2336,18 @@ html[data-theme="dark"] .com-group-members-count {
 }
 
 html[data-theme="dark"] .com-group-footer {
-    border-top-color: rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Leaderboard */
-html[data-theme="dark"] .com-leaderboard-board {
-    background: var(--card-bg);
-    border-color: var(--card-border);
-    box-shadow: var(--card-shadow);
-}
-
 html[data-theme="dark"] .com-leaderboard-table th {
     color: var(--color-text-muted);
-    border-bottom-color: rgba(255, 255, 255, 0.08);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-leaderboard-table tr.com-lb-row {
     background: rgba(15, 23, 42, 0.65);
+    border: none !important;
     box-shadow: none;
 }
 
@@ -2357,26 +2357,65 @@ html[data-theme="dark"] .com-leaderboard-table tr.com-lb-row:hover {
 
 html[data-theme="dark"] .com-leaderboard-table td {
     color: var(--color-text);
-    border-color: rgba(255, 255, 255, 0.06);
+    border: none !important;
 }
 
 html[data-theme="dark"] .com-lb-score {
     color: var(--accent-bright);
 }
 
-/* Notifications Page */
-html[data-theme="dark"] .com-notif-full-item {
-    background: var(--card-bg);
-    border-color: var(--card-border);
-    color: var(--color-text);
+/* Leaderboard Rank Medals (Đồng bộ Glowing Glass Medals) */
+html[data-theme="dark"] .com-lb-rank--1 {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.35), rgba(180, 83, 9, 0.2)) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(251, 191, 36, 0.4) !important;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25) !important;
 }
 
+html[data-theme="dark"] .com-lb-rank--2 {
+    background: linear-gradient(135deg, rgba(148, 163, 184, 0.35), rgba(71, 85, 105, 0.2)) !important;
+    color: #e2e8f0 !important;
+    border: 1px solid rgba(226, 232, 240, 0.4) !important;
+    box-shadow: 0 4px 12px rgba(148, 163, 184, 0.25) !important;
+}
+
+html[data-theme="dark"] .com-lb-rank--3 {
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.35), rgba(146, 64, 14, 0.2)) !important;
+    color: #f97316 !important;
+    border: 1px solid rgba(249, 115, 22, 0.4) !important;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25) !important;
+}
+
+html[data-theme="dark"] .com-lb-rank {
+    color: var(--color-text-muted);
+}
+
+/* Notifications Page */
 html[data-theme="dark"] .com-notif-full-item:hover {
     background: rgba(15, 30, 60, 0.85);
-    border-color: rgba(56, 189, 248, 0.2);
 }
 
 html[data-theme="dark"] .com-notif-full-item.is-unread {
     background: rgba(30, 58, 138, 0.25);
-    border-color: var(--accent-bright);
+    border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+
+html[data-theme="dark"] .com-notif-type-icon.post {
+    background: rgba(37, 99, 235, 0.2) !important;
+    color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .com-notif-type-icon.comment {
+    background: rgba(147, 51, 234, 0.2) !important;
+    color: #c084fc !important;
+}
+
+html[data-theme="dark"] .com-notif-type-icon.like {
+    background: rgba(225, 29, 72, 0.2) !important;
+    color: #fb7185 !important;
+}
+
+html[data-theme="dark"] .com-notif-type-icon.group {
+    background: rgba(22, 163, 74, 0.2) !important;
+    color: #4ade80 !important;
 }
