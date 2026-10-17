@@ -2168,3 +2168,203 @@
   white-space: pre-wrap;
   word-break: break-all;
 }
+
+/* =====================================================================
+   /* ===== DARK THEME ===== */
+   Module: Resources (resources.html)
+   ===================================================================== */
+html[data-theme="dark"] {
+  --res-blue: var(--accent-bright);
+  --res-blue-dark: var(--color-primary);
+  --res-blue-soft: rgba(37, 99, 235, 0.22);
+  --res-ink: var(--color-text);
+  --res-muted: var(--color-text-muted);
+  --res-line: rgba(255, 255, 255, 0.1);
+  --res-white: var(--card-bg);
+  --res-shadow: var(--card-shadow);
+
+  --color-text: #f8fafc;
+  --color-text-muted: #64748b;
+}
+
+html[data-theme="dark"] .resource-page {
+  background-color: #030712;
+  background-image: var(--theme-bg-image);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-heading h1 {
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-heading p:not(.res-eyebrow) {
+  color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .res-eyebrow {
+  color: var(--accent-bright);
+}
+
+/* Cards & containers */
+html[data-theme="dark"] .res-library-card,
+html[data-theme="dark"] .res-promo-card,
+html[data-theme="dark"] .res-stats-card,
+html[data-theme="dark"] .res-recent-card {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+  box-shadow: var(--card-shadow);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-promo-card h2,
+html[data-theme="dark"] .res-stats-card h2,
+html[data-theme="dark"] .res-recent-card h2 {
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-stats-card li {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-secondary);
+}
+
+/* Search & Filters */
+html[data-theme="dark"] .res-resource-search {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] #resource-search {
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] #resource-search::placeholder {
+  color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .res-filter-button {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .res-filter-panel {
+  background: rgba(10, 22, 44, 0.85);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-filter-panel legend,
+html[data-theme="dark"] .res-filter-panel > label {
+  color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .res-filter-panel fieldset label {
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-filter-panel select {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-text);
+}
+
+/* Resource Items */
+html[data-theme="dark"] .res-resource-item {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-resource-item:hover {
+  background: rgba(15, 30, 60, 0.85);
+  border-color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .res-resource-info h2 {
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-resource-info p {
+  color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .res-resource-subject {
+  color: var(--accent-bright);
+  background: rgba(56, 189, 248, 0.15);
+  border-color: var(--accent-glow);
+}
+
+html[data-theme="dark"] .res-download-button {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .res-download-button:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .res-arrow-button {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .res-arrow-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-favorite-card-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .res-favorite-card-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #f59e0b;
+}
+
+html[data-theme="dark"] .res-favorite-card-btn.is-favorited {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+/* Dialogs & Buttons */
+html[data-theme="dark"] .res-dialog-shell {
+  background: rgba(10, 22, 44, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--color-text);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .res-dialog-shell h2 {
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-primary-button {
+  color: var(--color-on-accent);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+html[data-theme="dark"] .res-secondary-button {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-load-more-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .res-load-more-btn:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: var(--accent-bright);
+}
