@@ -1359,42 +1359,79 @@
   }
 }
 
-/* =====================================================================
-   /* ===== DARK THEME ===== */
-   Module: History (history.html)
-   ===================================================================== */
-html[data-theme="dark"] .history-app {
+/* ===== DARK THEME ===== */
+/* Module: History (history.html) */
+html[data-theme="dark"] .history-app,
+html[data-theme="dark"] {
   --his-blue: var(--accent-bright);
   --his-blue-light: var(--accent-bright);
   --his-blue-soft: rgba(37, 99, 235, 0.22);
-  --his-border: rgba(255, 255, 255, 0.12);
+  --his-border: transparent;
   --his-muted: var(--color-text-muted);
   --his-surface: var(--card-bg);
   --his-shadow: var(--card-shadow);
 }
 
+/* Typography & Headings */
 html[data-theme="dark"] .his-eyebrow {
   color: var(--accent-bright);
 }
 
-html[data-theme="dark"] .his-heading h1 {
-  color: var(--color-text);
+html[data-theme="dark"] .his-heading h1,
+html[data-theme="dark"] .his-section-heading h2,
+html[data-theme="dark"] .his-card h2,
+html[data-theme="dark"] .his-card h3,
+html[data-theme="dark"] .his-calendar-header h3,
+html[data-theme="dark"] .his-activity-title,
+html[data-theme="dark"] .his-schedule-copy strong,
+html[data-theme="dark"] .his-related-copy strong,
+html[data-theme="dark"] .his-resource-copy strong,
+html[data-theme="dark"] .his-progress-stats > div strong,
+html[data-theme="dark"] .his-progress-top strong,
+html[data-theme="dark"] .his-subject-progress strong,
+html[data-theme="dark"] .his-ring span {
+  color: var(--color-text) !important;
 }
 
-html[data-theme="dark"] .his-subtitle {
-  color: var(--color-text-muted);
+html[data-theme="dark"] .his-subtitle,
+html[data-theme="dark"] .his-section-heading p,
+html[data-theme="dark"] .his-card-heading p,
+html[data-theme="dark"] .his-result-count,
+html[data-theme="dark"] .his-activity-meta,
+html[data-theme="dark"] .his-activity-side,
+html[data-theme="dark"] .his-timeline-date,
+html[data-theme="dark"] .his-calendar-legend,
+html[data-theme="dark"] .his-schedule-copy span,
+html[data-theme="dark"] .his-related-copy span,
+html[data-theme="dark"] .his-resource-copy span,
+html[data-theme="dark"] .his-save-status,
+html[data-theme="dark"] .his-chart figcaption {
+  color: var(--color-text-muted) !important;
 }
 
+html[data-theme="dark"] .his-takeaways,
+html[data-theme="dark"] .his-takeaways li,
+html[data-theme="dark"] .his-detail-description,
+html[data-theme="dark"] .his-subject-progress {
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-theme="dark"] .his-takeaways li::before {
+  color: var(--accent-bright) !important;
+}
+
+/* Primary / Action Buttons */
 html[data-theme="dark"] .his-export-button {
   color: var(--color-on-accent);
   background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
-  border-color: var(--accent-bright);
+  border: none !important;
   box-shadow: 0 4px 12px var(--accent-glow);
 }
 
+/* Navigation tabs & Segmented controls */
 html[data-theme="dark"] .his-view-nav {
-  background: rgba(6, 13, 31, 0.5);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(6, 13, 31, 0.5) !important;
+  border: none !important;
 }
 
 html[data-theme="dark"] .his-view-button {
@@ -1412,63 +1449,76 @@ html[data-theme="dark"] .his-view-button.is-active {
   box-shadow: 0 2px 8px var(--accent-glow);
 }
 
+/* Filters & Select */
 html[data-theme="dark"] .his-filter {
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.1);
+  border: none !important;
   color: var(--color-text-secondary);
 }
 
 html[data-theme="dark"] .his-filter:hover {
   color: #ffffff;
   background: rgba(56, 189, 248, 0.12);
-  border-color: var(--accent-bright);
 }
 
 html[data-theme="dark"] .his-filter.is-active {
   color: var(--color-on-accent);
   background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
-  border-color: var(--accent-bright);
+  border: none !important;
   box-shadow: 0 4px 10px var(--accent-glow);
 }
 
 html[data-theme="dark"] .his-select {
   background-color: rgba(15, 23, 42, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
+  border: none !important;
   color: var(--color-text);
 }
 
 html[data-theme="dark"] .his-select:focus {
-  border-color: var(--accent-bright);
-  box-shadow: 0 0 0 3px var(--accent-glow);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-bright);
 }
 
-html[data-theme="dark"] .his-result-count {
-  color: var(--color-text-muted);
-}
-
+/* Cards & Lists - XÓA BỎ BORDER THEO YÊU CẦU */
 html[data-theme="dark"] .his-activity-list,
 html[data-theme="dark"] .his-card,
-html[data-theme="dark"] .his-activity-row {
-  background: var(--card-bg);
-  border-color: var(--card-border);
+html[data-theme="dark"] .his-table-wrap,
+html[data-theme="dark"] .his-timeline-item {
+  background: var(--card-bg) !important;
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
   color: var(--color-text);
+}
+
+html[data-theme="dark"] .his-activity-row {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .his-activity-row:last-child {
+  border-bottom: none !important;
 }
 
 html[data-theme="dark"] .his-activity-row:hover {
-  background: rgba(15, 30, 60, 0.85);
+  background: rgba(15, 30, 60, 0.85) !important;
 }
 
-html[data-theme="dark"] .his-activity-title {
-  color: var(--color-text);
+/* Round arrow / Open buttons */
+html[data-theme="dark"] .his-row-arrow,
+html[data-theme="dark"] .his-schedule-open,
+html[data-theme="dark"] .his-related-open {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: none !important;
+  color: var(--accent-bright) !important;
 }
 
-html[data-theme="dark"] .his-activity-meta {
-  color: var(--color-text-muted);
-}
-
-html[data-theme="dark"] .his-row-arrow {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+html[data-theme="dark"] .his-row-arrow:hover,
+html[data-theme="dark"] .his-schedule-open:hover,
+html[data-theme="dark"] .his-related-open:hover {
+  background: rgba(56, 189, 248, 0.2) !important;
+  color: #ffffff !important;
 }
 
 html[data-theme="dark"] .his-row-arrow::after {
@@ -1476,29 +1526,170 @@ html[data-theme="dark"] .his-row-arrow::after {
   border-right-color: #f8fafc;
 }
 
+/* Empty states */
+html[data-theme="dark"] .his-empty-state {
+  background: rgba(10, 22, 44, 0.6) !important;
+  border: 1px dashed rgba(255, 255, 255, 0.12) !important;
+  color: var(--color-text-muted) !important;
+}
+
+/* Quiz History Table (Screen 5) */
+html[data-theme="dark"] .his-quiz-table {
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .his-quiz-table th {
+  background: rgba(6, 15, 34, 0.6) !important;
+  color: var(--color-text-muted) !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] .his-quiz-table td {
+  color: var(--color-text) !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+html[data-theme="dark"] .his-quiz-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+html[data-theme="dark"] .his-quiz-table tr:hover td {
+  background: rgba(15, 30, 60, 0.85) !important;
+}
+
+html[data-theme="dark"] .his-quiz-open {
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .his-quiz-open:hover {
+  color: var(--accent-bright) !important;
+}
+
+/* Activity & Stat Icons (Đồng bộ Dark Theme Glass Tiles) */
+html[data-theme="dark"] .his-icon,
+html[data-theme="dark"] .his-type-icon,
+html[data-theme="dark"] .his-resource-icon {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.45), rgba(37, 99, 235, 0.2)) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  color: var(--accent-bright) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .his-icon--quiz,
+html[data-theme="dark"] .his-type-icon--quiz {
+  background: linear-gradient(135deg, rgba(76, 29, 149, 0.45), rgba(124, 58, 237, 0.2)) !important;
+  border: 1px solid rgba(167, 139, 250, 0.3) !important;
+  color: #a78bfa !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+html[data-theme="dark"] .his-icon--practice,
+html[data-theme="dark"] .his-type-icon--practice {
+  background: linear-gradient(135deg, rgba(19, 78, 74, 0.45), rgba(20, 184, 166, 0.2)) !important;
+  border: 1px solid rgba(45, 212, 191, 0.3) !important;
+  color: #34d399 !important;
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.2);
+}
+
+html[data-theme="dark"] .his-icon--resource,
+html[data-theme="dark"] .his-type-icon--resource {
+  background: linear-gradient(135deg, rgba(12, 74, 110, 0.45), rgba(14, 165, 233, 0.2)) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  color: #38bdf8 !important;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+}
+
+html[data-theme="dark"] .his-stat-icon {
+  background: rgba(37, 99, 235, 0.2) !important;
+  color: var(--accent-bright) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+
+html[data-theme="dark"] .his-stat-quiz {
+  background: rgba(124, 58, 237, 0.2) !important;
+  color: #a78bfa !important;
+  border: 1px solid rgba(167, 139, 250, 0.25) !important;
+}
+
+html[data-theme="dark"] .his-stat-practice {
+  background: rgba(16, 185, 129, 0.2) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(52, 211, 153, 0.25) !important;
+}
+
+/* Status Badges & Scores */
+html[data-theme="dark"] .his-status {
+  border: none !important;
+}
+
 html[data-theme="dark"] .his-status--completed {
   color: #34d399;
   background: rgba(16, 185, 129, 0.18);
-  border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 html[data-theme="dark"] .his-status--in-progress,
 html[data-theme="dark"] .his-status--viewed {
   color: var(--accent-bright);
   background: rgba(56, 189, 248, 0.18);
-  border: 1px solid var(--accent-glow);
 }
 
 html[data-theme="dark"] .his-status--failed {
   color: #f87171;
   background: rgba(239, 68, 68, 0.18);
-  border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
+html[data-theme="dark"] .his-score {
+  color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .his-trend {
+  color: #34d399 !important;
+  background: rgba(16, 185, 129, 0.2) !important;
+}
+
+/* Schedule / Related / Resource Items */
+html[data-theme="dark"] .his-schedule-item,
+html[data-theme="dark"] .his-related-item,
+html[data-theme="dark"] .his-resource-item {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] .his-schedule-item:hover,
+html[data-theme="dark"] .his-related-item:hover,
+html[data-theme="dark"] .his-resource-item:hover {
+  background: rgba(15, 30, 60, 0.8) !important;
+}
+
+/* Progress summary & Charts */
+html[data-theme="dark"] .his-progress-stats > div {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] .his-ring {
+  background: conic-gradient(var(--accent-bright) var(--his-ring-value), rgba(255, 255, 255, 0.08) 0) !important;
+}
+
+html[data-theme="dark"] .his-ring::before {
+  background: #0a162c !important;
+}
+
+html[data-theme="dark"] .his-chart-points circle {
+  fill: #0a162c !important;
+  stroke: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .his-chart-line {
+  stroke: var(--accent-bright) !important;
+}
+
+/* Calendar */
 html[data-theme="dark"] .his-calendar-day {
   background: rgba(255, 255, 255, 0.04);
   color: var(--color-text);
-  border-color: rgba(255, 255, 255, 0.08);
+  border: none !important;
 }
 
 html[data-theme="dark"] .his-calendar-day:hover {
@@ -1508,14 +1699,103 @@ html[data-theme="dark"] .his-calendar-day:hover {
 html[data-theme="dark"] .his-calendar-day.is-selected {
   background: var(--accent-bright);
   color: var(--color-on-accent);
+  border: none !important;
 }
 
-html[data-theme="dark"] .his-timeline-item {
-  background: var(--card-bg);
-  border-color: var(--card-border);
-  color: var(--color-text);
+html[data-theme="dark"] .his-icon-button {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: none !important;
+  color: var(--color-text) !important;
 }
 
-html[data-theme="dark"] .his-timeline-date {
-  color: var(--color-text-muted);
+html[data-theme="dark"] .his-icon-button:hover {
+  background: rgba(56, 189, 248, 0.18) !important;
+  color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .his-text-button {
+  color: var(--accent-bright) !important;
+  background: rgba(56, 189, 248, 0.15) !important;
+  border: none !important;
+}
+
+/* Timeline */
+html[data-theme="dark"] .his-timeline-item:hover {
+  background: rgba(15, 30, 60, 0.85) !important;
+}
+
+html[data-theme="dark"] .his-timeline-item::before {
+  border-color: #030712 !important;
+  background: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .his-timeline-items {
+  border-left-color: rgba(56, 189, 248, 0.3) !important;
+}
+
+/* Detail view */
+html[data-theme="dark"] .his-back-button {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: none !important;
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-theme="dark"] .his-back-button:hover {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .his-detail-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .his-detail-tab {
+  color: var(--color-text-muted) !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+html[data-theme="dark"] .his-detail-tab.is-active {
+  color: var(--accent-bright) !important;
+  border-bottom: 2px solid var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .his-note-editor {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .his-note-editor:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .his-secondary-button {
+  background: rgba(56, 189, 248, 0.15) !important;
+  border: none !important;
+  color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .his-secondary-button:hover {
+  background: rgba(56, 189, 248, 0.25) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .his-resource-download {
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: none !important;
+  color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .his-resource-download:hover {
+  background: rgba(56, 189, 248, 0.22) !important;
+  color: #ffffff !important;
+}
+
+/* Toast */
+html[data-theme="dark"] .his-toast {
+  background: rgba(10, 22, 44, 0.95) !important;
+  border: 1px solid var(--accent-bright) !important;
+  color: var(--color-text) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
 }

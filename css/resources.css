@@ -2169,10 +2169,8 @@
   word-break: break-all;
 }
 
-/* =====================================================================
-   /* ===== DARK THEME ===== */
-   Module: Resources (resources.html)
-   ===================================================================== */
+/* ===== DARK THEME ===== */
+/* Module: Resources (resources.html) */
 html[data-theme="dark"] {
   --res-blue: var(--accent-bright);
   --res-blue-dark: var(--color-primary);

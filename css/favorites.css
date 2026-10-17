@@ -788,10 +788,8 @@
   to { transform: translateY(100%); opacity: 0; }
 }
 
-/* =====================================================================
-   /* ===== DARK THEME ===== */
-   Module: Favorites (favorites.html)
-   ===================================================================== */
+/* ===== DARK THEME ===== */
+/* Module: Favorites (favorites.html) */
 html[data-theme="dark"] {
   --fav-card-bg: var(--card-bg);
   --fav-card-border: var(--card-border);
