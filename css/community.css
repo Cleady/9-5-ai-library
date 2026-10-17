@@ -1821,3 +1821,562 @@
     background: #dcfce7;
     color: #16a34a;
 }
+
+/* ===== DARK THEME ===== */
+html[data-theme="dark"] .com-page-head h1 {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-page-head p {
+    color: var(--color-text-muted);
+}
+
+/* Tabs */
+html[data-theme="dark"] .com-tabs {
+    background: rgba(6, 13, 31, 0.5);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .com-tabs a {
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .com-tabs a:hover {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme="dark"] .com-tabs a.is-active {
+    color: var(--color-on-accent);
+    background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
+    box-shadow: 0 2px 10px var(--accent-glow);
+}
+
+/* Cards & Composer */
+html[data-theme="dark"] .com-card {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+    box-shadow: var(--card-shadow);
+}
+
+html[data-theme="dark"] .com-composer textarea {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-composer textarea:focus,
+html[data-theme="dark"] .com-comment-form input:focus {
+    border-color: var(--accent-bright);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+html[data-theme="dark"] .com-composer-attachment {
+    background: rgba(15, 23, 42, 0.65);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+html[data-theme="dark"] .com-tool-button {
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .com-tool-button span {
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-tool-button:hover,
+html[data-theme="dark"] .com-tool-button[aria-pressed="true"] {
+    color: var(--accent-bright);
+    background: rgba(56, 189, 248, 0.1);
+}
+
+html[data-theme="dark"] .com-button--primary {
+    color: var(--color-on-accent);
+    background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
+    box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+html[data-theme="dark"] .com-button--soft {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-button--soft:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+/* Post Cards */
+html[data-theme="dark"] .com-post-person strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-post-person span,
+html[data-theme="dark"] .com-post-meta,
+html[data-theme="dark"] .com-post-stats {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-post-menu {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .com-post-menu:hover {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .com-post-content {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-tag {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-post-preview {
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .com-preview-copy strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-preview-copy span {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-post-actions {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .com-action-button {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-action-button:hover {
+    background: rgba(56, 189, 248, 0.08);
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-action-button[aria-pressed="true"] {
+    color: #f43f5e;
+    background: rgba(244, 63, 94, 0.15);
+}
+
+/* Comments */
+html[data-theme="dark"] .com-comment-form input {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-comment-item {
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .com-comment-item strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-comment-delete-btn,
+html[data-theme="dark"] .com-reply-delete-btn {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-comment-delete-btn:hover,
+html[data-theme="dark"] .com-reply-delete-btn:hover {
+    color: #ef4444;
+}
+
+/* Post Dropdown Menu & Edit */
+html[data-theme="dark"] .com-post-dropdown {
+    background: rgba(10, 22, 44, 0.96);
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .com-post-dropdown button {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-post-dropdown button:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .com-post-dropdown button.com-dropdown-danger {
+    color: #f87171;
+}
+
+html[data-theme="dark"] .com-post-dropdown button.com-dropdown-danger:hover {
+    background: rgba(239, 68, 68, 0.15);
+}
+
+html[data-theme="dark"] .com-post-edit-box textarea {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-filter-chip-bar {
+    background: rgba(6, 13, 31, 0.5);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Aside Widgets */
+html[data-theme="dark"] .com-widget-heading h2 {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-widget-heading a {
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-trending-link {
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .com-trending-link:hover {
+    background: rgba(56, 189, 248, 0.08);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-trending-link span:last-child {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-contributor-copy strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-contributor-copy span {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-aside-promo {
+    background: linear-gradient(145deg, rgba(14, 27, 54, 0.8), rgba(10, 20, 40, 0.85));
+    border-color: rgba(56, 189, 248, 0.16);
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .com-aside-promo-icon {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-aside-promo strong {
+    color: var(--color-text);
+}
+
+/* Filter Tabs & Search in Discussions / Search Page */
+html[data-theme="dark"] .com-filter-tabs {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .com-filter-tabs button {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-filter-tabs button:hover {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme="dark"] .com-filter-tabs button.is-active {
+    color: var(--accent-bright);
+    background: rgba(56, 189, 248, 0.12);
+}
+
+html[data-theme="dark"] .com-discussion-search {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-discussion-search input,
+html[data-theme="dark"] .com-search-form input {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-discussion-search input::placeholder,
+html[data-theme="dark"] .com-search-form input::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* Discussion Rows */
+html[data-theme="dark"] .com-discussion-row {
+    border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme="dark"] .com-discussion-row:hover {
+    background: rgba(15, 30, 60, 0.85);
+}
+
+html[data-theme="dark"] .com-discussion-icon {
+    background: rgba(56, 189, 248, 0.12);
+    border-color: rgba(56, 189, 248, 0.2);
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-discussion-copy strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-discussion-copy p,
+html[data-theme="dark"] .com-discussion-meta,
+html[data-theme="dark"] .com-discussion-count small {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-discussion-tag {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-discussion-count {
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-discussion-empty {
+    color: var(--color-text-muted);
+}
+
+/* Breadcrumbs & Detail Page */
+html[data-theme="dark"] .com-breadcrumb {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-breadcrumb a {
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-detail-card h1 {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-detail-author-copy strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-detail-author-copy span {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-detail-body {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-detail-preview {
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .com-detail-preview strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-detail-preview p {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-detail-comments h2 {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-detail-comment-copy strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-detail-comment-copy time {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-detail-reply input {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-related-link strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-related-link span {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-related-link:hover {
+    background: rgba(56, 189, 248, 0.08);
+}
+
+/* Search Page & Topics */
+html[data-theme="dark"] .com-search-panel {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+html[data-theme="dark"] .com-results-title {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-search-result {
+    border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme="dark"] .com-search-result:hover {
+    background: rgba(15, 30, 60, 0.85);
+}
+
+html[data-theme="dark"] .com-result-copy strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-result-copy span {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-topic-pill {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .com-topic-pill:hover {
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-bright);
+    border-color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .com-no-results strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-no-results p {
+    color: var(--color-text-muted);
+}
+
+/* Modals */
+html[data-theme="dark"] .com-modal {
+    background: rgba(3, 7, 18, 0.7);
+}
+
+html[data-theme="dark"] .com-modal-card {
+    background: rgba(10, 22, 44, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: var(--card-shadow);
+}
+
+html[data-theme="dark"] .com-modal-header {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .com-modal-header h2 {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-modal-close {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-modal-close:hover {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .com-modal-footer {
+    background: rgba(6, 13, 31, 0.5);
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .com-form-group label {
+    color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .com-form-group input,
+html[data-theme="dark"] .com-form-group select,
+html[data-theme="dark"] .com-form-group textarea {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.14);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-form-group input:focus,
+html[data-theme="dark"] .com-form-group select:focus,
+html[data-theme="dark"] .com-form-group textarea:focus {
+    border-color: var(--accent-bright);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* Groups */
+html[data-theme="dark"] .com-group-card {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+    box-shadow: var(--card-shadow);
+}
+
+html[data-theme="dark"] .com-group-card:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .com-group-title {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-group-desc,
+html[data-theme="dark"] .com-group-members-count {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .com-group-footer {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Leaderboard */
+html[data-theme="dark"] .com-leaderboard-board {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+    box-shadow: var(--card-shadow);
+}
+
+html[data-theme="dark"] .com-leaderboard-table th {
+    color: var(--color-text-muted);
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .com-leaderboard-table tr.com-lb-row {
+    background: rgba(15, 23, 42, 0.65);
+    box-shadow: none;
+}
+
+html[data-theme="dark"] .com-leaderboard-table tr.com-lb-row:hover {
+    background: rgba(30, 41, 59, 0.7);
+}
+
+html[data-theme="dark"] .com-leaderboard-table td {
+    color: var(--color-text);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme="dark"] .com-lb-score {
+    color: var(--accent-bright);
+}
+
+/* Notifications Page */
+html[data-theme="dark"] .com-notif-full-item {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .com-notif-full-item:hover {
+    background: rgba(15, 30, 60, 0.85);
+    border-color: rgba(56, 189, 248, 0.2);
+}
+
+html[data-theme="dark"] .com-notif-full-item.is-unread {
+    background: rgba(30, 58, 138, 0.25);
+    border-color: var(--accent-bright);
+}
