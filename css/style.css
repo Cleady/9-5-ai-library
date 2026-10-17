@@ -8,6 +8,12 @@
     --color-primary-soft: #eff6ff;
     --color-primary-glow: rgba(29, 78, 216, 0.2);
 
+    /* 1b. Accent mở rộng & Hiệu ứng */
+    --accent-bright: var(--color-primary);
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(29, 78, 216, 0.25);
+    --icon-filter: none;
+
     /* 2. Màu nền tảng & Chữ */
     --color-bg: #f5f8ff;
     --color-text: #0f172a;
@@ -33,7 +39,7 @@
 
     /* 5. Tài nguyên hình ảnh theo Theme */
     --theme-bg-image: url("/assets/theme/background.png");
-    --theme-promo-bg: url("/assets/theme/scene2.png");
+    --theme-promo-bg: url("/assets/theme/scene.png");
     --continue-thumb: url("/assets/theme/continue-thumb.png");
 }
 
@@ -45,6 +51,10 @@ html[data-accent="blue"] {
     --color-primary-light: #3b82f6;
     --color-primary-soft: #eff6ff;
     --color-primary-glow: rgba(29, 78, 216, 0.2);
+    --accent-bright: #1d4ed8;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(29, 78, 216, 0.25);
+    --icon-filter: none;
     --nav-hover-bg: rgba(59, 130, 246, 0.1);
     --active-gradient: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
     --role-badge-bg: #dbeafe;
@@ -56,6 +66,10 @@ html[data-accent="purple"] {
     --color-primary-light: #8b5cf6;
     --color-primary-soft: #f5f3ff;
     --color-primary-glow: rgba(124, 58, 237, 0.2);
+    --accent-bright: #7c3aed;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(124, 58, 237, 0.25);
+    --icon-filter: hue-rotate(58deg) saturate(1.1);
     --nav-hover-bg: rgba(124, 58, 237, 0.1);
     --active-gradient: linear-gradient(135deg, #ede9fe 0%, #f5f3ff 100%);
     --role-badge-bg: #ede9fe;
@@ -67,6 +81,10 @@ html[data-accent="green"] {
     --color-primary-light: #10b981;
     --color-primary-soft: #ecfdf5;
     --color-primary-glow: rgba(5, 150, 105, 0.2);
+    --accent-bright: #059669;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(5, 150, 105, 0.25);
+    --icon-filter: hue-rotate(-50deg) saturate(1.2);
     --nav-hover-bg: rgba(5, 150, 105, 0.1);
     --active-gradient: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
     --role-badge-bg: #d1fae5;
@@ -78,6 +96,10 @@ html[data-accent="orange"] {
     --color-primary-light: #f97316;
     --color-primary-soft: #fff7ed;
     --color-primary-glow: rgba(234, 88, 12, 0.2);
+    --accent-bright: #ea580c;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(234, 88, 12, 0.25);
+    --icon-filter: hue-rotate(174deg) saturate(1.3) brightness(1.05);
     --nav-hover-bg: rgba(234, 88, 12, 0.1);
     --active-gradient: linear-gradient(135deg, #ffedd5 0%, #fff7ed 100%);
     --role-badge-bg: #ffedd5;
@@ -89,6 +111,10 @@ html[data-accent="pink"] {
     --color-primary-light: #ec4899;
     --color-primary-soft: #fdf2f8;
     --color-primary-glow: rgba(219, 39, 119, 0.2);
+    --accent-bright: #db2777;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(219, 39, 119, 0.25);
+    --icon-filter: hue-rotate(120deg) saturate(1.2);
     --nav-hover-bg: rgba(219, 39, 119, 0.1);
     --active-gradient: linear-gradient(135deg, #fce7f3 0%, #fdf2f8 100%);
     --role-badge-bg: #fce7f3;
@@ -99,26 +125,30 @@ html[data-accent="pink"] {
    DARK THEME SYSTEM (Giao diện tối toàn site)
    ========================================================================== */
 html[data-theme="dark"] {
-    /* Nền tảng tối & Chữ sáng */
-    --color-bg: #0b1120;
+    /* Nền tảng tối & Chữ sáng theo thiết kế đích */
+    --color-bg: #030712;
     --color-text: #f8fafc;
-    --color-text-secondary: #cbd5e1;
-    --color-text-muted: #94a3b8;
-    --color-nav-text: #cbd5e1;
+    --color-text-secondary: #94a3b8;
+    --color-text-muted: #64748b;
+    --color-nav-text: #94a3b8;
     --color-white: #1e293b;
     --color-border: rgba(255, 255, 255, 0.12);
 
     /* Bề mặt kính tối (Dark Glassmorphism) */
-    --card-bg: rgba(15, 23, 42, 0.72);
-    --card-bg-elevated: rgba(30, 41, 59, 0.85);
-    --card-border: 1px solid rgba(255, 255, 255, 0.12);
+    --card-bg: rgba(10, 22, 44, 0.75);
+    --card-bg-elevated: rgba(15, 30, 60, 0.85);
+    --card-border: 1px solid rgba(56, 189, 248, 0.14);
     --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
     --card-shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.35);
 
-    /* Tương tác tối */
+    /* Tương tác tối & Accent Bright Tokens (Mặc định: Blue) */
+    --accent-bright: #38bdf8;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(56, 189, 248, 0.45);
+    --icon-filter: none;
     --color-primary-soft: rgba(37, 99, 235, 0.22);
     --nav-hover-bg: rgba(59, 130, 246, 0.16);
-    --active-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.35) 0%, rgba(30, 58, 138, 0.45) 100%);
+    --active-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.4) 0%, rgba(30, 58, 138, 0.55) 100%);
     --role-badge-bg: rgba(37, 99, 235, 0.25);
     --role-badge-text: #93c5fd;
 
@@ -129,34 +159,62 @@ html[data-theme="dark"] {
 }
 
 /* Dark Theme phối hợp Accent Colors */
+html[data-theme="dark"][data-accent="blue"] {
+    --accent-bright: #38bdf8;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(56, 189, 248, 0.45);
+    --icon-filter: none;
+    --color-primary-soft: rgba(37, 99, 235, 0.22);
+    --nav-hover-bg: rgba(59, 130, 246, 0.16);
+    --active-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.4) 0%, rgba(30, 58, 138, 0.55) 100%);
+    --role-badge-bg: rgba(37, 99, 235, 0.25);
+    --role-badge-text: #93c5fd;
+}
+
 html[data-theme="dark"][data-accent="purple"] {
+    --accent-bright: #a78bfa;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(167, 139, 250, 0.45);
+    --icon-filter: hue-rotate(58deg) saturate(1.1);
     --color-primary-soft: rgba(124, 58, 237, 0.22);
     --nav-hover-bg: rgba(124, 58, 237, 0.16);
-    --active-gradient: linear-gradient(135deg, rgba(124, 58, 237, 0.35) 0%, rgba(91, 33, 182, 0.45) 100%);
+    --active-gradient: linear-gradient(135deg, rgba(124, 58, 237, 0.4) 0%, rgba(91, 33, 182, 0.55) 100%);
     --role-badge-bg: rgba(124, 58, 237, 0.25);
     --role-badge-text: #c4b5fd;
 }
 
 html[data-theme="dark"][data-accent="green"] {
+    --accent-bright: #34d399;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(52, 211, 153, 0.45);
+    --icon-filter: hue-rotate(-50deg) saturate(1.2);
     --color-primary-soft: rgba(5, 150, 105, 0.22);
     --nav-hover-bg: rgba(5, 150, 105, 0.16);
-    --active-gradient: linear-gradient(135deg, rgba(5, 150, 105, 0.35) 0%, rgba(6, 95, 70, 0.45) 100%);
+    --active-gradient: linear-gradient(135deg, rgba(5, 150, 105, 0.4) 0%, rgba(6, 95, 70, 0.55) 100%);
     --role-badge-bg: rgba(5, 150, 105, 0.25);
     --role-badge-text: #6ee7b7;
 }
 
 html[data-theme="dark"][data-accent="orange"] {
+    --accent-bright: #fb923c;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(251, 146, 60, 0.45);
+    --icon-filter: hue-rotate(174deg) saturate(1.3) brightness(1.05);
     --color-primary-soft: rgba(234, 88, 12, 0.22);
     --nav-hover-bg: rgba(234, 88, 12, 0.16);
-    --active-gradient: linear-gradient(135deg, rgba(234, 88, 12, 0.35) 0%, rgba(154, 52, 18, 0.45) 100%);
+    --active-gradient: linear-gradient(135deg, rgba(234, 88, 12, 0.4) 0%, rgba(154, 52, 18, 0.55) 100%);
     --role-badge-bg: rgba(234, 88, 12, 0.25);
     --role-badge-text: #fdba74;
 }
 
 html[data-theme="dark"][data-accent="pink"] {
+    --accent-bright: #f472b6;
+    --color-on-accent: #ffffff;
+    --accent-glow: rgba(244, 114, 182, 0.45);
+    --icon-filter: hue-rotate(120deg) saturate(1.2);
     --color-primary-soft: rgba(219, 39, 119, 0.22);
     --nav-hover-bg: rgba(219, 39, 119, 0.16);
-    --active-gradient: linear-gradient(135deg, rgba(219, 39, 119, 0.35) 0%, rgba(157, 23, 77, 0.45) 100%);
+    --active-gradient: linear-gradient(135deg, rgba(219, 39, 119, 0.4) 0%, rgba(157, 23, 77, 0.55) 100%);
     --role-badge-bg: rgba(219, 39, 119, 0.25);
     --role-badge-text: #f9a8d4;
 }
@@ -334,6 +392,8 @@ body {
     height: 20px;
     flex-shrink: 0;
     border-radius: 6px;
+    filter: var(--icon-filter, none);
+    transition: filter 0.2s ease, opacity 0.2s ease;
 }
 
 /* mục đang chọn (đặt dưới .nav-link)*/
@@ -458,65 +518,42 @@ body {
 }
 
 /* ==========================================================================
-   CSS MASK-IMAGE (Icon đổi màu tự động theo Accent Color & Theme)
+   SIDEBAR & NAV (Dark Theme Overrides)
    ========================================================================== */
-@supports ((-webkit-mask-image: url("")) or (mask-image: url(""))) {
-    .nav-icon {
-        background-color: var(--color-nav-text);
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: center;
-        mask-position: center;
-        background-image: none !important;
-        transition: background-color 0.2s ease;
-    }
+html[data-theme="dark"] .sidebar {
+    background: rgba(6, 13, 31, 0.65);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-    .nav-link:hover .nav-icon,
-    .nav-link.is-active .nav-icon {
-        background-color: var(--color-primary);
-    }
+html[data-theme="dark"] .nav-link {
+    color: var(--color-nav-text);
+}
 
-    .home-icon {
-        -webkit-mask-image: url("/assets/icon/Better_Icon/home-button.png");
-        mask-image: url("/assets/icon/Better_Icon/home-button.png");
-    }
+html[data-theme="dark"] .nav-link:hover {
+    background-color: var(--nav-hover-bg);
+    color: #ffffff;
+}
 
-    .lectures-icon {
-        -webkit-mask-image: url("/assets/icon/Better_Icon/media.png");
-        mask-image: url("/assets/icon/Better_Icon/media.png");
-    }
+html[data-theme="dark"] .nav-link.is-active {
+    background: var(--active-gradient);
+    color: #ffffff;
+    border: 1px solid var(--accent-glow);
+    box-shadow: 0 4px 14px var(--accent-glow);
+}
 
-    .practice-icon {
-        -webkit-mask-image: url("/assets/icon/Better_Icon/writing.png");
-        mask-image: url("/assets/icon/Better_Icon/writing.png");
-    }
+html[data-theme="dark"] .nav-icon {
+    filter: var(--icon-filter, none) brightness(0.9) saturate(0.85);
+    opacity: 0.85;
+}
 
-    .history-icon {
-        -webkit-mask-image: url("/assets/icon/Better_Icon/history.png");
-        mask-image: url("/assets/icon/Better_Icon/history.png");
-    }
+html[data-theme="dark"] .nav-link:hover .nav-icon {
+    filter: var(--icon-filter, none) brightness(1.1) saturate(1.05);
+    opacity: 1;
+}
 
-    .favorites-icon {
-        -webkit-mask-image: url("/assets/icon/Better_Icon/star.png");
-        mask-image: url("/assets/icon/Better_Icon/star.png");
-    }
-
-    .resources-icon {
-        -webkit-mask-image: url("/assets/icon/Better_Icon/folder.png");
-        mask-image: url("/assets/icon/Better_Icon/folder.png");
-    }
-
-    .community-icon {
-        -webkit-mask-image: url("/assets/icon/Better_Icon/group.png");
-        mask-image: url("/assets/icon/Better_Icon/group.png");
-    }
-
-    .settings-icon {
-        -webkit-mask-image: url("/assets/icon/Better_Icon/settings.png");
-        mask-image: url("/assets/icon/Better_Icon/settings.png");
-    }
+html[data-theme="dark"] .nav-link.is-active .nav-icon {
+    filter: var(--icon-filter, none) brightness(1.25) saturate(1.2) drop-shadow(0 0 8px var(--accent-glow));
+    opacity: 1;
 }
 
 /* slogan của sidebar*/
@@ -1847,7 +1884,7 @@ body {
     min-height: 150px;
 
     background-color: #dbeafe;
-    background-image: url("../assets/theme/scene.png");
+    background-image: var(--theme-promo-bg);
     background-size: cover;
     background-position: center;
 }
@@ -2011,4 +2048,247 @@ body {
     border: 2px solid transparent;
     background-clip: content-box;
     /* để thanh trông mảnh hơn rãnh */
+}
+
+/* ==========================================================================
+   DARK THEME: HOME & DASHBOARD OVERRIDES
+   ========================================================================== */
+html[data-theme="dark"] .sidebar-promo,
+html[data-theme="dark"] .promo-card {
+    background-color: rgba(10, 22, 44, 0.75);
+    background-image: var(--theme-promo-bg);
+    color: #f8fafc;
+    border: 1px solid rgba(56, 189, 248, 0.14);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="dark"] .promo-title {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .promo-brand,
+html[data-theme="dark"] .promo-footer {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .promo-arrow-link {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+html[data-theme="dark"] .promo-arrow-link::after {
+    border-top-color: #f8fafc;
+    border-right-color: #f8fafc;
+}
+
+html[data-theme="dark"] .promo-arrow-link:hover {
+    background-color: var(--accent-glow);
+}
+
+/* Activity Table */
+html[data-theme="dark"] .activity-table th {
+    background-color: rgba(6, 15, 34, 0.4);
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .activity-table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .activity-table td:nth-child(2) {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .activity-table tbody tr:hover {
+    background-color: rgba(56, 189, 248, 0.06);
+}
+
+/* Score Badges */
+html[data-theme="dark"] .score-high {
+    background-color: rgba(16, 185, 129, 0.18);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+html[data-theme="dark"] .score-mid {
+    background-color: rgba(59, 130, 246, 0.18);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Row Arrow */
+html[data-theme="dark"] .row-arrow {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .row-arrow::after {
+    border-top-color: #f8fafc;
+    border-right-color: #f8fafc;
+}
+
+html[data-theme="dark"] .row-arrow:hover {
+    background-color: var(--accent-glow);
+    border-color: var(--accent-bright);
+}
+
+/* Links & Buttons */
+html[data-theme="dark"] .card-link {
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .button-primary {
+    color: var(--color-on-accent);
+    background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
+    box-shadow: 0 6px 16px var(--accent-glow);
+}
+
+html[data-theme="dark"] .button-primary:hover {
+    box-shadow: 0 8px 20px var(--accent-glow);
+}
+
+/* Progress bar */
+html[data-theme="dark"] .progress {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .progress::-webkit-progress-bar {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .progress::-webkit-progress-value {
+    background: linear-gradient(90deg, var(--color-primary), var(--accent-bright));
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+html[data-theme="dark"] .progress::-moz-progress-bar {
+    background: linear-gradient(90deg, var(--color-primary), var(--accent-bright));
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* Hero Highlight & Tags */
+html[data-theme="dark"] .highlight {
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .hero-tag {
+    background: rgba(37, 99, 235, 0.2);
+    color: var(--accent-bright);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+html[data-theme="dark"] .hero-tag:hover {
+    background: rgba(37, 99, 235, 0.35);
+}
+
+/* Score Ring */
+html[data-theme="dark"] .score-ring {
+    background: conic-gradient(var(--accent-bright) calc(var(--value) * 1%), rgba(255, 255, 255, 0.08) 0);
+}
+
+html[data-theme="dark"] .score-ring::before {
+    background-color: var(--card-bg);
+}
+
+/* Chips in subject cards */
+html[data-theme="dark"] .chip-outline {
+    color: #f8fafc;
+    background-color: rgba(30, 58, 138, 0.45);
+    border: 1px solid var(--accent-bright);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+html[data-theme="dark"] .chip-outline:hover {
+    background-color: rgba(37, 99, 235, 0.6);
+}
+
+html[data-theme="dark"] .chip-soft {
+    color: #94a3b8;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .chip-soft:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #f8fafc;
+}
+
+/* Subject Cards Icons & Arrows */
+html[data-theme="dark"] .subject1-icon,
+html[data-theme="dark"] .icon-blue {
+    background-image: url(/assets/icon/chip.png), linear-gradient(135deg, rgba(30, 58, 138, 0.45), rgba(37, 99, 235, 0.25));
+    box-shadow: 0 0 16px rgba(37, 99, 235, 0.3);
+}
+
+html[data-theme="dark"] .subject2-icon {
+    background-image: url(/assets/icon/math.png), linear-gradient(135deg, rgba(76, 29, 149, 0.45), rgba(124, 58, 237, 0.25));
+    box-shadow: 0 0 16px rgba(124, 58, 237, 0.3);
+}
+
+html[data-theme="dark"] .subject3-icon {
+    background-image: url(/assets/icon/program.png), linear-gradient(135deg, rgba(30, 58, 138, 0.45), rgba(37, 99, 235, 0.25));
+    box-shadow: 0 0 16px rgba(37, 99, 235, 0.3);
+}
+
+html[data-theme="dark"] .subject4-icon {
+    background-image: url(/assets/icon/data.png), linear-gradient(135deg, rgba(19, 78, 74, 0.45), rgba(20, 184, 166, 0.25));
+    box-shadow: 0 0 16px rgba(20, 184, 166, 0.3);
+}
+
+html[data-theme="dark"] .subject5-icon,
+html[data-theme="dark"] .icon-orange {
+    background-image: url(/assets/icon/mas.png), linear-gradient(135deg, rgba(124, 45, 18, 0.45), rgba(234, 88, 12, 0.25));
+    box-shadow: 0 0 16px rgba(234, 88, 12, 0.3);
+}
+
+html[data-theme="dark"] .subject6-icon,
+html[data-theme="dark"] .icon-pink {
+    background-image: url(/assets/icon/soft.png), linear-gradient(135deg, rgba(131, 24, 67, 0.45), rgba(219, 39, 119, 0.25));
+    box-shadow: 0 0 16px rgba(219, 39, 119, 0.3);
+}
+
+html[data-theme="dark"] .subject-arrow {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .subject-arrow::after {
+    border-top-color: #f8fafc;
+    border-right-color: #f8fafc;
+}
+
+html[data-theme="dark"] .subject-arrow:hover {
+    background-color: var(--accent-glow);
+    border-color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .subject-fav-btn {
+    background-color: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .subject-fav-btn:hover {
+    background-color: rgba(30, 41, 59, 0.9);
+}
+
+html[data-theme="dark"] .subject-fav-btn.is-favorited {
+    background-color: rgba(30, 41, 59, 0.9);
+    border-color: rgba(245, 158, 11, 0.5);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+}
+
+/* Scrollbar dark */
+html[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: rgba(6, 13, 31, 0.65);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-bright);
 }

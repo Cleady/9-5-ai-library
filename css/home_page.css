@@ -23,6 +23,62 @@
     --home-radius-pill: 999px;
 }
 
+/* ==========================================================================
+   DARK THEME SYSTEM (Landing Page)
+   ========================================================================== */
+html[data-theme="dark"] {
+    --home-navy: #f8fafc;
+    --home-body: #94a3b8;
+    --home-muted: #64748b;
+    --home-tint: rgba(37, 99, 235, 0.15);
+    --home-page: #030712;
+    --home-white: rgba(10, 22, 44, 0.82);
+    --home-border: rgba(255, 255, 255, 0.12);
+    --home-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    --home-shadow-strong: 0 14px 38px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .home-page {
+    background-color: #030712;
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__header {
+    background: rgba(6, 13, 31, 0.78);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .home-page__header.is-scrolled {
+    background: rgba(6, 13, 31, 0.92);
+}
+
+html[data-theme="dark"] .home-page__brand {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__nav-link {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .home-page__nav-link:hover {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.12);
+}
+
+html[data-theme="dark"] .home-page__nav-link--active {
+    color: #ffffff;
+    background: rgba(37, 99, 235, 0.35);
+}
+
+html[data-theme="dark"] .home-page__search {
+    background: rgba(15, 23, 42, 0.65);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .home-page__search input {
+    color: #f8fafc;
+}
+
 .home-page,
 .home-page * {
     box-sizing: border-box;
