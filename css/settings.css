@@ -2,12 +2,12 @@
    BIẾN (Variables) - Nếu chưa có ở gốc thì thêm vào đây
    ========================================================================== */
 :root {
-  --set-card-bg: rgba(255, 255, 255, 0.6);
-  --set-card-blur: blur(12px);
-  --set-card-border: 1px solid rgba(255, 255, 255, 0.8);
-  --set-card-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
-  --set-border-color: rgba(15, 23, 42, 0.1);
-  --set-nav-hover: rgba(59, 130, 246, 0.1);
+  --set-card-bg: var(--card-bg);
+  --set-card-blur: var(--card-blur);
+  --set-card-border: var(--card-border);
+  --set-card-shadow: var(--card-shadow-sm);
+  --set-border-color: var(--color-border);
+  --set-nav-hover: var(--nav-hover-bg);
   --set-danger-color: #ef4444;
   --set-success-color: #22c55e;
 }
@@ -801,47 +801,13 @@ input:checked+.set-slider:before {
 }
 
 /* ==========================================================================
-   DARK THEME OVERRIDES (Scoped to settings UI only as per design)
+   DARK THEME OVERRIDES (Settings-specific UI)
    ========================================================================== */
-html[data-theme="dark"] body {
-  background-color: #0f172a;
-  background-image: none;
-}
-
-html[data-theme="dark"] {
-  --color-text: #f8fafc;
-  --color-text-muted: #94a3b8;
-  --color-nav-text: #cbd5e1;
-  --set-card-bg: rgba(15, 23, 42, 0.6);
-  --set-border-color: rgba(255, 255, 255, 0.1);
-  --color-white: #1e293b;
-}
-
-html[data-theme="dark"] .sidebar {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-html[data-theme="dark"] .search {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-html[data-theme="dark"] .search-input {
-  color: #f8fafc;
-}
-
-html[data-theme="dark"] .icon-button,
-html[data-theme="dark"] .user-menu-toggle {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #f8fafc;
-}
-
 html[data-theme="dark"] .set-input,
 html[data-theme="dark"] .set-textarea {
   background: rgba(15, 23, 42, 0.8);
   color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 html[data-theme="dark"] .set-list-row {
@@ -850,35 +816,7 @@ html[data-theme="dark"] .set-list-row {
 
 html[data-theme="dark"] .set-segment-content {
   background: rgba(30, 41, 59, 0.6);
-}
-
-html[data-theme="dark"] .user-menu-list,
-html[data-theme="dark"] .notification-panel {
-  background: rgba(15, 23, 42, 0.9);
   color: #f8fafc;
-}
-
-/* Blurred BG */
-html[data-bgstyle="blurred"] body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: inherit;
-  backdrop-filter: blur(10px);
-  z-index: -1;
-}
-
-/* Font Size Overrides */
-html[data-fontsize="small"] body {
-  font-size: 14px;
-}
-
-html[data-fontsize="medium"] body {
-  font-size: 16px;
-}
-
-html[data-fontsize="large"] body {
-  font-size: 18px;
 }
 
 /* ==========================================================================

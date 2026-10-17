@@ -1,13 +1,206 @@
-/* Màu chung của toàn bộ trang */
+/* ==========================================================================
+   DESIGN TOKENS (Hệ thống biến toàn site - Design System)
+   ========================================================================== */
 :root {
+    /* 1. Màu thương hiệu & Trạng thái (Accent: Blue mặc định) */
     --color-primary: #1d4ed8;
     --color-primary-light: #3b82f6;
     --color-primary-soft: #eff6ff;
+    --color-primary-glow: rgba(29, 78, 216, 0.2);
+
+    /* 2. Màu nền tảng & Chữ */
     --color-bg: #f5f8ff;
     --color-text: #0f172a;
+    --color-text-secondary: #334e7a;
     --color-text-muted: #64748b;
     --color-white: #ffffff;
     --color-nav-text: #475569;
+    --color-border: rgba(15, 23, 42, 0.08);
+
+    /* 3. Bề mặt Kính mờ (Glassmorphism Surfaces) */
+    --card-bg: rgba(255, 255, 255, 0.65);
+    --card-bg-elevated: rgba(255, 255, 255, 0.85);
+    --card-blur: blur(12px);
+    --card-border: 1px solid rgba(255, 255, 255, 0.8);
+    --card-shadow: 0 8px 32px rgba(29, 78, 216, 0.08);
+    --card-shadow-sm: 0 4px 16px rgba(29, 78, 216, 0.06);
+
+    /* 4. Tương tác & Menu */
+    --nav-hover-bg: rgba(59, 130, 246, 0.1);
+    --active-gradient: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+    --role-badge-bg: #dbeafe;
+    --role-badge-text: var(--color-primary);
+
+    /* 5. Tài nguyên hình ảnh theo Theme */
+    --theme-bg-image: url("/assets/theme/background.png");
+    --theme-promo-bg: url("/assets/theme/scene2.png");
+    --continue-thumb: url("/assets/theme/continue-thumb.png");
+}
+
+/* ==========================================================================
+   ACCENT COLOR THEMES (5 Bộ màu: Blue, Purple, Green, Orange, Pink)
+   ========================================================================== */
+html[data-accent="blue"] {
+    --color-primary: #1d4ed8;
+    --color-primary-light: #3b82f6;
+    --color-primary-soft: #eff6ff;
+    --color-primary-glow: rgba(29, 78, 216, 0.2);
+    --nav-hover-bg: rgba(59, 130, 246, 0.1);
+    --active-gradient: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+    --role-badge-bg: #dbeafe;
+    --role-badge-text: #1d4ed8;
+}
+
+html[data-accent="purple"] {
+    --color-primary: #7c3aed;
+    --color-primary-light: #8b5cf6;
+    --color-primary-soft: #f5f3ff;
+    --color-primary-glow: rgba(124, 58, 237, 0.2);
+    --nav-hover-bg: rgba(124, 58, 237, 0.1);
+    --active-gradient: linear-gradient(135deg, #ede9fe 0%, #f5f3ff 100%);
+    --role-badge-bg: #ede9fe;
+    --role-badge-text: #7c3aed;
+}
+
+html[data-accent="green"] {
+    --color-primary: #059669;
+    --color-primary-light: #10b981;
+    --color-primary-soft: #ecfdf5;
+    --color-primary-glow: rgba(5, 150, 105, 0.2);
+    --nav-hover-bg: rgba(5, 150, 105, 0.1);
+    --active-gradient: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    --role-badge-bg: #d1fae5;
+    --role-badge-text: #059669;
+}
+
+html[data-accent="orange"] {
+    --color-primary: #ea580c;
+    --color-primary-light: #f97316;
+    --color-primary-soft: #fff7ed;
+    --color-primary-glow: rgba(234, 88, 12, 0.2);
+    --nav-hover-bg: rgba(234, 88, 12, 0.1);
+    --active-gradient: linear-gradient(135deg, #ffedd5 0%, #fff7ed 100%);
+    --role-badge-bg: #ffedd5;
+    --role-badge-text: #ea580c;
+}
+
+html[data-accent="pink"] {
+    --color-primary: #db2777;
+    --color-primary-light: #ec4899;
+    --color-primary-soft: #fdf2f8;
+    --color-primary-glow: rgba(219, 39, 119, 0.2);
+    --nav-hover-bg: rgba(219, 39, 119, 0.1);
+    --active-gradient: linear-gradient(135deg, #fce7f3 0%, #fdf2f8 100%);
+    --role-badge-bg: #fce7f3;
+    --role-badge-text: #db2777;
+}
+
+/* ==========================================================================
+   DARK THEME SYSTEM (Giao diện tối toàn site)
+   ========================================================================== */
+html[data-theme="dark"] {
+    /* Nền tảng tối & Chữ sáng */
+    --color-bg: #0b1120;
+    --color-text: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    --color-nav-text: #cbd5e1;
+    --color-white: #1e293b;
+    --color-border: rgba(255, 255, 255, 0.12);
+
+    /* Bề mặt kính tối (Dark Glassmorphism) */
+    --card-bg: rgba(15, 23, 42, 0.72);
+    --card-bg-elevated: rgba(30, 41, 59, 0.85);
+    --card-border: 1px solid rgba(255, 255, 255, 0.12);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    --card-shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.35);
+
+    /* Tương tác tối */
+    --color-primary-soft: rgba(37, 99, 235, 0.22);
+    --nav-hover-bg: rgba(59, 130, 246, 0.16);
+    --active-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.35) 0%, rgba(30, 58, 138, 0.45) 100%);
+    --role-badge-bg: rgba(37, 99, 235, 0.25);
+    --role-badge-text: #93c5fd;
+
+    /* Ảnh nền Dark Theme */
+    --theme-bg-image: url("/assets/theme/darktheme/dark_background.png");
+    --theme-promo-bg: url("/assets/theme/darktheme/dark-scene2.png");
+    --continue-thumb: url("/assets/theme/darktheme/dark-continue-thumb.png");
+}
+
+/* Dark Theme phối hợp Accent Colors */
+html[data-theme="dark"][data-accent="purple"] {
+    --color-primary-soft: rgba(124, 58, 237, 0.22);
+    --nav-hover-bg: rgba(124, 58, 237, 0.16);
+    --active-gradient: linear-gradient(135deg, rgba(124, 58, 237, 0.35) 0%, rgba(91, 33, 182, 0.45) 100%);
+    --role-badge-bg: rgba(124, 58, 237, 0.25);
+    --role-badge-text: #c4b5fd;
+}
+
+html[data-theme="dark"][data-accent="green"] {
+    --color-primary-soft: rgba(5, 150, 105, 0.22);
+    --nav-hover-bg: rgba(5, 150, 105, 0.16);
+    --active-gradient: linear-gradient(135deg, rgba(5, 150, 105, 0.35) 0%, rgba(6, 95, 70, 0.45) 100%);
+    --role-badge-bg: rgba(5, 150, 105, 0.25);
+    --role-badge-text: #6ee7b7;
+}
+
+html[data-theme="dark"][data-accent="orange"] {
+    --color-primary-soft: rgba(234, 88, 12, 0.22);
+    --nav-hover-bg: rgba(234, 88, 12, 0.16);
+    --active-gradient: linear-gradient(135deg, rgba(234, 88, 12, 0.35) 0%, rgba(154, 52, 18, 0.45) 100%);
+    --role-badge-bg: rgba(234, 88, 12, 0.25);
+    --role-badge-text: #fdba74;
+}
+
+html[data-theme="dark"][data-accent="pink"] {
+    --color-primary-soft: rgba(219, 39, 119, 0.22);
+    --nav-hover-bg: rgba(219, 39, 119, 0.16);
+    --active-gradient: linear-gradient(135deg, rgba(219, 39, 119, 0.35) 0%, rgba(157, 23, 77, 0.45) 100%);
+    --role-badge-bg: rgba(219, 39, 119, 0.25);
+    --role-badge-text: #f9a8d4;
+}
+
+/* ==========================================================================
+   FONT SIZE & BACKGROUND STYLE HELPERS
+   ========================================================================== */
+html[data-fontsize="small"] body {
+    font-size: 14px;
+}
+html[data-fontsize="small"] .sidebar,
+html[data-fontsize="small"] .main {
+    font-size: 0.92em;
+}
+
+html[data-fontsize="medium"] body {
+    font-size: 16px;
+}
+
+html[data-fontsize="large"] body {
+    font-size: 17px;
+}
+html[data-fontsize="large"] .sidebar,
+html[data-fontsize="large"] .main {
+    font-size: 1.08em;
+}
+
+/* Background Style: Blurred */
+html[data-bgstyle="blurred"] body {
+    background-image: none !important;
+}
+
+html[data-bgstyle="blurred"] body::before {
+    content: '';
+    position: fixed;
+    inset: -20px;
+    background-image: var(--theme-bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(12px);
+    z-index: -1;
+    pointer-events: none;
 }
 
 html {
@@ -34,7 +227,7 @@ body {
     background-color: var(--color-bg);
 
     /* ảnh nền */
-    background-image: url("/assets/theme/background.png");
+    background-image: var(--theme-bg-image);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -74,12 +267,12 @@ body {
     height: calc(100vh - 20px);
 
     padding: 20px 16px;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
+    background: var(--card-bg);
+    backdrop-filter: var(--card-blur);
     border-radius: 0 0 24px 24px;
     border-top: none;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 8px 32px rgba(29, 78, 216, 0.08);
+    border: var(--card-border);
+    box-shadow: var(--card-shadow);
 
     display: flex;
     flex-direction: column;
@@ -131,7 +324,7 @@ body {
 }
 
 .nav-link:hover {
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: var(--nav-hover-bg);
     color: var(--color-primary);
 }
 
@@ -145,10 +338,10 @@ body {
 
 /* mục đang chọn (đặt dưới .nav-link)*/
 .nav-link.is-active {
-    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+    background: var(--active-gradient);
     color: var(--color-primary);
     font-weight: 700;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    box-shadow: 0 4px 12px var(--color-primary-glow);
 }
 
 /* 9.5 AI Logo */
@@ -204,7 +397,7 @@ body {
 .sidebar-nav-secondary {
     margin-top: 12px;
     padding-top: 12px;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    border-top: 1px solid var(--color-border);
 }
 
 /* icon của sidebar */
@@ -272,13 +465,13 @@ body {
     padding: 20px 16px;
     min-height: 110px;
     border-radius: 16px;
-    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
-    color: #334e7a;
+    background: var(--active-gradient);
+    color: var(--color-text-secondary);
     font-weight: 600;
     line-height: 1.3;
-    background-color: #dbeafe;
+    background-color: var(--color-primary-soft);
     /* màu dự phòng, hiện khi ảnh chưa tải hoặc sai đường dẫn */
-    background-image: url("../assets/theme/scene2.png");
+    background-image: var(--theme-promo-bg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -302,7 +495,7 @@ body {
     background-color: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.7);
-    box-shadow: 0 2px 8px rgba(29, 78, 216, 0.12);
+    box-shadow: 0 2px 8px var(--color-primary-glow);
 }
 
 .promo-arrow::after {
@@ -312,8 +505,8 @@ body {
     left: 50%;
     width: 7px;
     height: 7px;
-    border-top: 2px solid #334e7a;
-    border-right: 2px solid #334e7a;
+    border-top: 2px solid var(--color-text-secondary);
+    border-right: 2px solid var(--color-text-secondary);
     transform: translate(-65%, -50%) rotate(45deg);
 }
 
@@ -339,18 +532,18 @@ body {
     max-width: 540px;
     padding: 8px 14px;
 
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: var(--card-bg);
+    backdrop-filter: var(--card-blur);
+    border: var(--card-border);
     border-radius: 14px;
-    box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+    box-shadow: var(--card-shadow-sm);
 
     transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 .search:focus-within {
     border-color: var(--color-primary-light);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 0 3px var(--color-primary-glow);
 }
 
 .search-icon {
@@ -394,8 +587,8 @@ body {
     font-family: inherit;
     font-size: 12px;
     color: var(--color-text-muted);
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(15, 23, 42, 0.1);
+    background: var(--card-bg-elevated);
+    border: 1px solid var(--color-border);
     border-radius: 6px;
 }
 
@@ -417,17 +610,17 @@ body {
     height: 40px;
     padding: 0;
 
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: var(--card-bg);
+    backdrop-filter: var(--card-blur);
+    border: var(--card-border);
     border-radius: 50%;
-    box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+    box-shadow: var(--card-shadow-sm);
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .icon-button:hover {
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--card-bg-elevated);
 }
 
 .bell-icon {
@@ -472,11 +665,11 @@ body {
     right: 0;
     width: 340px;
 
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: var(--card-bg-elevated);
+    backdrop-filter: var(--card-blur);
+    border: var(--card-border);
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(29, 78, 216, 0.12);
+    box-shadow: var(--card-shadow);
 
     transform-origin: top right;
     animation: menu-drop 0.22s cubic-bezier(0.16, 1, 0.3, 1);
@@ -535,7 +728,7 @@ body {
 }
 
 .notification-item.is-unread {
-    background-color: rgba(219, 234, 254, 0.6);
+    background-color: var(--color-primary-soft);
 }
 
 /* Chấm nhỏ báo chưa đọc: chỉ hiện ở mục chưa đọc */
@@ -572,7 +765,7 @@ body {
     text-align: center;
     color: var(--color-primary);
     text-decoration: none;
-    border-top: 1px solid rgba(15, 23, 42, 0.06);
+    border-top: 1px solid var(--color-border);
 }
 
 .notification-footer:hover {
@@ -592,11 +785,11 @@ body {
 
     font: inherit;
     color: var(--color-text);
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: var(--card-bg);
+    backdrop-filter: var(--card-blur);
+    border: var(--card-border);
     border-radius: 999px;
-    box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+    box-shadow: var(--card-shadow-sm);
     cursor: pointer;
 }
 
@@ -629,8 +822,8 @@ body {
     padding: 5px 12px;
     font-size: 13px;
     font-weight: 600;
-    color: var(--color-primary);
-    background-color: #98b9ff;
+    color: var(--role-badge-text);
+    background-color: var(--role-badge-bg);
     border-radius: 999px;
 }
 
@@ -654,11 +847,11 @@ body {
     padding: 8px;
     list-style: none;
 
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: var(--card-bg-elevated);
+    backdrop-filter: var(--card-blur);
+    border: var(--card-border);
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(29, 78, 216, 0.12);
+    box-shadow: var(--card-shadow);
 }
 
 .user-menu-list[hidden] {
@@ -862,11 +1055,11 @@ body {
 .card {
     padding: 14px 16px;
 
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.85);
+    background: var(--card-bg);
+    backdrop-filter: var(--card-blur);
+    border: var(--card-border);
     border-radius: 18px;
-    box-shadow: 0 6px 24px rgba(29, 78, 216, 0.07);
+    box-shadow: var(--card-shadow);
 }
 
 /* đầu thẻ: tiêu đề trái | liên kết phụ phải */
@@ -966,7 +1159,7 @@ body {
     height: 78px;
     flex-shrink: 0;
     border-radius: 12px;
-    background-image: url(/assets/theme/continue-thumb.png);
+    background-image: var(--continue-thumb);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1089,7 +1282,7 @@ body {
     position: absolute;
     inset: 8px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: var(--card-bg-elevated);
 }
 
 .score-value {
@@ -1340,7 +1533,7 @@ body {
 
 .chip-outline {
     color: var(--color-primary);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--card-bg-elevated);
     border: 1px solid var(--color-primary-light);
 }
 
@@ -1349,13 +1542,13 @@ body {
 }
 
 .chip-soft {
-    color: #4a6fa5;
-    background-color: rgba(219, 234, 254, 0.7);
+    color: var(--color-primary);
+    background-color: var(--color-primary-soft);
     border: 1px solid transparent;
 }
 
 .chip-soft:hover {
-    background-color: #bfdbfe;
+    background-color: var(--nav-hover-bg);
 }
 
 /* Nút ngôi sao yêu thích ở góc phải mỗi môn học */
@@ -1367,9 +1560,9 @@ body {
     width: 26px;
     height: 26px;
     padding: 0;
-    border: 1px solid rgba(15, 23, 42, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--card-bg-elevated);
     backdrop-filter: blur(4px);
     box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
     display: flex;
@@ -1381,7 +1574,7 @@ body {
 
 .subject-fav-btn:hover {
     transform: scale(1.15);
-    background-color: #ffffff;
+    background-color: var(--color-white);
     box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
 }
 

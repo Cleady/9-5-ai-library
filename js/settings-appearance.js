@@ -29,16 +29,24 @@
       htmlNode.removeAttribute("data-theme");
     }
 
-    // 2. Accent color (Override css variable)
-    const colorMap = {
-      blue: "#1d4ed8",
-      purple: "#7c3aed",
-      green: "#059669",
-      orange: "#ea580c",
-      pink: "#db2777"
+    // 2. Accent color (Set data-accent and dynamic primary tokens)
+    const accent = appearanceObj.accentColor || "blue";
+    htmlNode.setAttribute("data-accent", accent);
+
+    const colorThemes = {
+      blue: { primary: "#1d4ed8", light: "#3b82f6", soft: "#eff6ff" },
+      purple: { primary: "#7c3aed", light: "#8b5cf6", soft: "#f5f3ff" },
+      green: { primary: "#059669", light: "#10b981", soft: "#ecfdf5" },
+      orange: { primary: "#ea580c", light: "#f97316", soft: "#fff7ed" },
+      pink: { primary: "#db2777", light: "#ec4899", soft: "#fdf2f8" }
     };
-    if (colorMap[appearanceObj.accentColor]) {
-      htmlNode.style.setProperty("--color-primary", colorMap[appearanceObj.accentColor]);
+    const currentTheme = colorThemes[accent] || colorThemes.blue;
+    htmlNode.style.setProperty("--color-primary", currentTheme.primary);
+    htmlNode.style.setProperty("--color-primary-light", currentTheme.light);
+    if (theme !== "dark") {
+      htmlNode.style.setProperty("--color-primary-soft", currentTheme.soft);
+    } else {
+      htmlNode.style.removeProperty("--color-primary-soft");
     }
 
     // 3. Font Size
