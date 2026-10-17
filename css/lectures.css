@@ -2629,10 +2629,8 @@
   stroke: #d97706;
 }
 
-/* =====================================================================
-   /* ===== DARK THEME ===== */
-   Module: Lectures (lectures.html, lecture.html, next-lectures.html, subject.html)
-   ===================================================================== */
+/* ===== DARK THEME ===== */
+/* Module: Lectures (lectures.html, lecture.html, next-lectures.html, subject.html) */
 html[data-theme="dark"] .lec-course-card {
   background: var(--card-bg);
   border: var(--card-border);
@@ -2760,9 +2758,37 @@ html[data-theme="dark"] .lec-row-meta {
   color: var(--color-text-muted);
 }
 
+html[data-theme="dark"] .lec-row-thumb {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.45), rgba(15, 23, 42, 0.85)) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
 html[data-theme="dark"] .lec-row-type-badge {
-  background: rgba(15, 23, 42, 0.7);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(10, 22, 44, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="dark"] .lec-badge--video .lec-type-svg {
+  color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .lec-badge--quiz .lec-type-svg {
+  color: #34d399 !important;
+}
+
+html[data-theme="dark"] .lec-badge--reading .lec-type-svg {
+  color: #fb923c !important;
+}
+
+html[data-theme="dark"] .lec-row-progress .progress-label {
+  color: var(--accent-bright);
+}
+
+html[data-theme="dark"] #lec-subjects-count-badge {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: var(--accent-bright) !important;
 }
 
 /* Status Badges */
