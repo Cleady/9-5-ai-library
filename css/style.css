@@ -457,6 +457,68 @@ body {
     background-position: center;
 }
 
+/* ==========================================================================
+   CSS MASK-IMAGE (Icon đổi màu tự động theo Accent Color & Theme)
+   ========================================================================== */
+@supports ((-webkit-mask-image: url("")) or (mask-image: url(""))) {
+    .nav-icon {
+        background-color: var(--color-nav-text);
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-image: none !important;
+        transition: background-color 0.2s ease;
+    }
+
+    .nav-link:hover .nav-icon,
+    .nav-link.is-active .nav-icon {
+        background-color: var(--color-primary);
+    }
+
+    .home-icon {
+        -webkit-mask-image: url("/assets/icon/Better_Icon/home-button.png");
+        mask-image: url("/assets/icon/Better_Icon/home-button.png");
+    }
+
+    .lectures-icon {
+        -webkit-mask-image: url("/assets/icon/Better_Icon/media.png");
+        mask-image: url("/assets/icon/Better_Icon/media.png");
+    }
+
+    .practice-icon {
+        -webkit-mask-image: url("/assets/icon/Better_Icon/writing.png");
+        mask-image: url("/assets/icon/Better_Icon/writing.png");
+    }
+
+    .history-icon {
+        -webkit-mask-image: url("/assets/icon/Better_Icon/history.png");
+        mask-image: url("/assets/icon/Better_Icon/history.png");
+    }
+
+    .favorites-icon {
+        -webkit-mask-image: url("/assets/icon/Better_Icon/star.png");
+        mask-image: url("/assets/icon/Better_Icon/star.png");
+    }
+
+    .resources-icon {
+        -webkit-mask-image: url("/assets/icon/Better_Icon/folder.png");
+        mask-image: url("/assets/icon/Better_Icon/folder.png");
+    }
+
+    .community-icon {
+        -webkit-mask-image: url("/assets/icon/Better_Icon/group.png");
+        mask-image: url("/assets/icon/Better_Icon/group.png");
+    }
+
+    .settings-icon {
+        -webkit-mask-image: url("/assets/icon/Better_Icon/settings.png");
+        mask-image: url("/assets/icon/Better_Icon/settings.png");
+    }
+}
+
 /* slogan của sidebar*/
 .sidebar-promo {
     position: relative;
