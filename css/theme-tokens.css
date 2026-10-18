@@ -1,0 +1,516 @@
+/* ==========================================================================
+   THEME TOKENS (Design Tokens: Light & Dark Systems)
+   Dùng chung cho toàn bộ website, trang độc lập (Admin, Auth, Landing)
+   và đồng bộ với css/style.css
+   ========================================================================== */
+
+:root {
+  /* color-scheme */
+  color-scheme: light;
+
+  /* 1. Accent & Brand Colors (Mặc định: Blue) */
+  --color-primary: #1d4ed8;
+  --color-primary-light: #3b82f6;
+  --color-primary-soft: #eff6ff;
+  --color-primary-glow: rgba(29, 78, 216, 0.2);
+  --accent-bright: #1d4ed8;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(29, 78, 216, 0.25);
+  --icon-filter: none;
+
+  /* 2. Nền tảng & Văn bản (Surfaces & Typography) */
+  --color-bg: #f5f8ff;
+  --color-text: #0f172a;
+  --color-text-secondary: #334e7a;
+  --color-text-muted: #64748b;
+  --color-white: #ffffff;
+  --color-nav-text: #475569;
+  --color-border: rgba(15, 23, 42, 0.08);
+
+  /* Bề mặt (Surfaces) */
+  --surface-bg: #f5f8ff;
+  --surface-card: rgba(255, 255, 255, 0.65);
+  --surface-elevated: rgba(255, 255, 255, 0.85);
+  --surface-panel: rgba(255, 255, 255, 0.72);
+  --surface-sunken: #f1f5f9;
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --card-bg-elevated: rgba(255, 255, 255, 0.85);
+  --card-blur: blur(12px);
+
+  /* Viền (Borders) */
+  --border-subtle: rgba(15, 23, 42, 0.06);
+  --border-default: rgba(15, 23, 42, 0.12);
+  --border-focus: #3b82f6;
+  --card-border: 1px solid rgba(255, 255, 255, 0.8);
+
+  /* Văn bản mở rộng */
+  --text-primary: #0f172a;
+  --text-secondary: #334e7a;
+  --text-muted: #64748b;
+  --text-on-accent: #ffffff;
+  --text-inverse: #ffffff;
+
+  /* Form / Input */
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
+  --input-placeholder: #94a3b8;
+  --input-focus-border: #3b82f6;
+
+  /* Bảng (Tables) */
+  --table-head-bg: #f8fafc;
+  --table-head-text: #475569;
+  --table-row-border: rgba(15, 23, 42, 0.06);
+  --table-row-hover: rgba(59, 130, 246, 0.04);
+
+  /* Trạng thái (Statuses) */
+  --status-success: #16a34a;
+  --status-success-bg: #dcfce7;
+  --status-warning: #ea580c;
+  --status-warning-bg: #ffedd5;
+  --status-error: #dc2626;
+  --status-error-bg: #fee2e2;
+  --status-info: #2563eb;
+  --status-info-bg: #dbeafe;
+
+  /* Đổ bóng (Shadows) */
+  --shadow-sm: 0 4px 16px rgba(29, 78, 216, 0.06);
+  --shadow-md: 0 8px 32px rgba(29, 78, 216, 0.08);
+  --shadow-lg: 0 14px 38px rgba(36, 91, 170, 0.17);
+  --card-shadow: 0 8px 32px rgba(29, 78, 216, 0.08);
+  --card-shadow-sm: 0 4px 16px rgba(29, 78, 216, 0.06);
+
+  /* Modal / Overlay */
+  --overlay-bg: rgba(15, 23, 42, 0.5);
+
+  /* Tương tác & Menu */
+  --nav-hover-bg: rgba(59, 130, 246, 0.1);
+  --active-gradient: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+  --role-badge-bg: #dbeafe;
+  --role-badge-text: var(--color-primary);
+
+  /* Tài nguyên hình ảnh theo Theme */
+  --theme-bg-image: url("/assets/theme/background.png");
+  --theme-promo-bg: url("/assets/theme/scene.png");
+  --continue-thumb: url("/assets/theme/continue-thumb.png");
+  --theme-hero-bg: url("/assets/theme/home_page_backgroud.png");
+  --auth-banner-bg: url("/assets/theme/scene2.png");
+}
+
+/* 5 Accent Colors (Light) */
+html[data-accent="blue"] {
+  --color-primary: #1d4ed8;
+  --color-primary-light: #3b82f6;
+  --color-primary-soft: #eff6ff;
+  --color-primary-glow: rgba(29, 78, 216, 0.2);
+  --accent-bright: #1d4ed8;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(29, 78, 216, 0.25);
+  --icon-filter: none;
+  --nav-hover-bg: rgba(59, 130, 246, 0.1);
+  --active-gradient: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+  --role-badge-bg: #dbeafe;
+  --role-badge-text: #1d4ed8;
+}
+
+html[data-accent="purple"] {
+  --color-primary: #7c3aed;
+  --color-primary-light: #8b5cf6;
+  --color-primary-soft: #f5f3ff;
+  --color-primary-glow: rgba(124, 58, 237, 0.2);
+  --accent-bright: #7c3aed;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(124, 58, 237, 0.25);
+  --icon-filter: hue-rotate(58deg) saturate(1.1);
+  --nav-hover-bg: rgba(124, 58, 237, 0.1);
+  --active-gradient: linear-gradient(135deg, #ede9fe 0%, #f5f3ff 100%);
+  --role-badge-bg: #ede9fe;
+  --role-badge-text: #7c3aed;
+}
+
+html[data-accent="green"] {
+  --color-primary: #059669;
+  --color-primary-light: #10b981;
+  --color-primary-soft: #ecfdf5;
+  --color-primary-glow: rgba(5, 150, 105, 0.2);
+  --accent-bright: #059669;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(5, 150, 105, 0.25);
+  --icon-filter: hue-rotate(-50deg) saturate(1.2);
+  --nav-hover-bg: rgba(5, 150, 105, 0.1);
+  --active-gradient: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  --role-badge-bg: #d1fae5;
+  --role-badge-text: #059669;
+}
+
+html[data-accent="orange"] {
+  --color-primary: #ea580c;
+  --color-primary-light: #f97316;
+  --color-primary-soft: #fff7ed;
+  --color-primary-glow: rgba(234, 88, 12, 0.2);
+  --accent-bright: #ea580c;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(234, 88, 12, 0.25);
+  --icon-filter: hue-rotate(174deg) saturate(1.3) brightness(1.05);
+  --nav-hover-bg: rgba(234, 88, 12, 0.1);
+  --active-gradient: linear-gradient(135deg, #ffedd5 0%, #fff7ed 100%);
+  --role-badge-bg: #ffedd5;
+  --role-badge-text: #ea580c;
+}
+
+html[data-accent="pink"] {
+  --color-primary: #db2777;
+  --color-primary-light: #ec4899;
+  --color-primary-soft: #fdf2f8;
+  --color-primary-glow: rgba(219, 39, 119, 0.2);
+  --accent-bright: #db2777;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(219, 39, 119, 0.25);
+  --icon-filter: hue-rotate(120deg) saturate(1.2);
+  --nav-hover-bg: rgba(219, 39, 119, 0.1);
+  --active-gradient: linear-gradient(135deg, #fce7f3 0%, #fdf2f8 100%);
+  --role-badge-bg: #fce7f3;
+  --role-badge-text: #db2777;
+}
+
+/* ==========================================================================
+   DARK THEME SYSTEM (html[data-theme="dark"])
+   ========================================================================== */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* 1. Nền tảng tối & Chữ sáng theo thiết kế đích */
+  --color-bg: #030712;
+  --color-text: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #94a3b8; /* nâng từ #64748b lên #94a3b8 để vượt ngưỡng WCAG AA 4.5:1 */
+  --color-white: #1e293b;
+  --color-nav-text: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.12);
+
+  /* Bề mặt (Dark Glassmorphism) */
+  --surface-bg: #030712;
+  --surface-card: rgba(10, 22, 44, 0.75);
+  --surface-elevated: rgba(15, 30, 60, 0.85);
+  --surface-panel: rgba(6, 13, 31, 0.78);
+  --surface-sunken: rgba(3, 7, 18, 0.6);
+  --card-bg: rgba(10, 22, 44, 0.75);
+  --card-bg-elevated: rgba(15, 30, 60, 0.85);
+  --card-blur: blur(12px);
+
+  /* Viền (Dark Borders) */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-default: rgba(255, 255, 255, 0.14);
+  --border-focus: #38bdf8;
+  --card-border: 1px solid rgba(56, 189, 248, 0.14);
+
+  /* Văn bản mở rộng */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #94a3b8;
+  --text-on-accent: #ffffff;
+  --text-inverse: #030712;
+
+  /* Form / Input */
+  --input-bg: rgba(255, 255, 255, 0.06);
+  --input-border: rgba(255, 255, 255, 0.14);
+  --input-placeholder: #64748b;
+  --input-focus-border: #38bdf8;
+
+  /* Bảng (Tables) */
+  --table-head-bg: rgba(6, 15, 34, 0.65);
+  --table-head-text: #94a3b8;
+  --table-row-border: rgba(255, 255, 255, 0.06);
+  --table-row-hover: rgba(56, 189, 248, 0.06);
+
+  /* Trạng thái sáng (Statuses Dark) */
+  --status-success: #34d399;
+  --status-success-bg: rgba(52, 211, 153, 0.15);
+  --status-warning: #fb923c;
+  --status-warning-bg: rgba(251, 146, 60, 0.15);
+  --status-error: #f87171;
+  --status-error-bg: rgba(248, 113, 113, 0.15);
+  --status-info: #38bdf8;
+  --status-info-bg: rgba(56, 189, 248, 0.15);
+
+  /* Đổ bóng (Dark Shadows) */
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 14px 38px rgba(0, 0, 0, 0.65);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --card-shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.35);
+
+  /* Modal / Overlay */
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+
+  /* Accent Bright & Tương tác tối (Mặc định: Blue) */
+  --accent-bright: #38bdf8;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(56, 189, 248, 0.45);
+  --icon-filter: none;
+  --color-primary-soft: rgba(37, 99, 235, 0.22);
+  --nav-hover-bg: rgba(59, 130, 246, 0.16);
+  --active-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.4) 0%, rgba(30, 58, 138, 0.55) 100%);
+  --role-badge-bg: rgba(37, 99, 235, 0.25);
+  --role-badge-text: #93c5fd;
+
+  /* Tài nguyên hình ảnh theo Theme */
+  --theme-bg-image: url("/assets/theme/darktheme/dark_background.png");
+  --theme-promo-bg: url("/assets/theme/darktheme/dark-scene2.png");
+  --continue-thumb: url("/assets/theme/darktheme/dark-continue-thumb.png");
+  --theme-hero-bg: url("/assets/theme/darktheme/dark-home_page_backgroud.png");
+  --auth-banner-bg: url("/assets/theme/darktheme/dark-scene2.png");
+}
+
+/* 5 Accent Colors (Dark) */
+html[data-theme="dark"][data-accent="blue"] {
+  --accent-bright: #38bdf8;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(56, 189, 248, 0.45);
+  --icon-filter: none;
+  --color-primary-soft: rgba(37, 99, 235, 0.22);
+  --nav-hover-bg: rgba(59, 130, 246, 0.16);
+  --active-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.4) 0%, rgba(30, 58, 138, 0.55) 100%);
+  --role-badge-bg: rgba(37, 99, 235, 0.25);
+  --role-badge-text: #93c5fd;
+}
+
+html[data-theme="dark"][data-accent="purple"] {
+  --accent-bright: #a78bfa;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(167, 139, 250, 0.45);
+  --icon-filter: hue-rotate(58deg) saturate(1.1);
+  --color-primary-soft: rgba(124, 58, 237, 0.22);
+  --nav-hover-bg: rgba(124, 58, 237, 0.16);
+  --active-gradient: linear-gradient(135deg, rgba(124, 58, 237, 0.4) 0%, rgba(91, 33, 182, 0.55) 100%);
+  --role-badge-bg: rgba(124, 58, 237, 0.25);
+  --role-badge-text: #c4b5fd;
+}
+
+html[data-theme="dark"][data-accent="green"] {
+  --accent-bright: #34d399;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(52, 211, 153, 0.45);
+  --icon-filter: hue-rotate(-50deg) saturate(1.2);
+  --color-primary-soft: rgba(5, 150, 105, 0.22);
+  --nav-hover-bg: rgba(5, 150, 105, 0.16);
+  --active-gradient: linear-gradient(135deg, rgba(5, 150, 105, 0.4) 0%, rgba(6, 95, 70, 0.55) 100%);
+  --role-badge-bg: rgba(5, 150, 105, 0.25);
+  --role-badge-text: #6ee7b7;
+}
+
+html[data-theme="dark"][data-accent="orange"] {
+  --accent-bright: #fb923c;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(251, 146, 60, 0.45);
+  --icon-filter: hue-rotate(174deg) saturate(1.3) brightness(1.05);
+  --color-primary-soft: rgba(234, 88, 12, 0.22);
+  --nav-hover-bg: rgba(234, 88, 12, 0.16);
+  --active-gradient: linear-gradient(135deg, rgba(234, 88, 12, 0.4) 0%, rgba(154, 52, 18, 0.55) 100%);
+  --role-badge-bg: rgba(234, 88, 12, 0.25);
+  --role-badge-text: #fdba74;
+}
+
+html[data-theme="dark"][data-accent="pink"] {
+  --accent-bright: #f472b6;
+  --color-on-accent: #ffffff;
+  --accent-glow: rgba(244, 114, 182, 0.45);
+  --icon-filter: hue-rotate(120deg) saturate(1.2);
+  --color-primary-soft: rgba(219, 39, 119, 0.22);
+  --nav-hover-bg: rgba(219, 39, 119, 0.16);
+  --active-gradient: linear-gradient(135deg, rgba(219, 39, 119, 0.4) 0%, rgba(157, 23, 77, 0.55) 100%);
+  --role-badge-bg: rgba(219, 39, 119, 0.25);
+  --role-badge-text: #f9a8d4;
+}
+
+/* ==========================================================================
+   QUICK THEME TOGGLE BUTTONS & SMOOTH TRANSITIONS
+   ========================================================================== */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease !important;
+}
+
+.theme-quick-toggle {
+  color: var(--color-text-secondary);
+}
+.theme-quick-toggle:hover {
+  color: var(--accent-bright);
+  border-color: var(--accent-glow);
+}
+.theme-quick-toggle .theme-icon-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.home-page__theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--home-border, rgba(15, 23, 42, 0.12));
+  background: var(--home-white, rgba(255, 255, 255, 0.8));
+  color: var(--home-navy, #0f1f4b);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  backdrop-filter: blur(8px);
+}
+.home-page__theme-toggle:hover {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+html[data-theme="dark"] .home-page__theme-toggle {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(10, 22, 44, 0.75);
+  color: #38bdf8;
+}
+
+@media (max-width: 640px) {
+  .theme-quick-toggle {
+    display: none !important;
+  }
+}
+
+
+.auth-theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: var(--card-border, 1px solid rgba(255, 255, 255, 0.8));
+  background: var(--card-bg, rgba(255, 255, 255, 0.75));
+  color: var(--color-text, #0f172a);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.auth-theme-toggle:hover {
+  color: var(--accent-bright, #38bdf8);
+  border-color: var(--accent-glow, rgba(56, 189, 248, 0.3));
+  transform: scale(1.05);
+}
+
+.user-menu-theme-item .user-menu-theme-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  color: var(--color-nav-text, #475569);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: background 0.15s, color 0.15s;
+}
+.user-menu-theme-item .user-menu-theme-link:hover {
+  background: var(--nav-hover-bg, rgba(59, 130, 246, 0.1));
+  color: var(--color-primary, #1d4ed8);
+}
+html[data-theme="dark"] .user-menu-theme-item .user-menu-theme-link:hover {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   AUTH PAGES DARK THEME
+   ========================================================================== */
+html[data-theme="dark"] body.auth-body,
+html[data-theme="dark"]:has(.auth-card, .main > .sidebar) body {
+  background-image: url("/assets/theme/darktheme/dark-scene2.png") !important;
+}
+
+html[data-theme="dark"] .main:has(.sidebar-brand, .auth-card) {
+  background-image: linear-gradient(135deg, rgba(10, 22, 44, 0.92) 0%, rgba(6, 13, 31, 0.95) 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.18) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .auth-card {
+  background: transparent !important;
+}
+
+html[data-theme="dark"] .auth-title,
+html[data-theme="dark"] .welcome {
+  color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .auth-subtitle,
+html[data-theme="dark"] .slogan {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .input-container {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+html[data-theme="dark"] .input-container:focus-within {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
+}
+
+html[data-theme="dark"] .input-content input {
+  color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .input-content input::placeholder {
+  color: #64748b !important;
+}
+
+html[data-theme="dark"] .btn-login,
+html[data-theme="dark"] .btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35) !important;
+}
+
+html[data-theme="dark"] .btn-login:hover,
+html[data-theme="dark"] .btn-primary:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+}
+
+html[data-theme="dark"] .btn-social {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
+
+html[data-theme="dark"] .btn-social:hover {
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .forgot-link,
+html[data-theme="dark"] .signup-link a,
+html[data-theme="dark"] .login-link a,
+html[data-theme="dark"] .resend-link {
+  color: #38bdf8 !important;
+}
+
+html[data-theme="dark"] .divider span {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .divider::before,
+html[data-theme="dark"] .divider::after {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+html[data-theme="dark"] .auth-note,
+html[data-theme="dark"] .remember-group label,
+html[data-theme="dark"] .resend-hint {
+  color: #94a3b8 !important;
+}

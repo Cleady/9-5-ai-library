@@ -179,3 +179,41 @@ Mọi route đều yêu cầu xác thực JWT qua header `Authorization: Bearer 
   ```
   *(18/18 kịch bản pass: uploader/admin/owner permissions, 403 authorization, toggle favorite, sync favorites, preview PDF/Code, file disk removal).*
 
+---
+
+## 7. Hệ Thống Giao Diện Dark Theme & Design Tokens
+
+Dự án sử dụng kiến trúc CSS Variables hai lớp (Two-tier Design Tokens) cho phép hỗ trợ toàn diện cả giao diện Sáng (Light) và Tối (Dark), cùng 5 bộ màu Accent tùy chọn (Blue, Purple, Green, Orange, Pink) mà không làm biến dạng giao diện ban đầu.
+
+### Cơ Chế Kỹ Thuật (Architecture)
+1. **Khởi tạo chống giật sáng (Zero FOUC)**: Script inline `js/theme-init.js` nằm trong thẻ `<head>` của toàn bộ 28 trang HTML, đọc cấu hình từ `localStorage` (`lib95:settings:data`) hoặc `prefers-color-scheme` của hệ điều hành, ngay lập tức gán thuộc tính `data-theme="dark|light"` và `data-accent="blue|purple|green|orange|pink"` vào thẻ `<html>` trước khi trình duyệt dựng layout.
+2. **Bộ Token Chuẩn (`css/theme-tokens.css` & `css/style.css`)**:
+   - Sử dụng cho toàn bộ các trang chính và các trang độc lập (Landing Page, Admin, Auth).
+   - Thỏa mãn tiêu chuẩn độ tương phản WCAG 2.1 AA (Tỷ lệ tương phản chữ/nền tối thiểu 4.5:1 đối với văn bản thông thường và 3:1 đối với thành phần UI lớn).
+
+### Bảng Tra Cứu Token Thiết Kế (Design Tokens)
+
+| Nhóm Token | Tên Biến CSS | Giá trị Light Mode | Giá trị Dark Mode | Mục đích sử dụng |
+| :--- | :--- | :--- | :--- | :--- |
+| **Màu Nền Tảng** | `--color-bg` | `#f5f8ff` | `#030712` | Màu nền dự phòng toàn trang |
+| | `--color-text` | `#0f172a` | `#f8fafc` | Chữ chính (tiêu đề, nội dung quan trọng) |
+| | `--color-text-secondary` | `#334e7a` | `#94a3b8` | Chữ phụ, mô tả ngắn |
+| | `--color-text-muted` | `#64748b` | `#94a3b8` | Chữ phụ mờ, timestamp (WCAG AA: 7.04:1) |
+| | `--color-border` | `rgba(15, 23, 42, 0.08)` | `rgba(255, 255, 255, 0.12)` | Viền phân cách nội dung |
+| **Bề Mặt Kính** | `--surface-card` / `--card-bg` | `rgba(255, 255, 255, 0.65)` | `rgba(10, 22, 44, 0.75)` | Nền thẻ kính mờ (Dashboard, Feed, Grid) |
+| | `--surface-elevated` / `--card-bg-elevated` | `rgba(255, 255, 255, 0.85)` | `rgba(15, 30, 60, 0.85)` | Bề mặt nổi (Dropdown, User Menu, Modal) |
+| | `--surface-panel` | `rgba(255, 255, 255, 0.72)` | `rgba(6, 13, 31, 0.78)` | Bề mặt Sidebar, Panel điều hướng |
+| | `--card-border` | `1px solid rgba(255, 255, 255, 0.8)`| `1px solid rgba(56, 189, 248, 0.14)`| Viền kính mờ phản chiếu ánh sáng |
+| | `--card-shadow` | `0 8px 32px rgba(29, 78, 216, 0.08)`| `0 8px 32px rgba(0, 0, 0, 0.45)` | Đổ bóng đa lớp nổi khối |
+| **Màu Nhấn (Accent)**| `--accent-bright` | `#1d4ed8` | `#38bdf8` | Điểm nhấn phát sáng, link/tab active |
+| | `--accent-glow` | `rgba(29, 78, 216, 0.25)` | `rgba(56, 189, 248, 0.45)` | Hiệu ứng phát quang xung quanh nút/viền |
+| | `--color-on-accent`| `#ffffff` | `#ffffff` | Màu chữ trên nền accent |
+| **Form & Bảng** | `--input-bg` | `#ffffff` | `rgba(255, 255, 255, 0.06)` | Nền ô nhập liệu |
+| | `--input-border` | `#cbd5e1` | `rgba(255, 255, 255, 0.14)` | Viền ô nhập liệu |
+| | `--table-head-bg` | `#f8fafc` | `rgba(6, 15, 34, 0.65)` | Nền hàng tiêu đề bảng |
+| **Hình Nền Theme** | `--theme-bg-image` | `url('/assets/theme/background.png')` | `url('/assets/theme/darktheme/dark_background.png')` | Ảnh nền toàn bộ trang nội bộ |
+| | `--theme-hero-bg` | `url('/assets/theme/home_page_backgroud.png')` | `url('/assets/theme/darktheme/dark-home_page_backgroud.png')` | Banner Hero trang Landing index.html |
+| | `--theme-promo-bg`| `url('/assets/theme/scene.png')` | `url('/assets/theme/darktheme/dark-scene2.png')` | Banner quảng bá sidebar & tài nguyên |
+| | `--auth-banner-bg`| `url('/assets/theme/scene2.png')` | `url('/assets/theme/darktheme/dark-scene2.png')` | Banner bên trái trang đăng nhập/đăng ký |
+
+

@@ -2,6 +2,8 @@
    DESIGN TOKENS (Hệ thống biến toàn site - Design System)
    ========================================================================== */
 :root {
+    color-scheme: light;
+
     /* 1. Màu thương hiệu & Trạng thái (Accent: Blue mặc định) */
     --color-primary: #1d4ed8;
     --color-primary-light: #3b82f6;
@@ -23,6 +25,46 @@
     --color-nav-text: #475569;
     --color-border: rgba(15, 23, 42, 0.08);
 
+    /* 2b. Bề mặt & Token mở rộng */
+    --surface-bg: #f5f8ff;
+    --surface-card: rgba(255, 255, 255, 0.65);
+    --surface-elevated: rgba(255, 255, 255, 0.85);
+    --surface-panel: rgba(255, 255, 255, 0.72);
+    --surface-sunken: #f1f5f9;
+    --border-subtle: rgba(15, 23, 42, 0.06);
+    --border-default: rgba(15, 23, 42, 0.12);
+    --border-focus: #3b82f6;
+
+    --text-primary: #0f172a;
+    --text-secondary: #334e7a;
+    --text-muted: #64748b;
+    --text-on-accent: #ffffff;
+    --text-inverse: #ffffff;
+
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --input-placeholder: #94a3b8;
+    --input-focus-border: #3b82f6;
+
+    --table-head-bg: #f8fafc;
+    --table-head-text: #475569;
+    --table-row-border: rgba(15, 23, 42, 0.06);
+    --table-row-hover: rgba(59, 130, 246, 0.04);
+
+    --status-success: #16a34a;
+    --status-success-bg: #dcfce7;
+    --status-warning: #ea580c;
+    --status-warning-bg: #ffedd5;
+    --status-error: #dc2626;
+    --status-error-bg: #fee2e2;
+    --status-info: #2563eb;
+    --status-info-bg: #dbeafe;
+
+    --shadow-sm: 0 4px 16px rgba(29, 78, 216, 0.06);
+    --shadow-md: 0 8px 32px rgba(29, 78, 216, 0.08);
+    --shadow-lg: 0 14px 38px rgba(36, 91, 170, 0.17);
+    --overlay-bg: rgba(15, 23, 42, 0.5);
+
     /* 3. Bề mặt Kính mờ (Glassmorphism Surfaces) */
     --card-bg: rgba(255, 255, 255, 0.65);
     --card-bg-elevated: rgba(255, 255, 255, 0.85);
@@ -41,6 +83,8 @@
     --theme-bg-image: url("/assets/theme/background.png");
     --theme-promo-bg: url("/assets/theme/scene.png");
     --continue-thumb: url("/assets/theme/continue-thumb.png");
+    --theme-hero-bg: url("/assets/theme/home_page_backgroud.png");
+    --auth-banner-bg: url("/assets/theme/scene2.png");
 }
 
 /* ==========================================================================
@@ -125,21 +169,62 @@ html[data-accent="pink"] {
    DARK THEME SYSTEM (Giao diện tối toàn site)
    ========================================================================== */
 html[data-theme="dark"] {
+    color-scheme: dark;
+
     /* Nền tảng tối & Chữ sáng theo thiết kế đích */
     --color-bg: #030712;
     --color-text: #f8fafc;
     --color-text-secondary: #94a3b8;
-    --color-text-muted: #64748b;
+    --color-text-muted: #94a3b8;
     --color-nav-text: #94a3b8;
     --color-white: #1e293b;
     --color-border: rgba(255, 255, 255, 0.12);
 
     /* Bề mặt kính tối (Dark Glassmorphism) */
+    --surface-bg: #030712;
+    --surface-card: rgba(10, 22, 44, 0.75);
+    --surface-elevated: rgba(15, 30, 60, 0.85);
+    --surface-panel: rgba(6, 13, 31, 0.78);
+    --surface-sunken: rgba(3, 7, 18, 0.6);
     --card-bg: rgba(10, 22, 44, 0.75);
     --card-bg-elevated: rgba(15, 30, 60, 0.85);
     --card-border: 1px solid rgba(56, 189, 248, 0.14);
     --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
     --card-shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.35);
+
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-default: rgba(255, 255, 255, 0.14);
+    --border-focus: #38bdf8;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #94a3b8;
+    --text-on-accent: #ffffff;
+    --text-inverse: #030712;
+
+    --input-bg: rgba(255, 255, 255, 0.06);
+    --input-border: rgba(255, 255, 255, 0.14);
+    --input-placeholder: #64748b;
+    --input-focus-border: #38bdf8;
+
+    --table-head-bg: rgba(6, 15, 34, 0.65);
+    --table-head-text: #94a3b8;
+    --table-row-border: rgba(255, 255, 255, 0.06);
+    --table-row-hover: rgba(56, 189, 248, 0.06);
+
+    --status-success: #34d399;
+    --status-success-bg: rgba(52, 211, 153, 0.15);
+    --status-warning: #fb923c;
+    --status-warning-bg: rgba(251, 146, 60, 0.15);
+    --status-error: #f87171;
+    --status-error-bg: rgba(248, 113, 113, 0.15);
+    --status-info: #38bdf8;
+    --status-info-bg: rgba(56, 189, 248, 0.15);
+
+    --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 14px 38px rgba(0, 0, 0, 0.65);
+    --overlay-bg: rgba(0, 0, 0, 0.7);
 
     /* Tương tác tối & Accent Bright Tokens (Mặc định: Blue) */
     --accent-bright: #38bdf8;
@@ -156,6 +241,8 @@ html[data-theme="dark"] {
     --theme-bg-image: url("/assets/theme/darktheme/dark_background.png");
     --theme-promo-bg: url("/assets/theme/darktheme/dark-scene2.png");
     --continue-thumb: url("/assets/theme/darktheme/dark-continue-thumb.png");
+    --theme-hero-bg: url("/assets/theme/darktheme/dark-home_page_backgroud.png");
+    --auth-banner-bg: url("/assets/theme/darktheme/dark-scene2.png");
 }
 
 /* Dark Theme phối hợp Accent Colors */
@@ -2292,3 +2379,90 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb {
 html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-bright);
 }
+
+/* User Menu & Dropdowns Dark Overrides */
+html[data-theme="dark"] .user-menu-list a:hover {
+    background-color: rgba(56, 189, 248, 0.12);
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .user-chevron {
+    border-right-color: var(--color-text-muted);
+    border-bottom-color: var(--color-text-muted);
+}
+
+/* Notification Panel Dark Overrides */
+html[data-theme="dark"] .notification-clear {
+    color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .notification-clear:hover {
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .notification-footer {
+    color: var(--accent-bright);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .notification-footer:hover {
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .notification-item:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+html[data-theme="dark"] .notification-item.is-unread {
+    background-color: rgba(37, 99, 235, 0.22);
+}
+
+/* Search Shortcut & Quote Dark Overrides */
+html[data-theme="dark"] .search-shortcut kbd {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .hero-quote::before {
+    color: rgba(56, 189, 248, 0.25);
+}
+
+html[data-theme="dark"] .card-menu {
+    color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .card-menu:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-text);
+}
+
+/* User Menu theme item */
+.user-menu-theme-item .user-menu-theme-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    color: var(--color-nav-text);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.user-menu-theme-item .user-menu-theme-link:hover {
+    background: var(--nav-hover-bg);
+    color: var(--color-primary);
+}
+
+html[data-theme="dark"] .user-menu-theme-item .user-menu-theme-link:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 640px) {
+    .theme-quick-toggle {
+        display: none !important;
+    }
+}
+

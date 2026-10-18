@@ -79,6 +79,172 @@ html[data-theme="dark"] .home-page__search input {
     color: #f8fafc;
 }
 
+html[data-theme="dark"] .home-page__keyboard-hint kbd {
+    background: rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+html[data-theme="dark"] .home-page__guest-button {
+    color: #f8fafc;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+html[data-theme="dark"] .home-page__guest-avatar {
+    background: rgba(56, 189, 248, 0.2) !important;
+    color: #38bdf8 !important;
+}
+
+/* Hero Section Dark */
+html[data-theme="dark"] .home-page__hero {
+    background: #030712 url("../assets/theme/darktheme/dark-home_page_backgroud.png") center 50% / cover no-repeat;
+}
+
+html[data-theme="dark"] .home-page__hero-wash {
+    background: linear-gradient(180deg, rgba(3, 7, 18, 0.45) 0%, rgba(3, 7, 18, 0.8) 100%);
+}
+
+html[data-theme="dark"] .home-page__hero-badge {
+    color: #38bdf8;
+    background: rgba(10, 22, 44, 0.75);
+    border-color: rgba(56, 189, 248, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="dark"] .home-page__hero-badge svg {
+    color: #38bdf8;
+    fill: #38bdf8;
+}
+
+html[data-theme="dark"] .home-page__hero-title {
+    background: linear-gradient(135deg, #ffffff 0%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="dark"] .home-page__hero-subtitle {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .home-page__button--primary {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
+}
+
+html[data-theme="dark"] .home-page__button--secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+html[data-theme="dark"] .home-page__button--secondary:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+}
+
+/* Recent Events Dark */
+html[data-theme="dark"] .home-page__events {
+    background: transparent;
+}
+
+html[data-theme="dark"] .home-page__section-title {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__text-link {
+    color: #38bdf8;
+}
+
+html[data-theme="dark"] .home-page__text-link:hover {
+    color: #7dd3fc;
+}
+
+html[data-theme="dark"] .home-page__event-card {
+    background: rgba(15, 31, 75, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="dark"] .home-page__event-card:hover {
+    border-color: rgba(56, 189, 248, 0.35);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .home-page__event-content h3 {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__event-content > p {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .home-page__event-meta {
+    color: #94a3b8;
+}
+
+/* Features, Showcase & Steps Dark */
+html[data-theme="dark"] .home-page__feature-card,
+html[data-theme="dark"] .home-page__showcase,
+html[data-theme="dark"] .home-page__step-card {
+    background: rgba(10, 22, 44, 0.75);
+    border-color: rgba(56, 189, 248, 0.14);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* About & Features Dark Overrides */
+html[data-theme="dark"] .home-page__about {
+    background: linear-gradient(105deg, #070d1e 0%, #0a162e 52%, #081226 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .home-page__about::before {
+    background: radial-gradient(ellipse at 96% 100%, rgba(56, 189, 248, 0.12), transparent 45%);
+}
+
+html[data-theme="dark"] .home-page__about-copy h2 {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__about-copy h2 span {
+    color: #38bdf8;
+}
+
+html[data-theme="dark"] .home-page__about-description {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .home-page__feature {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .home-page__feature-icon {
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: #38bdf8;
+    background: rgba(10, 22, 44, 0.75);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="dark"] .home-page__feature h3 {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__feature p {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .home-page__motto {
+    color: #94a3b8;
+}
+
+
+html[data-theme="dark"] .home-page__footer {
+    border-top-color: rgba(255, 255, 255, 0.08);
+    background: rgba(3, 7, 18, 0.95);
+}
+
 .home-page,
 .home-page * {
     box-sizing: border-box;

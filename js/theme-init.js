@@ -86,6 +86,15 @@
         } catch (err) {}
       });
     }
+
+    // Tự động nạp bộ điều khiển nút chuyển Theme nhanh nếu chưa có
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!window.Lib95?.themeToggle && !document.querySelector('script[src*="theme-toggle.js"]')) {
+        const s = document.createElement("script");
+        s.src = "/js/theme-toggle.js";
+        document.body.appendChild(s);
+      }
+    });
   } catch (err) {
     console.error("theme-init error:", err);
   }

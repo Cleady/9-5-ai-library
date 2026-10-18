@@ -32,7 +32,7 @@ body {
     color: var(--color-text);
     font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
     line-height: 1.5;
-    background: var(--color-bg) url("../assets/theme/background.png") center / cover fixed no-repeat;
+    background: var(--color-bg) var(--theme-bg-image, url("../assets/theme/background.png")) center / cover fixed no-repeat;
 }
 
 button,

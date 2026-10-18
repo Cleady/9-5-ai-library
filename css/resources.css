@@ -36,7 +36,7 @@
   min-height: 100vh;
   color: var(--res-ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  background: #eaf5ff url("../assets/theme/background.png") center / cover fixed no-repeat;
+  background: var(--color-bg, #eaf5ff) var(--theme-bg-image, url("../assets/theme/background.png")) center / cover fixed no-repeat;
 }
 
 .resource-page button,
@@ -985,7 +985,7 @@
   min-height: 182px;
   padding: 20px;
   overflow: hidden;
-  background: rgba(255, 255, 255, .68) url("../assets/theme/scene.png") center / cover no-repeat;
+  background: var(--card-bg, rgba(255, 255, 255, .68)) var(--theme-promo-bg, url("../assets/theme/scene.png")) center / cover no-repeat;
 }
 
 .res-promo-card p {
