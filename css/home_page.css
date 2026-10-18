@@ -239,11 +239,127 @@ html[data-theme="dark"] .home-page__motto {
     color: #94a3b8;
 }
 
+/* Hero Floating Cards Dark */
+html[data-theme="dark"] .home-page__float-card {
+    background: rgba(10, 22, 44, 0.78);
+    border-color: rgba(56, 189, 248, 0.2);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__float-card:hover {
+    background: rgba(15, 30, 60, 0.9);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .home-page__float-icon {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(6, 13, 31, 0.85);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .home-page__float-icon--blue {
+    color: #38bdf8;
+}
+
+html[data-theme="dark"] .home-page__float-icon--violet {
+    color: #a78bfa;
+}
+
+html[data-theme="dark"] .home-page__float-icon--teal {
+    color: #34d399;
+}
+
+html[data-theme="dark"] .home-page__float-copy strong {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__float-copy small {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .home-page__float-arrow {
+    color: #38bdf8;
+}
+
+/* Header, Notifications & Menus Dark */
+html[data-theme="dark"] .home-page__icon-button {
+    background: rgba(10, 22, 44, 0.75);
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .home-page__notification-panel {
+    background: rgba(15, 30, 60, 0.95);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .home-page__notification-header strong {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__notification-header span {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.15);
+}
+
+html[data-theme="dark"] .home-page__notification-item {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .home-page__notification-item.is-unread {
+    background: rgba(37, 99, 235, 0.2);
+}
+
+html[data-theme="dark"] .home-page__notification-item p {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__notification-item time {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .home-page__notification-item:not(.is-unread) .home-page__notification-mark {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme="dark"] .home-page__guest-menu {
+    background: rgba(15, 30, 60, 0.95);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .home-page__guest-menu a {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__guest-menu a:hover {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.12);
+}
+
+html[data-theme="dark"] .home-page__menu-button {
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(10, 22, 44, 0.75);
+}
+
+html[data-theme="dark"] .home-page__menu-button span {
+    background: #f8fafc;
+}
+
+html[data-theme="dark"] .home-page__nav {
+    background: rgba(10, 22, 44, 0.96);
+    border: 1px solid rgba(56, 189, 248, 0.18);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
 
 html[data-theme="dark"] .home-page__footer {
     border-top-color: rgba(255, 255, 255, 0.08);
     background: rgba(3, 7, 18, 0.95);
 }
+
 
 .home-page,
 .home-page * {
