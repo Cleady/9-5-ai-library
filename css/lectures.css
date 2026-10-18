@@ -1184,11 +1184,15 @@
   border-radius: var(--lec-radius);
   box-shadow: 0 12px 40px rgba(29, 78, 216, 0.15);
 
-  transform: translateY(120%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(100% + 40px));
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
 }
 
 .lec-mini-player--visible {
+  opacity: 1;
+  pointer-events: auto;
   transform: translateY(0);
 }
 
@@ -3024,3 +3028,99 @@ html[data-theme="dark"] .subject-fav-btn.is-favorited {
   border-color: rgba(245, 158, 11, 0.5);
   box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
 }
+
+/* Video Player & Mini Player Dark Overrides */
+html[data-theme="dark"] .lec-player-wrapper {
+  background-color: #030712;
+  border-color: rgba(56, 189, 248, 0.18);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .lec-player-video {
+  background-color: #030712;
+}
+
+html[data-theme="dark"] .lec-play-big {
+  background: rgba(10, 22, 44, 0.85);
+  border-color: rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .lec-play-big:hover {
+  background: var(--accent-bright);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+html[data-theme="dark"] .lec-mini-player {
+  background: rgba(10, 22, 44, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .lec-mini-title {
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .lec-mini-time {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .lec-mini-close {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .lec-mini-close:hover {
+  color: #f8fafc;
+}
+
+/* Discussion & Comments Dark Overrides */
+html[data-theme="dark"] #lec-comments-count {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .lec-comment-box {
+  background: rgba(10, 22, 44, 0.75) !important;
+  border-color: rgba(56, 189, 248, 0.18) !important;
+}
+
+html[data-theme="dark"] #lec-comment-input {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #f8fafc !important;
+}
+
+html[data-theme="dark"] #lec-comment-input::placeholder {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] #lec-comment-input:focus {
+  border-color: var(--accent-bright) !important;
+  box-shadow: 0 0 0 3px var(--accent-glow) !important;
+  outline: none !important;
+}
+
+html[data-theme="dark"] #lec-btn-submit-comment {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright)) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px var(--accent-glow) !important;
+}
+
+html[data-theme="dark"] .lec-comment-item {
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .lec-comment-item strong {
+  color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .lec-comment-item div[style*="color: #334155"] {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .lec-comment-item > div:first-child {
+  background: rgba(56, 189, 248, 0.2) !important;
+  color: #38bdf8 !important;
+}

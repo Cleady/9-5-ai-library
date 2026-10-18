@@ -78,6 +78,12 @@
       settingRadio.checked = true;
     }
 
+    // Update video poster if on lecture player page
+    const lecVideo = document.getElementById("lec-video");
+    if (lecVideo) {
+      lecVideo.poster = effective === "dark" ? "/assets/theme/darktheme/dark-scene2.png" : "/assets/theme/scene.png";
+    }
+
     // Update all toggle buttons in DOM
     updateToggleButtonsUI(setting, effective);
   }
