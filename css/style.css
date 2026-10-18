@@ -2582,32 +2582,5 @@ html[data-theme="dark"] .card-menu:hover {
     color: var(--color-text);
 }
 
-/* User Menu theme item */
-.user-menu-theme-item .user-menu-theme-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 14px;
-    color: var(--color-nav-text);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 10px;
-    transition: background 0.15s, color 0.15s;
-}
 
-.user-menu-theme-item .user-menu-theme-link:hover {
-    background: var(--nav-hover-bg);
-    color: var(--color-primary);
-}
-
-html[data-theme="dark"] .user-menu-theme-item .user-menu-theme-link:hover {
-    color: #ffffff;
-}
-
-@media (max-width: 640px) {
-    .theme-quick-toggle {
-        display: none !important;
-    }
-}
 

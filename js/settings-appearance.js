@@ -78,12 +78,27 @@
     data.settings.appearance[key] = value;
     S.core.saveData(data);
     S.applyAppearance(data.settings.appearance);
+    if (key === "theme" && window.Lib95?.themeToggle) {
+      window.Lib95.themeToggle.applyTheme(value, false);
+    }
     S.core.showToast("Appearance đã được lưu", 1500);
   }
 
   // --- EVENTS ---
   themeRadios.forEach(r => {
     r.addEventListener("change", (e) => saveAndApply("theme", e.target.value));
+  });
+
+  window.addEventListener("storage", (e) => {
+    if (e.key === "lib95:settings:data") {
+      try {
+        const d = JSON.parse(e.newValue);
+        if (d?.settings?.appearance?.theme) {
+          const t = d.settings.appearance.theme;
+          themeRadios.forEach(r => r.checked = (r.value === t));
+        }
+      } catch (err) {}
+    }
   });
 
   sizeRadios.forEach(r => {

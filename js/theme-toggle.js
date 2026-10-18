@@ -101,39 +101,37 @@
     applyTheme(newSetting, true);
   }
 
-  function cycleTheme() {
+  function toggleTheme() {
     const current = getCurrentThemeSetting();
-    // Cycle: light -> dark -> auto -> light
-    let next = "dark";
-    if (current === "dark") next = "auto";
-    else if (current === "auto") next = "light";
+    const effective = getEffectiveTheme(current);
+    // Bấm để chuyển Sáng ↔ Tối theo theme HIỆU DỤNG hiện tại (nếu đang Auto thì dùng theme hệ thống để quyết định)
+    const next = effective === "dark" ? "light" : "dark";
     saveAndApplyTheme(next);
   }
 
   function updateToggleButtonsUI(setting, effective) {
-    // 1. Topbar & Header icons
+    // Topbar & Header icons
     const toggleBtns = document.querySelectorAll(".theme-quick-toggle, .home-page__theme-toggle, .auth-theme-toggle");
+    const isDark = effective === "dark";
     toggleBtns.forEach(btn => {
-      const isDark = effective === "dark";
       const iconSpan = btn.querySelector(".theme-icon-indicator");
       if (iconSpan) {
+        // Mặt trời khi đang tối (isDark = true) -> bấm để sang sáng
+        // Mặt trăng khi đang sáng (isDark = false) -> bấm để sang tối
         iconSpan.innerHTML = isDark
           ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`
           : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
       }
-      btn.setAttribute("aria-label", `Giao diện: ${setting} (${isDark ? "Đang bật Tối" : "Đang bật Sáng"}). Nhấp để đổi.`);
-      btn.setAttribute("title", `Giao diện: ${setting.toUpperCase()} (Nhấp để đổi)`);
+      btn.setAttribute("aria-label", isDark ? "Chuyển sang giao diện sáng" : "Chuyển sang giao diện tối");
+      btn.setAttribute("aria-pressed", isDark ? "true" : "false");
+      btn.setAttribute("title", isDark ? "Giao diện Tối (Nhấp để chuyển sang Sáng)" : "Giao diện Sáng (Nhấp để chuyển sang Tối)");
     });
-
-    // 2. User Menu label
-    const userMenuLabel = document.querySelector(".user-menu-theme-label");
-    if (userMenuLabel) {
-      const labelMap = { light: "Sáng", dark: "Tối", auto: "Tự động" };
-      userMenuLabel.textContent = labelMap[setting] || setting;
-    }
   }
 
   function injectTopbarToggle() {
+    // Dọn sạch bất kỳ mục theme nào còn sót trong user menu
+    document.querySelectorAll(".user-menu-theme-item").forEach(el => el.remove());
+
     // 1. In standard app pages with .topbar-actions
     const topbarActions = document.querySelector(".topbar-actions");
     if (topbarActions && !document.querySelector(".theme-quick-toggle")) {
@@ -141,34 +139,9 @@
       btn.type = "button";
       btn.className = "icon-button theme-quick-toggle";
       btn.innerHTML = `<span class="theme-icon-indicator" aria-hidden="true"></span>`;
-      btn.addEventListener("click", cycleTheme);
+      btn.addEventListener("click", toggleTheme);
       // Insert before notification or user-menu
       topbarActions.insertBefore(btn, topbarActions.firstChild);
-    }
-
-    // 2. In user-menu-list (#user-menu-list)
-    const userMenuList = document.getElementById("user-menu-list");
-    if (userMenuList && !document.querySelector(".user-menu-theme-item")) {
-      const li = document.createElement("li");
-      li.className = "user-menu-theme-item";
-      li.setAttribute("role", "none");
-      li.innerHTML = `
-        <a href="#" role="menuitem" class="user-menu-theme-link">
-          <span class="menu-icon theme-icon-indicator" aria-hidden="true" style="display:inline-flex;align-items:center;margin-right:8px;"></span>
-          <span>Giao diện: <strong class="user-menu-theme-label">...</strong></span>
-        </a>
-      `;
-      li.querySelector("a").addEventListener("click", (e) => {
-        e.preventDefault();
-        cycleTheme();
-      });
-      // Insert before the last item (Đăng xuất)
-      const lastItem = userMenuList.lastElementChild;
-      if (lastItem) {
-        userMenuList.insertBefore(li, lastItem);
-      } else {
-        userMenuList.appendChild(li);
-      }
     }
 
     // 3. In Landing Page (index.html)
@@ -179,7 +152,7 @@
       btn.className = "home-page__theme-toggle";
       btn.setAttribute("aria-label", "Chuyển đổi giao diện");
       btn.innerHTML = `<span class="theme-icon-indicator" aria-hidden="true"></span>`;
-      btn.addEventListener("click", cycleTheme);
+      btn.addEventListener("click", toggleTheme);
       
       const actions = landingNav.querySelector(".home-page__actions");
       const notifWrap = landingNav.querySelector(".home-page__notification-wrap");
@@ -206,7 +179,7 @@
       btn.type = "button";
       btn.className = "auth-theme-toggle";
       btn.innerHTML = `<span class="theme-icon-indicator" aria-hidden="true"></span>`;
-      btn.addEventListener("click", cycleTheme);
+      btn.addEventListener("click", toggleTheme);
       document.body.appendChild(btn);
     }
   }
@@ -242,7 +215,9 @@
   window.Lib95.themeToggle = {
     applyTheme,
     saveAndApplyTheme,
-    cycleTheme,
-    getCurrentThemeSetting
+    toggleTheme,
+    cycleTheme: toggleTheme,
+    getCurrentThemeSetting,
+    getEffectiveTheme
   };
 })();
