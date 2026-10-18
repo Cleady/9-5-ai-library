@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/style.css" />
     <!-- Appearance riêng cho phần Settings, ghi đè hoặc thêm class set- -->
     <link rel="stylesheet" href="/css/settings.css" />
-    <link rel="icon" type="image/png" href="/assets/icon/cool_book.png" />
+    <link rel="icon" type="image/png" href="/assets/icon/favicon-32.png" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
     <style>
     .cropper-view-box, .cropper-face { border-radius: 50%; }
@@ -187,8 +187,8 @@
                                         aria-hidden="true"></span>Profile</a>
                             </li>
                             <li role="none">
-                                <a href="/pages/auth/reset_pass.html" role="menuitem"><span class="menu-icon password-icon"
-                                        aria-hidden="true"></span>Change Password</a>
+                                <a href="#password" id="user-menu-change-pwd" role="menuitem"><span class="menu-icon password-icon"
+                                        aria-hidden="true"></span>Đổi mật khẩu</a>
                             </li>
                             <li role="none">
                                 <a href="/pages/auth/login.html" role="menuitem"><span class="menu-icon logout-icon"
@@ -904,8 +904,8 @@
         <div class="set-modal-backdrop" data-close="modal-password"></div>
         <div class="set-modal-content">
             <header class="set-modal-header">
-                <h2 id="modal-pwd-title">Change Password</h2>
-                <button class="set-modal-close" aria-label="Close" data-close="modal-password"><svg viewBox="0 0 24 24"
+                <h2 id="modal-pwd-title">Đổi mật khẩu</h2>
+                <button class="set-modal-close" aria-label="Đóng" data-close="modal-password"><svg viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="18" y1="6" x2="6" y2="18" />
                         <line x1="6" y1="6" x2="18" y2="18" />
@@ -914,23 +914,38 @@
             <form id="form-password">
                 <div class="set-modal-body set-form">
                     <div class="set-form-group">
-                        <label for="pwd-current">Current password</label>
-                        <input type="password" id="pwd-current" class="set-input" required>
+                        <label for="pwd-current">Mật khẩu hiện tại <span style="color: #ef4444;">*</span></label>
+                        <div class="set-input-password-wrap">
+                            <input type="password" id="pwd-current" class="set-input" placeholder="Nhập mật khẩu hiện tại" required autocomplete="current-password">
+                            <button type="button" class="btn-toggle-pwd" data-target="pwd-current" aria-label="Hiện mật khẩu" title="Hiện/ẩn mật khẩu">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
                     </div>
                     <div class="set-form-group">
-                        <label for="pwd-new">New password</label>
-                        <input type="password" id="pwd-new" class="set-input" required minlength="8">
-                        <div class="set-pwd-rules">Min 8 chars, contains a number.</div>
+                        <label for="pwd-new">Mật khẩu mới <span style="color: #ef4444;">*</span></label>
+                        <div class="set-input-password-wrap">
+                            <input type="password" id="pwd-new" class="set-input" placeholder="Nhập mật khẩu mới" required minlength="6" autocomplete="new-password">
+                            <button type="button" class="btn-toggle-pwd" data-target="pwd-new" aria-label="Hiện mật khẩu" title="Hiện/ẩn mật khẩu">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
+                        <div class="set-pwd-rules" id="pwd-rules-text">Tối thiểu 6 ký tự.</div>
                     </div>
                     <div class="set-form-group">
-                        <label for="pwd-confirm">Confirm new password</label>
-                        <input type="password" id="pwd-confirm" class="set-input" required>
+                        <label for="pwd-confirm">Xác nhận mật khẩu mới <span style="color: #ef4444;">*</span></label>
+                        <div class="set-input-password-wrap">
+                            <input type="password" id="pwd-confirm" class="set-input" placeholder="Nhập lại mật khẩu mới" required autocomplete="new-password">
+                            <button type="button" class="btn-toggle-pwd" data-target="pwd-confirm" aria-label="Hiện mật khẩu" title="Hiện/ẩn mật khẩu">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
                         <span class="set-error-msg" id="pwd-error"></span>
                     </div>
                 </div>
                 <footer class="set-modal-footer">
-                    <button type="button" class="set-btn-secondary" data-close="modal-password">Cancel</button>
-                    <button type="submit" class="set-btn-primary">Change password</button>
+                    <button type="button" class="set-btn-secondary" data-close="modal-password">Hủy bỏ</button>
+                    <button type="submit" class="set-btn-primary" id="btn-submit-change-pwd">Lưu mật khẩu mới</button>
                 </footer>
             </form>
         </div>

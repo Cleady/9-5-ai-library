@@ -88,6 +88,22 @@
   --role-badge-bg: #dbeafe;
   --role-badge-text: var(--color-primary);
 
+  /* Secondary Buttons (Light) */
+  --btn-secondary-bg: #e5f1ff;
+  --btn-secondary-border: rgba(36, 101, 198, 0.2);
+  --btn-secondary-color: #2465c6;
+  --btn-secondary-hover-bg: #d0e5ff;
+
+  /* Topbar surface (Light) */
+  --topbar-bg: transparent;
+  --topbar-backdrop: none;
+  --topbar-border-bottom: none;
+
+  /* Owner badge (Light) */
+  --badge-owner-bg: #fee2e2;
+  --badge-owner-color: #dc3545;
+  --badge-owner-border: rgba(220, 53, 69, 0.25);
+
   /* Tài nguyên hình ảnh theo Theme */
   --theme-bg-image: url("/assets/theme/background.png");
   --theme-promo-bg: url("/assets/theme/scene.png");
@@ -252,6 +268,22 @@ html[data-theme="dark"] {
   --active-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.4) 0%, rgba(30, 58, 138, 0.55) 100%);
   --role-badge-bg: rgba(37, 99, 235, 0.25);
   --role-badge-text: #93c5fd;
+
+  /* Secondary Buttons (Dark) */
+  --btn-secondary-bg: rgba(255, 255, 255, 0.08);
+  --btn-secondary-border: rgba(255, 255, 255, 0.16);
+  --btn-secondary-color: #e2e8f0;
+  --btn-secondary-hover-bg: rgba(255, 255, 255, 0.14);
+
+  /* Topbar surface (Dark - matches Light layout) */
+  --topbar-bg: transparent;
+  --topbar-backdrop: none;
+  --topbar-border-bottom: none;
+
+  /* Owner badge (Option A: Cyan glass) */
+  --badge-owner-bg: rgba(56, 189, 248, 0.16);
+  --badge-owner-color: #38bdf8;
+  --badge-owner-border: rgba(56, 189, 248, 0.25);
 
   /* Tài nguyên hình ảnh theo Theme */
   --theme-bg-image: url("/assets/theme/darktheme/dark_background.png");
@@ -457,12 +489,22 @@ html[data-theme="dark"] .input-container:focus-within {
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
 }
 
+html[data-theme="dark"] .input-content label {
+  color: #cbd5e1 !important;
+}
+
 html[data-theme="dark"] .input-content input {
   color: #f8fafc !important;
 }
 
 html[data-theme="dark"] .input-content input::placeholder {
-  color: #64748b !important;
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .home-page__brand small,
+html[data-theme="dark"] .sidebar-brand small,
+html[data-theme="dark"] .brand-text small {
+  color: var(--color-text-secondary, #94a3b8) !important;
 }
 
 html[data-theme="dark"] .btn-login,

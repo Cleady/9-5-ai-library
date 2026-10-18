@@ -27,12 +27,25 @@ function renderProfile() {
 
     document.querySelectorAll('.role-badge').forEach(el => {
         el.textContent = displayRole;
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
         if (user.role === 'owner' || user.role === 'admin') {
-            el.style.backgroundColor = '#dc3545';
-            el.style.color = 'white';
+            el.classList.add('badge-owner');
+            if (!isDark) {
+                el.style.backgroundColor = '#dc3545';
+                el.style.color = 'white';
+            } else {
+                el.style.backgroundColor = '';
+                el.style.color = '';
+            }
         } else if (user.role === 'staff') {
-            el.style.backgroundColor = '#ffc107';
-            el.style.color = 'black';
+            el.classList.add('badge-staff');
+            if (!isDark) {
+                el.style.backgroundColor = '#ffc107';
+                el.style.color = 'black';
+            } else {
+                el.style.backgroundColor = '';
+                el.style.color = '';
+            }
         }
     });
 

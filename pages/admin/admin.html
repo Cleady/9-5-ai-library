@@ -4,16 +4,22 @@
 <head>
 <script>
     // Kiểm tra quyền truy cập Admin Dashboard
-    const userStr = localStorage.getItem('user');
-    if (!userStr) {
-        window.location.href = '../../index.html';
-    } else {
-        const user = JSON.parse(userStr);
-        if (user.role === 'member') {
-            alert('You không có quyền truy cập trang Quản trị!');
-            window.location.href = '../../index.html';
+    (function() {
+        const userStr = localStorage.getItem('user');
+        if (!userStr) {
+            window.location.replace('../../index.html');
+            return;
         }
-    }
+        try {
+            const user = JSON.parse(userStr);
+            if (!user.role || user.role === 'member') {
+                alert('Bạn không có quyền truy cập trang Quản trị!');
+                window.location.replace('../../index.html');
+            }
+        } catch (e) {
+            window.location.replace('../../index.html');
+        }
+    })();
 </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,11 +27,14 @@
     <title>Admin Dashboard | 9.5 AI CLUB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/png" href="../../assets/icon/cool_book.png">
+    <link rel="icon" type="image/png" href="../../assets/icon/favicon-32.png">
     <!-- Khởi tạo Theme chống chớp trắng (FOUC) -->
     <script src="/js/theme-init.js"></script>
     <link rel="stylesheet" href="../../css/theme-tokens.css">
     <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin-dashboard.css">
+    <link rel="stylesheet" href="../../css/admin-moderation.css">
+    <link rel="stylesheet" href="../../css/admin-settings.css">
     <link rel="stylesheet" href="../../css/lectures.css">
     <style>
         /* Tinh chỉnh Placeholder: không in đậm, màu xám nhạt dịu mắt */
@@ -67,26 +76,25 @@
                 <ul>
                     <li><a href="#page-dashboard" class="nav-link is-active" data-page-target="dashboard"
                             aria-current="page"><span class="nav-icon dashboard-icon" aria-hidden="true"></span><span
-                                class="nav-label">Dashboard</span></a></li>
+                                class="nav-label">Tổng quan</span></a></li>
                     <li><a href="#page-lms" class="nav-link" data-page-target="lms"><span class="nav-icon lms-icon"
-                                aria-hidden="true"></span><span class="nav-label">LMS Manager</span></a></li>
+                                aria-hidden="true"></span><span class="nav-label">Quản lý học tập</span></a></li>
                     <li><a href="#page-community" class="nav-link" data-page-target="community"><span
                                 class="nav-icon community-icon" aria-hidden="true"></span><span
-                                class="nav-label">Community Moderation</span></a></li>
+                                class="nav-label">Kiểm duyệt cộng đồng</span></a></li>
                 </ul>
             </nav>
-            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Manage tài khoản và cài đặt">
+            <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Quản lý tài khoản và cài đặt">
                 <ul>
                     <li><a href="#page-users" class="nav-link" data-page-target="users"><span
-                                class="nav-icon users-icon" aria-hidden="true"></span><span class="nav-label">User
-                                Management</span></a></li>
+                                class="nav-icon users-icon" aria-hidden="true"></span><span class="nav-label">Quản lý người dùng</span></a></li>
                     <li><a href="#page-settings" class="nav-link" data-page-target="settings"><span
                                 class="nav-icon settings-icon" aria-hidden="true"></span><span
-                                class="nav-label">Settings</span></a></li>
+                                class="nav-label">Cài đặt hệ thống</span></a></li>
                 </ul>
             </nav>
             <a href="#" class="sidebar-promo">
-                <p>Better Learning<br>Brighter Dreams</p><span class="promo-arrow" aria-hidden="true"></span>
+                <p>Tri thức vì một ngày mai tươi sáng</p><span class="promo-arrow" aria-hidden="true"></span>
             </a>
         </aside>
 
@@ -100,18 +108,18 @@
                     <span class="search-icon" aria-hidden="true"></span>
                     <label for="admin-search" class="visually-hidden">Tìm kiếm trong trang quản trị</label>
                     <input type="search" id="admin-search" name="q" class="search-input"
-                        placeholder="Search anything..." autocomplete="off">
+                        placeholder="Tìm kiếm mọi thứ..." autocomplete="off">
                     <span class="search-shortcut" aria-hidden="true"><kbd>Ctrl</kbd><kbd>K</kbd></span>
                 </form>
                 <div class="topbar-actions">
                     <div class="notification">
-                        <button type="button" class="icon-button" aria-label="Notifications (có 3 thông báo mới)"
+                        <button type="button" class="icon-button" aria-label="Thông báo (có 3 thông báo mới)"
                             aria-expanded="false" aria-controls="notification-panel"><span class="bell-icon"
                                 aria-hidden="true"></span><span class="notification-dot"
                                 aria-hidden="true"></span></button>
                         <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
                             <header class="notification-header">
-                                <p class="notification-title">Notifications</p><button type="button"
+                                <p class="notification-title">Thông báo</p><button type="button"
                                     class="notification-clear">Mark as read</button>
                             </header>
                             <ul class="notification-list">
@@ -137,15 +145,9 @@
                                     </div>
                                 </li>
                             </ul>
-                            <a href="#notifications" class="notification-footer">View all notifications</a>
+                            <a href="#notifications" class="notification-footer">Xem tất cả thông báo</a>
                         </section>
                     </div>
-                    <button class="icon-button theme-button" type="button" aria-label="Appearance sáng"><svg
-                            viewBox="0 0 24 24" aria-hidden="true">
-                            <circle cx="12" cy="12" r="4" />
-                            <path
-                                d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-                        </svg></button>
                     <div class="user-menu">
                         <button type="button" class="user-menu-toggle" aria-haspopup="menu" aria-expanded="false"
                             aria-controls="user-menu-list"><span class="user-avatar" aria-hidden="true">A</span><span
@@ -153,11 +155,11 @@
                                 class="role-badge">Administrator</span></button>
                         <ul class="user-menu-list" id="user-menu-list" role="menu" hidden>
                             <li role="none"><a href="../settings/settings.html#profile" role="menuitem"><span class="menu-icon profile-icon"
-                                        aria-hidden="true"></span>Profile</a></li>
-                            <li role="none"><a href="#security" role="menuitem"><span class="menu-icon password-icon"
-                                        aria-hidden="true"></span>Security tài khoản</a></li>
+                                        aria-hidden="true"></span>Hồ sơ cá nhân</a></li>
+                            <li role="none"><a href="/pages/settings/settings.html#password" role="menuitem"><span class="menu-icon password-icon"
+                                        aria-hidden="true"></span>Đổi mật khẩu</a></li>
                             <li role="none"><a href="#signout" role="menuitem"><span class="menu-icon logout-icon"
-                                        aria-hidden="true"></span>Logout</a></li>
+                                        aria-hidden="true"></span>Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -170,104 +172,180 @@
                         <div>
                             <p class="eyebrow">OVERVIEW</p>
                             <h1 id="dashboard-title">Chào mừng trở lại, Admin <span aria-hidden="true">👋</span></h1>
-                            <p class="page-subtitle">Dưới đây là tổng quan hoạt động của 9.5 AI CLUB trong thời gian gần
-                                đây.</p>
-                        </div><button class="select-button" type="button"><span class="select-cal-icon"></span> 7 ngày qua <span>⌄</span></button>
+                            <p class="page-subtitle">Dưới đây là tổng quan hoạt động của 9.5 AI CLUB trong thời gian gần đây.</p>
+                        </div>
+                        <div class="dash-dropdown">
+                            <button class="dash-dropdown-btn" id="dash-range-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="select-cal-icon"></span> <span class="dash-btn-text">7 ngày qua</span> <span class="dash-chevron">⌄</span>
+                            </button>
+                            <ul class="dash-dropdown-menu" id="dash-range-menu" role="menu">
+                                <li><button type="button" class="dash-dropdown-item is-selected" data-value="7d" role="menuitem">7 ngày qua</button></li>
+                                <li><button type="button" class="dash-dropdown-item" data-value="30d" role="menuitem">30 ngày qua</button></li>
+                                <li><button type="button" class="dash-dropdown-item" data-value="90d" role="menuitem">90 ngày qua</button></li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <!-- Panel Cần xử lý (Tài khoản chờ duyệt & Báo cáo vi phạm) -->
+                    <div class="dashboard-attention-grid" id="dashboard-attention-panel">
+                        <a href="#users" class="attention-card" data-page-target="users">
+                            <div class="attention-icon-wrap amber" aria-hidden="true">
+                                <svg class="attention-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <circle cx="17.5" cy="11.5" r="4.5" />
+                                    <polyline points="17.5 9.5 17.5 11.5 19 12.5" />
+                                </svg>
+                            </div>
+                            <div class="attention-details">
+                                <p class="attention-title">Tài khoản chờ duyệt</p>
+                                <p class="attention-count" id="attention-pending-count" data-dash-val>0</p>
+                            </div>
+                            <span class="attention-arrow">→</span>
+                        </a>
+                        <a href="#community" class="attention-card" data-page-target="community">
+                            <div class="attention-icon-wrap rose" aria-hidden="true">
+                                <svg class="attention-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                                    <line x1="4" y1="22" x2="4" y2="15" />
+                                </svg>
+                            </div>
+                            <div class="attention-details">
+                                <p class="attention-title">Báo cáo vi phạm chờ xử lý</p>
+                                <p class="attention-count" id="attention-reports-count" data-dash-val>0</p>
+                            </div>
+                            <span class="attention-arrow">→</span>
+                        </a>
+                    </div>
+
+                    <!-- 4 Thẻ số liệu chính -->
                     <div class="metric-grid">
-                        <article class="metric-card"><span class="metric-icon blue metric-users-icon"></span><span
-                                class="metric-label">Tổng người dùng</span><strong>2,486</strong><small
-                                class="trend up">↑ 12% <span>so với tuần trước</span></small></article>
-                        <article class="metric-card"><span class="metric-icon violet metric-courses-icon"></span><span
-                                class="metric-label">Tổng khóa học</span><strong>48</strong><small class="trend up">↑ 8%
-                                <span>so với tuần trước</span></small></article>
-                        <article class="metric-card"><span class="metric-icon cyan metric-pending-icon"></span><span
-                                class="metric-label">Pending Posts</span><strong>12</strong><small
-                                class="trend down">↓ 3% <span>so với tuần trước</span></small></article>
-                        <article class="metric-card"><span class="metric-icon red metric-report-icon"></span><span
-                                class="metric-label">Reported Posts</span><strong>5</strong><small
-                                class="trend down">↓ 44% <span>so với tuần trước</span></small></article>
+                        <article class="metric-card">
+                            <span class="metric-icon blue metric-users-icon"></span>
+                            <span class="metric-label">Tổng người dùng</span>
+                            <strong id="metric-users-val" data-dash-val>...</strong>
+                            <small class="trend neutral" id="metric-users-trend"><span>Đang tải...</span></small>
+                        </article>
+                        <article class="metric-card">
+                            <span class="metric-icon violet metric-courses-icon"></span>
+                            <span class="metric-label">Tổng khóa học</span>
+                            <strong id="metric-courses-val" data-dash-val>...</strong>
+                            <small class="trend neutral" id="metric-courses-trend"><span>Đang tải...</span></small>
+                        </article>
+                        <article class="metric-card">
+                            <span class="metric-icon cyan metric-pending-icon"></span>
+                            <span class="metric-label">Bài viết cộng đồng</span>
+                            <strong id="metric-posts-val" data-dash-val>...</strong>
+                            <small class="trend neutral" id="metric-posts-trend"><span>Đang tải...</span></small>
+                        </article>
+                        <article class="metric-card">
+                            <span class="metric-icon red metric-report-icon"></span>
+                            <span class="metric-label">Tài liệu thư viện</span>
+                            <strong id="metric-resources-val" data-dash-val>...</strong>
+                            <small class="trend neutral" id="metric-resources-trend"><span>Đang tải...</span></small>
+                        </article>
                     </div>
+
+                    <!-- Biểu đồ & Phân bố vai trò -->
                     <div class="dashboard-charts">
                         <article class="panel chart-panel">
                             <div class="panel-heading">
                                 <div>
-                                    <h2>Active người dùng</h2>
-                                    <p>Số lượng người dùng mới trong 7 ngày qua</p>
-                                </div><button class="mini-select" type="button">7 ngày qua⌄</button>
+                                    <h2 id="chart-title">Active người dùng</h2>
+                                    <p id="chart-subtitle">Số lượng người dùng hoạt động theo ngày</p>
+                                </div>
+                                <div class="dash-dropdown">
+                                    <button class="dash-dropdown-btn" id="dash-metric-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="dash-btn-text">Active người dùng</span> <span class="dash-chevron">⌄</span>
+                                    </button>
+                                    <ul class="dash-dropdown-menu" id="dash-metric-menu" role="menu">
+                                        <li><button type="button" class="dash-dropdown-item is-selected" data-value="activeUsers" role="menuitem">Active người dùng</button></li>
+                                        <li><button type="button" class="dash-dropdown-item" data-value="newUsers" role="menuitem">Đăng ký mới</button></li>
+                                        <li><button type="button" class="dash-dropdown-item" data-value="contentActivity" role="menuitem">Hoạt động nội dung</button></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="line-chart">
-                                <div class="chart-y">
-                                    <span>200</span><span>150</span><span>100</span><span>50</span><span>0</span></div>
-                                <svg viewBox="0 0 600 190" role="img"
-                                    aria-label="Biểu đồ hoạt động người dùng tăng dần">
+                            <div class="line-chart" style="position:relative;">
+                                <div class="chart-y" id="chart-y-axis">
+                                    <span>5</span><span>4</span><span>3</span><span>2</span><span>0</span>
+                                </div>
+                                <div class="chart-tooltip" id="chart-tooltip" role="tooltip" aria-hidden="true"></div>
+                                <svg viewBox="0 0 600 190" role="img" id="dashboard-svg-chart"
+                                    aria-label="Biểu đồ hoạt động theo thời gian">
                                     <defs>
                                         <linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1">
                                             <stop offset="0" stop-color="#3b82f6" stop-opacity=".22" />
                                             <stop offset="1" stop-color="#3b82f6" stop-opacity="0" />
                                         </linearGradient>
                                     </defs>
-                                    <path class="chart-area"
-                                        d="M20 155 105 132 190 145 275 123 360 96 445 94 530 70 580 48V180H20Z" />
-                                    <path class="chart-line"
-                                        d="M20 155 105 132 190 145 275 123 360 96 445 94 530 70 580 48" />
-                                    <g class="chart-points">
-                                        <circle cx="20" cy="155" r="4" />
-                                        <circle cx="105" cy="132" r="4" />
-                                        <circle cx="190" cy="145" r="4" />
-                                        <circle cx="275" cy="123" r="4" />
-                                        <circle cx="360" cy="96" r="4" />
-                                        <circle cx="445" cy="94" r="4" />
-                                        <circle cx="530" cy="70" r="4" />
-                                        <circle cx="580" cy="48" r="4" />
-                                    </g>
                                     <path class="chart-grid"
-                                        d="M20 20H580M20 60H580M20 100H580M20 140H580M20 180H580" />
+                                        d="M30 20H570M30 55H570M30 90H570M30 125H570M30 160H570" />
+                                    <path class="chart-area" d="" />
+                                    <path class="chart-line" d="" />
+                                    <g class="chart-points"></g>
                                 </svg>
-                                <div class="chart-x"><span>Sep 14</span><span>Sep 15</span><span>Sep 16</span><span>Sep
-                                        17</span><span>Sep 18</span><span>Sep 19</span><span>Sep 20</span></div>
+                                <div class="chart-x" id="chart-x-axis"></div>
                             </div>
+                            <div class="chart-active-note" id="chart-active-note" hidden></div>
                         </article>
+
                         <article class="panel roles-panel">
                             <div class="panel-heading">
                                 <div>
                                     <h2>Phân bố vai trò</h2>
-                                    <p>Tổng quan members</p>
+                                    <p>Tỷ lệ tài khoản theo vai trò trong hệ thống</p>
                                 </div>
                             </div>
                             <div class="role-content">
-                                <div class="donut">
-                                    <div><strong>2,486</strong><span>Tổng người dùng</span></div>
+                                <div class="donut" id="dashboard-roles-donut">
+                                    <div><strong id="donut-total-users" data-dash-val>...</strong><span>Tổng người dùng</span></div>
                                 </div>
-                                <ul class="legend-list">
-                                    <li><i class="legend-blue"></i>Sinh viên <b>68%</b></li>
-                                    <li><i class="legend-cyan"></i>Instructor <b>12%</b></li>
-                                    <li><i class="legend-violet"></i>Admin <b>8%</b></li>
-                                    <li><i class="legend-orange"></i>Khác <b>12%</b></li>
-                                </ul>
+                                <ul class="legend-list" id="donut-legend-list"></ul>
                             </div>
                         </article>
                     </div>
+
+                    <!-- Hoạt động gần đây -->
                     <article class="panel activity-panel">
                         <div class="panel-heading">
                             <div>
                                 <h2>Active gần đây</h2>
-                            </div><a href="#activity">View tất cả <span>→</span></a>
+                            </div>
+                            <button type="button" class="button-link" id="dash-view-all-activity" style="background:none; border:none; color:var(--accent-bright,#2167e9); font-weight:600; cursor:pointer;">View tất cả <span>→</span></button>
                         </div>
-                        <ul class="activity-list">
-                            <li><span class="activity-icon green act-bookmark-icon"></span><span>Nguyễn Văn A đã đăng ký
-                                    khóa học <b>“Machine Learning Basics”</b></span><time>5 phút trước</time></li>
-                            <li><span class="activity-icon green act-writing-icon"></span><span>Trần Thị B đã bình luận
-                                    trong posts <b>“Học Python có khó không?”</b></span><time>18 phút trước</time>
-                            </li>
-                            <li><span class="activity-icon blue act-user-icon"></span><span>Lê Minh C đã gửi yêu cầu
-                                    tham gia cộng đồng</span><time>42 phút trước</time></li>
-                            <li><span class="activity-icon red act-report-icon"></span><span>Bài viết <b>“Review tài
-                                        liệu AI”</b> đang chờ duyệt</span><time>1 hours ago</time></li>
-                            <li><span class="activity-icon red act-report-icon"></span><span>Nguyễn Thảo Vũ đã báo cáo
-                                    một posts</span><time>2 hours ago</time></li>
+                        <ul class="activity-list" id="dashboard-activity-list">
+                            <li style="justify-content:center; color:#94a3b8;">Đang tải hoạt động...</li>
                         </ul>
                     </article>
+
+                    <!-- Modal Xem tất cả hoạt động -->
+                    <div class="activity-modal-overlay" id="activity-modal-overlay" aria-hidden="true">
+                        <div class="activity-modal-container" role="dialog" aria-labelledby="activity-modal-title">
+                            <header class="activity-modal-header">
+                                <h2 class="activity-modal-title" id="activity-modal-title">Dòng thời gian hoạt động hệ thống</h2>
+                                <button type="button" class="activity-modal-close" id="activity-modal-close" aria-label="Đóng">✕</button>
+                            </header>
+                            <div class="activity-filter-bar">
+                                <button type="button" class="activity-filter-chip is-active" data-type="">Tất cả</button>
+                                <button type="button" class="activity-filter-chip" data-type="user_registered">Người dùng</button>
+                                <button type="button" class="activity-filter-chip" data-type="post_created">Bài viết</button>
+                                <button type="button" class="activity-filter-chip" data-type="comment_created">Bình luận</button>
+                                <button type="button" class="activity-filter-chip" data-type="course_created">Khóa học</button>
+                                <button type="button" class="activity-filter-chip" data-type="resource_uploaded">Tài liệu</button>
+                                <button type="button" class="activity-filter-chip" data-type="audit_log" style="font-weight: 700;">🛡️ Nhật ký quản trị</button>
+                            </div>
+                            <div class="activity-modal-body" id="activity-modal-list">
+                                <div style="text-align:center; padding:30px; color:#94a3b8;">Đang tải hoạt động...</div>
+                            </div>
+                            <footer class="activity-modal-footer">
+                                <span id="activity-page-indicator" style="font-size:13px; color:#64748b;">Trang 1 / 1</span>
+                                <div class="activity-pagination">
+                                    <button type="button" id="activity-prev-page" disabled>Trước</button>
+                                    <button type="button" id="activity-next-page" disabled>Sau</button>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="admin-page" id="page-lms" data-page-panel="lms" aria-labelledby="lms-title" hidden>
@@ -465,127 +543,84 @@
                         <div>
                             <p class="eyebrow">COMMUNITY SAFETY</p>
                             <h1 id="community-title">Community Moderation</h1>
-                            <p class="page-subtitle">View và xử lý các posts, báo cáo vi phạm hoặc bình luận cần được
-                                duyệt.</p>
+                            <p class="page-subtitle">Xem và xử lý các báo cáo vi phạm nội dung (Bài viết, Bình luận, Thảo luận) từ cộng đồng.</p>
                         </div>
                     </div>
-                    <div class="moderation-tabs"><button class="moderation-tab active" type="button">Pending
-                            <span>12</span></button><button class="moderation-tab" type="button">Reports
-                            <span>5</span></button></div>
+                    <!-- Hàng Tabs trạng thái và Bộ lọc loại đối tượng -->
+                    <div class="mod-tabs-row">
+                        <div class="mod-tabs-group" role="tablist">
+                            <button class="mod-tab-btn is-active" type="button" data-mod-status="open" role="tab" aria-selected="true">
+                                Chờ xử lý <span id="mod-badge-open" class="mod-tab-count">0</span>
+                            </button>
+                            <button class="mod-tab-btn" type="button" data-mod-status="actioned" role="tab" aria-selected="false">
+                                Đã xử lý (Đã ẩn) <span id="mod-badge-actioned" class="mod-tab-count">0</span>
+                            </button>
+                            <button class="mod-tab-btn" type="button" data-mod-status="dismissed" role="tab" aria-selected="false">
+                                Đã bỏ qua <span id="mod-badge-dismissed" class="mod-tab-count">0</span>
+                            </button>
+                            <button class="mod-tab-btn" type="button" data-mod-status="" role="tab" aria-selected="false">
+                                Tất cả
+                            </button>
+                        </div>
+
+                        <div class="mod-filter-bar">
+                            <select id="mod-type-select" class="mod-select" aria-label="Lọc theo loại nội dung">
+                                <option value="">Tất cả loại nội dung</option>
+                                <option value="post">Bài viết (Post)</option>
+                                <option value="comment">Bình luận (Comment)</option>
+                                <option value="discussion">Thảo luận (Discussion)</option>
+                                <option value="reply">Câu trả lời (Reply)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Bảng dữ liệu báo cáo vi phạm -->
                     <article class="panel moderation-panel">
                         <div class="panel-heading">
                             <div>
-                                <h2>Pending Posts</h2>
-                                <p>12 posts awaiting review</p>
+                                <h2>Danh sách báo cáo</h2>
+                                <p>Nội dung được thành viên gắn cờ cảnh báo</p>
                             </div>
-                            <div class="search-control compact-search"><span>⌕</span><input aria-label="Search posts"
-                                    placeholder="Search posts..."></div>
                         </div>
-                        <div class="table-scroll">
+
+                        <!-- Trạng thái Đang nạp -->
+                        <div id="moderation-loading-state" class="mod-loading-state" style="display: none;">
+                            <div class="mod-empty-icon">⏳</div>
+                            <p>Đang tải danh sách báo cáo vi phạm...</p>
+                        </div>
+
+                        <!-- Trạng thái Trống -->
+                        <div id="moderation-empty-state" class="mod-empty-state" style="display: none;">
+                            <div class="mod-empty-icon">✨</div>
+                            <h3>Không có báo cáo nào trong mục này</h3>
+                            <p>Cộng đồng hiện tại đang an toàn và tuân thủ tốt các tiêu chuẩn.</p>
+                        </div>
+
+                        <!-- Bảng chính -->
+                        <div class="table-scroll" id="moderation-table-wrapper">
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>Author</th>
-                                        <th>Content</th>
-                                        <th>Time</th>
-                                        <th>Actions</th>
+                                        <th>Loại &amp; Nội dung</th>
+                                        <th>Tác giả</th>
+                                        <th>Người báo cáo</th>
+                                        <th>Lý do vi phạm</th>
+                                        <th>Trạng thái</th>
+                                        <th>Thao tác</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><span class="person-cell"><i class="person-avatar avatar-one">NA</i>Nguyễn
-                                                Minh Anh</span></td>
-                                        <td>Sharing Machine Learning documents...</td>
-                                        <td>2 hours ago</td>
-                                        <td><button class="button-approve">Approve</button><button
-                                                class="button-reject">Reject</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="person-cell"><i class="person-avatar avatar-two">HL</i>Lê Hoàng
-                                                Nam</span></td>
-                                        <td>I think Python is the easiest language...</td>
-                                        <td>4 hours ago</td>
-                                        <td><button class="button-approve">Approve</button><button
-                                                class="button-reject">Reject</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="person-cell"><i class="person-avatar avatar-three">PT</i>Phạm
-                                                Thị Lan</span></td>
-                                        <td>Does anyone know how to make an AI project?</td>
-                                        <td>6 hours ago</td>
-                                        <td><button class="button-approve">Approve</button><button
-                                                class="button-reject">Reject</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="person-cell"><i class="person-avatar avatar-four">TD</i>Trần
-                                                Đức Huy</span></td>
-                                        <td>Data Science course review (highly recommended)</td>
-                                        <td>8 hours ago</td>
-                                        <td><button class="button-approve">Approve</button><button
-                                                class="button-reject">Reject</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="person-cell"><i class="person-avatar avatar-five">BN</i>Hoàng
-                                                Bảo Ngọc</span></td>
-                                        <td>Looking for React study buddy in HCM</td>
-                                        <td>10 hours ago</td>
-                                        <td><button class="button-approve">Approve</button><button
-                                                class="button-reject">Reject</button></td>
-                                    </tr>
+                                <tbody id="moderation-table-body">
+                                    <!-- Render động từ js/admin-moderation.js -->
                                 </tbody>
                             </table>
                         </div>
-                        <div class="table-footer"><span>Displaying 5 / 12 posts</span>
-                            <div class="pagination"><button>‹</button><button
-                                    class="selected">1</button><button>2</button><button>3</button><button>›</button>
+
+                        <div class="table-footer">
+                            <span id="mod-page-info">Trang 1 / 1 (0 báo cáo)</span>
+                            <div class="pagination">
+                                <button type="button" id="mod-prev-btn" aria-label="Trang trước" disabled>‹</button>
+                                <button type="button" id="mod-next-btn" aria-label="Trang sau" disabled>›</button>
                             </div>
-                        </div>
-                    </article>
-                    <article class="panel reports-panel">
-                        <div class="panel-heading">
-                            <div>
-                                <h2>Reported Posts</h2>
-                                <p>Content flagged by members</p>
-                            </div><button class="mini-select" type="button">Newest⌄</button>
-                        </div>
-                        <div class="table-scroll">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Author</th>
-                                        <th>Content</th>
-                                        <th>Report Reason</th>
-                                        <th>Time</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Đặng Quốc Việt</td>
-                                        <td>Post contains inappropriate content...</td>
-                                        <td>Spam</td>
-                                        <td>1 days ago</td>
-                                        <td><button class="button-view">View</button><button
-                                                class="button-primary small">Resolve</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ngọc Thanh Tâm</td>
-                                        <td>Sharing link with unknown source...</td>
-                                        <td>Malicious content</td>
-                                        <td>1 days ago</td>
-                                        <td><button class="button-view">View</button><button
-                                                class="button-primary small">Resolve</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vũ Minh Khang</td>
-                                        <td>Offensive comment towards other members</td>
-                                        <td>Personal attack</td>
-                                        <td>2 days ago</td>
-                                        <td><button class="button-view">View</button><button
-                                                class="button-primary small">Resolve</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </article>
                 </section>
@@ -669,43 +704,375 @@
                     </div>
                 </section>
 
-                <section class="admin-page" id="page-settings" data-page-panel="settings"
+                                <section class="admin-page" id="page-settings" data-page-panel="settings"
                     aria-labelledby="settings-title" hidden>
                     <div class="page-heading">
                         <div>
-                            <p class="eyebrow">CONFIGURATION</p>
-                            <h1 id="settings-title">System Settings</h1>
-                            <p class="page-subtitle">Configure general information and options for the website.</p>
+                            <p class="eyebrow">CẤU HÌNH HỆ THỐNG</p>
+                            <h1 id="settings-title">Cài đặt hệ thống</h1>
+                            <p class="page-subtitle">Quản lý thông tin thương hiệu, giao diện mặc định, dịch vụ email và chính sách bảo mật toàn website.</p>
                         </div>
                     </div>
-                    <article class="panel settings-panel">
-                        <nav class="settings-tabs" aria-label="Settings Groups"><button class="selected"
-                                type="button">General Information</button><button type="button">Appearance</button><button
-                                type="button">Email</button><button type="button">Security</button></nav>
-                        <form class="settings-form">
-                            <h2>General Information</h2><label>Website Name<input
-                                    value="9.5 AI CLUB"></label><label>Short Description<input
-                                    value="AI Learning Platform & Community for Students"></label>
-                            <div class="logo-settings"><strong>Logo</strong>
-                                <div class="logo-option"><img src="../../assets/icon/cool_book.png"
-                                        alt="Logo 9.5 AI CLUB"><button type="button">Upload</button><small>Kích thước
-                                        tối ưu: 64×64px</small></div>
-                                <div class="logo-option"><span class="favicon-preview">9.5</span><button
-                                        type="button">Upload</button><small>Optimal size: 32×32px</small></div>
+
+                    <!-- Banner Chỉ đọc cho vai trò Admin -->
+                    <div class="settings-readonly-banner" id="settings-readonly-banner" style="display: none;" role="status">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="16" x2="12" y2="12"/>
+                            <line x1="12" y1="8" x2="12.01" y2="8"/>
+                        </svg>
+                        <span><strong>Chế độ Chỉ đọc:</strong> Bạn đang đăng nhập với vai trò Quản trị viên (Admin). Chỉ Chủ sở hữu (Owner) mới có quyền chỉnh sửa và lưu các thiết lập hệ thống.</span>
+                    </div>
+
+                    <!-- Sub-tabs ARIA Tablist -->
+                    <nav class="settings-tabs" role="tablist" aria-label="Nhóm cài đặt">
+                        <button type="button" class="settings-tab-btn is-active selected" role="tab" id="tab-btn-general"
+                            aria-selected="true" aria-controls="panel-general" data-subtab="general">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="16" x2="12" y2="12"/>
+                                <line x1="12" y1="8" x2="12.01" y2="8"/>
+                            </svg>
+                            <span>Thông tin chung</span>
+                        </button>
+                        <button type="button" class="settings-tab-btn" role="tab" id="tab-btn-appearance"
+                            aria-selected="false" aria-controls="panel-appearance" data-subtab="appearance">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z"/>
+                            </svg>
+                            <span>Giao diện</span>
+                        </button>
+                        <button type="button" class="settings-tab-btn" role="tab" id="tab-btn-email"
+                            aria-selected="false" aria-controls="panel-email" data-subtab="email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>Email</span>
+                        </button>
+                        <button type="button" class="settings-tab-btn" role="tab" id="tab-btn-security"
+                            aria-selected="false" aria-controls="panel-security" data-subtab="security">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span>Bảo mật</span>
+                        </button>
+                    </nav>
+
+                    <form class="settings-panel" id="form-settings" onsubmit="return false;">
+                        <!-- TAB 1: THÔNG TIN CHUNG (GENERAL) -->
+                        <div class="settings-tab-panel" id="panel-general" data-subpanel="general" role="tabpanel" aria-labelledby="tab-btn-general">
+                            <h2 class="settings-section-title">Thông tin Website & Nhận diện thương hiệu</h2>
+                            <p class="settings-section-subtitle">Tên website và mô tả được hiển thị trên thanh tiêu đề trình duyệt, công cụ tìm kiếm và thẻ chia sẻ mạng xã hội.</p>
+
+                            <div class="settings-field">
+                                <label class="settings-field-label" for="setting-website-name">
+                                    <span>Tên website <span style="color: #ef4444;">*</span></span>
+                                    <span class="settings-field-hint">Tối đa 60 ký tự</span>
+                                </label>
+                                <input type="text" id="setting-website-name" class="settings-input" maxlength="60" placeholder="VD: 9.5 AI CLUB" required>
                             </div>
-                            <h2>Social Links</h2><label class="social-field"><span
-                                    class="social-mark facebook">f</span><span>Facebook</span><input
-                                    value="https://facebook.com/9.5library"></label><label class="social-field"><span
-                                    class="social-mark discord">◈</span><span>Discord</span><input
-                                    value="https://discord.gg/9.5library"></label><label class="social-field"><span
-                                    class="social-mark youtube">▶</span><span>YouTube</span><input
-                                    value="https://youtube.com/@9.5library"></label><label class="social-field"><span
-                                    class="social-mark twitter">𝕏</span><span>Twitter (X)</span><input
-                                    value="https://x.com/9.5library"></label>
-                            <div class="form-actions"><button class="button-primary" type="button">Save Changes</button>
+
+                            <div class="settings-field">
+                                <label class="settings-field-label" for="setting-short-description">
+                                    <span>Mô tả ngắn (Tagline)</span>
+                                    <span class="settings-field-hint">Tối đa 160 ký tự</span>
+                                </label>
+                                <textarea id="setting-short-description" class="settings-textarea" maxlength="160" placeholder="Mô tả tóm tắt về sứ mệnh hoặc nội dung của website..."></textarea>
                             </div>
-                        </form>
-                    </article>
+
+                            <div class="branding-grid">
+                                <!-- Card Logo -->
+                                <div class="branding-card">
+                                    <div class="branding-card-header">
+                                        <h3 class="branding-card-title">Logo Website</h3>
+                                        <span class="branding-badge">Tối đa 256×256</span>
+                                    </div>
+                                    <div class="branding-content">
+                                        <div class="branding-preview-wrap">
+                                            <img id="logo-preview-img" class="branding-preview-img" src="/assets/icon/cool_book_128.png" alt="Logo 9.5 AI CLUB">
+                                        </div>
+                                        <div class="branding-actions">
+                                            <div class="branding-btn-row">
+                                                <button type="button" class="btn-branding-upload" id="btn-upload-logo">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                                    <span>Tải ảnh lên...</span>
+                                                </button>
+                                                <button type="button" class="btn-branding-reset" id="btn-reset-logo">Mặc định</button>
+                                                <input type="file" id="file-input-logo" accept="image/png,image/jpeg,image/webp" hidden>
+                                            </div>
+                                            <p class="branding-info-text">PNG, JPG, WEBP &le; 1MB. Tự động thu nhỏ và nén an toàn.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card Favicon -->
+                                <div class="branding-card">
+                                    <div class="branding-card-header">
+                                        <h3 class="branding-card-title">Favicon (Biểu tượng Tab)</h3>
+                                        <span class="branding-badge">Khuyên dùng 32×32</span>
+                                    </div>
+                                    <div class="branding-content">
+                                        <div class="branding-preview-wrap">
+                                            <img id="favicon-preview-img" class="branding-preview-img" src="/assets/icon/favicon-32.png" alt="Favicon 9.5 AI CLUB">
+                                        </div>
+                                        <div class="branding-actions">
+                                            <div class="branding-btn-row">
+                                                <button type="button" class="btn-branding-upload" id="btn-upload-favicon">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                                    <span>Tải ảnh lên...</span>
+                                                </button>
+                                                <button type="button" class="btn-branding-reset" id="btn-reset-favicon">Mặc định</button>
+                                                <input type="file" id="file-input-favicon" accept="image/png,image/jpeg,image/webp" hidden>
+                                            </div>
+                                            <p class="branding-info-text">Tự động căn giữa và cắt vuông sắc nét trên thanh tab.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="settings-divider">
+
+                            <h2 class="settings-section-title">Liên kết Mạng xã hội & Cộng đồng</h2>
+                            <p class="settings-section-subtitle">Các biểu tượng liên kết chỉ xuất hiện ở chân trang (Footer) và các trang liên hệ khi có đường dẫn URL hợp lệ.</p>
+
+                            <div class="social-links-list">
+                                <!-- Facebook -->
+                                <div class="social-link-row">
+                                    <div class="social-brand-icon-box brand-facebook" title="Facebook">
+                                        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                    </div>
+                                    <span class="social-label-text">Facebook</span>
+                                    <input type="url" id="social-facebook" class="social-url-input" placeholder="https://facebook.com/..." maxlength="255">
+                                </div>
+
+                                <!-- Discord -->
+                                <div class="social-link-row">
+                                    <div class="social-brand-icon-box brand-discord" title="Discord">
+                                        <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                                    </div>
+                                    <span class="social-label-text">Discord</span>
+                                    <input type="url" id="social-discord" class="social-url-input" placeholder="https://discord.gg/..." maxlength="255">
+                                </div>
+
+                                <!-- YouTube -->
+                                <div class="social-link-row">
+                                    <div class="social-brand-icon-box brand-youtube" title="YouTube">
+                                        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                    </div>
+                                    <span class="social-label-text">YouTube</span>
+                                    <input type="url" id="social-youtube" class="social-url-input" placeholder="https://youtube.com/@..." maxlength="255">
+                                </div>
+
+                                <!-- Twitter / X -->
+                                <div class="social-link-row">
+                                    <div class="social-brand-icon-box brand-x" title="Twitter (X)">
+                                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                    </div>
+                                    <span class="social-label-text">Twitter (X)</span>
+                                    <input type="url" id="social-x" class="social-url-input" placeholder="https://x.com/..." maxlength="255">
+                                </div>
+
+                                <!-- GitHub -->
+                                <div class="social-link-row">
+                                    <div class="social-brand-icon-box brand-github" title="GitHub">
+                                        <svg viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                    </div>
+                                    <span class="social-label-text">GitHub</span>
+                                    <input type="url" id="social-github" class="social-url-input" placeholder="https://github.com/..." maxlength="255">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TAB 2: GIAO DIỆN (APPEARANCE) -->
+                        <div class="settings-tab-panel" id="panel-appearance" data-subpanel="appearance" role="tabpanel" aria-labelledby="tab-btn-appearance" hidden>
+                            <h2 class="settings-section-title">Chủ đề Mặc định (Default Theme)</h2>
+                            <p class="settings-section-subtitle">Chủ đề áp dụng cho khách vãng lai và người dùng chưa đặt tùy chọn giao diện cá nhân.</p>
+
+                            <div class="theme-selector-grid" role="radiogroup" aria-label="Chọn chủ đề mặc định">
+                                <div class="theme-card-option" data-theme-value="system" role="radio" aria-checked="false" tabindex="0">
+                                    <div class="theme-card-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                    </div>
+                                    <h3 class="theme-card-title">Hệ thống</h3>
+                                    <p class="theme-card-desc">Tự động thích ứng theo chế độ máy tính/điện thoại người dùng</p>
+                                </div>
+
+                                <div class="theme-card-option" data-theme-value="light" role="radio" aria-checked="false" tabindex="0">
+                                    <div class="theme-card-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                                    </div>
+                                    <h3 class="theme-card-title">Chủ đề Sáng</h3>
+                                    <p class="theme-card-desc">Giao diện tươi sáng, độ tương phản cao, tối ưu cho môi trường đủ sáng</p>
+                                </div>
+
+                                <div class="theme-card-option" data-theme-value="dark" role="radio" aria-checked="false" tabindex="0">
+                                    <div class="theme-card-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                                    </div>
+                                    <h3 class="theme-card-title">Chủ đề Tối</h3>
+                                    <p class="theme-card-desc">Giao diện nền tối sang trọng, dịu mắt, tiết kiệm năng lượng màn hình OLED</p>
+                                </div>
+                            </div>
+
+                            <hr class="settings-divider">
+
+                            <h2 class="settings-section-title">Màu nhấn Chủ đạo (Default Accent Color)</h2>
+                            <p class="settings-section-subtitle">Màu sắc các nút bấm chính, liên kết nổi bật và hiệu ứng trang trí ban đầu.</p>
+
+                            <div class="accent-selector-grid" role="radiogroup" aria-label="Chọn màu nhấn mặc định">
+                                <div class="accent-pill-option" data-accent-value="blue" role="radio" aria-checked="false" tabindex="0">
+                                    <span class="accent-color-circle" style="background: #2563eb;"></span>
+                                    <span>Xanh lam (Mặc định)</span>
+                                </div>
+                                <div class="accent-pill-option" data-accent-value="purple" role="radio" aria-checked="false" tabindex="0">
+                                    <span class="accent-color-circle" style="background: #7c3aed;"></span>
+                                    <span>Tím thạch anh</span>
+                                </div>
+                                <div class="accent-pill-option" data-accent-value="green" role="radio" aria-checked="false" tabindex="0">
+                                    <span class="accent-color-circle" style="background: #16a34a;"></span>
+                                    <span>Xanh ngọc lục bảo</span>
+                                </div>
+                                <div class="accent-pill-option" data-accent-value="orange" role="radio" aria-checked="false" tabindex="0">
+                                    <span class="accent-color-circle" style="background: #ea580c;"></span>
+                                    <span>Cam năng lượng</span>
+                                </div>
+                                <div class="accent-pill-option" data-accent-value="pink" role="radio" aria-checked="false" tabindex="0">
+                                    <span class="accent-color-circle" style="background: #db2777;"></span>
+                                    <span>Hồng thạch anh</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TAB 3: EMAIL (TRUNG THỰC - CHƯA KÍCH HOẠT) -->
+                        <div class="settings-tab-panel" id="panel-email" data-subpanel="email" role="tabpanel" aria-labelledby="tab-btn-email" hidden>
+                            <h2 class="settings-section-title">Dịch vụ Thư điện tử (Email SMTP)</h2>
+                            <p class="settings-section-subtitle">Thông báo trạng thái hạ tầng gửi thư tự động của hệ thống.</p>
+
+                            <div class="email-status-card">
+                                <div class="email-status-header">
+                                    <h3 style="margin: 0; font-size: 15px; font-weight: 700;">Hạ tầng Gửi Email Hệ thống</h3>
+                                    <span class="email-status-pill status-pending">Chưa kích hoạt</span>
+                                </div>
+
+                                <p class="email-explanation">
+                                    Hệ thống 9.5 AI Library hiện sử dụng phương thức đăng nhập và kiểm soát tài khoản tập trung trực tiếp qua máy chủ. Để đảm bảo <strong>an toàn thông tin tuyệt đối</strong>, cấu hình máy chủ SMTP (mật khẩu ứng dụng, API key) sẽ được nạp trực tiếp qua biến môi trường bí mật (<code>.env</code>) trên máy chủ khi tính năng phát hành chính thức, hoàn toàn <strong>không lưu mật khẩu thư vào cơ sở dữ liệu</strong>.
+                                </p>
+
+                                <h4 style="margin: 8px 0 4px 0; font-size: 13.5px; font-weight: 600;">Lộ trình tính năng Email:</h4>
+                                <ul class="email-feature-list">
+                                    <li class="email-feature-item">
+                                        <span>Gửi liên kết đặt lại mật khẩu an toàn</span>
+                                        <span class="email-feature-badge">Sắp ra mắt</span>
+                                    </li>
+                                    <li class="email-feature-item">
+                                        <span>Thông báo phê duyệt tài khoản mới</span>
+                                        <span class="email-feature-badge">Sắp ra mắt</span>
+                                    </li>
+                                    <li class="email-feature-item">
+                                        <span>Cảnh báo báo cáo vi phạm cộng đồng</span>
+                                        <span class="email-feature-badge">Sắp ra mắt</span>
+                                    </li>
+                                    <li class="email-feature-item">
+                                        <span>Bản tin tóm tắt hoạt động tuần</span>
+                                        <span class="email-feature-badge">Sắp ra mắt</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- TAB 4: BẢO MẬT & PHIÊN (SECURITY) -->
+                        <div class="settings-tab-panel" id="panel-security" data-subpanel="security" role="tabpanel" aria-labelledby="tab-btn-security" hidden>
+                            <h2 class="settings-section-title">Chính sách Đăng ký & Bảo mật Tài khoản</h2>
+                            <p class="settings-section-subtitle">Các quy định kiểm soát tài khoản thành viên mới và thời hạn phiên đăng nhập toàn website.</p>
+
+                            <div class="security-settings-grid">
+                                <!-- Cho phép đăng ký -->
+                                <div class="security-card">
+                                    <div class="security-card-info">
+                                        <h3 class="security-card-title">Cho phép Đăng ký</h3>
+                                        <p class="security-card-desc">Bật tính năng mở cổng cho thành viên mới đăng ký tài khoản tự do.</p>
+                                    </div>
+                                    <label class="switch-label">
+                                        <input type="checkbox" id="setting-allow-registration" class="switch-input">
+                                        <span class="switch-slider"></span>
+                                        <span>Kích hoạt đăng ký</span>
+                                    </label>
+                                </div>
+
+                                <!-- Phê duyệt tài khoản -->
+                                <div class="security-card">
+                                    <div class="security-card-info">
+                                        <h3 class="security-card-title">Kiểm duyệt Tài khoản mới</h3>
+                                        <p class="security-card-desc">Tài khoản mới đăng ký phải được Quản trị viên duyệt thủ công (Pending).</p>
+                                    </div>
+                                    <label class="switch-label">
+                                        <input type="checkbox" id="setting-require-approval" class="switch-input">
+                                        <span class="switch-slider"></span>
+                                        <span>Bắt buộc phê duyệt</span>
+                                    </label>
+                                </div>
+
+                                <!-- Độ dài mật khẩu tối thiểu -->
+                                <div class="security-card">
+                                    <div class="security-card-info">
+                                        <h3 class="security-card-title">Độ dài Mật khẩu Tối thiểu</h3>
+                                        <p class="security-card-desc">Áp dụng cho đăng ký tài khoản mới và chức năng đổi mật khẩu cá nhân.</p>
+                                    </div>
+                                    <select id="setting-min-password-length" class="settings-select">
+                                        <option value="6">6 ký tự (Mặc định)</option>
+                                        <option value="8">8 ký tự (Khuyến nghị an toàn)</option>
+                                        <option value="10">10 ký tự (Bảo mật cao)</option>
+                                        <option value="12">12 ký tự (Tiêu chuẩn doanh nghiệp)</option>
+                                    </select>
+                                </div>
+
+                                <!-- Thời hạn phiên đăng nhập -->
+                                <div class="security-card">
+                                    <div class="security-card-info">
+                                        <h3 class="security-card-title">Thời hạn Phiên (JWT Expiry)</h3>
+                                        <p class="security-card-desc">Thời gian hiệu lực của token đăng nhập trước khi người dùng cần đăng nhập lại.</p>
+                                    </div>
+                                    <select id="setting-session-days" class="settings-select">
+                                        <option value="1">1 ngày (Mặc định)</option>
+                                        <option value="7">7 ngày (Một tuần)</option>
+                                        <option value="30">30 ngày (Một tháng)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div style="background: rgba(37, 99, 235, 0.05); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: 10px; padding: 14px 18px; display: flex; align-items: center; gap: 12px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <span style="font-size: 13px; color: var(--color-text-secondary, #475569); line-height: 1.4;">
+                                    <strong>Nhật ký Kiểm toán:</strong> Mọi thao tác cập nhật cấu hình bảo mật đều được ghi lại tự động vào bảng <code>audit_logs</code> kèm mã định danh người thực hiện, địa chỉ IP và dấu thời gian chuẩn.
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- THANH HÀNH ĐỘNG FORM (DIRTY STATE & NÚT LƯU) -->
+                        <div class="settings-form-actions">
+                            <div class="settings-dirty-indicator" id="settings-dirty-indicator">
+                                <span class="settings-dirty-dot"></span>
+                                <span>Có thay đổi chưa lưu</span>
+                            </div>
+
+                            <div class="settings-btn-group">
+                                <button type="button" class="btn-settings-discard" id="btn-settings-discard" disabled>Hủy thay đổi</button>
+                                <button type="button" class="btn-settings-save" id="btn-settings-save" disabled>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                                        <polyline points="17 21 17 13 7 13 7 21"/>
+                                        <polyline points="7 3 7 8 15 8"/>
+                                    </svg>
+                                    <span>Lưu thay đổi</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </section>
             </div>
             <footer class="admin-footer"><span>© 2025 9.5 AI CLUB Admin</span><span>Better Learning · Brighter
@@ -775,6 +1142,9 @@
     <script src="../../js/syncProfile.js?v=3"></script>
     <script src="../../js/admin-users.js?v=14"></script>
     <script src="../../js/admin-lms.js"></script>
+    <script src="../../js/admin-dashboard.js"></script>
+    <script src="../../js/admin-moderation.js"></script>
+    <script src="../../js/admin-settings.js"></script>
 </body>
 
 </html>

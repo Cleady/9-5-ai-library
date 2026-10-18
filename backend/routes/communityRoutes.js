@@ -118,4 +118,8 @@ router.post('/notifications/:id/read', verifyToken, communityController.markNoti
 // === 10. TÌM KIẾM (SEARCH) ===
 router.get('/search', verifyToken, communityController.searchCommunity);
 
+// === 11. BÁO CÁO VI PHẠM (REPORT) ===
+const moderationController = require('../controllers/moderationController');
+router.post('/report', verifyToken, moderationController.createReport);
+
 module.exports = router;

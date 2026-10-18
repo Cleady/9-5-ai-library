@@ -465,6 +465,114 @@ async function initDatabase() {
       console.log('✅ Seeding completed successfully!');
     }
 
+    // 4. Tạo bảng user_activity_daily (Đo lường người dùng hoạt động theo ngày)
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS user_activity_daily (
+        user_id INT NOT NULL,
+        activity_date DATE NOT NULL,
+        first_seen_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        last_seen_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        hits INT DEFAULT 1,
+        PRIMARY KEY (user_id, activity_date),
+        CONSTRAINT fk_user_act_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    `);
+
+    // 5. Kiểm tra và bổ sung cột last_login_at vào bảng users (nếu chưa có)
+    const [userCols] = await db.query(`
+      SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS
+      WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'last_login_at'
+    `);
+    if (userCols.length === 0) {
+      await db.query('ALTER TABLE users ADD COLUMN last_login_at TIMESTAMP NULL DEFAULT NULL');
+      console.log('✅ Added column users.last_login_at');
+    }
+
+    // 6. Bảng community_reports (Báo cáo vi phạm nội dung cộng đồng)
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS community_reports (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        reporter_id INT NOT NULL,
+        target_type ENUM('post','comment','discussion','reply') NOT NULL,
+        target_id INT NOT NULL,
+        reason ENUM('spam','harassment','inappropriate','misinformation','other') NOT NULL,
+        note VARCHAR(500) NULL,
+        status ENUM('open','dismissed','actioned') DEFAULT 'open',
+        handled_by INT NULL,
+        handled_at TIMESTAMP NULL DEFAULT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_reporter_target (reporter_id, target_type, target_id),
+        INDEX idx_rep_status (status),
+        INDEX idx_rep_created_at (created_at),
+        CONSTRAINT fk_rep_reporter FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE,
+        CONSTRAINT fk_rep_handler FOREIGN KEY (handled_by) REFERENCES users(id) ON DELETE SET NULL
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    `);
+
+    // 7. Bổ sung các cột is_hidden, hidden_by, hidden_at vào posts, comments, discussions, replies
+    const tablesToHide = ['community_posts', 'community_comments', 'community_discussions', 'community_discussion_replies'];
+    for (const tbl of tablesToHide) {
+      const [cols] = await db.query(`
+        SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS
+        WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ? AND COLUMN_NAME = 'is_hidden'
+      `, [tbl]);
+      if (cols.length === 0) {
+        await db.query(`ALTER TABLE ${tbl} ADD COLUMN is_hidden TINYINT(1) DEFAULT 0, ADD COLUMN hidden_by INT NULL, ADD COLUMN hidden_at TIMESTAMP NULL`);
+        console.log(`✅ Added is_hidden columns to ${tbl}`);
+      }
+    }
+
+    // 8. Bảng audit_logs (Nhật ký hành động quản trị hệ thống)
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS audit_logs (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        actor_id INT NOT NULL,
+        action VARCHAR(64) NOT NULL,
+        target_type VARCHAR(64) NOT NULL,
+        target_id INT NULL,
+        details JSON NULL,
+        ip_address VARCHAR(45) NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_audit_actor (actor_id),
+        INDEX idx_audit_action (action),
+        INDEX idx_audit_created_at (created_at),
+        CONSTRAINT fk_audit_actor FOREIGN KEY (actor_id) REFERENCES users(id) ON DELETE CASCADE
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    `);
+
+    // 9. Bảng site_settings (Cấu hình toàn hệ thống)
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS site_settings (
+        setting_key VARCHAR(100) PRIMARY KEY,
+        setting_value TEXT NOT NULL,
+        updated_by INT NULL,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        CONSTRAINT fk_settings_updated_by FOREIGN KEY (updated_by) REFERENCES users(id) ON DELETE SET NULL
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    `);
+
+    // Seed cài đặt mặc định nếu chưa có
+    const defaultSettings = [
+      ['website_name', '9.5 AI CLUB'],
+      ['short_description', 'AI Learning Platform & Community for Students'],
+      ['logo_url', '/assets/icon/cool_book_128.png'],
+      ['favicon_url', '/assets/icon/favicon-32.png'],
+      ['social_links', JSON.stringify({ facebook: '', discord: '', youtube: '', x: '', github: '' })],
+      ['default_theme', 'system'],
+      ['default_accent', 'blue'],
+      ['allow_registration', 'true'],
+      ['require_approval', 'true'],
+      ['min_password_length', '6'],
+      ['session_days', '1']
+    ];
+
+    for (const [key, val] of defaultSettings) {
+      await db.query(
+        'INSERT IGNORE INTO site_settings (setting_key, setting_value) VALUES (?, ?)',
+        [key, val]
+      );
+    }
+
     console.log('🎉 Database tables initialized and ready.');
   } catch (err) {
     console.error('⚠️ Database init error (will fallback to JSON if needed):', err.message);

@@ -119,11 +119,21 @@
   let currentHash = "";
 
   function handleHashChange() {
-    let hash = window.location.hash.replace("#", "");
-    if (!panelTitles[hash]) {
-      hash = "profile"; // Mặc định
+    let rawHash = (window.location.hash || "").replace("#", "").toLowerCase();
+    
+    // Hỗ trợ alias dẫn thẳng đến đổi mật khẩu / bảo mật
+    let shouldOpenPasswordModal = false;
+    if (rawHash === "password" || rawHash === "change-password" || rawHash === "security" || rawHash === "account:password") {
+      rawHash = "account";
+      shouldOpenPasswordModal = true;
+    }
+
+    if (!panelTitles[rawHash]) {
+      rawHash = "profile"; // Mặc định
       window.history.replaceState(null, null, "#profile");
     }
+
+    const hash = rawHash;
 
     // Unsaved guard (nếu panel trước đó bị dirty thì chặn)
     // - sẽ cài đặt chi tiết trong settings-profile.js 
@@ -153,6 +163,17 @@
     document.querySelectorAll(".set-panel").forEach(panel => {
       panel.hidden = panel.id !== `panel-${hash}`;
     });
+
+    // Tự động mở modal đổi mật khẩu nếu hash yêu cầu
+    if (shouldOpenPasswordModal) {
+      setTimeout(() => {
+        const formPwd = document.getElementById("form-password");
+        const pwdError = document.getElementById("pwd-error");
+        if (formPwd) formPwd.reset();
+        if (pwdError) pwdError.textContent = "";
+        S.core.openModal("modal-password");
+      }, 80);
+    }
   }
 
   // Khởi tạo routing

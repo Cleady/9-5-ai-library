@@ -3123,4 +3123,75 @@ html[data-theme="dark"] .lec-comment-item div[style*="color: #334155"] {
 html[data-theme="dark"] .lec-comment-item > div:first-child {
   background: rgba(56, 189, 248, 0.2) !important;
   color: #38bdf8 !important;
+}
+
+/* Lecture Content Cards in Dark Theme */
+html[data-theme="dark"] .lec-section-card {
+  background: var(--surface-card, rgba(10, 22, 44, 0.75)) !important;
+  border-color: var(--card-border, rgba(56, 189, 248, 0.14)) !important;
+  box-shadow: var(--card-shadow, 0 8px 32px rgba(0, 0, 0, 0.45)) !important;
+}
+
+html[data-theme="dark"] .lec-section-title {
+  color: var(--color-text, #f8fafc) !important;
+}
+
+html[data-theme="dark"] .lec-section-subtitle {
+  color: var(--color-text-secondary, #94a3b8) !important;
+}
+
+html[data-theme="dark"] .lec-section-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .lec-concept-box {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border-left-color: var(--accent-bright, #38bdf8) !important;
+}
+
+html[data-theme="dark"] .lec-concept-box h4 {
+  color: var(--accent-bright, #38bdf8) !important;
+}
+
+html[data-theme="dark"] .lec-concept-box p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .lec-formula-card {
+  background: rgba(15, 30, 60, 0.7) !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
+}
+
+html[data-theme="dark"] .lec-formula-label {
+  color: var(--accent-bright, #38bdf8) !important;
+}
+
+html[data-theme="dark"] .lec-algo-card {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .lec-feynman-tag {
+  background: rgba(56, 189, 248, 0.16) !important;
+  color: var(--accent-bright, #38bdf8) !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
+}
+
+html[data-theme="dark"] .lec-feynman-headline {
+  color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .lec-feynman-desc {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .lec-material-icon--pdf {
+  background: rgba(239, 68, 68, 0.2) !important;
+  color: #fca5a5 !important;
+}
+
+html[data-theme="dark"] .lec-ctrl-btn,
+html[data-theme="dark"] .lec-speed-btn {
+  color: #ffffff !important;
 }

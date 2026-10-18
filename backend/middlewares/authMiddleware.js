@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const { recordApiActivity } = require('../utils/activityTracker');
 
 // Middleware xác thực xem user đã đăng nhập chưa
 exports.verifyToken = (req, res, next) => {
@@ -15,9 +16,22 @@ exports.verifyToken = (req, res, next) => {
         
         // Gắn thông tin giải mã được vào req để các API sau sử dụng
         req.user = decoded;
+
+        // Ghi nhận người dùng hoạt động (fire-and-forget, throttle 5 phút/người dùng)
+        recordApiActivity(decoded);
+
         next();
     } catch (error) {
         return res.status(401).json({ error: 'Phiên đăng nhập không hợp lệ hoặc đã hết hạn' });
+    }
+};
+
+// Middleware kiểm tra quyền Owner (Chủ sở hữu hệ thống)
+exports.isOwner = (req, res, next) => {
+    if (req.user && req.user.role === 'owner') {
+        next();
+    } else {
+        res.status(403).json({ error: 'Chỉ Chủ sở hữu (Owner) mới có quyền thực hiện hành động này' });
     }
 };
 

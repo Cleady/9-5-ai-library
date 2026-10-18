@@ -1,4 +1,5 @@
 const db = require('../config/db');
+const { recordAudit } = require('../utils/audit');
 
 exports.getAllUsers = async (req, res) => {
     try {
@@ -34,9 +35,28 @@ exports.updateUser = async (req, res) => {
 
         if (updates.length === 0) return res.status(400).json({ error: 'No data to update' });
 
+        const [[oldUser]] = await db.query('SELECT role, status, username, full_name FROM users WHERE id = ?', [targetUserId]);
+
         values.push(targetUserId);
 
         await db.query(`UPDATE users SET ${updates.join(', ')} WHERE id = ?`, values);
+
+        // Ghi nhật ký quản trị
+        recordAudit({
+            actorId: req.user.id,
+            action: role && status ? 'user.update' : role ? 'user.role_change' : 'user.status_change',
+            targetType: 'user',
+            targetId: parseInt(targetUserId, 10),
+            details: {
+                targetUsername: oldUser ? oldUser.username : null,
+                oldRole: oldUser ? oldUser.role : undefined,
+                newRole: role || undefined,
+                oldStatus: oldUser ? oldUser.status : undefined,
+                newStatus: status || undefined
+            },
+            req
+        });
+
         res.json({ message: 'Update successful' });
 
     } catch (error) {

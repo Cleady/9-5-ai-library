@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (canChangeRoleGlobal) {
                         actionHtml = `<button class="row-action btn-approve" data-id="${u.id}" style="background: rgba(25, 135, 84, 0.15); color: #157347; border: 1.5px solid rgba(25, 135, 84, 0.3); padding: 6px 16px; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 12.5px; backdrop-filter: blur(4px); transition: all 0.2s ease;" onmouseover="this.style.background='rgba(25, 135, 84, 0.25)'" onmouseout="this.style.background='rgba(25, 135, 84, 0.15)'">Approve</button>`;
                     } else {
-                        actionHtml = `<span style="color:#999; font-size:0.85em;">No permission</span>`;
+                        actionHtml = `<span class="admin-status-muted">No permission</span>`;
                     }
                     
                     roleDisplayHtml = `<span style="font-weight: 600; color: #475569;">${rText}</span>`;
@@ -206,23 +206,23 @@ document.addEventListener("DOMContentLoaded", () => {
                                 </div>
                             </div>
                         `;
-                        actionHtml = `<span style="color:#28a745; font-size: 0.85em; font-weight: 500;">Done</span>`;
+                        actionHtml = `<span class="admin-status-done">Done</span>`;
                     } else {
                         if (isInternalAccount) {
-                            roleDisplayHtml = `<span style="padding: 6px 12px; border-radius: 8px; background: rgba(13, 110, 253, 0.05); color: #0d6efd; font-weight: 700; border: 1.5px solid rgba(13, 110, 253, 0.2); display: inline-flex; align-items: center;"><img src="../../assets/icon/Better_Icon/lock.png" alt="Lock" style="width: 14px; height: 14px; margin-right: 6px;">${rText}</span>`;
+                            roleDisplayHtml = `<span class="internal-role-badge"><img src="../../assets/icon/Better_Icon/lock.png" alt="Lock" style="width: 14px; height: 14px; margin-right: 6px;">${rText}</span>`;
                         } else {
                             roleDisplayHtml = `<span style="font-weight: 600; color: #475569;">${rText}</span>`;
                         }
                         
                         if (currentUser && u.id == currentUser.id) {
-                            actionHtml = `<span style="color:#6c757d; font-size:0.85em;">(You)</span>`;
+                            actionHtml = `<span class="admin-status-you">(You)</span>`;
                         } else {
-                            actionHtml = `<span style="color:#999; font-size:0.85em;">-</span>`;
+                            actionHtml = `<span class="admin-status-muted">-</span>`;
                         }
                     }
                 } else {
                     statusHtml = `<span class="status" style="background: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 500;">Banned</span>`;
-                    actionHtml = `<span style="color:#999; font-size:0.85em;">-</span>`;
+                    actionHtml = `<span class="admin-status-muted">-</span>`;
                     roleDisplayHtml = `<span style="font-weight: 600; color: #475569;">${rText}</span>`;
                 }
 

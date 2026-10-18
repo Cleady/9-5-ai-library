@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "generatedAt": "2026-10-18T15:06:00.000+07:00",
+  "range": {
+    "code": "90d",
+    "from": "2026-07-20",
+    "to": "2026-10-18",
+    "days": 90,
+    "label": "07-20 đến 10-18"
+  },
+  "cards": {
+    "users": {
+      "total": 2486,
+      "newInRange": 1240,
+      "newPrev": 980,
+      "delta": { "percent": 27, "text": "↑ 27% so với kỳ trước", "direction": "up", "noBaseline": false }
+    },
+    "courses": {
+      "total": 48,
+      "newInRange": 12,
+      "newPrev": 8,
+      "delta": { "percent": 50, "text": "↑ 50% so với kỳ trước", "direction": "up", "noBaseline": false }
+    },
+    "posts": {
+      "total": 1580,
+      "newInRange": 450,
+      "newPrev": 320,
+      "delta": { "percent": 41, "text": "↑ 41% so với kỳ trước", "direction": "up", "noBaseline": false }
+    },
+    "resources": {
+      "total": 312,
+      "downloads": 8450,
+      "newInRange": 85,
+      "newPrev": 60,
+      "delta": { "percent": 42, "text": "↑ 42% so với kỳ trước", "direction": "up", "noBaseline": false }
+    }
+  },
+  "roles": [
+    { "role": "owner", "label": "Owner", "count": 1, "percent": 1 },
+    { "role": "admin", "label": "Admin", "count": 12, "percent": 2 },
+    { "role": "staff", "label": "Staff", "count": 85, "percent": 5 },
+    { "role": "member", "label": "Member", "count": 2388, "percent": 92 }
+  ],
+  "series": {
+    "newUsers": [
+      { "date": "2026-07-20", "count": 15 },
+      { "date": "2026-08-01", "count": 45 },
+      { "date": "2026-08-15", "count": 60 },
+      { "date": "2026-09-01", "count": 120 },
+      { "date": "2026-09-15", "count": 80 },
+      { "date": "2026-10-01", "count": 190 },
+      { "date": "2026-10-18", "count": 210 }
+    ],
+    "contentActivity": [
+      { "date": "2026-07-20", "count": 30 },
+      { "date": "2026-08-01", "count": 85 },
+      { "date": "2026-08-15", "count": 140 },
+      { "date": "2026-09-01", "count": 250 },
+      { "date": "2026-09-15", "count": 190 },
+      { "date": "2026-10-01", "count": 340 },
+      { "date": "2026-10-18", "count": 420 }
+    ],
+    "activeUsers": [
+      { "date": "2026-07-20", "count": 120 },
+      { "date": "2026-08-01", "count": 350 },
+      { "date": "2026-08-15", "count": 520 },
+      { "date": "2026-09-01", "count": 890 },
+      { "date": "2026-09-15", "count": 760 },
+      { "date": "2026-10-01", "count": 1150 },
+      { "date": "2026-10-18", "count": 1480 }
+    ],
+    "activeSince": "2026-07-20"
+  },
+  "needsAttention": {
+    "pendingAccounts": 14,
+    "openReports": 3
+  }
+}

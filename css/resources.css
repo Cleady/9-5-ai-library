@@ -40,7 +40,7 @@
 }
 
 .resource-page button,
-.resource-page input,
+.resource-page input:not(.search-input),
 .resource-page select,
 .resource-page textarea {
   font: inherit;
@@ -371,10 +371,16 @@
 }
 
 .role-badge {
-  padding: 5px 12px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 11px;
+  border: 1px solid transparent;
   color: var(--color-primary);
   font-size: 13px;
   font-weight: 600;
+  line-height: 1.4;
   background-color: #98b9ff;
   border-radius: 999px;
 }
@@ -2182,7 +2188,7 @@ html[data-theme="dark"] {
   --res-shadow: var(--card-shadow);
 
   --color-text: #f8fafc;
-  --color-text-muted: #64748b;
+  --color-text-muted: #94a3b8;
 }
 
 html[data-theme="dark"] .resource-page {
@@ -2633,4 +2639,17 @@ html[data-theme="dark"] #edit-dialog div[style*="background"] {
   background: rgba(255, 255, 255, 0.04) !important;
   border: none !important;
   color: var(--color-text-muted) !important;
+}
+
+html[data-theme="dark"] .res-uploader-role[data-role="owner"],
+html[data-theme="dark"] .res-uploader-role[data-role="admin"] {
+  background: var(--badge-owner-bg, rgba(56, 189, 248, 0.16)) !important;
+  color: var(--badge-owner-color, #38bdf8) !important;
+  border: 1px solid var(--badge-owner-border, rgba(56, 189, 248, 0.25)) !important;
+}
+
+html[data-theme="dark"] .res-uploader-role[data-role="staff"] {
+  background: rgba(234, 179, 8, 0.15) !important;
+  color: #eab308 !important;
+  border: 1px solid rgba(234, 179, 8, 0.25) !important;
 }

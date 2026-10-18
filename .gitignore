@@ -12,3 +12,5 @@ backend/storage/resources/
 # Temporary and backup files
 *.bak
 *.log
+tools/backup/
+tools/shots/

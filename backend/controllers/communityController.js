@@ -53,6 +53,7 @@ async function createNotification(userId, actorId, type, postId = null) {
 exports.getPosts = async (req, res) => {
   try {
     const currentUserId = req.user ? req.user.id : null;
+    const isStaffOrAdmin = req.user && ['staff', 'admin', 'owner'].includes(req.user.role);
     const { tag, q } = req.query;
     const page = Math.max(1, parseInt(req.query.page, 10) || 1);
     const limit = Math.min(50, Math.max(1, parseInt(req.query.limit, 10) || 10));
@@ -60,6 +61,11 @@ exports.getPosts = async (req, res) => {
 
     const whereClauses = [];
     const params = [];
+
+    // Lọc bỏ bài viết bị ẩn nếu người dùng không phải staff/admin/owner
+    if (!isStaffOrAdmin) {
+      whereClauses.push('(p.is_hidden = 0 OR p.is_hidden IS NULL)');
+    }
 
     if (tag && tag.trim()) {
       const cleanTag = tag.replace(/^#/, '').trim().toLowerCase();
@@ -493,13 +499,15 @@ exports.toggleLike = async (req, res) => {
 exports.getComments = async (req, res) => {
   try {
     const postId = req.params.id;
+    const isStaffOrAdmin = req.user && ['staff', 'admin', 'owner'].includes(req.user.role);
+    const hiddenFilter = !isStaffOrAdmin ? 'AND (c.is_hidden = 0 OR c.is_hidden IS NULL)' : '';
 
     const [comments] = await db.query(
       `SELECT c.id, c.post_id, c.user_id, c.content, c.created_at,
               u.full_name, u.username, u.avatar_url, u.role
        FROM community_comments c
        JOIN users u ON c.user_id = u.id
-       WHERE c.post_id = ?
+       WHERE c.post_id = ? ${hiddenFilter}
        ORDER BY c.created_at ASC`,
       [postId]
     );
@@ -800,6 +808,7 @@ exports.getTopContributors = async (req, res) => {
 // GET /api/community/discussions (?tag=, ?q=, ?page=, ?limit=)
 exports.getDiscussions = async (req, res) => {
   try {
+    const isStaffOrAdmin = req.user && ['staff', 'admin', 'owner'].includes(req.user.role);
     const { tag, q } = req.query;
     const page = Math.max(1, parseInt(req.query.page, 10) || 1);
     const limit = Math.min(50, Math.max(1, parseInt(req.query.limit, 10) || 10));
@@ -807,6 +816,11 @@ exports.getDiscussions = async (req, res) => {
 
     const whereClauses = [];
     const params = [];
+
+    // Lọc bỏ thảo luận bị ẩn nếu không phải staff/admin/owner
+    if (!isStaffOrAdmin) {
+      whereClauses.push('(d.is_hidden = 0 OR d.is_hidden IS NULL)');
+    }
 
     if (tag && tag.trim() && tag.trim().toLowerCase() !== 'all') {
       whereClauses.push('d.tag = ?');
@@ -872,9 +886,10 @@ exports.getDiscussions = async (req, res) => {
 exports.getDiscussionDetail = async (req, res) => {
   try {
     const discussionId = req.params.id;
+    const isStaffOrAdmin = req.user && ['staff', 'admin', 'owner'].includes(req.user.role);
 
     const [dRows] = await db.query(
-      `SELECT d.id, d.user_id, d.title, d.body, d.tag, d.created_at,
+      `SELECT d.id, d.user_id, d.title, d.body, d.tag, d.is_hidden, d.created_at,
               u.full_name, u.username, u.avatar_url, u.role
        FROM community_discussions d
        JOIN users u ON d.user_id = u.id
@@ -887,12 +902,18 @@ exports.getDiscussionDetail = async (req, res) => {
     }
     const d = dRows[0];
 
+    // Chặn người dùng thường xem thảo luận đã bị ẩn
+    if (d.is_hidden && !isStaffOrAdmin) {
+      return res.status(404).json({ error: 'Cuộc thảo luận này đã bị ẩn do vi phạm tiêu chuẩn cộng đồng.' });
+    }
+
+    const replyHiddenFilter = !isStaffOrAdmin ? 'AND (r.is_hidden = 0 OR r.is_hidden IS NULL)' : '';
     const [replies] = await db.query(
       `SELECT r.id, r.discussion_id, r.user_id, r.content, r.created_at,
               u.full_name, u.username, u.avatar_url, u.role
        FROM community_discussion_replies r
        JOIN users u ON r.user_id = u.id
-       WHERE r.discussion_id = ?
+       WHERE r.discussion_id = ? ${replyHiddenFilter}
        ORDER BY r.created_at ASC`,
       [discussionId]
     );
@@ -1456,13 +1477,15 @@ exports.searchCommunity = async (req, res) => {
     );
 
     // 3. Discussions
+    const isStaffOrAdmin = req.user && ['staff', 'admin', 'owner'].includes(req.user.role);
+    const searchHiddenFilter = !isStaffOrAdmin ? 'AND (d.is_hidden = 0 OR d.is_hidden IS NULL)' : '';
     const [discussions] = await db.query(
       `SELECT d.id, d.title, d.body, d.tag, d.created_at,
               u.full_name AS author_name,
               (SELECT COUNT(*) FROM community_discussion_replies WHERE discussion_id = d.id) AS replyCount
        FROM community_discussions d
        JOIN users u ON d.user_id = u.id
-       WHERE d.title LIKE ? OR d.body LIKE ? OR d.tag LIKE ?
+       WHERE (d.title LIKE ? OR d.body LIKE ? OR d.tag LIKE ?) ${searchHiddenFilter}
        LIMIT 10`,
       [searchTerm, searchTerm, searchTerm]
     );

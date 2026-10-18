@@ -1,0 +1,66 @@
+{
+  "test1_toggle_and_persistence": {
+    "themeInitial": null,
+    "themeAfterClick": "dark",
+    "storagePersisted": "dark",
+    "themeAfterReload": "dark",
+    "passed": true
+  },
+  "test2_fouc": {
+    "domReadyTheme": "dark",
+    "passed": true
+  },
+  "test3_cross_tab_sync": {
+    "themePageA": null,
+    "themePageB": null,
+    "synced": true
+  },
+  "test4_mobile_390_layout": [
+    {
+      "page": "home_page",
+      "clientWidth": 106,
+      "scrollWidth": 663,
+      "overflows": true,
+      "themeBtnVisible": true,
+      "hasHorizontalScroll": true
+    },
+    {
+      "page": "resources",
+      "clientWidth": 106,
+      "scrollWidth": 633,
+      "overflows": true,
+      "themeBtnVisible": true,
+      "hasHorizontalScroll": true
+    },
+    {
+      "page": "admin",
+      "clientWidth": 366,
+      "scrollWidth": 366,
+      "overflows": false,
+      "themeBtnVisible": true,
+      "hasHorizontalScroll": false
+    },
+    {
+      "page": "index",
+      "clientWidth": 372,
+      "scrollWidth": 372,
+      "overflows": false,
+      "themeBtnVisible": false,
+      "hasHorizontalScroll": false
+    }
+  ],
+  "test5_interactive_states": {
+    "normal": {
+      "themeBtn": {
+        "bg": "rgba(255, 255, 255, 0.65)",
+        "border": "1px solid rgba(255, 255, 255, 0.8)",
+        "color": "rgb(0, 0, 0)"
+      }
+    },
+    "hover": {
+      "hoverBg": "rgba(255, 255, 255, 0.85)",
+      "hoverColor": "rgb(0, 0, 0)",
+      "hoverBorder": "1px solid rgba(255, 255, 255, 0.8)"
+    }
+  }
+}

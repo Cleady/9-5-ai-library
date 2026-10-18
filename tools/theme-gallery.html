@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.5 AI Library — Theme Gallery (Light vs Dark)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #090d16;
+            color: #f8fafc;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        /* Master Header */
+        .master-header {
+            background: #0f172a;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .header-title {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header-desc {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        /* Nav Pills */
+        .nav-pills {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: thin;
+        }
+        .nav-pill {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #cbd5e1;
+            padding: 5px 12px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+        .nav-pill:hover {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: rgba(56, 189, 248, 0.4);
+            color: #38bdf8;
+        }
+        /* Split View Columns */
+        .split-labels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #0b1120;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .split-label {
+            padding: 8px 24px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .split-label-light {
+            background: #f8fafc;
+            color: #0f172a;
+            border-right: 1px solid #e2e8f0;
+        }
+        .split-label-dark {
+            background: #030712;
+            color: #38bdf8;
+        }
+        .split-container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: calc(100vh - 110px);
+            position: relative;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #frame-light {
+            border-right: 2px solid #334155;
+            background: #f8fafc;
+        }
+        #frame-dark {
+            background: #030712;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="master-header">
+        <div class="header-top">
+            <div class="header-brand">
+                <span style="font-size: 20px;">🎨</span>
+                <div>
+                    <h1 class="header-title">9.5 AI Library — Unified Component Theme Gallery</h1>
+                    <p class="header-desc">Side-by-side comparison with real stylesheets (style.css, theme-tokens.css, admin.css, resources.css)</p>
+                </div>
+            </div>
+            <div style="font-size: 11px; color: #64748b;">
+                Giai đoạn 2: Kiểm toán giao diện &amp; So sánh đồng bộ
+            </div>
+        </div>
+        <nav class="nav-pills">
+            <button class="nav-pill" onclick="jumpTo('sec-landing-header')">1. Landing Header</button>
+            <button class="nav-pill" onclick="jumpTo('sec-topbar')">2. Topbar &amp; Menu</button>
+            <button class="nav-pill" onclick="jumpTo('sec-sidebar')">3. Sidebar So Sánh</button>
+            <button class="nav-pill" onclick="jumpTo('sec-buttons')">4. Nút Bấm</button>
+            <button class="nav-pill" onclick="jumpTo('sec-inputs')">5. Form Inputs</button>
+            <button class="nav-pill" onclick="jumpTo('sec-badges')">6. Badges &amp; Tags</button>
+            <button class="nav-pill" onclick="jumpTo('sec-cards')">7. Cards &amp; Kính</button>
+            <button class="nav-pill" onclick="jumpTo('sec-tables')">8. Bảng &amp; LMS</button>
+            <button class="nav-pill" onclick="jumpTo('sec-progress')">9. Progress</button>
+            <button class="nav-pill" onclick="jumpTo('sec-modal')">10. Modal Dialog</button>
+            <button class="nav-pill" onclick="jumpTo('sec-toast')">11. Toasts</button>
+            <button class="nav-pill" onclick="jumpTo('sec-empty')">12. Empty State</button>
+        </nav>
+    </header>
+
+    <div class="split-labels">
+        <div class="split-label split-label-light">
+            <span>☀️ LIGHT THEME (Giao diện Sáng hiện hữu)</span>
+        </div>
+        <div class="split-label split-label-dark">
+            <span>🌙 DARK THEME (Giao diện Tối cần hoàn thiện)</span>
+        </div>
+    </div>
+
+    <main class="split-container">
+        <iframe id="frame-light" src="theme-gallery-content.html?theme=light"></iframe>
+        <iframe id="frame-dark" src="theme-gallery-content.html?theme=dark"></iframe>
+    </main>
+
+    <script>
+        const frameLight = document.getElementById('frame-light');
+        const frameDark = document.getElementById('frame-dark');
+        let isSyncing = false;
+
+        function setupScrollSync() {
+            try {
+                const winLight = frameLight.contentWindow;
+                const winDark = frameDark.contentWindow;
+
+                winLight.addEventListener('scroll', () => {
+                    if (isSyncing) return;
+                    isSyncing = true;
+                    winDark.scrollTo(0, winLight.scrollY);
+                    requestAnimationFrame(() => isSyncing = false);
+                });
+
+                winDark.addEventListener('scroll', () => {
+                    if (isSyncing) return;
+                    isSyncing = true;
+                    winLight.scrollTo(0, winDark.scrollY);
+                    requestAnimationFrame(() => isSyncing = false);
+                });
+            } catch (e) {
+                console.warn('Sync scroll notice:', e.message);
+            }
+        }
+
+        frameLight.addEventListener('load', () => {
+            if (frameDark.contentDocument.readyState === 'complete') setupScrollSync();
+        });
+        frameDark.addEventListener('load', () => {
+            if (frameLight.contentDocument.readyState === 'complete') setupScrollSync();
+        });
+
+        function jumpTo(secId) {
+            try {
+                const elL = frameLight.contentDocument.getElementById(secId);
+                const elD = frameDark.contentDocument.getElementById(secId);
+                if (elL) elL.scrollIntoView({ behavior: 'smooth' });
+                if (elD) elD.scrollIntoView({ behavior: 'smooth' });
+            } catch (e) {
+                console.error(e);
+            }
+        }
+    </script>
+</body>
+</html>

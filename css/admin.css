@@ -587,7 +587,8 @@ kbd {
     padding: 9px 10px;
     border-radius: 9px;
     color: #405b7e;
-    font-size: 10px;
+    font-size: 13px;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -796,15 +797,13 @@ td small {
     min-height: 25px;
 }
 
-.lesson-form label,
-.settings-form>label {
+.lesson-form label {
     font-size: 8px;
 }
 
 .lesson-form input,
 .lesson-form select,
-.lesson-form textarea,
-.settings-form input {
+.lesson-form textarea {
     font-size: 9px;
 }
 
@@ -813,8 +812,7 @@ td small {
     font-size: 9px;
 }
 
-.moderation-tab,
-.settings-tabs button {
+.moderation-tab {
     font-size: 9px;
 }
 
@@ -841,6 +839,8 @@ td small {
 .admin-page {
     display: none;
     min-width: 0;
+    padding-top: 12px;
+    scroll-margin-top: 85px;
 }
 
 .admin-page.is-visible {
@@ -1549,8 +1549,7 @@ td small {
     margin-top: 10px;
 }
 
-.lesson-form label,
-.settings-form>label {
+.lesson-form label {
     display: grid;
     gap: 5px;
     color: #57769d;
@@ -1560,8 +1559,7 @@ td small {
 
 .lesson-form input,
 .lesson-form select,
-.lesson-form textarea,
-.settings-form input {
+.lesson-form textarea {
     width: 100%;
     min-height: 29px;
     padding: 6px 8px;
@@ -1829,116 +1827,7 @@ td small {
     padding-top: 14px;
 }
 
-.settings-form h2 {
-    margin: 0 0 1px;
-    color: #27456d;
-    font-size: 10px;
-}
-
-.settings-form>label {
-    gap: 5px;
-}
-
-.settings-form>label>span {
-    color: #e7616a;
-}
-
-.settings-form input {
-    height: 30px;
-}
-
-.logo-settings {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    color: #57769d;
-    font-size: 8px;
-}
-
-.logo-settings>strong {
-    grid-column: 1 / -1;
-}
-
-.logo-option {
-    display: grid;
-    grid-template-columns: 42px 1fr;
-    align-items: center;
-    gap: 3px 8px;
-    padding: 9px;
-    border: 1px solid #e1ebf7;
-    border-radius: 7px;
-    background: rgba(255, 255, 255, .45);
-}
-
-.logo-option img,
-.favicon-preview {
-    grid-row: span 2;
-    width: 38px;
-    height: 38px;
-    object-fit: contain;
-}
-
-.favicon-preview {
-    display: grid;
-    place-items: center;
-    border-radius: 9px;
-    color: white;
-    background: linear-gradient(140deg, #58bcff, #1d4ed8);
-    font-size: 9px;
-    font-weight: 800;
-}
-
-.logo-option button {
-    justify-self: start;
-    padding: 4px 9px;
-    border: 0;
-    border-radius: 5px;
-    color: #3473ca;
-    background: #eaf3ff;
-    cursor: pointer;
-    font-size: 7px;
-}
-
-.logo-option small {
-    color: #91a1b6;
-    font-size: 7px;
-}
-
-.social-field {
-    display: grid !important;
-    grid-template-columns: 22px 74px minmax(0, 1fr);
-    align-items: center;
-    gap: 8px !important;
-}
-
-.social-mark {
-    display: grid;
-    place-items: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 5px;
-    color: #fff;
-    background: #3985e9;
-    font-size: 11px;
-}
-
-.social-mark.discord {
-    background: #697ce4;
-}
-
-.social-mark.youtube {
-    background: #f04d55;
-}
-
-.social-mark.twitter {
-    background: #39a8e8;
-}
-
-.form-actions {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 4px;
-}
+/* Note: Admin Settings styling is now cleanly modularized in css/admin-settings.css */
 
 .admin-footer {
     display: flex;
@@ -2314,7 +2203,7 @@ td small {
     height: 47px;
     flex: 0 0 auto;
     border-radius: 10px;
-    background: url("../assets/icon/cool_book.png") center / contain no-repeat;
+    background: url("../assets/icon/cool_book_128.png") center / contain no-repeat;
 }
 
 .sidebar-brand .brand-text {
@@ -2591,8 +2480,8 @@ td small {
 }
 
 .bell-icon:hover {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     border-radius: 6px;
     background: url("../assets/icon/hover-bell-icon.png") center / contain no-repeat;
 }
@@ -2767,12 +2656,18 @@ td small {
 }
 
 .role-badge {
-    padding: 5px 12px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 11px;
+    border: 1px solid transparent;
     border-radius: 999px;
     color: var(--color-primary);
     background-color: #98b9ff;
     font-size: 13px;
     font-weight: 600;
+    line-height: 1.4;
 }
 
 .user-menu-list {
@@ -3241,23 +3136,19 @@ td small {
 }
 
 /* form bài giảng + cài đặt */
-.lesson-form label,
-.settings-form>label {
+.lesson-form label {
     font-size: 11px;
 }
 
 .lesson-form input,
 .lesson-form select,
-.lesson-form textarea,
-.settings-form input {
+.lesson-form textarea {
     font-size: 12px;
     font-weight: 400 !important;
 }
 
 .lesson-form input::placeholder,
 .lesson-form textarea::placeholder,
-.settings-form input::placeholder,
-.settings-form textarea::placeholder,
 #modal-course input::placeholder,
 #modal-course textarea::placeholder {
     color: #94a3b8 !important;
@@ -3420,9 +3311,10 @@ html[data-theme="dark"] .nav-link:hover {
 
 html[data-theme="dark"] .sidebar-link.is-active,
 html[data-theme="dark"] .nav-link.is-active {
-    color: var(--color-on-accent, #ffffff) !important;
-    background: linear-gradient(135deg, var(--color-primary-light, #2563eb), var(--accent-bright, #38bdf8)) !important;
-    box-shadow: 0 4px 12px var(--accent-glow) !important;
+    background: var(--active-gradient) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--accent-glow) !important;
+    box-shadow: 0 4px 14px var(--accent-glow) !important;
 }
 
 html[data-theme="dark"] .sidebar-nav-secondary {
@@ -3450,18 +3342,20 @@ html[data-theme="dark"] .promo-arrow::after {
     border-right-color: #f8fafc !important;
 }
 
-/* Topbar & Search */
 html[data-theme="dark"] .topbar {
     background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
     border: none !important;
 }
 
 html[data-theme="dark"] .search {
-    height: 44px;
-    min-height: 44px;
-    padding: 0 16px;
-    border-radius: 999px;
+    padding: 8px 14px !important;
+    border-radius: 14px !important;
     background: rgba(10, 22, 44, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(56, 189, 248, 0.16) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
 }
@@ -3491,8 +3385,8 @@ html[data-theme="dark"] .search-shortcut kbd {
 }
 
 html[data-theme="dark"] .icon-button {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50% !important;
     background: rgba(10, 22, 44, 0.75) !important;
     border: 1px solid rgba(56, 189, 248, 0.16) !important;
@@ -3522,6 +3416,12 @@ html[data-theme="dark"] .user-menu-toggle:hover {
 }
 
 html[data-theme="dark"] .role-badge {
+    box-sizing: border-box;
+    padding: 4px 11px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    border-radius: 999px;
     background: rgba(56, 189, 248, 0.18) !important;
     color: var(--accent-bright) !important;
     border: 1px solid rgba(56, 189, 248, 0.25) !important;
@@ -3757,21 +3657,18 @@ html[data-theme="dark"] .page-btn.is-active {
 }
 
 /* Tabs & Moderation */
-html[data-theme="dark"] .moderation-tab,
-html[data-theme="dark"] .settings-tabs button {
+html[data-theme="dark"] .moderation-tab {
     background: transparent !important;
     border: none !important;
     color: #94a3b8 !important;
 }
 
-html[data-theme="dark"] .moderation-tab:hover,
-html[data-theme="dark"] .settings-tabs button:hover {
+html[data-theme="dark"] .moderation-tab:hover {
     color: #ffffff !important;
     background: rgba(56, 189, 248, 0.1) !important;
 }
 
-html[data-theme="dark"] .moderation-tab.is-active,
-html[data-theme="dark"] .settings-tabs button.is-active {
+html[data-theme="dark"] .moderation-tab.is-active {
     color: #ffffff !important;
     background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright)) !important;
     box-shadow: 0 2px 8px var(--accent-glow) !important;
@@ -3780,10 +3677,7 @@ html[data-theme="dark"] .settings-tabs button.is-active {
 /* Forms & Inputs in Admin */
 html[data-theme="dark"] .lesson-form input,
 html[data-theme="dark"] .lesson-form select,
-html[data-theme="dark"] .lesson-form textarea,
-html[data-theme="dark"] .settings-form input,
-html[data-theme="dark"] .settings-form select,
-html[data-theme="dark"] .settings-form textarea {
+html[data-theme="dark"] .lesson-form textarea {
     background: rgba(15, 23, 42, 0.8) !important;
     border: none !important;
     color: #f8fafc !important;
@@ -3791,27 +3685,23 @@ html[data-theme="dark"] .settings-form textarea {
 
 html[data-theme="dark"] .lesson-form input:focus,
 html[data-theme="dark"] .lesson-form select:focus,
-html[data-theme="dark"] .lesson-form textarea:focus,
-html[data-theme="dark"] .settings-form input:focus,
-html[data-theme="dark"] .settings-form select:focus,
-html[data-theme="dark"] .settings-form textarea:focus {
+html[data-theme="dark"] .lesson-form textarea:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--accent-bright) !important;
 }
 
-html[data-theme="dark"] .lesson-form label,
-html[data-theme="dark"] .settings-form > label {
+html[data-theme="dark"] .lesson-form label {
     color: #cbd5e1 !important;
 }
 
 html[data-theme="dark"] .admin-footer {
-    color: #64748b !important;
+    color: var(--color-text-secondary, #94a3b8) !important;
 }
 
 /* Modal Dialog (Course Add / Edit) */
 html[data-theme="dark"] #modal-course .panel {
     background: rgba(10, 22, 44, 0.98) !important;
-    border: none !important;
+    border: 1px solid rgba(56, 189, 248, 0.2) !important;
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7) !important;
     color: #f8fafc !important;
 }
@@ -3826,9 +3716,12 @@ html[data-theme="dark"] #modal-course label {
 
 html[data-theme="dark"] #modal-course input,
 html[data-theme="dark"] #modal-course select,
-html[data-theme="dark"] #modal-course textarea {
+html[data-theme="dark"] #modal-course textarea,
+html[data-theme="dark"] .lesson-form input,
+html[data-theme="dark"] .lesson-form select,
+html[data-theme="dark"] .lesson-form textarea {
     background: rgba(15, 23, 42, 0.8) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
     color: #f8fafc !important;
 }
 
@@ -3837,4 +3730,169 @@ html[data-theme="dark"] .button-primary {
     color: var(--color-on-accent, #ffffff) !important;
     border: none !important;
     box-shadow: 0 4px 12px var(--accent-glow) !important;
+}
+
+/* Secondary Buttons & Actions in Dark Theme */
+html[data-theme="dark"] .button-secondary,
+html[data-theme="dark"] .btn-secondary,
+html[data-theme="dark"] .select-button {
+    background: var(--btn-secondary-bg, rgba(255, 255, 255, 0.08)) !important;
+    color: var(--btn-secondary-color, #e2e8f0) !important;
+    border: 1px solid var(--btn-secondary-border, rgba(255, 255, 255, 0.16)) !important;
+}
+html[data-theme="dark"] .button-secondary:hover,
+html[data-theme="dark"] .btn-secondary:hover,
+html[data-theme="dark"] .select-button:hover {
+    background: var(--btn-secondary-hover-bg, rgba(255, 255, 255, 0.14)) !important;
+    color: #ffffff !important;
+    border-color: var(--accent-bright, #38bdf8) !important;
+}
+
+/* Inline tools (Search & Select inside toolbars) */
+html[data-theme="dark"] .inline-tool input,
+html[data-theme="dark"] .inline-tool select {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    color: #f8fafc !important;
+    font-size: 11px !important;
+}
+html[data-theme="dark"] .inline-tool input::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* Custom Global Filter Dropdown (All roles filter) */
+html[data-theme="dark"] .custom-global-filter .cg-trigger {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    color: #f8fafc !important;
+}
+html[data-theme="dark"] .custom-global-filter .cg-trigger #cg-display {
+    color: #f8fafc !important;
+}
+html[data-theme="dark"] .custom-global-filter .cg-options {
+    background: rgba(10, 22, 44, 0.95) !important;
+    border: 1px solid rgba(56, 189, 248, 0.2) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+}
+html[data-theme="dark"] .custom-global-filter .cg-opt {
+    color: #cbd5e1 !important;
+}
+html[data-theme="dark"] .custom-global-filter .cg-opt:hover {
+    background: rgba(56, 189, 248, 0.15) !important;
+    color: #38bdf8 !important;
+}
+
+/* Video Upload Dropzone & Video Detected Bar */
+html[data-theme="dark"] #lms-video-upload-area {
+    border-color: rgba(56, 189, 248, 0.3) !important;
+    background: rgba(15, 23, 42, 0.4) !important;
+}
+html[data-theme="dark"] #lms-video-upload-empty > div:first-child {
+    background: rgba(56, 189, 248, 0.15) !important;
+    border: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+html[data-theme="dark"] #lms-video-upload-empty strong {
+    color: var(--accent-bright, #38bdf8) !important;
+}
+html[data-theme="dark"] #lms-video-upload-empty small {
+    color: #94a3b8 !important;
+}
+html[data-theme="dark"] div:has(> #lms-lec-video-detected) {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(56, 189, 248, 0.2) !important;
+}
+html[data-theme="dark"] div:has(> #lms-lec-video-detected) span {
+    color: #94a3b8 !important;
+}
+html[data-theme="dark"] #lms-lec-video-detected {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(56, 189, 248, 0.25) !important;
+    color: #f8fafc !important;
+}
+html[data-theme="dark"] #lms-course-filter-select {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(56, 189, 248, 0.25) !important;
+    color: #f8fafc !important;
+}
+
+/* Metric & Activity Icons */
+html[data-theme="dark"] .metric-icon.blue {
+    background-color: rgba(56, 189, 248, 0.16) !important;
+    color: #38bdf8 !important;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+}
+html[data-theme="dark"] .metric-icon.violet {
+    background-color: rgba(167, 139, 250, 0.16) !important;
+    color: #a78bfa !important;
+    border: 1px solid rgba(167, 139, 250, 0.25);
+}
+html[data-theme="dark"] .metric-icon.cyan {
+    background-color: rgba(34, 211, 238, 0.16) !important;
+    color: #22d3ee !important;
+    border: 1px solid rgba(34, 211, 238, 0.25);
+}
+html[data-theme="dark"] .metric-icon.red {
+    background-color: rgba(248, 113, 113, 0.16) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(248, 113, 113, 0.25);
+}
+html[data-theme="dark"] .activity-icon.green {
+    background-color: rgba(52, 211, 153, 0.16) !important;
+    color: #34d399 !important;
+}
+html[data-theme="dark"] .activity-icon.blue {
+    background-color: rgba(56, 189, 248, 0.16) !important;
+    color: #38bdf8 !important;
+}
+html[data-theme="dark"] .activity-icon.red {
+    background-color: rgba(248, 113, 113, 0.16) !important;
+    color: #f87171 !important;
+}
+
+/* Classes for LMS Course Code and Description */
+.lms-course-code {
+    color: var(--color-text, #0f172a);
+}
+.lms-course-desc {
+    color: var(--color-text-secondary, #64748b);
+}
+html[data-theme="dark"] .lms-course-code {
+    color: #f8fafc !important;
+}
+html[data-theme="dark"] .lms-course-desc {
+    color: #94a3b8 !important;
+}
+html[data-theme="dark"] .lms-attached-resource {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(56, 189, 248, 0.2) !important;
+    color: #f8fafc !important;
+}
+
+/* User Management Table Classes */
+.admin-status-done {
+    color: var(--status-success, #28a745);
+    font-size: 0.85em;
+    font-weight: 500;
+}
+.admin-status-you {
+    color: var(--color-text-secondary, #6c757d);
+    font-size: 0.85em;
+}
+.admin-status-muted {
+    color: var(--color-text-muted, #999);
+    font-size: 0.85em;
+}
+html[data-theme="dark"] .admin-status-done {
+    color: #34d399 !important;
+}
+html[data-theme="dark"] .admin-status-you {
+    color: #94a3b8 !important;
+}
+html[data-theme="dark"] .admin-status-muted {
+    color: #94a3b8 !important;
+}
+html[data-theme="dark"] .internal-role-badge {
+    background: rgba(56, 189, 248, 0.16) !important;
+    color: var(--accent-bright, #38bdf8) !important;
+    border: 1px solid rgba(56, 189, 248, 0.3) !important;
 }

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Gallery Content</title>
+    <!-- Read theme from query parameter (?theme=light or ?theme=dark) -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const theme = params.get('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+    <!-- Project Stylesheets in correct cascade order -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme-tokens.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/resources.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/favorites.css">
+    <link rel="stylesheet" href="../css/community.css">
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Gallery Container Styling */
+        body {
+            padding: 24px;
+            box-sizing: border-box;
+            min-height: 100vh;
+            font-family: var(--font-family, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+        }
+        .gallery-header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color, rgba(148, 163, 184, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .gallery-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--color-text, #0f172a);
+        }
+        .gallery-badge {
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        html[data-theme="light"] .gallery-badge {
+            background: #e0f2fe;
+            color: #0284c7;
+        }
+        html[data-theme="dark"] .gallery-badge {
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .component-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 12px;
+            background: var(--card-bg, rgba(255, 255, 255, 0.7));
+            border: 1px solid var(--card-border, rgba(0, 0, 0, 0.08));
+            box-shadow: var(--card-shadow, 0 4px 16px rgba(0, 0, 0, 0.04));
+        }
+        .section-heading {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-text, #0f172a);
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px dashed var(--border-color, rgba(148, 163, 184, 0.2));
+            padding-bottom: 8px;
+        }
+        .demo-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .demo-col {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+            min-width: 240px;
+        }
+        .demo-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-secondary, #64748b);
+            margin-bottom: 4px;
+        }
+        /* Topbar preview override for standalone container */
+        .component-section .topbar,
+        .component-section .home-page__header {
+            position: relative;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        /* Modal embedded preview */
+        .embedded-modal-box {
+            position: relative;
+            border-radius: 12px;
+            padding: 20px;
+            background: var(--card-bg, #ffffff);
+            border: 1px solid var(--card-border, rgba(0, 0, 0, 0.1));
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            max-width: 480px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="gallery-header">
+        <h1 class="gallery-title">Component Showcase</h1>
+        <span class="gallery-badge" id="theme-indicator">LIGHT THEME</span>
+    </header>
+
+    <!-- SECTION 1: LANDING HEADER (index.html) -->
+    <section class="component-section" id="sec-landing-header">
+        <h2 class="section-heading">1. Landing Header Ngang (index.html)</h2>
+        <header class="home-page__header" style="position: relative; border-radius: 12px;">
+            <div class="home-page__brand">
+                <div class="home-page__logo"></div>
+                <span class="home-page__title">9.5 AI Library</span>
+            </div>
+            <nav class="home-page__nav">
+                <a href="javascript:void(0)" class="home-page__nav-link home-page__nav-link--active">Home</a>
+                <a href="javascript:void(0)" class="home-page__nav-link">Lectures</a>
+                <a href="javascript:void(0)" class="home-page__nav-link">Practice</a>
+                <a href="javascript:void(0)" class="home-page__nav-link">History</a>
+            </nav>
+            <div class="home-page__actions">
+                <div class="home-page__search-bar">
+                    <span class="home-page__search-icon">🔍</span>
+                    <input type="text" placeholder="Search anything..." class="home-page__search-input">
+                    <kbd>Ctrl K</kbd>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+                <div class="home-page__notifications">
+                    <button class="home-page__bell" aria-label="Notifications">🔔</button>
+                    <span class="home-page__badge">3</span>
+                </div>
+                <div class="home-page__guest-avatar" style="background-image: url('/assets/icon/cool_book_128.png');"></div>
+                <button class="home-page__cta">Get Started</button>
+            </div>
+        </header>
+    </section>
+
+    <!-- SECTION 2: TOPBAR -->
+    <section class="component-section" id="sec-topbar">
+        <h2 class="section-heading">2. Standard Topbar (Search, Theme Toggle, Bell, User Menu & Dropdown)</h2>
+        <div style="position: relative; min-height: 280px;">
+            <header class="topbar" style="position: relative; border-radius: 12px; margin-bottom: 12px;">
+                <form class="search" role="search" onsubmit="return false;">
+                    <span class="search-icon" aria-hidden="true"></span>
+                    <input type="search" placeholder="Search lectures, quizzes, resources..." aria-label="Search">
+                    <span class="search-shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+                </form>
+                <div class="topbar-actions">
+                    <button type="button" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                        <span class="theme-toggle-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="notification">
+                        <button type="button" class="topbar-icon-btn notification-bell" aria-label="Notifications" aria-expanded="false">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            </svg>
+                            <span class="notification-dot" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="user-menu is-open">
+                        <button type="button" class="user-menu-toggle" aria-haspopup="menu" aria-expanded="true">
+                            <span class="user-avatar" style="background-image: url('/assets/icon/cool_book_128.png');"></span>
+                            <span class="user-name">Alex Pham</span>
+                            <span class="user-role-badge">Owner</span>
+                            <span class="user-menu-arrow">▾</span>
+                        </button>
+                        <div class="user-dropdown" role="menu" style="display: block; position: absolute; right: 0; top: 100%; margin-top: 8px; z-index: 50;">
+                            <div class="user-dropdown-header">
+                                <span class="user-dropdown-name">Alex Pham</span>
+                                <span class="user-dropdown-email">owner95aiclub@internal.edu.vn</span>
+                            </div>
+                            <div class="user-dropdown-divider"></div>
+                            <a href="javascript:void(0)" class="user-dropdown-item" role="menuitem">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                Hồ sơ cá nhân
+                            </a>
+                            <a href="javascript:void(0)" class="user-dropdown-item" role="menuitem">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                Cài đặt
+                            </a>
+                            <div class="user-dropdown-divider"></div>
+                            <a href="javascript:void(0)" class="user-dropdown-item user-dropdown-logout" role="menuitem">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                Đăng xuất
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SIDEBAR COMPARISON (style.css vs admin.css) -->
+    <section class="component-section" id="sec-sidebar">
+        <h2 class="section-heading">3. Sidebar So Sánh (style.css vs admin.css) & Banner</h2>
+        <div class="demo-row">
+            <div class="demo-col">
+                <span class="demo-label">style.css (11 trang thông thường)</span>
+                <aside class="sidebar" style="position: static; width: 100%; max-width: 280px; height: auto; border-radius: 12px; padding: 16px;">
+                    <div class="sidebar-brand">
+                        <span class="brand-logo"></span>
+                        <div class="brand-text"><strong>9.5 AI CLUB</strong><small>Learn · Build · Grow</small></div>
+                    </div>
+                    <nav class="sidebar-nav" style="margin-top: 16px;">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="nav-link is-active">
+                                    <span class="nav-icon resources-icon"></span>
+                                    <span class="nav-label">Resources (Active)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="nav-link">
+                                    <span class="nav-icon lectures-icon"></span>
+                                    <span class="nav-label">Lectures (Normal)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="sidebar-promo" style="margin-top: 24px;">
+                        <span class="sidebar-promo-badge">PRO</span>
+                        <p class="sidebar-promo-title">Knowledge for a better tomorrow</p>
+                    </div>
+                </aside>
+            </div>
+            <div class="demo-col">
+                <span class="demo-label">admin.css (Trang Admin Dashboard)</span>
+                <aside class="sidebar admin-sidebar" style="position: static; width: 100%; max-width: 280px; height: auto; border-radius: 12px; padding: 16px;">
+                    <div class="sidebar-brand">
+                        <span class="brand-logo"></span>
+                        <div class="brand-text"><strong>9.5 AI CLUB</strong><small>Learn · Build · Grow</small></div>
+                    </div>
+                    <nav class="sidebar-nav" style="margin-top: 16px;">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)" class="nav-link is-active">
+                                    <span class="nav-icon dashboard-icon"></span>
+                                    <span class="nav-label">Dashboard (Active)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="nav-link">
+                                    <span class="nav-icon users-icon"></span>
+                                    <span class="nav-label">Users (Normal)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="sidebar-promo" style="margin-top: 24px;">
+                        <span class="sidebar-promo-badge">PRO</span>
+                        <p class="sidebar-promo-title">Better Learning<br>Brighter Dreams</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: NÚT BẤM (BUTTONS) -->
+    <section class="component-section" id="sec-buttons">
+        <h2 class="section-heading">4. Nút Bấm (Primary, Secondary, Danger, Disabled, Icon-only)</h2>
+        <div class="demo-row">
+            <div>
+                <span class="demo-label">Primary Button</span><br>
+                <button type="button" class="button-primary">Save Changes</button>
+                <button type="button" class="btn-primary" style="margin-left: 8px;">Upload File</button>
+            </div>
+            <div>
+                <span class="demo-label">Secondary / Ghost Button</span><br>
+                <button type="button" class="button-secondary">Cancel</button>
+                <button type="button" class="btn-secondary" style="margin-left: 8px;">Unban</button>
+            </div>
+            <div>
+                <span class="demo-label">Danger Button</span><br>
+                <button type="button" class="button-danger">Delete Course</button>
+                <button type="button" class="btn-danger" style="margin-left: 8px;">Ban User</button>
+            </div>
+            <div>
+                <span class="demo-label">Disabled Button</span><br>
+                <button type="button" class="button-primary" disabled>Processing...</button>
+            </div>
+            <div>
+                <span class="demo-label">Icon-only Button</span><br>
+                <button type="button" class="topbar-icon-btn"><i class="fas fa-filter"></i></button>
+                <button type="button" class="icon-button" style="margin-left: 8px;"><i class="fas fa-ellipsis-v"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FORM INPUTS -->
+    <section class="component-section" id="sec-inputs">
+        <h2 class="section-heading">5. Form Input (Text, Search, Textarea, Selects, Dropzone, States)</h2>
+        <div class="demo-row">
+            <div class="demo-col">
+                <span class="demo-label">Standard Text Input</span>
+                <input type="text" class="form-input" placeholder="Enter course name...">
+
+                <span class="demo-label">Search Input</span>
+                <input type="search" class="search-input" placeholder="Type to filter...">
+
+                <span class="demo-label">Textarea</span>
+                <textarea rows="3" class="form-textarea" placeholder="Course syllabus and description..."></textarea>
+            </div>
+            <div class="demo-col">
+                <span class="demo-label">Standard Select (Style.css)</span>
+                <select class="form-select">
+                    <option>Kỳ 1 (Term 1)</option>
+                    <option>Kỳ 2 (Term 2)</option>
+                    <option>Kỳ 3 (Term 3)</option>
+                </select>
+
+                <span class="demo-label">Admin Role Filter (admin.html:606 inline)</span>
+                <select style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.12); background: rgba(255, 255, 255, 0.58);">
+                    <option style="background: rgba(255, 255, 255, 0.95); color: #0f172a;">All roles</option>
+                    <option style="background: rgba(255, 255, 255, 0.95); color: #0f172a;">Admin</option>
+                    <option style="background: rgba(255, 255, 255, 0.95); color: #0f172a;">Member</option>
+                </select>
+
+                <span class="demo-label">Admin Inline Tool (.inline-tool select & input)</span>
+                <div class="inline-tool" style="display: flex; gap: 8px;">
+                    <select><option>Select role</option><option>Member</option></select>
+                    <input type="text" placeholder="Enter email or username">
+                </div>
+            </div>
+            <div class="demo-col">
+                <span class="demo-label">Checkbox & Radio</span>
+                <div style="display: flex; gap: 16px; align-items: center;">
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" checked> <span>Remember login</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="radio" name="demo_radio" checked> <span>Active</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="radio" name="demo_radio"> <span>Draft</span>
+                    </label>
+                </div>
+
+                <span class="demo-label">Disabled & Error States</span>
+                <input type="text" class="form-input" disabled value="Disabled field value">
+                <input type="text" class="form-input error" value="Invalid course code" style="border-color: #ef4444;">
+            </div>
+        </div>
+
+        <div style="margin-top: 16px;">
+            <span class="demo-label">Admin Upload Dropzone & Video Detected Bar</span>
+            <div style="display: flex; gap: 16px; align-items: stretch; flex-wrap: wrap;">
+                <div id="lms-lec-dropzone" style="flex: 1; min-width: 280px; border: 2px dashed #93c5fd; border-radius: 12px; padding: 20px; text-align: center; background: rgba(240, 249, 255, 0.6);">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: #eff6ff; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 8px;">📁</div>
+                    <p style="margin: 0; font-size: 13px; font-weight: 600; color: #1e3a8a;">Kéo thả video bài giảng (.mp4, .webm)</p>
+                </div>
+                <div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; justify-content: center;">
+                    <div id="lms-lec-video-detected" style="padding: 10px 14px; font-size: 12px; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; color: #0f172a;">
+                        🎬 <strong>Video phát hiện:</strong> lecture_cea201_intro.mp4 (124 MB)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: BADGE & TAG -->
+    <section class="component-section" id="sec-badges">
+        <h2 class="section-heading">6. Badge & Tag (Role Badges & Status Badges)</h2>
+        <div class="demo-row">
+            <div>
+                <span class="demo-label">Role Badges (User Menu & Admin)</span><br>
+                <span class="user-role-badge">Owner</span>
+                <span class="role-badge" style="margin-left: 8px; background: rgba(56, 189, 248, 0.18); color: var(--accent-bright); border: 1px solid rgba(56, 189, 248, 0.25); padding: 4px 8px; border-radius: 6px;">Admin</span>
+                <span class="role-badge" style="margin-left: 8px; background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.25); padding: 4px 8px; border-radius: 6px;">Staff</span>
+                <span class="role-badge" style="margin-left: 8px; background: rgba(148, 163, 184, 0.15); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.25); padding: 4px 8px; border-radius: 6px;">Member</span>
+            </div>
+            <div>
+                <span class="demo-label">Status Badges</span><br>
+                <span class="status-badge is-active" style="padding: 4px 8px; border-radius: 6px; font-size: 12px; background: rgba(34, 197, 94, 0.15); color: #22c55e;">Active</span>
+                <span class="status-badge is-draft" style="margin-left: 8px; padding: 4px 8px; border-radius: 6px; font-size: 12px; background: rgba(234, 179, 8, 0.15); color: #eab308;">Draft</span>
+                <span class="status-badge is-banned" style="margin-left: 8px; padding: 4px 8px; border-radius: 6px; font-size: 12px; background: rgba(239, 68, 68, 0.15); color: #ef4444;">Banned</span>
+            </div>
+            <div>
+                <span class="demo-label">Muted Status Labels</span><br>
+                <span style="color:#28a745; font-size: 13px; font-weight: 600;">Done</span>
+                <span style="color:#6c757d; font-size: 13px; margin-left: 12px;">(You)</span>
+                <span style="color:#94a3b8; font-size: 13px; margin-left: 12px;">2 hours ago</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: CARD / KHỐI KÍNH -->
+    <section class="component-section" id="sec-cards">
+        <h2 class="section-heading">7. Card / Khối Kính (Glass Card Cấp 1 & Cấp 2)</h2>
+        <div class="demo-row">
+            <div class="glass-card demo-col" style="padding: 20px; border-radius: 12px;">
+                <span class="demo-label">Glass Card Cấp 1 (.glass-card / .card)</span>
+                <h3 style="margin: 0; font-size: 16px; color: var(--color-text);">Machine Learning Fundamentals</h3>
+                <p style="margin: 0; font-size: 13px; color: var(--color-text-secondary);">Master deep learning models, supervised algorithms and data pipelines.</p>
+                <div class="glass-card" style="padding: 12px; border-radius: 8px; margin-top: 10px; background: var(--bg-hover, rgba(255, 255, 255, 0.05));">
+                    <span class="demo-label">Khối kính lồng cấp 2 (Nested Glass Box)</span>
+                    <span style="font-size: 12px; color: var(--color-text);">💡 Tip: Chuyển đổi định dạng tệp trước khi upload</span>
+                </div>
+            </div>
+            <div class="stat-card demo-col" style="padding: 20px; border-radius: 12px; border: 1px solid var(--card-border);">
+                <span class="demo-label">Stat Card (.stat-card)</span>
+                <div style="font-size: 28px; font-weight: 700; color: var(--color-primary, #3b82f6);">1,420</div>
+                <div style="font-size: 13px; color: var(--color-text-secondary);">Active Students This Month</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: BẢNG DỮ LIỆU -->
+    <section class="component-section" id="sec-tables">
+        <h2 class="section-heading">8. Bảng Dữ Liệu (Thead, Row Hover, Selected, Mã Môn & Status)</h2>
+        <div style="overflow-x: auto;">
+            <table class="admin-table" style="width: 100%; border-collapse: collapse; font-size: 13px;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--border-color, rgba(148, 163, 184, 0.2)); text-align: left;">
+                        <th style="padding: 10px 14px;">MÃ MÔN</th>
+                        <th style="padding: 10px 14px;">TÊN MÔN HỌC</th>
+                        <th style="padding: 10px 14px;">NGƯỜI TẠO</th>
+                        <th style="padding: 10px 14px;">TRẠNG THÁI</th>
+                        <th style="padding: 10px 14px; text-align: right;">HÀNH ĐỘNG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid var(--border-color, rgba(148, 163, 184, 0.1));">
+                        <td style="padding: 12px 14px;">
+                            <!-- Hardcoded inline color from js/admin-lms.js:250 for testing -->
+                            <span style="font-weight: 700; font-size: 14px; color: #0f172a;">CEA201</span>
+                        </td>
+                        <td style="padding: 12px 14px;">Computer Organization and Architecture</td>
+                        <td style="padding: 12px 14px;">Alex Pham <span style="color:#6c757d; font-size:0.85em;">(You)</span></td>
+                        <td style="padding: 12px 14px;"><span style="color:#28a745; font-size: 0.85em; font-weight: 600;">Done</span></td>
+                        <td style="padding: 12px 14px; text-align: right;">
+                            <button type="button" class="button-secondary" style="padding: 4px 8px; font-size: 12px;">Unban</button>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color, rgba(148, 163, 184, 0.1)); background: rgba(56, 189, 248, 0.08);">
+                        <td style="padding: 12px 14px;">
+                            <span style="font-weight: 700; font-size: 14px; color: #0f172a;">DBI202</span>
+                        </td>
+                        <td style="padding: 12px 14px;">Introduction to Databases</td>
+                        <td style="padding: 12px 14px;">Nguyễn Văn B</td>
+                        <td style="padding: 12px 14px;"><span class="status-badge is-active" style="font-size: 11px;">Active</span></td>
+                        <td style="padding: 12px 14px; text-align: right;">
+                            <button type="button" class="button-secondary" style="padding: 4px 8px; font-size: 12px;">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SECTION 9: THANH TIẾN ĐỘ -->
+    <section class="component-section" id="sec-progress">
+        <h2 class="section-heading">9. Thanh Tiến Độ (Progress Bar)</h2>
+        <div class="demo-col">
+            <div>
+                <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px;">
+                    <span>Course Progress</span>
+                    <strong>75%</strong>
+                </div>
+                <progress class="progress" value="75" max="100" style="width: 100%; height: 8px;"></progress>
+            </div>
+            <div>
+                <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px;">
+                    <span>Quiz Completion Rate</span>
+                    <strong>40%</strong>
+                </div>
+                <progress class="prc-progress" value="40" max="100" style="width: 100%; height: 8px;"></progress>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: MODAL / DIALOG POPUP -->
+    <section class="component-section" id="sec-modal">
+        <h2 class="section-heading">10. Modal / Dialog Popup Preview</h2>
+        <div class="embedded-modal-box">
+            <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                <h3 style="margin: 0; font-size: 16px; font-weight: 700; color: var(--color-text);">Chỉnh Sửa Môn Học</h3>
+                <button type="button" style="background: none; border: none; font-size: 18px; color: var(--color-text-secondary); cursor: pointer;">✕</button>
+            </header>
+            <div style="margin-bottom: 16px; font-size: 13px; color: var(--color-text-secondary);">
+                Cập nhật thông tin chi tiết môn học và phân bổ tài liệu cho sinh viên.
+                <input type="text" class="form-input" value="Computer Organization" style="margin-top: 10px;">
+            </div>
+            <footer style="display: flex; justify-content: flex-end; gap: 8px;">
+                <button type="button" class="button-secondary">Hủy bỏ</button>
+                <button type="button" class="button-primary">Lưu Thay Đổi</button>
+            </footer>
+        </div>
+    </section>
+
+    <!-- SECTION 11: TOAST THÔNG BÁO -->
+    <section class="component-section" id="sec-toast">
+        <h2 class="section-heading">11. Toast Thông Báo (Success, Error, Info)</h2>
+        <div class="demo-row">
+            <div class="fav-toast is-visible" style="position: static; display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 8px; box-shadow: var(--card-shadow);">
+                <i class="fas fa-check-circle" style="color: #22c55e;"></i>
+                <span style="font-size: 13px;">Cập nhật thông tin thành công!</span>
+            </div>
+            <div class="com-toast is-visible" style="position: static; display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 8px; box-shadow: var(--card-shadow);">
+                <i class="fas fa-exclamation-circle" style="color: #ef4444;"></i>
+                <span style="font-size: 13px;">Không thể kết nối đến máy chủ.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 12: EMPTY STATE -->
+    <section class="component-section" id="sec-empty">
+        <h2 class="section-heading">12. Empty State</h2>
+        <div class="fav-empty" style="text-align: center; padding: 32px 20px;">
+            <div style="font-size: 36px; margin-bottom: 10px;">📂</div>
+            <h4 style="margin: 0 0 6px 0; font-size: 16px; color: var(--color-text);">Chưa có tài liệu nào</h4>
+            <p style="margin: 0 0 16px 0; font-size: 13px; color: var(--color-text-secondary);">Hãy bắt đầu bằng cách thêm bài giảng hoặc tài liệu môn học mới.</p>
+            <button type="button" class="button-primary">+ Thêm Tài Liệu Mới</button>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('theme-indicator').textContent = theme.toUpperCase() + ' THEME';
+    </script>
+</body>
+</html>

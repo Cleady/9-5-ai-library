@@ -1,0 +1,117 @@
+{
+  "totalDiffPixels": 9905803,
+  "pages": [
+    {
+      "page": "01_landing_index",
+      "diffPixels": 15407
+    },
+    {
+      "page": "02_home_dashboard",
+      "diffPixels": 9372
+    },
+    {
+      "page": "03_lectures_list",
+      "diffPixels": 6657
+    },
+    {
+      "page": "04_lectures_subject",
+      "diffPixels": 5519
+    },
+    {
+      "page": "05_lectures_lecture",
+      "diffPixels": 14013
+    },
+    {
+      "page": "06_lectures_next",
+      "diffPixels": 5519
+    },
+    {
+      "page": "07_lectures_resources",
+      "diffPixels": 190900
+    },
+    {
+      "page": "08_practice_list",
+      "diffPixels": 7233
+    },
+    {
+      "page": "09_practice_subject",
+      "diffPixels": 7233
+    },
+    {
+      "page": "10_practice_quiz_intro",
+      "diffPixels": 7233
+    },
+    {
+      "page": "11_practice_quiz",
+      "diffPixels": 7233
+    },
+    {
+      "page": "12_practice_result",
+      "diffPixels": 7233
+    },
+    {
+      "page": "13_history",
+      "diffPixels": 5519
+    },
+    {
+      "page": "14_favorites",
+      "diffPixels": 1229993
+    },
+    {
+      "page": "15_community_feed",
+      "diffPixels": 1180166
+    },
+    {
+      "page": "16_community_discussions",
+      "diffPixels": 1154901
+    },
+    {
+      "page": "17_community_detail",
+      "diffPixels": 1225712
+    },
+    {
+      "page": "18_community_groups",
+      "diffPixels": 1221340
+    },
+    {
+      "page": "19_community_leaderboard",
+      "diffPixels": 1207744
+    },
+    {
+      "page": "20_community_notifications",
+      "diffPixels": 1203773
+    },
+    {
+      "page": "21_community_search",
+      "diffPixels": 1162222
+    },
+    {
+      "page": "22_settings",
+      "diffPixels": 11762
+    },
+    {
+      "page": "23_admin",
+      "diffPixels": 7984
+    },
+    {
+      "page": "24_auth_login",
+      "diffPixels": 2227
+    },
+    {
+      "page": "25_auth_signup",
+      "diffPixels": 2227
+    },
+    {
+      "page": "26_auth_forgot_pass",
+      "diffPixels": 2227
+    },
+    {
+      "page": "27_auth_reset_pass",
+      "diffPixels": 2227
+    },
+    {
+      "page": "28_auth_send_email",
+      "diffPixels": 2227
+    }
+  ]
+}

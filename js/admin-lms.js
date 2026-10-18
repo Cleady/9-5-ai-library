@@ -247,12 +247,12 @@ document.addEventListener('DOMContentLoaded', function () {
           '<td>' +
             '<div style="display: flex; align-items: center; gap: 12px;">' +
               '<span class="course-cover" style="width: 40px; height: 36px; border-radius: 8px; background: url(\'' + iconImg + '\') center / 55% no-repeat, ' + grad + '; flex-shrink: 0; display: inline-block;"></span>' +
-              '<span style="font-weight: 700; font-size: 14px; color: #0f172a; letter-spacing: -0.2px;">' + c.code + '</span>' +
+              '<span class="lms-course-code" style="font-weight: 700; font-size: 14px; letter-spacing: -0.2px;">' + c.code + '</span>' +
             '</div>' +
           '</td>' +
           '<td>' +
             '<strong>' + c.title + '</strong>' +
-            (c.description ? '<br><small style="color: #64748b;">' + (c.description.length > 60 ? c.description.substring(0, 60) + '...' : c.description) + '</small>' : '') +
+            (c.description ? '<br><small class="lms-course-desc">' + (c.description.length > 60 ? c.description.substring(0, 60) + '...' : c.description) + '</small>' : '') +
           '</td>' +
           '<td><span class="tag">' + (c.term || 'Kỳ II') + '</span></td>' +
           '<td><strong style="color: var(--color-primary);">' + (c.lecture_count || 0) + '</strong> bài giảng</td>' +
@@ -1020,7 +1020,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var html = '';
     currentResources.forEach(function (r, idx) {
       html +=
-        '<div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 10px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 6px; font-size: 13px;">' +
+        '<div class="lms-attached-resource" style="display: flex; align-items: center; justify-content: space-between; padding: 6px 10px; border-radius: 8px; margin-bottom: 6px; font-size: 13px;">' +
           '<div>' +
             '<span class="tag" style="text-transform: uppercase; font-size: 10px; margin-right: 6px;">' + (r.type || 'PDF') + '</span>' +
             '<strong>' + r.title + '</strong> ' +

@@ -162,9 +162,52 @@
 }
 
 .set-error-msg {
-  font-size: 12px;
-  color: var(--set-danger-color);
+  font-size: 12.5px;
+  color: var(--set-danger-color, #dc2626);
   min-height: 18px;
+  margin-top: 4px;
+  font-weight: 500;
+  display: block;
+}
+
+.set-input-password-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.set-input-password-wrap .set-input {
+  padding-right: 44px;
+}
+
+.btn-toggle-pwd {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-toggle-pwd:hover {
+  color: var(--color-primary, #1d4ed8);
+  background: rgba(15, 23, 42, 0.05);
+}
+
+html[data-theme="dark"] .btn-toggle-pwd {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .btn-toggle-pwd:hover {
+  color: #38bdf8;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .set-textarea {

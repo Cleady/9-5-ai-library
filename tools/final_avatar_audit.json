@@ -1,0 +1,366 @@
+{
+  "pages": {
+    "index": {
+      "desktop_light": {
+        "shot": "avatar_index_desktop_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "27px",
+          "height": "27px",
+          "textContent": ""
+        }
+      },
+      "desktop_dark": {
+        "shot": "avatar_index_desktop_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(56, 189, 248, 0.2)",
+          "display": "grid",
+          "width": "27px",
+          "height": "27px",
+          "textContent": ""
+        }
+      },
+      "mobile_light": {
+        "shot": "avatar_index_mobile_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "25px",
+          "height": "25px",
+          "textContent": ""
+        }
+      },
+      "mobile_dark": {
+        "shot": "avatar_index_mobile_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(56, 189, 248, 0.2)",
+          "display": "grid",
+          "width": "25px",
+          "height": "25px",
+          "textContent": ""
+        }
+      }
+    },
+    "home_page": {
+      "desktop_light": {
+        "shot": "avatar_home_page_desktop_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "desktop_dark": {
+        "shot": "avatar_home_page_desktop_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_light": {
+        "shot": "avatar_home_page_mobile_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_dark": {
+        "shot": "avatar_home_page_mobile_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      }
+    },
+    "resources": {
+      "desktop_light": {
+        "shot": "avatar_resources_desktop_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "desktop_dark": {
+        "shot": "avatar_resources_desktop_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_light": {
+        "shot": "avatar_resources_mobile_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_dark": {
+        "shot": "avatar_resources_mobile_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      }
+    },
+    "community_feed": {
+      "desktop_light": {
+        "shot": "avatar_community_feed_desktop_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "desktop_dark": {
+        "shot": "avatar_community_feed_desktop_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_light": {
+        "shot": "avatar_community_feed_mobile_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_dark": {
+        "shot": "avatar_community_feed_mobile_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      }
+    },
+    "settings": {
+      "desktop_light": {
+        "shot": "avatar_settings_desktop_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "desktop_dark": {
+        "shot": "avatar_settings_desktop_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_light": {
+        "shot": "avatar_settings_mobile_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_dark": {
+        "shot": "avatar_settings_mobile_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      }
+    },
+    "admin": {
+      "desktop_light": {
+        "shot": "avatar_admin_desktop_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "desktop_dark": {
+        "shot": "avatar_admin_desktop_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_light": {
+        "shot": "avatar_admin_mobile_light.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      },
+      "mobile_dark": {
+        "shot": "avatar_admin_mobile_dark.png",
+        "avatar": {
+          "tagName": "SPAN",
+          "hasBgImage": true,
+          "bgImage": "url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABA...",
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "display": "grid",
+          "width": "32px",
+          "height": "32px",
+          "textContent": ""
+        }
+      }
+    }
+  },
+  "threeCases": {
+    "case2_no_avatar": {
+      "index": {
+        "textContent": "O",
+        "color": "rgb(15, 23, 42)",
+        "bgColor": "rgb(226, 232, 240)",
+        "hasBgImage": false
+      },
+      "home_page": {
+        "textContent": "",
+        "color": "rgb(30, 41, 59)",
+        "bgColor": "rgba(0, 0, 0, 0)",
+        "hasBgImage": true
+      }
+    },
+    "case3_broken_img": {
+      "index": {
+        "textContent": "O",
+        "color": "rgb(15, 23, 42)",
+        "bgColor": "rgb(226, 232, 240)",
+        "bgImage": "none"
+      }
+    }
+  },
+  "dynamicToggle": {
+    "step1": {
+      "theme": "light",
+      "hasBgImage": true
+    },
+    "step2": {
+      "theme": "dark",
+      "hasBgImage": true
+    },
+    "step3": {
+      "theme": "light",
+      "hasBgImage": true
+    }
+  }
+}

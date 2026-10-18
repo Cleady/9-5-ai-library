@@ -23,6 +23,17 @@
       } catch (e) {
         console.warn("theme-init: parse error", e);
       }
+    } else {
+      // Khi khách vãng lai hoặc chưa có cài đặt cá nhân, áp dụng cài đặt mặc định của hệ thống
+      try {
+        const siteCache = JSON.parse(localStorage.getItem("site_settings_cache") || "{}");
+        if (siteCache.default_theme) {
+          appearance.theme = siteCache.default_theme === "system" ? "auto" : siteCache.default_theme;
+        }
+        if (siteCache.default_accent) {
+          appearance.accentColor = siteCache.default_accent;
+        }
+      } catch (e) {}
     }
 
     const htmlNode = document.documentElement;
@@ -87,12 +98,17 @@
       });
     }
 
-    // Tự động nạp bộ điều khiển nút chuyển Theme nhanh nếu chưa có
+    // Tự động nạp bộ điều khiển nút chuyển Theme và Đồng bộ thương hiệu toàn trang
     document.addEventListener("DOMContentLoaded", function () {
       if (!window.Lib95?.themeToggle && !document.querySelector('script[src*="theme-toggle.js"]')) {
         const s = document.createElement("script");
         s.src = "/js/theme-toggle.js";
         document.body.appendChild(s);
+      }
+      if (!window.SiteBranding && !document.querySelector('script[src*="site-branding.js"]')) {
+        const sb = document.createElement("script");
+        sb.src = "/js/site-branding.js";
+        document.body.appendChild(sb);
       }
     });
   } catch (err) {

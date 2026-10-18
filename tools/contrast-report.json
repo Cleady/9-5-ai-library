@@ -1,0 +1,254 @@
+[
+  {
+    "id": "index",
+    "name": "Landing Page (index.html)",
+    "url": "/index.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "home_page",
+    "name": "Dashboard (home_page.html)",
+    "url": "/home_page/home_page.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "lectures",
+    "name": "Lectures List",
+    "url": "/pages/lectures/lectures.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "subject",
+    "name": "Lectures Subject",
+    "url": "/pages/lectures/subject.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "lecture",
+    "name": "Lecture Player",
+    "url": "/pages/lectures/lecture.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "next_lectures",
+    "name": "Next Lectures",
+    "url": "/pages/lectures/next-lectures.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "resources",
+    "name": "Resources",
+    "url": "/pages/lectures/resources.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "practice",
+    "name": "Practice List",
+    "url": "/pages/practice/practice.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "practice_subject",
+    "name": "Practice Subject",
+    "url": "/pages/practice/practice-subject.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "practice_quiz_intro",
+    "name": "Practice Quiz Intro",
+    "url": "/pages/practice/practice-quiz-intro.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "practice_quiz",
+    "name": "Practice Quiz Active",
+    "url": "/pages/practice/practice-quiz.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "practice_result",
+    "name": "Practice Result",
+    "url": "/pages/practice/practice-result.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "history",
+    "name": "History",
+    "url": "/pages/history.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "favorites",
+    "name": "Favorites",
+    "url": "/pages/favorites.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "community_feed",
+    "name": "Community Feed",
+    "url": "/pages/community/community-feed.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "community_discussions",
+    "name": "Community Discussions",
+    "url": "/pages/community/community-discussions.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "community_detail",
+    "name": "Discussion Detail",
+    "url": "/pages/community/discussion-detail.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "community_groups",
+    "name": "Community Groups",
+    "url": "/pages/community/community-groups.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "community_leaderboard",
+    "name": "Community Leaderboard",
+    "url": "/pages/community/community-leaderboard.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "community_notifications",
+    "name": "Community Notifications",
+    "url": "/pages/community/community-notifications.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "community_search",
+    "name": "Community Search",
+    "url": "/pages/community/community-search.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "settings",
+    "name": "Settings",
+    "url": "/pages/settings/settings.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "admin",
+    "name": "Admin Dashboard",
+    "url": "/pages/admin/admin.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "login",
+    "name": "Auth Login",
+    "url": "/pages/auth/login.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "signup",
+    "name": "Auth Signup",
+    "url": "/pages/auth/signup.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "forgot_pass",
+    "name": "Auth Forgot Password",
+    "url": "/pages/auth/forgot_pass.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "reset_pass",
+    "name": "Auth Reset Password",
+    "url": "/pages/auth/reset_pass.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  },
+  {
+    "id": "send_email",
+    "name": "Auth Send Email",
+    "url": "/pages/auth/send_email.html",
+    "violationCount": 0,
+    "lightOnLightCount": 0,
+    "darkOnDarkCount": 0,
+    "violations": []
+  }
+]

@@ -199,9 +199,18 @@ html[data-theme="dark"] .home-page__hero-badge svg {
 }
 
 html[data-theme="dark"] .home-page__hero-title {
+    color: #f8fafc;
     background: linear-gradient(135deg, #ffffff 0%, #38bdf8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="dark"] .home-page__hero-description {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .home-page__eyebrow {
+    color: var(--accent-bright, #38bdf8) !important;
 }
 
 html[data-theme="dark"] .home-page__hero-subtitle {
@@ -254,15 +263,52 @@ html[data-theme="dark"] .home-page__event-card:hover {
 }
 
 html[data-theme="dark"] .home-page__event-content h3 {
-    color: #f8fafc;
+    color: #f8fafc !important;
 }
 
 html[data-theme="dark"] .home-page__event-content > p {
-    color: #94a3b8;
+    color: #cbd5e1 !important;
 }
 
-html[data-theme="dark"] .home-page__event-meta {
-    color: #94a3b8;
+html[data-theme="dark"] .home-page__event-meta span {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .home-page__event-tag--blue {
+    color: #38bdf8 !important;
+    background: rgba(56, 189, 248, 0.16) !important;
+    border: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+
+html[data-theme="dark"] .home-page__event-tag--purple {
+    color: #a78bfa !important;
+    background: rgba(167, 139, 250, 0.16) !important;
+    border: 1px solid rgba(167, 139, 250, 0.25) !important;
+}
+
+html[data-theme="dark"] .home-page__event-tag--green {
+    color: #34d399 !important;
+    background: rgba(52, 211, 153, 0.16) !important;
+    border: 1px solid rgba(52, 211, 153, 0.25) !important;
+}
+
+html[data-theme="dark"] .home-page__event-tag--pink {
+    color: #f472b6 !important;
+    background: rgba(244, 114, 182, 0.16) !important;
+    border: 1px solid rgba(244, 114, 182, 0.25) !important;
+}
+
+html[data-theme="dark"] .home-page__section-title,
+html[data-theme="dark"] #events-title {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .home-page__feature h3 {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .home-page__feature p {
+    color: #94a3b8 !important;
 }
 
 /* Features, Showcase & Steps Dark */

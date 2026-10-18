@@ -1,0 +1,172 @@
+{
+  "pagesAudit": {
+    "home_page": {
+      "topbarThemeBtnCount": 1,
+      "userMenuThemeItemCount": 0,
+      "userMenuItems": [
+        "Manage",
+        "Hồ sơ cá\n                                    nhân",
+        "Đổi mật\n                                    khẩu",
+        "Đăng\n                                    xuất"
+      ],
+      "btnDetails": {
+        "className": "icon-button theme-quick-toggle",
+        "ariaLabel": "Chuyển sang giao diện sáng",
+        "ariaPressed": "true",
+        "title": "Giao diện Tối (Nhấp để chuyển sang Sáng)",
+        "hasSvg": true,
+        "isLeftOfBell": true
+      },
+      "consoleErrors": []
+    },
+    "resources": {
+      "topbarThemeBtnCount": 1,
+      "userMenuThemeItemCount": 0,
+      "userMenuItems": [
+        "Manage",
+        "Hồ sơ cá nhân",
+        "Change Password",
+        "Đăng xuất"
+      ],
+      "btnDetails": {
+        "className": "icon-button theme-quick-toggle",
+        "ariaLabel": "Chuyển sang giao diện sáng",
+        "ariaPressed": "true",
+        "title": "Giao diện Tối (Nhấp để chuyển sang Sáng)",
+        "hasSvg": true,
+        "isLeftOfBell": true
+      },
+      "consoleErrors": []
+    },
+    "community_feed": {
+      "topbarThemeBtnCount": 1,
+      "userMenuThemeItemCount": 0,
+      "userMenuItems": [
+        "Manage",
+        "Profile",
+        "Cài đặt",
+        "Logout"
+      ],
+      "btnDetails": {
+        "className": "icon-button theme-quick-toggle",
+        "ariaLabel": "Chuyển sang giao diện sáng",
+        "ariaPressed": "true",
+        "title": "Giao diện Tối (Nhấp để chuyển sang Sáng)",
+        "hasSvg": true,
+        "isLeftOfBell": true
+      },
+      "consoleErrors": []
+    },
+    "history": {
+      "topbarThemeBtnCount": 1,
+      "userMenuThemeItemCount": 0,
+      "userMenuItems": [
+        "Manage",
+        "Profile",
+        "Account settings",
+        "Log out"
+      ],
+      "btnDetails": {
+        "className": "icon-button theme-quick-toggle",
+        "ariaLabel": "Chuyển sang giao diện sáng",
+        "ariaPressed": "true",
+        "title": "Giao diện Tối (Nhấp để chuyển sang Sáng)",
+        "hasSvg": true,
+        "isLeftOfBell": true
+      },
+      "consoleErrors": []
+    },
+    "settings": {
+      "topbarThemeBtnCount": 1,
+      "userMenuThemeItemCount": 0,
+      "userMenuItems": [
+        "Manage",
+        "Profile",
+        "Change Password",
+        "Đăng\n                                    xuất"
+      ],
+      "btnDetails": {
+        "className": "icon-button theme-quick-toggle",
+        "ariaLabel": "Chuyển sang giao diện sáng",
+        "ariaPressed": "true",
+        "title": "Giao diện Tối (Nhấp để chuyển sang Sáng)",
+        "hasSvg": true,
+        "isLeftOfBell": true
+      },
+      "consoleErrors": [
+        "Cannot read properties of undefined (reading 'twoFactor')",
+        "Cannot read properties of undefined (reading 'lectureUpdates')",
+        "Cannot read properties of undefined (reading 'forEach')"
+      ]
+    },
+    "admin": {
+      "topbarThemeBtnCount": 1,
+      "userMenuThemeItemCount": 0,
+      "userMenuItems": [
+        "Profile",
+        "Security tài khoản",
+        "Logout"
+      ],
+      "btnDetails": {
+        "className": "icon-button theme-quick-toggle",
+        "ariaLabel": "Chuyển sang giao diện sáng",
+        "ariaPressed": "true",
+        "title": "Giao diện Tối (Nhấp để chuyển sang Sáng)",
+        "hasSvg": true,
+        "isLeftOfBell": true
+      },
+      "consoleErrors": []
+    },
+    "index": {
+      "topbarThemeBtnCount": 1,
+      "userMenuThemeItemCount": 0,
+      "userMenuItems": [],
+      "btnDetails": {
+        "className": "home-page__theme-toggle",
+        "ariaLabel": "Chuyển sang giao diện sáng",
+        "ariaPressed": "true",
+        "title": "Giao diện Tối (Nhấp để chuyển sang Sáng)",
+        "hasSvg": true,
+        "isLeftOfBell": true
+      },
+      "consoleErrors": []
+    },
+    "login": {
+      "topbarThemeBtnCount": 1,
+      "userMenuThemeItemCount": 0,
+      "userMenuItems": [],
+      "btnDetails": {
+        "className": "auth-theme-toggle",
+        "ariaLabel": "Chuyển sang giao diện sáng",
+        "ariaPressed": "true",
+        "title": "Giao diện Tối (Nhấp để chuyển sang Sáng)",
+        "hasSvg": true,
+        "isLeftOfBell": false
+      },
+      "consoleErrors": []
+    }
+  },
+  "behaviorTests": {
+    "clickFromLightToDark": {
+      "themeInStorage": "dark",
+      "hasDarkAttr": true,
+      "darkRadioChecked": true,
+      "ariaLabel": "Chuyển sang giao diện sáng",
+      "ariaPressed": "true"
+    },
+    "clickFromDarkToLight": {
+      "themeInStorage": "light",
+      "hasDarkAttr": false,
+      "lightRadioChecked": true,
+      "ariaLabel": "Chuyển sang giao diện tối",
+      "ariaPressed": "false"
+    },
+    "clickFromAuto": {
+      "themeInStorage": "dark",
+      "hasDarkAttr": true,
+      "ariaLabel": "Chuyển sang giao diện sáng",
+      "ariaPressed": "true"
+    },
+    "hintTextPresent": "Nút trên thanh trên cùng chuyển nhanh Sáng/Tối. Chọn Tự động để theo hệ thống."
+  }
+}

@@ -81,13 +81,69 @@
   }
 
   // --- SỰ KIỆN ĐỔI PASSWORD ---
+  // Lấy độ dài mật khẩu tối thiểu từ cấu hình hệ thống
+  let minPwdLength = 6;
+  try {
+    const cached = localStorage.getItem("lib95:site_settings");
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      if (parsed.min_password_length) minPwdLength = parseInt(parsed.min_password_length, 10) || 6;
+    }
+  } catch (e) {}
+
+  const ruleText = document.getElementById("pwd-rules-text");
+  if (ruleText) ruleText.textContent = `Tối thiểu ${minPwdLength} ký tự.`;
+  if (pwdNew) pwdNew.setAttribute("minlength", String(minPwdLength));
+
+  function openPasswordModal() {
+    if (formPwd) formPwd.reset();
+    if (pwdError) pwdError.textContent = "";
+    document.querySelectorAll(".btn-toggle-pwd").forEach(btn => {
+      const targetId = btn.getAttribute("data-target");
+      const input = document.getElementById(targetId);
+      if (input) input.type = "password";
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+    });
+    S.core.openModal("modal-password");
+  }
+
   if (btnChangePwd) {
-    btnChangePwd.addEventListener("click", () => {
-      formPwd.reset();
-      pwdError.textContent = "";
-      S.core.openModal("modal-password");
+    btnChangePwd.addEventListener("click", openPasswordModal);
+  }
+
+  const userMenuChangePwd = document.getElementById("user-menu-change-pwd");
+  if (userMenuChangePwd) {
+    userMenuChangePwd.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.hash = "account";
+      openPasswordModal();
     });
   }
+
+  // Bật/tắt ẩn hiện mật khẩu trong modal
+  document.querySelectorAll(".btn-toggle-pwd").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-target");
+      const input = document.getElementById(targetId);
+      if (input) {
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        btn.setAttribute("aria-label", isPassword ? "Ẩn mật khẩu" : "Hiện mật khẩu");
+        btn.innerHTML = isPassword
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="23" x2="23" y2="23"></line></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+      }
+    });
+  });
+
+  // Tự động xóa lỗi khi người dùng gõ lại
+  [pwdCurrent, pwdNew, pwdConfirm].forEach(input => {
+    if (input) {
+      input.addEventListener("input", () => {
+        if (pwdError) pwdError.textContent = "";
+      });
+    }
+  });
 
   if (formPwd) {
     formPwd.addEventListener("submit", async (e) => {
@@ -97,18 +153,21 @@
       const pNew = pwdNew.value;
       const pConfirm = pwdConfirm.value;
       
-      if (pNew.length < 8 || !/\d/.test(pNew)) {
-        pwdError.textContent = "Password mới phải từ 8 kí tự và chứa chữ số.";
+      if (pNew.length < minPwdLength) {
+        pwdError.textContent = `Mật khẩu mới phải có tối thiểu ${minPwdLength} ký tự.`;
+        pwdNew.focus();
         return;
       }
       
       if (pNew !== pConfirm) {
-        pwdError.textContent = "Password xác nhận không khớp.";
+        pwdError.textContent = "Mật khẩu xác nhận không khớp.";
+        pwdConfirm.focus();
         return;
       }
       
       if (pNew === pCurrent) {
-        pwdError.textContent = "Password mới phải khác mật khẩu hiện tại.";
+        pwdError.textContent = "Mật khẩu mới phải khác mật khẩu hiện tại.";
+        pwdNew.focus();
         return;
       }
 
@@ -119,7 +178,10 @@
       }
 
       const submitBtn = formPwd.querySelector('button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Đang lưu...";
+      }
 
       try {
         const res = await fetch("/api/users/change-password", {
@@ -147,7 +209,10 @@
         console.error("Change password error:", err);
         pwdError.textContent = "Lỗi kết nối máy chủ. Vui lòng thử lại sau.";
       } finally {
-        if (submitBtn) submitBtn.disabled = false;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Lưu mật khẩu mới";
+        }
       }
     });
   }

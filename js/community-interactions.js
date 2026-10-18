@@ -50,6 +50,22 @@
       delBtn.dataset.comDeleteComment = comment.id;
       delBtn.dataset.comPostParent = comment.post_id;
       item.appendChild(delBtn);
+    } else if (user && user.id !== comment.user_id) {
+      var repCommentBtn = make('button', 'com-comment-report-btn', '🚩 Báo cáo');
+      repCommentBtn.type = 'button';
+      repCommentBtn.title = 'Báo cáo bình luận';
+      repCommentBtn.style.background = 'transparent';
+      repCommentBtn.style.border = 'none';
+      repCommentBtn.style.cursor = 'pointer';
+      repCommentBtn.style.fontSize = '11px';
+      repCommentBtn.style.color = '#ef4444';
+      repCommentBtn.style.opacity = '0.7';
+      repCommentBtn.dataset.comReport = 'true';
+      repCommentBtn.dataset.comReportType = 'comment';
+      repCommentBtn.dataset.comReportId = comment.id;
+      repCommentBtn.dataset.comReportAuthor = comment.user_id;
+      repCommentBtn.dataset.comReportPreview = comment.content;
+      item.appendChild(repCommentBtn);
     }
 
     return item;
@@ -143,6 +159,17 @@
       copyLinkBtn.type = 'button';
       copyLinkBtn.dataset.comShare = postId;
       dropdown.appendChild(copyLinkBtn);
+
+      if (!isAuthor) {
+        var reportBtn = make('button', '', '🚩 Báo cáo vi phạm');
+        reportBtn.type = 'button';
+        reportBtn.dataset.comReport = 'true';
+        reportBtn.dataset.comReportType = 'post';
+        reportBtn.dataset.comReportId = postId;
+        reportBtn.dataset.comReportAuthor = post ? post.user_id : '';
+        reportBtn.dataset.comReportPreview = post ? post.content : '';
+        dropdown.appendChild(reportBtn);
+      }
 
       header.appendChild(dropdown);
       return;

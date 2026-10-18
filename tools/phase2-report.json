@@ -1,0 +1,222 @@
+{
+  "lightRegression": [
+    {
+      "page": "01_landing_index",
+      "viewport": "desktop",
+      "diffPercent": "0.5529",
+      "diffPixels": 7165,
+      "passed": false
+    },
+    {
+      "page": "01_landing_index",
+      "viewport": "mobile",
+      "diffPercent": "0.0000",
+      "diffPixels": 0,
+      "passed": true
+    },
+    {
+      "page": "02_home_dashboard",
+      "viewport": "desktop",
+      "diffPercent": "0.1228",
+      "diffPixels": 1591,
+      "passed": false
+    },
+    {
+      "page": "02_home_dashboard",
+      "viewport": "mobile",
+      "diffPercent": "0.0000",
+      "diffPixels": 0,
+      "passed": true
+    },
+    {
+      "page": "07_lectures_resources",
+      "viewport": "desktop",
+      "diffPercent": "0.8448",
+      "diffPixels": 10949,
+      "passed": false
+    },
+    {
+      "page": "07_lectures_resources",
+      "viewport": "mobile",
+      "diffPercent": "0.0416",
+      "diffPixels": 137,
+      "passed": true
+    },
+    {
+      "page": "23_admin",
+      "viewport": "desktop",
+      "diffPercent": "0.1228",
+      "diffPixels": 1592,
+      "passed": false
+    },
+    {
+      "page": "23_admin",
+      "viewport": "mobile",
+      "diffPercent": "0.0000",
+      "diffPixels": 0,
+      "passed": true
+    },
+    {
+      "page": "24_auth_login",
+      "viewport": "desktop",
+      "diffPercent": "0.1718",
+      "diffPixels": 2227,
+      "passed": false
+    },
+    {
+      "page": "24_auth_login",
+      "viewport": "mobile",
+      "diffPercent": "0.6805",
+      "diffPixels": 2240,
+      "passed": false
+    },
+    {
+      "page": "25_auth_signup",
+      "viewport": "desktop",
+      "diffPercent": "0.1718",
+      "diffPixels": 2227,
+      "passed": false
+    },
+    {
+      "page": "25_auth_signup",
+      "viewport": "mobile",
+      "diffPercent": "0.6805",
+      "diffPixels": 2240,
+      "passed": false
+    },
+    {
+      "page": "26_auth_forgot_pass",
+      "viewport": "desktop",
+      "diffPercent": "0.1718",
+      "diffPixels": 2227,
+      "passed": false
+    },
+    {
+      "page": "26_auth_forgot_pass",
+      "viewport": "mobile",
+      "diffPercent": "0.6805",
+      "diffPixels": 2240,
+      "passed": false
+    },
+    {
+      "page": "27_auth_reset_pass",
+      "viewport": "desktop",
+      "diffPercent": "0.1718",
+      "diffPixels": 2227,
+      "passed": false
+    },
+    {
+      "page": "27_auth_reset_pass",
+      "viewport": "mobile",
+      "diffPercent": "0.6805",
+      "diffPixels": 2240,
+      "passed": false
+    },
+    {
+      "page": "28_auth_send_email",
+      "viewport": "desktop",
+      "diffPercent": "0.1718",
+      "diffPixels": 2227,
+      "passed": false
+    },
+    {
+      "page": "28_auth_send_email",
+      "viewport": "mobile",
+      "diffPercent": "0.6805",
+      "diffPixels": 2240,
+      "passed": false
+    }
+  ],
+  "darkPhase2Screenshots": [
+    {
+      "page": "01_landing_index",
+      "viewport": "desktop",
+      "file": "01_landing_index_desktop_dark_p2.png"
+    },
+    {
+      "page": "01_landing_index",
+      "viewport": "mobile",
+      "file": "01_landing_index_mobile_dark_p2.png"
+    },
+    {
+      "page": "02_home_dashboard",
+      "viewport": "desktop",
+      "file": "02_home_dashboard_desktop_dark_p2.png"
+    },
+    {
+      "page": "02_home_dashboard",
+      "viewport": "mobile",
+      "file": "02_home_dashboard_mobile_dark_p2.png"
+    },
+    {
+      "page": "07_lectures_resources",
+      "viewport": "desktop",
+      "file": "07_lectures_resources_desktop_dark_p2.png"
+    },
+    {
+      "page": "07_lectures_resources",
+      "viewport": "mobile",
+      "file": "07_lectures_resources_mobile_dark_p2.png"
+    },
+    {
+      "page": "23_admin",
+      "viewport": "desktop",
+      "file": "23_admin_desktop_dark_p2.png"
+    },
+    {
+      "page": "23_admin",
+      "viewport": "mobile",
+      "file": "23_admin_mobile_dark_p2.png"
+    },
+    {
+      "page": "24_auth_login",
+      "viewport": "desktop",
+      "file": "24_auth_login_desktop_dark_p2.png"
+    },
+    {
+      "page": "24_auth_login",
+      "viewport": "mobile",
+      "file": "24_auth_login_mobile_dark_p2.png"
+    },
+    {
+      "page": "25_auth_signup",
+      "viewport": "desktop",
+      "file": "25_auth_signup_desktop_dark_p2.png"
+    },
+    {
+      "page": "25_auth_signup",
+      "viewport": "mobile",
+      "file": "25_auth_signup_mobile_dark_p2.png"
+    },
+    {
+      "page": "26_auth_forgot_pass",
+      "viewport": "desktop",
+      "file": "26_auth_forgot_pass_desktop_dark_p2.png"
+    },
+    {
+      "page": "26_auth_forgot_pass",
+      "viewport": "mobile",
+      "file": "26_auth_forgot_pass_mobile_dark_p2.png"
+    },
+    {
+      "page": "27_auth_reset_pass",
+      "viewport": "desktop",
+      "file": "27_auth_reset_pass_desktop_dark_p2.png"
+    },
+    {
+      "page": "27_auth_reset_pass",
+      "viewport": "mobile",
+      "file": "27_auth_reset_pass_mobile_dark_p2.png"
+    },
+    {
+      "page": "28_auth_send_email",
+      "viewport": "desktop",
+      "file": "28_auth_send_email_desktop_dark_p2.png"
+    },
+    {
+      "page": "28_auth_send_email",
+      "viewport": "mobile",
+      "file": "28_auth_send_email_mobile_dark_p2.png"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 const db = require('../config/db');
 const bcrypt = require('bcrypt');
+const { getSettingValue } = require('./settingsController');
 
 exports.updateProfile = async (req, res) => {
     const userId = req.user.id;
@@ -40,8 +41,10 @@ exports.changePassword = async (req, res) => {
         return res.status(400).json({ error: 'Vui lòng nhập mật khẩu hiện tại và mật khẩu mới' });
     }
 
-    if (new_password.length < 6) {
-        return res.status(400).json({ error: 'Mật khẩu mới phải có ít nhất 6 ký tự' });
+    const minLenStr = await getSettingValue('min_password_length', '6');
+    const minLength = parseInt(minLenStr, 10) || 6;
+    if (new_password.length < minLength) {
+        return res.status(400).json({ error: `Mật khẩu mới phải có tối thiểu ${minLength} ký tự` });
     }
 
     try {
