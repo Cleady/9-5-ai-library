@@ -92,8 +92,8 @@ html[data-theme="dark"] .home-page__guest-button {
 }
 
 html[data-theme="dark"] .home-page__guest-avatar {
-    background: rgba(56, 189, 248, 0.2) !important;
-    color: #38bdf8 !important;
+    background: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
 }
 
 /* Hero Section Dark */
