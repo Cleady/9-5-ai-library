@@ -841,14 +841,16 @@ html[data-theme="dark"] .fav-select:focus {
 }
 
 html[data-theme="dark"] .fav-card {
-  background: var(--card-bg);
-  border-color: var(--card-border);
+  background: var(--card-bg) !important;
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
   color: var(--color-text);
 }
 
 html[data-theme="dark"] .fav-card:hover {
-  background: rgba(15, 30, 60, 0.85);
-  border-color: var(--accent-bright);
+  background: rgba(15, 30, 60, 0.85) !important;
+  border: none !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55) !important;
 }
 
 html[data-theme="dark"] .fav-card-title {
@@ -868,7 +870,7 @@ html[data-theme="dark"] .fav-tag {
 html[data-theme="dark"] .fav-menu-btn {
   color: var(--color-text-muted);
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none !important;
 }
 
 html[data-theme="dark"] .fav-menu-btn:hover {
@@ -878,8 +880,8 @@ html[data-theme="dark"] .fav-menu-btn:hover {
 
 html[data-theme="dark"] .fav-empty,
 html[data-theme="dark"] .fav-search-empty {
-  background: var(--card-bg);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: var(--card-bg) !important;
+  border: none !important;
   color: var(--color-text-muted);
 }
 
@@ -893,3 +895,45 @@ html[data-theme="dark"] .fav-btn-clear-search {
   background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
   box-shadow: 0 4px 12px var(--accent-glow);
 }
+
+/* Thumbnail dark glass gradients */
+html[data-theme="dark"] .fav-thumb-lecture {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.45), rgba(37, 99, 235, 0.25)) !important;
+  color: var(--accent-bright) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+
+html[data-theme="dark"] .fav-thumb-practice {
+  background: linear-gradient(135deg, rgba(120, 53, 15, 0.45), rgba(245, 158, 11, 0.25)) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(251, 191, 36, 0.25) !important;
+}
+
+html[data-theme="dark"] .fav-thumb-resource {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.45), rgba(16, 185, 129, 0.25)) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(52, 211, 153, 0.25) !important;
+}
+
+html[data-theme="dark"] .fav-thumb-subject,
+html[data-theme="dark"] .fav-thumb-subject-1,
+html[data-theme="dark"] .fav-thumb-subject-3 {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.45), rgba(37, 99, 235, 0.25)) !important;
+  color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .fav-thumb-subject-2 {
+  background: linear-gradient(135deg, rgba(19, 78, 74, 0.45), rgba(20, 184, 166, 0.25)) !important;
+  color: #2dd4bf !important;
+}
+
+html[data-theme="dark"] .fav-thumb-subject-4 {
+  background: linear-gradient(135deg, rgba(124, 45, 18, 0.45), rgba(249, 115, 22, 0.25)) !important;
+  color: #fb923c !important;
+}
+
+html[data-theme="dark"] .fav-thumb-subject-5 {
+  background: linear-gradient(135deg, rgba(131, 24, 67, 0.45), rgba(236, 72, 153, 0.25)) !important;
+  color: #f472b6 !important;
+}
+
