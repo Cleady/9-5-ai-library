@@ -436,10 +436,27 @@ html[data-theme="dark"] .main:has(.sidebar-brand, .auth-card) {
   background-image: linear-gradient(135deg, rgba(10, 22, 44, 0.92) 0%, rgba(6, 13, 31, 0.95) 100%) !important;
   border: 1px solid rgba(56, 189, 248, 0.18) !important;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6) !important;
+  height: auto !important;
+  min-height: min(600px, 90vh) !important;
+  aspect-ratio: auto !important;
 }
 
 html[data-theme="dark"] .auth-card {
   background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: auto !important;
+}
+
+html[data-theme="dark"] .main:not(:has(.sidebar)) .auth-card {
+  background: rgba(10, 22, 44, 0.88) !important;
+  border: none !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="dark"] .sidebar-nav .nav-link,
+html[data-theme="dark"] .nav-label {
+  color: #cbd5e1 !important;
 }
 
 html[data-theme="dark"] .auth-title,
