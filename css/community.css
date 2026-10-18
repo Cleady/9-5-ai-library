@@ -1883,6 +1883,21 @@ html[data-theme="dark"] .com-composer-attachment {
     border: none !important;
 }
 
+html[data-theme="dark"] .com-attachment-clear {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: none !important;
+    color: var(--color-text-muted) !important;
+}
+
+html[data-theme="dark"] .com-attachment-clear:hover {
+    background: rgba(239, 68, 68, 0.2) !important;
+    color: #f87171 !important;
+}
+
+html[data-theme="dark"] .com-photo-preview-img {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
 html[data-theme="dark"] .com-tool-button {
     color: var(--color-text-secondary);
     border: none !important;
