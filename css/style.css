@@ -2417,11 +2417,156 @@ html[data-theme="dark"] .notification-item.is-unread {
     background-color: rgba(37, 99, 235, 0.22);
 }
 
-/* Search Shortcut & Quote Dark Overrides */
+/* ============================================================
+   TOPBAR UNIFIED DARK GLASS THEME
+   - Search: 44px pill, dark glass, WCAG AA contrast (5.8:1+)
+   - Theme toggle & Bell buttons: 44px circles, dark glass, identical geometry
+   - User menu toggle: 44px pill, dark glass, aligned avatar & text
+   - Unified hover, focus-visible, and dropdown styling
+============================================================ */
+
+/* 1. Global Search Container (.search) */
+html[data-theme="dark"] .search {
+    height: 44px;
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: 999px;
+    background: var(--card-bg, rgba(10, 22, 44, 0.75)) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.16) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+html[data-theme="dark"] .search:hover {
+    background: var(--card-bg-elevated, rgba(15, 30, 60, 0.85)) !important;
+    border-color: rgba(56, 189, 248, 0.3) !important;
+}
+
+html[data-theme="dark"] .search:focus-within {
+    background: var(--card-bg-elevated, rgba(15, 30, 60, 0.9)) !important;
+    border-color: var(--accent-bright, #38bdf8) !important;
+    box-shadow: 0 0 0 3px var(--accent-glow, rgba(56, 189, 248, 0.25)) !important;
+}
+
+html[data-theme="dark"] .search-icon {
+    filter: brightness(1.2) contrast(1.1);
+}
+
+html[data-theme="dark"] .search-input {
+    color: var(--text-primary, #f8fafc) !important;
+    font-size: 14px;
+}
+
+html[data-theme="dark"] .search-input::placeholder {
+    color: var(--text-secondary, #94a3b8) !important;
+}
+
 html[data-theme="dark"] .search-shortcut kbd {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
-    color: var(--color-text-muted);
+    padding: 2px 7px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #cbd5e1 !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* 2. Unified Icon Buttons: Theme Quick Toggle & Notification Bell */
+html[data-theme="dark"] .icon-button,
+html[data-theme="dark"] .theme-quick-toggle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    border-radius: 50% !important;
+    background: var(--card-bg, rgba(10, 22, 44, 0.75)) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.16) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    color: var(--text-secondary, #94a3b8) !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+html[data-theme="dark"] .icon-button:hover,
+html[data-theme="dark"] .theme-quick-toggle:hover {
+    background: var(--card-bg-elevated, rgba(15, 30, 60, 0.85)) !important;
+    border-color: rgba(56, 189, 248, 0.35) !important;
+    color: var(--accent-bright, #38bdf8) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="dark"] .icon-button:focus-visible,
+html[data-theme="dark"] .theme-quick-toggle:focus-visible {
+    outline: 2px solid var(--accent-bright, #38bdf8) !important;
+    outline-offset: 2px;
+}
+
+html[data-theme="dark"] .bell-icon {
+    filter: brightness(1.15) contrast(1.1);
+}
+
+html[data-theme="dark"] .notification-dot {
+    top: 10px;
+    right: 11px;
+    background-color: #ef4444;
+    border: 2px solid rgba(10, 22, 44, 1);
+}
+
+/* 3. User Menu Toggle (.user-menu-toggle) */
+html[data-theme="dark"] .user-menu-toggle {
+    height: 44px;
+    min-height: 44px;
+    padding: 5px 12px 5px 6px;
+    gap: 10px;
+    border-radius: 999px !important;
+    background: var(--card-bg, rgba(10, 22, 44, 0.75)) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.16) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    color: var(--text-primary, #f8fafc) !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+html[data-theme="dark"] .user-menu-toggle:hover {
+    background: var(--card-bg-elevated, rgba(15, 30, 60, 0.85)) !important;
+    border-color: rgba(56, 189, 248, 0.35) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="dark"] .user-menu-toggle:focus-visible {
+    outline: 2px solid var(--accent-bright, #38bdf8) !important;
+    outline-offset: 2px;
+}
+
+html[data-theme="dark"] .user-name {
+    color: var(--text-primary, #f8fafc);
+}
+
+html[data-theme="dark"] .user-chevron {
+    border-right-color: var(--text-secondary, #94a3b8);
+    border-bottom-color: var(--text-secondary, #94a3b8);
+}
+
+html[data-theme="dark"] .role-badge {
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 999px;
+    background: rgba(56, 189, 248, 0.18) !important;
+    color: var(--accent-bright, #38bdf8) !important;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+/* 4. Dropdown Menus (User Menu & Notification Panel) */
+html[data-theme="dark"] .user-menu-list,
+html[data-theme="dark"] .notification-panel {
+    background: rgba(10, 22, 44, 0.95) !important;
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(56, 189, 248, 0.18) !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5) !important;
 }
 
 html[data-theme="dark"] .hero-quote::before {

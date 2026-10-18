@@ -177,11 +177,22 @@
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "home-page__theme-toggle";
+      btn.setAttribute("aria-label", "Chuyển đổi giao diện");
       btn.innerHTML = `<span class="theme-icon-indicator" aria-hidden="true"></span>`;
       btn.addEventListener("click", cycleTheme);
       
+      const actions = landingNav.querySelector(".home-page__actions");
+      const notifWrap = landingNav.querySelector(".home-page__notification-wrap");
       const guestWrap = landingNav.querySelector(".home-page__guest-wrap");
-      if (guestWrap) {
+      if (actions) {
+        if (notifWrap && notifWrap.parentNode === actions) {
+          actions.insertBefore(btn, notifWrap);
+        } else if (guestWrap && guestWrap.parentNode === actions) {
+          actions.insertBefore(btn, guestWrap);
+        } else {
+          actions.insertBefore(btn, actions.firstChild);
+        }
+      } else if (guestWrap && guestWrap.parentNode === landingNav) {
         landingNav.insertBefore(btn, guestWrap);
       } else {
         landingNav.appendChild(btn);
