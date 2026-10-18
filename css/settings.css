@@ -996,6 +996,60 @@ html[data-theme="dark"] .set-storage-bar {
 }
 
 /* Update dark mode elements */
+html[data-theme="dark"] .set-card {
+  background: var(--card-bg) !important;
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+html[data-theme="dark"] .set-nav-item {
+  color: var(--color-text-secondary);
+}
+
+html[data-theme="dark"] .set-nav-item:hover {
+  color: #ffffff;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+html[data-theme="dark"] .set-nav-item.is-active {
+  color: var(--accent-bright);
+  background: rgba(56, 189, 248, 0.15);
+  border-left-color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .set-list-row {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] .set-list-row:hover {
+  background: rgba(15, 30, 60, 0.85) !important;
+}
+
+html[data-theme="dark"] .set-row-icon {
+  background: rgba(37, 99, 235, 0.2) !important;
+  color: var(--accent-bright) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+
+html[data-theme="dark"] .set-slider {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+html[data-theme="dark"] input:checked + .set-slider {
+  background-color: var(--color-primary);
+}
+
+html[data-theme="dark"] .set-pill-disconnect {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-muted);
+}
+
+html[data-theme="dark"] .set-pill-disconnect:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
 html[data-theme="dark"] .set-storage-bar-wrapper {
   background: rgba(255, 255, 255, 0.1);
 }
@@ -1003,7 +1057,85 @@ html[data-theme="dark"] .set-storage-bar-wrapper {
 html[data-theme="dark"] .set-storage-item,
 html[data-theme="dark"] .set-nav-btn,
 html[data-theme="dark"] .set-faq-item {
-  background: rgba(30, 41, 59, 0.6);
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: none !important;
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .set-storage-icon {
+  background: rgba(37, 99, 235, 0.2) !important;
+  color: var(--accent-bright) !important;
+}
+
+/* Primary Button in Dark Mode */
+html[data-theme="dark"] .set-btn-primary {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright));
+  box-shadow: 0 4px 12px var(--accent-glow);
+  color: var(--color-on-accent);
+}
+
+/* Modals & Dialogs in Settings */
+html[data-theme="dark"] .set-modal-backdrop {
+  background: rgba(3, 7, 18, 0.7);
+}
+
+html[data-theme="dark"] .set-modal-content {
+  background: rgba(10, 22, 44, 0.98) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7) !important;
+}
+
+html[data-theme="dark"] .set-modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .set-modal-header h2 {
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .set-modal-close {
+  color: var(--color-text-muted) !important;
+}
+
+html[data-theme="dark"] .set-modal-close:hover {
+  color: var(--color-text) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .set-modal-footer {
+  background: rgba(6, 13, 31, 0.5) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .set-photo-btn {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="dark"] .set-photo-btn:hover {
+  background: rgba(56, 189, 248, 0.1) !important;
+  border-color: var(--accent-bright) !important;
+}
+
+/* Success Overlay */
+html[data-theme="dark"] .set-overlay-content {
+  background: rgba(10, 22, 44, 0.98) !important;
+  border: none !important;
+  color: var(--color-text) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7) !important;
+}
+
+html[data-theme="dark"] .set-overlay-title {
+  color: var(--color-text) !important;
+}
+
+/* Toast */
+html[data-theme="dark"] .set-toast {
+  background: rgba(10, 22, 44, 0.95) !important;
+  border: 1px solid var(--accent-bright) !important;
+  color: var(--color-text) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* Secondary Buttons & Change photo (Dark Theme) */

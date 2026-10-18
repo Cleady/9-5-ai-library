@@ -3369,3 +3369,449 @@ td small {
     vertical-align: middle;
     background: url("../assets/icon/calendar-icon.png") center / contain no-repeat;
 }
+
+/* ===== DARK THEME ===== */
+/* Module: Admin Dashboard (admin.html) */
+html[data-theme="dark"] {
+    --color-primary: #38bdf8;
+    --color-primary-light: #60a5fa;
+    --color-bg: #030712;
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --color-nav-text: #94a3b8;
+    --color-white: #ffffff;
+    --admin-panel: var(--card-bg, rgba(10, 22, 44, 0.75));
+    --admin-border: transparent;
+    --admin-shadow: var(--card-shadow, 0 8px 32px rgba(0, 0, 0, 0.5));
+}
+
+html[data-theme="dark"] body {
+    background-color: #030712;
+    background-image: var(--theme-bg-image);
+    color: #f8fafc;
+}
+
+/* Sidebar */
+html[data-theme="dark"] .sidebar {
+    background: rgba(6, 13, 31, 0.75) !important;
+    border: none !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .sidebar-brand strong {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .sidebar-brand small {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .sidebar-link,
+html[data-theme="dark"] .nav-link {
+    color: #94a3b8 !important;
+    background: transparent !important;
+}
+
+html[data-theme="dark"] .sidebar-link:hover,
+html[data-theme="dark"] .nav-link:hover {
+    color: #ffffff !important;
+    background: rgba(56, 189, 248, 0.12) !important;
+}
+
+html[data-theme="dark"] .sidebar-link.is-active,
+html[data-theme="dark"] .nav-link.is-active {
+    color: var(--color-on-accent, #ffffff) !important;
+    background: linear-gradient(135deg, var(--color-primary-light, #2563eb), var(--accent-bright, #38bdf8)) !important;
+    box-shadow: 0 4px 12px var(--accent-glow) !important;
+}
+
+html[data-theme="dark"] .sidebar-nav-secondary {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .sidebar-promo {
+    background-image: var(--theme-promo-bg) !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .sidebar-promo p {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .promo-arrow {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: none !important;
+}
+
+html[data-theme="dark"] .promo-arrow::after {
+    border-top-color: #f8fafc !important;
+    border-right-color: #f8fafc !important;
+}
+
+/* Topbar & Search */
+html[data-theme="dark"] .topbar {
+    background: transparent !important;
+    border: none !important;
+}
+
+html[data-theme="dark"] .search {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: none !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+}
+
+html[data-theme="dark"] .search:focus-within {
+    box-shadow: 0 0 0 2px var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .search-input {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .search-input::placeholder {
+    color: #64748b !important;
+}
+
+html[data-theme="dark"] .search-shortcut kbd {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: none !important;
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .icon-button {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: none !important;
+    color: #f8fafc !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-theme="dark"] .icon-button:hover {
+    background: rgba(56, 189, 248, 0.18) !important;
+    color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .user-menu-toggle {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: none !important;
+    color: #f8fafc !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-theme="dark"] .role-badge {
+    background: rgba(56, 189, 248, 0.18) !important;
+    color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .notification-panel,
+html[data-theme="dark"] .user-menu-list {
+    background: rgba(10, 22, 44, 0.98) !important;
+    border: none !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7) !important;
+}
+
+html[data-theme="dark"] .notification-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .notification-title {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .notification-clear {
+    color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .notification-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+html[data-theme="dark"] .notification-item.is-unread {
+    background: rgba(30, 58, 138, 0.25) !important;
+}
+
+html[data-theme="dark"] .notification-text {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .notification-time {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .notification-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .user-menu-list a {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .user-menu-list a:hover {
+    background: rgba(56, 189, 248, 0.12) !important;
+    color: #ffffff !important;
+}
+
+/* Headings & Overview */
+html[data-theme="dark"] .page-heading h1,
+html[data-theme="dark"] #dashboard-title {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .eyebrow {
+    color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .page-subtitle {
+    color: #94a3b8 !important;
+}
+
+/* Panels, Metrics & Cards - NO WHITE BORDERS */
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .metric-card,
+html[data-theme="dark"] .chart-panel,
+html[data-theme="dark"] .roles-panel,
+html[data-theme="dark"] .activity-panel,
+html[data-theme="dark"] .table-panel,
+html[data-theme="dark"] .users-panel,
+html[data-theme="dark"] .moderation-panel,
+html[data-theme="dark"] .settings-panel {
+    background: var(--card-bg, rgba(10, 22, 44, 0.75)) !important;
+    border: none !important;
+    box-shadow: var(--card-shadow, 0 8px 32px rgba(0, 0, 0, 0.5)) !important;
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .metric-card > strong {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .metric-label {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .panel-heading h2 {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .panel-heading p {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .panel-heading > a {
+    color: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .mini-select,
+html[data-theme="dark"] .select-button {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: none !important;
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .select-button:focus,
+html[data-theme="dark"] .mini-select:focus {
+    box-shadow: 0 0 0 2px var(--accent-bright) !important;
+}
+
+/* Charts & Donut */
+html[data-theme="dark"] .chart-grid {
+    stroke: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .chart-line {
+    stroke: var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .chart-points {
+    fill: var(--accent-bright) !important;
+    stroke: #0a162c !important;
+}
+
+html[data-theme="dark"] .chart-y,
+html[data-theme="dark"] .chart-x {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .donut::before {
+    background: #0a162c !important;
+}
+
+html[data-theme="dark"] .donut strong {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .donut span {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .legend-list {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .legend-list b {
+    color: #f8fafc !important;
+}
+
+/* Activity Items */
+html[data-theme="dark"] .activity-list li {
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .activity-list b {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .activity-list time {
+    color: #94a3b8 !important;
+}
+
+/* Tables & Toolbars */
+html[data-theme="dark"] .table-toolbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .search-control,
+html[data-theme="dark"] .compact-search {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: none !important;
+}
+
+html[data-theme="dark"] .search-control input,
+html[data-theme="dark"] .compact-search input {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] thead {
+    background: rgba(15, 23, 42, 0.8) !important;
+}
+
+html[data-theme="dark"] th {
+    color: #94a3b8 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] td {
+    color: #cbd5e1 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+html[data-theme="dark"] tbody tr:hover {
+    background: rgba(15, 30, 60, 0.85) !important;
+}
+
+html[data-theme="dark"] td strong {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] td small {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .table-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .table-pagination button,
+html[data-theme="dark"] .page-btn {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: none !important;
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .table-pagination button:hover,
+html[data-theme="dark"] .page-btn:hover {
+    background: rgba(56, 189, 248, 0.18) !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .page-btn.is-active {
+    background: var(--accent-bright) !important;
+    color: #030712 !important;
+}
+
+/* Tabs & Moderation */
+html[data-theme="dark"] .moderation-tab,
+html[data-theme="dark"] .settings-tabs button {
+    background: transparent !important;
+    border: none !important;
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .moderation-tab:hover,
+html[data-theme="dark"] .settings-tabs button:hover {
+    color: #ffffff !important;
+    background: rgba(56, 189, 248, 0.1) !important;
+}
+
+html[data-theme="dark"] .moderation-tab.is-active,
+html[data-theme="dark"] .settings-tabs button.is-active {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, var(--color-primary-light), var(--accent-bright)) !important;
+    box-shadow: 0 2px 8px var(--accent-glow) !important;
+}
+
+/* Forms & Inputs in Admin */
+html[data-theme="dark"] .lesson-form input,
+html[data-theme="dark"] .lesson-form select,
+html[data-theme="dark"] .lesson-form textarea,
+html[data-theme="dark"] .settings-form input,
+html[data-theme="dark"] .settings-form select,
+html[data-theme="dark"] .settings-form textarea {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: none !important;
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .lesson-form input:focus,
+html[data-theme="dark"] .lesson-form select:focus,
+html[data-theme="dark"] .lesson-form textarea:focus,
+html[data-theme="dark"] .settings-form input:focus,
+html[data-theme="dark"] .settings-form select:focus,
+html[data-theme="dark"] .settings-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-bright) !important;
+}
+
+html[data-theme="dark"] .lesson-form label,
+html[data-theme="dark"] .settings-form > label {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .admin-footer {
+    color: #64748b !important;
+}
+
+/* Modal Dialog (Course Add / Edit) */
+html[data-theme="dark"] #modal-course .panel {
+    background: rgba(10, 22, 44, 0.98) !important;
+    border: none !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7) !important;
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] #modal-course h2 {
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] #modal-course label {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] #modal-course input,
+html[data-theme="dark"] #modal-course select,
+html[data-theme="dark"] #modal-course textarea {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .button-primary {
+    background: linear-gradient(135deg, var(--color-primary-light, #2563eb), var(--accent-bright, #38bdf8)) !important;
+    color: var(--color-on-accent, #ffffff) !important;
+    border: none !important;
+    box-shadow: 0 4px 12px var(--accent-glow) !important;
+}
