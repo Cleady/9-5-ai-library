@@ -88,13 +88,185 @@
   /* Biến trạng thái khởi tạo player & bài giảng hiện tại */
   var isPlayerInitialized = false;
   var currentPlayingLecture = null;
+  var ytPlayerInstance = null;
+  var ytProgressInterval = null;
+
+  function cleanupYouTubePlayer() {
+    if (ytProgressInterval) {
+      clearInterval(ytProgressInterval);
+      ytProgressInterval = null;
+    }
+    if (ytPlayerInstance && typeof ytPlayerInstance.destroy === 'function') {
+      try {
+        ytPlayerInstance.destroy();
+      } catch (e) {}
+      ytPlayerInstance = null;
+    }
+    var ytContainer = document.getElementById('lec-youtube-player');
+    if (ytContainer) {
+      ytContainer.innerHTML = '';
+      ytContainer.style.display = 'none';
+    }
+    var ytError = document.getElementById('lec-youtube-error');
+    if (ytError) {
+      ytError.style.display = 'none';
+    }
+  }
+
+  function initYouTubePlayer(lecture) {
+    var wrapper = document.getElementById('lec-player-wrapper');
+    var video = document.getElementById('lec-video');
+    var ytContainer = document.getElementById('lec-youtube-player');
+    var ytError = document.getElementById('lec-youtube-error');
+    var ytErrorLink = document.getElementById('lec-yt-error-link');
+    var ytErrorTitle = document.getElementById('lec-yt-error-title');
+    var ytErrorDesc = document.getElementById('lec-yt-error-desc');
+
+    if (video) {
+      video.pause();
+      video.style.display = 'none';
+    }
+
+    if (wrapper) {
+      wrapper.classList.add('is-youtube');
+    }
+
+    if (ytError) ytError.style.display = 'none';
+    cleanupYouTubePlayer();
+    if (ytContainer) ytContainer.style.display = 'block';
+
+    var ytId = lecture.youtubeId;
+    if (!ytId && window.Lib95 && window.Lib95.youtube) {
+      ytId = window.Lib95.youtube.extractYouTubeId(lecture.videoUrl);
+    }
+
+    if (!ytId) {
+      if (ytContainer) ytContainer.style.display = 'none';
+      if (ytError) {
+        if (ytErrorTitle) ytErrorTitle.textContent = 'Link video YouTube không hợp lệ';
+        if (ytErrorDesc) ytErrorDesc.textContent = 'Không thể trích xuất ID video từ đường link bài giảng.';
+        if (ytErrorLink) ytErrorLink.style.display = 'none';
+        ytError.style.display = 'flex';
+      }
+      return;
+    }
+
+    if (ytErrorLink) {
+      ytErrorLink.href = 'https://www.youtube.com/watch?v=' + ytId;
+      ytErrorLink.style.display = 'inline-block';
+    }
+
+    if (!window.Lib95 || !window.Lib95.youtube) {
+      console.warn('YouTube utils library not loaded');
+      return;
+    }
+
+    window.Lib95.youtube.loadApi().then(function (YT) {
+      ytPlayerInstance = new YT.Player('lec-youtube-player', {
+        height: '100%',
+        width: '100%',
+        videoId: ytId,
+        host: 'https://www.youtube-nocookie.com',
+        playerVars: {
+          autoplay: 0,
+          controls: 1,
+          fs: 1,
+          playsinline: 1,
+          rel: 0,
+          modestbranding: 1
+        },
+        events: {
+          onReady: function () {
+            // Restore saved progress
+            var savedPct = core.storageGet('watch:' + lecture.id);
+            if (savedPct && typeof savedPct === 'number' && savedPct > 0 && savedPct < 90) {
+              try {
+                var dur = ytPlayerInstance.getDuration();
+                if (dur && dur > 0) {
+                  var seekSec = Math.round((savedPct / 100) * dur);
+                  ytPlayerInstance.seekTo(seekSec, true);
+                }
+              } catch (e) {}
+            }
+          },
+          onStateChange: function (event) {
+            if (event.data === YT.PlayerState.PLAYING) {
+              if (!ytProgressInterval) {
+                ytProgressInterval = setInterval(function () {
+                  if (!ytPlayerInstance || typeof ytPlayerInstance.getCurrentTime !== 'function') return;
+                  try {
+                    var cur = ytPlayerInstance.getCurrentTime();
+                    var dur = ytPlayerInstance.getDuration();
+                    if (dur && dur > 0) {
+                      var pct = Math.min(100, Math.round((cur / dur) * 100));
+                      core.storageSet('watch:' + lecture.id, pct);
+                      if (pct >= 90) {
+                        core.markCompleted(lecture.id);
+                        updateSidebarProgress(lecture.id);
+                      }
+                    }
+                  } catch (e) {}
+                }, 1000);
+              }
+            } else {
+              if (ytProgressInterval) {
+                clearInterval(ytProgressInterval);
+                ytProgressInterval = null;
+              }
+              if (event.data === YT.PlayerState.ENDED) {
+                core.storageSet('watch:' + lecture.id, 100);
+                core.markCompleted(lecture.id);
+                updateSidebarProgress(lecture.id);
+              }
+            }
+          },
+          onError: function (event) {
+            if (ytContainer) ytContainer.style.display = 'none';
+            if (ytError) {
+              var code = event.data;
+              if (code === 101 || code === 150) {
+                if (ytErrorTitle) ytErrorTitle.textContent = 'Chủ sở hữu đã tắt cho phép nhúng video';
+                if (ytErrorDesc) ytErrorDesc.textContent = 'Video này không cho phép phát trên các trang web bên ngoài. Vui lòng xem trực tiếp trên YouTube.';
+              } else if (code === 100) {
+                if (ytErrorTitle) ytErrorTitle.textContent = 'Video không tồn tại hoặc đã bị xóa';
+                if (ytErrorDesc) ytErrorDesc.textContent = 'Không tìm thấy video này trên YouTube.';
+              } else {
+                if (ytErrorTitle) ytErrorTitle.textContent = 'Không thể phát video YouTube này';
+                if (ytErrorDesc) ytErrorDesc.textContent = 'Đã xảy ra lỗi khi tải trình phát YouTube.';
+              }
+              ytError.style.display = 'flex';
+            }
+          }
+        }
+      });
+    }).catch(function (err) {
+      console.warn('Failed to load YouTube API for player:', err);
+      if (ytContainer) ytContainer.style.display = 'none';
+      if (ytError) ytError.style.display = 'flex';
+    });
+  }
 
   /* ====== TRÌNH PHÁT VIDEO ====== */
   function initPlayer(lecture) {
-    var video = document.getElementById('lec-video');
-    if (!video || !lecture) return;
+    if (!lecture) return;
 
     currentPlayingLecture = lecture;
+
+    var isYoutube = (lecture.videoSource === 'youtube') || Boolean(lecture.youtubeId);
+
+    if (isYoutube) {
+      initYouTubePlayer(lecture);
+      return;
+    }
+
+    // Video file: Dọn dẹp YouTube player nếu có, phục hồi chế độ HTML5 video
+    cleanupYouTubePlayer();
+    var wrapper = document.getElementById('lec-player-wrapper');
+    if (wrapper) wrapper.classList.remove('is-youtube');
+    var video = document.getElementById('lec-video');
+    if (video) video.style.display = 'block';
+
+    if (!video) return;
 
     var timeDisplay = document.getElementById('lec-time-display');
 
@@ -111,6 +283,7 @@
     if (timeDisplay && (!video.duration || isNaN(video.duration))) {
       timeDisplay.textContent = '0:00 / ' + durMin + ':00';
     }
+
 
     /* Đảm bảo event listener chỉ được gắn DUY NHẤT 1 LẦN */
     if (isPlayerInitialized) return;

@@ -214,6 +214,19 @@
                         <video id="lec-video" class="lec-player-video" src=""
                             poster="/assets/theme/scene.png" preload="metadata"></video>
 
+                        <!-- Container nhúng YouTube iframe player -->
+                        <div id="lec-youtube-player" style="display: none;"></div>
+
+                        <!-- Khung thông báo lỗi nếu YouTube bị chặn nhúng hoặc gỡ bỏ -->
+                        <div id="lec-youtube-error" class="lec-yt-error-container" style="display: none;">
+                            <div class="lec-yt-error-box">
+                                <span style="font-size: 32px; margin-bottom: 8px;">⚠️</span>
+                                <h3 id="lec-yt-error-title" style="margin: 0 0 6px; font-size: 16px; font-weight: 700;">Không thể phát video YouTube này</h3>
+                                <p id="lec-yt-error-desc" style="font-size: 13px; color: #94a3b8; margin: 0 0 14px;">Chủ sở hữu video đã tắt tính năng nhúng hoặc video không khả dụng.</p>
+                                <a id="lec-yt-error-link" href="#" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 7px 16px; background: #dc2626; color: #fff; text-decoration: none; border-radius: 6px; font-size: 12px; font-weight: 600;">Xem trực tiếp trên YouTube ↗</a>
+                            </div>
+                        </div>
+
                         <!-- Overlay nút Play to ở giữa -->
                         <div class="lec-player-overlay" id="lec-player-overlay">
                             <button class="lec-play-big" id="lec-btn-play-big" aria-label="Phát video">
@@ -443,6 +456,7 @@
     </div>
 
     <script src="/js/main.js"></script>
+    <script src="/js/youtube-utils.js"></script>
     <script src="/js/lectures-data.js"></script>
     <script src="/js/lectures-core.js"></script>
     <script src="/js/lecture-player.js"></script>
