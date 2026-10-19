@@ -270,6 +270,93 @@
     });
   }
 
+  /* ====== TIỆN ÍCH MATHJAX & LATEX ====== */
+  function escapeHtml(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  /* Định dạng an toàn cho chuỗi có công thức toán */
+  function formatMathText(text, isExplanation) {
+    if (!text) return '';
+    var str = String(text);
+    var regex = /(\\\[[\s\S]*?\\\]|\\\(.*?\\\))/g;
+    var parts = str.split(regex);
+    var result = '';
+    for (var i = 0; i < parts.length; i++) {
+      var part = parts[i];
+      if (!part) continue;
+      if (part.startsWith('\\(') || part.startsWith('\\[')) {
+        result += escapeHtml(part);
+      } else {
+        var esc = escapeHtml(part);
+        if (isExplanation) {
+          esc = esc.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+          var lines = esc.split('\n');
+          var formattedLines = [];
+          var inList = false;
+          for (var j = 0; j < lines.length; j++) {
+            var line = lines[j];
+            var trimmed = line.trim();
+            if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
+              if (!inList) {
+                formattedLines.push('<ul class="prc-exp-list">');
+                inList = true;
+              }
+              formattedLines.push('<li>' + trimmed.substring(2) + '</li>');
+            } else {
+              if (inList) {
+                formattedLines.push('</ul>');
+                inList = false;
+              }
+              formattedLines.push(line);
+            }
+          }
+          if (inList) {
+            formattedLines.push('</ul>');
+          }
+          esc = formattedLines.join('<br>').replace(/<\/ul><br>/g, '</ul>').replace(/<br><ul/g, '<ul');
+        }
+        result += esc;
+      }
+    }
+    return result;
+  }
+
+  /* Render MathJax cho một phần tử DOM cụ thể */
+  function typesetMath(el) {
+    if (!el) return Promise.resolve();
+    var text = el.textContent || '';
+    if (text.indexOf('\\(') === -1 && text.indexOf('\\[') === -1) {
+      return Promise.resolve();
+    }
+    if (!window.MathJax) {
+      return Promise.resolve();
+    }
+    if (window.MathJax.typesetClear) {
+      try {
+        window.MathJax.typesetClear([el]);
+      } catch (e) {}
+    }
+    var startup = (window.MathJax.startup && window.MathJax.startup.promise)
+      ? window.MathJax.startup.promise
+      : Promise.resolve();
+
+    return startup.then(function () {
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        return window.MathJax.typesetPromise([el]);
+      }
+    }).catch(function (err) {
+      console.warn('MathJax typeset error:', err);
+    });
+  }
+
+  window.Lib95.practice.typesetMath = typesetMath;
+  window.Lib95.practice.formatMathText = formatMathText;
+
   /* Render một câu hỏi */
   function renderQuestion(quiz, questions, progress, index) {
     var q = questions[index];
@@ -280,7 +367,7 @@
 
     var html =
       '<p class="prc-question-label">Multiple choice</p>' +
-      '<p class="prc-question-text">' + q.text + '</p>' +
+      '<p class="prc-question-text">' + formatMathText(q.text) + '</p>' +
       '<ul class="prc-options-list" role="radiogroup" aria-label="Đáp án">';
 
     q.options.forEach(function (opt, i) {
@@ -291,13 +378,14 @@
           '<input type="radio" class="prc-option-input" name="prc-answer" id="' + id + '" value="' + i + '"' + checked + ' />' +
           '<label class="prc-option-label" for="' + id + '">' +
             '<span class="prc-option-letter">' + LETTERS[i] + '</span>' +
-            '<span class="prc-option-text">' + opt + '</span>' +
+            '<span class="prc-option-text">' + formatMathText(opt) + '</span>' +
           '</label>' +
         '</li>';
     });
 
     html += '</ul>';
     card.innerHTML = html;
+    typesetMath(card);
 
     /* Gắn sự kiện chọn đáp án qua click radio */
     var radios = card.querySelectorAll('.prc-option-input');
@@ -642,7 +730,7 @@
 
       html += '<div class="prc-review-question">';
       html += '<p class="prc-review-q-num">Question ' + (i + 1) + '</p>';
-      html += '<p class="prc-review-q-text">' + q.text + '</p>';
+      html += '<p class="prc-review-q-text">' + formatMathText(q.text) + '</p>';
 
       html += '<ul class="prc-options-list" style="pointer-events:none">';
       q.options.forEach(function (opt, j) {
@@ -654,7 +742,7 @@
           '<li class="' + optClass + '">' +
             '<label class="prc-option-label">' +
               '<span class="prc-option-letter">' + LETTERS[j] + '</span>' +
-              '<span class="prc-option-text">' + opt + '</span>' +
+              '<span class="prc-option-text">' + formatMathText(opt) + '</span>' +
             '</label>' +
           '</li>';
       });
@@ -662,13 +750,33 @@
 
       /* Giải thích */
       if (q.explanation) {
-        html += '<div class="prc-review-explanation"><strong>Giải thích:</strong> ' + q.explanation + '</div>';
+        html += '<div class="prc-review-explanation"><strong>Giải thích:</strong><div style="margin-top:6px;">' + formatMathText(q.explanation, true) + '</div></div>';
       }
 
       html += '</div>';
     });
 
     container.innerHTML = html;
+
+    /* Typeset theo lô nhỏ 5 câu để không làm khựng UI */
+    var reviewQuestions = container.querySelectorAll('.prc-review-question');
+    if (reviewQuestions.length > 0) {
+      var batchSize = 5;
+      var qIdx = 0;
+      function typesetNextBatch() {
+        var end = Math.min(qIdx + batchSize, reviewQuestions.length);
+        for (var k = qIdx; k < end; k++) {
+          typesetMath(reviewQuestions[k]);
+        }
+        qIdx = end;
+        if (qIdx < reviewQuestions.length) {
+          requestAnimationFrame(typesetNextBatch);
+        }
+      }
+      typesetNextBatch();
+    } else {
+      typesetMath(container);
+    }
   }
 
   /* ====== KHỞI TẠO ====== */

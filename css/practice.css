@@ -2553,3 +2553,43 @@ html[data-theme="dark"] .prc-trophy-icon svg > circle {
 html[data-theme="dark"] .prc-type-icon {
   filter: brightness(1.2) drop-shadow(0 0 4px var(--accent-glow));
 }
+
+/* ========================================================
+   MathJax & LaTeX Styling (Responsive & Dark Mode Safe)
+   ======================================================== */
+mjx-container {
+  outline: none !important;
+  color: inherit !important;
+}
+
+mjx-container[jax="SVG"] {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block !important;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 10px 0 !important;
+  padding: 4px 0;
+}
+
+mjx-container[jax="SVG"]:not([display="true"]) {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: -0.2em;
+}
+
+.prc-exp-list {
+  list-style: disc;
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+.prc-exp-list li {
+  margin-bottom: 4px;
+}
