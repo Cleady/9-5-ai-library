@@ -410,76 +410,129 @@
                                     <input type="text" id="lms-lec-title" placeholder="VD: Computer Organization and Architecture: Number Systems" required>
                                 </label>
 
-                                <!-- KHU VỰC TẢI LÊN VIDEO BÀI GIẢNG -->
+                                <!-- KHU VỰC TẢI LÊN / CHỌN NGUỒN VIDEO BÀI GIẢNG -->
                                 <div class="wide-field" style="margin-bottom: 8px;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
                                         <label style="font-weight: 600; margin: 0; font-size: 13.5px; color: #1e293b;">Video bài giảng</label>
                                         <div id="lms-duration-badge-container" style="display: flex; align-items: center; gap: 6px;">
                                             <span style="font-size: 12px; color: #64748b;">Thời lượng:</span>
-                                            <span id="lms-duration-auto-badge" style="background: #f1f5f9; color: #64748b; font-weight: 600; font-size: 12px; padding: 4px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 5px; border: 1px solid #e2e8f0; transition: all .2s ease;">
+                                            <input type="number" id="lms-lec-duration" min="1" value="15" style="width: 58px; padding: 2px 6px; font-size: 12px; font-weight: 600; border-radius: 6px; border: 1px solid #cbd5e1; text-align: center; color: var(--color-primary); background: #fff;" title="Thời lượng tính bằng phút (có thể tự do chỉnh sửa thủ công)">
+                                            <span style="font-size: 12px; color: #64748b;">phút</span>
+                                            <span id="lms-duration-auto-badge" style="background: #f1f5f9; color: #64748b; font-weight: 600; font-size: 11px; padding: 3px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; border: 1px solid #e2e8f0; transition: all .2s ease;">
                                                 <span>⏱️</span> <span id="lms-duration-text">Tự động nhận diện khi có video</span>
                                             </span>
-                                            <input type="hidden" id="lms-lec-duration" value="0">
                                         </div>
+                                    </div>
+
+                                    <!-- Segmented Control Chọn 3 Nguồn Video -->
+                                    <div class="lms-source-segmented" role="tablist" aria-label="Nguồn video bài giảng">
+                                        <button type="button" class="lms-source-tab-btn is-active" id="lms-tab-source-file" data-source="file" role="tab" aria-selected="true">
+                                            <span>📤 Tải file lên</span>
+                                        </button>
+                                        <button type="button" class="lms-source-tab-btn" id="lms-tab-source-local" data-source="local" role="tab" aria-selected="false">
+                                            <span>📁 File có sẵn</span>
+                                        </button>
+                                        <button type="button" class="lms-source-tab-btn" id="lms-tab-source-youtube" data-source="youtube" role="tab" aria-selected="false">
+                                            <span>▶ Link YouTube</span>
+                                        </button>
                                     </div>
                                     
-                                    <!-- Upload Card chính: Click để chọn video từ máy hoặc kéo thả -->
-                                    <div id="lms-video-upload-area" style="border: 2px dashed #93c5fd; border-radius: 12px; background: rgba(59,130,246,0.03); padding: 18px 14px; text-align: center; cursor: pointer; transition: all .2s ease; position: relative;">
-                                        <input type="file" id="lms-video-file-input" accept="video/mp4,video/webm,video/quicktime,video/x-matroska" style="display: none;">
-                                        
-                                        <!-- State 1: Chưa chọn video -->
-                                        <div id="lms-video-upload-empty" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
-                                            <div style="width: 44px; height: 44px; border-radius: 50%; background: #eff6ff; display: flex; align-items: center; justify-content: center; font-size: 22px;">📁</div>
-                                            <strong style="color: var(--color-primary); font-size: 14px;">Bấm để Tải lên Video từ máy tính</strong>
-                                            <small style="color: #64748b; font-size: 12px;">Hỗ trợ tệp MP4, WEBM, MOV (Tự động tính thời lượng video)</small>
-                                        </div>
+                                    <!-- TAB 1: Tải lên video từ máy tính -->
+                                    <div id="lms-source-panel-file" class="lms-source-panel">
+                                        <div id="lms-video-upload-area" style="border: 2px dashed #93c5fd; border-radius: 12px; background: rgba(59,130,246,0.03); padding: 18px 14px; text-align: center; cursor: pointer; transition: all .2s ease; position: relative;">
+                                            <input type="file" id="lms-video-file-input" accept="video/mp4,video/webm,video/quicktime,video/x-matroska" style="display: none;">
+                                            
+                                            <!-- State 1: Chưa chọn video -->
+                                            <div id="lms-video-upload-empty" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                                                <div style="width: 44px; height: 44px; border-radius: 50%; background: #eff6ff; display: flex; align-items: center; justify-content: center; font-size: 22px;">📁</div>
+                                                <strong style="color: var(--color-primary); font-size: 14px;">Bấm để Tải lên Video từ máy tính</strong>
+                                                <small style="color: #64748b; font-size: 12px;">Hỗ trợ tệp MP4, WEBM, MOV (Tự động tính thời lượng video)</small>
+                                            </div>
 
-                                        <!-- State 2: Đã có video được chọn / gán -->
-                                        <div id="lms-video-upload-selected" style="display: none; flex-direction: column; gap: 10px; background: #fff; padding: 12px 14px; border-radius: 8px; border: 1px solid #bfdbfe; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
-                                            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-                                                <div style="display: flex; align-items: center; gap: 10px; text-align: left; overflow: hidden;">
-                                                    <span style="font-size: 24px; flex-shrink: 0;">🎬</span>
-                                                    <div style="overflow: hidden;">
-                                                        <strong id="lms-video-display-name" style="font-size: 13px; color: #0f172a; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Tên_video.mp4</strong>
-                                                        <div style="font-size: 11px; color: #64748b; display: flex; gap: 8px; margin-top: 2px;">
-                                                            <span id="lms-video-display-size">0 MB</span>
-                                                            <span>•</span>
-                                                            <span id="lms-video-display-dur" style="color: var(--color-primary); font-weight: 600;">15 phút</span>
-                                                            <span class="tag" style="background: #ecfdf5; color: #10b981; font-weight: 600; font-size: 10px; padding: 1px 6px;">✓ Đã sẵn sàng</span>
+                                            <!-- State 2: Đã có video được chọn / gán -->
+                                            <div id="lms-video-upload-selected" style="display: none; flex-direction: column; gap: 10px; background: #fff; padding: 12px 14px; border-radius: 8px; border: 1px solid #bfdbfe; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+                                                <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                                                    <div style="display: flex; align-items: center; gap: 10px; text-align: left; overflow: hidden;">
+                                                        <span style="font-size: 24px; flex-shrink: 0;">🎬</span>
+                                                        <div style="overflow: hidden;">
+                                                            <strong id="lms-video-display-name" style="font-size: 13px; color: #0f172a; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Tên_video.mp4</strong>
+                                                            <div style="font-size: 11px; color: #64748b; display: flex; gap: 8px; margin-top: 2px;">
+                                                                <span id="lms-video-display-size">0 MB</span>
+                                                                <span>•</span>
+                                                                <span id="lms-video-display-dur" style="color: var(--color-primary); font-weight: 600;">15 phút</span>
+                                                                <span class="tag" style="background: #ecfdf5; color: #10b981; font-weight: 600; font-size: 10px; padding: 1px 6px;">✓ Đã sẵn sàng</span>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <div style="display: flex; gap: 6px; flex-shrink: 0; margin-left: 10px;">
+                                                        <button type="button" id="lms-btn-change-video" class="mini-select" style="font-size: 12px; cursor: pointer;">Đổi video</button>
+                                                        <button type="button" id="lms-btn-remove-video" class="mini-select" style="font-size: 12px; color: #ef4444; border-color: rgba(239,68,68,0.2); cursor: pointer;">✕ Xóa</button>
+                                                    </div>
                                                 </div>
-                                                <div style="display: flex; gap: 6px; flex-shrink: 0; margin-left: 10px;">
-                                                    <button type="button" id="lms-btn-change-video" class="mini-select" style="font-size: 12px; cursor: pointer;">Đổi video</button>
-                                                    <button type="button" id="lms-btn-remove-video" class="mini-select" style="font-size: 12px; color: #ef4444; border-color: rgba(239,68,68,0.2); cursor: pointer;">✕ Xóa</button>
-                                                </div>
+                                                <!-- Video preview để admin xem trước -->
+                                                <video id="lms-video-preview" controls preload="metadata" style="display: none; width: 100%; max-height: 220px; border-radius: 6px; background: #000;"></video>
                                             </div>
-                                            <!-- Video preview để admin xem trước -->
-                                            <video id="lms-video-preview" controls preload="metadata" style="display: none; width: 100%; max-height: 220px; border-radius: 6px; background: #000;"></video>
-                                        </div>
 
-                                        <!-- Thanh tiến trình Upload -->
-                                        <div id="lms-video-upload-progress" style="display: none; margin-top: 10px;">
-                                            <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; margin-bottom: 4px;">
-                                                <span style="color: var(--color-primary);">Đang tải lên video lên thư mục hệ thống...</span>
-                                                <span id="lms-upload-percent-text">0%</span>
-                                            </div>
-                                            <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 99px; overflow: hidden;">
-                                                <div id="lms-upload-percent-bar" style="width: 0%; height: 100%; background: var(--color-primary); transition: width .15s ease;"></div>
+                                            <!-- Thanh tiến trình Upload -->
+                                            <div id="lms-video-upload-progress" style="display: none; margin-top: 10px;">
+                                                <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; margin-bottom: 4px;">
+                                                    <span style="color: var(--color-primary);">Đang tải lên video lên thư mục hệ thống...</span>
+                                                    <span id="lms-upload-percent-text">0%</span>
+                                                </div>
+                                                <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 99px; overflow: hidden;">
+                                                    <div id="lms-upload-percent-bar" style="width: 0%; height: 100%; background: var(--color-primary); transition: width .15s ease;"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Tùy chọn: Chọn video có sẵn trong document/Lectures -->
-                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 12px; background: #f8fafc; padding: 6px 10px; border-radius: 6px; border: 1px solid #f1f5f9;">
-                                        <span style="color: #64748b; font-weight: 500;">📁 Hoặc chọn video có sẵn trên máy:</span>
-                                        <select id="lms-lec-video-detected" style="max-width: 65%; padding: 4px 8px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background: #fff;">
-                                            <option value="">-- Quét thư mục document/Lectures --</option>
-                                        </select>
+                                    <!-- TAB 2: Chọn video có sẵn trong document/Lectures -->
+                                    <div id="lms-source-panel-local" class="lms-source-panel" style="display: none;">
+                                        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; background: #f8fafc; padding: 10px 12px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                            <label style="color: #475569; font-weight: 600;">📁 Chọn tệp video đã quét trong thư mục document/Lectures/:</label>
+                                            <select id="lms-lec-video-detected" style="width: 100%; padding: 6px 10px; font-size: 12px; border-radius: 6px; border: 1px solid #cbd5e1; background: #fff;">
+                                                <option value="">-- Quét thư mục document/Lectures --</option>
+                                            </select>
+                                        </div>
                                     </div>
 
-                                    <!-- Hidden input lưu URL video thực tế -->
+                                    <!-- TAB 3: Dán link video YouTube -->
+                                    <div id="lms-source-panel-youtube" class="lms-source-panel" style="display: none;">
+                                        <div class="lms-yt-panel">
+                                            <div style="display: flex; flex-direction: column; gap: 6px;">
+                                                <label for="lms-lec-youtube-url" style="font-size: 12px; font-weight: 600; color: #475569;">Dán đường link YouTube của bài giảng:</label>
+                                                <div class="lms-yt-input-row">
+                                                    <input type="text" id="lms-lec-youtube-url" class="lms-yt-input" placeholder="https://www.youtube.com/watch?v=... hoặc https://youtu.be/..." autocomplete="off">
+                                                    <button type="button" id="lms-btn-check-youtube" class="mini-select" style="padding: 8px 12px; font-size: 12px; font-weight: 600; cursor: pointer; flex-shrink: 0;">🔍 Kiểm tra</button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Trạng thái kiểm tra link (spinner / kết quả / lỗi) -->
+                                            <div id="lms-yt-status-container" class="lms-yt-status-badge"></div>
+
+                                            <!-- Khung thông tin Video Preview -->
+                                            <div id="lms-yt-preview-card" class="lms-yt-preview-card" style="display: none;">
+                                                <div class="lms-yt-preview-thumb-wrap">
+                                                    <img id="lms-yt-preview-thumb" src="" alt="Thumbnail bài giảng">
+                                                </div>
+                                                <div class="lms-yt-preview-meta">
+                                                    <div>
+                                                        <h4 id="lms-yt-preview-title" class="lms-yt-preview-title">Tiêu đề video YouTube</h4>
+                                                        <div id="lms-yt-preview-author" class="lms-yt-preview-author">Kênh: --</div>
+                                                    </div>
+                                                    <div class="lms-yt-preview-actions">
+                                                        <button type="button" id="lms-btn-apply-yt-title" class="mini-select" style="font-size: 11px; padding: 3px 8px; color: var(--color-primary); cursor: pointer;" title="Điền tiêu đề này vào ô Tên bài giảng ở trên">📝 Dùng làm tên bài giảng</button>
+                                                        <a id="lms-yt-preview-link" href="#" target="_blank" rel="noopener noreferrer" style="font-size: 11px; color: #64748b; text-decoration: underline;">Mở trên YouTube ↗</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Hidden input lưu nguồn video và URL video thực tế -->
+                                    <input type="hidden" id="lms-lec-video-source" value="file">
                                     <input type="hidden" id="lms-lec-video-url" value="">
+                                    <input type="hidden" id="lms-lec-youtube-id" value="">
                                 </div>
 
                                 <label class="wide-field">Mô tả ngắn (Short Description)
@@ -1141,6 +1194,7 @@
 
     <script src="../../js/syncProfile.js?v=3"></script>
     <script src="../../js/admin-users.js?v=14"></script>
+    <script src="../../js/youtube-utils.js"></script>
     <script src="../../js/admin-lms.js"></script>
     <script src="../../js/admin-dashboard.js"></script>
     <script src="../../js/admin-moderation.js"></script>

@@ -105,6 +105,28 @@ document.addEventListener('DOMContentLoaded', function () {
   var btnRemoveVideo = document.getElementById('lms-btn-remove-video');
   var videoPreview = document.getElementById('lms-video-preview');
 
+  // Video Source Tabs & YouTube Elements
+  var inputLecVideoSource = document.getElementById('lms-lec-video-source');
+  var inputLecYoutubeId = document.getElementById('lms-lec-youtube-id');
+  var tabSourceFile = document.getElementById('lms-tab-source-file');
+  var tabSourceLocal = document.getElementById('lms-tab-source-local');
+  var tabSourceYoutube = document.getElementById('lms-tab-source-youtube');
+  var panelSourceFile = document.getElementById('lms-source-panel-file');
+  var panelSourceLocal = document.getElementById('lms-source-panel-local');
+  var panelSourceYoutube = document.getElementById('lms-source-panel-youtube');
+  var inputYtUrl = document.getElementById('lms-lec-youtube-url');
+  var btnCheckYt = document.getElementById('lms-btn-check-youtube');
+  var ytStatusContainer = document.getElementById('lms-yt-status-container');
+  var ytPreviewCard = document.getElementById('lms-yt-preview-card');
+  var ytPreviewThumb = document.getElementById('lms-yt-preview-thumb');
+  var ytPreviewTitle = document.getElementById('lms-yt-preview-title');
+  var ytPreviewAuthor = document.getElementById('lms-yt-preview-author');
+  var ytPreviewLink = document.getElementById('lms-yt-preview-link');
+  var btnApplyYtTitle = document.getElementById('lms-btn-apply-yt-title');
+  var currentVideoSource = 'file'; // 'file' | 'local' | 'youtube'
+  var ytDebounceTimer = null;
+  var currentYtTitle = '';
+
   // Mẫu bài giảng Feynman chuẩn có KaTeX
   var FEYNMAN_TEMPLATE = `<div class="lec-feynman-container">
   <div class="lec-feynman-banner">
@@ -666,6 +688,198 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // =====================================================================
+  // 3.1. QUẢN LÝ NGUỒN VIDEO (TABS: FILE / LOCAL / YOUTUBE)
+  // =====================================================================
+  function setVideoSourceTab(source) {
+    currentVideoSource = source;
+    if (inputLecVideoSource) {
+      inputLecVideoSource.value = (source === 'youtube') ? 'youtube' : 'file';
+    }
+
+    var tabs = [
+      { btn: tabSourceFile, panel: panelSourceFile, key: 'file' },
+      { btn: tabSourceLocal, panel: panelSourceLocal, key: 'local' },
+      { btn: tabSourceYoutube, panel: panelSourceYoutube, key: 'youtube' }
+    ];
+
+    tabs.forEach(function (t) {
+      if (t.btn) {
+        if (t.key === source) {
+          t.btn.classList.add('is-active');
+          t.btn.setAttribute('aria-selected', 'true');
+        } else {
+          t.btn.classList.remove('is-active');
+          t.btn.setAttribute('aria-selected', 'false');
+        }
+      }
+      if (t.panel) {
+        t.panel.style.display = (t.key === source) ? 'block' : 'none';
+      }
+    });
+  }
+
+  if (tabSourceFile) {
+    tabSourceFile.addEventListener('click', function () { setVideoSourceTab('file'); });
+  }
+  if (tabSourceLocal) {
+    tabSourceLocal.addEventListener('click', function () { setVideoSourceTab('local'); });
+  }
+  if (tabSourceYoutube) {
+    tabSourceYoutube.addEventListener('click', function () { setVideoSourceTab('youtube'); });
+  }
+
+  function setYtStatus(type, message) {
+    if (!ytStatusContainer) return;
+    ytStatusContainer.className = 'lms-yt-status-badge ' + (type ? ('is-' + type) : '');
+    ytStatusContainer.textContent = message || '';
+  }
+
+  function handleCheckYouTube() {
+    if (!inputYtUrl) return;
+    var raw = inputYtUrl.value.trim();
+    if (!raw) {
+      setYtStatus('', '');
+      if (ytPreviewCard) ytPreviewCard.style.display = 'none';
+      if (inputLecYoutubeId) inputLecYoutubeId.value = '';
+      return;
+    }
+
+    if (!window.Lib95 || !window.Lib95.youtube) {
+      setYtStatus('error', '⚠️ Thư viện YouTube chưa được tải');
+      return;
+    }
+
+    var ytId = window.Lib95.youtube.extractYouTubeId(raw);
+    if (!ytId) {
+      setYtStatus('error', '⚠️ Link YouTube không hợp lệ. Chỉ chấp nhận link từ youtube.com hoặc youtu.be.');
+      if (ytPreviewCard) ytPreviewCard.style.display = 'none';
+      if (inputLecYoutubeId) inputLecYoutubeId.value = '';
+      return;
+    }
+
+    setYtStatus('loading', '⏳ Đang kiểm tra video và nhận diện thời lượng...');
+
+    var canonicalUrl = window.Lib95.youtube.canonicalWatchUrl(ytId);
+    var thumbUrl = window.Lib95.youtube.thumbnailUrl(ytId);
+
+    // Fetch oEmbed info from backend proxy
+    fetch('/api/lms/youtube-info?url=' + encodeURIComponent(canonicalUrl), {
+      headers: getHeaders()
+    })
+    .then(function (res) {
+      return res.json().then(function (data) {
+        return { status: res.status, data: data };
+      });
+    })
+    .then(function (result) {
+      if (result.status === 200 && result.data) {
+        var info = result.data;
+        currentYtTitle = info.title || '';
+        if (inputLecYoutubeId) inputLecYoutubeId.value = info.youtubeId;
+        if (inputLecVideoUrl) inputLecVideoUrl.value = info.canonicalUrl;
+
+        // Display preview card safely using textContent and setAttribute
+        if (ytPreviewThumb) {
+          ytPreviewThumb.src = info.thumbnailUrl || thumbUrl;
+          ytPreviewThumb.alt = info.title || 'YouTube Video';
+        }
+        if (ytPreviewTitle) {
+          ytPreviewTitle.textContent = info.title || ('Video #' + info.youtubeId);
+        }
+        if (ytPreviewAuthor) {
+          ytPreviewAuthor.textContent = 'Kênh: ' + (info.authorName || 'YouTube');
+        }
+        if (ytPreviewLink) {
+          ytPreviewLink.href = info.canonicalUrl;
+        }
+        if (ytPreviewCard) {
+          ytPreviewCard.style.display = 'flex';
+        }
+
+        // Tự động gợi ý tên bài giảng nếu chưa nhập
+        if (inputLecTitle && !inputLecTitle.value.trim() && info.title) {
+          inputLecTitle.value = info.title;
+        }
+
+        setYtStatus('success', '✓ Video hợp lệ: ' + (info.title || info.youtubeId));
+
+        // Nhận diện thời lượng video bằng offscreen iframe player
+        window.Lib95.youtube.detectDuration(info.youtubeId, { timeoutMs: 8000 })
+          .then(function (mins) {
+            if (mins && mins > 0) {
+              updateDurationUI(mins, mins + ' phút', true);
+              if (inputLecDuration) inputLecDuration.value = mins;
+              setYtStatus('success', '✓ Đã nhận diện: ' + (info.title || info.youtubeId) + ' (' + mins + ' phút)');
+            } else {
+              var fallbackMin = parseInt(inputLecDuration.value, 10) || 15;
+              updateDurationUI(fallbackMin, fallbackMin + ' phút', false);
+              setYtStatus('success', '✓ Video hợp lệ. Vui lòng kiểm tra lại số phút bài giảng ở trên.');
+            }
+          })
+          .catch(function () {
+            var fallbackMin = parseInt(inputLecDuration.value, 10) || 15;
+            updateDurationUI(fallbackMin, fallbackMin + ' phút', false);
+          });
+
+      } else {
+        var errCode = result.data ? result.data.code : '';
+        var errMsg = result.data ? result.data.error : 'Lỗi khi kiểm tra link YouTube';
+        if (errCode === 'EMBED_DISABLED') {
+          setYtStatus('error', '⚠️ Video riêng tư hoặc chủ sở hữu đã tắt tính năng nhúng.');
+        } else if (errCode === 'NOT_FOUND') {
+          setYtStatus('error', '⚠️ Video không tồn tại hoặc đã bị xóa trên YouTube.');
+        } else {
+          setYtStatus('error', '⚠️ ' + errMsg);
+        }
+        if (ytPreviewCard) ytPreviewCard.style.display = 'none';
+        if (inputLecYoutubeId) inputLecYoutubeId.value = '';
+      }
+    })
+    .catch(function (err) {
+      setYtStatus('error', '⚠️ Không thể kết nối để kiểm tra link YouTube.');
+    });
+  }
+
+  if (inputYtUrl) {
+    inputYtUrl.addEventListener('input', function () {
+      clearTimeout(ytDebounceTimer);
+      ytDebounceTimer = setTimeout(handleCheckYouTube, 600);
+    });
+    inputYtUrl.addEventListener('paste', function () {
+      setTimeout(handleCheckYouTube, 100);
+    });
+  }
+
+  if (btnCheckYt) {
+    btnCheckYt.addEventListener('click', function () {
+      clearTimeout(ytDebounceTimer);
+      handleCheckYouTube();
+    });
+  }
+
+  if (btnApplyYtTitle) {
+    btnApplyYtTitle.addEventListener('click', function () {
+      if (currentYtTitle && inputLecTitle) {
+        inputLecTitle.value = currentYtTitle;
+        showToast('Đã áp dụng tiêu đề video từ YouTube!');
+      }
+    });
+  }
+
+  if (inputLecDuration) {
+    inputLecDuration.addEventListener('input', function () {
+      var val = parseInt(inputLecDuration.value, 10);
+      if (val && val > 0 && durationAutoBadge && durationText) {
+        durationAutoBadge.style.background = '#f1f5f9';
+        durationAutoBadge.style.color = '#334155';
+        durationAutoBadge.style.borderColor = '#cbd5e1';
+        durationText.textContent = val + ' phút (Chỉnh sửa thủ công)';
+      }
+    });
+  }
+
+
+  // =====================================================================
   // 4. DANH SÁCH BÀI GIẢNG (LECTURES)
   // =====================================================================
   function loadLectures(courseId) {
@@ -693,9 +907,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var html = '';
     lectures.forEach(function (l) {
       var isCurrent = isEditingLecture && parseInt(inputLecId.value, 10) === l.id;
+      var ytBadge = (l.video_source === 'youtube' || l.youtube_id) ? '<span class="tag" style="background: rgba(239, 68, 68, 0.1); color: #dc2626; font-size: 10px; font-weight: 600; padding: 1px 5px; border-radius: 4px; margin-left: 6px;">YouTube</span>' : '';
       html +=
         '<li style="' + (isCurrent ? 'background: rgba(29, 78, 216, 0.06); border-radius: 8px;' : '') + '">' +
-          '<span><strong>' + l.chapter_order + '.</strong> ' + l.title + '</span>' +
+          '<span><strong>' + l.chapter_order + '.</strong> ' + l.title + ytBadge + '</span>' +
           '<time>' + l.duration_min + 'm</time>' +
           '<div style="display: flex; gap: 4px;">' +
             '<button type="button" class="lms-btn-edit-lec" data-id="' + l.id + '" title="Chỉnh sửa bài giảng" style="cursor: pointer;">✎</button>' +
@@ -730,7 +945,7 @@ document.addEventListener('DOMContentLoaded', function () {
     inputLecId.value = '';
     inputLecTitle.value = '';
     inputLecOrder.value = (currentLectures.length + 1) || 1;
-    inputLecDuration.value = 0;
+    inputLecDuration.value = 15;
     inputLecDesc.value = '';
     inputLecTakeaways.value = '';
     inputLecOverview.value = '';
@@ -739,11 +954,20 @@ document.addEventListener('DOMContentLoaded', function () {
     currentResources = [];
     renderResources();
 
+    // Reset YouTube & Source Tabs
+    if (inputYtUrl) inputYtUrl.value = '';
+    if (inputLecYoutubeId) inputLecYoutubeId.value = '';
+    currentYtTitle = '';
+    setYtStatus('', '');
+    if (ytPreviewCard) ytPreviewCard.style.display = 'none';
+    setVideoSourceTab('file');
+
     if (editorTitle) editorTitle.textContent = 'Thêm bài giảng mới';
     if (editorSub) editorSub.textContent = 'Điền thông tin chương bài giảng, video và nội dung tổng quan';
     if (btnCancelEdit) btnCancelEdit.style.display = 'none';
     if (btnSaveLecture) btnSaveLecture.textContent = '💾 Lưu bài giảng mới';
     if (previewLecOverview) previewLecOverview.style.display = 'none';
+    renderLectures(currentLectures);
   }
 
   if (btnResetForm) btnResetForm.addEventListener('click', resetLectureForm);
@@ -765,21 +989,74 @@ document.addEventListener('DOMContentLoaded', function () {
         inputLecDuration.value = l.duration_min || 1;
         inputLecDesc.value = l.description || '';
 
-        // Hiển thị video đã có kèm thời lượng đã lưu
-        if (l.video_url) {
-          var fName = decodeURIComponent(l.video_url.split('/').pop() || 'Video.mp4');
+        var isYoutube = (l.video_source === 'youtube') || Boolean(l.youtube_id);
+
+        if (isYoutube) {
+          setVideoSourceTab('youtube');
+          var ytId = l.youtube_id || (window.Lib95 && window.Lib95.youtube ? window.Lib95.youtube.extractYouTubeId(l.video_url) : '');
+          var canonical = l.video_url || (window.Lib95 && window.Lib95.youtube ? window.Lib95.youtube.canonicalWatchUrl(ytId) : '');
+          if (inputYtUrl) inputYtUrl.value = canonical;
+          if (inputLecVideoUrl) inputLecVideoUrl.value = canonical;
+          if (inputLecYoutubeId) inputLecYoutubeId.value = ytId || '';
+
+          // Display YouTube preview card safely
+          var thumb = l.thumbnail_url || (window.Lib95 && window.Lib95.youtube ? window.Lib95.youtube.thumbnailUrl(ytId) : '');
+          if (ytPreviewThumb) {
+            ytPreviewThumb.src = thumb;
+            ytPreviewThumb.alt = l.title;
+          }
+          if (ytPreviewTitle) {
+            ytPreviewTitle.textContent = l.title;
+          }
+          if (ytPreviewAuthor) {
+            ytPreviewAuthor.textContent = 'Nguồn: YouTube' + (ytId ? (' (' + ytId + ')') : '');
+          }
+          if (ytPreviewLink) {
+            ytPreviewLink.href = canonical;
+          }
+          if (ytPreviewCard) {
+            ytPreviewCard.style.display = 'flex';
+          }
+          currentYtTitle = l.title;
+          setYtStatus('success', '✓ Bài giảng đang dùng nguồn YouTube');
           var savedMin = l.duration_min || 1;
-          setVideoAssigned(l.video_url, fName, 'Đã lưu trên hệ thống', savedMin, savedMin + ' phút');
           updateDurationUI(savedMin, savedMin + ' phút', false);
         } else {
-          clearVideoAssigned();
+          // File-based lecture
+          var isLocalVideo = false;
+          if (localVideos && localVideos.some(function (v) { return v.url === l.video_url; })) {
+            isLocalVideo = true;
+          }
+
+          if (isLocalVideo) {
+            setVideoSourceTab('local');
+            if (selectLecVideoDetected) selectLecVideoDetected.value = l.video_url;
+          } else {
+            setVideoSourceTab('file');
+          }
+
+          if (l.video_url) {
+            var fName = decodeURIComponent(l.video_url.split('/').pop() || 'Video.mp4');
+            var savedMin = l.duration_min || 1;
+            setVideoAssigned(l.video_url, fName, 'Đã lưu trên hệ thống', savedMin, savedMin + ' phút');
+            updateDurationUI(savedMin, savedMin + ' phút', false);
+          } else {
+            clearVideoAssigned();
+          }
         }
 
         // Takeaways
         if (Array.isArray(l.key_takeaways)) {
           inputLecTakeaways.value = l.key_takeaways.join('\n');
         } else if (typeof l.key_takeaways === 'string') {
-          inputLecTakeaways.value = l.key_takeaways;
+          try {
+            var parsed = JSON.parse(l.key_takeaways);
+            inputLecTakeaways.value = Array.isArray(parsed) ? parsed.join('\n') : l.key_takeaways;
+          } catch (e) {
+            inputLecTakeaways.value = l.key_takeaways;
+          }
+        } else {
+          inputLecTakeaways.value = '';
         }
 
         inputLecOverview.value = l.overview_html || '';
@@ -836,7 +1113,6 @@ document.addEventListener('DOMContentLoaded', function () {
       var title = inputLecTitle.value.trim();
       var order = parseInt(inputLecOrder.value, 10) || 1;
       var duration = parseInt(inputLecDuration.value, 10) || 1;
-      var videoUrl = inputLecVideoUrl ? inputLecVideoUrl.value.trim() : '';
       var desc = inputLecDesc.value.trim();
       var overview = inputLecOverview.value.trim();
 
@@ -848,9 +1124,45 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Vui lòng nhập tên bài giảng / chương!');
         return;
       }
-      if (!videoUrl) {
-        alert('Vui lòng tải lên hoặc chọn video cho bài giảng!');
-        return;
+
+      var finalSource = inputLecVideoSource ? inputLecVideoSource.value : 'file';
+      var videoUrl = '';
+      var youtubeId = null;
+
+      if (finalSource === 'youtube') {
+        var ytInput = inputYtUrl ? inputYtUrl.value.trim() : '';
+        var rawUrl = inputLecVideoUrl.value.trim() || ytInput;
+        if (!window.Lib95 || !window.Lib95.youtube) {
+          alert('Thư viện YouTube chưa sẵn sàng');
+          return;
+        }
+        youtubeId = inputLecYoutubeId ? inputLecYoutubeId.value.trim() : '';
+        if (!youtubeId) {
+          youtubeId = window.Lib95.youtube.extractYouTubeId(rawUrl);
+        }
+        if (!youtubeId) {
+          alert('Vui lòng nhập đường link YouTube hợp lệ!');
+          if (inputYtUrl) inputYtUrl.focus();
+          return;
+        }
+        videoUrl = window.Lib95.youtube.canonicalWatchUrl(youtubeId);
+        if (!duration || duration < 1) {
+          alert('Vui lòng nhập thời lượng bài giảng (số phút >= 1)!');
+          if (inputLecDuration) inputLecDuration.focus();
+          return;
+        }
+      } else {
+        // File source (upload or local)
+        if (currentVideoSource === 'local' && selectLecVideoDetected && selectLecVideoDetected.value) {
+          videoUrl = selectLecVideoDetected.value;
+        } else {
+          videoUrl = inputLecVideoUrl ? inputLecVideoUrl.value.trim() : '';
+        }
+
+        if (!videoUrl) {
+          alert('Vui lòng tải lên hoặc chọn video cho bài giảng!');
+          return;
+        }
       }
 
       // Tách takeaways theo từng dòng
@@ -865,7 +1177,9 @@ document.addEventListener('DOMContentLoaded', function () {
         chapter_order: order,
         type: 'video',
         duration_min: duration,
+        video_source: finalSource,
         video_url: videoUrl,
+        youtube_id: youtubeId,
         description: desc,
         key_takeaways: takeaways,
         overview_html: overview,
@@ -875,6 +1189,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var lecId = inputLecId.value;
       var url = lecId ? '/api/lms/lectures/' + lecId : '/api/lms/courses/' + courseId + '/lectures';
       var method = lecId ? 'PUT' : 'POST';
+
 
       fetch(url, {
         method: method,

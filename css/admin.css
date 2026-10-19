@@ -3896,3 +3896,196 @@ html[data-theme="dark"] .internal-role-badge {
     color: var(--accent-bright, #38bdf8) !important;
     border: 1px solid rgba(56, 189, 248, 0.3) !important;
 }
+
+/* =====================================================================
+   LMS VIDEO SOURCE SEGMENTED CONTROLS & YOUTUBE PANEL
+   ===================================================================== */
+.lms-source-segmented {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(241, 245, 249, 0.85);
+    padding: 3px;
+    border-radius: var(--admin-radius-small, 10px);
+    border: 1px solid #e2e8f0;
+    gap: 3px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.lms-source-tab-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 7px 12px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.lms-source-tab-btn:hover {
+    color: var(--color-text);
+}
+
+.lms-source-tab-btn.is-active {
+    background: var(--color-white, #ffffff);
+    color: var(--color-primary);
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.lms-yt-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    background: var(--color-white, #ffffff);
+    border-radius: var(--admin-radius-small, 10px);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.lms-yt-input-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lms-yt-input {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #fff;
+    color: var(--color-text);
+}
+
+.lms-yt-input:focus {
+    border-color: var(--color-primary-light);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.lms-yt-status-badge {
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 20px;
+    font-weight: 500;
+}
+
+.lms-yt-status-badge.is-loading {
+    color: var(--color-primary);
+}
+
+.lms-yt-status-badge.is-success {
+    color: #059669;
+}
+
+.lms-yt-status-badge.is-error {
+    color: #dc2626;
+}
+
+.lms-yt-preview-card {
+    display: flex;
+    gap: 12px;
+    padding: 10px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.lms-yt-preview-thumb-wrap {
+    position: relative;
+    width: 140px;
+    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+}
+
+.lms-yt-preview-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.lms-yt-preview-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    flex: 1;
+}
+
+.lms-yt-preview-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.35;
+    margin: 0 0 4px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.lms-yt-preview-author {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.lms-yt-preview-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+/* Dark Mode Support for LMS YouTube */
+html[data-theme="dark"] .lms-source-segmented {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+html[data-theme="dark"] .lms-source-tab-btn {
+    color: #94a3b8;
+}
+html[data-theme="dark"] .lms-source-tab-btn:hover {
+    color: #f8fafc;
+}
+html[data-theme="dark"] .lms-source-tab-btn.is-active {
+    background: rgba(30, 41, 59, 0.95);
+    color: var(--accent-bright, #38bdf8);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+html[data-theme="dark"] .lms-yt-panel {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+html[data-theme="dark"] .lms-yt-input {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #f8fafc;
+}
+html[data-theme="dark"] .lms-yt-preview-card {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+html[data-theme="dark"] .lms-yt-preview-title {
+    color: #f8fafc;
+}
+html[data-theme="dark"] .lms-yt-preview-author {
+    color: #94a3b8;
+}
