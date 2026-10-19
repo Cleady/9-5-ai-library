@@ -283,7 +283,7 @@
             <section class="subjects" aria-labelledby="subjects-title">
                 <header class="section-header">
                     <h2 class="section-title" id="subjects-title">Your subjects</h2>
-                    <a href="#" class="card-link">View all subjects</a>
+                    <a href="#" id="view-all-subjects" class="card-link">View all subjects</a>
                 </header>
 
                 <ul class="subject-grid">
@@ -519,6 +519,36 @@
             </footer>
         </main>
 
+    </div>
+
+    <!-- Modal: View all subjects -->
+    <div id="home-subjects-modal" class="home-subjects-modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="home-subjects-modal-title">
+        <div class="home-subjects-modal-dialog">
+            <div class="home-subjects-modal-header">
+                <h2 id="home-subjects-modal-title" class="home-subjects-modal-title">All subjects</h2>
+                <button type="button" class="home-subjects-modal-close" id="home-subjects-modal-close" aria-label="Đóng">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="home-subjects-modal-search-wrap">
+                <svg class="home-subjects-modal-search-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="search" id="home-subjects-search-input" class="home-subjects-modal-search-input" placeholder="Tìm môn học theo tên hoặc mã môn..." aria-label="Tìm môn học" autocomplete="off" />
+            </div>
+            <div class="home-subjects-modal-body">
+                <ul class="home-subjects-modal-list" id="home-subjects-modal-list">
+                    <!-- Dynamic subjects rendered by JS -->
+                </ul>
+                <div class="home-subjects-modal-empty" id="home-subjects-modal-empty" hidden>
+                    <p>Không tìm thấy môn học nào</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="/js/main.js"></script>

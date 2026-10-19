@@ -1863,6 +1863,255 @@ html:not([data-theme="dark"]) .subject-card .chip-soft:active {
     background-color: var(--color-primary-soft);
 }
 
+/* ==========================================================================
+   Home Subjects Modal ("View all subjects")
+   ========================================================================== */
+.home-subjects-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 1;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.home-subjects-modal-overlay[hidden] {
+    display: none !important;
+}
+
+.home-subjects-modal-dialog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: min(720px, 92vw);
+    max-height: 80vh;
+    background-color: var(--card-bg-elevated);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    animation: homeModalFadeIn 0.2s ease-out;
+}
+
+@keyframes homeModalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.home-subjects-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.home-subjects-modal-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.home-subjects-modal-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.home-subjects-modal-close:hover {
+    background-color: var(--nav-hover-bg);
+    color: var(--color-text);
+}
+
+.home-subjects-modal-close:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.home-subjects-modal-search-wrap {
+    position: relative;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--card-border);
+    display: flex;
+    align-items: center;
+}
+
+.home-subjects-modal-search-icon {
+    position: absolute;
+    left: 32px;
+    color: var(--color-text-muted);
+    pointer-events: none;
+}
+
+.home-subjects-modal-search-input {
+    width: 100%;
+    padding: 8px 12px 8px 36px;
+    font-size: 14px;
+    color: var(--color-text);
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.home-subjects-modal-search-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 18%, transparent);
+}
+
+.home-subjects-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px 20px;
+    min-height: 120px;
+}
+
+.home-subjects-modal-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home-subjects-modal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 10px 14px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    transition: background-color 0.15s;
+}
+
+.home-subjects-modal-item:hover {
+    background-color: var(--nav-hover-bg);
+}
+
+.home-subjects-modal-item-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.home-subjects-modal-item .subject-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.home-subjects-modal-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.home-subjects-modal-item-name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.home-subjects-modal-item-desc {
+    margin: 2px 0 6px;
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.home-subjects-modal-item .progress-row {
+    margin-top: 0;
+    gap: 8px;
+}
+
+.home-subjects-modal-item .progress {
+    height: 6px;
+    max-width: 140px;
+}
+
+.home-subjects-modal-item .progress-label {
+    font-size: 11px;
+}
+
+.home-subjects-modal-item-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    align-items: center;
+    min-width: 170px;
+    justify-content: flex-end;
+}
+
+.home-subjects-modal-item-actions .chip {
+    padding: 6px 14px;
+    min-width: 76px;
+}
+
+/* Light mode shadow for Practice chip in modal */
+html:not([data-theme="dark"]) .home-subjects-modal-item .chip-soft {
+    box-shadow: 0 2px 6px color-mix(in srgb, var(--color-primary) 18%, transparent);
+}
+
+html:not([data-theme="dark"]) .home-subjects-modal-item .chip-soft:hover {
+    box-shadow: 0 3px 8px color-mix(in srgb, var(--color-primary) 26%, transparent);
+}
+
+.home-subjects-modal-empty {
+    padding: 36px 16px;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+@media (max-width: 580px) {
+    .home-subjects-modal-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .home-subjects-modal-item-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .home-subjects-modal-item-actions .chip {
+        flex: 1;
+    }
+}
+
 /* Dấu ">" vẽ bằng CSS, cùng kiểu với mũi tên ở sidebar */
 .subject-arrow::after {
     content: "";

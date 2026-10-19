@@ -9,6 +9,7 @@
 
   function initDashboard() {
     renderSubjects();
+    initViewAllModal();
     renderContinueLearning();
     renderLatestScore();
     renderRecentActivity();
@@ -196,6 +197,146 @@
         });
       }
     });
+  }
+
+  function initViewAllModal() {
+    const trigger = document.getElementById('view-all-subjects');
+    const modal = document.getElementById('home-subjects-modal');
+    if (!trigger || !modal) return;
+
+    const closeBtn = document.getElementById('home-subjects-modal-close');
+    const searchInput = document.getElementById('home-subjects-search-input');
+    const listEl = document.getElementById('home-subjects-modal-list');
+    const emptyEl = document.getElementById('home-subjects-modal-empty');
+
+    let lastFocusedElement = null;
+
+    function renderModalList(filterQuery) {
+      if (!listEl) return;
+      const q = (filterQuery || '').trim().toLowerCase();
+      const allSubjects = core.getSubjects();
+      let visibleCount = 0;
+      let html = '';
+
+      allSubjects.forEach(sub => {
+        const nameMatch = (sub.name || '').toLowerCase().includes(q);
+        const codeMatch = (sub.title || '').toLowerCase().includes(q);
+
+        if (!q || nameMatch || codeMatch) {
+          visibleCount++;
+          const progress = getSubjectProgress(sub);
+          const pct = progress.percent;
+
+          html += `
+            <li class="home-subjects-modal-item" data-subject-id="${sub.id}">
+              <div class="home-subjects-modal-item-left">
+                <span class="subject-icon ${sub.icon}" aria-hidden="true"></span>
+                <div class="home-subjects-modal-item-info">
+                  <h3 class="home-subjects-modal-item-name">${sub.name}</h3>
+                  <p class="home-subjects-modal-item-desc">${sub.title}</p>
+                  <div class="progress-row">
+                    <progress class="progress" value="${pct}" max="100" aria-label="Tiến độ ${sub.name}">${pct}%</progress>
+                    <span class="progress-label">${pct}%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-subjects-modal-item-actions">
+                <a href="/pages/lectures/lectures.html" class="chip chip-outline">Lectures</a>
+                <a href="/pages/practice/practice-subject.html?subject=${sub.id}" class="chip chip-soft">Practice</a>
+              </div>
+            </li>
+          `;
+        }
+      });
+
+      listEl.innerHTML = html;
+      if (emptyEl) {
+        emptyEl.hidden = visibleCount > 0;
+      }
+    }
+
+    function openModal() {
+      lastFocusedElement = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      if (searchInput) {
+        searchInput.value = '';
+      }
+      renderModalList('');
+      setTimeout(() => {
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }, 50);
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        lastFocusedElement.focus();
+      }
+    }
+
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeModal();
+      });
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (modal.hidden) return;
+
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeModal();
+        return;
+      }
+
+      if (e.key === 'Tab') {
+        const focusable = modal.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const focusableArr = Array.prototype.filter.call(
+          focusable,
+          el => !el.hidden && el.offsetParent !== null
+        );
+        if (focusableArr.length === 0) return;
+
+        const first = focusableArr[0];
+        const last = focusableArr[focusableArr.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        renderModalList(searchInput.value);
+      });
+    }
   }
 
   function renderContinueLearning() {
