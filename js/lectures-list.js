@@ -251,10 +251,20 @@
       /* URL đích — nếu bị khóa thì không điều hướng */
       var href = isLocked ? '#' : (lec.type === 'quiz' ? 'quiz.html?id=' + lec.id : 'lecture.html?id=' + lec.id);
 
+      var isYoutube = (lec.videoSource === 'youtube') || Boolean(lec.youtubeId);
+      var thumbImgHtml = '';
+      if (isYoutube || lec.thumbnailUrl) {
+        var thumbSrc = lec.thumbnailUrl || (lec.youtubeId ? ('https://i.ytimg.com/vi/' + lec.youtubeId + '/hqdefault.jpg') : '');
+        if (thumbSrc) {
+          thumbImgHtml = '<img class="lec-row-thumb-img" src="' + thumbSrc + '" alt="" loading="lazy">';
+        }
+      }
+
       html +=
         '<a href="' + href + '" class="lec-row' + lockedClass + '" data-lecture-id="' + lec.id + '" data-status="' + lec.status + '"' +
           (isLocked ? ' aria-disabled="true"' : '') + '>' +
-          '<div class="lec-row-thumb" style="background: linear-gradient(135deg, ' + gradFrom + ', ' + gradTo + ')">' +
+          '<div class="lec-row-thumb' + (thumbImgHtml ? ' has-image' : '') + '" style="background: linear-gradient(135deg, ' + gradFrom + ', ' + gradTo + ')">' +
+            thumbImgHtml +
             '<span class="lec-row-type-badge lec-badge--' + lec.type + '">' + TYPE_ICONS[lec.type] + '</span>' +
           '</div>' +
           '<div class="lec-row-body">' +
@@ -507,9 +517,19 @@
       var gradFrom = subject ? subject.gradientFrom : '#dbeafe';
       var gradTo = subject ? subject.gradientTo : '#bfdbfe';
 
+      var isYoutube = (lec.videoSource === 'youtube') || Boolean(lec.youtubeId);
+      var thumbImgHtml = '';
+      if (isYoutube || lec.thumbnailUrl) {
+        var thumbSrc = lec.thumbnailUrl || (lec.youtubeId ? ('https://i.ytimg.com/vi/' + lec.youtubeId + '/hqdefault.jpg') : '');
+        if (thumbSrc) {
+          thumbImgHtml = '<img class="lec-row-thumb-img" src="' + thumbSrc + '" alt="" loading="lazy">';
+        }
+      }
+
       html +=
         '<div class="lec-next-row' + (isLocked ? ' lec-row--locked' : '') + '" data-lecture-id="' + lec.id + '">' +
-          '<div class="lec-row-thumb" style="background: linear-gradient(135deg, ' + gradFrom + ', ' + gradTo + ')">' +
+          '<div class="lec-row-thumb' + (thumbImgHtml ? ' has-image' : '') + '" style="background: linear-gradient(135deg, ' + gradFrom + ', ' + gradTo + ')">' +
+            thumbImgHtml +
             '<span class="lec-row-type-badge lec-badge--' + lec.type + '">' + TYPE_ICONS[lec.type] + '</span>' +
           '</div>' +
           '<div class="lec-row-body">' +

@@ -469,10 +469,20 @@
         var subject = core.getSubjectById(subjectId);
         var isLocked = nextLec.status === 'locked';
         var href = isLocked ? '#' : (nextLec.type === 'quiz' ? 'quiz.html?id=' + nextLec.id : 'lecture.html?id=' + nextLec.id);
+
+        var isYoutube = (nextLec.videoSource === 'youtube') || Boolean(nextLec.youtubeId);
+        var thumbImgHtml = '';
+        if (isYoutube || nextLec.thumbnailUrl) {
+          var thumbSrc = nextLec.thumbnailUrl || (nextLec.youtubeId ? ('https://i.ytimg.com/vi/' + nextLec.youtubeId + '/hqdefault.jpg') : '');
+          if (thumbSrc) {
+            thumbImgHtml = '<img class="lec-next-card-thumb-img" src="' + thumbSrc + '" alt="" loading="lazy">';
+          }
+        }
         
         nextCard.innerHTML =
           '<a href="' + href + '" class="lec-next-card-item' + (isLocked ? ' lec-row--locked' : '') + '">' +
-            '<div class="lec-next-card-thumb" style="background: linear-gradient(135deg, ' + subject.gradientFrom + ', ' + subject.gradientTo + ')">' +
+            '<div class="lec-next-card-thumb' + (thumbImgHtml ? ' has-image' : '') + '" style="background: linear-gradient(135deg, ' + subject.gradientFrom + ', ' + subject.gradientTo + ')">' +
+              thumbImgHtml +
               '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg>' +
             '</div>' +
             '<div class="lec-next-card-info">' +

@@ -286,6 +286,7 @@
 /* Thumbnail nhỏ ở đầu hàng */
 .lec-row-thumb {
   position: relative;
+  overflow: hidden;
   width: 56px;
   height: 56px;
   flex-shrink: 0;
@@ -293,6 +294,35 @@
   /* Gradient được đặt inline từ JS */
   display: grid;
   place-items: center;
+}
+
+.lec-row-thumb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.25s ease;
+}
+
+.lec-row:hover .lec-row-thumb-img,
+.lec-next-row:hover .lec-row-thumb-img {
+  transform: scale(1.08);
+}
+
+.lec-row-thumb.has-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, transparent 70%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.lec-row-thumb.has-image .lec-row-type-badge {
+  position: relative;
+  z-index: 3;
 }
 
 /* Badge loại bài giảng (video/quiz/reading) trên thumbnail */
@@ -1083,12 +1113,44 @@
 }
 
 .lec-next-card-thumb {
+  position: relative;
+  overflow: hidden;
   width: 40px;
   height: 40px;
   border-radius: 8px;
   flex-shrink: 0;
   display: grid;
   place-items: center;
+}
+
+.lec-next-card-thumb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.25s ease;
+}
+
+.lec-next-card-item:hover .lec-next-card-thumb-img {
+  transform: scale(1.08);
+}
+
+.lec-next-card-thumb.has-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.lec-next-card-thumb.has-image svg {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
 }
 
 .lec-next-card-info {
