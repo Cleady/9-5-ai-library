@@ -1,0 +1,54 @@
+[2026-07-15T05:28:05.581Z] 🚀 Bắt đầu phân loại câu hỏi bằng Google Gemini AI
+[2026-07-15T05:28:05.582Z] 📊 Tổng số: 5 câu hỏi
+[2026-07-15T05:28:05.582Z] 🔄 Cần xử lý: 5 câu
+[2026-07-15T05:28:06.203Z] ✅ 5/5 (100.0%) | Đã phân loại: 0 | Lỗi: 5 | Chapters: {}
+[2026-07-15T05:28:06.207Z] 
+═══════════════════════════════════════════
+[2026-07-15T05:28:06.207Z] 📊 KẾT QUẢ PHÂN LOẠI:
+[2026-07-15T05:28:06.208Z]   Chương 1: Logic và Bằng chứng: 0 câu
+[2026-07-15T05:28:06.208Z]   Chương 2: Cấu trúc cơ bản - Tập hợp, Hàm, Dãy và Tổng: 0 câu
+[2026-07-15T05:28:06.209Z]   Chương 3: Thuật toán: 0 câu
+[2026-07-15T05:28:06.209Z]   Chương 4: Lý thuyết số và Mật mã: 0 câu
+[2026-07-15T05:28:06.209Z]   Chương 5: Quy nạp và Đệ quy: 0 câu
+[2026-07-15T05:28:06.209Z]   Chương 6: Đếm: 0 câu
+[2026-07-15T05:28:06.209Z]   Chương 7: Đồ thị: 0 câu
+[2026-07-15T05:28:06.209Z]   Chương 8: Cây: 0 câu
+[2026-07-15T05:28:06.210Z] 
+✅ Tổng đã phân loại: 0/5
+[2026-07-15T05:28:06.210Z] ❌ Số lỗi: 5
+[2026-07-15T05:28:06.210Z] 
+⚠️ Danh sách lỗi:
+[2026-07-15T05:28:06.210Z]   Câu 1: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod
+[2026-07-15T05:28:06.210Z]   Câu 2: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod
+[2026-07-15T05:28:06.210Z]   Câu 3: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod
+[2026-07-15T05:28:06.211Z]   Câu 4: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod
+[2026-07-15T05:28:06.211Z]   Câu 5: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod
+[2026-07-15T05:28:06.211Z] 
+📝 Kết quả chi tiết: C:\Users\anhqu\Documents\FPTU - Artificial Intelligent\MAD101\MAD\classification_results.json
+[2026-07-15T05:28:06.212Z] 📝 Tóm tắt: C:\Users\anhqu\Documents\FPTU - Artificial Intelligent\MAD101\MAD\chapter_breakdown.json
+[2026-07-15T05:28:06.212Z] ✅ HOÀN TẤT!
+[2026-07-15T05:28:21.634Z] 🚀 Bắt đầu phân loại câu hỏi bằng Google Gemini AI
+[2026-07-15T05:28:21.635Z] 📊 Tổng số: 1 câu hỏi
+[2026-07-15T05:28:21.636Z] 🔄 Cần xử lý: 1 câu
+[2026-07-15T05:28:21.960Z] ✅ 1/1 (100.0%) | Đã phân loại: 0 | Lỗi: 1 | Chapters: {}
+[2026-07-15T05:28:21.961Z] 
+═══════════════════════════════════════════
+[2026-07-15T05:28:21.961Z] 📊 KẾT QUẢ PHÂN LOẠI:
+[2026-07-15T05:28:21.961Z]   Chương 1: Logic và Bằng chứng: 0 câu
+[2026-07-15T05:28:21.961Z]   Chương 2: Cấu trúc cơ bản - Tập hợp, Hàm, Dãy và Tổng: 0 câu
+[2026-07-15T05:28:21.962Z]   Chương 3: Thuật toán: 0 câu
+[2026-07-15T05:28:21.962Z]   Chương 4: Lý thuyết số và Mật mã: 0 câu
+[2026-07-15T05:28:21.962Z]   Chương 5: Quy nạp và Đệ quy: 0 câu
+[2026-07-15T05:28:21.962Z]   Chương 6: Đếm: 0 câu
+[2026-07-15T05:28:21.962Z]   Chương 7: Đồ thị: 0 câu
+[2026-07-15T05:28:21.963Z]   Chương 8: Cây: 0 câu
+[2026-07-15T05:28:21.963Z] 
+✅ Tổng đã phân loại: 0/1
+[2026-07-15T05:28:21.963Z] ❌ Số lỗi: 1
+[2026-07-15T05:28:21.963Z] 
+⚠️ Danh sách lỗi:
+[2026-07-15T05:28:21.963Z]   Câu 1: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod
+[2026-07-15T05:28:21.964Z] 
+📝 Kết quả chi tiết: C:\Users\anhqu\Documents\FPTU - Artificial Intelligent\MAD101\MAD\classification_results.json
+[2026-07-15T05:28:21.964Z] 📝 Tóm tắt: C:\Users\anhqu\Documents\FPTU - Artificial Intelligent\MAD101\MAD\chapter_breakdown.json
+[2026-07-15T05:28:21.964Z] ✅ HOÀN TẤT!

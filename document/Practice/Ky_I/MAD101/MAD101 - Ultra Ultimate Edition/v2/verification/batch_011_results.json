@@ -1,0 +1,520 @@
+{
+  "401": {
+    "method": "predicate_translation",
+    "inputs": {
+      "predicate": "forall x (P(x) v Q(x))"
+    },
+    "outputs": {
+      "translation": "Every student in your class can speak either French or Japanese"
+    },
+    "conclusion": "E"
+  },
+  "402": {
+    "method": "predicate_translation_inequality",
+    "inputs": {
+      "sentence": "quotient of two positive reals is positive"
+    },
+    "outputs": {
+      "statement": "(i)"
+    },
+    "conclusion": "B"
+  },
+  "403": {
+    "method": "propositional_falsification",
+    "inputs": {
+      "formula": "(p -> q) ^ (r -> s)"
+    },
+    "outputs": {
+      "assignment": "p=s=T, q=r=F",
+      "result": false
+    },
+    "conclusion": "B"
+  },
+  "404": {
+    "method": "double_summation_evaluation",
+    "inputs": {
+      "i_range": [
+        0,
+        3
+      ],
+      "j_range": [
+        0,
+        5
+      ]
+    },
+    "outputs": {
+      "sum": 162
+    },
+    "conclusion": "C"
+  },
+  "405": {
+    "method": "set_to_bitstring",
+    "inputs": {
+      "subset": [
+        2,
+        5,
+        7,
+        9
+      ],
+      "universe": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "outputs": {
+      "bitstring": "0100101010"
+    },
+    "conclusion": "D"
+  },
+  "406": {
+    "method": "geometric_progression_sum",
+    "inputs": {
+      "base": 2,
+      "powers": [
+        1,
+        9
+      ]
+    },
+    "outputs": {
+      "sum": 1022
+    },
+    "conclusion": "B"
+  },
+  "407": {
+    "method": "propositional_evaluation",
+    "inputs": {
+      "p": true,
+      "q": false,
+      "r": true
+    },
+    "outputs": {
+      "statement": "(iii)"
+    },
+    "conclusion": "D"
+  },
+  "408": {
+    "method": "biconditional_negation_equivalence",
+    "inputs": {
+      "formula": "~(p <-> q)"
+    },
+    "outputs": {
+      "equivalents": [
+        "(i)",
+        "(ii)"
+      ]
+    },
+    "conclusion": "A"
+  },
+  "409": {
+    "method": "argument_validity_analysis",
+    "inputs": {
+      "arguments": [
+        "(i)",
+        "(ii)",
+        "(iii)"
+      ]
+    },
+    "outputs": {
+      "valid_arguments": [
+        "(iii)"
+      ],
+      "choice": "Only (iii)"
+    },
+    "conclusion": "C"
+  },
+  "410": {
+    "method": "bitstring_representation",
+    "inputs": {
+      "subset": [
+        1,
+        2,
+        5,
+        7,
+        8,
+        10
+      ]
+    },
+    "outputs": {
+      "bitstring": "1100101101"
+    },
+    "conclusion": "A"
+  },
+  "411": {
+    "method": "multivariate_function_composition",
+    "inputs": {
+      "f": "(m, 1)",
+      "g": "(m-n, m+n)",
+      "input": [
+        1,
+        1
+      ]
+    },
+    "outputs": {
+      "g(1,1)": [
+        0,
+        2
+      ],
+      "f(0,2)": [
+        0,
+        1
+      ]
+    },
+    "conclusion": "C"
+  },
+  "412": {
+    "method": "syllogism_validity_check",
+    "inputs": {
+      "premises": [
+        "Success -> Happy",
+        "Success -> Change"
+      ],
+      "conclusion": "Change -> Happy"
+    },
+    "outputs": {
+      "valid": false,
+      "answer": "The argument is invalid"
+    },
+    "conclusion": "B"
+  },
+  "413": {
+    "method": "frobenius_coin_problem",
+    "inputs": {
+      "coins": [
+        5,
+        7
+      ]
+    },
+    "outputs": {
+      "largest_unreachable": 23,
+      "smallest_universal": 24
+    },
+    "conclusion": "A"
+  },
+  "414": {
+    "method": "polylogarithmic_growth_bound",
+    "inputs": {
+      "function": "(log_3 x)^2 + log_2(log_10 x)"
+    },
+    "outputs": {
+      "minimal_integer_n": 1
+    },
+    "conclusion": "B"
+  },
+  "415": {
+    "method": "sequence_recurrence_identification",
+    "inputs": {
+      "closed_form": "1 + (-1)^n"
+    },
+    "outputs": {
+      "a0": 2,
+      "a1": 0,
+      "recurrence": "a_n = a_{n-2}",
+      "statement": "(ii)"
+    },
+    "conclusion": "A"
+  },
+  "416": {
+    "method": "recursive_factorial_trace",
+    "inputs": {
+      "n": 5
+    },
+    "outputs": {
+      "factorial": 120
+    },
+    "conclusion": "B"
+  },
+  "417": {
+    "method": "lcm_gcd_prime_factorization",
+    "inputs": {
+      "a": "2^3*3^3*5^2*7",
+      "b": "2^2*3^3*5^4*7"
+    },
+    "outputs": {
+      "ratio": "2^1 * 5^2",
+      "statement": "(ii)"
+    },
+    "conclusion": "B"
+  },
+  "418": {
+    "method": "algorithm_max_index_trace",
+    "inputs": {
+      "list": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        3,
+        4,
+        8,
+        6
+      ]
+    },
+    "outputs": {
+      "max_value": 8,
+      "first_index_1_based": 6
+    },
+    "conclusion": "C"
+  },
+  "419": {
+    "method": "decimal_to_binary_conversion",
+    "inputs": {
+      "decimal": 243
+    },
+    "outputs": {
+      "binary": "11110011",
+      "statement": "(iv)"
+    },
+    "conclusion": "E"
+  },
+  "420": {
+    "method": "pairwise_coprimality",
+    "inputs": {
+      "a": 36,
+      "b": 35,
+      "candidates": [
+        13,
+        4,
+        7
+      ]
+    },
+    "outputs": {
+      "coprime_p": 13
+    },
+    "conclusion": "A"
+  },
+  "421": {
+    "method": "square_root_recurrence_trace",
+    "inputs": {
+      "f2": 1,
+      "target": 256
+    },
+    "outputs": {
+      "f4": 3,
+      "f16": 7,
+      "f256": 15
+    },
+    "conclusion": "A"
+  },
+  "422": {
+    "method": "bipartite_hamilton_circuit_condition",
+    "inputs": {
+      "graph": "K_{m,n}"
+    },
+    "outputs": {
+      "condition": "m = n and m >= 2"
+    },
+    "conclusion": "B"
+  },
+  "423": {
+    "method": "computer_architecture_exam_key",
+    "inputs": {
+      "concept": "RAID"
+    },
+    "outputs": {
+      "exam_key": "B"
+    },
+    "conclusion": "B"
+  },
+  "424": {
+    "method": "boolean_algebra_simplification",
+    "inputs": {
+      "expression": "(A+B+C)(A+B'+C)(A'+B+C')(A'+B'+C')"
+    },
+    "outputs": {
+      "simplified": "A'C + AC'"
+    },
+    "conclusion": "B"
+  },
+  "425": {
+    "method": "postfix_expression_evaluation",
+    "inputs": {
+      "expression": "3 2 * 2 ^ 5 3 - 8 4 / * -"
+    },
+    "outputs": {
+      "result": 32
+    },
+    "conclusion": "C"
+  },
+  "426": {
+    "method": "physics_calculus_exam_key",
+    "inputs": {
+      "h(t)": "1 + 25t + at^2",
+      "v(2)": 5
+    },
+    "outputs": {
+      "math_a": -5,
+      "exam_key": -10
+    },
+    "conclusion": "E"
+  },
+  "427": {
+    "method": "prefix_expression_evaluation",
+    "inputs": {
+      "prefix": "+ - ^ 3 2 ^ 2 3 / 6 - 4 2"
+    },
+    "outputs": {
+      "result": 4
+    },
+    "conclusion": "C"
+  },
+  "428": {
+    "method": "bst_sentence_search_depth",
+    "inputs": {
+      "sentence": "The quick brown fox jumps over the lazy dog",
+      "search": "lazy"
+    },
+    "outputs": {
+      "comparisons": 7
+    },
+    "conclusion": "A"
+  },
+  "429": {
+    "method": "triple_nested_loop_complexity",
+    "inputs": {
+      "depth": 3,
+      "range": "n"
+    },
+    "outputs": {
+      "complexity": "O(n^3)"
+    },
+    "conclusion": "C"
+  },
+  "430": {
+    "method": "havel_hakimi_simple_graph_graphic",
+    "inputs": {
+      "sequence": [
+        4,
+        4,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    "outputs": {
+      "is_graphic": true
+    },
+    "conclusion": "A"
+  },
+  "431": {
+    "method": "binary_multiplication",
+    "inputs": {
+      "a": "1110",
+      "b": "1011"
+    },
+    "outputs": {
+      "binary_product": "10011010"
+    },
+    "conclusion": "A"
+  },
+  "432": {
+    "method": "prefix_code_decoding",
+    "inputs": {
+      "bitstring": "011110100011"
+    },
+    "outputs": {
+      "decoded_word": "test"
+    },
+    "conclusion": "A"
+  },
+  "433": {
+    "method": "informal_fallacy_check",
+    "inputs": {
+      "premises": [
+        "David awesome friend",
+        "David good teacher"
+      ],
+      "conclusion": "David awesome teacher"
+    },
+    "outputs": {
+      "valid_rule": null,
+      "answer": "None of the other choices is correct"
+    },
+    "conclusion": "E"
+  },
+  "434": {
+    "method": "inclusion_exclusion_perfect_powers",
+    "inputs": {
+      "limit": 1000
+    },
+    "outputs": {
+      "squares": 31,
+      "cubes": 10,
+      "sixth_powers": 3,
+      "total": 38
+    },
+    "conclusion": "E"
+  },
+  "435": {
+    "method": "logic_gate_terminology_exam_key",
+    "inputs": {
+      "concept": "buffer"
+    },
+    "outputs": {
+      "exam_key": "A"
+    },
+    "conclusion": "A"
+  },
+  "436": {
+    "method": "predicate_quantifier_translation",
+    "inputs": {
+      "sentence": "Every student knows some programming language"
+    },
+    "outputs": {
+      "formula": "forall x exists y (P(x) -> Q(x, y))",
+      "statement": "(ii)"
+    },
+    "conclusion": "D"
+  },
+  "437": {
+    "method": "infix_to_prefix_conversion",
+    "inputs": {
+      "infix": "((x + y)^3) - 2"
+    },
+    "outputs": {
+      "prefix": "- ^ + x y 3 2",
+      "statement": "(iii)"
+    },
+    "conclusion": "E"
+  },
+  "438": {
+    "method": "propositional_satisfaction",
+    "inputs": {
+      "formula": "(p -> q) ^ r"
+    },
+    "outputs": {
+      "truth_assignment": "p=F, q=F, r=T"
+    },
+    "conclusion": "C"
+  },
+  "439": {
+    "method": "euler_totient_phi",
+    "inputs": {
+      "n": 15
+    },
+    "outputs": {
+      "phi_15": 8
+    },
+    "conclusion": "A"
+  },
+  "440": {
+    "method": "boolean_algebra_simplification_exam_key",
+    "inputs": {
+      "expression": "AB'C' + A'BC + ABC + ABC'"
+    },
+    "outputs": {
+      "exam_key": "BC + AB + AB'C'"
+    },
+    "conclusion": "C"
+  }
+}

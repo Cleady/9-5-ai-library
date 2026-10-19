@@ -1,0 +1,322 @@
+[
+  {
+    "id": 681,
+    "image": "0681_q681_Question_681.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI If B is the point where the perpendicular line from A = (6; -1; 11) meets the plane 31 + 4y + 52 10, find the distance AB_ AB = 9 /v5O () AB ="
+  },
+  {
+    "id": 682,
+    "image": "0682_q682_Question_682.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "DinhThuc",
+    "text": "CAU HOI Let be the area of the triangle with the vertices A(3,~1,1), B(4,1,0), C(2,-3,0). Find $2_ 56 DAP AN cAN CHON CAc DAP AN A 10 B: 5 D. 15 None "
+  },
+  {
+    "id": 683,
+    "image": "0683_q683_Question_683.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "DinhThuc",
+    "text": "CAU HOI Find the area of the triangle with the following vertices: A(3, ~1,1), B(4, -1,0) , and C(2, 3,0) V3 (iii) 2v3 (iv) V6 56 DAP AN cAN CHON CAC "
+  },
+  {
+    "id": 684,
+    "image": "0684_q684_Question_684.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Simplify (au + x (cu dv) , where &, b, C, d are real numbers and U, are vectors in R3_ 80 DAP AN CAN CHON CAc DAP AN (ad + bc)u X B. (ad bc)u "
+  },
+  {
+    "id": 685,
+    "image": "0685_q685_Question_685.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Determine whether u and are parallel in each of the following cases. U = u = [2; 0;_1jT;v = [-8;0;41 (iv) u = [1; 0; -1JT;v = [1;0;1]T 80 DAP "
+  },
+  {
+    "id": 686,
+    "image": "0686_q686_Question_686.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Two vectors and w are orthogonal if and only if U.W = 0 U.W = -1 (ii) Ilv x wll = -1 (iv) Ilv x wll = 0 80 DAP AN CAN CAc DAP AN None of other"
+  },
+  {
+    "id": 687,
+    "image": "0687_q687_Question_687.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Let U, be two vectors in R: such that Ilull Ilvll u and are perpendicular: The length of u X 56 DAP AN cAN CHON CAC DAP AN A. 16 B: 8"
+  },
+  {
+    "id": 688,
+    "image": "0688_q688_Question_688.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI The area of the parallelogram determined by the vectors u and v is 202. Find the area of the parallelogram determined by the vectors u and 8u "
+  },
+  {
+    "id": 689,
+    "image": "0689_q689_Question_689.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Let T R? R? be reflection in the y-axis followed by projection on the line y 2x . Let v = [1 2T Find T(v). 56 DAP AN cAN CHON CAc DAP AN 3[3 6"
+  },
+  {
+    "id": 690,
+    "image": "0690_q690_Question_690.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Find the projection v [1 0 on the plane with equation 2x 32 = 0. 80 DAP AN CAN CHON CAc DAP AN () #/-21 _ 31 B. () 1[16 _ 1 _ l1/T (Iv) 1[18 ~"
+  },
+  {
+    "id": 691,
+    "image": "0691_q691_Question_691.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Determine if T : R2 _ is either projection on a line, reflection in a line , or rotation through an angle, and find the line or angle. 80 DAP "
+  },
+  {
+    "id": 692,
+    "image": "0692_q692_Question_692.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Let T : R? R? be rotation about the origin through  followed by projection on X-axis_ Find the sum of the (1,1)-entry and (2,2)-entry of the m"
+  },
+  {
+    "id": 693,
+    "image": "0693_q693_Question_693.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Which of the following are subspaces of R4? () U = {(a,b,c,d)la? + 6 _ 2} 0} 56 DAP AN cAN CHON CAC DAP AN Both () and (ii) Neither (i) or 5d "
+  },
+  {
+    "id": 694,
+    "image": "0694_q694_Question_694.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Which of the following subsets of R2 are subspaces? {(1,y) 1 = 2y + 1} 56 DAP AN cAN CHON CAC DAP AN None of (i) or only and (ii) only"
+  },
+  {
+    "id": 695,
+    "image": "0695_q695_Question_695.png",
+    "bank_answer": "E",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Which of the following subsets are independent? {[0, 1,2], [1,1,0], [2,2,1]} {[1,2], [2,1]} {[0, 1}, [2,3], [1,4]} 80 DAP AN CAN CHON CAc DAP "
+  },
+  {
+    "id": 696,
+    "image": "0696_q696_Question_696.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Find all vectors (a,b,€, d) such that the following set is orthogonal: {(1,0,-1,1), (2,1,1,-1), (1, 3,1,0) , (a,b,c,d)} 56 DAP AN cAN CHON CAc"
+  },
+  {
+    "id": 697,
+    "image": "0697_q697_Question_697.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Let {v1, U2, Ug} be an orthonormal set in R3. Which of the following statements are true? {v1,v2 +v3} is an orthonormal set in R? 32\"3} is an "
+  },
+  {
+    "id": 698,
+    "image": "0698_q698_Question_698.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Let X and Y be vectors in Rn such that 3,X . Y Compute Il2x 3Y |. 56 DAP AN cAN CHON CAC DAP AN A: 13 C. 11 None of the other choices is corre"
+  },
+  {
+    "id": 699,
+    "image": "0699_q699_Question_699.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Let {v1, U2, U3} be an orthogonal set in R3. Which of the following statements are true? {01, U2, v3} is a basis of R3 {01, 2v2, 3v3} is also "
+  },
+  {
+    "id": 700,
+    "image": "0700_q700_Question_700.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "text": "CAU HOI Let A be a 3 X 5 matrix If dim(Null( A)) = 4,what is the rank of A? 80 DAP AN CAN CHON CAc DAP AN A: 4 B. 3 C. 2 E. 5"
+  },
+  {
+    "id": 701,
+    "image": "0701_q701_Question_701.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Let A be a 5 X matrix Which of the following statements are true? Matrix A can have independent columns Matrix A can have independent rows The"
+  },
+  {
+    "id": 702,
+    "image": "0702_q702_Question_702.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Let ~1 ~2 Find dim(null A). 56 DAP AN cAN CHON CAc DAP AN A 3 B. 4 C. 2"
+  },
+  {
+    "id": 703,
+    "image": "0703_q703_Question_703.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Let A be a 7 x 8 matrix Assume that the rows of A are linearly independent: Find rank A. 80 DAP AN CAN CHON CAc DAP AN There is not enough inf"
+  },
+  {
+    "id": 704,
+    "image": "0704_q704_Question_704.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Consider the line I = 1+ 2t, y = -1 -t 2 = 6 + 4t and the plane 2x y + 42 _ 6 = 0 Choose the correct answer. 56 DAP AN cAN CHON CAC DAP AN A. "
+  },
+  {
+    "id": 705,
+    "image": "0705_q705_Question_705.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Find an equation for the plane passing through the points (2,0,0) , (0,  3,0), (0,0,4)  80 DAP AN CAN CHON CAc DAP AN 62 + 4y _ 32 - 12 = 0 62"
+  },
+  {
+    "id": 706,
+    "image": "0706_q706_Question_706.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Find the distance from the point ( ~2,5, 9) to the plane 62 + 2y 32 + 8 = 0. 80 DAP AN CAN CHON CAc DAP AN B. 3 C. 4 D: 2 E. 9 None of the oth"
+  },
+  {
+    "id": 707,
+    "image": "0707_q707_Question_707.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Find a normal vector of the plane through A(1,2,0), B(1,1,1),C(0,0,2) 80 DAP AN CAN CHON CAc DAP AN all of the other choices are false B. (3,_"
+  },
+  {
+    "id": 708,
+    "image": "0708_q708_Question_708.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Which of the following are subspaces? {[sa, &,~alla € R} {[a + b _ 3,a,bJla,b € R} 56 DAP AN cAN CHON CAC DAP AN and (ii) None of the other ch"
+  },
+  {
+    "id": 709,
+    "image": "0709_q709_Question_709.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Which of the following are subspaces of R3? U = {(4a b, 3a 7b, 2a + b) @,b are any real numbers} (i) U = {(a,b,c) 2a 3b + c = 0,a _ b+c = 1} 5"
+  },
+  {
+    "id": 710,
+    "image": "0710_q710_Question_710.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "text": "CAU HOI Let A be a 4 x 3 matrix and B a 3 X 4 matrix Assume that rank(AB) = 3. Find dim(Null( AB)). 56 DAP AN cAN CHON CAc DAP AN B: 1 C. 2 D: 3"
+  },
+  {
+    "id": 711,
+    "image": "0711_q711_Question_711.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Let A be a 4 X matrix Assume that rank(A) = 1. Find the dimension of the null space of A. 80 DAP AN CAN CHON CAc DAP AN A: 3 None of the other"
+  },
+  {
+    "id": 712,
+    "image": "0712_q712_Question_712.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Let T : R? R? be projection on the line y 31 followed by projection on the line y Find the (2,1)-entry of the matrix of T. 56 DAP AN cAN CHON "
+  },
+  {
+    "id": 713,
+    "image": "0713_q713_Question_713.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "text": "CAU HOI Let U = {(a,b,€,d)la + 2d = 3b c} be a subspace in R4. Find the dimension of U. 80 DAP AN CAN CHON CAc DAP AN C. 2 E: 4"
+  },
+  {
+    "id": 714,
+    "image": "0714_q714_Question_714.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Let X and Y be vectors in Rn such that Find the value of the dot product X . Y 56 DAP AN cAN CHON CAC DAP AN C. -2 None of the other choices i"
+  },
+  {
+    "id": 715,
+    "image": "0715_q715_Question_715.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Find a,b, such that the set orthogonal: 56 DAP AN cAN CHON CAC DAP AN A a = 3,b = 2,c = 7 a = 2,6 = 4,c = 1 a = 3,6 = 3,c = 3 3,b = 2,c = 6 0 "
+  },
+  {
+    "id": 716,
+    "image": "0716_q716_Question_716.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI Assume that the set {[1,2,3], [~2,1,0], [1,a, b]} is orthogonal. Find a - 80 DAP AN CAN CHON CAc DAP AN A. 11/3 B. 7/3 C. 1/3 None of the othe"
+  },
+  {
+    "id": 717,
+    "image": "0717_q717_Question_717.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "text": "CAU HOI f(z) h(z) 2x + 3, find g(z) such that f(g(z)) h(z). 80 DAP AN CAN CHON CAc DAP AN 22 - 1 2x + 5 2x None of the other choices is correct"
+  },
+  {
+    "id": 718,
+    "image": "0718_q718_Question_718.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "text": "fuoverflow Which function is shown in the graph below? (Choose answer) (See picture) None of the other choices is correct 2r-4 x<-2 21+4, x<-2 f(r) ={"
+  },
+  {
+    "id": 719,
+    "image": "0719_q719_Question_719.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "text": "CAU HOI Evaluate the limit, if it exists 5x + 6 lim 1-2 50 DAP AN CAN CAc DAP AN A. 1/5 B. 0 c -2/5 D: 2/5 E -1/5 None of the other choices is correct"
+  },
+  {
+    "id": 720,
+    "image": "0720_q720_Question_720.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "text": "CAU HOI Find the value of the derivative of the function f(z) = 423/2 52l/2 al € 16 s6 DAP AN cAN CHON CAc DAP AN A. 197/8 B. 187/8 C. 101/4 D: 91/4 N"
+  }
+]

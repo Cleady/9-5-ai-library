@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f43f5e">
+  <meta name="description" content="MAE101 Study Hub — luyện Giải tích 1 và Đại số tuyến tính 1 với lưu tự động.">
+  <title>MAE101 Study Hub</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      options: {
+        enableMenu: false
+      }
+    };
+  </script>
+  <script src="vendor/mathjax/tex-svg.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <button class="brand" id="homeBtn" type="button" aria-label="Về trang chủ">
+        <span class="brand-mark">M</span>
+        <span><strong>MAE101</strong><small>Study Hub</small></span>
+      </button>
+      <nav class="header-actions" aria-label="Công cụ">
+        <a href="preview_v2.html" class="icon-button" style="text-decoration:none; color:var(--accent); font-weight:800;" title="Xem trước 20 câu LaTeX">✨<span>Xem thử v2</span></a>
+        <button class="icon-button" id="searchToggleBtn" type="button" title="Tìm câu hỏi">⌕<span>Tìm kiếm</span></button>
+        <button class="icon-button" id="historyBtn" type="button" title="Lịch sử">◷<span>Lịch sử</span></button>
+        <button class="icon-button" id="themeBtn" type="button" title="Đổi giao diện">☾<span>Giao diện</span></button>
+        <button class="avatar-button" id="dataBtn" type="button" title="Sao lưu dữ liệu">ME</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="dashboardView" class="view">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">Không cần đăng nhập · Lưu ngay trên thiết bị</span>
+            <h1>Học đúng phần mình còn yếu.</h1>
+            <p>1.131 câu hỏi MAE101, tự động lưu tiến độ và biến mỗi câu sai thành một bài ôn tập tiếp theo.</p>
+            <div class="hero-actions">
+              <button class="button primary" id="quickStartBtn" type="button">Luyện nhanh 20 câu</button>
+              <button class="button secondary" id="reviewMistakesBtn" type="button">Ôn câu sai</button>
+              <a href="preview_v2.html" class="button secondary" style="text-decoration:none; display:inline-flex; align-items:center;">✨ Xem thử 20 câu v2</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Tổng quan học tập">
+            <div class="score-ring" id="accuracyRing"><span id="accuracyValue">--</span><small>độ chính xác</small></div>
+            <div class="mini-stat"><strong id="attemptedValue">0</strong><span>câu đã làm</span></div>
+            <div class="mini-stat"><strong id="streakValue">0</strong><span>ngày liên tiếp</span></div>
+          </div>
+        </div>
+
+        <section id="resumeCard" class="resume-card hidden" aria-live="polite">
+          <div class="resume-icon">↗</div>
+          <div>
+            <span class="eyebrow">Bài đang làm dở</span>
+            <h2 id="resumeTitle">Tiếp tục bài học</h2>
+            <p id="resumeMeta"></p>
+          </div>
+          <div class="resume-actions">
+            <button class="button primary" id="resumeBtn" type="button">Tiếp tục</button>
+            <button class="button ghost" id="discardResumeBtn" type="button">Bỏ bài</button>
+          </div>
+        </section>
+
+        <div class="dashboard-grid">
+          <section class="surface setup-card">
+            <div class="section-heading">
+              <div><span class="eyebrow">Tạo phiên học</span><h2>Hôm nay bạn muốn học gì?</h2></div>
+              <span class="save-chip"><span></span>Tự động lưu</span>
+            </div>
+            <div class="segmented" id="modeControl" role="group" aria-label="Chế độ học">
+              <button type="button" data-mode="practice" class="active"><strong>Luyện tập</strong><small>Xem kết quả ngay</small></button>
+              <button type="button" data-mode="exam"><strong>Thi thử</strong><small>Chấm khi nộp bài</small></button>
+              <button type="button" data-mode="flashcard"><strong>Flashcard</strong><small>Ôn theo trí nhớ</small></button>
+            </div>
+            <div class="form-grid">
+              <label>Môn học
+                <select id="folderSelect">
+                  <option value="all">Tất cả môn</option>
+                  <option value="GT1">Giải tích 1</option>
+                  <option value="DSTT1">Đại số tuyến tính 1</option>
+                </select>
+              </label>
+              <label>Chủ đề
+                <select id="topicSelect"><option value="all">Tất cả chủ đề</option></select>
+              </label>
+              <label>Nguồn câu hỏi
+                <select id="sourceSelect">
+                  <option value="all">Toàn bộ ngân hàng</option>
+                  <option value="mistakes">Chỉ câu từng sai</option>
+                  <option value="bookmarks">Câu đã đánh dấu</option>
+                </select>
+              </label>
+              <label>Số câu
+                <select id="countSelect">
+                  <option value="10">10 câu</option>
+                  <option value="20" selected>20 câu</option>
+                  <option value="30">30 câu</option>
+                  <option value="50">50 câu</option>
+                  <option value="100">100 câu</option>
+                  <option value="all">Tất cả</option>
+                </select>
+              </label>
+              <label>Thời gian
+                <select id="minutesSelect">
+                  <option value="0">Không giới hạn</option>
+                  <option value="15">15 phút</option>
+                  <option value="30" selected>30 phút</option>
+                  <option value="60">60 phút</option>
+                  <option value="90">90 phút</option>
+                </select>
+              </label>
+              <label>Thứ tự câu
+                <select id="shuffleSelect">
+                  <option value="yes">Trộn ngẫu nhiên</option>
+                  <option value="no">Theo số câu</option>
+                </select>
+              </label>
+            </div>
+            <div class="pool-preview"><span id="poolCount">1.131 câu phù hợp</span><span>Dữ liệu được lưu trên trình duyệt này</span></div>
+            <button class="button primary wide" id="startBtn" type="button">Bắt đầu phiên học</button>
+          </section>
+
+          <aside class="insights-column">
+            <section class="surface insight-card">
+              <div class="section-heading compact"><div><span class="eyebrow">Tập trung hôm nay</span><h2>Góc ôn tập</h2></div></div>
+              <button class="insight-row" id="mistakeShortcut" type="button">
+                <span class="insight-icon rose">!</span><span><strong id="mistakeCount">0 câu sai</strong><small>Luyện lại để củng cố</small></span><b>→</b>
+              </button>
+              <button class="insight-row" id="bookmarkShortcut" type="button">
+                <span class="insight-icon amber">★</span><span><strong id="bookmarkCount">0 câu đánh dấu</strong><small>Danh sách cần xem lại</small></span><b>→</b>
+              </button>
+              <div class="week-strip" id="weekStrip" aria-label="Hoạt động 7 ngày"></div>
+            </section>
+            <section class="surface topic-summary">
+              <div class="section-heading compact"><div><span class="eyebrow">Tiến độ theo môn</span><h2>Ngân hàng câu hỏi</h2></div></div>
+              <div class="subject-row"><span class="subject-dot calculus"></span><div><strong>Giải tích 1</strong><small>572 câu hỏi</small></div><span id="gtAccuracy">--</span></div>
+              <div class="subject-row"><span class="subject-dot algebra"></span><div><strong>Đại số tuyến tính 1</strong><small>559 câu hỏi</small></div><span id="dsttAccuracy">--</span></div>
+            </section>
+          </aside>
+        </div>
+
+        <section class="surface topic-browser">
+          <div class="section-heading">
+            <div><span class="eyebrow">Chọn nhanh</span><h2>Học theo chủ đề</h2></div>
+            <button class="text-button" id="showAllTopicsBtn" type="button">Xem tất cả</button>
+          </div>
+          <div class="topic-grid" id="topicGrid"></div>
+        </section>
+      </section>
+
+      <section id="quizView" class="view hidden">
+        <div class="quiz-header">
+          <div>
+            <button class="back-link" id="exitQuizBtn" type="button">← Trang chủ</button>
+            <span class="quiz-title" id="quizTitle">Luyện tập</span>
+          </div>
+          <div class="quiz-status">
+            <span class="autosave-status" id="autosaveStatus">✓ Đã lưu</span>
+            <span class="timer" id="timer">--:--</span>
+            <button class="button danger small" id="submitBtn" type="button">Nộp bài</button>
+          </div>
+        </div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+        <div class="quiz-metrics">
+          <span><b id="positionStat">1/20</b> Câu hiện tại</span>
+          <span><b id="doneStat">0</b> Đã trả lời</span>
+          <span id="liveCorrectMetric"><b id="correctStat">0</b> Chính xác</span>
+          <span><b id="markedStat">0</b> Đánh dấu</span>
+        </div>
+
+        <div class="quiz-layout">
+          <article class="question-surface">
+            <div class="question-heading">
+              <div><span class="question-number" id="questionNumber">Câu 1</span><span class="topic-pill" id="questionTopic"></span></div>
+              <button class="mark-button" id="markBtn" type="button" aria-pressed="false">☆ Đánh dấu</button>
+            </div>
+            
+            <div class="latex-stage hidden" id="latexStage">
+              <div class="latex-text" id="latexQuestionText"></div>
+              <div class="latex-meta-bar">
+                <span class="confidence-badge" id="confidenceBadge">Độ tin cậy: Cao</span>
+                <button class="button ghost small" id="toggleImageBtn" type="button">📷 Xem ảnh gốc</button>
+              </div>
+            </div>
+
+            <div class="image-stage" id="imageStage">
+              <img id="questionImage" alt="Nội dung câu hỏi">
+              <div class="image-tools">
+                <button id="zoomOutBtn" type="button" aria-label="Thu nhỏ">−</button>
+                <button id="zoomResetBtn" type="button" aria-label="Đặt lại độ phóng">100%</button>
+                <button id="zoomInBtn" type="button" aria-label="Phóng to">+</button>
+              </div>
+            </div>
+            <div id="answerOptions" class="answer-options" aria-label="Chọn đáp án"></div>
+            <div id="flashcardPanel" class="flashcard-panel hidden">
+              <button class="button primary" id="revealBtn" type="button">Lật đáp án</button>
+              <div id="flashcardAnswer" class="flashcard-answer hidden"></div>
+              <div id="ratingButtons" class="rating-buttons hidden">
+                <button type="button" data-rating="again">Quên</button>
+                <button type="button" data-rating="hard">Khó</button>
+                <button type="button" data-rating="good">Nhớ</button>
+              </div>
+            </div>
+            <div id="answerFeedback" class="answer-feedback hidden" role="status"></div>
+            
+            <div id="explanationBox" class="explanation-box hidden">
+              <button class="explanation-toggle" id="explanationToggle" type="button" aria-expanded="false">
+                <span>💡 Xem lời giải chi tiết từng bước</span>
+                <span class="chevron">▼</span>
+              </button>
+              <div class="explanation-content hidden" id="explanationContent"></div>
+            </div>
+
+            <div class="question-actions">
+              <button class="button secondary" id="prevBtn" type="button">← Câu trước</button>
+              <button class="button secondary" id="checkBtn" type="button">Kiểm tra</button>
+              <button class="button primary" id="nextBtn" type="button">Câu sau →</button>
+            </div>
+          </article>
+
+          <aside class="question-navigator">
+            <div class="navigator-heading"><div><span class="eyebrow">Bản đồ đề</span><h2>Danh sách câu</h2></div><button id="closeNavigatorBtn" type="button">×</button></div>
+            <div class="navigator-legend"><span><i class="answered"></i>Đã làm</span><span><i class="current"></i>Hiện tại</span><span><i class="marked"></i>Đánh dấu</span></div>
+            <div class="question-grid" id="questionGrid"></div>
+          </aside>
+        </div>
+        <button class="navigator-fab" id="navigatorFab" type="button">▦ Danh sách câu</button>
+      </section>
+
+      <section id="resultsView" class="view hidden">
+        <div class="results-card">
+          <span class="eyebrow">Hoàn thành phiên học</span>
+          <h1 id="resultHeading">Kết quả của bạn</h1>
+          <div class="result-score" id="resultScore">0%</div>
+          <p id="resultMessage"></p>
+          <div class="result-stats">
+            <div><strong id="resultCorrect">0</strong><span>Đúng</span></div>
+            <div><strong id="resultWrong">0</strong><span>Sai</span></div>
+            <div><strong id="resultUnanswered">0</strong><span>Chưa làm</span></div>
+            <div><strong id="resultDuration">0p</strong><span>Thời gian</span></div>
+          </div>
+          <div class="result-actions">
+            <button class="button primary" id="retryWrongBtn" type="button">Làm lại câu sai</button>
+            <button class="button secondary" id="newSessionBtn" type="button">Tạo phiên mới</button>
+          </div>
+        </div>
+        <section class="surface review-section">
+          <div class="section-heading"><div><span class="eyebrow">Xem lại</span><h2>Các câu cần chú ý</h2></div></div>
+          <div id="reviewList" class="review-list"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="searchModal">
+    <section class="modal search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="modal-heading"><div><span class="eyebrow">Ngân hàng 1.131 câu</span><h2 id="searchTitle">Tìm câu hỏi</h2></div><button type="button" data-close-modal="searchModal">×</button></div>
+      <input id="searchInput" class="search-input" type="search" placeholder="Nhập số câu hoặc từ khóa OCR…" autocomplete="off">
+      <p class="search-hint">Dữ liệu OCR chỉ dùng để tìm kiếm; ảnh gốc vẫn là nội dung chính xác nhất.</p>
+      <div id="searchResults" class="search-results"></div>
+    </section>
+  </div>
+
+  <div class="modal-backdrop hidden" id="historyModal">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
+      <div class="modal-heading"><div><span class="eyebrow">Dữ liệu trên thiết bị</span><h2 id="historyTitle">Lịch sử học tập</h2></div><button type="button" data-close-modal="historyModal">×</button></div>
+      <div id="historyList" class="history-list"></div>
+    </section>
+  </div>
+
+  <div class="modal-backdrop hidden" id="dataModal">
+    <section class="modal compact-modal" role="dialog" aria-modal="true" aria-labelledby="dataTitle">
+      <div class="modal-heading"><div><span class="eyebrow">An toàn dữ liệu</span><h2 id="dataTitle">Sao lưu & khôi phục</h2></div><button type="button" data-close-modal="dataModal">×</button></div>
+      <p>Tiến độ đang được lưu trên trình duyệt này. Bạn có thể tải một bản sao để chuyển sang thiết bị khác.</p>
+      <div class="stack-actions">
+        <button class="button primary" id="exportBtn" type="button">Xuất bản sao JSON</button>
+        <button class="button secondary" id="importBtn" type="button">Nhập bản sao</button>
+        <button class="button danger-outline" id="clearDataBtn" type="button">Xóa toàn bộ tiến độ</button>
+      </div>
+    </section>
+  </div>
+
+  <input id="importFile" type="file" accept="application/json,.json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data/questions.js"></script>
+  <script src="data/v2/questions_v2.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

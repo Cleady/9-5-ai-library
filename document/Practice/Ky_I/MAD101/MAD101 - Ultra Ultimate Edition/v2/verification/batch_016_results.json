@@ -1,0 +1,333 @@
+{
+  "601": {
+    "method": "bit_string_bitwise_or",
+    "input": "A = 1010101010, B = 0101010101 over U={0..9}",
+    "output": "1111111111",
+    "verified": true,
+    "conclusion": "A ∪ B corresponds to 1111111111, which is {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}."
+  },
+  "602": {
+    "method": "reverse_polish_notation_conversion",
+    "input": "(x - y)^2 + x(y + 5)",
+    "output": "x y - 2 ↑ x y 5 + * +",
+    "verified": true,
+    "conclusion": "Postfix expression is x y - 2 ↑ x y 5 + * +."
+  },
+  "603": {
+    "method": "recursive_algorithm_trace",
+    "input": "n = 9",
+    "output": 22,
+    "verified": true,
+    "conclusion": "T(9) = 3*T(8) - 2 = 3*8 - 2 = 22."
+  },
+  "604": {
+    "method": "divide_and_conquer_recurrence_iteration",
+    "input": "f(n) = 2f(n/3) + n, f(1)=2, n=81",
+    "output": 227,
+    "verified": true,
+    "conclusion": "f(81) = 227."
+  },
+  "605": {
+    "method": "floor_ceil_identity_analysis",
+    "input": "ceil(floor(x)) for all real x",
+    "output": "ceil(floor(x)) <= x",
+    "verified": true,
+    "conclusion": "Since floor(x) is an integer, ceil(floor(x)) = floor(x) <= x for all real x."
+  },
+  "606": {
+    "method": "polynomial_expansion_and_big_o",
+    "input": "(i) sum i^3, (ii) (n+4)^5 - (n-2)^5, (iii) (n log n - 1)^4",
+    "output": {
+      "mathematical_not_o_n4": "(iii)",
+      "official_key": "A",
+      "official_statement": "(ii)"
+    },
+    "verified": true,
+    "conclusion": "Exam key incorrectly flagged (ii) as degree 5 without recognizing cancellation (30n^4), while (iii) is genuinely not O(n^4). Exam key retained with flaw flag."
+  },
+  "607": {
+    "method": "algorithm_multiplication_counting",
+    "input": "Polynomial evaluation loop i=1..n with 2 multiplications per step",
+    "output": "2n",
+    "verified": true,
+    "conclusion": "Exactly 2n multiplications are performed."
+  },
+  "608": {
+    "method": "adjacency_matrix_ones_counting",
+    "input": "C_4 cycle graph with 4 edges",
+    "output": {
+      "graph": "C_4",
+      "ones": 8
+    },
+    "verified": true,
+    "conclusion": "C_4 has 4 edges, so its adjacency matrix contains 2 * 4 = 8 ones."
+  },
+  "609": {
+    "method": "existential_quantifier_expansion",
+    "input": "exists x [(x >= 0) and P(x)] over {-2..4}",
+    "output": "P(0) v P(1) v P(2) v P(3) v P(4)",
+    "verified": true,
+    "conclusion": "Expands to disjunction P(0) ∨ P(1) ∨ P(2) ∨ P(3) ∨ P(4)."
+  },
+  "610": {
+    "method": "huffman_coding_tree_simulation",
+    "input": "A:0.3, B:0.15, C:0.25, D:0.2, E:0.1",
+    "output": 2.25,
+    "verified": true,
+    "conclusion": "Average bits required is 2.25."
+  },
+  "611": {
+    "method": "set_theory_axiom_verification",
+    "input": "6 set propositions",
+    "output": [
+      1,
+      5,
+      6
+    ],
+    "verified": true,
+    "conclusion": "Statements 1, 5, and 6 are true."
+  },
+  "612": {
+    "method": "adjacency_matrix_power_paths",
+    "input": "5-vertex graph, A^3[b][e]",
+    "output": 7,
+    "verified": true,
+    "conclusion": "Number of paths of length 3 from b to e is 7."
+  },
+  "613": {
+    "method": "dijkstra_shortest_path",
+    "input": "Weighted graph, source A, target G",
+    "output": {
+      "path": [
+        "A",
+        "B",
+        "E",
+        "F",
+        "G"
+      ],
+      "distance": 19
+    },
+    "verified": true,
+    "conclusion": "Shortest distance between A and G is 19."
+  },
+  "614": {
+    "method": "tree_height_calculation",
+    "input": "Rooted tree centered at black square",
+    "output": 4,
+    "verified": true,
+    "conclusion": "The height of the tree is 4."
+  },
+  "615": {
+    "method": "predicate_logic_translation",
+    "input": "∃x(F(x) ∧ ∀y(S(y) → P(x, y)))",
+    "output": "Some faculties taught all students",
+    "verified": true,
+    "conclusion": "Translates to: 'Some faculties taught all students'."
+  },
+  "616": {
+    "method": "bit_string_to_set_decoding",
+    "input": "0101010101 over {0..9}",
+    "output": [
+      1,
+      3,
+      5,
+      7,
+      9
+    ],
+    "verified": true,
+    "conclusion": "The subset is {1, 3, 5, 7, 9}."
+  },
+  "617": {
+    "method": "spanning_tree_bridge_decomposition",
+    "input": "Two C_4 cycles joined by bridge (d,e)",
+    "output": 16,
+    "verified": true,
+    "conclusion": "Total spanning trees = 4 * 1 * 4 = 16."
+  },
+  "618": {
+    "method": "propositional_logic_translation",
+    "input": "deadline (r), grade above 5 (q), not pass (~p)",
+    "output": "q ∧ r ∧ ¬p",
+    "verified": true,
+    "conclusion": "Logical expression is q ∧ r ∧ ¬p."
+  },
+  "619": {
+    "method": "argument_validity_definition",
+    "input": "An argument is valid if and only if",
+    "output": "The conclusion must be true if the premises are true",
+    "verified": true,
+    "conclusion": "An argument is valid iff the conclusion is true whenever all premises are true."
+  },
+  "620": {
+    "method": "base_conversion",
+    "input": "(204)_5 to binary",
+    "output": "110110",
+    "verified": true,
+    "conclusion": "(204)_5 = 54_10 = 110110_2."
+  },
+  "621": {
+    "method": "summation_closed_form",
+    "input": "sum_{i=1}^{97} i(i + 3)",
+    "output": 323204,
+    "verified": true,
+    "conclusion": "The sum evaluates to 323204."
+  },
+  "622": {
+    "method": "boolean_equivalence_distributive_law",
+    "input": "(p → q) ∧ (¬p → q)",
+    "output": "q",
+    "verified": true,
+    "conclusion": "(¬p ∨ q) ∧ (p ∨ q) ≡ (¬p ∧ p) ∨ q ≡ F ∨ q ≡ q."
+  },
+  "623": {
+    "method": "combinatorial_counting_strings",
+    "input": "C(4, 2) * 9^2",
+    "output": 486,
+    "verified": true,
+    "conclusion": "Number of strings is C(4, 2) * 9^2 = 6 * 81 = 486."
+  },
+  "624": {
+    "method": "recurrence_evaluation",
+    "input": "f(1)=1, f(2)=-1, n=5",
+    "output": 1,
+    "verified": true,
+    "conclusion": "f(3)=2, f(4)=-5, f(5)=1."
+  },
+  "625": {
+    "method": "implication_truth_value_check",
+    "input": "Propositions (i), (ii), (iii)",
+    "output": "(ii)",
+    "verified": true,
+    "conclusion": "In (ii), hypothesis is true but conclusion (K_2 has Hamilton circuit) is false, making the implication false."
+  },
+  "626": {
+    "method": "polish_prefix_evaluation",
+    "input": "- * / 15 - 7 + 1 1 3 + 2 + 1 1",
+    "output": 5,
+    "verified": true,
+    "conclusion": "Evaluates to 5."
+  },
+  "627": {
+    "method": "predicate_logic_quantifier_translation",
+    "input": "∀x (F(x) → (J(x) ∨ R(x)))",
+    "output": "(i)",
+    "verified": true,
+    "conclusion": "Correct translation is statement (i)."
+  },
+  "628": {
+    "method": "max_algorithm_trace",
+    "input": "[1, 4, 5, 2, 7, 9, 3]",
+    "output": [
+      1,
+      4,
+      5,
+      7,
+      9
+    ],
+    "verified": true,
+    "conclusion": "The variable Max takes values 1, 4, 5, 7, 9."
+  },
+  "629": {
+    "method": "gcd_lcm_prime_powers",
+    "input": "m, n given",
+    "output": [
+      "(iii)",
+      "(i)"
+    ],
+    "verified": true,
+    "conclusion": "Statements (i) and (iii) are correct."
+  },
+  "630": {
+    "method": "euclidean_gcd",
+    "input": "851, 931",
+    "output": 1,
+    "verified": true,
+    "conclusion": "gcd(851, 931) = 1, so option E (None of the other choices is correct) is correct."
+  },
+  "631": {
+    "method": "algorithm_recursion_identification",
+    "input": "Procedures (i) and (ii)",
+    "output": "Only (i)",
+    "verified": true,
+    "conclusion": "Only procedure (i) calls itself recursively."
+  },
+  "632": {
+    "method": "asymptotic_dominance",
+    "input": "4x^2 log x + x^2 (log x)^2",
+    "output": "x^2 (log x)^2",
+    "verified": true,
+    "conclusion": "The dominant term is x^2 (log x)^2, which is statement (iv)."
+  },
+  "633": {
+    "method": "kruskal_algorithm_trace",
+    "input": "Weighted graph with 7 vertices",
+    "output": [
+      "{A,B}",
+      "{A,D}",
+      "{G,C}",
+      "{C,E}",
+      "{D,G}",
+      "{C,F}"
+    ],
+    "verified": true,
+    "conclusion": "Edges selected by Kruskal's algorithm match Option D."
+  },
+  "634": {
+    "method": "euclidean_algorithm_division_count",
+    "input": "287, 91",
+    "output": 3,
+    "verified": true,
+    "conclusion": "Exactly 3 divisions are performed."
+  },
+  "635": {
+    "method": "linear_recurrence_solution_test",
+    "input": "a_n = -3a_{n-1} + 4a_{n-2}",
+    "output": [
+      "(i)",
+      "(ii)",
+      "(iii)"
+    ],
+    "verified": true,
+    "conclusion": "All three formulas (i), (ii), and (iii) satisfy the recurrence relation."
+  },
+  "636": {
+    "method": "set_symmetric_difference_algebra",
+    "input": "A ⊕ (A ∩ B)",
+    "output": "A - B",
+    "verified": true,
+    "conclusion": "Since (A ∩ B) ⊆ A, A ⊕ (A ∩ B) = A - (A ∩ B) = A - B."
+  },
+  "637": {
+    "method": "bubble_sort_simulation",
+    "input": "[4, 2, 3, 1]",
+    "output": 5,
+    "verified": true,
+    "conclusion": "Exactly 5 swaps are performed."
+  },
+  "638": {
+    "method": "mathematical_induction_step_ordering",
+    "input": "Postage problem using 3-cent and 5-cent stamps",
+    "output": [
+      3,
+      2,
+      1,
+      4
+    ],
+    "verified": true,
+    "conclusion": "The correct logical order is base cases (3), hypothesis (2), inductive step (1), and conclusion (4)."
+  },
+  "639": {
+    "method": "prefix_code_decoding",
+    "input": "110111010",
+    "output": "ptf",
+    "verified": true,
+    "conclusion": "The message decodes to 'ptf'."
+  },
+  "640": {
+    "method": "merge_algorithm_comparison_count",
+    "input": "[1, 3, 5, 7, 9] and [2, 6]",
+    "output": 5,
+    "verified": true,
+    "conclusion": "Exactly 5 comparisons are required."
+  }
+}

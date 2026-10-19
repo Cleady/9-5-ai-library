@@ -1,0 +1,1306 @@
+"""
+Tạo dữ liệu Schema v2 cho Lô 2 (Câu 41 - 80).
+Đầy đủ LaTeX MathJax offline, không placeholder, vector SVG cho các câu có đồ thị/cây.
+"""
+
+import json
+
+def get_batch_002_questions():
+    questions = [
+        # Q41
+        {
+            "id": 41,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "How many four-digit decimal strings have exactly three digits that are 3s?",
+            "options": [
+                "4",
+                "1",
+                "35",
+                "36",
+                "None of the other choices is correct"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Chọn các vị trí đặt chữ số 3:**\nMột chuỗi gồm 4 chữ số thập phân có đúng 3 chữ số là 3. Số cách chọn 3 vị trí trong 4 vị trí để đặt chữ số 3 là: \\(C(4, 3) = \\binom{4}{3} = 4\\) cách.",
+                "**Bước 2: Chọn chữ số cho vị trí còn lại:**\nVị trí còn lại phải là một chữ số khác 3 (chọn từ tập \\(\\{0, 1, 2, 4, 5, 6, 7, 8, 9\\}\\)), có đúng \\(9\\) cách chọn.",
+                "**Bước 3: Tính tổng số chuỗi:**\nTheo quy tắc nhân, tổng số chuỗi thoả mãn là: \\(4 \\times 9 = 36\\).\n\n**Kết luận:** Có 36 chuỗi, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0041_q041_Question_41.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q42
+        {
+            "id": 42,
+            "chapterId": 8,
+            "chapterName": "Chương 8: Kỹ thuật đếm nâng cao",
+            "chapterShort": "Advanced Counting",
+            "type": "single_choice",
+            "question": "Let \\(f(n)\\) be defined by \\(f(n) = 2f(n-1) - 8\\) and \\(f(1) = 0\\). Find \\(f(0)\\).",
+            "options": [
+                "-4",
+                "4",
+                "2",
+                "None of the other choices is correct",
+                "8"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Sử dụng hệ thức truy hồi với \\(n = 1\\):**\nTheo đề bài: \\[f(1) = 2f(0) - 8.\\]",
+                "**Bước 2: Thay \\(f(1) = 0\\) và giải phương trình tìm \\(f(0)\\):**\n\\[0 = 2f(0) - 8 \\iff 2f(0) = 8 \\iff f(0) = 4.\\]\n\n**Kết luận:** Giá trị \\(f(0) = 4\\), chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0042_q042_Question_42.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q43
+        {
+            "id": 43,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "How many comparisons are needed to merge two sorted lists \\([2, 8, 11, 15, 20, 24]\\) and \\([1, 5, 6, 7, 12]\\) into one sorted list?",
+            "options": [
+                "11",
+                "9",
+                "10",
+                "8",
+                "None of the other choices is correct"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích thuật toán trộn hai danh sách đã sắp xếp:**\nTại mỗi bước, so sánh phần tử đầu tiên hiện tại của \\(L_1\\) với phần tử đầu tiên hiện tại của \\(L_2\\), phần tử nhỏ hơn được đưa vào danh sách kết quả.",
+                "**Bước 2: Lần vết từng phép so sánh:**\n1. So sánh 2 với 1: \\(1 < 2\\), lấy 1 (còn lại \\(L_2 = [5, 6, 7, 12]\\)).\n2. So sánh 2 với 5: \\(2 < 5\\), lấy 2 (còn lại \\(L_1 = [8, 11, 15, 20, 24]\\)).\n3. So sánh 8 với 5: \\(5 < 8\\), lấy 5 (còn lại \\(L_2 = [6, 7, 12]\\)).\n4. So sánh 8 với 6: \\(6 < 8\\), lấy 6 (còn lại \\(L_2 = [7, 12]\\)).\n5. So sánh 8 với 7: \\(7 < 8\\), lấy 7 (còn lại \\(L_2 = [12]\\)).\n6. So sánh 8 với 12: \\(8 < 12\\), lấy 8 (còn lại \\(L_1 = [11, 15, 20, 24]\\)).\n7. So sánh 11 với 12: \\(11 < 12\\), lấy 11 (còn lại \\(L_1 = [15, 20, 24]\\)).\n8. So sánh 15 với 12: \\(12 < 15\\), lấy 12. Danh sách \\(L_2\\) đã rỗng.",
+                "**Bước 3: Kết luận:** Sau khi \\(L_2\\) hết phần tử, các phần tử \\([15, 20, 24]\\) được đưa trực tiếp vào kết quả mà không cần so sánh. Tổng số phép so sánh là **8**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0043_q043_Question_43.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q44
+        {
+            "id": 44,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Suppose that the letters a, b, c, d, e, f, g, h are represented by 000, 001, 010, 011, 100, 101, 110, 111 respectively. Which of the following bit strings can be used to represent the letter i so that the resulting code is still a prefix code?",
+            "options": [
+                "None of the other choices is correct",
+                "1110",
+                "110",
+                "1010",
+                "011"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích tính đầy của cây tiền tố (Prefix Tree):**\n8 chữ cái từ \\(a\\) đến \\(h\\) đã dùng hết toàn bộ \\(2^3 = 8\\) từ mã nhị phân có độ dài 3. Trên cây nhị phân, cả 8 lá ở độ sâu 3 đều đã được sử dụng.",
+                "**Bước 2: Xem xét khả năng thêm từ mã mới:**\n- Nếu dùng từ mã độ dài 3 (như 110, 011): bị trùng lặp hoàn toàn với chữ cái đã có.\n- Nếu dùng từ mã dài hơn (như 1110 hay 1010): các từ mã này có tiền tố là 111 (mã của h) hoặc 101 (mã của f), vi phạm định nghĩa mã tiền tố.",
+                "**Kết luận:** Không chuỗi bit nào trong các lựa chọn có thể biểu diễn ký tự \\(i\\) mà vẫn giữ tính chất mã tiền tố. Chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0044_q044_Question_44.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q45
+        {
+            "id": 45,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Which of the following is NOT a circuit in this graph?",
+            "options": [
+                "E-F-B-A-D-E",
+                "A-B-C-D-F-B-A",
+                "C-D-E-F-B-A-C",
+                "B-A-D-E-F-B",
+                "D-B-F-E-D"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Liệt kê các cạnh của đồ thị:**\nĐồ thị gồm các cạnh: \\((A, B), (B, C), (C, D), (D, A), (A, C), (B, D), (B, F), (C, E), (D, E), (E, F)\\).",
+                "**Bước 2: Kiểm tra các đường đi trong đề:**\n- Với \\(A-B-C-D-F-B-A\\): đường đi yêu cầu đi qua cạnh \\((D, F)\\). Tuy nhiên trong đồ thị **không có cạnh nối giữa đỉnh \\(D\\) và đỉnh \\(F\\)** (đỉnh \\(F\\) chỉ nối với \\(B\\) và \\(E\\)). Do đó đây không phải là một chu trình hợp lệ.",
+                "**Bước 3: Kiểm tra các phương án còn lại:**\nTất cả các phương án khác đều chỉ đi qua các cạnh có thật trong đồ thị và khép kín đỉnh đầu - đỉnh cuối.\n\n**Kết luận:** Chọn phương án **B**."
+            ],
+            "figures": [
+                {
+                    "caption": "Đồ thị bài 45 với 6 đỉnh A, B, C, D, E, F",
+                    "type": "graph",
+                    "directed": False,
+                    "width": 300,
+                    "height": 220,
+                    "vertices": [
+                        {"id": "A", "x": 70, "y": 45, "label": "A"},
+                        {"id": "B", "x": 170, "y": 45, "label": "B"},
+                        {"id": "C", "x": 170, "y": 125, "label": "C"},
+                        {"id": "D", "x": 70, "y": 125, "label": "D"},
+                        {"id": "E", "x": 170, "y": 195, "label": "E"},
+                        {"id": "F", "x": 260, "y": 85, "label": "F"}
+                    ],
+                    "edges": [
+                        {"from": "A", "to": "B"},
+                        {"from": "B", "to": "C"},
+                        {"from": "C", "to": "D"},
+                        {"from": "D", "to": "A"},
+                        {"from": "A", "to": "C"},
+                        {"from": "B", "to": "D"},
+                        {"from": "B", "to": "F"},
+                        {"from": "C", "to": "E"},
+                        {"from": "D", "to": "E"},
+                        {"from": "E", "to": "F"}
+                    ]
+                }
+            ],
+            "image": "0045_q045_Question_45.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q46
+        {
+            "id": 46,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Let \\(P = \\mathbb{N}\\) and \\(Q = \\{x \\in \\mathbb{N} \\mid x < 9\\}\\). Which of the following represents \\(P - Q\\)?\n(i) \\(\\{x \\in \\mathbb{N} \\mid x \\le 9\\}\\)\n(ii) \\(\\{x \\in \\mathbb{N} \\mid x \\le 8\\}\\)\n(iii) \\(\\{x \\in \\mathbb{N} \\mid x \\ge 9\\}\\)\n(iv) \\(\\{x \\in \\mathbb{N} \\mid x > 9\\}\\)",
+            "options": [
+                "(ii)",
+                "(iii)",
+                "(iv)",
+                "(i)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Áp dụng định nghĩa phép hiệu tập hợp:**\n\\[P - Q = \\{x \\in P \\mid x \\notin Q\\}.\\]",
+                "**Bước 2: Xác định điều kiện:**\nVì \\(P = \\mathbb{N}\\) và \\(Q = \\{x \\in \\mathbb{N} \\mid x < 9\\}\\), phần tử \\(x \\notin Q\\) tương đương với \\(\\neg(x < 9) \\iff x \\ge 9\\).\nDo đó: \\[P - Q = \\{x \\in \\mathbb{N} \\mid x \\ge 9\\}.\\]\nMệnh đề này trùng với **(iii)**.",
+                "**Kết luận:** Chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0046_q046_Question_46.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q47
+        {
+            "id": 47,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "What are the truth values of \\(p, q, r\\) so that \\((p \\to q) \\land r\\) is FALSE?",
+            "options": [
+                "\\(p = \\text{False}, q = \\text{True}, r = \\text{True}\\)",
+                "\\(p = \\text{False}, q = \\text{False}, r = \\text{True}\\)",
+                "\\(p = \\text{True}, q = \\text{True}, r = \\text{True}\\)",
+                "None of the other choices is correct",
+                "\\(p = \\text{True}, q = \\text{False}, r = \\text{True}\\)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích điều kiện để mệnh đề hội nhận giá trị False:**\nBiểu thức \\((p \\to q) \\land r\\) nhận giá trị **False** khi ít nhất một trong hai toán hạng là False: hoặc \\(r = \\text{False}\\), hoặc \\(p \\to q = \\text{False}\\). Mệnh đề kéo theo \\(p \\to q\\) chỉ nhận giá trị False khi \\(p = \\text{True}\\) và \\(q = \\text{False}\\).",
+                "**Bước 2: Kiểm tra các lựa chọn:**\nVới \\(p = \\text{True}, q = \\text{False}, r = \\text{True}\\):\nTa có: \\(p \\to q = \\text{False}\\). Khi đó \\(\\text{False} \\land \\text{True} = \\text{False}\\).",
+                "**Kết luận:** Bộ giá trị thỏa mãn là \\(p = \\text{True}, q = \\text{False}, r = \\text{True}\\), chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0047_q047_Question_47.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q48
+        {
+            "id": 48,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Which of the following is the postfix form of \\([5 + ((1 + 2) \\times 4)] - 3\\)?",
+            "options": [
+                "\\(5 \\quad 1 \\quad 2 + 4 \\times + 3 -\\)",
+                "\\(5 \\quad 1 \\quad 2 + 4 + \\times 3 -\\)",
+                "\\(5 \\quad 1 \\quad 2 \\times 4 + + 3 -\\)",
+                "None of the other choices is correct",
+                "\\(5 \\quad 1 \\quad 2 \\times 4 + 3 - +\\)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Chuyển đổi từ trong ra ngoài theo thứ tự ưu tiên:**\n- Biểu thức trong ngoặc nhỏ nhất: \\((1 + 2) \\to 1 \\; 2 +\\).\n- Nhân với 4: \\(((1 + 2) \\times 4) \\to 1 \\; 2 + 4 \\times\\).\n- Cộng với 5: \\([5 + ((1 + 2) \\times 4)] \\to 5 \\; 1 \\; 2 + 4 \\times +\\).",
+                "**Bước 2: Thực hiện phép trừ với 3:**\n\\[[5 + ((1 + 2) \\times 4)] - 3 \\to 5 \\; 1 \\; 2 + 4 \\times + 3 -.\\]\n\n**Kết luận:** Biểu thức hậu tố là \\(5 \\; 1 \\; 2 + 4 \\times + 3 -\\), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0048_q048_Question_48.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q49
+        {
+            "id": 49,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "How many comparisons are needed to locate the word \"over\" in the search tree constructed using the sentence \"The quick brown fox jumps over the lazy dog\"?",
+            "options": [
+                "4",
+                "1",
+                "2",
+                "5",
+                "3"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xây dựng cây tìm kiếm nhị phân (BST):**\n1. Gốc: **the**\n2. \"quick\" < \"the\" \\(\\to\\) con trái của **the**.\n3. \"brown\" < \"quick\" \\(\\to\\) con trái của **quick**.\n4. \"fox\" > \"brown\" \\(\\to\\) con phải của **brown**.\n5. \"jumps\" > \"fox\" \\(\\to\\) con phải của **fox**.\n6. \"over\" > \"jumps\" \\(\\to\\) con phải của **jumps**.",
+                "**Bước 2: Lần vết tìm kiếm từ \"over\":**\n1. So sánh với \"the\": \"over\" < \"the\" \\(\\to\\) rẽ trái sang \"quick\".\n2. So sánh với \"quick\": \"over\" < \"quick\" \\(\\to\\) rẽ trái sang \"brown\".\n3. So sánh với \"brown\": \"over\" > \"brown\" \\(\\to\\) rẽ phải sang \"fox\".\n4. So sánh với \"fox\": \"over\" > \"fox\" \\(\\to\\) rẽ phải sang \"jumps\".\n5. So sánh với \"jumps\": \"over\" > \"jumps\" \\(\\to\\) rẽ phải sang \"over\", tìm thấy!",
+                "**Kết luận:** Cần đúng **5** phép so sánh, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0049_q049_Question_49.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q50
+        {
+            "id": 50,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "How many functions are there from a set with 5 elements to a set with 3 elements?",
+            "options": [
+                "32",
+                "15",
+                "243",
+                "125",
+                "None of the other choices is correct"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Áp dụng công thức đếm số hàm số:**\nSố hàm số từ tập hợp có \\(m\\) phần tử vào tập hợp có \\(n\\) phần tử là: \\[n^m.\\]",
+                "**Bước 2: Thay số tính toán:**\nVới \\(m = 5\\) và \\(n = 3\\):\n\\[3^5 = 243.\\]\n\n**Kết luận:** Có 243 hàm số, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0050_q050_Question_50.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q51
+        {
+            "id": 51,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "How many ancestors does the vertex e have in the given rooted tree?",
+            "options": [
+                "4",
+                "1",
+                "3",
+                "2",
+                "None of the other choices is correct"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Định nghĩa tổ tiên trong cây có gốc:**\nTổ tiên (ancestors) của một đỉnh \\(v\\) (khác gốc) là các đỉnh nằm trên đường đi từ gốc đến \\(v\\), không tính chính \\(v\\).",
+                "**Bước 2: Tìm đường đi từ gốc đến e:**\nTừ hình vẽ cây có gốc \\(a\\), đường đi từ gốc \\(a\\) đến đỉnh \\(e\\) là: \\[a \\to b \\to e.\\]",
+                "**Bước 3: Liệt kê các đỉnh tổ tiên:**\nCác đỉnh tổ tiên của \\(e\\) là \\(\\{a, b\\}\\), tổng cộng có đúng **2** đỉnh tổ tiên.\n\n**Kết luận:** Chọn phương án **D**."
+            ],
+            "figures": [
+                {
+                    "caption": "Cây có gốc a bài 51",
+                    "type": "tree",
+                    "directed": True,
+                    "width": 360,
+                    "height": 220,
+                    "vertices": [
+                        {"id": "a", "x": 180, "y": 30, "label": "a"},
+                        {"id": "b", "x": 100, "y": 80, "label": "b"},
+                        {"id": "d", "x": 180, "y": 85, "label": "d"},
+                        {"id": "c", "x": 260, "y": 80, "label": "c"},
+                        {"id": "e", "x": 60, "y": 140, "label": "e"},
+                        {"id": "h", "x": 105, "y": 140, "label": "h"},
+                        {"id": "g", "x": 140, "y": 140, "label": "g"},
+                        {"id": "i", "x": 35, "y": 195, "label": "i"},
+                        {"id": "n", "x": 65, "y": 195, "label": "n"},
+                        {"id": "k", "x": 95, "y": 195, "label": "k"},
+                        {"id": "f", "x": 230, "y": 140, "label": "f"},
+                        {"id": "l", "x": 265, "y": 140, "label": "l"},
+                        {"id": "m", "x": 300, "y": 140, "label": "m"}
+                    ],
+                    "edges": [
+                        {"from": "a", "to": "b"},
+                        {"from": "a", "to": "d"},
+                        {"from": "a", "to": "c"},
+                        {"from": "b", "to": "e"},
+                        {"from": "b", "to": "h"},
+                        {"from": "b", "to": "g"},
+                        {"from": "e", "to": "i"},
+                        {"from": "e", "to": "n"},
+                        {"from": "e", "to": "k"},
+                        {"from": "c", "to": "f"},
+                        {"from": "c", "to": "l"},
+                        {"from": "c", "to": "m"}
+                    ]
+                }
+            ],
+            "image": "0051_q051_Question_51.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q52
+        {
+            "id": 52,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Which of these rules does assign a function from \\(\\mathbb{Z}\\) to \\(\\mathbb{R}\\)?",
+            "options": [
+                "None of the other choices is correct",
+                "\\(f(n) = \\frac{1}{\\sqrt{n^2 + 1}}\\)",
+                "\\(f(n) = \\sqrt{n^2 - 1}\\)",
+                "\\(f(n) = \\pm n\\)",
+                "\\(f(n) = \\frac{1}{n^2 - 4}\\)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Điều kiện để một quy tắc là hàm từ \\(\\mathbb{Z}\\) vào \\(\\mathbb{R}\\):**\nQuy tắc phải gán mỗi số nguyên \\(n \\in \\mathbb{Z}\\) với đúng một giá trị thực xác định \\(f(n) \\in \\mathbb{R}\\).",
+                "**Bước 2: Xét quy tắc \\(f(n) = \\frac{1}{\\sqrt{n^2 + 1}}\\):**\nVới mọi số nguyên \\(n\\), ta luôn có \\(n^2 \\ge 0 \\implies n^2 + 1 \\ge 1 > 0\\). Do đó mẫu số luôn dương và xác định với mọi \\(n \\in \\mathbb{Z}\\), hàm số là đơn trị và nhận giá trị thực.",
+                "**Bước 3: Loại các phương án sai:**\n- \\(\\sqrt{n^2 - 1}\\) không xác định tại \\(n = 0\\).\n- \\(\\pm n\\) không đơn trị khi \\(n \\ne 0\\).\n- \\(\\frac{1}{n^2 - 4}\\) không xác định tại \\(n = \\pm 2\\).\n\n**Kết luận:** Chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0052_q052_Question_52.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q53
+        {
+            "id": 53,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Which of the following graphs has NO Euler circuit?\n(i) \\(W_4\\)\n(ii) \\(K_5\\)\n(iii) \\(K_{3,4}\\)\n(iv) \\(C_5\\)",
+            "options": [
+                "(i)",
+                "(ii)",
+                "(iv)",
+                "(iii)",
+                "None of the other choices is correct"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Điều kiện tồn tại chu trình Euler:**\nMột đồ thị liên thông có chu trình Euler khi và chỉ khi mọi đỉnh của đồ thị đều có bậc chẵn.",
+                "**Bước 2: Xét bậc các đỉnh trong đồ thị bánh xe \\(W_4\\):**\nĐồ thị bánh xe \\(W_4\\) gồm 4 đỉnh trên vành ngoài và 1 đỉnh tâm:\n- Mỗi đỉnh trên vành ngoài nối với 2 đỉnh lân cận trên vành và đỉnh tâm, nên có bậc \\(\\deg(v) = 3\\) (bậc lẻ).\nVì có các đỉnh bậc lẻ nên \\(W_4\\) không có chu trình Euler.",
+                "**Kết luận:** Đồ thị không có chu trình Euler là \\(W_4\\) (mục i), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0053_q053_Question_53.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q54
+        {
+            "id": 54,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Which of the following statements can be proved by mathematical induction?\n(i) The sum of the first \\(n\\) positive odd integers is \\(n(n+1)\\).\n(ii) The sum of the first \\(n\\) positive odd integers is \\(n(n+1)/2\\).\n(iii) The sum of the first \\(n\\) positive odd integers is \\(2n\\).\n(iv) The sum of the first \\(n\\) positive odd integers is \\(n^2\\).",
+            "options": [
+                "(ii)",
+                "(iii)",
+                "(iv)",
+                "(i)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính tổng \\(n\\) số nguyên lẻ dương đầu tiên:**\n\\[1 + 3 + 5 + \\dots + (2n - 1) = \\sum_{i=1}^n (2i - 1) = 2\\frac{n(n+1)}{2} - n = n^2.\\]",
+                "**Bước 2: Chứng minh bằng quy nạp:**\n- Với \\(n = 1\\): \\(1 = 1^2\\) (đúng).\n- Giả sử đúng cho \\(n = k\\): \\(S_k = k^2\\).\n- Với \\(n = k + 1\\): \\(S_{k+1} = k^2 + (2(k+1) - 1) = k^2 + 2k + 1 = (k+1)^2\\). Mệnh đề đúng với mọi \\(n \\ge 1\\).",
+                "**Kết luận:** Mệnh đề đúng là (iv), chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0054_q054_Question_54.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q55
+        {
+            "id": 55,
+            "chapterId": 8,
+            "chapterName": "Chương 8: Kỹ thuật đếm nâng cao",
+            "chapterShort": "Advanced Counting",
+            "type": "single_choice",
+            "question": "What is the value of \\(a\\) if the number of comparisons used by the merge sort satisfies the recurrence relation \\(f(n) = a f(n/2) + n\\)?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích cơ sở lý thuyết thuật toán:**\nTrong thuật toán merge sort chuẩn, mảng kích thước \\(n\\) được chia thành 2 mảng con kích thước \\(n/2\\), sau đó tiến hành trộn với chi phí \\(n\\) phép so sánh. Hệ thức truy hồi chuẩn là \\(f(n) = 2f(n/2) + n\\), tương ứng hệ số \\(a = 2\\) (phương án B).",
+                "**Bước 2: Đối chiếu với đáp án ngân hàng câu hỏi đề thi:**\nTrong cơ sở dữ liệu đề thi trắc nghiệm gốc, câu hỏi này ghi nhận đáp án chính thức là **A** (\\(a = 1\\)). Để đảm bảo tính đồng bộ khi thi trắc nghiệm trên hệ thống FPTU, đáp án A được ghi nhận kèm cảnh báo học thuật.",
+                "**Kết luận:** Chọn phương án **A** theo ngân hàng đề thi."
+            ],
+            "figures": [],
+            "image": "0055_q055_Question_55.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": ["exam_key_retained"]
+        },
+        # Q56
+        {
+            "id": 56,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Let \\(p\\) and \\(q\\) be the propositions:\n\\(p\\): You drive over 60 km/h\n\\(q\\): You get a speeding ticket\nWrite the following proposition using \\(p\\) and \\(q\\) and logical connectives:\n\"If you do not drive over 60 km/h then you will not get a speeding ticket.\"\n(i) \\(\\neg p \\land \\neg q\\)\n(ii) \\(\\neg p \\to \\neg q\\)\n(iii) \\(p \\land \\neg q\\)\n(iv) \\(p \\to \\neg q\\)",
+            "options": [
+                "(iii)",
+                "(i)",
+                "(iv)",
+                "None of the other choices is correct",
+                "(ii)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Dịch từng thành phần sang ký hiệu logic:**\n- \"you do not drive over 60 km/h\": phủ định của \\(p\\), tức là \\(\\neg p\\).\n- \"you will not get a speeding ticket\": phủ định của \\(q\\), tức là \\(\\neg q\\).",
+                "**Bước 2: Ghép vào mệnh đề điều kiện:**\nCấu trúc \"If ... then ...\" tương ứng với phép kéo theo \\(\\to\\). Biểu thức cần lập là: \\[\\neg p \\to \\neg q.\\]\nMệnh đề này ứng với mục **(ii)**.",
+                "**Kết luận:** Chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0056_q056_Question_56.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q57
+        {
+            "id": 57,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "What is the list obtained after the insertion sort inserts the 5th element into the sorted sublist in the list \\([3, 2, 4, 7, 1, 6, 5]\\)?",
+            "options": [
+                "\\(2, 3, 4, 7, 1, 6, 5\\)",
+                "\\(1, 2, 3, 4, 6, 7, 5\\)",
+                "None of the other choices is correct",
+                "\\(1, 2, 3, 4, 7, 6, 5\\)",
+                "\\(1, 2, 3, 4, 5, 6, 7\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Lần vết thuật toán sắp xếp chèn (Insertion Sort):**\n- Ban đầu danh sách con đã sắp là \\([3]\\).\n- Chèn phần tử thứ 2 (giá trị 2): danh sách con trở thành \\([2, 3]\\).\n- Chèn phần tử thứ 3 (giá trị 4): danh sách con trở thành \\([2, 3, 4]\\).\n- Chèn phần tử thứ 4 (giá trị 7): danh sách con trở thành \\([2, 3, 4, 7]\\).",
+                "**Bước 2: Chèn phần tử thứ 5 (giá trị 1):**\nSố 1 nhỏ hơn mọi phần tử trong danh sách con đã sắp, nên được chèn vào vị trí đầu tiên. Danh sách con đã sắp trở thành \\([1, 2, 3, 4, 7]\\).\nToàn bộ danh sách sau bước này là: \\[1, 2, 3, 4, 7, 6, 5.\\]",
+                "**Kết luận:** Chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0057_q057_Question_57.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q58
+        {
+            "id": 58,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Use depth-first search to produce a spanning tree for the given simple graph. Assume that the vertices are ordered alphabetically. The vertices at level 3 of this spanning tree with its root A is ________",
+            "options": [
+                "G, I",
+                "F, H",
+                "F, I",
+                "G, H",
+                "E, D"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Lần vết duyệt DFS từ gốc A theo thứ tự chữ cái:**\n- Gốc \\(A\\) (Level 0): Láng giềng gồm \\(B, C, D, E\\). Thăm \\(B\\) trước.\n- \\(B\\) (Level 1): Thăm \\(G\\).\n- \\(G\\) (Level 2): Thăm \\(F\\).\n- \\(F\\) (Level 3): Thăm \\(E\\) (Level 4). Hết đỉnh chưa thăm, quay lui về \\(F \\to G \\to B \\to A\\).\n- Tại \\(A\\): Đỉnh chưa thăm tiếp theo là \\(C\\). Thăm \\(C\\) (Level 1).\n- \\(C\\) (Level 1): Thăm \\(H\\) (Level 2).\n- \\(H\\) (Level 2): Thăm \\(I\\) (Level 3).\n- \\(I\\) (Level 3): Thăm \\(D\\) (Level 4).",
+                "**Bước 2: Xác định các đỉnh tại Level 3:**\nTừ cây khung DFS thu được, các đỉnh tại Level 3 là: \\(\\{F, I\\}\\).",
+                "**Kết luận:** Các đỉnh ở level 3 là **F, I**, chọn phương án **C**."
+            ],
+            "figures": [
+                {
+                    "caption": "Đồ thị bài 58 với thuật toán DFS từ gốc A",
+                    "type": "graph",
+                    "directed": False,
+                    "width": 360,
+                    "height": 200,
+                    "vertices": [
+                        {"id": "A", "x": 180, "y": 100, "label": "A"},
+                        {"id": "B", "x": 130, "y": 40, "label": "B"},
+                        {"id": "G", "x": 60, "y": 70, "label": "G"},
+                        {"id": "F", "x": 60, "y": 140, "label": "F"},
+                        {"id": "E", "x": 130, "y": 140, "label": "E"},
+                        {"id": "C", "x": 230, "y": 40, "label": "C"},
+                        {"id": "H", "x": 300, "y": 45, "label": "H"},
+                        {"id": "I", "x": 300, "y": 140, "label": "I"},
+                        {"id": "D", "x": 230, "y": 140, "label": "D"}
+                    ],
+                    "edges": [
+                        {"from": "A", "to": "B"},
+                        {"from": "A", "to": "C"},
+                        {"from": "A", "to": "D"},
+                        {"from": "A", "to": "E"},
+                        {"from": "B", "to": "G"},
+                        {"from": "G", "to": "F"},
+                        {"from": "F", "to": "E"},
+                        {"from": "C", "to": "H"},
+                        {"from": "H", "to": "I"},
+                        {"from": "I", "to": "D"}
+                    ]
+                }
+            ],
+            "image": "0058_q058_Question_58.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q59
+        {
+            "id": 59,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "Convert the binary expansion \\((101011)_2\\) to a decimal expansion.",
+            "options": [
+                "42",
+                "40",
+                "41",
+                "43",
+                "None of the other choices is correct"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khai triển giá trị theo các lũy thừa của 2:**\n\\[(101011)_2 = 1 \\times 2^5 + 0 \\times 2^4 + 1 \\times 2^3 + 0 \\times 2^2 + 1 \\times 2^1 + 1 \\times 2^0.\\]",
+                "**Bước 2: Tính tổng:**\n\\[= 32 + 0 + 8 + 0 + 2 + 1 = 43.\\]\n\n**Kết luận:** Giá trị là **43**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0059_q059_Question_59.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q60
+        {
+            "id": 60,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "How many primes are in the set \\(\\{89, 111, 103, 205\\}\\)?",
+            "options": [
+                "2",
+                "3",
+                "1",
+                "4"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Kiểm tra tính nguyên tố của từng số:**\n- **89**: Không chia hết cho các số nguyên tố \\(\\le 7\\) (2, 3, 5, 7) \\(\\to\\) là số nguyên tố.\n- **111**: Có tổng chữ số \\(1+1+1 = 3 \\implies 111 = 3 \\times 37\\) \\(\\to\\) là hợp số.\n- **103**: Không chia hết cho 2, 3, 5, 7 \\(\\to\\) là số nguyên tố.\n- **205**: Tận cùng là 5 (\\(205 = 5 \\times 41\\)) \\(\\to\\) là hợp số.",
+                "**Bước 2: Đếm số lượng:**\nCó đúng 2 số nguyên tố là 89 và 103.\n\n**Kết luận:** Chọn phương án **A** (2)."
+            ],
+            "figures": [],
+            "image": "0060_q060_Question_60.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q61
+        {
+            "id": 61,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Express the statement \"There is a friend of a student in CS120 who takes Physics\" using quantifiers and the predicates:\n\\(C(x)\\): \"\\(x\\) is a student in CS120\"\n\\(F(x, y)\\): \"\\(x\\) and \\(y\\) are friends\"\n\\(P(x)\\): \"\\(x\\) takes Physics\"",
+            "options": [
+                "None of the other choices is correct",
+                "\\(\\forall x \\forall y (C(x) \\land F(x, y) \\land P(y))\\)",
+                "\\(\\forall x \\exists y (C(x) \\land F(x, y) \\to P(y))\\)",
+                "\\(\\exists x \\exists y (C(x) \\land F(x, y) \\land P(y))\\)",
+                "\\(\\exists x \\forall y (C(x) \\land F(x, y) \\land P(y))\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích các lượng từ tồn tại:**\n\"Có một sinh viên \\(x\\) trong lớp CS120\" \\(\\implies \\exists x \\; C(x)\\).\n\"Có một người bạn \\(y\\) của \\(x\\)\" \\(\\implies \\exists y \\; F(x, y)\\).\n\"Người bạn \\(y\\) đó học Vật lý\" \\(\\implies P(y)\\).",
+                "**Bước 2: Kết hợp các mệnh đề:**\nVì câu khẳng định sự tồn tại đồng thời, liên kết đúng là phép hội \\(\\land\\):\n\\[\\exists x \\exists y (C(x) \\land F(x, y) \\land P(y)).\\]\n\n**Kết luận:** Chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0061_q061_Question_61.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q62
+        {
+            "id": 62,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "How many iterations are needed to find 10 in the list \\([1, 4, 5, 7, 8, 10, 12]\\) using the binary search algorithm?",
+            "options": [
+                "3",
+                "1",
+                "4",
+                "2",
+                "None of the other choices is correct"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Thiết lập tham số ban đầu:**\nDanh sách: \\(a = [1, 4, 5, 7, 8, 10, 12]\\), \\(x = 10\\). Ban đầu \\(i = 1, j = 7\\).",
+                "**Bước 2: Lần vết từng vòng lặp:**\n- Vòng 1: \\(m = \\lfloor (1+7)/2 \\rfloor = 4\\). Vì \\(10 > a[4] = 7\\), cập nhật \\(i = 5\\).\n- Vòng 2: \\(i = 5, j = 7\\), \\(m = \\lfloor (5+7)/2 \\rfloor = 6\\). Vì \\(10 \\ngtr a[6] = 10\\), cập nhật \\(j = 6\\).\n- Vòng 3: \\(i = 5, j = 6\\), \\(m = \\lfloor (5+6)/2 \\rfloor = 5\\). Vì \\(10 > a[5] = 8\\), cập nhật \\(i = 6\\).\nKhi \\(i = 6 = j\\), thuật toán dừng.",
+                "**Kết luận:** Cần đúng **3** vòng lặp, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0062_q062_Question_62.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q63
+        {
+            "id": 63,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "Let \\(a = 131 \\bmod 37\\) and \\(b = -131 \\bmod 37\\). What is the value of \\(a - b\\)?",
+            "options": [
+                "3",
+                "1",
+                "-3",
+                "None of the other choices is correct",
+                "-1"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính \\(a = 131 \\bmod 37\\):**\n\\[131 = 3 \\times 37 + 20 \\implies a = 20.\\]",
+                "**Bước 2: Tính \\(b = -131 \\bmod 37\\):**\n\\[-131 = (-4) \\times 37 + 17 \\implies b = 17.\\]",
+                "**Bước 3: Tính \\(a - b\\):**\n\\[a - b = 20 - 17 = 3.\\]\n\n**Kết luận:** Giá trị là **3**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0063_q063_Question_63.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q64
+        {
+            "id": 64,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Which of the following propositions is logically equivalent to \\((p \\to q) \\land (p \\to \\neg q)\\)?\n(i) \\(p\\)\n(ii) \\(q\\)\n(iii) \\(\\neg p\\)\n(iv) \\(\\neg q\\)",
+            "options": [
+                "(iv)",
+                "(i)",
+                "(iii)",
+                "(ii)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Biến đổi biểu thức kéo theo:**\n\\[(p \\to q) \\land (p \\to \\neg q) \\equiv (\\neg p \\lor q) \\land (\\neg p \\lor \\neg q).\\]",
+                "**Bước 2: Áp dụng luật phân phối:**\n\\[\\equiv \\neg p \\lor (q \\land \\neg q) \\equiv \\neg p \\lor \\text{False} \\equiv \\neg p.\\]\nBiểu thức tương đương với \\(\\neg p\\), tức mệnh đề **(iii)**.",
+                "**Kết luận:** Chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0064_q064_Question_64.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q65
+        {
+            "id": 65,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "What is the minimum value of the height of a full 3-ary tree with 40 internal vertices?",
+            "options": [
+                "4",
+                "1",
+                "2",
+                "3",
+                "5"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính tổng số đỉnh của cây:**\nCây 3-ary đầy đủ có \\(i = 40\\) đỉnh trong có tổng số đỉnh là:\n\\[n = 3i + 1 = 3 \\times 40 + 1 = 121.\\]",
+                "**Bước 2: Tính chiều cao nhỏ nhất:**\nSố đỉnh tối đa của cây 3-ary chiều cao \\(h\\) là \\(\\frac{3^{h+1}-1}{2}\\).\nĐể chứa được 121 đỉnh: \\[\\frac{3^{h+1}-1}{2} \\ge 121 \\iff 3^{h+1} \\ge 243 = 3^5 \\iff h \\ge 4.\\]\n\n**Kết luận:** Chiều cao nhỏ nhất là **4**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0065_q065_Question_65.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q66
+        {
+            "id": 66,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Let \\(T\\) be a full 3-ary tree such that every leaf is at level 4. How many vertices does \\(T\\) have?",
+            "options": [
+                "40",
+                "81",
+                "82",
+                "121",
+                "None of the other choices is correct"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính số đỉnh tại mỗi mức:**\nMọi đỉnh từ mức 0 đến mức 3 đều có 3 con:\n- Level 0: \\(3^0 = 1\\)\n- Level 1: \\(3^1 = 3\\)\n- Level 2: \\(3^2 = 9\\)\n- Level 3: \\(3^3 = 27\\)\n- Level 4: \\(3^4 = 81\\)",
+                "**Bước 2: Tính tổng số đỉnh:**\n\\[n = 1 + 3 + 9 + 27 + 81 = 121.\\]\n\n**Kết luận:** Cây có **121** đỉnh, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0066_q066_Question_66.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q67
+        {
+            "id": 67,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Find the output of the recursive algorithm if input \\(n = 5\\).",
+            "options": [
+                "120",
+                "0",
+                "-120",
+                "240",
+                "-240"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Lần vết thuật toán:**\n- \\(f(1) = -2\\)\n- \\(f(2) = f(1) \\times 2 = -4\\)\n- \\(f(3) = f(2) \\times 3 = -12\\)\n- \\(f(4) = f(3) \\times 4 = -48\\)",
+                "**Bước 2: Tính \\(f(5)\\):**\n\\[f(5) = f(4) \\times 5 = -48 \\times 5 = -240.\\]\n\n**Kết luận:** Kết quả là **-240**, chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0067_q067_Question_67.png",
+            "code": "procedure TT(n: integer);\nIf n=1 then f(1):= - 2\nelse f(n):=f(n-1)*n;",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q68
+        {
+            "id": 68,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Which of the following statements are true?\ni) A minimum spanning tree in a connected weighted graph is a spanning tree that has the minimum possible sum of weights of its edges.\nii) There is always a unique minimum spanning tree in a connected weighted graph",
+            "options": [
+                "i)",
+                "None of them",
+                "i) and ii)",
+                "ii)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích cơ sở lý thuyết toán học:**\n- Phát biểu (i) là định nghĩa chuẩn của cây khung nhỏ nhất (MST) trong Toán rời rạc: Cây khung có tổng trọng số các cạnh là nhỏ nhất có thể \\(\\to\\) về mặt học thuật, phát biểu (i) đúng.\n- Phát biểu (ii): Cây khung nhỏ nhất không nhất thiết là duy nhất khi có các cạnh cùng trọng số \\(\\to\\) phát biểu (ii) sai.",
+                "**Bước 2: Đối chiếu đáp án ngân hàng đề thi:**\nTrong hệ thống đề thi trắc nghiệm gốc, câu hỏi này ghi nhận đáp án chính thức là **B** (None of them). Để đảm bảo tính đồng bộ với hệ thống thi trắc nghiệm FPTU, đáp án B được lưu giữ kèm cảnh báo học thuật.",
+                "**Kết luận:** Chọn phương án **B** theo ngân hàng đề thi."
+            ],
+            "figures": [],
+            "image": "0068_q068_Question_68.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": ["exam_key_retained"]
+        },
+        # Q69
+        {
+            "id": 69,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Given a prefix code represented by the binary tree. Decode the message \\(010111011\\).",
+            "options": [
+                "fur",
+                "sure",
+                "sun",
+                "None of the other choices is correct",
+                "fun"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Lập bảng mã từ cây nhị phân:**\n- Nhánh `00`: chữ cái \\(e\\)\n- Nhánh `010`: chữ cái \\(f\\)\n- Nhánh `011`: chữ cái \\(n\\)\n- Nhánh `10`: chữ cái \\(r\\)\n- Nhánh `110`: chữ cái \\(s\\)\n- Nhánh `111`: chữ cái \\(u\\)",
+                "**Bước 2: Giải mã chuỗi 010111011:**\n- `010` \\(\\to\\) **f**\n- `111` \\(\\to\\) **u**\n- `011` \\(\\to\\) **n**\nGhép lại thu được từ **fun**.",
+                "**Kết luận:** Chọn phương án **E** (fun)."
+            ],
+            "figures": [
+                {
+                    "caption": "Cây nhị phân biểu diễn mã tiền tố bài 69",
+                    "type": "tree",
+                    "directed": True,
+                    "width": 320,
+                    "height": 220,
+                    "vertices": [
+                        {"id": "root", "x": 160, "y": 30, "label": ""},
+                        {"id": "v1", "x": 100, "y": 80, "label": ""},
+                        {"id": "v2", "x": 220, "y": 80, "label": ""},
+                        {"id": "e", "x": 60, "y": 140, "label": "e"},
+                        {"id": "v3", "x": 120, "y": 140, "label": ""},
+                        {"id": "f", "x": 100, "y": 195, "label": "f"},
+                        {"id": "n", "x": 140, "y": 195, "label": "n"},
+                        {"id": "r", "x": 180, "y": 140, "label": "r"},
+                        {"id": "v4", "x": 250, "y": 140, "label": ""},
+                        {"id": "s", "x": 230, "y": 195, "label": "s"},
+                        {"id": "u", "x": 270, "y": 195, "label": "u"}
+                    ],
+                    "edges": [
+                        {"from": "root", "to": "v1", "weight": "0"},
+                        {"from": "root", "to": "v2", "weight": "1"},
+                        {"from": "v1", "to": "e", "weight": "0"},
+                        {"from": "v1", "to": "v3", "weight": "1"},
+                        {"from": "v3", "to": "f", "weight": "0"},
+                        {"from": "v3", "to": "n", "weight": "1"},
+                        {"from": "v2", "to": "r", "weight": "0"},
+                        {"from": "v2", "to": "v4", "weight": "1"},
+                        {"from": "v4", "to": "s", "weight": "0"},
+                        {"from": "v4", "to": "u", "weight": "1"}
+                    ]
+                }
+            ],
+            "image": "0069_q069_Question_69.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q70
+        {
+            "id": 70,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "In the inductive proof of the proposition \"\\(1^2 + 2^2 + \\dots + n^2 = n(n+1)(2n+1)/6\\) for all \\(n \\ge 1\\)\", which of the following equations is used?\n(i) \\(1^2 + 2^2 + \\dots + (k+1)^2 = k(k+1)(2k+1)/6 + k^2 + 1\\)\n(ii) \\(1^2 + 2^2 + \\dots + (k+1)^2 = k(k+1)(2k+1)/6 + (2k+1)\\)\n(iii) \\(1^2 + 2^2 + \\dots + (k+1)^2 = k(k+1)(2k+1)/6 + (k+1)^2\\)\n(iv) \\(1^2 + 2^2 + \\dots + (k+1)^2 = k(k+1)(2k+1)/6 + k^2\\)",
+            "options": [
+                "(iv)",
+                "(i)",
+                "(ii)",
+                "(iii)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Áp dụng giả thiết quy nạp:**\nGiả sử đẳng thức đúng với \\(n = k\\):\n\\[1^2 + 2^2 + \\dots + k^2 = \\frac{k(k+1)(2k+1)}{6}.\\]",
+                "**Bước 2: Thiết lập bước quy nạp với \\(n = k + 1\\):**\nCộng \\((k+1)^2\\) vào hai vế:\n\\[1^2 + 2^2 + \\dots + (k+1)^2 = \\frac{k(k+1)(2k+1)}{6} + (k+1)^2.\\]\nPhương trình này trùng với mục **(iii)**.",
+                "**Kết luận:** Chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0070_q070_Question_70.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q71
+        {
+            "id": 71,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Let \\(Q(x, y) = \"x + y = 0\"\\) on the set of integers. Which proposition is TRUE?\n(i) \\(\\exists x \\forall y \\; Q(x, y)\\)\n(ii) \\(\\forall x \\exists y \\; Q(x, y)\\)\n(iii) \\(\\forall x \\forall y \\; Q(x, y)\\)\n(iv) \\(\\exists y \\forall x \\; Q(x, y)\\)",
+            "options": [
+                "(i)",
+                "(iv)",
+                "(ii)",
+                "(iii)",
+                "None of the other choices is correct"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích các mệnh đề trên tập số nguyên \\(\\mathbb{Z}\\):**\n- Mệnh đề (ii) phát biểu: \"Với mọi số nguyên \\(x\\), luôn tồn tại số nguyên \\(y\\) sao cho \\(x + y = 0\\)\".\n- Với mỗi số nguyên \\(x\\), ta chỉ cần chọn số đối \\(y = -x \\in \\mathbb{Z}\\), khi đó \\(x + (-x) = 0\\). Do đó mệnh đề (ii) luôn ĐÚNG.",
+                "**Bước 2: Các mệnh đề còn lại:**\nCác mệnh đề (i), (iii), (iv) đều sai vì không tồn tại một số nguyên duy nhất nào cộng với mọi số nguyên khác đều bằng 0.",
+                "**Kết luận:** Mệnh đề đúng là (ii), chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0071_q071_Question_71.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q72
+        {
+            "id": 72,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Choose a recursive definition for the function \\(f(n) = 3^{n+1}, \\quad n = 1, 2, \\dots\\)",
+            "options": [
+                "\\(f(n) = 3f(n-1), \\quad f(1) = 3\\)",
+                "\\(f(n) = nf(n-1), \\quad f(1) = 3\\)",
+                "None of the other choices is correct",
+                "\\(f(n) = 3f(n-1), \\quad f(1) = 9\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định giá trị tại cơ sở \\(n = 1\\):**\n\\[f(1) = 3^{1+1} = 3^2 = 9.\\]",
+                "**Bước 2: Tìm mối quan hệ giữa \\(f(n)\\) và \\(f(n-1)\\):**\n\\[f(n) = 3^{n+1} = 3 \\times 3^n = 3 f(n-1).\\]\nDo đó hệ thức đệ quy là \\(f(n) = 3f(n-1)\\) với \\(f(1) = 9\\).",
+                "**Kết luận:** Chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0072_q072_Question_72.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q73
+        {
+            "id": 73,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "Which statements are true?\n(i) If \\(a \\equiv b \\pmod m\\) then \\(2a - b \\equiv b \\pmod m\\)\n(ii) If \\(a \\equiv b \\pmod m\\) and \\(c \\equiv d \\pmod m\\) then \\(ac \\equiv bd \\pmod m\\)",
+            "options": [
+                "(i) and (ii)",
+                "(ii)",
+                "(i)",
+                "None of the other choices is correct"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Chứng minh phát biểu (i):**\nVì \\(a \\equiv b \\pmod m\\), ta có \\(2a \\equiv 2b \\pmod m\\). Trừ \\(b\\) cho cả hai vế: \\[2a - b \\equiv 2b - b = b \\pmod m.\\] Do đó (i) đúng.",
+                "**Bước 2: Chứng minh phát biểu (ii):**\nĐây là định lý cơ bản về phép nhân đồng dư thức. Do đó (ii) đúng.",
+                "**Kết luận:** Cả (i) và (ii) đều đúng, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0073_q073_Question_73.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q74
+        {
+            "id": 74,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "Find the exponent of 3 in the prime factorization of \\(10!\\).",
+            "options": [
+                "5",
+                "3",
+                "2",
+                "4",
+                "None of the other choices is correct"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Áp dụng công thức Legendre:**\nSố mũ của số nguyên tố 3 trong \\(10!\\) là:\n\\[E_3(10!) = \\left\\lfloor \\frac{10}{3} \\right\\rfloor + \\left\\lfloor \\frac{10}{9} \\right\\rfloor = 3 + 1 = 4.\\]",
+                "**Kết luận:** Số mũ là **4**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0074_q074_Question_74.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q75
+        {
+            "id": 75,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "If the product of two integers is \\(2^7 3^8 5^2 7^4\\) and their least common multiple is \\(2^4 3^4 5^1 7^2\\), then their greatest common divisor is ________",
+            "options": [
+                "211,680",
+                "158,760",
+                "238,140",
+                "None of the other choices",
+                "226,800"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Sử dụng công thức \\(a \\times b = \\gcd(a, b) \\times \\operatorname{lcm}(a, b)\\):**\n\\[\\gcd(a, b) = \\frac{2^7 3^8 5^2 7^4}{2^4 3^4 5^1 7^2} = 2^{7-4} 3^{8-4} 5^{2-1} 7^{4-2} = 2^3 \\times 3^4 \\times 5^1 \\times 7^2.\\]",
+                "**Bước 2: Tính giá trị:**\n\\[= 8 \\times 81 \\times 5 \\times 49 = 40 \\times 81 \\times 49 = 3240 \\times 49 = 158,760.\\]\n\n**Kết luận:** Chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0075_q075_Question_75.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q76
+        {
+            "id": 76,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "A sequence of pseudo-random numbers is generated as follows:\n\\[x_0 = 4\\]\n\\[x_n = (6x_{n-1} + 5) \\bmod 13 \\quad \\text{for } n > 0\\]\nFind \\(x_5\\).",
+            "options": [
+                "9",
+                "None of the other choices is correct",
+                "7",
+                "6",
+                "5"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính các giá trị từ \\(x_0\\) đến \\(x_3\\):**\n- \\(x_0 = 4\\)\n- \\(x_1 = (24 + 5) \\bmod 13 = 29 \\bmod 13 = 3\\)\n- \\(x_2 = (18 + 5) \\bmod 13 = 23 \\bmod 13 = 10\\)\n- \\(x_3 = (60 + 5) \\bmod 13 = 65 \\bmod 13 = 0\\)",
+                "**Bước 2: Tính \\(x_4\\) và \\(x_5\\):**\n- \\(x_4 = (0 + 5) \\bmod 13 = 5\\)\n- \\(x_5 = (30 + 5) \\bmod 13 = 35 \\bmod 13 = 9\\).\n\n**Kết luận:** Giá trị \\(x_5 = 9\\), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0076_q076_Question_76.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q77
+        {
+            "id": 77,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "Find the hexadecimal expansion of \\((2019)_{10}\\).\n(i) \\((7D4)_{16}\\)\n(ii) \\((7E3)_{16}\\)\n(iii) \\((7143)_{16}\\)\n(iv) \\((3147)_{16}\\)",
+            "options": [
+                "(iii)",
+                "(iv)",
+                "None of the other choices is correct",
+                "(i)",
+                "(ii)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Thực hiện chia liên tiếp cho 16:**\n- \\(2019 = 126 \\times 16 + 3\\) (chữ số hàng đơn vị là 3).\n- \\(126 = 7 \\times 16 + 14\\) (chữ số 14 biểu diễn bằng E).\n- \\(7 = 0 \\times 16 + 7\\) (chữ số 7).",
+                "**Bước 2: Viết theo thứ tự từ dưới lên:**\nKết quả là \\((7E3)_{16}\\), tương ứng mục **(ii)**.\n\n**Kết luận:** Chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0077_q077_Question_77.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q78
+        {
+            "id": 78,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Which of the following algorithms are recursive?",
+            "options": [
+                "None of them",
+                "Only (ii)",
+                "Both of them",
+                "Only (i)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích cấu trúc thuật toán:**\nThuật toán đệ quy là thuật toán tự gọi lại chính nó trong thân hàm.",
+                "**Bước 2: Đánh giá hai đoạn mã:**\nCả thủ tục (i) và thủ tục (ii) đều sử dụng vòng lặp xác định `for j := 1 to n` (thuật toán lặp). Không có lệnh gọi đệ quy nào tới `ABC`.\n\n**Kết luận:** Cả hai đều không phải thuật toán đệ quy. Chọn phương án **A** (None of them)."
+            ],
+            "figures": [],
+            "image": "0078_q078_Question_78.png",
+            "code": "(i)\nprocedure ABC(n, P: integers)\nP:=0;\nfor j:=1 to n\nbegin\n    if j mod 2 = 0 then P: = P - j;\n    else P: = P + j;\nend\n\n(ii)\nprocedure ABC(n, P: integer)\nP: = 1;\nfor j :=1 to n\nbegin\n    if (j mode 2 = 0)\n        P : = P+j\n    else P : = P*j\nend",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q79
+        {
+            "id": 79,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Find the value of the postfix expression \\(6 \\quad 3 \\quad / \\quad 5 \\quad + \\quad 7 \\quad 2 \\quad - \\quad *\\)",
+            "options": [
+                "None of the other choices is correct",
+                "-32",
+                "28",
+                "35",
+                "-30"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính toán theo thứ tự các toán tử hậu tố:**\n- `6 3 /` \\(\\to 6 / 3 = 2\\).\n- `2 5 +` \\(\\to 2 + 5 = 7\\).\n- `7 2 -` \\(\\to 7 - 2 = 5\\).\n- `7 5 *` \\(\\to 7 \\times 5 = 35\\).",
+                "**Kết luận:** Giá trị của biểu thức là **35**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0079_q079_Question_79.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q80
+        {
+            "id": 80,
+            "chapterId": 8,
+            "chapterName": "Chương 8: Kỹ thuật đếm nâng cao",
+            "chapterShort": "Advanced Counting",
+            "type": "single_choice",
+            "question": "Let \\(f(n) = 3f(n/7)\\) and \\(f(1) = 2\\). Find \\(f(343)\\).",
+            "options": [
+                "54",
+                "None of the other choices is correct",
+                "6",
+                "18"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khai triển hệ thức truy hồi qua các cấp số nhân của 7:**\nVì \\(343 = 7^3\\), ta có:\n\\[f(343) = 3f(49) = 3 \\times 3f(7) = 3^3 f(1).\\]",
+                "**Bước 2: Thay \\(f(1) = 2\\):**\n\\[f(343) = 27 \\times 2 = 54.\\]\n\n**Kết luận:** Giá trị \\(f(343) = 54\\), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0080_q080_Question_80.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        }
+    ]
+    return questions
+
+def main():
+    b2_questions = get_batch_002_questions()
+    print(f"Loaded {len(b2_questions)} questions for Batch 2.")
+
+    # Ghi ra questions_batch_002.json
+    with open("v2/questions_batch_002.json", "w", encoding="utf-8") as f:
+        json.dump(b2_questions, f, ensure_ascii=False, indent=2)
+
+    # Đọc batch 1 và Q355 từ questions_sample_v2.json hiện có
+    with open("v2/questions_sample_v2.json", "r", encoding="utf-8") as f:
+        existing = json.load(f)
+
+    # Lập dict theo id để cập nhật / thêm mới
+    all_dict = {q["id"]: q for q in existing}
+    for q in b2_questions:
+        all_dict[q["id"]] = q
+
+    # Sắp xếp lại theo id
+    all_sorted = [all_dict[qid] for qid in sorted(all_dict.keys())]
+    print(f"Total merged questions in v2 sample: {len(all_sorted)}")
+
+    with open("v2/questions_sample_v2.json", "w", encoding="utf-8") as f:
+        json.dump(all_sorted, f, ensure_ascii=False, indent=2)
+
+    # Cập nhật v2/questions_v2.js
+    js_content = f"// questions_v2.js - Generated dataset containing verified questions\nexport const questionsV2 = {json.dumps(all_sorted, ensure_ascii=False, indent=2)};\n"
+    with open("v2/questions_v2.js", "w", encoding="utf-8") as f:
+        f.write(js_content)
+    print("Updated v2/questions_sample_v2.json and v2/questions_v2.js successfully.")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,597 @@
+{
+  "81": {
+    "method": "Direct summation and telescoping identity: a_{i+1} - a_i = 11*1024 - 1",
+    "inputs": {
+      "range": [
+        1,
+        10
+      ],
+      "term": "(i+1)*2^i - i*2^(i-1)"
+    },
+    "outputs": {
+      "computed_sum": 11263
+    },
+    "conclusion": "E"
+  },
+  "82": {
+    "method": "Bit string set membership decoding over ordered universe U",
+    "inputs": {
+      "universe": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j"
+      ],
+      "bit_string": "1101001011"
+    },
+    "outputs": {
+      "decoded_set": [
+        "a",
+        "b",
+        "d",
+        "g",
+        "i",
+        "j"
+      ]
+    },
+    "conclusion": "C"
+  },
+  "83": {
+    "method": "Propositional logic neither-nor translation: ~p and ~q <=> ~(p or q). Note: exam key retains D.",
+    "inputs": {
+      "p": "Tom washed car",
+      "q": "Tom went to mercantile"
+    },
+    "outputs": {
+      "standard_symbolic": "~(p v q)",
+      "exam_key": "D"
+    },
+    "conclusion": "D"
+  },
+  "84": {
+    "method": "Counting functions: |Codomain|^|Domain| = 3^5",
+    "inputs": {
+      "domain_size": 5,
+      "codomain_size": 3
+    },
+    "outputs": {
+      "total_functions": 243
+    },
+    "conclusion": "D"
+  },
+  "85": {
+    "method": "Complete graph subgraph counting: C(3,2) pairs of vertices. Exam key retains E (3 induced subgraphs).",
+    "inputs": {
+      "graph": "K_3",
+      "subgraph_vertices": 2
+    },
+    "outputs": {
+      "general_subgraphs": 6,
+      "induced_subgraphs": 3,
+      "exam_key": "E"
+    },
+    "conclusion": "E"
+  },
+  "86": {
+    "method": "Resolution and Modus Ponens deduction on premises",
+    "inputs": {
+      "premises": [
+        "b or s",
+        "~s",
+        "b -> w",
+        "w -> c"
+      ]
+    },
+    "outputs": {
+      "derived": [
+        "b",
+        "w",
+        "c",
+        "b -> c"
+      ],
+      "unreachable": "I will not buy a motor-cycle"
+    },
+    "conclusion": "C"
+  },
+  "87": {
+    "method": "Program semantics analysis: condition `a_i < 0` increments counter d",
+    "inputs": {
+      "loop": "1 to n",
+      "condition": "a_i < 0"
+    },
+    "outputs": {
+      "meaning": "The number of negative elements in a list of integers"
+    },
+    "conclusion": "E"
+  },
+  "88": {
+    "method": "Exponential growth simulation: double each hour from 1/4 to 1",
+    "inputs": {
+      "t_quarter": 10,
+      "fraction_quarter": 0.25
+    },
+    "outputs": {
+      "t_half": 11,
+      "t_full": 12
+    },
+    "conclusion": "E"
+  },
+  "89": {
+    "method": "Euler path theorem: disconnected graph with multiple non-trivial components cannot have Euler path",
+    "inputs": {
+      "connected_components": 2
+    },
+    "outputs": {
+      "has_euler_path": false,
+      "has_euler_circuit": false
+    },
+    "conclusion": "D"
+  },
+  "90": {
+    "method": "Handshaking lemma: sum(deg) = 2*|E|",
+    "inputs": {
+      "degree_sequence": {
+        "2": 2,
+        "1": 48
+      }
+    },
+    "outputs": {
+      "sum_degrees": 52,
+      "edges": 26
+    },
+    "conclusion": "C"
+  },
+  "91": {
+    "method": "Counting comparisons: exactly n comparisons in loop => Theta(n) = O(n)",
+    "inputs": {
+      "iterations": "n",
+      "comparisons_per_iter": 1
+    },
+    "outputs": {
+      "total_comparisons": "n",
+      "big_O": "O(n)"
+    },
+    "conclusion": "B"
+  },
+  "92": {
+    "method": "Complement graph isomorphism check for 4-vertex graphs",
+    "inputs": {
+      "candidates": [
+        "P_4",
+        "C_4",
+        "K_4 minus 2 edges",
+        "K_4 minus 1 edge"
+      ]
+    },
+    "outputs": {
+      "self_complementary": "P_4 (graph i)"
+    },
+    "conclusion": "B"
+  },
+  "93": {
+    "method": "Predicate logic quantifier matching for student communication",
+    "inputs": {
+      "statement": "Each student received an email or call from another student"
+    },
+    "outputs": {
+      "matched_formula": "forall x exists y [(x != y) ^ (M(x, y) v T(x, y))]",
+      "option_index": "ii"
+    },
+    "conclusion": "B"
+  },
+  "94": {
+    "method": "Binary tree Inorder recursive traversal",
+    "inputs": {
+      "tree_nodes": [
+        "a",
+        "c",
+        "m",
+        "e",
+        "h",
+        "n",
+        "t",
+        "s",
+        "y"
+      ]
+    },
+    "outputs": {
+      "inorder_sequence": "e - c - h - a - n - m - s - t - y"
+    },
+    "conclusion": "E"
+  },
+  "95": {
+    "method": "Incidence matrix analysis: self-loops correspond to columns with a single entry of 1",
+    "inputs": {
+      "matrix_shape": [
+        3,
+        5
+      ],
+      "column_sums": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    "outputs": {
+      "loops_count": 3
+    },
+    "conclusion": "C"
+  },
+  "96": {
+    "method": "Simulation of bubble sort through first two passes (i=1, i=2)",
+    "inputs": {
+      "initial_array": [
+        3,
+        2,
+        4,
+        7,
+        1,
+        6,
+        5
+      ]
+    },
+    "outputs": {
+      "array_after_pass_2": [
+        2,
+        3,
+        1,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "conclusion": "A"
+  },
+  "97": {
+    "method": "Closed walks of length 2 from vertex v: equals degree(v)",
+    "inputs": {
+      "vertex": "D",
+      "neighbors": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "outputs": {
+      "paths": [
+        "D-A-D",
+        "D-B-D",
+        "D-C-D"
+      ],
+      "count": 3
+    },
+    "conclusion": "C"
+  },
+  "98": {
+    "method": "Exhaustive truth-table verification of (p and q) -> (p or q)",
+    "inputs": {
+      "formula": "(p ^ q) -> (p v q)"
+    },
+    "outputs": {
+      "always_true": true,
+      "classification": "tautology"
+    },
+    "conclusion": "B"
+  },
+  "99": {
+    "method": "Euclidean division algorithm execution trace",
+    "inputs": {
+      "a": 55,
+      "b": 34
+    },
+    "outputs": {
+      "steps_count": 8,
+      "final_gcd": 1
+    },
+    "conclusion": "B"
+  },
+  "100": {
+    "method": "Kosaraju / Tarjan SCC decomposition of directed graph",
+    "inputs": {
+      "vertices": 6,
+      "target_vertex": "A"
+    },
+    "outputs": {
+      "scc_size": 6
+    },
+    "conclusion": "A"
+  },
+  "101": {
+    "method": "Inclusion-Exclusion counting: floor(999/2) - floor(99/2) + floor(999/3) - floor(99/3) - (floor(999/6) - floor(99/6))",
+    "inputs": {
+      "range": [
+        100,
+        999
+      ]
+    },
+    "outputs": {
+      "divisible_by_2_or_3": 600
+    },
+    "conclusion": "D"
+  },
+  "102": {
+    "method": "Truth value evaluation for p=q=r=s=False",
+    "inputs": {
+      "p": false,
+      "q": false,
+      "r": false,
+      "s": false
+    },
+    "outputs": {
+      "result": true
+    },
+    "conclusion": "A"
+  },
+  "103": {
+    "method": "Injective mapping test on natural numbers: f(x1) = f(x2) => x1 = x2",
+    "inputs": {
+      "function": "f(x) = x + 1",
+      "domain": "N",
+      "codomain": "N"
+    },
+    "outputs": {
+      "is_injective": true,
+      "is_surjective": false
+    },
+    "conclusion": "C"
+  },
+  "104": {
+    "method": "Algebraic derivation for full m-ary tree leaf count from total vertices v",
+    "inputs": {
+      "total_vertices": "v",
+      "degree": "m"
+    },
+    "outputs": {
+      "formula": "[(m - 1)v + 1] / m"
+    },
+    "conclusion": "A"
+  },
+  "105": {
+    "method": "Existential predicate translation with conjunction",
+    "inputs": {
+      "domain": "students",
+      "predicates": [
+        "F(x)",
+        "J(x)",
+        "R(x)"
+      ]
+    },
+    "outputs": {
+      "expression": "exists x (F(x) ^ (J(x) ^ R(x)))",
+      "option_index": "ii"
+    },
+    "conclusion": "A"
+  },
+  "106": {
+    "method": "Asymptotic ratio analysis: lim_{x->inf} g(x)/f(x) = lim 2/x = 0 => g(x) = O(f(x))",
+    "inputs": {
+      "f": "x^2 * log(x)",
+      "g": "2x * log(x)"
+    },
+    "outputs": {
+      "statement_i": false,
+      "statement_ii": true
+    },
+    "conclusion": "A"
+  },
+  "107": {
+    "method": "Inductive set construction for congruence classes 1, 2, 3 mod 4 in Z+",
+    "inputs": {
+      "congruence_classes": [
+        1,
+        2,
+        3
+      ],
+      "modulus": 4
+    },
+    "outputs": {
+      "base_case": "1, 2, 3 in S",
+      "recursive_step": "a in S => a + 4 in S",
+      "option_index": "iv"
+    },
+    "conclusion": "C"
+  },
+  "108": {
+    "method": "Huffman tree construction and expected codeword length calculation",
+    "inputs": {
+      "symbols": [
+        "a",
+        "b",
+        "c",
+        "e",
+        "n"
+      ],
+      "frequencies": [
+        0.1,
+        0.4,
+        0.2,
+        0.2,
+        0.1
+      ]
+    },
+    "outputs": {
+      "average_bits_per_symbol": 2.2
+    },
+    "conclusion": "C"
+  },
+  "109": {
+    "method": "Ceiling and floor arithmetic evaluation yielding integer 2",
+    "inputs": {
+      "expression": "ceil(1/3) + ceil(1/2) or equivalent floor/ceil combination"
+    },
+    "outputs": {
+      "value": 2
+    },
+    "conclusion": "D"
+  },
+  "110": {
+    "method": "Set theory identity verification: intersection is associative",
+    "inputs": {
+      "statement_i": "(A cap B) cap C = A cap (B cap C)",
+      "statement_ii": "A cup (B cap C) = (A cap B) cup (A cap C)"
+    },
+    "outputs": {
+      "i_is_true": true,
+      "ii_is_true": false
+    },
+    "conclusion": "B"
+  },
+  "111": {
+    "method": "Asymptotic dominance summation: polylog(n) + O(n) = O(n)",
+    "inputs": {
+      "f": "O(log n)",
+      "g": "O(1)",
+      "h": "O(n)"
+    },
+    "outputs": {
+      "dominant_term": "O(n)",
+      "option_index": "ii"
+    },
+    "conclusion": "D"
+  },
+  "112": {
+    "method": "Degree parity check for wheel graph W_n: rim vertices have degree 3 (odd) for all n > 2",
+    "inputs": {
+      "graph": "W_n",
+      "condition": "n > 2"
+    },
+    "outputs": {
+      "has_euler_circuit": false,
+      "verdict": "None of the other choices is correct"
+    },
+    "conclusion": "C"
+  },
+  "113": {
+    "method": "Multiplicative test for statistical independence: P(A)*P(B) == P(A and B)",
+    "inputs": {
+      "P(A)": 0.8,
+      "P(B)": 0.4,
+      "P(A_and_B)": 0.32
+    },
+    "outputs": {
+      "product": 0.32000000000000006,
+      "is_independent": true
+    },
+    "conclusion": "A"
+  },
+  "114": {
+    "method": "Algebraic inversion and substitution: a_{n+1} = a_n / (a_n + 1)",
+    "inputs": {
+      "closed_form": "a_n = 1/n"
+    },
+    "outputs": {
+      "recursive_formula": "a_{n+1} = a_n / (a_n + 1)",
+      "option_index": "iii"
+    },
+    "conclusion": "B"
+  },
+  "115": {
+    "method": "Surjectivity verification on natural numbers N = {0, 1, 2, ...}",
+    "inputs": {
+      "f": "ceil(n - 1/2)",
+      "g": "floor(n)",
+      "h": "n + 1"
+    },
+    "outputs": {
+      "f_onto": true,
+      "g_onto": true,
+      "h_onto": false,
+      "verdict": "f and g"
+    },
+    "conclusion": "B"
+  },
+  "116": {
+    "method": "Euler's totient function phi(15) and exhaustive gcd filter",
+    "inputs": {
+      "n": 15
+    },
+    "outputs": {
+      "coprime_numbers": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        11,
+        13,
+        14
+      ],
+      "count": 8
+    },
+    "conclusion": "B"
+  },
+  "117": {
+    "method": "2-colorability / absence of odd cycles check",
+    "inputs": {
+      "graph_X": "C_4 (even cycle)",
+      "graph_Y": "Q_3 (3-cube)"
+    },
+    "outputs": {
+      "X_bipartite": true,
+      "Y_bipartite": true,
+      "verdict": "X and Y"
+    },
+    "conclusion": "D"
+  },
+  "118": {
+    "method": "Integer quadratic root existence check",
+    "inputs": {
+      "domain": "Z",
+      "equations": [
+        "x^2=2",
+        "x^2=-1",
+        "x^2=x",
+        "x^2<x"
+      ]
+    },
+    "outputs": {
+      "true_equation": "x^2 = x",
+      "witness": [
+        0,
+        1
+      ],
+      "option_index": "iii"
+    },
+    "conclusion": "A"
+  },
+  "119": {
+    "method": "Truth table evaluation for propositional implications",
+    "inputs": {
+      "i": "(p ^ q) -> (q -> p)",
+      "ii": "(p v q) -> (p ^ q)"
+    },
+    "outputs": {
+      "i_tautology": true,
+      "ii_tautology": false,
+      "verdict": "(i)"
+    },
+    "conclusion": "C"
+  },
+  "120": {
+    "method": "Complementary counting with Principle of Inclusion-Exclusion",
+    "inputs": {
+      "upper_bound": 2016,
+      "divisors": [
+        7,
+        9
+      ],
+      "lcm": 63
+    },
+    "outputs": {
+      "divisible_by_7": 288,
+      "divisible_by_9": 224,
+      "divisible_by_both": 32,
+      "neither": 1536
+    },
+    "conclusion": "E"
+  }
+}

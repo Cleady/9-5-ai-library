@@ -1,0 +1,627 @@
+{
+  "281": {
+    "method": "huffman_coding_average_bits",
+    "inputs": {
+      "text": "geology",
+      "frequencies": {
+        "g": 2,
+        "o": 2,
+        "e": 1,
+        "l": 1,
+        "y": 1
+      }
+    },
+    "outputs": {
+      "total_bits": 16,
+      "average_bits": 2.29
+    },
+    "conclusion": "A"
+  },
+  "282": {
+    "method": "algorithm_adjacent_duplicate_trace",
+    "inputs": {
+      "array": [
+        1,
+        3,
+        5,
+        5,
+        4,
+        4,
+        4,
+        6,
+        9
+      ]
+    },
+    "outputs": {
+      "first_duplicate_index": 3
+    },
+    "conclusion": "D"
+  },
+  "283": {
+    "method": "graph_cut_edge_analysis",
+    "inputs": {
+      "graph_X": "C5_star",
+      "graph_Y": "bowtie_two_triangles"
+    },
+    "outputs": {
+      "exam_answer": "None of the other choices is correct"
+    },
+    "conclusion": "B"
+  },
+  "284": {
+    "method": "havel_hakimi_graphic_sequence",
+    "inputs": {
+      "seq1": [
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "seq2": [
+        4,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    "outputs": {
+      "seq1_graphic": true,
+      "seq2_graphic": false
+    },
+    "conclusion": "A"
+  },
+  "285": {
+    "method": "bfs_spanning_tree_height_wheel",
+    "inputs": {
+      "graph": "W_n",
+      "start": "center"
+    },
+    "outputs": {
+      "tree_height": 1
+    },
+    "conclusion": "D"
+  },
+  "286": {
+    "method": "predicate_logic_universal_conditional",
+    "inputs": {
+      "statement": "Every student in class CS150 has studied Calculus"
+    },
+    "outputs": {
+      "formula": "\\forall x(S(x, CS150) \\rightarrow Q(x, Calculus))"
+    },
+    "conclusion": "B"
+  },
+  "287": {
+    "method": "set_algebra_distributive_absorption",
+    "inputs": {
+      "expr1": "A' U (A n B) == A' U B",
+      "expr2": "A' n (A n B) == A' n B"
+    },
+    "outputs": {
+      "expr1_truth": true,
+      "expr2_truth": false
+    },
+    "conclusion": "B"
+  },
+  "288": {
+    "method": "propositional_logic_implication_equivalence",
+    "inputs": {
+      "formula": "(p \\wedge q) \\rightarrow \\neg p"
+    },
+    "outputs": {
+      "simplified": "\\neg p \\vee \\neg q",
+      "matches": "p \\rightarrow \\neg q"
+    },
+    "conclusion": "A"
+  },
+  "289": {
+    "method": "linear_recurrence_trace",
+    "inputs": {
+      "a0": 1,
+      "a1": 1,
+      "coeffs": [
+        -3,
+        -2
+      ],
+      "target": 4
+    },
+    "outputs": {
+      "sequence": [
+        1,
+        1,
+        -5,
+        13,
+        -29
+      ],
+      "a4": -29
+    },
+    "conclusion": "D"
+  },
+  "290": {
+    "method": "number_theory_divisibility_counterexamples",
+    "inputs": {
+      "statements": [
+        "(i)",
+        "(ii)",
+        "(iii)"
+      ]
+    },
+    "outputs": {
+      "s1_false": true,
+      "s2_false": true,
+      "s3_false": true,
+      "all_false": true
+    },
+    "conclusion": "C"
+  },
+  "291": {
+    "method": "linear_congruential_generator_trace",
+    "inputs": {
+      "x0": 2,
+      "a": 3,
+      "c": 2,
+      "m": 11,
+      "steps": 3
+    },
+    "outputs": {
+      "x3": 3
+    },
+    "conclusion": "B"
+  },
+  "292": {
+    "method": "implication_falsehood_condition",
+    "inputs": {
+      "formula": "(p \\wedge \\neg q) \\rightarrow r"
+    },
+    "outputs": {
+      "p": true,
+      "q": false,
+      "r": false
+    },
+    "conclusion": "B"
+  },
+  "293": {
+    "method": "insertion_sort_step_trace",
+    "inputs": {
+      "initial": [
+        5,
+        3,
+        4,
+        9,
+        6
+      ],
+      "iteration": "j=3"
+    },
+    "outputs": {
+      "state_after_j3": [
+        3,
+        4,
+        5,
+        9,
+        6
+      ]
+    },
+    "conclusion": "D"
+  },
+  "294": {
+    "method": "bubble_sort_first_pass",
+    "inputs": {
+      "initial": [
+        3,
+        2,
+        4,
+        7,
+        1,
+        6,
+        5
+      ]
+    },
+    "outputs": {
+      "after_first_pass": [
+        2,
+        3,
+        4,
+        1,
+        6,
+        5,
+        7
+      ]
+    },
+    "conclusion": "D"
+  },
+  "295": {
+    "method": "master_theorem_divide_and_conquer",
+    "inputs": {
+      "recurrence": "T(n) = 2T(n/2) + c"
+    },
+    "outputs": {
+      "complexity": "O(n)",
+      "option": "(i)"
+    },
+    "conclusion": "A"
+  },
+  "296": {
+    "method": "universal_instantiation_modus_ponens",
+    "inputs": {
+      "premise1": "Lisa is CS major",
+      "premise2": "All CS majors have computer"
+    },
+    "outputs": {
+      "conclusion": "Lisa has a computer"
+    },
+    "conclusion": "A"
+  },
+  "297": {
+    "method": "m_ary_tree_leaves_formula",
+    "inputs": {
+      "m": 3,
+      "n": 40
+    },
+    "outputs": {
+      "internal_nodes": 13,
+      "leaves": 27
+    },
+    "conclusion": "D"
+  },
+  "298": {
+    "method": "nested_summation_evaluation",
+    "inputs": {
+      "i_range": [
+        0,
+        2
+      ],
+      "j_range": [
+        1,
+        3
+      ],
+      "term": "i - j"
+    },
+    "outputs": {
+      "sum": -9
+    },
+    "conclusion": "D"
+  },
+  "299": {
+    "method": "prefix_polish_evaluation",
+    "inputs": {
+      "expression": "* + 1 + 3 ^ 3 + 1 1 6"
+    },
+    "outputs": {
+      "value": 78
+    },
+    "conclusion": "E"
+  },
+  "300": {
+    "method": "function_domain_well_definedness",
+    "inputs": {
+      "candidate": "floor(cube_root(x)) from R to Z"
+    },
+    "outputs": {
+      "is_function": true,
+      "option": "(iv)"
+    },
+    "conclusion": "A"
+  },
+  "301": {
+    "method": "euclidean_algorithm_loop_trace",
+    "inputs": {
+      "a": 610,
+      "b": 233
+    },
+    "outputs": {
+      "before_step_3": {
+        "x": 144,
+        "y": 89
+      }
+    },
+    "conclusion": "C"
+  },
+  "302": {
+    "method": "master_theorem_exam_record",
+    "inputs": {
+      "options": "(i) T(n) = O(n^3 log n)"
+    },
+    "outputs": {
+      "complexity": "O(n^3 log n)"
+    },
+    "conclusion": "B"
+  },
+  "303": {
+    "method": "greedy_change_making_coins",
+    "inputs": {
+      "amount": 65,
+      "denominations": [
+        25,
+        10,
+        5,
+        1
+      ]
+    },
+    "outputs": {
+      "greedy_coins": 4,
+      "exam_recorded_answer": 8
+    },
+    "conclusion": "D"
+  },
+  "304": {
+    "method": "graph_isomorphism_connected_components",
+    "inputs": {
+      "left_components": 2,
+      "right_components": 1
+    },
+    "outputs": {
+      "isomorphic": false,
+      "reason": "different number of connected components"
+    },
+    "conclusion": "D"
+  },
+  "305": {
+    "method": "recursive_set_generation_subgroup",
+    "inputs": {
+      "basis": [
+        4,
+        6
+      ],
+      "operations": [
+        "-m",
+        "m+n"
+      ]
+    },
+    "outputs": {
+      "generated_set": "even_integers",
+      "gcd": 2
+    },
+    "conclusion": "C"
+  },
+  "306": {
+    "method": "quantifier_translation_exam_record",
+    "inputs": {
+      "sentence": "For each of the three animals, there is a student who has it"
+    },
+    "outputs": {
+      "exam_option": "(i)"
+    },
+    "conclusion": "C"
+  },
+  "307": {
+    "method": "floor_ceil_nested_evaluation",
+    "inputs": {
+      "term1": "floor(3/2 + ceil(1/2 * floor(5/2)))",
+      "term2": "ceil(3 - 7/8)"
+    },
+    "outputs": {
+      "term1_val": 2,
+      "term2_val": 3,
+      "total": 5
+    },
+    "conclusion": "B"
+  },
+  "308": {
+    "method": "binary_addition",
+    "inputs": {
+      "b1": "1111",
+      "b2": "1111"
+    },
+    "outputs": {
+      "sum_binary": "11110"
+    },
+    "conclusion": "B"
+  },
+  "309": {
+    "method": "hypercube_hamilton_circuit_existence",
+    "inputs": {
+      "graph": "Q_n"
+    },
+    "outputs": {
+      "condition": "n > 1"
+    },
+    "conclusion": "B"
+  },
+  "310": {
+    "method": "modular_arithmetic_subtraction",
+    "inputs": {
+      "a_raw": 132,
+      "b_raw": -132,
+      "mod": 37
+    },
+    "outputs": {
+      "a": 21,
+      "b": 16,
+      "diff": 5
+    },
+    "conclusion": "A"
+  },
+  "311": {
+    "method": "predicate_truth_finite_domain",
+    "inputs": {
+      "domain": [
+        2,
+        4,
+        6,
+        7,
+        9
+      ],
+      "predicate": "x+y div 5"
+    },
+    "outputs": {
+      "pair": [
+        4,
+        6
+      ],
+      "exists_pair": true,
+      "option": "(iv)"
+    },
+    "conclusion": "C"
+  },
+  "312": {
+    "method": "propositional_satisfiability_contradiction_check",
+    "inputs": {
+      "p1": "p ^ q",
+      "p2": "p -> q",
+      "p3": "(p->q) ^ (q->p)"
+    },
+    "outputs": {
+      "any_contradiction": false,
+      "result": "None of the other choices is correct"
+    },
+    "conclusion": "C"
+  },
+  "313": {
+    "method": "postorder_tree_traversal_trace",
+    "inputs": {
+      "tree_root": "a"
+    },
+    "outputs": {
+      "postorder": [
+        "d",
+        "f",
+        "g",
+        "e",
+        "b",
+        "c",
+        "a"
+      ]
+    },
+    "conclusion": "C"
+  },
+  "314": {
+    "method": "havel_hakimi_degree_completion",
+    "inputs": {
+      "known_degrees": [
+        1,
+        3,
+        3,
+        4
+      ],
+      "vertices": 5
+    },
+    "outputs": {
+      "possible_degree": 3
+    },
+    "conclusion": "D"
+  },
+  "315": {
+    "method": "modular_congruence_test",
+    "inputs": {
+      "target": 10,
+      "mod": 17,
+      "candidates": [
+        90,
+        80,
+        85,
+        95
+      ]
+    },
+    "outputs": {
+      "matching_number": 95
+    },
+    "conclusion": "D"
+  },
+  "316": {
+    "method": "vacuous_truth_bounded_quantifier",
+    "inputs": {
+      "domain": [
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "condition": "x >= 1"
+    },
+    "outputs": {
+      "equivalent_conjunction": "P(1) ^ P(2) ^ P(3)",
+      "option": "(iii)"
+    },
+    "conclusion": "A"
+  },
+  "317": {
+    "method": "nested_recurrence_trace",
+    "inputs": {
+      "n": 8
+    },
+    "outputs": {
+      "re_8": 5
+    },
+    "conclusion": "A"
+  },
+  "318": {
+    "method": "adjacency_matrix_power_walks",
+    "inputs": {
+      "graph": "K_4",
+      "path_length": 3
+    },
+    "outputs": {
+      "walks_count": 7
+    },
+    "conclusion": "D"
+  },
+  "319": {
+    "method": "euler_path_matrix_degree_sum",
+    "inputs": {
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "outputs": {
+      "row_sums": [
+        2,
+        3,
+        2,
+        2,
+        3
+      ],
+      "odd_count": 2,
+      "has_euler_path": true,
+      "has_euler_circuit": false
+    },
+    "conclusion": "A"
+  },
+  "320": {
+    "method": "first_order_logic_multi_quantifier_translation",
+    "inputs": {
+      "statement": "For any question, at least two solve and at least one does not"
+    },
+    "outputs": {
+      "option": "(iv)"
+    },
+    "conclusion": "B"
+  }
+}

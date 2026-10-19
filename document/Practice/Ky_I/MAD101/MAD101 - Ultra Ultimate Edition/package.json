@@ -1,0 +1,21 @@
+{
+  "name": "mad101-studio",
+  "version": "2.0.0",
+  "description": "MAD101 Discrete Mathematics Studio 2.0 (FPT University)",
+  "main": "index.html",
+  "scripts": {
+    "validate": "node v2/validate.js",
+    "test": "node v2/validate.js",
+    "build": "node scripts/build.js"
+  },
+  "keywords": [
+    "mad101",
+    "discrete-mathematics",
+    "fpt-university",
+    "quiz",
+    "latex",
+    "mathjax"
+  ],
+  "author": "Antigravity Pair Programming",
+  "license": "MIT"
+}

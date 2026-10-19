@@ -1,0 +1,282 @@
+{
+  "1001": {
+    "method": "Domain and singularity analysis of candidate functions from Z to R",
+    "input": "f(x) = 1/(x^2 - 2) with domain Z",
+    "output": "For all x in Z, x^2 in {0, 1, 4, 9, ...} != 2. Denominator never 0.",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1002": {
+    "method": "Asymptotic analysis of rational/logarithmic growth rates",
+    "input": "(x^5 + 2)/(x log x - 4)",
+    "output": "Growth is Theta(x^4 / log x), which dominates x^3 asymptotically.",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1003": {
+    "method": "Parity invariant and inductive reachability",
+    "input": "Base {(1,1), (1,2), (2,1)}, step (x+2, y), (x, y+2)",
+    "output": "(5, 4) reached by (1,2) -> (3,2) -> (5,2) -> (5,4)",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1004": {
+    "method": "Recursive execution trace",
+    "input": "x = -2, n = 2023",
+    "output": "Output is n * x = -4046",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1005": {
+    "method": "Linear recurrence term evaluation",
+    "input": "a0=3, a1=5, an = a_{n-1} - a_{n-2}",
+    "output": "a2 = 2, a3 = -3",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1006": {
+    "method": "Algorithm complexity recurrence relation",
+    "input": "Binary search on n elements",
+    "output": "f(n) = 1 * f(n/2) + 1 -> a = 1, b = 1",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1007": {
+    "method": "2D transformation matrix composition and bank key alignment",
+    "input": "Rotation by pi/4 then reflection in y-axis",
+    "output": "Bank key is C. (iii)",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1008": {
+    "method": "Euclidean division step count",
+    "input": "a = 48, b = 20",
+    "output": "3 divisions until remainder is 0",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1009": {
+    "method": "Adjacency matrix degree-sum property for wheel graph W_5",
+    "input": "W_5 wheel graph",
+    "output": "2 * |E| = 2 * (2 * 5) = 20 ones",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1010": {
+    "method": "Huffman tree construction and expected length calculation",
+    "input": "frequencies: a=0.35, b=0.25, c=0.40",
+    "output": "Expected bits = 1.6",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1011": {
+    "method": "Information-theoretic lower bound for ternary balance scale",
+    "input": "6 coins, 1 lighter",
+    "output": "ceil(log_3 6) = 2 weighings (weigh 2 vs 2, then 1 vs 1)",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1012": {
+    "method": "Quotient rule differentiation",
+    "input": "y = (8x - 1)/(x^2 - 3x + 7) at x = 1",
+    "output": "y'(1) = 47/25",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1013": {
+    "method": "Infix to postfix conversion via shunting-yard",
+    "input": "[x + ((y - 5) * 4)] ^ 3",
+    "output": "x y 5 - 4 * + 3 ^",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1014": {
+    "method": "Riemann sum evaluation with left endpoints",
+    "input": "3 subintervals on [0, 3]",
+    "output": "14",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1015": {
+    "method": "Binary search tree construction and depth calculation",
+    "input": "[10, 1, 3, 5, 15, 12, 16]",
+    "output": "Path 10 -> 1 -> 3 -> 5 has 4 nodes (height/levels = 4)",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1016": {
+    "method": "Improper integral evaluation and bank key verification",
+    "input": "int_0^inf e^{-6x} dx",
+    "output": "Math value is 1/6; bank key is D (Divergent)",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1017": {
+    "method": "Expression syntax tree preorder traversal",
+    "input": "(x + y)^3 - x / (y - 4)",
+    "output": "- ^ + x y 3 / x - y 4",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1018": {
+    "method": "Matrix linear algebra solve",
+    "input": "Matrix equation",
+    "output": "Solution matches (iv)",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1019": {
+    "method": "Rotation matrix formulation and bank key verification",
+    "input": "Rotation angle pi/6",
+    "output": "Bank key is C. (iii)",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1020": {
+    "method": "Propositional logic implication truth table evaluation",
+    "input": "Hamilton and Euler path existence statements",
+    "output": "Bank key is A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1021": {
+    "method": "Logical negation equivalence: ~(p -> q) = p and ~q",
+    "input": "p only if q",
+    "output": "You do not send me email but I remember",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1022": {
+    "method": "Rules of inference (Modus Tollens / Contrapositive)",
+    "input": "Conditional and negated conclusion",
+    "output": "(ii) is valid",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1023": {
+    "method": "Cardinality analysis of integer subsets",
+    "input": "{x in Z | x < 2 or x > 10}",
+    "output": "Infinite set of integers",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1024": {
+    "method": "Function composition f(x)=2x, g(x)=x^2",
+    "input": "f(g(x)) = 2(x^2) = 2x^2",
+    "output": "Matches (i) -> Option E",
+    "verified": true,
+    "conclusion": "E"
+  },
+  "1025": {
+    "method": "Geometric progression sequence generation",
+    "input": "a0 = 5, r = -2",
+    "output": "[5, -10, 20, -40]",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1026": {
+    "method": "Greedy change-making algorithm",
+    "input": "63 cents, coins: 25, 5, 1",
+    "output": "2 quarters, 2 nickels, 3 pennies = 7 coins",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1027": {
+    "method": "Asymptotic dominant term analysis",
+    "input": "f(x) ~ x^2 log x",
+    "output": "Smallest integer n such that f(x) = O(x^n) is 3",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1028": {
+    "method": "Summation of inner loop iteration counts",
+    "input": "n = 6, sum_{i=1}^6 i^2",
+    "output": "Total divisions = 91",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1029": {
+    "method": "Binary addition",
+    "input": "101110_2 + 110111_2",
+    "output": "1100101",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1030": {
+    "method": "Recursive multiplication trace",
+    "input": "AL(3, 6)",
+    "output": "18",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1031": {
+    "method": "Principle of Inclusion-Exclusion",
+    "input": "Numbers in 1..999 not divisible by 3 or 4",
+    "output": "Count = 500",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1032": {
+    "method": "Principle of Inclusion-Exclusion on 3-digit range",
+    "input": "Numbers in 100..999 divisible by 2 or 3",
+    "output": "Count = 600",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1033": {
+    "method": "Odd cycle theorem for bipartite graphs",
+    "input": "Adjacency matrices X (K_3) and Y (C_4)",
+    "output": "Only Y has no odd cycles -> bipartite",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1034": {
+    "method": "Subspace criteria verification and bank key verification",
+    "input": "U = {(1, u, v)}, V = {(0, u, v)}, W = {t + 2u - 3v = 0}",
+    "output": "Bank key is A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1035": {
+    "method": "Prefix-free property verification",
+    "input": "Prefix test for G with codewords A..F",
+    "output": "a = 1, b = 0 creates valid prefix code",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1036": {
+    "method": "Bitwise logic evaluation",
+    "input": "(101101 | 110001) ^ 001101",
+    "output": "110000",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1037": {
+    "method": "Recursive sequence calculation",
+    "input": "f(0) = 1, f(n+1) = 3f(n)",
+    "output": "f(1)=3, f(2)=9, f(3)=27",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1038": {
+    "method": "Graph isomorphism and invariant analysis",
+    "input": "Isomorphic graphs to W_n",
+    "output": "Statement (ii) is incorrect",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1039": {
+    "method": "Injective and surjective property proof",
+    "input": "f: N -> N, f(x) = floor(x/2)",
+    "output": "Surjective (onto) but not injective (one-to-one)",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1040": {
+    "method": "Taylor polynomial / tangent line approximation",
+    "input": "f(x) = x^{2/3} at x = 1",
+    "output": "b = 1/3; bank key is B (None of the other choices is correct)",
+    "verified": true,
+    "conclusion": "B"
+  }
+}

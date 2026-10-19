@@ -1,0 +1,947 @@
+[
+  {
+    "base": "0193_q193_Question_193",
+    "png_path": "chapters/Ch2_Sets_Functions/0193_q193_Question_193.png",
+    "webp_path": "0193_q193_Question_193.webp",
+    "png_size": 24760,
+    "webp_size": 21656,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0194_q194_Question_194",
+    "png_path": "chapters/Ch2_Sets_Functions/0194_q194_Question_194.png",
+    "webp_path": "0194_q194_Question_194.webp",
+    "png_size": 22975,
+    "webp_size": 21716,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0195_q195_Question_195",
+    "png_path": "chapters/Ch2_Sets_Functions/0195_q195_Question_195.png",
+    "webp_path": "0195_q195_Question_195.webp",
+    "png_size": 30585,
+    "webp_size": 20972,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0196_q196_Question_196",
+    "png_path": "chapters/Ch2_Sets_Functions/0196_q196_Question_196.png",
+    "webp_path": "0196_q196_Question_196.webp",
+    "png_size": 23313,
+    "webp_size": 19832,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0197_q197_Question_197",
+    "png_path": "chapters/Ch2_Sets_Functions/0197_q197_Question_197.png",
+    "webp_path": "0197_q197_Question_197.webp",
+    "png_size": 36601,
+    "webp_size": 19586,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0198_q198_Question_198",
+    "png_path": "chapters/Ch2_Sets_Functions/0198_q198_Question_198.png",
+    "webp_path": "0198_q198_Question_198.webp",
+    "png_size": 54342,
+    "webp_size": 17782,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0199_q199_Question_199",
+    "png_path": "chapters/Ch2_Sets_Functions/0199_q199_Question_199.png",
+    "webp_path": "0199_q199_Question_199.webp",
+    "png_size": 29797,
+    "webp_size": 17004,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0200_q200_Question_200",
+    "png_path": "chapters/Ch2_Sets_Functions/0200_q200_Question_200.png",
+    "webp_path": "0200_q200_Question_200.webp",
+    "png_size": 35935,
+    "webp_size": 17990,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0201_q201_Question_201",
+    "png_path": "chapters/Ch2_Sets_Functions/0201_q201_Question_201.png",
+    "webp_path": "0201_q201_Question_201.webp",
+    "png_size": 38773,
+    "webp_size": 18578,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0202_q202_Question_202",
+    "png_path": "chapters/Ch2_Sets_Functions/0202_q202_Question_202.png",
+    "webp_path": "0202_q202_Question_202.webp",
+    "png_size": 33134,
+    "webp_size": 23226,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0203_q203_Question_203",
+    "png_path": "chapters/Ch2_Sets_Functions/0203_q203_Question_203.png",
+    "webp_path": "0203_q203_Question_203.webp",
+    "png_size": 25560,
+    "webp_size": 21474,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0206_q206_Question_206",
+    "png_path": "chapters/Ch2_Sets_Functions/0206_q206_Question_206.png",
+    "webp_path": "0206_q206_Question_206.webp",
+    "png_size": 181141,
+    "webp_size": 20476,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0207_q207_Question_207",
+    "png_path": "chapters/Ch2_Sets_Functions/0207_q207_Question_207.png",
+    "webp_path": "0207_q207_Question_207.webp",
+    "png_size": 116706,
+    "webp_size": 22294,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0208_q208_Question_208",
+    "png_path": "chapters/Ch2_Sets_Functions/0208_q208_Question_208.png",
+    "webp_path": "0208_q208_Question_208.webp",
+    "png_size": 35661,
+    "webp_size": 16474,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0209_q209_Question_209",
+    "png_path": "chapters/Ch2_Sets_Functions/0209_q209_Question_209.png",
+    "webp_path": "0209_q209_Question_209.webp",
+    "png_size": 114086,
+    "webp_size": 19016,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0210_q210_Question_210",
+    "png_path": "chapters/Ch2_Sets_Functions/0210_q210_Question_210.png",
+    "webp_path": "0210_q210_Question_210.webp",
+    "png_size": 143266,
+    "webp_size": 19890,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0211_q211_Question_211",
+    "png_path": "chapters/Ch2_Sets_Functions/0211_q211_Question_211.png",
+    "webp_path": "0211_q211_Question_211.webp",
+    "png_size": 164744,
+    "webp_size": 18094,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0212_q212_Question_212",
+    "png_path": "chapters/Ch2_Sets_Functions/0212_q212_Question_212.png",
+    "webp_path": "0212_q212_Question_212.webp",
+    "png_size": 153395,
+    "webp_size": 20662,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0213_q213_Question_213",
+    "png_path": "chapters/Ch2_Sets_Functions/0213_q213_Question_213.png",
+    "webp_path": "0213_q213_Question_213.webp",
+    "png_size": 31090,
+    "webp_size": 23514,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0214_q214_Question_214",
+    "png_path": "chapters/Ch2_Sets_Functions/0214_q214_Question_214.png",
+    "webp_path": "0214_q214_Question_214.webp",
+    "png_size": 24799,
+    "webp_size": 23978,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0215_q215_Question_215",
+    "png_path": "chapters/Ch2_Sets_Functions/0215_q215_Question_215.png",
+    "webp_path": "0215_q215_Question_215.webp",
+    "png_size": 23859,
+    "webp_size": 18970,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0216_q216_Question_216",
+    "png_path": "chapters/Ch2_Sets_Functions/0216_q216_Question_216.png",
+    "webp_path": "0216_q216_Question_216.webp",
+    "png_size": 20922,
+    "webp_size": 20782,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0217_q217_Question_217",
+    "png_path": "chapters/Ch2_Sets_Functions/0217_q217_Question_217.png",
+    "webp_path": "0217_q217_Question_217.webp",
+    "png_size": 132999,
+    "webp_size": 17820,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0218_q218_Question_218",
+    "png_path": "chapters/Ch2_Sets_Functions/0218_q218_Question_218.png",
+    "webp_path": "0218_q218_Question_218.webp",
+    "png_size": 27752,
+    "webp_size": 25046,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0220_q220_Question_220",
+    "png_path": "chapters/Ch2_Sets_Functions/0220_q220_Question_220.png",
+    "webp_path": "0220_q220_Question_220.webp",
+    "png_size": 22645,
+    "webp_size": 20242,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0221_q221_Question_221",
+    "png_path": "chapters/Ch2_Sets_Functions/0221_q221_Question_221.png",
+    "webp_path": "0221_q221_Question_221.webp",
+    "png_size": 156654,
+    "webp_size": 19002,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0222_q222_Question_222",
+    "png_path": "chapters/Ch2_Sets_Functions/0222_q222_Question_222.png",
+    "webp_path": "0222_q222_Question_222.webp",
+    "png_size": 24641,
+    "webp_size": 18414,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0223_q223_Question_223",
+    "png_path": "chapters/Ch2_Sets_Functions/0223_q223_Question_223.png",
+    "webp_path": "0223_q223_Question_223.webp",
+    "png_size": 43400,
+    "webp_size": 28544,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0224_q224_Question_224",
+    "png_path": "chapters/Ch2_Sets_Functions/0224_q224_Question_224.png",
+    "webp_path": "0224_q224_Question_224.webp",
+    "png_size": 43490,
+    "webp_size": 18392,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0225_q225_Question_225",
+    "png_path": "chapters/Ch2_Sets_Functions/0225_q225_Question_225.png",
+    "webp_path": "0225_q225_Question_225.webp",
+    "png_size": 32478,
+    "webp_size": 18334,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0226_q226_Question_226",
+    "png_path": "chapters/Ch2_Sets_Functions/0226_q226_Question_226.png",
+    "webp_path": "0226_q226_Question_226.webp",
+    "png_size": 43478,
+    "webp_size": 18872,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0227_q227_Question_227",
+    "png_path": "chapters/Ch2_Sets_Functions/0227_q227_Question_227.png",
+    "webp_path": "0227_q227_Question_227.webp",
+    "png_size": 31385,
+    "webp_size": 19556,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0228_q228_Question_228",
+    "png_path": "chapters/Ch2_Sets_Functions/0228_q228_Question_228.png",
+    "webp_path": "0228_q228_Question_228.webp",
+    "png_size": 33597,
+    "webp_size": 22866,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0247_q247_Question_247",
+    "png_path": "chapters/Ch2_Sets_Functions/0247_q247_Question_247.png",
+    "webp_path": "0247_q247_Question_247.webp",
+    "png_size": 28169,
+    "webp_size": 19630,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0306_q306_Question_306",
+    "png_path": "chapters/Ch3_Algorithms/0306_q306_Question_306.png",
+    "webp_path": "0306_q306_Question_306.webp",
+    "png_size": 61231,
+    "webp_size": 24770,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0410_q410_Question_410",
+    "png_path": "chapters/Ch4_Number_Theory/0410_q410_Question_410.png",
+    "webp_path": "0410_q410_Question_410.webp",
+    "png_size": 37556,
+    "webp_size": 25378,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0423_q423_Question_423",
+    "png_path": "0423_q423_Question_423.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0423_q423_Question_423.webp",
+    "png_size": 38349,
+    "webp_size": 23384,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0424_q424_Question_424",
+    "png_path": "0424_q424_Question_424.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0424_q424_Question_424.webp",
+    "png_size": 28833,
+    "webp_size": 28128,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0426_q426_Question_426",
+    "png_path": "0426_q426_Question_426.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0426_q426_Question_426.webp",
+    "png_size": 32849,
+    "webp_size": 18640,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0435_q435_Question_435",
+    "png_path": "0435_q435_Question_435.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0435_q435_Question_435.webp",
+    "png_size": 26577,
+    "webp_size": 18778,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0440_q440_Question_440",
+    "png_path": "0440_q440_Question_440.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0440_q440_Question_440.webp",
+    "png_size": 26969,
+    "webp_size": 18778,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0449_q449_Question_449",
+    "png_path": "0449_q449_Question_449.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0449_q449_Question_449.webp",
+    "png_size": 23963,
+    "webp_size": 19818,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0452_q452_Question_452",
+    "png_path": "0452_q452_Question_452.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0452_q452_Question_452.webp",
+    "png_size": 27422,
+    "webp_size": 29244,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0459_q459_Question_459",
+    "png_path": "0459_q459_Question_459.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0459_q459_Question_459.webp",
+    "png_size": 28093,
+    "webp_size": 25026,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0462_q462_Question_462",
+    "png_path": "0462_q462_Question_462.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0462_q462_Question_462.webp",
+    "png_size": 28308,
+    "webp_size": 21696,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0463_q463_Question_463",
+    "png_path": "chapters/Ch4_Number_Theory/0463_q463_Question_463.png",
+    "webp_path": "0463_q463_Question_463.webp",
+    "png_size": 40688,
+    "webp_size": 52960,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0464_q464_Question_464",
+    "png_path": "0464_q464_Question_464.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0464_q464_Question_464.webp",
+    "png_size": 34704,
+    "webp_size": 25744,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0465_q465_Question_465",
+    "png_path": "0465_q465_Question_465.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0465_q465_Question_465.webp",
+    "png_size": 56435,
+    "webp_size": 22160,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0467_q467_Question_467",
+    "png_path": "chapters/Ch4_Number_Theory/0467_q467_Question_467.png",
+    "webp_path": "0467_q467_Question_467.webp",
+    "png_size": 21455,
+    "webp_size": 28376,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0477_q477_Question_477",
+    "png_path": "0477_q477_Question_477.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0477_q477_Question_477.webp",
+    "png_size": 43307,
+    "webp_size": 38208,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0483_q483_Question_483",
+    "png_path": "0483_q483_Question_483.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0483_q483_Question_483.webp",
+    "png_size": 23735,
+    "webp_size": 24712,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0486_q486_Question_486",
+    "png_path": "0486_q486_Question_486.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0486_q486_Question_486.webp",
+    "png_size": 36001,
+    "webp_size": 26260,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0488_q488_Question_488",
+    "png_path": "0488_q488_Question_488.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0488_q488_Question_488.webp",
+    "png_size": 45523,
+    "webp_size": 21906,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0489_q489_Question_489",
+    "png_path": "chapters/Ch4_Number_Theory/0489_q489_Question_489.png",
+    "webp_path": "0489_q489_Question_489.webp",
+    "png_size": 41170,
+    "webp_size": 27842,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0494_q494_Question_494",
+    "png_path": "chapters/Ch4_Number_Theory/0494_q494_Question_494.png",
+    "webp_path": "0494_q494_Question_494.webp",
+    "png_size": 26036,
+    "webp_size": 28432,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0496_q496_Question_496",
+    "png_path": "0496_q496_Question_496.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0496_q496_Question_496.webp",
+    "png_size": 33715,
+    "webp_size": 20062,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0497_q497_Question_497",
+    "png_path": "0497_q497_Question_497.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0497_q497_Question_497.webp",
+    "png_size": 31102,
+    "webp_size": 24862,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0502_q502_Question_502",
+    "png_path": "0502_q502_Question_502.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0502_q502_Question_502.webp",
+    "png_size": 33803,
+    "webp_size": 25256,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0507_q507_Question_507",
+    "png_path": "0507_q507_Question_507.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0507_q507_Question_507.webp",
+    "png_size": 37482,
+    "webp_size": 26974,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0509_q509_Question_509",
+    "png_path": "0509_q509_Question_509.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0509_q509_Question_509.webp",
+    "png_size": 27354,
+    "webp_size": 29528,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0518_q518_Question_518",
+    "png_path": "0518_q518_Question_518.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0518_q518_Question_518.webp",
+    "png_size": 28146,
+    "webp_size": 15022,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0534_q534_Question_534",
+    "png_path": "chapters/Ch4_Number_Theory/0534_q534_Question_534.png",
+    "webp_path": "0534_q534_Question_534.webp",
+    "png_size": 29154,
+    "webp_size": 22054,
+    "png_in_v1": true,
+    "webp_in_v1": false
+  },
+  {
+    "base": "0542_q542_Question_542",
+    "png_path": "0542_q542_Question_542.png",
+    "webp_path": "chapters/Ch4_Number_Theory/0542_q542_Question_542.webp",
+    "png_size": 28375,
+    "webp_size": 14800,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0552_q552_Question_552",
+    "png_path": "0552_q552_Question_552.png",
+    "webp_path": "chapters/Ch5_Induction/0552_q552_Question_552.webp",
+    "png_size": 26464,
+    "webp_size": 15846,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0553_q553_Question_553",
+    "png_path": "0553_q553_Question_553.png",
+    "webp_path": "chapters/Ch5_Induction/0553_q553_Question_553.webp",
+    "png_size": 34577,
+    "webp_size": 22688,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0555_q555_Question_555",
+    "png_path": "0555_q555_Question_555.png",
+    "webp_path": "chapters/Ch5_Induction/0555_q555_Question_555.webp",
+    "png_size": 29646,
+    "webp_size": 22986,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0558_q558_Question_558",
+    "png_path": "0558_q558_Question_558.png",
+    "webp_path": "chapters/Ch5_Induction/0558_q558_Question_558.webp",
+    "png_size": 26840,
+    "webp_size": 23774,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0561_q561_Question_561",
+    "png_path": "0561_q561_Question_561.png",
+    "webp_path": "chapters/Ch5_Induction/0561_q561_Question_561.webp",
+    "png_size": 28407,
+    "webp_size": 15800,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0563_q563_Question_563",
+    "png_path": "0563_q563_Question_563.png",
+    "webp_path": "chapters/Ch5_Induction/0563_q563_Question_563.webp",
+    "png_size": 24029,
+    "webp_size": 17356,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0564_q564_Question_564",
+    "png_path": "0564_q564_Question_564.png",
+    "webp_path": "chapters/Ch5_Induction/0564_q564_Question_564.webp",
+    "png_size": 35271,
+    "webp_size": 23486,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0572_q572_Question_572",
+    "png_path": "0572_q572_Question_572.png",
+    "webp_path": "chapters/Ch5_Induction/0572_q572_Question_572.webp",
+    "png_size": 38433,
+    "webp_size": 16456,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0575_q575_Question_575",
+    "png_path": "0575_q575_Question_575.png",
+    "webp_path": "chapters/Ch5_Induction/0575_q575_Question_575.webp",
+    "png_size": 26569,
+    "webp_size": 27936,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0577_q577_Question_577",
+    "png_path": "0577_q577_Question_577.png",
+    "webp_path": "chapters/Ch5_Induction/0577_q577_Question_577.webp",
+    "png_size": 26051,
+    "webp_size": 17136,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0578_q578_Question_578",
+    "png_path": "0578_q578_Question_578.png",
+    "webp_path": "chapters/Ch5_Induction/0578_q578_Question_578.webp",
+    "png_size": 35377,
+    "webp_size": 19424,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0579_q579_Question_579",
+    "png_path": "0579_q579_Question_579.png",
+    "webp_path": "chapters/Ch5_Induction/0579_q579_Question_579.webp",
+    "png_size": 25342,
+    "webp_size": 21268,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0580_q580_Question_580",
+    "png_path": "0580_q580_Question_580.png",
+    "webp_path": "chapters/Ch5_Induction/0580_q580_Question_580.webp",
+    "png_size": 31247,
+    "webp_size": 23392,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0583_q583_Question_583",
+    "png_path": "0583_q583_Question_583.png",
+    "webp_path": "chapters/Ch5_Induction/0583_q583_Question_583.webp",
+    "png_size": 28096,
+    "webp_size": 40772,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0591_q591_Question_591",
+    "png_path": "0591_q591_Question_591.png",
+    "webp_path": "chapters/Ch5_Induction/0591_q591_Question_591.webp",
+    "png_size": 42883,
+    "webp_size": 27690,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0597_q597_Question_597",
+    "png_path": "0597_q597_Question_597.png",
+    "webp_path": "chapters/Ch5_Induction/0597_q597_Question_597.webp",
+    "png_size": 28931,
+    "webp_size": 30754,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0612_q612_Question_612",
+    "png_path": "0612_q612_Question_612.png",
+    "webp_path": "chapters/Ch5_Induction/0612_q612_Question_612.webp",
+    "png_size": 26537,
+    "webp_size": 24900,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0613_q613_Question_613",
+    "png_path": "0613_q613_Question_613.png",
+    "webp_path": "chapters/Ch5_Induction/0613_q613_Question_613.webp",
+    "png_size": 18192,
+    "webp_size": 34324,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0614_q614_Question_614",
+    "png_path": "0614_q614_Question_614.png",
+    "webp_path": "chapters/Ch5_Induction/0614_q614_Question_614.webp",
+    "png_size": 26571,
+    "webp_size": 32762,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0617_q617_Question_617",
+    "png_path": "0617_q617_Question_617.png",
+    "webp_path": "chapters/Ch5_Induction/0617_q617_Question_617.webp",
+    "png_size": 40572,
+    "webp_size": 24634,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0956_q956_Question_956",
+    "png_path": "0956_q956_Question_956.png",
+    "webp_path": "chapters/Ch7_Graphs/0956_q956_Question_956.webp",
+    "png_size": 27389,
+    "webp_size": 29470,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0957_q957_Question_957",
+    "png_path": "0957_q957_Question_957.png",
+    "webp_path": "chapters/Ch7_Graphs/0957_q957_Question_957.webp",
+    "png_size": 25372,
+    "webp_size": 28468,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "0972_q972_Question_972",
+    "png_path": "0972_q972_Question_972.png",
+    "webp_path": "chapters/Ch7_Graphs/0972_q972_Question_972.webp",
+    "png_size": 32654,
+    "webp_size": 37038,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1007_q1007_Question_1007",
+    "png_path": "1007_q1007_Question_1007.png",
+    "webp_path": "chapters/Ch7_Graphs/1007_q1007_Question_1007.webp",
+    "png_size": 33207,
+    "webp_size": 33590,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1012_q1012_Question_1012",
+    "png_path": "1012_q1012_Question_1012.png",
+    "webp_path": "chapters/Ch7_Graphs/1012_q1012_Question_1012.webp",
+    "png_size": 25113,
+    "webp_size": 11564,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1014_q1014_Question_1014",
+    "png_path": "1014_q1014_Question_1014.png",
+    "webp_path": "chapters/Ch7_Graphs/1014_q1014_Question_1014.webp",
+    "png_size": 29037,
+    "webp_size": 16848,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1016_q1016_Question_1016",
+    "png_path": "1016_q1016_Question_1016.png",
+    "webp_path": "chapters/Ch7_Graphs/1016_q1016_Question_1016.webp",
+    "png_size": 24780,
+    "webp_size": 20596,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1018_q1018_Question_1018",
+    "png_path": "1018_q1018_Question_1018.png",
+    "webp_path": "chapters/Ch7_Graphs/1018_q1018_Question_1018.webp",
+    "png_size": 25990,
+    "webp_size": 20292,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1019_q1019_Question_1019",
+    "png_path": "1019_q1019_Question_1019.png",
+    "webp_path": "chapters/Ch7_Graphs/1019_q1019_Question_1019.webp",
+    "png_size": 30966,
+    "webp_size": 84446,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1034_q1034_Question_1034",
+    "png_path": "1034_q1034_Question_1034.png",
+    "webp_path": "chapters/Ch8_Trees/1034_q1034_Question_1034.webp",
+    "png_size": 36542,
+    "webp_size": 186398,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1040_q1040_Question_1040",
+    "png_path": "1040_q1040_Question_1040.png",
+    "webp_path": "chapters/Ch8_Trees/1040_q1040_Question_1040.webp",
+    "png_size": 27514,
+    "webp_size": 179128,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1051_q1051_Question_1051",
+    "png_path": "1051_q1051_Question_1051.png",
+    "webp_path": "chapters/Ch8_Trees/1051_q1051_Question_1051.webp",
+    "png_size": 39532,
+    "webp_size": 195062,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1069_q1069_Question_1069",
+    "png_path": "1069_q1069_Question_1069.png",
+    "webp_path": "chapters/Ch8_Trees/1069_q1069_Question_1069.webp",
+    "png_size": 41696,
+    "webp_size": 36876,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1081_q1081_Question_1081",
+    "png_path": "1081_q1081_Question_1081.png",
+    "webp_path": "chapters/Ch8_Trees/1081_q1081_Question_1081.webp",
+    "png_size": 38330,
+    "webp_size": 33594,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1084_q1084_Question_1084",
+    "png_path": "1084_q1084_Question_1084.png",
+    "webp_path": "chapters/Ch8_Trees/1084_q1084_Question_1084.webp",
+    "png_size": 28883,
+    "webp_size": 32426,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1085_q1085_Question_1085",
+    "png_path": "1085_q1085_Question_1085.png",
+    "webp_path": "chapters/Ch8_Trees/1085_q1085_Question_1085.webp",
+    "png_size": 33765,
+    "webp_size": 62830,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1097_q1097_Question_1097",
+    "png_path": "1097_q1097_Question_1097.png",
+    "webp_path": "chapters/Ch8_Trees/1097_q1097_Question_1097.webp",
+    "png_size": 28904,
+    "webp_size": 38336,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1098_q1098_Question_1098",
+    "png_path": "1098_q1098_Question_1098.png",
+    "webp_path": "chapters/Ch8_Trees/1098_q1098_Question_1098.webp",
+    "png_size": 37060,
+    "webp_size": 46104,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1107_q1107_Question_1107",
+    "png_path": "1107_q1107_Question_1107.png",
+    "webp_path": "chapters/Ch8_Trees/1107_q1107_Question_1107.webp",
+    "png_size": 21453,
+    "webp_size": 24668,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1118_q1118_Question_1118",
+    "png_path": "1118_q1118_Question_1118.png",
+    "webp_path": "chapters/Ch8_Trees/1118_q1118_Question_1118.webp",
+    "png_size": 25988,
+    "webp_size": 27386,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1119_q1119_Question_1119",
+    "png_path": "1119_q1119_Question_1119.png",
+    "webp_path": "chapters/Ch8_Trees/1119_q1119_Question_1119.webp",
+    "png_size": 27171,
+    "webp_size": 16588,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  },
+  {
+    "base": "1120_q1120_Question_1120",
+    "png_path": "1120_q1120_Question_1120.png",
+    "webp_path": "chapters/Ch8_Trees/1120_q1120_Question_1120.webp",
+    "png_size": 34878,
+    "webp_size": 41240,
+    "png_in_v1": false,
+    "webp_in_v1": true
+  }
+]

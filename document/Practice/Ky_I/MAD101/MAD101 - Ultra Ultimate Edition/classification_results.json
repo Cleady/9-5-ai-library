@@ -1,0 +1,7 @@
+{
+  "1": {
+    "id": 1,
+    "chapter": null,
+    "error": "API error: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your "
+  }
+}

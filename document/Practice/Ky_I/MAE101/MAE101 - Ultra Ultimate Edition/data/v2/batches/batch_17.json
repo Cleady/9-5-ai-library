@@ -1,0 +1,1207 @@
+[
+  {
+    "id": 641,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "If ABC can be formed, A is \\(3 \\times 3\\) matrix and C is \\(5 \\times 5\\) matrix then the size of B is _________",
+    "options": [
+      "\\(3 \\times 5\\)",
+      "\\(5 \\times 3\\)",
+      "\\(3 \\times 3\\)",
+      "\\(5 \\times 5\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Để tích ma trận \\(AB\\) thực hiện được, số hàng của \\(B\\) phải bằng số cột của \\(A\\), tức là \\(B\\) có 3 hàng.",
+      "Để tích ma trận \\(BC\\) thực hiện được, số cột của \\(B\\) phải bằng số hàng của \\(C\\), tức là \\(B\\) có 5 cột.",
+      "Do đó, kích thước của ma trận \\(B\\) phải là \\(3 \\times 5\\). Chọn A."
+    ],
+    "image": "assets/questions/0641_q641_Question_641.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 642,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A = \\begin{pmatrix} 1 & 0 & 2 \\\\ 3 & 2 & -1 \\end{pmatrix}\\), \\(B = \\begin{pmatrix} 1 & 1 \\\\ 2 & -1 \\\\ 3 & 0 \\end{pmatrix}\\). Find \\(AB\\).\n(i) \\(\\begin{pmatrix} 7 & 1 \\\\ 4 & 1 \\end{pmatrix}\\)\n(ii) \\(\\begin{pmatrix} 1 & 7 \\\\ 1 & 4 \\end{pmatrix}\\)\n(iii) \\(\\begin{pmatrix} 1 & 1 \\\\ 7 & 4 \\end{pmatrix}\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Thực hiện nhân ma trận cỡ \\(2 \\times 3\\) với ma trận cỡ \\(3 \\times 2\\):",
+      "\\[AB = \\begin{pmatrix} 1(1) + 0(2) + 2(3) & 1(1) + 0(-1) + 2(0) \\\\ 3(1) + 2(2) + (-1)(3) & 3(1) + 2(-1) + (-1)(0) \\end{pmatrix}\\]",
+      "\\[= \\begin{pmatrix} 1 + 0 + 6 & 1 + 0 + 0 \\\\ 3 + 4 - 3 & 3 - 2 + 0 \\end{pmatrix} = \\begin{pmatrix} 7 & 1 \\\\ 4 & 1 \\end{pmatrix}\\]",
+      "Khớp với công thức (i). Do đó chọn A."
+    ],
+    "image": "assets/questions/0642_q642_Question_642.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 643,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Find the \\((2, 3)\\)-entry of the product \\[\\begin{bmatrix} 1 \\\\ -2 \\\\ 3 \\end{bmatrix} \\begin{bmatrix} 0 & 5 & -4 \\end{bmatrix}.\\]",
+    "options": [
+      "-14",
+      "15",
+      "8",
+      "-22",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Tích của vectơ cột cỡ \\(3 \\times 1\\) với vectơ hàng cỡ \\(1 \\times 3\\) là ma trận cỡ \\(3 \\times 3\\).",
+      "Phần tử ở hàng \\(i\\) cột \\(j\\) được tính bằng: \\(c_{ij} = a_i \\cdot b_j\\).",
+      "Với \\((i, j) = (2, 3)\\):",
+      "\\[c_{23} = (-2) \\times (-4) = 8\\]",
+      "Chọn C."
+    ],
+    "image": "assets/questions/0643_q643_Question_643.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 644,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A = \\begin{bmatrix} 1 & -1 \\\\ 0 & 1 \\end{bmatrix}\\). Which of the following matrices is \\(A^{100}\\)?\n(i) \\(\\begin{bmatrix} 100 & -100 \\\\ 0 & 100 \\end{bmatrix}\\)\n(ii) \\(\\begin{bmatrix} 1 & -100 \\\\ 0 & 1 \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}\\)",
+    "options": [
+      "(iii)",
+      "(ii)",
+      "All of the other choices are incorrect",
+      "(i)"
+    ],
+    "answer": "B",
+    "answer_original": "A",
+    "answer_status": "conflict",
+    "explanation": [
+      "Xét ma trận tam giác trên dạng \\(\\begin{bmatrix} 1 & k \\\\ 0 & 1 \\end{bmatrix}\\):",
+      "\\[A^2 = \\begin{bmatrix} 1 & -1 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} 1 & -1 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & -2 \\\\ 0 & 1 \\end{bmatrix}\\]",
+      "\\[A^3 = \\begin{bmatrix} 1 & -2 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} 1 & -1 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & -3 \\\\ 0 & 1 \\end{bmatrix}\\]",
+      "Bằng quy nạp ta có \\(A^n = \\begin{bmatrix} 1 & -n \\\\ 0 & 1 \\end{bmatrix}\\). Với \\(n = 100\\):",
+      "\\[A^{100} = \\begin{bmatrix} 1 & -100 \\\\ 0 & 1 \\end{bmatrix}\\]",
+      "Trùng khớp với công thức (ii), tương ứng với lựa chọn B.",
+      "Ngân hàng chọn A (công thức (iii)) do tác giả nhầm lẫn rằng \\((-1)^{100} = 1\\) theo lũy thừa từng phần tử."
+    ],
+    "image": "assets/questions/0644_q644_Question_644.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 645,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A = \\begin{bmatrix} 1 & 2 \\\\ 0 & 1 \\end{bmatrix}\\), \\(B = \\begin{bmatrix} 0 & 7 \\\\ 1 & 1 \\end{bmatrix}\\), and \\(X\\) such that \\(AX = B\\). The second row of matrix \\(X\\) is",
+    "options": [
+      "\\([1 \\quad 0]\\)",
+      "\\([0 \\quad 1]\\)",
+      "\\([1 \\quad 1]\\)",
+      "\\([-1 \\quad 1]\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Ma trận nghịch đảo của \\(A\\) là \\(A^{-1} = \\begin{bmatrix} 1 & -2 \\\\ 0 & 1 \\end{bmatrix}\\).",
+      "Giải phương trình ma trận \\(X = A^{-1}B\\):",
+      "\\[X = \\begin{bmatrix} 1 & -2 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} 0 & 7 \\\\ 1 & 1 \\end{bmatrix} = \\begin{bmatrix} 1(0) - 2(1) & 1(7) - 2(1) \\\\ 0(0) + 1(1) & 0(7) + 1(1) \\end{bmatrix} = \\begin{bmatrix} -2 & 5 \\\\ 1 & 1 \\end{bmatrix}\\]",
+      "Hàng thứ hai của ma trận \\(X\\) là \\([1 \\quad 1]\\). Chọn C."
+    ],
+    "image": "assets/questions/0645_q645_Question_645.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 646,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A = \\begin{bmatrix} 1 & 0 & 1 \\\\ k & 1 & k \\\\ 3 & k & 2 \\end{bmatrix}\\). Find the \\((2, 1)\\)-entry of the inverse matrix \\(A^{-1}\\).",
+    "options": [
+      "\\(-k\\)",
+      "1",
+      "0",
+      "-1",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Theo công thức ma trận nghịch đảo qua ma trận phụ hợp:",
+      "\\[(A^{-1})_{21} = \\frac{C_{12}}{\\det(A)}\\]",
+      "Tính định thức \\(\\det(A)\\) bằng cách khai triển theo hàng 1:",
+      "\\[\\det(A) = 1 \\cdot (2 - k^2) - 0 + 1 \\cdot (k^2 - 3) = 2 - k^2 + k^2 - 3 = -1\\]",
+      "Tính phần bù đại số \\(C_{12}\\):",
+      "\\[C_{12} = (-1)^{1+2} \\begin{vmatrix} k & k \\\\ 3 & 2 \\end{vmatrix} = -(2k - 3k) = -(-k) = k\\]",
+      "Do đó:",
+      "\\[(A^{-1})_{21} = \\frac{k}{-1} = -k\\]",
+      "Chọn A."
+    ],
+    "image": "assets/questions/0646_q646_Question_646.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 647,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A\\) be an invertible matrix such that \\[A^{-1} = \\begin{bmatrix} 1 & 2 & -1 \\\\ 0 & 1 & 2 \\\\ 3 & 0 & 1 \\end{bmatrix}.\\] Find the \\((2, 3)\\)-entry of the matrix \\((3A^T)^{-1}\\).",
+    "options": [
+      "6",
+      "-2/3",
+      "2/3",
+      "0",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Sử dụng các tính chất của nghịch đảo và chuyển vị:",
+      "\\[(3A^T)^{-1} = \\frac{1}{3} (A^T)^{-1} = \\frac{1}{3} (A^{-1})^T\\]",
+      "Do đó phần tử ở hàng 2 cột 3 của \\((3A^T)^{-1}\\) là:",
+      "\\[((3A^T)^{-1})_{23} = \\frac{1}{3} ((A^{-1})^T)_{23} = \\frac{1}{3} (A^{-1})_{32}\\]",
+      "Quan sát ma trận \\(A^{-1}\\), phần tử ở hàng 3 cột 2 là \\((A^{-1})_{32} = 0\\).",
+      "Vậy kết quả là \\(\\frac{1}{3} \\times 0 = 0\\). Chọn D."
+    ],
+    "image": "assets/questions/0647_q647_Question_647.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 648,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(A = (a_{ij})\\) be the matrix of rotation in the plane through \\(\\pi/6\\). Find \\(a_{21}\\).\n(i) \\(\\frac{1}{2}\\)\n(ii) \\(-\\frac{1}{2}\\)\n(iii) \\(\\frac{\\sqrt{3}}{2}\\)\n(iv) \\(-\\frac{\\sqrt{3}}{2}\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "None of the other choices is correct",
+      "(iv)"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Ma trận quay một góc \\(\\theta\\) trong mặt phẳng có dạng:",
+      "\\[R_\\theta = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{bmatrix}\\]",
+      "Với \\(\\theta = \\pi/6\\), phần tử \\(a_{21} = \\sin(\\pi/6) = \\frac{1}{2}\\).",
+      "Khớp với khẳng định (i). Chọn A."
+    ],
+    "image": "assets/questions/0648_q648_Question_648.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 649,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(T : \\mathbb{R}^2 \\to \\mathbb{R}^2\\) be the linear transformation such that \\[T\\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} -3 \\\\ 6 \\end{bmatrix},\\quad T\\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -6 \\end{bmatrix}.\\] Compute \\(T\\begin{bmatrix} 7 \\\\ 3 \\end{bmatrix}\\).\n(i) \\(\\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}\\)\n(ii) \\(\\begin{bmatrix} 1 \\\\ -2 \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} 4 \\\\ -9 \\end{bmatrix}\\)\n(iv) \\(\\begin{bmatrix} -1 \\\\ 7 \\end{bmatrix}\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "None of the other choices is correct"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Biểu diễn vectơ \\(\\begin{bmatrix} 7 \\\\ 3 \\end{bmatrix}\\) thành tổ hợp tuyến tính của \\(\\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}\\) và \\(\\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix}\\):",
+      "\\[c_1 \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} + c_2 \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix} = \\begin{bmatrix} 7 \\\\ 3 \\end{bmatrix}\\]",
+      "Ta có hệ phương trình:",
+      "\\[\\begin{cases} c_1 + c_2 = 7 \\\\ 2c_1 - c_2 = 3 \\end{cases} \\implies 3c_1 = 10 \\implies c_1 = \\frac{10}{3}, \\quad c_2 = \\frac{11}{3}\\]",
+      "Do tính chất tuyến tính của \\(T\\):",
+      "\\[T\\begin{bmatrix} 7 \\\\ 3 \\end{bmatrix} = \\frac{10}{3} T\\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} + \\frac{11}{3} T\\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix} = \\frac{10}{3} \\begin{bmatrix} -3 \\\\ 6 \\end{bmatrix} + \\frac{11}{3} \\begin{bmatrix} 3 \\\\ -6 \\end{bmatrix}\\]",
+      "\\[= \\begin{bmatrix} -10 + 11 \\\\ 20 - 22 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ -2 \\end{bmatrix}\\]",
+      "Khớp với công thức (ii). Chọn B."
+    ],
+    "image": "assets/questions/0649_q649_Question_649.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 650,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "If \\(T : \\mathbb{R}^2 \\to \\mathbb{R}^2\\) is rotation through \\(2\\pi/3\\), then \\(T\\begin{bmatrix} 2 \\\\ -6 \\end{bmatrix}\\) is:\n(i) \\(\\begin{bmatrix} 3\\sqrt{3} - 1 \\\\ \\sqrt{3} + 3 \\end{bmatrix}\\)\n(ii) \\(\\begin{bmatrix} 1 - 3\\sqrt{3} \\\\ \\sqrt{3} - 3 \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} \\sqrt{3} \\\\ 2 \\end{bmatrix}\\)\n(iv) \\(\\begin{bmatrix} 3\\sqrt{3} - 1 \\\\ 3 - \\sqrt{3} \\end{bmatrix}\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Ma trận quay góc \\(\\theta = 2\\pi/3\\):",
+      "\\[R_{2\\pi/3} = \\begin{bmatrix} \\cos(2\\pi/3) & -\\sin(2\\pi/3) \\\\ \\sin(2\\pi/3) & \\cos(2\\pi/3) \\end{bmatrix} = \\begin{bmatrix} -1/2 & -\\sqrt{3}/2 \\\\ \\sqrt{3}/2 & -1/2 \\end{bmatrix}\\]",
+      "Tính ảnh của vectơ \\(\\begin{bmatrix} 2 \\\\ -6 \\end{bmatrix}\\):",
+      "\\[T\\begin{bmatrix} 2 \\\\ -6 \\end{bmatrix} = \\begin{bmatrix} -\\frac{1}{2}(2) + \\left(-\\frac{\\sqrt{3}}{2}\\right)(-6) \\\\ \\frac{\\sqrt{3}}{2}(2) + \\left(-\\frac{1}{2}\\right)(-6) \\end{bmatrix} = \\begin{bmatrix} -1 + 3\\sqrt{3} \\\\ \\sqrt{3} + 3 \\end{bmatrix} = \\begin{bmatrix} 3\\sqrt{3} - 1 \\\\ \\sqrt{3} + 3 \\end{bmatrix}\\]",
+      "Khớp hoàn toàn với công thức (i). Chọn A."
+    ],
+    "image": "assets/questions/0650_q650_Question_650.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 651,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(T : \\mathbb{R}^2 \\to \\mathbb{R}^2\\) be rotation through \\(7\\pi/4\\). Find the standard matrix of T.\n(i) \\(\\begin{bmatrix} \\frac{\\sqrt{2}}{2} & \\frac{\\sqrt{2}}{2} \\\\ -\\frac{\\sqrt{2}}{2} & \\frac{\\sqrt{2}}{2} \\end{bmatrix}\\)\n(ii) \\(\\begin{bmatrix} \\frac{\\sqrt{3}}{3} & \\frac{\\sqrt{3}}{3} \\\\ -\\frac{\\sqrt{3}}{3} & \\frac{\\sqrt{3}}{3} \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} -\\frac{\\sqrt{2}}{2} & -\\frac{\\sqrt{2}}{2} \\\\ -\\frac{\\sqrt{2}}{2} & \\frac{\\sqrt{2}}{2} \\end{bmatrix}\\)\n(iv) \\(\\begin{bmatrix} 1 & 1 \\\\ -1 & 1 \\end{bmatrix}\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Ma trận quay chuẩn tắc góc \\(\\theta = 7\\pi/4\\):",
+      "\\[[T] = \\begin{bmatrix} \\cos(7\\pi/4) & -\\sin(7\\pi/4) \\\\ \\sin(7\\pi/4) & \\cos(7\\pi/4) \\end{bmatrix}\\]",
+      "Vì \\(7\\pi/4 = 2\\pi - \\pi/4\\), ta có:",
+      "\\[\\cos(7\\pi/4) = \\frac{\\sqrt{2}}{2}, \\quad \\sin(7\\pi/4) = -\\frac{\\sqrt{2}}{2} \\implies -\\sin(7\\pi/4) = \\frac{\\sqrt{2}}{2}\\]",
+      "Do đó:",
+      "\\[[T] = \\begin{bmatrix} \\frac{\\sqrt{2}}{2} & \\frac{\\sqrt{2}}{2} \\\\ -\\frac{\\sqrt{2}}{2} & \\frac{\\sqrt{2}}{2} \\end{bmatrix}\\]",
+      "Khớp với công thức (i). Chọn A."
+    ],
+    "image": "assets/questions/0651_q651_Question_651.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 652,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(A = (a_{ij})\\) be the \\(2 \\times 2\\) matrix of reflection in the x-axis followed by reflection in the line \\(y = x\\). Find \\(a_{22}\\).",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "2",
+      "-2"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "1. Ma trận phản xạ qua trục hoành \\(Ox\\):",
+      "\\[M_1 = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\]",
+      "2. Ma trận phản xạ qua đường thẳng \\(y = x\\):",
+      "\\[M_2 = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}\\]",
+      "Ma trận hợp thành (phản xạ qua trục \\(Ox\\) trước, sau đó qua \\(y = x\\)):",
+      "\\[A = M_2 M_1 = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix} \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix} = \\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}\\]",
+      "Phần tử \\(a_{22}\\) của ma trận \\(A\\) là 0. Chọn A."
+    ],
+    "image": "assets/questions/0652_q652_Question_652.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 653,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "DinhThuc",
+    "type": "single_choice",
+    "question": "Find the \\((1, 2)\\)-cofactor of the matrix \\[\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & -1 & 5 \\\\ 0 & 7 & 6 \\end{bmatrix}.\\]",
+    "options": [
+      "-3",
+      "24",
+      "3",
+      "-24",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Phần bù đại số \\(C_{12}\\) được tính bằng:",
+      "\\[C_{12} = (-1)^{1+2} M_{12} = - \\begin{vmatrix} 4 & 5 \\\\ 0 & 6 \\end{vmatrix}\\]",
+      "\\[= -(4 \\times 6 - 5 \\times 0) = -24\\]",
+      "Chọn D."
+    ],
+    "image": "assets/questions/0653_q653_Question_653.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 654,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "DinhThuc",
+    "type": "single_choice",
+    "question": "Given the matrix \\[A = \\begin{pmatrix} 1 & 2 & 10 \\\\ 0 & 2 & -15 \\\\ -6 & 2 & 50 \\end{pmatrix}.\\] Let \\(c_{ij}(A)\\) be the \\((i, j)\\)-cofactor of A. Find \\(c_{12}(A) + c_{22}(A) + c_{32}(A)\\).",
+    "options": [
+      "215",
+      "6",
+      "430",
+      "-13",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Tính từng phần bù đại số:",
+      "\\[c_{12}(A) = (-1)^{1+2} \\begin{vmatrix} 0 & -15 \\\\ -6 & 50 \\end{vmatrix} = -(0 - 90) = 90\\]",
+      "\\[c_{22}(A) = (-1)^{2+2} \\begin{vmatrix} 1 & 10 \\\\ -6 & 50 \\end{vmatrix} = +(50 - (-60)) = 110\\]",
+      "\\[c_{32}(A) = (-1)^{3+2} \\begin{vmatrix} 1 & 10 \\\\ 0 & -15 \\end{vmatrix} = -(-15 - 0) = 15\\]",
+      "Tổng các phần bù đại số là:",
+      "\\[90 + 110 + 15 = 215\\]",
+      "Chọn A."
+    ],
+    "image": "assets/questions/0654_q654_Question_654.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 655,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "DinhThuc",
+    "type": "single_choice",
+    "question": "Which of the following statements are true for every \\(4 \\times 4\\) matrix A:\n(i) \\(\\det(-A) = -\\det A\\)\n(ii) \\(\\det(2A) = 16\\det A\\)",
+    "options": [
+      "Both (i) and (ii) are true",
+      "Only (i) is true",
+      "None of (i) and (ii) is true",
+      "Only (ii) is true"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Với ma trận vuông cấp \\(n = 4\\), tính chất của định thức đối với phép nhân vô hướng là \\(\\det(cA) = c^n \\det(A)\\).",
+      "- Với (i): \\(\\det(-A) = (-1)^4 \\det(A) = \\det(A) \\ne -\\det(A)\\) (nói chung). Khẳng định (i) sai.",
+      "- Với (ii): \\(\\det(2A) = 2^4 \\det(A) = 16\\det(A)\\). Khẳng định (ii) luôn đúng với mọi ma trận cấp 4.",
+      "Vậy chỉ có (ii) đúng. Chọn D."
+    ],
+    "image": "assets/questions/0655_q655_Question_655.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 656,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Find the \\((1, 2)\\)-entry of the inverse of the matrix \\[A = \\begin{bmatrix} 2 & 2 & 4 \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{bmatrix}.\\]",
+    "options": [
+      "0",
+      "-2",
+      "None of the other choices is correct",
+      "2",
+      "this matrix is not invertible"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Theo công thức ma trận nghịch đảo qua ma trận phụ hợp:",
+      "\\[(A^{-1})_{12} = \\frac{C_{21}}{\\det(A)}\\]",
+      "Khai triển định thức theo hàng 3:",
+      "\\[\\det(A) = -1 \\cdot \\begin{vmatrix} 2 & 4 \\\\ 1 & 1 \\end{vmatrix} = -(2 - 4) = 2\\]",
+      "Tính phần bù đại số \\(C_{21}\\):",
+      "\\[C_{21} = (-1)^{2+1} \\begin{vmatrix} 2 & 4 \\\\ 1 & 0 \\end{vmatrix} = -(0 - 4) = 4\\]",
+      "Suy ra:",
+      "\\[(A^{-1})_{12} = \\frac{4}{2} = 2\\]",
+      "Chọn D."
+    ],
+    "image": "assets/questions/0656_q656_Question_656.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 657,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(a\\) be a nonzero number. Find the \\((3, 2)\\)-entry of \\(A^{-1}\\) for \\[A = \\begin{bmatrix} a & 0 & 0 \\\\ a & a+1 & a+2 \\\\ 1 & 1 & 1 \\end{bmatrix}.\\]",
+    "options": [
+      "-1",
+      "1",
+      "none of the other choices is correct",
+      "\\(a\\)",
+      "\\(-a\\)"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Áp dụng công thức phần bù đại số:",
+      "\\[(A^{-1})_{32} = \\frac{C_{23}}{\\det(A)}\\]",
+      "Tính định thức \\(\\det(A)\\) bằng cách khai triển theo hàng 1:",
+      "\\[\\det(A) = a \\cdot \\begin{vmatrix} a+1 & a+2 \\\\ 1 & 1 \\end{vmatrix} = a((a+1) - (a+2)) = -a\\]",
+      "Tính phần bù đại số \\(C_{23}\\):",
+      "\\[C_{23} = (-1)^{2+3} \\begin{vmatrix} a & 0 \\\\ 1 & 1 \\end{vmatrix} = -(a - 0) = -a\\]",
+      "Do đó:",
+      "\\[(A^{-1})_{32} = \\frac{-a}{-a} = 1\\]",
+      "Chọn B."
+    ],
+    "image": "assets/questions/0657_q657_Question_657.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 658,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "type": "single_choice",
+    "question": "The characteristic polynomial of \\(A = \\begin{bmatrix} 2 & 0 \\\\ -5 & 3 \\end{bmatrix}\\) is:\n(i) \\((x - 2)(x - 3) + 5\\)\n(ii) \\(x^2 + 4x - 5\\)\n(iii) \\(x^2 - 5x + 6\\)\n(iv) \\(x^2 - 5x + 1\\)\n(v) \\((x + 2)(x + 3)\\)",
+    "options": [
+      "(v)",
+      "(iv)",
+      "(ii)",
+      "(iii)",
+      "(i)",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Đa thức đặc trưng của ma trận tam giác dưới \\(A\\):",
+      "\\[p(x) = \\det(xI - A) = \\begin{vmatrix} x - 2 & 0 \\\\ 5 & x - 3 \\end{vmatrix} = (x - 2)(x - 3) - 0 = x^2 - 5x + 6\\]",
+      "Biểu thức này khớp với (iii), tương ứng với lựa chọn D."
+    ],
+    "image": "assets/questions/0658_q658_Question_658.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 659,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "type": "single_choice",
+    "question": "Find the eigenvalues of the matrix \\(\\begin{bmatrix} 2 & 3 \\\\ 3 & 2 \\end{bmatrix}\\).",
+    "options": [
+      "It has no eigenvalue",
+      "-1 and 5",
+      "-2 and 6",
+      "1 and -5",
+      "2 and -6",
+      "None of the other choices is correct"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Phương trình đặc trưng của ma trận:",
+      "\\[\\det(A - \\lambda I) = (2 - \\lambda)^2 - 9 = \\lambda^2 - 4\\lambda - 5 = 0\\]",
+      "\\[(\\lambda - 5)(\\lambda + 1) = 0 \\iff \\lambda = -1, \\quad \\lambda = 5\\]",
+      "Vậy các giá trị riêng là -1 và 5. Chọn B."
+    ],
+    "image": "assets/questions/0659_q659_Question_659.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 660,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "type": "single_choice",
+    "question": "Given that \\(\\lambda = 9\\) is an eigenvalue for the matrix \\[\\begin{bmatrix} 5 & 2 & -2 \\\\ 2 & 5 & -2 \\\\ -2 & -2 & 5 \\end{bmatrix}.\\] Find basic eigenvectors corresponding to \\(\\lambda = 9\\).\n(i) \\([1 \\quad 1 \\quad -1]^T\\)\n(ii) \\([1 \\quad -1 \\quad -1]^T\\)\n(iii) \\([1 \\quad 1 \\quad 1]^T\\) and \\([0 \\quad 1 \\quad 1]^T\\)\n(iv) \\([1 \\quad 1 \\quad -1]^T\\) and \\([1 \\quad 0 \\quad 1]^T\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "D",
+    "answer_status": "conflict",
+    "explanation": [
+      "Giải hệ thuần nhất \\((A - 9I)\\mathbf{x} = \\mathbf{0}\\):",
+      "\\[A - 9I = \\begin{bmatrix} -4 & 2 & -2 \\\\ 2 & -4 & -2 \\\\ -2 & -2 & -4 \\end{bmatrix}\\]",
+      "Đưa về dạng bậc thang qua các phép biến đổi sơ cấp theo hàng:",
+      "- Hàng 2 chia 2: \\([1 \\quad -2 \\quad -1]\\).",
+      "- Hàng 1 chia -2: \\([2 \\quad -1 \\quad 1]\\). Lấy \\(R_1 - 2R_2\\): \\([0 \\quad 3 \\quad 3] \\implies [0 \\quad 1 \\quad 1]\\).",
+      "- Hàng 3 chia -2: \\([1 \\quad 1 \\quad 2]\\). Lấy \\(R_3 - R_2\\): \\([0 \\quad 3 \\quad 3]\\), triệt tiêu với hàng trên.",
+      "Hệ có 2 phương trình độc lập:",
+      "\\[\\begin{cases} x_2 + x_3 = 0 \\implies x_2 = -x_3 \\\\ x_1 - 2x_2 - x_3 = 0 \\implies x_1 = 2(-x_3) + x_3 = -x_3 \\end{cases}\\]",
+      "Chọn \\(x_3 = -1 \\implies x_1 = 1, x_2 = 1\\). Vectơ riêng cơ bản là \\([1 \\quad 1 \\quad -1]^T\\).",
+      "Không gian riêng của \\(\\lambda = 9\\) chỉ có số chiều bằng 1 (bội hình học bằng 1).",
+      "Do đó chỉ có một vectơ riêng cơ sở là (i), tương ứng với lựa chọn A.",
+      "Ngân hàng chọn D (công thức (iv)) là sai do đưa thêm vectơ \\([1 \\quad 0 \\quad 1]^T\\) vốn thuộc không gian riêng của \\(\\lambda = 3\\)."
+    ],
+    "image": "assets/questions/0660_q660_Question_660.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 661,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "type": "single_choice",
+    "question": "Given \\(A = \\begin{bmatrix} 5 & -3 & 1 \\\\ 3 & 0 & 4 \\\\ 2 & 1 & 5 \\end{bmatrix}\\). Choose the correct statement.",
+    "options": [
+      "7 is an eigenvalue of A",
+      "3 is an eigenvalue of A",
+      "Both 7 and 3 are eigenvalues of A",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Kiểm tra \\(\\lambda = 7\\):",
+      "\\[\\det(A - 7I) = \\begin{vmatrix} -2 & -3 & 1 \\\\ 3 & -7 & 4 \\\\ 2 & 1 & -2 \\end{vmatrix} = -2(14 - 4) + 3(-6 - 8) + 1(3 + 14) = -20 - 42 + 17 = -45 \\ne 0\\]",
+      "Vậy 7 không phải giá trị riêng.",
+      "Kiểm tra \\(\\lambda = 3\\):",
+      "\\[\\det(A - 3I) = \\begin{vmatrix} 2 & -3 & 1 \\\\ 3 & -3 & 4 \\\\ 2 & 1 & 2 \\end{vmatrix} = 2(-6 - 4) + 3(6 - 8) + 1(3 + 6) = -20 - 6 + 9 = -17 \\ne 0\\]",
+      "Vậy 3 không phải giá trị riêng.",
+      "Do đó, cả 7 và 3 đều không phải giá trị riêng của \\(A\\). Lựa chọn D đúng."
+    ],
+    "image": "assets/questions/0661_q661_Question_661.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 662,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "type": "single_choice",
+    "question": "Let \\(A\\) be a \\(2 \\times 2\\) matrix. Given that 1 and 2 are eigenvalues of \\(A\\) with corresponding eigenvectors \\([1 \\quad 3]^T\\) and \\([0 \\quad 1]^T\\). Find the \\((1, 2)\\)-entry of the matrix \\(A\\).",
+    "options": [
+      "none of the other choices is true",
+      "1",
+      "2",
+      "0",
+      "-3"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Theo định nghĩa vectơ riêng ứng với giá trị riêng \\(\\lambda = 2\\):",
+      "\\[A \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix} = 2 \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 2 \\end{bmatrix}\\]",
+      "Tích của ma trận \\(A\\) với vectơ đơn vị chuẩn \\(\\mathbf{e}_2 = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}\\) chính là cột thứ hai của ma trận \\(A\\).",
+      "Do đó cột thứ hai của \\(A\\) là \\(\\begin{bmatrix} a_{12} \\\\ a_{22} \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 2 \\end{bmatrix}\\).",
+      "Suy ra phần tử \\(a_{12} = 0\\). Chọn D."
+    ],
+    "image": "assets/questions/0662_q662_Question_662.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 663,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinhTuyenTinh",
+    "type": "single_choice",
+    "question": "Find all values of \\(a\\) such that the following system has no solution: \\[\\begin{cases} x + y - z = 2 \\\\ 3x - y + 2z = 3 \\\\ 2x - 2y + 3z = a \\end{cases}\\]",
+    "options": [
+      "1",
+      "All numbers but 1",
+      "All numbers but 7",
+      "Any number",
+      "7"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Xét vế trái của các phương trình:",
+      "\\[(3x - y + 2z) - (x + y - z) = 2x - 2y + 3z\\]",
+      "Vế trái phương trình (2) trừ vế trái phương trình (1) đúng bằng vế trái phương trình (3).",
+      "Để hệ phương trình có nghiệm, vế phải cũng phải thỏa mãn cùng hệ thức tương tự:",
+      "\\[a = 3 - 2 = 1\\]",
+      "Khi \\(a \\ne 1\\), lấy phương trình (2) trừ phương trình (1) ta được \\(2x - 2y + 3z = 1\\), mâu thuẫn với phương trình (3) \\(2x - 2y + 3z = a \\ne 1\\). Hệ dẫn đến \\(0 = a - 1 \\ne 0\\) (vô nghiệm).",
+      "Vậy hệ vô nghiệm với mọi số thực \\(a \\ne 1\\) (All numbers but 1). Chọn B."
+    ],
+    "image": "assets/questions/0663_q663_Question_663.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 664,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinhTuyenTinh",
+    "type": "single_choice",
+    "question": "Solve the following the linear system: \\[\\begin{cases} x - y - z = 1 \\\\ x + z = 2 \\\\ y - 2z = 5 \\end{cases}\\]",
+    "options": [
+      "\\(x = 3, y = -1, z = 1\\)",
+      "\\(x = 3, y = 3, z = -1\\)",
+      "None of the other choices is correct",
+      "\\(x = 2, y = 1, z = 2\\)"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Từ phương trình (2): \\(x = 2 - z\\).",
+      "Từ phương trình (3): \\(y = 5 + 2z\\).",
+      "Thay \\(x\\) và \\(y\\) vào phương trình (1):",
+      "\\[(2 - z) - (5 + 2z) - z = 1 \\iff 2 - 5 - 4z = 1 \\iff -3 - 4z = 1 \\iff -4z = 4 \\iff z = -1\\]",
+      "Tính \\(x\\) và \\(y\\):",
+      "\\[x = 2 - (-1) = 3\\]",
+      "\\[y = 5 + 2(-1) = 3\\]",
+      "Nghiệm của hệ là \\(x = 3, y = 3, z = -1\\). Chọn B."
+    ],
+    "image": "assets/questions/0664_q664_Question_664.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 665,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinhTuyenTinh",
+    "type": "single_choice",
+    "question": "Solve for \\(z\\) in the system of equations: \\[\\begin{cases} x + y - z = 3 \\\\ x + 2y - 2z = 4 \\\\ 2x + y + 2z = 5 \\end{cases}\\]",
+    "options": [
+      "0",
+      "\\(z\\) is arbitrary",
+      "2",
+      "-1",
+      "1",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Lấy phương trình (2) trừ phương trình (1):",
+      "\\[(x + 2y - 2z) - (x + y - z) = 4 - 3 \\implies y - z = 1 \\implies y = z + 1\\]",
+      "Từ phương trình (1):",
+      "\\[x = 3 - y + z = 3 - (z + 1) + z = 2\\]",
+      "Thay \\(x = 2\\) và \\(y = z + 1\\) vào phương trình (3):",
+      "\\[2(2) + (z + 1) + 2z = 5 \\iff 4 + 3z + 1 = 5 \\iff 3z = 0 \\iff z = 0\\]",
+      "Vậy \\(z = 0\\). Chọn A."
+    ],
+    "image": "assets/questions/0665_q665_Question_665.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 666,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "ToHopTuyenTinh",
+    "type": "single_choice",
+    "question": "Let \\(\\mathbf{x} = \\begin{bmatrix} 1 \\\\ 1 \\\\ 2 \\end{bmatrix}\\), \\(\\mathbf{y} = \\begin{bmatrix} 2 \\\\ 6 \\\\ 0 \\end{bmatrix}\\), \\(\\mathbf{z} = \\begin{bmatrix} 2 \\\\ 2 \\\\ 4 \\end{bmatrix}\\) and \\(\\mathbf{v} = \\begin{bmatrix} -1 \\\\ 9 \\\\ 6 \\end{bmatrix}\\). Write \\(\\mathbf{v}\\) as a linear combination of \\(\\mathbf{x}, \\mathbf{y}\\) and \\(\\mathbf{z}\\).",
+    "options": [
+      "\\(\\mathbf{v} = -2\\mathbf{x} + 5\\mathbf{y} - 2\\mathbf{z}\\)",
+      "\\(\\mathbf{v} = \\mathbf{x} + 2\\mathbf{y} + 2\\mathbf{z}\\)",
+      "There is no linear combination",
+      "\\(\\mathbf{v} = -4\\mathbf{x} + 5\\mathbf{y} - \\mathbf{z}\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Ta thấy \\(\\mathbf{z} = 2\\mathbf{x}\\), do đó \\(\\text{span}\\{\\mathbf{x}, \\mathbf{y}, \\mathbf{z}\\} = \\text{span}\\{\\mathbf{x}, \\mathbf{y}\\}\\).",
+      "Xét xem \\(\\mathbf{v}\\) có thuộc \\(\\text{span}\\{\\mathbf{x}, \\mathbf{y}\\}\\) không:",
+      "\\[c_1 \\begin{bmatrix} 1 \\\\ 1 \\\\ 2 \\end{bmatrix} + c_2 \\begin{bmatrix} 2 \\\\ 6 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} -1 \\\\ 9 \\\\ 6 \\end{bmatrix}\\]",
+      "Từ thành phần thứ ba: \\(2c_1 = 6 \\implies c_1 = 3\\).",
+      "Từ thành phần thứ nhất: \\(c_1 + 2c_2 = -1 \\implies 3 + 2c_2 = -1 \\implies c_2 = -2\\).",
+      "Kiểm tra thành phần thứ hai:",
+      "\\[c_1 + 6c_2 = 3 + 6(-2) = 3 - 12 = -9 \\ne 9\\]",
+      "Hệ phương trình vô nghiệm. Do đó không tồn tại tổ hợp tuyến tính nào để biểu diễn \\(\\mathbf{v}\\). Chọn C."
+    ],
+    "image": "assets/questions/0666_q666_Question_666.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 667,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Find the \\((2, 3)\\)-entry of the product \\[\\begin{bmatrix} -1 \\\\ 2 \\\\ 5 \\end{bmatrix} \\begin{bmatrix} 5 & 3 & -4 \\end{bmatrix}.\\]",
+    "options": [
+      "-8",
+      "-15",
+      "15",
+      "8",
+      "-19",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Phần tử ở hàng 2 cột 3 của tích ma trận \\(C = A B\\) được tính bằng tích của phần tử hàng 2 của \\(A\\) với phần tử cột 3 của \\(B\\):",
+      "\\[c_{23} = 2 \\times (-4) = -8\\]",
+      "Chọn A."
+    ],
+    "image": "assets/questions/0667_q667_Question_667.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 668,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "If ABC can be formed, and A is \\(4 \\times 4\\), C is \\(7 \\times 7\\), what is the size of B?",
+    "options": [
+      "\\(4 \\times 4\\)",
+      "\\(7 \\times 7\\)",
+      "\\(7 \\times 4\\)",
+      "\\(4 \\times 7\\)"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Để thực hiện phép nhân \\(AB\\), số hàng của \\(B\\) phải bằng số cột của \\(A\\), tức là 4.",
+      "Để thực hiện phép nhân \\(BC\\), số cột của \\(B\\) phải bằng số hàng của \\(C\\), tức là 7.",
+      "Vậy kích thước của ma trận \\(B\\) là \\(4 \\times 7\\). Chọn D."
+    ],
+    "image": "assets/questions/0668_q668_Question_668.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 669,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "If \\(A = \\begin{bmatrix} 2 & 1 \\\\ 0 & 3 \\end{bmatrix}\\); \\(B = \\begin{bmatrix} 4 & 6 \\\\ 9 & 3 \\end{bmatrix}\\), determine the \\((2, 2)\\)-entry of \\(A^2 - \\frac{1}{3}B\\).",
+    "options": [
+      "6",
+      "0",
+      "none of the other choices is true",
+      "8",
+      "12"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Tính lũy thừa \\(A^2\\):",
+      "\\[A^2 = \\begin{bmatrix} 2 & 1 \\\\ 0 & 3 \\end{bmatrix} \\begin{bmatrix} 2 & 1 \\\\ 0 & 3 \\end{bmatrix} = \\begin{bmatrix} 4 & 5 \\\\ 0 & 9 \\end{bmatrix}\\]",
+      "Phần tử ở hàng 2 cột 2 của \\(A^2\\) là 9.",
+      "Phần tử ở hàng 2 cột 2 của \\(\\frac{1}{3}B\\) là \\(\\frac{1}{3}(3) = 1\\).",
+      "Do đó phần tử \\((2, 2)\\) của \\(A^2 - \\frac{1}{3}B\\) là:",
+      "\\[9 - 1 = 8\\]",
+      "Chọn D."
+    ],
+    "image": "assets/questions/0669_q669_Question_669.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 670,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "DinhThuc",
+    "type": "single_choice",
+    "question": "Let A be a square matrix. Denote by \\(A_{ij}\\) the matrix obtained from A by deleting its \\(i\\)th row and \\(j\\)th column. Which of the following statement is true?\n(i) The \\((i, j)\\)-cofactor of the matrix A is \\(A_{ij}\\)\n(ii) The \\((i, j)\\)-cofactor of the matrix A is \\((-1)^{i+j} \\det(A_{ij})\\)\n(iii) The \\((i, j)\\)-cofactor of the matrix A is \\((-1)^{i+j} A_{ij}\\)",
+    "options": [
+      "(i) only",
+      "(ii) only",
+      "None of the other choices is correct",
+      "(iii) only"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Theo định nghĩa trong đại số tuyến tính:",
+      "- Ma trận con \\(A_{ij}\\) nhận được bằng cách xóa hàng \\(i\\) và cột \\(j\\).",
+      "- Định thức con (minor) \\(M_{ij} = \\det(A_{ij})\\).",
+      "- Phần bù đại số (cofactor) \\(C_{ij} = (-1)^{i+j} M_{ij} = (-1)^{i+j} \\det(A_{ij})\\).",
+      "Phần bù đại số là một đại lượng vô hướng (số thực), không phải một ma trận. Do đó chỉ có (ii) là khẳng định đúng. Chọn B."
+    ],
+    "image": "assets/questions/0670_q670_Question_670.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 671,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "type": "single_choice",
+    "question": "Given \\[A = \\begin{bmatrix} 3 & 5 & -7 \\\\ 0 & 1 & 5 \\\\ 0 & 0 & 2 \\end{bmatrix},\\quad B = \\begin{bmatrix} 1 & 0 & 0 \\\\ -3 & 4 & 0 \\\\ 5 & 2 & 2 \\end{bmatrix},\\] \\(u = [-18 \\quad 5 \\quad 1]^T\\) and \\(v = [1 \\quad 1 \\quad -7]^T\\). Choose the correct statement.",
+    "options": [
+      "\\(u\\) is a common eigenvector of \\(A\\) and \\(B\\)",
+      "\\(v\\) is a common eigenvector of \\(A\\) and \\(B\\)",
+      "Both \\(u\\) and \\(v\\) are common eigenvectors of \\(A\\) and \\(B\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Kiểm tra \\(u = [-18 \\quad 5 \\quad 1]^T\\):",
+      "\\[A u = \\begin{bmatrix} 3(-18) + 5(5) - 7(1) \\\\ 0(-18) + 1(5) + 5(1) \\\\ 0(-18) + 0(5) + 2(1) \\end{bmatrix} = \\begin{bmatrix} -36 \\\\ 10 \\\\ 2 \\end{bmatrix} = 2u\\]",
+      "Vậy \\(u\\) là vectơ riêng của \\(A\\) ứng với \\(\\lambda = 2\\).",
+      "Xét \\(B u\\):",
+      "\\[B u = \\begin{bmatrix} 1(-18) + 0 + 0 \\\\ -3(-18) + 4(5) + 0 \\\\ 5(-18) + 2(5) + 2(1) \\end{bmatrix} = \\begin{bmatrix} -18 \\\\ 74 \\\\ -78 \\end{bmatrix}\\]",
+      "Vectơ này không cùng phương với \\(u\\) (vì \\(74 / 5 \\ne -18 / -18\\)). Do đó \\(u\\) không phải vectơ riêng của \\(B\\).",
+      "Kiểm tra \\(v = [1 \\quad 1 \\quad -7]^T\\):",
+      "\\[A v = \\begin{bmatrix} 3(1) + 5(1) - 7(-7) \\\\ 0(1) + 1(1) + 5(-7) \\\\ 2(-7) \\end{bmatrix} = \\begin{bmatrix} 57 \\\\ -34 \\\\ -14 \\end{bmatrix}\\]",
+      "Vectơ này không cùng phương với \\(v\\), nên \\(v\\) không phải vectơ riêng của \\(A\\).",
+      "Do đó không có khẳng định nào trong các câu A, B, C là đúng. Chọn D."
+    ],
+    "image": "assets/questions/0671_q671_Question_671.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 672,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "type": "single_choice",
+    "question": "Given that \\(\\lambda = 0\\) is an eigenvalue of the matrix \\[\\begin{bmatrix} 1 & 1 & 0 \\\\ 1 & 1 & 2 \\\\ 1 & 1 & 2 \\end{bmatrix}.\\] Find a set of basic eigenvectors corresponding to this eigenvalue 0.\n(i) \\([1 \\quad 1 \\quad 0]^T\\)\n(ii) \\([1 \\quad -1 \\quad 0]^T\\)\n(iii) \\([1 \\quad 0 \\quad -1]^T\\)\n(iv) \\([1 \\quad -1 \\quad 0]^T\\) and \\([1 \\quad 0 \\quad -1]^T\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "None of the other choices is correct"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Giải hệ thuần nhất \\(A\\mathbf{x} = \\mathbf{0}\\):",
+      "\\[\\begin{bmatrix} 1 & 1 & 0 \\\\ 1 & 1 & 2 \\\\ 1 & 1 & 2 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}\\]",
+      "- Hàng 1 cho: \\(x_1 + x_2 = 0 \\implies x_1 = -x_2\\).",
+      "- Lấy hàng 2 trừ hàng 1: \\(2x_3 = 0 \\implies x_3 = 0\\).",
+      "- Hàng 3 giống hệt hàng 2 nên triệt tiêu.",
+      "Với ẩn tự do \\(x_2\\), chọn \\(x_2 = -1 \\implies x_1 = 1\\), ta được vectơ riêng cơ sở duy nhất là \\([1 \\quad -1 \\quad 0]^T\\).",
+      "Khớp với công thức (ii). Chọn B."
+    ],
+    "image": "assets/questions/0672_q672_Question_672.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 673,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A\\) be the matrix that satisfies \\[\\left(2A^T - 3\\begin{bmatrix} 2 & 3 \\\\ 0 & 5 \\end{bmatrix}\\right)^T = 2I\\] where \\(I\\) is the \\(2 \\times 2\\) identity matrix. Find the \\((2, 2)\\)-entry of \\(A\\).",
+    "options": [
+      "8",
+      "17/2",
+      "All of the other choices are incorrect",
+      "13/2"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Lấy chuyển vị hai vế của phương trình:",
+      "\\[2A^T - 3\\begin{bmatrix} 2 & 3 \\\\ 0 & 5 \\end{bmatrix} = (2I)^T = 2I\\]",
+      "\\[2A^T = \\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix} + \\begin{bmatrix} 6 & 9 \\\\ 0 & 15 \\end{bmatrix} = \\begin{bmatrix} 8 & 9 \\\\ 0 & 17 \\end{bmatrix}\\]",
+      "\\[A^T = \\frac{1}{2} \\begin{bmatrix} 8 & 9 \\\\ 0 & 17 \\end{bmatrix} = \\begin{bmatrix} 4 & 9/2 \\\\ 0 & 17/2 \\end{bmatrix}\\]",
+      "Do đó \\(A = (A^T)^T = \\begin{bmatrix} 4 & 0 \\\\ 9/2 & 17/2 \\end{bmatrix}\\).",
+      "Phần tử ở hàng 2 cột 2 của \\(A\\) là \\(17/2\\). Chọn B."
+    ],
+    "image": "assets/questions/0673_q673_Question_673.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 674,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A = \\begin{bmatrix} 2\\sqrt{2} & \\sqrt{3} \\\\ -\\sqrt{2} & 2\\sqrt{3} \\end{bmatrix}\\) and \\(B = \\begin{bmatrix} \\sqrt{2} \\\\ \\sqrt{3} \\end{bmatrix}\\). Find \\(AB\\).\n(i) Undefined\n(ii) \\(\\begin{bmatrix} 4 & \\sqrt{6} \\\\ -\\sqrt{6} & 6 \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} 7 \\\\ 4 \\end{bmatrix}\\)\n(iv) \\(\\begin{bmatrix} 4 & 3 \\\\ -2 & 6 \\end{bmatrix}\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "None of the choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Thực hiện nhân ma trận \\(2 \\times 2\\) với vectơ cột \\(2 \\times 1\\):",
+      "\\[AB = \\begin{bmatrix} 2\\sqrt{2}(\\sqrt{2}) + \\sqrt{3}(\\sqrt{3}) \\\\ -\\sqrt{2}(\\sqrt{2}) + 2\\sqrt{3}(\\sqrt{3}) \\end{bmatrix} = \\begin{bmatrix} 4 + 3 \\\\ -2 + 6 \\end{bmatrix} = \\begin{bmatrix} 7 \\\\ 4 \\end{bmatrix}\\]",
+      "Khớp với công thức (iii). Chọn C."
+    ],
+    "image": "assets/questions/0674_q674_Question_674.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 675,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Which points of the set \\(\\{P(1, 2, 3), Q(3, 1, 4), R(2, 1, 1)\\}\\) lie on the line \\[x = 2 + t, \\quad y = -1 + 2t, \\quad z = 1 + 3t\\quad ?\\]",
+    "options": [
+      "Only R",
+      "Only P",
+      "All of the other choices are incorrect",
+      "Only Q"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Kiểm tra từng điểm với phương trình tham số của đường thẳng:",
+      "- Với \\(P(1, 2, 3)\\): \\(x = 1 \\implies 2 + t = 1 \\implies t = -1\\). Khi đó \\(y = -1 + 2(-1) = -3 \\ne 2\\). Vậy \\(P\\) không nằm trên đường thẳng.",
+      "- Với \\(Q(3, 1, 4)\\): \\(x = 3 \\implies 2 + t = 3 \\implies t = 1\\). Khi đó \\(y = -1 + 2(1) = 1\\) (đúng) và \\(z = 1 + 3(1) = 4\\) (đúng). Vậy \\(Q\\) nằm trên đường thẳng.",
+      "- Với \\(R(2, 1, 1)\\): \\(x = 2 \\implies 2 + t = 2 \\implies t = 0\\). Khi đó \\(y = -1 + 2(0) = -1 \\ne 1\\). Vậy \\(R\\) không nằm trên đường thẳng.",
+      "Do đó chỉ có điểm \\(Q\\) nằm trên đường thẳng. Chọn D."
+    ],
+    "image": "assets/questions/0675_q675_Question_675.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 676,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Find the parametric equations of the line passing through \\(P(1, 0, -3)\\) and parallel to the line with parametric equations \\[x = -1 + 2t, \\quad y = 2 - t, \\quad z = 3 + 3t.\\]",
+    "options": [
+      "\\(x = 1 + 4t, y = -2t, z = -3 + 6t\\)",
+      "\\(x = 3 + 2t, y = 7 - t, z = -3 + 9t\\)",
+      "\\(x = 7 + 2t, y = 5 - t, z = -3 + 3t\\)",
+      "\\(x = 1 + 4t, y = -2t, z = -3 + 3t\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Đường thẳng đã cho có vectơ chỉ phương \\(\\mathbf{d} = (2, -1, 3)\\).",
+      "Đường thẳng song song sẽ có vectơ chỉ phương cùng phương với \\(\\mathbf{d}\\), ví dụ \\(\\mathbf{d}' = 2\\mathbf{d} = (4, -2, 6)\\).",
+      "Đường thẳng đi qua điểm \\(P(1, 0, -3)\\), do đó có phương trình tham số:",
+      "\\[\\begin{cases} x = 1 + 4t \\\\ y = -2t \\\\ z = -3 + 6t \\end{cases}\\]",
+      "Trùng khớp hoàn toàn với lựa chọn A."
+    ],
+    "image": "assets/questions/0676_q676_Question_676.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 677,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(A(-2, 1, 3)\\) and \\(B(1, 2, 4)\\). Let \\(P(a, b, c)\\) be the point on the line \\(AB\\) that is closest to the origin. Find \\(a\\).",
+    "options": [
+      "35/11",
+      "13/11",
+      "-16/11",
+      "-2/11",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Vectơ chỉ phương của đường thẳng \\(AB\\) là \\(\\vec{AB} = (1 - (-2), 2 - 1, 4 - 3) = (3, 1, 1)\\).",
+      "Phương trình tham số của đường thẳng \\(AB\\):",
+      "\\[P(t) = (-2 + 3t, 1 + t, 3 + t)\\]",
+      "Điểm \\(P\\) gần gốc tọa độ \\(O(0, 0, 0)\\) nhất chính là hình chiếu vuông góc của \\(O\\) lên đường thẳng \\(AB\\), thỏa mãn \\(\\vec{OP} \\perp \\vec{AB}\\):",
+      "\\[\\vec{OP} \\cdot \\vec{AB} = 0 \\iff 3(-2 + 3t) + 1(1 + t) + 1(3 + t) = 0\\]",
+      "\\[-6 + 9t + 1 + t + 3 + t = 0 \\iff 11t - 2 = 0 \\iff t = \\frac{2}{11}\\]",
+      "Hoành độ của điểm \\(P\\) là:",
+      "\\[a = -2 + 3\\left(\\frac{2}{11}\\right) = -2 + \\frac{6}{11} = -\\frac{16}{11}\\]",
+      "Chọn C."
+    ],
+    "image": "assets/questions/0677_q677_Question_677.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 678,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(P = (a, b, c)\\) be the point on the line \\[x = 1 + t, \\quad y = -1 + 2t, \\quad z = 3 + t\\] that is closest to the point \\(C = (1; -1; 0)\\). Find \\(a\\).",
+    "options": [
+      "All other choices are incorrect",
+      "1/2",
+      "1",
+      "-1/2",
+      "-1"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Vectơ nối \\(C\\) với một điểm \\(P\\) bất kỳ trên đường thẳng:",
+      "\\[\\vec{CP} = (1 + t - 1, -1 + 2t - (-1), 3 + t - 0) = (t, 2t, 3 + t)\\]",
+      "Vectơ chỉ phương của đường thẳng là \\(\\mathbf{d} = (1, 2, 1)\\).",
+      "Điểm \\(P\\) gần \\(C\\) nhất khi \\(\\vec{CP} \\perp \\mathbf{d}\\):",
+      "\\[\\vec{CP} \\cdot \\mathbf{d} = 0 \\iff t(1) + 2t(2) + (3 + t)(1) = 0\\]",
+      "\\[t + 4t + 3 + t = 0 \\iff 6t + 3 = 0 \\iff t = -\\frac{1}{2}\\]",
+      "Khi đó hoành độ \\(a\\) của điểm \\(P\\) là:",
+      "\\[a = 1 + t = 1 - \\frac{1}{2} = \\frac{1}{2}\\]",
+      "Chọn B."
+    ],
+    "image": "assets/questions/0678_q678_Question_678.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 679,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Find the projection of \\(u = [1, 9, 1]\\) along \\(v = [3, 4, 0]\\).",
+    "options": [
+      "\\([117/5, 156/5, 0]\\)",
+      "\\([117/25, 156/25, 0]\\)",
+      "none of the other choices is true",
+      "\\([106/5, 196/5, 0]\\)",
+      "\\([106/25, 196/25, 0]\\)"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Công thức hình chiếu trực giao của vectơ \\(u\\) lên vectơ \\(v\\):",
+      "\\[\\text{proj}_v u = \\frac{u \\cdot v}{\\|v\\|^2} v\\]",
+      "Tính tích vô hướng và độ dài:",
+      "\\[u \\cdot v = 1(3) + 9(4) + 1(0) = 3 + 36 = 39\\]",
+      "\\[\\|v\\|^2 = 3^2 + 4^2 + 0^2 = 9 + 16 = 25\\]",
+      "Do đó:",
+      "\\[\\text{proj}_v u = \\frac{39}{25} [3, 4, 0] = \\left[\\frac{117}{25}, \\frac{156}{25}, 0\\right]\\]",
+      "Chọn B."
+    ],
+    "image": "assets/questions/0679_q679_Question_679.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 680,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Find an equation for the plane passing through \\((2, 1, 4)\\), \\((1, -1, 2)\\), \\((4, -1, 1)\\).",
+    "options": [
+      "\\(2x - 7y + 6z = 21;\\)",
+      "\\(2x - 7y + 6z = -21;\\)",
+      "\\(2x - 7y - 6z = 21;\\)",
+      "\\(2x + 7y - 6z = -21.\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Gọi ba điểm là \\(A(2, 1, 4)\\), \\(B(1, -1, 2)\\), \\(C(4, -1, 1)\\).",
+      "Hai vectơ chỉ phương thuộc mặt phẳng là:",
+      "\\[\\vec{AB} = (-1, -2, -2), \\quad \\vec{AC} = (2, -2, -3)\\]",
+      "Vectơ pháp tuyến của mặt phẳng:",
+      "\\[\\mathbf{n} = \\vec{AB} \\times \\vec{AC} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ -1 & -2 & -2 \\\\ 2 & -2 & -3 \\end{vmatrix} = \\mathbf{i}(6 - 4) - \\mathbf{j}(3 + 4) + \\mathbf{k}(2 + 4) = (2, -7, 6)\\]",
+      "Phương trình mặt phẳng đi qua \\(A(2, 1, 4)\\):",
+      "\\[2(x - 2) - 7(y - 1) + 6(z - 4) = 0 \\iff 2x - 7y + 6z - (4 - 7 + 24) = 0 \\iff 2x - 7y + 6z = 21\\]",
+      "Khớp hoàn toàn với phương án A."
+    ],
+    "image": "assets/questions/0680_q680_Question_680.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  }
+]

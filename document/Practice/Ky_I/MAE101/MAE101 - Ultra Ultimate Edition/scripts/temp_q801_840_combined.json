@@ -1,0 +1,322 @@
+[
+  {
+    "id": 801,
+    "image": "0801_q801_Question_801.png",
+    "bank_answer": "A",
+    "topic": "PhuongTrinhViPhan",
+    "folder": "GT1",
+    "text": "CAU HOI How many solutions must homogeneous linear system of 6 equations in unknowns have? 80 DAP AN CAN CHON CAc DAP AN"
+  },
+  {
+    "id": 802,
+    "image": "0802_q802_Question_802.png",
+    "bank_answer": "B",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI For matrices A, B, C and a real number k, which of the following statements are correct ? () A + B = A+ C then B"
+  },
+  {
+    "id": 803,
+    "image": "0803_q803_Question_803.png",
+    "bank_answer": "D",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Rewrite the system of equations x + 2y + 32 = 3 ~2 + 5y + 72 = 10 21 + 3y + 6 = 2 into a matrix-vector product: "
+  },
+  {
+    "id": 804,
+    "image": "0804_q804_Question_804.png",
+    "bank_answer": "A",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find the matrix A such that (I + AT)-1 = -2 -3 ~2 ~2 56 DAP AN cAN CHON CAC DAP AN None of the other choices is "
+  },
+  {
+    "id": 805,
+    "image": "0805_q805_Question_805.png",
+    "bank_answer": "C",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Given three vectors U, V, W: u = [1,2,3]\" ,v = [0,1,a]\" [0,2,5]2\" Find all possible values of such that the volu"
+  },
+  {
+    "id": 806,
+    "image": "0806_q806_Question_806.png",
+    "bank_answer": "C",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Suppose ball is dropped from height of 400 ft. Its position t seconds after it is dropped until it hits the grou"
+  },
+  {
+    "id": 807,
+    "image": "0807_q807_Question_807.png",
+    "bank_answer": "C",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find the domain of the function x2 f(z) (-0,0) {0} (~0,-1] (iv) [1, 0) 80 DAP AN CAN CAc DAP AN None of them: CH"
+  },
+  {
+    "id": 808,
+    "image": "0808_q808_Question_808.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find the domain of the function f(z) Vin(z) [1,0) (iii) (1, 0) (v) (0,0) 56 DAP AN cAN CHON CAC DAP AN None of t"
+  },
+  {
+    "id": 809,
+    "image": "0809_q809_Question_809.png",
+    "bank_answer": "D",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find the domain of the function x + 5 f(z) sin € (iv) {cl = k is integer} 56 DAP AN cAN CHON CAc DAP AN None of "
+  },
+  {
+    "id": 810,
+    "image": "0810_q810_Question_810.png",
+    "bank_answer": "A",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Find the equation of the line that passes through the points and 9,4). 80 DAP AN CAN CHON FUS CAc DAP AN A: y = "
+  },
+  {
+    "id": 811,
+    "image": "0811_q811_Question_811.png",
+    "bank_answer": "A",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Find the limit 1 - lim 1-0 2(2+1) 56 DAP AN cAN CHON CAC DAP AN positive infinity B. negative infinity ~1 E 0 No"
+  },
+  {
+    "id": 812,
+    "image": "0812_q812_Question_812.png",
+    "bank_answer": "E",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Find the number such that @LL 80 DAP AN CAN CHON CAc DAP AN None of the other choices is correct D: 4 limr-+0 `"
+  },
+  {
+    "id": 813,
+    "image": "0813_q813_Question_813.png",
+    "bank_answer": "B",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI How many vertical asymptotes of 22 56 DAP AN cAN CHON CAc DAP AN A 0 B. 2 fl)"
+  },
+  {
+    "id": 814,
+    "image": "0814_q814_Question_814.png",
+    "bank_answer": "A",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI How many vertical asymptotes of sin € f(r) +1 56 DAP AN cAN CHON CAC DAP AN B: 2"
+  },
+  {
+    "id": 815,
+    "image": "0815_q815_Question_815.png",
+    "bank_answer": "A",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Find the limit 2 -1 lim 2(2+1) 56 DAP AN cAN CHON CAC DAP AN A. negative infinity ~1 positive infinity None of t"
+  },
+  {
+    "id": 816,
+    "image": "0816_q816_Question_816.png",
+    "bank_answer": "D",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Evaluate the limit, if it exists 5x + 6 lim 1-2 50 DAP AN CAN CAc DAP AN B. 2/5 c -2/5 D: 1/5 E -1/5 None of the"
+  },
+  {
+    "id": 817,
+    "image": "0817_q817_Question_817.png",
+    "bank_answer": "E",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Evaluate the limit, if it exists 4x + 3 lim 1 - 1 56 DAP AN cAN CHON CAC DAP AN B. 3 ~3 D: -2 E 2 None of the ot"
+  },
+  {
+    "id": 818,
+    "image": "0818_q818_Question_818.png",
+    "bank_answer": "A",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Find the limit lim 56 DAP AN cAN CHON CAC DAP AN B. Limit does not exist C. 1 None of the other choices is corre"
+  },
+  {
+    "id": 819,
+    "image": "0819_q819_Question_819.png",
+    "bank_answer": "C",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI AO Find the numbers a, b such that the function if x < 2 f(z) ax + b if2 < € < 4 ifx > 4 is continuous on its do"
+  },
+  {
+    "id": 820,
+    "image": "0820_q820_Question_820.png",
+    "bank_answer": "B",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Determine where f is discontinuous_ ~I if x < 0 f(c) 3 _ x if 0 < € < 3 (3 _ 1)2 if x > 3 80 DAP AN CAN CHON CAc"
+  },
+  {
+    "id": 821,
+    "image": "0821_q821_Question_821.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI For what value of the constant is the function f continuous on (~0,x) x3 + 125 2 +-5 f(z) c+2 56 DAP AN cAN CHON"
+  },
+  {
+    "id": 822,
+    "image": "0822_q822_Question_822.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "fuoverflow (Choose answer) The graph of f(x) is given. State the numbers at which f(x) is not differentiable (See pictur"
+  },
+  {
+    "id": 823,
+    "image": "0823_q823_Question_823.png",
+    "bank_answer": "D",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Which of the following limits does represent the derivative of f(r) at a? limr uflel limr flz_e 80 DAP AN CAN CH"
+  },
+  {
+    "id": 824,
+    "image": "0824_q824_Question_824.png",
+    "bank_answer": "D",
+    "topic": "PhuongTrinhViPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Find y' (1) for y 80 DAP AN CAN CHON CAc DAP AN 8/9 B. 7/3 None of the other choices is correct 8/9 E: -7/3"
+  },
+  {
+    "id": 825,
+    "image": "0825_q825_Question_825.png",
+    "bank_answer": "C",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find an equation for the tangent line to the graph of the function 36 f(z) at (1,36) 56 DAP AN cAN CHON CAc DAP "
+  },
+  {
+    "id": 826,
+    "image": "0826_q826_Question_826.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI A ball dropped from the top of building has a height of 576 16t2 meters after seconds: How long does it take the"
+  },
+  {
+    "id": 827,
+    "image": "0827_q827_Question_827.png",
+    "bank_answer": "E",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI A ball is thrown into the air such that its height (in feet) after seconds takes the form h(t) = 16t? _ Assume t"
+  },
+  {
+    "id": 828,
+    "image": "0828_q828_Question_828.png",
+    "bank_answer": "E",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI If a ball is thrown into the air with a velocity of 45 ft/s, its height in feet after seconds is given by y = 45"
+  },
+  {
+    "id": 829,
+    "image": "0829_q829_Question_829.png",
+    "bank_answer": "A",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI A rock is dropped from height of 100 meters. Its height above ground at time seconds later is given by s(t) -4t2"
+  },
+  {
+    "id": 830,
+    "image": "0830_q830_Question_830.png",
+    "bank_answer": "B",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Find d1 for y = Vz+ 2 16(2+21372 16(1+217 2 16(2+21572 80 DAP AN CAN CHON CAc DAP AN (iv) None of the other choi"
+  },
+  {
+    "id": 831,
+    "image": "0831_q831_Question_831.png",
+    "bank_answer": "D",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Given f (u) = u8, g(2) find (f 0 g) (3) 80 DAP AN CAN CHON CAc DAP AN A. 882 B. 147 ~147 882 None of the other c"
+  },
+  {
+    "id": 832,
+    "image": "0832_q832_Question_832.png",
+    "bank_answer": "B",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Find dy dx by implicit differentiation 2y - € + xy = 6. 80 DAP AN CAN CAc DAP AN None of the other choices is co"
+  },
+  {
+    "id": 833,
+    "image": "0833_q833_Question_833.png",
+    "bank_answer": "B",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Find dy dx by implicit differentiation y _ 2\" _ 6 50 DAP AN CAN CAc DAP AN None of the other choices is correct "
+  },
+  {
+    "id": 834,
+    "image": "0834_q834_Question_834.png",
+    "bank_answer": "B",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Assume that x 2(t) , y y(t) 2 = 2(t) such that [2(t)]2 [2(t)12 + 4ly(t)]2 . Compute # when € 3,y = 2, # d = 3. 5"
+  },
+  {
+    "id": 835,
+    "image": "0835_q835_Question_835.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find the linear approximation of the function f (z) at x = 0 56 DAP AN cAN CHON CAc DAP AN B: 1 - 3x C. 1 + 32 N"
+  },
+  {
+    "id": 836,
+    "image": "0836_q836_Question_836.png",
+    "bank_answer": "C",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find the total area between the function f(z) sin € and the X-axis over the interval 5,$] 56 DAP AN cAN CHON CAC"
+  },
+  {
+    "id": 837,
+    "image": "0837_q837_Question_837.png",
+    "bank_answer": "A",
+    "topic": "PhuongPhapSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find the linear approximation for f(z) 80 DAP AN CAN CHON CAc DAP AN 2x +1 3x - 2 3x + 2 None of the other choic"
+  },
+  {
+    "id": 838,
+    "image": "0838_q838_Question_838.png",
+    "bank_answer": "A",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find the absolute maximum and absolute minimum values of S2 + 6 56 DAP AN cAN CHON CAc DAP AN Absolute maximum: "
+  },
+  {
+    "id": 839,
+    "image": "0839_q839_Question_839.png",
+    "bank_answer": "B",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find all the numbers that satisfy the conclusion of the Mean Value Theorem f(z) = r' + 32 [0; 2] () -2/v3 (ii) 2"
+  },
+  {
+    "id": 840,
+    "image": "0840_q840_Question_840.png",
+    "bank_answer": "A",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find all the numbers that satisfy the conclusion of Rolle's Theorem f(c) = TVx + 3; [-3,0] 80 DAP AN CAN CAc DAP"
+  }
+]

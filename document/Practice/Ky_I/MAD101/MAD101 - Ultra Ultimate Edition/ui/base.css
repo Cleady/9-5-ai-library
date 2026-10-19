@@ -1,0 +1,154 @@
+/* ===================================================================
+   MAD101 STUDIO — BASE STYLES
+   ui/base.css
+   White Tech Theme Base
+   =================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ui-font-sans);
+  background-color: var(--ui-bg-base);
+  color: var(--ui-text-primary);
+  line-height: 1.55;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tech Grid Pattern Overlay (Light & Tech) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, var(--ui-grid-line, rgba(0, 0, 0, 0.035)) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--ui-grid-line, rgba(0, 0, 0, 0.035)) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ambient Radial Glow */
+body::after {
+  content: '';
+  position: fixed;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(circle, var(--ui-glow-color, rgba(249, 115, 22, 0.06)) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Accessible focus visible */
+:focus-visible {
+  outline: 2px solid var(--ui-accent);
+  outline-offset: 3px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* App Shell Layout */
+.ui-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: var(--ui-space-4);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .ui-shell {
+    padding: var(--ui-space-6);
+  }
+}
+
+/* Typography elements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ui-text-primary);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+p {
+  color: var(--ui-text-primary);
+}
+
+a {
+  color: var(--ui-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--ui-accent-hover);
+}
+
+/* Code block pseudo-code */
+pre.ui-code {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: var(--ui-radius-md);
+  padding: var(--ui-space-4);
+  font-family: var(--ui-font-mono);
+  font-size: var(--ui-text-sm);
+  color: #38bdf8;
+  overflow-x: auto;
+  line-height: 1.6;
+  margin: var(--ui-space-4) 0;
+  white-space: pre;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+pre.ui-code code {
+  font-family: inherit;
+}
+
+/* MathJax safe overrides */
+mjx-container[jax="SVG"] {
+  color: inherit !important;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 3px 0;
+  vertical-align: middle;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: var(--ui-space-3) 0;
+  background: rgba(241, 245, 249, 0.7);
+  border-radius: var(--ui-radius-md);
+  padding: var(--ui-space-3);
+  border: 1px solid var(--ui-border-subtle);
+}
+
+[data-theme="dark"] mjx-container[jax="SVG"][display="true"] {
+  background: rgba(11, 18, 32, 0.45);
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "id": 561,
+    "image": "0561_q561_Question_561.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 562,
+    "image": "0562_q562_Question_562.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": ""
+  },
+  {
+    "id": 563,
+    "image": "0563_q563_Question_563.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 564,
+    "image": "0564_q564_Question_564.png",
+    "bank_answer": "E",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 565,
+    "image": "0565_q565_Question_565.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 566,
+    "image": "0566_q566_Question_566.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": ""
+  },
+  {
+    "id": 567,
+    "image": "0567_q567_Question_567.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "ocr_preview": ""
+  },
+  {
+    "id": 568,
+    "image": "0568_q568_Question_568.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": ""
+  },
+  {
+    "id": 569,
+    "image": "0569_q569_Question_569.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 570,
+    "image": "0570_q570_Question_570.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 571,
+    "image": "0571_q571_Question_571.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 572,
+    "image": "0572_q572_Question_572.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "ocr_preview": ""
+  },
+  {
+    "id": 573,
+    "image": "0573_q573_Question_573.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "ocr_preview": ""
+  },
+  {
+    "id": 574,
+    "image": "0574_q574_Question_574.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": ""
+  },
+  {
+    "id": 575,
+    "image": "0575_q575_Question_575.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "PhuongPhapSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 576,
+    "image": "0576_q576_Question_576.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "ocr_preview": ""
+  },
+  {
+    "id": 577,
+    "image": "0577_q577_Question_577.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 578,
+    "image": "0578_q578_Question_578.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "ocr_preview": ""
+  },
+  {
+    "id": 579,
+    "image": "0579_q579_Question_579.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 580,
+    "image": "0580_q580_Question_580.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 581,
+    "image": "0581_q581_Question_581.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "ocr_preview": ""
+  },
+  {
+    "id": 582,
+    "image": "0582_q582_Question_582.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 583,
+    "image": "0583_q583_Question_583.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 584,
+    "image": "0584_q584_Question_584.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 585,
+    "image": "0585_q585_Question_585.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 586,
+    "image": "0586_q586_Question_586.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 587,
+    "image": "0587_q587_Question_587.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 588,
+    "image": "0588_q588_Question_588.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 589,
+    "image": "0589_q589_Question_589.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": ""
+  },
+  {
+    "id": 590,
+    "image": "0590_q590_Question_590.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": ""
+  },
+  {
+    "id": 591,
+    "image": "0591_q591_Question_591.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 592,
+    "image": "0592_q592_Question_592.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 593,
+    "image": "0593_q593_Question_593.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "ocr_preview": ""
+  },
+  {
+    "id": 594,
+    "image": "0594_q594_Question_594.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "PhuongTrinhViPhan",
+    "ocr_preview": ""
+  },
+  {
+    "id": 595,
+    "image": "0595_q595_Question_595.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 596,
+    "image": "0596_q596_Question_596.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "ocr_preview": ""
+  },
+  {
+    "id": 597,
+    "image": "0597_q597_Question_597.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": ""
+  },
+  {
+    "id": 598,
+    "image": "0598_q598_Question_598.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "ocr_preview": ""
+  },
+  {
+    "id": 599,
+    "image": "0599_q599_Question_599.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": ""
+  },
+  {
+    "id": 600,
+    "image": "0600_q600_Question_600.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "PhuongPhapSo",
+    "ocr_preview": ""
+  }
+]

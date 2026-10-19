@@ -1,0 +1,322 @@
+[
+  {
+    "id": 441,
+    "image": "0441_q441_Question_441.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Consider the vectors U1 and Suppose that &, 8 and y are real numbers such that v au1 + 8uz Yug . Find & 28. 50 DAP AN CAN CAc DAP AN B: 2 CHON"
+  },
+  {
+    "id": 442,
+    "image": "0442_q442_Question_442.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI A potato is launched vertically upward with an initial velocity of 100 ft/s from potato gun at the top of an 85-feet-tall building: The distan"
+  },
+  {
+    "id": 443,
+    "image": "0443_q443_Question_443.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let A and B be 3 X 3 matrices such that det A = 1, det B = 3 Find det (2AB-1). 56 DAP AN cAN CHON CAc DAP AN A. 2/3 B. 24 c. 8/3 None of the o"
+  },
+  {
+    "id": 444,
+    "image": "0444_q444_Question_444.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "ocr_preview": "CAU HOI A particle moves along the curve y? = 1 + x8. As it reaches the point (2 , 3) , the y-coordinate is increasing at a rate of 4 cm/s. How fast i"
+  },
+  {
+    "id": 445,
+    "image": "0445_q445_Question_445.png",
+    "bank_answer": "E",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "ocr_preview": "CAU HOI Find basic eigenvectors corresponding to the eigenvalue = ]of the matrix 9 4 56 DAP AN cAN CHON CAC DAP AN A [1, 0, 0] and [0, 1, 0] None of t"
+  },
+  {
+    "id": 446,
+    "image": "0446_q446_Question_446.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Find conditions on a, b, such that the system has infinitely many solutions 1 + ay = 0 y + bz = 0 +c = 0 80 DAP AN CAN CHON CAc DAP AN abc = -"
+  },
+  {
+    "id": 447,
+    "image": "0447_q447_Question_447.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI A particle moves along line with the velocity v(t) = t2 _ 2t (m/s). Find the distance traveled by the particle during the time interval 0 < t "
+  },
+  {
+    "id": 448,
+    "image": "0448_q448_Question_448.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI x _ 27 Consider the function f (z) x - 3 27 if x = 3 Choose the correct statement. 56 DAP AN cAN CHON CAc DAP AN A. fis continuous on R B. f "
+  },
+  {
+    "id": 449,
+    "image": "0449_q449_Question_449.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI If er + sin(2) + 4 < f(z) < 2cos(w) + 3e2r for all €, find the limit f(z) 80 DAP AN CAN CHON RO CAc DAP AN A: -6 None of the other choices is "
+  },
+  {
+    "id": 450,
+    "image": "0450_q450_Question_450.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "DinhThuc",
+    "ocr_preview": "CAU HOI Find the area of the triangle with vertices A(1,0,1), B(2,1,-1), C(1,-1,2). V3 (ii) v3/2 (iii) 3 (iv) 3/2 56 DAP AN cAN CHON CAC DAP AN None o"
+  },
+  {
+    "id": 451,
+    "image": "0451_q451_Question_451.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Find a basis for the subspace of R? defined as U = {[a a _ bJT| a, b are real numbers}. () {[1 -1JT} (ii) {[1 0]T} (iii) {[1 1]T , [-1 -1/T} 8"
+  },
+  {
+    "id": 452,
+    "image": "0452_q452_Question_452.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "ocr_preview": "CAU HOI Find the integral +C cos 21 + C 21 + Isin2c cos 21 + C 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct"
+  },
+  {
+    "id": 453,
+    "image": "0453_q453_Question_453.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Let u = (0,1,1),v = (1,1,-1) be vectors. Which of the following vectors belong to span{u, v} (1,3,-1),y = (0,2,3) 56 DAP AN cAN CHON CAC DAP A"
+  },
+  {
+    "id": 454,
+    "image": "0454_q454_Question_454.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Find the dimension of the space U = {[a c and b = 2c + d, where @,b,€,d € R} 80 DAP AN CAN CHON CAc DAP AN A: 4 None of the other choices is c"
+  },
+  {
+    "id": 455,
+    "image": "0001_q455_Question_455.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI is an artificial neuron similar to single biological neuron: 80 DAP AN CAN CHON CAc DAP AN An expert system An intelligent agent A perceptron "
+  },
+  {
+    "id": 456,
+    "image": "0456_q456_Question_456.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "PhuongTrinhViPhan",
+    "ocr_preview": "CAU HOI Calculate y' from the equation cy? + 2 y 2x + 4y +52 (iv) Bry2 56 DAP AN cAN CHON CAC DAP AN None of others"
+  },
+  {
+    "id": 457,
+    "image": "0457_q457_Question_457.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Find all values of a such that the following system has unique solution (x+y - 2 = 2 31 y + 2z = 3 21 2y + 32 = 80 DAP AN CAN CHON CAc DAP AN "
+  },
+  {
+    "id": 458,
+    "image": "0458_q458_Question_458.png",
+    "bank_answer": "E",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Find f h, where f(z) +1; g(z) sin(52); h(c) = 22 + 1 sin? (1Oz + 5) + 1 sin? (1Or +5) +1 sin? (1Oz + 1) +1 sin? (IOz + 1) + 1 56 DAP AN cAN CH"
+  },
+  {
+    "id": 459,
+    "image": "0459_q459_Question_459.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Find the point on the parabola € = y? 6y + 9 that is closest to the point (~1,3). 80 DAP AN CAN CHON CAc DAP AN A (2,1) B. (4,1) None of the o"
+  },
+  {
+    "id": 460,
+    "image": "0460_q460_Question_460.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Which of the following matrices are in reduced row-echelon form? ~1 50 DAP AN CAN CAc DAP AN and (ii) None of the other choices is correct CHO"
+  },
+  {
+    "id": 461,
+    "image": "0461_q461_Question_461.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI State the domain of the derivative of the function f(z) [0, 0) (iii) (~o,0) {0} 80 DAP AN CAN CHON CAc DAP AN None of them"
+  },
+  {
+    "id": 462,
+    "image": "0462_q462_Question_462.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let 4 = Find a diagonal form D of the matrix A (if exists) 50 DAP AN CAN CAc DAP AN None of the other choices is correct CHON"
+  },
+  {
+    "id": 463,
+    "image": "0463_q463_Question_463.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Find Ai (4-' _ |1% ( [41 % (v [ % 56 DAP AN cAN CHON CAC DAP AN All of the other choices are incorrect"
+  },
+  {
+    "id": 464,
+    "image": "0464_q464_Question_464.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Let d be the line passing through M(-1,2,5) and parallel to the line € = 1 + 2t,y = 2 + 4t,2 t Let P(3,10, and Q(0,5,1). Which of the followin"
+  },
+  {
+    "id": 465,
+    "image": "0465_q465_Question_465.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI 80 DAP AN CAN CHON CAc DAP AN A L(z) = 2/3 _ 4/3 B. L(z) = 2/3 +1/3 None of the choices is correct D. L(z) = -c/3 +4/3 E L(z) = 2/3+ 4/3 HS ot"
+  },
+  {
+    "id": 466,
+    "image": "0466_q466_Question_466.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI A point moves in a straight line so that its distance at time from a fixed point of the line is s(t) 8t 3t2 . What is the total distance cover"
+  },
+  {
+    "id": 467,
+    "image": "0467_q467_Question_467.webp",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "fuoverflow b. D d. C Question 3 Complete Express the limit as a definite integral on the given interval. Mark 1.00 out 8_4 of 1.00 lim 2[2r;\" Jr,[4,8]"
+  },
+  {
+    "id": 468,
+    "image": "0468_q468_Question_468.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI 2x Evaluate d 32 + 1 56 DAP AN cAN CHON CAC DAP AN A 16 n 11 B. 10ln 10 It is divergent"
+  },
+  {
+    "id": 469,
+    "image": "0469_q469_Question_469.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI Evaluate v3 Ft 56 DAP AN cAN CHON CAc DAP AN"
+  },
+  {
+    "id": 470,
+    "image": "0470_q470_Question_470.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI x + 1 Given f (z) Calculate dx COS TI 56 DAP AN cAN CHON CAC DAP AN A 1/2+1/1 B. -1/2 C. 1/2-1/t D: 1/2 1 < 0"
+  },
+  {
+    "id": 471,
+    "image": "0471_q471_Question_471.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI A table of values for continuous function f is shown above. If four equal subintervals of [0, 2] are used, which of the following is the trape"
+  },
+  {
+    "id": 472,
+    "image": "0472_q472_Question_472.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI A particle moves along line so that its velocity at time t is v(t) = t2 + 2t _ 5 (measured in meters per second) . Find the displacement of th"
+  },
+  {
+    "id": 473,
+    "image": "0473_q473_Question_473.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI Suppose that f(t) dt = 12 2x + 1. Find f(z) 80 DAP AN CAN CHON CAc DAP AN A f(z) = %23 22 + 2 +C B. f(z) = 22 2x + 1 C. f(z) = 2r - 2 None"
+  },
+  {
+    "id": 474,
+    "image": "0474_q474_Question_474.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI f(z dx 5 where c is constant; then J1-c f(w) dx 80 DAP AN CAN CHON CAc DAP AN A: 5 +c B: 5 C. 5 _ c _5"
+  },
+  {
+    "id": 475,
+    "image": "0475_q475_Question_475.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI Which of the following integrals is/are convergent? dx dx (ii) Jo dx 50 DAP AN CAN CAc DAP AN and (iii) only and only and (iii) and (iii) only"
+  },
+  {
+    "id": 476,
+    "image": "0476_q476_Question_476.png",
+    "bank_answer": "E",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Ifu = (-2,1,1) V = (1,0,1) , then Ilprojvull is: (iv) 3 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct and"
+  },
+  {
+    "id": 477,
+    "image": "0477_q477_Question_477.png",
+    "bank_answer": "E",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Find the dimension of the column space of the matrix ~2 ~5 10 ~1 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct B. 4 C. 1 "
+  },
+  {
+    "id": 478,
+    "image": "0478_q478_Question_478.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Let A be a 3 x matrix of rank 2. Which of the following statements are true? Ahas 2 independent rows A has 5 independent columns The null spac"
+  },
+  {
+    "id": 479,
+    "image": "0479_q479_Question_479.png",
+    "bank_answer": "E",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Which of the following is a basis for the row space of the matrix ~1 [13 _6 -2 50 DAP AN CAN CAc DAP AN A [1,2,-1,3], [0,1,0,1] B [1,2, -1,3],"
+  },
+  {
+    "id": 480,
+    "image": "0480_q480_Question_480.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Let T R3 R? be the linear transformation given by and let u = [1 2 _ 1JT ,w = [110jT,v = [-2 0 1/T . Find the volume of the parallelepiped det"
+  }
+]

@@ -1,0 +1,907 @@
+const fs = require('fs');
+const path = require('path');
+
+// Load test_20.json for questions already verified
+const test20 = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/v2/test_20.json'), 'utf8'));
+const test20Map = new Map();
+for (const q of test20) {
+  test20Map.set(q.id, q);
+}
+
+const batch01 = [];
+
+// Helper to add question
+function addQ(q) {
+  batch01.push(q);
+}
+
+// Q1 (from test_20)
+addQ(test20Map.get(1));
+
+// Q2
+addQ({
+  id: 2,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "MaTran",
+  type: "single_choice",
+  question: "Let \\(A, B\\) be square matrices of size \\(4 \\times 4\\). Choose the correct statement: \\[(i) \\text{ If } \\det(A) = 0 \\text{ then } A \\text{ has two equal rows.}\\] \\[(ii) \\det(-A) = -\\det(A)\\] \\[(iii) \\det(A + B) = \\det(A) + \\det(B)\\]",
+  options: [
+    "(i)",
+    "(ii)",
+    "(iii)",
+    "None of the other choices is correct"
+  ],
+  answer: "D",
+  answer_original: "D",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Xét khẳng định (i): Ma trận có định thức bằng 0 (ma trận suy biến) chỉ cần các hàng phụ thuộc tuyến tính, không nhất thiết phải có hai hàng bằng nhau. Ví dụ ma trận có một hàng toàn số 0 thì định thức bằng 0 nhưng không có 2 hàng bằng nhau. Do đó (i) sai.",
+    "**Bước 2:** Xét khẳng định (ii): Với ma trận \\(A\\) kích thước \\(n \\times n\\), ta có công thức \\(\\det(kA) = k^n \\det(A)\\). Ở đây \\(A\\) có cấp \\(4 \\times 4\\) (với \\(n = 4\\) chẵn), nên \\(\\det(-A) = (-1)^4 \\det(A) = \\det(A) \\neq -\\det(A)\\). Do đó (ii) sai.",
+    "**Bước 3:** Xét khẳng định (iii): Định thức không có tính chất cộng phân phối đối với phép cộng ma trận, tổng quát \\(\\det(A + B) \\neq \\det(A) + \\det(B)\\). Do đó (iii) sai.",
+    "**Kết luận:** Cả 3 khẳng định (i), (ii), (iii) đều sai. Đáp án đúng là D (None of the other choices is correct)."
+  ],
+  image: "0002_q002_Question_2.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q3
+addQ({
+  id: 3,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "MaTran",
+  type: "single_choice",
+  question: "Find values of \\(c\\) for which the matrix \\[A = \\begin{bmatrix} 1 & 2 & 1 \\\\ 2 & c & 1 \\\\ 0 & 0 & c \\end{bmatrix}\\] has an inverse.",
+  options: [
+    "All numbers different from 4",
+    "All nonzero numbers",
+    "All numbers different from 0 and 4",
+    "None of the other choices is correct",
+    "All real numbers"
+  ],
+  answer: "C",
+  answer_original: "C",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Ma trận \\(A\\) khả nghịch (có ma trận nghịch đảo) khi và chỉ khi \\(\\det(A) \\neq 0\\).",
+    "**Bước 2:** Khai triển định thức của \\(A\\) theo hàng 3 (hàng có hai số 0): \\[\\det(A) = c \\cdot \\begin{vmatrix} 1 & 2 \\\\ 2 & c \\end{vmatrix} = c(1 \\cdot c - 2 \\cdot 2) = c(c - 4).\\]",
+    "**Bước 3:** Để ma trận khả nghịch, ta cần \\(\\det(A) \\neq 0 \\iff c(c - 4) \\neq 0 \\iff c \\neq 0\\) và \\(c \\neq 4\\).",
+    "**Kết luận:** Giá trị của \\(c\\) là tất cả các số thực khác 0 và khác 4. Đáp án đúng là C."
+  ],
+  image: "0003_q003_Question_3.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q4 (from test_20)
+addQ(test20Map.get(4));
+
+// Q5
+addQ({
+  id: 5,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "AnhXaTuyenTinh",
+  type: "single_choice",
+  question: "Let \\(A = (a_{ij})\\) be the \\(2 \\times 2\\) matrix of reflection in the x-axis followed by reflection in the line \\(y = x\\). Find \\(a_{12}\\).",
+  options: [
+    "1",
+    "-2",
+    "-1",
+    "2",
+    "0"
+  ],
+  answer: "C",
+  answer_original: "C",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Phép đối xứng qua trục hoành (x-axis) biến vector \\(\\begin{bmatrix} x \\\\ y \\end{bmatrix}\\) thành \\(\\begin{bmatrix} x \\\\ -y \\end{bmatrix}\\). Ma trận biểu diễn là \\(R_x = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\).",
+    "**Bước 2:** Phép đối xứng qua đường thẳng \\(y = x\\) biến vector \\(\\begin{bmatrix} x \\\\ y \\end{bmatrix}\\) thành \\(\\begin{bmatrix} y \\\\ x \\end{bmatrix}\\). Ma trận biểu diễn là \\(R_{y=x} = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}\\).",
+    "**Bước 3:** Phép biến đổi kết hợp (phản xạ qua trục hoành trước, sau đó qua đường thẳng \\(y=x\\)) có ma trận là tích: \\[A = R_{y=x} R_x = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix} \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix} = \\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}.\\]",
+    "**Bước 4:** Phần tử ở hàng 1 cột 2 của \\(A\\) là \\(a_{12} = -1\\).",
+    "**Kết luận:** Đáp án đúng là C (-1)."
+  ],
+  image: "0005_q005_Question_5.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q6
+addQ({
+  id: 6,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "MaTran",
+  type: "single_choice",
+  question: "Let \\(A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}\\). Compute \\(A^{10}\\). \\[(i) \\begin{bmatrix} 1 & 10 \\\\ 0 & 1 \\end{bmatrix} \\quad (ii) \\begin{bmatrix} 10 & 10 \\\\ 0 & 10 \\end{bmatrix} \\quad (iii) \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}\\]",
+  options: [
+    "(iii)",
+    "(i)",
+    "All of the other choices are incorrect",
+    "(ii)"
+  ],
+  answer: "B",
+  answer_original: "B",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Tính các lũy thừa ban đầu của \\(A\\): \\[A^2 = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 2 \\\\ 0 & 1 \\end{bmatrix}\\] \\[A^3 = A^2 A = \\begin{bmatrix} 1 & 2 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 3 \\\\ 0 & 1 \\end{bmatrix}.\\]",
+    "**Bước 2:** Bằng quy nạp toán học, với mọi số nguyên dương \\(n\\), ta có: \\[A^n = \\begin{bmatrix} 1 & n \\\\ 0 & 1 \\end{bmatrix}.\\]",
+    "**Bước 3:** Với \\(n = 10\\), ta được \\[A^{10} = \\begin{bmatrix} 1 & 10 \\\\ 0 & 1 \\end{bmatrix}.\\] Đây chính là ma trận (i).",
+    "**Kết luận:** Đáp án đúng là B ((i))."
+  ],
+  image: "0006_q006_Question_6.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q7
+addQ({
+  id: 7,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "MaTran",
+  type: "single_choice",
+  question: "Let \\[A = \\begin{bmatrix} 1 & 2s - t & t^3 \\\\ s + t & 2 & 1 \\\\ st & 1 & 4 \\end{bmatrix}.\\] Find all pairs of real numbers \\((s, t)\\) such that the matrix \\(A\\) is symmetric.",
+  options: [
+    "\\(s = 0, t = 0\\)",
+    "\\(s = 0, t = 0\\) or \\(s = 4, t = 2\\)",
+    "\\(s = 2, t = 4\\)",
+    "\\(s = 0, t = 0\\) or \\(s = 2, t = 4\\)"
+  ],
+  answer: "B",
+  answer_original: "B",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Ma trận \\(A\\) đối xứng khi và chỉ khi \\(A = A^T\\), tức là các cặp phần tử đối xứng qua đường chéo chính phải bằng nhau: \\(a_{12} = a_{21}\\), \\(a_{13} = a_{31}\\), \\(a_{23} = a_{32}\\).",
+    "**Bước 2:** Ta thấy \\(a_{23} = a_{32} = 1\\) đã thỏa mãn. Cần thỏa mãn hai điều kiện còn lại: \\[\\begin{cases} 2s - t = s + t \\\\ t^3 = st \\end{cases} \\iff \\begin{cases} s = 2t \\\\ st = t^3 \\end{cases}\\]",
+    "**Bước 3:** Thay \\(s = 2t\\) vào phương trình thứ hai: \\[2t \\cdot t = t^3 \\iff 2t^2 = t^3 \\iff t^2(t - 2) = 0.\\]",
+    "**Bước 4:** Giải phương trình ta được hai trường hợp: \\(t = 0 \\implies s = 2(0) = 0\\), suy ra cặp \\((s, t) = (0, 0)\\); hoặc \\(t = 2 \\implies s = 2(2) = 4\\), suy ra cặp \\((s, t) = (4, 2)\\).",
+    "**Kết luận:** Có 2 cặp nghiệm là \\((s, t) = (0, 0)\\) hoặc \\((s, t) = (4, 2)\\). Đáp án đúng là B."
+  ],
+  image: "0007_q007_Question_7.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q8
+addQ({
+  id: 8,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "HePhuongTrinh",
+  type: "single_choice",
+  question: "Determine how many solutions and how many parameters are possible for a homogeneous system for 5 linear equation in 7 variables with augmented matrix \\(A\\) and \\(\\operatorname{rank} A = 1\\).",
+  options: [
+    "There are 5 parameters and infinitely many solutions",
+    "There are 5 parameters and a unique solution",
+    "There are 6 parameters and infinitely many solutions",
+    "There are 7 parameters and infinitely many solutions",
+    "None of the other choices is correct"
+  ],
+  answer: "C",
+  answer_original: "C",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Hệ phương trình tuyến tính thuần nhất gồm \\(n = 7\\) ẩn số và có hạng của ma trận hệ số là \\(r = \\operatorname{rank}(A) = 1\\).",
+    "**Bước 2:** Hệ thuần nhất luôn luôn tương thích (ít nhất có nghiệm tầm thường). Vì hạng \\(r = 1 < n = 7\\), hệ có vô số nghiệm phụ thuộc vào các tham số tự do.",
+    "**Bước 3:** Số tham số tự do trong nghiệm tổng quát bằng số ẩn trừ đi hạng: \\[k = n - r = 7 - 1 = 6 \\text{ tham số}.\\]",
+    "**Kết luận:** Hệ có vô số nghiệm và phụ thuộc 6 tham số (There are 6 parameters and infinitely many solutions). Đáp án đúng là C."
+  ],
+  image: "0008_q008_Question_8.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q9 (from test_20)
+addQ(test20Map.get(9));
+
+// Q10 (from test_20)
+addQ(test20Map.get(10));
+
+// Q11 (from test_20)
+addQ(test20Map.get(11));
+
+// Q12 (from test_20)
+addQ(test20Map.get(12));
+
+// Q13
+addQ({
+  id: 13,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "GioiHan",
+  type: "single_choice",
+  question: "Find the limit \\[\\lim_{x \\to \\infty} \\frac{3x\\sqrt{x+2} + 5}{(4x - 1)\\sqrt{x}}.\\]",
+  options: [
+    "None of the other choices is correct",
+    "5/4",
+    "3/4",
+    "infinity",
+    "4/3",
+    "0"
+  ],
+  answer: "C",
+  answer_original: "C",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Xét bậc cao nhất của tử số và mẫu số khi \\(x \\to \\infty\\). Bậc chủ đạo của tử số là \\(3x \\cdot \\sqrt{x} = 3x^{3/2}\\), bậc chủ đạo của mẫu số là \\(4x \\cdot \\sqrt{x} = 4x^{3/2}\\).",
+    "**Bước 2:** Chia cả tử số và mẫu số cho \\(x\\sqrt{x} = x^{3/2}\\): \\[\\frac{3x\\sqrt{x+2} + 5}{(4x - 1)\\sqrt{x}} = \\frac{3\\sqrt{\\frac{x+2}{x}} + \\frac{5}{x^{3/2}}}{\\left(4 - \\frac{1}{x}\\right)} = \\frac{3\\sqrt{1 + \\frac{2}{x}} + \\frac{5}{x^{3/2}}}{4 - \\frac{1}{x}}.\\]",
+    "**Bước 3:** Lấy giới hạn khi \\(x \\to \\infty\\): \\[\\lim_{x \\to \\infty} \\frac{3\\sqrt{1+0} + 0}{4 - 0} = \\frac{3}{4}.\\]",
+    "**Kết luận:** Giới hạn bằng \\(3/4\\). Đáp án đúng là C."
+  ],
+  image: "0013_q013_Question_13.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q14
+addQ({
+  id: 14,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "TichPhan",
+  type: "single_choice",
+  question: "Consider the convergence of the following integrals \\[(i) \\int_0^\\infty \\frac{dx}{\\sqrt{1+x^3}} \\quad (ii) \\int_0^\\infty \\frac{\\sqrt{x^3}}{1+x^2}\\,dx\\]",
+  options: [
+    "Both converge",
+    "Only (ii) converges",
+    "Only (i) converges",
+    "Both diverge"
+  ],
+  answer: "C",
+  answer_original: "C",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Xét tích phân (i): \\(\\int_0^\\infty \\frac{dx}{\\sqrt{1+x^3}}\\). Hàm dưới dấu tích phân liên tục trên \\([0, \\infty)\\). Khi \\(x \\to \\infty\\), \\(\\frac{1}{\\sqrt{1+x^3}} \\sim \\frac{1}{x^{3/2}}\\). Tích phân \\(\\int_1^\\infty \\frac{dx}{x^{3/2}}\\) hội tụ vì \\(p = 3/2 > 1\\). Theo tiêu chuẩn so sánh giới hạn, tích phân (i) hội tụ.",
+    "**Bước 2:** Xét tích phân (ii): \\(\\int_0^\\infty \\frac{x^{3/2}}{1+x^2}\\,dx\\). Khi \\(x \\to \\infty\\), \\(\\frac{x^{3/2}}{1+x^2} \\sim \\frac{x^{3/2}}{x^2} = \\frac{1}{x^{1/2}}\\). Tích phân \\(\\int_1^\\infty \\frac{dx}{x^{1/2}}\\) phân kỳ vì \\(p = 1/2 \\le 1\\). Theo tiêu chuẩn so sánh giới hạn, tích phân (ii) phân kỳ.",
+    "**Kết luận:** Chỉ có tích phân (i) hội tụ (Only (i) converges). Đáp án đúng là C."
+  ],
+  image: "0014_q014_Question_14.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q15
+addQ({
+  id: 15,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "DaoHam",
+  type: "single_choice",
+  question: "Given \\(y = \\tan\\sqrt{t}\\). Find \\(dy\\) if \\(t = \\pi^2\\) and \\(dt = 1\\). \\[(i) \\frac{1}{2\\pi} \\quad (ii) \\frac{-1}{\\pi} \\quad (iii) \\frac{-1}{2\\pi} \\quad (iv) \\frac{1}{4\\pi}\\]",
+  options: [
+    "(i)",
+    "(ii)",
+    "(iii)",
+    "(iv)",
+    "None of the other choices is correct"
+  ],
+  answer: "A",
+  answer_original: "A",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Vi phân của hàm số \\(y = f(t)\\) là \\(dy = f'(t) dt\\).",
+    "**Bước 2:** Đạo hàm của \\(y = \\tan\\sqrt{t}\\) theo biến \\(t\\) theo quy tắc hàm hợp: \\[y' = \\frac{d}{dt}(\\tan\\sqrt{t}) = \\sec^2(\\sqrt{t}) \\cdot \\frac{d}{dt}(\\sqrt{t}) = \\frac{\\sec^2(\\sqrt{t})}{2\\sqrt{t}} = \\frac{1}{2\\sqrt{t}\\cos^2(\\sqrt{t})}.\\]",
+    "**Bước 3:** Thay \\(t = \\pi^2\\) và \\(dt = 1\\): \\[dy = \\frac{1}{2\\sqrt{\\pi^2}\\cos^2(\\sqrt{\\pi^2})} \\cdot 1 = \\frac{1}{2\\pi \\cos^2(\\pi)} = \\frac{1}{2\\pi (-1)^2} = \\frac{1}{2\\pi}.\\]",
+    "**Kết luận:** Giá trị vi phân là \\(dy = \\frac{1}{2\\pi}\\), chính là khẳng định (i). Đáp án đúng là A."
+  ],
+  image: "0015_q015_Question_15.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q16
+addQ({
+  id: 16,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "HamSo",
+  type: "single_choice",
+  question: "Find the range of the function \\[f(x) = x^3 + 5\\] \\[(i) (-\\infty, 5) \\quad (ii) (-\\infty, \\infty) \\quad (iii) (5, \\infty)\\]",
+  options: [
+    "(iii)",
+    "(ii)",
+    "(i)",
+    "None of them"
+  ],
+  answer: "B",
+  answer_original: "B",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Hàm số \\(f(x) = x^3 + 5\\) là hàm đa thức bậc 3 xác định trên toàn bộ tập số thực \\(\\mathbb{R}\\).",
+    "**Bước 2:** Khi \\(x \\to -\\infty\\), \\(f(x) \\to -\\infty\\). Khi \\(x \\to +\\infty\\), \\(f(x) \\to +\\infty\\).",
+    "**Bước 3:** Vì \\(f(x)\\) liên tục trên \\(\\mathbb{R}\\), theo định lý giá trị trung gian, tập giá trị (range) của \\(f(x)\\) là \\((-\\infty, \\infty)\\).",
+    "**Kết luận:** Tập giá trị là \\((-\\infty, \\infty)\\), tương ứng với (ii). Đáp án đúng là B."
+  ],
+  image: "0016_q016_Question_16.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q17
+addQ({
+  id: 17,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "VectorHinhHoc",
+  type: "single_choice",
+  question: "Find all \\(a, b\\) and \\(c\\) such that the set \\[[1, 2, 1, 1], [2, 1, -1, -3], [a, b, c, 3]\\] is orthogonal.",
+  options: [
+    "\\(a = s - 6, b = 3s + 3, c = s\\)",
+    "None of the other choices is correct",
+    "\\(a = 4s, b = 4s - 3, c = s\\)",
+    "\\(a = s + 7, b = -s - 5, c = s\\)",
+    "\\(a = s + 5, b = s - 7, c = s\\)"
+  ],
+  answer: "D",
+  answer_original: "D",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Tập ba vector trực giao khi đôi một tích vô hướng bằng 0. Hai vector đầu: \\(1(2) + 2(1) + 1(-1) + 1(-3) = 2 + 2 - 1 - 3 = 0\\) (đã trực giao).",
+    "**Bước 2:** Lập điều kiện trực giao giữa vector thứ ba \\([a, b, c, 3]\\) với hai vector đầu: \\[\\begin{cases} 1\\cdot a + 2\\cdot b + 1\\cdot c + 1\\cdot 3 = 0 \\implies a + 2b + c = -3 \\\\ 2\\cdot a + 1\\cdot b - 1\\cdot c - 3\\cdot 3 = 0 \\implies 2a + b - c = 9 \\end{cases}\\]",
+    "**Bước 3:** Cộng hai phương trình: \\((a + 2b + c) + (2a + b - c) = -3 + 9 \\implies 3a + 3b = 6 \\implies a + b = 2 \\implies b = 2 - a\\).",
+    "**Bước 4:** Chọn tham số tự do \\(c = s\\). Thay vào phương trình đầu: \\(a + 2(2 - a) + s = -3 \\implies a + 4 - 2a + s = -3 \\implies -a + s = -7 \\implies a = s + 7\\).",
+    "**Bước 5:** Suy ra \\(b = 2 - a = 2 - (s + 7) = -s - 5\\).",
+    "**Kết luận:** Nghiệm là \\(a = s + 7, b = -s - 5, c = s\\). Đáp án đúng là D."
+  ],
+  image: "0017_q017_Question_17.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q18
+addQ({
+  id: 18,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "KhongGianVector",
+  type: "single_choice",
+  question: "Which sets are subspaces of \\(R^3\\)? \\[U = \\{(1, s, t) \\mid s \\text{ and } t \\text{ in } R\\}\\] \\[V = \\{(2r, -s^2, t) \\mid r, s \\text{ and } t \\text{ in } R\\}\\]",
+  options: [
+    "U only",
+    "V only",
+    "None of them",
+    "Both U and V"
+  ],
+  answer: "C",
+  answer_original: "C",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Một tập con là không gian vector con của \\(\\mathbb{R}^3\\) phải chứa vector không \\((0, 0, 0)\\) và đóng kín với phép cộng và phép nhân vô hướng.",
+    "**Bước 2:** Với tập \\(U\\): Mọi phần tử đều có thành phần đầu tiên bằng 1, do đó vector không \\((0, 0, 0) \\notin U\\). Vậy \\(U\\) không phải là không gian con.",
+    "**Bước 3:** Với tập \\(V\\): Thành phần thứ hai luôn có dạng \\(-s^2 \\le 0\\) với mọi \\(s \\in \\mathbb{R}\\). Lấy vector \\(v = (0, -1, 0) \\in V\\) (với \\(s=1\\)), nếu nhân với vô hướng \\(c = -1\\), ta được \\((-1)v = (0, 1, 0)\\). Thành phần thứ hai là \\(1 > 0\\), không thể biểu diễn dưới dạng \\(-s^2\\) với \\(s \\in \\mathbb{R}\\). Do đó \\(V\\) không đóng kín với phép nhân vô hướng, nên \\(V\\) không phải không gian con.",
+    "**Kết luận:** Cả hai tập \\(U\\) và \\(V\\) đều không phải là không gian con (None of them). Đáp án đúng là C."
+  ],
+  image: "0018_q018_Question_18.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q19 (from test_20)
+addQ(test20Map.get(19));
+
+// Q20
+addQ({
+  id: 20,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "DaoHam",
+  type: "single_choice",
+  question: "If \\(f(x) = \\frac{1}{x+2}\\), find \\(f^{(4)}(x)\\). \\[(i) \\frac{-4!}{(x+2)^4} \\quad (ii) \\frac{-4!}{(x+2)^5} \\quad (iii) \\frac{4!}{(x+2)^4} \\quad (iv) \\frac{4!}{(x+2)^5}\\]",
+  options: [
+    "(iii)",
+    "None of them",
+    "(i)",
+    "(iv)",
+    "(ii)"
+  ],
+  answer: "D",
+  answer_original: "D",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Viết lại hàm số dưới dạng lũy thừa: \\(f(x) = (x+2)^{-1}\\).",
+    "**Bước 2:** Tính liên tiếp các cấp đạo hàm: \\[f'(x) = -1(x+2)^{-2}\\] \\[f''(x) = (-1)(-2)(x+2)^{-3} = 2!(x+2)^{-3}\\] \\[f'''(x) = (-1)(-2)(-3)(x+2)^{-4} = -3!(x+2)^{-4}\\] \\[f^{(4)}(x) = (-1)(-2)(-3)(-4)(x+2)^{-5} = 4!(x+2)^{-5} = \\frac{4!}{(x+2)^5}.\\]",
+    "**Bước 3:** Biểu thức này tương ứng với khẳng định (iv).",
+    "**Kết luận:** Đáp án đúng là D ((iv))."
+  ],
+  image: "0020_q020_Question_20.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q21
+addQ({
+  id: 21,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "DaoHam",
+  type: "single_choice",
+  question: "Simplify the quotient \\(\\frac{f(x+h)-f(x)}{h}\\) for \\(f(x) = -x^3 + 2\\). \\[(i) 3xh - 3x^2 + h \\quad (ii) -3xh - 3x^2 - h^2 \\quad (iii) 3x + 3x^2 - h \\quad (iv) 3x - 3x^2 + h\\]",
+  options: [
+    "None of the other choices is correct",
+    "(iii)",
+    "(iv)",
+    "(i)",
+    "(ii)"
+  ],
+  answer: "E",
+  answer_original: "E",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Tính tử số: \\[f(x+h) - f(x) = [-(x+h)^3 + 2] - [-x^3 + 2] = -(x^3 + 3x^2h + 3xh^2 + h^3) + x^3 = -3x^2h - 3xh^2 - h^3.\\]",
+    "**Bước 2:** Chia cho \\(h\\) (với \\(h \\neq 0\\)): \\[\\frac{f(x+h) - f(x)}{h} = \\frac{-3x^2h - 3xh^2 - h^3}{h} = -3x^2 - 3xh - h^2 = -3xh - 3x^2 - h^2.\\]",
+    "**Bước 3:** Biểu thức rút gọn trùng khớp hoàn toàn với khẳng định (ii).",
+    "**Kết luận:** Đáp án đúng là E ((ii))."
+  ],
+  image: "0021_q021_Question_21.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q22 (from test_20)
+addQ(test20Map.get(22));
+
+// Q23
+addQ({
+  id: 23,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "DaoHam",
+  type: "single_choice",
+  question: "Let \\((L)\\) be the line passing through \\((1, -1)\\) with slope \\(-1/2\\). Which of the following point lies in \\((L)\\)?",
+  options: [
+    "\\((-2, 1/2)\\)",
+    "None of the other choices is correct",
+    "\\((-2, -3/2)\\)",
+    "\\((2, 1)\\)",
+    "\\((2, 0)\\)"
+  ],
+  answer: "A",
+  answer_original: "A",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Phương trình đường thẳng đi qua điểm \\((x_0, y_0) = (1, -1)\\) với hệ số góc \\(m = -1/2\\) là: \\[y - y_0 = m(x - x_0) \\implies y - (-1) = -\\frac{1}{2}(x - 1) \\implies y = -\\frac{1}{2}x - \\frac{1}{2}.\\]",
+    "**Bước 2:** Thử tọa độ các điểm đã cho: với điểm \\((-2, 1/2)\\), thay \\(x = -2\\) vào: \\[y = -\\frac{1}{2}(-2) - \\frac{1}{2} = 1 - \\frac{1}{2} = \\frac{1}{2}.\\]",
+    "**Bước 3:** Tọa độ thỏa mãn phương trình đường thẳng, do đó điểm \\((-2, 1/2)\\) thuộc \\((L)\\).",
+    "**Kết luận:** Đáp án đúng là A."
+  ],
+  image: "0023_q023_Question_23.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q24 (from test_20)
+addQ(test20Map.get(24));
+
+// Q25
+addQ({
+  id: 25,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "VectorHinhHoc",
+  type: "single_choice",
+  question: "Let \\(U = [1, 1, 1]\\), \\(V = [0, 1, 2]\\), \\(W = [2, 0, 3]\\) and \\(K = [0, 0, 1]\\). The vector \\(K\\) can be written uniquely as \\[K = aU + bV + cW\\] where \\(a, b, c\\) are numbers. Find \\(a\\).",
+  options: [
+    "-2/5",
+    "None of the other choices is correct",
+    "-1/5",
+    "1/5",
+    "2/5"
+  ],
+  answer: "A",
+  answer_original: "A",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Thiết lập phương trình vector: \\[a[1, 1, 1] + b[0, 1, 2] + c[2, 0, 3] = [0, 0, 1].\\]",
+    "**Bước 2:** Cân bằng từng tọa độ ta được hệ phương trình tuyến tính: \\[\\begin{cases} a + 2c = 0 \\quad (1) \\\\ a + b = 0 \\quad (2) \\\\ a + 2b + 3c = 1 \\quad (3) \\end{cases}\\]",
+    "**Bước 3:** Từ (1) suy ra \\(a = -2c\\). Từ (2) suy ra \\(b = -a = 2c\\).",
+    "**Bước 4:** Thay vào (3): \\(-2c + 2(2c) + 3c = 1 \\implies 5c = 1 \\implies c = 1/5\\). Suy ra \\(a = -2c = -2/5\\).",
+    "**Kết luận:** Giá trị cần tìm là \\(a = -2/5\\). Đáp án đúng là A."
+  ],
+  image: "0025_q025_Question_25.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q26
+addQ({
+  id: 26,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "DaoHam",
+  type: "single_choice",
+  question: "If \\(4y^2 + 9z^2 = 36\\), and \\(dz/dt = 4\\), find \\(dy/dt\\) when \\(z = \\sqrt{2}\\). \\[(i) \\pm 3/\\sqrt{2} \\quad (ii) \\pm 2/\\sqrt{3} \\quad (iii) \\pm 2 \\quad (iv) \\pm 6\\]",
+  options: [
+    "(i)",
+    "(iii)",
+    "(ii)",
+    "(iv)",
+    "None of the other choices is correct"
+  ],
+  answer: "D",
+  answer_original: "D",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Khi \\(z = \\sqrt{2}\\), tìm \\(y\\) từ phương trình: \\[4y^2 + 9(\\sqrt{2})^2 = 36 \\implies 4y^2 + 18 = 36 \\implies 4y^2 = 18 \\implies y = \\pm \\sqrt{\\frac{9}{2}} = \\pm \\frac{3}{\\sqrt{2}}.\\]",
+    "**Bước 2:** Lấy đạo hàm hai vế theo thời gian \\(t\\): \\[8y \\frac{dy}{dt} + 18z \\frac{dz}{dt} = 0 \\implies \\frac{dy}{dt} = -\\frac{18z \\frac{dz}{dt}}{8y} = -\\frac{9z \\frac{dz}{dt}}{4y}.\\]",
+    "**Bước 3:** Thay \\(z = \\sqrt{2}\\), \\(\\frac{dz}{dt} = 4\\), và \\(y = \\pm \\frac{3}{\\sqrt{2}}\\): \\[\\frac{dy}{dt} = -\\frac{9(\\sqrt{2})(4)}{4\\left(\\pm \\frac{3}{\\sqrt{2}}\\right)} = \\mp \\frac{9\\sqrt{2}}{\\frac{3}{\\sqrt{2}}} = \\mp 6 = \\pm 6.\\]",
+    "**Kết luận:** Giá trị \\(\\frac{dy}{dt} = \\pm 6\\), tương ứng với khẳng định (iv). Đáp án đúng là D."
+  ],
+  image: "0026_q026_Question_26.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q27 (from test_20)
+addQ(test20Map.get(27));
+
+// Q28
+addQ({
+  id: 28,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "DinhThuc",
+  type: "single_choice",
+  question: "Let \\(A, B\\) be \\(4 \\times 4\\) matrices with \\(\\det A = 3\\) and \\(\\det B = -1\\). Find \\(\\det (A^{-1}(3B)^T)\\).",
+  options: [
+    "27",
+    "-3",
+    "All of the other choices are incorrect",
+    "3",
+    "-27"
+  ],
+  answer: "E",
+  answer_original: "E",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Áp dụng tính chất định thức của tích hai ma trận: \\[\\det(A^{-1}(3B)^T) = \\det(A^{-1}) \\cdot \\det((3B)^T).\\]",
+    "**Bước 2:** Ta có \\(\\det(A^{-1}) = \\frac{1}{\\det A} = \\frac{1}{3}\\) và định thức của ma trận chuyển vị bằng định thức ban đầu: \\(\\det((3B)^T) = \\det(3B)\\).",
+    "**Bước 3:** Vì \\(B\\) là ma trận vuông cấp \\(n = 4\\), khi nhân ma trận với số thực \\(k = 3\\), ta có: \\[\\det(3B) = 3^4 \\det(B) = 81 \\cdot (-1) = -81.\\]",
+    "**Bước 4:** Tính kết quả: \\[\\det(A^{-1}(3B)^T) = \\frac{1}{3} \\cdot (-81) = -27.\\]",
+    "**Kết luận:** Đáp án đúng là E (-27)."
+  ],
+  image: "0028_q028_Question_28.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q29
+addQ({
+  id: 29,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "KhongGianVector",
+  type: "single_choice",
+  question: "Which of the following subsets are independent in \\(\\mathbb{R}^4\\)? \\[(i) \\; \\{[1, 2, 3, 4]^T, [2, 0, 1, -1]^T, [1, -1, 0, 3]^T\\}\\] \\[(ii) \\; \\{[2, 0, 1, -1]^T, [1, 2, -1, 1]^T, [3, 2, 0, 0]^T\\}\\]",
+  options: [
+    "(i)",
+    "(i) and (ii)",
+    "(ii)",
+    "None of the other choices is correct"
+  ],
+  answer: "A",
+  answer_original: "A",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Xét tập (ii): Đặt \\(v_1 = [2, 0, 1, -1]^T\\), \\(v_2 = [1, 2, -1, 1]^T\\), \\(v_3 = [3, 2, 0, 0]^T\\). Ta nhận thấy ngay: \\[v_1 + v_2 = [2+1, 0+2, 1-1, -1+1]^T = [3, 2, 0, 0]^T = v_3.\\] Vì một vector là tổ hợp tuyến tính của các vector còn lại, tập (ii) phụ thuộc tuyến tính (không độc lập tuyến tính).",
+    "**Bước 2:** Xét tập (i): Lập ma trận gồm 3 cột là 3 vector và biến đổi hàng: \\[\\begin{bmatrix} 1 & 2 & 1 \\\\ 2 & 0 & -1 \\\\ 3 & 1 & 0 \\\\ 4 & -1 & 3 \\end{bmatrix} \\xrightarrow{R_2 - 2R_1, R_3 - 3R_1, R_4 - 4R_1} \\begin{bmatrix} 1 & 2 & 1 \\\\ 0 & -4 & -3 \\\\ 0 & -5 & -3 \\\\ 0 & -9 & -1 \\end{bmatrix}.\\]",
+    "**Bước 3:** Hai hàng \\([-4, -3]\\) và \\([-5, -3]\\) rõ ràng độc lập tuyến tính, do đó hạng ma trận bằng 3 (bằng số cột). Vậy 3 vector trong tập (i) độc lập tuyến tính.",
+    "**Kết luận:** Chỉ có tập (i) độc lập tuyến tính. Đáp án đúng là A ((i))."
+  ],
+  image: "0029_q029_Question_29.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q30
+addQ({
+  id: 30,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "VectorHinhHoc",
+  type: "single_choice",
+  question: "Find the reflection of \\(v = [0; -1; 3]\\) in the plane with equation \\(2x + y - 3z = 0\\).",
+  options: [
+    "[20/7; -3/7; -9/7]",
+    "None of other choices is correct",
+    "[-20/7; 3/7; 9/7]",
+    "[-20/7; 3/7; -9/7]",
+    "[20/7; 3/7; -9/7]"
+  ],
+  answer: "E",
+  answer_original: "E",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Mặt phẳng đi qua gốc tọa độ có vector pháp tuyến \\(n = [2, 1, -3]^T\\). Độ dài bình phương: \\(\\|n\\|^2 = 2^2 + 1^2 + (-3)^2 = 14\\).",
+    "**Bước 2:** Công thức hình chiếu và phản xạ của vector \\(v\\) qua mặt phẳng pháp tuyến \\(n\\): \\[\\operatorname{ref}(v) = v - 2\\operatorname{proj}_n(v) = v - 2 \\frac{v \\cdot n}{\\|n\\|^2} n.\\]",
+    "**Bước 3:** Tính tích vô hướng: \\(v \\cdot n = 0(2) + (-1)(1) + 3(-3) = -10\\).",
+    "**Bước 4:** Thay vào công thức: \\[\\operatorname{ref}(v) = [0, -1, 3]^T - 2 \\frac{-10}{14} [2, 1, -3]^T = [0, -1, 3]^T + \\frac{10}{7} [2, 1, -3]^T = \\left[ \\frac{20}{7}, -1 + \\frac{10}{7}, 3 - \\frac{30}{7} \\right]^T = \\left[ \\frac{20}{7}, \\frac{3}{7}, -\\frac{9}{7} \\right]^T.\\]",
+    "**Kết luận:** Vector đối xứng là \\([20/7; 3/7; -9/7]\\). Đáp án đúng là E."
+  ],
+  image: "0030_q030_Question_30.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q31 (conflict: original A, actual math E)
+addQ({
+  id: 31,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "CucTri",
+  type: "single_choice",
+  question: "Find the absolute maximum and absolute minimum values of \\[f(x) = \\sqrt[4]{x}\\] on \\([0, 8]\\).",
+  options: [
+    "Absolute maximum: 2, absolute minimum: 0",
+    "Absolute maximum: 8, absolute minimum: 0",
+    "No absolute extrema",
+    "Absolute minimum: 0, no absolute maximum",
+    "None of the other choices is correct"
+  ],
+  answer: "E",
+  answer_original: "A",
+  answer_status: "conflict",
+  explanation: [
+    "**Bước 1:** Hàm số \\(f(x) = \\sqrt[4]{x} = x^{1/4}\\) đồng biến nghiêm ngặt trên đoạn \\([0, 8]\\).",
+    "**Bước 2:** Giá trị nhỏ nhất tuyệt đối đạt tại \\(x = 0\\): \\(f(0) = \\sqrt[4]{0} = 0\\).",
+    "**Bước 3:** Giá trị lớn nhất tuyệt đối đạt tại \\(x = 8\\): \\(f(8) = \\sqrt[4]{8} = 2^{3/4} \\approx 1.6818 \\neq 2\\).",
+    "**Bước 4:** Vì giá trị lớn nhất là \\(\\sqrt[4]{8}\\) chứ không phải 2, nên không có lựa chọn A, B, C, D nào đúng về mặt toán học. Do đó đáp án chính xác theo đề bài là E (None of the other choices is correct).",
+    "**Lưu ý đối chiếu ngân hàng:** Đáp án gốc của ngân hàng chọn A do người ra đề có thể đã nhầm căn bậc 4 của 8 thành căn bậc 3 (vì \\(\\sqrt[3]{8} = 2\\)), hoặc nhầm đoạn thành \\([0, 16]\\) (vì \\(\\sqrt[4]{16} = 2\\))."
+  ],
+  image: "0031_q031_Question_31.png",
+  needs_image: false,
+  review_flags: ["answer_conflict"],
+  confidence: "high"
+});
+
+// Q32
+addQ({
+  id: 32,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "GioiHan",
+  type: "single_choice",
+  question: "Find the number \\(a\\) such that the function \\[f(x) = \\begin{cases} \\frac{\\sqrt{x+7} - 3}{x - 2}, & x \\neq 2 \\\\ a, & x = 2 \\end{cases}\\] is continuous at 2.",
+  options: [
+    "2",
+    "Does not exist",
+    "-2",
+    "1",
+    "0",
+    "1/6"
+  ],
+  answer: "F",
+  answer_original: "F",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Hàm số \\(f(x)\\) liên tục tại \\(x = 2\\) khi và chỉ khi \\[\\lim_{x \\to 2} f(x) = f(2) = a.\\]",
+    "**Bước 2:** Tính giới hạn bằng cách nhân liên hợp: \\[\\lim_{x \\to 2} \\frac{\\sqrt{x+7} - 3}{x - 2} = \\lim_{x \\to 2} \\frac{(\\sqrt{x+7} - 3)(\\sqrt{x+7} + 3)}{(x - 2)(\\sqrt{x+7} + 3)} = \\lim_{x \\to 2} \\frac{x + 7 - 9}{(x - 2)(\\sqrt{x+7} + 3)}.\\]",
+    "**Bước 3:** Rút gọn thừa số \\(x - 2\\): \\[\\lim_{x \\to 2} \\frac{x - 2}{(x - 2)(\\sqrt{x+7} + 3)} = \\lim_{x \\to 2} \\frac{1}{\\sqrt{x+7} + 3} = \\frac{1}{\\sqrt{9} + 3} = \\frac{1}{6}.\\]",
+    "**Kết luận:** Để hàm số liên tục tại \\(x = 2\\) thì \\(a = 1/6\\). Đáp án đúng là F."
+  ],
+  image: "0032_q032_Question_32.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q33 (from test_20)
+addQ(test20Map.get(33));
+
+// Q34
+addQ({
+  id: 34,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "VectorHinhHoc",
+  type: "single_choice",
+  question: "Let M be the line through \\(A = (1, 2, 3)\\) and parallel to the line joining \\(B = (-2, 2, 0)\\) and \\(C = (4, 2, 6)\\). Let N be the line joining \\(E = (1, -1, 8)\\) and \\(F = (10, -1, 11)\\). Then the lines M and N ___________",
+  options: [
+    "intersect;",
+    "are orthogonal;",
+    "are parallel.",
+    "do not intersect;"
+  ],
+  answer: "D",
+  answer_original: "D",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Vector chỉ phương của đường thẳng BC là \\(\\vec{u}_{BC} = C - B = (6, 0, 6) \\parallel (1, 0, 1)\\). Vì M song song với BC nên vector chỉ phương của M là \\(\\vec{u}_M = (1, 0, 1)\\).",
+    "**Bước 2:** Vector chỉ phương của đường thẳng N (qua EF) là \\(\\vec{u}_N = F - E = (9, 0, 3) \\parallel (3, 0, 1)\\).",
+    "**Bước 3:** Hai vector chỉ phương \\((1, 0, 1)\\) và \\((3, 0, 1)\\) không cùng phương (không song song) và tích vô hướng \\(1(3) + 0(0) + 1(1) = 4 \\neq 0\\) (không vuông góc).",
+    "**Bước 4:** Phương trình tham số: M có \\(y = 2\\) với mọi điểm, còn N có \\(y = -1\\) với mọi điểm. Vì tung độ \\(y\\) luôn khác nhau (\\(2 \\neq -1\\)), hai đường thẳng không thể có điểm chung.",
+    "**Kết luận:** Hai đường thẳng chéo nhau và không cắt nhau (do not intersect;). Đáp án đúng là D."
+  ],
+  image: "0034_q034_Question_34.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q35
+addQ({
+  id: 35,
+  chapter: "GT1 - Giải tích 1",
+  folder: "GT1",
+  topic: "HamSo",
+  type: "single_choice",
+  question: "A rocket is fired vertically upward from the ground. The distance \\(s\\) in feet that the rocket travels from the ground after \\(t\\) seconds is given by \\[s(t) = -16t^2 + 560t\\] Find the acceleration (ft/\\(\\text{s}^2\\)) of the rocket 2 seconds after being fired.",
+  options: [
+    "-32",
+    "1077",
+    "None of the other choices is correct",
+    "-496",
+    "496"
+  ],
+  answer: "A",
+  answer_original: "A",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Vận tốc của tên lửa là đạo hàm cấp 1 của hàm quãng đường: \\[v(t) = s'(t) = \\frac{d}{dt}(-16t^2 + 560t) = -32t + 560.\\]",
+    "**Bước 2:** Gia tốc của tên lửa là đạo hàm cấp 2 của hàm quãng đường (hoặc đạo hàm cấp 1 của hàm vận tốc): \\[a(t) = v'(t) = s''(t) = \\frac{d}{dt}(-32t + 560) = -32.\\]",
+    "**Bước 3:** Gia tốc là hằng số \\(-32\\) ft/\\(\\text{s}^2\\) tại mọi thời điểm, do đó sau 2 giây gia tốc vẫn là \\(-32\\) ft/\\(\\text{s}^2\\).",
+    "**Kết luận:** Gia tốc bằng \\(-32\\). Đáp án đúng là A."
+  ],
+  image: "0035_q035_Question_35.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q36
+addQ({
+  id: 36,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "MaTran",
+  type: "single_choice",
+  question: "Let \\(A\\) be the matrix that satisfies \\[\\left(3A - \\begin{bmatrix} 1 & -1 \\\\ 2 & 0 \\end{bmatrix}\\right)^{-1} = \\begin{bmatrix} -1 & -3 \\\\ 4 & 5 \\end{bmatrix}\\] Find the \\((1, 1)\\)-entry of \\(A\\).",
+  options: [
+    "-4/7",
+    "4/7",
+    "None of the other choices is correct",
+    "-8/3",
+    "8/3"
+  ],
+  answer: "B",
+  answer_original: "B",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Đặt \\(M = 3A - \\begin{bmatrix} 1 & -1 \\\\ 2 & 0 \\end{bmatrix}\\). Ta có \\(M^{-1} = \\begin{bmatrix} -1 & -3 \\\\ 4 & 5 \\end{bmatrix}\\).",
+    "**Bước 2:** Tìm \\(M\\) bằng cách nghịch đảo ma trận \\(M^{-1}\\): \\[\\det(M^{-1}) = (-1)(5) - (-3)(4) = -5 + 12 = 7\\] \\[M = (M^{-1})^{-1} = \\frac{1}{7} \\begin{bmatrix} 5 & 3 \\\\ -4 & -1 \\end{bmatrix}.\\]",
+    "**Bước 3:** Tính \\(3A\\): \\[3A = M + \\begin{bmatrix} 1 & -1 \\\\ 2 & 0 \\end{bmatrix} = \\begin{bmatrix} \\frac{5}{7} + 1 & \\frac{3}{7} - 1 \\\\ -\\frac{4}{7} + 2 & -\\frac{1}{7} + 0 \\end{bmatrix} = \\begin{bmatrix} \\frac{12}{7} & -\\frac{4}{7} \\\\ \\frac{10}{7} & -\\frac{1}{7} \\end{bmatrix}.\\]",
+    "**Bước 4:** Chia cả hai vế cho 3: \\[A = \\begin{bmatrix} \\frac{4}{7} & -\\frac{4}{21} \\\\ \\frac{10}{21} & -\\frac{1}{21} \\end{bmatrix}.\\]",
+    "**Kết luận:** Phần tử \\((1, 1)\\) của \\(A\\) là \\(4/7\\). Đáp án đúng là B."
+  ],
+  image: "0036_q036_Question_36.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q37 (from test_20)
+addQ(test20Map.get(37));
+
+// Q38
+addQ({
+  id: 38,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "VectorHinhHoc",
+  type: "single_choice",
+  question: "The triangle with vertices \\((-3, 0, 2)\\), \\((6, 1, 4)\\), \\((-5, 1, 0)\\) has area \\[(i) \\frac{1}{2}\\sqrt{333} \\quad (ii) \\frac{1}{2}\\sqrt{33} \\quad (iii) \\frac{1}{2}\\sqrt{331} \\quad (iv) \\frac{1}{2}\\sqrt{3}\\]",
+  options: [
+    "(iv)",
+    "(i)",
+    "(ii)",
+    "(iii)",
+    "None of the other choices is correct"
+  ],
+  answer: "B",
+  answer_original: "B",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Đặt các đỉnh tam giác là \\(A(-3, 0, 2)\\), \\(B(6, 1, 4)\\), \\(C(-5, 1, 0)\\).",
+    "**Bước 2:** Tính hai vector cạnh: \\[\\vec{AB} = B - A = (6 - (-3), 1 - 0, 4 - 2) = (9, 1, 2)\\] \\[\\vec{AC} = C - A = (-5 - (-3), 1 - 0, 0 - 2) = (-2, 1, -2).\\]",
+    "**Bước 3:** Tính tích có hướng: \\[\\vec{AB} \\times \\vec{AC} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 9 & 1 & 2 \\\\ -2 & 1 & -2 \\end{vmatrix} = \\mathbf{i}(-2 - 2) - \\mathbf{j}(-18 + 4) + \\mathbf{k}(9 + 2) = (-4, 14, 11).\\]",
+    "**Bước 4:** Độ dài vector tích có hướng: \\(\\|\\vec{AB} \\times \\vec{AC}\\| = \\sqrt{(-4)^2 + 14^2 + 11^2} = \\sqrt{16 + 196 + 121} = \\sqrt{333}\\).",
+    "**Bước 5:** Diện tích tam giác bằng \\(S = \\frac{1}{2} \\|\\vec{AB} \\times \\vec{AC}\\| = \\frac{1}{2}\\sqrt{333}\\).",
+    "**Kết luận:** Diện tích là \\(\\frac{1}{2}\\sqrt{333}\\), tương ứng với khẳng định (i). Đáp án đúng là B."
+  ],
+  image: "0038_q038_Question_38.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q39
+addQ({
+  id: 39,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "MaTran",
+  type: "single_choice",
+  question: "Determine whether the matrix is in row-echelon form. If it is, determine if it is also in reduced row-echelon form. \\[\\begin{bmatrix} 1 & -8 & 4 & -8 \\\\ 0 & 1 & 0 & -3 \\\\ 0 & 0 & 1 & 1 \\end{bmatrix}\\]",
+  options: [
+    "neither",
+    "row-echelon form but not reduced-row echelon form",
+    "row-echelon form and reduced-row echelon form"
+  ],
+  answer: "B",
+  answer_original: "B",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Kiểm tra dạng bậc thang (row-echelon form - REF): Các phần tử dẫn đầu (leading entry) của hàng 1, 2, 3 lần lượt nằm ở cột 1, 2, 3 và đều bằng 1. Hàng sau có phần tử dẫn đầu nằm bên phải phần tử dẫn đầu của hàng trước, các phần tử phía dưới đều bằng 0. Do đó ma trận ở dạng bậc thang (REF).",
+    "**Bước 2:** Kiểm tra dạng bậc thang rút gọn (reduced row-echelon form - RREF): Ở cột 2, phần tử dẫn đầu là 1 (tại hàng 2), nhưng ở hàng 1 cùng cột lại là \\(-8 \\neq 0\\). Tương tự ở cột 3, hàng 1 có \\(4 \\neq 0\\). Vì trên các cột chứa phần tử dẫn đầu vẫn còn các phần tử khác 0, ma trận KHÔNG ở dạng rút gọn.",
+    "**Kết luận:** Ma trận ở dạng bậc thang nhưng không phải dạng bậc thang rút gọn (row-echelon form but not reduced-row echelon form). Đáp án đúng là B."
+  ],
+  image: "0039_q039_Question_39.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Q40
+addQ({
+  id: 40,
+  chapter: "DSTT1 - Đại số tuyến tính 1",
+  folder: "DSTT1",
+  topic: "VectorHinhHoc",
+  type: "single_choice",
+  question: "Let \\(\\vec{u} = [2, 1, 3]^T\\), \\(\\vec{v} = [-4, 0, 3]^T\\). Let \\(\\vec{x} = [a, b, c]^T\\) be such that \\[4\\vec{u} - \\|\\vec{v}\\| \\vec{v} = 2\\vec{x} + \\vec{v}.\\] Find \\(b\\).",
+  options: [
+    "-3",
+    "2",
+    "None of the other choices is correct",
+    "16",
+    "0"
+  ],
+  answer: "B",
+  answer_original: "B",
+  answer_status: "verified",
+  explanation: [
+    "**Bước 1:** Tính độ dài vector \\(\\vec{v}\\): \\[\\|\\vec{v}\\| = \\sqrt{(-4)^2 + 0^2 + 3^2} = \\sqrt{16 + 9} = 5.\\]",
+    "**Bước 2:** Xét thành phần thứ hai (thành phần tương ứng với \\(b\\)) của phương trình vector: \\[4 u_2 - \\|\\vec{v}\\| v_2 = 2 x_2 + v_2.\\]",
+    "**Bước 3:** Thay các giá trị \\(u_2 = 1\\), \\(v_2 = 0\\), \\(x_2 = b\\): \\[4(1) - 5(0) = 2b + 0 \\implies 4 = 2b \\implies b = 2.\\]",
+    "**Kết luận:** Giá trị của \\(b\\) là 2. Đáp án đúng là B."
+  ],
+  image: "0040_q040_Question_40.png",
+  needs_image: false,
+  review_flags: [],
+  confidence: "high"
+});
+
+// Sort by ID
+batch01.sort((a, b) => a.id - b.id);
+
+// Ensure output directory exists
+const outDir = path.join(__dirname, '../data/v2/batches');
+if (!fs.existsSync(outDir)) {
+  fs.mkdirSync(outDir, { recursive: true });
+}
+
+// Write batch_01.json
+fs.writeFileSync(path.join(outDir, 'batch_01.json'), JSON.stringify(batch01, null, 2), 'utf8');
+console.log(`Successfully generated batch_01.json with ${batch01.length} questions.`);

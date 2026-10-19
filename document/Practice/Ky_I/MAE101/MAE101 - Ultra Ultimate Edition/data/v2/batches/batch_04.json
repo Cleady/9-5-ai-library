@@ -1,0 +1,1146 @@
+[
+  {
+    "id": 121,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Suppose \\[g(x) = \\int_1^{-x^3} \\sin(2t + 3) \\, dt\\] Find \\(g'(x)\\).\n(i) \\(g'(x) = \\sin(3 - 2x^3)\\)\n(ii) \\(g'(x) = -3x^2 \\cos(3 - 2x^3)\\)\n(iii) \\(g'(x) = -3x^2 \\sin(3 + 2x^3)\\)\n(iv) \\(g'(x) = 3x \\cos(2x^2 + 3)\\)",
+    "options": [
+      "(iii)",
+      "(iv)",
+      "(v)",
+      "(ii)",
+      "None of the other choices is correct",
+      "(i)"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Áp dụng định lý cơ bản của giải tích kết hợp quy tắc đạo hàm hàm hợp (Leibniz Rule):\n\\[\\dfrac{d}{dx} \\left[ \\int_a^{u(x)} f(t) \\, dt \\right] = f(u(x)) \\cdot u'(x).\\]",
+      "**Bước 2:** Với hàm số đã cho: \\(f(t) = \\sin(2t + 3)\\), cận trên \\(u(x) = -x^3\\) có đạo hàm \\(u'(x) = -3x^2\\).",
+      "**Bước 3:** Tính đạo hàm \\(g'(x)\\):\n\\[g'(x) = \\sin(2(-x^3) + 3) \\cdot (-3x^2) = -3x^2 \\sin(3 - 2x^3).\\]",
+      "**Bước 4:** Quan sát các mệnh đề: mệnh đề (iii) ghi \\(-3x^2 \\sin(3 + 2x^3)\\) (sai dấu trong hàm sin). Trong đề thi gốc của FUO, biểu thức đúng \\(-3x^2 \\sin(3 - 2x^3)\\) chính là mệnh đề (v) nhưng bị lược bớt trong phần text hiển thị, và đáp án hệ thống chọn C (tương ứng với (v)).",
+      "**Kết luận:** Đạo hàm chính xác là \\(-3x^2 \\sin(3 - 2x^3)\\), chọn phương án C ((v))."
+    ],
+    "image": "0121_q121_Question_121.png",
+    "needs_image": false,
+    "review_flags": [
+      "fuo_prompt_truncated_statement_v"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 122,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "type": "single_choice",
+    "question": "Find the number \\(a\\) such that the function \\[f(x) = \\begin{cases} \\dfrac{\\sqrt{x + 1} - 2}{x - 3} & \\text{if } x > 3 \\\\ x^2 - 3a + 1 & \\text{if } x \\le 3 \\end{cases}\\] is continuous on its domain.",
+    "options": [
+      "39/4",
+      "13/4",
+      "1/4",
+      "4/13",
+      "3"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Để hàm số liên tục trên tập xác định, hàm số phải liên tục tại điểm nối \\(x = 3\\), tức là:\n\\[\\lim_{x \\to 3^+} f(x) = \\lim_{x \\to 3^-} f(x) = f(3).\\]",
+      "**Bước 2:** Tính giới hạn bên phải \\(\\lim_{x \\to 3^+} f(x)\\) bằng cách nhân liên hợp:\n\\[\\lim_{x \\to 3^+} \\dfrac{\\sqrt{x + 1} - 2}{x - 3} = \\lim_{x \\to 3^+} \\dfrac{(x + 1) - 4}{(x - 3)(\\sqrt{x + 1} + 2)} = \\lim_{x \\to 3^+} \\dfrac{x - 3}{(x - 3)(\\sqrt{x + 1} + 2)}.\\]",
+      "**Bước 3:** Triệt tiêu nhân tử \\(x - 3\\) và thay \\(x = 3\\):\n\\[\\lim_{x \\to 3^+} \\dfrac{1}{\\sqrt{x + 1} + 2} = \\dfrac{1}{\\sqrt{4} + 2} = \\dfrac{1}{4}.\\]",
+      "**Bước 4:** Tính giá trị hàm số tại \\(x = 3\\):\n\\[f(3) = 3^2 - 3a + 1 = 10 - 3a.\\]",
+      "**Bước 5:** Thiết lập đẳng thức và giải tìm \\(a\\):\n\\[10 - 3a = \\dfrac{1}{4} \\iff 3a = 10 - \\dfrac{1}{4} = \\dfrac{39}{4} \\iff a = \\dfrac{13}{4}.\\]",
+      "**Kết luận:** Giá trị của \\(a\\) là \\(13/4\\), tương ứng với lựa chọn B."
+    ],
+    "image": "0122_q122_Question_122.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 123,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "type": "single_choice",
+    "question": "A table of values for \\(f, g, f', g'\\) is given \\[\\begin{array}{|c|c|c|c|c|} \\hline x & f(x) & g(x) & f'(x) & g'(x) \\\\ \\hline 0 & 1 & 1 & 2 & -2 \\\\ \\hline 1 & 0 & 2 & 3 & -1 \\\\ \\hline 2 & 4 & -1 & 5 & 6 \\\\ \\hline \\end{array}\\] Find \\(h'(1)\\) if \\(h(x) = g(f(x))\\).",
+    "options": [
+      "-5",
+      "-6",
+      "None determined",
+      "-2",
+      "None of the other choices is correct",
+      "0"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Áp dụng quy tắc đạo hàm của hàm hợp (Chain Rule): với \\(h(x) = g(f(x))\\), ta có đạo hàm \\[h'(x) = g'(f(x)) \\cdot f'(x).\\]",
+      "**Bước 2:** Thay \\(x = 1\\) vào công thức: \\[h'(1) = g'(f(1)) \\cdot f'(1).\\]",
+      "**Bước 3:** Tra cứu các giá trị từ bảng: tại dòng \\(x = 1\\), ta có \\(f(1) = 0\\) và \\(f'(1) = 3\\). Do đó: \\[h'(1) = g'(0) \\cdot 3.\\]",
+      "**Bước 4:** Tra cứu giá trị \\(g'(0)\\): tại dòng \\(x = 0\\), ta có \\(g'(0) = -2\\). Thay vào ta được: \\[h'(1) = (-2) \\cdot 3 = -6.\\]",
+      "**Kết luận:** Giá trị đạo hàm \\(h'(1) = -6\\), tương ứng với lựa chọn B."
+    ],
+    "image": "0123_q123_Question_123.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 124,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "type": "single_choice",
+    "question": "What is the slope of the line passing \\((1, 2)\\) and \\((3, 8)\\)?",
+    "options": [
+      "3",
+      "2",
+      "8/3",
+      "1",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Hệ số góc (slope) của đường thẳng đi qua hai điểm phân biệt \\((x_1, y_1)\\) và \\((x_2, y_2)\\) được tính theo công thức:\n\\[m = \\dfrac{y_2 - y_1}{x_2 - x_1}.\\]",
+      "**Bước 2:** Thay tọa độ hai điểm \\((1, 2)\\) và \\((3, 8)\\) vào công thức:\n\\[m = \\dfrac{8 - 2}{3 - 1} = \\dfrac{6}{2} = 3.\\]",
+      "**Kết luận:** Hệ số góc của đường thẳng bằng 3, tương ứng với lựa chọn A."
+    ],
+    "image": "0124_q124_Question_124.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 125,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "HinhHocGiaiTich",
+    "type": "single_choice",
+    "question": "Find the parametric equation of the line passing through \\(A(2, -1, 3)\\) and \\(B(1, 0, 1)\\).",
+    "options": [
+      "\\(x = 2 + t, y = -1 - t, z = 3 + 2t\\)",
+      "\\(x = 2 + t, y = -1 + t, z = 3 + 2t\\)",
+      "\\(x = 1 + t, y = t, z = 1 + 2t\\)",
+      "None of the other choices is correct",
+      "\\(x = 1 + t, y = 1 - t, z = 2t\\)"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Tìm vector chỉ phương của đường thẳng đi qua hai điểm \\(A(2, -1, 3)\\) và \\(B(1, 0, 1)\\):\n\\[\\vec{BA} = A - B = (2 - 1, -1 - 0, 3 - 1) = (1, -1, 2).\\]",
+      "**Bước 2:** Lấy điểm đi qua là \\(A(2, -1, 3)\\) và vector chỉ phương \\(\\vec{d} = (1, -1, 2)\\), phương trình tham số của đường thẳng có dạng:\n\\[\\begin{cases} x = 2 + t \\\\ y = -1 - t \\\\ z = 3 + 2t \\end{cases} \\quad (t \\in \\mathbb{R}).\\]",
+      "**Bước 3:** Kiểm tra với điểm \\(B\\): tại \\(t = -1\\), ta có \\(x = 1, y = 0, z = 1\\), đúng bằng tọa độ điểm \\(B\\).",
+      "**Kết luận:** Phương trình tham số đúng là lựa chọn A."
+    ],
+    "image": "0125_q125_Question_125.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 126,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\[A = \\begin{bmatrix} 3 & -1 & 2 \\\\ 1 & -2 & 6 \\\\ -1 & 0 & 8 \\end{bmatrix} \\quad \\text{and} \\quad B = \\begin{bmatrix} 2 & 3 & -1 \\\\ 1 & 1 & -2 \\\\ -1 & 2 & 1 \\end{bmatrix}\\] Find the (3, 2)-entry of the matrix \\(2A - 3B^T\\).",
+    "options": [
+      "-6",
+      "None of them",
+      "-2",
+      "6",
+      "2"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Phần tử ở hàng 3, cột 2 của ma trận \\(2A - 3B^T\\) được tính theo công thức:\n\\[(2A - 3B^T)_{3, 2} = 2 A_{3, 2} - 3 (B^T)_{3, 2}.\\]",
+      "**Bước 2:** Theo định nghĩa chuyển vị ma trận, phần tử \\((B^T)_{3, 2} = B_{2, 3}\\).",
+      "**Bước 3:** Tra cứu các phần tử từ hai ma trận:\n- Từ ma trận \\(A\\): \\(A_{3, 2} = 0\\).\n- Từ ma trận \\(B\\): \\(B_{2, 3} = -2\\).",
+      "**Bước 4:** Thực hiện phép tính:\n\\[(2A - 3B^T)_{3, 2} = 2(0) - 3(-2) = 0 + 6 = 6.\\]",
+      "**Kết luận:** Giá trị phần tử (3, 2) là 6, tương ứng với lựa chọn D."
+    ],
+    "image": "0126_q126_Question_126.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 127,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "type": "single_choice",
+    "question": "A table of values for \\(f, g, f', g'\\) is given \\[\\begin{array}{|c|c|c|c|c|} \\hline x & f(x) & g(x) & f'(x) & g'(x) \\\\ \\hline 0 & 1 & 1 & 2 & -2 \\\\ \\hline 1 & 0 & 2 & 3 & -1 \\\\ \\hline 2 & 4 & 0 & 5 & 6 \\\\ \\hline \\end{array}\\] Find \\(h'(2)\\) if \\(h(x) = f(g(x))\\).",
+    "options": [
+      "0",
+      "-6",
+      "-2",
+      "-5",
+      "12",
+      "None of the other choices is correct"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Áp dụng quy tắc đạo hàm hàm hợp (Chain Rule): với \\(h(x) = f(g(x))\\), ta có:\n\\[h'(x) = f'(g(x)) \\cdot g'(x).\\]",
+      "**Bước 2:** Thay \\(x = 2\\) vào biểu thức:\n\\[h'(2) = f'(g(2)) \\cdot g'(2).\\]",
+      "**Bước 3:** Tra bảng giá trị tại dòng \\(x = 2\\):\n- \\(g(2) = 0\\)\n- \\(g'(2) = 6\\)\nDo đó \\(h'(2) = f'(0) \\cdot 6\\).",
+      "**Bước 4:** Tra bảng giá trị tại dòng \\(x = 0\\):\n- \\(f'(0) = 2\\).\nThay vào ta được:\n\\[h'(2) = 2 \\cdot 6 = 12.\\]",
+      "**Kết luận:** Giá trị đạo hàm \\(h'(2) = 12\\), tương ứng với lựa chọn E."
+    ],
+    "image": "0127_q127_Question_127.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 128,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Find the derivative of the function \\[g(x) = \\int_5^{x^2} \\sqrt{1 + e^{2t}} \\, dt\\]\n(i) \\(2\\sqrt{1 + e^{2x^2}}\\)\n(ii) \\(\\sqrt{1 + e^{2x^2}}\\)\n(iii) \\(x\\sqrt{1 + e^{2x^2}}\\)\n(iv) \\(2x\\sqrt{1 + e^{2x^2}}\\)\n(v) \\(\\sqrt{1 + 2x e^{2x^2}}\\)",
+    "options": [
+      "(v)",
+      "None of the other choices is correct",
+      "(i)",
+      "(iii)",
+      "(iv)",
+      "(ii)"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Theo định lý cơ bản của giải tích và quy tắc đạo hàm hàm hợp (Leibniz Rule):\n\\[\\dfrac{d}{dx} \\left[ \\int_a^{u(x)} f(t) \\, dt \\right] = f(u(x)) \\cdot u'(x).\\]",
+      "**Bước 2:** Trong bài này: \\(f(t) = \\sqrt{1 + e^{2t}}\\), cận trên \\(u(x) = x^2\\) có đạo hàm \\(u'(x) = 2x\\).",
+      "**Bước 3:** Thay cận vào hàm dưới dấu tích phân và nhân với đạo hàm cận trên:\n\\[g'(x) = \\sqrt{1 + e^{2(x^2)}} \\cdot (x^2)' = 2x\\sqrt{1 + e^{2x^2}}.\\]",
+      "**Bước 4:** So sánh với các phương án: kết quả khớp với biểu thức (iv).",
+      "**Kết luận:** Phương án đúng là E ((iv))."
+    ],
+    "image": "0128_q128_Question_128.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 129,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "type": "single_choice",
+    "question": "A spherical balloon is being inflated. Find the rate of increase of the surface area \\(S = 4\\pi r^2\\) with respect to the radius \\(r\\) when \\(r = 1\\).\n(i) \\(-8\\pi\\)\n(ii) \\(8\\pi\\)\n(iii) \\(4\\pi\\)\n(iv) \\(-4\\pi\\)",
+    "options": [
+      "(iii)",
+      "(iv)",
+      "(ii)",
+      "(i)",
+      "None of these"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Đề bài yêu cầu tìm tốc độ biến thiên của diện tích bề mặt \\(S\\) theo bán kính \\(r\\), tức là tính đạo hàm \\(\\dfrac{dS}{dr}\\).",
+      "**Bước 2:** Lấy đạo hàm của \\(S = 4\\pi r^2\\) theo biến \\(r\\):\n\\[\\dfrac{dS}{dr} = \\dfrac{d}{dr}(4\\pi r^2) = 4\\pi \\cdot 2r = 8\\pi r.\\]",
+      "**Bước 3:** Thay \\(r = 1\\) vào công thức đạo hàm:\n\\[\\left. \\dfrac{dS}{dr} \\right|_{r=1} = 8\\pi(1) = 8\\pi.\\]",
+      "**Bước 4:** Kết quả khớp với biểu thức (ii).",
+      "**Kết luận:** Phương án đúng là C ((ii))."
+    ],
+    "image": "0129_q129_Question_129.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 130,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinh",
+    "type": "single_choice",
+    "question": "Find all numbers \\(b\\) such that the following system has infinitely many solutions: \\[\\begin{cases} x - 2y + bz = 3 \\\\ 3x + 2z = 2 \\\\ 5x + 2y = 1 \\end{cases}\\]",
+    "options": [
+      "-3",
+      "4",
+      "Any numbers but 4",
+      "None of the other choices is correct",
+      "Any numbers but -3"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xét ma trận hệ số \\(A\\) của hệ phương trình:\n\\[A = \\begin{bmatrix} 1 & -2 & b \\\\ 3 & 0 & 2 \\\\ 5 & 2 & 0 \\end{bmatrix}.\\]",
+      "**Bước 2:** Hệ có vô số nghiệm khi ma trận hệ số có định thức \\(\\det(A) = 0\\):\nKhai triển theo hàng thứ hai:\n\\[\\det(A) = -3 \\begin{vmatrix} -2 & b \\\\ 2 & 0 \\end{vmatrix} - 2 \\begin{vmatrix} 1 & -2 \\\\ 5 & 2 \\end{vmatrix} = -3(0 - 2b) - 2(2 - (-10)) = 6b - 24.\\]",
+      "**Bước 3:** Cho \\(\\det(A) = 0 \\iff 6b - 24 = 0 \\iff b = 4\\).",
+      "**Bước 4:** Kiểm tra tính tương thích của hệ khi \\(b = 4\\):\nCộng phương trình (1) và phương trình (3):\n\\[(x - 2y + 4z) + (5x + 2y) = 6x + 4z = 3 + 1 = 4 \\iff 3x + 2z = 2.\\]\nPhương trình tổng này đồng nhất hoàn toàn với phương trình (2). Do đó hạng của ma trận hệ số bằng hạng ma trận bổ sung và bằng 2 (< 3 ẩn), hệ có vô số nghiệm phụ thuộc 1 tham số tự do.",
+      "**Kết luận:** Giá trị của \\(b\\) là 4, tương ứng với lựa chọn B."
+    ],
+    "image": "0130_q130_Question_130.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 131,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "type": "single_choice",
+    "question": "The following graph shows the position \\(y = s(t)\\) of an object moving along a straight line. When is the object slowing down?\n(i) \\(t \\in (0, 1) \\cup (5, 6)\\)\n(ii) \\(t \\in (1, 2) \\cup (6, 7)\\)\n(iii) \\(t \\in (0, 2) \\cup (5, 7)\\)",
+    "options": [
+      "None of the other choices is correct",
+      "(i)",
+      "(iv)",
+      "(ii)",
+      "(iii)"
+    ],
+    "answer": "B",
+    "answer_original": "E",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Một vật chuyển động trên đường thẳng chạy chậm dần (slowing down) khi độ lớn của vận tốc (tốc độ \\(|v(t)| = |s'(t)|\\)) giảm dần, tức là vận tốc \\(v(t)\\) và gia tốc \\(a(t)\\) trái dấu (\\(v(t) \\cdot a(t) < 0\\)). Về mặt hình học, điều này tương ứng với các khoảng mà tiếp tuyến của đồ thị phẳng dần về phương ngang (hệ số góc tiến về 0 tại các đỉnh/đáy cực trị \\(t = 1\\) và \\(t = 6\\)).",
+      "**Bước 2:** Phân tích từng khoảng thời gian trên đồ thị:\n- Trên khoảng \\((0, 1)\\): đồ thị tăng (\\(v > 0\\)) nhưng bề lõm quay xuống (\\(a < 0\\)) → vật chuyển động chậm dần về đỉnh \\(t = 1\\).\n- Trên khoảng \\((1, 2)\\): đồ thị giảm (\\(v < 0\\)) và dốc dần (\\(a < 0\\)) → vật chuyển động nhanh dần (speeding up).\n- Trên khoảng \\((2, 5)\\): đồ thị là đoạn thẳng, vận tốc không đổi.\n- Trên khoảng \\((5, 6)\\): đồ thị giảm (\\(v < 0\\)) nhưng bề lõm quay lên (\\(a > 0\\)) → độ dốc phẳng dần về đáy \\(t = 6\\), vật chuyển động chậm dần.\n- Trên khoảng \\((6, 7)\\): đồ thị tăng (\\(v > 0\\)) và dốc dần (\\(a > 0\\)) → vật chuyển động nhanh dần.",
+      "**Bước 3:** Tổng hợp các khoảng vật chuyển động chậm dần là: \\(t \\in (0, 1) \\cup (5, 6)\\), tương ứng với mệnh đề (i).",
+      "**Ghi chú đối chiếu:** Đáp án gốc trong ngân hàng là E (chọn (iii): \\((0, 2) \\cup (5, 7)\\)). Đây là sai sót do gộp lẫn cả giai đoạn chậm dần và giai đoạn tăng tốc sau cực trị. Đáp án chính xác theo giải tích là B (chọn (i))."
+    ],
+    "image": "0131_q131_Question_131.png",
+    "needs_image": true,
+    "review_flags": [
+      "conflict_with_original_key: key says E (iii), mathematically correct is B (i)"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 132,
+    "chapter": "DSTT2 - Đại số tuyến tính 2",
+    "folder": "DSTT2",
+    "topic": "AnhXaTuyenTinh",
+    "type": "single_choice",
+    "question": "Let \\(T : \\mathbb{R}^2 \\to \\mathbb{R}^2\\) be rotation through \\(\\pi/2\\) followed by reflection in the line \\(y = x\\). Then T is:",
+    "options": [
+      "Reflection about \\(y = -x\\).",
+      "Reflection in the x-axis.",
+      "None of the other choices is correct",
+      "Rotation through 180 degrees",
+      "Reflection in the y-axis."
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xác định ma trận chính tắc của phép quay một góc \\(\\pi/2\\) ngược chiều kim đồng hồ:\n\\[R_{\\pi/2} = \\begin{bmatrix} \\cos(\\pi/2) & -\\sin(\\pi/2) \\\\ \\sin(\\pi/2) & \\cos(\\pi/2) \\end{bmatrix} = \\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}.\\]",
+      "**Bước 2:** Xác định ma trận chính tắc của phép đối xứng qua đường thẳng \\(y = x\\):\n\\[M = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}.\\]",
+      "**Bước 3:** Phép biến đổi hợp thành được biểu diễn bởi tích hai ma trận (thực hiện phép quay trước, phép đối xứng sau):\n\\[T = M \\cdot R_{\\pi/2} = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix} \\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix} = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}.\\]",
+      "**Bước 4:** Áp dụng ma trận \\(T\\) lên vector \\(\\begin{bmatrix} x \\\\ y \\end{bmatrix}\\):\n\\[T \\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} x \\\\ -y \\end{bmatrix}.\\]\nPhép biến đổi giữ nguyên tọa độ \\(x\\) và đổi dấu tọa độ \\(y\\), đây chính là phép đối xứng qua trục hoành (Reflection in the x-axis).",
+      "**Kết luận:** Phép biến đổi là phép đối xứng qua trục x ('Reflection in the x-axis'), tương ứng với lựa chọn B."
+    ],
+    "image": "0132_q132_Question_132.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 133,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "KhaoSatHamSo",
+    "type": "single_choice",
+    "question": "Find the absolute maximum and absolute minimum values of \\[f(x) = \\sqrt[3]{x}\\] on \\([0, 8]\\)",
+    "options": [
+      "Absolute maximum: 8, absolute minimum: 0",
+      "None of the other choices is correct",
+      "Absolute minimum: 0, no absolute maximum",
+      "No absolute extrema",
+      "Absolute maximum: 2, absolute minimum: 0"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xét hàm số \\(f(x) = x^{1/3}\\) liên tục trên đoạn đóng \\([0, 8]\\).",
+      "**Bước 2:** Đạo hàm của hàm số: \\(f'(x) = \\dfrac{1}{3} x^{-2/3} = \\dfrac{1}{3\\sqrt[3]{x^2}} > 0\\) với mọi \\(x \\in (0, 8)\\).",
+      "**Bước 3:** Vì đạo hàm luôn dương trên khoảng mở, hàm số đồng biến thực sự trên đoạn \\([0, 8]\\). Do đó giá trị cực trị tuyệt đối chỉ đạt tại hai đầu mút:\n- Điểm mút trái: \\(f(0) = \\sqrt[3]{0} = 0\\) là giá trị nhỏ nhất tuyệt đối (Absolute minimum).\n- Điểm mút phải: \\(f(8) = \\sqrt[3]{8} = 2\\) là giá trị lớn nhất tuyệt đối (Absolute maximum).",
+      "**Kết luận:** Giá trị lớn nhất là 2, giá trị nhỏ nhất là 0, tương ứng với lựa chọn E."
+    ],
+    "image": "0133_q133_Question_133.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 134,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "HinhHocGiaiTich",
+    "type": "single_choice",
+    "question": "Let \\(u = (3, 4)\\) and suppose \\(v = (a, b)\\) is a unit vector orthogonal to \\(u\\). Find \\(|b|\\).",
+    "options": [
+      "3/5",
+      "4/5",
+      "4",
+      "3/4",
+      "3",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Điều kiện vector \\(v = (a, b)\\) trực giao với \\(u = (3, 4)\\) là tích vô hướng bằng 0:\n\\[u \\cdot v = 0 \\iff 3a + 4b = 0 \\implies a = -\\dfrac{4}{3}b.\\]",
+      "**Bước 2:** Điều kiện \\(v\\) là vector đơn vị: \\(\\|v\\|^2 = 1\\):\n\\[a^2 + b^2 = 1 \\iff \\left(-\\dfrac{4}{3}b\\right)^2 + b^2 = 1 \\iff \\dfrac{16}{9}b^2 + b^2 = 1 \\iff \\dfrac{25}{9}b^2 = 1.\\]",
+      "**Bước 3:** Giải phương trình tìm \\(|b|\\):\n\\[b^2 = \\dfrac{9}{25} \\implies |b| = \\sqrt{\\dfrac{9}{25}} = \\dfrac{3}{5}.\\]",
+      "**Kết luận:** Giá trị của \\(|b|\\) là \\(3/5\\), tương ứng với lựa chọn A."
+    ],
+    "image": "0134_q134_Question_134.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 135,
+    "chapter": "DSTT2 - Đại số tuyến tính 2",
+    "folder": "DSTT2",
+    "topic": "AnhXaTuyenTinh",
+    "type": "single_choice",
+    "question": "Let \\(T : \\mathbb{R}^4 \\to \\mathbb{R}^3\\) be a linear transformation with \\(T(1, 1, 0, -2) = (2, 3, -1)\\), and \\(T(0, -1, 1, 1) = (5, 0, 1)\\). Find \\(T(1, 3, -2, -4)\\).",
+    "options": [
+      "\\((-8, 3, -3)\\)",
+      "\\((7, 3, 0)\\)",
+      "None of the others",
+      "\\((1, -6, 3)\\)"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Đặt \\(v_1 = (1, 1, 0, -2)\\), \\(v_2 = (0, -1, 1, 1)\\) và \\(v = (1, 3, -2, -4)\\). Tìm các hệ số \\(c_1, c_2\\) sao cho:\n\\[v = c_1 v_1 + c_2 v_2.\\]",
+      "**Bước 2:** Xét từng thành phần:\n- Thành phần 1: \\(c_1(1) + c_2(0) = 1 \\implies c_1 = 1\\).\n- Thành phần 3: \\(c_1(0) + c_2(1) = -2 \\implies c_2 = -2\\).\n- Kiểm tra thành phần 2: \\(1(1) + (-2)(-1) = 1 + 2 = 3\\) (thỏa mãn).\n- Kiểm tra thành phần 4: \\(1(-2) + (-2)(1) = -2 - 2 = -4\\) (thỏa mãn).",
+      "**Bước 3:** Sử dụng tính tuyến tính của ánh xạ \\(T\\):\n\\[T(v) = 1 \\cdot T(v_1) - 2 \\cdot T(v_2) = (2, 3, -1) - 2(5, 0, 1) = (2 - 10, 3 - 0, -1 - 2) = (-8, 3, -3).\\]",
+      "**Kết luận:** Giá trị \\(T(1, 3, -2, -4) = (-8, 3, -3)\\), tương ứng với lựa chọn A."
+    ],
+    "image": "0135_q135_Question_135.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 136,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Suppose \\(f(x)\\) is continuous and differentiable, \\(f(1) = 5\\) and \\[\\int_0^1 f(x) \\, dx = 4.\\] Find \\[\\int_0^1 x f'(x) \\, dx.\\]",
+    "options": [
+      "2",
+      "-3",
+      "-2",
+      "1",
+      "-1",
+      "3"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Áp dụng phương pháp tích phân từng phần: đặt \\(u = x\\) và \\(dv = f'(x) \\, dx\\).\nKhi đó \\(du = dx\\) và \\(v = f(x)\\).",
+      "**Bước 2:** Công thức tích phân từng phần:\n\\[\\int_0^1 x f'(x) \\, dx = [x f(x)]_0^1 - \\int_0^1 f(x) \\, dx.\\]",
+      "**Bước 3:** Tính phần thế cận:\n\\[[x f(x)]_0^1 = 1 \\cdot f(1) - 0 \\cdot f(0) = f(1) = 5.\\]",
+      "**Bước 4:** Thay số:\n\\[\\int_0^1 x f'(x) \\, dx = 5 - 4 = 1.\\]",
+      "**Kết luận:** Giá trị của tích phân là 1, tương ứng với lựa chọn D."
+    ],
+    "image": "0136_q136_Question_136.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 137,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "type": "single_choice",
+    "question": "Find \\(b\\) such that the graph of \\(y = a + bx + cx^2\\) passes through \\((0, 5), (-1, -7), (2, 11)\\).",
+    "options": [
+      "-5",
+      "None of the other choices is correct",
+      "-9",
+      "9",
+      "5"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Thay tọa độ điểm \\((0, 5)\\) vào phương trình:\n\\[a + b(0) + c(0^2) = 5 \\implies a = 5.\\]",
+      "**Bước 2:** Thay tọa độ điểm \\((-1, -7)\\) với \\(a = 5\\):\n\\[5 + b(-1) + c(-1)^2 = -7 \\iff -b + c = -12 \\iff c = b - 12.\\]",
+      "**Bước 3:** Thay tọa độ điểm \\((2, 11)\\) với \\(a = 5\\):\n\\[5 + 2b + 4c = 11 \\iff 2b + 4c = 6 \\iff b + 2c = 3.\\]",
+      "**Bước 4:** Thay \\(c = b - 12\\) vào phương trình trên:\n\\[b + 2(b - 12) = 3 \\iff 3b - 24 = 3 \\iff 3b = 27 \\iff b = 9.\\]",
+      "**Kết luận:** Giá trị của \\(b\\) là 9, tương ứng với lựa chọn D."
+    ],
+    "image": "0137_q137_Question_137.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 138,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "The sizes of two matrices A and B are \\(2 \\times 3\\) and \\(3 \\times 2\\), respectively. Find the sizes of the products AB and BA, if they are defined.",
+    "options": [
+      "AB is \\(2 \\times 2\\), BA is \\(3 \\times 3\\).",
+      "AB is \\(3 \\times 3\\), BA is \\(2 \\times 2\\).",
+      "AB is \\(2 \\times 2\\), BA is undefined.",
+      "AB is undefined, BA is \\(3 \\times 3\\).",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Điều kiện nhân hai ma trận: tích \\(MN\\) của ma trận \\(M\\) cỡ \\(m \\times k\\) và ma trận \\(N\\) cỡ \\(k \\times p\\) xác định và có kích thước \\(m \\times p\\).",
+      "**Bước 2:** Với tích \\(AB\\): \\(A\\) có kích thước \\(2 \\times 3\\) và \\(B\\) có kích thước \\(3 \\times 2\\). Do số cột của \\(A\\) bằng số hàng của \\(B\\) (đều bằng 3), tích \\(AB\\) xác định và có kích thước \\(2 \\times 2\\).",
+      "**Bước 3:** Với tích \\(BA\\): \\(B\\) có kích thước \\(3 \\times 2\\) và \\(A\\) có kích thước \\(2 \\times 3\\). Do số cột của \\(B\\) bằng số hàng của \\(A\\) (đều bằng 2), tích \\(BA\\) xác định và có kích thước \\(3 \\times 3\\).",
+      "**Kết luận:** 'AB is \\(2 \\times 2\\), BA is \\(3 \\times 3\\)', tương ứng với lựa chọn A."
+    ],
+    "image": "0138_q138_Question_138.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 139,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Given that \\[\\int_4^9 f(x) \\, dx = \\frac{38}{3},\\] what is \\[\\int_9^4 f(t) \\, dt?\\]",
+    "options": [
+      "-38/3",
+      "-19/3",
+      "38/3",
+      "19/3",
+      "0",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Theo tính chất đổi cận của tích phân xác định:\n\\[\\int_b^a f(t) \\, dt = -\\int_a^b f(t) \\, dt.\\]",
+      "**Bước 2:** Thay giá trị đã cho vào công thức:\n\\[\\int_9^4 f(t) \\, dt = -\\int_4^9 f(x) \\, dx = -\\dfrac{38}{3}.\\]",
+      "**Kết luận:** Giá trị tích phân là \\(-38/3\\), tương ứng với lựa chọn A."
+    ],
+    "image": "0139_q139_Question_139.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 140,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinh",
+    "type": "single_choice",
+    "question": "The coefficient matrix A in a homogeneous system of 15 equations in 19 unknowns has rank 8. How many free parameters are there in the solution?",
+    "options": [
+      "19",
+      "4",
+      "8",
+      "11",
+      "7",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xét hệ phương trình tuyến tính thuần nhất \\(Ax = 0\\) có \\(n = 19\\) ẩn.",
+      "**Bước 2:** Theo định lý Rank-Nullity đối với ma trận hệ số \\(A\\):\n\\[\\text{Số tham số tự do (nullity)} = n - \\operatorname{rank}(A).\\]",
+      "**Bước 3:** Thay số: với \\(n = 19\\) và \\(\\operatorname{rank}(A) = 8\\):\n\\[\\text{Số tham số tự do} = 19 - 8 = 11.\\]",
+      "**Kết luận:** Họ nghiệm phụ thuộc đúng 11 tham số tự do, tương ứng với lựa chọn D."
+    ],
+    "image": "0140_q140_Question_140.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 141,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Find the average value of the function \\[f(x) = x^2 - 6x + 4\\] over the interval \\([0, 2]\\)",
+    "options": [
+      "-4",
+      "-1",
+      "10/3",
+      "-2/3",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Công thức tính giá trị trung bình của hàm số \\(f(x)\\) trên đoạn \\([a, b]\\) là:\n\\[f_{\\text{avg}} = \\dfrac{1}{b - a} \\int_a^b f(x) \\, dx.\\]",
+      "**Bước 2:** Thay \\(a = 0\\), \\(b = 2\\) và tính tích phân xác định:\n\\[\\int_0^2 (x^2 - 6x + 4) \\, dx = \\left[ \\dfrac{x^3}{3} - 3x^2 + 4x \\right]_0^2 = \\dfrac{8}{3} - 3(4) + 4(2) = \\dfrac{8}{3} - 12 + 8 = \\dfrac{8}{3} - 4 = -\\dfrac{4}{3}.\\]",
+      "**Bước 3:** Chia cho độ dài đoạn \\(b - a = 2 - 0 = 2\\):\n\\[f_{\\text{avg}} = \\dfrac{1}{2} \\left( -\\dfrac{4}{3} \\right) = -\\dfrac{2}{3}.\\]",
+      "**Kết luận:** Giá trị trung bình của hàm số là \\(-2/3\\), tương ứng với lựa chọn D."
+    ],
+    "image": "0141_q141_Question_141.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 142,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "type": "single_choice",
+    "question": "Find \\[\\lim_{x \\to -\\infty} \\frac{2x + 1}{\\sqrt{4x^2 + 2}}\\]",
+    "options": [
+      "1",
+      "1/2",
+      "-1/2",
+      "None of the other choices is correct",
+      "-1"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Phân tích biểu thức căn bậc hai khi \\(x \\to -\\infty\\) (chú ý \\(x < 0\\)):\n\\[\\sqrt{4x^2 + 2} = \\sqrt{x^2 \\left(4 + \\dfrac{2}{x^2}\\right)} = |x| \\sqrt{4 + \\dfrac{2}{x^2}} = -x \\sqrt{4 + \\dfrac{2}{x^2}}.\\]",
+      "**Bước 2:** Chia cả tử và mẫu cho \\(x\\) (với \\(x < 0\\)):\n\\[\\dfrac{2x + 1}{\\sqrt{4x^2 + 2}} = \\dfrac{x(2 + 1/x)}{-x \\sqrt{4 + 2/x^2}} = \\dfrac{2 + 1/x}{-\\sqrt{4 + 2/x^2}}.\\]",
+      "**Bước 3:** Lấy giới hạn khi \\(x \\to -\\infty\\):\n\\[\\lim_{x \\to -\\infty} \\dfrac{2 + 1/x}{-\\sqrt{4 + 2/x^2}} = \\dfrac{2 + 0}{-\\sqrt{4 + 0}} = \\dfrac{2}{-2} = -1.\\]",
+      "**Kết luận:** Giới hạn bằng \\(-1\\), tương ứng với lựa chọn E."
+    ],
+    "image": "0142_q142_Question_142.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 143,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Evaluate \\[\\int \\frac{(\\ln x)^5}{x} \\, dx\\]\n(i) \\(\\frac{1}{5}(\\ln x)^5 + C\\)\n(ii) \\(\\frac{1}{6}(\\ln x)^6 + C\\)\n(iii) \\(6(\\ln x)^6 + C\\)\n(iv) \\(5(\\ln x)^5 + C\\)",
+    "options": [
+      "(i)",
+      "(iv)",
+      "None of the other choices is correct",
+      "(ii)",
+      "(iii)"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Áp dụng phương pháp đổi biến số (u-substitution): đặt \\(u = \\ln x\\).",
+      "**Bước 2:** Lấy vi phân hai vế: \\[du = \\dfrac{1}{x} \\, dx.\\]",
+      "**Bước 3:** Thay vào tích phân ban đầu:\n\\[\\int \\dfrac{(\\ln x)^5}{x} \\, dx = \\int u^5 \\, du = \\dfrac{u^6}{6} + C = \\dfrac{1}{6}(\\ln x)^6 + C.\\]",
+      "**Bước 4:** Kết quả khớp với biểu thức (ii).",
+      "**Kết luận:** Phương án đúng là D ((ii))."
+    ],
+    "image": "0143_q143_Question_143.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 144,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Find A when \\[(A^{-1} - 2I)^T = -2 \\begin{bmatrix} 2 & 3 \\\\ 1 & 1 \\end{bmatrix}.\\]\n(i) \\(\\begin{bmatrix} 0 & -1/6 \\\\ -1/2 & 1/6 \\end{bmatrix}\\)\n(ii) \\(\\begin{bmatrix} 0 & 1/6 \\\\ 1/2 & 1/6 \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} 0 & -1/6 \\\\ -1/2 & -1/6 \\end{bmatrix}\\)\n(iv) \\(\\begin{bmatrix} 0 & 1/6 \\\\ 1/2 & -1/6 \\end{bmatrix}\\)",
+    "options": [
+      "(iii)",
+      "(ii)",
+      "(i)",
+      "None of the other choices is correct",
+      "(iv)"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Nhân hệ số vào vế phải:\n\\[-2 \\begin{bmatrix} 2 & 3 \\\\ 1 & 1 \\end{bmatrix} = \\begin{bmatrix} -4 & -6 \\\\ -2 & -2 \\end{bmatrix}.\\]",
+      "**Bước 2:** Lấy chuyển vị hai vế để tìm \\(A^{-1} - 2I\\):\n\\[A^{-1} - 2I = \\begin{bmatrix} -4 & -6 \\\\ -2 & -2 \\end{bmatrix}^T = \\begin{bmatrix} -4 & -2 \\\\ -6 & -2 \\end{bmatrix}.\\]",
+      "**Bước 3:** Cộng \\(2I = \\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix}\\) để tìm \\(A^{-1}\\):\n\\[A^{-1} = \\begin{bmatrix} -4 & -2 \\\\ -6 & -2 \\end{bmatrix} + \\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix} = \\begin{bmatrix} -2 & -2 \\\\ -6 & 0 \\end{bmatrix}.\\]",
+      "**Bước 4:** Nghịch đảo ma trận \\(A^{-1}\\) để tìm \\(A\\):\n- Định thức: \\(\\det(A^{-1}) = (-2)(0) - (-2)(-6) = -12\\).\n- Ma trận nghịch đảo: \\[A = \\dfrac{1}{-12} \\begin{bmatrix} 0 & 2 \\\\ 6 & -2 \\end{bmatrix} = \\begin{bmatrix} 0 & -1/6 \\\\ -1/2 & 1/6 \\end{bmatrix}.\\]",
+      "**Kết luận:** Kết quả khớp với biểu thức (i), chọn phương án C."
+    ],
+    "image": "0144_q144_Question_144.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 145,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVectơ",
+    "type": "single_choice",
+    "question": "Let \\(\\{X, Y, Z\\}\\) be a set of linearly independent vectors. Which of the following sets are linearly independent?\n(i) \\(\\{X + Y, Y + Z, Z + X\\}\\)\n(ii) \\(\\{X - Y, Y - Z, Z - X\\}\\)",
+    "options": [
+      "Only (ii)",
+      "None of (i) or (ii)",
+      "Both (i) and (ii)",
+      "Only (i)"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xét tập (i) \\(\\{X + Y, Y + Z, Z + X\\}\\). Ma trận tọa độ biểu diễn qua cơ sở \\(\\{X, Y, Z\\}\\) là:\n\\[M_1 = \\begin{bmatrix} 1 & 0 & 1 \\\\ 1 & 1 & 0 \\\\ 0 & 1 & 1 \\end{bmatrix}.\\]\nTính định thức: \\(\\det(M_1) = 1(1 - 0) + 1(1 - 0) = 2 \\ne 0\\). Do định thức khác 0, tập (i) độc lập tuyến tính.",
+      "**Bước 2:** Xét tập (ii) \\(\\{X - Y, Y - Z, Z - X\\}\\). Nhận thấy tổng của cả ba vector bằng vector không:\n\\[(X - Y) + (Y - Z) + (Z - X) = 0.\\]\nVì tồn tại một tổ hợp tuyến tính triệt tiêu với các hệ số \\(1, 1, 1\\) không đồng thời bằng 0, nên tập (ii) phụ thuộc tuyến tính.",
+      "**Kết luận:** Chỉ có tập (i) độc lập tuyến tính ('Only (i)'), tương ứng với lựa chọn D."
+    ],
+    "image": "0145_q145_Question_145.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 146,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "type": "single_choice",
+    "question": "Use Newton's method with the specified initial approximation \\(X_1\\) to find the third approximation \\(X_3\\) to the root of the given equation. \\[X^2 - 2 = 0, \\quad X_1 = 2.\\] (Given your answer to 4 decimal places)",
+    "options": [
+      "1.4167",
+      "1.4321",
+      "1.4100",
+      "1.4605",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Công thức lặp Newton-Raphson: với \\(f(x) = x^2 - 2\\), ta có \\(f'(x) = 2x\\).\n\\[x_{n+1} = x_n - \\dfrac{f(x_n)}{f'(x_n)} = x_n - \\dfrac{x_n^2 - 2}{2x_n} = \\dfrac{x_n}{2} + \\dfrac{1}{x_n}.\\]",
+      "**Bước 2:** Tính bước lặp thứ hai với \\(x_1 = 2\\):\n\\[x_2 = \\dfrac{2}{2} + \\dfrac{1}{2} = 1 + 0.5 = 1.5.\\]",
+      "**Bước 3:** Tính bước lặp thứ ba \\(x_3\\) với \\(x_2 = 1.5\\):\n\\[x_3 = \\dfrac{1.5}{2} + \\dfrac{1}{1.5} = 0.75 + \\dfrac{2}{3} = \\dfrac{3}{4} + \\dfrac{2}{3} = \\dfrac{17}{12} \\approx 1.416666...\\approx 1.4167.\\]",
+      "**Kết luận:** Giá trị xấp xỉ bậc 3 là 1.4167, tương ứng với lựa chọn A."
+    ],
+    "image": "0146_q146_Question_146.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 147,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "type": "single_choice",
+    "question": "Evaluate the limit \\[\\lim_{h \\to 0} \\frac{f(1 + h) - f(1)}{h}\\] where \\(f(x) = x^2\\).",
+    "options": [
+      "None of the other choices is correct",
+      "2",
+      "1",
+      "Does not exist"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Nhận biết biểu thức giới hạn chính là định nghĩa đạo hàm của hàm số \\(f(x)\\) tại điểm \\(x = 1\\):\n\\[f'(1) = \\lim_{h \\to 0} \\dfrac{f(1 + h) - f(1)}{h}.\\]",
+      "**Bước 2:** Với \\(f(x) = x^2\\), đạo hàm là \\(f'(x) = 2x\\). Do đó \\(f'(1) = 2(1) = 2\\).",
+      "**Bước 3:** Hoặc tính đại số trực tiếp:\n\\[\\lim_{h \\to 0} \\dfrac{(1 + h)^2 - 1^2}{h} = \\lim_{h \\to 0} \\dfrac{1 + 2h + h^2 - 1}{h} = \\lim_{h \\to 0} \\dfrac{h(2 + h)}{h} = \\lim_{h \\to 0} (2 + h) = 2.\\]",
+      "**Kết luận:** Giá trị giới hạn bằng 2, tương ứng với lựa chọn B."
+    ],
+    "image": "0147_q147_Question_147.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 148,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "type": "single_choice",
+    "question": "Find all points of discontinuity of the function \\[f(x) = \\begin{cases} 2x + 1 & \\text{if } x < -1 \\\\ 2 & \\text{if } -1 \\le x < 2 \\\\ x^2 - 2 & \\text{if } x \\ge 2 \\end{cases}\\]",
+    "options": [
+      "None of the other choices is correct",
+      "-1 and 2",
+      "2",
+      "-1"
+    ],
+    "answer": "D",
+    "answer_original": "B",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Kiểm tra tính liên tục tại điểm ranh giới thứ nhất \\(x = -1\\):\n- Giới hạn trái: \\(\\lim_{x \\to -1^-} f(x) = 2(-1) + 1 = -1\\).\n- Giới hạn phải: \\(\\lim_{x \\to -1^+} f(x) = 2\\).\n- Giá trị hàm: \\(f(-1) = 2\\).\nVì giới hạn trái và giới hạn phải khác nhau (\\(-1 \\ne 2\\)), nên hàm số gián đoạn (discontinuous) tại \\(x = -1\\).",
+      "**Bước 2:** Kiểm tra tính liên tục tại điểm ranh giới thứ hai \\(x = 2\\):\n- Giới hạn trái: \\(\\lim_{x \\to 2^-} f(x) = 2\\).\n- Giới hạn phải: \\(\\lim_{x \\to 2^+} f(x) = 2^2 - 2 = 4 - 2 = 2\\).\n- Giá trị hàm: \\(f(2) = 2^2 - 2 = 2\\).\nVì \\(\\lim_{x \\to 2^-} f(x) = \\lim_{x \\to 2^+} f(x) = f(2) = 2\\), hàm số liên tục hoàn toàn tại \\(x = 2\\).",
+      "**Bước 3:** Trên các khoảng còn lại hàm số là đa thức nên liên tục. Do đó, điểm gián đoạn duy nhất là \\(x = -1\\).",
+      "**Ghi chú đối chiếu:** Đáp án gốc trong ngân hàng là B ('-1 and 2'). Đây là sai sót thường gặp do người ra đề giả định tất cả các điểm chia nhánh đều là điểm gián đoạn mà không tính thử giới hạn tại \\(x = 2\\) (tại \\(x = 2\\) đồ thị nối liền nhau). Đáp án toán học chính xác là D ('-1')."
+    ],
+    "image": "0148_q148_Question_148.png",
+    "needs_image": false,
+    "review_flags": [
+      "conflict_with_original_key: key says B (-1 and 2), mathematically correct is D (-1)"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 149,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVectơ",
+    "type": "single_choice",
+    "question": "Let \\(\\{X, Y\\}\\) be a basis of a subspace \\(U\\) of \\(\\mathbb{R}^3\\) and \\(V = \\operatorname{span}\\{3X + Y, -X + 2Y, Y\\}\\). What is the dimension of \\(V\\)?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Vì \\(\\{X, Y\\}\\) là cơ sở của \\(U\\), ta có \\(\\dim(U) = 2\\).",
+      "**Bước 2:** Mọi vector trong tập sinh của \\(V\\) đều là tổ hợp tuyến tính của \\(X\\) và \\(Y\\), do đó \\(V \\subseteq U\\), suy ra \\(\\dim(V) \\le \\dim(U) = 2\\).",
+      "**Bước 3:** Xét hai vector \\(Y\\) và \\(3X + Y\\) thuộc \\(V\\):\n\\[(3X + Y) - Y = 3X \\in V \\implies X \\in V.\\]\nVì cả hai vector cơ sở \\(X\\) và \\(Y\\) đều thuộc \\(V\\), nên \\(U = \\operatorname{span}\\{X, Y\\} \\subseteq V\\).",
+      "**Bước 4:** Do \\(V \\subseteq U\\) và \\(U \\subseteq V\\), ta suy ra \\(V = U\\), và \\(\\dim(V) = 2\\).",
+      "**Kết luận:** Số chiều của \\(V\\) bằng 2, tương ứng với lựa chọn C."
+    ],
+    "image": "0149_q149_Question_149.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 150,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "If \\[\\det \\begin{bmatrix} a & b & c \\\\ p & q & r \\\\ x & y & z \\end{bmatrix} = 2,\\] compute \\[\\det \\begin{bmatrix} -p & -q & -r \\\\ 2p + a & 2q + b & 2r + c \\\\ p + 3x & q + 3y & r + 3z \\end{bmatrix}\\]",
+    "options": [
+      "3",
+      "6",
+      "none of the other choices is true",
+      "-6",
+      "-3"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Đặt ma trận cần tính là \\(M\\). Đưa dấu âm ra ngoài hàng 1:\n\\[\\det(M) = -1 \\cdot \\det \\begin{bmatrix} p & q & r \\\\ 2p + a & 2q + b & 2r + c \\\\ p + 3x & q + 3y & r + 3z \\end{bmatrix}.\\]",
+      "**Bước 2:** Dùng phép biến đổi hàng sơ cấp không làm đổi định thức: lấy Hàng 2 trừ đi 2 lần Hàng 1, và lấy Hàng 3 trừ đi Hàng 1:\n\\[\\det(M) = -1 \\cdot \\det \\begin{bmatrix} p & q & r \\\\ a & b & c \\\\ 3x & 3y & 3z \\end{bmatrix}.\\]",
+      "**Bước 3:** Đưa thừa số chung 3 ra ngoài từ hàng 3:\n\\[\\det(M) = -3 \\cdot \\det \\begin{bmatrix} p & q & r \\\\ a & b & c \\\\ x & y & z \\end{bmatrix}.\\]",
+      "**Bước 4:** Đổi chỗ Hàng 1 và Hàng 2 (phép đổi chỗ hai hàng làm đổi dấu định thức):\n\\[\\det(M) = (-3) \\cdot (-1) \\cdot \\det \\begin{bmatrix} a & b & c \\\\ p & q & r \\\\ x & y & z \\end{bmatrix} = 3 \\cdot 2 = 6.\\]",
+      "**Kết luận:** Giá trị định thức là 6, tương ứng với lựa chọn B."
+    ],
+    "image": "0150_q150_Question_150.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 151,
+    "chapter": "DSTT2 - Đại số tuyến tính 2",
+    "folder": "DSTT2",
+    "topic": "AnhXaTuyenTinh",
+    "type": "single_choice",
+    "question": "Let \\(T : \\mathbb{R}^2 \\to \\mathbb{R}^2\\) be rotation through \\(\\pi/3\\) followed by reflection in the line \\(y = 2x\\). Find the (1,2)-entry of the matrix of T.\n(i) \\((-3 + 4\\sqrt{3})/10\\)\n(ii) \\((4 + 3\\sqrt{3})/10\\)\n(iii) \\((-3 - 4\\sqrt{3})/10\\)",
+    "options": [
+      "(i)",
+      "None of the other choices is correct",
+      "(iii)",
+      "(ii)"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Ma trận của phép quay một góc \\(\\pi/3\\) là:\n\\[R = \\begin{bmatrix} \\cos(\\pi/3) & -\\sin(\\pi/3) \\\\ \\sin(\\pi/3) & \\cos(\\pi/3) \\end{bmatrix} = \\begin{bmatrix} 1/2 & -\\sqrt{3}/2 \\\\ \\sqrt{3}/2 & 1/2 \\end{bmatrix}.\\]",
+      "**Bước 2:** Ma trận của phép đối xứng qua đường thẳng \\(y = mx\\) với hệ số góc \\(m = 2 = \\tan\\theta\\):\nTa có \\(\\cos(2\\theta) = \\dfrac{1 - m^2}{1 + m^2} = \\dfrac{1 - 4}{1 + 4} = -\\dfrac{3}{5}\\) và \\(\\sin(2\\theta) = \\dfrac{2m}{1 + m^2} = \\dfrac{4}{5}\\).\nDo đó ma trận đối xứng là: \\[M = \\begin{bmatrix} -3/5 & 4/5 \\\\ 4/5 & 3/5 \\end{bmatrix}.\\]",
+      "**Bước 3:** Ma trận hợp thành \\(T = M \\cdot R\\). Phần tử ở hàng 1, cột 2 là tích vô hướng của hàng 1 ma trận \\(M\\) và cột 2 ma trận \\(R\\):\n\\[T_{1, 2} = \\left(-\\dfrac{3}{5}\\right)\\left(-\\dfrac{\\sqrt{3}}{2}\\right) + \\left(\\dfrac{4}{5}\\right)\\left(\\dfrac{1}{2}\\right) = \\dfrac{3\\sqrt{3}}{10} + \\dfrac{4}{10} = \\dfrac{4 + 3\\sqrt{3}}{10}.\\]",
+      "**Bước 4:** Kết quả khớp với biểu thức (ii).",
+      "**Kết luận:** Phương án đúng là D ((ii))."
+    ],
+    "image": "0151_q151_Question_151.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 152,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let A be a \\(3 \\times 4\\) matrix and B a \\(4 \\times 5\\) matrix. Which of the following statements are true?\n(i) \\(\\operatorname{rank}(AB) \\le 3\\).\n(ii) \\(\\operatorname{rank}(A) \\le \\operatorname{rank}(B)\\).",
+    "options": [
+      "(ii) only.",
+      "None of them.",
+      "Both (i) and (ii).",
+      "(i) only."
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xét khẳng định (i): Tích \\(AB\\) có kích thước \\(3 \\times 5\\). Theo tính chất cơ bản của hạng ma trận: \\[\\operatorname{rank}(AB) \\le \\min(\\operatorname{rank}(A), \\operatorname{rank}(B)) \\le \\min(3, 4) = 3.\\] Do đó \\(\\operatorname{rank}(AB) \\le 3\\) luôn luôn đúng. Khẳng định (i) ĐÚNG.",
+      "**Bước 2:** Xét khẳng định (ii): Không có bất kỳ ràng buộc nào yêu cầu hạng của \\(A\\) phải nhỏ hơn hoặc bằng hạng của \\(B\\) (chẳng hạn nếu chọn \\(B = 0\\) thì \\(\\operatorname{rank}(B) = 0\\), trong khi \\(\\operatorname{rank}(A)\\) có thể bằng 3). Khẳng định (ii) SAI.",
+      "**Kết luận:** Chỉ có mệnh đề (i) đúng ('(i) only.'), tương ứng với lựa chọn D."
+    ],
+    "image": "0152_q152_Question_152.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 153,
+    "chapter": "DSTT2 - Đại số tuyến tính 2",
+    "folder": "DSTT2",
+    "topic": "TriRiengVectơRieng",
+    "type": "single_choice",
+    "question": "Find the eigenvalues of the matrix \\[\\begin{bmatrix} 1 & 1 & -1 \\\\ 0 & 0 & -1 \\\\ 0 & 2 & -3 \\end{bmatrix}\\]",
+    "options": [
+      "2; 3; 4",
+      "None of the other choices is correct",
+      "0; 2; 3",
+      "-3; 0; 4",
+      "-1; -2; 1",
+      "-3; 3; 4"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xét phương trình đặc trưng: \\[\\det(A - \\lambda I) = 0.\\]",
+      "**Bước 2:** Ma trận có dạng khối tam giác dưới vì cột 1 chỉ có phần tử đầu tiên khác 0: \\(\\begin{bmatrix} 1 - \\lambda \\\\ 0 \\\\ 0 \\end{bmatrix}\\). Khai triển định thức theo cột 1:\n\\[\\det(A - \\lambda I) = (1 - \\lambda) \\begin{vmatrix} -\\lambda & -1 \\\\ 2 & -3 - \\lambda \\end{vmatrix}.\\]",
+      "**Bước 3:** Tính định thức con cấp 2:\n\\[\\begin{vmatrix} -\\lambda & -1 \\\\ 2 & -3 - \\lambda \\end{vmatrix} = (-\\lambda)(-3 - \\lambda) - (-1)(2) = \\lambda^2 + 3\\lambda + 2 = (\\lambda + 1)(\\lambda + 2).\\]",
+      "**Bước 4:** Phương trình đặc trưng trở thành:\n\\[(1 - \\lambda)(\\lambda + 1)(\\lambda + 2) = 0 \\iff \\lambda = 1, \\quad \\lambda = -1, \\quad \\lambda = -2.\\]",
+      "**Kết luận:** Các giá trị riêng là \\(-1; -2; 1\\), tương ứng với lựa chọn E."
+    ],
+    "image": "0153_q153_Question_153.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 154,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "KhaoSatHamSo",
+    "type": "single_choice",
+    "question": "Determine where the function is increasing and where it is decreasing \\[f(x) = (x - 2)^{1/3} + 7\\]\n(i) Decreasing on \\((-\\infty, \\infty)\\)\n(ii) Increasing on \\((-\\infty, 2)\\), decreasing on \\((2, \\infty)\\)\n(iii) Decreasing on \\((-\\infty, 2)\\), increasing on \\((2, \\infty)\\)\n(iv) Increasing on \\((-\\infty, \\infty)\\)",
+    "options": [
+      "(iii)",
+      "(ii)",
+      "(iv)",
+      "None of the other choices is correct",
+      "(i)"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Tập xác định của hàm số là \\(D = \\mathbb{R}\\). Hàm số liên tục trên toàn bộ trục số.",
+      "**Bước 2:** Tính đạo hàm của hàm số khi \\(x \\ne 2\\):\n\\[f'(x) = \\dfrac{1}{3}(x - 2)^{-2/3} = \\dfrac{1}{3\\sqrt[3]{(x - 2)^2}}.\\]",
+      "**Bước 3:** Xét dấu của \\(f'(x)\\): vì \\((x - 2)^2 > 0\\) với mọi \\(x \\ne 2\\), nên \\(f'(x) > 0\\) với mọi \\(x \\ne 2\\).",
+      "**Bước 4:** Mặc dù tại \\(x = 2\\) đạo hàm không tồn tại (tiếp tuyến thẳng đứng), hàm số liên tục tại \\(x = 2\\) và có đạo hàm dương ở cả hai phía, do đó hàm số đồng biến trên toàn bộ \\((-\\infty, \\infty)\\).",
+      "**Kết luận:** Hàm số đồng biến trên \\((-\\infty, \\infty)\\) ('Increasing on \\((-\\infty, \\infty)\\)'), tương ứng với (iv) và lựa chọn C."
+    ],
+    "image": "0154_q154_Question_154.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 155,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "type": "single_choice",
+    "question": "Given functions \\(f(x) = 2x + 1\\) and \\(g(x) = x^2\\). Find \\(g \\circ f(x)\\)\n(i) \\(4x^2 + 1\\)\n(ii) \\(2(x + 1)^2\\)\n(iii) \\((2x + 1)^2\\)\n(iv) \\(2x^2 + 1\\)",
+    "options": [
+      "(ii)",
+      "All of other choices are incorrect",
+      "(iii)",
+      "(iv)",
+      "(i)"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Theo định nghĩa hàm hợp \\(g \\circ f(x) = g(f(x))\\).",
+      "**Bước 2:** Thay \\(f(x) = 2x + 1\\) vào biểu thức của \\(g(u) = u^2\\):\n\\[g(f(x)) = (f(x))^2 = (2x + 1)^2.\\]",
+      "**Bước 3:** Kết quả khớp với biểu thức (iii).",
+      "**Kết luận:** Phương án đúng là C ((iii))."
+    ],
+    "image": "0155_q155_Question_155.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 156,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "type": "single_choice",
+    "question": "Evaluate the limit, if it exists \\[\\lim_{x \\to 1} \\frac{x^2 - 5x + 2}{x^4 + 8x + 7}\\]",
+    "options": [
+      "1/8",
+      "-3/8",
+      "None of the other choices is correct",
+      "0",
+      "3/8",
+      "-1/8"
+    ],
+    "answer": "F",
+    "answer_original": "F",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xét tính xác định của hàm số tại \\(x = 1\\):\n- Tử số: \\(1^2 - 5(1) + 2 = 1 - 5 + 2 = -2\\).\n- Mẫu số: \\(1^4 + 8(1) + 7 = 1 + 8 + 7 = 16\\).",
+      "**Bước 2:** Vì mẫu số khác 0, hàm phân thức liên tục tại \\(x = 1\\), có thể thay trực tiếp giá trị:\n\\[\\lim_{x \\to 1} \\dfrac{x^2 - 5x + 2}{x^4 + 8x + 7} = \\dfrac{-2}{16} = -\\dfrac{1}{8}.\\]",
+      "**Kết luận:** Giá trị giới hạn là \\(-1/8\\), tương ứng với lựa chọn F."
+    ],
+    "image": "0156_q156_Question_156.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 157,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVectơ",
+    "type": "single_choice",
+    "question": "Find the value of \\(t\\) for which \\((1, 2, t)\\) lies in \\(U = \\operatorname{span}\\{(1, 3, 4); (0, 2, 2)\\}\\)",
+    "options": [
+      "-1",
+      "1",
+      "3",
+      "5",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Vector \\((1, 2, t) \\in U\\) khi và chỉ khi tồn tại các hệ số \\(c_1, c_2\\) sao cho:\n\\[(1, 2, t) = c_1(1, 3, 4) + c_2(0, 2, 2).\\]",
+      "**Bước 2:** Thiết lập hệ phương trình theo từng thành phần:\n\\[\\begin{cases} c_1 = 1 \\\\ 3c_1 + 2c_2 = 2 \\\\ 4c_1 + 2c_2 = t \\end{cases}\\]",
+      "**Bước 3:** Từ phương trình 1: \\(c_1 = 1\\).\nThay vào phương trình 2: \\(3(1) + 2c_2 = 2 \\iff 2c_2 = -1 \\iff c_2 = -\\dfrac{1}{2}\\).",
+      "**Bước 4:** Thay \\(c_1 = 1\\) và \\(c_2 = -1/2\\) vào phương trình 3 để tính \\(t\\):\n\\[t = 4(1) + 2\\left(-\\dfrac{1}{2}\\right) = 4 - 1 = 3.\\]",
+      "**Kết luận:** Giá trị của \\(t\\) là 3, tương ứng với lựa chọn C."
+    ],
+    "image": "0157_q157_Question_157.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 158,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVectơ",
+    "type": "single_choice",
+    "question": "Let \\(U = \\{(x, y, z) \\mid 2x - y + z = 0\\}\\) be a subspace of \\(\\mathbb{R}^3\\). Which of the following statements are true?\n(i) \\(U = \\operatorname{span}\\{(1, 0, -2), (0, 1, 1)\\}\\)\n(ii) \\(U = \\operatorname{span}\\{(1, 2, 0)\\}\\)",
+    "options": [
+      "(i) only",
+      "(ii) only",
+      "Both (i) and (ii)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Không gian con \\(U\\) là một mặt phẳng đi qua gốc tọa độ trong \\(\\mathbb{R}^3\\), có phương trình \\(z = -2x + y\\). Số chiều của \\(U\\) là \\(\\dim(U) = 3 - 1 = 2\\).",
+      "**Bước 2:** Xét khẳng định (ii): Tập sinh chỉ có 1 vector, do đó \\(\\dim(\\operatorname{span}\\{(1, 2, 0)\\}) = 1 \\ne 2\\). Khẳng định (ii) SAI.",
+      "**Bước 3:** Xét khẳng định (i): Tập gồm 2 vector \\(v_1 = (1, 0, -2)\\) và \\(v_2 = (0, 1, 1)\\).\n- Kiểm tra thuộc \\(U\\):\n  + \\(2(1) - 0 + (-2) = 0\\) (thỏa mãn)\n  + \\(2(0) - 1 + 1 = 0\\) (thỏa mãn)\n- Hai vector này rõ ràng độc lập tuyến tính vì không tỷ lệ với nhau. Do đó 2 vector này tạo thành một cơ sở của \\(U\\), và \\(U = \\operatorname{span}\\{v_1, v_2\\}\\). Khẳng định (i) ĐÚNG.",
+      "**Kết luận:** Chỉ có khẳng định (i) đúng ('(i) only'), tương ứng với lựa chọn A."
+    ],
+    "image": "0158_q158_Question_158.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 159,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "HinhHocGiaiTich",
+    "type": "single_choice",
+    "question": "Find an equation describing the plane passing through \\((6, 0, 2)\\) and perpendicular to the line of intersection of the planes \\[x + y - 2z = 4 \\quad \\text{and} \\quad 3x - 2y + z = 1\\]",
+    "options": [
+      "\\(3x + 7y + 5z = 28\\)",
+      "\\(3x - 7y - 5z = 28\\)",
+      "\\(3x - 7y - 5z = -28\\)",
+      "\\(3x + 7y + 5z = -28\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Giao tuyến của hai mặt phẳng có vector chỉ phương \\(\\vec{d}\\) vuông góc với pháp tuyến của cả hai mặt phẳng \\(\\vec{n}_1 = (1, 1, -2)\\) và \\(\\vec{n}_2 = (3, -2, 1)\\):\n\\[\\vec{d} = \\vec{n}_1 \\times \\vec{n}_2 = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 & 1 & -2 \\\\ 3 & -2 & 1 \\end{vmatrix}.\\]",
+      "**Bước 2:** Tính các thành phần của tích có hướng:\n- \\(x = 1(1) - (-2)(-2) = 1 - 4 = -3\\)\n- \\(y = -[1(1) - (-2)(3)] = -(1 + 6) = -7\\)\n- \\(z = 1(-2) - 1(3) = -2 - 3 = -5\\)\nDo đó \\(\\vec{d} = (-3, -7, -5)\\), hay chọn vector cùng phương \\(\\vec{n} = (3, 7, 5)\\).",
+      "**Bước 3:** Mặt phẳng cần tìm vuông góc với giao tuyến nên nhận \\(\\vec{n} = (3, 7, 5)\\) làm vector pháp tuyến và đi qua điểm \\((6, 0, 2)\\):\n\\[3(x - 6) + 7(y - 0) + 5(z - 2) = 0 \\iff 3x + 7y + 5z - 18 - 10 = 0 \\iff 3x + 7y + 5z = 28.\\]",
+      "**Kết luận:** Phương trình mặt phẳng là \\(3x + 7y + 5z = 28\\), tương ứng với lựa chọn A."
+    ],
+    "image": "0159_q159_Question_159.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 160,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "HinhHocGiaiTich",
+    "type": "single_choice",
+    "question": "Find the volume of the parallelepiped determined by \\(\\mathbf{w}, \\mathbf{u}\\), and \\(\\mathbf{v}\\) when: \\[\\mathbf{w} = \\begin{bmatrix} 2 \\\\ 1 \\\\ 1 \\end{bmatrix}, \\quad \\mathbf{v} = \\begin{bmatrix} 1 \\\\ 0 \\\\ 2 \\end{bmatrix}, \\quad \\text{and} \\quad \\mathbf{u} = \\begin{bmatrix} 2 \\\\ 1 \\\\ -1 \\end{bmatrix}\\]",
+    "options": [
+      "1",
+      "2",
+      "3/2",
+      "3",
+      "None of the choices is correct",
+      "1/2"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Thể tích của hình hộp dựng bởi ba vector \\(\\mathbf{w}, \\mathbf{v}, \\mathbf{u}\\) bằng trị tuyệt đối của tích hỗn tạp (định thức của ma trận ghép 3 vector):\n\\[V = |\\det[\\mathbf{w} \\quad \\mathbf{v} \\quad \\mathbf{u}]| = \\left| \\begin{vmatrix} 2 & 1 & 2 \\\\ 1 & 0 & 1 \\\\ 1 & 2 & -1 \\end{vmatrix} \\right|.\\]",
+      "**Bước 2:** Khai triển định thức theo hàng 2 (vì có phần tử 0):\n\\[\\det = -1 \\begin{vmatrix} 1 & 2 \\\\ 2 & -1 \\end{vmatrix} + 0 - 1 \\begin{vmatrix} 2 & 1 \\\\ 1 & 2 \\end{vmatrix} = -1(-1 - 4) - 1(4 - 1) = -1(-5) - 1(3) = 5 - 3 = 2.\\]",
+      "**Bước 3:** Lấy trị tuyệt đối: \\[V = |2| = 2.\\]",
+      "**Kết luận:** Thể tích của hình hộp là 2, tương ứng với lựa chọn B."
+    ],
+    "image": "0160_q160_Question_160.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  }
+]

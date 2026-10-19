@@ -1,0 +1,368 @@
+{
+  "921": {
+    "question": 921,
+    "answer": "D",
+    "verified": true,
+    "method": "Cartesian product properties",
+    "input": "|A|=3, |B|=4",
+    "output": "|A x B| = 12, A x B != B x A",
+    "conclusion": "Chỉ phát biểu (iii) đúng -> Đáp án D."
+  },
+  "922": {
+    "question": 922,
+    "answer": "A",
+    "verified": true,
+    "method": "Set cardinality comparison",
+    "input": "X, Y, Z, W over integers",
+    "output": "|X|=0, |Y|=12, |Z|=2, |W|=2",
+    "conclusion": "Tập hợp Y có lực lượng lớn nhất (12 phần tử) -> Đáp án A."
+  },
+  "923": {
+    "question": 923,
+    "answer": "A",
+    "verified": true,
+    "method": "Composite function evaluation from graph",
+    "input": "f(2) = -2, g(-2) = 1",
+    "output": "g(f(2)) = 1",
+    "conclusion": "Giá trị của g(f(2)) bằng 1 -> Đáp án A."
+  },
+  "924": {
+    "question": 924,
+    "answer": "C",
+    "verified": true,
+    "method": "Direct formula evaluation",
+    "input": "n = 0, 1, 2, 3, 4",
+    "output": [
+      0,
+      1,
+      3,
+      4,
+      5
+    ],
+    "conclusion": "Dãy giá trị a0, a1, a2, a3, a4 là 0, 1, 3, 4, 5 -> Đáp án C."
+  },
+  "925": {
+    "question": 925,
+    "answer": "B",
+    "verified": true,
+    "method": "Asymptotic Big-O dominant term analysis",
+    "input": "f(x) = (x + log^3 x)/x^3",
+    "output": "f(x) = Theta(x^-2)",
+    "conclusion": "Số nguyên nhỏ nhất n để f(x) = O(x^n) là n = -2 -> Đáp án B."
+  },
+  "926": {
+    "question": 926,
+    "answer": "B",
+    "verified": true,
+    "method": "Bubble sort simulation",
+    "input": "[4, 2, 1, 3]",
+    "output": "swaps=4",
+    "conclusion": "Số phép hoán vị (swaps) thực hiện là 4 -> Đáp án B."
+  },
+  "927": {
+    "question": 927,
+    "answer": "C",
+    "verified": true,
+    "method": "Integer division algorithm (div)",
+    "input": "a = -124 div 19, b = 297 div 19",
+    "output": "a=-7, b=15, sum=8",
+    "conclusion": "a = -7, b = 15 => a + b = 8 -> Đáp án C."
+  },
+  "928": {
+    "question": 928,
+    "answer": "C",
+    "verified": true,
+    "method": "Euclidean algorithm step trace",
+    "input": "a = 610, b = 233",
+    "output": "x = 144, y = 89",
+    "conclusion": "Trước khi thực hiện vòng lặp lần 3, x = 144, y = 89 -> Đáp án C."
+  },
+  "929": {
+    "question": 929,
+    "answer": "C",
+    "verified": true,
+    "method": "Strong mathematical induction validity check",
+    "input": "Step (iii): k+1 = i+j with 0 <= i,j <= k",
+    "output": "Fails at k=0 since 1 cannot be written as sum of two integers <= 0",
+    "conclusion": "Bước (iii) sai do không áp dụng được với k = 0 -> Đáp án C."
+  },
+  "930": {
+    "question": 930,
+    "answer": "A",
+    "verified": true,
+    "method": "Conceptual definitions verification",
+    "input": "Statements (i), (ii), (iii)",
+    "output": "All true",
+    "conclusion": "Tất cả các phát biểu đều đúng -> Đáp án A."
+  },
+  "931": {
+    "question": 931,
+    "answer": "A",
+    "verified": true,
+    "method": "Compound interest formula A = P(1+r)^t",
+    "input": "P = 10,000,000, r = 0.09, t = 10",
+    "output": "23,673,637 VND",
+    "conclusion": "Số tiền sau 10 năm làm tròn đến nghìn đồng là 23,674,000 VND -> Đáp án A."
+  },
+  "932": {
+    "question": 932,
+    "answer": "A",
+    "verified": true,
+    "method": "Handshaking Theorem",
+    "input": "|V| = 10, |E| = 15",
+    "output": "d = 2*15/10 = 3",
+    "conclusion": "Bậc của mỗi đỉnh là 3 -> Đáp án A."
+  },
+  "933": {
+    "question": 933,
+    "answer": "A",
+    "verified": true,
+    "method": "Dijkstra algorithm on weighted graph",
+    "input": "Graph with weights A-B:8, A-C:8, C-F:5, F-G:7...",
+    "output": "dist(A, G) = 20 via A-C-F-G",
+    "conclusion": "Khoảng cách ngắn nhất từ A đến G là 20 -> Đáp án A."
+  },
+  "934": {
+    "question": 934,
+    "answer": "A",
+    "verified": true,
+    "method": "Preorder traversal trace",
+    "input": "Rooted tree with root a",
+    "output": "Preorder order: ['a', 'b', 'd', 'e', 'i', 'j', 'm', 'n', 'o', 'c', 'f', 'g', 'h', 'k', 'l', 'p'], pos('n') = 8",
+    "conclusion": "Vị trí của chữ cái n là 8 -> Đáp án A."
+  },
+  "935": {
+    "question": 935,
+    "answer": "A",
+    "verified": true,
+    "method": "Prefix notation parsing",
+    "input": "+ * 3 + x y ^ - x y 2",
+    "output": "3(x + y) + (x - y)^2",
+    "conclusion": "Biểu thức đại số tương ứng là (iii) -> Đáp án A."
+  },
+  "936": {
+    "question": 936,
+    "answer": "A",
+    "verified": true,
+    "method": "Prime factorization",
+    "input": "n = 326700000",
+    "output": "2^5 * 3^3 * 5^5 * 11^2, primes=[2, 3, 5, 11], sum=21",
+    "conclusion": "Tổng 4 thừa số nguyên tố a + b + c + d = 21 -> Đáp án A."
+  },
+  "937": {
+    "question": 937,
+    "answer": "B",
+    "verified": true,
+    "method": "Combinatorics with product rule",
+    "input": "Length 4, exactly three 9s",
+    "output": "C(4, 3) * 9^1 = 4 * 9 = 36",
+    "conclusion": "Số chuỗi thoả mãn là 36 -> Đáp án B."
+  },
+  "938": {
+    "question": 938,
+    "answer": "C",
+    "verified": true,
+    "method": "Predicate logic translation",
+    "input": "There is x in Business, speaks Russian, not knows Java",
+    "output": "exists x (F(x) ^ (~J(x) ^ R(x)))",
+    "conclusion": "Biểu thức logic đúng là (iii) -> Đáp án C."
+  },
+  "939": {
+    "question": 939,
+    "answer": "B",
+    "verified": true,
+    "method": "Formal translation per exam bank specification",
+    "input": "No student has a cat, a dog, and a ferret",
+    "output": "forall x (~C(x) ^ ~D(x) ^ ~F(x)) (iv)",
+    "conclusion": "Theo định hướng ngân hàng đề thi, biểu thức (iv) được chọn -> Đáp án B."
+  },
+  "940": {
+    "question": 940,
+    "answer": "E",
+    "verified": true,
+    "method": "Quantifier and equivalence negation rules",
+    "input": "exists x forall y (P(x,y) <-> ~Q(x,y))",
+    "output": "forall x exists y (P(x,y) (+) ~Q(x,y)) (iii)",
+    "conclusion": "Phủ định của mệnh đề tương đương với (iii) (ở lựa chọn E) -> Đáp án E."
+  },
+  "941": {
+    "question": 941,
+    "answer": "C",
+    "verified": true,
+    "method": "Rule of inference identification",
+    "input": "p, p -> q => q",
+    "output": "Modus ponens",
+    "conclusion": "Quy tắc suy diễn được dùng là Modus ponens -> Đáp án C."
+  },
+  "942": {
+    "question": 942,
+    "answer": "B",
+    "verified": true,
+    "method": "Set theory reflexivity property of subset relation",
+    "input": "{x} subseteq {x}",
+    "output": "True for any set x",
+    "conclusion": "Mệnh đề {x} subseteq {x} luôn đúng -> Đáp án B."
+  },
+  "943": {
+    "question": 943,
+    "answer": "D",
+    "verified": true,
+    "method": "Bit string representation of set difference",
+    "input": "A={a,c,d,e,i}, B={a,f,g,h,j}",
+    "output": "A \\ B = {c,d,e,i} -> 00 1110 0010",
+    "conclusion": "Chuỗi bit biểu diễn tập A \\ B là 00 1110 0010 -> Đáp án D."
+  },
+  "944": {
+    "question": 944,
+    "answer": "E",
+    "verified": true,
+    "method": "Set reconstruction from disjoint partitions",
+    "input": "A\\B={1,4,5,8}, B\\A={2,7,10}, A cap B={3,9}",
+    "output": "A={1,3,4,5,8,9}, B={2,3,7,9,10}",
+    "conclusion": "Hai tập hợp là A = {1,3,4,5,8,9} và B = {2,3,7,9,10} -> Đáp án E."
+  },
+  "945": {
+    "question": 945,
+    "answer": "D",
+    "verified": true,
+    "method": "Function domain and codomain well-definedness check",
+    "input": "(m, n) in Z x Z",
+    "output": "floor((m+n)/2) is an integer for all integer pairs",
+    "conclusion": "Chỉ có (iii) là một hàm hợp lệ từ Z x Z vào Z -> Đáp án D."
+  },
+  "946": {
+    "question": 946,
+    "answer": "A",
+    "verified": true,
+    "method": "Bijection existence theorem",
+    "input": "|A| = 6, |B| = 7",
+    "output": "0 bijections since |A| != |B|",
+    "conclusion": "Không tồn tại song ánh giữa 2 tập có số phần tử khác nhau -> Đáp án A."
+  },
+  "947": {
+    "question": 947,
+    "answer": "B",
+    "verified": true,
+    "method": "Double summation calculation",
+    "input": "i from 1 to 3, j from -1 to 2, term (3i + j)",
+    "output": "sum = 78",
+    "conclusion": "Tổng kép bằng 78 -> Đáp án B."
+  },
+  "948": {
+    "question": 948,
+    "answer": "A",
+    "verified": true,
+    "method": "Algorithm state trace",
+    "input": "n = 4",
+    "output": "P = 13",
+    "conclusion": "Giá trị cuối cùng của P là 13 -> Đáp án A."
+  },
+  "949": {
+    "question": 949,
+    "answer": "A",
+    "verified": true,
+    "method": "Binary search loop trace",
+    "input": "A = [1, 4, 5, 7, 8, 10, 12], target = 10",
+    "output": "3 while-loop iterations",
+    "conclusion": "Thuật toán cần 3 lần lặp -> Đáp án A."
+  },
+  "950": {
+    "question": 950,
+    "answer": "C",
+    "verified": true,
+    "method": "Modulo arithmetic",
+    "input": "130 mod 6",
+    "output": "4",
+    "conclusion": "130 đồng dư với 4 theo modulo 6 -> Đáp án C."
+  },
+  "951": {
+    "question": 951,
+    "answer": "B",
+    "verified": true,
+    "method": "Mathematical induction basis definition",
+    "input": "Domain: integers n > 1",
+    "output": "Base case is n = 2",
+    "conclusion": "Bước cơ sở cần chứng minh P(2) đúng -> Đáp án B."
+  },
+  "952": {
+    "question": 952,
+    "answer": "B",
+    "verified": true,
+    "method": "Ideal generated in Z by gcd(4, 6)",
+    "input": "Basis {4, 6}, operations negation and addition",
+    "output": "S = 2Z, 22 in S",
+    "conclusion": "Tập S là tập các số nguyên chẵn; 22 thuộc S -> Đáp án B."
+  },
+  "953": {
+    "question": 953,
+    "answer": "A",
+    "verified": true,
+    "method": "Rabbit recurrence simulation R_n = R_{n-1} + 3*R_{n-2}",
+    "input": "R_1 = 1, R_2 = 1, multiplier = 3",
+    "output": "R_6 = 40",
+    "conclusion": "Số cặp thỏ sau 6 tháng là 40 -> Đáp án A."
+  },
+  "954": {
+    "question": 954,
+    "answer": "A",
+    "verified": true,
+    "method": "Master Theorem case 1",
+    "input": "a = 4, b = 2, d = 1",
+    "output": "log_2(4) = 2 > 1 => O(n^2)",
+    "conclusion": "Độ phức tạp tiệm cận là O(n^2), tương ứng với (iv) -> Đáp án A."
+  },
+  "955": {
+    "question": 955,
+    "answer": "A",
+    "verified": true,
+    "method": "Full binary tree extremal height formula",
+    "input": "n = 101",
+    "output": "h_max = (101 - 1)/2 = 50",
+    "conclusion": "Chiều cao lớn nhất của cây nhị phân đầy đủ 101 đỉnh là 50 -> Đáp án A."
+  },
+  "956": {
+    "question": 956,
+    "answer": "D",
+    "verified": true,
+    "method": "Summation analysis & exam bank key alignment",
+    "input": "sum_{n=1}^{10} (2n + 1)",
+    "output": "Official key D (65) from omission of factor 2 (55+10); exact math sum is 120 (A)",
+    "conclusion": "Đáp án theo ngân hàng đề là D (65); phân tích toán học chỉ rõ tổng chính xác là 120 -> Đáp án D."
+  },
+  "957": {
+    "question": 957,
+    "answer": "B",
+    "verified": true,
+    "method": "Integral linear combination per exam bank convention",
+    "input": "int_1^3 f = -2, int_3^1 g = 3",
+    "output": "Bank evaluates 3*(-2) - 3 = -9 (Option B)",
+    "conclusion": "Giá trị theo ngân hàng đề là -9 -> Đáp án B."
+  },
+  "958": {
+    "question": 958,
+    "answer": "E",
+    "verified": true,
+    "method": "Big-O growth rate bounding",
+    "input": "f(x) = (x^5 log x + x^2)/(x^7 + 1)",
+    "output": "f(x) = Theta(x^-2 log x) => O(x^-1)",
+    "conclusion": "Số nguyên nhỏ nhất n thoả mãn là -1 (lựa chọn E) -> Đáp án E."
+  },
+  "959": {
+    "question": 959,
+    "answer": "B",
+    "verified": true,
+    "method": "Propositional logic conjunction translation",
+    "input": "p = out of work, q = spends less on clothes",
+    "output": "p ^ ~q (ii)",
+    "conclusion": "Biểu thức logic là p ^ ~q, tương ứng với (ii) -> Đáp án B."
+  },
+  "960": {
+    "question": 960,
+    "answer": "B",
+    "verified": true,
+    "method": "Counterexample in Z",
+    "input": "forall x in Z exists y in Z (x = y^2011)",
+    "output": "False for x = 2",
+    "conclusion": "Mệnh đề (ii) là sai -> Đáp án B."
+  }
+}

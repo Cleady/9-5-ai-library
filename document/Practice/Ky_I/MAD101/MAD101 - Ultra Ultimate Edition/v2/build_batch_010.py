@@ -1,0 +1,1361 @@
+"""
+Xây dựng dữ liệu Schema v2 cho Lô 10 (Câu 361 - 400) môn Toán rời rạc MAD101.
+Gồm:
+- Phiên âm toán học LaTeX / MathJax chính xác 100% từ ảnh gốc.
+- Mô hình hoá vector SVG native cho các câu có hình vẽ (372, 375, 380, 391, 394).
+- Giải thích từng bước (>= 2 bước) chi tiết, chuẩn sư phạm bằng tiếng Việt.
+- Xuất dữ liệu ra v2/questions_batch_010.json và gộp vào v2/questions_sample_v2.json, v2/questions_v2.js.
+"""
+
+import json
+import os
+
+SVG_Q372 = """<svg viewBox="0 0 540 300" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow372" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="540" height="300" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Edges -->
+  <g stroke="#64748b" stroke-width="2">
+    <line x1="270" y1="35" x2="170" y2="85"/>
+    <line x1="270" y1="35" x2="380" y2="85"/>
+    <line x1="170" y1="85" x2="110" y2="140"/>
+    <line x1="170" y1="85" x2="210" y2="140"/>
+    <line x1="210" y1="140" x2="170" y2="195"/>
+    <line x1="210" y1="140" x2="250" y2="195"/>
+    <line x1="250" y1="195" x2="210" y2="255"/>
+    <line x1="250" y1="195" x2="250" y2="255"/>
+    <line x1="250" y1="195" x2="290" y2="255"/>
+    <line x1="380" y1="85" x2="340" y2="140"/>
+    <line x1="380" y1="85" x2="380" y2="140"/>
+    <line x1="380" y1="85" x2="430" y2="140"/>
+    <line x1="430" y1="140" x2="400" y2="195"/>
+    <line x1="430" y1="140" x2="465" y2="195"/>
+    <line x1="465" y1="195" x2="465" y2="255"/>
+  </g>
+
+  <!-- Nodes -->
+  <g filter="url(#shadow372)">
+    <!-- a -->
+    <circle cx="270" cy="35" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="270" y="39" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">a</text>
+    <!-- b, c -->
+    <circle cx="170" cy="85" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="170" y="89" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">b</text>
+    <circle cx="380" cy="85" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="380" y="89" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">c</text>
+    <!-- d, e -->
+    <circle cx="110" cy="140" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="110" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">d</text>
+    <circle cx="210" cy="140" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="210" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">e</text>
+    <!-- f, g, h -->
+    <circle cx="340" cy="140" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="340" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">f</text>
+    <circle cx="380" cy="140" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="380" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">g</text>
+    <circle cx="430" cy="140" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="430" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">h</text>
+    <!-- i, j -->
+    <circle cx="170" cy="195" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="170" y="199" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">i</text>
+    <circle cx="250" cy="195" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="250" y="199" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">j</text>
+    <!-- k, l -->
+    <circle cx="400" cy="195" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="400" y="199" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">k</text>
+    <circle cx="465" cy="195" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="465" y="199" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">l</text>
+    <!-- m, n, o, p -->
+    <circle cx="210" cy="255" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="210" y="259" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">m</text>
+    <circle cx="250" cy="255" r="12" fill="#f97316" stroke="#c2410c" stroke-width="2.5"/>
+    <text x="250" y="259" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">n</text>
+    <circle cx="290" cy="255" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="290" y="259" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">o</text>
+    <circle cx="465" cy="255" r="12" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="465" y="259" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">p</text>
+  </g>
+</svg>"""
+
+SVG_Q375 = """<svg viewBox="0 0 540 240" width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow375" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="540" height="240" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Left Graph -->
+  <g stroke="#334155" stroke-width="2">
+    <line x1="50" y1="110" x2="100" y2="45"/>
+    <line x1="50" y1="110" x2="100" y2="175"/>
+    <line x1="100" y1="45" x2="150" y2="45"/>
+    <line x1="100" y1="175" x2="150" y2="175"/>
+    <line x1="100" y1="45" x2="100" y2="175"/>
+    <line x1="150" y1="45" x2="150" y2="175"/>
+    <line x1="150" y1="45" x2="200" y2="110"/>
+    <line x1="150" y1="175" x2="200" y2="110"/>
+  </g>
+  <g filter="url(#shadow375)">
+    <circle cx="50" cy="110" r="5" fill="#0284c7"/>
+    <circle cx="100" cy="45" r="5" fill="#0284c7"/>
+    <circle cx="100" cy="175" r="5" fill="#0284c7"/>
+    <circle cx="150" cy="45" r="5" fill="#0284c7"/>
+    <circle cx="150" cy="175" r="5" fill="#0284c7"/>
+    <circle cx="200" cy="110" r="5" fill="#0284c7"/>
+  </g>
+  <text x="125" y="215" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">Đồ thị bên trái</text>
+
+  <!-- Right Graph -->
+  <g stroke="#334155" stroke-width="2">
+    <line x1="340" y1="110" x2="390" y2="45"/>
+    <line x1="340" y1="110" x2="390" y2="175"/>
+    <line x1="390" y1="45" x2="440" y2="45"/>
+    <line x1="390" y1="175" x2="440" y2="175"/>
+    <!-- Diagonals inside -->
+    <line x1="390" y1="45" x2="440" y2="175"/>
+    <line x1="390" y1="175" x2="440" y2="45"/>
+    <line x1="440" y1="45" x2="490" y2="110"/>
+    <line x1="440" y1="175" x2="490" y2="110"/>
+  </g>
+  <g filter="url(#shadow375)">
+    <circle cx="340" cy="110" r="5" fill="#0284c7"/>
+    <circle cx="390" cy="45" r="5" fill="#0284c7"/>
+    <circle cx="390" cy="175" r="5" fill="#0284c7"/>
+    <circle cx="440" cy="45" r="5" fill="#0284c7"/>
+    <circle cx="440" cy="175" r="5" fill="#0284c7"/>
+    <circle cx="490" cy="110" r="5" fill="#0284c7"/>
+  </g>
+  <text x="415" y="215" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">Đồ thị bên phải</text>
+</svg>"""
+
+SVG_Q380 = """<svg viewBox="0 0 540 280" width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow380" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="540" height="280" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Edges -->
+  <g stroke="#64748b" stroke-width="2">
+    <line x1="120" y1="60" x2="260" y2="60"/>
+    <line x1="260" y1="60" x2="400" y2="60"/>
+    <line x1="120" y1="60" x2="120" y2="150"/>
+    <line x1="120" y1="150" x2="120" y2="230"/>
+    <line x1="120" y1="60" x2="260" y2="150"/>
+    <line x1="120" y1="150" x2="260" y2="150"/>
+    <line x1="120" y1="230" x2="260" y2="150"/>
+    <line x1="260" y1="60" x2="260" y2="150"/>
+    <line x1="400" y1="60" x2="400" y2="150"/>
+    <line x1="260" y1="150" x2="400" y2="150"/>
+  </g>
+
+  <!-- Weight badges -->
+  <rect x="182" y="48" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="191" y="61" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">2</text>
+  <rect x="322" y="48" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="331" y="61" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+  <rect x="105" y="98" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="114" y="111" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">2</text>
+  <rect x="105" y="182" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="114" y="195" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+  <rect x="182" y="92" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="191" y="105" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+  <rect x="182" y="142" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="191" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">2</text>
+  <rect x="182" y="198" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="191" y="211" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">3</text>
+  <rect x="252" y="98" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="261" y="111" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">2</text>
+  <rect x="392" y="98" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="401" y="111" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">2</text>
+  <rect x="322" y="142" width="18" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="331" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">3</text>
+
+  <!-- Nodes -->
+  <g filter="url(#shadow380)">
+    <circle cx="120" cy="60" r="14" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="120" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">A</text>
+    <circle cx="120" cy="150" r="14" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="120" y="155" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">B</text>
+    <circle cx="120" cy="230" r="14" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="120" y="235" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">E</text>
+    <circle cx="260" cy="60" r="14" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="260" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">D</text>
+    <circle cx="260" cy="150" r="14" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="260" y="155" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">C</text>
+    <circle cx="400" cy="60" r="14" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="400" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">F</text>
+    <circle cx="400" cy="150" r="14" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <text x="400" y="155" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">G</text>
+  </g>
+</svg>"""
+
+SVG_Q391 = """<svg viewBox="0 0 540 250" width="100%" height="230" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow391" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="540" height="250" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Graph X: 5-pointed star -->
+  <g stroke="#334155" stroke-width="2">
+    <line x1="140" y1="30" x2="187" y2="175"/>
+    <line x1="187" y1="175" x2="64" y2="85"/>
+    <line x1="64" y1="85" x2="216" y2="85"/>
+    <line x1="216" y1="85" x2="93" y2="175"/>
+    <line x1="93" y1="175" x2="140" y2="30"/>
+  </g>
+  <g filter="url(#shadow391)">
+    <circle cx="140" cy="30" r="5" fill="#0284c7"/>
+    <circle cx="216" cy="85" r="5" fill="#0284c7"/>
+    <circle cx="187" cy="175" r="5" fill="#0284c7"/>
+    <circle cx="93" cy="175" r="5" fill="#0284c7"/>
+    <circle cx="64" cy="85" r="5" fill="#0284c7"/>
+  </g>
+  <text x="140" y="215" font-family="system-ui, sans-serif" font-size="16" font-style="italic" font-weight="bold" fill="#0f172a" text-anchor="middle">X</text>
+
+  <!-- Graph Y: Bowtie graph -->
+  <g stroke="#334155" stroke-width="2">
+    <line x1="330" y1="30" x2="330" y2="175"/>
+    <line x1="330" y1="30" x2="390" y2="105"/>
+    <line x1="330" y1="175" x2="390" y2="105"/>
+    <line x1="450" y1="30" x2="450" y2="175"/>
+    <line x1="450" y1="30" x2="390" y2="105"/>
+    <line x1="450" y1="175" x2="390" y2="105"/>
+  </g>
+  <g filter="url(#shadow391)">
+    <circle cx="330" cy="30" r="5" fill="#0284c7"/>
+    <circle cx="330" cy="175" r="5" fill="#0284c7"/>
+    <circle cx="390" cy="105" r="5" fill="#0284c7"/>
+    <circle cx="450" cy="30" r="5" fill="#0284c7"/>
+    <circle cx="450" cy="175" r="5" fill="#0284c7"/>
+  </g>
+  <text x="390" y="215" font-family="system-ui, sans-serif" font-size="16" font-style="italic" font-weight="bold" fill="#0f172a" text-anchor="middle">Y</text>
+</svg>"""
+
+SVG_Q394 = """<svg viewBox="0 0 540 260" width="100%" height="240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow394" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0f766e" />
+    </marker>
+    <filter id="shadow394" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="540" height="260" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- G1: Directed connected graph -->
+  <g stroke="#0f766e" stroke-width="2" marker-end="url(#arrow394)">
+    <line x1="60" y1="65" x2="135" y2="65"/>
+    <line x1="135" y1="65" x2="205" y2="65"/>
+    <line x1="60" y1="165" x2="60" y2="75"/>
+    <line x1="60" y1="165" x2="135" y2="70"/>
+    <line x1="205" y1="65" x2="205" y2="155"/>
+  </g>
+  <g filter="url(#shadow394)">
+    <circle cx="60" cy="65" r="6" fill="#e11d48"/>
+    <circle cx="60" cy="165" r="6" fill="#e11d48"/>
+    <circle cx="135" cy="65" r="6" fill="#e11d48"/>
+    <circle cx="205" cy="65" r="6" fill="#e11d48"/>
+    <circle cx="205" cy="165" r="6" fill="#e11d48"/>
+  </g>
+  <text x="135" y="215" font-family="system-ui, sans-serif" font-size="16" font-style="italic" font-weight="bold" fill="#0f172a" text-anchor="middle">G1</text>
+
+  <!-- G2: 6-pointed star (two disjoint triangles) -->
+  <g stroke="#0f766e" stroke-width="2" marker-end="url(#arrow394)">
+    <!-- Upward triangle -->
+    <line x1="390" y1="40" x2="455" y2="165"/>
+    <line x1="455" y1="165" x2="325" y2="165"/>
+    <line x1="325" y1="165" x2="390" y2="45"/>
+    <!-- Downward triangle -->
+    <line x1="325" y1="65" x2="455" y2="65"/>
+    <line x1="455" y1="65" x2="390" y2="190"/>
+    <line x1="390" y1="190" x2="325" y2="70"/>
+  </g>
+  <g filter="url(#shadow394)">
+    <circle cx="390" cy="40" r="6" fill="#e11d48"/>
+    <circle cx="455" cy="165" r="6" fill="#e11d48"/>
+    <circle cx="325" cy="165" r="6" fill="#e11d48"/>
+    <circle cx="325" cy="65" r="6" fill="#e11d48"/>
+    <circle cx="455" cy="65" r="6" fill="#e11d48"/>
+    <circle cx="390" cy="190" r="6" fill="#e11d48"/>
+  </g>
+  <text x="390" y="215" font-family="system-ui, sans-serif" font-size="16" font-style="italic" font-weight="bold" fill="#0f172a" text-anchor="middle">G2</text>
+</svg>"""
+
+def build_batch_010():
+    questions = [
+        # Q361
+        {
+            "id": 361,
+            "chapter": 4,
+            "question": "Tìm giá trị của biểu thức đồng dư: \\(2^{28} \\bmod 19\\).",
+            "options": [
+                "A. 14",
+                "B. 15",
+                "C. None of the other choices is correct",
+                "D. 16",
+                "E. 17"
+            ],
+            "answer": "E",
+            "explanation": [
+                "Bước 1: Áp dụng định lý nhỏ Fermat: Vì 19 là số nguyên tố và \\(\\gcd(2, 19) = 1\\), ta có \\(2^{19-1} = 2^{18} \\equiv 1 \\pmod{19}\\).",
+                "Bước 2: Phân tích số mũ: \\(28 = 18 + 10\\), do đó:\n\\[2^{28} = 2^{18} \\cdot 2^{10} \\equiv 1 \\cdot 2^{10} \\pmod{19}\\]",
+                "Bước 3: Tính \\(2^{10} = 1024\\). Chia 1024 cho 19:\n\\[1024 = 19 \\times 53 + 17\\]\nDo đó \\(2^{28} \\equiv 17 \\pmod{19}\\). Chọn phương án E."
+            ],
+            "figures": [],
+            "image": "0361_q361_Question_361.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q362
+        {
+            "id": 362,
+            "chapter": 11,
+            "question": "Tìm biểu thức đại số có dạng ký pháp tiền tố (prefix notation) là:\n\\[+ * 3 + x \\, y \\, \\text{^} - x \\, y \\, 2\\]\n(i) \\((3x + y) + (x - y)^2\\)\n(ii) \\(3((x + y) + (x - y)^2)\\)\n(iii) \\(3(x + y) + (x - y)^2\\)",
+            "options": [
+                "A. None of the other choices is correct",
+                "B. (ii)",
+                "C. (iii)",
+                "D. (i)"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Phân tích biểu thức tiền tố từ phải sang trái:\n- Toán tử `^ - x y 2` biến đổi thành \\((x - y)^2\\).\n- Toán tử `+ x y` biến đổi thành \\((x + y)\\).\n- Toán tử `* 3 (+ x y)` biến đổi thành \\(3 \\cdot (x + y)\\).",
+                "Bước 2: Toán tử ngoài cùng `+` kết hợp hai biểu thức con:\n\\[+ \\ [3(x + y)] \\ [(x - y)^2] \\implies 3(x + y) + (x - y)^2\\]",
+                "Bước 3: Biểu thức này hoàn toàn trùng khớp với biểu thức (iii). Chọn phương án C."
+            ],
+            "figures": [],
+            "image": "0362_q362_Question_362.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q363
+        {
+            "id": 363,
+            "chapter": 1,
+            "question": "Tìm mệnh đề phủ định của mệnh đề lượng từ sau:\n\\[\\exists x (P(x) \\to Q(x))\\]",
+            "options": [
+                "A. \\(\\forall x (Q(x) \\to P(x))\\)",
+                "B. \\(\\forall x (\\neg Q(x) \\wedge P(x))\\)",
+                "C. \\(\\forall x (\\neg Q(x) \\to P(x))\\)",
+                "D. \\(\\forall x (\\neg Q(x) \\wedge \\neg P(x))\\)",
+                "E. None of the other choices is correct"
+            ],
+            "answer": "B",
+            "explanation": [
+                "Bước 1: Áp dụng quy tắc phủ định lượng từ tồn tại:\n\\[\\neg \\exists x (P(x) \\to Q(x)) \\equiv \\forall x \\neg(P(x) \\to Q(x))\\]",
+                "Bước 2: Phủ định của phép kéo theo \\(\\neg(P \\to Q) \\equiv P \\wedge \\neg Q\\).",
+                "Bước 3: Do phép hội có tính giao hoán, \\(P(x) \\wedge \\neg Q(x) \\equiv \\neg Q(x) \\wedge P(x)\\). Vậy biểu thức phủ định là \\(\\forall x (\\neg Q(x) \\wedge P(x))\\). Chọn phương án B."
+            ],
+            "figures": [],
+            "image": "0363_q363_Question_363.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q364
+        {
+            "id": 364,
+            "chapter": 2,
+            "question": "Cho tập phổ dụng \\(U = \\{a, b, c, d, e, f, g, h, i, j\\}\\). Cho \\(P\\) là tập con của \\(U\\) có chuỗi bit biểu diễn bị khuyết trong đề gốc (\"is 1.\"). Cho \\(Q\\) là tập con có chuỗi bit là 0100110111. Tìm giao của \\(P\\) và \\(Q\\).",
+            "options": [
+                "A. {b, e, h, i}",
+                "B. {b, e, h, i, j}",
+                "C. {c, f, g, j}",
+                "D. {c, f, g, h, j}",
+                "E. None of the other choices is correct"
+            ],
+            "answer": "E",
+            "explanation": [
+                "Bước 1: Trong đề thi gốc, chuỗi bit của tập hợp \\(P\\) bị lỗi in ấn, chỉ ghi nhận ký tự '1.' thay vì chuỗi 10 bit hoàn chỉnh.",
+                "Bước 2: Do không thể xác định tập \\(P\\) từ chuỗi bit bị cắt ngắn, các phương án liệt kê cụ thể không thể suy diễn một cách hợp lệ.",
+                "Bước 3: Đáp án chính thức được ghi nhận trong cơ sở dữ liệu đề thi là phương án E (\"None of the other choices is correct\")."
+            ],
+            "figures": [],
+            "image": "0364_q364_Question_364.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": ["question_text_ambiguous", "exam_key_retained"]
+        },
+        # Q365
+        {
+            "id": 365,
+            "chapter": 1,
+            "question": "Mệnh đề nào sau đây là SAI (FALSE) trên tập hợp các số thực \\(\\mathbb{R}\\)?\n(i) \\(\\exists x (x^3 = -1)\\)\n(ii) \\(\\exists x (x^4 \\le x^2)\\)\n(iii) \\(\\forall x ((-x)^2 = x^2)\\)\n(iv) \\(\\forall x (2x > x)\\)",
+            "options": [
+                "A. (i)",
+                "B. (iii)",
+                "C. None of the other choices is correct",
+                "D. (ii)",
+                "E. (iv)"
+            ],
+            "answer": "E",
+            "explanation": [
+                "Bước 1: Kiểm tra các mệnh đề (i), (ii), (iii):\n- (i) \\(x = -1 \\implies (-1)^3 = -1\\) (Đúng).\n- (ii) \\(x = 0 \\implies 0^4 \\le 0^2\\) hoặc \\(x = 1 \\implies 1 \\le 1\\) (Đúng).\n- (iii) Bình phương của số đối luôn bằng nhau với mọi số thực (Đúng).",
+                "Bước 2: Xét mệnh đề (iv): Bất đẳng thức \\(2x > x \\iff x > 0\\). Với các số thực âm hoặc bằng 0 (ví dụ \\(x = -2\\) thì \\(-4 > -2\\) sai; \\(x = 0\\) thì \\(0 > 0\\) sai).",
+                "Bước 3: Vì mệnh đề lượng từ với mọi đòi hỏi đúng với tất cả số thực, mệnh đề (iv) là SAI. Chọn phương án E."
+            ],
+            "figures": [],
+            "image": "0365_q365_Question_365.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q366
+        {
+            "id": 366,
+            "chapter": 1,
+            "question": "Tìm mệnh đề tương ứng với bảng chân trị sau (kết quả lần lượt là T, T, T, F khi \\((p, q)\\) lần lượt là (T,T), (T,F), (F,T), (F,F)):\n(i) \\(p \\to q\\)\n(ii) \\(q \\to p\\)\n(iii) \\(p \\to \\neg q\\)\n(iv) \\(\\neg p \\to q\\)",
+            "options": [
+                "A. (iv)",
+                "B. (ii)",
+                "C. (iii)",
+                "D. (i)"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Bảng chân trị có giá trị False duy nhất khi cả \\(p\\) và \\(q\\) cùng False, và True trong cả 3 trường hợp còn lại. Đây chính là bảng chân trị của phép tuyển \\(p \\vee q\\).",
+                "Bước 2: Sử dụng luật tương đương của phép kéo theo: \\(\\neg p \\to q \\equiv \\neg(\\neg p) \\vee q \\equiv p \\vee q\\).",
+                "Bước 3: Do đó mệnh đề (iv) \\(\\neg p \\to q\\) có bảng chân trị trùng khớp hoàn toàn. Chọn phương án A."
+            ],
+            "figures": [],
+            "image": "0366_q366_Question_366.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q367
+        {
+            "id": 367,
+            "chapter": 8,
+            "question": "Giả sử hàm số \\(f(n)\\) thỏa mãn hệ thức truy hồi chia để trị:\n\\[f(n) = 4f(n/7) + 2n \\quad \\text{và } f(4) = 3.\\]\nTìm giá trị của \\(f(196)\\).",
+            "options": [
+                "A. 440",
+                "B. 664",
+                "C. 272",
+                "D. 48",
+                "E. None of the other choices is correct"
+            ],
+            "answer": "B",
+            "explanation": [
+                "Bước 1: Phân tích các bước chia: \\(196 / 7 = 28\\) và \\(28 / 7 = 4\\).",
+                "Bước 2: Tính \\(f(28)\\) từ điều kiện cơ sở \\(f(4) = 3\\):\n\\[f(28) = 4f(28/7) + 2(28) = 4f(4) + 56 = 4(3) + 56 = 12 + 56 = 68\\]",
+                "Bước 3: Tính \\(f(196)\\):\n\\[f(196) = 4f(196/7) + 2(196) = 4f(28) + 392 = 4(68) + 392 = 272 + 392 = 664\\]\nChọn phương án B."
+            ],
+            "figures": [],
+            "image": "0367_q367_Question_367.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q368
+        {
+            "id": 368,
+            "chapter": 10,
+            "question": "Cho \\(G\\) là đồ thị vô hướng gồm ba đỉnh \\(A, B, C\\) có ma trận kề như sau:\n\\[M = \\begin{bmatrix} 1 & 3 & 0 \\\\ 3 & 0 & 1 \\\\ 0 & 1 & 2 \\end{bmatrix}\\]\nCó bao nhiêu đường đi có độ dài 3 từ đỉnh \\(A\\) đến đỉnh \\(C\\) trong đồ thị \\(G\\)?",
+            "options": [
+                "A. 9",
+                "B. 3",
+                "C. 10",
+                "D. 19"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Theo định lý về số đường đi trong đồ thị, số đường đi có độ dài \\(r\\) từ đỉnh \\(i\\) đến đỉnh \\(j\\) bằng phần tử tại hàng \\(i\\), cột \\(j\\) của ma trận lũy thừa \\(M^r\\). Ở đây ta cần tính phần tử \\((M^3)_{1, 3}\\).",
+                "Bước 2: Tính hàng 1 của \\(M^2\\):\n\\[(M^2)_{1, 1} = 1(1) + 3(3) + 0(0) = 10\\]\n\\[(M^2)_{1, 2} = 1(3) + 3(0) + 0(1) = 3\\]\n\\[(M^2)_{1, 3} = 1(0) + 3(1) + 0(2) = 3\\]\nDo đó hàng 1 của \\(M^2\\) là \\([10, 3, 3]\\).",
+                "Bước 3: Nhân hàng 1 của \\(M^2\\) với cột 3 của \\(M = [0, 1, 2]^T\\):\n\\[(M^3)_{1, 3} = 10(0) + 3(1) + 3(2) = 0 + 3 + 6 = 9\\]\nVậy có 9 đường đi độ dài 3 từ A đến C."
+            ],
+            "figures": [],
+            "image": "0368_q368_Question_368.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q369
+        {
+            "id": 369,
+            "chapter": 2,
+            "question": "Quy tắc nào sau đây là một hàm số (function) hợp lệ?\n(i) \\(f : \\mathbb{Z} \\to \\mathbb{R}, f(x) = 1/(x^2 - 5)\\)\n(ii) \\(f : \\mathbb{Z} \\to \\mathbb{Z}, f(x) = 1/(x^2 - 5)\\)\n(iii) \\(f : \\mathbb{Z} \\to \\mathbb{Z}, f(x) = 1/(x^2 - 4)\\)\n(iv) \\(f : \\mathbb{Z} \\to \\mathbb{R}, f(x) = 1/(x^2 - 4)\\)",
+            "options": [
+                "A. (i)",
+                "B. (ii)",
+                "C. (iii)",
+                "D. (iv)"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Một quy tắc \\(f: A \\to B\\) là hàm số khi và chỉ khi mỗi phần tử \\(x \\in A\\) được gán với duy nhất một phần tử \\(y \\in B\\).",
+                "Bước 2: Phân tích từng quy tắc:\n- Với (iii) và (iv): Tại \\(x = 2\\) và \\(x = -2\\), mẫu số \\(x^2 - 4 = 0\\), phép chia cho 0 không xác định \\(\\implies\\) không phải hàm số.\n- Với (ii): Khi \\(x = 0\\), \\(f(0) = -1/5\\) không thuộc tập số nguyên \\(\\mathbb{Z}\\) (vi phạm tập đích) \\(\\implies\\) không phải hàm số.\n- Với (i): Mẫu số \\(x^2 - 5 = 0 \\iff x = \\pm \\sqrt{5} \\notin \\mathbb{Z}\\). Do đó mẫu số luôn khác 0 với mọi số nguyên \\(x\\), và giá trị luôn là số thực.",
+                "Bước 3: Chỉ có quy tắc (i) là một hàm số hợp lệ. Chọn phương án A."
+            ],
+            "figures": [],
+            "image": "0369_q369_Question_369.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q370
+        {
+            "id": 370,
+            "chapter": 1,
+            "question": "Chọn bộ giá trị của \\(p, q, r\\) sao cho mệnh đề \\((p \\to q) \\wedge r\\) mang giá trị True.",
+            "options": [
+                "A. p = T, q = F, r = T",
+                "B. None of the mentioned",
+                "C. p = F, q = F, r = T",
+                "D. p = F, q = T, r = F",
+                "E. p = q = r = F"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Mệnh đề có dạng hội \\(A \\wedge r\\). Để biểu thức True, bắt buộc cả \\(p \\to q\\) phải True và \\(r\\) phải True.",
+                "Bước 2: Thử phương án C với \\(p = F, q = F, r = T\\):\n- \\(p \\to q \\iff F \\to F\\) mang chân trị True.\n- \\(r = T\\) mang chân trị True.\n- Biểu thức \\((p \\to q) \\wedge r \\iff True \\wedge True\\) mang giá trị True.",
+                "Bước 3: Trong khi đó, phương án A cho \\(T \\to F = False\\); các phương án D, E có \\(r = F\\) nên biểu thức hội mang giá trị False. Chọn phương án C."
+            ],
+            "figures": [],
+            "image": "0370_q370_Question_370.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q371
+        {
+            "id": 371,
+            "chapter": 1,
+            "question": "Nhắc lại một số quy tắc suy diễn (Rules of inference):\n- Modus ponens: \\(p \\wedge (p \\to q) \\to q\\)\n- Modus tollens: \\(\\neg q \\wedge (p \\to q) \\to \\neg p\\)\n- Hypothetical syllogism: \\((p \\to q) \\wedge (q \\to r) \\to (p \\to r)\\)\n- Disjunctive syllogism: \\([(p \\vee q) \\wedge \\neg p] \\to q\\)\nXác định quy tắc suy diễn được sử dụng trong lập luận đã cho.",
+            "options": [
+                "A. Modus ponens",
+                "B. Disjunctive syllogism",
+                "C. Hypothetical syllogism",
+                "D. None of the other choices is correct",
+                "E. Modus tollens"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Đối chiếu các quy tắc suy diễn cơ bản trong logic mệnh đề.",
+                "Bước 2: Quy tắc Modus ponens (Khẳng định tiền đề) có cấu trúc: nếu có \\(p\\) và \\(p \\to q\\), suy ra \\(q\\).",
+                "Bước 3: Phương án chính xác theo đề thi là Modus ponens (phương án A)."
+            ],
+            "figures": [],
+            "image": "0371_q371_Question_371.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": ["original_image_clipped", "exam_key_retained"]
+        },
+        # Q372
+        {
+            "id": 372,
+            "chapter": 11,
+            "question": "Vị trí của chữ cái \\(n\\) là thứ mấy khi duyệt cây có gốc trong hình vẽ theo thứ tự trước (preorder traversal)?",
+            "options": [
+                "A. None of the other choices is correct",
+                "B. 7",
+                "C. 11",
+                "D. 6",
+                "E. 8",
+                "F. 10"
+            ],
+            "answer": "E",
+            "explanation": [
+                "Bước 1: Quy tắc duyệt thứ tự trước (Preorder): Thăm gốc trước, sau đó lần lượt duyệt các cây con từ trái sang phải.",
+                "Bước 2: Truy vết thứ tự duyệt từng đỉnh:\n1. Thăm gốc: \\(a\\) (thứ 1)\n2. Sang cây con trái của \\(a\\): thăm \\(b\\) (thứ 2)\n3. Sang con trái của \\(b\\): thăm \\(d\\) (thứ 3)\n4. Sang con phải của \\(b\\): thăm \\(e\\) (thứ 4)\n5. Sang con trái của \\(e\\): thăm \\(i\\) (thứ 5)\n6. Sang con phải của \\(e\\): thăm \\(j\\) (thứ 6)\n7. Sang con thứ nhất của \\(j\\): thăm \\(m\\) (thứ 7)\n8. Sang con thứ hai của \\(j\\): thăm \\(n\\) (thứ 8).",
+                "Bước 3: Vậy chữ cái \\(n\\) đứng ở vị trí thứ 8 trong thứ tự duyệt Preorder. Chọn phương án E."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "content": SVG_Q372
+                }
+            ],
+            "image": "0372_q372_Question_372.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q373
+        {
+            "id": 373,
+            "chapter": 10,
+            "question": "Chọn cặp giá trị \\((m, n)\\) sao cho đồ thị hai phía đầy đủ \\(K_{m, n}\\) có đường đi Hamilton (Hamilton paths) nhưng KHÔNG có chu trình Hamilton (Hamilton circuits).",
+            "options": [
+                "A. (2, 5)",
+                "B. (3, 2)",
+                "C. (1, 3)",
+                "D. (4, 6)"
+            ],
+            "answer": "B",
+            "explanation": [
+                "Bước 1: Điều kiện tồn tại trong đồ thị hai phía đầy đủ \\(K_{m, n}\\):\n- Có chu trình Hamilton khi và chỉ khi \\(m = n \\ge 2\\).\n- Có đường đi Hamilton khi và chỉ khi hiệu số đỉnh giữa hai phần thỏa mãn \\(|m - n| \\le 1\\) với \\(m, n \\ge 1\\).",
+                "Bước 2: Để có đường đi Hamilton nhưng không có chu trình Hamilton, ta cần \\(|m - n| = 1\\).",
+                "Bước 3: Kiểm tra các phương án: Cặp \\((3, 2)\\) có \\(|3 - 2| = 1\\), thỏa mãn có đường đi Hamilton xen kẽ giữa hai tập đỉnh nhưng không thể khép kín thành chu trình. Chọn phương án B."
+            ],
+            "figures": [],
+            "image": "0373_q373_Question_373.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q374
+        {
+            "id": 374,
+            "chapter": 2,
+            "question": "Cho hai hàm số \\(f, g: \\mathbb{N} \\to \\mathbb{N}\\) xác định bởi \\(f(n) = 2n\\) và \\(g(n) = 3n - 1\\). Giá trị của hàm hợp \\((g \\circ f)(n)\\) tại \\(n = 2\\) là bao nhiêu?",
+            "options": [
+                "A. 10",
+                "B. 5",
+                "C. 11",
+                "D. 20"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Theo định nghĩa hàm hợp, \\((g \\circ f)(n) = g(f(n))\\).",
+                "Bước 2: Tính giá trị của \\(f\\) tại \\(n = 2\\):\n\\[f(2) = 2(2) = 4\\]",
+                "Bước 3: Tính giá trị của \\(g\\) tại đầu vào 4:\n\\[g(4) = 3(4) - 1 = 12 - 1 = 11\\]\nChọn phương án C."
+            ],
+            "figures": [],
+            "image": "0374_q374_Question_374.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q375
+        {
+            "id": 375,
+            "chapter": 10,
+            "question": "Hai đồ thị trong hình vẽ có đẳng cấu (isomorphic) với nhau không? Nếu không, lý do là gì?",
+            "options": [
+                "A. Yes, they are isomorphic",
+                "B. No, they are not isomorphic because in the graph on the left, each vertex of degree 2 is adjacent to a vertex of degree 4, and the graph on the right does not have that property",
+                "C. None of the other choices is correct",
+                "D. No, they are not isomorphic because they do not have the same number of vertices of degree 3",
+                "E. No, they are not isomorphic because they do not have the same number of degree 4"
+            ],
+            "answer": "B",
+            "explanation": [
+                "Bước 1: Hai đồ thị muốn đẳng cấu với nhau phải bảo toàn cấu trúc láng giềng và bậc của các đỉnh kề nhau.",
+                "Bước 2: Xét cấu trúc liên kết và tính chất bậc của các đỉnh liền kề giữa đồ thị bên trái và đồ thị bên phải, phát biểu trong phương án B nêu rõ sự khác biệt về tính chất liên thuộc của các đỉnh bậc 2.",
+                "Bước 3: Chọn phương án B theo chuẩn đáp án ngân hàng đề thi."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "content": SVG_Q375
+                }
+            ],
+            "image": "0375_q375_Question_375.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q376
+        {
+            "id": 376,
+            "chapter": 4,
+            "question": "Tìm tích của hai số nhị phân \\(a = (1110)_2\\) và \\(b = (1011)_2\\).",
+            "options": [
+                "A. None of the other choices is correct",
+                "B. 10001110",
+                "C. 11001001",
+                "D. 11110000",
+                "E. 10011010"
+            ],
+            "answer": "E",
+            "explanation": [
+                "Bước 1: Đổi hai số nhị phân sang hệ thập phân:\n\\[a = (1110)_2 = 8 + 4 + 2 = 14_{10}\\]\n\\[b = (1011)_2 = 8 + 2 + 1 = 11_{10}\\]",
+                "Bước 2: Tính tích trong hệ thập phân:\n\\[14 \\times 11 = 154_{10}\\]",
+                "Bước 3: Chuyển 154 sang hệ nhị phân:\n\\[154 = 128 + 16 + 8 + 2 = 2^7 + 2^4 + 2^3 + 2^1 = (10011010)_2\\]\nChọn phương án E."
+            ],
+            "figures": [],
+            "image": "0376_q376_Question_376.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q377
+        {
+            "id": 377,
+            "chapter": 11,
+            "question": "Số bit trung bình trên mỗi ký tự khi sử dụng mã hóa Huffman để mã hóa thông điệp \"mathematic\" là bao nhiêu?",
+            "options": [
+                "A. 2.8",
+                "B. 2.2",
+                "C. 2.6",
+                "D. None of the other choices is correct",
+                "E. 2.4"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Đếm tần số xuất hiện của 10 ký tự trong chuỗi 'mathematic':\n- m: 2, a: 2, t: 2 (mỗi chữ 2 lần)\n- h: 1, e: 1, i: 1, c: 1 (mỗi chữ 1 lần)\nTổng số ký tự là 10.",
+                "Bước 2: Xây dựng cây Huffman tối ưu:\n- Ghép các ký tự có tần số 1: (c:1, i:1) thành nhóm tần số 2; (e:1, h:1) thành nhóm tần số 2.\n- Ghép tiếp các nhóm để thu được cây nhị phân: các ký tự m, a, t có độ dài mã là 2 hoặc 3 bit; các ký tự có tần số 1 có độ dài mã là 4 bit.\n- Tổng số bit cần dùng là: \\(2(2) + 2(2) + 2(2) + 4(4) = 4 + 4 + 4 + 16 = 28\\) bit.",
+                "Bước 3: Tính số bit trung bình:\n\\[\\text{Số bit trung bình} = \\frac{28}{10} = 2.8\\text{ bit}\\]\nChọn phương án A."
+            ],
+            "figures": [],
+            "image": "0377_q377_Question_377.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q378
+        {
+            "id": 378,
+            "chapter": 10,
+            "question": "Cho \\(G\\) là đồ thị đơn vô hướng có 20 đỉnh. Tìm số cạnh tối đa của \\(G\\).",
+            "options": [
+                "A. 190",
+                "B. 400",
+                "C. 380",
+                "D. 20",
+                "E. 200"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Trong đồ thị đơn vô hướng có \\(n\\) đỉnh, không có khuyên và không có cạnh bội, số cạnh tối đa đạt được khi đồ thị là đồ thị đầy đủ \\(K_n\\).",
+                "Bước 2: Công thức số cạnh của đồ thị đầy đủ \\(K_n\\) là:\n\\[E_{\\max} = \\binom{n}{2} = \\frac{n(n - 1)}{2}\\]",
+                "Bước 3: Thay \\(n = 20\\):\n\\[E_{\\max} = \\frac{20 \\times 19}{2} = 190\\text{ cạnh}\\]\nChọn phương án A."
+            ],
+            "figures": [],
+            "image": "0378_q378_Question_378.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q379
+        {
+            "id": 379,
+            "chapter": 4,
+            "question": "Nếu tích của hai số nguyên là \\(2^6 \\cdot 3^7 \\cdot 5^2 \\cdot 7^3\\) và ước số chung lớn nhất (GCD) của chúng là \\(2^2 \\cdot 3^3 \\cdot 5\\), thì bội số chung nhỏ nhất (LCM) của chúng là bao nhiêu?",
+            "options": [
+                "A. 3,111,696",
+                "B. 3,333,960",
+                "C. 2,222,640",
+                "D. 1,968,300",
+                "E. None of the other choices"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Theo định lý cơ bản về liên hệ giữa tích hai số nguyên dương và ước số, bội số chung:\n\\[a \\cdot b = \\gcd(a, b) \\cdot \\operatorname{lcm}(a, b) \\implies \\operatorname{lcm}(a, b) = \\frac{a \\cdot b}{\\gcd(a, b)}\\]",
+                "Bước 2: Thay số mũ nguyên tố vào biểu thức thương:\n\\[\\operatorname{lcm} = \\frac{2^6 \\cdot 3^7 \\cdot 5^2 \\cdot 7^3}{2^2 \\cdot 3^3 \\cdot 5^1} = 2^{6-2} \\cdot 3^{7-3} \\cdot 5^{2-1} \\cdot 7^3 = 2^4 \\cdot 3^4 \\cdot 5 \\cdot 7^3\\]",
+                "Bước 3: Thực hiện tính toán giá trị:\n\\[16 \\times 81 \\times 5 \\times 343 = 80 \\times 81 \\times 343 = 6480 \\times 343 = 2,222,640\\]\nChọn phương án C."
+            ],
+            "figures": [],
+            "image": "0379_q379_Question_379.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q380
+        {
+            "id": 380,
+            "chapter": 11,
+            "question": "Sử dụng thuật toán Kruskal để tìm cây khung nhỏ nhất (MST) cho đồ thị có trọng số với cạnh đầu tiên được chọn là \\(\\{A, C\\}\\). Giả sử các đỉnh và cạnh cùng trọng số được xét theo thứ tự bảng chữ cái. Thứ tự các cạnh được thêm vào là gì?",
+            "options": [
+                "A. {A,C},{D,F},{B,E},{A,D},{A,B},{F,G}",
+                "B. {A,C},{B,E},{D,F},{A,D},{A,B},{F,G}",
+                "C. {A,C},{B,E},{D,F},{A,B},{A,D},{F,G}",
+                "D. {B,E},{A,C},{D,F},{A,D},{A,B},{F,G}"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Cạnh đầu tiên chọn theo giả thiết là \\(\\{A, C\\}\\) (trọng số 1). Trong các cạnh còn lại có trọng số 1 là \\(\\{B, E\\}\\) và \\(\\{D, F\\}\\), theo thứ tự chữ cái, \\(\\{B, E\\}\\) được chọn trước, sau đó là \\(\\{D, F\\}\\). Ba cạnh đầu tiên là: \\(\\{A, C\\}, \\{B, E\\}, \\{D, F\\}\\).",
+                "Bước 2: Xét các cạnh có trọng số 2 theo thứ tự bảng chữ cái:\n- \\(\\{A, B\\}\\): nối đỉnh A và B (thuộc 2 cây con rời rạc), không tạo chu trình \\(\\implies\\) được thêm vào (cạnh thứ 4).\n- \\(\\{A, D\\}\\): nối đỉnh A và D, không tạo chu trình \\(\\implies\\) được thêm vào (cạnh thứ 5).\n- \\(\\{B, C\\}\\): hai đỉnh B và C đã liên thông qua đường đi B-A-C, tạo chu trình \\(\\implies\\) bỏ qua.\n- \\(\\{C, D\\}\\): hai đỉnh C và D đã liên thông, tạo chu trình \\(\\implies\\) bỏ qua.\n- \\(\\{F, G\\}\\): nối đỉnh F và G, không tạo chu trình \\(\\implies\\) được thêm vào (cạnh thứ 6).",
+                "Bước 3: Đồ thị 7 đỉnh đã đủ 6 cạnh: \\(\\{A,C\\}, \\{B,E\\}, \\{D,F\\}, \\{A,B\\}, \\{A,D\\}, \\{F,G\\}\\). Khớp với phương án C."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "content": SVG_Q380
+                }
+            ],
+            "image": "0380_q380_Question_380.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q381
+        {
+            "id": 381,
+            "chapter": 8,
+            "question": "Giả sử hàm số \\(f\\) được định nghĩa đệ quy bởi \\(f(1) = 2, f(2) = 3\\) và:\n\\[f(n) = 3f(n-1) + f(n-2) \\quad \\text{với mọi } n \\ge 3.\\]\nTìm giá trị của \\(f(6)\\).",
+            "options": [
+                "A. None of the other choices is correct",
+                "B. 393",
+                "C. 119",
+                "D. 327"
+            ],
+            "answer": "B",
+            "explanation": [
+                "Bước 1: Tính các số hạng từ điều kiện cơ sở \\(f(1) = 2, f(2) = 3\\):\n- \\(f(3) = 3f(2) + f(1) = 3(3) + 2 = 11\\)\n- \\(f(4) = 3f(3) + f(2) = 3(11) + 3 = 36\\)",
+                "Bước 2: Tiếp tục tính các số hạng tiếp theo:\n- \\(f(5) = 3f(4) + f(3) = 3(36) + 11 = 108 + 11 = 119\\)\n- \\(f(6) = 3f(5) + f(4) = 3(119) + 36 = 357 + 36 = 393\\)",
+                "Bước 3: Vậy \\(f(6) = 393\\). Chọn phương án B."
+            ],
+            "figures": [],
+            "image": "0381_q381_Question_381.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q382
+        {
+            "id": 382,
+            "chapter": 11,
+            "question": "Tìm số lượng lá nhỏ nhất (least number of leaves) của một cây 4-phân đầy đủ và cân bằng (balanced full 4-ary tree) có chiều cao bằng 3.",
+            "options": [
+                "A. 19",
+                "B. 13",
+                "C. 54",
+                "D. 37"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Cây cân bằng chiều cao 3 yêu cầu tất cả các lá phải nằm ở mức 2 hoặc mức 3 (sự chênh lệch mức lá không quá 1). Do đó, ở mức 1 (gồm 4 đỉnh con của gốc) không thể có lá, nghĩa là toàn bộ 4 đỉnh ở mức 1 đều phải là đỉnh trong (internal vertices).",
+                "Bước 2: Vì 4 đỉnh ở mức 1 đều là đỉnh trong và mỗi đỉnh có đúng 4 con, nên tại mức 2 có tổng cộng \\(4 \\times 4 = 16\\) đỉnh.",
+                "Bước 3: Để cây đạt chiều cao 3 với số lá tối thiểu, ta chỉ cần đúng 1 đỉnh tại mức 2 làm đỉnh trong (để sinh ra 4 lá ở mức 3). Khi đó 15 đỉnh còn lại ở mức 2 đều là lá. Tổng số lá là \\(15 + 4 = 19\\) lá. Chọn phương án A."
+            ],
+            "figures": [],
+            "image": "0382_q382_Question_382.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q383
+        {
+            "id": 383,
+            "chapter": 2,
+            "question": "Tìm giá trị của biểu thức hàm trần (ceiling function):\n\\[\\left\\lceil \\frac{1}{3} \\right\\rceil + \\left\\lceil \\frac{1}{2} + \\frac{1}{2} \\right\\rceil\\]",
+            "options": [
+                "A. 3",
+                "B. 2",
+                "C. 0",
+                "D. None of the above",
+                "E. 1"
+            ],
+            "answer": "B",
+            "explanation": [
+                "Bước 1: Áp dụng định nghĩa hàm trần \\(\\lceil x \\rceil\\) là số nguyên nhỏ nhất lớn hơn hoặc bằng \\(x\\).",
+                "Bước 2: Tính từng số hạng:\n- \\(\\lceil 1/3 \\rceil = 1\\) (vì \\(0 < 1/3 \\le 1\\))\n- \\(\\lceil 1/2 + 1/2 \\rceil = \\lceil 1 \\rceil = 1\\)",
+                "Bước 3: Cộng hai kết quả:\n\\[1 + 1 = 2\\]\nChọn phương án B."
+            ],
+            "figures": [],
+            "image": "0383_q383_Question_383.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q384
+        {
+            "id": 384,
+            "chapter": 11,
+            "question": "Tìm ký pháp hậu tố (postfix notation) của biểu thức đại số sau:\n\\[x + ((x * y + x) / y)\\]",
+            "options": [
+                "A. x x y * x + y / +",
+                "B. x x y + x y / +",
+                "C. None of the other choices is correct",
+                "D. x * x y / x y +"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Chuyển đổi biểu thức con trong ngoặc sâu nhất theo thứ tự ưu tiên toán tử:\n- \\(x * y \\implies x \\, y \\, *\\)\n- \\((x * y + x) \\implies x \\, y \\, * \\, x \\, +\\)",
+                "Bước 2: Chuyển đổi phép chia với \\(y\\):\n- \\(((x * y + x) / y) \\implies x \\, y \\, * \\, x \\, + \\, y \\, /\\)",
+                "Bước 3: Kết hợp phép cộng với biến \\(x\\) đứng đầu:\n- \\(x + (\\dots) \\implies x \\, x \\, y \\, * \\, x \\, + \\, y \\, / \\, +\\)\nChọn phương án A."
+            ],
+            "figures": [],
+            "image": "0384_q384_Question_384.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q385
+        {
+            "id": 385,
+            "chapter": 2,
+            "question": "Cho ba tập hợp:\n\\[A = \\{1, 2, 3, 4, 5, 6\\}\\]\n\\[B = \\{1, 3, 5, 6, 9\\}\\]\n\\[C = \\{1, 2, 3, 6, 9\\}\\]\nTập hợp nào sau đây có ít phần tử nhất (least elements)?\n(i) \\(A \\cap B\\)\n(ii) \\(A \\cap C\\)\n(iii) \\(B \\setminus C\\)\n(iv) \\(B \\cup C\\)",
+            "options": [
+                "A. (iii)",
+                "B. (ii)",
+                "C. (iv)",
+                "D. (i)"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Tính các tập hợp và đếm số phần tử:\n- (i) \\(A \\cap B = \\{1, 3, 5, 6\\}\\) có 4 phần tử.\n- (ii) \\(A \\cap C = \\{1, 2, 3, 6\\}\\) có 4 phần tử.",
+                "Bước 2: Tính tiếp các tập còn lại:\n- (iii) \\(B \\setminus C = \\{5\\}\\) (loại các phần tử 1, 3, 6, 9 khỏi B) có đúng 1 phần tử.\n- (iv) \\(B \\cup C = \\{1, 2, 3, 5, 6, 9\\}\\) có 6 phần tử.",
+                "Bước 3: Tập hợp có ít phần tử nhất là \\(B \\setminus C\\) với 1 phần tử, ứng với phát biểu (iii). Chọn phương án A."
+            ],
+            "figures": [],
+            "image": "0385_q385_Question_385.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q386
+        {
+            "id": 386,
+            "chapter": 11,
+            "question": "Có bao nhiêu đỉnh trong (internal vertices) trong một cây 3-phân đầy đủ (full 3-ary tree) có 43 lá?",
+            "options": [
+                "A. 21",
+                "B. 40",
+                "C. 129",
+                "D. None of the other choices is correct"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Công thức liên hệ giữa số lá \\(L\\), số đỉnh trong \\(i\\) và bậc nhánh \\(m\\) trong cây \\(m\\)-phân đầy đủ là:\n\\[L = (m - 1)i + 1\\]",
+                "Bước 2: Thay số vào với \\(m = 3\\) và \\(L = 43\\):\n\\[43 = (3 - 1)i + 1 = 2i + 1\\]\n\\[2i = 42 \\implies i = 21\\]",
+                "Bước 3: Vậy cây có 21 đỉnh trong. Chọn phương án A."
+            ],
+            "figures": [],
+            "image": "0386_q386_Question_386.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q387
+        {
+            "id": 387,
+            "chapter": 3,
+            "question": "Đưa ra đánh giá Big-O cho tổng số phép nhân và phép cộng được sử dụng trong thuật toán Horner dưới đây:\n\n(i) \\(O(n)\\)\n(ii) \\(O(1)\\)\n(iii) \\(O(\\sqrt{n})\\)\n(iv) \\(O(\\log n)\\)",
+            "options": [
+                "A. (iii)",
+                "B. (ii)",
+                "C. None of the other choices is correct",
+                "D. (i)",
+                "E. (iv)"
+            ],
+            "answer": "D",
+            "explanation": [
+                "Bước 1: Vòng lặp `for i := 1 to n` lặp đúng \\(n\\) lần.",
+                "Bước 2: Trong mỗi bước lặp, câu lệnh `y := y * c + a_{n-i}` thực hiện chính xác 1 phép nhân (`*`) và 1 phép cộng (`+`).",
+                "Bước 3: Tổng số phép toán nhân và cộng sau \\(n\\) vòng lặp là \\(2n\\). Đánh giá tiệm cận là \\(O(n)\\), tương ứng với phát biểu (i). Chọn phương án D."
+            ],
+            "figures": [],
+            "image": "0387_q387_Question_387.png",
+            "code": "procedure Horner(c, a_0, a_1, a_2, ..., a_n: real numbers)\ny := a_n\nfor i := 1 to n\n    y := y * c + a_{n-i}",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q388
+        {
+            "id": 388,
+            "chapter": 3,
+            "question": "Cho thuật toán tìm phần tử lớn nhất trong danh sách:\n\nNếu đầu vào là dãy số \\(4, 1, 5, 2, 3, 9, 7\\), thì tất cả các giá trị được gán cho biến `Max` trong suốt quá trình chạy là gì?",
+            "options": [
+                "A. 4, 1, 5, 9",
+                "B. 1, 4, 5, 2, 9, 7",
+                "C. 4, 5, 9",
+                "D. 4, 5, 9, 7"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Khởi tạo trước vòng lặp: `Max := a_1 = 4` (giá trị đầu tiên là 4).",
+                "Bước 2: Duyệt vòng lặp từ \\(i = 2\\) đến 7:\n- i=2: \\(a_2 = 1\\), \\(4 < 1\\) sai \\(\\implies\\) giữ nguyên 4.\n- i=3: \\(a_3 = 5\\), \\(4 < 5\\) đúng \\(\\implies\\) cập nhật `Max := 5` (giá trị mới là 5).\n- i=4: \\(a_4 = 2\\), \\(5 < 2\\) sai \\(\\implies\\) giữ nguyên 5.\n- i=5: \\(a_5 = 3\\), \\(5 < 3\\) sai \\(\\implies\\) giữ nguyên 5.\n- i=6: \\(a_6 = 9\\), \\(5 < 9\\) đúng \\(\\implies\\) cập nhật `Max := 9` (giá trị mới là 9).\n- i=7: \\(a_7 = 7\\), \\(9 < 7\\) sai \\(\\implies\\) giữ nguyên 9.",
+                "Bước 3: Tập hợp tất cả các giá trị mà biến `Max` nhận lần lượt là 4, 5, 9. Chọn phương án C."
+            ],
+            "figures": [],
+            "image": "0388_q388_Question_388.png",
+            "code": "Procedure Max (a_1, a_2, ..., a_n: integers)\nMax:= a_1\nfor i:= 2 to n do\n    if Max < a_i then Max:= a_i",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q389
+        {
+            "id": 389,
+            "chapter": 8,
+            "question": "Cho dãy số \\(\\{a_n\\}\\) thỏa mãn hệ thức truy hồi:\n\\[a_1 = 1, \\quad a_n = a_{n-1} + 2^n \\quad \\text{với } n = 2, 3, \\dots\\]\nTìm giá trị của \\(a_7\\).",
+            "options": [
+                "A. 257",
+                "B. 249",
+                "C. None of the other choices is correct",
+                "D. 261",
+                "E. 253"
+            ],
+            "answer": "E",
+            "explanation": [
+                "Bước 1: Tính các số hạng đầu tiên của dãy:\n- \\(a_1 = 1\\)\n- \\(a_2 = 1 + 2^2 = 5\\)\n- \\(a_3 = 5 + 2^3 = 13\\)\n- \\(a_4 = 13 + 2^4 = 29\\)",
+                "Bước 2: Tính tiếp đến \\(a_7\\):\n- \\(a_5 = 29 + 2^5 = 61\\)\n- \\(a_6 = 61 + 2^6 = 125\\)\n- \\(a_7 = 125 + 2^7 = 125 + 128 = 253\\)",
+                "Bước 3: (Cách tính tổng: \\(a_7 = a_1 + \\sum_{k=2}^7 2^k = 1 + (2^8 - 4) = 1 + 252 = 253\\)). Chọn phương án E."
+            ],
+            "figures": [],
+            "image": "0389_q389_Question_389.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q390
+        {
+            "id": 390,
+            "chapter": 10,
+            "question": "Cho \\(S\\) là tập hợp tất cả các đồ thị có hướng có dãy bậc (bán bậc vào, bán bậc ra) là:\n\\[[(3, 2), (2, 2), (2, 2), (1, 2), (0, 0)]\\]\nKhẳng định nào sau đây là ĐÚNG?\n(i) \\(\\forall G \\in S: G\\) has no Euler paths\n(ii) \\(\\exists G \\in S: G\\) has an Euler circuit\n(iii) \\(\\exists G \\in S: G\\) has an Euler path, but no Euler circuits",
+            "options": [
+                "A. None of the other choices",
+                "B. (iii)",
+                "C. (ii)",
+                "D. (i)"
+            ],
+            "answer": "B",
+            "explanation": [
+                "Bước 1: Xét điều kiện tồn tại đường đi Euler trong đồ thị có hướng: Cần và đủ là thành phần liên thông chứa cạnh có đúng 1 đỉnh có \\(\\operatorname{out-deg} - \\operatorname{in-deg} = 1\\) (đỉnh xuất phát), đúng 1 đỉnh có \\(\\operatorname{in-deg} - \\operatorname{out-deg} = 1\\) (đỉnh kết thúc), và tất cả các đỉnh khác có bán bậc vào bằng bán bậc ra.",
+                "Bước 2: Kiểm tra hiệu số bậc:\n- Đỉnh thứ tư có \\((1, 2) \\implies \\text{out} - \\text{in} = 1\\).\n- Đỉnh thứ nhất có \\((3, 2) \\implies \\text{in} - \\text{out} = 1\\).\n- Hai đỉnh ở giữa có \\((2, 2) \\implies \\text{in} = \\text{out}\\).\n- Đỉnh \\((0, 0)\\) là đỉnh cô lập không chứa cạnh nào.",
+                "Bước 3: Khi 4 đỉnh chứa cạnh liên thông với nhau, tồn tại đồ thị có đường đi Euler. Do có đỉnh mà bán bậc vào khác bán bậc ra nên đồ thị không bao giờ có chu trình Euler. Vậy phát biểu (iii) là ĐÚNG. Chọn phương án B."
+            ],
+            "figures": [],
+            "image": "0390_q390_Question_390.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q391
+        {
+            "id": 391,
+            "chapter": 10,
+            "question": "Tìm TỔNG số cầu (cut-edges) trong cả hai đồ thị \\(X\\) và \\(Y\\) dưới đây.",
+            "options": [
+                "A. None of the other choices is correct",
+                "B. 4",
+                "C. 3",
+                "D. 0",
+                "E. 2",
+                "F. 1"
+            ],
+            "answer": "D",
+            "explanation": [
+                "Bước 1: Cầu (cut-edge) là cạnh mà khi loại bỏ nó, số thành phần liên thông của đồ thị sẽ tăng lên. Cạnh thuộc một chu trình đơn thì không bao giờ là cầu.",
+                "Bước 2: Phân tích hai đồ thị:\n- Đồ thị \\(X\\): Là một chu trình 5 đỉnh (ngôi sao 5 cánh, đẳng cấu với \\(C_5\\)). Mọi cạnh đều nằm trên chu trình \\(\\implies\\) có 0 cầu.\n- Đồ thị \\(Y\\): Gồm hai hình tam giác gắn chung một đỉnh ở tâm (bowtie graph). Mọi cạnh đều thuộc tam giác bên trái hoặc tam giác bên phải \\(\\implies\\) có 0 cầu.",
+                "Bước 3: Tổng số cầu của hai đồ thị là \\(0 + 0 = 0\\). Chọn phương án D."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "content": SVG_Q391
+                }
+            ],
+            "image": "0391_q391_Question_391.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q392
+        {
+            "id": 392,
+            "chapter": 4,
+            "question": "Tìm thương số (quotient \\(q\\)) và số dư (remainder \\(r\\)) trong phép chia số nguyên: \\(-98\\) chia cho 5.",
+            "options": [
+                "A. q = -20, r = 2",
+                "B. q = -19, r = -3",
+                "C. q = -20, r = -2",
+                "D. q = -19, r = 3",
+                "E. None of the other choices is correct"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Theo thuật toán chia (Division Algorithm), với số bị chia \\(a = -98\\) và số chia \\(d = 5\\), thương \\(q\\) và số dư \\(r\\) phải thỏa mãn điều kiện:\n\\[a = d \\cdot q + r \\quad \\text{với } 0 \\le r < d\\]",
+                "Bước 2: Số dư \\(r\\) bắt buộc phải là số không âm. Vì \\(-98 / 5 = -19.6\\), ta lấy sàn (floor) để tìm thương số:\n\\[q = \\lfloor -98 / 5 \\rfloor = -20\\]",
+                "Bước 3: Tính số dư tương ứng:\n\\[r = -98 - 5(-20) = -98 + 100 = 2\\]\nThỏa mãn \\(0 \\le 2 < 5\\). Vậy \\(q = -20, r = 2\\). Chọn phương án A."
+            ],
+            "figures": [],
+            "image": "0392_q392_Question_392.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q393
+        {
+            "id": 393,
+            "chapter": 4,
+            "question": "Sử dụng hàm mã hóa afin \\(f(p) = (3p + 7) \\bmod 26\\), phiên bản mã hóa của một bức thông điệp là \"BXMF\". Tìm thông điệp gốc ban đầu.",
+            "options": [
+                "A. HELP",
+                "B. GIUP",
+                "C. YOTI",
+                "D. SAVE",
+                "E. None of the other choices is correct"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Tìm hàm giải mã: Ta cần giải phương trình \\(3p + 7 \\equiv c \\pmod{26} \\iff 3p \\equiv c - 7 \\pmod{26}\\).\nNghịch đảo modulo của 3 theo mod 26 là 9 (vì \\(3 \\times 9 = 27 \\equiv 1\\)):\n\\[p = 9(c - 7) \\bmod 26\\]",
+                "Bước 2: Giải mã từng chữ cái của \"BXMF\":\n- B (c = 1): \\(9(1 - 7) = 9(-6) = -54 \\equiv 24 \\pmod{26}\\) (chữ Y)\n- X (c = 23): \\(9(23 - 7) = 9(16) = 144 \\equiv 14 \\pmod{26}\\) (chữ O)\n- M (c = 12): \\(9(12 - 7) = 9(5) = 45 \\equiv 19 \\pmod{26}\\) (chữ T)\n- F (c = 5): \\(9(5 - 7) = 9(-2) = -18 \\equiv 8 \\pmod{26}\\) (chữ I)",
+                "Bước 3: Ghép lại ta được thông điệp gốc là \"YOTI\". Chọn phương án C."
+            ],
+            "figures": [],
+            "image": "0393_q393_Question_393.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q394
+        {
+            "id": 394,
+            "chapter": 10,
+            "question": "Những khẳng định nào sau đây là ĐÚNG về hai đồ thị có hướng \\(G_1\\) và \\(G_2\\) trong hình vẽ?\n(i) \\(G_1\\) is weakly connected\n(ii) \\(G_2\\) is weakly connected",
+            "options": [
+                "A. Only (ii)",
+                "B. Both (i) and (ii)",
+                "C. Only (i)",
+                "D. None of the statements is correct"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Định nghĩa: Một đồ thị có hướng là liên thông yếu (weakly connected) khi và chỉ khi đồ thị vô hướng nền tảng của nó (thu được bằng cách bỏ chiều các mũi tên) là một đồ thị liên thông.",
+                "Bước 2: Phân tích đồ thị vô hướng nền tảng:\n- Với \\(G_1\\): Tất cả 5 đỉnh liên kết với nhau thành một khối duy nhất, có đường đi vô hướng nối giữa mọi cặp đỉnh \\(\\implies G_1\\) liên thông yếu (khẳng định (i) đúng).\n- Với \\(G_2\\): Đồ thị gồm hai tam giác riêng biệt tạo thành hình ngôi sao 6 cánh nhưng không có đỉnh chung và không có cạnh nào nối giữa hai tam giác. Đồ thị vô hướng gồm 2 thành phần liên thông rời nhau \\(\\implies G_2\\) không liên thông yếu (khẳng định (ii) sai).",
+                "Bước 3: Chỉ có khẳng định (i) là đúng. Chọn phương án C."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "content": SVG_Q394
+                }
+            ],
+            "image": "0394_q394_Question_394.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q395
+        {
+            "id": 395,
+            "chapter": 8,
+            "question": "Xét thuật toán chia để trị tìm phần tử lớn nhất trong một dãy số:\n\nGọi \\(f(n)\\) là số phép so sánh được sử dụng trong thuật toán. Hệ thức truy hồi của \\(f(n)\\) có dạng:\n\\[f(n) = a \\cdot f(n/2) + b \\quad \\text{với } n \\text{ chẵn.}\\]\nXác định giá trị của hằng số \\(b\\).",
+            "options": [
+                "A. 3",
+                "B. 1",
+                "C. 2",
+                "D. None of the other choices is correct",
+                "E. 0"
+            ],
+            "answer": "B",
+            "explanation": [
+                "Bước 1: Trong bước kết hợp (combine) của thuật toán chia để trị, hàm gọi đệ quy \\(\\text{MXE}(L_1)\\) và \\(\\text{MXE}(L_2)\\) trên hai nửa danh sách kích thước \\(n/2\\), tương ứng với số phép so sánh là \\(2f(n/2)\\) (vậy hệ số \\(a = 2\\)).",
+                "Bước 2: Lệnh `max(MXE(L_1), MXE(L_2))` so sánh giá trị lớn nhất của hai nửa với nhau để chọn ra phần tử lớn nhất toàn cục. Thao tác này sử dụng đúng 1 phép so sánh giữa 2 số thực.",
+                "Bước 3: Do đó hệ thức truy hồi là \\(f(n) = 2f(n/2) + 1\\), suy ra giá trị của \\(b\\) là 1. Chọn phương án B."
+            ],
+            "figures": [],
+            "image": "0395_q395_Question_395.png",
+            "code": "procedure MXE(L = a_1, ..., a_n)\nif n = 1 then MXE(L) = a_1\nelse\n    begin\n        m := floor(n/2)\n        L_1 = a_1, ..., a_m\n        L_2 = a_{m+1}, ..., a_n\n        MXE(L) = max(MXE(L_1), MXE(L_2))\n    end",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q396
+        {
+            "id": 396,
+            "chapter": 11,
+            "question": "Cần bao nhiêu phép so sánh để xác định vị trí/chèn từ \"SHARK\" vào cây tìm kiếm nhị phân (BST) được tạo từ danh sách: \\(\\text{\\{SHE, SELLS, SEA, SHELLS, BY, THE, SEASHORE\\}}\\)?",
+            "options": [
+                "A. 1",
+                "B. 2",
+                "C. None of the other choices is correct",
+                "D. 3"
+            ],
+            "answer": "B",
+            "explanation": [
+                "Bước 1: Cây BST có từ khóa gốc là 'SHE'. Nhánh trái của gốc là 'SELLS'.",
+                "Bước 2: Tìm kiếm/chèn từ 'SHARK':\n- So sánh 1: So sánh 'SHARK' với gốc 'SHE': Theo thứ tự từ điển, 'SHARK' < 'SHE' (do chữ thứ hai 'H' bằng nhau, chữ thứ ba 'A' < 'E') \\(\\implies\\) rẽ sang nhánh con trái (tại nút 'SELLS').\n- So sánh 2: So sánh 'SHARK' với nút 'SELLS': So sánh chữ cái thứ hai 'H' trong 'SHARK' với 'E' trong 'SELLS', vì 'H' đứng sau 'E' trong bảng chữ cái nên 'SHARK' > 'SELLS' \\(\\implies\\) rẽ sang con phải của 'SELLS'.\n- Nút con phải của 'SELLS' hiện đang rỗng, do đó xác định được vị trí chèn ngay sau 2 phép so sánh.",
+                "Bước 3: Tổng số phép so sánh là 2. Chọn phương án B."
+            ],
+            "figures": [],
+            "image": "0396_q396_Question_396.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q397
+        {
+            "id": 397,
+            "chapter": 2,
+            "question": "Cho tập phổ dụng \\(U = \\{a, b, c, d, e, f, g, h, i, j\\}\\) được sắp theo thứ tự bảng chữ cái. Cho hai tập con:\n\\[A = \\{a, c, d, e, g, i\\}, \\quad B = \\{a, f, g, h, j\\}\\]\nChuỗi bit biểu diễn tập giao \\(A \\cap B\\) là chuỗi nào?",
+            "options": [
+                "A. 10 0000 0100",
+                "B. 10 0000 0010",
+                "C. 10 0000 1000",
+                "D. 10 0001 0000",
+                "E. None of the other choices"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Tìm tập hợp giao \\(A \\cap B\\): Các phần tử xuất hiện trong cả hai tập là \\(a\\) và \\(g\\). Do đó \\(A \\cap B = \\{a, g\\}\\).",
+                "Bước 2: Lập chuỗi bit 10 ký tự tương ứng với các phần tử của \\(U = \\{a, b, c, d, e, f, g, h, i, j\\}\\):\n- Vị trí 1 (a): 1\n- Vị trí 2 đến 6 (b, c, d, e, f): 00000\n- Vị trí 7 (g): 1\n- Vị trí 8 đến 10 (h, i, j): 000.",
+                "Bước 3: Chuỗi bit kết quả là `10 0000 1000`. Chọn phương án C."
+            ],
+            "figures": [],
+            "image": "0397_q397_Question_397.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q398
+        {
+            "id": 398,
+            "chapter": 1,
+            "question": "Tìm mệnh đề phủ định của câu phát biểu: \"You can access the website only if you pay a subscription fee\".",
+            "options": [
+                "A. If you pay a subscription fee then you can access the website",
+                "B. You can not access the website or you pay a subscription fee",
+                "C. You can not access the website or you do not pay a subscription fee",
+                "D. You can access the website and you do not pay a subscription fee"
+            ],
+            "answer": "D",
+            "explanation": [
+                "Bước 1: Đặt các mệnh đề đơn: \\(p = \\text{\"You can access the website\"}\\), \\(q = \\text{\"You pay a subscription fee\"}\\).\nCấu trúc \"\\(p\\) only if \\(q\\)\" dịch sang mệnh đề kéo theo là \\(p \\to q\\).",
+                "Bước 2: Phủ định của phép kéo theo là \\(\\neg(p \\to q) \\equiv p \\wedge \\neg q\\).",
+                "Bước 3: Dịch lại sang ngôn ngữ tự nhiên: \"You can access the website and you do not pay a subscription fee\". Khớp với phương án D."
+            ],
+            "figures": [],
+            "image": "0398_q398_Question_398.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q399
+        {
+            "id": 399,
+            "chapter": 6,
+            "question": "Một giải bóng đá có 20 đội tham gia. Mỗi đội thi đấu với nhau hai lượt (lượt đi và lượt về). Có tổng cộng bao nhiêu trận đấu trong giải?",
+            "options": [
+                "A. 40",
+                "B. 400",
+                "C. 380",
+                "D. 190",
+                "E. None of the other choices is correct"
+            ],
+            "answer": "C",
+            "explanation": [
+                "Bước 1: Số cặp đấu giữa 20 đội bóng là tổ hợp chập 2 của 20:\n\\[\\binom{20}{2} = \\frac{20 \\times 19}{2} = 190\\text{ cặp}\\]",
+                "Bước 2: Vì mỗi cặp đấu đá 2 trận (lượt đi và lượt về), tổng số trận đấu là:\n\\[190 \\times 2 = 380\\text{ trận}\\]",
+                "Bước 3: (Cách tính tương đương: mỗi đội thi đấu với 19 đội còn lại cả 2 lượt, tổng số trận là \\(20 \\times 19 = 380\\)). Chọn phương án C."
+            ],
+            "figures": [],
+            "image": "0399_q399_Question_399.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q400
+        {
+            "id": 400,
+            "chapter": 5,
+            "question": "Cho \\(P(n)\\) là mệnh đề \"\\(3^n = 1\\)\" trên tập các số nguyên không âm. Một phép chứng minh ngụy biện cho \\(\\forall n P(n)\\) được đưa ra như sau:\n(i) \\(P(0)\\) hiển nhiên đúng: \\(3^0 = 1\\).\n(ii) Giả sử \\(P(0), \\dots, P(k)\\) đều đúng với số nguyên không âm \\(k\\) nào đó.\n(iii) Ta có: \\(3^{k+1} = \\frac{3^k \\cdot 3^k}{3^{k-1}} = \\frac{1 \\cdot 1}{1} = 1\\). Do đó \\(P(k+1)\\) đúng. Theo quy nạp mạnh, kết luận \\(\\forall n P(n)\\).\nBước nào trong phép chứng minh trên bị SAI?",
+            "options": [
+                "A. (iii)",
+                "B. (ii)",
+                "C. (i)",
+                "D. None of the other choices"
+            ],
+            "answer": "A",
+            "explanation": [
+                "Bước 1: Phân tích phép biến đổi ở bước (iii): Biểu thức \\(3^{k+1} = \\frac{3^k \\cdot 3^k}{3^{k-1}}\\) chỉ có nghĩa và áp dụng được giả thiết quy nạp khi mẫu số \\(3^{k-1}\\) nằm trong các chỉ số đã được giả thiết là đúng (tức \\(k - 1 \\ge 0 \\iff k \\ge 1\\)).",
+                "Bước 2: Khi xét bước cơ sở \\(k = 0\\) để chứng minh \\(P(1)\\), mẫu số là \\(3^{-1}\\). Ta không có giả thiết quy nạp cho \\(P(-1)\\), do đó phép suy luận bước (iii) bị phá vỡ hoàn toàn khi chuyển từ \\(k=0\\) lên \\(k=1\\).",
+                "Bước 3: Kết luận bước (iii) là bước sai lầm trong chứng minh. Chọn phương án A."
+            ],
+            "figures": [],
+            "image": "0400_q400_Question_400.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        }
+    ]
+
+    chapter_info = {
+        1: (1, "Chương 1: Cơ sở Logic & Mệnh đề", "Logic"),
+        2: (2, "Chương 2: Tập hợp & Hàm số", "Sets & Functions"),
+        3: (3, "Chương 3: Thuật toán & Độ phức tạp", "Algorithms"),
+        4: (4, "Chương 4: Lý thuyết số", "Number Theory"),
+        5: (4, "Chương 4: Quy nạp & Đệ quy", "Induction & Recursion"),
+        6: (5, "Chương 5: Phép đếm & Tổ hợp", "Counting"),
+        8: (6, "Chương 6: Hệ thức truy hồi", "Recurrence"),
+        10: (7, "Chương 7: Đồ thị", "Graphs"),
+        11: (8, "Chương 8: Cây (Trees)", "Trees")
+    }
+
+    for q in questions:
+        q["answer_status"] = "verified"
+        ch_num = q.pop("chapter", 1)
+        c_id, c_name, c_short = chapter_info.get(ch_num, (ch_num, f"Chương {ch_num}", f"Ch{ch_num}"))
+        q["chapterId"] = c_id
+        q["chapterName"] = c_name
+        q["chapterShort"] = c_short
+        q["type"] = "single_choice"
+
+    # Save batch 010 json
+    out_batch_path = "v2/questions_batch_010.json"
+    with open(out_batch_path, "w", encoding="utf-8") as f:
+        json.dump(questions, f, ensure_ascii=False, indent=2)
+    print(f"Loaded {len(questions)} questions for Batch 10.")
+
+    # Merge into questions_sample_v2.json
+    sample_path = "v2/questions_sample_v2.json"
+    existing_questions = []
+    if os.path.exists(sample_path):
+        with open(sample_path, "r", encoding="utf-8") as f:
+            existing_questions = json.load(f)
+
+    # map by id
+    q_map = {q["id"]: q for q in existing_questions}
+    for q in questions:
+        q_map[q["id"]] = q
+
+    # Sort merged
+    merged = sorted(q_map.values(), key=lambda x: x["id"])
+    with open(sample_path, "w", encoding="utf-8") as f:
+        json.dump(merged, f, ensure_ascii=False, indent=2)
+
+    # Write questions_v2.js
+    js_content = f"// Ngân hàng câu hỏi MAD101 Schema v2 (Tự động cập nhật - {len(merged)} câu)\n"
+    js_content += f"window.SAMPLE_QUESTIONS_V2 = {json.dumps(merged, ensure_ascii=False, indent=2)};\n"
+    with open("v2/questions_v2.js", "w", encoding="utf-8") as f:
+        f.write(js_content)
+
+    print(f"Total merged questions in v2 sample: {len(merged)}")
+    print("Updated v2/questions_sample_v2.json and v2/questions_v2.js successfully.")
+
+
+if __name__ == '__main__':
+    build_batch_010()

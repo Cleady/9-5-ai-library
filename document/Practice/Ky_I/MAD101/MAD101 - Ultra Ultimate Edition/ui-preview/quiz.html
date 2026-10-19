@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Làm bài | MAD101 Discrete Mathematics Studio</title>
+  <link rel="stylesheet" href="preview.css">
+  
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="../vendor/mathjax/tex-svg.js" defer></script>
+
+  <style>
+    /* Top Quiz Control Bar */
+    .quiz-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-3) var(--space-4);
+      background: var(--bg-glass);
+      backdrop-filter: var(--blur-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-5);
+    }
+    .quiz-timer {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-lg);
+      font-weight: 800;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(249, 115, 22, 0.3);
+      font-family: var(--font-mono);
+    }
+    .quiz-progress-text {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+
+    /* Question Main Card */
+    .question-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-4);
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .question-title {
+      font-size: var(--text-xl);
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+    .question-body {
+      font-size: var(--text-base);
+      line-height: 1.7;
+      color: var(--text-primary);
+      margin-bottom: var(--space-4);
+    }
+
+    /* Original Image Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-4);
+    }
+    .lightbox-modal.active {
+      display: flex;
+    }
+    .lightbox-content {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5);
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow: auto;
+      text-align: center;
+    }
+    .lightbox-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      margin-top: var(--space-3);
+    }
+
+    /* Navigation Action Bar */
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-2);
+      margin-top: var(--space-6);
+      flex-wrap: wrap;
+    }
+
+    /* Keyboard legend */
+    .kbd-hint {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      display: flex;
+      gap: var(--space-2);
+      align-items: center;
+      margin-top: var(--space-4);
+    }
+    .kbd-chip {
+      background: rgba(148, 163, 184, 0.1);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1px 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ui-app">
+    <!-- Top Quiz Control Bar -->
+    <header class="quiz-top-bar">
+      <div style="display:flex; align-items:center; gap:var(--space-3);">
+        <a href="home.html" class="ui-btn ui-btn-ghost" title="Về trang chủ">← Trang chủ</a>
+        <span class="ui-badge ui-badge-accent">Chương 3: Thuật toán</span>
+      </div>
+
+      <div class="quiz-timer" id="timerBox">
+        <span>⏱️</span>
+        <span id="timerText">28:45</span>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:var(--space-2);">
+        <button class="ui-btn ui-btn-secondary" id="flagBtn" onclick="toggleFlag()" title="Đánh dấu câu hỏi này (Phím F)">
+          <span id="flagIcon">⭐</span> Đánh dấu
+        </button>
+        <button class="ui-btn ui-btn-ghost ui-btn-icon" id="themeToggleBtn" title="Chuyển chế độ sáng/tối">
+          🌓
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Layout: 2 Columns on Desktop -->
+    <div class="ui-layout-2col">
+      <!-- Left Column: Question & Interaction -->
+      <main>
+        <div class="ui-card">
+          <!-- Question Header -->
+          <div class="question-head">
+            <div>
+              <div class="question-title">
+                Câu 285 <span style="font-size:var(--text-sm); font-weight:500; color:var(--text-muted);">(Câu 14 / 50)</span>
+              </div>
+              <div style="margin-top:4px; display:flex; gap:var(--space-2);">
+                <span class="ui-badge ui-badge-success">✓ Đã kiểm chứng (Verified)</span>
+                <span class="ui-badge ui-badge-info">Độ phức tạp tính toán</span>
+              </div>
+            </div>
+
+            <button class="ui-btn ui-btn-secondary ui-btn-sm" onclick="openLightbox()">
+              🔍 Xem ảnh đề gốc
+            </button>
+          </div>
+
+          <!-- Question Body with LaTeX and Code Block -->
+          <div class="question-body">
+            <p>
+              Cho thuật toán tìm kiếm nhị phân (<strong>Binary Search</strong>) sau đây thực hiện trên một dãy đã sắp xếp gồm \(n\) phần tử: \(a_1 < a_2 < \dots < a_n\).
+            </p>
+
+            <!-- Pseudo-code block -->
+            <pre class="ui-code-block"><code>procedure binary_search(x: integer, a1, a2, ..., an: integers)
+    i := 1
+    j := n
+    while i &lt; j
+        m := floor((i + j) / 2)
+        if x &gt; a[m] then i := m + 1
+        else j := m
+    if x = a[i] then location := i
+    else location := 0
+return location</code></pre>
+
+            <p>
+              Hỏi trong trường hợp xấu nhất (<em>worst-case</em>), số phép so sánh (các phép so sánh giữa phần tử \(x\) và \(a_m\), cộng thêm phép so sánh kiểm tra điều kiện lặp) cần thực hiện khi kích thước mảng \(n = 32\) là bao nhiêu?
+            </p>
+          </div>
+
+          <!-- Multiple Choice Options -->
+          <div class="ui-options-list">
+            <!-- Option A -->
+            <div class="ui-option-item" onclick="selectOption('A', this)">
+              <div class="ui-option-key">A</div>
+              <div class="ui-option-content">
+                Tối đa \(5\) phép so sánh vì \(\log_2(32) = 5\).
+              </div>
+            </div>
+
+            <!-- Option B -->
+            <div class="ui-option-item selected" onclick="selectOption('B', this)">
+              <div class="ui-option-key">B</div>
+              <div class="ui-option-content">
+                Tối đa \(6\) phép so sánh khóa, vì thuật toán lặp qua \(\lfloor\log_2(32)\rfloor + 1 = 6\) lần lặp kiểm tra.
+              </div>
+            </div>
+
+            <!-- Option C -->
+            <div class="ui-option-item" onclick="selectOption('C', this)">
+              <div class="ui-option-key">C</div>
+              <div class="ui-option-content">
+                Tối đa \(32\) phép so sánh như tìm kiếm tuần tự.
+              </div>
+            </div>
+
+            <!-- Option D -->
+            <div class="ui-option-item" onclick="selectOption('D', this)">
+              <div class="ui-option-key">D</div>
+              <div class="ui-option-content">
+                Tối đa \(16\) phép so sánh.
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Action Buttons -->
+          <div class="action-bar">
+            <div style="display:flex; gap:var(--space-2);">
+              <button class="ui-btn ui-btn-secondary" onclick="alert('Đã chuyển sang câu trước')">
+                ← Câu trước
+              </button>
+              <button class="ui-btn ui-btn-primary" onclick="alert('Đã chuyển sang câu sau')">
+                Câu sau →
+              </button>
+            </div>
+
+            <div style="display:flex; gap:var(--space-2);">
+              <button class="ui-btn ui-btn-success" id="checkBtn" onclick="toggleExplanation()">
+                💡 Kiểm tra & Hiện giải thích
+              </button>
+              <a href="result.html" class="ui-btn ui-btn-danger">
+                Nộp bài thi
+              </a>
+            </div>
+          </div>
+
+          <!-- Keyboard Hints -->
+          <div class="kbd-hint">
+            <span>Phím tắt:</span>
+            <span class="kbd-chip">1-4</span> hoặc <span class="kbd-chip">A-D</span>: Chọn đáp án |
+            <span class="kbd-chip">← / →</span>: Chuyển câu |
+            <span class="kbd-chip">F</span>: Đánh dấu câu |
+            <span class="kbd-chip">Enter</span>: Kiểm tra
+          </div>
+
+          <!-- Step-by-Step Explanation Accordion (Visible on demand) -->
+          <div class="ui-accordion" id="explanationBox">
+            <div class="ui-accordion-header" onclick="toggleAccordionContent()">
+              <span style="display:flex; align-items:center; gap:var(--space-2); color:var(--success);">
+                <span>✓</span> Hướng Dẫn Giải Chi Tiết Từng Bước
+              </span>
+              <span id="accordionArrow">▼</span>
+            </div>
+            <div class="ui-accordion-content" id="explanationContent">
+              <div class="ui-step-item">
+                <strong>Bước 1: Phân tích số lần chia đôi của thuật toán</strong>
+                <p>
+                  Tại mỗi bước của vòng lặp <code>while i &lt; j</code>, khoảng tìm kiếm từ \(i\) đến \(j\) bị thu hẹp đi một nửa:
+                  \[\text{Kích thước còn lại} \approx \left\lceil \frac{j - i + 1}{2} \right\rceil\]
+                </p>
+              </div>
+
+              <div class="ui-step-item">
+                <strong>Bước 2: Tính toán cho trường hợp \(n = 32\)</strong>
+                <p>
+                  Bắt đầu với đoạn độ dài 32. Sau mỗi lần chia đôi:
+                  \[32 \longrightarrow 16 \longrightarrow 8 \longrightarrow 4 \longrightarrow 2 \longrightarrow 1\]
+                  Tổng số lần lặp vòng lặp để đưa đoạn về độ dài 1 là \(\log_2(32) = 5\) lần.
+                </p>
+              </div>
+
+              <div class="ui-step-item">
+                <strong>Bước 3: Đếm phép so sánh cuối cùng</strong>
+                <p>
+                  Sau khi thoát khỏi vòng lặp tại \(i = j\), thuật toán thực hiện thêm đúng 1 phép so sánh điều kiện:
+                  \[x = a[i]\]
+                  Do đó, tổng số phép so sánh đối với phần tử mảng trong trường hợp xấu nhất là \(5 + 1 = 6\) phép so sánh.
+                </p>
+              </div>
+
+              <div class="ui-step-item" style="border-left-color: var(--success);">
+                <strong style="color:var(--success);">Kết luận:</strong>
+                <p>Đáp án đúng là <strong>B</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Right Column: Navigation Grid & Summary -->
+      <aside>
+        <div class="ui-card" style="position:sticky; top:var(--space-4);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-4);">
+            <h3 style="font-size:var(--text-base); font-weight:700;">Danh sách câu hỏi</h3>
+            <span class="ui-badge ui-badge-accent">14/50 Đã làm</span>
+          </div>
+
+          <!-- Filter tags -->
+          <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-3);">
+            <button class="ui-btn ui-btn-primary ui-btn-sm" style="flex:1; padding:4px 8px; font-size:11px;">Tất cả (50)</button>
+            <button class="ui-btn ui-btn-secondary ui-btn-sm" style="flex:1; padding:4px 8px; font-size:11px;">Chưa làm (36)</button>
+            <button class="ui-btn ui-btn-secondary ui-btn-sm" style="flex:1; padding:4px 8px; font-size:11px;">Đánh dấu (3)</button>
+          </div>
+
+          <!-- Question Matrix (50 buttons) -->
+          <div class="ui-nav-grid" id="navGrid">
+            <!-- Rendered by JS below -->
+          </div>
+
+          <!-- Status Legend -->
+          <div style="margin-top:var(--space-5); padding-top:var(--space-4); border-top:1px solid var(--border-subtle); display:grid; grid-template-columns:repeat(2,1fr); gap:var(--space-2); font-size:var(--text-xs); color:var(--text-secondary);">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="width:10px; height:10px; background:var(--accent); border-radius:2px;"></span> Đang xem
+            </div>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="width:10px; height:10px; background:rgba(16,185,129,0.3); border:1px solid #10b981; border-radius:2px;"></span> Đã chọn
+            </div>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="width:10px; height:10px; background:#f59e0b; border-radius:50%;"></span> Đánh dấu
+            </div>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="width:10px; height:10px; background:var(--bg-secondary); border:1px solid var(--border-subtle); border-radius:2px;"></span> Chưa làm
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal for Original Image -->
+  <div class="lightbox-modal" id="imageLightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3 style="font-size:var(--text-base); font-weight:700;">Ảnh đề gốc đối chiếu (Câu 285)</h3>
+        <button class="ui-btn ui-btn-ghost ui-btn-sm" onclick="closeLightbox()">✕ Đóng</button>
+      </div>
+      <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:4px;">
+        File: 0285_q285_Question_285.png
+      </p>
+      <img src="../0285_q285_Question_285.png" alt="Đề gốc câu 285" onerror="this.src='../1084_q1084_Question_1084.png'">
+    </div>
+  </div>
+
+  <script>
+    // Theme toggle
+    document.getElementById('themeToggleBtn').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+    });
+
+    // Option selection
+    function selectOption(key, el) {
+      document.querySelectorAll('.ui-option-item').forEach(item => item.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    // Toggle Flag
+    let isFlagged = false;
+    function toggleFlag() {
+      isFlagged = !isFlagged;
+      document.getElementById('flagIcon').textContent = isFlagged ? '⭐' : '☆';
+      document.getElementById('flagBtn').classList.toggle('ui-btn-primary', isFlagged);
+      const currentCell = document.querySelector('.ui-nav-cell.current');
+      if (currentCell) currentCell.classList.toggle('flagged', isFlagged);
+    }
+
+    // Explanation toggle
+    function toggleExplanation() {
+      const box = document.getElementById('explanationBox');
+      box.style.display = box.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function toggleAccordionContent() {
+      const content = document.getElementById('explanationContent');
+      const arrow = document.getElementById('accordionArrow');
+      const isHidden = content.style.display === 'none';
+      content.style.display = isHidden ? 'block' : 'none';
+      arrow.textContent = isHidden ? '▼' : '▲';
+    }
+
+    // Lightbox modal
+    function openLightbox() {
+      document.getElementById('imageLightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('imageLightbox').classList.remove('active');
+    }
+
+    // Render 50 questions in nav grid
+    const navGrid = document.getElementById('navGrid');
+    for (let i = 1; i <= 50; i++) {
+      const cell = document.createElement('div');
+      cell.className = 'ui-nav-cell';
+      if (i === 14) cell.classList.add('current');
+      else if (i < 14) cell.classList.add('answered');
+      if (i === 4 || i === 14 || i === 22) cell.classList.add('flagged');
+      cell.textContent = i;
+      cell.onclick = () => {
+        document.querySelectorAll('.ui-nav-cell').forEach(c => c.classList.remove('current'));
+        cell.classList.add('current');
+      };
+      navGrid.appendChild(cell);
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      const key = e.key.toUpperCase();
+      if (['1', 'A'].includes(key)) document.querySelectorAll('.ui-option-item')[0]?.click();
+      if (['2', 'B'].includes(key)) document.querySelectorAll('.ui-option-item')[1]?.click();
+      if (['3', 'C'].includes(key)) document.querySelectorAll('.ui-option-item')[2]?.click();
+      if (['4', 'D'].includes(key)) document.querySelectorAll('.ui-option-item')[3]?.click();
+      if (key === 'F') toggleFlag();
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>

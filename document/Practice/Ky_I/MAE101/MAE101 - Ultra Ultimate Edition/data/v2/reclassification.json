@@ -1,0 +1,1541 @@
+{
+  "summary": {
+    "totalQuestions": 1131,
+    "totalChanged": 150,
+    "needsReviewCount": 1,
+    "beforeDistribution": {
+      "DSTT1/MaTran": 245,
+      "GT1/PhuongTrinhViPhan": 23,
+      "DSTT1/HePhuongTrinh": 38,
+      "DSTT1/TriRieng": 19,
+      "GT1/GioiHan": 113,
+      "GT1/CucTri": 89,
+      "GT1/HamSo": 213,
+      "DSTT1/VectorHinhHoc": 145,
+      "DSTT1/KhongGianVector": 75,
+      "GT1/DaoHam": 58,
+      "GT1/TichPhan": 47,
+      "GT1/PhuongPhapSo": 29,
+      "DSTT1/AnhXaTuyenTinh": 15,
+      "DSTT1/DinhThuc": 22
+    },
+    "afterDistribution": {
+      "DSTT1/MaTran": 195,
+      "DSTT1/DinhThuc": 45,
+      "DSTT1/AnhXaTuyenTinh": 45,
+      "DSTT1/HePhuongTrinh": 50,
+      "DSTT1/TriRieng": 33,
+      "GT1/GioiHan": 115,
+      "GT1/CucTri": 96,
+      "GT1/HamSo": 161,
+      "DSTT1/VectorHinhHoc": 120,
+      "DSTT1/KhongGianVector": 75,
+      "GT1/DaoHam": 95,
+      "GT1/TichPhan": 71,
+      "GT1/PhuongPhapSo": 29,
+      "Unknown/Unknown": 1
+    }
+  },
+  "reclassifications": [
+    {
+      "id": 2,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 5,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 8,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi về số nghiệm của hệ phương trình tuyến tính thuần nhất, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 28,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 32,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "GioiHan",
+      "reason": "Câu hỏi tìm giới hạn hoặc xét tính liên tục tại một điểm, thuộc GT1/GioiHan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 41,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 44,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi giải hoặc biện luận hệ phương trình tuyến tính, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 45,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 47,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 79,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 81,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 88,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 92,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 93,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "CucTri",
+      "reason": "Câu hỏi tìm cực trị, điểm uốn hoặc bài toán tối ưu hóa, thuộc GT1/CucTri.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 100,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi giải hoặc biện luận hệ phương trình tuyến tính, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 103,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 109,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "CucTri",
+      "reason": "Câu hỏi tìm cực trị, điểm uốn hoặc bài toán tối ưu hóa, thuộc GT1/CucTri.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 111,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi về số nghiệm của hệ phương trình tuyến tính thuần nhất, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 113,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 114,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 117,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 118,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 120,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 129,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 130,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi giải hoặc biện luận hệ phương trình tuyến tính, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 132,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 151,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 153,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 181,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 184,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 187,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi về số nghiệm của hệ phương trình tuyến tính thuần nhất, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 189,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 191,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 197,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 215,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 216,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 218,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 223,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 246,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "CucTri",
+      "reason": "Câu hỏi tìm cực trị, điểm uốn hoặc bài toán tối ưu hóa, thuộc GT1/CucTri.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 247,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 250,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 261,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 264,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 270,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 284,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 293,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 294,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 306,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "Unknown",
+      "new_topic": "Unknown",
+      "reason": "Câu hỏi thuộc môn CSD201 (Bucket hashing), không thuộc MAE101; chuyển sang Unknown chờ duyệt.",
+      "confidence": "medium",
+      "needs_review": true
+    },
+    {
+      "id": 311,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 320,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 333,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 347,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 357,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 368,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 394,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 398,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 423,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 427,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 431,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 440,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 443,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 446,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi giải hoặc biện luận hệ phương trình tuyến tính, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 455,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Ảnh gốc trên đĩa 0455_q455_Question_455.png là bài toán tích phân MAE101 (chuyển từ MaTran sang TichPhan).",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 456,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 461,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 480,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 485,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "CucTri",
+      "reason": "Câu hỏi tìm cực trị, điểm uốn hoặc bài toán tối ưu hóa, thuộc GT1/CucTri.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 501,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 504,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 515,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 521,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 524,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 528,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 530,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi giải hoặc biện luận hệ phương trình tuyến tính, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 537,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 539,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 552,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 556,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 561,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 564,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 565,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 570,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 579,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 580,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi giải hoặc biện luận hệ phương trình tuyến tính, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 594,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi về số nghiệm của hệ phương trình tuyến tính thuần nhất, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 602,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 607,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 609,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 635,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 650,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 651,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 652,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 655,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 671,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 689,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 691,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 712,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 734,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 735,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 750,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 761,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 763,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 772,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 776,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 790,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 791,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 792,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 796,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính nguyên hàm/tích phân bất định (Find \\int x^3 e^{x^2} dx), thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 801,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi về số nghiệm của hệ phương trình tuyến tính thuần nhất, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 824,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 825,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 835,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 859,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 860,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 865,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 886,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 908,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 916,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 922,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 940,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 943,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 946,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 962,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 966,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 975,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 979,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 988,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 995,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1007,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1008,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "TriRieng",
+      "reason": "Câu hỏi tìm trị riêng hoặc vector riêng, thuộc DSTT1/TriRieng.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1011,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "GioiHan",
+      "reason": "Câu hỏi tìm giới hạn hoặc xét tính liên tục tại một điểm, thuộc GT1/GioiHan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1012,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1021,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1037,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1049,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1062,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1067,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1072,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1081,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1082,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1083,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "DinhThuc",
+      "reason": "Câu hỏi tính định thức ma trận hoặc tính chất định thức, thuộc DSTT1/DinhThuc.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1085,
+      "old_folder": "DSTT1",
+      "old_topic": "VectorHinhHoc",
+      "new_folder": "DSTT1",
+      "new_topic": "AnhXaTuyenTinh",
+      "reason": "Câu hỏi về phép biến đổi tuyến tính (phản xạ, phép quay, hình chiếu), thuộc DSTT1/AnhXaTuyenTinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1087,
+      "old_folder": "GT1",
+      "old_topic": "PhuongTrinhViPhan",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm hàm số hoặc đạo hàm ẩn, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1091,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "TichPhan",
+      "reason": "Câu hỏi tính tích phân hoặc diện tích hình phẳng dưới đồ thị, thuộc GT1/TichPhan.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1099,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "CucTri",
+      "reason": "Câu hỏi tìm cực trị, điểm uốn hoặc bài toán tối ưu hóa, thuộc GT1/CucTri.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1104,
+      "old_folder": "DSTT1",
+      "old_topic": "MaTran",
+      "new_folder": "DSTT1",
+      "new_topic": "HePhuongTrinh",
+      "reason": "Câu hỏi giải hoặc biện luận hệ phương trình tuyến tính, thuộc DSTT1/HePhuongTrinh.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1112,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "CucTri",
+      "reason": "Câu hỏi tìm cực trị, điểm uốn hoặc bài toán tối ưu hóa, thuộc GT1/CucTri.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1119,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1122,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "CucTri",
+      "reason": "Câu hỏi tìm cực trị, điểm uốn hoặc bài toán tối ưu hóa, thuộc GT1/CucTri.",
+      "confidence": "high",
+      "needs_review": false
+    },
+    {
+      "id": 1124,
+      "old_folder": "GT1",
+      "old_topic": "HamSo",
+      "new_folder": "GT1",
+      "new_topic": "DaoHam",
+      "reason": "Câu hỏi tính đạo hàm, vi phân, tiếp tuyến hoặc xấp xỉ tuyến tính, thuộc GT1/DaoHam.",
+      "confidence": "high",
+      "needs_review": false
+    }
+  ]
+}

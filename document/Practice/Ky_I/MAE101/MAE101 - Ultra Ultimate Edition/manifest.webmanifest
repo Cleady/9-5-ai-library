@@ -1,0 +1,10 @@
+{
+  "name": "MAE101 Study Hub",
+  "short_name": "MAE101",
+  "description": "Luyện Giải tích 1 và Đại số tuyến tính 1 với lưu tiến độ tự động.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff8f9",
+  "theme_color": "#e11d48",
+  "lang": "vi"
+}

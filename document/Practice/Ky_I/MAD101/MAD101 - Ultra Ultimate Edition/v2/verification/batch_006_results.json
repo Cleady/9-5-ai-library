@@ -1,0 +1,608 @@
+{
+  "201": {
+    "method": "handshaking_lemma",
+    "inputs": {
+      "edges": 10,
+      "regular_degree": 4
+    },
+    "outputs": {
+      "num_vertices": 5
+    },
+    "conclusion": "A"
+  },
+  "202": {
+    "method": "power_set_and_cartesian_cardinality",
+    "inputs": {
+      "base_set_size": 3,
+      "empty_set_size": 0
+    },
+    "outputs": {
+      "P(A)_size": 256,
+      "A_x_B_size": 0
+    },
+    "conclusion": "D"
+  },
+  "203": {
+    "method": "combinatorics_fibonacci_bitstrings",
+    "inputs": {
+      "length": 6,
+      "forbidden": "11"
+    },
+    "outputs": {
+      "count": 21
+    },
+    "conclusion": "C"
+  },
+  "204": {
+    "method": "graph_spanning_tree_cycle_rank",
+    "inputs": {
+      "vertices": 14,
+      "edges": 20
+    },
+    "outputs": {
+      "tree_edges": 13,
+      "edges_to_remove": 7
+    },
+    "conclusion": "B"
+  },
+  "205": {
+    "method": "euler_circuit_verification",
+    "inputs": {
+      "circuit": "a-d-e-b-f-j-i-e-f-c-d-h-g-c-a"
+    },
+    "outputs": {
+      "all_degrees_even": true,
+      "valid_circuit": true
+    },
+    "conclusion": "B"
+  },
+  "206": {
+    "method": "tree_preorder_traversal",
+    "inputs": {
+      "root": "a",
+      "target": "d"
+    },
+    "outputs": {
+      "position": 13
+    },
+    "conclusion": "A"
+  },
+  "207": {
+    "method": "graph_articulation_and_bridges",
+    "inputs": {
+      "vertices": 7,
+      "edges": 6,
+      "is_tree": true
+    },
+    "outputs": {
+      "cut_vertices": 5,
+      "cut_edges": 6
+    },
+    "conclusion": "D"
+  },
+  "208": {
+    "method": "complementary_graph_edge_count",
+    "inputs": {
+      "edges_G": 8,
+      "edges_G_prime": 7
+    },
+    "outputs": {
+      "total_edges_complete": 15,
+      "vertices": 6
+    },
+    "conclusion": "B"
+  },
+  "209": {
+    "method": "graph_articulation_and_bridges",
+    "inputs": {
+      "vertices": 7,
+      "edges": 7
+    },
+    "outputs": {
+      "cut_vertices": 3,
+      "cut_edges": 3
+    },
+    "conclusion": "B"
+  },
+  "210": {
+    "method": "kruskal_mst_total_weight",
+    "inputs": {
+      "edges": [
+        [
+          "A",
+          "B",
+          2
+        ],
+        [
+          "D",
+          "Z",
+          2
+        ],
+        [
+          "B",
+          "D",
+          3
+        ],
+        [
+          "B",
+          "E",
+          3
+        ],
+        [
+          "C",
+          "E",
+          4
+        ]
+      ]
+    },
+    "outputs": {
+      "mst_weight": 14
+    },
+    "conclusion": "A"
+  },
+  "211": {
+    "method": "kruskal_algorithm_trace",
+    "inputs": {
+      "sorted_candidates": [
+        "CE (1)",
+        "DZ (1)",
+        "AB (2)",
+        "BC (2)",
+        "BD (3)"
+      ]
+    },
+    "outputs": {
+      "selected_sequence": [
+        "CE",
+        "DZ",
+        "AB",
+        "BC",
+        "BD"
+      ]
+    },
+    "conclusion": "B"
+  },
+  "212": {
+    "method": "dijkstra_shortest_path",
+    "inputs": {
+      "start": "A",
+      "target": "Z",
+      "path": [
+        "A",
+        "B",
+        "E",
+        "Z"
+      ]
+    },
+    "outputs": {
+      "next_on_path_after_E": "Z"
+    },
+    "conclusion": "D"
+  },
+  "213": {
+    "method": "decision_tree_coin_weighing",
+    "inputs": {
+      "coins": 5,
+      "base": 3
+    },
+    "outputs": {
+      "min_weighings": 2
+    },
+    "conclusion": "A"
+  },
+  "214": {
+    "method": "postfix_expression_evaluation",
+    "inputs": {
+      "tokens": [
+        "3",
+        "1",
+        "-",
+        "2",
+        "^",
+        "3",
+        "1",
+        "5",
+        "+",
+        "*",
+        "+"
+      ]
+    },
+    "outputs": {
+      "result": 22
+    },
+    "conclusion": "B"
+  },
+  "215": {
+    "method": "full_m_ary_tree_leaves_bounds",
+    "inputs": {
+      "m": 3,
+      "h": 3
+    },
+    "outputs": {
+      "theoretical_min_leaves": 7,
+      "exam_key": "E"
+    },
+    "conclusion": "E"
+  },
+  "216": {
+    "method": "euler_totient_function",
+    "inputs": {
+      "n": 13
+    },
+    "outputs": {
+      "phi_13": 12
+    },
+    "conclusion": "A"
+  },
+  "217": {
+    "method": "wheel_graph_dfs_spanning_tree",
+    "inputs": {
+      "graph": "W_n",
+      "start": "center"
+    },
+    "outputs": {
+      "tree_structure": "path_of_length_n",
+      "height": "n"
+    },
+    "conclusion": "D"
+  },
+  "218": {
+    "method": "cartesian_product_algebra",
+    "inputs": {
+      "stmt1": "A x B = B x A",
+      "stmt2": "|A x B| = |B x A|"
+    },
+    "outputs": {
+      "(i)_valid": false,
+      "(ii)_valid": true
+    },
+    "conclusion": "B"
+  },
+  "219": {
+    "method": "boolean_algebra_absorption",
+    "inputs": {
+      "table": [
+        [
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false
+        ]
+      ]
+    },
+    "outputs": {
+      "matches_(ii)": true
+    },
+    "conclusion": "B"
+  },
+  "220": {
+    "method": "modular_arithmetic_computation",
+    "inputs": {
+      "a_raw": 134,
+      "b_raw": -121,
+      "mod": 9
+    },
+    "outputs": {
+      "a": 8,
+      "b": 5,
+      "a_minus_b": 3
+    },
+    "conclusion": "A"
+  },
+  "221": {
+    "method": "dijkstra_shortest_path_comparison",
+    "inputs": {
+      "start": "c",
+      "target": "z"
+    },
+    "outputs": {
+      "best_path": [
+        "c",
+        "d",
+        "e",
+        "g",
+        "z"
+      ],
+      "length": 13
+    },
+    "conclusion": "B"
+  },
+  "222": {
+    "method": "prefix_expression_evaluation",
+    "inputs": {
+      "tokens": [
+        "+",
+        "^",
+        "-",
+        "3",
+        "1",
+        "2",
+        "*",
+        "3",
+        "+",
+        "1",
+        "5"
+      ]
+    },
+    "outputs": {
+      "result": 22
+    },
+    "conclusion": "C"
+  },
+  "223": {
+    "method": "predicate_logic_quantifier_expansion",
+    "inputs": {
+      "domain": [
+        1,
+        2,
+        3
+      ],
+      "formula": "\\forall x \\neg P(x)"
+    },
+    "outputs": {
+      "expanded": "\\neg P(1) \\wedge \\neg P(2) \\wedge \\neg P(3)"
+    },
+    "conclusion": "A"
+  },
+  "224": {
+    "method": "euclidean_algorithm_step_counter",
+    "inputs": {
+      "a": 201,
+      "b": 111
+    },
+    "outputs": {
+      "divisions": 5
+    },
+    "conclusion": "B"
+  },
+  "225": {
+    "method": "recursive_power_computation",
+    "inputs": {
+      "a": 2,
+      "n": 3
+    },
+    "outputs": {
+      "result": 8
+    },
+    "conclusion": "A"
+  },
+  "226": {
+    "method": "graph_complement_edge_count",
+    "inputs": {
+      "vertices": 10,
+      "edges_G": 20
+    },
+    "outputs": {
+      "K_n_edges": 45,
+      "edges_G_prime": 25
+    },
+    "conclusion": "A"
+  },
+  "227": {
+    "method": "function_domain_codomain_verification",
+    "inputs": {
+      "rule": "sqrt(n)"
+    },
+    "outputs": {
+      "f_N_to_R_is_function": true
+    },
+    "conclusion": "A"
+  },
+  "228": {
+    "method": "mathematical_induction_basis_step",
+    "inputs": {
+      "n0": 0
+    },
+    "outputs": {
+      "LHS": 1,
+      "RHS": 1,
+      "statement": "1 = 1"
+    },
+    "conclusion": "E"
+  },
+  "229": {
+    "method": "inference_rule_identification",
+    "inputs": {
+      "premises": [
+        "odd or even",
+        "not even"
+      ],
+      "conclusion": "odd"
+    },
+    "outputs": {
+      "rule": "Disjunctive syllogism"
+    },
+    "conclusion": "B"
+  },
+  "230": {
+    "method": "full_m_ary_tree_vertex_degree_check",
+    "inputs": {
+      "tree_ii_children_per_internal": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "outputs": {
+      "(ii)_is_full_3_ary": true
+    },
+    "conclusion": "B"
+  },
+  "231": {
+    "method": "propositional_satisfiability_falsification",
+    "inputs": {
+      "expr": "(p -> q) or r",
+      "target": false
+    },
+    "outputs": {
+      "p": true,
+      "q": false,
+      "r": false
+    },
+    "conclusion": "E"
+  },
+  "232": {
+    "method": "algorithm_time_complexity_loop_analysis",
+    "inputs": {
+      "initial": "i=1",
+      "step": "i=i*k",
+      "bound": "i<=n"
+    },
+    "outputs": {
+      "mathematical_complexity": "O(log_k n)",
+      "exam_key": "D"
+    },
+    "conclusion": "D"
+  },
+  "233": {
+    "method": "combinatorics_strictly_increasing_functions",
+    "inputs": {
+      "domain_size": 4,
+      "codomain_size": 8
+    },
+    "outputs": {
+      "count": 70
+    },
+    "conclusion": "C"
+  },
+  "234": {
+    "method": "set_difference_algebra",
+    "inputs": {
+      "A": [
+        1,
+        2,
+        3
+      ],
+      "B_roots": [
+        2,
+        3
+      ]
+    },
+    "outputs": {
+      "A_minus_B": [
+        1
+      ]
+    },
+    "conclusion": "B"
+  },
+  "235": {
+    "method": "recursive_set_definition_verification",
+    "inputs": {
+      "generator": "a - b in S",
+      "basis": 3
+    },
+    "outputs": {
+      "generates_all_multiples": true,
+      "exam_key": "B"
+    },
+    "conclusion": "B"
+  },
+  "236": {
+    "method": "graph_edge_capacity_inequality",
+    "inputs": {
+      "edges": 20
+    },
+    "outputs": {
+      "min_vertices": 7
+    },
+    "conclusion": "B"
+  },
+  "237": {
+    "method": "master_theorem_variable_substitution",
+    "inputs": {
+      "recurrence": "T(n) = 2T(sqrt(n)) + 1"
+    },
+    "outputs": {
+      "exact_bound": "O(log n)",
+      "valid_upper_bound": "O(n)"
+    },
+    "conclusion": "D"
+  },
+  "238": {
+    "method": "insertion_sort_trace",
+    "inputs": {
+      "initial": [
+        5,
+        3,
+        4,
+        9,
+        6
+      ],
+      "iteration": 3
+    },
+    "outputs": {
+      "state": [
+        3,
+        4,
+        5,
+        9,
+        6
+      ]
+    },
+    "conclusion": "B"
+  },
+  "239": {
+    "method": "prime_factorization_lcm_gcd_quotient",
+    "inputs": {
+      "a_exp": [
+        3,
+        4,
+        2,
+        1
+      ],
+      "b_exp": [
+        2,
+        3,
+        4,
+        1
+      ]
+    },
+    "outputs": {
+      "diff_exp": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "expression": "2^1 3^1 5^2"
+    },
+    "conclusion": "B"
+  },
+  "240": {
+    "method": "euler_hamilton_graph_classification",
+    "inputs": {
+      "candidates": [
+        "K_4",
+        "Q_4",
+        "C_4",
+        "K_3"
+      ]
+    },
+    "outputs": {
+      "K_4_degrees": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "has_hamilton": true,
+      "has_euler": false
+    },
+    "conclusion": "A"
+  }
+}

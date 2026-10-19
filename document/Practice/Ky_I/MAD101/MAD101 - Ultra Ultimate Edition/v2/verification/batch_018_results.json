@@ -1,0 +1,294 @@
+{
+  "681": {
+    "method": "modular_congruence_check",
+    "input": "x ≡ 5 (mod 17) among {-29, 80, -122, 103}",
+    "output": -29,
+    "verified": true,
+    "conclusion": "-29 = -2*17 + 5 ≡ 5 (mod 17)."
+  },
+  "682": {
+    "method": "modular_arithmetic_remainder",
+    "input": "a = 137 mod 31 = 13, b = -137 mod 31 = 18",
+    "output": 5,
+    "verified": true,
+    "conclusion": "b - a = 18 - 13 = 5."
+  },
+  "683": {
+    "method": "lcg_simulation",
+    "input": "x_0 = 4, x_n = (6x_{n-1} + 5) mod 13, step 4",
+    "output": 5,
+    "verified": true,
+    "conclusion": "x_1 = 3, x_2 = 10, x_3 = 0, x_4 = 5."
+  },
+  "684": {
+    "method": "integer_floor_division",
+    "input": "a = floor(137/31), b = floor(-137/31)",
+    "output": -1,
+    "verified": true,
+    "conclusion": "a = 4, b = -5 => a + b = -1."
+  },
+  "685": {
+    "method": "euler_totient_coprime_enumeration",
+    "input": "x < 18 with gcd(x, 18) = 1",
+    "output": 6,
+    "verified": true,
+    "conclusion": "Coprimes are {1, 5, 7, 11, 13, 17}, total 6."
+  },
+  "686": {
+    "method": "gcd_lcm_product_identity",
+    "input": "LCM * GCD / 4200",
+    "output": 3920,
+    "verified": true,
+    "conclusion": "a = 58800 * 280 / 4200 = 3920."
+  },
+  "687": {
+    "method": "pairwise_coprime_check",
+    "input": "p among {15, 21, 39} coprime to 26 and 55",
+    "output": 21,
+    "verified": true,
+    "conclusion": "p = 21 since gcd(21, 26)=1 and gcd(21, 55)=1."
+  },
+  "688": {
+    "method": "binary_to_octal_conversion",
+    "input": "(11011111011)_2",
+    "output": "3373",
+    "verified": true,
+    "conclusion": "(11011111011)_2 = (3373)_8 (statement iv)."
+  },
+  "689": {
+    "method": "base_conversion_radix",
+    "input": "(434)_5",
+    "output": "11102",
+    "verified": true,
+    "conclusion": "(434)_5 = 119_10 = (11102)_3."
+  },
+  "690": {
+    "method": "euclidean_division_count",
+    "input": "gcd(90, 24)",
+    "output": 3,
+    "verified": true,
+    "conclusion": "Exactly 3 divisions are performed."
+  },
+  "691": {
+    "method": "mathematical_induction_identity",
+    "input": "1 + 3 + ... + (2k+1) = [1 + ... + (2k-1)] + (2k+1)",
+    "output": "(i)",
+    "verified": true,
+    "conclusion": "1 + ... + (2k+1) = k^2 + (2k+1) = (k+1)^2. Statement (i) is correct."
+  },
+  "692": {
+    "method": "induction_hypothesis_definition",
+    "input": "nonnegative integer n",
+    "output": "P(k) is true for some integer k >= 0",
+    "verified": true,
+    "conclusion": "Inductive hypothesis is statement (ii): P(k) is true for some integer k >= 0."
+  },
+  "693": {
+    "method": "induction_base_step",
+    "input": "nonnegative integer n => base is n = 0",
+    "output": "P(0)",
+    "verified": true,
+    "conclusion": "Base step proves P(0)."
+  },
+  "694": {
+    "method": "induction_proof_ordering",
+    "input": "Base cases (Step 2), hypothesis (Step 1), step (Step 4), conclusion (Step 3)",
+    "output": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "verified": true,
+    "conclusion": "The correct logical order is 2, 1, 4, 3."
+  },
+  "695": {
+    "method": "induction_algebraic_step",
+    "input": "1^3 + ... + (k+1)^3",
+    "output": "(ii)",
+    "verified": true,
+    "conclusion": "Statement (ii) correctly splits the sum into k terms plus (k+1)^3."
+  },
+  "696": {
+    "method": "frobenius_coin_problem",
+    "input": "n = 6x + 7y, x,y >= 0",
+    "output": 30,
+    "verified": true,
+    "conclusion": "Largest non-representable integer is 29, so for all n >= 30 the representation exists."
+  },
+  "697": {
+    "method": "recursive_set_characterization",
+    "input": "Basis 2, recursive 2x",
+    "output": "S = {2^n | n = 1, 2, ...}",
+    "verified": true,
+    "conclusion": "S consists of positive powers of 2 (statement i)."
+  },
+  "698": {
+    "method": "recurrence_evaluation",
+    "input": "a_0 = 2, a_n = a_{n-1}^2 - 1, n = 4",
+    "output": 3968,
+    "verified": true,
+    "conclusion": "a_1 = 3, a_2 = 8, a_3 = 63, a_4 = 3968."
+  },
+  "699": {
+    "method": "merge_algorithm_comparison_simulation",
+    "input": "[1,3,5,7,8,10] and [2,4,6,9]",
+    "output": 9,
+    "verified": true,
+    "conclusion": "Exactly 9 comparisons are required."
+  },
+  "700": {
+    "method": "recursive_algorithm_trace",
+    "input": "AL(n), n = 5",
+    "output": 648,
+    "verified": true,
+    "conclusion": "AL(3) = 6, AL(4) = 36, AL(5) = 648."
+  },
+  "701": {
+    "method": "recursive_procedure_trace",
+    "input": "a = 3, n = 5",
+    "output": 13,
+    "verified": true,
+    "conclusion": "P(3, 5) = 3*4 + 1 = 13."
+  },
+  "702": {
+    "method": "combinatorial_counting",
+    "input": "C(3, 2) * 9",
+    "output": 27,
+    "verified": true,
+    "conclusion": "3 * 9 = 27 strings."
+  },
+  "703": {
+    "method": "permutation_count",
+    "input": "P(10, 5)",
+    "output": 30240,
+    "verified": true,
+    "conclusion": "P(10, 5) = 10*9*8*7*6 = 30240."
+  },
+  "704": {
+    "method": "injection_count_multiset_domain",
+    "input": "|Y| = 2, |X| = 4",
+    "output": 12,
+    "verified": true,
+    "conclusion": "P(4, 2) = 4 * 3 = 12."
+  },
+  "705": {
+    "method": "pie_divisibility",
+    "input": "N = 200, d1 = 3, d2 = 5",
+    "output": 93,
+    "verified": true,
+    "conclusion": "66 + 40 - 13 = 93."
+  },
+  "706": {
+    "method": "geometric_series_recurrence",
+    "input": "a_0 = -1, delta = 3^n, n = 5",
+    "output": 362,
+    "verified": true,
+    "conclusion": "a_5 = -1 + 363 = 362."
+  },
+  "707": {
+    "method": "recurrence_summation",
+    "input": "a_1 = 1, delta = 3^n for n=2..4",
+    "output": 118,
+    "verified": true,
+    "conclusion": "a_4 = 1 + 9 + 27 + 81 = 118."
+  },
+  "708": {
+    "method": "closed_form_evaluation",
+    "input": "a_n = 2^n + 4*(3^n) + n, n in {0, 2, 4}",
+    "output": [
+      5,
+      42,
+      344
+    ],
+    "verified": true,
+    "conclusion": "a_0 = 5, a_2 = 42, a_4 = 344."
+  },
+  "709": {
+    "method": "fibonacci_bitstring_complement",
+    "input": "length 5 binary strings",
+    "output": 19,
+    "verified": true,
+    "conclusion": "32 - 13 = 19 strings."
+  },
+  "710": {
+    "method": "linear_recurrence_forward_backward",
+    "input": "f(3) = 18",
+    "output": {
+      "f(2)": 4,
+      "f(4)": 60
+    },
+    "verified": true,
+    "conclusion": "f(2) = 4, f(4) = 60."
+  },
+  "711": {
+    "method": "jacobsthal_rabbit_recurrence",
+    "input": "r_1 = 1, r_2 = 1, factor = 2, month = 6",
+    "output": 21,
+    "verified": true,
+    "conclusion": "r_3=3, r_4=5, r_5=11, r_6=21."
+  },
+  "712": {
+    "method": "characteristic_equation_root_test",
+    "input": "r^2 + 3r - 4 = 0 => roots 1, -4",
+    "output": "None of the other choices is correct",
+    "verified": true,
+    "conclusion": "Both (i) and (ii) satisfy the recurrence, so neither fails."
+  },
+  "713": {
+    "method": "divide_and_conquer_geometric_expansion",
+    "input": "f(1)=4, n=125",
+    "output": 469,
+    "verified": true,
+    "conclusion": "f(5)=19, f(25)=94, f(125)=469."
+  },
+  "714": {
+    "method": "master_theorem",
+    "input": "a=2, b=2, f(n)=n^2",
+    "output": "O(n^2)",
+    "verified": true,
+    "conclusion": "T(n) = O(n^2) (statement iii)."
+  },
+  "715": {
+    "method": "variable_substitution_recurrence",
+    "input": "f(3) = 1, n = 81",
+    "output": 7.82,
+    "verified": true,
+    "conclusion": "f(81) = 4 + 4*log10(9) ≈ 7.82."
+  },
+  "716": {
+    "method": "master_theorem",
+    "input": "a=2, b=2, f(n)=n^3",
+    "output": "O(n^3)",
+    "verified": true,
+    "conclusion": "T(n) = O(n^3) (statement iii)."
+  },
+  "717": {
+    "method": "recurrence_fractional_evaluation",
+    "input": "f(1) = 3, delta = n^2/3, n = 25",
+    "output": "659/3",
+    "verified": true,
+    "conclusion": "f(25) = 34/3 + 625/3 = 659/3."
+  },
+  "718": {
+    "method": "linear_equation_solving_recurrence",
+    "input": "f(9) = 25, formula given",
+    "output": -2,
+    "verified": true,
+    "conclusion": "f(3) = -2."
+  },
+  "719": {
+    "method": "merge_algorithm_comparison_simulation",
+    "input": "[1,4,6,9] and [3,5,8,10,12,14]",
+    "output": 7,
+    "verified": true,
+    "conclusion": "Exactly 7 comparisons are required."
+  },
+  "720": {
+    "method": "pie_divisibility",
+    "input": "N = 99, d1 = 3, d2 = 4",
+    "output": 49,
+    "verified": true,
+    "conclusion": "33 + 24 - 8 = 49."
+  }
+}

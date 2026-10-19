@@ -1,0 +1,79 @@
+{
+  "1121": {
+    "method": "Full m-ary tree leaf-internal relation L = (m-1)i + 1 and factor analysis",
+    "input": "h = 4, L = 63",
+    "output": "m - 1 = 2 => m = 3, Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1122": {
+    "method": "Second derivative test for concavity",
+    "input": "f(x) = (x + 3)^{2/3}",
+    "output": "f''(x) < 0 for all x != -3 => concave down on (-inf, -3) and (-3, inf) -> Option B",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1123": {
+    "method": "Newton-Raphson numerical root iteration",
+    "input": "f(x) = x^3 - 3x^2 + 1, x_1 = 3",
+    "output": "x_3 = 16171/5616 approx 2.8794 -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1124": {
+    "method": "Fundamental Theorem of Calculus Part 1 with chain rule (Leibniz integral rule)",
+    "input": "g(x) = int_5^{sin x} (1+t) dt",
+    "output": "g'(x) = (1 + sin x) cos x -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1125": {
+    "method": "Indefinite substitution integration u = ln x",
+    "input": "int dx / [x (ln x)^6]",
+    "output": "-1 / [5(ln x)^5] + C -> item (ii) which is Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1126": {
+    "method": "Gaussian elimination / linear system consistency check",
+    "input": "x + 2y - 3z = -1, x + 5z = 5, 2x - 4y + 5z = 1",
+    "output": "(x, y, z) = (0, 1, 1) -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1127": {
+    "method": "Matrix-vector multiplication",
+    "input": "A = [[1, -1], [0, 1]], x = [x1, x2]^T",
+    "output": "[x1 - x2, x2]^T -> item (i) which is Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1128": {
+    "method": "Adjugate matrix definition adj(A) = C^T, computing row 1 = [C11, C21, C31]",
+    "input": "A = [[2, 3, 1], [2, -1, 2], [3, 4, -2]]",
+    "output": "[-6, 10, 7] -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1129": {
+    "method": "Adjugate matrix first column computation [C11, C12, C13]^T",
+    "input": "A with first row [a, b, c], rows 2-3 given",
+    "output": "[-6, 10, 11]^T -> item (i) which is Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1130": {
+    "method": "Eigenspace computation via null space of (A - lambda I)",
+    "input": "A = [[3, -6], [8, -11]], lambda = -5",
+    "output": "v = t[3, 4]^T, t != 0 -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1131": {
+    "method": "Subspace dimension via Rank-Nullity Theorem",
+    "input": "Homogeneous linear system in R^3 with 3 equations",
+    "output": "rank = 2 => nullity = 3 - 2 = 1 -> Option B",
+    "verified": true,
+    "conclusion": "B"
+  }
+}

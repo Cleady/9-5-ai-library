@@ -1,0 +1,86 @@
+{
+  "total_images": 1135,
+  "duplicate_hash_groups_count": 0,
+  "duplicate_hash_groups": [],
+  "corrupted_images": [],
+  "zero_byte_images": [],
+  "png_webp_pairs": {
+    "247": {
+      ".png": {
+        "filename": "0247_q247_Question_247.png",
+        "size": 33236,
+        "used_in_qjs": true
+      },
+      ".webp": {
+        "filename": "0247_q247_Question_247.webp",
+        "size": 19630,
+        "used_in_qjs": false
+      }
+    },
+    "306": {
+      ".png": {
+        "filename": "0306_q306_Question_306.png",
+        "size": 35423,
+        "used_in_qjs": true
+      },
+      ".webp": {
+        "filename": "0306_q306_Question_306.webp",
+        "size": 24770,
+        "used_in_qjs": false
+      }
+    },
+    "410": {
+      ".png": {
+        "filename": "0410_q410_Question_410.png",
+        "size": 38119,
+        "used_in_qjs": true
+      },
+      ".webp": {
+        "filename": "0410_q410_Question_410.webp",
+        "size": 25378,
+        "used_in_qjs": false
+      }
+    }
+  },
+  "oversized_count": 4,
+  "top_oversized": [
+    {
+      "filename": "0595_q595_Question_595.png",
+      "size_kb": 307.04
+    },
+    {
+      "filename": "0131_q131_Question_131.png",
+      "size_kb": 208.42
+    },
+    {
+      "filename": "0254_q254_Question_254.png",
+      "size_kb": 154.74
+    },
+    {
+      "filename": "0112_q112_Question_112.png",
+      "size_kb": 138.39
+    }
+  ],
+  "unreferenced_images": [
+    {
+      "filename": "0247_q247_Question_247.webp",
+      "rel_path": "assets/questions/0247_q247_Question_247.webp",
+      "size_bytes": 19630
+    },
+    {
+      "filename": "0306_q306_Question_306.webp",
+      "rel_path": "assets/questions/0306_q306_Question_306.webp",
+      "size_bytes": 24770
+    },
+    {
+      "filename": "0410_q410_Question_410.webp",
+      "rel_path": "assets/questions/0410_q410_Question_410.webp",
+      "size_bytes": 25378
+    },
+    {
+      "filename": "0455_q455_Question_455.png",
+      "rel_path": "assets/questions/0455_q455_Question_455.png",
+      "size_bytes": 27297
+    }
+  ]
+}

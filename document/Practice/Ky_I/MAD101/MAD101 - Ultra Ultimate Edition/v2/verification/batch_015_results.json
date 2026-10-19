@@ -1,0 +1,373 @@
+{
+  "561": {
+    "method": "graph_cut_vertex_analysis",
+    "input": "Vertices {a,b,c,d,e,f,g,h}, edges (a,b),(b,c),(b,d),(c,d),(c,e),(e,f),(f,g),(g,h),(h,e),(e,g)",
+    "output": {
+      "cut_vertices": [
+        "b",
+        "c",
+        "e"
+      ],
+      "count": 3
+    },
+    "verified": true,
+    "conclusion": "There are exactly 3 cut vertices: b, c, e."
+  },
+  "562": {
+    "method": "euler_circuit_theorem_and_key_reconciliation",
+    "input": "K_{2,4}",
+    "output": {
+      "mathematical_circuit_length": 8,
+      "official_key": "B",
+      "official_text": "The graph does not have an Euler circuit."
+    },
+    "verified": true,
+    "conclusion": "Degrees are all even (4 and 2), so Euler circuit exists mathematically with length 8, but exam key incorrectly marks B (confusing with Hamilton circuit). Exam key retained with design flag."
+  },
+  "563": {
+    "method": "adjacency_matrix_power",
+    "input": "C_4 bipartite graph, A^4[a][d]",
+    "output": 8,
+    "verified": true,
+    "conclusion": "Exactly 8 paths of length 4 from a to d."
+  },
+  "564": {
+    "method": "hamilton_cycle_bipartite_parity",
+    "input": "Graphs G (7 vertices, bipartite) and H (6 vertices, contains perimeter 6-cycle)",
+    "output": "Only H has a Hamilton circuit",
+    "verified": true,
+    "conclusion": "Only H has a Hamilton circuit; G cannot have one since it is bipartite with an odd number of vertices."
+  },
+  "565": {
+    "method": "recursive_tree_addition_counting",
+    "input": "Fibo(7)",
+    "output": 12,
+    "verified": true,
+    "conclusion": "Computing Fibo(7) takes 12 additions."
+  },
+  "566": {
+    "method": "characteristic_equation_repeated_root",
+    "input": "a_n = 6a_{n-1} - 9a_{n-2}, a_0=1, a_1=6",
+    "output": "a_n = 3^n + n*3^n",
+    "verified": true,
+    "conclusion": "Solution is a_n = 3^n + n*3^n."
+  },
+  "567": {
+    "method": "product_rule_permutations",
+    "input": "P(15, 2) * 13",
+    "output": 2730,
+    "verified": true,
+    "conclusion": "Number of ways is 15 * 14 * 13 = 2730."
+  },
+  "568": {
+    "method": "euler_path_degree_parity",
+    "input": "Degrees: [3, 2, 2, 1]",
+    "output": "Graph has only an Euler path",
+    "verified": true,
+    "conclusion": "Exactly two vertices of odd degree means the graph has an Euler path but no Euler circuit."
+  },
+  "569": {
+    "method": "master_theorem",
+    "input": "f(n) = 7f(n/2) + 5",
+    "output": "O(n^{log_2 7})",
+    "verified": true,
+    "conclusion": "By Master Theorem, f(n) is O(n^{log_2 7})."
+  },
+  "570": {
+    "method": "pigeonhole_principle_and_key_reconciliation",
+    "input": "|A|=5, |B|=4, injective functions",
+    "output": {
+      "mathematical": 0,
+      "official_key": "A",
+      "official_value": 20
+    },
+    "verified": true,
+    "conclusion": "By Pigeonhole Principle 0 injective functions exist, but exam key incorrectly used 5*4=20. Retained A with design flaw flag."
+  },
+  "571": {
+    "method": "function_counting",
+    "input": "|A|=4, |B|=5",
+    "output": 625,
+    "verified": true,
+    "conclusion": "|B|^{|A|} = 5^4 = 625."
+  },
+  "572": {
+    "method": "bridge_cut_edge_analysis",
+    "input": "Same graph as 561",
+    "output": {
+      "bridges": [
+        "(a,b)",
+        "(c,e)"
+      ],
+      "count": 2
+    },
+    "verified": true,
+    "conclusion": "Exactly 2 cut edges: (a,b) and (c,e)."
+  },
+  "573": {
+    "method": "adjacency_matrix_power_multigraph",
+    "input": "Matrix A, A^3[1][2]",
+    "output": 24,
+    "verified": true,
+    "conclusion": "Number of paths of length 3 from B to C is 24."
+  },
+  "574": {
+    "method": "spanning_tree_cayley_bipartite",
+    "input": "K_{2,2} isomorphic to C_4",
+    "output": 4,
+    "verified": true,
+    "conclusion": "K_{2,2} has 4 spanning trees."
+  },
+  "575": {
+    "method": "graph_isomorphism_triangular_prism",
+    "input": "Two graphs on 6 vertices, 9 edges, 3-regular",
+    "output": "They are isomorphic",
+    "verified": true,
+    "conclusion": "Both graphs are representations of the triangular prism graph K_3 x K_2."
+  },
+  "576": {
+    "method": "euler_path_degree_check",
+    "input": "K_{1,2}, K_2, K_{2,5}, Q_3",
+    "output": "(i) and (ii)",
+    "verified": true,
+    "conclusion": "Both K_{1,2} and K_2 have exactly two odd-degree vertices, hence Euler paths."
+  },
+  "577": {
+    "method": "cut_vertex_identification",
+    "input": "Graph G with two connected triangles and two pendant vertices",
+    "output": {
+      "cut_vertices": [
+        "c",
+        "d",
+        "f"
+      ],
+      "count": 3
+    },
+    "verified": true,
+    "conclusion": "There are 3 cut vertices: c, d, f."
+  },
+  "578": {
+    "method": "tarjan_scc_analysis",
+    "input": "Directed graph with 6 vertices",
+    "output": {
+      "scc_list": [
+        [
+          "E"
+        ],
+        [
+          "F"
+        ],
+        [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      ],
+      "count": 3
+    },
+    "verified": true,
+    "conclusion": "The directed graph has 3 strongly connected components."
+  },
+  "579": {
+    "method": "rooted_tree_internal_vertices",
+    "input": "Tree with root a, children b, d, c; b->e,h,g; e->i,n,k; c->f,l,m",
+    "output": {
+      "internal_vertices": [
+        "a",
+        "b",
+        "c",
+        "e"
+      ],
+      "count": 4
+    },
+    "verified": true,
+    "conclusion": "There are 4 internal vertices."
+  },
+  "580": {
+    "method": "dijkstra_execution_trace",
+    "input": "Graph weights, start a",
+    "output": [
+      "a",
+      "d",
+      "b"
+    ],
+    "verified": true,
+    "conclusion": "The first 3 vertices chosen by Dijkstra are a, d, b."
+  },
+  "581": {
+    "method": "lcg_simulation",
+    "input": "x_0 = 3, a = 5, c = 1, m = 9",
+    "output": [
+      7,
+      0,
+      1,
+      6,
+      4
+    ],
+    "verified": true,
+    "conclusion": "Sequence is 7, 0, 1, 6, 4."
+  },
+  "582": {
+    "method": "graph_enumeration_n3",
+    "input": "n = 3",
+    "output": 4,
+    "verified": true,
+    "conclusion": "There are 4 non-isomorphic simple graphs on 3 vertices."
+  },
+  "583": {
+    "method": "bfs_simulation",
+    "input": "Graph G, start vertex a, alphabetical ordering at each level",
+    "output": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h"
+    ],
+    "verified": true,
+    "conclusion": "BFS traversal order is a, b, c, d, e, f, g, h."
+  },
+  "584": {
+    "method": "predicate_logic_translation",
+    "input": "∀x(S(x) -> ∃y(F(y) ∧ P(y, x)))",
+    "output": "Each student is taught by some teacher",
+    "verified": true,
+    "conclusion": "The formula translates to: 'Each student is taught by some teacher'."
+  },
+  "585": {
+    "method": "big_o_growth_rates",
+    "input": "x^2, x^2 log x, x^2 [x] vs x^3",
+    "output": "None of these functions",
+    "verified": true,
+    "conclusion": "All three functions are O(x^3), so none of them is NOT O(x^3)."
+  },
+  "586": {
+    "method": "algebraic_induction_step_formulation",
+    "input": "P(n) = (n+1)(2n+1)(2n+3)/3",
+    "output": "(iii)",
+    "verified": true,
+    "conclusion": "The inductive step requires proving P(k+1), which is statement (iii)."
+  },
+  "587": {
+    "method": "compound_interest_formula",
+    "input": "P = 10000, r = 0.12, t = 10",
+    "output": "$31,058",
+    "verified": true,
+    "conclusion": "10000 * (1.12)^10 ≈ $31,058."
+  },
+  "588": {
+    "method": "summation_evaluation",
+    "input": "sum_{j in {2,4,6,8,10}} (2j - 1)",
+    "output": 55,
+    "verified": true,
+    "conclusion": "The sum evaluates to 55."
+  },
+  "589": {
+    "method": "modus_tollens_and_disjunctive_syllogism",
+    "input": "Premises with An and Binh",
+    "output": [
+      "(ii)",
+      "(iii)"
+    ],
+    "verified": true,
+    "conclusion": "Conclusions (ii) and (iii) can be validly drawn."
+  },
+  "590": {
+    "method": "polish_prefix_evaluation",
+    "input": "- * / 15 - 7 + 1 1 3 + 2 + 1 1",
+    "output": 5,
+    "verified": true,
+    "conclusion": "The prefix expression evaluates to 5."
+  },
+  "591": {
+    "method": "euler_circuit_degree_verification",
+    "input": "4 graphs",
+    "output": 2,
+    "verified": true,
+    "conclusion": "Exactly 2 graphs (top-left and bottom-right) have all even degrees."
+  },
+  "592": {
+    "method": "bipartite_max_edges",
+    "input": "Bipartite graph with 6 vertices",
+    "output": 9,
+    "verified": true,
+    "conclusion": "Max edges is floor(6/2) * ceil(6/2) = 3 * 3 = 9."
+  },
+  "593": {
+    "method": "binary_arithmetic",
+    "input": "101111_2 + 110111_2",
+    "output": "1100110",
+    "verified": true,
+    "conclusion": "Sum is 1100110 in binary."
+  },
+  "594": {
+    "method": "strassen_recurrence_computation",
+    "input": "f(n) = 7f(n/2) + 15n^2/4, f(1)=1, n=8",
+    "output": 1738,
+    "verified": true,
+    "conclusion": "f(8) = 1738."
+  },
+  "595": {
+    "method": "prime_factorization_gcd_lcm_bounds",
+    "input": "gcd and lcm given",
+    "output": [
+      "(i)",
+      "(iii)"
+    ],
+    "verified": true,
+    "conclusion": "Both (i) and (iii) satisfy the gcd and lcm exponent conditions."
+  },
+  "596": {
+    "method": "insertion_sort_trace",
+    "input": "[7, 2, 4, 3, 1, 6, 5], loop i=4",
+    "output": [
+      2,
+      3,
+      4,
+      7,
+      1,
+      6,
+      5
+    ],
+    "verified": true,
+    "conclusion": "After outer loop i=4, list is [2, 3, 4, 7, 1, 6, 5]."
+  },
+  "597": {
+    "method": "prim_algorithm_trace",
+    "input": "Weighted graph, starting from minimum edge CE",
+    "output": [
+      "CE",
+      "BC",
+      "AB",
+      "EZ",
+      "DZ"
+    ],
+    "verified": true,
+    "conclusion": "Edges selected in order: CE, BC, AB, EZ, DZ."
+  },
+  "598": {
+    "method": "cartesian_product_set_inclusion",
+    "input": "A x B subset B x C",
+    "output": "(i) A subset B subset C",
+    "verified": true,
+    "conclusion": "Statement (i) A ⊆ B ⊆ C is the correct implication."
+  },
+  "599": {
+    "method": "floor_ceil_function_composition",
+    "input": "f(x) = floor(x/2), g(x) = 2*ceil(x), x = 1.75",
+    "output": 0,
+    "verified": true,
+    "conclusion": "g(f(1.75)) = g(0) = 0."
+  },
+  "600": {
+    "method": "nonlinear_recurrence_iteration",
+    "input": "f(0)=2, f(n+1) = f(n)^2 + 2f(n) - 3",
+    "output": 1085,
+    "verified": true,
+    "conclusion": "f(3) = 1085."
+  }
+}

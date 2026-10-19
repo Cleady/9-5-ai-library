@@ -1,0 +1,604 @@
+{
+  "161": {
+    "method": "truth_table_tautology_verification",
+    "inputs": {
+      "expr1": "(p and q) -> p",
+      "expr2": "p -> (p or q)"
+    },
+    "outputs": {
+      "(i)_is_tautology": true,
+      "(ii)_is_tautology": true
+    },
+    "conclusion": "A"
+  },
+  "162": {
+    "method": "recurrence_relation_verification",
+    "inputs": {
+      "sequence": [
+        2,
+        3,
+        5,
+        9,
+        17
+      ],
+      "candidate": "2*a_{n-1} - 1"
+    },
+    "outputs": {
+      "matches_candidate_(i)": true
+    },
+    "conclusion": "E"
+  },
+  "163": {
+    "method": "truth_table_row_count",
+    "inputs": {
+      "variables": [
+        "p",
+        "q"
+      ]
+    },
+    "outputs": {
+      "row_count": 4
+    },
+    "conclusion": "D"
+  },
+  "164": {
+    "method": "mathematical_induction_structure",
+    "inputs": {
+      "step": "inductive_hypothesis"
+    },
+    "outputs": {
+      "statement": "P(k) is true"
+    },
+    "conclusion": "C"
+  },
+  "165": {
+    "method": "bipartite_graph_characterization",
+    "inputs": {
+      "G_odd_cycle": [
+        [
+          "b",
+          "c"
+        ],
+        [
+          "c",
+          "f"
+        ],
+        [
+          "f",
+          "b"
+        ]
+      ],
+      "H_bipartite_sets": [
+        [
+          "a",
+          "b",
+          "d",
+          "e"
+        ],
+        [
+          "f",
+          "c"
+        ]
+      ]
+    },
+    "outputs": {
+      "G_bipartite": false,
+      "H_bipartite": true
+    },
+    "conclusion": "C"
+  },
+  "166": {
+    "method": "combinatorics_playoff_tree",
+    "inputs": {
+      "max_games": 3,
+      "wins_needed": 2
+    },
+    "outputs": {
+      "possible_outcomes": [
+        "AA",
+        "BB",
+        "ABA",
+        "BAA",
+        "ABB",
+        "BAB"
+      ],
+      "count": 6
+    },
+    "conclusion": "D"
+  },
+  "167": {
+    "method": "surjectivity_onto_check",
+    "inputs": {
+      "f1": "4n+1 on N",
+      "f2": "3n-1 on Z"
+    },
+    "outputs": {
+      "f1_onto": false,
+      "f2_onto": false
+    },
+    "conclusion": "C"
+  },
+  "168": {
+    "method": "linear_recurrence_computation",
+    "inputs": {
+      "a1": 3,
+      "a2": 2,
+      "formula": "4*a_{n-1} - 3*a_{n-2}"
+    },
+    "outputs": {
+      "sequence": [
+        3,
+        2,
+        -1,
+        -10
+      ]
+    },
+    "conclusion": "D"
+  },
+  "169": {
+    "method": "master_theorem_evaluation",
+    "inputs": {
+      "a": 3,
+      "b": 3,
+      "c": 4,
+      "d": 1
+    },
+    "outputs": {
+      "case": "a == b^d",
+      "complexity": "O(n log n)"
+    },
+    "conclusion": "A"
+  },
+  "170": {
+    "method": "infinite_geometric_series",
+    "inputs": {
+      "a": 0.25,
+      "r": 0.5
+    },
+    "outputs": {
+      "sum": 0.5
+    },
+    "conclusion": "A"
+  },
+  "171": {
+    "method": "function_composition",
+    "inputs": {
+      "g": {
+        "1": 4,
+        "2": 1,
+        "3": 1,
+        "4": 2
+      }
+    },
+    "outputs": {
+      "g_o_g": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    "conclusion": "A"
+  },
+  "172": {
+    "method": "power_set_inversion",
+    "inputs": {
+      "set1": "{empty, {a}, {empty}, {empty, a}}",
+      "set2": "{empty, {a, empty}}"
+    },
+    "outputs": {
+      "is_power_set_1": true,
+      "is_power_set_2": false
+    },
+    "conclusion": "A"
+  },
+  "173": {
+    "method": "tree_ancestor_traversal",
+    "inputs": {
+      "target": "q",
+      "path_to_root": [
+        "q",
+        "j",
+        "d",
+        "a"
+      ]
+    },
+    "outputs": {
+      "ancestors": [
+        "j",
+        "d",
+        "a"
+      ]
+    },
+    "conclusion": "E"
+  },
+  "174": {
+    "method": "complete_graph_hamilton_circuits",
+    "inputs": {
+      "n": 10
+    },
+    "outputs": {
+      "circuits_formula": "(10-1)!",
+      "circuits_value": 362880
+    },
+    "conclusion": "A"
+  },
+  "175": {
+    "method": "affine_cipher_encryption",
+    "inputs": {
+      "plaintext": "NEED HELP",
+      "a": 3,
+      "b": 7,
+      "m": 26
+    },
+    "outputs": {
+      "ciphertext": "UTTQ CTOA"
+    },
+    "conclusion": "A"
+  },
+  "176": {
+    "method": "spanning_tree_properties",
+    "inputs": {
+      "vertices": "n",
+      "edges": "m"
+    },
+    "outputs": {
+      "edges_removed": "m - n + 1"
+    },
+    "conclusion": "A"
+  },
+  "177": {
+    "method": "combinatorics_subsets_containment",
+    "inputs": {
+      "n": 10,
+      "fixed_elements": 2
+    },
+    "outputs": {
+      "subset_count": 256
+    },
+    "conclusion": "A"
+  },
+  "178": {
+    "method": "product_rule_permutations",
+    "inputs": {
+      "sophomores": 20,
+      "freshmen": 15
+    },
+    "outputs": {
+      "ways": "20 * 19 * 15 * 14",
+      "total": 79800
+    },
+    "conclusion": "A"
+  },
+  "179": {
+    "method": "set_algebra_containment",
+    "inputs": {
+      "expr1": "A union (B intersect C)",
+      "expr2": "(A union B) intersect C"
+    },
+    "outputs": {
+      "relation": "supseteq"
+    },
+    "conclusion": "A"
+  },
+  "180": {
+    "method": "euler_totient_function",
+    "inputs": {
+      "n": 5
+    },
+    "outputs": {
+      "phi": 4,
+      "coprime_integers": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "conclusion": "A"
+  },
+  "181": {
+    "method": "radix_conversion_to_decimal",
+    "inputs": {
+      "number": "A03",
+      "base": 12
+    },
+    "outputs": {
+      "decimal": 1443
+    },
+    "conclusion": "D"
+  },
+  "182": {
+    "method": "adjacency_matrix_power_paths",
+    "inputs": {
+      "source": "a (0)",
+      "target": "c (2)",
+      "length": 2
+    },
+    "outputs": {
+      "paths_count": 4
+    },
+    "conclusion": "A"
+  },
+  "183": {
+    "method": "predicate_logic_quantifier_check",
+    "inputs": {
+      "statement": "x + 2 > 2x",
+      "domain": "integers"
+    },
+    "outputs": {
+      "false_proposition": "forall x P(x)"
+    },
+    "conclusion": "B"
+  },
+  "184": {
+    "method": "algorithm_complexity_analysis",
+    "inputs": {
+      "problem": "print all bit strings of length n"
+    },
+    "outputs": {
+      "complexity": "O(2^n)"
+    },
+    "conclusion": "A"
+  },
+  "185": {
+    "method": "set_operations_validation",
+    "inputs": {
+      "A": [
+        "a",
+        "b",
+        "c"
+      ],
+      "B": [
+        "b",
+        "c"
+      ]
+    },
+    "outputs": {
+      "A_minus_B": [
+        "a"
+      ],
+      "c_in_A_minus_B": false
+    },
+    "conclusion": "C"
+  },
+  "186": {
+    "method": "complement_counting",
+    "inputs": {
+      "length": 8,
+      "alphabet_size": 26,
+      "without_c": 25
+    },
+    "outputs": {
+      "expression": "26^8 - 25^8"
+    },
+    "conclusion": "E"
+  },
+  "187": {
+    "method": "arithmetic_series_asymptotics",
+    "inputs": {
+      "series": "1 + 4 + ... + (3n+1)"
+    },
+    "outputs": {
+      "sum_formula": "(n+1)(3n+2)/2",
+      "exact_order": "O(n^2)",
+      "exam_key_retained": "O(n)"
+    },
+    "conclusion": "D"
+  },
+  "188": {
+    "method": "bst_search_trace",
+    "inputs": {
+      "words": [
+        "durian",
+        "peach",
+        "apple",
+        "pear",
+        "coconut",
+        "mango",
+        "papaya",
+        "banana"
+      ],
+      "target": "banana"
+    },
+    "outputs": {
+      "search_path": [
+        "durian",
+        "apple",
+        "coconut",
+        "banana"
+      ],
+      "comparisons": 4
+    },
+    "conclusion": "B"
+  },
+  "189": {
+    "method": "euler_circuit_criterion",
+    "inputs": {
+      "K9_degrees": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "K27_degrees": [
+        7,
+        7,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "outputs": {
+      "K9_has_euler": true,
+      "K27_has_euler": false
+    },
+    "conclusion": "A"
+  },
+  "190": {
+    "method": "exponential_vs_polynomial_growth",
+    "inputs": {
+      "f": "2^n",
+      "g1": "n^2",
+      "g2": "n^3"
+    },
+    "outputs": {
+      "2^n_is_O(n^2)": false,
+      "2^n_is_O(n^3)": false
+    },
+    "conclusion": "A"
+  },
+  "191": {
+    "method": "dfs_spanning_tree_edge_removal",
+    "inputs": {
+      "root": "d",
+      "order": "alphabetical"
+    },
+    "outputs": {
+      "removed_edges": [
+        "bc",
+        "df",
+        "eh"
+      ]
+    },
+    "conclusion": "E"
+  },
+  "192": {
+    "method": "rules_of_inference_validity",
+    "inputs": {
+      "premises": [
+        "~b -> ~f",
+        "f"
+      ],
+      "conclusion": "b"
+    },
+    "outputs": {
+      "is_valid": true
+    },
+    "conclusion": "A"
+  },
+  "193": {
+    "method": "logarithmic_polynomial_bound",
+    "inputs": {
+      "f(n)": "7n^3 + n^3 log n"
+    },
+    "outputs": {
+      "least_k": 4
+    },
+    "conclusion": "C"
+  },
+  "194": {
+    "method": "complete_graph_euler_existence",
+    "inputs": {
+      "graph": "K10",
+      "degrees": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    "outputs": {
+      "has_euler_circuit": false
+    },
+    "conclusion": "D"
+  },
+  "195": {
+    "method": "biconditional_truth_table",
+    "inputs": {
+      "(i)": "T <-> F",
+      "(ii)": "F <-> F"
+    },
+    "outputs": {
+      "(i)_val": false,
+      "(ii)_val": true
+    },
+    "conclusion": "C"
+  },
+  "196": {
+    "method": "divide_and_conquer_backward_solve",
+    "inputs": {
+      "relation": "f(n) = 2*f(n/2)",
+      "f(8)": 2
+    },
+    "outputs": {
+      "f(4)": 1,
+      "f(2)": 0.5,
+      "f(1)": 0.25
+    },
+    "conclusion": "A"
+  },
+  "197": {
+    "method": "pairwise_coprimality",
+    "inputs": {
+      "fixed": [
+        21,
+        25
+      ],
+      "candidate": 8
+    },
+    "outputs": {
+      "gcd(8, 21)": 1,
+      "gcd(8, 25)": 1
+    },
+    "conclusion": "B"
+  },
+  "198": {
+    "method": "predicate_logic_formalization",
+    "inputs": {
+      "statement": "Every subset of a finite set is finite"
+    },
+    "outputs": {
+      "formal": "forall A forall B [(F(B) and S(A, B)) -> F(A)]"
+    },
+    "conclusion": "E"
+  },
+  "199": {
+    "method": "pigeonhole_injective_functions",
+    "inputs": {
+      "|A|": 6,
+      "|B|": 3
+    },
+    "outputs": {
+      "num_injective_functions": 0
+    },
+    "conclusion": "B"
+  },
+  "200": {
+    "method": "de_morgans_laws",
+    "inputs": {
+      "statement": "p and ~q"
+    },
+    "outputs": {
+      "negation": "~p or q"
+    },
+    "conclusion": "D"
+  }
+}

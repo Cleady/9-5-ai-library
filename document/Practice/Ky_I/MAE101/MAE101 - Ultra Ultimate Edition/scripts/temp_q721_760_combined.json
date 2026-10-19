@@ -1,0 +1,322 @@
+[
+  {
+    "id": 721,
+    "image": "0721_q721_Question_721.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI The driver of a car traveling at 42 ftlsec suddenly applies the brakes. The position of the car is 8 = 42t 3t? ,"
+  },
+  {
+    "id": 722,
+    "image": "0722_q722_Question_722.png",
+    "bank_answer": "E",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Find dy dx by implicit differentiation 80 DAP AN CAN CAc DAP AN A. (2x +y)/(z + 2y) B. (2x y)/(z + 2y) None of t"
+  },
+  {
+    "id": 723,
+    "image": "0723_q723_Question_723.png",
+    "bank_answer": "A",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find the absolute maximum and absolute minimum values of f(z) = 2' 41\" 162 + 1 [~9,0]: 56 DAP AN cAN CHON CAC DA"
+  },
+  {
+    "id": 724,
+    "image": "0724_q724_Question_724.png",
+    "bank_answer": "B",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Determine where the given function is increasing and where it is decreasing f(c) +152\" + 241 Decreasing on and ("
+  },
+  {
+    "id": 725,
+    "image": "0725_q725_Question_725.png",
+    "bank_answer": "A",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Find the point on the line € + 2y 5 = 0 that is closest to the origin: 80 DAP AN CAN CHON CAc DAP AN A (1,2) B. "
+  },
+  {
+    "id": 726,
+    "image": "0726_q726_Question_726.png",
+    "bank_answer": "A",
+    "topic": "PhuongPhapSo",
+    "folder": "GT1",
+    "text": "CAU HOI Use Newton's method with the initial approximation T1 3 to find €g of the following equation 3r\" _ 1 = 0 80 DAP "
+  },
+  {
+    "id": 727,
+    "image": "0727_q727_Question_727.png",
+    "bank_answer": "A",
+    "topic": "TichPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Find the Riemann sum for f (x) = 322 5,0 < € < 2, with - subintervals; taking the sample points to be left endpo"
+  },
+  {
+    "id": 728,
+    "image": "0728_q728_Question_728.png",
+    "bank_answer": "C",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Express the limit lim Ti(1 + sin n=CC as definite integral on the interval [0, () Jo x dx 56 DAP AN cAN CHON CAC"
+  },
+  {
+    "id": 729,
+    "image": "0729_q729_Question_729.png",
+    "bank_answer": "F",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Suppose f(x) is continuous and differentiable, f(1) = 2 Jo f()dr 5 . Find 56 DAP AN cAN CHON CAc DAP AN A -2 C. "
+  },
+  {
+    "id": 730,
+    "image": "0730_q730_Question_730.png",
+    "bank_answer": "D",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI What can we say about the following integral? dx v3 _ € 80 DAP AN CAN CHON CAc DAP AN A. The integral converges "
+  },
+  {
+    "id": 731,
+    "image": "0731_q731_Question_731.png",
+    "bank_answer": "C",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find all a,b, such that the following matrix is in reduced roW-echelon form: 4 56 DAP AN cAN CHON CAC DAP AN non"
+  },
+  {
+    "id": 732,
+    "image": "0732_q732_Question_732.png",
+    "bank_answer": "A",
+    "topic": "HePhuongTrinh",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find all solutions of the following system of linear equations. I - y+2 = 3 2r +y _ 42 = -3 80 DAP AN CAN CHON C"
+  },
+  {
+    "id": 733,
+    "image": "0733_q733_Question_733.png",
+    "bank_answer": "C",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let A be an n X matrix that satisies 48 _ 342 + I = 0. Choose correct statement: 4-1 = 30 _ 42 (iii) A-1 = 34 - "
+  },
+  {
+    "id": 734,
+    "image": "0734_q734_Question_734.png",
+    "bank_answer": "A",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let T : R2 R2 be rotation through T, 2 followed by reflection in the line y Then Tis: 80 DAP AN CAN CHON CAc DAP"
+  },
+  {
+    "id": 735,
+    "image": "0735_q735_Question_735.png",
+    "bank_answer": "E",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let B be a 4 x 4 matrix such that det(BT B) 4. Find |det(2B3)|. 80 DAP AN CAN CHON CAc DAP AN A: 12 B. 96 C. 64 "
+  },
+  {
+    "id": 736,
+    "image": "0736_q736_Question_736.png",
+    "bank_answer": "C",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find the second coordinate of the projection of the vector u = [1 ~1JT on the vector U 1]T 56 DAP AN cAN CHON CA"
+  },
+  {
+    "id": 737,
+    "image": "0737_q737_Question_737.png",
+    "bank_answer": "A",
+    "topic": "DinhThuc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find the area of the triangle with the vertices A(3,0,1), B(5,1,0), C(7,2,-1) 80 DAP AN CAN CHON CAc DAP AN C. 2"
+  },
+  {
+    "id": 738,
+    "image": "0738_q738_Question_738.png",
+    "bank_answer": "A",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Which of the following sets are bases for R3 ? {(1,1,1), (1,8,9) , (0,3,4)} {(0,3,1) , (1,~8,9), (0,3,4) , (2,3,"
+  },
+  {
+    "id": 739,
+    "image": "0739_q739_Question_739.png",
+    "bank_answer": "A",
+    "topic": "KhongGianVector",
+    "folder": "DSTT1",
+    "text": "CAU HOI The dimension of the subspace U = span{[-2 0 3]T , [1 2 _ 1/T, [-285]T, [-12 2T} 56 DAP AN cAN CHON CAC DAP AN A"
+  },
+  {
+    "id": 740,
+    "image": "0740_q740_Question_740.png",
+    "bank_answer": "D",
+    "topic": "AnhXaTuyenTinh",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let T : R? R? be a linear transformation such that Then T equals_ 94] 147 (iii)_ 56 DAP AN cAN CHON CAc DAP AN B"
+  },
+  {
+    "id": 741,
+    "image": "0741_q741_Question_741.png",
+    "bank_answer": "E",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find the absolute maximum and absolute minimum values of f(z) = 2' 41\" 162 + 1 [~9,0]: 56 DAP AN cAN CHON CAC DA"
+  },
+  {
+    "id": 742,
+    "image": "0742_q742_Question_742.png",
+    "bank_answer": "C",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Find dy/ dx by implicit differentiation 80 DAP AN CAN CAc DAP AN None of the other choices is correct (2x +y) / "
+  },
+  {
+    "id": 743,
+    "image": "0743_q743_Question_743.png",
+    "bank_answer": "C",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI A windbreaker is kind of 80 DAP AN CAN CHON CAc DAP AN hosiery B. bags and accessories jacket"
+  },
+  {
+    "id": 744,
+    "image": "0744_q744_Question_744.png",
+    "bank_answer": "C",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI want to school Which bag is the black or the green one? 80 DAP AN CAN CHON CAc DAP AN practicaller practicaler m"
+  },
+  {
+    "id": 745,
+    "image": "0745_q745_Question_745.png",
+    "bank_answer": "A",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI A: What do you feel like eating? B: 80 DAP AN CAN CHON CAc DAP AN Im in the mood for some pasta III have bottled"
+  },
+  {
+    "id": 746,
+    "image": "0746_q746_Question_746.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI f(z) = 21 + 3 and h(z) 62 + 5, find function such that g = f = h. 80 DAP AN CAN CHON CAc DAP AN A g(z) = 32 B. g"
+  },
+  {
+    "id": 747,
+    "image": "0747_q747_Question_747.png",
+    "bank_answer": "A",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Let (L) be the line passing through (1, ~1) with slope 2. Which of the following point lies in (L)? 80 DAP AN CA"
+  },
+  {
+    "id": 748,
+    "image": "0748_q748_Question_748.png",
+    "bank_answer": "A",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Simplify the quotient for f(z) 2x2 + x 80 DAP AN CAN CHON CAc DAP AN 42 + 2h + 1 42 _ 2h - 1 41 - 2h +1 2x + 2h "
+  },
+  {
+    "id": 749,
+    "image": "0749_q749_Question_749.png",
+    "bank_answer": "A",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Find an equation of the tangent line to the curve. y = x +1 at (4,0.4) 56 DAP AN cAN CHON CAc DAP AN y = 0.032 +"
+  },
+  {
+    "id": 750,
+    "image": "0750_q750_Question_750.png",
+    "bank_answer": "D",
+    "topic": "PhuongTrinhViPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Find y' (1) for y (422 + 1)4 80 DAP AN CAN CHON CAc DAP AN A. 400 B. 1600 C. 160 D. 4000 None of the other choic"
+  },
+  {
+    "id": 751,
+    "image": "0751_q751_Question_751.png",
+    "bank_answer": "E",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Differentiate implicitly to find the slope of the curve at the given point 56 DAP AN cAN CHON CAc DAP AN -3 B. -"
+  },
+  {
+    "id": 752,
+    "image": "0752_q752_Question_752.png",
+    "bank_answer": "B",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find the absolute maximum and absolute minimum values of f(r) = 1' _ 321\" + 2 [-5,5]; 56 DAP AN cAN CHON CAC DAP"
+  },
+  {
+    "id": 753,
+    "image": "0753_q753_Question_753.png",
+    "bank_answer": "C",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find points of inflection for f(z) 523 + 2x + 5 80 DAP AN CAN CAc DAP AN A (1,12) B. (~1,-2) C. (0,5) D: (5,0) N"
+  },
+  {
+    "id": 754,
+    "image": "0754_q754_Question_754.png",
+    "bank_answer": "A",
+    "topic": "TichPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Evaluate the Riemann sum for f(c) = 2 - 22,0 < € < 2 with 4 equal subintervals, taking right endpoints 56 DAP AN"
+  },
+  {
+    "id": 755,
+    "image": "0755_q755_Question_755.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI If it is known that f(c)dz find the value of J0 f(r)dr _ 56 DAP AN cAN CHON CAC DAP AN A -1 B: 1 D: 2 E: 5 F. 6"
+  },
+  {
+    "id": 756,
+    "image": "0756_q756_Question_756.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find g\" (1) with 6 (+8)4 80 DAP AN CAN CAc DAP AN A: 12 B. 10 C. 4 None of the other choices is correct CHON"
+  },
+  {
+    "id": 757,
+    "image": "0757_q757_Question_757.png",
+    "bank_answer": "A",
+    "topic": "TichPhan",
+    "folder": "GT1",
+    "text": "CAU HOI x dx Evaluate the integral V9 _ x2 (i) 3 _ V5 (i) v5 _ 3 (iii) 5 _ v3 (iv) 3 + V5 80 DAP AN CAN CHON CAc DAP AN "
+  },
+  {
+    "id": 758,
+    "image": "0758_q758_Question_758.png",
+    "bank_answer": "D",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Which matrices are reduced-row echelon? 80 DAP AN CAN CAc DAP AN and (ii) B.  (ii) , (iii) and (iv) and (iv) and"
+  },
+  {
+    "id": 759,
+    "image": "0759_q759_Question_759.png",
+    "bank_answer": "D",
+    "topic": "HePhuongTrinh",
+    "folder": "DSTT1",
+    "text": "CAU HOI Solve the following system of linear equations: 31 - y + T2 = 0 41 - 2y + 82 = 1 y + 2 = 1 80 DAP AN CAN CHON CA"
+  },
+  {
+    "id": 760,
+    "image": "0760_q760_Question_760.png",
+    "bank_answer": "D",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let A be a square matrix that satisfies 43 _ 21, where I is an identity matrix of the same size. Choose the corr"
+  }
+]

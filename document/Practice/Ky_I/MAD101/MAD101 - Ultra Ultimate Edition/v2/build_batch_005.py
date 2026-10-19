@@ -1,0 +1,1198 @@
+"""
+Tạo dữ liệu Schema v2 cho Lô 5 (Câu 161 - 200).
+Đầy đủ LaTeX MathJax offline, không placeholder, vector SVG cho các câu có hình vẽ.
+"""
+
+import json
+
+def get_batch_005_questions():
+    questions = [
+        # Q161
+        {
+            "id": 161,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Determine whether these conditional statements are tautology:\n(i) \\((p \\land q) \\to p\\)\n(ii) \\(p \\to (p \\lor q)\\)",
+            "options": [
+                "(i) true, (ii) true",
+                "(i) false, (ii) false",
+                "(i) false, (ii) true",
+                "(i) true, (ii) false"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khảo sát mệnh đề kéo theo (i) \\((p \\land q) \\to p\\):**\nMệnh đề kéo theo chỉ sai khi tiền đề đúng và hệ quả sai. Giả sử \\(p \\land q\\) đúng thì bắt buộc cả \\(p\\) và \\(q\\) đều đúng, do đó hệ quả \\(p\\) luôn đúng. Vì vậy \\((p \\land q) \\to p\\) luôn nhận giá trị True với mọi chân trị của \\(p, q\\) (đây là quy tắc rút gọn logic / Simplification tautology).",
+                "**Bước 2: Khảo sát mệnh đề kéo theo (ii) \\(p \\to (p \\lor q)\\):**\nNếu \\(p\\) đúng thì \\(p \\lor q\\) hiển nhiên đúng theo luật bổ sung (Addition). Nếu \\(p\\) sai thì mệnh đề kéo theo hiển nhiên đúng vì tiền đề sai. Do đó \\(p \\to (p \\lor q)\\) cũng là hằng đúng (Tautology).",
+                "**Kết luận:** Cả hai mệnh đề đều là hằng đúng: **(i) true, (ii) true**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0161_q161_Question_161.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q162
+        {
+            "id": 162,
+            "chapterId": 8,
+            "chapterName": "Chương 8: Hệ thức truy hồi và Toán ứng dụng",
+            "chapterShort": "Recurrence & Applications",
+            "type": "single_choice",
+            "question": "Find a recurrence relation with the initial condition satisfied by the sequence \\(a_n = 2^n + 1\\). Assume \\(a_0\\) is the first term of the sequence.\n(i) \\(a_n = 2a_{n-1} - 1, a_0 = 2\\)\n(ii) \\(a_n = 2a_{n-1} + 1, a_0 = 2\\)\n(iii) \\(a_n = a_{n-1} + 1, a_0 = 2\\)\n(iv) \\(a_n = a_{n-1} - 1, a_0 = 2\\)",
+            "options": [
+                "None of the other choices is correct.",
+                "(ii)",
+                "(iv)",
+                "(iii)",
+                "(i)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính các số hạng đầu tiên của dãy số:**\nVới \\(a_n = 2^n + 1\\):\n- \\(a_0 = 2^0 + 1 = 1 + 1 = 2\\).\n- \\(a_1 = 2^1 + 1 = 2 + 1 = 3\\).\n- \\(a_2 = 2^2 + 1 = 4 + 1 = 5\\).\n- \\(a_3 = 2^3 + 1 = 8 + 1 = 9\\).",
+                "**Bước 2: Kiểm tra hệ thức truy hồi (i):**\nBiến đổi đại số: \\[2a_{n-1} - 1 = 2(2^{n-1} + 1) - 1 = 2^n + 2 - 1 = 2^n + 1 = a_n.\\]\nKhớp hoàn toàn với dãy số đã cho cùng điều kiện ban đầu \\(a_0 = 2\\).",
+                "**Kết luận:** Hệ thức thỏa mãn là **(i)**, chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0162_q162_Question_162.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q163
+        {
+            "id": 163,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "How many rows appear in a truth table of the following compound proposition?\n\\[(q \\to \\neg p) \\lor (\\neg p \\lor \\neg q)\\]",
+            "options": [
+                "\\(8\\)",
+                "\\(12\\)",
+                "None of the other choices is correct.",
+                "\\(4\\)",
+                "\\(10\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định số lượng biến mệnh đề phân biệt:**\nTrong mệnh đề phức hợp \\((q \\to \\neg p) \\lor (\\neg p \\lor \\neg q)\\), chỉ có đúng 2 biến mệnh đề nguyên tử phân biệt là \\(p\\) và \\(q\\).",
+                "**Bước 2: Áp dụng công thức tính số hàng bảng chân trị:**\nVới một mệnh đề chứa \\(n\\) biến mệnh đề độc lập, bảng chân trị có tổng cộng: \\[2^n = 2^2 = 4 \\text{ hàng}.\\]\n\n**Kết luận:** Số hàng xuất hiện trong bảng chân trị là **4**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0163_q163_Question_163.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q164
+        {
+            "id": 164,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Prove that \\(P(n) = \"1\\cdot 1! + 2\\cdot 2! + 3\\cdot 3! + \\dots + n\\cdot n! = (n + 1)! - 1 \\text{ for all } n \\ge 1\"\\) is true.\nIn the Principle of Mathematical Induction, assuming that \\(P(k)\\) is true for some \\(k\\), in order to prove \\(P(k + 1)\\) is true we should __________.",
+            "options": [
+                "(iii)",
+                "(iv)",
+                "(i)",
+                "(ii)",
+                "None of the other choices is correct."
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Cấu trúc của bước quy nạp (Inductive Step):**\nTrong phương pháp quy nạp toán học, ta giả thiết quy nạp rằng mệnh đề đúng với \\(n = k\\), tức là sử dụng mệnh đề: \\[P(k) = \"1\\cdot 1! + 2\\cdot 2! + \\dots + k\\cdot k! = (k + 1)! - 1\" \\text{ là đúng}.\\]",
+                "**Bước 2: Chứng minh \\(P(k + 1)\\):**\nĐể chứng minh cho bước \\(k + 1\\), ta thay tổng \\(k\\) số hạng đầu bằng vế phải của giả thiết quy nạp \\(P(k)\\):\n\\[[1\\cdot 1! + \\dots + k\\cdot k!] + (k+1)(k+1)! = (k+1)! - 1 + (k+1)(k+1)! = (k+2)! - 1.\\]\nDo đó, phát biểu cần sử dụng là **(i)**.",
+                "**Kết luận:** Chọn phương án **C** (tương ứng mục (i))."
+            ],
+            "figures": [],
+            "image": "0164_q164_Question_164.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q165
+        {
+            "id": 165,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Which graph is bipartite? (Refer to Graph G and Graph H)",
+            "options": [
+                "Graph G",
+                "None of these",
+                "Graph H",
+                "Both of them"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khảo sát Đồ thị G:**\nTrong Đồ thị G, các đỉnh \\(b, c, f\\) nối với nhau tạo thành chu trình tam giác \\(b - c - f - b\\) độ dài 3 (chu trình lẻ). Theo định lý cơ bản, đồ thị chứa chu trình có độ dài lẻ thì KHÔNG THỂ là đồ thị 2 phía (bipartite).",
+                "**Bước 2: Khảo sát Đồ thị H:**\nTa có thể phân hoạch tập đỉnh của Đồ thị H thành hai tập rời nhau:\n- Tập 1: \\(V_1 = \\{a, b, d, e\\}\\)\n- Tập 2: \\(V_2 = \\{f, c\\}\\)\nMỗi cạnh của H đều nối một đỉnh thuộc \\(V_1\\) với một đỉnh thuộc \\(V_2\\). Không có cạnh nào nối giữa hai đỉnh trong cùng một tập. Đồ thị H thực chất là đồ thị 2 phía đầy đủ \\(K_{4, 2}\\).",
+                "**Kết luận:** Đồ thị 2 phía là **Graph H**, chọn phương án **C**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Đồ thị G (chứa chu trình lẻ) và Đồ thị H (đồ thị 2 phía K_{4, 2})",
+                    "content": "<svg viewBox=\"0 0 540 220\" class=\"w-full max-w-xl mx-auto\"><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:2}.edge{stroke:#94a3b8;stroke-width:2}.label{font-size:14px;font-weight:bold;fill:#0f172a;text-anchor:middle;dominant-baseline:central}</style><g transform=\"translate(20,20)\"><text x=\"100\" y=\"190\" class=\"label\">Đồ thị G (Không 2 phía)</text><line x1=\"60\" y1=\"30\" x2=\"140\" y2=\"30\" class=\"edge\"/><line x1=\"20\" y1=\"100\" x2=\"60\" y2=\"30\" class=\"edge\"/><line x1=\"20\" y1=\"100\" x2=\"180\" y2=\"100\" class=\"edge\"/><line x1=\"140\" y1=\"30\" x2=\"180\" y2=\"100\" class=\"edge\"/><line x1=\"60\" y1=\"30\" x2=\"60\" y2=\"160\" class=\"edge\"/><line x1=\"140\" y1=\"30\" x2=\"140\" y2=\"160\" class=\"edge\"/><line x1=\"140\" y1=\"30\" x2=\"60\" y2=\"160\" class=\"edge\" stroke=\"#ea580c\" stroke-width=\"2\"/><line x1=\"20\" y1=\"100\" x2=\"140\" y2=\"160\" class=\"edge\"/><circle cx=\"20\" cy=\"100\" r=\"8\" class=\"node\"/><text x=\"10\" y=\"100\" class=\"label\">a</text><circle cx=\"60\" cy=\"30\" r=\"8\" class=\"node\"/><text x=\"60\" y=\"15\" class=\"label\">b</text><circle cx=\"140\" cy=\"30\" r=\"8\" class=\"node\"/><text x=\"140\" y=\"15\" class=\"label\">c</text><circle cx=\"180\" cy=\"100\" r=\"8\" class=\"node\"/><text x=\"195\" y=\"100\" class=\"label\">d</text><circle cx=\"140\" cy=\"160\" r=\"8\" class=\"node\"/><text x=\"140\" y=\"175\" class=\"label\">e</text><circle cx=\"60\" cy=\"160\" r=\"8\" class=\"node\"/><text x=\"60\" y=\"175\" class=\"label\">f</text></g><g transform=\"translate(280,20)\"><text x=\"110\" y=\"190\" class=\"label\">Đồ thị H (Đồ thị 2 phía)</text><line x1=\"20\" y1=\"30\" x2=\"90\" y2=\"100\" class=\"edge\"/><line x1=\"20\" y1=\"30\" x2=\"150\" y2=\"100\" class=\"edge\"/><line x1=\"20\" y1=\"160\" x2=\"90\" y2=\"100\" class=\"edge\"/><line x1=\"20\" y1=\"160\" x2=\"150\" y2=\"100\" class=\"edge\"/><line x1=\"200\" y1=\"30\" x2=\"90\" y2=\"100\" class=\"edge\"/><line x1=\"200\" y1=\"30\" x2=\"150\" y2=\"100\" class=\"edge\"/><line x1=\"200\" y1=\"160\" x2=\"90\" y2=\"100\" class=\"edge\"/><line x1=\"200\" y1=\"160\" x2=\"150\" y2=\"100\" class=\"edge\"/><circle cx=\"20\" cy=\"30\" r=\"8\" class=\"node\"/><text x=\"10\" y=\"30\" class=\"label\">a</text><circle cx=\"20\" cy=\"160\" r=\"8\" class=\"node\"/><text x=\"10\" y=\"160\" class=\"label\">e</text><circle cx=\"200\" cy=\"30\" r=\"8\" class=\"node\"/><text x=\"212\" y=\"30\" class=\"label\">b</text><circle cx=\"200\" cy=\"160\" r=\"8\" class=\"node\"/><text x=\"212\" y=\"160\" class=\"label\">d</text><circle cx=\"90\" cy=\"100\" r=\"8\" class=\"node\" style=\"fill:#f97316\"/><text x=\"90\" y=\"85\" class=\"label\">f</text><circle cx=\"150\" cy=\"100\" r=\"8\" class=\"node\" style=\"fill:#f97316\"/><text x=\"150\" y=\"85\" class=\"label\">c</text></g></svg>"
+                }
+            ],
+            "image": "0165_q165_Question_165.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q166
+        {
+            "id": 166,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "A playoff between two teams consists of at most 3 games. The first team that wins 2 games wins the playoff. In how many different ways can the playoff occur?",
+            "options": [
+                "\\(8\\)",
+                "\\(10\\)",
+                "\\(12\\)",
+                "\\(6\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Mô hình hóa các kịch bản kết thúc trận đấu bằng cây quyết định:**\nGọi hai đội là A và B. Trận đấu kết thúc ngay khi có một đội đạt 2 ván thắng:\n- Kết thúc sau 2 ván: Cả 2 ván thắng thuộc về một đội:\n  + `AA` (A thắng sau 2 ván)\n  + `BB` (B thắng sau 2 ván)\n  \\(\\implies 2\\) cách.",
+                "**Bước 2: Xét trường hợp kết thúc sau đúng 3 ván:**\nSau 2 ván tỷ số hòa 1-1, ván thứ 3 quyết định đội thắng:\n- `ABA` (A thắng ván 1 và 3)\n- `BAA` (A thắng ván 2 và 3)\n- `ABB` (B thắng ván 2 và 3)\n- `BAB` (B thắng ván 1 và 3)\n\\(\\implies 4\\) cách.\n\nTổng số cách diễn ra vòng đấu loại: \\[2 + 4 = 6 \\text{ cách}.\\]\n\n**Kết luận:** Có **6** cách khác nhau, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0166_q166_Question_166.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q167
+        {
+            "id": 167,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Determine whether:\n(i) \\(f : \\mathbf{N} \\to \\mathbf{N}\\) with \\(f(n) = 4n + 1\\) is onto \\(\\mathbf{N}\\).\n(ii) \\(f : \\mathbf{Z} \\to \\mathbf{Z}\\) with \\(f(n) = 3n - 1\\) is onto \\(\\mathbf{Z}\\).",
+            "options": [
+                "Only (ii)",
+                "Both of them",
+                "None of these",
+                "Only (i)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Kiểm tra tính toàn ánh (onto / surjective) của hàm (i):**\nHàm \\(f : \\mathbf{N} \\to \\mathbf{N}\\) với \\(f(n) = 4n + 1\\). Lấy phần tử \\(y = 2 \\in \\mathbf{N}\\):\nPhương trình \\(4n + 1 = 2 \\iff 4n = 1 \\iff n = 1/4 \\notin \\mathbf{N}\\).\nDo đó không tồn tại \\(n \\in \\mathbf{N}\\) có ảnh là 2, nên hàm (i) không phải là toàn ánh.",
+                "**Bước 2: Kiểm tra tính toàn ánh của hàm (ii):**\nHàm \\(f : \\mathbf{Z} \\to \\mathbf{Z}\\) với \\(f(n) = 3n - 1\\). Lấy phần tử \\(y = 0 \\in \\mathbf{Z}\\):\nPhương trình \\(3n - 1 = 0 \\iff 3n = 1 \\iff n = 1/3 \\notin \\mathbf{Z}\\).\nDo đó hàm (ii) cũng không phải là toàn ánh.",
+                "**Kết luận:** Cả hai hàm đều không phải là toàn ánh (\"None of these\"), chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0167_q167_Question_167.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q168
+        {
+            "id": 168,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Find \\(a_1, a_2, a_3, a_4\\) if \\(a_n\\) is recursively defined by:\nBASIS STEP: \\(a_1 = 3, a_2 = 2\\).\nRECURSIVE STEP: \\(a_n = 4a_{n-1} - 3a_{n-2}\\) for \\(n > 2\\).",
+            "options": [
+                "None of the other choices is correct.",
+                "\\(2, 3, -1, -7\\)",
+                "\\(3, 2, -1, -7\\)",
+                "\\(3, 2, -1, -10\\)",
+                "\\(3, 2, 6, 18\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Liệt kê các điều kiện cơ sở:**\n- \\(a_1 = 3\\)\n- \\(a_2 = 2\\)",
+                "**Bước 2: Tính toán các số hạng tiếp theo theo bước đệ quy:**\n- Với \\(n = 3\\): \\[a_3 = 4a_2 - 3a_1 = 4(2) - 3(3) = 8 - 9 = -1.\\]\n- Với \\(n = 4\\): \\[a_4 = 4a_3 - 3a_2 = 4(-1) - 3(2) = -4 - 6 = -10.\\]\nDãy bốn số hạng đầu tiên là: \\(3, 2, -1, -10\\).",
+                "**Kết luận:** Dãy là **3, 2, -1, -10**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0168_q168_Question_168.png",
+            "code": "BASIS STEP: a_1 = 3, a_2 = 2\nRECURSIVE STEP: a_n = 4*a_{n-1} - 3*a_{n-2} for n > 2",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q169
+        {
+            "id": 169,
+            "chapterId": 8,
+            "chapterName": "Chương 8: Hệ thức truy hồi và Toán ứng dụng",
+            "chapterShort": "Recurrence & Applications",
+            "type": "single_choice",
+            "question": "Use the Master Theorem to give the best big-O estimate for the function \\(f\\), where \\(f\\) satisfies the recurrence relation \\[f(n) = 3f(n/3) + 4n\\] and \\(f\\) is an increasing function.\n(i) \\(O(n)\\)\n(ii) \\(O(n^2)\\)\n(iii) \\(O(n \\log n)\\)\n(iv) \\(O(1)\\)",
+            "options": [
+                "(iii)",
+                "(i)",
+                "(ii)",
+                "(iv)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định các tham số của Định lý Thợ (Master Theorem):**\nPhương trình có dạng \\(f(n) = a f(n/b) + c n^d\\):\n- \\(a = 3\\)\n- \\(b = 3\\)\n- \\(c = 4\\)\n- \\(d = 1\\)",
+                "**Bước 2: So sánh \\(a\\) và \\(b^d\\):**\nTa có: \\[b^d = 3^1 = 3 = a.\\]\nTheo trường hợp thứ hai của Master Theorem (khi \\(a = b^d\\)), độ phức tạp tiệm cận của hàm là: \\[f(n) \\in O(n^d \\log n) = O(n \\log n).\\]\nĐiều này tương ứng với mục (iii).",
+                "**Kết luận:** Chọn phương án **A** (tương ứng mục (iii) \\(O(n \\log n)\\))."
+            ],
+            "figures": [],
+            "image": "0169_q169_Question_169.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q170
+        {
+            "id": 170,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Find the sum \\[\\frac{1}{4} + \\frac{1}{8} + \\frac{1}{16} + \\frac{1}{32} + \\dots\\]",
+            "options": [
+                "\\(\\frac{1}{2}\\)",
+                "\\(1\\)",
+                "\\(\\frac{2}{3}\\)",
+                "None of the above"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nhận dạng cấp số nhân lùi vô hạn:**\nTổng có dạng chuỗi cấp số nhân vô hạn \\(S = \\sum_{k=1}^{\\infty} a r^{k-1}\\) với:\n- Số hạng đầu tiên: \\(a = \\frac{1}{4}\\).\n- Công bội: \\(r = \\frac{1/8}{1/4} = \\frac{1}{2}\\).",
+                "**Bước 2: Áp dụng công thức tính tổng:**\nVì \\(|r| = \\frac{1}{2} < 1\\), chuỗi hội tụ và có tổng bằng:\n\\[S = \\frac{a}{1 - r} = \\frac{1/4}{1 - 1/2} = \\frac{1/4}{1/2} = \\frac{1}{2}.\\]\n\n**Kết luận:** Tổng của chuỗi là **1/2**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0170_q170_Question_170.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q171
+        {
+            "id": 171,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Suppose \\(g : A \\to B\\) and \\(f : B \\to C\\) where \\(A = B = C = \\{1, 2, 3, 4\\}\\),\n\\(g = \\{(1, 4), (2, 1), (3, 1), (4, 2)\\}\\) and \\(f = \\{(1, 3), (2, 2), (3, 4), (4, 2)\\}\\).\nFind \\(g \\circ g\\).",
+            "options": [
+                "\\(\\{(1, 2), (2, 4), (3, 4), (4, 1)\\}\\)",
+                "\\(\\{(1, 2), (2, 4), (3, 2), (4, 1)\\}\\)",
+                "\\(\\{(1, 2), (2, 2), (3, 4), (4, 1)\\}\\)",
+                "\\(\\{(1, 2), (2, 4), (3, 4), (4, 4)\\}\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nhắc lại định nghĩa hàm hợp:**\n\\((g \\circ g)(x) = g(g(x))\\).",
+                "**Bước 2: Lần lượt tính giá trị cho từng phần tử của \\(A\\):**\n- Với \\(x = 1\\): \\(g(1) = 4 \\implies g(4) = 2 \\implies (1, 2)\\).\n- Với \\(x = 2\\): \\(g(2) = 1 \\implies g(1) = 4 \\implies (2, 4)\\).\n- Với \\(x = 3\\): \\(g(3) = 1 \\implies g(1) = 4 \\implies (3, 4)\\).\n- Với \\(x = 4\\): \\(g(4) = 2 \\implies g(2) = 1 \\implies (4, 1)\\).\n\nTập hợp các cặp có thứ tự là: \\(\\{(1, 2), (2, 4), (3, 4), (4, 1)\\}\\).",
+                "**Kết luận:** \\(g \\circ g = \\{(1, 2), (2, 4), (3, 4), (4, 1)\\}\\), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0171_q171_Question_171.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q172
+        {
+            "id": 172,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Determine whether the given sets are the power set of some set:\n(i) \\(\\{\\emptyset, \\{a\\}, \\{\\emptyset\\}, \\{\\emptyset, a\\}\\}\\)\n(ii) \\(\\{\\emptyset, \\{a, \\emptyset\\}\\}\\)",
+            "options": [
+                "Only (i)",
+                "Only (ii)",
+                "None of these",
+                "Both of them"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xét tập hợp (i):**\nXét tập \\(S = \\{a, \\emptyset\\}\\). Tập \\(S\\) có 2 phần tử, do đó tập lũy thừa \\(\\mathcal{P}(S)\\) có đúng \\(2^2 = 4\\) tập con:\n- Tập con 0 phần tử: \\(\\emptyset\\)\n- Tập con 1 phần tử: \\(\\{a\\}\\), \\(\\{\\emptyset\\}\\)\n- Tập con 2 phần tử: \\(\\{a, \\emptyset\\}\\)\nNhư vậy tập (i) chính là \\(\\mathcal{P}(\\{a, \\emptyset\\})\\).",
+                "**Bước 2: Xét tập hợp (ii):**\nTập (ii) có 2 phần tử. Nếu nó là tập lũy thừa \\(\\mathcal{P}(T)\\) thì \\(T\\) phải có 1 phần tử \\(T = \\{x\\}\\), khi đó \\(\\mathcal{P}(T) = \\{\\emptyset, \\{x\\}\\}\\). Tuy nhiên phần tử thứ hai ở đây lại là \\(\\{a, \\emptyset\\}\\) (chứa 2 phần tử). Mâu thuẫn! Do đó (ii) không thể là tập lũy thừa.",
+                "**Kết luận:** Chỉ có tập **(i)** là tập lũy thừa (\"Only (i)\"), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0172_q172_Question_172.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q173
+        {
+            "id": 173,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Consider this rooted tree. List all ancestors of q.",
+            "options": [
+                "None of the other choices is correct.",
+                "j, d",
+                "i, j, k, d, a",
+                "q, j, d, a",
+                "j, d, a"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Định nghĩa tổ tiên (Ancestors) trong cây có gốc:**\nTổ tiên của một đỉnh \\(v\\) là tất cả các đỉnh nằm trên đường đi duy nhất từ gốc cây tới cha của \\(v\\) (không bao gồm chính đỉnh \\(v\\)).",
+                "**Bước 2: Truy vết đường đi từ gốc \\(a\\) tới đỉnh \\(q\\):**\nTừ hình vẽ cây có gốc:\n- Gốc là \\(a\\).\n- \\(a\\) có con là \\(d\\).\n- \\(d\\) có con là \\(j\\).\n- \\(j\\) có con là \\(q\\).\nĐường đi từ gốc đến cha của \\(q\\) gồm các đỉnh: **j, d, a**.",
+                "**Kết luận:** Danh sách các tổ tiên của \\(q\\) là **j, d, a**, chọn phương án **E**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Cây có gốc với đỉnh gốc a và các nhánh con",
+                    "content": "<svg viewBox=\"0 0 460 260\" class=\"w-full max-w-lg mx-auto\"><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:2}.ancestor{fill:#f97316;stroke:#ea580c;stroke-width:2}.edge{stroke:#94a3b8;stroke-width:2}.tree-edge{stroke:#f97316;stroke-width:2.5}.label{font-size:13px;font-weight:bold;fill:#0f172a;text-anchor:middle;dominant-baseline:central}</style><line x1=\"230\" y1=\"30\" x2=\"100\" y2=\"75\" class=\"edge\"/><line x1=\"230\" y1=\"30\" x2=\"230\" y2=\"75\" class=\"edge\"/><line x1=\"230\" y1=\"30\" x2=\"350\" y2=\"75\" class=\"tree-edge\"/><line x1=\"100\" y1=\"75\" x2=\"60\" y2=\"125\" class=\"edge\"/><line x1=\"100\" y1=\"75\" x2=\"130\" y2=\"125\" class=\"edge\"/><line x1=\"230\" y1=\"75\" x2=\"200\" y2=\"125\" class=\"edge\"/><line x1=\"230\" y1=\"75\" x2=\"260\" y2=\"125\" class=\"edge\"/><line x1=\"350\" y1=\"75\" x2=\"310\" y2=\"125\" class=\"edge\"/><line x1=\"350\" y1=\"75\" x2=\"350\" y2=\"125\" class=\"tree-edge\"/><line x1=\"350\" y1=\"75\" x2=\"390\" y2=\"125\" class=\"edge\"/><line x1=\"350\" y1=\"125\" x2=\"330\" y2=\"175\" class=\"tree-edge\"/><line x1=\"350\" y1=\"125\" x2=\"370\" y2=\"175\" class=\"edge\"/><circle cx=\"230\" cy=\"30\" r=\"10\" class=\"ancestor\"/><text x=\"230\" y=\"30\" class=\"label\" fill=\"#ffffff\">a</text><circle cx=\"100\" cy=\"75\" r=\"10\" class=\"node\"/><text x=\"100\" y=\"75\" class=\"label\">b</text><circle cx=\"230\" cy=\"75\" r=\"10\" class=\"node\"/><text x=\"230\" y=\"75\" class=\"label\">c</text><circle cx=\"350\" cy=\"75\" r=\"10\" class=\"ancestor\"/><text x=\"350\" y=\"75\" class=\"label\" fill=\"#ffffff\">d</text><circle cx=\"310\" cy=\"125\" r=\"9\" class=\"node\"/><text x=\"310\" y=\"125\" class=\"label\">i</text><circle cx=\"350\" cy=\"125\" r=\"9\" class=\"ancestor\"/><text x=\"350\" y=\"125\" class=\"label\" fill=\"#ffffff\">j</text><circle cx=\"390\" cy=\"125\" r=\"9\" class=\"node\"/><text x=\"390\" y=\"125\" class=\"label\">k</text><circle cx=\"330\" cy=\"175\" r=\"9\" class=\"node\" style=\"fill:#22c55e;stroke:#16a34a\"/><text x=\"330\" y=\"175\" class=\"label\" fill=\"#ffffff\">q</text><circle cx=\"370\" cy=\"175\" r=\"9\" class=\"node\"/><text x=\"370\" y=\"175\" class=\"label\">r</text></svg>"
+                }
+            ],
+            "image": "0173_q173_Question_173.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q174
+        {
+            "id": 174,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "The number of Hamilton circuits in the graph \\(K_{10}\\) is ________.",
+            "options": [
+                "\\(9!\\)",
+                "\\(10!\\)",
+                "None of the other choices is correct.",
+                "\\(10\\)",
+                "\\(10!/2\\)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Công thức số chu trình Hamilton trong đồ thị đầy đủ:**\nTrong đồ thị đầy đủ \\(K_n\\) với đỉnh xuất phát được cố định trước (định nghĩa theo thứ tự thăm các đỉnh còn lại), số lượng chu trình Hamilton có hướng được xác định bởi: \\[(n - 1)!.\\]",
+                "**Bước 2: Thay số với \\(n = 10\\):**\nÁp dụng cho đồ thị \\(K_{10}\\): \\[\\text{Số chu trình} = (10 - 1)! = 9!.\\]\n\n**Kết luận:** Số chu trình Hamilton là **9!**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0174_q174_Question_174.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q175
+        {
+            "id": 175,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "Encrypt the message NEED HELP by translating the letters into numbers, applying the encryption function \\(f(p) = (3p + 7) \\bmod 26\\), and then translating the numbers back into letters.",
+            "options": [
+                "UTTQ CTOA.",
+                "USSP CSOA.",
+                "USSQ CSOA.",
+                "USSQ CSOZ.",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Ánh xạ từng chữ cái sang giá trị số (A=0, ..., Z=25):**\n- `N` (13): \\((3 \\times 13 + 7) \\bmod 26 = 46 \\bmod 26 = 20 \\implies \\text{U}\\).\n- `E` (4): \\((3 \\times 4 + 7) \\bmod 26 = 19 \\bmod 26 = 19 \\implies \\text{T}\\).\n- `E` (4): \\(\\implies \\text{T}\\).\n- `D` (3): \\((3 \\times 3 + 7) \\bmod 26 = 16 \\bmod 26 = 16 \\implies \\text{Q}\\).\nTừ thứ nhất mã hóa thành: **UTTQ**.",
+                "**Bước 2: Mã hóa từ thứ hai HELP:**\n- `H` (7): \\((3 \\times 7 + 7) \\bmod 26 = 28 \\bmod 26 = 2 \\implies \\text{C}\\).\n- `E` (4): \\(\\implies \\text{T}\\).\n- `L` (11): \\((3 \\times 11 + 7) \\bmod 26 = 40 \\bmod 26 = 14 \\implies \\text{O}\\).\n- `P` (15): \\((3 \\times 15 + 7) \\bmod 26 = 52 \\bmod 26 = 0 \\implies \\text{A}\\).\nTừ thứ hai mã hóa thành: **CTOA**.\n\nToàn bộ bản mã là: **UTTQ CTOA**.",
+                "**Kết luận:** Bản mã là **UTTQ CTOA.**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0175_q175_Question_175.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q176
+        {
+            "id": 176,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "How many edges must be removed from a connected graph with n vertices and m edges to produce a spanning tree?",
+            "options": [
+                "\\(m - n + 1\\)",
+                "\\(m - n - 1\\)",
+                "\\(n - m - 1\\)",
+                "\\(m - n\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính chất cơ bản của cây khung (Spanning Tree):**\nMọi cây khung của một đồ thị liên thông có \\(n\\) đỉnh luôn có đúng \\(n - 1\\) cạnh.",
+                "**Bước 2: Tính số cạnh cần loại bỏ:**\nĐồ thị ban đầu có \\(m\\) cạnh. Để tạo thành cây khung, số cạnh phải loại bỏ bằng tổng số cạnh ban đầu trừ đi số cạnh của cây khung:\n\\[\\text{Số cạnh bỏ đi} = m - (n - 1) = m - n + 1.\\]\n\n**Kết luận:** Số cạnh cần loại bỏ là **\\(m - n + 1\\)**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0176_q176_Question_176.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q177
+        {
+            "id": 177,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "Find the number of subsets of \\(S = \\{1, 2, \\dots, 10\\}\\) that contain both 5 and 6.",
+            "options": [
+                "\\(256\\)",
+                "\\(128\\)",
+                "\\(220\\)",
+                "\\(168\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Cố định các phần tử bắt buộc phải có:**\nTập \\(S\\) có 10 phần tử. Một tập con của \\(S\\) chứa cả 5 và 6 có dạng: \\(A = \\{5, 6\\} \\cup T\\), trong đó \\(T\\) là một tập con bất kỳ của các phần tử còn lại.",
+                "**Bước 2: Đếm số lượng tập con \\(T\\):**\nSố phần tử còn lại trong \\(S\\) sau khi lấy ra 5 và 6 là: \\[10 - 2 = 8 \\text{ phần tử}.\\]\nSố tập con \\(T\\) có thể tạo ra từ 8 phần tử là: \\[2^8 = 256.\\]\n\n**Kết luận:** Có **256** tập con thỏa mãn, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0177_q177_Question_177.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q178
+        {
+            "id": 178,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "A class consists of 20 sophomores and 15 freshmen. The club needs to choose four different members to be president, vice president, secretary, and treasurer. In how many ways is this possible if sophomores will be chosen as president and treasurer and freshmen as vice president and secretary?",
+            "options": [
+                "\\(20 \\times 19 \\times 15 \\times 14\\)",
+                "\\(35 \\times 34 \\times 33 \\times 32\\)",
+                "\\(20 \\times 19 \\times 18 \\times 17\\)",
+                "\\(20 \\times 15 \\times 14 \\times 13\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Chọn Chủ tịch và Thủ quỹ từ sinh viên năm hai (Sophomores):**\nCó 20 sinh viên năm hai:\n- Chọn Chủ tịch: 20 cách chọn.\n- Chọn Thủ quỹ: 19 cách chọn (khác chủ tịch).\nSố cách chọn là: \\(20 \\times 19\\).",
+                "**Bước 2: Chọn Phó chủ tịch và Thư ký từ sinh viên năm nhất (Freshmen):**\nCó 15 sinh viên năm nhất:\n- Chọn Phó chủ tịch: 15 cách chọn.\n- Chọn Thư ký: 14 cách chọn (khác phó chủ tịch).\nSố cách chọn là: \\(15 \\times 14\\).\n\nÁp dụng quy tắc nhân, tổng số cách là: \\[20 \\times 19 \\times 15 \\times 14.\\]\n\n**Kết luận:** Chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0178_q178_Question_178.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q179
+        {
+            "id": 179,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Which relationship, \\(\\subseteq, =, \\supseteq\\), is true for the pair of sets:\n\\[A \\cup (B \\cap C) \\dots (A \\cup B) \\cap C\\]\nChoose the correct answer to fill in the blank: (i) \\(\\subseteq\\) (ii) \\(=\\) (iii) \\(\\supseteq\\) (iv) None of these",
+            "options": [
+                "(iii)",
+                "(ii)",
+                "(iv)",
+                "(i)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khai triển vế phải theo luật phân phối:**\n\\[(A \\cup B) \\cap C = (A \\cap C) \\cup (B \\cap C).\\]",
+                "**Bước 2: So sánh với vế trái:**\nVế trái là: \\[A \\cup (B \\cap C).\\]\nVì \\(A \\cap C \\subseteq A\\), nên hiển nhiên: \\[(A \\cap C) \\cup (B \\cap C) \\subseteq A \\cup (B \\cap C).\\]\nĐiều này đồng nghĩa với quan hệ bao hàm ngược: \\[A \\cup (B \\cap C) \\supseteq (A \\cup B) \\cap C.\\]\nQuan hệ này tương ứng với mục (iii).",
+                "**Kết luận:** Quan hệ đúng là **(iii)** (\\(\\supseteq\\)), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0179_q179_Question_179.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q180
+        {
+            "id": 180,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "How many positive integers less than 5 are relatively prime to 5?",
+            "options": [
+                "\\(4\\)",
+                "\\(3\\)",
+                "\\(2\\)",
+                "\\(5\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Liệt kê các số nguyên dương nhỏ hơn 5:**\nTập các số nguyên dương nhỏ hơn 5 là: \\(\\{1, 2, 3, 4\\}\\).",
+                "**Bước 2: Kiểm tra tính nguyên tố cùng nhau với 5:**\nVì 5 là một số nguyên tố, mọi số nguyên dương nhỏ hơn 5 đều không chia hết cho 5, tức là:\n\\[\\gcd(1, 5) = 1, \\quad \\gcd(2, 5) = 1, \\quad \\gcd(3, 5) = 1, \\quad \\gcd(4, 5) = 1.\\]\n(Theo hàm phi Euler: \\(\\phi(5) = 5 - 1 = 4\\)).\nTổng cộng có 4 số.",
+                "**Kết luận:** Có **4** số nguyên dương thỏa mãn, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0180_q180_Question_180.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q181
+        {
+            "id": 181,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "Convert \\((A03)_{12}\\) to decimal expansion.",
+            "options": [
+                "\\(1693\\)",
+                "\\(172\\)",
+                "None of the other choices is correct.",
+                "\\(1443\\)",
+                "\\(1862\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định giá trị các chữ số trong hệ cơ số 12 (Duodecimal):**\nKý tự \\(A\\) trong hệ cơ số 12 đại diện cho giá trị 10.",
+                "**Bước 2: Khai triển số \\((A03)_{12}\\) sang hệ thập phân:**\n\\[(A03)_{12} = A \\times 12^2 + 0 \\times 12^1 + 3 \\times 12^0 = 10 \\times 144 + 0 + 3 = 1440 + 3 = 1443.\\]\n\n**Kết luận:** Giá trị trong hệ thập phân là **1443**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0181_q181_Question_181.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q182
+        {
+            "id": 182,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Given the adjacency matrix of a digraph:\n\\[A = \\begin{pmatrix} 0 & 1 & 1 & 0 & 2 \\\\ 1 & 0 & 1 & 2 & 0 \\\\ 1 & 0 & 1 & 1 & 2 \\\\ 1 & 1 & 0 & 1 & 1 \\\\ 2 & 0 & 1 & 1 & 0 \\end{pmatrix}\\]\nwith ordered vertices \\(a, b, c, d, e\\). How many paths of length 2 are from vertex a to vertex c?",
+            "options": [
+                "\\(4\\)",
+                "\\(5\\)",
+                "\\(2\\)",
+                "\\(3\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Áp dụng định lý số đường đi và lũy thừa ma trận kề:**\nSố đường đi độ dài 2 từ đỉnh \\(a\\) đến đỉnh \\(c\\) chính là phần tử ở hàng \\(a\\) (hàng 1) và cột \\(c\\) (cột 3) của ma trận \\(A^2\\):\n\\[(A^2)_{a, c} = \\sum_{k \\in \\{a, b, c, d, e\\}} A_{a, k} \\times A_{k, c}.\\]",
+                "**Bước 2: Tính tích vô hướng hàng 1 và cột 3:**\n- Hàng 1 (ứng với đỉnh \\(a\\)): \\([0, 1, 1, 0, 2]\\).\n- Cột 3 (ứng với đỉnh \\(c\\)): \\([1, 1, 1, 0, 1]^T\\).\nNhân từng cặp tương ứng:\n\\[(0 \\times 1) + (1 \\times 1) + (1 \\times 1) + (0 \\times 0) + (2 \\times 1) = 0 + 1 + 1 + 0 + 2 = 4.\\]\n\n**Kết luận:** Có **4** đường đi độ dài 2 từ \\(a\\) đến \\(c\\), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0182_q182_Question_182.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q183
+        {
+            "id": 183,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Let \\(P(x)\\) be the statement \"\\(x + 2 > 2x\\)\". Which of the following proposition is false if the domain consists of the integers?\n(i) \\(\\forall x P(x)\\)\n(ii) \\(\\exists x P(x)\\)\n(iii) \\(P(0)\\)\n(iv) \\(P(-1)\\)",
+            "options": [
+                "None of the other choices is correct.",
+                "(i)",
+                "(iv)",
+                "(ii)",
+                "(iii)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Rút gọn bất phương trình trong mệnh đề \\(P(x)\\):**\n\\[x + 2 > 2x \\iff 2 > x \\iff x < 2.\\]\nNhư vậy \\(P(x)\\) đúng khi và chỉ khi \\(x < 2\\).",
+                "**Bước 2: Kiểm tra chân trị của các mệnh đề trên tập số nguyên \\(\\mathbf{Z}\\):**\n- Mệnh đề (i) \\(\\forall x P(x)\\): \"Với mọi số nguyên \\(x\\), \\(x < 2\\)\". Mệnh đề này **Sai** (phản ví dụ \\(x = 3 \\in \\mathbf{Z}\\) thì \\(3 < 2\\) là sai).\n- Mệnh đề (ii) \\(\\exists x P(x)\\): Đúng (ví dụ \\(x = 0 < 2\\)).\n- Mệnh đề (iii) \\(P(0)\\): \\(0 < 2\\) Đúng.\n- Mệnh đề (iv) \\(P(-1)\\): \\(-1 < 2\\) Đúng.\n\n**Kết luận:** Mệnh đề sai là **(i)**, chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0183_q183_Question_183.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q184
+        {
+            "id": 184,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "Give the \"best\" big-O notation to describe the complexity of the algorithm that prints all bit strings of length n.\n(i) \\(O(2^n)\\)\n(ii) \\(O(n)\\)\n(iii) \\(O(n^2)\\)\n(iv) \\(O(n \\log n)\\)",
+            "options": [
+                "(i)",
+                "(ii)",
+                "(iii)",
+                "None of the other choices is correct.",
+                "(iv)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định số lượng chuỗi bit độ dài n:**\nMỗi vị trí trong chuỗi bit có 2 khả năng (0 hoặc 1). Số lượng chuỗi bit độ dài \\(n\\) là \\(2^n\\).",
+                "**Bước 2: Đánh giá độ phức tạp thuật toán in toàn bộ các chuỗi:**\nĐể in toàn bộ \\(2^n\\) chuỗi bit, thuật toán bắt buộc phải thực hiện số phép toán ít nhất tỷ lệ với số chuỗi cần in. Do đó hàm chặn tiệm cận tốt nhất là hàm mũ \\(O(2^n)\\) (tương ứng mục (i)).",
+                "**Kết luận:** Ký hiệu Big-O tốt nhất là **(i)** (\\(O(2^n)\\)), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0184_q184_Question_184.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q185
+        {
+            "id": 185,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Suppose \\(A = \\{a, b, c\\}\\) and \\(B = \\{b, c\\}\\). Which statement is false?\n(i) \\(c \\in A - B\\)\n(ii) \\(|P(A \\times B)| = 64\\)\n(iii) \\(\\emptyset \\in P(B)\\)\n(iv) \\(B \\subseteq A\\)",
+            "options": [
+                "(iv)",
+                "(ii)",
+                "(i)",
+                "(iii)",
+                "None of the other choices is correct."
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính hiệu hai tập hợp \\(A - B\\):**\n\\[A - B = \\{a, b, c\\} - \\{b, c\\} = \\{a\\}.\\]\nDo đó phần tử \\(c \\notin A - B\\). Phát biểu (i) \"\\(c \\in A - B\\)\" là **Sai**.",
+                "**Bước 2: Kiểm tra các phát biểu còn lại:**\n- (ii): \\(|A| = 3, |B| = 2 \\implies |A \\times B| = 6 \\implies |P(A \\times B)| = 2^6 = 64\\) (Đúng).\n- (iii): Tập rỗng \\(\\emptyset\\) luôn là một phần tử của tập lũy thừa \\(P(B)\\) (Đúng).\n- (iv): \\(\\{b, c\\} \\subseteq \\{a, b, c\\}\\) (Đúng).",
+                "**Kết luận:** Phát biểu sai là **(i)**, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0185_q185_Question_185.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q186
+        {
+            "id": 186,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "Using the ordinary alphabet and allowing repeated letters, find the number of words of length 8 that have at least one C.\n(i) \\(26^8 - 25^8\\)\n(ii) \\(26^8\\)\n(iii) \\(2 \\times 26^8\\)\n(iv) \\(2 \\times 26^7\\)",
+            "options": [
+                "(iii)",
+                "(iv)",
+                "(ii)",
+                "None of the other choices is correct.",
+                "(i)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Áp dụng nguyên lý bù trừ (Complement Rule):**\nBảng chữ cái tiếng Anh chuẩn có 26 chữ cái. Số từ có độ dài 8 ký tự cho phép lặp lại là: \\[N_{\\text{total}} = 26^8.\\]",
+                "**Bước 2: Đếm số từ không chứa chữ C nào:**\nNếu không chứa chữ C, mỗi vị trí chỉ có thể chọn trong 25 chữ cái còn lại: \\[N_{\\text{không C}} = 25^8.\\]\nSố từ có ít nhất một chữ C bằng: \\[N_{\\ge 1\\text{ C}} = N_{\\text{total}} - N_{\\text{không C}} = 26^8 - 25^8.\\]\nĐiều này tương ứng với mục (i).",
+                "**Kết luận:** Chọn phương án **E** (tương ứng mục (i))."
+            ],
+            "figures": [],
+            "image": "0186_q186_Question_186.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q187
+        {
+            "id": 187,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "Find the best big-O function for the function \\(f(n) = 1 + 4 + 7 + \\dots + (3n + 1)\\).\n(i) \\(O(n^2)\\)\n(ii) \\(O(n^3)\\)\n(iii) \\(O(n)\\)\n(iv) \\(O(1)\\)",
+            "options": [
+                "None of the other choices is correct.",
+                "(i)",
+                "(ii)",
+                "(iii)",
+                "(iv)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích cơ sở lý thuyết tiệm cận của tổng cấp số cộng:**\nTổng cấp số cộng gồm \\(n + 1\\) số hạng: \\[f(n) = \\frac{(n + 1)(1 + (3n + 1))}{2} = \\frac{3n^2 + 5n + 2}{2}.\\] Bậc cao nhất là \\(n^2\\), do đó theo lý thuyết chuẩn hàm có bậc tăng \\(O(n^2)\\) (mục i).",
+                "**Bước 2: Đối chiếu đáp án chính thức trong ngân hàng đề thi FPTU:**\nTrong ngân hàng câu hỏi gốc, đề thi ghi nhận đáp án chính thức là **D (tương ứng mục iii, O(n))**, do người soạn đề nhầm lẫn giữa bậc của số hạng cuối \\((3n+1)\\) với bậc của toàn bộ tổng chuỗi. Để đảm bảo tối đa quyền lợi điểm số của người học, hệ thống bảo lưu đáp án **D** kèm ghi chú đối chiếu học thuật rõ ràng.",
+                "**Kết luận:** Chọn phương án **D** theo ngân hàng đề thi FPTU."
+            ],
+            "figures": [],
+            "image": "0187_q187_Question_187.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": ["exam_key_retained"]
+        },
+        # Q188
+        {
+            "id": 188,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Build a binary search tree for the words: durian, peach, apple, pear, coconut, mango, papaya, and banana using alphabetical order. How many comparisons are required to locate the word \"banana\"?",
+            "options": [
+                "\\(5\\)",
+                "\\(4\\)",
+                "\\(3\\)",
+                "\\(2\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xây dựng cây tìm kiếm nhị phân (BST):**\nThêm lần lượt các từ theo thứ tự bảng chữ cái:\n1. Gốc (Root): `durian`.\n2. `peach` > `durian` \\(\\to\\) con phải của `durian`.\n3. `apple` < `durian` \\(\\to\\) con trái của `durian`.\n4. `pear` > `durian`, `pear` > `peach` \\(\\to\\) con phải của `peach`.\n5. `coconut` < `durian`, `coconut` > `apple` \\(\\to\\) con phải của `apple`.\n6. `mango` > `durian`, `mango` < `peach` \\(\\to\\) con trái của `peach`.\n7. `papaya` \\(\\to\\) con phải của `mango`.\n8. `banana` < `durian` (nhánh trái), `banana` > `apple` (nhánh phải), `banana` < `coconut` \\(\\to\\) con trái của `coconut`.",
+                "**Bước 2: Đếm số phép so sánh khi tìm kiếm từ \"banana\":**\nQuá trình tìm kiếm từ gốc xuống:\n- So sánh 1: với `durian` (`banana` < `durian` \\(\\to\\) rẽ trái).\n- So sánh 2: với `apple` (`banana` > `apple` \\(\\to\\) rẽ phải).\n- So sánh 3: với `coconut` (`banana` < `coconut` \\(\\to\\) rẽ trái).\n- So sánh 4: với `banana` (`banana` == `banana` \\(\\to\\) tìm thấy!).\nTổng cộng cần đúng 4 phép so sánh.",
+                "**Kết luận:** Cần **4** phép so sánh, chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0188_q188_Question_188.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q189
+        {
+            "id": 189,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Which graphs have an Euler circuit? (i) \\(K_9\\) (ii) \\(K_{2, 7}\\)",
+            "options": [
+                "(i)",
+                "None of these",
+                "(ii)",
+                "Both of them"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tiêu chuẩn Euler đối với đồ thị liên thông:**\nMột đồ thị liên thông có chu trình Euler khi và chỉ khi mọi đỉnh của đồ thị đều có BẬC CHẴN.",
+                "**Bước 2: Xét bậc các đỉnh trong từng đồ thị:**\n- Với \\(K_9\\): Đồ thị đầy đủ 9 đỉnh. Mỗi đỉnh nối với 8 đỉnh còn lại \\(\\implies \\deg(v) = 8\\) (chẵn) với mọi \\(v\\). Do đó \\(K_9\\) có chu trình Euler.\n- Với \\(K_{2, 7}\\): Đồ thị 2 phía đầy đủ. Hai đỉnh ở phần thứ nhất có bậc là 7 (bậc lẻ). Vì tồn tại đỉnh bậc lẻ, \\(K_{2, 7}\\) không có chu trình Euler.",
+                "**Kết luận:** Chỉ có \\(K_9\\) có chu trình Euler, chọn phương án **A** (tương ứng mục (i))."
+            ],
+            "figures": [],
+            "image": "0189_q189_Question_189.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q190
+        {
+            "id": 190,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "Which of the following statements is/are TRUE?\n(i) \\(2^n\\) is \\(O(n^2)\\)\n(ii) \\(2^n\\) is \\(O(n^3)\\)",
+            "options": [
+                "Neither (i) nor (ii)",
+                "(i) only",
+                "(ii) only",
+                "Both (i) and (ii)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: So sánh tốc độ tăng trưởng của hàm mũ và hàm đa thức:**\nXét giới hạn khi \\(n \\to \\infty\\):\n\\[\\lim_{n \\to \\infty} \\frac{2^n}{n^2} = \\infty \\quad \\text{và} \\quad \\lim_{n \\to \\infty} \\frac{2^n}{n^3} = \\infty.\\]",
+                "**Bước 2: Kết luận về quan hệ Big-O:**\nVì hàm mũ \\(2^n\\) tăng nhanh hơn bất kỳ đa thức nào, không tồn tại hằng số \\(C\\) nào để \\(2^n \\le C n^2\\) hay \\(2^n \\le C n^3\\) khi \\(n\\) đủ lớn. Do đó cả hai phát biểu (i) và (ii) đều SAI.",
+                "**Kết luận:** Cả hai đều sai (\"Neither (i) nor (ii)\"), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0190_q190_Question_190.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q191
+        {
+            "id": 191,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Use a depth-first search to produce a spanning tree for the given simple graph. Choose d as the root of this spanning tree and assume that the vertices are ordered alphabetically. Which edges will be removed?",
+            "options": [
+                "None of the other choices is correct.",
+                "ac, ef, dh",
+                "ac, ef, hg",
+                "bc, df, hg",
+                "bc, df, eh"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khảo sát số đỉnh và cạnh của đồ thị:**\nĐồ thị gồm 10 đỉnh \\(\\{a, b, c, d, e, f, g, h, i, j\\}\\) và 12 cạnh. Một cây khung gồm 10 đỉnh cần đúng 9 cạnh, do đó phải loại bỏ đúng \\(12 - 9 = 3\\) cạnh.",
+                "**Bước 2: Mô phỏng quá trình DFS bắt đầu từ gốc d theo thứ tự alphabet:**\n1. Từ \\(d\\), thăm \\(c\\) qua cạnh \\((d, c)\\).\n2. Từ \\(c\\), thăm \\(a\\) qua cạnh \\((c, a)\\).\n3. Từ \\(a\\), thăm \\(b\\) qua cạnh \\((a, b)\\).\n4. Tại \\(b\\), đỉnh \\(c\\) đã thăm \\(\\implies\\) quay lui. Cạnh **\\(bc\\)** không được dùng (bị loại bỏ).\n5. Quay lui về \\(d\\), thăm \\(e\\) qua cạnh \\((d, e)\\).\n6. Từ \\(e\\), các đỉnh kề chưa thăm là \\(f, h\\). Theo alphabet thăm \\(f\\) qua cạnh \\((e, f)\\).\n   Cạnh **\\(df\\)** nối giữa \\(d\\) và \\(f\\) không được dùng (bị loại bỏ).\n7. Từ \\(f\\), thăm \\(g\\) qua cạnh \\((f, g)\\).\n8. Từ \\(g\\), các đỉnh kề chưa thăm là \\(h, j\\). Thăm \\(h\\) qua cạnh \\((g, h)\\).\n   Cạnh **\\(eh\\)** nối đỉnh \\(e\\) và \\(h\\) không được dùng (bị loại bỏ).\n9. Từ \\(h\\), thăm \\(i\\) qua cạnh \\((h, i)\\).\n10. Quay lui về \\(g\\), thăm \\(j\\) qua cạnh \\((g, j)\\).\n\nBa cạnh bị loại bỏ là: **bc, df, eh**.",
+                "**Kết luận:** Ba cạnh bị loại bỏ là **bc, df, eh**, chọn phương án **E**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Đồ thị 10 đỉnh khảo sát loại bỏ cạnh trong DFS từ gốc d",
+                    "content": "<svg viewBox=\"0 0 540 180\" class=\"w-full max-w-xl mx-auto\"><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:2}.root{fill:#f97316;stroke:#ea580c;stroke-width:2}.edge{stroke:#94a3b8;stroke-width:2}.tree-edge{stroke:#16a34a;stroke-width:2.5}.removed{stroke:#ef4444;stroke-width:2;stroke-dasharray:5,5}.label{font-size:14px;font-weight:bold;fill:#0f172a;text-anchor:middle;dominant-baseline:central}</style><line x1=\"50\" y1=\"40\" x2=\"120\" y2=\"90\" class=\"tree-edge\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"140\" class=\"tree-edge\"/><line x1=\"50\" y1=\"140\" x2=\"120\" y2=\"90\" class=\"removed\"/><line x1=\"120\" y1=\"90\" x2=\"190\" y2=\"90\" class=\"tree-edge\"/><line x1=\"190\" y1=\"90\" x2=\"260\" y2=\"40\" class=\"tree-edge\"/><line x1=\"190\" y1=\"90\" x2=\"260\" y2=\"140\" class=\"removed\"/><line x1=\"260\" y1=\"40\" x2=\"260\" y2=\"140\" class=\"tree-edge\"/><line x1=\"260\" y1=\"40\" x2=\"340\" y2=\"40\" class=\"removed\"/><line x1=\"260\" y1=\"140\" x2=\"340\" y2=\"140\" class=\"tree-edge\"/><line x1=\"340\" y1=\"40\" x2=\"340\" y2=\"140\" class=\"tree-edge\"/><line x1=\"340\" y1=\"40\" x2=\"420\" y2=\"40\" class=\"tree-edge\"/><line x1=\"340\" y1=\"140\" x2=\"420\" y2=\"140\" class=\"tree-edge\"/><circle cx=\"50\" cy=\"40\" r=\"8\" class=\"node\"/><text x=\"35\" y=\"30\" class=\"label\">a</text><circle cx=\"50\" cy=\"140\" r=\"8\" class=\"node\"/><text x=\"35\" y=\"150\" class=\"label\">b</text><circle cx=\"120\" cy=\"90\" r=\"8\" class=\"node\"/><text x=\"120\" y=\"72\" class=\"label\">c</text><circle cx=\"190\" cy=\"90\" r=\"10\" class=\"root\"/><text x=\"190\" y=\"72\" class=\"label\" fill=\"#ea580c\">d</text><circle cx=\"260\" cy=\"40\" r=\"8\" class=\"node\"/><text x=\"260\" y=\"22\" class=\"label\">e</text><circle cx=\"260\" cy=\"140\" r=\"8\" class=\"node\"/><text x=\"260\" y=\"158\" class=\"label\">f</text><circle cx=\"340\" cy=\"40\" r=\"8\" class=\"node\"/><text x=\"340\" y=\"22\" class=\"label\">h</text><circle cx=\"340\" cy=\"140\" r=\"8\" class=\"node\"/><text x=\"340\" y=\"158\" class=\"label\">g</text><circle cx=\"420\" cy=\"40\" r=\"8\" class=\"node\"/><text x=\"420\" y=\"22\" class=\"label\">i</text><circle cx=\"420\" cy=\"140\" r=\"8\" class=\"node\"/><text x=\"420\" y=\"158\" class=\"label\">j</text></svg>"
+                }
+            ],
+            "image": "0191_q191_Question_191.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q192
+        {
+            "id": 192,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Determine whether the following argument is valid or not valid:\n\"Lin can't go fishing if she doesn't have a bike.\nLast week, Lin went fishing with her friends.\nTherefore, she has got a bike.\"",
+            "options": [
+                "Valid",
+                "Not valid"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Chuyển đổi các câu sang ký hiệu mệnh đề hình thức:**\n- Gọi \\(b\\) là mệnh đề: \"Lin có xe đạp\".\n- Gọi \\(f\\) là mệnh đề: \"Lin đi câu cá\".\nTiền đề 1: \"Lin không thể đi câu nếu không có xe đạp\" biểu diễn bằng: \\[\\neg b \\to \\neg f.\\]\nTheo luật phản đảo (Contrapositive), mệnh đề này tương đương với: \\[f \\to b.\\]",
+                "**Bước 2: Đánh giá quy tắc suy diễn:**\nTiền đề 2: \"Tuần trước Lin đã đi câu cá\" \\(\\implies f\\) đúng.\nTừ \\(f \\to b\\) và \\(f\\), theo quy tắc Khẳng định tiền đề (Modus Ponens), ta suy ra kết luận \\(b\\) (\"Lin có xe đạp\") là đúng.",
+                "**Kết luận:** Lập luận trên là hợp lệ (**Valid**), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0192_q192_Question_192.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q193
+        {
+            "id": 193,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "Find the least integer k such that \\(f(n)\\) is \\(O(n^k)\\) if \\[f(n) = 7n^3 + n^3 \\log n\\]",
+            "options": [
+                "None of the other choices is correct.",
+                "\\(3\\)",
+                "\\(4\\)",
+                "\\(2\\)",
+                "\\(1\\)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định số hạng trội của hàm số:**\nTrong hàm \\(f(n) = 7n^3 + n^3 \\log n\\), số hạng tăng trưởng nhanh nhất là \\(n^3 \\log n\\).",
+                "**Bước 2: Tìm số nguyên k nhỏ nhất để \\(n^3 \\log n \\in O(n^k)\\):**\n- Với \\(k = 3\\): \\[\\lim_{n \\to \\infty} \\frac{n^3 \\log n}{n^3} = \\lim_{n \\to \\infty} \\log n = \\infty,\\] do đó \\(f(n)\\) không phải là \\(O(n^3)\\).\n- Với \\(k = 4\\): Vì \\(\\log n < n\\) với mọi \\(n \\ge 1\\), ta có: \\[n^3 \\log n \\le n^3 \\cdot n = n^4.\\] Do đó \\(f(n) \\in O(n^4)\\).\nSố nguyên \\(k\\) nhỏ nhất thỏa mãn là 4.",
+                "**Kết luận:** Số nguyên \\(k\\) nhỏ nhất là **4**, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0193_q193_Question_193.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q194
+        {
+            "id": 194,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Every Euler circuit in graph \\(K_{10}\\) has length _____.",
+            "options": [
+                "\\(10!\\)",
+                "\\(10\\)",
+                "\\(90\\)",
+                "The graph has no Euler circuit",
+                "\\(45\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Kiểm tra điều kiện tồn tại chu trình Euler:**\nMột đồ thị liên thông có chu trình Euler khi và chỉ khi mọi đỉnh của đồ thị đều có bậc chẵn.",
+                "**Bước 2: Xét bậc các đỉnh của đồ thị đầy đủ \\(K_{10}\\):**\nĐồ thị \\(K_{10}\\) có 10 đỉnh. Bậc của mỗi đỉnh bằng: \\[\\deg(v) = 10 - 1 = 9.\\]\nVì 9 là số lẻ (tất cả 10 đỉnh đều có bậc lẻ), đồ thị \\(K_{10}\\) hoàn toàn không có chu trình Euler.",
+                "**Kết luận:** Đồ thị không có chu trình Euler (\"The graph has no Euler circuit\"), chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0194_q194_Question_194.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q195
+        {
+            "id": 195,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Determine whether these biconditionals are true or false:\n(i) \\(1 + 1 = 2\\) if and only if \\(2 + 2 = 5\\).\n(ii) \\(1 + 1 = 3\\) if and only if \\(2 + 2 = 5\\).",
+            "options": [
+                "(i) true, (ii) false",
+                "(i) false, (ii) false",
+                "(i) false, (ii) true",
+                "(i) true, (ii) true"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Bảng chân trị của phép tương đương (Biconditional \\(p \\leftrightarrow q\\)):**\nMệnh đề tương đương \\(p \\leftrightarrow q\\) nhận giá trị Đúng (True) khi và chỉ khi hai vế có cùng giá trị chân trị (cùng True hoặc cùng False).",
+                "**Bước 2: Đánh giá từng mệnh đề:**\n- (i): Vế trái \"\\(1 + 1 = 2\\)\" là **True**, vế phải \"\\(2 + 2 = 5\\)\" là **False**. Khác chân trị \\(\\implies T \\leftrightarrow F\\) là **False**.\n- (ii): Vế trái \"\\(1 + 1 = 3\\)\" là **False**, vế phải \"\\(2 + 2 = 5\\)\" là **False**. Cùng chân trị False \\(\\implies F \\leftrightarrow F\\) là **True**.",
+                "**Kết luận:** Kết quả là **(i) false, (ii) true**, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0195_q195_Question_195.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q196
+        {
+            "id": 196,
+            "chapterId": 8,
+            "chapterName": "Chương 8: Hệ thức truy hồi và Toán ứng dụng",
+            "chapterShort": "Recurrence & Applications",
+            "type": "single_choice",
+            "question": "Suppose \\(f(n) = 2f(n/2)\\), \\(f(8) = 2\\). Find \\(f(1)\\).",
+            "options": [
+                "\\(1/4\\)",
+                "\\(1\\)",
+                "\\(1/2\\)",
+                "\\(2\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Biến đổi ngược từ \\(f(8)\\):**\nTheo hệ thức chia để trị \\(f(n) = 2f(n/2) \\implies f(n/2) = \\frac{f(n)}{2}\\).\n- Với \\(n = 8\\): \\[f(4) = \\frac{f(8)}{2} = \\frac{2}{2} = 1.\\]",
+                "**Bước 2: Tiếp tục tính lùi về \\(f(1)\\):**\n- Với \\(n = 4\\): \\[f(2) = \\frac{f(4)}{2} = \\frac{1}{2}.\\]\n- Với \\(n = 2\\): \\[f(1) = \\frac{f(2)}{2} = \\frac{1/2}{2} = \\frac{1}{4}.\\]\n\n**Kết luận:** Giá trị \\(f(1) = 1/4\\), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0196_q196_Question_196.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q197
+        {
+            "id": 197,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "The integers \\(a_1, a_2, \\dots, a_n\\) are pairwise relatively prime if \\(\\gcd(a_i, a_j) = 1\\) whenever \\(1 \\le i < j \\le n\\).\nSuppose 21, 25, and m are pairwise relatively prime. Select m from the following integers or say that no such m.",
+            "options": [
+                "No such m",
+                "\\(8\\)",
+                "\\(7\\)",
+                "\\(6\\)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích các thừa số nguyên tố của 21 và 25:**\n- \\(21 = 3 \\times 7\\).\n- \\(25 = 5^2\\).\nĐể 21, 25 và \\(m\\) đôi một nguyên tố cùng nhau thì \\(m\\) không được chứa bất kỳ ước nguyên tố nào là 3, 5, hoặc 7.",
+                "**Bước 2: Kiểm tra các phương án:**\n- Với \\(m = 8 = 2^3\\): Ước nguyên tố duy nhất là 2. Ta có:\n  + \\(\\gcd(8, 21) = 1\\)\n  + \\(\\gcd(8, 25) = 1\\)\n  + \\(\\gcd(21, 25) = 1\\)\n  Thỏa mãn định nghĩa đôi một nguyên tố cùng nhau!\n- Với \\(m = 7\\): chung ước 7 với 21.\n- Với \\(m = 6\\): chung ước 3 với 21.",
+                "**Kết luận:** Số thỏa mãn là **8**, chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0197_q197_Question_197.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q198
+        {
+            "id": 198,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Let \\(F(A)\\) be the predicate \"A is a finite set\" and \\(S(A, B)\\) be the predicate \"A is contained in B\".\nSuppose the universe of discourse consists of all sets. Translate the statement into symbols:\n\"Every subset of a finite set is finite\".\nWhich one is true?\n(i) \\(\\forall A \\forall B [(F(B) \\land S(A, B)) \\to F(A)]\\)\n(ii) \\(\\forall A \\forall B [(F(B) \\land S(A, B)) \\land F(A)]\\)\n(iii) \\(\\forall A \\forall B [(F(B) \\to S(A, B)) \\land F(A)]\\)",
+            "options": [
+                "(i) and (ii)",
+                "(iii)",
+                "(ii)",
+                "None of the other choices is correct.",
+                "(i)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích cấu trúc mệnh đề ngôn ngữ tự nhiên:**\nCâu \"Mọi tập con của một tập hữu hạn đều là tập hữu hạn\" có nghĩa là:\n\"Với mọi tập \\(A\\) và với mọi tập \\(B\\), NẾU \\(B\\) là tập hữu hạn (\\(F(B)\\)) VÀ \\(A\\) là tập con chứa trong \\(B\\) (\\(S(A, B)\\)), THÌ \\(A\\) cũng là tập hữu hạn (\\(F(A)\\))\".",
+                "**Bước 2: Chuyển dịch sang logic vị từ:**\nCấu trúc giả thiết - hệ quả được thể hiện chính xác qua phép kéo theo:\n\\[\\forall A \\forall B [(F(B) \\land S(A, B)) \\to F(A)].\\]\nCông thức này trùng khớp hoàn toàn với mục (i).",
+                "**Kết luận:** Chọn phương án **E** (tương ứng mục (i))."
+            ],
+            "figures": [],
+            "image": "0198_q198_Question_198.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q199
+        {
+            "id": 199,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "Suppose \\(|A| = 6\\) and \\(|B| = 3\\). Find the number of one-to-one functions \\(f : A \\to B\\).\n(i) \\(6^3\\)\n(ii) \\(0\\)\n(iii) \\(18\\)\n(iv) \\(6 \\times 5 \\times 4\\)",
+            "options": [
+                "None of the other choices is correct.",
+                "(ii)",
+                "(iv)",
+                "(i)",
+                "(iii)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Áp dụng nguyên lý Dirichlet (Pigeonhole Principle):**\nMột hàm số \\(f : A \\to B\\) là đơn ánh (one-to-one) khi và chỉ khi các phần tử phân biệt trong \\(A\\) có các ảnh phân biệt trong \\(B\\). Điều kiện cần để tồn tại đơn ánh là: \\[|A| \\le |B|.\\]",
+                "**Bước 2: So sánh lực lượng hai tập hợp:**\nỞ đây: \\(|A| = 6\\) và \\(|B| = 3\\). Do \\(|A| > |B|\\), theo nguyên lý Dirichlet, luôn tồn tại ít nhất hai phần tử phân biệt của \\(A\\) cùng ánh xạ vào một phần tử của \\(B\\).\nVì vậy, không tồn tại bất kỳ đơn ánh nào từ \\(A\\) vào \\(B\\) (số lượng đơn ánh bằng 0).",
+                "**Kết luận:** Số lượng đơn ánh là **0** (mục ii), chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0199_q199_Question_199.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q200
+        {
+            "id": 200,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "What is the negation of the following proposition?\n\"It is January, but it is not cold.\"",
+            "options": [
+                "It is not January, but it is not cold.",
+                "It is January, but it is cold.",
+                "It is not January and it is cold.",
+                "It is not January or it is cold.",
+                "None of the other choices is correct."
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Biểu diễn câu gốc dưới dạng mệnh đề logic:**\nĐặt:\n- \\(p\\): \"It is January\" (Bây giờ là tháng Giêng)\n- \\(q\\): \"It is cold\" (Trời lạnh)\nCâu \"It is January, but it is not cold\" có nghĩa là \\(p \\land \\neg q\\).",
+                "**Bước 2: Áp dụng luật De Morgan để tìm phủ định:**\n\\[\\neg(p \\land \\neg q) \\equiv \\neg p \\lor \\neg(\\neg q) \\equiv \\neg p \\lor q.\\]\nDịch ngược lại ngôn ngữ tự nhiên: \"Bây giờ không phải tháng Giêng HOẶC trời lạnh\" (\"It is not January or it is cold.\").",
+                "**Kết luận:** Mệnh đề phủ định là \"It is not January or it is cold.\", chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0200_q200_Question_200.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        }
+    ]
+    return questions
+
+def main():
+    b5_questions = get_batch_005_questions()
+    print(f"Loaded {len(b5_questions)} questions for Batch 5.")
+
+    # Ghi ra questions_batch_005.json
+    with open("v2/questions_batch_005.json", "w", encoding="utf-8") as f:
+        json.dump(b5_questions, f, ensure_ascii=False, indent=2)
+
+    # Đọc existing từ questions_sample_v2.json
+    with open("v2/questions_sample_v2.json", "r", encoding="utf-8") as f:
+        existing = json.load(f)
+
+    # Lập dict theo id để cập nhật / thêm mới
+    all_dict = {q["id"]: q for q in existing}
+    for q in b5_questions:
+        all_dict[q["id"]] = q
+
+    # Sắp xếp lại theo id
+    all_sorted = [all_dict[qid] for qid in sorted(all_dict.keys())]
+    print(f"Total merged questions in v2 sample: {len(all_sorted)}")
+
+    with open("v2/questions_sample_v2.json", "w", encoding="utf-8") as f:
+        json.dump(all_sorted, f, ensure_ascii=False, indent=2)
+
+    # Cập nhật v2/questions_v2.js
+    js_content = f"// questions_v2.js - Generated dataset containing verified questions\nexport const questionsV2 = {json.dumps(all_sorted, ensure_ascii=False, indent=2)};\n"
+    with open("v2/questions_v2.js", "w", encoding="utf-8") as f:
+        f.write(js_content)
+    print("Updated v2/questions_sample_v2.json and v2/questions_v2.js successfully.")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f97316">
+  <meta name="description" content="MAD101 Discrete Mathematics Studio — Ứng dụng luyện thi Toán rời rạc 1,131 câu hỏi FPT University với LaTeX MathJax offline.">
+  <title>MAD101 Studio — Discrete Mathematics</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="0001_q001_Question_1.png">
+
+  <!-- Core Design Tokens & Styles (White Theme Default) -->
+  <link rel="stylesheet" href="ui/tokens.css">
+  <link rel="stylesheet" href="ui/base.css">
+  <link rel="stylesheet" href="ui/components.css">
+
+  <!-- MathJax Configuration & Local Script -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="vendor/mathjax/tex-svg.js" defer></script>
+</head>
+<body>
+  <div class="ui-shell">
+    <!-- Global Header Navbar -->
+    <header class="ui-navbar">
+      <a href="#/home" class="ui-brand">
+        <span class="ui-brand-badge">MAD101</span>
+        <div>
+          <div class="ui-brand-title">Discrete Mathematics Studio</div>
+          <div class="ui-brand-subtitle">Toán Rời Rạc • 1,131 Câu Hỏi Chuẩn</div>
+        </div>
+      </a>
+
+      <nav class="ui-nav-actions" aria-label="Điều hướng chính">
+        <a href="#/home" class="ui-btn ui-btn-ghost ui-btn-sm" title="Về trang chủ">
+          🏠 <span>Trang chủ</span>
+        </a>
+        <a href="#/history" class="ui-btn ui-btn-ghost ui-btn-sm" title="Lịch sử làm bài">
+          📊 <span>Lịch sử</span>
+        </a>
+        <a href="#/settings" class="ui-btn ui-btn-ghost ui-btn-sm" title="Cài đặt">
+          ⚙️ <span>Cài đặt</span>
+        </a>
+        <button class="ui-btn ui-btn-ghost ui-btn-icon" id="globalThemeToggle" type="button" title="Chuyển chế độ sáng/tối">
+          🌓
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Dynamic View Container -->
+    <main id="mainView" style="flex:1;">
+      <div class="ui-card ui-empty-state" style="padding:var(--ui-space-12);">
+        <p style="color:var(--ui-text-muted); font-size:var(--ui-text-sm);">
+          Đang khởi động MAD101 Discrete Mathematics Studio...
+        </p>
+      </div>
+    </main>
+
+    <!-- Global App Footer -->
+    <footer style="margin-top:auto; padding-top:var(--ui-space-10); padding-bottom:var(--ui-space-4); text-align:center; color:var(--ui-text-muted); font-size:var(--ui-text-xs); line-height:1.6;">
+      <p>MAD101 Discrete Mathematics Studio 2.0 • FPT University</p>
+      <p style="margin-top:2px;">
+        100% Thuần HTML/CSS/JS • MathJax Offline • Hỗ trợ PWA Cài Đặt Trực Tiếp
+      </p>
+    </footer>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="ui-toast-container"></div>
+
+  <!-- Direct Script Ingestion (Compatible with file:/// protocol, zero CORS errors) -->
+  <script src="questions_data.js"></script>
+  <script src="v2/questions_v2.js"></script>
+  <script src="app.bundle.js"></script>
+</body>
+</html>

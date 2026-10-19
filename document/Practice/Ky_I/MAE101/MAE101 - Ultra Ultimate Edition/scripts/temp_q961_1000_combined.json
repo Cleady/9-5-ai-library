@@ -1,0 +1,282 @@
+[
+  {
+    "id": 961,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let A be square matrix that satisfies 48 +242 _ 44+I = 0. Which of the following statements are true? (i). A is invertible and = 4I _ 24 inver",
+    "image": "0961_q961_Question_961.png"
+  },
+  {
+    "id": 962,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Let A be a 3 x 3 matrix with the cofactor matrix -1 Given that det(A) 3, find the (2,3)-entry of the inverse matrix _ 56 DAP AN cAN CHON CAc D",
+    "image": "0962_q962_Question_962.png"
+  },
+  {
+    "id": 963,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Which of the followings are subspaces of R3? () U = {(2,y,2+1)z,y and 2 in R} (i) U = {(I,y,2)lx + 2y 32 = 0} (ii) U = {(1,y,_ Y+2 =1} s6 DAP ",
+    "image": "0963_q963_Question_963.png"
+  },
+  {
+    "id": 964,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Find all values of a such that {u = (1,2,a),v = (-1,3,1)} is an orthogonal set: 80 DAP AN CAN CHON CAc DAP AN A: 5 ~1 F. 3",
+    "image": "0964_q964_Question_964.png"
+  },
+  {
+    "id": 965,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Evaluate the limit, if it exists (2x) lim 270 sin(x) sin(4x) 56 DAP AN cAN CHON CAC DAP AN ~1 C. -2 D. 2 E 0 None of the other choices is corr",
+    "image": "0965_q965_Question_965.png"
+  },
+  {
+    "id": 966,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find y' (2) for y 80 DAP AN CAN CHON CAc DAP AN A: 2 B: 5 C. 3/2 None of the other choices is correct",
+    "image": "0966_q966_Question_966.png"
+  },
+  {
+    "id": 967,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI The position of_ bird flying along straight line in t seconds is given by s(t) = 3t8 36t meters Determine the acceleration (in m/s?) of the bi",
+    "image": "0967_q967_Question_967.png"
+  },
+  {
+    "id": 968,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "fuoverflow (Choose answer) Which of following statements are correct about the function (See picture) whose graph is given in the figure and only B. (",
+    "image": "0968_q968_Question_968.png"
+  },
+  {
+    "id": 969,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find a positive number such that the sum of the number and four times of its reciprocal is as small as possible. 56 DAP AN cAN CHON CAc DAP AN",
+    "image": "0969_q969_Question_969.png"
+  },
+  {
+    "id": 970,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Use the Right - endpoint rule with n 4 to estimate the value of the integral [ f6) = dx 1.5 2.5 f(c) 0.31 0.54 0.36 1.35 2.04 56 DAP AN cAN CH",
+    "image": "0970_q970_Question_970.png"
+  },
+  {
+    "id": 971,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find the net signed area of f (c) = € + over the interval [~1,1]: 80 DAP AN CAN CHON CAc DAP AN A: 2 C. 3 E: 1 None of the other choices is co",
+    "image": "0971_q971_Question_971.png"
+  },
+  {
+    "id": 972,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Evaluate (i) (1/2) (In 2)2 (iv) (1/4)(In 2)4 + € 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct +C",
+    "image": "0972_q972_Question_972.png"
+  },
+  {
+    "id": 973,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Use the Left endpoint Method with n approximate the integral f(e)dz, given the table 1.5 2.5 3.5 f(z) 2 56 DAP AN cAN CHON CAC DAP AN A. 13.5 ",
+    "image": "0973_q973_Question_973.png"
+  },
+  {
+    "id": 974,
+    "folder": "DSTT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find all values of a, b, C, d such that 4-[ & 5o DAP AN CAN CAc DAP AN A. a = 1,6 = $,c = $,d = 1, for arbitrary B. a = s,b = 1,c = 1,d = for ",
+    "image": "0974_q974_Question_974.png"
+  },
+  {
+    "id": 975,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let T : R2 _ R2 be the linear transformation such that Find the matrix of T. 80 DAP AN CAN CAc DAP AN None of the other choices is correct CHO",
+    "image": "0975_q975_Question_975.png"
+  },
+  {
+    "id": 976,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Simplify (au + x (cu dv) , where a, b, C, dare real numbers and u; V are vectors in R3 80 DAP AN CAN CHON CAc DAP AN (ad + bcJu x v B. (ad bc)",
+    "image": "0976_q976_Question_976.png"
+  },
+  {
+    "id": 977,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let A be a 5 X matrix. Which of the following is FALSE? Acan have independent columns (ii) can have independent rows 56 DAP AN cAN CHON CAc DA",
+    "image": "0977_q977_Question_977.png"
+  },
+  {
+    "id": 978,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Find the function f 9(1) for f(z) g(x) 2erT] 2 56 DAP AN cAN CHON CAc DAP AN None of them",
+    "image": "0978_q978_Question_978.png"
+  },
+  {
+    "id": 979,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find all the values of x where the tangent line to the graph of the function is horizontal f (z) 22 + 56 DAP AN cAN CHON CAc DAP AN A 1/6 None",
+    "image": "0979_q979_Question_979.png"
+  },
+  {
+    "id": 980,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI A particle moves along straight line such that its position at any time t is given by s(t) = 2t2 20t + 51. Find the velocity of the particle a",
+    "image": "0980_q980_Question_980.png"
+  },
+  {
+    "id": 981,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI If a tank holds 5000 gallons of water, and that water can drain from the tank in 40 minutes, then Torricelli's Law gives the volume V of water",
+    "image": "0981_q981_Question_981.png"
+  },
+  {
+    "id": 982,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Find the relative extrema, if they exist, of the function f(c) = 2 50 DAP AN CAN CAc DAP AN None of the other choices is correct No relative e",
+    "image": "0982_q982_Question_982.png"
+  },
+  {
+    "id": 983,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Which of following statements are correct about the function whose graph is given in the figure f(z) limr-0 f(z) = 2 f(z) = 2 5o DAP AN CAN CA",
+    "image": "0983_q983_Question_983.png"
+  },
+  {
+    "id": 984,
+    "folder": "GT1",
+    "bank_answer": "F",
+    "text": "CAU HOI Find the average value of the function f (z) Tx + 5 on the interval [1,4]. 80 DAP AN CAN CHON CAc DAP AN A: 7 B: 2 C. 4 D. 14 None of the othe",
+    "image": "0984_q984_Question_984.png"
+  },
+  {
+    "id": 985,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find the integral f (Inx + 1) dx (i) clnx + C x Inx - x +C (iii) z ln x + x + C 50 DAP AN CAN CAc DAP AN CHON",
+    "image": "0985_q985_Question_985.png"
+  },
+  {
+    "id": 986,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Use Midpoint Rule with n 4 t0 approximate f(r) 2 5 50 DAP AN CAN CAc DAP AN B: 40 D. 28 None of the other choices is correct F.20 CHON",
+    "image": "0986_q986_Question_986.png"
+  },
+  {
+    "id": 987,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI How many solutions would HOMOGENEOUS system of linear equations of equations and in variables have? 56 DAP AN cAN CHON CAc DAP AN A. Infinitel",
+    "image": "0987_q987_Question_987.png"
+  },
+  {
+    "id": 988,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Let T : R2 R2 be the rotation through T followed by reflection in the X axis. Then T is: 80 DAP AN CAN CHON CAc DAP AN Reflection about y None",
+    "image": "0988_q988_Question_988.png"
+  },
+  {
+    "id": 989,
+    "folder": "DSTT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Let u, v be two vectors in R3 such that Ilull Ilvll = 4, uand v are perpendicular: The length of u X vis_ 56 DAP AN cAN CHON CAc DAP AN",
+    "image": "0989_q989_Question_989.png"
+  },
+  {
+    "id": 990,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Suppose that the set of vectors {Xi; Xz, Xz} is orthonormal: Find the length of the vector Xi X2 + 2X3_ 56 DAP AN cAN CHON CAc DAP AN (ii) v6 ",
+    "image": "0990_q990_Question_990.png"
+  },
+  {
+    "id": 991,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI What is the dimension of the solution space of the system of following equations? €+y+2 = 0,€ + 2y = 0,y _ 2 = 0. 56 DAP AN cAN CHON CAc DAP A",
+    "image": "0991_q991_Question_991.png"
+  },
+  {
+    "id": 992,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find the domain of the function f(c) = Vz+4 (ii) [-4,&) (iv) (~8,-4] (v) (-4,0) 80 DAP AN CAN CAc DAP AN E. (ii) None of the other choices is ",
+    "image": "0992_q992_Question_992.png"
+  },
+  {
+    "id": 993,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI 6 for all <, find the limit lim_-1 f(z) 80 DAP AN CAN CHON CAc DAP AN B. -2 C. 1 D: 2 ~1 None of the other choices is correct",
+    "image": "0993_q993_Question_993.png"
+  },
+  {
+    "id": 994,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find the numbers at which the function 23 + 6 if 2 < 1 f(c) 2x if 1 < € < 3 3 _ x if x > 3 is discontinuous_ 56 DAP AN cAN CHON CAC DAP AN A 3",
+    "image": "0994_q994_Question_994.png"
+  },
+  {
+    "id": 995,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find an equation for the tangent line to the graph of the function 36 f(z) at (1,36) 56 DAP AN cAN CHON CAc DAP AN None of the other choices i",
+    "image": "0995_q995_Question_995.png"
+  },
+  {
+    "id": 996,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Find dy dz by implicit differentiation zy? = 4 80 DAP AN CAN CHON CAc DAP AN A. 2c/y (2x) 2y/z None of the other choices is correct E 2/(2y)",
+    "image": "0996_q996_Question_996.png"
+  },
+  {
+    "id": 997,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find the relative extrema;, if they exist; of the function f (x) = 622 2x 80 DAP AN CAN CHON CAc DAP AN Relative maximum at (1/6,41/6) , No re",
+    "image": "0997_q997_Question_997.png"
+  },
+  {
+    "id": 998,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Find 2x + 1 lim 56 DAP AN cAN CHON CAC DAP AN -1/2 C. 1/2 None of the other choices is correct E: -1",
+    "image": "0998_q998_Question_998.png"
+  },
+  {
+    "id": 999,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Compute the maximum product for two positive numbers with the property that the sum of the first and six times the second is 60_ 56 DAP AN cAN",
+    "image": "0999_q999_Question_999.png"
+  },
+  {
+    "id": 1000,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Use Newton's method with the specified initial approximation T1 to find T3, the third approximation to the root of the given equation: 32 + 1 ",
+    "image": "1000_q1000_Question_1000.png"
+  }
+]

@@ -1,0 +1,282 @@
+{
+  "1081": {
+    "method": "Linear transformation standard basis mapping and bank key verification",
+    "input": "T(e1)=e2, T(e2)=e1",
+    "output": "Matrix is [[0,1],[1,0]]; bank key is A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1082": {
+    "method": "Binary search tree construction and key search comparison count",
+    "input": "Keys inserted in given sentence order, search 'hatched'",
+    "output": "3 comparisons to reach 'hatched' -> Option C",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1083": {
+    "method": "Postfix expression stack evaluation",
+    "input": "6 3 / 5 + 7 2 - *",
+    "output": "35 -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1084": {
+    "method": "Point-to-plane perpendicular distance formula and bank key verification",
+    "input": "(1, -2, 3) to 2x - y - z = 6",
+    "output": "Math: 5*sqrt(6)/6; bank key is E",
+    "verified": true,
+    "conclusion": "E"
+  },
+  "1085": {
+    "method": "Orthogonal projection on subspace/line and bank key verification",
+    "input": "Line x = 2y, vector [-5, 6]^T",
+    "output": "Math: [-8/5, -4/5]^T; bank key is B",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1086": {
+    "method": "Truth table tautology verification for Modus Ponens",
+    "input": "[p and (p -> q)] -> q",
+    "output": "Identically true -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1087": {
+    "method": "Nested quantifier formal semantics translation",
+    "input": "\\forall x \\forall z \\exists y ((x != z) -> ~(T(x,y) \\land T(z,y)))",
+    "output": "For every two different students there is a cuisine either does not like -> Option C",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1088": {
+    "method": "Rule of inference classification",
+    "input": "p, q -> p and q",
+    "output": "Conjunction rule -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1089": {
+    "method": "Two-set inclusion-exclusion complement count",
+    "input": "50 - (20 + 30 - 10)",
+    "output": "10 -> Option E",
+    "verified": true,
+    "conclusion": "E"
+  },
+  "1090": {
+    "method": "Finite series summation formula n(n+1)(n+2)/3",
+    "input": "n = 99",
+    "output": "333300 -> Option C",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1091": {
+    "method": "Division algorithm with non-negative remainder",
+    "input": "-112 div 19, -112 mod 19",
+    "output": "-6 and 2 -> Option B",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1092": {
+    "method": "Frobenius coin problem formula ab - a - b + 1",
+    "input": "a = 5, b = 6",
+    "output": "n0 = 20 -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1093": {
+    "method": "Inductive definition of positive odd integers",
+    "input": "1 in S; a + 2 in S",
+    "output": "Generates {1, 3, 5, 7, ...} -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1094": {
+    "method": "Divide-and-conquer recurrence term evaluation",
+    "input": "f(1)=3, f(n) = 3f(n/3) + 4n",
+    "output": "f(27) = 405 -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1095": {
+    "method": "Cycle graph topology invariants",
+    "input": "C_n properties",
+    "output": "Statements (i), (ii), and (iii) are all true -> Option E",
+    "verified": true,
+    "conclusion": "E"
+  },
+  "1096": {
+    "method": "Simple graph edge existence counterexample (empty graph)",
+    "input": "Adjacency matrix properties of simple graph",
+    "output": "Statement B is incorrect -> Option B",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1097": {
+    "method": "System of parametric linear equations solution",
+    "input": "Lines in R^3",
+    "output": "Intersection P(0, 3, -3), a = 0 -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1098": {
+    "method": "Integration by parts and bank key verification",
+    "input": "int e^{-x}(x^2 + 1) dx",
+    "output": "Math: -e^{-x}(x^2 + 2x + 3) + C; bank key is A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1099": {
+    "method": "Universal disjunction formalization",
+    "input": "All students have C, D, or F",
+    "output": "\\forall x (C(x) v D(x) v F(x)) -> Option C",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1100": {
+    "method": "Deductive argument pattern recognition",
+    "input": "p -> q, p => q",
+    "output": "Modus Ponens -> Option A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1101": {
+    "method": "Set membership vs subset distinction",
+    "input": "{x} in {x}",
+    "output": "{x} is a subset of {x}, not an element -> Option C",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1102": {
+    "method": "Quadratic root finding and set difference",
+    "input": "{2, 3} \\ {1, 2, 3}",
+    "output": "Empty set -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1103": {
+    "method": "Linear congruential generator forward and backward evaluation",
+    "input": "x3 = 9, 3x2 + 4 = 9 mod 16, x4 = 3(9)+4 mod 16",
+    "output": "x2 = 7, x4 = 15 -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1104": {
+    "method": "Harmonic series partial sum evaluation",
+    "input": "H_4 and H_{k+1}",
+    "output": "25/12 and 1 + ... + 1/(k+1) -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1105": {
+    "method": "Master Theorem case 1",
+    "input": "a = 7, b = 2, f(n) = O(n^2)",
+    "output": "O(n^{\\log_2 7}) -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1106": {
+    "method": "Graph isomorphism bijection edge-preservation verification",
+    "input": "Adjacency matrices of G and H, mapping f",
+    "output": "f preserves all edges -> Only (ii), Option C",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1107": {
+    "method": "Matrix cofactor formula and bank key verification",
+    "input": "C_{23} = (-1)^5 (15 - 24)",
+    "output": "Math: 9; bank key is A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1108": {
+    "method": "Full m-ary tree node counting formula n = mi + 1",
+    "input": "m = 4, i = 50",
+    "output": "n = 201 -> Option B",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1109": {
+    "method": "Boolean algebra law reduction to tautology",
+    "input": "(p -> q) v (p -> ~q)",
+    "output": "Tautology T -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1110": {
+    "method": "Universal conditional logic translation",
+    "input": "Every school student plays B or knows J",
+    "output": "None of the other choices is correct -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1111": {
+    "method": "Predicate quantifier negation and conditional negation",
+    "input": "~(\\exists x \\forall y (P -> Q))",
+    "output": "\\forall x \\exists y (P \\land \\neg Q) -> Option B",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1112": {
+    "method": "Floor and ceiling nested arithmetic evaluation",
+    "input": "Expression with ceil and floor",
+    "output": "3 + 2 = 5 -> Option C",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1113": {
+    "method": "Loop iteration summation and asymptotic analysis",
+    "input": "Outer n, inner doubling k up to n",
+    "output": "O(n log n) -> Option B",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1114": {
+    "method": "Modular exponentiation and bank key verification",
+    "input": "11^5 mod 101",
+    "output": "Math: 57; bank key is C",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1115": {
+    "method": "Induction proof step sequencing",
+    "input": "Base (2), Hypothesis (4), Inductive step (3), Conclusion (1)",
+    "output": "2, 4, 3, 1 -> Option E",
+    "verified": true,
+    "conclusion": "E"
+  },
+  "1116": {
+    "method": "Recursive algorithm functional identification",
+    "input": "f(n) = 2n - 1 + f(n-1), f(1) = 1",
+    "output": "Sum of first n odd positive integers -> Option D",
+    "verified": true,
+    "conclusion": "D"
+  },
+  "1117": {
+    "method": "Handshaking lemma and Havel-Hakimi theorem",
+    "input": "(i) 7,5,4,3,2,2; (ii) 5,5,4,3,2,1,0",
+    "output": "Neither can be graphic -> Option C",
+    "verified": true,
+    "conclusion": "C"
+  },
+  "1118": {
+    "method": "Function composition and bank key verification",
+    "input": "f(x) = 2x - 4, g(x) = x - 5",
+    "output": "Math: 2x - 14; bank key is B",
+    "verified": true,
+    "conclusion": "B"
+  },
+  "1119": {
+    "method": "Power rule derivative evaluation and bank key verification",
+    "input": "f'(4) for f(x) = 9x^{5/2} - 7x^{3/2}",
+    "output": "Math: 159; bank key is A",
+    "verified": true,
+    "conclusion": "A"
+  },
+  "1120": {
+    "method": "Implicit differentiation and bank key verification",
+    "input": "1/3 x^3 - 9y^2 = 1",
+    "output": "Math: x^2 / (18y); bank key is C",
+    "verified": true,
+    "conclusion": "C"
+  }
+}

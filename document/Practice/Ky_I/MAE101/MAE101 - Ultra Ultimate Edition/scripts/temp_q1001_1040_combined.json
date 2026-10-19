@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1001,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Express the limit lim sin sin (2)+-+ sin ( as definite integral: Jo sin € dx cos € dx Jo cos € dx Jo sin € dx 5o DAP AN CAN CAc DAP AN None of",
+    "image": "1001_q1001_Question_1001.png"
+  },
+  {
+    "id": 1002,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Let f(x) (t2 + 3t + 1)dt: Find f' (2). 80 DAP AN CAN CHON CAc DAP AN 4 - 16 42 +17 41 - 14 41 - 18 4x 20 If |",
+    "image": "1002_q1002_Question_1002.png"
+  },
+  {
+    "id": 1003,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Evaluate ~(1/56) (7z? + 3)-4 + 0 ~(1/56) (Tz2 3)6 + C 80 DAP AN CAN CHON CAc DAP AN B: (ii) None of the other choices is correct E.] (iv)",
+    "image": "1003_q1003_Question_1003.png"
+  },
+  {
+    "id": 1004,
+    "folder": "GT1",
+    "bank_answer": "E",
+    "text": "CAU HOI Using Simpson's Rule with n 6 to approximate 56 DAP AN cAN CHON CAC DAP AN A. 74.776 None of the other choices is correct 49.892 64.946 24.925",
+    "image": "1004_q1004_Question_1004.png"
+  },
+  {
+    "id": 1005,
+    "folder": "DSTT1",
+    "bank_answer": "E",
+    "text": "CAU HOI The sizes of two matrices A and B are 2 x 3 and 3 x 2, respectively. Find the sizes of the products AB and BA; if they are defined: 56 DAP AN ",
+    "image": "1005_q1005_Question_1005.png"
+  },
+  {
+    "id": 1006,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Let A = ( ! & % va B = Find AB_ 56 DAP AN cAN CHON CAc DAP AN B: (iii) None of the other choices is correct",
+    "image": "1006_q1006_Question_1006.png"
+  },
+  {
+    "id": 1007,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let T R? R2 be rotation through f followed by refiection in the Y axis. Find the matrix of T. 4 (iii) R 4 [4 # 56 DAP AN cAN CHON CAC DAP AN (",
+    "image": "1007_q1007_Question_1007.png"
+  },
+  {
+    "id": 1008,
+    "folder": "DSTT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Given u = [3 2T andv = [~7 1]T . Choose the correct statement 56 DAP AN cAN CHON CAc DAP AN is an eigenvector of A Both & are eigenvectors of ",
+    "image": "1008_q1008_Question_1008.png"
+  },
+  {
+    "id": 1009,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find all values of € s0 that the set {(1,1,1), (4,2,2), (0,0,-2)} is linearly dependent. 56 DAP AN cAN CHON CAC DAP AN A: 2,-2 None of the oth",
+    "image": "1009_q1009_Question_1009.png"
+  },
+  {
+    "id": 1010,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find the domain of the function f(z) = sin 80 DAP AN CAN CHON CAc DAP AN None of the other choices is correct E. ()",
+    "image": "1010_q1010_Question_1010.png"
+  },
+  {
+    "id": 1011,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Given the function f (x) Which of the following statements is TRUE? 56 DAP AN cAN CHON CAC DAP AN The function is discontinuous at € = 1 B. ",
+    "image": "1011_q1011_Question_1011.png"
+  },
+  {
+    "id": 1012,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find y' (1) for y 32 + 7 56 DAP AN cAN CHON 1) CAc DAP AN 47/25 None of the other choices is correct -44/25 47/25 E 44/25",
+    "image": "1012_q1012_Question_1012.png"
+  },
+  {
+    "id": 1013,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI 80 DAP AN CAN CHON CAc DAP AN None of the other choices is correct C. 15 D. 30 30",
+    "image": "1013_q1013_Question_1013.png"
+  },
+  {
+    "id": 1014,
+    "folder": "GT1",
+    "bank_answer": "E",
+    "text": "CAU HOI Find the Riemann sum for f (c) = € +22,0 < 1 < 3 with 3 equal subintervals and taking left endpoints 56 DAP AN cAN CHON CAc DAP AN None of the",
+    "image": "1014_q1014_Question_1014.png"
+  },
+  {
+    "id": 1015,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Evaluate () (1/4)(3 +t4)3/4+C (i) 3(3 + t4)3/4 + C (iv) 4(3 + t4)3/4 + C 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct",
+    "image": "1015_q1015_Question_1015.png"
+  },
+  {
+    "id": 1016,
+    "folder": "GT1",
+    "bank_answer": "E",
+    "text": "CAU HOI Evaluate the integral Jo ir dx 80 DAP AN CAN CHON CAc DAP AN B. 5/6 C. 1 D. Divergent E 1/6 None of the other choices is correct",
+    "image": "1016_q1016_Question_1016.png"
+  },
+  {
+    "id": 1017,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Given a homogeneous system of 5 linear equations in 7 variables with augmented matrix A and rank A = 1. Determine how many solutions and how m",
+    "image": "1017_q1017_Question_1017.png"
+  },
+  {
+    "id": 1018,
+    "folder": "DSTT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find the matrix A if 54 - 3] = 34 - # (iii) 56 DAP AN cAN CHON CAC DAP AN B. (iii)",
+    "image": "1018_q1018_Question_1018.png"
+  },
+  {
+    "id": 1019,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let A = be the matrix of rotation in the plane through T, 6 . Find (i) 1/2 -1/2 (iv) 56 DAP AN cAN CHON CAC DAP AN None of the other choices i",
+    "image": "1019_q1019_Question_1019.png"
+  },
+  {
+    "id": 1020,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find all values of t so that the following matrix is invertible: -1 56 DAP AN cAN CHON CAC DAP AN A: t=-5 B. All numbers different from -5 AI",
+    "image": "1020_q1020_Question_1020.png"
+  },
+  {
+    "id": 1021,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Let T : R? R? be rotation through 90\" followed by refiection in the line y 31. Find the (2,1)-entry of the matrix of T. 56 DAP AN cAN CHON CAc",
+    "image": "1021_q1021_Question_1021.png"
+  },
+  {
+    "id": 1022,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Which of the following are even functions () f(c) = 2 1010 (ii) f(z) sin(x 10x (v) f(z) = sin € COS € 80 DAP AN CAN CHON CAc DAP AN None of th",
+    "image": "1022_q1022_Question_1022.png"
+  },
+  {
+    "id": 1023,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI A condominium in an upscale of the city was purchased for <Ispan-420000 In2Oyearsitisworth<span class-\"katex\" >6000060000. Find the rate of de",
+    "image": "1023_q1023_Question_1023.png"
+  },
+  {
+    "id": 1024,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Evaluate the limit, if it exists sin(2x) sin(1) lim 1-0 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct R -2",
+    "image": "1024_q1024_Question_1024.png"
+  },
+  {
+    "id": 1025,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find all values of a 0 such that the average value of the function on the interval |a, 0l is 56 DAP AN cAN CHON CAC DAP AN ~1 None of the othe",
+    "image": "1025_q1025_Question_1025.png"
+  },
+  {
+    "id": 1026,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find the absolute maximum and absolute minimum values of f(z) 4x2 523 [0, 5]. 56 DAP AN cAN CHON CAC DAP AN Absolute maximum: 256 /135 absolut",
+    "image": "1026_q1026_Question_1026.png"
+  },
+  {
+    "id": 1027,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Determine where the function is increasing and where it is decreasing: f(c) = 24 182\" + 4 Decreasing on 3,0) (3,0) , increasing on 00, and (0,",
+    "image": "1027_q1027_Question_1027.png"
+  },
+  {
+    "id": 1028,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find the limit (if exists) lim TVi - 3 DAP AN cAN CHON CAc DAP AN ~1 B. -5/3 C. 2 None of the other choices is correct 50",
+    "image": "1028_q1028_Question_1028.png"
+  },
+  {
+    "id": 1029,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Use Newton's method with the specified initial approximation Xj to find the third approximation Xz to the root of the given equation: X? _ 2X ",
+    "image": "1029_q1029_Question_1029.png"
+  },
+  {
+    "id": 1030,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find the average value of the function f (z) 2x2 on the interval [~1,3]. 80 DAP AN CAN CHON CAc DAP AN 203/12 None of others_ C.203/48 D. -11/",
+    "image": "1030_q1030_Question_1030.png"
+  },
+  {
+    "id": 1031,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Evaluate +C () -(1/5)el/+ + € (iii) (1/5)el/+ + C (iv) +C 56 DAP AN cAN CHON CAc DAP AN None of the other choices is correct el/t",
+    "image": "1031_q1031_Question_1031.png"
+  },
+  {
+    "id": 1032,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Evaluate dx Tvr 56 DAP AN cAN CHON CAc DAP AN A. 2 B. 4 diverges",
+    "image": "1032_q1032_Question_1032.png"
+  },
+  {
+    "id": 1033,
+    "folder": "DSTT1",
+    "bank_answer": "D",
+    "text": "CAU HOI The echelon form of the augmented matrix of a system of Iinear equations has the following form where denotes any real number. What can you sa",
+    "image": "1033_q1033_Question_1033.png"
+  },
+  {
+    "id": 1034,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Which of the following subsets are subspaces of R3? U = {(1,U,v)lu,v € R},V = {(0,u, \")lu,v € R}, W = {(t,u,v)lt + 2u - 3v and t, U,v € R} 56 ",
+    "image": "1034_q1034_Question_1034.png"
+  },
+  {
+    "id": 1035,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find all vectors in R3 that are orthogonal to both (~1,1,5) and (2,1,2). 80 DAP AN CAN CHON CAc DAP AN A. (t,-4t,t) , where t is arbitrary Non",
+    "image": "1035_q1035_Question_1035.png"
+  },
+  {
+    "id": 1036,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Find all values of a such that the following system has nontrivial solutions x + 2y + z = 0 2 + 3y + 62 = 0 2c + 3y + az = 0 80 DAP AN CAN CHO",
+    "image": "1036_q1036_Question_1036.png"
+  },
+  {
+    "id": 1037,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Find y' (1) for y 31+9 80 DAP AN CAN CHON CAc DAP AN A. 61/144 B. 63/144 C. 33/72 D. 31/72 None of the other choices is correct",
+    "image": "1037_q1037_Question_1037.png"
+  },
+  {
+    "id": 1038,
+    "folder": "GT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Find d tdt 80 DAP AN CAN CHON CAc DAP AN None of the other choices is correct F. 1 for y",
+    "image": "1038_q1038_Question_1038.png"
+  },
+  {
+    "id": 1039,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find # fory = 4 6(2 + 1)-4 (i) _6(2 + 1) -4 (2+1)-4 (iv) ~(2 +1)-4 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct",
+    "image": "1039_q1039_Question_1039.png"
+  },
+  {
+    "id": 1040,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Let y + b be the linear approximation for f(z) 22/3 at € Find b. 56 DAP AN cAN CHON CAC DAP AN A. 2/3 None of the other choices is correct C. ",
+    "image": "1040_q1040_Question_1040.png"
+  }
+]

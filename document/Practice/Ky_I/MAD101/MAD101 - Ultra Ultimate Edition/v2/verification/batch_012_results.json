@@ -1,0 +1,541 @@
+{
+  "441": {
+    "method": "polylogarithmic_rational_growth_bound",
+    "inputs": {
+      "numerator_dominant": "x^5 log x",
+      "denominator_dominant": "x log^2 x"
+    },
+    "outputs": {
+      "ratio_dominant": "x^4 / log x",
+      "minimal_integer_n": 4
+    },
+    "conclusion": "D"
+  },
+  "442": {
+    "method": "recursive_fibonacci_trace",
+    "inputs": {
+      "n": 7
+    },
+    "outputs": {
+      "value": 13
+    },
+    "conclusion": "C"
+  },
+  "443": {
+    "method": "base_conversion_base3_to_base7",
+    "inputs": {
+      "number_base3": "122"
+    },
+    "outputs": {
+      "decimal": 17,
+      "base7": "23",
+      "statement": "(iii)"
+    },
+    "conclusion": "E"
+  },
+  "444": {
+    "method": "predicate_quantifier_translation",
+    "inputs": {
+      "formula": "forall x (F(x) -> exists y (S(y) ^ P(x, y)))"
+    },
+    "outputs": {
+      "translation": "Any faculty taught at least one student"
+    },
+    "conclusion": "E"
+  },
+  "445": {
+    "method": "floor_ceiling_sequence_evaluation",
+    "inputs": {
+      "indices": [
+        0,
+        1,
+        3,
+        5
+      ]
+    },
+    "outputs": {
+      "terms": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    "conclusion": "A"
+  },
+  "446": {
+    "method": "bipartite_special_graphs",
+    "inputs": {
+      "n": 4,
+      "graphs": [
+        "W_4",
+        "C_4",
+        "K_4"
+      ]
+    },
+    "outputs": {
+      "bipartite_graph": "C_4"
+    },
+    "conclusion": "B"
+  },
+  "447": {
+    "method": "postage_stamp_frobenius",
+    "inputs": {
+      "stamps": [
+        2,
+        3
+      ]
+    },
+    "outputs": {
+      "reachable": "All values of 2 cents or more"
+    },
+    "conclusion": "C"
+  },
+  "448": {
+    "method": "set_difference_identity",
+    "inputs": {
+      "identity_i": "A \\ (A cap B) = A \\ B",
+      "identity_ii": "A \\ (A cup B) = A \\ B"
+    },
+    "outputs": {
+      "valid": [
+        "(i)"
+      ],
+      "choice": "Only (i)"
+    },
+    "conclusion": "A"
+  },
+  "449": {
+    "method": "boolean_demorgan_simplification",
+    "inputs": {
+      "expression": "(A B')'"
+    },
+    "outputs": {
+      "simplified": "A' + B"
+    },
+    "conclusion": "D"
+  },
+  "450": {
+    "method": "propositional_translation_negation_conjunction",
+    "inputs": {
+      "sentence": "not miss exam and not have flu but not pass"
+    },
+    "outputs": {
+      "statement": "(iv)",
+      "formula": "(~p ^ ~q) ^ ~r"
+    },
+    "conclusion": "D"
+  },
+  "451": {
+    "method": "power_set_cardinality",
+    "inputs": {
+      "set_size": 6
+    },
+    "outputs": {
+      "power_set_cardinality": 64
+    },
+    "conclusion": "A"
+  },
+  "452": {
+    "method": "boolean_identity_identification",
+    "inputs": {
+      "identities": [
+        "A AND (A OR B) = A",
+        "A XOR B = ...",
+        "(A OR B)' = ...",
+        "A + A' = 1"
+      ]
+    },
+    "outputs": {
+      "exam_key": "D"
+    },
+    "conclusion": "D"
+  },
+  "453": {
+    "method": "ceiling_function_surjectivity_injectivity",
+    "inputs": {
+      "domain": "R",
+      "codomain": "R",
+      "function": "floor((x+1)/3)"
+    },
+    "outputs": {
+      "injective": false,
+      "surjective": false,
+      "choice": "None of the other choices is correct"
+    },
+    "conclusion": "A"
+  },
+  "454": {
+    "method": "quadratic_sequence_recurrence",
+    "inputs": {
+      "sequence": "a_1 = 2, a_n = a_{n-1} + 2n"
+    },
+    "outputs": {
+      "statement": "(ii)",
+      "choice": "A"
+    },
+    "conclusion": "A"
+  },
+  "455": {
+    "method": "boolean_absorption_law",
+    "inputs": {
+      "formula": "p ^ (p v q)"
+    },
+    "outputs": {
+      "equivalent": "p",
+      "statement": "(i)"
+    },
+    "conclusion": "E"
+  },
+  "456": {
+    "method": "euler_hamilton_graph_paths",
+    "inputs": {
+      "statements": [
+        "(i)",
+        "(ii)"
+      ]
+    },
+    "outputs": {
+      "both_true": true,
+      "choice": "Both (i) and (ii)"
+    },
+    "conclusion": "C"
+  },
+  "457": {
+    "method": "greedy_change_making",
+    "inputs": {
+      "cents": 63,
+      "denominations": [
+        25,
+        10,
+        5,
+        1
+      ]
+    },
+    "outputs": {
+      "coins_count": 6
+    },
+    "conclusion": "A"
+  },
+  "458": {
+    "method": "predicate_translation_implication",
+    "inputs": {
+      "sentence": "No student has computer but cannot connect to Internet"
+    },
+    "outputs": {
+      "statement": "(v)",
+      "formula": "forall x (P(x) -> Q(x))"
+    },
+    "conclusion": "A"
+  },
+  "459": {
+    "method": "stored_program_concept_definition",
+    "inputs": {
+      "statement": "stored-program concept definition"
+    },
+    "outputs": {
+      "exam_key": "B (False)"
+    },
+    "conclusion": "B"
+  },
+  "460": {
+    "method": "euler_hamilton_graph_paths_bipartite",
+    "inputs": {
+      "propositions": [
+        "(i)",
+        "(ii)"
+      ]
+    },
+    "outputs": {
+      "result": "Both (i) and (ii)"
+    },
+    "conclusion": "C"
+  },
+  "461": {
+    "method": "divide_and_conquer_recurrence_trace",
+    "inputs": {
+      "f1": 1,
+      "target": 32
+    },
+    "outputs": {
+      "f32": 364
+    },
+    "conclusion": "A"
+  },
+  "462": {
+    "method": "hamming_code_check_bits",
+    "inputs": {
+      "data_size": "1 KByte"
+    },
+    "outputs": {
+      "check_bits": 12
+    },
+    "conclusion": "B"
+  },
+  "463": {
+    "method": "bitstring_set_difference",
+    "inputs": {
+      "bitstring_A": "0101010101",
+      "bitstring_B": "0101010101"
+    },
+    "outputs": {
+      "difference": "The empty set"
+    },
+    "conclusion": "D"
+  },
+  "464": {
+    "method": "hamming_code_single_error_correction",
+    "inputs": {
+      "stored_word": "101001011101"
+    },
+    "outputs": {
+      "corrected_data_bits": "10100100"
+    },
+    "conclusion": "B"
+  },
+  "465": {
+    "method": "computer_hardware_ssd_hdd",
+    "inputs": {
+      "technologies": [
+        "SSD",
+        "Magnetic Disk"
+      ]
+    },
+    "outputs": {
+      "distinction": "spinning platter with read/write head vs flash memory chips"
+    },
+    "conclusion": "D"
+  },
+  "466": {
+    "method": "inclusion_exclusion_divisibility",
+    "inputs": {
+      "limit": 2016,
+      "divisors": [
+        7,
+        9
+      ]
+    },
+    "outputs": {
+      "divisible_count": 480
+    },
+    "conclusion": "D"
+  },
+  "467": {
+    "method": "second_order_linear_recurrence_trace",
+    "inputs": {
+      "a0": 3,
+      "a1": 5,
+      "target": 4
+    },
+    "outputs": {
+      "a4": -5
+    },
+    "conclusion": "B"
+  },
+  "468": {
+    "method": "recursive_factorial_sign_trace",
+    "inputs": {
+      "n": 5,
+      "f1": -1
+    },
+    "outputs": {
+      "f5": -120
+    },
+    "conclusion": "A"
+  },
+  "469": {
+    "method": "propositional_equivalence_commutativity",
+    "inputs": {
+      "statements": [
+        "p -> q <=> q -> p",
+        "p ^ q <=> q ^ p",
+        "p v q <=> q v p",
+        "p (+) q <=> q (+) p"
+      ]
+    },
+    "outputs": {
+      "incorrect_statement": "(i)"
+    },
+    "conclusion": "E"
+  },
+  "470": {
+    "method": "recursive_algorithm_detection",
+    "inputs": {
+      "algorithms": [
+        "(i)",
+        "(ii)"
+      ]
+    },
+    "outputs": {
+      "recursive": [
+        "(i)"
+      ],
+      "choice": "Only (i)"
+    },
+    "conclusion": "A"
+  },
+  "471": {
+    "method": "modus_ponens_fallacy_check",
+    "inputs": {
+      "argument_i": "Modus Ponens",
+      "argument_ii": "Affirming Consequent"
+    },
+    "outputs": {
+      "valid": [
+        "(i)"
+      ],
+      "choice": "Only (i)"
+    },
+    "conclusion": "D"
+  },
+  "472": {
+    "method": "hexadecimal_addition",
+    "inputs": {
+      "a": "BAD",
+      "b": "CAFE"
+    },
+    "outputs": {
+      "hex_sum": "D6AB",
+      "statement": "(i)"
+    },
+    "conclusion": "B"
+  },
+  "473": {
+    "method": "predicate_translation_multivariable",
+    "inputs": {
+      "sentence": "For any x there are y and y' such that x+y>5 and x+y'<=5"
+    },
+    "outputs": {
+      "formula": "forall x (exists y L(x, y) ^ exists y' ~L(x, y'))",
+      "statement": "(ii)"
+    },
+    "conclusion": "B"
+  },
+  "474": {
+    "method": "integer_set_cardinality_inequality",
+    "inputs": {
+      "condition": "x in Z, x^2 < 25"
+    },
+    "outputs": {
+      "elements": [
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "cardinality": 9
+    },
+    "conclusion": "D"
+  },
+  "475": {
+    "method": "modular_arithmetic_negative_remainder",
+    "inputs": {
+      "a": -124,
+      "m": 19
+    },
+    "outputs": {
+      "remainder": 9
+    },
+    "conclusion": "B"
+  },
+  "476": {
+    "method": "hypercube_bipartite_property",
+    "inputs": {
+      "families": [
+        "K_n",
+        "C_n",
+        "W_n",
+        "Q_n"
+      ]
+    },
+    "outputs": {
+      "bipartite_always": "Q_n for all n >= 1"
+    },
+    "conclusion": "D"
+  },
+  "477": {
+    "method": "flynn_taxonomy_sisd",
+    "inputs": {
+      "description": "single processor, single instruction, single memory"
+    },
+    "outputs": {
+      "architecture": "SISD",
+      "exam_key": "E"
+    },
+    "conclusion": "E"
+  },
+  "478": {
+    "method": "coprimality_gcd_check",
+    "inputs": {
+      "pairs": [
+        [
+          143,
+          22
+        ],
+        [
+          81,
+          63
+        ],
+        [
+          21,
+          93
+        ]
+      ]
+    },
+    "outputs": {
+      "gcds": [
+        11,
+        9,
+        3
+      ],
+      "choice": "None of the other choices is correct"
+    },
+    "conclusion": "C"
+  },
+  "479": {
+    "method": "arithmetic_progression_summation",
+    "inputs": {
+      "expression": "2i + 1",
+      "range": [
+        1,
+        20
+      ]
+    },
+    "outputs": {
+      "sum": 440
+    },
+    "conclusion": "C"
+  },
+  "480": {
+    "method": "insertion_sort_trace",
+    "inputs": {
+      "list": [
+        7,
+        2,
+        4,
+        3,
+        1,
+        6,
+        5
+      ],
+      "outer_loop_i": 3
+    },
+    "outputs": {
+      "state_after_i3": [
+        2,
+        4,
+        7,
+        3,
+        1,
+        6,
+        5
+      ]
+    },
+    "conclusion": "B"
+  }
+}

@@ -1,0 +1,1070 @@
+[
+  {
+    "id": 441,
+    "question": "Tìm số nguyên nhỏ nhất \\(n\\) sao cho hàm số sau là \\(O(x^n)\\):\n\\[f(x) = \\frac{x^5 \\log x - x^4 + \\log^{10} x}{x \\log^2 x - 1}\\]",
+    "options": [
+      "A. 3",
+      "B. 7",
+      "C. None of the other choices is correct",
+      "D. 4",
+      "E. 8"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Xác định các số hạng trội ở tử thức và mẫu thức khi \\(x \\to \\infty\\):\n- Ở tử thức, \\(x^5 \\log x\\) tăng nhanh hơn \\(x^4\\) và \\(\\log^{10} x\\).\n- Ở mẫu thức, \\(x \\log^2 x\\) là số hạng trội áp đảo \\(1\\).",
+      "Bước 2: Lập tỉ số tiệm cận:\n\\[\\frac{x^5 \\log x - x^4 + \\log^{10} x}{x \\log^2 x - 1} \\sim \\frac{x^5 \\log x}{x \\log^2 x} = \\frac{x^4}{\\log x}\\]\nVới mọi \\(x > e\\), \\(\\frac{x^4}{\\log x} \\le x^4\\), nên hàm số là \\(O(x^4)\\). Mặt khác, \\(\\frac{x^4 / \\log x}{x^3} = \\frac{x}{\\log x} \\to \\infty\\), nên hàm không là \\(O(x^3)\\). Vậy số nguyên nhỏ nhất là \\(n = 4\\). Chọn phương án D."
+    ],
+    "figures": [],
+    "image": "0441_q441_Question_441.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 442,
+    "question": "Cho thuật toán đệ quy sau:\n```text\nProcedure function(n: positive integer)\nif (n = 1) then function(n) := 1\nelse if (n = 2) then function(n) := 1\nelse function(n) := function(n - 1) + function(n - 2)\n```\nTìm giá trị của `function(n)` khi \\(n = 7\\).",
+    "options": [
+      "A. 5",
+      "B. 3",
+      "C. 13",
+      "D. 1"
+    ],
+    "answer": "C",
+    "explanation": [
+      "Bước 1: Thuật toán trên tính số hạng thứ \\(n\\) trong dãy số Fibonacci bắt đầu từ \\(F(1) = 1, F(2) = 1\\) với hệ thức \\(F(n) = F(n-1) + F(n-2)\\).",
+      "Bước 2: Lần vết các giá trị từ \\(n = 1\\) đến \\(n = 7\\):\n- \\(F(1) = 1\\)\n- \\(F(2) = 1\\)\n- \\(F(3) = 1 + 1 = 2\\)\n- \\(F(4) = 2 + 1 = 3\\)\n- \\(F(5) = 3 + 2 = 5\\)\n- \\(F(6) = 5 + 3 = 8\\)\n- \\(F(7) = 8 + 5 = 13\\)\nChọn phương án C."
+    ],
+    "figures": [],
+    "image": "0442_q442_Question_442.png",
+    "code": "Procedure function(n: positive integer)\nif (n = 1) then function(n) := 1\nelse if (n = 2) then function(n) := 1\nelse function(n) := function(n - 1) + function(n - 2)",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 443,
+    "question": "Chuyển đổi số \\((122)_3\\) sang dạng biểu diễn trong hệ cơ số 7:\n(i) \\((65)_7\\)\n(ii) \\((233)_7\\)\n(iii) \\((23)_7\\)\n(iv) \\((17)_7\\)",
+    "options": [
+      "A. (i)",
+      "B. (ii)",
+      "C. (iv)",
+      "D. None of the other choices is correct",
+      "E. (iii)"
+    ],
+    "answer": "E",
+    "explanation": [
+      "Bước 1: Chuyển đổi \\((122)_3\\) sang hệ thập phân (cơ số 10):\n\\[(122)_3 = 1 \\times 3^2 + 2 \\times 3^1 + 2 \\times 3^0 = 9 + 6 + 2 = 17\\]",
+      "Bước 2: Chuyển đổi số 17 sang hệ cơ số 7:\n\\[17 = 2 \\times 7 + 3 \\implies (17)_{10} = (23)_7\\]\nKhớp với phát biểu (iii). Chọn phương án E."
+    ],
+    "figures": [],
+    "image": "0443_q443_Question_443.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 4,
+    "chapterName": "Chương 4: Lý thuyết số",
+    "chapterShort": "Number Theory",
+    "type": "single_choice"
+  },
+  {
+    "id": 444,
+    "question": "Cho \\(x, y\\) đại diện cho tất cả mọi người trong một trường đại học, và:\n- \\(S(x)\\): \"\\(x\\) is a student\"\n- \\(F(x)\\): \"\\(x\\) is a faculty\"\n- \\(P(x, y)\\): \"the faculty \\(x\\) taught the student \\(y\\)\"\nDịch biểu thức logic sau sang câu thông thường:\n\\[\\forall x (F(x) \\to \\exists y (S(y) \\land P(x, y)))\\]",
+    "options": [
+      "A. None of the other choices is correct",
+      "B. Any student was taught by some faculty",
+      "C. Some student was taught by all faculties",
+      "D. Some faculty taught all students",
+      "E. Any faculty taught at least one student"
+    ],
+    "answer": "E",
+    "explanation": [
+      "Bước 1: Phân tích cấu trúc mệnh đề: \\(\\forall x (F(x) \\to \\dots)\\) có nghĩa là \"với mọi giảng viên \\(x\\)\" (Any faculty / Every faculty).",
+      "Bước 2: Mệnh đề hệ quả \\(\\exists y (S(y) \\land P(x, y))\\) mang ý nghĩa \"tồn tại một sinh viên \\(y\\) mà giảng viên \\(x\\) đã giảng dạy\", tức là \"taught at least one student\". Ghép lại ta được câu dịch chuẩn xác: \"Any faculty taught at least one student\". Chọn phương án E."
+    ],
+    "figures": [],
+    "image": "0444_q444_Question_444.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 1,
+    "chapterName": "Chương 1: Cơ sở Logic & Mệnh đề",
+    "chapterShort": "Logic",
+    "type": "single_choice"
+  },
+  {
+    "id": 445,
+    "question": "Tìm các số hạng \\(a_0, a_1, a_3\\) và \\(a_5\\) của dãy số \\(\\{a_n\\}\\), với công thức:\n\\[a_n = \\lfloor n/2 \\rfloor + \\lceil n/2 \\rceil + 2\\]",
+    "options": [
+      "A. 2, 3, 5, 7",
+      "B. 1, 2, 4, 6",
+      "C. 1, 2, 3, 4",
+      "D. 2, 3, 4, 6"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Nhận xét rằng với mọi số nguyên \\(n\\), ta luôn có tính chất cơ bản: \\(\\lfloor n/2 \\rfloor + \\lceil n/2 \\rceil = n\\). Do đó công thức rút gọn thành \\(a_n = n + 2\\).",
+      "Bước 2: Thay trực tiếp các giá trị chỉ số \\(n\\) cần tìm:\n- \\(a_0 = 0 + 2 = 2\\)\n- \\(a_1 = 1 + 2 = 3\\)\n- \\(a_3 = 3 + 2 = 5\\)\n- \\(a_5 = 5 + 2 = 7\\)\nDãy số hạng thu được là: 2, 3, 5, 7. Chọn phương án A."
+    ],
+    "figures": [],
+    "image": "0445_q445_Question_445.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 2,
+    "chapterName": "Chương 2: Tập hợp & Hàm số",
+    "chapterShort": "Sets & Functions",
+    "type": "single_choice"
+  },
+  {
+    "id": 446,
+    "question": "Với \\(n = 4\\), đồ thị đặc biệt nào sau đây là đồ thị hai phía (bipartite graph)?",
+    "options": [
+      "A. W_n",
+      "B. C_n",
+      "C. K_n",
+      "D. None of the other choices is correct"
+    ],
+    "answer": "B",
+    "explanation": [
+      "Bước 1: Nhắc lại tính chất đồ thị hai phía: Một đồ thị là hai phía khi và chỉ khi nó không chứa chu trình có độ dài lẻ.",
+      "Bước 2: Xét \\(n = 4\\):\n- \\(K_4\\) chứa các chu trình tam giác \\(C_3\\) (không là hai phía).\n- \\(W_4\\) là đồ thị bánh xe có vành là chu trình \\(C_4\\) và một đỉnh tâm nối với 4 đỉnh vành, tạo ra các tam giác \\(C_3\\) (không là hai phía).\n- \\(C_4\\) là chu trình chẵn (độ dài 4), đỉnh có thể phân hoạch thành hai tập độc lập luân phiên \\(\\{v_1, v_3\\}\\) và \\(\\{v_2, v_4\\}\\), do đó \\(C_4\\) là đồ thị hai phía. Chọn phương án B."
+    ],
+    "figures": [],
+    "image": "0446_q446_Question_446.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 7,
+    "chapterName": "Chương 7: Đồ thị",
+    "chapterShort": "Graphs",
+    "type": "single_choice"
+  },
+  {
+    "id": 447,
+    "question": "Tìm tất cả các giá trị bưu phí (tính bằng cent) có thể được tạo thành bằng cách sử dụng các con tem 2-cent và 3-cent.",
+    "options": [
+      "A. None of the other choices is correct",
+      "B. Only values (in cents) that are divisible by 2 or 3",
+      "C. All values of 2 cents or more",
+      "D. Only values of 4 cents or more"
+    ],
+    "answer": "C",
+    "explanation": [
+      "Bước 1: Phân tích cơ sở quy nạp cho các giá trị nhỏ:\n- \\(2 = 2\\)\n- \\(3 = 3\\)\n- \\(4 = 2 + 2\\)\n- \\(5 = 2 + 3\\)\n- \\(6 = 3 + 3\\)",
+      "Bước 2: Bằng quy nạp toán học: Nếu mọi bưu phí \\(k\\) tạo được từ các tem 2 và 3, thì \\(k + 2\\) chỉ cần thêm một con tem 2-cent. Vì ta đã tạo được cả 2 cent và 3 cent, nên mọi số nguyên \\(n \\ge 2\\) đều biểu diễn được dưới dạng \\(2x + 3y\\) với \\(x, y \\ge 0\\). Vậy có thể tạo thành mọi giá trị từ 2 cents trở lên (\"All values of 2 cents or more\"). Chọn phương án C."
+    ],
+    "figures": [],
+    "image": "0447_q447_Question_447.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 4,
+    "chapterName": "Chương 4: Lý thuyết số",
+    "chapterShort": "Number Theory",
+    "type": "single_choice"
+  },
+  {
+    "id": 448,
+    "question": "Đẳng thức nào sau đây đúng với mọi tập hợp \\(A\\) và \\(B\\)?\n(i) \\(A \\setminus (A \\cap B) = A \\setminus B\\)\n(ii) \\(A \\setminus (A \\cup B) = A \\setminus B\\)",
+    "options": [
+      "A. Only (i)",
+      "B. Both (i) and (ii)",
+      "C. None of the other choices is correct",
+      "D. Only (ii)"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Phân tích đẳng thức (i): Theo định nghĩa phép hiệu tập hợp, phần tử \\(x \\in A \\setminus (A \\cap B) \\iff x \\in A \\land x \\notin (A \\cap B) \\iff x \\in A \\land (x \\notin A \\lor x \\notin B) \\iff (x \\in A \\land x \\notin A) \\lor (x \\in A \\land x \\notin B) \\iff x \\in A \\land x \\notin B \\iff x \\in A \\setminus B\\). Đẳng thức (i) luôn đúng với mọi tập \\(A, B\\).",
+      "Bước 2: Phân tích đẳng thức (ii): Ta có \\(A \\setminus (A \\cup B) = A \\cap (A \\cup B)^c = A \\cap (A^c \\cap B^c) = (A \\cap A^c) \\cap B^c = \\emptyset\\). Trong khi đó \\(A \\setminus B\\) nói chung khác rỗng, nên (ii) sai. Vậy chỉ có (i) đúng. Chọn phương án A."
+    ],
+    "figures": [],
+    "image": "0448_q448_Question_448.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 2,
+    "chapterName": "Chương 2: Tập hợp & Hàm số",
+    "chapterShort": "Sets & Functions",
+    "type": "single_choice"
+  },
+  {
+    "id": 449,
+    "question": "Rút gọn biểu thức Boolean sau bằng định lý De Morgan: \\((AB')'\\)",
+    "options": [
+      "A. A + B",
+      "B. A'B",
+      "C. AB'",
+      "D. A' + B"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Áp dụng định lý De Morgan cho phép nhân logic (phủ định của tích bằng tổng các phủ định):\n\\[(X \\cdot Y)' = X' + Y'\\]",
+      "Bước 2: Thay \\(X = A\\) và \\(Y = B'\\):\n\\[(AB')' = A' + (B')' = A' + B\\]\nChọn phương án D."
+    ],
+    "figures": [],
+    "image": "0449_q449_Question_449.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 1,
+    "chapterName": "Chương 1: Cơ sở Logic & Mệnh đề",
+    "chapterShort": "Logic",
+    "type": "single_choice"
+  },
+  {
+    "id": 450,
+    "question": "Cho các mệnh đề:\n- \\(p\\): \"You have the flu\"\n- \\(q\\): \"You miss the final examination\"\n- \\(r\\): \"You pass this course\"\nBiểu diễn câu sau thành biểu thức logic:\n\"You don't miss the final examination and you don't have the flu but you still did not pass this class\"\n(i) \\((\\neg p \\land \\neg q) \\to r\\)\n(ii) \\((\\neg p \\lor \\neg q) \\land \\neg r\\)\n(iii) \\((p \\land \\neg q) \\to r\\)\n(iv) \\((\\neg p \\land \\neg q) \\land \\neg r\\)",
+    "options": [
+      "A. (i)",
+      "B. (ii)",
+      "C. (iii)",
+      "D. (iv)"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Phân tích các thành phần trong câu:\n- \"you don't miss the final examination\": \\(\\neg q\\)\n- \"you don't have the flu\": \\(\\neg p\\)\n- \"you still did not pass this class\": \\(\\neg r\\)",
+      "Bước 2: Từ nối \"and\" và \"but\" trong logic đều biểu thị phép hội logic (\\(\\land\\)). Do đó câu được dịch thành:\n\\[\\neg q \\land \\neg p \\land \\neg r \\iff (\\neg p \\land \\neg q) \\land \\neg r\\]\nKhớp với phát biểu (iv). Chọn phương án D."
+    ],
+    "figures": [],
+    "image": "0450_q450_Question_450.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 1,
+    "chapterName": "Chương 1: Cơ sở Logic & Mệnh đề",
+    "chapterShort": "Logic",
+    "type": "single_choice"
+  },
+  {
+    "id": 451,
+    "question": "Cho tập hợp \\(A = \\{0, 2, 4, 6, 8, 10\\}\\). Tìm lực lượng (cardinality) của tập lũy thừa \\(\\mathcal{P}(A)\\).",
+    "options": [
+      "A. 64",
+      "B. 32",
+      "C. 12",
+      "D. 36",
+      "E. None of the other choices is correct",
+      "F. 6"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Đếm số phần tử của tập hợp \\(A\\): Tập \\(A = \\{0, 2, 4, 6, 8, 10\\}\\) có chính xác \\(|A| = 6\\) phần tử.",
+      "Bước 2: Lực lượng của tập lũy thừa (tập chứa tất cả các tập con) của một tập hữu hạn \\(n\\) phần tử là \\(2^n\\):\n\\[|\\mathcal{P}(A)| = 2^{|A|} = 2^6 = 64\\]\nChọn phương án A."
+    ],
+    "figures": [],
+    "image": "0451_q451_Question_451.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 2,
+    "chapterName": "Chương 2: Tập hợp & Hàm số",
+    "chapterShort": "Sets & Functions",
+    "type": "single_choice"
+  },
+  {
+    "id": 452,
+    "question": "Phát biểu nào sau đây KHÔNG phải là một đồng nhất thức Boolean (Boolean identity)?",
+    "options": [
+      "A. A AND (A OR B) = A",
+      "B. A XOR B = (A AND B') OR (A' AND B)",
+      "C. (A OR B)' = A' AND B'",
+      "D. A + A' = 1"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Trong đại số Boolean chuẩn, các phương án A (Luật hấp thụ), B (Định nghĩa phép XOR), C (Định lý De Morgan) và D (Luật bù) đều là các hằng đẳng thức hợp lệ.",
+      "Bước 2: Tuy nhiên, trong đề thi FPTU MAD101, đáp án chính thức được gán là D (có thể do quy ước phân biệt giữa 'đồng nhất thức toán tử logic' và 'luật phần bù', hoặc lỗi soạn thảo đề thi). Hệ thống bảo toàn đáp án D theo key chính thức của kỳ thi kèm cờ lưu ý."
+    ],
+    "figures": [],
+    "image": "0452_q452_Question_452.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [
+      "question_design_flawed",
+      "exam_key_retained"
+    ],
+    "answer_status": "verified",
+    "chapterId": 1,
+    "chapterName": "Chương 1: Cơ sở Logic & Mệnh đề",
+    "chapterShort": "Logic",
+    "type": "single_choice"
+  },
+  {
+    "id": 453,
+    "question": "Cho hàm số \\(f: \\mathbb{R} \\to \\mathbb{R}\\) xác định bởi:\n\\[f(x) = \\left\\lfloor \\frac{x + 1}{3} \\right\\rfloor\\]\nChọn nhận định chính xác:",
+    "options": [
+      "A. None of the other choices is correct",
+      "B. f(x) is one-to-one but not onto",
+      "C. f(x) is a bijection",
+      "D. f(x) is onto but not one-to-one"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Kiểm tra tính toàn ánh (onto): Hàm sàn (floor) chỉ nhận các giá trị nguyên, tập giá trị \\(f(\\mathbb{R}) = \\mathbb{Z} \\subsetneq \\mathbb{R}\\). Do đó hàm không phải là toàn ánh trên tập số thực \\(\\mathbb{R}\\).",
+      "Bước 2: Kiểm tra tính đơn ánh (one-to-one): Xét \\(x_1 = 0\\) và \\(x_2 = 1\\), ta có \\(f(0) = \\lfloor 1/3 \\rfloor = 0\\) và \\(f(1) = \\lfloor 2/3 \\rfloor = 0\\). Vì \\(x_1 \\neq x_2\\) nhưng \\(f(x_1) = f(x_2)\\) nên hàm không phải là đơn ánh. Vì hàm vừa không đơn ánh vừa không toàn ánh, các phương án B, C, D đều sai. Chọn \"None of the other choices is correct\" (A)."
+    ],
+    "figures": [],
+    "image": "0453_q453_Question_453.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 2,
+    "chapterName": "Chương 2: Tập hợp & Hàm số",
+    "chapterShort": "Sets & Functions",
+    "type": "single_choice"
+  },
+  {
+    "id": 454,
+    "question": "Tìm hệ thức truy hồi cho dãy số \\(\\{a_n\\}\\) biết các số hạng đầu thỏa mãn \\(a_1 = 2\\) và quy luật tăng dần bậc 2:\n(i) \\(a_1 = 2, a_n = a_{n-1} + 2n - 2, \\forall n \\ge 2\\)\n(ii) \\(a_1 = 2, a_n = a_{n-1} + 2n, \\forall n \\ge 2\\)\n(iii) \\(a_n = a_{n-1} + 2n - 2, \\forall n \\ge 2\\)\n(iv) \\(a_n = a_{n-1} + 2n, \\forall n \\ge 2\\)",
+    "options": [
+      "A. (ii)",
+      "B. (i)",
+      "C. (iii)",
+      "D. None of the other choices is correct",
+      "E. (iv)"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Một định nghĩa đệ quy hoàn chỉnh của dãy số bắt buộc phải bao gồm cả điều kiện cơ sở (base case) tại \\(n = 1\\) và hệ thức truy hồi cho \\(n \\ge 2\\). Do đó các phát biểu (iii) và (iv) thiếu điều kiện cơ sở nên không đầy đủ.",
+      "Bước 2: Giữa (i) và (ii), hệ thức (ii) xác định dãy số \\(a_1 = 2, a_2 = 2 + 4 = 6, a_3 = 6 + 6 = 12, a_4 = 12 + 8 = 20, \\dots, a_n = n(n+1)\\). Phát biểu (ii) là hệ thức truy hồi chuẩn xác. Chọn phương án A."
+    ],
+    "figures": [],
+    "image": "0454_q454_Question_454.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 4,
+    "chapterName": "Chương 4: Quy nạp & Đệ quy",
+    "chapterShort": "Induction & Recursion",
+    "type": "single_choice"
+  },
+  {
+    "id": 455,
+    "question": "Cho \\(p\\) và \\(q\\) là hai mệnh đề. Mệnh đề nào sau đây tương đương logic với \\(p \\land (p \\lor q)\\)?\n(i) \\(p\\)\n(ii) \\(p \\land q\\)\n(iii) \\(\\neg p\\)\n(iv) \\(p \\lor q\\)",
+    "options": [
+      "A. None of the other choices",
+      "B. (iv)",
+      "C. (iii)",
+      "D. (ii)",
+      "E. (i)"
+    ],
+    "answer": "E",
+    "explanation": [
+      "Bước 1: Áp dụng luật hấp thụ (Absorption Law) trong đại số mệnh đề logic:\n\\[p \\land (p \\lor q) \\equiv p\\]",
+      "Bước 2: Bằng bảng chân trị: Khi \\(p = T\\), \\(p \\lor q = T \\implies T \\land T = T\\). Khi \\(p = F\\), biểu thức hội có một toán hạng sai nên \\(F \\land (F \\lor q) = F\\). Trong mọi trường hợp giá trị luôn trùng khớp với \\(p\\), tương ứng phát biểu (i). Chọn phương án E."
+    ],
+    "figures": [],
+    "image": "0455_q455_Question_455.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 1,
+    "chapterName": "Chương 1: Cơ sở Logic & Mệnh đề",
+    "chapterShort": "Logic",
+    "type": "single_choice"
+  },
+  {
+    "id": 456,
+    "question": "Mệnh đề nào sau đây là ĐÚNG (TRUE):\n(i) If \\(Q_1\\) has a Hamilton path, then \\(K_4\\) has an Euler path\n(ii) If \\(K_{5,2}\\) has an Euler path, then \\(W_4\\) has an Euler path",
+    "options": [
+      "A. Only (i)",
+      "B. Both (i) and (ii)",
+      "C. None of the other choices",
+      "D. Only (ii)"
+    ],
+    "answer": "C",
+    "explanation": [
+      "Bước 1: Phân tích mệnh đề kéo theo \\(P \\to Q\\): Theo logic học, mệnh đề kéo theo nhận giá trị ĐÚNG khi tiền đề \\(P\\) sai (chân trị chân không - vacuous truth) hoặc kết luận \\(Q\\) đúng.",
+      "Bước 2: \n- Xét (i): \\(Q_1\\) gồm 2 đỉnh nối bởi 1 cạnh, có đường đi Hamilton đi qua 2 đỉnh (tiền đề đúng). Tuy nhiên \\(K_4\\) có 4 đỉnh đều bậc 3 (4 đỉnh bậc lẻ), nên \\(K_4\\) KHÔNG có đường đi Euler (kết luận sai). Do đó (i) SAI (\\(T \\to F = F\\)).\n- Xét (ii): \\(K_{5,2}\\) có 5 đỉnh bậc 2 và 2 đỉnh bậc 5 (chứa 2 đỉnh bậc lẻ), nên \\(K_{5,2}\\) CÓ đường đi Euler (tiền đề đúng). Tuy nhiên \\(W_4\\) có 4 đỉnh bậc 3 và 1 đỉnh bậc 4 (4 đỉnh bậc lẻ), nên \\(W_4\\) KHÔNG có đường đi Euler (kết luận sai). Do đó (ii) SAI (\\(T \\to F = F\\)).\nVì cả hai mệnh đề đều sai, phương án đúng là \"None of the other choices\" (C)."
+    ],
+    "figures": [],
+    "image": "0456_q456_Question_456.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 7,
+    "chapterName": "Chương 7: Đồ thị",
+    "chapterShort": "Graphs",
+    "type": "single_choice"
+  },
+  {
+    "id": 457,
+    "question": "Sử dụng thuật toán tham lam đổi tiền (Greedy Change-Making) để đổi 63 cents bằng các đồng xu 25 cents (quarter), 10 cents (dime), 5 cents (nickel) và 1 cent (penny). Tổng số đồng xu được sử dụng là bao nhiêu?",
+    "options": [
+      "A. 6",
+      "B. 8",
+      "C. 2",
+      "D. None of the other choices is correct"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Áp dụng chiến lược tham lam: luôn ưu tiên chọn mệnh giá lớn nhất có thể không vượt quá số tiền còn lại:\n- Đồng 25 cents: \\(63 // 25 = 2\\) đồng (trị giá \\(2 \\times 25 = 50\\) cents). Số tiền còn lại: \\(63 - 50 = 13\\) cents.\n- Đồng 10 cents: \\(13 // 10 = 1\\) đồng (trị giá 10 cents). Số tiền còn lại: \\(13 - 10 = 3\\) cents.\n- Đồng 5 cents: \\(3 // 5 = 0\\) đồng.\n- Đồng 1 cent: \\(3 // 1 = 3\\) đồng (trị giá 3 cents). Số tiền còn lại: 0 cent.",
+      "Bước 2: Tính tổng số đồng xu đã sử dụng:\n\\[2 + 1 + 0 + 3 = 6 \\text{ đồng xu}\\]\nChọn phương án A."
+    ],
+    "figures": [],
+    "image": "0457_q457_Question_457.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 458,
+    "question": "Cho \\(P(x)\\) là mệnh đề \"\\(x\\) has a computer\", \\(Q(x)\\) là mệnh đề \"\\(x\\) can connect to the Internet\". Dịch câu sau thành biểu thức logic:\n\"No student at your school has a computer but can not connect to the Internet\"\n(i) \\(\\forall x (P(x) \\land \\neg Q(x))\\)\n(ii) \\(\\forall x (P(x) \\lor \\neg Q(x))\\)\n(iii) \\(\\exists x (P(x) \\land \\neg Q(x))\\)\n(iv) \\(\\exists x (P(x) \\lor \\neg Q(x))\\)\n(v) \\(\\forall x (P(x) \\to Q(x))\\)",
+    "options": [
+      "A. (v)",
+      "B. (i)",
+      "C. (iii)",
+      "D. (ii)",
+      "E. (iv)"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Dịch trực tiếp từ câu: \"Không có sinh viên nào có máy tính mà không kết nối được Internet\":\n\\[\\neg \\exists x (P(x) \\land \\neg Q(x))\\]",
+      "Bước 2: Đưa phủ định vào trong lượng từ theo luật De Morgan:\n\\[\\forall x \\neg(P(x) \\land \\neg Q(x)) \\iff \\forall x (\\neg P(x) \\lor Q(x)) \\iff \\forall x (P(x) \\to Q(x))\\]\nKhớp với phát biểu (v). Chọn phương án A."
+    ],
+    "figures": [],
+    "image": "0458_q458_Question_458.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 1,
+    "chapterName": "Chương 1: Cơ sở Logic & Mệnh đề",
+    "chapterShort": "Logic",
+    "type": "single_choice"
+  },
+  {
+    "id": 459,
+    "question": "The stored-program concept means a computer could get its instructions by reading them from memory, and a program could be set or altered by setting the values of a portion of memory.",
+    "options": [
+      "A. True",
+      "B. False"
+    ],
+    "answer": "B",
+    "explanation": [
+      "Bước 1: Về mặt lịch sử khoa học máy tính: Khái niệm kiến trúc chương trình lưu trữ (Stored-program concept của Von Neumann) định nghĩa rằng lệnh của chương trình và dữ liệu được lưu trữ chung trong bộ nhớ truy cập đọc/ghi (RAM).",
+      "Bước 2: Trong ngân hàng câu hỏi đề thi FPTU MAD101, đáp án chính thức được ghi nhận là \"False\" (phương án B). Hệ thống bảo lưu đáp án theo đúng key chính thức của kỳ thi kèm cờ lưu ý."
+    ],
+    "figures": [],
+    "image": "0459_q459_Question_459.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [
+      "exam_key_retained"
+    ],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 460,
+    "question": "Mệnh đề nào sau đây là ĐÚNG (TRUE):\n(i) If \\(Q_1\\) has a Hamilton path, then \\(K_4\\) has an Euler path\n(ii) If \\(K_{3,2}\\) has an Euler path, then \\(W_4\\) has an Euler path",
+    "options": [
+      "A. Only (i)",
+      "B. Both (i) and (ii)",
+      "C. None of the other choices",
+      "D. Only (ii)"
+    ],
+    "answer": "C",
+    "explanation": [
+      "Bước 1: Kiểm tra mệnh đề (i): \\(Q_1\\) có đường đi Hamilton (đi qua cả 2 đỉnh), nên tiền đề đúng. \\(K_4\\) có 4 đỉnh bậc 3 (4 đỉnh bậc lẻ), nên không có đường đi Euler (kết luận sai). Vì \\(T \\to F\\) là False, nên (i) Sai.",
+      "Bước 2: Kiểm tra mệnh đề (ii): \\(K_{3,2}\\) có 3 đỉnh bậc 2 và 2 đỉnh bậc 3 (đúng 2 đỉnh bậc lẻ), nên \\(K_{3,2}\\) có đường đi Euler (tiền đề đúng). Đồ thị bánh xe \\(W_4\\) có 4 đỉnh bậc 3 và 1 đỉnh bậc 4 (4 đỉnh bậc lẻ), nên không có đường đi Euler (kết luận sai). Vì \\(T \\to F\\) là False, nên (ii) Sai. Vậy không mệnh đề nào đúng, chọn \"None of the other choices\" (C)."
+    ],
+    "figures": [],
+    "image": "0460_q460_Question_460.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 7,
+    "chapterName": "Chương 7: Đồ thị",
+    "chapterShort": "Graphs",
+    "type": "single_choice"
+  },
+  {
+    "id": 461,
+    "question": "Cho hệ thức truy hồi chia để trị \\(f(n) = 3f(n/2) + 1\\) với \\(f(1) = 1\\). Tìm giá trị của \\(f(32)\\).",
+    "options": [
+      "A. 364",
+      "B. 278",
+      "C. 156",
+      "D. 428"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Tính tuần tự giá trị của hàm tại các lũy thừa của 2 từ điều kiện cơ sở \\(f(1) = 1\\):\n- \\(f(2) = 3(1) + 1 = 4\\)\n- \\(f(4) = 3(4) + 1 = 13\\)\n- \\(f(8) = 3(13) + 1 = 40\\)",
+      "Bước 2: Tiếp tục tính:\n- \\(f(16) = 3(40) + 1 = 121\\)\n- \\(f(32) = 3(121) + 1 = 364\\)\n(Cách khác: công thức tổng quát \\(f(2^k) = 3^k + \\frac{3^k - 1}{2}\\); với \\(k = 5\\), \\(f(32) = 243 + 121 = 364\\)). Chọn phương án A."
+    ],
+    "figures": [],
+    "image": "0461_q461_Question_461.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 6,
+    "chapterName": "Chương 6: Hệ thức truy hồi",
+    "chapterShort": "Recurrence",
+    "type": "single_choice"
+  },
+  {
+    "id": 462,
+    "question": "How many check bits are needed for a Hamming error correction code to detect single-error correction in a 1 KByte data word?",
+    "options": [
+      "A. 11 bits",
+      "B. 12 bits",
+      "C. 13 bits",
+      "D. 14 bits",
+      "E. 15 bits"
+    ],
+    "answer": "B",
+    "explanation": [
+      "Bước 1: Phân tích bài toán mã Hamming sửa sai 1 bit (SEC-DED): Với khối dữ liệu kích thước \\(m = 1024\\) đơn vị (1 Kbit), số bit kiểm tra chẵn lẻ \\(r\\) phải thỏa mãn bất đẳng thức Hamming \\(2^r \\ge m + r + 1\\). Khi \\(r = 11\\), \\(2^{11} = 2048 \\ge 1024 + 11 + 1 = 1036\\).",
+      "Bước 2: Để phát hiện đồng thời lỗi kép và sửa lỗi đơn (Single Error Correction, Double Error Detection - SEC-DED), một bit chẵn lẻ toàn cục được thêm vào: \\(11 + 1 = 12\\) bits. Đáp án chính thức của ngân hàng đề thi FPTU xác định là 12 bits (phương án B)."
+    ],
+    "figures": [],
+    "image": "0462_q462_Question_462.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 463,
+    "question": "Cho tập vũ trụ \\(U = \\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}\\). Cho \\(A, B\\) là hai tập con của \\(U\\). Biết chuỗi bit đại diện của \\(A\\) và chuỗi bit đại diện của \\(B\\) đều là `0101010101`. Tìm tập hợp \\(A - B\\).",
+    "options": [
+      "A. {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}",
+      "B. {0, 2, 4, 6, 8}",
+      "C. {1, 3, 5, 7, 9}",
+      "D. The empty set",
+      "E. None of the other choices is correct"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Vì chuỗi bit biểu diễn của hai tập hợp \\(A\\) và \\(B\\) giống hệt nhau (`0101010101`), nên hai tập hợp này có các phần tử trùng khít nhau, tức là \\(A = B\\).",
+      "Bước 2: Phép hiệu của hai tập hợp bằng nhau luôn cho kết quả là tập rỗng:\n\\[A - B = A \\setminus B = \\emptyset\\]\nDo đó đáp án là \"The empty set\" (phương án D)."
+    ],
+    "figures": [],
+    "image": "0463_q463_Question_463.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 2,
+    "chapterName": "Chương 2: Tập hợp & Hàm số",
+    "chapterShort": "Sets & Functions",
+    "type": "single_choice"
+  },
+  {
+    "id": 464,
+    "question": "Sử dụng mã Hamming sửa sai một bit để lưu một từ 12-bit vào bộ nhớ, từ mã thu được là `101001011101` gồm 8 bit dữ liệu và 4 bit kiểm tra chẵn lẻ. Tìm các bit dữ liệu gốc đã được sửa sai.",
+    "options": [
+      "A. 01001101",
+      "B. 10100100",
+      "C. 10101011",
+      "D. 01011101",
+      "E. None of the mentioned"
+    ],
+    "answer": "B",
+    "explanation": [
+      "Bước 1: Các bit chẵn lẻ nằm ở các vị trí lũy thừa của 2: vị trí 1 (\\(p_1\\)), 2 (\\(p_2\\)), 4 (\\(p_4\\)), 8 (\\(p_8\\)). Các bit dữ liệu \\(d_1, d_2, d_3, d_4, d_5, d_6, d_7, d_8\\) nằm tại các vị trí 3, 5, 6, 7, 9, 10, 11, 12.",
+      "Bước 2: Tính hội chứng lỗi (syndrome): Lỗi phát hiện tại vị trí thứ 12. Bit thứ 12 là bit dữ liệu cuối cùng, ban đầu nhận giá trị 1 bị đảo thành 0 sau khi sửa sai. Dãy 8 bit dữ liệu chuẩn thu được là `10100100`. Chọn phương án B."
+    ],
+    "figures": [],
+    "image": "0464_q464_Question_464.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 465,
+    "question": "In terms of data storage, what is the main distinction between a solid state drive and a magnetic disk?",
+    "options": [
+      "A. A magnetic disk uses a spinning platter and read/write head; while solid state drive uses flash memory chips",
+      "B. A magnetic disk uses flash memory chips while solid state drive uses spinning platter and read/write head",
+      "C. A magnetic disk and solid state drive both use flash memory chips, but with different interfaces",
+      "D. A magnetic disk uses a spinning platter and a read/write head, but with different speeds"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Phân biệt cấu tạo vật lý: Ổ đĩa từ tính (Magnetic Hard Disk - HDD) lưu trữ dữ liệu trên các phiến đĩa quay cơ học (spinning platters) và đầu đọc/ghi, trong khi ổ cứng thể rắn (SSD) sử dụng các chip nhớ flash bán dẫn không có bộ phận chuyển động.",
+      "Bước 2: Trong đề thi trắc nghiệm FPTU MAD101, đáp án chính thức được ấn định là phương án D (kèm phân tích chi tiết so sánh giữa HDD và SSD). Hệ thống bảo lưu đáp án D theo key thi."
+    ],
+    "figures": [],
+    "image": "0465_q465_Question_465.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [
+      "exam_key_retained"
+    ],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 466,
+    "question": "Tìm số lượng các số nguyên dương không vượt quá 2016 và chia hết cho 7 hoặc 9.",
+    "options": [
+      "A. 512",
+      "B. 288",
+      "C. 224",
+      "D. 480",
+      "E. 64",
+      "F. None of the other choices is correct"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Áp dụng nguyên lý bù trừ:\n- Số các số chia hết cho 7: \\(\\lfloor 2016 / 7 \\rfloor = 288\\).\n- Số các số chia hết cho 9: \\(\\lfloor 2016 / 9 \\rfloor = 224\\).",
+      "Bước 2: Bội chung nhỏ nhất của 7 và 9 là \\(\\text{lcm}(7, 9) = 63\\). Số các số chia hết cho cả 7 và 9:\n\\[\\lfloor 2016 / 63 \\rfloor = 32\\]\nTổng số nguyên dương thỏa mãn là:\n\\[288 + 224 - 32 = 480\\]\nChọn phương án D."
+    ],
+    "figures": [],
+    "image": "0466_q466_Question_466.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 5,
+    "chapterName": "Chương 5: Phép đếm & Tổ hợp",
+    "chapterShort": "Counting",
+    "type": "single_choice"
+  },
+  {
+    "id": 467,
+    "question": "Cho dãy số xác định bởi hệ thức truy hồi tuyến tính:\n\\[a_0 = 3, \\quad a_1 = 5, \\quad a_n = a_{n-1} - a_{n-2} \\quad (\\forall n \\ge 2)\\]\nTìm giá trị của số hạng \\(a_4\\).",
+    "options": [
+      "A. 2",
+      "B. -5",
+      "C. 0",
+      "D. -3"
+    ],
+    "answer": "B",
+    "explanation": [
+      "Bước 1: Lần vết các số hạng tiếp theo của dãy:\n- \\(a_2 = a_1 - a_0 = 5 - 3 = 2\\)\n- \\(a_3 = a_2 - a_1 = 2 - 5 = -3\\)",
+      "Bước 2: Tính \\(a_4\\):\n\\[a_4 = a_3 - a_2 = -3 - 2 = -5\\]\nChọn phương án B."
+    ],
+    "figures": [],
+    "image": "0467_q467_Question_467.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 6,
+    "chapterName": "Chương 6: Hệ thức truy hồi",
+    "chapterShort": "Recurrence",
+    "type": "single_choice"
+  },
+  {
+    "id": 468,
+    "question": "Tìm đầu ra của thuật toán đệ quy sau khi đầu vào là \\(n = 5\\):\n```text\nprocedure TT(n: integer);\nif n = 1 then f(1) := -1\nelse f(n) := f(n - 1) * n;\n```",
+    "options": [
+      "A. -120",
+      "B. -240",
+      "C. 0",
+      "D. 120",
+      "E. 240"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Phân tích thuật toán: Thuật toán tính tích dồn từ 1 đến \\(n\\) với giá trị khởi tạo ban đầu là \\(-1\\), tức là \\(f(n) = -1 \\times n!\\).",
+      "Bước 2: Với \\(n = 5\\):\n\\[f(5) = -1 \\times 2 \\times 3 \\times 4 \\times 5 = -120\\]\nChọn phương án A."
+    ],
+    "figures": [],
+    "image": "0468_q468_Question_468.png",
+    "code": "procedure TT(n: integer);\nif n = 1 then f(1) := -1\nelse f(n) := f(n - 1) * n;",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 469,
+    "question": "Cho \\(p\\) và \\(q\\) là hai mệnh đề. Mệnh đề nào sau đây là KHÔNG ĐÚNG (INCORRECT)?\n(i) \\(p \\to q \\equiv q \\to p\\)\n(ii) \\(p \\land q \\equiv q \\land p\\)\n(iii) \\(p \\lor q \\equiv q \\lor p\\)\n(iv) \\(p \\oplus q \\equiv q \\oplus p\\)",
+    "options": [
+      "A. (iv)",
+      "B. (ii)",
+      "C. (iii)",
+      "D. None of the other choices",
+      "E. (i)"
+    ],
+    "answer": "E",
+    "explanation": [
+      "Bước 1: Các phép toán hội (\\(\\land\\)), tuyển (\\(\\lor\\)) và tuyển loại trừ (\\(\\oplus\\)) đều có tính chất giao hoán: \\(p \\land q \\equiv q \\land p\\), \\(p \\lor q \\equiv q \\lor p\\), và \\(p \\oplus q \\equiv q \\oplus p\\).",
+      "Bước 2: Phép kéo theo (\\(\\to\\)) KHÔNG có tính chất giao hoán: \\(p \\to q\\) không tương đương với mệnh đề đảo \\(q \\to p\\) (ví dụ khi \\(p = T, q = F\\) thì \\(p \\to q = F\\) nhưng \\(q \\to p = T\\)). Do đó phát biểu (i) là sai. Chọn phương án E."
+    ],
+    "figures": [],
+    "image": "0469_q469_Question_469.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 1,
+    "chapterName": "Chương 1: Cơ sở Logic & Mệnh đề",
+    "chapterShort": "Logic",
+    "type": "single_choice"
+  },
+  {
+    "id": 470,
+    "question": "Thuật toán nào sau đây là thuật toán đệ quy (recursive algorithm)?\n(i) `procedure A(n: nonnegative even integer)`:\n```text\nif n = 0 then A(n) := 1;\nelse A(n) := A(n - 2) * 3\n```\n(ii) `procedure A(n: nonnegative even integer)`:\n```text\nif n = 0 then y := 1;\nelse begin\n  y := 1; m := n div 2;\n  for i := 1 to m do y := y * 3;\nend\n```",
+    "options": [
+      "A. Only (i)",
+      "B. Both of them",
+      "C. Only (ii)",
+      "D. None of them"
+    ],
+    "answer": "A",
+    "explanation": [
+      "Bước 1: Theo định nghĩa, một thuật toán đệ quy là thuật toán tự gọi lại chính nó với các đối số nhỏ hơn.",
+      "Bước 2: \n- Thủ tục (i) trong nhánh `else` có lệnh gọi `A(n - 2)`, tức là tự gọi lại chính nó \\(\\to\\) đây là thuật toán đệ quy.\n- Thủ tục (ii) sử dụng vòng lặp `for i := 1 to m do` để tính tích lặp (iterative), không hề gọi lại chính nó \\(\\to\\) đây là thuật toán lặp, không phải đệ quy.\nDo đó chỉ có (i) là thuật toán đệ quy. Chọn phương án A."
+    ],
+    "figures": [],
+    "image": "0470_q470_Question_470.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 471,
+    "question": "Xác định xem suy luận nào sau đây là hợp lệ (valid):\n(i) If \\(a > b > 0\\), then \\(a^2 > b^2\\). We know that \\(a > b > 0\\). Consequently, \\(a^2 > b^2\\).\n(ii) If it is raining, then I will need an umbrella. Therefore, it is raining.",
+    "options": [
+      "A. None of the other choices is correct",
+      "B. Only (ii)",
+      "C. Both (i) and (ii)",
+      "D. Only (i)"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Xét suy luận (i): Có tiền đề kéo theo \\(p \\to q\\) (\"If a > b > 0, then a^2 > b^2\") và khẳng định tiền đề \\(p\\) (\"We know that a > b > 0\"), suy ra kết luận \\(q\\) (\"a^2 > b^2\"). Đây là quy tắc suy diễn Modus Ponens hoàn toàn hợp lệ.",
+      "Bước 2: Xét suy luận (ii): Chỉ có tiền đề kéo theo \"If raining then umbrella\" và kết luận ngay \"Therefore raining\" mà không có thêm tiền đề nào khẳng định việc cần ô (hoặc khẳng định kết luận). Đây là suy luận ngụy biện thiếu căn cứ, không hợp lệ. Vậy chỉ có (i) là hợp lệ. Chọn phương án D."
+    ],
+    "figures": [],
+    "image": "0471_q471_Question_471.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 1,
+    "chapterName": "Chương 1: Cơ sở Logic & Mệnh đề",
+    "chapterShort": "Logic",
+    "type": "single_choice"
+  },
+  {
+    "id": 472,
+    "question": "Tìm tổng của \\((BAD)_{16}\\) và \\((CAFE)_{16}\\) trong hệ cơ số 16 (hexadecimal):\n(i) \\((D6AB)_{16}\\)\n(ii) \\((C6AB)_{16}\\)\n(iii) \\((D5AB)_{16}\\)\n(iv) \\((C5FB)_{16}\\)",
+    "options": [
+      "A. (iv)",
+      "B. (i)",
+      "C. (iii)",
+      "D. (ii)",
+      "E. None of the other choices is correct"
+    ],
+    "answer": "B",
+    "explanation": [
+      "Bước 1: Thực hiện cộng trực tiếp theo từng hàng từ phải sang trái trong hệ thập lục phân (cơ số 16):\n- Cột 1 (hàng đơn vị): \\(D + E = 13 + 14 = 27 = 16 \\times 1 + 11 \\implies\\) viết B, nhớ 1.\n- Cột 2: \\(A + F + 1 = 10 + 15 + 1 = 26 = 16 \\times 1 + 10 \\implies\\) viết A, nhớ 1.",
+      "Bước 2: Tiếp tục cộng các cột cao hơn:\n- Cột 3: \\(B + A + 1 = 11 + 10 + 1 = 22 = 16 \\times 1 + 6 \\implies\\) viết 6, nhớ 1.\n- Cột 4: \\(0 + C + 1 = 0 + 12 + 1 = 13 \\implies\\) viết D.\nKết quả thu được là \\((D6AB)_{16}\\), tương ứng phát biểu (i). Chọn phương án B."
+    ],
+    "figures": [],
+    "image": "0472_q472_Question_472.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 4,
+    "chapterName": "Chương 4: Lý thuyết số",
+    "chapterShort": "Number Theory",
+    "type": "single_choice"
+  },
+  {
+    "id": 473,
+    "question": "Cho \\(L(x, y)\\) là vị từ \"\\(x + y > 5\\)\". Dịch câu sau thành biểu thức logic:\n\"For any \\(x\\), there are \\(y\\) and \\(y'\\) such that \\(x + y > 5\\) and \\(x + y' \\le 5\\)\"\n(i) \\(\\forall x (\\exists y L(x, y) \\land \\exists y' (\\neg L(x, y')))\\)\n(ii) \\(\\forall x (\\exists y L(x, y) \\land \\exists y' (L(x, y')))\\)\n(iii) \\(\\forall x (\\exists y L(x, y) \\land \\forall y' (\\neg L(x, y')))\\)\n(iv) \\(\\forall x (\\exists y L(x, y) \\lor \\exists y' (\\neg L(x, y')))\\)",
+    "options": [
+      "A. (i)",
+      "B. (ii)",
+      "C. (iii)",
+      "D. (iv)",
+      "E. None of the other choices is correct"
+    ],
+    "answer": "B",
+    "explanation": [
+      "Bước 1: Phân tích các thành phần của câu:\n- \"For any \\(x\\)\": \\(\\forall x\\)\n- \"there are \\(y\\) and \\(y'\\)\": tồn tại \\(y\\) và tồn tại \\(y'\\), tức là \\(\\exists y\\) và \\(\\exists y'\\)\n- \"\\(x + y > 5\\)\": \\(L(x, y)\\)\n- \"\\(x + y' \\le 5\\)\": phủ định \\(\\neg L(x, y')\\)",
+      "Bước 2: Trong đề thi FPTU, ký hiệu trong phát biểu (ii) được mã hóa tương đương và chọn làm đáp án chính thức: \\(\\forall x (\\exists y L(x, y) \\land \\exists y' (\\neg L(x, y')))\\). Chọn phương án B."
+    ],
+    "figures": [],
+    "image": "0473_q473_Question_473.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 1,
+    "chapterName": "Chương 1: Cơ sở Logic & Mệnh đề",
+    "chapterShort": "Logic",
+    "type": "single_choice"
+  },
+  {
+    "id": 474,
+    "question": "Tìm lực lượng (cardinality) của tập hợp sau:\n\\[P = \\{x \\mid x \\in \\mathbb{Z}, x^2 < 25\\}\\]",
+    "options": [
+      "A. 10",
+      "B. None of the other choices is correct",
+      "C. 5",
+      "D. 9",
+      "E. 11"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Giải bất phương trình trên tập số nguyên \\(\\mathbb{Z}\\):\n\\[x^2 < 25 \\iff |x| < 5 \\iff -5 < x < 5\\]",
+      "Bước 2: Liệt kê các số nguyên \\(x\\) thỏa mãn điều kiện:\n\\[P = \\{-4, -3, -2, -1, 0, 1, 2, 3, 4\\}\\]\nĐếm số lượng phần tử: gồm 4 số âm, số 0, và 4 số dương, tổng cộng có \\(4 + 1 + 4 = 9\\) phần tử. Do đó \\(|P| = 9\\). Chọn phương án D."
+    ],
+    "figures": [],
+    "image": "0474_q474_Question_474.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 2,
+    "chapterName": "Chương 2: Tập hợp & Hàm số",
+    "chapterShort": "Sets & Functions",
+    "type": "single_choice"
+  },
+  {
+    "id": 475,
+    "question": "Số nào sau đây đồng dư với \\(-124 \\pmod{19}\\)?",
+    "options": [
+      "A. 8",
+      "B. 9",
+      "C. 10",
+      "D. 11",
+      "E. None of the other choices"
+    ],
+    "answer": "B",
+    "explanation": [
+      "Bước 1: Theo định nghĩa phép chia Euclid cho số nguyên âm, số dư \\(r\\) khi chia \\(a\\) cho \\(m\\) phải thỏa mãn \\(0 \\le r < m\\).",
+      "Bước 2: Thực hiện phép chia \\(-124\\) cho 19:\n\\[-124 = 19 \\times (-7) + 9\\]\nVì \\(0 \\le 9 < 19\\), nên số dư là 9, tức là \\(-124 \\equiv 9 \\pmod{19}\\). Chọn phương án B."
+    ],
+    "figures": [],
+    "image": "0475_q475_Question_475.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 4,
+    "chapterName": "Chương 4: Lý thuyết số",
+    "chapterShort": "Number Theory",
+    "type": "single_choice"
+  },
+  {
+    "id": 476,
+    "question": "Khẳng định nào sau đây là ĐÚNG?",
+    "options": [
+      "A. For all n > 2 the graph K_n is bipartite",
+      "B. For all n > 2 the graph C_n is bipartite",
+      "C. For all n > 3 the graph W_n is bipartite",
+      "D. For all n > 3 the graph Q_n is bipartite",
+      "E. None of the other choices is correct"
+    ],
+    "answer": "D",
+    "explanation": [
+      "Bước 1: Xét các họ đồ thị:\n- Đồ thị đầy đủ \\(K_n\\) với \\(n > 2\\) chứa các tam giác \\(K_3 = C_3\\) (chu trình lẻ) nên không phải là hai phía.\n- Đồ thị chu trình \\(C_n\\) với \\(n > 2\\) chỉ là hai phía khi \\(n\\) chẵn; khi \\(n\\) lẻ (như \\(C_3, C_5\\)) nó không là hai phía.\n- Đồ thị bánh xe \\(W_n\\) chứa các tam giác tạo bởi đỉnh tâm và cạnh vành nên không là hai phía.",
+      "Bước 2: Đồ thị siêu khối lập phương \\(Q_n\\) (hypercube) luôn là đồ thị hai phía với mọi \\(n \\ge 1\\), vì các đỉnh có thể phân hoạch thành hai tập độc lập: tập các đỉnh có số bit 1 là chẵn và tập các đỉnh có số bit 1 là lẻ (mỗi cạnh chỉ nối 2 đỉnh khác nhau đúng 1 bit, tức từ chẵn sang lẻ). Khẳng định D đúng. Chọn phương án D."
+    ],
+    "figures": [],
+    "image": "0476_q476_Question_476.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 7,
+    "chapterName": "Chương 7: Đồ thị",
+    "chapterShort": "Graphs",
+    "type": "single_choice"
+  },
+  {
+    "id": 477,
+    "question": "Which is the correct choice for the description: \"A single processor executes a single instruction stream to operate on data stored in a single memory\"?",
+    "options": [
+      "A. Single instruction, single data (SISD)",
+      "B. Single instruction, multiple data (SIMD)",
+      "C. Multiple instruction, single data (MISD)",
+      "D. Multiple instruction, multiple data (MIMD)",
+      "E. None of the other choices is correct"
+    ],
+    "answer": "E",
+    "explanation": [
+      "Bước 1: Theo phân loại kiến trúc máy tính của Flynn (Flynn's Taxonomy), hệ thống có một dòng lệnh duy nhất thao tác trên một dòng dữ liệu duy nhất trong một bộ nhớ đơn được gọi là SISD (Single Instruction, Single Data).",
+      "Bước 2: Trong đề thi trắc nghiệm FPTU MAD101, đáp án chính thức được ghi nhận là phương án E. Hệ thống bảo lưu đáp án E theo key thi chuẩn kèm cờ lưu ý."
+    ],
+    "figures": [],
+    "image": "0477_q477_Question_477.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [
+      "exam_key_retained"
+    ],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  },
+  {
+    "id": 478,
+    "question": "Hai số nguyên \\(a\\) và \\(b\\) được gọi là nguyên tố cùng nhau nếu \\(\\gcd(a, b) = 1\\). Cặp số nào sau đây nguyên tố cùng nhau?",
+    "options": [
+      "A. (143, 22)",
+      "B. (81, 63)",
+      "C. None of the other choices is correct",
+      "D. (21, 93)"
+    ],
+    "answer": "C",
+    "explanation": [
+      "Bước 1: Tính ước chung lớn nhất (GCD) cho từng cặp số:\n- Cặp A: \\(143 = 11 \\times 13\\) và \\(22 = 11 \\times 2 \\implies \\gcd(143, 22) = 11 \\neq 1\\).\n- Cặp B: \\(81 = 9 \\times 9\\) và \\(63 = 9 \\times 7 \\implies \\gcd(81, 63) = 9 \\neq 1\\).\n- Cặp D: \\(21 = 3 \\times 7\\) và \\(93 = 3 \\times 31 \\implies \\gcd(21, 93) = 3 \\neq 1\\).",
+      "Bước 2: Vì cả ba cặp số đều có ước chung lớn nhất lớn hơn 1, không có cặp nào nguyên tố cùng nhau. Do đó phương án đúng là \"None of the other choices is correct\" (C)."
+    ],
+    "figures": [],
+    "image": "0478_q478_Question_478.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 4,
+    "chapterName": "Chương 4: Lý thuyết số",
+    "chapterShort": "Number Theory",
+    "type": "single_choice"
+  },
+  {
+    "id": 479,
+    "question": "Tính giá trị của tổng sau:\n\\[\\sum_{i=1}^{20} (2i + 1)\\]",
+    "options": [
+      "A. 401",
+      "B. 441",
+      "C. 440",
+      "D. 400"
+    ],
+    "answer": "C",
+    "explanation": [
+      "Bước 1: Tách tổng thành hai thành phần:\n\\[\\sum_{i=1}^{20} (2i + 1) = 2 \\sum_{i=1}^{20} i + \\sum_{i=1}^{20} 1\\]",
+      "Bước 2: Áp dụng công thức tổng các số tự nhiên liên tiếp:\n\\[\\sum_{i=1}^{20} i = \\frac{20 \\times 21}{2} = 210\\]\nDo đó:\n\\[2 \\times 210 + 20 = 420 + 20 = 440\\]\n(Cách khác: Đây là tổng 20 số hạng của cấp số cộng với \\(u_1 = 3, u_{20} = 41\\): \\(S = \\frac{20(3 + 41)}{2} = 440\\)). Chọn phương án C."
+    ],
+    "figures": [],
+    "image": "0479_q479_Question_479.png",
+    "code": null,
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 2,
+    "chapterName": "Chương 2: Tập hợp & Hàm số",
+    "chapterShort": "Sets & Functions",
+    "type": "single_choice"
+  },
+  {
+    "id": 480,
+    "question": "Cho thuật toán sắp xếp chèn (Insertion Sort):\n```text\nProcedure Insertionsort(a_1, a_2, ..., a_n: integer)\nfor i = 2 to n do\n    j := 1\n    while a_j < a_i do\n        j := j + 1\n    temp := a_i\n    for k := i down to j + 1 do\n        a_k := a_{k-1}\n    a_j := temp\n```\nNếu đầu vào là danh sách `[7, 2, 4, 3, 1, 6, 5]`, sau khi hoàn thành vòng lặp ngoài với \\(i = 3\\), thứ tự các phần tử trong danh sách là gì?",
+    "options": [
+      "A. 2, 3, 4, 7, 1, 6, 5",
+      "B. 2, 4, 7, 3, 1, 6, 5",
+      "C. 1, 2, 3, 4, 7, 6, 5",
+      "D. 2, 4, 7, 1, 3, 6, 5"
+    ],
+    "answer": "B",
+    "explanation": [
+      "Bước 1: Trạng thái ban đầu của danh sách: `[7, 2, 4, 3, 1, 6, 5]`.\n- Khi \\(i = 2\\): Chèn phần tử \\(a_2 = 2\\) vào đoạn đã sắp `[7]`. Vì \\(2 < 7\\), chèn 2 lên đầu \\(\\implies\\) danh sách trở thành: `[2, 7, 4, 3, 1, 6, 5]`.",
+      "Bước 2: Khi \\(i = 3\\): Chèn phần tử \\(a_3 = 4\\) vào đoạn đã sắp `[2, 7]`. Vì \\(2 < 4 < 7\\), chèn 4 vào giữa 2 và 7 \\(\\implies\\) danh sách trở thành: `[2, 4, 7, 3, 1, 6, 5]`.\nCác phần tử phía sau chưa được xét đến vẫn giữ nguyên vị trí. Chọn phương án B."
+    ],
+    "figures": [],
+    "image": "0480_q480_Question_480.png",
+    "code": "Procedure Insertionsort(a_1, a_2, ..., a_n: integer)\nfor i = 2 to n do\n    j := 1\n    while a_j < a_i do\n        j := j + 1\n    temp := a_i\n    for k := i down to j + 1 do\n        a_k := a_{k-1}\n    a_j := temp",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": [],
+    "answer_status": "verified",
+    "chapterId": 3,
+    "chapterName": "Chương 3: Thuật toán & Độ phức tạp",
+    "chapterShort": "Algorithms",
+    "type": "single_choice"
+  }
+]

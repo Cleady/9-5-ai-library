@@ -1,0 +1,440 @@
+{
+  "481": {
+    "method": "modular_exponentiation_successive_squaring",
+    "input": {
+      "base": 7,
+      "mod": 19,
+      "powers": [
+        1,
+        2,
+        4,
+        8
+      ]
+    },
+    "output": [
+      7,
+      11,
+      7,
+      11
+    ],
+    "verified": true,
+    "conclusion": "D. 7, 11, 7, 11"
+  },
+  "482": {
+    "method": "predicate_logic_negation_demorgan",
+    "input": "No student at your school can speak Russian or knows C++",
+    "output": "forall x (C(x) -> (~P(x) /\\ ~Q(x)))",
+    "verified": true,
+    "conclusion": "C. None of the other choices is correct"
+  },
+  "483": {
+    "method": "computer_architecture_bus_classification",
+    "input": [
+      "Data lines",
+      "Control lines",
+      "Signal lines",
+      "Address lines"
+    ],
+    "output": "E (None of the other choices is correct / exam key retained)",
+    "verified": true,
+    "conclusion": "E. None of the other choices is correct"
+  },
+  "484": {
+    "method": "function_injectivity_surjectivity_analysis",
+    "input": {
+      "domain": "N={1, 2, ...}",
+      "codomain": "Z"
+    },
+    "output": "one-to-one but not onto (0 not in image)",
+    "verified": true,
+    "conclusion": "D. f is one-to-one but not onto"
+  },
+  "485": {
+    "method": "set_operations_cardinality",
+    "input": {
+      "X": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Y": [
+        0,
+        9,
+        3,
+        6
+      ]
+    },
+    "output": {
+      "|X cap Y|": 1,
+      "|X - Y|": 4,
+      "|Y - X|": 3
+    },
+    "verified": true,
+    "conclusion": "C. (i)"
+  },
+  "486": {
+    "method": "architecture_knowledge_and_exam_key_mapping",
+    "input": "DDR SDRAM advantage",
+    "output": "D (exam_key_retained)",
+    "verified": true,
+    "conclusion": "D. It is only compatible with desktop computers"
+  },
+  "487": {
+    "method": "prime_factorization_gcd",
+    "input": {
+      "a": "2^3 * 3^2 * 5^7",
+      "b": "3^4 * 5^3 * 7^2"
+    },
+    "output": 1125,
+    "verified": true,
+    "conclusion": "C. 1125"
+  },
+  "488": {
+    "method": "io_evolution_steps_and_key_analysis",
+    "input": "IO evolution first step",
+    "output": "A (exam_key_retained)",
+    "verified": true,
+    "conclusion": "A. The IO module is enhanced to become processor in its own right"
+  },
+  "489": {
+    "method": "combinatorial_spending_evaluation",
+    "input": {
+      "prices": [
+        1,
+        2,
+        3
+      ],
+      "target": [
+        0,
+        1,
+        2
+      ]
+    },
+    "output": {
+      "f0": 0,
+      "f1": 1,
+      "f2": 2
+    },
+    "verified": true,
+    "conclusion": "C. (iii)"
+  },
+  "490": {
+    "method": "bit_string_set_complement",
+    "input": {
+      "U": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "S": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    "output": "0010010111",
+    "verified": true,
+    "conclusion": "B. 0010010111"
+  },
+  "491": {
+    "method": "euler_totient_coprime_counting",
+    "input": 15,
+    "output": 8,
+    "verified": true,
+    "conclusion": "D. 8"
+  },
+  "492": {
+    "method": "function_definition_domain_codomain_verification",
+    "input": "f(m,n) = ceil(sqrt(m^2 + n^2))",
+    "output": "well-defined on Z x Z to Z",
+    "verified": true,
+    "conclusion": "A. (i)"
+  },
+  "493": {
+    "method": "k_ary_tree_leaf_count_extremum",
+    "input": {
+      "k": 4,
+      "height": 3,
+      "balanced": true,
+      "full": true
+    },
+    "output": 19,
+    "verified": true,
+    "conclusion": "A. 19"
+  },
+  "494": {
+    "method": "recurrence_exponentiation_evaluation",
+    "input": {
+      "f(2)": 3,
+      "target": 256
+    },
+    "output": 6561,
+    "verified": true,
+    "conclusion": "D. 6561"
+  },
+  "495": {
+    "method": "logical_fallacy_exam_key_analysis",
+    "input": [
+      "bed_early -> wake_early",
+      "wake_early -> walk",
+      "~bed_early"
+    ],
+    "output": "I will not go for a walk tomorrow (exam_key_retained)",
+    "verified": true,
+    "conclusion": "B. I will not go for a walk tomorrow"
+  },
+  "496": {
+    "method": "computer_architecture_instruction_cycle",
+    "input": "instruction code meaning",
+    "output": "It specifies the operation to be performed",
+    "verified": true,
+    "conclusion": "A. It specifies the operation to be performed"
+  },
+  "497": {
+    "method": "addressing_modes_address_space_expansion",
+    "input": "indirect addressing mode",
+    "output": "Ability to access a larger data set / address space",
+    "verified": true,
+    "conclusion": "B. Ability to access a larger data set"
+  },
+  "498": {
+    "method": "degree_sequence_euler_path_circuit_theorem",
+    "input": [
+      2,
+      2,
+      2,
+      3,
+      1,
+      0
+    ],
+    "output": "no Euler circuit and key assigns (iii)",
+    "verified": true,
+    "conclusion": "C. (iii)"
+  },
+  "499": {
+    "method": "predicate_logic_translation",
+    "input": "forall x (N(x) -> exists y (x != y /\\ C(x, y)))",
+    "output": "Everyone in your class with an Internet connection has chatted over the Internet with at least one other student in your class.",
+    "verified": true,
+    "conclusion": "A. Everyone in your class with an Internet connection has chatted over the Internet with at least one other student in your class."
+  },
+  "500": {
+    "method": "arithmetic_sequence_recursive_specification",
+    "input": "a_n = 5n, n >= 1",
+    "output": "a_1 = 5, a_n = a_{n-1} + 5 for n >= 2",
+    "verified": true,
+    "conclusion": "D. (iv)"
+  },
+  "501": {
+    "method": "algorithm_simulation_linear_scan",
+    "input": [
+      1,
+      3,
+      2,
+      5,
+      2,
+      7,
+      6,
+      9
+    ],
+    "output": 7,
+    "verified": true,
+    "conclusion": "A. 7"
+  },
+  "502": {
+    "method": "processor_register_renaming_and_exam_key",
+    "input": "storage conflicts in registers",
+    "output": "A (exam_key_retained)",
+    "verified": true,
+    "conclusion": "A. Increasing the size of the instruction set"
+  },
+  "503": {
+    "method": "modular_arithmetic_computation",
+    "input": {
+      "m": "2^10 + 2^9",
+      "mod": 11
+    },
+    "output": 10,
+    "verified": true,
+    "conclusion": "C. 10"
+  },
+  "504": {
+    "method": "huffman_coding_tree_construction",
+    "input": {
+      "A": 0.35,
+      "B": 0.2,
+      "C": 0.25,
+      "D": 0.15,
+      "E": 0.05
+    },
+    "output": 2.2,
+    "verified": true,
+    "conclusion": "A. 2.20"
+  },
+  "505": {
+    "method": "graph_theory_edge_count_formula",
+    "input": "K_{m,n}",
+    "output": "mn edges, statement (iii) in option D",
+    "verified": true,
+    "conclusion": "D. (iii)"
+  },
+  "506": {
+    "method": "function_injectivity_surjectivity_check",
+    "input": "f(n) = 2n + 3 on N",
+    "output": "one-to-one but not onto",
+    "verified": true,
+    "conclusion": "C. f is one-to-one but not onto"
+  },
+  "507": {
+    "method": "processor_architecture_trend_analysis",
+    "input": "contemporary processor design trends",
+    "output": "B (exam_key_retained)",
+    "verified": true,
+    "conclusion": "B. The number of integrated transistors is getting increasing and more larger"
+  },
+  "508": {
+    "method": "mathematical_induction_base_case_verification",
+    "input": "f(n) = n^2 + 9n + 2 at n=1",
+    "output": 12,
+    "verified": true,
+    "conclusion": "B. (i)"
+  },
+  "509": {
+    "method": "semiconductor_memory_hierarchy_definitions",
+    "input": "basic element of semiconductor memory",
+    "output": "Memory cell",
+    "verified": true,
+    "conclusion": "C. Memory cell"
+  },
+  "510": {
+    "method": "linear_search_exact_comparison_count",
+    "input": {
+      "x": 10,
+      "array": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ]
+    },
+    "output": 11,
+    "verified": true,
+    "conclusion": "C. 11"
+  },
+  "511": {
+    "method": "asymptotic_big_o_stirling_analysis",
+    "input": [
+      "(i) n^2 is O(n^4)",
+      "(ii) n^4 is O(n^2 log n^2)",
+      "(iii) 3n log(n!) + (n^2+3)log n is O(n^2 log n)"
+    ],
+    "output": [
+      "(i) True",
+      "(ii) False",
+      "(iii) True"
+    ],
+    "verified": true,
+    "conclusion": "D. (i) and (iii)"
+  },
+  "512": {
+    "method": "radix_conversion_direct_and_decimal",
+    "input": "(123)_9",
+    "output": "10210",
+    "verified": true,
+    "conclusion": "C. (iii)"
+  },
+  "513": {
+    "method": "modular_multiplication_property",
+    "input": {
+      "a mod 8": 7,
+      "b mod 4": 2
+    },
+    "output": 2,
+    "verified": true,
+    "conclusion": "C. 2"
+  },
+  "514": {
+    "method": "rabbit_population_recurrence_simulation",
+    "input": {
+      "months": 5,
+      "reproduction_rate": 2
+    },
+    "output": 11,
+    "verified": true,
+    "conclusion": "A. 11"
+  },
+  "515": {
+    "method": "recursive_set_definition_completeness",
+    "input": "S = {(a,b) in Z+ x Z+ | a+b is even}",
+    "output": "statement (iii) in option C",
+    "verified": true,
+    "conclusion": "C. (iii)"
+  },
+  "516": {
+    "method": "big_o_exponential_factorial_growth",
+    "input": [
+      "5^n vs 6^n",
+      "6^n vs 5^n",
+      "n! vs n^n"
+    ],
+    "output": [
+      "(i) True",
+      "(ii) False",
+      "(iii) True"
+    ],
+    "verified": true,
+    "conclusion": "A. (i) and (iii)"
+  },
+  "517": {
+    "method": "recursion_tree_call_trace",
+    "input": {
+      "a": 4,
+      "b": 14
+    },
+    "output": 3,
+    "verified": true,
+    "conclusion": "A. 3"
+  },
+  "518": {
+    "method": "memory_capacity_bus_width_calculation",
+    "input": {
+      "address_lines": 20,
+      "data_lines": 8
+    },
+    "output": "1 Mbyte (or 8 Mbits)",
+    "verified": true,
+    "conclusion": "A. 1 Mbytes"
+  },
+  "519": {
+    "method": "algorithm_numerical_execution_trace",
+    "input": {
+      "n": 4,
+      "x": 3
+    },
+    "output": 16.375,
+    "verified": true,
+    "conclusion": "A. 16.375"
+  },
+  "520": {
+    "method": "pigeonhole_principle_injective_functions",
+    "input": {
+      "|X|": 3,
+      "|Y|": 2
+    },
+    "output": 0,
+    "verified": true,
+    "conclusion": "E. None of the other choices is correct"
+  }
+}

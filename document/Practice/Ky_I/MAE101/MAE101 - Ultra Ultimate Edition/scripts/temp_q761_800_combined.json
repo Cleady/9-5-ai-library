@@ -1,0 +1,322 @@
+[
+  {
+    "id": 761,
+    "image": "0761_q761_Question_761.png",
+    "bank_answer": "D",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let T : R4 _ R? be a linear transformation and U;, V be vectors such that T(u - 5v) [-2 7]T;T(v) = [1 3T Then T("
+  },
+  {
+    "id": 762,
+    "image": "0762_q762_Question_762.png",
+    "bank_answer": "A",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find the (3, 2)-cofactor of the matrix 56 DAP AN cAN CHON CAC DAP AN A: -3 B: 5 C. -5 D: 3 E 7 None of the other"
+  },
+  {
+    "id": 763,
+    "image": "0763_q763_Question_763.png",
+    "bank_answer": "A",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find the eigenvalues of the matrix 5 56 DAP AN cAN CHON CAC DAP AN A -1;-2;1 B. 0; 2; 3 C. 2; 3,4 ~3; 0; 4 E: -3"
+  },
+  {
+    "id": 764,
+    "image": "0764_q764_Question_764.png",
+    "bank_answer": "E",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find the volume of the parallelepiped determined by 2u, provided that u = [1,2,-1JT ,v = [0,2,4T , w 56 DAP AN c"
+  },
+  {
+    "id": 765,
+    "image": "0765_q765_Question_765.png",
+    "bank_answer": "D",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI 8 for all €, find f(c). 80 DAP AN CAN CHON CAc DAP AN A: 5 ~1 None of the other choices is correct lim; -1"
+  },
+  {
+    "id": 766,
+    "image": "0766_q766_Question_766.png",
+    "bank_answer": "B",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Find all points of discontinuity of the function 2x + 1 if 1 < -1 f(z) = if -l<€ < 2 22 _ 2 if 2 > 2 80 DAP AN C"
+  },
+  {
+    "id": 767,
+    "image": "0767_q767_Question_767.png",
+    "bank_answer": "A",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find f' (0) for f(z) In(22+3) 21+3 80 DAP AN CAN CHON CAc DAP AN 2-23 None of the other choices is correct 76S 1"
+  },
+  {
+    "id": 768,
+    "image": "0768_q768_Question_768.png",
+    "bank_answer": "D",
+    "topic": "TichPhan",
+    "folder": "GT1",
+    "text": "fuoverflow Given the curve off(x) on the interval [0, 8], compute the right (Choose answer) Riemann sum Rs_ (210004)(See"
+  },
+  {
+    "id": 769,
+    "image": "0769_q769_Question_769.png",
+    "bank_answer": "A",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find the critical numbers of f (2) 80 DAP AN CAN CHON CAc DAP AN A. 1,-1,0 B. 1,~1 C. 1,0 E. _1,0 None of the ot"
+  },
+  {
+    "id": 770,
+    "image": "0770_q770_Question_770.png",
+    "bank_answer": "D",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Determine where the given function is increasing and where it is decreasing f(z) Increasing on and (2,0) , decre"
+  },
+  {
+    "id": 771,
+    "image": "0771_q771_Question_771.png",
+    "bank_answer": "A",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find two positive numbers (a, b) whose product is 64 and whose sum is minimum: 80 DAP AN CAN CHON CAc DAP AN A: "
+  },
+  {
+    "id": 772,
+    "image": "0772_q772_Question_772.png",
+    "bank_answer": "A",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Approximate the area under the graph of over the interval [0 5] using 5 subintervals and left endpoints_ 56 DAP "
+  },
+  {
+    "id": 773,
+    "image": "0773_q773_Question_773.png",
+    "bank_answer": "A",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Express the limits as definite integral over [1,3] lim (2;)Az () cdx (ii) xdz xdx (iv) dx 50 DAP AN CAN CAc DAP "
+  },
+  {
+    "id": 774,
+    "image": "0774_q774_Question_774.png",
+    "bank_answer": "C",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Find the average value of f(z) 5x 2 over the interval [0,3]. 80 DAP AN CAN CHON CAc DAP AN A. 12.5 B. 13 C. 5.5 "
+  },
+  {
+    "id": 775,
+    "image": "0775_q775_Question_775.png",
+    "bank_answer": "D",
+    "topic": "TichPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Assume that w' (t) is the rate of growth of a child's weight in kilograms in year t. What does the following int"
+  },
+  {
+    "id": 776,
+    "image": "0776_q776_Question_776.png",
+    "bank_answer": "E",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Evaluate 2x5 (625 dx (26 (1/7) (26 215)7 + C (iii) 6x 10x +C (1/6) (36 2x5 80 DAP AN CAN CHON CAc DAP AN None of"
+  },
+  {
+    "id": 777,
+    "image": "0777_q777_Question_777.png",
+    "bank_answer": "B",
+    "topic": "DaoHam",
+    "folder": "GT1",
+    "text": "CAU HOI Find the most general antiderivative of f(r) = (2\" + l)e\" 22 + 3)ez + €C 21 + l)er + C (22 + 2x - 2)er + €C s6 D"
+  },
+  {
+    "id": 778,
+    "image": "0778_q778_Question_778.png",
+    "bank_answer": "B",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Given a matrix A and column vectors X, b. Which of the following statements are correct? (i) If Ax 0 then either"
+  },
+  {
+    "id": 779,
+    "image": "0779_q779_Question_779.png",
+    "bank_answer": "C",
+    "topic": "MaTran",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let A = be a 3 x 3 matrix with @ij j for all 1 < i,j < 3. Find the (2,3)-entry of the matrix A? . 56 DAP AN cAN "
+  },
+  {
+    "id": 780,
+    "image": "0780_q780_Question_780.png",
+    "bank_answer": "A",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let u = [-3 3]T , & = [-4 4JT . Let € be such that 4u 3v = Ilillz. Find the length of €_ 80 DAP AN CAN CHON CAc "
+  },
+  {
+    "id": 781,
+    "image": "0781_q781_Question_781.png",
+    "bank_answer": "A",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find the distance from the origin to the line passing through the point (3,1,5) and having the direction v (2,-1"
+  },
+  {
+    "id": 782,
+    "image": "0782_q782_Question_782.png",
+    "bank_answer": "A",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find the point on the plane € 2y + 2 = 4 that is closest to the point P(1,0,1). 80 DAP AN CAN CHON CAc DAP AN A."
+  },
+  {
+    "id": 783,
+    "image": "0783_q783_Question_783.png",
+    "bank_answer": "D",
+    "topic": "KhongGianVector",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let W be a subspace of a vector space V. Which of the following statements are correct? (i) u +v = v +ufor all u"
+  },
+  {
+    "id": 784,
+    "image": "0784_q784_Question_784.png",
+    "bank_answer": "D",
+    "topic": "KhongGianVector",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find the dimension of the subspace span{[1,1, -3], [1,2, 0], [1,3,3]}. 56 DAP AN cAN CHON CAc DAP AN A 0 B. 3 D:"
+  },
+  {
+    "id": 785,
+    "image": "0785_q785_Question_785.png",
+    "bank_answer": "B",
+    "topic": "VectorHinhHoc",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let {v1, U2, U3, U4} be an orthogonal set in R4. Which of the following statements are true? {v1,v2 + v3 , 04} i"
+  },
+  {
+    "id": 786,
+    "image": "0786_q786_Question_786.png",
+    "bank_answer": "B",
+    "topic": "KhongGianVector",
+    "folder": "DSTT1",
+    "text": "CAU HOI Let U = span{[1,0,10], [0, 1,15], [1, 1,25]}. Find dim U. 80 DAP AN CAN CHON CAc DAP AN A: 1 B: 2 None of the ot"
+  },
+  {
+    "id": 787,
+    "image": "0787_q787_Question_787.png",
+    "bank_answer": "C",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI 16 if € > 0 Let f(x) + 4 16 if x < 0 0 Find limr-0+ f(z) 56 DAP AN cAN CHON CAC DAP AN Does not exist B: 4 None "
+  },
+  {
+    "id": 788,
+    "image": "0788_q788_Question_788.png",
+    "bank_answer": "B",
+    "topic": "GioiHan",
+    "folder": "GT1",
+    "text": "CAU HOI Write ONE equation that expresses the fact that function f is continuous at the number 4 limr-_4 f(c) = -f(4) f("
+  },
+  {
+    "id": 789,
+    "image": "0789_q789_Question_789.png",
+    "bank_answer": "C",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Simplify the expression flel for f(x) = 22 + 52. 80 DAP AN CAN CHON CAc DAP AN A. 2h + 2 + 5 B. h + 2x C. h + 22"
+  },
+  {
+    "id": 790,
+    "image": "0790_q790_Question_790.png",
+    "bank_answer": "D",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find an equation for the tangent line to the graph f the function f (z) 32 4at (4,12). 80 DAP AN CAN CHON CAc DA"
+  },
+  {
+    "id": 791,
+    "image": "0791_q791_Question_791.png",
+    "bank_answer": "A",
+    "topic": "PhuongTrinhViPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Find y' (0) for y (x +1)2(2+ 1)-3 80 DAP AN CAN CHON CAc DAP AN A: 2 E. -2 None of the other choices is correct"
+  },
+  {
+    "id": 792,
+    "image": "0792_q792_Question_792.png",
+    "bank_answer": "A",
+    "topic": "PhuongTrinhViPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Find y' (0) if 2y + ry 4x = 0 80 DAP AN CAN CAc DAP AN A: 2 C. 1 D: -2 E: _1 None of the other choices is correc"
+  },
+  {
+    "id": 793,
+    "image": "0793_q793_Question_793.png",
+    "bank_answer": "A",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Volume of a spherical ballon is decreasing at rate 9 cm? /s. How fast is its diameter decreasing when the volume"
+  },
+  {
+    "id": 794,
+    "image": "0794_q794_Question_794.png",
+    "bank_answer": "C",
+    "topic": "CucTri",
+    "folder": "GT1",
+    "text": "CAU HOI Determine where the function 20x + 104 is concave up and where it is concave down: Concave down on (~&; Concave "
+  },
+  {
+    "id": 795,
+    "image": "0795_q795_Question_795.png",
+    "bank_answer": "B",
+    "topic": "HamSo",
+    "folder": "GT1",
+    "text": "CAU HOI Find the average value of the function f(z) 5x + 3 over the interval [2 , 9] 56 DAP AN cAN CHON CAC DAP AN 213.5"
+  },
+  {
+    "id": 796,
+    "image": "0796_q796_Question_796.png",
+    "bank_answer": "B",
+    "topic": "PhuongTrinhViPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Find 22+C -1)/2 + C er _ 2 + C 23 + C 80 DAP AN CAN CHON CAc DAP AN B:  (ii) (IV) E: (v) None of the other choic"
+  },
+  {
+    "id": 797,
+    "image": "0797_q797_Question_797.png",
+    "bank_answer": "B",
+    "topic": "TichPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Use the Right endpoint Method with n steps to approximate the integral f(z)dz, given the table 1.5 2.5 3.5 f(z) "
+  },
+  {
+    "id": 798,
+    "image": "0798_q798_Question_798.png",
+    "bank_answer": "C",
+    "topic": "TichPhan",
+    "folder": "GT1",
+    "text": "CAU HOI Which of the following are improper integrals? FU ! f e2 dx dx 80 DAP AN CAN CHON CAc DAP AN A. Only () Both () "
+  },
+  {
+    "id": 799,
+    "image": "0799_q799_Question_799.png",
+    "bank_answer": "C",
+    "topic": "HePhuongTrinh",
+    "folder": "DSTT1",
+    "text": "CAU HOI For a system of 4 linear equations in 3 unknowns, which f the following statements are true? The system can be i"
+  },
+  {
+    "id": 800,
+    "image": "0800_q800_Question_800.png",
+    "bank_answer": "B",
+    "topic": "HePhuongTrinh",
+    "folder": "DSTT1",
+    "text": "CAU HOI Find conditions on (a, b,c) such that the following system is inconsistent 22 + y + 32 = b 4y + 9z = 80 DAP AN C"
+  }
+]

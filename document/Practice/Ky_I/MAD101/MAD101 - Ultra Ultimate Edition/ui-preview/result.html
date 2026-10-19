@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kết quả bài thi | MAD101 Discrete Mathematics Studio</title>
+  <link rel="stylesheet" href="preview.css">
+  
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="../vendor/mathjax/tex-svg.js" defer></script>
+
+  <style>
+    /* Hero Score Summary Card */
+    .score-hero-card {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(15, 23, 42, 0.85));
+      border: 1px solid rgba(249, 115, 22, 0.35);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8) var(--space-6);
+      text-align: center;
+      margin-bottom: var(--space-6);
+      position: relative;
+      overflow: hidden;
+    }
+    .score-circle-wrapper {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, rgba(15, 23, 42, 0.6) 70%);
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
+      margin-bottom: var(--space-4);
+    }
+    .score-number {
+      font-size: var(--text-4xl);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+    .score-scale {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .score-status-title {
+      font-size: var(--text-2xl);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: var(--space-2);
+    }
+    .score-status-desc {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Stats Quick Grid */
+    .result-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+    }
+    @media (min-width: 768px) {
+      .result-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-4);
+      }
+    }
+    .result-stat-item {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      text-align: center;
+    }
+    .result-stat-val {
+      font-size: var(--text-2xl);
+      font-weight: 800;
+    }
+    .result-stat-lbl {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
+
+    /* Chapter Performance Breakdown Bars */
+    .chapter-breakdown-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      margin-top: var(--space-4);
+    }
+    .ch-bar-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .ch-bar-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--text-xs);
+      font-weight: 600;
+    }
+
+    /* Wrong Review List */
+    .wrong-review-item {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--danger);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      margin-bottom: var(--space-3);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .wrong-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="ui-app">
+    <!-- Navbar -->
+    <header class="ui-navbar">
+      <a href="home.html" class="ui-brand">
+        <span class="ui-brand-badge">MAD101</span>
+        <div>
+          <div class="ui-brand-title">Kết Quả Bài Thi</div>
+          <div class="ui-brand-subtitle">Thi thử 50 câu • Hoàn thành lúc 21:40</div>
+        </div>
+      </a>
+
+      <div class="ui-nav-actions">
+        <button class="ui-btn ui-btn-ghost ui-btn-icon" id="themeToggleBtn" title="Chuyển chế độ sáng/tối">
+          🌓
+        </button>
+        <a href="home.html" class="ui-btn ui-btn-secondary">
+          🏠 Về trang chủ
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Score Summary -->
+      <section class="score-hero-card">
+        <div class="score-circle-wrapper">
+          <div class="score-number">8.4</div>
+          <div class="score-scale">/ 10 ĐIỂM</div>
+        </div>
+        <div class="score-status-title">Xuất sắc! Đạt chuẩn đỗ cao</div>
+        <div class="score-status-desc">
+          Bạn đã hoàn thành 42/50 câu chính xác (tỷ lệ 84%). Điểm số này vượt mức chuẩn mục tiêu qua môn MAD101!
+        </div>
+
+        <div style="margin-top:var(--space-6); display:flex; justify-content:center; gap:var(--space-3); flex-wrap:wrap;">
+          <a href="quiz.html?filter=wrong_only" class="ui-btn ui-btn-primary">
+            🔥 Làm lại 8 câu sai ngay
+          </a>
+          <a href="quiz.html?retry=all" class="ui-btn ui-btn-secondary">
+            🔄 Thi lại toàn bộ đề này
+          </a>
+        </div>
+      </section>
+
+      <!-- Stats Quick Grid -->
+      <section class="result-stats-grid">
+        <div class="result-stat-item">
+          <div class="result-stat-val" style="color:var(--success);">42</div>
+          <div class="result-stat-lbl">Số câu đúng</div>
+        </div>
+        <div class="result-stat-item">
+          <div class="result-stat-val" style="color:var(--danger);">8</div>
+          <div class="result-stat-lbl">Số câu sai</div>
+        </div>
+        <div class="result-stat-item">
+          <div class="result-stat-val" style="color:var(--info);">24:18</div>
+          <div class="result-stat-lbl">Thời gian làm bài</div>
+        </div>
+        <div class="result-stat-item">
+          <div class="result-stat-val" style="color:var(--accent);">29.1s</div>
+          <div class="result-stat-lbl">Tốc độ TB / Câu</div>
+        </div>
+      </section>
+
+      <!-- 2 Columns: Chapter Breakdown & Wrong Questions Review -->
+      <div class="ui-layout-2col">
+        <!-- Left Column: Chapter Breakdown -->
+        <section class="ui-card">
+          <h2 style="font-size:var(--text-lg); font-weight:800; margin-bottom:var(--space-2);">
+            Phân Tích Năng Lực Từng Chương
+          </h2>
+          <p style="font-size:var(--text-xs); color:var(--text-muted); margin-bottom:var(--space-4);">
+            Độ chính xác trên từng chủ đề của đề thi vừa rồi
+          </p>
+
+          <div class="chapter-breakdown-list">
+            <!-- Ch1 -->
+            <div class="ch-bar-row">
+              <div class="ch-bar-header">
+                <span>Chương 1: Logic & Bằng chứng</span>
+                <span style="color:var(--success); font-weight:700;">6/6 (100%)</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 100%; background: var(--success);"></div>
+              </div>
+            </div>
+
+            <!-- Ch2 -->
+            <div class="ch-bar-row">
+              <div class="ch-bar-header">
+                <span>Chương 2: Tập hợp & Ánh xạ</span>
+                <span style="color:var(--success); font-weight:700;">6/7 (86%)</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 86%;"></div>
+              </div>
+            </div>
+
+            <!-- Ch3 -->
+            <div class="ch-bar-row">
+              <div class="ch-bar-header">
+                <span>Chương 3: Thuật toán & Độ phức tạp</span>
+                <span style="color:var(--success); font-weight:700;">8/10 (80%)</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 80%;"></div>
+              </div>
+            </div>
+
+            <!-- Ch4 -->
+            <div class="ch-bar-row">
+              <div class="ch-bar-header">
+                <span>Chương 4: Lý thuyết số & Mật mã (Cần ôn thêm)</span>
+                <span style="color:var(--warning); font-weight:700;">5/8 (62%)</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 62%; background: var(--warning);"></div>
+              </div>
+            </div>
+
+            <!-- Ch5 -->
+            <div class="ch-bar-row">
+              <div class="ch-bar-header">
+                <span>Chương 5: Quy nạp & Đệ quy</span>
+                <span style="color:var(--success); font-weight:700;">5/6 (83%)</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 83%;"></div>
+              </div>
+            </div>
+
+            <!-- Ch6 -->
+            <div class="ch-bar-row">
+              <div class="ch-bar-header">
+                <span>Chương 6: Phép đếm & Nhị thức Newton</span>
+                <span style="color:var(--warning); font-weight:700;">5/7 (71%)</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 71%; background: var(--warning);"></div>
+              </div>
+            </div>
+
+            <!-- Ch7 -->
+            <div class="ch-bar-row">
+              <div class="ch-bar-header">
+                <span>Chương 7: Đồ thị Euler & Hamilton</span>
+                <span style="color:var(--success); font-weight:700;">4/4 (100%)</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 100%; background: var(--success);"></div>
+              </div>
+            </div>
+
+            <!-- Ch8 -->
+            <div class="ch-bar-row">
+              <div class="ch-bar-header">
+                <span>Chương 8: Cây & Cây khung nhỏ nhất</span>
+                <span style="color:var(--success); font-weight:700;">3/2 (100%)</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 100%; background: var(--success);"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Column: List of Wrong Questions -->
+        <section class="ui-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-4);">
+            <h2 style="font-size:var(--text-lg); font-weight:800;">
+              Danh Sách 8 Câu Làm Sai
+            </h2>
+            <span class="ui-badge ui-badge-danger">8 câu</span>
+          </div>
+
+          <!-- Wrong item 1 -->
+          <div class="wrong-review-item">
+            <div class="wrong-meta">
+              <div>
+                <strong>Câu 412</strong> • <span style="color:var(--text-muted); font-size:var(--text-xs);">Chương 4 (Số học)</span>
+              </div>
+              <span class="ui-badge ui-badge-danger">Sai</span>
+            </div>
+            <p style="font-size:var(--text-sm);">
+              Tìm nghịch đảo modulo của \(7 \pmod{26}\).
+            </p>
+            <div style="font-size:var(--text-xs); background:rgba(0,0,0,0.2); padding:var(--space-2); border-radius:var(--radius-sm);">
+              <div>❌ Bạn đã chọn: <strong style="color:var(--danger);">B (\(13\))</strong></div>
+              <div>✓ Đáp án đúng: <strong style="color:var(--success);">D (\(15\))</strong> vì \(7 \times 15 = 105 \equiv 1 \pmod{26}\)</div>
+            </div>
+          </div>
+
+          <!-- Wrong item 2 -->
+          <div class="wrong-review-item">
+            <div class="wrong-meta">
+              <div>
+                <strong>Câu 745</strong> • <span style="color:var(--text-muted); font-size:var(--text-xs);">Chương 6 (Tổ hợp)</span>
+              </div>
+              <span class="ui-badge ui-badge-danger">Sai</span>
+            </div>
+            <p style="font-size:var(--text-sm);">
+              Có bao nhiêu xâu nhị phân độ dài 10 chứa đúng 4 chữ số 1 liên tiếp?
+            </p>
+            <div style="font-size:var(--text-xs); background:rgba(0,0,0,0.2); padding:var(--space-2); border-radius:var(--radius-sm);">
+              <div>❌ Bạn đã chọn: <strong style="color:var(--danger);">A (\(210\))</strong></div>
+              <div>✓ Đáp án đúng: <strong style="color:var(--success);">C (\(180\))</strong></div>
+            </div>
+          </div>
+
+          <!-- Wrong item 3 -->
+          <div class="wrong-review-item">
+            <div class="wrong-meta">
+              <div>
+                <strong>Câu 315</strong> • <span style="color:var(--text-muted); font-size:var(--text-xs);">Chương 3 (Thuật toán)</span>
+              </div>
+              <span class="ui-badge ui-badge-danger">Sai</span>
+            </div>
+            <p style="font-size:var(--text-sm);">
+              Độ phức tạp thời gian tốt nhất (best-case) của Bubble Sort là gì?
+            </p>
+            <div style="font-size:var(--text-xs); background:rgba(0,0,0,0.2); padding:var(--space-2); border-radius:var(--radius-sm);">
+              <div>❌ Bạn đã chọn: <strong style="color:var(--danger);">C (\(O(n^2)\))</strong></div>
+              <div>✓ Đáp án đúng: <strong style="color:var(--success);">A (\(O(n)\))</strong> (khi có cờ kiểm tra swap)</div>
+            </div>
+          </div>
+
+          <div style="text-align:center; margin-top:var(--space-4);">
+            <a href="quiz.html?filter=wrong_only" class="ui-btn ui-btn-primary" style="width:100%;">
+              Luyện lại toàn bộ 8 câu này →
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle
+    document.getElementById('themeToggleBtn').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

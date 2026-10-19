@@ -1,0 +1,636 @@
+=== Q841 (img: 0841_q841_Question_841.png) ===
+CAU HOI
+What is the power of 3 in the prime factorization of 20!?
+80 DAP AN CAN CHON
+CAc DAP AN
+HUS
+None of the other choices is correct
+
+=== Q842 (img: 0842_q842_Question_842.png) ===
+CAU HOI
+Find 59
+mod 23
+80 DAP AN CAN CHON
+CAc DAP AN
+A. 10
+B. 11
+C.12
+D. 13
+None of the other choices is correct
+FUS
+
+=== Q843 (img: 0843_q843_Question_843.png) ===
+CAU HOI
+Suppose that
+f(n) = f(n/5) + 2n8 when n is a positive integer divisible by 5.
+Give a big-0 estimate for f (n) if f is an increasing function.
+() O(n")
+(ii) O(n?)
+(iii) O(n? log n)
+(IV)
+O(nlog5
+O(nlog 3)
+56 DAP AN cAN CHON
+CAC DAP AN
+
+=== Q844 (img: 0844_q844_Question_844.png) ===
+fuoverflow
+Which graphs are isomorphicto Kz;?
+(Choose
+answer)
+(See picture)
+A. X
+
+B. Y
+C.Xand Y
+
+D. None of the other choices is correct
+HUO
+FUO
+FUOVERFLOWCOM
+
+=== Q845 (img: 0845_q845_Question_845.png) ===
+CAU HOI
+Let G be an undirected graph with 4 vertices A, B, C, D, whose adjacency matrix (in that order of
+vertices) is
+0 |
+How many paths of length 2 from B to D?
+56 DAP AN cAN CHON
+CAC DAP AN
+A: 3
+FUO
+None of the other choices is correct
+
+=== Q846 (img: 0846_q846_Question_846.png) ===
+fuoverflow
+(Choose
+answer)
+Find the TOTAL number of cut-edges in the two
+
+C. 2
+
+D. 3
+E: 4
+F None of the other choices is correct
+V
+FUO
+FUOVERFLOWCOM
+graphs:
+
+=== Q847 (img: 0847_q847_Question_847.png) ===
+CAU HOI
+Let $ be the set of all directed graphs with the sequence of (out-degree, in-degree):
+[(2,1) , (1,3) , (2,2) , (2,1)].
+Which of the following is TRUE:
+(i) VG € S: G has no Euler paths
+(ii) 3G € S: G has an Euler circuit
+(iii) 3G € S: G has an Euler path; but no Euler circuits
+80 DAP AN CAN CHON
+CAc DAP AN
+B:  (ii)
+None of the other choices
+FUS
+
+=== Q848 (img: 0848_q848_Question_848.png) ===
+CAU HOI
+Compute the value of the postfix notation
+56 DAP AN cAN CHON
+CAc DAP AN
+A 5
+B: -5
+i =
+C. 37
+None of the other choices is correct
+
+=== Q849 (img: 0849_q849_Question_849.png) ===
+CAU HOI
+Find the postfx notation for the expression
+(x _ y)? + xly + 5)
+() € y - 2 t xy 5 + *+
+(i) + $ ~xy 2*x + 5 y
+(iii) € - y 1 2+2*y + 5
+(iv) + 1 -cy 2*1 + y 5
+S0 DAP AN CAN CHON
+CAc DAP AN
+None of the other choices is correct
+B:  ()
+FUOI
+(iv)
+
+=== Q850 (img: 0850_q850_Question_850.png) ===
+fuoverflow
+Ifusing the Prim
+algorithm to find
+minimum spanning tree T
+(Choose
+answer)
+from the graph below: which edgeis addedto Tin thelast step?
+(See picture)
+A. ED
+
+B. EC
+D. EF
+
+E
+None of the other choices is correct
+HUO
+FUO
+FUOVERFLOWCOM
+
+=== Q851 (img: 0851_q851_Question_851.png) ===
+CAU HOI
+FUS
+Let G be a simple graph: The complementary graph of G is the simple graph G' having the same
+set of vertices
+and there is an edge connecting
+and V in G' if and only if there is no edge
+connecting
+and v in G_
+If G has v vertices and
+edges, how many edges does G
+have?
+80 DAP AN CAN CHON
+CAc DAP AN
+None of the other choices is correct
+v(v _ 1)/2 - e+1
+D. v(v _ 1)/2 - e
+
+=== Q852 (img: 0852_q852_Question_852.png) ===
+CAU HOI
+How many vertices are needed to construct a graph with 6 edges in which every vertex is of
+degree 3?
+56 DAP AN cAN CHON
+FUS
+CAc DAP AN
+A 3
+B. 4
+None of the other choices
+
+=== Q853 (img: 0853_q853_Question_853.png) ===
+fuoverflow
+(Choose
+answer)
+(See picture)
+B
+
+1
+
+None of the other choices is correct
+The adjacency list to represent the given graph is_
+Vertex
+Adjacent Vertices
+Vertex
+Adjacent Vertices
+6,}
+b.
+6,€
+d,e, f
+d,f
+d
+Ce
+C.e
+Cd
+c (
+f
+CLC€
+f
+6.€
+Vertex
+Adjacent Vertices
+Vertex
+Adjacent Vertices
+6.
+6,d
+b
+a,c
+d,e, f
+d,e f
+(iii)
+d
+C;e
+d
+C€
+Gd
+Cd
+FUO
+f
+6,€
+f
+6,c
+FUOVERFLOWCOM
+
+=== Q854 (img: 0854_q854_Question_854.png) ===
+CAU HOI
+How many Os are there in the adjacency matrix of the graph Kmn ?
+mn
+2mn
++n"
+(iv) m? + n? + mn
+80 DAP AN CAN
+CAc DAP AN
+m?
+CHON
+
+=== Q855 (img: 0855_q855_Question_855.png) ===
+fuoverflow
+(Choose
+answer)
+How many Is are there in the adjacency matrix of the following graph?
+0
+A. 5
+
+B. 8
+C.10
+
+D. 16
+FUO
+FUOVERFLOWCOM
+
+=== Q856 (img: 0856_q856_Question_856.png) ===
+fuoverflow
+(Choose
+answer)
+How many cut-edges in this graph?
+
+None of the other choices is correct
+
+FUO
+FUOVERFLOWCOM
+
+=== Q857 (img: 0857_q857_Question_857.png) ===
+CAU HOI
+Let u, V be two vertices on different sides of the bipartite graph K2,2. How many paths of length 3
+from u to v?
+56 DAP AN cAN CHON
+CAc DAP AN
+FUO
+A 4
+B: 2
+None of the other choices is correct
+
+=== Q858 (img: 0858_q858_Question_858.png) ===
+CAU HOI
+Which of the following propositions is TRUE:
+(i) If K1,2 has a Hamilton path, then Kz has an Hamilton circuit
+(I) If W4 has a Hamilton path; then K4,3 has an Euler path
+(ii) If K4,5 has an Euler path, then Q3 has a Hamilton circuit
+80 DAP AN CAN CHON
+FUS
+CAc DAP AN
+B.  (i)
+None of the other choices
+
+=== Q859 (img: 0859_q859_Question_859.png) ===
+fuoverflow
+Forwhat values ofn does the graph Q have Hamilton circuits?
+(Choose
+answer)
+(See picture)
+is even
+
+B. n is odd
+no values of n
+
+D. nz]
+None of the other choices is correct
+FUO
+FUOVERFLOWCOM
+
+=== Q860 (img: 0860_q860_Question_860.png) ===
+fuoverflow
+(Choose
+answer)
+Apply the Dijkstra algorithm to find the shortest path from
+to Z How many vertices are NOT chosen?
+'
+B. 2
+
+None of the other choices is correct
+FUO
+FUOVERFLOWCOM
+
+=== Q861 (img: 0861_q861_Question_861.png) ===
+fuoverflow
+(Choose
+answer)
+Apply the Dijkstra algorithm to find the shortest path from
+What are the first three vertices chosen?
+A:A, B, E
+"
+B. A,B, C
+C.A,C, E
+
+D. A,B, D
+E: None of the other choices is correct
+HUO
+FUO
+FUOVERFLOWCOM
+
+=== Q862 (img: 0862_q862_Question_862.png) ===
+fuoverflow
+(Choose
+answer)
+Which graphs are trees?
+
+(M)
+
+D. All of () , (ii) and (iii)
+HUO;
+None of the other choices is correct
+FUO
+FUOVERFLOWCOM
+
+=== Q863 (img: 0863_q863_Question_863.png) ===
+CAU HOI
+How many leaves in a full binary tree with 61 vertices?
+80 DAP AN CAN CHON
+CAc DAP AN
+None of the other choices is correct
+B. 31
+C. 61
+Q !
+D. 30
+
+=== Q864 (img: 0864_q864_Question_864.png) ===
+fuoverflow
+(Choose
+answer)
+How many leaves in this tree?
+A. 9
+
+B. 8
+C.10
+
+D. 13
+None of the other choices is correct
+FUO
+FUO
+FUOVERFLOWCOM
+
+=== Q865 (img: 0865_q865_Question_865.png) ===
+CAU HOI
+Given the message 'weekend'. Encoding this message by a Huffman coding: How many bits are
+used t0 encode the letter 'e'
+56 DAP AN cAN CHON
+CAc DAP AN
+B. 2
+
+=== Q866 (img: 0866_q866_Question_866.png) ===
+CAU HOI
+Use Huffman coding to encode these symbols with given frequencies
+A: 0.2
+B: 0.1
+C: 0.45
+D: 0.15
+E:0.1
+What is the average number of bits required to encode a character?
+56 DAP AN cAN CHON
+CAc DAP AN
+2.20
+B. 2.25
+2.10
+D: 2.05
+
+=== Q867 (img: 0867_q867_Question_867.png) ===
+CAU HOI
+How many comparisons are needed to search for the word "hoa" in the binary search tree for the
+sentence "Canh le trang diem mot vai bong hoa" ?
+56 DAP AN cAN CHON
+CAc DAP AN
+A 2
+None of the other choices is correct
+E 4
+
+=== Q868 (img: 0868_q868_Question_868.png) ===
+CAU HOI
+Find the value of the prefix notation
+3 + 3
+1 1
+56 DAP AN cAN CHON
+CAc DAP AN
+48
+B. 180
+C. 78
+AUS
+D. 396
+None of the other choices is correct
+
+=== Q869 (img: 0869_q869_Question_869.png) ===
+CAU HOI
+Find the prefix notation for the expression
+a/b + (c - d) *
+56 DAP AN cAN CHON
+CAc DAP AN
+{abted-e"
+None of the other choices is correct
++Jab"-
+cde
+ab/cd-e*+
+
+=== Q870 (img: 0870_q870_Question_870.png) ===
+CAU HOI
+Find the value of the prefix expression
++_ 13
+12
+3 /
+56 DAP AN cAN CHON
+CAc DAP AN
+A 4
+B. 3
+FUS
+C. 5
+
+=== Q871 (img: 0871_q871_Question_871.png) ===
+fuoverflow
+(Choose
+answer)
+Ifwe do breath-first search to build a spanning tree stalting
+from *g
+what are the last 3 edges we will add to the tree?
+(See picture)
+a
+We supposethat at each stage
+if we have many choices
+we
+A. af; bc; de
+will visit the vertices in the reverse alphabet order (for
+B. de;cd, bf
+example; we
+visit 'b' before
+a' if there are two choices
+af; bc;, df
+and *b' ).
+
+D: cd; bc; de
+E: cd; bc, af
+F cd, bc; de
+FUOI
+FUO
+FUOVERFLOWCOM
+will
+
+=== Q872 (img: 0872_q872_Question_872.png) ===
+fuoverflow
+Howmanynon-isomorphic spanning trees does the following
+(Choose
+answer)
+graph have?
+(See picture)
+A. 2
+
+B. 3
+
+E: 7
+F 8
+HUO
+FUO
+FUOVERFLOWCOM
+
+=== Q873 (img: 0873_q873_Question_873.png) ===
+fuoverflow
+(Choose
+answer)
+Given a graph G as shown below.
+(See picture)
+A. a,b,€, e,g,h;d, f
+
+B.a,b,C, e, f,d,g,h
+C.a,b,€,d,e; f,g,h
+
+D.a,b,€,d,e,g, f,h
+What is the order of vertices traversed by Depth First Search algorithm
+from the vertex c?
+Assume that at each step, if there are more than one choice then the vertex is
+chosen in the alphabetical order:
+FUO
+FUO
+FUOVERFLOWCOM
+
+=== Q874 (img: 0874_q874_Question_874.png) ===
+fuoverflow
+(Choose
+answer)
+What is the height of spanning tree obtained from Wioo by the Depth-first
+search, starting at the vertex of degree 1002
+(See picture)
+A. 99
+
+B. 100
+
+D. 2
+E: 0
+F None of the choices is correct
+U@
+FUO
+FUOVERFLOWCOM
+
+=== Q875 (img: 0875_q875_Question_875.png) ===
+fuoverflow
+Use Prim's algorithm to find the minimum spanningtree for
+(Choose
+answer)
+the given weighted graph with the first edges {A. C}. Assume
+the veitices are ordered alphabetically
+(See picture)
+{ACKA,BXX{B,EXA,DXDFX{EG}
+a
+B. {A,C}X{DF} B,E}{ADHA,BH{EG}
+{AC}XA,B}A,DHB,EX{D,FX{EG}
+
+D. {ACHA,DHA BX{B,E}{DFK{EG}
+FUO
+FUO
+FUOVERFLOWCOM
+that
+
+=== Q876 (img: 0876_q876_Question_876.png) ===
+fuoverflow
+Find thetotal weight ofa minimum spanning tree in the
+(Choose
+answer)
+following undirected weighted graph _
+(See picture)
+
+R
+Ao
+B. 30
+C.27
+
+D. 29
+E: 31
+A4
+#
+FUO)
+FUO
+FUOVERFLOWCOM
+
+=== Q877 (img: 0877_q877_Question_877.png) ===
+fuoverflow
+Consider the following weighted graph
+(Choose
+answer)
+(See picture)
+{C,EXXC,G}{A,BHXA ,D}{FE} {D,G}
+
+B. {A,BHA DHXG,C}{C,E}D,G}{C,F}
+{C,G}{A,DHA BXC,EX {B,G}{C,F}
+
+D. {ABHA{A,DX{G,C}{C,E} {DEHXC,F}
+FUO
+Which one of the
+following is NOT the sequence of edges
+added to the minimum spanning tree
+Kiuskal $
+algorithm?
+FUO
+FUOVERFLOWCOM
+using
+
+=== Q878 (img: 0878_q878_Question_878.png) ===
+fuoverflow
+(Choose
+answer)
+Which
+graph is bipartite?
+A. Graph 2
+
+C6
+B. None of the other choices is correct
+Graph
+Graph 2
+Graph 3
+Graph
+
+Graph 3
+FUO
+FUO
+FUOVERFLOWCOM
+
+=== Q879 (img: 0879_q879_Question_879.png) ===
+CAU HOI
+A complete bipartite graph with 15 edges has
+80 DAP AN CAN CHON
+CAc DAP AN
+vertices
+8 vertices
+vertices
+10 vertices
+None of the other choices
+HUS
+
+=== Q880 (img: 0880_q880_Question_880.png) ===
+fuoverflow
+(Choose
+answer)
+How many connected components in the
+B.3
+
+FUOI
+
+D. 2
+E. 13
+F None of the other choices is correct
+FUO
+FUOVERFLOWCOM
+graph?
+

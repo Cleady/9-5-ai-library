@@ -1,0 +1,591 @@
+=== Q881 (img: 0881_q881_Question_881.png) ===
+CAU HỎl
+Find the maximum number of internal vertices of a full 3-ary tree of height 3.
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+A. 13
+Fjo
+B. 17
+C. 19
+D. 21
+
+=== Q882 (img: 0882_q882_Question_882.png) ===
+CAU HỎl
+To encode
+message consisting of only the letters {a, b,
+n; S, t}, we want to use the following
+prefix coding scheme
+10, b: 01, i: 001, n: 110, s: 1111, t: (to be determined)
+Which of the following bit string could be used to encode the letter t?
+S6 ĐÁP ÁN CÁN CHON
+CÁC ĐÁP ÁN
+A. 0001
+111
+100
+None of the other choices is correct
+Fuo
+
+=== Q883 (img: 0883_q883_Question_883.png) ===
+fuoverflow
+(Choose
+answer)
+Find the inorder traversal of the tree
+A.e =h =
+=n = s
+~y =t - m
+
+B. e 
+c =h =a
+n = m = $ = t = y
+c =h =n =
+m =s -t -y -a
+
+D. a
+e =h
+m = n = t = s = y
+None of the other choices is correct
+FUo
+FUO
+FUOVERFLOWCOM
+
+=== Q884 (img: 0884_q884_Question_884.png) ===
+CAU HỎl
+How many edges must be removed from
+connected graph with 5 vertices
+8 edges to
+produce a spanning tree?
+sỐ ĐÁP ÁN CÀN CHON
+CẢC ĐÁP ÁN
+A. 3
+B. 4
+Fvo
+and
+
+=== Q885 (img: 0885_q885_Question_885.png) ===
+CAU HỎl
+How many positive integers between 100
+999, inclusive, that are NOT divisible by both 7
+and 11?
+sỐ ĐÁP ÁN CÀN CHON
+CẢC ĐÁP ÁN
+889
+901
+899
+D. 911
+and
+
+=== Q886 (img: 0886_q886_Question_886.png) ===
+fuoverflow
+There are 50 questions, and your progress of answering is
+Answer
+(Choose
+answer)
+(See picture)
+What is the shortest
+between G and A?
+G-F-C-A
+B
+B G-E-A
+G-B-A
+G-D-B-A
+Back
+Next
+G
+8
+3
+7
+F
+5
+PUO
+FUOsh
+the exam
+FUOVERFLOWCOM
+Q
+path
+
+=== Q887 (img: 0887_q887_Question_887.png) ===
+CAU HỎl
+Find the exponent of 2 in the prime factorization of 204.
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+u |
+A. 18
+B. 20
+C. 16
+D. 17
+E 22
+
+=== Q888 (img: 0888_q888_Question_888.png) ===
+CAU HỎl
+A formula for the sum of the first n even positive integers is
+(i) n(n + 1)
+Fjo
+(n + 1)2
+(iii) (n _ 1)2
+(iv) 2n2
+56 ĐÁP ÁN CAN
+CAC ĐÁP ÁN
+B. (iii)
+CHON
+
+=== Q889 (img: 0889_q889_Question_889.png) ===
+CAU HỎl
+If C is a subset of B and B is a subset of 4
+then the cardinality of AU BUC is equal to
+sỐ ĐÁP ÁN CÀN CHON
+CẢC ĐÁP ÁN
+Cardinality of €
+Cardinality of A
+None of the other choices is correct
+Cardinality of B
+
+=== Q890 (img: 0890_q890_Question_890.png) ===
+CAU HỎl
+Find a recursive definition for the set of all integers not divisible by 3.
+(i) 1 € S,if a € S then a + 3 € S,a = 3 € $
+(ii) 1 € S,if a € $ then a + 3 € $
+(iii) 1,2 € S,if a € $ then a + 3 € $
+(iv) 1,2 € S,if a € S then a + 3 € S,a - 3 € $
+Fjo
+56 ĐÁP ÁN CAN
+CAC ĐÁP ÁN
+None of the other choices is correct
+E (iii)
+CHON
+
+=== Q891 (img: 0891_q891_Question_891.png) ===
+CAU HỎl
+Find the least integer n such that f (z)
+Hogf
+is O(r")
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+A. 7
+B. 5
+Fuo
+
+=== Q892 (img: 0892_q892_Question_892.png) ===
+CAU HỎl
+Find the value of the prefix expression
+* + 2+ 2 1 2+ 2 2 2
+sỐ ĐÁP ÁN CÀN CHON
+CẢC ĐÁP ÁN
+None of the other choices is correct
+B. 22
+Fuo)
+C. 20
+D. 36
+40
+
+=== Q893 (img: 0893_q893_Question_893.png) ===
+CAU HỎl
+Let {2n} be a sequence of pseudorandom numbers such that
+I0 = 2,
+In+l
+mod 11
+for n 2 0
+Find the least positive integer k such that zk
+10.
+SỐ ĐÁP ÁN CÀN CHON
+
+CAC ĐAP AN
+A. 2
+B. 10
+None of the other choices is correct
+E. 5
+31n
+
+=== Q894 (img: 0894_q894_Question_894.png) ===
+CAU HỎl
+What is the complexity of the following algorithm?
+procedure
+POLYNOMIAL (€ ,
+integers)
+power
+for
+:=
+power
+power
+power
+return
+sỐ ĐÁP ÁN CÀN CHON
+CAC ĐAP AN
+Linear complexity
+Polynomial complexity
+Constant complexity
+Logarithmic complexity
+40 /
+a 1 /
+
+=== Q895 (img: 0895_q895_Question_895.png) ===
+fuoverflow
+There are 50 questions, and your progress of answering is
+Answer
+(Choose
+answer)
+
+How many vertices in the strongly connected
+component of maximal number of vertices in the given
+graph?
+None of the other choices is correct
+D.
+Back
+Next
+FUOsh
+the exam
+FUOVERFLOWCOM
+JQ: 28
+
+=== Q896 (img: 0896_q896_Question_896.png) ===
+CAU HỎl
+Which of the following is a tautology?
+i. (p ^9) = (p
+ii. (p v 9) = (p = 9)
+SỐ ĐÁP ÁN CÀN CHON
+CAC ĐAP AN
+A. (i)
+Fuo
+None of the other choices is correct
+Both (i) and
+
+=== Q897 (img: 0897_q897_Question_897.png) ===
+CAU HỎl
+In the graph W1o, how many edges in the longest simple circuit?
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+A. 10
+1re '
+C. 20
+None of the other choices is correct
+E 12
+
+=== Q898 (img: 0898_q898_Question_898.png) ===
+CAU HỎl
+Let
+C(z) = "xis a student" ,
+D(z) = "x studies Discrete Mathematics'
+where the domain of x consists of all people.
+Translate the sentence into a logical expression
+Every student studies Discrete Mathematics'
+Vz(C(z)
+D(z))
+Vz(C(z) ^ D(z))
+(iii) Hz(C() + D(z))
+(iv) Hz(C(z) ^ D(z))
+56 ĐÁP ÁN CAN
+CAC ĐÁP ÁN
+Avo
+CHON
+
+=== Q899 (img: 0899_q899_Question_899.png) ===
+CAU HỎl
+Let 4 = {1,2,a} Find the power set of A.
+S6 ĐÁP ÁN CÁN CHON
+Fuo
+CAC ĐÁP ÁN
+A. {{1}, {2}, {a} {1,2}, {1,a}, {2,a}, {1,2,a}}
+B. {{1,2,0}}
+{0, {1}, {2}, {a}, {1, 2}, {1,a}, {2,a}, {1,2,a}}
+D. {0, {1}, {2}, {a}}
+
+=== Q900 (img: 0900_q900_Question_900.png) ===
+CAU HỎl
+Which argument is NOT valid?
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+A. Any hardworking student gets good result in class
+An did not get good result in class. Therefore An
+was not working hard.
+B. Anyone in class understands logics. An is
+student in class. Therefore An understands logics
+computer science major must take Discrete Mathematics
+An is taking Discrete Mathematics
+Therefore An is
+computer science major .
+auo
+student of FPT university lives in the dorm. An is living in
+house. Therefore An is not
+student
+of FPT university.
+Any
+Any _
+
+=== Q901 (img: 0901_q901_Question_901.png) ===
+CAU HỎl
+Find the double summation
+i=1 j=i
+S0 ĐÁP ÁN CAN
+CAC ĐÁP ÁN
+A. 10
+avo
+B. 40
+C. 20
+D. 30
+E 50
+CHON
+
+=== Q902 (img: 0902_q902_Question_902.png) ===
+CAU HỎl
+How many divisions are needed when using Euclidean algorithm to find the greatest common
+divisor of 6468 and 3135
+sỐ ĐÁP ÁN CÀN CHON
+CẢC ĐÁP ÁN
+A. 4
+B. 5
+
+=== Q903 (img: 0903_q903_Question_903.png) ===
+CAU HỎl
+Compute 1011001 XOR 0111011
+S6 ĐÁP ÁN CÁN CHON
+Fjo
+CAC ĐÁP ÁN
+A. 1100001
+None of the other choices is correct
+c. 1100110
+D. 1100010
+
+=== Q904 (img: 0904_q904_Question_904.png) ===
+CAU HỎl
+Let P(z) be
+propositional function on {a,b, c}. Which statements are propositions?
+(i) P(c)
+Fuo
+HzP(z)
+~P(a) v P(b)
+sỐ ĐÁP ÁN CẦN CHON
+CÁC ĐÁP ÁN
+and (ii)
+B. (ii)
+D.  (i), (ii) and (iii)
+E (iii)
+None of the other choices is correct
+
+=== Q905 (img: 0905_q905_Question_905.png) ===
+CAU HỎl
+Let F(z) = "xis a student of the Business department" ,
+J(z) = "x knows the computer language Java" ,
+R(r) = "xcan speak Russian"
+The domain consists of all students of the university .
+Express the sentence into
+ logical expression
+"Some student of the Bussiness department either can speak Russian or knows Java"
+Vz(F(z)
+(J(z) v R(z)))
+Vz(F(z)
+(J(z) ^ R(z)))
+Fvo
+Iz(F(z) ^ (J(z) v R(z)))
+(iv) Hz(F(z) v (J(z) v R(z)))
+56 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+None of the other choices
+E (iv)
+
+=== Q906 (img: 0906_q906_Question_906.png) ===
+CAU HỎl
+Let U = {a,b,c,d,e, f,g,h, i,j}
+Given the subsets 4 =
+{a,c,d,e,i} B = {a,f,g,h,j} The bit string representing the union
+of A and B is
+sỐ ĐÁP ÁN CÀN CHON
+Jo
+CAC ĐAP AN
+11 0111 1111
+10 1111 1111
+C. 10 1011 1111
+D. 10 1111 1011
+None of the other choices
+
+=== Q907 (img: 0907_q907_Question_907.png) ===
+CAU HỎl
+o
+Let A, B be sets such that |Bl
+JAL + 1. Assume that the set A
+B has 90 elements. Find |AL.
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+None of the other choices is correct
+D. 10
+E 12
+
+=== Q908 (img: 0908_q908_Question_908.png) ===
+CAU HỎl
+Let X
+{1,2,3,4,5}, Y = {0,3,6,9} z = {0,2,4,6,8}
+Fvo
+Which of the following sets has the maximal cardinality?
+sỐ ĐÁP ÁN CÀN CHON
+CẢC ĐÁP ÁN
+A. X _ Y
+B. Y _ 2
+c. 2 _ X
+
+=== Q909 (img: 0909_q909_Question_909.png) ===
+CAU HỎl
+Find 2 + 22 + 23 +
+4 29
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+A. 1021
+Fvo
+B. 1022
+1023
+1024
+
+=== Q910 (img: 0910_q910_Question_910.png) ===
+CAU HỎl
+Find gcd(899,941) .
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+A. 13
+B. 17
+C. 29
+D. 31
+Fjo
+None of the other choices is correct
+
+=== Q911 (img: 0911_q911_Question_911.png) ===
+CAU HỎl
+Convert 11101 in binary representation to base 16 representation.
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+A. 1D
+B. E1
+C. IE
+Fuo
+D. D1
+
+=== Q912 (img: 0912_q912_Question_912.png) ===
+CAU HỎl
+Suppose that f (n) is defined recursively by:
+f(0) = 3,
+f(n + 1) = 2f(n) + 3,n = 0,1,2,
+Find f (1), f(2), f(3).
+Fjo
+S6 ĐÁP ÁN CÁN CHON
+CÁC ĐÁP ÁN
+A 9,21,45
+B. 12,21,45
+c. 18,21, 45
+D. 24,45,93
+
+=== Q913 (img: 0913_q913_Question_913.png) ===
+CAU HỎl
+Fjo
+Suppose that f (n)
+2f (n/4) + 3n
+f(1) = 2 Find f (64).
+S6 ĐÁP ÁN CÁN CHON
+CAC ĐÁP ÁN
+352
+B. 420
+280
+None of the other choices is correct
+and
+
+=== Q914 (img: 0914_q914_Question_914.png) ===
+fuoverflow
+(Choose
+answer)
+(See picture)
+A. 5
+d
+
+D. 8
+FUo
+What is the sum of the numbers in the third row of the
+adjacency matrix; in the order ab,c,d of the given graph?
+FUO
+FUOVERFLOWCOM
+
+=== Q915 (img: 0915_q915_Question_915.png) ===
+CAU HỎl
+Let G be an undirected graph with 3 vertices A, B, C and the incident matrix (in that order of
+vertices)
+8
+How many paths of length 2 from B to C?
+S0 ĐÁP ÁN CAN
+CAC ĐÁP ÁN
+A. 3
+B. 2
+vo
+None of the other choices is correct
+CHON
+
+=== Q916 (img: 0916_q916_Question_916.png) ===
+CAU HỎl
+Which graphs have Euler paths?
+K12
+(ii) K2
+(iii) K2.3
+Q3
+Fvo)
+sỐ ĐÁP ÁN CÀN CHON
+CẢC ĐÁP ÁN
+A. (i),
+and (iii)
+(iii)
+c. Only (iv)
+and (Iv)
+Only 
+
+=== Q917 (img: 0917_q917_Question_917.png) ===
+CAU HỎl
+There are 4 coins among which there is
+conterfeit coin that is either heavier or lighter than the
+others. With
+balance scale; how many weighings are needed to determine the conterfeit coin?
+(No need to determine the weight of the conterfeit coin).
+sỐ ĐÁP ÁN CÀN CHON
+CAC ĐAP AN
+None of the other choices is correct
+B. 2
+E 4
+
+=== Q918 (img: 0918_q918_Question_918.png) ===
+CAU HỎl
+Let L(z,y) be the statement "sin(r +y) = 1"
+Translate the statement into logical expression
+"For any 2 , there are more than one y so that sin(z + y) = 1"
+(i) Ez(VYyL(z,y))
+VrZy(L(z,y) ^Hy((y' + y) ^ L(z,y)))
+(iii) VzHy(L(z,y) ^ Vy((y' #y) + ~L(z,y)))
+VrHy(L(z,y) ^3y(y # y) ^ L(y;y)))
+sỐ ĐÁP ÁN CÀN CHON
+CẢC ĐÁP ÁN
+Fuo
+None of the other choices is correct
+
+=== Q919 (img: 0919_q919_Question_919.png) ===
+CAU HỎl
+If you study hard, you will graduate in time. However ,
+even you work hard; you can not get an
+excellent diploma unless you have effective studying strategies
+If you
+the excellent diploma;
+you can easily get good jobs after the graduation: Choose the best conclusion from these
+statements.
+56 ĐÁP ÁN CÁN CHON
+CÁC ĐÁP ÁN
+A. Studying hard is sufficient for getting an excellent diploma
+If you do not get the excellent diploma; ỉt is hard for you to get good jobs after the graduation:
+You can easily get good
+obs after the graduation only if you study hard and you have effective
+studying strategies
+If you study hard and have effective studying strategies; you can easily get good jobs after the
+graduation.
+get 5
+
+=== Q920 (img: 0920_q920_Question_920.png) ===
+CAU HỎl
+Let U = {0,1,2,3,4, 5,6, 7,8,9}. Let A, B be subsets of U. The bit string representation of A is
+1010101010, and the bit string representation of B is 0101010101. Find the intersection of A and
+sỐ ĐÁP ÁN CÀN CHON
+CAC ĐAP AN
+The empty set
+B. {0,3}
+Fvo
+{2,4, 7}
+D. U
+E {0,1,4,6,9}
+

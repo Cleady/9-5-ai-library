@@ -1,0 +1,118 @@
+/* ===================================================================
+   MAD101 STUDIO — DESIGN TOKENS
+   ui/tokens.css
+   DEFAULT: White Crisp Tech Theme (Tông trắng chủ đạo hiện đại)
+   =================================================================== */
+
+:root {
+  /* White Tech Theme (Default) */
+  --ui-bg-base: #f8fafc;
+  --ui-bg-surface: #ffffff;
+  --ui-bg-elevated: #f1f5f9;
+  --ui-bg-glass: rgba(255, 255, 255, 0.92);
+  --ui-bg-glass-card: rgba(255, 255, 255, 0.88);
+  --ui-bg-glass-hover: rgba(241, 245, 249, 0.95);
+
+  --ui-border-subtle: rgba(226, 232, 240, 0.9);
+  --ui-border-medium: rgba(203, 213, 225, 0.9);
+  --ui-border-strong: rgba(148, 163, 184, 0.6);
+  --ui-border-accent: rgba(249, 115, 22, 0.6);
+
+  --ui-text-primary: #0f172a;
+  --ui-text-secondary: #334155;
+  --ui-text-muted: #64748b;
+  --ui-text-inverse: #ffffff;
+
+  /* Accent & Vibrant Colors (Tech Orange #f97316) */
+  --ui-accent: #f97316;
+  --ui-accent-hover: #ea580c;
+  --ui-accent-light: rgba(249, 115, 22, 0.12);
+  --ui-accent-glow: 0 0 16px rgba(249, 115, 22, 0.25);
+
+  --ui-success: #16a34a;
+  --ui-success-bg: rgba(22, 163, 74, 0.1);
+  --ui-success-border: rgba(22, 163, 74, 0.35);
+
+  --ui-danger: #dc2626;
+  --ui-danger-bg: rgba(220, 38, 38, 0.1);
+  --ui-danger-border: rgba(220, 38, 38, 0.35);
+
+  --ui-warning: #d97706;
+  --ui-warning-bg: rgba(217, 119, 6, 0.1);
+  --ui-warning-border: rgba(217, 119, 6, 0.35);
+
+  --ui-info: #0284c7;
+  --ui-info-bg: rgba(2, 132, 199, 0.1);
+  --ui-info-border: rgba(2, 132, 199, 0.35);
+
+  /* Typography */
+  --ui-font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ui-font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, monospace;
+
+  --ui-text-xs: 0.75rem;    /* 12px */
+  --ui-text-sm: 0.875rem;   /* 14px */
+  --ui-text-base: 1rem;      /* 16px */
+  --ui-text-lg: 1.125rem;   /* 18px */
+  --ui-text-xl: 1.25rem;    /* 20px */
+  --ui-text-2xl: 1.5rem;    /* 24px */
+  --ui-text-3xl: 1.875rem;  /* 30px */
+  --ui-text-4xl: 2.25rem;   /* 36px */
+
+  /* Spacing */
+  --ui-space-1: 0.25rem;
+  --ui-space-2: 0.5rem;
+  --ui-space-3: 0.75rem;
+  --ui-space-4: 1rem;
+  --ui-space-5: 1.25rem;
+  --ui-space-6: 1.5rem;
+  --ui-space-8: 2rem;
+  --ui-space-10: 2.5rem;
+  --ui-space-12: 3rem;
+
+  /* Border Radii */
+  --ui-radius-sm: 6px;
+  --ui-radius-md: 10px;
+  --ui-radius-lg: 16px;
+  --ui-radius-xl: 22px;
+  --ui-radius-full: 9999px;
+
+  /* Glassmorphism & Shadows for Light theme */
+  --ui-blur-glass: blur(12px);
+  --ui-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --ui-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --ui-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --ui-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  --ui-grid-line: rgba(0, 0, 0, 0.035);
+  --ui-glow-color: rgba(249, 115, 22, 0.06);
+
+  --ui-touch-target: 44px;
+}
+
+/* Optional Dark Tech Theme (Khi bấm nút đổi theme) */
+[data-theme="dark"] {
+  --ui-bg-base: #060a12;
+  --ui-bg-surface: #0b1220;
+  --ui-bg-elevated: #111c33;
+  --ui-bg-glass: rgba(11, 18, 32, 0.85);
+  --ui-bg-glass-card: rgba(17, 28, 51, 0.7);
+  --ui-bg-glass-hover: rgba(26, 41, 71, 0.88);
+
+  --ui-border-subtle: rgba(148, 163, 184, 0.15);
+  --ui-border-medium: rgba(148, 163, 184, 0.25);
+  --ui-border-strong: rgba(148, 163, 184, 0.4);
+  --ui-border-accent: rgba(249, 115, 22, 0.5);
+
+  --ui-text-primary: #f8fafc;
+  --ui-text-secondary: #94a3b8;
+  --ui-text-muted: #64748b;
+  --ui-text-inverse: #0f172a;
+
+  --ui-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --ui-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --ui-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.55);
+  --ui-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.35);
+
+  --ui-grid-line: rgba(148, 163, 184, 0.04);
+  --ui-glow-color: rgba(249, 115, 22, 0.08);
+}

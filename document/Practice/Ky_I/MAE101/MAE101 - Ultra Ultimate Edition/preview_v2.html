@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f43f5e">
+  <title>MAE101 - Xem thử 20 câu LaTeX (v2)</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Styling for LaTeX preview and explanation components */
+    .latex-question-box {
+      font-size: 17px;
+      line-height: 1.65;
+      padding: 20px 24px;
+      background: var(--surface-muted);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      margin-top: 14px;
+    }
+    .latex-options {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .latex-option-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      cursor: pointer;
+      transition: border-color .15s ease, background .15s ease, transform .12s ease;
+      text-align: left;
+      font-size: 15px;
+    }
+    .latex-option-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .latex-option-card.selected {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .latex-option-card.correct {
+      border-color: var(--good);
+      background: var(--good-soft);
+      color: var(--good);
+      font-weight: 700;
+    }
+    .latex-option-card.wrong {
+      border-color: var(--bad);
+      background: var(--bad-soft);
+      color: var(--bad);
+    }
+    .option-badge {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      background: var(--surface-muted);
+      font-weight: 900;
+      font-size: 14px;
+    }
+    .latex-option-card.selected .option-badge {
+      background: var(--accent);
+      color: white;
+    }
+    .latex-option-card.correct .option-badge {
+      background: var(--good);
+      color: white;
+    }
+    .latex-option-card.wrong .option-badge {
+      background: var(--bad);
+      color: white;
+    }
+    .option-math {
+      flex: 1;
+      overflow-x: auto;
+    }
+    .explanation-panel {
+      margin-top: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      overflow: hidden;
+    }
+    .explanation-toggle {
+      width: 100%;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 0;
+      background: var(--surface-soft);
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 14px;
+      color: var(--accent-strong);
+    }
+    .explanation-content {
+      padding: 18px 22px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .explanation-step {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--line);
+    }
+    .explanation-step:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .orig-image-toggle {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 13px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .orig-image-toggle:hover {
+      color: var(--text);
+      border-color: var(--text);
+    }
+    .orig-image-container {
+      margin-top: 14px;
+      padding: 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius-md);
+      background: white;
+      text-align: center;
+    }
+    .orig-image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .status-pill {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .status-pill.verified {
+      background: var(--good-soft);
+      color: var(--good);
+    }
+    .status-pill.conflict {
+      background: var(--warn-soft);
+      color: var(--warn);
+    }
+    .status-pill.needs-image {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    mjx-container[jax="SVG"] {
+      display: inline-block;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      vertical-align: middle;
+    }
+    mjx-container[jax="SVG"][display="true"] {
+      display: block;
+      text-align: center;
+      margin: 0.85rem 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: false,
+        processEnvironments: true
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      startup: {
+        typeset: false
+      }
+    };
+  </script>
+  <script src="vendor/mathjax/tex-svg.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <a href="index.html" class="brand" aria-label="Về trang chủ chính">
+        <span class="brand-mark">M</span>
+        <span><strong>MAE101</strong><small>Xem thử v2 (LaTeX)</small></span>
+      </a>
+      <nav class="header-actions">
+        <a href="index.html" class="icon-button" style="text-decoration:none;">← <span>Về App chính</span></a>
+        <button class="icon-button" id="themeBtn" type="button">☾<span>Giao diện</span></button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="quiz-header">
+        <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+          <span class="quiz-title">Xem thử dữ liệu v2 (LaTeX chuẩn MathJax)</span>
+          <select id="datasetSelector" style="padding: 6px 12px; border-radius: 9px; border: 1px solid var(--line); font-weight: 700; background:var(--surface); color:var(--text);">
+            <option value="batch_01">Lô 1: Câu 1 - 40 (40 câu)</option>
+            <option value="batch_02">Lô 2: Câu 41 - 80 (40 câu)</option>
+            <option value="batch_03">Lô 3: Câu 81 - 120 (40 câu)</option>
+            <option value="batch_04">Lô 4: Câu 121 - 160 (40 câu)</option>
+            <option value="batch_05">Lô 5: Câu 161 - 200 (40 câu)</option>
+            <option value="batch_06">Lô 6: Câu 201 - 240 (40 câu)</option>
+            <option value="batch_07">Lô 7: Câu 241 - 280 (40 câu)</option>
+            <option value="batch_08">Lô 8: Câu 281 - 320 (40 câu)</option>
+            <option value="batch_09">Lô 9: Câu 321 - 360 (40 câu)</option>
+            <option value="batch_10">Lô 10: Câu 361 - 400 (40 câu)</option>
+            <option value="batch_11">Lô 11: Câu 401 - 440 (40 câu)</option>
+            <option value="batch_12">Lô 12: Câu 441 - 480 (40 câu)</option>
+            <option value="batch_13">Lô 13: Câu 481 - 520 (40 câu)</option>
+            <option value="batch_14">Lô 14: Câu 521 - 560 (40 câu)</option>
+            <option value="batch_15">Lô 15: Câu 561 - 600 (40 câu)</option>
+            <option value="batch_16">Lô 16: Câu 601 - 640 (40 câu)</option>
+            <option value="batch_18">Lô 18: Câu 681 - 720 (40 câu)</option>
+            <option value="batch_19">Lô 19: Câu 721 - 760 (40 câu)</option>
+            <option value="batch_20">Lô 20: Câu 761 - 800 (40 câu)</option>
+            <option value="batch_21">Lô 21: Câu 801 - 840 (40 câu)</option>
+            <option value="batch_22">Lô 22: Câu 841 - 880 (40 câu)</option>
+            <option value="batch_23">Lô 23: Câu 881 - 920 (40 câu)</option>
+            <option value="batch_24">Lô 24: Câu 921 - 960 (40 câu)</option>
+            <option value="batch_25">Lô 25: Câu 961 - 1000 (40 câu)</option>
+            <option value="batch_26">Lô 26: Câu 1001 - 1040 (40 câu)</option>
+            <option value="batch_27">Lô 27: Câu 1041 - 1080 (40 câu)</option>
+            <option value="batch_28">Lô 28: Câu 1081 - 1120 (40 câu)</option>
+            <option value="batch_29">Lô 29: Câu 1121 - 1131 (11 câu)</option>
+            <option value="test_20">Bộ test mẫu 20 câu</option>
+            <option value="all_v2" selected>Toàn bộ 1,131 câu v2 hoàn tất (100%)</option>
+          </select>
+        </div>
+        <div class="quiz-status">
+          <span class="autosave-status">✓ Dữ liệu cục bộ v2</span>
+        </div>
+      </div>
+
+      <div class="progress-track"><span id="progressBar" style="width: 5%;"></span></div>
+      <div class="quiz-metrics">
+        <span><b id="positionStat">1/20</b> Câu hiện tại</span>
+        <span><b id="verifiedStat">20/20</b> Đã kiểm chứng</span>
+        <span><b id="formulaStat">MathJax v3 SVG</b></span>
+      </div>
+
+      <div class="quiz-layout">
+        <article class="question-surface">
+          <div class="question-heading">
+            <div>
+              <span class="question-number" id="questionNumber">Câu 1</span>
+              <span class="topic-pill" id="questionTopic">Ma trận</span>
+              <span class="status-pill verified" id="questionStatus">Đã kiểm chứng</span>
+              <span class="status-pill needs-image hidden" id="needsImageBadge">Kèm hình vẽ</span>
+            </div>
+          </div>
+
+          <!-- LaTeX Question Text -->
+          <div class="latex-question-box" id="latexQuestion">Đang tải câu hỏi...</div>
+
+          <!-- Original Image Toggle -->
+          <div>
+            <button class="orig-image-toggle" id="toggleOrigImageBtn" type="button">
+              📷 <span id="toggleOrigImageText">Xem ảnh gốc để đối chiếu</span>
+            </button>
+            <div class="orig-image-container hidden" id="origImageContainer">
+              <img id="origImage" alt="Ảnh câu hỏi gốc">
+            </div>
+          </div>
+
+          <!-- LaTeX Options -->
+          <div class="latex-options" id="latexOptions"></div>
+
+          <!-- Answer Feedback -->
+          <div id="answerFeedback" class="answer-feedback hidden" role="status"></div>
+
+          <!-- Explanation Accordion -->
+          <div class="explanation-panel" id="explanationPanel">
+            <button class="explanation-toggle" id="toggleExplanationBtn" type="button">
+              <span>💡 Hướng dẫn giải chi tiết (từng bước)</span>
+              <span id="explanationArrow">▼</span>
+            </button>
+            <div class="explanation-content" id="explanationContent"></div>
+          </div>
+
+          <div class="question-actions">
+            <button class="button secondary" id="prevBtn" type="button">← Câu trước</button>
+            <button class="button secondary" id="checkBtn" type="button">Kiểm tra đáp án</button>
+            <button class="button primary" id="nextBtn" type="button">Câu sau →</button>
+          </div>
+        </article>
+
+        <aside class="question-navigator">
+          <div class="navigator-heading">
+            <div><span class="eyebrow">Mục lục 20 câu thử</span><h2>Danh sách câu</h2></div>
+          </div>
+          <div class="navigator-legend">
+            <span><i class="answered"></i>Đã làm</span>
+            <span><i class="current"></i>Hiện tại</span>
+          </div>
+          <div class="question-grid" id="questionGrid"></div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data/v2/test_20.js"></script>
+  <script src="data/v2/questions_v2.js"></script>
+  <script>
+    (async () => {
+      let questions = [];
+      let currentIndex = 0;
+      let selectedAnswers = {};
+      let checkedAnswers = {};
+      let showOrigImage = false;
+      let showExplanation = true;
+
+      const $ = (id) => document.getElementById(id);
+      const $$ = (sel) => [...document.querySelectorAll(sel)];
+
+      function loadDataset(name) {
+        if (name === 'batch_01') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 1 && q.id <= 40 && q.question);
+          }
+        } else if (name === 'batch_02') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 41 && q.id <= 80 && q.question);
+          }
+        } else if (name === 'batch_03') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 81 && q.id <= 120 && q.question);
+          }
+        } else if (name === 'batch_04') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 121 && q.id <= 160 && q.question);
+          }
+        } else if (name === 'batch_05') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 161 && q.id <= 200 && q.question);
+          }
+        } else if (name === 'batch_06') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 201 && q.id <= 240 && q.question);
+          }
+        } else if (name === 'batch_07') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 241 && q.id <= 280 && q.question);
+          }
+        } else if (name === 'batch_08') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 281 && q.id <= 320 && q.question);
+          }
+        } else if (name === 'batch_09') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 321 && q.id <= 360 && q.question);
+          }
+        } else if (name === 'batch_10') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 361 && q.id <= 400 && q.question);
+          }
+        } else if (name === 'batch_11') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 401 && q.id <= 440 && q.question);
+          }
+        } else if (name === 'batch_12') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 441 && q.id <= 480 && q.question);
+          }
+        } else if (name === 'batch_13') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 481 && q.id <= 520 && q.question);
+          }
+        } else if (name === 'batch_14') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 521 && q.id <= 560 && q.question);
+          }
+        } else if (name === 'batch_15') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 561 && q.id <= 600 && q.question);
+          }
+        } else if (name === 'batch_16') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 601 && q.id <= 640 && q.question);
+          }
+        } else if (name === 'batch_17') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 641 && q.id <= 680 && q.question);
+          }
+        } else if (name === 'batch_18') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 681 && q.id <= 720 && q.question);
+          }
+        } else if (name === 'batch_19') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 721 && q.id <= 760 && q.question);
+          }
+        } else if (name === 'batch_20') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 761 && q.id <= 800 && q.question);
+          }
+        } else if (name === 'batch_21') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 801 && q.id <= 840 && q.question);
+          }
+        } else if (name === 'batch_22') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 841 && q.id <= 880 && q.question);
+          }
+        } else if (name === 'batch_23') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 881 && q.id <= 920 && q.question);
+          }
+        } else if (name === 'batch_24') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 921 && q.id <= 960 && q.question);
+          }
+        } else if (name === 'batch_25') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 961 && q.id <= 1000 && q.question);
+          }
+        } else if (name === 'batch_26') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 1001 && q.id <= 1040 && q.question);
+          }
+        } else if (name === 'batch_27') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 1041 && q.id <= 1080 && q.question);
+          }
+        } else if (name === 'batch_28') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 1081 && q.id <= 1120 && q.question);
+          }
+        } else if (name === 'batch_29') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.id >= 1121 && q.id <= 1131 && q.question);
+          }
+        } else if (name === 'test_20') {
+          if (Array.isArray(window.TEST_20_QUESTIONS)) {
+            questions = window.TEST_20_QUESTIONS;
+          }
+        } else if (name === 'all_v2') {
+          if (Array.isArray(window.MAE_QUESTIONS_V2)) {
+            questions = window.MAE_QUESTIONS_V2.filter(q => q.question);
+          }
+        }
+        currentIndex = 0;
+        selectedAnswers = {};
+        checkedAnswers = {};
+        renderCurrent();
+      }
+
+      loadDataset('all_v2');
+      $('datasetSelector').addEventListener('change', (e) => {
+        loadDataset(e.target.value);
+      });
+
+      function showToast(msg) {
+        const toast = $('toast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2200);
+      }
+
+      function applyTheme(theme) {
+        const val = theme === 'dark' ? 'dark' : 'light';
+        document.documentElement.dataset.theme = val;
+        localStorage.setItem('mae101_preview_theme', val);
+        $('themeBtn').firstChild.textContent = val === 'dark' ? '☀' : '☾';
+      }
+
+      $('themeBtn').addEventListener('click', () => {
+        const cur = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        applyTheme(cur);
+      });
+      applyTheme(localStorage.getItem('mae101_preview_theme') || 'light');
+
+      function renderNavGrid() {
+        $('questionGrid').innerHTML = questions.map((q, idx) => {
+          const classes = ['question-jump'];
+          if (idx === currentIndex) classes.push('current');
+          if (checkedAnswers[q.id]) classes.push('answered');
+          return `<button type="button" class="${classes.join(' ')}" data-index="${idx}">${idx + 1}</button>`;
+        }).join('');
+
+        $$('.question-jump').forEach(btn => {
+          btn.addEventListener('click', () => {
+            currentIndex = Number(btn.dataset.index);
+            renderCurrent();
+          });
+        });
+      }
+
+      async function renderCurrent() {
+        const q = questions[currentIndex];
+        if (!q) return;
+
+        $('positionStat').textContent = `${currentIndex + 1}/${questions.length}`;
+        $('progressBar').style.width = `${((currentIndex + 1) / questions.length) * 100}%`;
+        $('questionNumber').textContent = `Câu ${currentIndex + 1} (Gốc #${q.id})`;
+        $('questionTopic').textContent = `${q.folder} · ${q.topic}`;
+
+        // Status badges
+        const statusEl = $('questionStatus');
+        statusEl.className = `status-pill ${q.answer_status}`;
+        statusEl.textContent = q.answer_status === 'verified' ? '✓ Đã kiểm chứng' : '⚠️ Cần đối chiếu';
+
+        const needsImgEl = $('needsImageBadge');
+        needsImgEl.classList.toggle('hidden', !q.needs_image);
+
+        // Render question text
+        const qBox = $('latexQuestion');
+        qBox.innerHTML = q.question.replace(/\n/g, '<br>');
+
+        // Render image
+        $('origImage').src = `assets/questions/${encodeURIComponent(q.image)}`;
+        if (q.needs_image) {
+          showOrigImage = true;
+        }
+        $('origImageContainer').classList.toggle('hidden', !showOrigImage);
+        $('toggleOrigImageText').textContent = showOrigImage ? 'Ẩn ảnh gốc' : 'Xem ảnh gốc để đối chiếu';
+
+        // Render options
+        const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+        const selected = selectedAnswers[q.id] || '';
+        const isChecked = Boolean(checkedAnswers[q.id]);
+
+        $('latexOptions').innerHTML = q.options.map((optText, optIdx) => {
+          const letter = letters[optIdx];
+          const classes = ['latex-option-card'];
+          if (selected === letter) classes.push('selected');
+          if (isChecked && q.answer === letter) classes.push('correct');
+          if (isChecked && selected === letter && q.answer !== letter) classes.push('wrong');
+
+          return `
+            <div class="${classes.join(' ')}" data-letter="${letter}">
+              <div class="option-badge">${letter}</div>
+              <div class="option-math">${optText}</div>
+            </div>
+          `;
+        }).join('');
+
+        $$('.latex-option-card').forEach(card => {
+          card.addEventListener('click', () => {
+            if (checkedAnswers[q.id]) return;
+            selectedAnswers[q.id] = card.dataset.letter;
+            renderCurrent();
+          });
+        });
+
+        // Feedback
+        const feedback = $('answerFeedback');
+        if (isChecked) {
+          const isCorrect = selected === q.answer;
+          feedback.className = `answer-feedback ${isCorrect ? 'good' : 'bad'}`;
+          feedback.innerHTML = isCorrect
+            ? `✓ <strong>Chính xác!</strong> Đáp án đúng là <strong>${q.answer}</strong>.`
+            : `✕ <strong>Chưa đúng!</strong> Bạn chọn <strong>${selected || 'Chưa chọn'}</strong>, đáp án đúng là <strong>${q.answer}</strong>.`;
+        } else {
+          feedback.className = 'answer-feedback hidden';
+          feedback.innerHTML = '';
+        }
+
+        // Explanation
+        const expContent = $('explanationContent');
+        expContent.innerHTML = q.explanation.map(step => `
+          <div class="explanation-step">${step.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</div>
+        `).join('');
+
+        $('explanationContent').classList.toggle('hidden', !showExplanation);
+        $('explanationArrow').textContent = showExplanation ? '▲' : '▼';
+
+        // Prev/Next buttons
+        $('prevBtn').disabled = currentIndex === 0;
+        $('nextBtn').textContent = currentIndex === questions.length - 1 ? 'Hết danh sách' : 'Câu sau →';
+
+        renderNavGrid();
+
+        // Typeset MathJax on the modified elements
+        if (window.MathJax && window.MathJax.typesetPromise) {
+          try {
+            await MathJax.typesetPromise([qBox, $('latexOptions'), expContent]);
+          } catch (err) {
+            console.error('MathJax typeset error:', err);
+          }
+        }
+      }
+
+      // Event listeners
+      $('toggleOrigImageBtn').addEventListener('click', () => {
+        showOrigImage = !showOrigImage;
+        $('origImageContainer').classList.toggle('hidden', !showOrigImage);
+        $('toggleOrigImageText').textContent = showOrigImage ? 'Ẩn ảnh gốc' : 'Xem ảnh gốc để đối chiếu';
+      });
+
+      $('toggleExplanationBtn').addEventListener('click', () => {
+        showExplanation = !showExplanation;
+        $('explanationContent').classList.toggle('hidden', !showExplanation);
+        $('explanationArrow').textContent = showExplanation ? '▲' : '▼';
+      });
+
+      $('checkBtn').addEventListener('click', () => {
+        const q = questions[currentIndex];
+        if (!selectedAnswers[q.id]) {
+          showToast('Vui lòng chọn một đáp án trước khi kiểm tra.');
+          return;
+        }
+        checkedAnswers[q.id] = true;
+        showExplanation = true;
+        renderCurrent();
+      });
+
+      $('prevBtn').addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          renderCurrent();
+        }
+      });
+
+      $('nextBtn').addEventListener('click', () => {
+        if (currentIndex < questions.length - 1) {
+          currentIndex++;
+          renderCurrent();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        const key = e.key.toUpperCase();
+        if (['A', 'B', 'C', 'D', 'E', 'F'].includes(key)) {
+          const q = questions[currentIndex];
+          if (!checkedAnswers[q.id]) {
+            selectedAnswers[q.id] = key;
+            renderCurrent();
+          }
+        } else if (e.key === 'ArrowRight' || key === 'N') {
+          if (currentIndex < questions.length - 1) {
+            currentIndex++;
+            renderCurrent();
+          }
+        } else if (e.key === 'ArrowLeft' || key === 'P') {
+          if (currentIndex > 0) {
+            currentIndex--;
+            renderCurrent();
+          }
+        } else if (e.key === 'Enter') {
+          $('checkBtn').click();
+        }
+      });
+
+      renderCurrent();
+    })();
+  </script>
+</body>
+</html>

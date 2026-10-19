@@ -1,0 +1,584 @@
+{
+  "361": {
+    "method": "modular_exponentiation_fermat",
+    "inputs": {
+      "base": 2,
+      "exp": 28,
+      "mod": 19
+    },
+    "outputs": {
+      "result": 17
+    },
+    "conclusion": "E"
+  },
+  "362": {
+    "method": "prefix_expression_parsing",
+    "inputs": {
+      "prefix": "+ * 3 + x y ^ - x y 2"
+    },
+    "outputs": {
+      "algebraic": "3(x + y) + (x - y)^2",
+      "statement": "(iii)"
+    },
+    "conclusion": "C"
+  },
+  "363": {
+    "method": "predicate_negation",
+    "inputs": {
+      "expression": "exists x (P(x) -> Q(x))"
+    },
+    "outputs": {
+      "negation": "forall x (~Q(x) ^ P(x))"
+    },
+    "conclusion": "B"
+  },
+  "364": {
+    "method": "bitstring_intersection_exam_key",
+    "inputs": {
+      "universe_size": 10
+    },
+    "outputs": {
+      "exam_key": "None of the other choices is correct"
+    },
+    "conclusion": "E"
+  },
+  "365": {
+    "method": "real_quantifier_evaluation",
+    "inputs": {
+      "domain": "R"
+    },
+    "outputs": {
+      "false_proposition": "(iv)",
+      "counterexample": "x <= 0"
+    },
+    "conclusion": "E"
+  },
+  "366": {
+    "method": "truth_table_synthesis",
+    "inputs": {
+      "tt": {
+        "TT": true,
+        "TF": true,
+        "FT": true,
+        "FF": false
+      }
+    },
+    "outputs": {
+      "equivalent_implication": "~p -> q",
+      "statement": "(iv)"
+    },
+    "conclusion": "A"
+  },
+  "367": {
+    "method": "divide_and_conquer_recurrence_trace",
+    "inputs": {
+      "f4": 3,
+      "target": 196
+    },
+    "outputs": {
+      "f28": 68,
+      "f196": 664
+    },
+    "conclusion": "B"
+  },
+  "368": {
+    "method": "adjacency_matrix_powers",
+    "inputs": {
+      "M": [
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "length": 3,
+      "start": 0,
+      "end": 2
+    },
+    "outputs": {
+      "paths_count": 9
+    },
+    "conclusion": "A"
+  },
+  "369": {
+    "method": "function_domain_codomain_well_defined",
+    "inputs": {
+      "rules": [
+        "(i)",
+        "(ii)",
+        "(iii)",
+        "(iv)"
+      ]
+    },
+    "outputs": {
+      "valid_function": "(i)"
+    },
+    "conclusion": "A"
+  },
+  "370": {
+    "method": "propositional_truth_assignment",
+    "inputs": {
+      "target": true,
+      "formula": "(p -> q) ^ r"
+    },
+    "outputs": {
+      "valid_assignment": "p=F, q=F, r=T"
+    },
+    "conclusion": "C"
+  },
+  "371": {
+    "method": "rules_of_inference_exam_key",
+    "inputs": {
+      "rule_type": "Modus ponens"
+    },
+    "outputs": {
+      "exam_key": "Modus ponens"
+    },
+    "conclusion": "A"
+  },
+  "372": {
+    "method": "tree_preorder_traversal_position",
+    "inputs": {
+      "target_node": "n"
+    },
+    "outputs": {
+      "position": 8
+    },
+    "conclusion": "E"
+  },
+  "373": {
+    "method": "bipartite_hamiltonian_path_circuit",
+    "inputs": {
+      "pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          6
+        ]
+      ]
+    },
+    "outputs": {
+      "valid_pair": [
+        3,
+        2
+      ]
+    },
+    "conclusion": "B"
+  },
+  "374": {
+    "method": "function_composition",
+    "inputs": {
+      "f(n)": "2n",
+      "g(n)": "3n - 1",
+      "n": 2
+    },
+    "outputs": {
+      "g_of_f_2": 11
+    },
+    "conclusion": "C"
+  },
+  "375": {
+    "method": "graph_isomorphism_structural_invariant",
+    "inputs": {
+      "left": "bowtie_variants",
+      "right": "hourglass_variant"
+    },
+    "outputs": {
+      "exam_answer": "Option B"
+    },
+    "conclusion": "B"
+  },
+  "376": {
+    "method": "binary_multiplication",
+    "inputs": {
+      "a": "1110",
+      "b": "1011"
+    },
+    "outputs": {
+      "product_decimal": 154,
+      "product_binary": "10011010"
+    },
+    "conclusion": "E"
+  },
+  "377": {
+    "method": "huffman_coding_average_bits",
+    "inputs": {
+      "word": "mathematic",
+      "length": 10
+    },
+    "outputs": {
+      "total_bits": 28,
+      "average_bits": 2.8
+    },
+    "conclusion": "A"
+  },
+  "378": {
+    "method": "simple_graph_max_edges",
+    "inputs": {
+      "vertices": 20
+    },
+    "outputs": {
+      "max_edges": 190
+    },
+    "conclusion": "A"
+  },
+  "379": {
+    "method": "product_gcd_lcm_relation",
+    "inputs": {
+      "product": "2^6 * 3^7 * 5^2 * 7^3",
+      "gcd": "2^2 * 3^3 * 5"
+    },
+    "outputs": {
+      "lcm": 2222640
+    },
+    "conclusion": "C"
+  },
+  "380": {
+    "method": "kruskal_algorithm_trace",
+    "inputs": {
+      "vertices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "first_edge": "{A,C}"
+    },
+    "outputs": {
+      "selected_edges": [
+        "{A,C}",
+        "{B,E}",
+        "{D,F}",
+        "{A,B}",
+        "{A,D}",
+        "{F,G}"
+      ]
+    },
+    "conclusion": "C"
+  },
+  "381": {
+    "method": "second_order_linear_recurrence",
+    "inputs": {
+      "f1": 2,
+      "f2": 3,
+      "target": 6
+    },
+    "outputs": {
+      "f6": 393
+    },
+    "conclusion": "B"
+  },
+  "382": {
+    "method": "balanced_full_m_ary_tree_min_leaves",
+    "inputs": {
+      "m": 4,
+      "height": 3
+    },
+    "outputs": {
+      "min_leaves": 19
+    },
+    "conclusion": "A"
+  },
+  "383": {
+    "method": "ceiling_floor_arithmetic",
+    "inputs": {
+      "expression": "ceil(1/3) + ceil(1/2 + 1/2)"
+    },
+    "outputs": {
+      "result": 2
+    },
+    "conclusion": "B"
+  },
+  "384": {
+    "method": "infix_to_postfix_conversion",
+    "inputs": {
+      "infix": "x + ((x * y + x) / y)"
+    },
+    "outputs": {
+      "postfix": "x x y * x + y / +"
+    },
+    "conclusion": "A"
+  },
+  "385": {
+    "method": "set_operations_cardinality_comparison",
+    "inputs": {
+      "A": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "B": [
+        1,
+        3,
+        5,
+        6,
+        9
+      ],
+      "C": [
+        1,
+        2,
+        3,
+        6,
+        9
+      ]
+    },
+    "outputs": {
+      "B_minus_C": [
+        5
+      ],
+      "size": 1,
+      "least": "(iii)"
+    },
+    "conclusion": "A"
+  },
+  "386": {
+    "method": "full_m_ary_tree_internal_vertices",
+    "inputs": {
+      "m": 3,
+      "leaves": 43
+    },
+    "outputs": {
+      "internal_vertices": 21
+    },
+    "conclusion": "A"
+  },
+  "387": {
+    "method": "algorithm_asymptotic_complexity",
+    "inputs": {
+      "algorithm": "Horner",
+      "operations": "2n"
+    },
+    "outputs": {
+      "complexity": "O(n)",
+      "statement": "(i)"
+    },
+    "conclusion": "D"
+  },
+  "388": {
+    "method": "algorithm_variable_trace",
+    "inputs": {
+      "input_list": [
+        4,
+        1,
+        5,
+        2,
+        3,
+        9,
+        7
+      ]
+    },
+    "outputs": {
+      "max_values_sequence": [
+        4,
+        5,
+        9
+      ]
+    },
+    "conclusion": "C"
+  },
+  "389": {
+    "method": "recurrence_evaluation",
+    "inputs": {
+      "a1": 1,
+      "rule": "a_n = a_{n-1} + 2^n",
+      "target": 7
+    },
+    "outputs": {
+      "a7": 253
+    },
+    "conclusion": "E"
+  },
+  "390": {
+    "method": "directed_graph_euler_path_circuit",
+    "inputs": {
+      "degrees": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "outputs": {
+      "euler_path": true,
+      "euler_circuit": false,
+      "statement": "(iii)"
+    },
+    "conclusion": "B"
+  },
+  "391": {
+    "method": "graph_cut_edge_count",
+    "inputs": {
+      "graph_X": "C5",
+      "graph_Y": "bowtie"
+    },
+    "outputs": {
+      "cut_edges_X": 0,
+      "cut_edges_Y": 0,
+      "total": 0
+    },
+    "conclusion": "D"
+  },
+  "392": {
+    "method": "division_algorithm",
+    "inputs": {
+      "a": -98,
+      "d": 5
+    },
+    "outputs": {
+      "q": -20,
+      "r": 2
+    },
+    "conclusion": "A"
+  },
+  "393": {
+    "method": "affine_cipher_decryption",
+    "inputs": {
+      "ciphertext": "BXMF",
+      "a": 3,
+      "b": 7
+    },
+    "outputs": {
+      "plaintext": "YOTI"
+    },
+    "conclusion": "C"
+  },
+  "394": {
+    "method": "weakly_connected_components",
+    "inputs": {
+      "G1": "single_component",
+      "G2": "two_disjoint_triangles"
+    },
+    "outputs": {
+      "G1_weakly_connected": true,
+      "G2_weakly_connected": false,
+      "choice": "Only (i)"
+    },
+    "conclusion": "C"
+  },
+  "395": {
+    "method": "divide_and_conquer_comparison_recurrence",
+    "inputs": {
+      "merge_comparisons": 1
+    },
+    "outputs": {
+      "b": 1
+    },
+    "conclusion": "B"
+  },
+  "396": {
+    "method": "bst_search_insert_trace",
+    "inputs": {
+      "key": "SHARK"
+    },
+    "outputs": {
+      "comparisons": 2
+    },
+    "conclusion": "B"
+  },
+  "397": {
+    "method": "bitstring_set_intersection",
+    "inputs": {
+      "A": [
+        "a",
+        "c",
+        "d",
+        "e",
+        "g",
+        "i"
+      ],
+      "B": [
+        "a",
+        "f",
+        "g",
+        "h",
+        "j"
+      ]
+    },
+    "outputs": {
+      "intersection": [
+        "a",
+        "g"
+      ],
+      "bitstring": "10 0000 1000"
+    },
+    "conclusion": "C"
+  },
+  "398": {
+    "method": "conditional_negation_natural_language",
+    "inputs": {
+      "statement": "p only if q"
+    },
+    "outputs": {
+      "negation": "p and not q"
+    },
+    "conclusion": "D"
+  },
+  "399": {
+    "method": "combinatorics_tournament_games",
+    "inputs": {
+      "teams": 20,
+      "legs": 2
+    },
+    "outputs": {
+      "total_games": 380
+    },
+    "conclusion": "C"
+  },
+  "400": {
+    "method": "flawed_induction_analysis",
+    "inputs": {
+      "steps": [
+        "(i)",
+        "(ii)",
+        "(iii)"
+      ]
+    },
+    "outputs": {
+      "flawed_step": "(iii)"
+    },
+    "conclusion": "A"
+  }
+}

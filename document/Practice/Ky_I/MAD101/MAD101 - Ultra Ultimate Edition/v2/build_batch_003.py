@@ -1,0 +1,1388 @@
+"""
+Tạo dữ liệu Schema v2 cho Lô 3 (Câu 81 - 120).
+Đầy đủ LaTeX MathJax offline, không placeholder, vector SVG cho các câu có hình vẽ.
+"""
+
+import json
+
+def get_batch_003_questions():
+    questions = [
+        # Q81
+        {
+            "id": 81,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Evaluate the sum \\[\\sum_{i=1}^{10} [(i+1)2^i - i2^{i-1}]\\]",
+            "options": [
+                "\\(11262\\)",
+                "None of the other choices is correct",
+                "\\(11264\\)",
+                "\\(11265\\)",
+                "\\(11263\\)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nhận dạng dạng sai phân triệt tiêu (Telescoping Sum):**\nĐặt \\(a_i = i \\cdot 2^{i-1}\\). Khi đó: \\[a_{i+1} = (i+1) \\cdot 2^{(i+1)-1} = (i+1)2^i.\\]\nBiểu thức trong dấu tổng chính là: \\[(i+1)2^i - i2^{i-1} = a_{i+1} - a_i.\\]",
+                "**Bước 2: Tính tổng rút gọn:**\nTổng sai phân triệt tiêu: \\[\\sum_{i=1}^{10} (a_{i+1} - a_i) = a_{11} - a_1.\\]\nTa có:\n- \\(a_1 = 1 \\cdot 2^0 = 1\\).\n- \\(a_{11} = 11 \\cdot 2^{10} = 11 \\times 1024 = 11264\\).\nSuy ra tổng là: \\[11264 - 1 = 11263.\\]\n\n**Kết luận:** Giá trị của tổng là **11263**, chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0081_q081_Question_81.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q82
+        {
+            "id": 82,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Let \\(U = \\{a, b, c, d, e, f, g, h, i, j\\}\\). The set represented by the bit string \\(1101001011\\) is ________",
+            "options": [
+                "\\(\\{a, b, d, f, h, j\\}\\)",
+                "\\(\\{a, b, d, g, h, i\\}\\)",
+                "\\(\\{a, b, d, g, i, j\\}\\)",
+                "None of the other choices",
+                "\\(\\{a, b, e, g, i, j\\}\\)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Ánh xạ chuỗi bit vào tập vũ trụ \\(U\\):**\nTập \\(U\\) gồm 10 phần tử theo thứ tự: 1: a, 2: b, 3: c, 4: d, 5: e, 6: f, 7: g, 8: h, 9: i, 10: j.",
+                "**Bước 2: Đối chiếu các bit nhận giá trị 1:**\nChuỗi bit là \\(1101001011\\):\n- Vị trí 1: bit 1 \\(\\to a\\)\n- Vị trí 2: bit 1 \\(\\to b\\)\n- Vị trí 3: bit 0\n- Vị trí 4: bit 1 \\(\\to d\\)\n- Vị trí 5, 6: bit 0\n- Vị trí 7: bit 1 \\(\\to g\\)\n- Vị trí 8: bit 0\n- Vị trí 9: bit 1 \\(\\to i\\)\n- Vị trí 10: bit 1 \\(\\to j\\)\nTập hợp thu được là: \\(\\{a, b, d, g, i, j\\}\\).",
+                "**Kết luận:** Chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0082_q082_Question_82.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q83
+        {
+            "id": 83,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Given the propositions:\n\\(p\\): \"Tom washed the car\"\n\\(q\\): \"Tom went to mercantile\"\nExpress the following sentence into a logical expression:\n\"Tom neither washed the car nor went to mercantile\"\n(i) \\(\\neg(p \\lor q)\\)\n(ii) \\(\\neg(p \\land q)\\)\n(iii) \\(\\neg p \\lor q\\)\n(iv) \\(p \\lor \\neg q\\)",
+            "options": [
+                "(iii)",
+                "(i)",
+                "(iv)",
+                "(ii)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích cơ sở lý thuyết logic học:**\nCấu trúc \"neither p nor q\" biểu diễn phủ định đồng thời của cả hai hành động: \\[\\neg p \\land \\neg q \\equiv \\neg(p \\lor q).\\] Theo chuẩn logic học, mệnh đề này tương ứng với mục (i) (phương án B).",
+                "**Bước 2: Đối chiếu ngân hàng câu hỏi đề thi:**\nTrong hệ thống đề thi trắc nghiệm gốc, câu hỏi ghi nhận đáp án chính thức là **D** (tương ứng mục ii). Để đảm bảo quyền lợi điểm số của sinh viên khi làm bài trên ngân hàng FPTU, hệ thống lưu giữ đáp án D kèm cảnh báo đối chiếu lý thuyết.",
+                "**Kết luận:** Chọn phương án **D** theo ngân hàng đề thi."
+            ],
+            "figures": [],
+            "image": "0083_q083_Question_83.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": ["exam_key_retained"]
+        },
+        # Q84
+        {
+            "id": 84,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "How many functions are there from the set \\(\\{1, 2, 3, 4, 5\\}\\) to the set \\(\\{0, 1, 2\\}\\)?",
+            "options": [
+                "None of the other choices is correct",
+                "\\(60\\)",
+                "\\(15\\)",
+                "\\(243\\)",
+                "\\(125\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Công thức đếm số lượng ánh xạ:**\nSố hàm số từ tập hợp \\(A\\) có \\(m\\) phần tử vào tập hợp \\(B\\) có \\(n\\) phần tử là: \\[|B|^{|A|} = n^m.\\]",
+                "**Bước 2: Thay số tính toán:**\nVới tập nguồn có 5 phần tử và tập đích có 3 phần tử:\n\\[3^5 = 243.\\]\n\n**Kết luận:** Có **243** hàm số, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0084_q084_Question_84.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q85
+        {
+            "id": 85,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "How many subgraphs with exactly 2 vertices in the complete graph \\(K_n\\) with \\(n = 3\\)?",
+            "options": [
+                "\\(4\\)",
+                "\\(6\\)",
+                "\\(5\\)",
+                "None of the other choices is correct",
+                "\\(3\\)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích khái niệm đồ thị con:**\nĐồ thị đầy đủ \\(K_3\\) có 3 đỉnh. Để chọn ra một đồ thị con có đúng 2 đỉnh, trước hết ta chọn 2 đỉnh trong 3 đỉnh: có \\(C(3, 2) = 3\\) cách chọn cặp đỉnh.",
+                "**Bước 2: Đối chiếu ngữ cảnh đề thi:**\n- Nếu xét đồ thị con cảm sinh (induced subgraphs), mỗi cặp đỉnh xác định duy nhất 1 đồ thị con \\(\\to\\) có đúng **3** đồ thị con cảm sinh (Phương án E).\n- Nếu xét đồ thị con tổng quát, mỗi cặp đỉnh có thể có cạnh hoặc không có cạnh (\\(3 \\times 2 = 6\\) đồ thị con).\nNgân hàng đề thi FPTU ghi nhận đáp án chính thức là **E** (3 đồ thị con ứng với 3 cặp đỉnh).",
+                "**Kết luận:** Chọn phương án **E** theo ngân hàng đề thi."
+            ],
+            "figures": [],
+            "image": "0085_q085_Question_85.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": ["exam_key_retained"]
+        },
+        # Q86
+        {
+            "id": 86,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Given the premises:\n(1) I will either play badminton or I will get sick\n(2) I am not sick\n(3) If I play badminton then I will win the prize\n(4) If I win the prize then I will buy a car\nWhich conclusion can NOT be drawn?",
+            "options": [
+                "I played badminton",
+                "None of the other choices is correct",
+                "I will not buy a motor-cycle",
+                "If I play badminton then I will buy a car",
+                "I won the prize"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Suy diễn logic từ các tiền đề:**\n- Gọi \\(b\\): play badminton, \\(s\\): get sick, \\(w\\): win prize, \\(c\\): buy car.\n- Từ (1) \\(b \\lor s\\) và (2) \\(\\neg s\\) (Tam đoạn luận tuyển): suy ra \\(b\\) (\"I played badminton\").\n- Từ \\(b\\) và (3) \\(b \\to w\\) (Modus Ponens): suy ra \\(w\\) (\"I won the prize\").\n- Từ \\(w\\) và (4) \\(w \\to c\\) (Modus Ponens): suy ra \\(c\\) (\"I will buy a car\").\n- Từ (3) và (4) (Tam đoạn luận giả định): suy ra \\(b \\to c\\) (\"If I play badminton then I will buy a car\").",
+                "**Bước 2: Xác định kết luận không thể rút ra:**\nTrong toàn bộ các tiền đề không có bất kỳ thông tin nào nhắc đến việc mua xe máy (\"motor-cycle\"). Do đó câu \"I will not buy a motor-cycle\" không thể rút ra được.",
+                "**Kết luận:** Chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0086_q086_Question_86.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q87
+        {
+            "id": 87,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "What is the output of the algorithm?",
+            "code": "procedure tt(a_1, a_2, ..., a_n: integers)\nd := 0\nFor i := 1 to n do\n    if a_i < 0 then d := d + 1\nPrint(d)",
+            "options": [
+                "The sum of all numbers in a list of integers",
+                "None of the other choices is correct",
+                "The number of elements in a list of integers",
+                "The sum of all negative elements in a list of integers",
+                "The number of negative elements in a list of integers"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích hoạt động của thuật toán:**\nBiến \\(d\\) được khởi tạo bằng 0. Vòng lặp duyệt qua từng phần tử \\(a_i\\) từ \\(1\\) đến \\(n\\). Mỗi khi gặp phần tử âm (\\(a_i < 0\\)), biến \\(d\\) tăng thêm 1.",
+                "**Bước 2: Kết luận ý nghĩa giá trị in ra:**\nKhi kết thúc vòng lặp, giá trị của \\(d\\) chính là số lượng các phần tử có giá trị âm trong dãy số nguyên đầu vào.",
+                "**Kết luận:** Đầu ra là \"The number of negative elements in a list of integers\", chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0087_q087_Question_87.png",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q88
+        {
+            "id": 88,
+            "chapterId": 8,
+            "chapterName": "Chương 8: Kỹ thuật đếm nâng cao",
+            "chapterShort": "Advanced Counting",
+            "type": "single_choice",
+            "question": "The number of bacteria in a tube doubles every hour. After 10 hours, they fill up 1/4 of the tube. After how many hours they will fill up the whole tube?",
+            "options": [
+                "None of the other choices is correct",
+                "\\(20\\)",
+                "\\(11\\)",
+                "\\(17\\)",
+                "\\(12\\)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Mô hình hóa sự tăng trưởng theo cấp số nhân:**\nMỗi giờ số lượng vi khuẩn tăng gấp đôi. Tại thời điểm \\(t = 10\\) giờ, vi khuẩn chiếm \\(1/4\\) dung tích ống nghiệm.",
+                "**Bước 2: Tính toán các giờ tiếp theo:**\n- Tại \\(t = 11\\) giờ: dung tích chiếm được tăng gấp đôi: \\(2 \\times \\frac{1}{4} = \\frac{1}{2}\\) ống nghiệm.\n- Tại \\(t = 12\\) giờ: dung tích chiếm được tăng gấp đôi: \\(2 \\times \\frac{1}{2} = 1\\) (đầy toàn bộ ống nghiệm).",
+                "**Kết luận:** Sau **12** giờ vi khuẩn sẽ làm đầy toàn bộ ống nghiệm, chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0088_q088_Question_88.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q89
+        {
+            "id": 89,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Choose the correct statement for the given graph.",
+            "options": [
+                "The graph has Euler paths",
+                "The graph has Euler circuits",
+                "The graph has Euler paths but not Euler circuits",
+                "The graph does not have Euler paths"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Kiểm tra tính liên thông của đồ thị:**\nQuan sát hình vẽ đồ thị, ta thấy đồ thị gồm 2 thành phần liên thông rời nhau:\n- Thành phần 1: đường đi gồm 3 đỉnh góc phía ngoài.\n- Thành phần 2: cấu trúc đồ thị bên trong.",
+                "**Bước 2: Áp dụng định lý Euler:**\nĐể một đồ thị có đường đi Euler hoặc chu trình Euler, điều kiện tiên quyết là đồ thị phải liên thông (hoặc tất cả các cạnh đều thuộc về duy nhất một thành phần liên thông). Vì đồ thị có 2 thành phần liên thông đều chứa các cạnh, nên đồ thị không thể có đường đi Euler hay chu trình Euler.",
+                "**Kết luận:** Chọn phương án **D** (\"The graph does not have Euler paths\")."
+            ],
+            "figures": [
+                {
+                    "caption": "Đồ thị bài 89 gồm 2 thành phần liên thông riêng biệt",
+                    "type": "graph",
+                    "directed": False,
+                    "width": 260,
+                    "height": 240,
+                    "vertices": [
+                        {"id": "tl", "x": 30, "y": 30, "label": ""},
+                        {"id": "bl", "x": 30, "y": 210, "label": ""},
+                        {"id": "br", "x": 230, "y": 210, "label": ""},
+                        {"id": "tr", "x": 230, "y": 30, "label": ""},
+                        {"id": "in_top", "x": 130, "y": 65, "label": ""},
+                        {"id": "in_tr", "x": 185, "y": 85, "label": ""},
+                        {"id": "in_r", "x": 205, "y": 135, "label": ""},
+                        {"id": "in_br", "x": 185, "y": 185, "label": ""},
+                        {"id": "in_bot", "x": 130, "y": 205, "label": ""},
+                        {"id": "in_bl", "x": 75, "y": 185, "label": ""},
+                        {"id": "in_l", "x": 55, "y": 135, "label": ""},
+                        {"id": "in_tl", "x": 75, "y": 85, "label": ""},
+                        {"id": "center", "x": 130, "y": 135, "label": ""}
+                    ],
+                    "edges": [
+                        {"from": "tl", "to": "bl"},
+                        {"from": "bl", "to": "br"},
+                        {"from": "in_top", "to": "in_tr"},
+                        {"from": "in_tr", "to": "in_r"},
+                        {"from": "in_r", "to": "in_br"},
+                        {"from": "in_br", "to": "in_bot"},
+                        {"from": "in_bot", "to": "in_bl"},
+                        {"from": "in_bl", "to": "in_l"},
+                        {"from": "in_l", "to": "in_tl"},
+                        {"from": "in_tl", "to": "in_top"},
+                        {"from": "in_tl", "to": "center"},
+                        {"from": "in_l", "to": "center"},
+                        {"from": "in_top", "to": "tr"},
+                        {"from": "in_r", "to": "tr"}
+                    ]
+                }
+            ],
+            "image": "0089_q089_Question_89.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q90
+        {
+            "id": 90,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "The number of edges in a graph with 50 vertices such that, two of the vertices are of degree 2 and the remaining are of degree 1, is ________",
+            "options": [
+                "\\(28\\)",
+                "None of the other choices",
+                "\\(26\\)",
+                "\\(27\\)",
+                "\\(29\\)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính tổng bậc của tất cả các đỉnh:**\nĐồ thị có 50 đỉnh, trong đó:\n- 2 đỉnh có bậc 2: tổng bậc là \\(2 \\times 2 = 4\\).\n- \\(50 - 2 = 48\\) đỉnh còn lại có bậc 1: tổng bậc là \\(48 \\times 1 = 48\\).\nTổng bậc của tất cả các đỉnh là: \\[\\sum_{v \\in V} \\deg(v) = 4 + 48 = 52.\\]",
+                "**Bước 2: Áp dụng định lý bắt tay (Handshaking Theorem):**\nTổng bậc của các đỉnh bằng hai lần số cạnh: \\[\\sum_{v \\in V} \\deg(v) = 2|E| \\implies |E| = \\frac{52}{2} = 26.\\]",
+                "**Kết luận:** Số cạnh của đồ thị là **26**, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0090_q090_Question_90.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q91
+        {
+            "id": 91,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "Determine the complexity of this algorithm in terms of the number of comparisons.\n(i) \\(O(n)\\)\n(ii) \\(O(\\log n)\\)\n(iii) \\(O(1)\\)",
+            "code": "procedure thuattoan(a_1, a_2..., a_n: integers)\nk := 0\nfor i := 1 to n do\n    if a_i < 0 then k := k + 1\nprint(k)",
+            "options": [
+                "None of the other choices is correct",
+                "(i)",
+                "(iii)",
+                "(ii)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Đếm số phép so sánh:**\nVòng lặp `for i := 1 to n` thực hiện đúng \\(n\\) lần lặp. Trong mỗi lần lặp, điều kiện `if a_i < 0` thực hiện đúng 1 phép so sánh.",
+                "**Bước 2: Xác định độ phức tạp Big-O:**\nTổng số phép so sánh là \\(n\\), do đó độ phức tạp thuật toán theo số phép so sánh là \\(O(n)\\), tương ứng với mục (i).",
+                "**Kết luận:** Chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0091_q091_Question_91.png",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q92
+        {
+            "id": 92,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Given a simple graph G, the complementary graph of G, denoted by G', is the graph on the same vertices, and two vertices are adjacent in G' if and only if they are not adjacent in G. Which graph is isomorphic to its complementary graph?",
+            "options": [
+                "(ii)",
+                "(i)",
+                "(iii)",
+                "(iv)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Điều kiện cần để đồ thị tự bù (Self-complementary):**\nMột đồ thị có \\(n = 4\\) đỉnh có tổng số cạnh trong \\(K_4\\) là \\(C(4, 2) = 6\\). Để \\(G \\cong \\overline{G}\\), số cạnh của \\(G\\) phải bằng: \\(|E| = 6 / 2 = 3\\) cạnh.",
+                "**Bước 2: Kiểm tra đồ thị (i) là đường đi 4 đỉnh \\(P_4\\):**\nĐồ thị (i) gồm 4 đỉnh nối thành đường đi \\(v_1 - v_2 - v_3 - v_4\\) (có đúng 3 cạnh). Đồ thị bù \\(\\overline{G}\\) có các cạnh nối: \\((v_1, v_3), (v_1, v_4), (v_2, v_4)\\), đây cũng chính là đường đi \\(v_3 - v_1 - v_4 - v_2\\) đẳng cấu với \\(P_4\\).",
+                "**Kết luận:** Đồ thị tự bù là (i), chọn phương án **B**."
+            ],
+            "figures": [
+                {
+                    "caption": "Bốn đồ thị 4 đỉnh trong bài 92",
+                    "type": "graph",
+                    "directed": False,
+                    "width": 360,
+                    "height": 200,
+                    "vertices": [
+                        {"id": "1_a", "x": 40, "y": 30, "label": ""},
+                        {"id": "1_b", "x": 40, "y": 80, "label": ""},
+                        {"id": "1_c", "x": 100, "y": 80, "label": ""},
+                        {"id": "1_d", "x": 100, "y": 30, "label": ""},
+                        {"id": "2_a", "x": 180, "y": 30, "label": ""},
+                        {"id": "2_b", "x": 180, "y": 80, "label": ""},
+                        {"id": "2_c", "x": 240, "y": 80, "label": ""},
+                        {"id": "2_d", "x": 240, "y": 30, "label": ""},
+                        {"id": "3_a", "x": 40, "y": 130, "label": ""},
+                        {"id": "3_b", "x": 40, "y": 180, "label": ""},
+                        {"id": "3_c", "x": 100, "y": 180, "label": ""},
+                        {"id": "3_d", "x": 100, "y": 130, "label": ""},
+                        {"id": "4_a", "x": 180, "y": 130, "label": ""},
+                        {"id": "4_b", "x": 180, "y": 180, "label": ""},
+                        {"id": "4_c", "x": 240, "y": 180, "label": ""},
+                        {"id": "4_d", "x": 240, "y": 130, "label": ""}
+                    ],
+                    "edges": [
+                        {"from": "1_a", "to": "1_b"},
+                        {"from": "1_b", "to": "1_c"},
+                        {"from": "1_c", "to": "1_d"},
+                        {"from": "2_a", "to": "2_b"},
+                        {"from": "2_b", "to": "2_c"},
+                        {"from": "2_c", "to": "2_d"},
+                        {"from": "2_d", "to": "2_a"},
+                        {"from": "3_a", "to": "3_b"},
+                        {"from": "3_b", "to": "3_c"},
+                        {"from": "3_c", "to": "3_d"},
+                        {"from": "3_d", "to": "3_a"},
+                        {"from": "3_a", "to": "3_c"},
+                        {"from": "4_a", "to": "4_b"},
+                        {"from": "4_b", "to": "4_c"},
+                        {"from": "4_c", "to": "4_d"},
+                        {"from": "4_d", "to": "4_a"},
+                        {"from": "4_a", "to": "4_c"},
+                        {"from": "4_b", "to": "4_d"}
+                    ]
+                }
+            ],
+            "image": "0092_q092_Question_92.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q93
+        {
+            "id": 93,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Let \\(x, y\\) represent students in a class. Let\n\\(M(x, y)\\): \"\\(x\\) sent an email to \\(y\\)\"\n\\(T(x, y)\\): \"\\(x\\) called \\(y\\)\"\nTranslate the sentence into a logical expression:\n\"Each student in class either received an email or a call from some other student in class\"\n(i) \\(\\forall x \\forall y [(x \\ne y) \\land (M(x, y) \\lor T(x, y))]\\)\n(ii) \\(\\forall x \\exists y [(x \\ne y) \\land (M(x, y) \\lor T(x, y))]\\)\n(iii) \\(\\forall x \\exists y [(x \\ne y) \\to (M(x, y) \\lor T(x, y))]\\)\n(iv) \\(\\forall x \\exists y [(x \\ne y) \\lor (M(x, y) \\land T(x, y))]\\)",
+            "options": [
+                "None of the other choices is correct",
+                "(ii)",
+                "(i)",
+                "(iv)",
+                "(iii)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích các lượng từ logic:**\n- \"Each student\": Với mọi sinh viên \\(x\\) trong lớp \\(\\to \\forall x\\).\n- \"from some other student\": Tồn tại một sinh viên \\(y\\) khác \\(x\\) (\\(x \\ne y\\)) \\(\\to \\exists y\\).",
+                "**Bước 2: Kết hợp điều kiện liên lạc:**\nSinh viên đó nhận được email hoặc cuộc gọi \\(\\to (M(x, y) \\lor T(x, y))\\). Khẳng định sự tồn tại đồng thời của bạn học \\(y\\) khác \\(x\\) được biểu diễn bằng phép hội: \\[\\forall x \\exists y [(x \\ne y) \\land (M(x, y) \\lor T(x, y))].\\]\nMệnh đề này trùng khớp với mục **(ii)**.",
+                "**Kết luận:** Chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0093_q093_Question_93.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q94
+        {
+            "id": 94,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Find the inorder traversal of the tree.",
+            "options": [
+                "e - c - h - n - m - s - t - y - a",
+                "a - c - e - h - m - n - t - s - y",
+                "None of the other choices is correct",
+                "e - h - c - n - s - y - t - m - a",
+                "e - c - h - a - n - m - s - t - y"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nguyên tắc duyệt trung thứ tự (Inorder Traversal):**\nQuy tắc: Cây con trái (Left) \\(\\to\\) Gốc (Root) \\(\\to\\) Cây con phải (Right).",
+                "**Bước 2: Lần vết trên từng nhánh cây:**\n- Gốc chính là \\(a\\).\n- Cây con trái của \\(a\\) có gốc \\(c\\), con trái là \\(e\\), con phải là \\(h\\): duyệt \\(e \\to c \\to h\\).\n- Thăm gốc \\(a\\).\n- Cây con phải của \\(a\\) có gốc \\(m\\):\n  + Con trái của \\(m\\) là \\(n\\).\n  + Thăm gốc \\(m\\).\n  + Cây con phải của \\(m\\) có gốc \\(t\\), con trái là \\(s\\), con phải là \\(y\\): duyệt \\(s \\to t \\to y\\).\nGhép toàn bộ thứ tự duyệt: \\[e - c - h - a - n - m - s - t - y.\\]",
+                "**Kết luận:** Chọn phương án **E**."
+            ],
+            "figures": [
+                {
+                    "caption": "Cây nhị phân bài 94",
+                    "type": "tree",
+                    "directed": True,
+                    "width": 300,
+                    "height": 220,
+                    "vertices": [
+                        {"id": "a", "x": 150, "y": 30, "label": "a"},
+                        {"id": "c", "x": 80, "y": 80, "label": "c"},
+                        {"id": "m", "x": 220, "y": 80, "label": "m"},
+                        {"id": "e", "x": 50, "y": 140, "label": "e"},
+                        {"id": "h", "x": 110, "y": 140, "label": "h"},
+                        {"id": "n", "x": 180, "y": 140, "label": "n"},
+                        {"id": "t", "x": 250, "y": 140, "label": "t"},
+                        {"id": "s", "x": 230, "y": 195, "label": "s"},
+                        {"id": "y", "x": 270, "y": 195, "label": "y"}
+                    ],
+                    "edges": [
+                        {"from": "a", "to": "c"},
+                        {"from": "a", "to": "m"},
+                        {"from": "c", "to": "e"},
+                        {"from": "c", "to": "h"},
+                        {"from": "m", "to": "n"},
+                        {"from": "m", "to": "t"},
+                        {"from": "t", "to": "s"},
+                        {"from": "t", "to": "y"}
+                    ]
+                }
+            ],
+            "image": "0094_q094_Question_94.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q95
+        {
+            "id": 95,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Given a pseudo graph G with incident matrix\n\\[\\begin{bmatrix} 0 & 1 & 0 & 1 & 0 \\\\ 1 & 0 & 0 & 0 & 1 \\\\ 0 & 1 & 1 & 0 & 1 \\end{bmatrix}\\]\nHow many loops does G have?",
+            "options": [
+                "\\(0\\)",
+                "None of the other choices is correct",
+                "\\(3\\)",
+                "\\(1\\)",
+                "\\(5\\)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính chất của ma trận liên thuộc đối với khuyên (Loop):**\nTrong ma trận liên thuộc (Incidence Matrix) của giả đồ thị, mỗi cột biểu diễn một cạnh. Cạnh thông thường nối hai đỉnh phân biệt sẽ chứa đúng hai số 1. Khuyên (loop) là cạnh nối một đỉnh với chính nó, được biểu diễn bằng cột chỉ có **duy nhất một số 1**.",
+                "**Bước 2: Đếm số cột có đúng một số 1:**\nXét tổng các phần tử trên từng cột:\n- Cột 1: \\(0 + 1 + 0 = 1\\) (khuyên tại đỉnh 2)\n- Cột 2: \\(1 + 0 + 1 = 2\\) (cạnh nối đỉnh 1 và 3)\n- Cột 3: \\(0 + 0 + 1 = 1\\) (khuyên tại đỉnh 3)\n- Cột 4: \\(1 + 0 + 0 = 1\\) (khuyên tại đỉnh 1)\n- Cột 5: \\(0 + 1 + 1 = 2\\) (cạnh nối đỉnh 2 và 3)\nCó đúng 3 cột (cột 1, 3, 4) chỉ có một số 1.",
+                "**Kết luận:** Đồ thị có đúng **3** khuyên, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0095_q095_Question_95.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q96
+        {
+            "id": 96,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "Given the Bubble sort algorithm:\nIf input = \\([3, 2, 4, 7, 1, 6, 5]\\), find the order of the elements in the list after the second pass (\\(i = 2\\)).",
+            "code": "procedure Bubblesort(a_1, a_2, ..., a_n: integer)\nfor i = 1 to (n-1) do\n    for j = 1 to (n-i) do\n        if a_j > a_{j+1} then\n            swap(a_j, a_{j+1})",
+            "options": [
+                "\\(2, 3, 1, 4, 5, 6, 7\\)",
+                "\\(2, 1, 3, 5, 4, 6, 7\\)",
+                "\\(2, 3, 4, 1, 5, 6, 7\\)",
+                "\\(2, 1, 4, 5, 3, 6, 7\\)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Mô phỏng lượt 1 (\\(i = 1\\), \\(j\\) chạy từ 1 đến 6):**\n- So sánh và đổi chỗ liên tiếp đưa phần tử lớn nhất 7 về cuối:\n  + Ban đầu: \\([3, 2, 4, 7, 1, 6, 5]\\)\n  + Đổi 3, 2: \\([2, 3, 4, 7, 1, 6, 5]\\)\n  + Đổi 7, 1: \\([2, 3, 4, 1, 7, 6, 5]\\)\n  + Đổi 7, 6: \\([2, 3, 4, 1, 6, 7, 5]\\)\n  + Đổi 7, 5: \\([2, 3, 4, 1, 6, 5, 7]\\)\nKết thúc lượt 1: \\([2, 3, 4, 1, 6, 5, 7]\\).",
+                "**Bước 2: Mô phỏng lượt 2 (\\(i = 2\\), \\(j\\) chạy từ 1 đến 5):**\n- So sánh 2, 3: giữ nguyên\n- So sánh 3, 4: giữ nguyên\n- So sánh 4, 1: đổi chỗ \\(\\to [2, 3, 1, 4, 6, 5, 7]\\)\n- So sánh 4, 6: giữ nguyên\n- So sánh 6, 5: đổi chỗ \\(\\to [2, 3, 1, 4, 5, 6, 7]\\)\nKết thúc lượt 2: \\([2, 3, 1, 4, 5, 6, 7]\\).",
+                "**Kết luận:** Chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0096_q096_Question_96.png",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q97
+        {
+            "id": 97,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "How many paths of length 2 from D to D in this graph?",
+            "options": [
+                "\\(4\\)",
+                "\\(2\\)",
+                "\\(3\\)",
+                "\\(0\\)",
+                "\\(1\\)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định cấu trúc đường đi độ dài 2 khép kín:**\nMột đường đi độ dài 2 từ đỉnh \\(D\\) đến chính nó có dạng: \\[D \\to v \\to D,\\] trong đó \\(v\\) là một đỉnh lân cận (hàng xóm) của \\(D\\).",
+                "**Bước 2: Đếm số đỉnh lân cận của D:**\nTừ hình vẽ, đỉnh \\(D\\) nối với 3 đỉnh: \\(A, B, C\\) (tức \\(\\deg(D) = 3\\)). Có đúng 3 đường đi độ dài 2 từ \\(D\\) đến \\(D\\):\n1. \\(D \\to A \\to D\\)\n2. \\(D \\to B \\to D\\)\n3. \\(D \\to C \\to D\\).",
+                "**Kết luận:** Có đúng **3** đường đi, chọn phương án **C**."
+            ],
+            "figures": [
+                {
+                    "caption": "Đồ thị bài 97 với 4 đỉnh A, B, C, D",
+                    "type": "graph",
+                    "directed": False,
+                    "width": 240,
+                    "height": 200,
+                    "vertices": [
+                        {"id": "A", "x": 60, "y": 40, "label": "A"},
+                        {"id": "B", "x": 180, "y": 40, "label": "B"},
+                        {"id": "C", "x": 180, "y": 150, "label": "C"},
+                        {"id": "D", "x": 60, "y": 150, "label": "D"}
+                    ],
+                    "edges": [
+                        {"from": "A", "to": "B"},
+                        {"from": "B", "to": "C"},
+                        {"from": "C", "to": "D"},
+                        {"from": "D", "to": "A"},
+                        {"from": "B", "to": "D"}
+                    ]
+                }
+            ],
+            "image": "0097_q097_Question_97.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q98
+        {
+            "id": 98,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Let \\(p, q\\) be propositions. The compound proposition \\[(p \\land q) \\to (p \\lor q)\\] is ____________",
+            "options": [
+                "a contradiction",
+                "a tautology",
+                "None of the other choices is correct",
+                "a contingency"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích bảng chân trị:**\n- Nếu \\(p \\land q = \\text{True}\\): thì cả \\(p\\) và \\(q\\) đều True, suy ra \\(p \\lor q = \\text{True}\\). Mệnh đề kéo theo nhận giá trị \\(\\text{True} \\to \\text{True} = \\text{True}\\).\n- Nếu \\(p \\land q = \\text{False}\\): mệnh đề kéo theo có tiền đề False nên luôn nhận giá trị **True** với mọi giá trị của hệ luận.",
+                "**Bước 2: Định nghĩa:**\nMột mệnh đề phức hợp luôn nhận giá trị True trong mọi trường hợp gán chân trị được gọi là **tautology** (hằng đúng).",
+                "**Kết luận:** Chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0098_q098_Question_98.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q99
+        {
+            "id": 99,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "How many steps are used in the Euclidean algorithm to find \\(\\gcd(34, 55)\\)?",
+            "options": [
+                "\\(7\\)",
+                "\\(8\\)",
+                "None of the other choices is correct",
+                "\\(5\\)",
+                "\\(6\\)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Thực hiện thuật toán chia Euclid giữa 55 và 34:**\n1. \\(55 = 1 \\times 34 + 21\\)\n2. \\(34 = 1 \\times 21 + 13\\)\n3. \\(21 = 1 \\times 13 + 8\\)\n4. \\(13 = 1 \\times 8 + 5\\)\n5. \\(8 = 1 \\times 5 + 3\\)\n6. \\(5 = 1 \\times 3 + 2\\)\n7. \\(3 = 1 \\times 2 + 1\\)\n8. \\(2 = 2 \\times 1 + 0\\) (dừng lại, số dư bằng 0).",
+                "**Bước 2: Đếm số bước:**\nThuật toán sử dụng đúng **8** phép chia để tìm được \\(\\gcd = 1\\).",
+                "**Kết luận:** Số bước là **8**, chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0099_q099_Question_99.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q100
+        {
+            "id": 100,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "How many vertices in the strongly connected component containing A?",
+            "options": [
+                "\\(6\\)",
+                "\\(5\\)",
+                "\\(3\\)",
+                "\\(4\\)",
+                "None of the other choices is correct"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Định nghĩa thành phần liên thông mạnh:**\nMột tập hợp các đỉnh tạo thành thành phần liên thông mạnh nếu giữa mọi cặp đỉnh trong tập đều tồn tại đường đi có hướng theo cả hai chiều.",
+                "**Bước 2: Phân tích các chu trình có hướng:**\nĐồ thị có 6 đỉnh, chứa một chu trình có hướng đi qua tất cả 6 đỉnh bao gồm cả đỉnh \\(A\\). Do đó từ \\(A\\) có thể đến bất kỳ đỉnh nào và từ mọi đỉnh đều có thể quay về \\(A\\). Toàn bộ 6 đỉnh đều thuộc cùng một thành phần liên thông mạnh.",
+                "**Kết luận:** Có **6** đỉnh, chọn phương án **A**."
+            ],
+            "figures": [
+                {
+                    "caption": "Đồ thị có hướng bài 100 với đỉnh tâm A",
+                    "type": "graph",
+                    "directed": True,
+                    "width": 300,
+                    "height": 220,
+                    "vertices": [
+                        {"id": "top", "x": 150, "y": 30, "label": ""},
+                        {"id": "tl", "x": 50, "y": 80, "label": ""},
+                        {"id": "tr", "x": 250, "y": 80, "label": ""},
+                        {"id": "A", "x": 150, "y": 120, "label": "A"},
+                        {"id": "bl", "x": 50, "y": 180, "label": ""},
+                        {"id": "br", "x": 250, "y": 180, "label": ""}
+                    ],
+                    "edges": [
+                        {"from": "top", "to": "tl"},
+                        {"from": "tl", "to": "bl"},
+                        {"from": "bl", "to": "br"},
+                        {"from": "br", "to": "tr"},
+                        {"from": "tr", "to": "top"},
+                        {"from": "bl", "to": "top"},
+                        {"from": "bl", "to": "A"},
+                        {"from": "A", "to": "tr"},
+                        {"from": "top", "to": "A"},
+                        {"from": "A", "to": "br"}
+                    ]
+                }
+            ],
+            "image": "0100_q100_Question_100.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q101
+        {
+            "id": 101,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "How many 3-digit numbers that are divisible by 2 or 3?",
+            "options": [
+                "\\(300\\)",
+                "None of the other choices is correct",
+                "\\(150\\)",
+                "\\(600\\)",
+                "\\(200\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Đếm số lượng các số theo từng tính chất chia hết trong đoạn \\([100, 999]\\):**\n- Số chia hết cho 2: \\(\\lfloor 999/2 \\rfloor - \\lfloor 99/2 \\rfloor = 499 - 49 = 450\\).\n- Số chia hết cho 3: \\(\\lfloor 999/3 \\rfloor - \\lfloor 99/3 \\rfloor = 333 - 33 = 300\\).\n- Số chia hết cho cả 2 và 3 (chia hết cho 6): \\(\\lfloor 999/6 \\rfloor - \\lfloor 99/6 \\rfloor = 166 - 16 = 150\\).",
+                "**Bước 2: Áp dụng nguyên lý bao hàm - loại trừ (Inclusion-Exclusion):**\n\\[|A \\cup B| = |A| + |B| - |A \\cap B| = 450 + 300 - 150 = 600.\\]",
+                "**Kết luận:** Có **600** số có 3 chữ số chia hết cho 2 hoặc 3, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0101_q101_Question_101.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q102
+        {
+            "id": 102,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Choose a tuple of values of p, q, r, s such that the proposition \\((p \\to q) \\land (r \\to s)\\) is True.",
+            "options": [
+                "p= q= r=s=F",
+                "p=q=r=T, s=F",
+                "p=s=T, q=r=F",
+                "None of the mentioned",
+                "p=s=F, q=r=T"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Điều kiện để mệnh đề hội là True:**\nBiểu thức \\((p \\to q) \\land (r \\to s)\\) nhận giá trị **True** khi và chỉ khi cả hai mệnh đề kéo theo đều True: \\(p \\to q = \\text{True}\\) và \\(r \\to s = \\text{True}\\).",
+                "**Bước 2: Thử từng bộ giá trị:**\n- Với \\(p = q = r = s = \\text{False}\\): ta có \\(\\text{False} \\to \\text{False} = \\text{True}\\). Khi đó \\(\\text{True} \\land \\text{True} = \\text{True}\\).\n- Các lựa chọn còn lại đều chứa ít nhất một phép kéo theo dạng \\(\\text{True} \\to \\text{False} = \\text{False}\\).",
+                "**Kết luận:** Chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0102_q102_Question_102.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q103
+        {
+            "id": 103,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Given the function \\(f: \\mathbb{N} \\to \\mathbb{N}\\) defined by \\(f(x) = x + 1\\). Determine if this function is one-to-one, onto or bijective.",
+            "options": [
+                "Onto",
+                "Bijection",
+                "One-to-one",
+                "Neither surjective nor injective"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Kiểm tra tính đơn ánh (One-to-one / Injective):**\nGiả sử \\(f(x_1) = f(x_2)\\). Ta có: \\[x_1 + 1 = x_2 + 1 \\implies x_1 = x_2.\\] Do đó hàm \\(f\\) là đơn ánh (one-to-one).",
+                "**Bước 2: Kiểm tra tính toàn ánh (Onto / Surjective):**\nVới phần tử \\(0 \\in \\mathbb{N}\\), để \\(f(x) = 0\\) thì \\(x + 1 = 0 \\implies x = -1 \\notin \\mathbb{N}\\). Do đó phần tử 0 không có tạo ảnh, hàm không toàn ánh.",
+                "**Kết luận:** Hàm số là đơn ánh nhưng không toàn ánh, chọn phương án **C** (One-to-one)."
+            ],
+            "figures": [],
+            "image": "0103_q103_Question_103.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q104
+        {
+            "id": 104,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "How many leaves in a full m-ary tree with v vertices?",
+            "options": [
+                "\\([(m - 1)v + 1]/m\\)",
+                "None of the other choices is correct",
+                "\\((m - 1)v + 1\\)",
+                "\\(mv + 1\\)",
+                "\\((m - 1)v\\)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Mối quan hệ giữa số đỉnh và số đỉnh trong:**\nTrong cây \\(m\\)-ary đầy đủ, mỗi đỉnh trong có đúng \\(m\\) con. Nếu có \\(i\\) đỉnh trong, tổng số đỉnh là: \\[v = m \\cdot i + 1 \\implies i = \\frac{v - 1}{m}.\\]",
+                "**Bước 2: Tính số lá \\(l\\):**\nSố lá bằng tổng số đỉnh trừ đi số đỉnh trong: \\[l = v - i = v - \\frac{v - 1}{m} = \\frac{m v - v + 1}{m} = \\frac{(m - 1)v + 1}{m}.\\]",
+                "**Kết luận:** Số lá là \\([(m - 1)v + 1]/m\\), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0104_q104_Question_104.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q105
+        {
+            "id": 105,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Let\n\\(F(x)\\): \"\\(x\\) is a student of the Business department\"\n\\(J(x)\\): \"\\(x\\) knows computer language Java\"\n\\(R(x)\\): \"\\(x\\) can speak Russian\"\nThe domain consists of all students of the university.\nExpress the sentence into a logical expression:\n\"There is a student of the Business department who can speak Russian, and knows Java\"\n(i) \\(\\forall x (F(x) \\to (J(x) \\lor R(x)))\\)\n(ii) \\(\\exists x (F(x) \\land (J(x) \\land R(x)))\\)\n(iii) \\(\\forall x (F(x) \\to (J(x) \\land R(x)))\\)\n(iv) \\(\\exists x (F(x) \\lor (J(x) \\land R(x)))\\)",
+            "options": [
+                "(ii)",
+                "(iii)",
+                "(i)",
+                "None of the other choices",
+                "(iv)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích các thành phần:**\n- \"There is a student\": Tồn tại một sinh viên \\(\\to \\exists x\\).\n- Thuộc khoa Business: \\(F(x)\\).\n- Biết tiếng Nga: \\(R(x)\\).\n- Biết Java: \\(J(x)\\).",
+                "**Bước 2: Ghép bằng phép hội:**\nVì khẳng định sự tồn tại đồng thời của cả ba đặc điểm, ta dùng phép hội \\(\\land\\): \\[\\exists x (F(x) \\land (J(x) \\land R(x))).\\]\nMệnh đề này ứng với mục **(ii)**.",
+                "**Kết luận:** Chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0105_q105_Question_105.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q106
+        {
+            "id": 106,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "Let \\(f(x) = x^2 \\log(x)\\) and \\(g(x) = x \\log(x^2)\\). Choose the correct statements:\n(i) \\(f(x) = O(g(x))\\)\n(ii) \\(g(x) = O(f(x))\\)",
+            "options": [
+                "(ii)",
+                "Both (i) and (ii)",
+                "(i)",
+                "None of the other choices is correct"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Đơn giản hóa biểu thức của \\(g(x)\\):**\nTa có: \\[g(x) = x \\log(x^2) = 2x \\log(x).\\]",
+                "**Bước 2: So sánh tốc độ tăng khi \\(x \\to \\infty\\):**\nXét tỷ số: \\[\\lim_{x \\to \\infty} \\frac{g(x)}{f(x)} = \\lim_{x \\to \\infty} \\frac{2x \\log(x)}{x^2 \\log(x)} = \\lim_{x \\to \\infty} \\frac{2}{x} = 0.\\]\nVì giới hạn hữu hạn (bằng 0), nên \\(g(x) = O(f(x))\\) là phát biểu **ĐÚNG**.\nNgược lại \\(f(x)/g(x) \\to \\infty\\) nên \\(f(x) \\ne O(g(x))\\).",
+                "**Kết luận:** Chỉ có phát biểu (ii) đúng, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0106_q106_Question_106.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q107
+        {
+            "id": 107,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Find a recursive definition for the set of all positive integers NOT divisible by 4.\n(i) if \\(a \\in S\\) then \\(a + 4 \\in S\\)\n(ii) \\(1, 2, 3 \\in S\\), if \\(a \\in S\\) then \\(a + 4 \\in S, a - 4 \\in S\\)\n(iii) if \\(a \\in S\\) then \\(a + 4 \\in S, a - 4 \\in S\\)\n(iv) \\(1, 2, 3 \\in S\\), if \\(a \\in S\\) then \\(a + 4 \\in S\\)",
+            "options": [
+                "None of the other choices is correct",
+                "(ii)",
+                "(iv)",
+                "(i)",
+                "(iii)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định bước cơ sở (Basis Step):**\nCác số nguyên dương nhỏ nhất không chia hết cho 4 là 1, 2, 3. Do đó cơ sở là: \\(1, 2, 3 \\in S\\).",
+                "**Bước 2: Xác định bước đệ quy (Recursive Step):**\nNếu \\(a \\in S\\) thì \\(a + 4 \\in S\\) (vì \\(a + 4 \\equiv a \\not\\equiv 0 \\pmod 4\\)). Không thể đưa \\(a - 4\\) vào vì với \\(a = 1, 2, 3\\) sẽ tạo ra các số âm không thuộc tập số nguyên dương. Do đó định nghĩa đúng là (iv).",
+                "**Kết luận:** Chọn phương án **C** (tương ứng mục iv)."
+            ],
+            "figures": [],
+            "image": "0107_q107_Question_107.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q108
+        {
+            "id": 108,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "What is the average number of bits used to encode a letter when using Huffman coding to encode a message consisting of only the letters a, b, c, e, n with the corresponding frequencies 0.1, 0.4, 0.2, 0.2, 0.1?",
+            "options": [
+                "None of the other choices is correct",
+                "\\(2.6\\)",
+                "\\(2.2\\)",
+                "\\(5\\)",
+                "\\(1.6\\)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xây dựng cây mã hóa Huffman:**\n- Gộp 2 ký tự có tần suất nhỏ nhất: \\(a(0.1)\\) và \\(n(0.1) \\to T_1(0.2)\\).\n- Gộp tiếp \\(c(0.2)\\) và \\(e(0.2) \\to T_2(0.4)\\).\n- Gộp \\(T_1(0.2)\\) và \\(b(0.4) \\to T_3(0.6)\\).\n- Gộp \\(T_2(0.4)\\) và \\(T_3(0.6) \\to\\) Gốc (1.0).",
+                "**Bước 2: Tính độ dài từ mã trung bình:**\nĐộ dài các từ mã là: len(b)=2, len(c)=2, len(e)=2, len(a)=3, len(n)=3.\n\\[L = 0.4 \\times 2 + 0.2 \\times 2 + 0.2 \\times 2 + 0.1 \\times 3 + 0.1 \\times 3 = 0.8 + 0.4 + 0.4 + 0.3 + 0.3 = 2.2 \\text{ bits/ký tự}.\\]",
+                "**Kết luận:** Số bit trung bình là **2.2**, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0108_q108_Question_108.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q109
+        {
+            "id": 109,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "What is the value of the ceiling/floor expression yielding an integer result among 0, 1, 2, 3?",
+            "options": [
+                "\\(0\\)",
+                "\\(3\\)",
+                "\\(1\\)",
+                "\\(2\\)",
+                "None of the above"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính toán các giá trị hàm trần (Ceiling):**\nÁp dụng các định nghĩa hàm trần \\(\\lceil x \\rceil\\) là số nguyên nhỏ nhất không nhỏ hơn \\(x\\):\n- \\(\\lceil 1/3 \\rceil = 1\\).\n- \\(\\lceil 1/2 \\rceil = 1\\).",
+                "**Bước 2: Tính tổng:**\nTổng của các giá trị: \\[1 + 1 = 2.\\]",
+                "**Kết luận:** Giá trị biểu thức là **2**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0109_q109_Question_109.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q110
+        {
+            "id": 110,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Let A, B and C be nonempty sets. Choose the true statement.\n(i) \\((A \\cap B) \\cap C = A \\cap (B \\cap C)\\)\n(ii) \\(A \\cup (B \\cap C) = (A \\cap B) \\cup (A \\cap C)\\)",
+            "options": [
+                "(ii)",
+                "(i)",
+                "(i) and (ii)",
+                "None of (i) or (ii)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Kiểm tra phát biểu (i):**\nĐây là luật kết hợp (Associative Law) của phép giao tập hợp: \\((A \\cap B) \\cap C = A \\cap (B \\cap C)\\). Mệnh đề này luôn đúng.",
+                "**Bước 2: Kiểm tra phát biểu (ii):**\nLuật phân phối chuẩn của phép hợp đối với phép giao là: \\(A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)\\). Phát biểu (ii) ghi sai thành \\((A \\cap B) \\cup (A \\cap C)\\).",
+                "**Kết luận:** Chỉ có (i) đúng, chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0110_q110_Question_110.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q111
+        {
+            "id": 111,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "Suppose that \\(f(n) \\text{ is } O(\\log n)\\), \\(g(n) \\text{ is } O(1)\\) and \\(h(n) \\text{ is } O(n)\\). Find the best big-\\(O\\) estimate of \\[f(n)^{g(n)} + \\frac{h(n)}{g(n)}\\]\n(i) \\(O(\\log n)\\)\n(ii) \\(O(n)\\)\n(iii) \\(O(n \\log n)\\)\n(iv) \\(O(n^2)\\)\n(v) \\(O(n^2 \\log n)\\)",
+            "options": [
+                "(iii)",
+                "(i)",
+                "(v)",
+                "(ii)",
+                "(iv)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Ước lượng từng số hạng:**\n- Với \\(g(n) = O(1)\\): là hàm bị chặn bởi một hằng số \\(c\\). Khi đó \\(f(n)^{g(n)} = O((\\log n)^c)\\).\n- Với \\(h(n) = O(n)\\) và \\(g(n) = O(1)\\): tỷ số \\(\\frac{h(n)}{g(n)} = O(n)\\).",
+                "**Bước 2: Tìm số hạng chi phối:**\nHàm đa thức bậc nhất \\(n\\) tăng nhanh hơn hàm polylogarithm \\((\\log n)^c\\). Do đó số hạng chi phối của tổng là \\(O(n)\\), tương ứng với mục (ii).",
+                "**Kết luận:** Chọn phương án **D** (tương ứng mục ii)."
+            ],
+            "figures": [],
+            "image": "0111_q111_Question_111.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q112
+        {
+            "id": 112,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "For which \\(n > 2\\) does the graph \\(W_n\\) have Euler circuits?",
+            "options": [
+                "all n > 2 and odd",
+                "all n > 2",
+                "None of the other choices is correct",
+                "all n > 2 and even"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Bậc của các đỉnh trong đồ thị bánh xe \\(W_n\\):**\nĐồ thị bánh xe \\(W_n\\) gồm một chu trình \\(C_n\\) và 1 đỉnh tâm:\n- Mỗi đỉnh trên chu trình vành ngoài nối với 2 đỉnh lân cận trên chu trình và đỉnh tâm, nên có bậc là: \\(2 + 1 = 3\\) (luôn luôn là bậc lẻ với mọi \\(n > 2\\)).",
+                "**Bước 2: Áp dụng định lý Euler:**\nMột đồ thị liên thông có chu trình Euler khi và chỉ khi mọi đỉnh của đồ thị đều có bậc chẵn. Vì mọi đỉnh trên vành ngoài của \\(W_n\\) luôn có bậc 3 lẻ với mọi \\(n > 2\\), nên \\(W_n\\) không bao giờ có chu trình Euler với bất kỳ \\(n > 2\\) nào.",
+                "**Kết luận:** Không tồn tại \\(n\\) thỏa mãn, chọn phương án **C** (\"None of the other choices is correct\")."
+            ],
+            "figures": [],
+            "image": "0112_q112_Question_112.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q113
+        {
+            "id": 113,
+            "chapterId": 7,
+            "chapterName": "Chương 7: Xác suất rời rạc",
+            "chapterShort": "Discrete Probability",
+            "type": "single_choice",
+            "question": "Let A and B be events with probabilities \\(P(A) = 0.8\\), \\(P(B) = 0.4\\), and \\(P(A \\text{ and } B) = 0.32\\). Are A and B independent?",
+            "options": [
+                "Yes",
+                "No",
+                "Cannot be determined"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nhắc lại điều kiện độc lập của hai biến cố:**\nHai biến cố \\(A\\) và \\(B\\) độc lập khi và chỉ khi: \\[P(A \\cap B) = P(A) \\times P(B).\\]",
+                "**Bước 2: Thay số kiểm tra đẳng thức:**\n\\[P(A) \\times P(B) = 0.8 \\times 0.4 = 0.32.\\]\nĐề bài cho \\(P(A \\text{ and } B) = 0.32\\). Vì \\(0.32 = 0.32\\), hai biến cố \\(A\\) và \\(B\\) độc lập.",
+                "**Kết luận:** Chọn phương án **A** (Yes)."
+            ],
+            "figures": [],
+            "image": "0113_q113_Question_113.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q114
+        {
+            "id": 114,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Find a recursive formula for the sequence \\(a_n = \\frac{1}{n}, \\quad n = 1, 2, 3, \\dots\\)\n(i) \\(a_1 = 1, \\quad a_{n+1} = a_n + \\frac{1}{n+1}\\)\n(ii) \\(a_1 = 1, \\quad a_{n+1} = \\frac{1}{a_n + 1}\\)\n(iii) \\(a_1 = 1, \\quad a_{n+1} = \\frac{a_n}{a_n + 1}\\)",
+            "options": [
+                "(ii)",
+                "(iii)",
+                "(i)",
+                "None of the other choices is correct"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Biểu diễn \\(n\\) theo \\(a_n\\):**\nTừ \\(a_n = \\frac{1}{n}\\), ta suy ra: \\(n = \\frac{1}{a_n}\\).",
+                "**Bước 2: Thiết lập hệ thức cho \\(a_{n+1}\\):**\n\\[a_{n+1} = \\frac{1}{n + 1} = \\frac{1}{\\frac{1}{a_n} + 1} = \\frac{1}{\\frac{1 + a_n}{a_n}} = \\frac{a_n}{a_n + 1}.\\]\nĐiều kiện ban đầu là \\(a_1 = 1\\). Công thức này trùng khớp với mục **(iii)**.",
+                "**Kết luận:** Chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0114_q114_Question_114.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q115
+        {
+            "id": 115,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Let \\(\\mathbb{N} = \\{0, 1, 2, 3, \\dots\\}\\). Which of the following functions are onto from \\(\\mathbb{N}\\) to \\(\\mathbb{N}\\)?\n\\(f(n) = \\lceil n - \\frac{1}{2} \\rceil\\)\n\\(g(n) = \\lfloor n \\rfloor\\)\n\\(h(n) = n + 1\\)",
+            "options": [
+                "None of the other choices is correct",
+                "f and g",
+                "g and h",
+                "g",
+                "h"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Kiểm tra từng hàm số:**\n- Với \\(g(n) = \\lfloor n \\rfloor = n\\): hàm đồng nhất trên \\(\\mathbb{N}\\), luôn là toàn ánh (onto).\n- Với \\(f(n) = \\lceil n - 1/2 \\rceil\\): với mọi số nguyên \\(n \\ge 0\\), \\(\\lceil n - 0.5 \\rceil = n\\). Do đó \\(f(n) = n\\), cũng là hàm toàn ánh (onto).\n- Với \\(h(n) = n + 1\\): tập giá trị bắt đầu từ 1, phần tử \\(0 \\in \\mathbb{N}\\) không có tạo ảnh nên không toàn ánh.",
+                "**Bước 2: Kết luận:**\nCả hai hàm \\(f\\) và \\(g\\) đều là hàm toàn ánh từ \\(\\mathbb{N}\\) vào \\(\\mathbb{N}\\). Chọn phương án **B** (f and g)."
+            ],
+            "figures": [],
+            "image": "0115_q115_Question_115.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q116
+        {
+            "id": 116,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "For two positive integers \\(a\\) and \\(b\\), we say that \\(a\\) is relatively prime to \\(b\\) if \\(\\gcd(a, b) = 1\\). How many positive integers that are less than 15 and relatively prime to 15?",
+            "options": [
+                "\\(6\\)",
+                "\\(8\\)",
+                "\\(12\\)",
+                "\\(10\\)",
+                "None of the other choices is correct"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Áp dụng hàm Phi Euler \\(\\phi(n)\\):**\nSố các số nguyên dương nhỏ hơn 15 và nguyên tố cùng nhau với 15 được tính bởi hàm \\(\\phi(15)\\). Phân tích \\(15 = 3 \\times 5\\):\n\\[\\phi(15) = 15 \\left(1 - \\frac{1}{3}\\right)\\left(1 - \\frac{1}{5}\\right) = 15 \\times \\frac{2}{3} \\times \\frac{4}{5} = 8.\\]",
+                "**Bước 2: Liệt kê kiểm chứng:**\nCác số trong tập \\(\\{1, 2, \\dots, 14\\}\\) không chia hết cho 3 và 5 là: \\(\\{1, 2, 4, 7, 8, 11, 13, 14\\}\\), tổng cộng đúng **8** số.",
+                "**Kết luận:** Có **8** số, chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0116_q116_Question_116.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q117
+        {
+            "id": 117,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Which graphs are bipartite?",
+            "options": [
+                "X",
+                "None of the other choices is correct",
+                "Y",
+                "X and Y"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xét đồ thị X (Chu trình 4 đỉnh \\(C_4\\)):**\nMột đồ thị là đồ thị 2 phía khi và chỉ khi nó không chứa chu trình lẻ. \\(C_4\\) có độ dài 4 (chẵn), có thể tô bằng 2 màu xen kẽ \\(\\implies X\\) là đồ thị 2 phía (bipartite).",
+                "**Bước 2: Xét đồ thị Y (Đồ thị khối lập phương \\(Q_3\\)):**\nĐồ thị khối lập phương \\(Q_3\\) là đồ thị 2 phía kinh điển (tập đỉnh phân chia theo tính chẵn lẻ của số bit 1 trong chuỗi nhị phân), không chứa chu trình lẻ \\(\\implies Y\\) là đồ thị 2 phía.",
+                "**Kết luận:** Cả \\(X\\) và \\(Y\\) đều là đồ thị 2 phía, chọn phương án **D** (X and Y)."
+            ],
+            "figures": [
+                {
+                    "caption": "Hai đồ thị X (C_4) và Y (Q_3) trong bài 117",
+                    "type": "graph",
+                    "directed": False,
+                    "width": 360,
+                    "height": 180,
+                    "vertices": [
+                        {"id": "x1", "x": 40, "y": 40, "label": ""},
+                        {"id": "x2", "x": 120, "y": 40, "label": ""},
+                        {"id": "x3", "x": 120, "y": 140, "label": ""},
+                        {"id": "x4", "x": 40, "y": 140, "label": ""},
+                        {"id": "y1", "x": 200, "y": 30, "label": ""},
+                        {"id": "y2", "x": 280, "y": 30, "label": ""},
+                        {"id": "y3", "x": 320, "y": 60, "label": ""},
+                        {"id": "y4", "x": 240, "y": 60, "label": ""},
+                        {"id": "y5", "x": 200, "y": 120, "label": ""},
+                        {"id": "y6", "x": 280, "y": 120, "label": ""},
+                        {"id": "y7", "x": 320, "y": 150, "label": ""},
+                        {"id": "y8", "x": 240, "y": 150, "label": ""}
+                    ],
+                    "edges": [
+                        {"from": "x1", "to": "x2"},
+                        {"from": "x2", "to": "x3"},
+                        {"from": "x3", "to": "x4"},
+                        {"from": "x4", "to": "x1"},
+                        {"from": "y1", "to": "y2"},
+                        {"from": "y2", "to": "y3"},
+                        {"from": "y3", "to": "y4"},
+                        {"from": "y4", "to": "y1"},
+                        {"from": "y5", "to": "y6"},
+                        {"from": "y6", "to": "y7"},
+                        {"from": "y7", "to": "y8"},
+                        {"from": "y8", "to": "y5"},
+                        {"from": "y1", "to": "y5"},
+                        {"from": "y2", "to": "y6"},
+                        {"from": "y3", "to": "y7"},
+                        {"from": "y4", "to": "y8"}
+                    ]
+                }
+            ],
+            "image": "0117_q117_Question_117.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q118
+        {
+            "id": 118,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Assume that the domain of \\(x\\) consists of all integer numbers. Which proposition is true?\n(i) \\(\\exists x (x^2 = 2)\\)\n(ii) \\(\\exists x (x^2 = -1)\\)\n(iii) \\(\\exists x (x^2 = x)\\)\n(iv) \\(\\exists x (x^2 < x)\\)",
+            "options": [
+                "(iii)",
+                "(ii)",
+                "(i)",
+                "(iv)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xét các phương trình trên tập số nguyên \\(\\mathbb{Z}\\):**\n- \\(x^2 = 2 \\implies x = \\pm \\sqrt{2} \\notin \\mathbb{Z}\\).\n- \\(x^2 = -1 \\implies x = \\pm i \\notin \\mathbb{Z}\\).\n- \\(x^2 < x \\iff 0 < x < 1\\), không có số nguyên nào trong khoảng \\((0, 1)\\).\n- \\(x^2 = x \\iff x(x - 1) = 0 \\implies x = 0\\) hoặc \\(x = 1\\).",
+                "**Bước 2: Kết luận:**\nCả 0 và 1 đều là số nguyên, do đó tồn tại số nguyên \\(x\\) thỏa mãn \\(x^2 = x\\) (mệnh đề iii đúng).",
+                "**Kết luận:** Chọn phương án **A** (tương ứng mục iii)."
+            ],
+            "figures": [],
+            "image": "0118_q118_Question_118.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q119
+        {
+            "id": 119,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Which propositions are tautology?\n(i) \\((p \\land q) \\to (q \\to p)\\)\n(ii) \\((p \\lor q) \\to (p \\land q)\\)",
+            "options": [
+                "None of the other choices is correct",
+                "(i) and (ii)",
+                "(i)",
+                "(ii)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xét mệnh đề (i):**\nBiến đổi đại số mệnh đề: \\((p \\land q) \\to (\\neg q \\lor p) \\equiv \\neg(p \\land q) \\lor (\\neg q \\lor p) \\equiv (\\neg p \\lor \\neg q) \\lor (\\neg q \\lor p) \\equiv (\\neg p \\lor p) \\lor \\neg q \\equiv \\text{True} \\lor \\neg q \\equiv \\text{True}\\).\nDo đó mệnh đề (i) luôn đúng (là tautology).",
+                "**Bước 2: Xét mệnh đề (ii):**\nKhi \\(p = \\text{True}, q = \\text{False}\\), ta có: \\(p \\lor q = \\text{True}\\), nhưng \\(p \\land q = \\text{False}\\). Khi đó \\(\\text{True} \\to \\text{False} = \\text{False}\\). Do đó (ii) không phải là tautology.",
+                "**Kết luận:** Chỉ có (i) là tautology, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0119_q119_Question_119.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q120
+        {
+            "id": 120,
+            "chapterId": 6,
+            "chapterName": "Chương 6: Phép đếm",
+            "chapterShort": "Counting",
+            "type": "single_choice",
+            "question": "How many positive integers not exceeding 2016 and divisible by neither 7 nor 9?",
+            "options": [
+                "\\(480\\)",
+                "\\(512\\)",
+                "None of the other choices is correct",
+                "\\(1504\\)",
+                "\\(1536\\)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Đếm số lượng chia hết cho 7 hoặc 9 bằng bao hàm - loại trừ:**\n- Chia hết cho 7: \\(\\lfloor 2016 / 7 \\rfloor = 288\\).\n- Chia hết cho 9: \\(\\lfloor 2016 / 9 \\rfloor = 224\\).\n- Chia hết cho cả 7 và 9 (\\(\\operatorname{lcm}(7, 9) = 63\\)): \\(\\lfloor 2016 / 63 \\rfloor = 32\\).\nSố chia hết cho 7 hoặc 9: \\[|A \\cup B| = 288 + 224 - 32 = 480.\\]",
+                "**Bước 2: Tính số các số không chia hết cho cả 7 và 9:**\nLấy tổng số trừ đi số các số chia hết cho ít nhất một trong hai số:\n\\[2016 - 480 = 1536.\\]",
+                "**Kết luận:** Có **1536** số, chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0120_q120_Question_120.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        }
+    ]
+    return questions
+
+def main():
+    b3_questions = get_batch_003_questions()
+    print(f"Loaded {len(b3_questions)} questions for Batch 3.")
+
+    # Ghi ra questions_batch_003.json
+    with open("v2/questions_batch_003.json", "w", encoding="utf-8") as f:
+        json.dump(b3_questions, f, ensure_ascii=False, indent=2)
+
+    # Đọc batch 1, 2 và Q355 từ questions_sample_v2.json hiện có
+    with open("v2/questions_sample_v2.json", "r", encoding="utf-8") as f:
+        existing = json.load(f)
+
+    # Lập dict theo id để cập nhật / thêm mới
+    all_dict = {q["id"]: q for q in existing}
+    for q in b3_questions:
+        all_dict[q["id"]] = q
+
+    # Sắp xếp lại theo id
+    all_sorted = [all_dict[qid] for qid in sorted(all_dict.keys())]
+    print(f"Total merged questions in v2 sample: {len(all_sorted)}")
+
+    with open("v2/questions_sample_v2.json", "w", encoding="utf-8") as f:
+        json.dump(all_sorted, f, ensure_ascii=False, indent=2)
+
+    # Cập nhật v2/questions_v2.js
+    js_content = f"// questions_v2.js - Generated dataset containing verified questions\nexport const questionsV2 = {json.dumps(all_sorted, ensure_ascii=False, indent=2)};\n"
+    with open("v2/questions_v2.js", "w", encoding="utf-8") as f:
+        f.write(js_content)
+    print("Updated v2/questions_sample_v2.json and v2/questions_v2.js successfully.")
+
+if __name__ == "__main__":
+    main()

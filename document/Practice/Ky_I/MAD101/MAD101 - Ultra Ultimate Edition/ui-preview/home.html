@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trang chủ | MAD101 Discrete Mathematics Studio</title>
+  <link rel="stylesheet" href="preview.css">
+  <style>
+    /* Specific Home Styles */
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+    }
+    @media (min-width: 768px) {
+      .hero-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-4);
+      }
+    }
+    .hero-stat-card {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-stat-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+    .hero-stat-value {
+      font-size: var(--text-3xl);
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .hero-stat-label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Resume Session Card */
+    .resume-card {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(249, 115, 22, 0.35);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5);
+      margin-bottom: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      position: relative;
+    }
+    @media (min-width: 768px) {
+      .resume-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .resume-title {
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .resume-subtitle {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+    .resume-actions {
+      display: flex;
+      gap: var(--space-3);
+    }
+
+    /* Quick Action Section */
+    .quick-actions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+      margin-bottom: var(--space-8);
+    }
+    @media (min-width: 768px) {
+      .quick-actions-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .quick-btn-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-2);
+      padding: var(--space-4);
+      background: var(--bg-glass-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: all 0.2s ease;
+    }
+    .quick-btn-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    .quick-icon {
+      font-size: var(--text-2xl);
+    }
+    .quick-title {
+      font-weight: 700;
+      font-size: var(--text-sm);
+    }
+    .quick-desc {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+    }
+
+    /* Chapter Matrix */
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    @media (min-width: 768px) {
+      .chapter-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1100px) {
+      .chapter-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .chapter-card {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--space-4);
+      transition: all 0.2s ease;
+    }
+    .chapter-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .ch-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .ch-number {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+    .ch-title {
+      font-size: var(--text-base);
+      font-weight: 700;
+      margin-top: 4px;
+      line-height: 1.35;
+      color: var(--text-primary);
+    }
+    .ch-en {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .ch-stats {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--text-xs);
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ui-app">
+    <!-- Navbar -->
+    <header class="ui-navbar">
+      <a href="home.html" class="ui-brand">
+        <span class="ui-brand-badge">MAD101</span>
+        <div>
+          <div class="ui-brand-title">Discrete Mathematics Studio</div>
+          <div class="ui-brand-subtitle">Toán Rời Rạc • 1131 Câu hỏi Chuẩn</div>
+        </div>
+      </a>
+
+      <div class="ui-nav-actions">
+        <span class="ui-badge ui-badge-success" title="Dữ liệu offline sẵn sàng">
+          ● Offline Ready
+        </span>
+        <button class="ui-btn ui-btn-ghost ui-btn-icon" id="themeToggleBtn" title="Chuyển chế độ sáng/tối">
+          🌓
+        </button>
+        <a href="quiz.html" class="ui-btn ui-btn-primary">
+          ▶ Vào làm bài
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Stats Bar -->
+      <section class="hero-stats-grid">
+        <div class="hero-stat-card">
+          <div class="hero-stat-value" style="color:var(--accent);">1,131</div>
+          <div class="hero-stat-label">Tổng số câu hỏi</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-value" style="color:var(--info);">245</div>
+          <div class="hero-stat-label">Đã hoàn thành</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-value" style="color:var(--success);">81.6%</div>
+          <div class="hero-stat-label">Độ chính xác TB</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-value" style="color:#a855f7;">5 ngày</div>
+          <div class="hero-stat-label">Chuỗi học liên tục</div>
+        </div>
+      </section>
+
+      <!-- Resume Ongoing Session Banner -->
+      <section class="resume-card">
+        <div>
+          <div class="resume-title">
+            <span>⏳</span> Tiếp tục bài thi đang dở
+            <span class="ui-badge ui-badge-accent">Chương 3: Thuật toán</span>
+          </div>
+          <div class="resume-subtitle">
+            Bạn đã làm xong 18/50 câu • Thời gian còn lại: <strong>22 phút 15 giây</strong>
+          </div>
+        </div>
+        <div class="resume-actions">
+          <button class="ui-btn ui-btn-secondary" onclick="alert('Đã hủy bài thi dở!')">Hủy bài</button>
+          <a href="quiz.html" class="ui-btn ui-btn-primary">Tiếp tục ngay →</a>
+        </div>
+      </section>
+
+      <!-- Quick Action Cards -->
+      <section class="quick-actions-grid">
+        <a href="quiz.html" class="quick-btn-card">
+          <div class="quick-icon">⚡</div>
+          <div class="quick-title">Thi thử nhanh</div>
+          <div class="quick-desc">50 câu ngẫu nhiên • 45 phút</div>
+        </a>
+        <a href="quiz.html?filter=flagged" class="quick-btn-card">
+          <div class="quick-icon">⭐</div>
+          <div class="quick-title">Câu đã đánh dấu</div>
+          <div class="quick-desc">14 câu cần xem lại</div>
+        </a>
+        <a href="quiz.html?filter=wrong" class="quick-btn-card">
+          <div class="quick-icon">❌</div>
+          <div class="quick-title">Ôn tập câu sai</div>
+          <div class="quick-desc">32 câu làm sai gần đây</div>
+        </a>
+        <a href="quiz.html?mode=custom" class="quick-btn-card">
+          <div class="quick-icon">⚙️</div>
+          <div class="quick-title">Tạo đề tùy chỉnh</div>
+          <div class="quick-desc">Chọn nhiều chương, số câu</div>
+        </a>
+      </section>
+
+      <!-- Chapter Matrix Section -->
+      <section>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:var(--space-4);">
+          <div>
+            <h2 style="font-size:var(--text-xl); font-weight:800; color:var(--text-primary);">
+              Danh mục 8 Chương Học
+            </h2>
+            <p style="font-size:var(--text-xs); color:var(--text-muted);">
+              Chọn chương để bắt đầu luyện tập chuyên sâu
+            </p>
+          </div>
+          <a href="quiz.html?chapter=0" class="ui-btn ui-btn-secondary">
+            Luyện tất cả (1,131 câu)
+          </a>
+        </div>
+
+        <div class="chapter-grid">
+          <!-- Ch1 -->
+          <div class="chapter-card">
+            <div>
+              <div class="ch-top">
+                <span class="ch-number">Chương 1</span>
+                <span class="ui-badge ui-badge-info">98 câu</span>
+              </div>
+              <div class="ch-title">Logic và Bằng chứng</div>
+              <div class="ch-en">Logic & Proofs</div>
+            </div>
+            <div>
+              <div class="ch-stats">
+                <span>Tiến độ: 45/98 (46%)</span>
+                <span style="color:var(--success); font-weight:700;">85% đúng</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 46%;"></div>
+              </div>
+              <div style="margin-top:var(--space-3); display:flex; justify-content:flex-end;">
+                <a href="quiz.html?chapter=1" class="ui-btn ui-btn-secondary ui-btn-sm" style="width:100%;">Luyện chương này</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ch2 -->
+          <div class="chapter-card">
+            <div>
+              <div class="ch-top">
+                <span class="ch-number">Chương 2</span>
+                <span class="ui-badge ui-badge-info">138 câu</span>
+              </div>
+              <div class="ch-title">Tập hợp, Hàm, Dãy & Chuỗi</div>
+              <div class="ch-en">Sets, Functions & Sequences</div>
+            </div>
+            <div>
+              <div class="ch-stats">
+                <span>Tiến độ: 32/138 (23%)</span>
+                <span style="color:var(--success); font-weight:700;">78% đúng</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 23%;"></div>
+              </div>
+              <div style="margin-top:var(--space-3); display:flex; justify-content:flex-end;">
+                <a href="quiz.html?chapter=2" class="ui-btn ui-btn-secondary ui-btn-sm" style="width:100%;">Luyện chương này</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ch3 -->
+          <div class="chapter-card" style="border-color: rgba(249, 115, 22, 0.4);">
+            <div>
+              <div class="ch-top">
+                <span class="ch-number">Chương 3</span>
+                <span class="ui-badge ui-badge-accent">118 câu</span>
+              </div>
+              <div class="ch-title">Thuật toán & Độ phức tạp</div>
+              <div class="ch-en">Algorithms & Complexity</div>
+            </div>
+            <div>
+              <div class="ch-stats">
+                <span>Tiến độ: 72/118 (61%)</span>
+                <span style="color:var(--success); font-weight:700;">89% đúng</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 61%;"></div>
+              </div>
+              <div style="margin-top:var(--space-3); display:flex; justify-content:flex-end;">
+                <a href="quiz.html?chapter=3" class="ui-btn ui-btn-primary ui-btn-sm" style="width:100%;">Đang học • Tiếp tục</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ch4 -->
+          <div class="chapter-card">
+            <div>
+              <div class="ch-top">
+                <span class="ch-number">Chương 4</span>
+                <span class="ui-badge ui-badge-info">164 câu</span>
+              </div>
+              <div class="ch-title">Lý thuyết số & Mật mã</div>
+              <div class="ch-en">Number Theory & Crypto</div>
+            </div>
+            <div>
+              <div class="ch-stats">
+                <span>Tiến độ: 10/164 (6%)</span>
+                <span style="color:var(--warning); font-weight:700;">60% đúng</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 6%;"></div>
+              </div>
+              <div style="margin-top:var(--space-3); display:flex; justify-content:flex-end;">
+                <a href="quiz.html?chapter=4" class="ui-btn ui-btn-secondary ui-btn-sm" style="width:100%;">Luyện chương này</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ch5 -->
+          <div class="chapter-card">
+            <div>
+              <div class="ch-top">
+                <span class="ch-number">Chương 5</span>
+                <span class="ui-badge ui-badge-info">157 câu</span>
+              </div>
+              <div class="ch-title">Quy nạp & Đệ quy</div>
+              <div class="ch-en">Induction & Recursion</div>
+            </div>
+            <div>
+              <div class="ch-stats">
+                <span>Tiến độ: 0/157 (0%)</span>
+                <span>Chưa học</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 0%;"></div>
+              </div>
+              <div style="margin-top:var(--space-3); display:flex; justify-content:flex-end;">
+                <a href="quiz.html?chapter=5" class="ui-btn ui-btn-secondary ui-btn-sm" style="width:100%;">Luyện chương này</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ch6 -->
+          <div class="chapter-card">
+            <div>
+              <div class="ch-top">
+                <span class="ch-number">Chương 6</span>
+                <span class="ui-badge ui-badge-info">182 câu</span>
+              </div>
+              <div class="ch-title">Phép đếm & Tổ hợp</div>
+              <div class="ch-en">Counting & Combinatorics</div>
+            </div>
+            <div>
+              <div class="ch-stats">
+                <span>Tiến độ: 25/182 (14%)</span>
+                <span style="color:var(--success); font-weight:700;">76% đúng</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 14%;"></div>
+              </div>
+              <div style="margin-top:var(--space-3); display:flex; justify-content:flex-end;">
+                <a href="quiz.html?chapter=6" class="ui-btn ui-btn-secondary ui-btn-sm" style="width:100%;">Luyện chương này</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ch7 -->
+          <div class="chapter-card">
+            <div>
+              <div class="ch-top">
+                <span class="ch-number">Chương 7</span>
+                <span class="ui-badge ui-badge-info">160 câu</span>
+              </div>
+              <div class="ch-title">Lý thuyết Đồ thị</div>
+              <div class="ch-en">Graphs & Connectivity</div>
+            </div>
+            <div>
+              <div class="ch-stats">
+                <span>Tiến độ: 50/160 (31%)</span>
+                <span style="color:var(--success); font-weight:700;">82% đúng</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 31%;"></div>
+              </div>
+              <div style="margin-top:var(--space-3); display:flex; justify-content:flex-end;">
+                <a href="quiz.html?chapter=7" class="ui-btn ui-btn-secondary ui-btn-sm" style="width:100%;">Luyện chương này</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ch8 -->
+          <div class="chapter-card">
+            <div>
+              <div class="ch-top">
+                <span class="ch-number">Chương 8</span>
+                <span class="ui-badge ui-badge-info">114 câu</span>
+              </div>
+              <div class="ch-title">Cây & Cây khung</div>
+              <div class="ch-en">Trees & Spanning Trees</div>
+            </div>
+            <div>
+              <div class="ch-stats">
+                <span>Tiến độ: 11/114 (10%)</span>
+                <span style="color:var(--success); font-weight:700;">90% đúng</span>
+              </div>
+              <div class="ui-progress-bar">
+                <div class="ui-progress-fill" style="width: 10%;"></div>
+              </div>
+              <div style="margin-top:var(--space-3); display:flex; justify-content:flex-end;">
+                <a href="quiz.html?chapter=8" class="ui-btn ui-btn-secondary ui-btn-sm" style="width:100%;">Luyện chương này</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top:auto; padding-top:var(--space-10); text-align:center; color:var(--text-muted); font-size:var(--text-xs);">
+      <p>MAD101 Studio • Thiết kế công nghệ cao cho sinh viên FPT University • Hoạt động 100% offline</p>
+      <p style="margin-top:4px;">Giao diện thử nghiệm Giai đoạn 1 (Preview)</p>
+    </footer>
+  </div>
+
+  <script>
+    // Theme toggle interaction
+    const btn = document.getElementById('themeToggleBtn');
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+    });
+  </script>
+</body>
+</html>

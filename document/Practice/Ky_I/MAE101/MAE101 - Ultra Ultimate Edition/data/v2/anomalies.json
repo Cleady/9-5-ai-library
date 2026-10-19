@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "totalImagesInAssets": 1135,
+    "totalQuestionsInQuestionsJs": 1131,
+    "totalKeysInClassifiedData": 1131,
+    "totalEntriesInOcrResults": 1885,
+    "uniqueImagesInOcrResults": 1135,
+    "duplicateImageHashes": 0,
+    "missingImagesForQuestions": 0,
+    "unreferencedImages": 4,
+    "namingAnomalies": 7,
+    "idDiscrepancies": 1,
+    "corruptImages": 0
+  },
+  "criticalAnomalies": [
+    {
+      "type": "MISPLACED_QUESTION_AND_WRONG_IMAGE",
+      "questionId": 455,
+      "currentInQuestionsJs": {
+        "image": "0001_q455_Question_455.png",
+        "topic": "MaTran",
+        "folder": "DSTT1",
+        "text": "_____ is an artificial neuron similar to a single biological neuron...",
+        "actualContent": "Câu hỏi môn Trí tuệ nhân tạo (AI/Perceptron), không thuộc MAE101"
+      },
+      "actualMaeQuestionOnDisk": {
+        "image": "0455_q455_Question_455.png",
+        "topicSuggested": "TichPhan",
+        "folderSuggested": "GT1",
+        "text": "Let \\int_1^4 f(x)dx = 6, \\int_1^4 (2f(x) - 5g(x))dx = 2. Find \\int_4^1 g(x)dx.",
+        "status": "Tồn tại trong assets/questions nhưng chưa được tham chiếu trong questions.js"
+      },
+      "recommendation": "Cần hoán đổi/thay thế bằng 0455_q455_Question_455.png thuộc chương Tích phân (GT1)"
+    },
+    {
+      "type": "NON_MAE101_QUESTION_IN_BANK",
+      "questionId": 306,
+      "currentInQuestionsJs": {
+        "image": "0306_q306_Question_306.png",
+        "topic": "PhuongTrinhViPhan",
+        "folder": "GT1",
+        "text": "A _____ is a node that can accommodate more than one record. The disadvantage of this method is that there may be a lot of wasted (unoccupied) locations.",
+        "actualContent": "Câu hỏi môn Cấu trúc dữ liệu và Giải thuật (CSD201 - Bucket Hashing), không thuộc toán MAE101"
+      },
+      "recommendation": "Đánh dấu review_flag='non_mae101_subject', giữ nguyên đề và đáp án (F - Bucket hashing) để đảm bảo toàn vẹn dữ liệu đề thi gốc."
+    }
+  ],
+  "unreferencedFiles": [
+    {
+      "file": "0455_q455_Question_455.png",
+      "sizeBytes": 27297,
+      "reason": "Ảnh gốc MAE101 hợp lệ của câu 455 nhưng bị bỏ sót vì questions.js đang trỏ nhầm vào 0001_q455_Question_455.png"
+    },
+    {
+      "file": "0247_q247_Question_247.webp",
+      "sizeBytes": 19630,
+      "reason": "Bản webp dư thừa; questions.js đang dùng 0247_q247_Question_247.png"
+    },
+    {
+      "file": "0306_q306_Question_306.webp",
+      "sizeBytes": 24770,
+      "reason": "Bản webp dư thừa; questions.js đang dùng 0306_q306_Question_306.png"
+    },
+    {
+      "file": "0410_q410_Question_410.webp",
+      "sizeBytes": 25378,
+      "reason": "Bản webp dư thừa; questions.js đang dùng 0410_q410_Question_410.png"
+    }
+  ],
+  "formatAnomalies": [
+    {
+      "file": "0467_q467_Question_467.webp",
+      "questionId": 467,
+      "note": "Đang dùng định dạng .webp trong questions.js (không có bản .png tương ứng)"
+    },
+    {
+      "file": "0488_q488_Question_488.webp",
+      "questionId": 488,
+      "note": "Đang dùng định dạng .webp trong questions.js (không có bản .png tương ứng)"
+    },
+    {
+      "file": "0489_q489_Question_489.webp",
+      "questionId": 489,
+      "note": "Đang dùng định dạng .webp trong questions.js (không có bản .png tương ứng)"
+    }
+  ],
+  "idSequenceCheck": {
+    "minId": 1,
+    "maxId": 1131,
+    "missingIds": [],
+    "duplicateIds": []
+  },
+  "ocrDuplicationNote": "File data/ocr_results_full.json có 1.885 bản ghi cho 1.135 ảnh (trung bình ~1.6 bản ghi/ảnh do chạy OCR nhiều lần ghi đè/append)."
+}

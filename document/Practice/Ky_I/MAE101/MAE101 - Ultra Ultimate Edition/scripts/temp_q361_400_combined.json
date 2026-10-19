@@ -1,0 +1,322 @@
+[
+  {
+    "id": 361,
+    "image": "0361_q361_Question_361.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Find the distance from the point (1, ~1, 0) to the plane 2x y + 22 - 3 = 0 80 DAP AN CAN CHON CAc DAP AN C. 1/3 None of the other choices is c"
+  },
+  {
+    "id": 362,
+    "image": "0362_q362_Question_362.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Find an equation of the line through the point (4,5) that cuts off the least area from the first quadrant: () { - * = 0 (i) 8x + 10y = 82 (ii)"
+  },
+  {
+    "id": 363,
+    "image": "0363_q363_Question_363.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Which of the following matrices are in row-echelon form? 56 DAP AN cAN CHON CAc DAP AN and (ii) None of the other choices is correct"
+  },
+  {
+    "id": 364,
+    "image": "0364_q364_Question_364.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Given that f(z)dz 6 find J6 f(c)dr 80 DAP AN CAN CHON CAc DAP AN -57/6 B. 57/6 C. -6/57 None of the other choices is correct E. 6/57"
+  },
+  {
+    "id": 365,
+    "image": "0365_q365_Question_365.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Find equations of the line containing two points P(1,2,3) Q(2,0,6). () x = 1 + 2t,y = 2,2 = 3 + 6t. r=2+t,y= -2t,2 6 + 3t. (ii) z = 1+t,y = 2 "
+  },
+  {
+    "id": 366,
+    "image": "0366_q366_Question_366.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "DinhThuc",
+    "ocr_preview": "CAU HOI Let ~1 (a € R) If det(A-1) = %, find a. 56 DAP AN cAN CHON CAc DAP AN -3 B. 3 D. 2"
+  },
+  {
+    "id": 367,
+    "image": "0367_q367_Question_367.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Find the function f 9(1) for f(z) sin(1) , sin(22) + 6 sin? (2) + 6 (iii) + 6) (iv) sin? (22 + 6) 80 DAP AN CAN CHON CAc DAP AN (iv) B:  (iii)"
+  },
+  {
+    "id": 368,
+    "image": "0368_q368_Question_368.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Estimate the area of under the graph of f(c) = 9 _ from x 0 to x 3, using three approximating rectangles and midpoints_ 56 DAP AN cAN CHON CAC"
+  },
+  {
+    "id": 369,
+    "image": "0369_q369_Question_369.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI Find the horizontal asymptote of sin € f(z) +1 56 DAP AN cAN CHON CAC DAP AN B. y = 0 C. y =-1 the horizontal asymptote does not exist"
+  },
+  {
+    "id": 370,
+    "image": "0370_q370_Question_370.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI The function s(t) t2 cos t + 4t2 represents the position of a particle moving along horizontal line. Find the velocity of the particle at time"
+  },
+  {
+    "id": 371,
+    "image": "0371_q371_Question_371.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Consider the function f(z) 322 + 2x. Find the number b such that the average value of the function f(z) on the interval [0, b] is equal to 72 "
+  },
+  {
+    "id": 372,
+    "image": "0372_q372_Question_372.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Find d Ji 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct for y = V16-ndt"
+  },
+  {
+    "id": 373,
+    "image": "0373_q373_Question_373.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Let U span{ (1,1,2,1) , (0,1,1, - -2) }. Find all values of t such that (1,t,3,4) is in U. 80 DAP AN CAN CHON CAc DAP AN There is no such B. -"
+  },
+  {
+    "id": 374,
+    "image": "0374_q374_Question_374.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "PhuongPhapSo",
+    "ocr_preview": "CAU HOI Find the linear approximation for at x = 0 56 DAP AN cAN CHON CAC DAP AN 32 - 1 B. (2/3)2 + 1 2x None of the other choices is correct 3x + 2"
+  },
+  {
+    "id": 375,
+    "image": "0375_q375_Question_375.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Let ABCD be a parallelogram with A(1,2,~1) B(1,0,2). Given that the midpoint of AC is 0(1,-1,-1). Find the coordinate of the vector BC . 80 DA"
+  },
+  {
+    "id": 376,
+    "image": "0376_q376_Question_376.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Let U = span{(1,2,3), (-2,4,0) , (0, 8, 6)}. Find the dimension of U . 80 DAP AN CAN CHON CAc DAP AN C. 2"
+  },
+  {
+    "id": 377,
+    "image": "0377_q377_Question_377.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Find the characteristic polynomial of the matrix ~2 ~c3 + 9x + 4 x3 4 9x + 4 622 9x 80 DAP AN CAN CHON CAc DAP AN B.  All of the other choices"
+  },
+  {
+    "id": 378,
+    "image": "0378_q378_Question_378.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI John and Joe earn total of <Ispan-34 when Johnworks2hoursand Joeworks3hours.I fJohnworks3hoursandJoeworks2hours,theyget <span class-\"katex\"-33"
+  },
+  {
+    "id": 379,
+    "image": "0379_q379_Question_379.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinh",
+    "ocr_preview": "CAU HOI For a homogeneous system of 3 equations in 5 variables, which of the following statement are true? 56 DAP AN cAN CHON CAc DAP AN The system ca"
+  },
+  {
+    "id": 380,
+    "image": "0380_q380_Question_380.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Find a 26 if the set {[1, 0,1], [-2,1,2], [1,&,b]} is orthogonal: 80 DAP AN CAN CHON CAc DAP AN A: 1 C. 3"
+  },
+  {
+    "id": 381,
+    "image": "0381_q381_Question_381.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Compute Ax where x = [~2 7 10 11 12 (i) [0 9T (ii) [0 ~ 3 _6 9]T (iv) [0 ~3 _ 6 9T 50 DAP AN CAN CAc DAP AN (Iv) None of the choices correct ~"
+  },
+  {
+    "id": 382,
+    "image": "0382_q382_Question_382.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let {u, U , w} be independent: Which of the following sets are independent? {u, w} 56 DAP AN cAN CHON CAC DAP AN and (ii) None of the other ch"
+  },
+  {
+    "id": 383,
+    "image": "0383_q383_Question_383.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Which of the followings are subspaces of R3 ? () U = {(1,y,2) x + 2y 32 = 0} (ii) U = {(1,y,2) 22 +y? + 22 = 1}. 56 DAP AN cAN CHON CAC DAP AN"
+  },
+  {
+    "id": 384,
+    "image": "0384_q384_Question_384.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "ocr_preview": "CAU HOI Let A = are real numbers_ Find the second column of adj(A). bz bx a1 S0 DAP AN CAN CHON CAc DAP AN AIl of the other choices are incorrect"
+  },
+  {
+    "id": 385,
+    "image": "0385_q385_Question_385.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "ocr_preview": "CAU HOI Find f' (1) for f(w) = 3 80 DAP AN CAN CHON CAc DAP AN A. 25 B: 17 None of the other choices is correct 25 ~17"
+  },
+  {
+    "id": 386,
+    "image": "0386_q386_Question_386.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "ocr_preview": "CAU HOI Use the Midpoint Rule with n 4 to estimate the value of the integral J f(x) dx 0.00 0.25 0.50 0.75 1.00 1.25 1.50 1.75 2.00 f(z) 1.00 0.61 0.4"
+  },
+  {
+    "id": 387,
+    "image": "0387_q387_Question_387.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI Evaluate the limit, if it exists 4x + 3 lim T[ 1 - 1 56 DAP AN cAN CHON CAC DAP AN A: 2 B: U C. -2 D. 3 E: -3 None of the other choices is cor"
+  },
+  {
+    "id": 388,
+    "image": "0388_q388_Question_388.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI At 2.00 PM a car's speedometer reads 30 milh. At 2:10 PM it reads 50 milh. Find the average acceleration from 2.00 PM to 2.10 PM: 56 DAP AN cA"
+  },
+  {
+    "id": 389,
+    "image": "0389_q389_Question_389.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "ocr_preview": "CAU HOI Compute the left Riemann sum for f(z) 2, 6] using subintervals_ (Give your answer to 2 decimal places) 56 DAP AN cAN CHON CAC DAP AN A 1 B. 0."
+  },
+  {
+    "id": 390,
+    "image": "0390_q390_Question_390.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "ocr_preview": "CAU HOI Let A be a 2 x 2 matrix with tWo eigenvectors U1 [1,~1JT and v2 [-1,2T corresponding to the eigenvalues A1 = 2 and A2 3, respectively. Find A."
+  },
+  {
+    "id": 391,
+    "image": "0391_q391_Question_391.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "ocr_preview": "CAU HOI Find dy dz by implicit differentiation zy? = 4 80 DAP AN CAN CHON CAc DAP AN None of the other choices is correct '(2x) C. 2/(2y) 2x /y 2y/€"
+  },
+  {
+    "id": 392,
+    "image": "0392_q392_Question_392.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "ocr_preview": "CAU HOI Let (L) be the line passing through (2,~1_ with slope % Which of the following point lies in (L)? 80 DAP AN CAN CHON CAc DAP AN A (-2,-3) B. ("
+  },
+  {
+    "id": 393,
+    "image": "0393_q393_Question_393.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let A,B be 2 x 2 matrices with 4-1 = 3],8 '= [ %] Find the (1,1)-entry of the matrix (ABT )-1_ 56 DAP AN cAN CHON CAC DAP AN None of the other"
+  },
+  {
+    "id": 394,
+    "image": "0394_q394_Question_394.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Let T be projection on the line y = x followed by reflection in the X-axis in the xy-plane. Find the sum of all entries in the first row of th"
+  },
+  {
+    "id": 395,
+    "image": "0395_q395_Question_395.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Find the function f 9(1) for f(z) +4 + 7 Vr + 4 + 5 (iii) Vz? F4r + 2 (iv) Vx? + 4 + 10 80 DAP AN CAN CHON CAc DAP AN (iii) None of them"
+  },
+  {
+    "id": 396,
+    "image": "0396_q396_Question_396.png",
+    "bank_answer": "F",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI Find all the constant that makes g DISCONTINUOUS at z = 4 if x < 4 cx + 13 80 DAP AN CAN CHON CAc DAP AN AII = values except 1 and = 3 All c v"
+  },
+  {
+    "id": 397,
+    "image": "0397_q397_Question_397.png",
+    "bank_answer": "E",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Find the average value of the function f(c) = 5 _ 22 over interval [~4,2] 56 DAP AN cAN CHON CAC DAP AN A: -7/3 B. 13/9 None of the other choi"
+  },
+  {
+    "id": 398,
+    "image": "0398_q398_Question_398.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let A and B be square matrices of the same size. Which of the following statements are true? det(A + B) = det(A) + det(B). If A is 2 x 2, then"
+  },
+  {
+    "id": 399,
+    "image": "0399_q399_Question_399.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "AnhXaTuyenTinh",
+    "ocr_preview": "CAU HOI Let T : R2 _ R? be a linear transformation such that T(1,~1) = (0,1),T(1,1) = (1,0). Find T(1,_7). 56 DAP AN cAN CHON CAc DAP AN A (-3,4) None"
+  },
+  {
+    "id": 400,
+    "image": "0400_q400_Question_400.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "ocr_preview": "CAU HOI Evaluate the integral of f(r) = (2\" + 1)e on the interval [0, 1]. 56 DAP AN cAN CHON CAC DAP AN A (2e + 5)/e (5 _ 2e)/e (2e + 3)/e (3e"
+  }
+]

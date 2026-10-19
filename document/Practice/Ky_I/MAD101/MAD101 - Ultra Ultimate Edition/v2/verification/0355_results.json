@@ -1,0 +1,85 @@
+{
+  "id": 355,
+  "method": "graph_theory_articulation_points_networkx",
+  "input": {
+    "graph_X": {
+      "nodes": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5"
+      ],
+      "edges": [
+        [
+          "v1",
+          "v3"
+        ],
+        [
+          "v1",
+          "v4"
+        ],
+        [
+          "v2",
+          "v5"
+        ],
+        [
+          "v2",
+          "v4"
+        ],
+        [
+          "v3",
+          "v5"
+        ]
+      ]
+    },
+    "graph_Y": {
+      "nodes": [
+        "TL",
+        "BL",
+        "TR",
+        "BR",
+        "C"
+      ],
+      "edges": [
+        [
+          "TL",
+          "BL"
+        ],
+        [
+          "TL",
+          "C"
+        ],
+        [
+          "BL",
+          "C"
+        ],
+        [
+          "TR",
+          "BR"
+        ],
+        [
+          "TR",
+          "C"
+        ],
+        [
+          "BR",
+          "C"
+        ]
+      ]
+    }
+  },
+  "output": {
+    "cut_vertices_X": [],
+    "cut_count_X": 0,
+    "cut_vertices_Y": [
+      "C"
+    ],
+    "cut_count_Y": 1,
+    "is_isomorphic_to_C5_X": true
+  },
+  "calculated_answer": "C",
+  "expected_answer": "C",
+  "match": true,
+  "conclusion": "Đồ thị Y có 1 cut vertex ('C'), trong khi đồ thị X có 0 cut vertex. Vậy Y có nhiều cut vertex hơn (Đáp án C)."
+}

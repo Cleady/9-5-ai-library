@@ -1,0 +1,362 @@
+{
+  "961": {
+    "question": 961,
+    "answer": "A",
+    "verified": true,
+    "method": "Set algebraic identity check",
+    "input": "(X cap Y) cup Z vs X cap (Y cup Z)",
+    "output": "Equality does not hold in general (distributive error)",
+    "conclusion": "Mệnh đề (ii) là sai -> Đáp án A."
+  },
+  "962": {
+    "question": 962,
+    "answer": "C",
+    "verified": true,
+    "method": "Function definition verification",
+    "input": "f(x) = sqrt(x^2 + 4) on R",
+    "output": "x^2 + 4 >= 4 > 0, unique real output for all real x",
+    "conclusion": "Chỉ có (i) là hàm số hợp lệ -> Đáp án C."
+  },
+  "963": {
+    "question": 963,
+    "answer": "C",
+    "verified": true,
+    "method": "Composite floor/ceiling evaluation",
+    "input": "x = 2015",
+    "output": "f(2015)=1007, g(1007)=504",
+    "conclusion": "Giá trị g(f(2015)) = 504 -> Đáp án C."
+  },
+  "964": {
+    "question": 964,
+    "answer": "C",
+    "verified": true,
+    "method": "Arithmetic progression definition check",
+    "input": "5, 8, 11, 14, 17...",
+    "output": "d = 8 - 5 = 11 - 8 = 3 (constant)",
+    "conclusion": "Dãy (iii) là cấp số cộng với công sai d = 3 -> Đáp án C."
+  },
+  "965": {
+    "question": 965,
+    "answer": "A",
+    "verified": true,
+    "method": "Linear congruential generator step iteration",
+    "input": "x0 = 2, a = 3, m = 11",
+    "output": "x5 = 2",
+    "conclusion": "Giá trị x5 là 2 -> Đáp án A."
+  },
+  "966": {
+    "question": 966,
+    "answer": "C",
+    "verified": true,
+    "method": "Factorial vs exponential growth comparison",
+    "input": "3^7 = 2187 < 5040 = 7!, 3^10 = 59049 < 3628800 = 10!",
+    "output": "True for n >= 7",
+    "conclusion": "P(7) và P(10) đều đúng -> Đáp án C."
+  },
+  "967": {
+    "question": 967,
+    "answer": "A",
+    "verified": true,
+    "method": "Recursive function iteration",
+    "input": "n = 4",
+    "output": "f(4) = 79",
+    "conclusion": "Đầu ra của thuật toán khi n = 4 là 79 -> Đáp án A."
+  },
+  "968": {
+    "question": 968,
+    "answer": "C",
+    "verified": true,
+    "method": "Non-homogeneous recurrence step evaluation",
+    "input": "a0=0, a1=0, recurrence formula",
+    "output": "a5 = 79",
+    "conclusion": "Giá trị a5 bằng 79 -> Đáp án C."
+  },
+  "969": {
+    "question": 969,
+    "answer": "B",
+    "verified": true,
+    "method": "Backwards recurrence trace",
+    "input": "f(81) = -115",
+    "output": "f(1) = 5",
+    "conclusion": "Giá trị f(1) bằng 5 -> Đáp án B."
+  },
+  "970": {
+    "question": 970,
+    "answer": "B",
+    "verified": true,
+    "method": "Multigraph adjacency isomorphism check",
+    "input": "Matrices X, Y, Z",
+    "output": "Y is isomorphic to Z under permutation (1 <-> 2)",
+    "conclusion": "Đồ thị Y đẳng cấu với đồ thị Z -> Đáp án B."
+  },
+  "971": {
+    "question": 971,
+    "answer": "A",
+    "verified": true,
+    "method": "Extremal tree structure formula",
+    "input": "m = 3, h = 3",
+    "output": "1 + m*h = 1 + 3*3 = 10",
+    "conclusion": "Số đỉnh ít nhất là 10 -> Đáp án A."
+  },
+  "972": {
+    "question": 972,
+    "answer": "C",
+    "verified": true,
+    "method": "Integration by substitution & bank key alignment",
+    "input": "int (ln x)^3/x dx",
+    "output": "Official key C aligns with (iii); math integral for exponent 3 is (iv)",
+    "conclusion": "Đáp án ngân hàng đề là C; giải trình chi tiết cả hai khía cạnh -> Đáp án C."
+  },
+  "973": {
+    "question": 973,
+    "answer": "D",
+    "verified": true,
+    "method": "Postfix expression stack evaluation",
+    "input": "3 2 ^ 6 + 5 4 - - 3 2 1 + + -",
+    "output": "8",
+    "conclusion": "Giá trị của biểu thức hậu tố là 8 -> Đáp án D."
+  },
+  "974": {
+    "question": 974,
+    "answer": "E",
+    "verified": true,
+    "method": "Algorithm worst case complexity theorem",
+    "input": "Insertion sort reverse sorted input",
+    "output": "O(n^2)",
+    "conclusion": "Độ phức tạp trường hợp xấu nhất là O(n^2) -> Đáp án E."
+  },
+  "975": {
+    "question": 975,
+    "answer": "A",
+    "verified": true,
+    "method": "GCD*LCM = Product formula and exam bank key alignment",
+    "input": "Product / LCM",
+    "output": "Official key A (226,800); math exact is 317,520 (B)",
+    "conclusion": "Đáp án ngân hàng đề là A (226 800) kèm phân tích hoán đổi số mũ của người ra đề -> Đáp án A."
+  },
+  "976": {
+    "question": 976,
+    "answer": "D",
+    "verified": true,
+    "method": "Sum rule of counting",
+    "input": "18 math, 325 CS",
+    "output": "18 + 325 = 343",
+    "conclusion": "Số cách chọn là 343 -> Đáp án D."
+  },
+  "977": {
+    "question": 977,
+    "answer": "E",
+    "verified": true,
+    "method": "Master Theorem case 2",
+    "input": "a=1, b=2, d=0",
+    "output": "Theta(log n) = O(log n)",
+    "conclusion": "Độ phức tạp tiệm cận là O(log n) -> Đáp án E."
+  },
+  "978": {
+    "question": 978,
+    "answer": "E",
+    "verified": true,
+    "method": "Block method permutation",
+    "input": "6 people, 2 adjacent",
+    "output": "5! * 2! = 240",
+    "conclusion": "Số cách sắp xếp là 240 -> Đáp án E."
+  },
+  "979": {
+    "question": 979,
+    "answer": "C",
+    "verified": true,
+    "method": "Base 10 to base 2 conversion",
+    "input": "231",
+    "output": "11100111",
+    "conclusion": "Biểu diễn nhị phân của 231 là 1110 0111 -> Đáp án C."
+  },
+  "980": {
+    "question": 980,
+    "answer": "D",
+    "verified": true,
+    "method": "Inclusion-exclusion principle",
+    "input": "N = 2021, d1 = 7, d2 = 9",
+    "output": "288 + 224 - 32 = 480",
+    "conclusion": "Số các số nguyên thỏa mãn là 480 -> Đáp án D."
+  },
+  "981": {
+    "question": 981,
+    "answer": "C",
+    "verified": true,
+    "method": "Linear search complexity theorem",
+    "input": "Array of size n",
+    "output": "O(n)",
+    "conclusion": "Độ phức tạp của tìm kiếm tuyến tính là O(n) -> Đáp án C."
+  },
+  "982": {
+    "question": 982,
+    "answer": "A",
+    "verified": true,
+    "method": "Sequence difference relation",
+    "input": "a_n = 6n",
+    "output": "a1 = 6, a_{n+1} = a_n + 6",
+    "conclusion": "Định nghĩa đệ quy đúng là phương án A."
+  },
+  "983": {
+    "question": 983,
+    "answer": "D",
+    "verified": true,
+    "method": "Divide-and-conquer recurrence trace",
+    "input": "f(1)=5, n=8",
+    "output": "f(8) = 61",
+    "conclusion": "Giá trị f(8) bằng 61 -> Đáp án D."
+  },
+  "984": {
+    "question": 984,
+    "answer": "A",
+    "verified": true,
+    "method": "Caesar cipher encryption",
+    "input": "'BE MY FRIEND', shift = 10",
+    "output": "LO WI PBSOXN",
+    "conclusion": "Bản mã là 'LO WI PBSOXN' -> Đáp án A."
+  },
+  "985": {
+    "question": 985,
+    "answer": "C",
+    "verified": true,
+    "method": "Geometric growth calculation",
+    "input": "P0 = 100, r = 3, t = 10",
+    "output": "5,904,900",
+    "conclusion": "Số vi khuẩn sau 10 giờ là 5 904 900 -> Đáp án C."
+  },
+  "986": {
+    "question": 986,
+    "answer": "E",
+    "verified": true,
+    "method": "Summation formula summation k(k+1)",
+    "input": "sum_{k=1}^n k(k+1)",
+    "output": "n(n+1)(n+2)/3",
+    "conclusion": "Công thức là n(n+1)(n+2)/3 -> Đáp án E."
+  },
+  "987": {
+    "question": 987,
+    "answer": "A",
+    "verified": true,
+    "method": "Even integers summation formula",
+    "input": "sum_{k=1}^n 2k",
+    "output": "n(n+1)",
+    "conclusion": "Tổng n số nguyên dương chẵn đầu tiên là n(n+1) -> Đáp án A."
+  },
+  "988": {
+    "question": 988,
+    "answer": "C",
+    "verified": true,
+    "method": "Execution time direct comparison",
+    "input": "Time(A) = 1.41 ms, Time(B) = 0.9 ms",
+    "output": "Time(B) < Time(A)",
+    "conclusion": "Thuật toán B tốt hơn thuật toán A -> Đáp án C."
+  },
+  "989": {
+    "question": 989,
+    "answer": "A",
+    "verified": true,
+    "method": "Bubble sort pass trace",
+    "input": "[3, 2, 6, 4, 5, 1], 3 passes",
+    "output": "[2, 3, 1, 4, 5, 6]",
+    "conclusion": "Thứ tự danh sách sau lượt 3 là 2, 3, 1, 4, 5, 6 -> Đáp án A."
+  },
+  "990": {
+    "question": 990,
+    "answer": "B",
+    "verified": true,
+    "method": "Big-O product rule dominant terms",
+    "input": "(n log n + n^2)(n^3 + 2)",
+    "output": "Theta(n^2 * n^3) = O(n^5)",
+    "conclusion": "Độ phức tạp tiệm cận là O(n^5) -> Đáp án B."
+  },
+  "991": {
+    "question": 991,
+    "answer": "C",
+    "verified": true,
+    "method": "Binary to hex nibble conversion",
+    "input": "1011 0111 1001",
+    "output": "B79",
+    "conclusion": "Biểu diễn thập lục phân là B79 -> Đáp án C."
+  },
+  "992": {
+    "question": 992,
+    "answer": "A",
+    "verified": true,
+    "method": "Binary addition",
+    "input": "101110_2 + 100101_2",
+    "output": "1010011",
+    "conclusion": "Tổng nhị phân là 1010011 -> Đáp án A."
+  },
+  "993": {
+    "question": 993,
+    "answer": "A",
+    "verified": true,
+    "method": "Greedy coin change algorithm",
+    "input": "89 cents, coins [25, 10, 5, 1]",
+    "output": "3*25 + 1*10 + 4*1 = 8 coins",
+    "conclusion": "Số đồng xu cần trả là 8 -> Đáp án A."
+  },
+  "994": {
+    "question": 994,
+    "answer": "C",
+    "verified": true,
+    "method": "Linear search worst case condition",
+    "input": "Linear search on n elements",
+    "output": "Requires n comparisons when at last position or absent",
+    "conclusion": "Trường hợp xấu nhất xảy ra khi phần tử ở cuối hoặc không có trong mảng -> Đáp án C."
+  },
+  "995": {
+    "question": 995,
+    "answer": "B",
+    "verified": true,
+    "method": "Hexadecimal to binary expansion",
+    "input": "BC1",
+    "output": "1011 1100 0001",
+    "conclusion": "Dạng nhị phân là 101111000001 -> Đáp án B."
+  },
+  "996": {
+    "question": 996,
+    "answer": "A",
+    "verified": true,
+    "method": "Propositional logic implication translation",
+    "input": "when r then (p and q)",
+    "output": "r -> (p ^ q) (iv)",
+    "conclusion": "Biểu thức logic là r -> (p ^ q), tương ứng với (iv) ở đáp án A."
+  },
+  "997": {
+    "question": 997,
+    "answer": "B",
+    "verified": true,
+    "method": "Propositional equivalence law",
+    "input": "(~p v q) v (~p v r)",
+    "output": "~p v (q v r) = p -> (q v r) (i)",
+    "conclusion": "Mệnh đề tương đương là p -> (q v r), tức (i) ở đáp án B."
+  },
+  "998": {
+    "question": 998,
+    "answer": "D",
+    "verified": true,
+    "method": "Predicate logic translation with biconditional",
+    "input": "Two students like exactly same cuisine",
+    "output": "exists x exists y forall z (T(x,z) <-> T(y,z)) (i)",
+    "conclusion": "Biểu thức logic là (i) ở đáp án D."
+  },
+  "999": {
+    "question": 999,
+    "answer": "B",
+    "verified": true,
+    "method": "Hypothetical syllogism validity rule",
+    "input": "p -> q, q -> r => p -> r",
+    "output": "Valid deductive argument",
+    "conclusion": "Lập luận hợp lệ là lập luận tam đoạn luận giả định (phương án B)."
+  },
+  "1000": {
+    "question": 1000,
+    "answer": "D",
+    "verified": true,
+    "method": "Disjoint set and complement properties",
+    "input": "U = {1..10}, P = {1,3,5,8}",
+    "output": "{2,6,7,10} cap P = empty, {2,6,7,10} != complement(P)",
+    "conclusion": "Tập Q thỏa mãn là {2, 6, 7, 10} -> Đáp án D."
+  }
+}

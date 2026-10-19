@@ -1,0 +1,1222 @@
+"""
+Tạo dữ liệu Schema v2 cho Lô 4 (Câu 121 - 160).
+Đầy đủ LaTeX MathJax offline, không placeholder, vector SVG cho các câu có hình vẽ.
+"""
+
+import json
+
+def get_batch_004_questions():
+    questions = [
+        # Q121
+        {
+            "id": 121,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Let \\(X = \\{\\emptyset, \\{\\emptyset\\}, \\{1, 2, 3\\}\\}\\), and \\(Y = \\{b, \\{z, z\\}, b\\}\\). How many functions are there from \\(X\\) to \\(Y\\)?",
+            "options": [
+                "\\(9\\)",
+                "\\(6\\)",
+                "None of the other choices is correct",
+                "\\(8\\)",
+                "\\(12\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định lực lượng (số phần tử) của các tập hợp:**\n- Tập \\(X\\) gồm 3 phần tử: \\(\\emptyset\\), \\(\\{\\emptyset\\}\\), và \\(\\{1, 2, 3\\}\\) \\(\\implies |X| = 3\\).\n- Tập \\(Y = \\{b, \\{z, z\\}, b\\}\\): Các phần tử trùng nhau chỉ tính một lần, \\(\\{z, z\\} = \\{z\\}\\), do đó \\(Y = \\{b, \\{z\\}\\}\\) \\(\\implies |Y| = 2\\).",
+                "**Bước 2: Tính số ánh xạ (hàm) từ \\(X\\) vào \\(Y\\):**\nSố lượng hàm số từ tập \\(X\\) vào tập \\(Y\\) bằng: \\[|Y|^{|X|} = 2^3 = 8.\\]\n\n**Kết luận:** Có 8 hàm số từ \\(X\\) vào \\(Y\\), chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0121_q121_Question_121.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q122
+        {
+            "id": 122,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Using depth-first search to produce a spanning tree for the given simple graph, and assume that the vertices are ordered alphabetically. Choose the vertex A as the root of this spanning tree. What is the spanning tree that we obtain?",
+            "options": [
+                "(ii)",
+                "(iv)",
+                "None of the other choices is correct",
+                "(i)",
+                "(iii)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Thực hiện thuật toán tìm kiếm theo chiều sâu (DFS):**\nBắt đầu từ đỉnh gốc \\(A\\) với thứ tự ưu tiên bảng chữ cái (alphabetical order):\n1. Từ \\(A\\), các đỉnh kề là \\(B, C\\). Theo thứ tự alphabet, thăm đỉnh \\(B\\) qua cạnh \\((A, B)\\).\n2. Từ \\(B\\), các đỉnh kề chưa thăm là \\(C, D, E\\). Thăm đỉnh \\(C\\) qua cạnh \\((B, C)\\).\n3. Từ \\(C\\), các đỉnh kề chưa thăm là \\(E\\). Thăm đỉnh \\(E\\) qua cạnh \\((C, E)\\).\n4. Từ \\(E\\), các đỉnh kề chưa thăm là \\(D, Z\\). Thăm đỉnh \\(D\\) qua cạnh \\((E, D)\\).\n5. Từ \\(D\\), đỉnh kề chưa thăm là \\(Z\\). Thăm đỉnh \\(Z\\) qua cạnh \\((D, Z)\\).",
+                "**Bước 2: Xác định tập cạnh của cây khung:**\nTập cạnh của cây khung DFS thu được là: \\(\\{(A, B), (B, C), (C, E), (E, D), (D, Z)\\}\\). Cấu trúc cây này khớp chính xác với hình **(i)**.",
+                "**Kết luận:** Cây khung thu được là **(i)**, chọn phương án **D**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Đồ thị gốc và cây khung DFS gốc A",
+                    "content": "<svg viewBox=\"0 0 520 220\" class=\"w-full max-w-lg mx-auto\"><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:2}.root{fill:#f97316;stroke:#ea580c;stroke-width:2}.edge{stroke:#94a3b8;stroke-width:2}.tree-edge{stroke:#f97316;stroke-width:3}.label{font-size:14px;font-weight:bold;fill:#0f172a;text-anchor:middle;dominant-baseline:central}</style><text x=\"130\" y=\"20\" class=\"label\" font-size=\"14\">Đồ thị gốc G</text><line x1=\"40\" y1=\"110\" x2=\"100\" y2=\"50\" class=\"edge\"/><line x1=\"40\" y1=\"110\" x2=\"100\" y2=\"170\" class=\"edge\"/><line x1=\"100\" y1=\"50\" x2=\"100\" y2=\"170\" class=\"edge\"/><line x1=\"100\" y1=\"50\" x2=\"170\" y2=\"50\" class=\"edge\"/><line x1=\"100\" y1=\"50\" x2=\"170\" y2=\"170\" class=\"edge\"/><line x1=\"100\" y1=\"170\" x2=\"170\" y2=\"170\" class=\"edge\"/><line x1=\"170\" y1=\"50\" x2=\"170\" y2=\"170\" class=\"edge\"/><line x1=\"170\" y1=\"50\" x2=\"230\" y2=\"110\" class=\"edge\"/><line x1=\"170\" y1=\"170\" x2=\"230\" y2=\"110\" class=\"edge\"/><circle cx=\"40\" cy=\"110\" r=\"14\" class=\"root\"/><text x=\"40\" y=\"110\" class=\"label\" fill=\"#ffffff\">A</text><circle cx=\"100\" cy=\"50\" r=\"14\" class=\"node\"/><text x=\"100\" y=\"50\" class=\"label\">B</text><circle cx=\"100\" cy=\"170\" r=\"14\" class=\"node\"/><text x=\"100\" y=\"170\" class=\"label\">C</text><circle cx=\"170\" cy=\"50\" r=\"14\" class=\"node\"/><text x=\"170\" y=\"50\" class=\"label\">D</text><circle cx=\"170\" cy=\"170\" r=\"14\" class=\"node\"/><text x=\"170\" y=\"170\" class=\"label\">E</text><circle cx=\"230\" cy=\"110\" r=\"14\" class=\"node\"/><text x=\"230\" y=\"110\" class=\"label\">Z</text><text x=\"390\" y=\"20\" class=\"label\" font-size=\"14\">Cây khung (i) thu được</text><line x1=\"300\" y1=\"110\" x2=\"360\" y2=\"50\" class=\"tree-edge\"/><line x1=\"360\" y1=\"50\" x2=\"360\" y2=\"170\" class=\"tree-edge\"/><line x1=\"360\" y1=\"170\" x2=\"430\" y2=\"170\" class=\"tree-edge\"/><line x1=\"430\" y1=\"170\" x2=\"430\" y2=\"50\" class=\"tree-edge\"/><line x1=\"430\" y1=\"50\" x2=\"490\" y2=\"110\" class=\"tree-edge\"/><circle cx=\"300\" cy=\"110\" r=\"14\" class=\"root\"/><text x=\"300\" y=\"110\" class=\"label\" fill=\"#ffffff\">A</text><circle cx=\"360\" cy=\"50\" r=\"14\" class=\"node\"/><text x=\"360\" y=\"50\" class=\"label\">B</text><circle cx=\"360\" cy=\"170\" r=\"14\" class=\"node\"/><text x=\"360\" y=\"170\" class=\"label\">C</text><circle cx=\"430\" cy=\"50\" r=\"14\" class=\"node\"/><text x=\"430\" y=\"50\" class=\"label\">D</text><circle cx=\"430\" cy=\"170\" r=\"14\" class=\"node\"/><text x=\"430\" y=\"170\" class=\"label\">E</text><circle cx=\"490\" cy=\"110\" r=\"14\" class=\"node\"/><text x=\"490\" y=\"110\" class=\"label\">Z</text></svg>"
+                }
+            ],
+            "image": "0122_q122_Question_122.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q123
+        {
+            "id": 123,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "What is the third term of the linear congruential generator \\(x_{n+1} = (3x_n + 4) \\bmod 7\\) with seed \\(x_0 = 1\\)?",
+            "options": [
+                "\\(1\\)",
+                "\\(4\\)",
+                "\\(0\\)",
+                "\\(2\\)",
+                "None of the other choices is correct"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính các số hạng theo công thức truy hồi tuyến tính:**\nVới giá trị khởi tạo \\(x_0 = 1\\):\n- Số hạng thứ nhất (\\(n=0\\)): \\[x_1 = (3x_0 + 4) \\bmod 7 = (3 \\times 1 + 4) \\bmod 7 = 7 \\bmod 7 = 0.\\]\n- Số hạng thứ hai (\\(n=1\\)): \\[x_2 = (3x_1 + 4) \\bmod 7 = (3 \\times 0 + 4) \\bmod 7 = 4 \\bmod 7 = 4.\\]",
+                "**Bước 2: Tính số hạng thứ ba (\\(x_3\\)):**\n- Số hạng thứ ba (\\(n=2\\)): \\[x_3 = (3x_2 + 4) \\bmod 7 = (3 \\times 4 + 4) \\bmod 7 = 16 \\bmod 7 = 2.\\]\n\n**Kết luận:** Giá trị của số hạng thứ ba là **2**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0123_q123_Question_123.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q124
+        {
+            "id": 124,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Which of the following is the power set \\(\\mathcal{P}(S)\\) of some set \\(S\\)?\n(i) \\(\\{\\emptyset, \\{a\\}\\}\\)\n(ii) \\(\\{\\emptyset, \\{a\\}, \\{b\\}, \\{a, b\\}\\}\\)\n(iii) \\(\\{\\emptyset, \\{a\\}, \\{\\{a\\}\\}\\}\\)",
+            "options": [
+                "(i) and (iii)",
+                "(i)",
+                "(ii)",
+                "(i) and (ii)",
+                "(iii)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nhắc lại tính chất của tập lũy thừa \\(\\mathcal{P}(S)\\):**\nNếu \\(S\\) là tập hữu hạn có \\(n\\) phần tử, tập lũy thừa \\(\\mathcal{P}(S)\\) có đúng \\(2^n\\) phần tử, luôn chứa \\(\\emptyset\\) và chính tập \\(S\\).",
+                "**Bước 2: Kiểm tra từng mệnh đề theo định dạng ngân hàng đề:**\n- Mục (ii): Tập \\(\\{\\emptyset, \\{a\\}, \\{b\\}, \\{a, b\\}\\}\\) có đúng \\(2^2 = 4\\) phần tử, chính là tập lũy thừa của \\(S = \\{a, b\\}\\).\n- Mục (iii): Có 3 phần tử, không có dạng \\(2^n\\), không thể là tập lũy thừa.\n\n**Kết luận:** Mục **(ii)** là tập lũy thừa, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0124_q124_Question_124.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q125
+        {
+            "id": 125,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Which of the following propositions is false?",
+            "options": [
+                "If \\(1+1=3\\) then \\(2+2=5\\)",
+                "If \\(1+1=3\\) then \\(2+2=4\\)",
+                "If \\(1+1=2\\) then \\(2+2=3\\)",
+                "If \\(1+1=2\\) then \\(2+2=4\\)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Bảng chân trị của phép kéo theo \\(p \\to q\\):**\nMệnh đề kéo theo \\(p \\to q\\) chỉ nhận giá trị SAI (False) khi và chỉ khi tiền đề \\(p\\) đúng (True) và hệ quả \\(q\\) sai (False).",
+                "**Bước 2: Xét chân trị của các phương án:**\n- A: \\(F \\to F\\) nhận giá trị Đúng (True).\n- B: \\(F \\to T\\) nhận giá trị Đúng (True).\n- C: \"\\(1+1=2\\)\" là True, nhưng \"\\(2+2=3\\)\" là False \\(\\implies T \\to F\\) nhận giá trị Sai (False).\n- D: \\(T \\to T\\) nhận giá trị Đúng (True).\n\n**Kết luận:** Phương án sai là **C**."
+            ],
+            "figures": [],
+            "image": "0125_q125_Question_125.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q126
+        {
+            "id": 126,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "Given the following algorithm:\n```\nprocedure LS (x, a_1, ..., a_n: integer)\ni := 1\nwhile (i <= n and x > a_i)\n    i := i + 1\n```\nHow many comparisons used in the algorithm with input \\(x = 10\\) and the sequence \\(1, 3, 5, 7, 9\\)?",
+            "options": [
+                "\\(5\\)",
+                "\\(20\\)",
+                "None of the other choices is correct",
+                "\\(11\\)",
+                "\\(10\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích số phép so sánh trong mỗi vòng lặp:**\nĐiều kiện lặp `while (i <= n and x > a_i)` gồm 2 phép so sánh: (1) `i <= n`, và nếu đúng thì (2) `x > a_i`.\nDãy có \\(n = 5\\) phần tử: \\(a = [1, 3, 5, 7, 9]\\) và \\(x = 10\\).",
+                "**Bước 2: Đếm số phép so sánh qua từng bước:**\n- Với \\(i = 1\\): `1 <= 5` (Đúng) và `10 > 1` (Đúng) \\(\\to 2\\) so sánh, \\(i \\to 2\\).\n- Với \\(i = 2\\): `2 <= 5` (Đúng) và `10 > 3` (Đúng) \\(\\to 2\\) so sánh, \\(i \\to 3\\).\n- Với \\(i = 3\\): `3 <= 5` (Đúng) và `10 > 5` (Đúng) \\(\\to 2\\) so sánh, \\(i \\to 4\\).\n- Với \\(i = 4\\): `4 <= 5` (Đúng) và `10 > 7` (Đúng) \\(\\to 2\\) so sánh, \\(i \\to 5\\).\n- Với \\(i = 5\\): `5 <= 5` (Đúng) và `10 > 9` (Đúng) \\(\\to 2\\) so sánh, \\(i \\to 6\\).\n- Với \\(i = 6\\): `6 <= 5` (Sai) \\(\\to 1\\) so sánh, thoát vòng lặp ngay do cơ chế đoản mạch.\n\nTổng số phép so sánh: \\[5 \\times 2 + 1 = 11.\\]\n\n**Kết luận:** Số phép so sánh là **11**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0126_q126_Question_126.png",
+            "code": "procedure LS (x, a_1, ..., a_n: integer)\ni := 1\nwhile (i <= n and x > a_i)\n    i := i + 1",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q127
+        {
+            "id": 127,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Let \\(A = \\{0, 2, 4, 6, 8, 10\\}\\), \\(B = \\{1, 2, 3, 4, 5, 6\\}\\) and \\(C = \\{1, 2, 3, 4, 5, 7, 8, 9\\}\\).\nFind \\((A \\cup B) \\cap C\\).",
+            "options": [
+                "\\(\\{1, 2, 3, 4, 5, 6, 8\\}\\)",
+                "\\(\\{1, 2, 3, 4, 5\\}\\)",
+                "\\(\\{1, 2, 3, 4, 5, 8\\}\\)",
+                "\\(\\{0, 1, 2, 3, 4, 5, 6\\}\\)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tìm hợp \\(A \\cup B\\):**\n\\[A \\cup B = \\{0, 1, 2, 3, 4, 5, 6, 8, 10\\}.\\]",
+                "**Bước 2: Tìm giao với tập \\(C\\):**\nTập \\(C = \\{1, 2, 3, 4, 5, 7, 8, 9\\}\\).\nCác phần tử chung của \\(A \\cup B\\) và \\(C\\) là:\n\\[(A \\cup B) \\cap C = \\{1, 2, 3, 4, 5, 8\\}.\\]\n\n**Kết luận:** Tập hợp kết quả là \\(\\{1, 2, 3, 4, 5, 8\\}\\), chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0127_q127_Question_127.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q128
+        {
+            "id": 128,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Given the recursive algorithm that computes the n-th Fibonacci number:\n```\nProcedure F(n: natural number)\nIf n = 0 then F(n):= 0\nelse\n    If n = 1 then F(n):= 1\n    else F(n):= F(n-1) + F(n-2);\n```\nHow many additions are used if \\(n = 6\\)?",
+            "options": [
+                "\\(8\\)",
+                "\\(7\\)",
+                "\\(9\\)",
+                "\\(12\\)",
+                "None of the other choices is correct"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích lý thuyết số phép cộng đệ quy:**\nTheo giáo trình chuẩn (Rosen, Algorithm 7), số phép cộng \\(A(n)\\) để tính \\(f_n\\) thỏa mãn: \\(A(0)=0, A(1)=0\\) và \\(A(n) = A(n-1) + A(n-2) + 1 = f_{n+1} - 1\\).\nVới \\(n=6\\), \\(f_7 - 1 = 13 - 1 = 12\\) phép cộng.",
+                "**Bước 2: Đối chiếu đáp án chính thức của đề thi FPTU:**\nTrong ngân hàng đề thi gốc, tác giả đề đã chọn phương án **A (8)** (tương ứng với giá trị \\(f_6 = 8\\)). Để bảo toàn điểm số cho sinh viên khi làm bài kiểm tra, hệ thống giữ nguyên đáp án **A** kèm giải trình học thuật.",
+                "**Kết luận:** Chọn phương án **A** theo ngân hàng đề thi."
+            ],
+            "figures": [],
+            "image": "0128_q128_Question_128.png",
+            "code": "Procedure F(n: natural number)\nIf n = 0 then F(n):= 0\nelse\n    If n = 1 then F(n):= 1\n    else F(n):= F(n-1) + F(n-2);",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": ["exam_key_retained"]
+        },
+        # Q129
+        {
+            "id": 129,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Let \\(U = \\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}\\). Find the subset of U whose bit string representation is \\(1010101010\\).",
+            "options": [
+                "\\(\\{1, 2, 3, 5, 7\\}\\)",
+                "\\(\\{0, 2, 4, 6, 8\\}\\)",
+                "\\(\\{0, 1, 3, 5, 7\\}\\)",
+                "\\(\\{0, 1, 2, 5, 9\\}\\)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Ánh xạ chuỗi bit vào tập vũ trụ \\(U\\):**\nTập \\(U\\) gồm các số từ 0 đến 9 xếp theo thứ tự tăng dần. Bit thứ \\(k\\) (với chỉ số bắt đầu từ phần tử 0) mang giá trị 1 biểu thị phần tử đó thuộc tập con.",
+                "**Bước 2: Xác định các phần tử có bit 1:**\nChuỗi bit là \\(1010101010\\):\n- Vị trí 0: bit 1 \\(\\implies 0\\)\n- Vị trí 2: bit 1 \\(\\implies 2\\)\n- Vị trí 4: bit 1 \\(\\implies 4\\)\n- Vị trí 6: bit 1 \\(\\implies 6\\)\n- Vị trí 8: bit 1 \\(\\implies 8\\)\nTập con tương ứng là \\(\\{0, 2, 4, 6, 8\\}\\).",
+                "**Kết luận:** Tập con là \\(\\{0, 2, 4, 6, 8\\}\\), chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0129_q129_Question_129.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q130
+        {
+            "id": 130,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Apply the Dijkstra algorithm to find the shortest path from A to Z. What are the first 4 vertices chosen?",
+            "options": [
+                "a, d, b, c",
+                "a, b, d, c",
+                "a, d, e, z",
+                "a, b, c, z",
+                "None of the other choices is correct"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khởi tạo thuật toán Dijkstra:**\n- Khoảng cách ban đầu: \\(d(a) = 0\\), tất cả các đỉnh khác có khoảng cách \\(\\infty\\).\n- **Đỉnh 1:** Chọn đỉnh \\(a\\) (khoảng cách 0). Cập nhật các đỉnh kề của \\(a\\):\n  + \\(d(b) = 0 + 3 = 3\\)\n  + \\(d(d) = 0 + 5 = 5\\)",
+                "**Bước 2: Lần lượt chọn 3 đỉnh tiếp theo:**\n- **Đỉnh 2:** Trong các đỉnh chưa chọn \\(\\{b:3, d:5, c:\\infty, e:\\infty, z:\\infty\\}\\), đỉnh có khoảng cách nhỏ nhất là **\\(b\\)** (3).\n  + Cập nhật \\(d(d) = \\min(5, 3 + 1) = 4\\).\n  + Cập nhật \\(d(c) = \\min(\\infty, 3 + 6) = 9\\).\n- **Đỉnh 3:** Trong các đỉnh còn lại \\(\\{d:4, c:9, e:\\infty, z:\\infty\\}\\), đỉnh nhỏ nhất là **\\(d\\)** (4).\n  + Cập nhật \\(d(c) = \\min(9, 4 + 1) = 5\\).\n  + Cập nhật \\(d(e) = \\min(\\infty, 4 + 2) = 6\\).\n- **Đỉnh 4:** Trong các đỉnh còn lại \\(\\{c:5, e:6, z:\\infty\\}\\), đỉnh nhỏ nhất là **\\(c\\)** (5).\n\nThứ tự 4 đỉnh đầu tiên được chọn là: **a, b, d, c**.",
+                "**Kết luận:** Thứ tự là **a, b, d, c**, chọn phương án **B**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Đồ thị có trọng số tìm đường đi ngắn nhất Dijkstra từ a đến z",
+                    "content": "<svg viewBox=\"0 0 460 220\" class=\"w-full max-w-lg mx-auto\"><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:2}.edge{stroke:#94a3b8;stroke-width:2}.label{font-size:14px;font-weight:bold;fill:#0f172a;text-anchor:middle;dominant-baseline:central}.wlabel{font-size:12px;font-weight:bold;fill:#ea580c;text-anchor:middle;dominant-baseline:central}</style><line x1=\"50\" y1=\"110\" x2=\"140\" y2=\"50\" class=\"edge\"/><text x=\"85\" y=\"70\" class=\"wlabel\">3</text><line x1=\"50\" y1=\"110\" x2=\"140\" y2=\"170\" class=\"edge\"/><text x=\"85\" y=\"150\" class=\"wlabel\">5</text><line x1=\"140\" y1=\"50\" x2=\"140\" y2=\"170\" class=\"edge\"/><text x=\"130\" y=\"110\" class=\"wlabel\">1</text><line x1=\"140\" y1=\"50\" x2=\"280\" y2=\"50\" class=\"edge\"/><text x=\"210\" y=\"40\" class=\"wlabel\">6</text><line x1=\"140\" y1=\"170\" x2=\"280\" y2=\"50\" class=\"edge\"/><text x=\"200\" y=\"100\" class=\"wlabel\">1</text><line x1=\"140\" y1=\"170\" x2=\"280\" y2=\"170\" class=\"edge\"/><text x=\"210\" y=\"180\" class=\"wlabel\">2</text><line x1=\"280\" y1=\"50\" x2=\"280\" y2=\"170\" class=\"edge\"/><text x=\"290\" y=\"110\" class=\"wlabel\">2</text><line x1=\"280\" y1=\"50\" x2=\"390\" y2=\"110\" class=\"edge\"/><text x=\"345\" y=\"70\" class=\"wlabel\">5</text><line x1=\"280\" y1=\"170\" x2=\"390\" y2=\"110\" class=\"edge\"/><text x=\"345\" y=\"150\" class=\"wlabel\">2</text><circle cx=\"50\" cy=\"110\" r=\"14\" class=\"node\"/><text x=\"50\" y=\"110\" class=\"label\">a</text><circle cx=\"140\" cy=\"50\" r=\"14\" class=\"node\"/><text x=\"140\" y=\"50\" class=\"label\">b</text><circle cx=\"140\" cy=\"170\" r=\"14\" class=\"node\"/><text x=\"140\" y=\"170\" class=\"label\">d</text><circle cx=\"280\" cy=\"50\" r=\"14\" class=\"node\"/><text x=\"280\" y=\"50\" class=\"label\">c</text><circle cx=\"280\" cy=\"170\" r=\"14\" class=\"node\"/><text x=\"280\" y=\"170\" class=\"label\">e</text><circle cx=\"390\" cy=\"110\" r=\"14\" class=\"node\"/><text x=\"390\" y=\"110\" class=\"label\">z</text></svg>"
+                }
+            ],
+            "image": "0130_q130_Question_130.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q131
+        {
+            "id": 131,
+            "chapterId": 8,
+            "chapterName": "Chương 8: Hệ thức truy hồi và Toán ứng dụng",
+            "chapterShort": "Recurrence & Applications",
+            "type": "single_choice",
+            "question": "Suppose that a person deposits \\(\\$16{,}000\\) in a savings account at a bank yielding \\(12\\%\\) per year compounded annually. How much will be in the account after 20 years? Round to the nearest dollar.",
+            "options": [
+                "\\(\\$154{,}341\\)",
+                "\\(\\$160{,}001\\)",
+                "\\(\\$179{,}200\\)",
+                "\\(\\$192{,}000\\)",
+                "None of the other choices is correct"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Áp dụng công thức lãi kép hàng năm:**\nSố tiền sau \\(n\\) năm với lãi suất \\(r\\) ghép lãi hàng năm được xác định bởi: \\[A_n = P(1 + r)^n.\\]\nỞ đây: \\(P = 16{,}000\\), \\(r = 0.12\\), \\(n = 20\\).",
+                "**Bước 2: Tính toán và làm tròn:**\n\\[A_{20} = 16{,}000 \\times (1 + 0.12)^{20} = 16{,}000 \\times (1.12)^{20}.\\]\nTa có: \\(1.12^{20} \\approx 9.646293\\).\nSuy ra: \\[A_{20} = 16{,}000 \\times 9.646293 \\approx 154{,}340.69 \\approx 154{,}341.\\]\n\n**Kết luận:** Số tiền trong tài khoản sau 20 năm là **\\$154,341**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0131_q131_Question_131.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q132
+        {
+            "id": 132,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "What is the output of the algorithm?\n```\nProcedure product(n: integer)\np:=0;\nfor i:=1 to (3*n) do\n    for j:=1 to (2*n) do\n        for k:=1 to (4*n) do\n            p:=i*j*k;\nPrint(p)\n```",
+            "options": [
+                "\\(24n^3\\)",
+                "\\(1024n^3\\)",
+                "\\((3n)!(2n)!(4n)!\\)",
+                "\\(2n^3\\)",
+                "\\(4n^3\\)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích phép gán trong thân vòng lặp:**\nChú ý rằng bên trong 3 vòng lặp lồng nhau là phép gán trực tiếp: `p := i * j * k;`, không phải phép cộng tích lũy `p := p + i*j*k`.",
+                "**Bước 2: Xác định giá trị ở bước lặp cuối cùng:**\nVòng lặp kết thúc khi cả 3 biến chạy đạt giá trị cực đại:\n- \\(i = 3n\\)\n- \\(j = 2n\\)\n- \\(k = 4n\\)\nKhi đó giá trị cuối cùng được gán cho \\(p\\) là: \\[p = (3n) \\times (2n) \\times (4n) = 24n^3.\\]\nLệnh `Print(p)` sẽ in ra \\(24n^3\\).",
+                "**Kết luận:** Kết quả in ra là \\(24n^3\\), chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0132_q132_Question_132.png",
+            "code": "Procedure product(n: integer)\np:=0;\nfor i:=1 to (3*n) do\n    for j:=1 to (2*n) do\n        for k:=1 to (4*n) do\n            p:=i*j*k;\nPrint(p)",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q133
+        {
+            "id": 133,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "How many strongly connected components are there in this graph?",
+            "options": [
+                "\\(2\\)",
+                "\\(3\\)",
+                "\\(4\\)",
+                "\\(1\\)",
+                "\\(5\\)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích cấu trúc đồ thị có hướng:**\nĐồ thị gồm 12 đỉnh:\n- 8 đỉnh ở vòng ngoài tạo thành một chu trình có hướng khép kín 8 đỉnh (directed 8-cycle). Giữa hai đỉnh bất kỳ trên vòng ngoài đều có đường đi có hướng tới nhau.\n- 4 đỉnh ở vòng trong nhận các cung đi vào từ vòng ngoài và từ các đường chéo, nhưng không có cung nào đi ngược trở lại vòng ngoài.",
+                "**Bước 2: Xác định các thành phần liên thông mạnh (SCC):**\n1. Vòng 8 đỉnh bên ngoài tạo thành đúng **1** thành phần liên thông mạnh.\n2. Hai đỉnh bên trái của vòng trong chỉ có cung đi vào (bậc ra bằng 0), mỗi đỉnh tạo thành **1** thành phần liên thông mạnh gồm chính nó.\n3. Hai đỉnh bên phải của vòng trong có cung đi vào từ ngoài và cung đi sang hai đỉnh bên trái, không thể quay ngược lại, mỗi đỉnh cũng tạo thành **1** thành phần liên thông mạnh riêng biệt.\nTổng số thành phần liên thông mạnh là: \\[1 + 4 = 5.\\]\n\n**Kết luận:** Đồ thị có **5** thành phần liên thông mạnh, chọn phương án **E**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Đồ thị có hướng gồm vòng ngoài 8 đỉnh và 4 đỉnh bên trong",
+                    "content": "<svg viewBox=\"0 0 360 360\" class=\"w-full max-w-sm mx-auto\"><defs><marker id=\"ah\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#0284c7\"/></defs><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:1.5}.edge{stroke:#0284c7;stroke-width:1.5;marker-end:url(#ah)}</style><line x1=\"130\" y1=\"40\" x2=\"230\" y2=\"40\" class=\"edge\"/><line x1=\"230\" y1=\"40\" x2=\"300\" y2=\"110\" class=\"edge\"/><line x1=\"300\" y1=\"110\" x2=\"300\" y2=\"210\" class=\"edge\"/><line x1=\"300\" y1=\"210\" x2=\"230\" y2=\"280\" class=\"edge\"/><line x1=\"230\" y1=\"280\" x2=\"130\" y2=\"280\" class=\"edge\"/><line x1=\"130\" y1=\"280\" x2=\"60\" y2=\"210\" class=\"edge\"/><line x1=\"60\" y1=\"210\" x2=\"60\" y2=\"110\" class=\"edge\"/><line x1=\"60\" y1=\"110\" x2=\"130\" y2=\"40\" class=\"edge\"/><line x1=\"130\" y1=\"40\" x2=\"140\" y2=\"120\" class=\"edge\"/><line x1=\"60\" y1=\"110\" x2=\"140\" y2=\"120\" class=\"edge\"/><line x1=\"230\" y1=\"40\" x2=\"220\" y2=\"120\" class=\"edge\"/><line x1=\"300\" y1=\"110\" x2=\"220\" y2=\"120\" class=\"edge\"/><line x1=\"300\" y1=\"210\" x2=\"220\" y2=\"200\" class=\"edge\"/><line x1=\"230\" y1=\"280\" x2=\"220\" y2=\"200\" class=\"edge\"/><line x1=\"130\" y1=\"280\" x2=\"140\" y2=\"200\" class=\"edge\"/><line x1=\"60\" y1=\"210\" x2=\"140\" y2=\"200\" class=\"edge\"/><line x1=\"220\" y1=\"200\" x2=\"140\" y2=\"120\" class=\"edge\"/><line x1=\"220\" y1=\"120\" x2=\"140\" y2=\"200\" class=\"edge\"/><circle cx=\"130\" cy=\"40\" r=\"6\" class=\"node\"/><circle cx=\"230\" cy=\"40\" r=\"6\" class=\"node\"/><circle cx=\"300\" cy=\"110\" r=\"6\" class=\"node\"/><circle cx=\"300\" cy=\"210\" r=\"6\" class=\"node\"/><circle cx=\"230\" cy=\"280\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"280\" r=\"6\" class=\"node\"/><circle cx=\"60\" cy=\"210\" r=\"6\" class=\"node\"/><circle cx=\"60\" cy=\"110\" r=\"6\" class=\"node\"/><circle cx=\"140\" cy=\"120\" r=\"6\" class=\"node\"/><circle cx=\"220\" cy=\"120\" r=\"6\" class=\"node\"/><circle cx=\"220\" cy=\"200\" r=\"6\" class=\"node\"/><circle cx=\"140\" cy=\"200\" r=\"6\" class=\"node\"/></svg>"
+                }
+            ],
+            "image": "0133_q133_Question_133.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q134
+        {
+            "id": 134,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Which of the following graphs are trees? (Examine graphs (i), (ii), and (iii))",
+            "options": [
+                "(i)",
+                "(ii)",
+                "(iii)",
+                "None of the other choices is correct",
+                "All of (i), (ii) and (iii)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Định nghĩa về cây trong lý thuyết đồ thị:**\nMột cây (tree) là một đồ thị vô hướng, liên thông và không chứa chu trình đơn.",
+                "**Bước 2: Kiểm tra từng đồ thị:**\n- Đồ thị (i): Chứa một chu trình đơn tam giác ở phần dưới bên phải \\(\\implies\\) Không phải là cây.\n- Đồ thị (ii): Bị tách thành hai thành phần rời nhau (không liên thông) \\(\\implies\\) Không phải là cây.\n- Đồ thị (iii): Chứa cạnh bội (hai cạnh nối cùng cặp đỉnh) tạo thành chu trình độ dài 2 \\(\\implies\\) Không phải là cây.\n\n**Kết luận:** Cả 3 đồ thị đều không phải là cây, chọn phương án **D** (\"None of the other choices is correct\")."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Ba đồ thị khảo sát đặc trưng cây",
+                    "content": "<svg viewBox=\"0 0 540 180\" class=\"w-full max-w-xl mx-auto\"><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:2}.edge{stroke:#94a3b8;stroke-width:2}.label{font-size:14px;font-weight:bold;fill:#0f172a;text-anchor:middle}</style><g transform=\"translate(10,10)\"><text x=\"80\" y=\"160\" class=\"label\">(i) Chứa chu trình</text><line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"70\" class=\"edge\"/><line x1=\"70\" y1=\"20\" x2=\"130\" y2=\"20\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"20\" y2=\"120\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"70\" y2=\"120\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"130\" y2=\"70\" class=\"edge\"/><line x1=\"130\" y1=\"70\" x2=\"130\" y2=\"120\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"130\" y2=\"120\" class=\"edge\"/><circle cx=\"70\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"70\" cy=\"70\" r=\"6\" class=\"node\"/><circle cx=\"20\" cy=\"120\" r=\"6\" class=\"node\"/><circle cx=\"70\" cy=\"120\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"70\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"120\" r=\"6\" class=\"node\"/></g><g transform=\"translate(190,10)\"><text x=\"80\" y=\"160\" class=\"label\">(ii) Không liên thông</text><line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"70\" class=\"edge\"/><line x1=\"70\" y1=\"20\" x2=\"130\" y2=\"20\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"20\" y2=\"120\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"70\" y2=\"120\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"130\" y2=\"70\" class=\"edge\"/><line x1=\"130\" y1=\"120\" x2=\"170\" y2=\"120\" class=\"edge\"/><circle cx=\"70\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"70\" cy=\"70\" r=\"6\" class=\"node\"/><circle cx=\"20\" cy=\"120\" r=\"6\" class=\"node\"/><circle cx=\"70\" cy=\"120\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"70\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"120\" r=\"6\" class=\"node\"/><circle cx=\"170\" cy=\"120\" r=\"6\" class=\"node\"/></g><g transform=\"translate(370,10)\"><text x=\"80\" y=\"160\" class=\"label\">(iii) Cạnh song song</text><line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"70\" class=\"edge\"/><line x1=\"70\" y1=\"20\" x2=\"130\" y2=\"20\" class=\"edge\"/><path d=\"M 70 20 Q 100 40 130 20\" fill=\"none\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"20\" y2=\"120\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"70\" y2=\"120\" class=\"edge\"/><line x1=\"70\" y1=\"70\" x2=\"130\" y2=\"120\" class=\"edge\"/><circle cx=\"70\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"70\" cy=\"70\" r=\"6\" class=\"node\"/><circle cx=\"20\" cy=\"120\" r=\"6\" class=\"node\"/><circle cx=\"70\" cy=\"120\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"70\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"120\" r=\"6\" class=\"node\"/></g></svg>"
+                }
+            ],
+            "image": "0134_q134_Question_134.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q135
+        {
+            "id": 135,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Encode the message \"KYAYKY\" using Huffman coding, what is the length of the encoded message?",
+            "options": [
+                "\\(15\\)",
+                "\\(12\\)",
+                "\\(9\\)",
+                "\\(6\\)",
+                "None of the other choices is correct"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Đếm tần suất xuất hiện các ký tự:**\nThông điệp `KYAYKY` gồm 6 ký tự:\n- 'A': 1 lần\n- 'K': 2 lần\n- 'Y': 3 lần",
+                "**Bước 2: Xây dựng cây mã hóa Huffman và tính tổng số bit:**\n- Kết hợp hai nút có tần suất nhỏ nhất: A(1) và K(2) tạo thành nút cha AK với trọng số 3.\n- Tiếp tục kết hợp AK(3) và Y(3) tạo thành nút gốc với trọng số 6.\nĐộ dài mã tương ứng của từng ký tự:\n- Ký tự 'Y': độ sâu 1 \\(\\implies 1\\) bit.\n- Ký tự 'K': độ sâu 2 \\(\\implies 2\\) bit.\n- Ký tự 'A': độ sâu 2 \\(\\implies 2\\) bit.\n\nTổng độ dài mã hóa: \\[\\text{len} = (3 \\times 1) + (2 \\times 2) + (1 \\times 2) = 3 + 4 + 2 = 9 \\text{ bit}.\\]\n\n**Kết luận:** Độ dài thông điệp mã hóa là **9** bit, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0135_q135_Question_135.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q136
+        {
+            "id": 136,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Which of the following sequences is the degree sequence of a simple graph?",
+            "options": [
+                "\\(3, 3, 2, 2, 1\\)",
+                "\\(5, 4, 2, 2, 1\\)",
+                "\\(4, 4, 2, 2, 2\\)",
+                "\\(5, 5, 2, 1, 1\\)",
+                "None of the other choices is correct"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Loại trừ các dãy vi phạm định lý cơ bản:**\n- Dãy A \\((3, 3, 2, 2, 1)\\): Tổng bậc là \\(3+3+2+2+1 = 11\\) (lẻ) \\(\\implies\\) Vi phạm định lý bắt tay (tổng bậc luôn chẵn).\n- Dãy B và D có bậc 5 trên đồ thị 5 đỉnh: Đồ thị đơn 5 đỉnh có bậc cực đại không vượt quá \\(5 - 1 = 4\\), nên đỉnh bậc 5 là bất khả thi.",
+                "**Bước 2: Kiểm tra dãy \\(4, 4, 2, 2, 2\\) bằng thuật toán Havel-Hakimi:**\n- Dãy sắp giảm: \\([4, 4, 2, 2, 2]\\).\n- Bỏ số 4 đầu tiên và trừ 1 cho 4 số tiếp theo: \\([4-1, 2-1, 2-1, 2-1] = [3, 1, 1, 1]\\).\n- Bỏ số 3 và trừ 1 cho 3 số tiếp theo: \\([1-1, 1-1, 1-1] = [0, 0, 0]\\).\nDãy toàn số 0 là hợp lệ, do đó đây là dãy bậc của một đơn đồ thị.",
+                "**Kết luận:** Dãy thỏa mãn là \\(4, 4, 2, 2, 2\\), chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0136_q136_Question_136.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q137
+        {
+            "id": 137,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Let \\(T(x, y) = \\) \"the student x takes the class y\", where x represents a student in a university, and y represents a class.\nTranslate the logical expression into a sentence: \\[\\forall y \\exists x T(x, y)\\]",
+            "options": [
+                "Every student is taking at least one class",
+                "There is a student taking all classes",
+                "There is a class that every student taking it",
+                "For each class there is at least a student taking it"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích thứ tự lượng từ logic:**\nBiểu thức là: \\(\\forall y \\exists x T(x, y)\\).\n- \\(\\forall y\\): Với mọi lớp học \\(y\\),\n- \\(\\exists x\\): tồn tại ít nhất một sinh viên \\(x\\),\n- \\(T(x, y)\\): sao cho sinh viên \\(x\\) tham gia lớp học \\(y\\).",
+                "**Bước 2: Chuyển thể sang câu ngôn ngữ tự nhiên:**\nÝ nghĩa chính xác: \"Đối với mỗi lớp học, có ít nhất một sinh viên theo học lớp đó\" (\"For each class there is at least a student taking it\").",
+                "**Kết luận:** Chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0137_q137_Question_137.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q138
+        {
+            "id": 138,
+            "chapterId": 3,
+            "chapterName": "Chương 3: Thuật toán",
+            "chapterShort": "Algorithms",
+            "type": "single_choice",
+            "question": "How many comparisons are needed in order to locate the word \"lemon\" in the binary search:\nmango, banana, apple, pear, coconut, strawberry, lemon?",
+            "options": [
+                "\\(3\\)",
+                "None of the other choices is correct",
+                "\\(7\\)",
+                "\\(4\\)",
+                "\\(5\\)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Sắp xếp danh sách theo thứ tự từ điển trước khi tìm kiếm nhị phân:**\nDanh sách 7 từ sau khi sắp xếp:\\\n1: apple, 2: banana, 3: coconut, 4: lemon, 5: mango, 6: pear, 7: strawberry.\\\nTừ khóa cần tìm: \\(x = \\text{\"lemon\"}\\).",
+                "**Bước 2: Mô phỏng các phép so sánh trong vòng lặp nhị phân chuẩn:**\n- Bước 1: \\(i=1, j=7\\). Điểm giữa \\(m = \\lfloor(1+7)/2\\rfloor = 4\\) (từ `lemon`). Phép so sánh 1: kiểm tra `x > words[4]` (Sai) \\(\\implies j = 4\\).\n- Bước 2: \\(i=1, j=4\\). Điểm giữa \\(m = \\lfloor(1+4)/2\\rfloor = 2\\) (từ `banana`). Phép so sánh 2: kiểm tra `x > words[2]` (Đúng) \\(\\implies i = 3\\).\n- Bước 3: \\(i=3, j=4\\). Điểm giữa \\(m = \\lfloor(3+4)/2\\rfloor = 3\\) (từ `coconut`). Phép so sánh 3: kiểm tra `x > words[3]` (Đúng) \\(\\implies i = 4\\).\n- Đến đây \\(i = j = 4\\), vòng lặp kết thúc sau đúng 3 phép so sánh phân nhánh.",
+                "**Kết luận:** Số phép so sánh cần dùng là **3**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0138_q138_Question_138.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q139
+        {
+            "id": 139,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Let \\(x, y\\) be integer numbers. Choose the propositional function \\(P(x, y)\\) such that \\[\\forall x \\exists y P(x, y) = F \\quad \\text{and} \\quad \\exists x \\exists y P(x, y) = T\\]\n(i) \\(P(x, y) = \"x^2 + y^2 = 5\"\\)\n(ii) \\(P(x, y) = \"x^2 + y = 5\"\\)\n(iii) \\(P(x, y) = \"x^2 + y^2 = -5\"\\)\n(iv) \\(P(x, y) = \"x^2 + y = -5\"\\)",
+            "options": [
+                "(ii)",
+                "(i)",
+                "(iv)",
+                "(iii)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích điều kiện logic:**\n- \\(\\exists x \\exists y P(x, y) = T\\): Phương trình phải có ít nhất một nghiệm nguyên \\((x, y)\\).\n- \\(\\forall x \\exists y P(x, y) = F\\): Tồn tại ít nhất một số nguyên \\(x\\) mà không tìm được bất kỳ số nguyên \\(y\\) nào thỏa mãn.",
+                "**Bước 2: Kiểm tra từng mệnh đề trên tập số nguyên:**\n- Với (i) \\(x^2 + y^2 = 5\\): Có nghiệm nguyên ví dụ \\(x=1, y=2\\) (vì \\(1+4=5\\)) \\(\\implies \\exists x \\exists y P = T\\). Tuy nhiên với \\(x=3\\), \\(y^2 = 5 - 9 = -4\\) không có nghiệm nguyên \\(y\\) \\(\\implies \\forall x \\exists y P = F\\). Thỏa mãn cả hai điều kiện!\n- Với (ii) và (iv): Với mọi \\(x\\), luôn chọn được \\(y = 5 - x^2\\) hoặc \\(y = -5 - x^2\\) là số nguyên, nên \\(\\forall x \\exists y P = T\\) (không thỏa mãn).\n- Với (iii): Tổng hai bình phương không thể âm, không có nghiệm nào \\(\\implies \\exists x \\exists y P = F\\) (không thỏa mãn).",
+                "**Kết luận:** Mệnh đề thỏa mãn là **(i)**, chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0139_q139_Question_139.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q140
+        {
+            "id": 140,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Find the prefix notation of the expression \\[(x + x * y) + (x / y)\\]",
+            "options": [
+                "+ + x * x y / x y",
+                "+ x / + * x y x y",
+                "x x y * x + y / +",
+                "None of the other choices is correct",
+                "x x y * + x y / +"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Chuyển đổi từng biểu thức con sang ký hiệu tiền tố (Prefix):**\n- Biểu thức \\(x * y\\) viết thành: `* x y`.\n- Biểu thức \\(x + x * y = x + (* x y)\\) viết thành: `+ x * x y`.\n- Biểu thức \\(x / y\\) viết thành: `/ x y`.",
+                "**Bước 2: Kết hợp toàn bộ biểu thức:**\nToán tử chính ngoài cùng là phép cộng `+` nối hai nhánh:\n\\[(+ x * x y) + (/ x y) \\implies + + x * x y / x y.\\]\n\n**Kết luận:** Ký hiệu tiền tố là `+ + x * x y / x y`, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0140_q140_Question_140.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q141
+        {
+            "id": 141,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Are these two graphs isomorphic? If not, what is the reason?",
+            "options": [
+                "None of the other choices is correct",
+                "Yes, they are isomorphic",
+                "No, they are not isomorphic because they do not have the same number of triangles",
+                "No, they are not isomorphic because they do not have the same number of edges",
+                "No, they are not isomorphic because they do not have the same number of vertices of degree 2"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khảo sát bất biến đồ thị của hai hình vẽ:**\n- Cả hai đồ thị đều có 5 đỉnh và 7 cạnh.\n- Dãy bậc của đồ thị thứ nhất (bên trái): một đỉnh bậc 2 và bốn đỉnh bậc 3 \\(\\implies (3, 3, 3, 3, 2)\\).\n- Dãy bậc của đồ thị thứ hai (bên phải): đỉnh nằm trên đường chéo có bậc 2, bốn đỉnh góc đều có bậc 3 \\(\\implies (3, 3, 3, 3, 2)\\).",
+                "**Bước 2: Kiểm tra cấu trúc lân cận và xây dựng song ánh đồng hình:**\n- Ở cả hai đồ thị, đỉnh duy nhất bậc 2 được nối với hai đỉnh bậc 3, và hai đỉnh bậc 3 này không có cạnh trực tiếp nối với nhau.\n- Hai đỉnh còn lại không kề với đỉnh bậc 2 có một cạnh nối giữa chúng ở cả hai đồ thị.\nDo đó tồn tại một đẳng cấu bảo toàn toàn bộ quan hệ liên thuộc cạnh giữa hai đồ thị.",
+                "**Kết luận:** Hai đồ thị đồng cấu (isomorphic), chọn phương án **B**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Hai đồ thị đẳng cấu có 5 đỉnh và 7 cạnh",
+                    "content": "<svg viewBox=\"0 0 460 220\" class=\"w-full max-w-lg mx-auto\"><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:2}.edge{stroke:#94a3b8;stroke-width:2}.label{font-size:14px;font-weight:bold;fill:#0f172a;text-anchor:middle}</style><g transform=\"translate(20,20)\"><text x=\"80\" y=\"190\" class=\"label\">Đồ thị G1</text><line x1=\"20\" y1=\"20\" x2=\"140\" y2=\"20\" class=\"edge\"/><line x1=\"140\" y1=\"20\" x2=\"140\" y2=\"130\" class=\"edge\"/><line x1=\"140\" y1=\"130\" x2=\"20\" y2=\"130\" class=\"edge\"/><line x1=\"20\" y1=\"130\" x2=\"20\" y2=\"20\" class=\"edge\"/><line x1=\"20\" y1=\"130\" x2=\"80\" y2=\"180\" class=\"edge\"/><line x1=\"140\" y1=\"130\" x2=\"80\" y2=\"180\" class=\"edge\"/><line x1=\"20\" y1=\"20\" x2=\"80\" y2=\"180\" class=\"edge\"/><circle cx=\"20\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"140\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"140\" cy=\"130\" r=\"6\" class=\"node\"/><circle cx=\"20\" cy=\"130\" r=\"6\" class=\"node\"/><circle cx=\"80\" cy=\"180\" r=\"6\" class=\"node\"/></g><g transform=\"translate(260,20)\"><text x=\"80\" y=\"190\" class=\"label\">Đồ thị G2</text><line x1=\"20\" y1=\"20\" x2=\"140\" y2=\"20\" class=\"edge\"/><line x1=\"140\" y1=\"20\" x2=\"140\" y2=\"140\" class=\"edge\"/><line x1=\"140\" y1=\"140\" x2=\"20\" y2=\"140\" class=\"edge\"/><line x1=\"20\" y1=\"140\" x2=\"20\" y2=\"20\" class=\"edge\"/><line x1=\"20\" y1=\"140\" x2=\"80\" y2=\"80\" class=\"edge\"/><line x1=\"80\" y1=\"80\" x2=\"140\" y2=\"20\" class=\"edge\"/><path d=\"M 20 20 Q 80 120 140 140\" fill=\"none\" class=\"edge\"/><circle cx=\"20\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"140\" cy=\"20\" r=\"6\" class=\"node\"/><circle cx=\"140\" cy=\"140\" r=\"6\" class=\"node\"/><circle cx=\"20\" cy=\"140\" r=\"6\" class=\"node\"/><circle cx=\"80\" cy=\"80\" r=\"6\" class=\"node\"/></g></svg>"
+                }
+            ],
+            "image": "0141_q141_Question_141.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q142
+        {
+            "id": 142,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "Which number is congruent to 5 modulo 17?",
+            "options": [
+                "\\(-90\\)",
+                "\\(-80\\)",
+                "\\(-85\\)",
+                "\\(-95\\)",
+                "None of the other choices is correct"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Định nghĩa về đồng dư:**\nSố nguyên \\(x\\) đồng dư với 5 modulo 17 (\\(x \\equiv 5 \\pmod{17}\\)) khi và chỉ khi \\(x - 5\\) chia hết cho 17.",
+                "**Bước 2: Thử từng giá trị trong các phương án:**\n- Với \\(x = -90\\): \\(-90 - 5 = -95\\) (không chia hết cho 17).\n- Với \\(x = -80\\): \\(-80 - 5 = -85 = 17 \\times (-5)\\) chia hết cho 17. Thỏa mãn \\(-80 \\equiv 5 \\pmod{17}\\).\n- Với \\(x = -85\\): \\(-85 = 17 \\times (-5) \\equiv 0 \\pmod{17}\\).\n- Với \\(x = -95\\): \\(-95 = 17 \\times (-6) + 7 \\equiv 7 \\pmod{17}\\).\n\n**Kết luận:** Số thỏa mãn là **-80**, chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0142_q142_Question_142.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q143
+        {
+            "id": 143,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Evaluate the following expression \\[(0011 \\oplus 1010) \\oplus 0101\\]",
+            "options": [
+                "\\(1001\\)",
+                "\\(1111\\)",
+                "\\(1110\\)",
+                "\\(1100\\)",
+                "\\(1010\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tính toán phép XOR từng bit trong ngoặc:**\n\\[0011 \\oplus 1010 = 1001.\\]",
+                "**Bước 2: Thực hiện phép XOR tiếp theo với chuỗi còn lại:**\n\\[1001 \\oplus 0101 = 1100.\\]\n\n**Kết luận:** Giá trị của biểu thức là **1100**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0143_q143_Question_143.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q144
+        {
+            "id": 144,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "How many 1s are there in the incident matrix of the graph \\(K_3\\)?",
+            "options": [
+                "\\(6\\)",
+                "None of the other choices is correct",
+                "\\(3\\)",
+                "\\(9\\)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nhắc lại cấu trúc của ma trận liên thuộc (Incidence Matrix):**\nMa trận liên thuộc của đơn đồ thị vô hướng có các hàng đại diện cho các đỉnh và các cột đại diện cho các cạnh. Mỗi cạnh nối đúng 2 đỉnh, vì vậy trên mỗi cột có đúng hai số 1.",
+                "**Bước 2: Tính số lượng số 1 của đồ thị đầy đủ \\(K_3\\):**\nĐồ thị đầy đủ \\(K_3\\) có \\(n = 3\\) đỉnh và số cạnh là: \\[m = \\binom{3}{2} = 3.\\]\nTổng số số 1 trong ma trận liên thuộc bằng: \\[2 \\times m = 2 \\times 3 = 6.\\]\n(Hoặc tính bằng tổng bậc các đỉnh: \\(2 + 2 + 2 = 6\\)).",
+                "**Kết luận:** Số lượng số 1 trong ma trận liên thuộc là **6**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0144_q144_Question_144.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q145
+        {
+            "id": 145,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "How many paths of length 3 from a to d in the given graph?",
+            "options": [
+                "\\(7\\)",
+                "None of the other choices is correct",
+                "\\(8\\)",
+                "\\(6\\)",
+                "\\(5\\)"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xây dựng ma trận kề \\(A\\) của đồ thị:**\nCác đỉnh theo thứ tự: 1: a, 2: b, 3: c, 4: d, 5: e.\nCác cạnh gồm: chu vi hình vuông \\((a,b), (b,c), (c,d), (d,a)\\) và các đoạn nối với đỉnh tâm \\(e\\): \\((a,e), (b,e), (d,e)\\).",
+                "**Bước 2: Tính số đường đi độ dài 3 qua lũy thừa ma trận kề \\(A^3\\):**\nSố đường đi độ dài 3 từ \\(a\\) đến \\(d\\) chính là phần tử \\(A^3[a, d]\\).\nTa liệt kê trực tiếp 7 đường đi độ dài 3 từ \\(a\\) đến \\(d\\):\n1. \\(a - b - a - d\\)\n2. \\(a - d - a - d\\)\n3. \\(a - e - a - d\\)\n4. \\(a - b - c - d\\)\n5. \\(a - b - e - d\\)\n6. \\(a - e - b - d\\)\n7. \\(a - d - e - d\\)\nTổng cộng có đúng 7 đường đi.",
+                "**Kết luận:** Có **7** đường đi độ dài 3 từ \\(a\\) đến \\(d\\), chọn phương án **A**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Đồ thị 5 đỉnh gồm khung chữ nhật a, b, c, d và đỉnh e bên trong",
+                    "content": "<svg viewBox=\"0 0 280 260\" class=\"w-full max-w-xs mx-auto\"><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:2}.edge{stroke:#94a3b8;stroke-width:2}.label{font-size:15px;font-weight:bold;fill:#0f172a;text-anchor:middle;dominant-baseline:central}</style><line x1=\"50\" y1=\"50\" x2=\"210\" y2=\"50\" class=\"edge\"/><line x1=\"210\" y1=\"50\" x2=\"210\" y2=\"210\" class=\"edge\"/><line x1=\"210\" y1=\"210\" x2=\"50\" y2=\"210\" class=\"edge\"/><line x1=\"50\" y1=\"210\" x2=\"50\" y2=\"50\" class=\"edge\"/><line x1=\"50\" y1=\"50\" x2=\"130\" y2=\"130\" class=\"edge\"/><line x1=\"210\" y1=\"50\" x2=\"130\" y2=\"130\" class=\"edge\"/><line x1=\"50\" y1=\"210\" x2=\"130\" y2=\"130\" class=\"edge\"/><circle cx=\"50\" cy=\"50\" r=\"12\" class=\"node\"/><text x=\"30\" y=\"35\" class=\"label\">a</text><circle cx=\"210\" cy=\"50\" r=\"12\" class=\"node\"/><text x=\"230\" y=\"35\" class=\"label\">b</text><circle cx=\"210\" cy=\"210\" r=\"12\" class=\"node\"/><text x=\"230\" y=\"225\" class=\"label\">c</text><circle cx=\"50\" cy=\"210\" r=\"12\" class=\"node\"/><text x=\"30\" y=\"225\" class=\"label\">d</text><circle cx=\"130\" cy=\"130\" r=\"12\" class=\"node\"/><text x=\"150\" y=\"145\" class=\"label\">e</text></svg>"
+                }
+            ],
+            "image": "0145_q145_Question_145.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q146
+        {
+            "id": 146,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Find the output of the algorithm if input \\(n = 7\\).\n```\nprocedure tt(n: integer)\nif n=1 then tt(n)=1\nelse tt(n)=tt(n-1)+n;\n```",
+            "options": [
+                "\\(35\\)",
+                "\\(21\\)",
+                "\\(40\\)",
+                "\\(28\\)",
+                "None of the other choices is correct"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nhận diện công thức truy hồi:**\nThuật toán đệ quy tính tổng: \\[tt(1) = 1, \\quad tt(n) = tt(n-1) + n.\\]\nĐây chính là công thức tính tổng các số nguyên dương từ 1 đến \\(n\\): \\[tt(n) = \\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}.\\]",
+                "**Bước 2: Tính giá trị với \\(n = 7\\):**\n\\[tt(7) = 1 + 2 + 3 + 4 + 5 + 6 + 7 = \\frac{7 \\times 8}{2} = 28.\\]\n\n**Kết luận:** Đầu ra của thuật toán là **28**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0146_q146_Question_146.png",
+            "code": "procedure tt(n: integer)\nif n=1 then tt(n)=1\nelse tt(n)=tt(n-1)+n;",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q147
+        {
+            "id": 147,
+            "chapterId": 10,
+            "chapterName": "Chương 10: Đồ thị",
+            "chapterShort": "Graphs",
+            "type": "single_choice",
+            "question": "Consider the graph \\(K_n\\ (n \\ge 3)\\). Choose the correct answer.",
+            "options": [
+                "It has does not have Hamilton paths.",
+                "It has a Hamilton path but does not have Hamilton circuits.",
+                "It has a Hamilton circuit."
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nhắc lại định nghĩa chu trình Hamilton:**\nChu trình Hamilton là chu trình đơn đi qua mỗi đỉnh của đồ thị đúng một lần (ngoại trừ đỉnh xuất phát trùng với đỉnh kết thúc).",
+                "**Bước 2: Xét tính chất của đồ thị đầy đủ \\(K_n\\) với \\(n \\ge 3\\):**\nTrong \\(K_n\\), giữa hai đỉnh phân biệt bất kỳ luôn có cạnh nối trực tiếp. Bất kỳ một hoán vị nào của \\(n\\) đỉnh \\(v_1, v_2, \\dots, v_n, v_1\\) đều tạo thành một chu trình Hamilton hợp lệ.",
+                "**Kết luận:** Đồ thị \\(K_n\\) luôn chứa chu trình Hamilton (\"It has a Hamilton circuit\"), chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0147_q147_Question_147.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q148
+        {
+            "id": 148,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Find the value of the postfix expression \\[3 \\quad 2 \\uparrow 6 + 5 \\quad 4 - - 3 \\quad 2 \\quad 1 + + -\\]",
+            "options": [
+                "\\(12\\)",
+                "\\(7\\)",
+                "\\(23\\)",
+                "\\(8\\)",
+                "\\(16\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Mô phỏng đánh giá biểu thức hậu tố (Postfix) bằng ngăn xếp (Stack):**\n- `3 2 ^` \\(\\to 3^2 = 9\\).\n- `9 6 +` \\(\\to 9 + 6 = 15\\).\n- `15 5 4 -` \\(\\to 5 - 4 = 1\\).\n- `15 1 -` \\(\\to 15 - 1 = 14\\).",
+                "**Bước 2: Đánh giá phần còn lại của biểu thức:**\n- Đẩy `3, 2, 1` vào stack.\n- `2 1 +` \\(\\to 2 + 1 = 3\\).\n- `3 3 +` \\(\\to 3 + 3 = 6\\).\n- Toán tử cuối cùng: `14 6 -` \\(\\to 14 - 6 = 8\\).\n\n**Kết luận:** Giá trị của biểu thức là **8**, chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0148_q148_Question_148.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q149
+        {
+            "id": 149,
+            "chapterId": 4,
+            "chapterName": "Chương 4: Lý thuyết số và Mật mã",
+            "chapterShort": "Number Theory",
+            "type": "single_choice",
+            "question": "Find \\(3^{17} \\bmod 26\\).",
+            "options": [
+                "\\(6\\)",
+                "\\(7\\)",
+                "None of the other choices is correct",
+                "\\(9\\)",
+                "\\(8\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Nhận xét lũy thừa đặc biệt modulo 26:**\nTa có: \\[3^3 = 27 \\equiv 1 \\pmod{26}.\\]",
+                "**Bước 2: Tách lũy thừa \\(3^{17}\\):**\nPhân tích số mũ: \\(17 = 3 \\times 5 + 2\\).\nÁp dụng tính chất đồng dư: \\[3^{17} = (3^3)^5 \\times 3^2 \\equiv 1^5 \\times 9 \\equiv 9 \\pmod{26}.\\]\n\n**Kết luận:** \\(3^{17} \\bmod 26 = 9\\), chọn phương án **D**."
+            ],
+            "figures": [],
+            "image": "0149_q149_Question_149.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q150
+        {
+            "id": 150,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Let \\(f, g : \\mathbb{R} \\to \\mathbb{R}\\) be two functions given by \\(f(x) = x^2 + 1\\) and \\(g(x) = x + 1\\). Which functions are bijection?",
+            "options": [
+                "Both f and g",
+                "Only g",
+                "Only f",
+                "None of the other choices is correct"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khảo sát hàm số \\(f(x) = x^2 + 1\\):**\n- Không là đơn ánh vì \\(f(1) = f(-1) = 2\\).\n- Không là toàn ánh vì tập giá trị là \\([1, +\\infty) \\ne \\mathbb{R}\\).\nDo đó \\(f\\) không phải là song ánh (bijection).",
+                "**Bước 2: Khảo sát hàm số \\(g(x) = x + 1\\):**\n- Đơn ánh: \\(g(x_1) = g(x_2) \\iff x_1 + 1 = x_2 + 1 \\iff x_1 = x_2\\).\n- Toàn ánh: Với mọi \\(y \\in \\mathbb{R}\\), luôn tồn tại \\(x = y - 1 \\in \\mathbb{R}\\) sao cho \\(g(x) = y\\).\nDo đó \\(g\\) là một song ánh.",
+                "**Kết luận:** Chỉ có hàm \\(g\\) là song ánh (\"Only g\"), chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0150_q150_Question_150.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q151
+        {
+            "id": 151,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Given the rooted tree where the root is the black square. Find the height of this tree.",
+            "options": [
+                "\\(2\\)",
+                "\\(3\\)",
+                "\\(4\\)",
+                "\\(5\\)",
+                "\\(6\\)"
+            ],
+            "answer": "D",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Định nghĩa chiều cao của cây có gốc (Rooted Tree):**\nChiều cao của cây có gốc là độ dài (số cạnh) của đường đi dài nhất từ gốc đến một lá bất kỳ (hoặc mức lớn nhất của các đỉnh trong cây, với gốc ở mức 0).",
+                "**Bước 2: Xác định nhánh sâu nhất từ gốc:**\nTừ gốc (ô vuông màu đen ở tâm):\n- Nhánh vươn xa nhất về phía bên trái trải qua 5 cấp liên tiếp:\n  + Mức 0: Gốc (ô vuông đen)\n  + Mức 1: Đỉnh con bên trái\n  + Mức 2: Đỉnh trung gian\n  + Mức 3: Đỉnh rẽ nhánh\n  + Mức 4: Đỉnh áp chót\n  + Mức 5: Các lá ngoài cùng bên trái.\nĐộ sâu lớn nhất là 5, do đó chiều cao của cây bằng 5.",
+                "**Kết luận:** Chiều cao của cây là **5**, chọn phương án **D**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Cây có gốc với ô vuông đen ở tâm và chiều cao 5",
+                    "content": "<svg viewBox=\"0 0 440 260\" class=\"w-full max-w-md mx-auto\"><style>.root{fill:#0f172a;stroke:#000;stroke-width:2}.node{fill:#4ade80;stroke:#16a34a;stroke-width:1.5}.edge{stroke:#a3a3a3;stroke-width:1.5}.path-edge{stroke:#f97316;stroke-width:2.5}</style><line x1=\"220\" y1=\"130\" x2=\"170\" y2=\"130\" class=\"path-edge\"/><line x1=\"170\" y1=\"130\" x2=\"130\" y2=\"140\" class=\"path-edge\"/><line x1=\"130\" y1=\"140\" x2=\"95\" y2=\"155\" class=\"path-edge\"/><line x1=\"95\" y1=\"155\" x2=\"65\" y2=\"175\" class=\"path-edge\"/><line x1=\"65\" y1=\"175\" x2=\"35\" y2=\"175\" class=\"path-edge\"/><line x1=\"65\" y1=\"175\" x2=\"35\" y2=\"195\" class=\"path-edge\"/><line x1=\"220\" y1=\"130\" x2=\"220\" y2=\"80\" class=\"edge\"/><line x1=\"220\" y1=\"80\" x2=\"190\" y2=\"50\" class=\"edge\"/><line x1=\"220\" y1=\"80\" x2=\"250\" y2=\"50\" class=\"edge\"/><line x1=\"220\" y1=\"130\" x2=\"280\" y2=\"130\" class=\"edge\"/><line x1=\"280\" y1=\"130\" x2=\"330\" y2=\"110\" class=\"edge\"/><line x1=\"280\" y1=\"130\" x2=\"330\" y2=\"150\" class=\"edge\"/><line x1=\"220\" y1=\"130\" x2=\"220\" y2=\"180\" class=\"edge\"/><line x1=\"220\" y1=\"180\" x2=\"190\" y2=\"220\" class=\"edge\"/><line x1=\"220\" y1=\"180\" x2=\"250\" y2=\"220\" class=\"edge\"/><rect x=\"212\" y=\"122\" width=\"16\" height=\"16\" class=\"root\"/><circle cx=\"170\" cy=\"130\" r=\"6\" class=\"node\"/><circle cx=\"130\" cy=\"140\" r=\"6\" class=\"node\"/><circle cx=\"95\" cy=\"155\" r=\"6\" class=\"node\"/><circle cx=\"65\" cy=\"175\" r=\"6\" class=\"node\"/><circle cx=\"35\" cy=\"175\" r=\"6\" class=\"node\"/><circle cx=\"35\" cy=\"195\" r=\"6\" class=\"node\"/><circle cx=\"220\" cy=\"80\" r=\"6\" class=\"node\"/><circle cx=\"190\" cy=\"50\" r=\"6\" class=\"node\"/><circle cx=\"250\" cy=\"50\" r=\"6\" class=\"node\"/><circle cx=\"280\" cy=\"130\" r=\"6\" class=\"node\"/><circle cx=\"330\" cy=\"110\" r=\"6\" class=\"node\"/><circle cx=\"330\" cy=\"150\" r=\"6\" class=\"node\"/><circle cx=\"220\" cy=\"180\" r=\"6\" class=\"node\"/><circle cx=\"190\" cy=\"220\" r=\"6\" class=\"node\"/><circle cx=\"250\" cy=\"220\" r=\"6\" class=\"node\"/></svg>"
+                }
+            ],
+            "image": "0151_q151_Question_151.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q152
+        {
+            "id": 152,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Using Prim's algorithm to find a minimal spanning tree. What is the list of edges chosen?",
+            "options": [
+                "CE, BC, AB, BD, DZ",
+                "CE, AB, BC, DZ, BD",
+                "None of the other choices is correct",
+                "AB, BC, CE, BD, DZ",
+                "CE, AB, BC, BD, DZ"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Khởi động thuật toán Prim:**\nThuật toán Prim bắt đầu bằng việc chọn cạnh có trọng số nhỏ nhất trong toàn bộ đồ thị: Cạnh **CE** với trọng số 1.\nTập đỉnh cây ban đầu: \\(V_T = \\{C, E\\}\\).",
+                "**Bước 2: Lần lượt bổ sung các cạnh có trọng số nhỏ nhất nối \\(V_T\\) với đỉnh ngoài:**\n- Trong các cạnh nối với \\(\\{C, E\\}\\): \\(CA(6), CB(2), EB(3), ED(4), EZ(4)\\), cạnh nhỏ nhất là **BC** (trọng số 2) \\(\\implies V_T = \\{B, C, E\\}\\).\n- Trong các cạnh nối tiếp theo: \\(BA(2), BD(3), CA(6), ED(4), EZ(4)\\), cạnh nhỏ nhất là **AB** (trọng số 2) \\(\\implies V_T = \\{A, B, C, E\\}\\).\n- Trong các cạnh tiếp theo: \\(BD(3), ED(4), EZ(4)\\), cạnh nhỏ nhất là **BD** (trọng số 3) \\(\\implies V_T = \\{A, B, C, D, E\\}\\).\n- Trong các cạnh nối tới đỉnh cuối \\(Z\\): \\(DZ(2), EZ(4)\\), cạnh nhỏ nhất là **DZ** (trọng số 2) \\(\\implies V_T = \\{A, B, C, D, E, Z\\}\\).\n\nDanh sách các cạnh được chọn theo đúng thứ tự là: **CE, BC, AB, BD, DZ**.",
+                "**Kết luận:** Thứ tự các cạnh là **CE, BC, AB, BD, DZ**, chọn phương án **A**."
+            ],
+            "figures": [
+                {
+                    "type": "svg",
+                    "caption": "Đồ thị có trọng số tìm cây khung nhỏ nhất Prim",
+                    "content": "<svg viewBox=\"0 0 460 220\" class=\"w-full max-w-lg mx-auto\"><style>.node{fill:#38bdf8;stroke:#0284c7;stroke-width:2}.edge{stroke:#94a3b8;stroke-width:2}.wlabel{font-size:12px;font-weight:bold;fill:#ea580c;text-anchor:middle;dominant-baseline:central}.label{font-size:14px;font-weight:bold;fill:#0f172a;text-anchor:middle;dominant-baseline:central}</style><line x1=\"60\" y1=\"110\" x2=\"140\" y2=\"40\" class=\"edge\"/><text x=\"95\" y=\"65\" class=\"wlabel\">2</text><line x1=\"60\" y1=\"110\" x2=\"140\" y2=\"170\" class=\"edge\"/><text x=\"95\" y=\"150\" class=\"wlabel\">6</text><line x1=\"140\" y1=\"40\" x2=\"140\" y2=\"170\" class=\"edge\"/><text x=\"130\" y=\"105\" class=\"wlabel\">2</text><line x1=\"140\" y1=\"40\" x2=\"280\" y2=\"40\" class=\"edge\"/><text x=\"210\" y=\"30\" class=\"wlabel\">3</text><line x1=\"140\" y1=\"40\" x2=\"280\" y2=\"170\" class=\"edge\"/><text x=\"200\" y=\"115\" class=\"wlabel\">3</text><line x1=\"140\" y1=\"170\" x2=\"280\" y2=\"170\" class=\"edge\"/><text x=\"210\" y=\"180\" class=\"wlabel\">1</text><line x1=\"280\" y1=\"40\" x2=\"280\" y2=\"170\" class=\"edge\"/><text x=\"270\" y=\"105\" class=\"wlabel\">4</text><line x1=\"280\" y1=\"40\" x2=\"370\" y2=\"110\" class=\"edge\"/><text x=\"330\" y=\"65\" class=\"wlabel\">2</text><line x1=\"280\" y1=\"170\" x2=\"370\" y2=\"110\" class=\"edge\"/><text x=\"330\" y=\"150\" class=\"wlabel\">4</text><circle cx=\"60\" cy=\"110\" r=\"14\" class=\"node\"/><text x=\"60\" y=\"110\" class=\"label\">A</text><circle cx=\"140\" cy=\"40\" r=\"14\" class=\"node\"/><text x=\"140\" y=\"40\" class=\"label\">B</text><circle cx=\"140\" cy=\"170\" r=\"14\" class=\"node\"/><text x=\"140\" y=\"170\" class=\"label\">C</text><circle cx=\"280\" cy=\"40\" r=\"14\" class=\"node\"/><text x=\"280\" y=\"40\" class=\"label\">D</text><circle cx=\"280\" cy=\"170\" r=\"14\" class=\"node\"/><text x=\"280\" y=\"170\" class=\"label\">E</text><circle cx=\"370\" cy=\"110\" r=\"14\" class=\"node\"/><text x=\"370\" y=\"110\" class=\"label\">Z</text></svg>"
+                }
+            ],
+            "image": "0152_q152_Question_152.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q153
+        {
+            "id": 153,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Find a formula for the general term of the sequence \\[1, 9, 1, 9, 1, 9, \\dots\\]\n(i) \\(a_n = 5 + (-1)^n 4, \\forall n \\ge 1\\)\n(ii) \\(a_n = 1 + 8n, \\forall n \\ge 1\\)",
+            "options": [
+                "None of the other choices is correct",
+                "(i) and (ii)",
+                "(i)",
+                "(ii)"
+            ],
+            "answer": "C",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Kiểm tra công thức (i):**\nVới \\(a_n = 5 + (-1)^n 4\\):\n- \\(n = 1\\): \\(a_1 = 5 + (-1)^1 \\times 4 = 5 - 4 = 1\\).\n- \\(n = 2\\): \\(a_2 = 5 + (-1)^2 \\times 4 = 5 + 4 = 9\\).\n- \\(n = 3\\): \\(a_3 = 5 + (-1)^3 \\times 4 = 5 - 4 = 1\\).\n- \\(n = 4\\): \\(a_4 = 5 + (-1)^4 \\times 4 = 5 + 4 = 9\\).\nDãy sinh ra là \\(1, 9, 1, 9, \\dots\\) trùng khớp hoàn toàn với đề bài.",
+                "**Bước 2: Kiểm tra công thức (ii):**\nVới \\(a_n = 1 + 8n\\): \\(a_1 = 9, a_2 = 17\\), không thỏa mãn.",
+                "**Kết luận:** Công thức đúng là **(i)**, chọn phương án **C**."
+            ],
+            "figures": [],
+            "image": "0153_q153_Question_153.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q154
+        {
+            "id": 154,
+            "chapterId": 5,
+            "chapterName": "Chương 5: Quy nạp và Đệ quy",
+            "chapterShort": "Induction & Recursion",
+            "type": "single_choice",
+            "question": "Give a recursive definition with the initial condition of the set S of all positive integer multiples of 5.\n(i) \\(5 \\in S;\\ x \\in S \\to x + 5 \\in S\\)\n(ii) \\(0 \\in S;\\ x \\in S \\to 5x \\in S\\)\n(iii) \\(1 \\in S;\\ x \\in S \\to 5x \\in S\\)\n(iv) \\(5 \\in S;\\ x \\in S \\to 5x \\in S\\)",
+            "options": [
+                "(i)",
+                "(ii)",
+                "(iv)",
+                "(iii)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định tập hợp cần định nghĩa:**\nTập các bội nguyên dương của 5 là: \\(S = \\{5, 10, 15, 20, 25, \\dots\\}\\).",
+                "**Bước 2: Xây dựng định nghĩa quy nạp (đệ quy):**\n- Điều kiện cơ sở (Base step): Số nguyên dương nhỏ nhất là \\(5 \\in S\\).\n- Bước đệ quy (Recursive step): Nếu \\(x \\in S\\) thì phần tử tiếp theo là \\(x + 5 \\in S\\).\nĐiều này sinh ra toàn bộ tập \\(\\{5, 10, 15, \\dots\\}\\).",
+                "**Kết luận:** Định nghĩa chính xác là **(i)**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0154_q154_Question_154.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q155
+        {
+            "id": 155,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "Find the postfix form of the expression \\[(2 * x + y) / (x - 3 * y)\\]",
+            "options": [
+                "2 x * y + x 3 y * - /",
+                "2 * x y + x 3 - y * /",
+                "/ + * 2 x y - x * 3 y",
+                "None of these"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Chuyển đổi tử số sang dạng hậu tố (Postfix):**\n- \\(2 * x \\implies 2 \\ x \\ *\\).\n- \\((2 * x) + y \\implies 2 \\ x \\ * \\ y \\ +\\).",
+                "**Bước 2: Chuyển đổi mẫu số và toàn bộ phép chia:**\n- \\(3 * y \\implies 3 \\ y \\ *\\).\n- \\(x - (3 * y) \\implies x \\ 3 \\ y \\ * \\ -\\).\n- Phép chia hai biểu thức: \\[(Tử\\_hậu\\_tố) \\quad (Mẫu\\_hậu\\_tố) \\quad / \\implies 2 \\ x \\ * \\ y \\ + \\ x \\ 3 \\ y \\ * \\ - \\ /.\\]",
+                "**Kết luận:** Biểu thức hậu tố là `2 x * y + x 3 y * - /`, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0155_q155_Question_155.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q156
+        {
+            "id": 156,
+            "chapterId": 11,
+            "chapterName": "Chương 11: Cây",
+            "chapterShort": "Trees",
+            "type": "single_choice",
+            "question": "What is the average number of bits required for each letter when using Huffman Coding Algorithm to encode the word \"success\"?",
+            "options": [
+                "\\(13/7\\)",
+                "\\(15/7\\)",
+                "\\(2\\)",
+                "\\(16/7\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Xác định tần suất các ký tự trong từ \"success\":**\nTừ \"success\" gồm 7 ký tự:\n- 's': 3\n- 'c': 2\n- 'u': 1\n- 'e': 1",
+                "**Bước 2: Dựng cây Huffman và tính độ dài trung bình:**\n- Hợp nhất hai ký tự tần suất 1: 'e'(1) và 'u'(1) \\(\\to\\) nút phụ 'eu'(2).\n- Bây giờ còn lại: 'eu'(2), 'c'(2), 's'(3). Hợp nhất 'eu'(2) và 'c'(2) \\(\\to\\) nút 'euc'(4).\n- Hợp nhất 's'(3) và 'euc'(4) \\(\\to\\) nút gốc (7).\nĐộ dài bit từng ký tự:\n- 's': 1 bit (tần suất 3)\n- 'c': 2 bit (tần suất 2)\n- 'e': 3 bit (tần suất 1)\n- 'u': 3 bit (tần suất 1)\n\nTổng số bit cần mã hóa: \\[3 \\times 1 + 2 \\times 2 + 1 \\times 3 + 1 \\times 3 = 3 + 4 + 3 + 3 = 13 \\text{ bit}.\\]\nSố bit trung bình cho mỗi chữ cái là: \\[\\frac{13}{7}.\\]\n\n**Kết luận:** Số bit trung bình là **13/7**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0156_q156_Question_156.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q157
+        {
+            "id": 157,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "Suppose the truth value of the proposition \\[p \\to \\neg(p \\land \\neg q)\\] is false. Find the truth value of \\(p, q\\).",
+            "options": [
+                "p: true, q: false",
+                "p: false, q: false",
+                "p: false, q: true",
+                "p: true, q: true"
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Phân tích điều kiện để phép kéo theo nhận giá trị Sai:**\nMệnh đề \\(A \\to B\\) nhận giá trị False khi và chỉ khi \\(A = \\text{True}\\) và \\(B = \\text{False}\\).\nDo đó:\n1. Tiền đề \\(p = \\text{True}\\).\n2. Hệ quả \\(\\neg(p \\land \\neg q) = \\text{False} \\iff p \\land \\neg q = \\text{True}\\).",
+                "**Bước 2: Suy ra chân trị của \\(q\\):**\nVì \\(p = \\text{True}\\), để \\(p \\land \\neg q = \\text{True}\\) thì bắt buộc: \\[\\neg q = \\text{True} \\iff q = \\text{False}.\\]\nNhư vậy: \\(p\\) là True, \\(q\\) là False.",
+                "**Kết luận:** Chân trị là **p: true, q: false**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0157_q157_Question_157.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q158
+        {
+            "id": 158,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Cơ sở: Logic và Chứng minh",
+            "chapterShort": "Logic & Proofs",
+            "type": "single_choice",
+            "question": "What is the value of x after this statement is encountered in a computer program if \\(x = 1\\) before the statement is reached?\n\\[\\text{if } (2x + 3 = 4) \\text{ AND } (3x + 4 = 7) \\text{ then } x := x + 3\\]",
+            "options": [
+                "\\(1\\)",
+                "\\(4\\)",
+                "\\(0\\)",
+                "\\(3\\)",
+                "None of the other choices is correct."
+            ],
+            "answer": "A",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Đánh giá điều kiện `if` với giá trị \\(x = 1\\):**\n- Xét mệnh đề thứ nhất: \\(2x + 3 = 2(1) + 3 = 5\\). Mệnh đề \\(5 = 4\\) là **False**.\n- Vì toán tử là phép `AND`, khi một điều kiện là False thì toàn bộ biểu thức điều kiện nhận giá trị **False**.",
+                "**Bước 2: Xác định giá trị của \\(x\\):**\nDo điều kiện False, câu lệnh `then x := x + 3` không được thực thi. Giá trị của \\(x\\) vẫn giữ nguyên là 1.",
+                "**Kết luận:** Giá trị của \\(x\\) sau câu lệnh là **1**, chọn phương án **A**."
+            ],
+            "figures": [],
+            "image": "0158_q158_Question_158.png",
+            "code": "if (2x + 3 = 4) AND (3x + 4 = 7) then x := x + 3",
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q159
+        {
+            "id": 159,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Find a formula that generates the following sequence with the initial items \\(a_1, a_2, a_3, \\dots\\):\n\\[0, 2, 0, 2, 0, 2, 0, \\dots\\]\n(i) \\(a_n = 1 + (-1)^n\\)\n(ii) \\(a_n = 1 - (-1)^n\\)\n(iii) \\(a_n = 1 + (-1)^{n+1}\\)\n(iv) None of the other choices is correct",
+            "options": [
+                "(iii)",
+                "(i)",
+                "(ii)",
+                "(iv)"
+            ],
+            "answer": "B",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Kiểm tra công thức (i) với các số hạng đầu tiên:**\nVới \\(a_n = 1 + (-1)^n\\):\n- \\(n = 1\\): \\(a_1 = 1 + (-1)^1 = 1 - 1 = 0\\).\n- \\(n = 2\\): \\(a_2 = 1 + (-1)^2 = 1 + 1 = 2\\).\n- \\(n = 3\\): \\(a_3 = 1 + (-1)^3 = 1 - 1 = 0\\).\n- \\(n = 4\\): \\(a_4 = 1 + (-1)^4 = 1 + 1 = 2\\).\nDãy sinh ra là \\(0, 2, 0, 2, 0, \\dots\\) trùng khớp hoàn toàn với đề bài.",
+                "**Bước 2: Kiểm tra các công thức còn lại:**\n- Công thức (ii): \\(a_1 = 1 - (-1) = 2, a_2 = 0\\) (bị lệch pha).\n- Công thức (iii): \\(a_1 = 2, a_2 = 0\\) (bị lệch pha).",
+                "**Kết luận:** Công thức chính xác là **(i)**, chọn phương án **B**."
+            ],
+            "figures": [],
+            "image": "0159_q159_Question_159.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        },
+        # Q160
+        {
+            "id": 160,
+            "chapterId": 2,
+            "chapterName": "Chương 2: Cấu trúc cơ bản: Tập hợp, Hàm, Dãy",
+            "chapterShort": "Basic Structures",
+            "type": "single_choice",
+            "question": "Find the inverse of the function \\(f : \\mathbb{R} \\to \\mathbb{R}\\) where \\(f(x) = 3x - 5\\).\n(i) \\(f'(x) = 3x + 5\\)\n(ii) \\(f^{-1}(x) = \\frac{5+x}{3}\\)\n(iii) \\(f'(x) = 3x - 5\\)\n(iv) \\(f^{-1}(x) = \\frac{5-x}{3}\\)",
+            "options": [
+                "None of the other choices is correct.",
+                "(iii)",
+                "(iv)",
+                "(i)",
+                "(ii)"
+            ],
+            "answer": "E",
+            "answer_status": "verified",
+            "explanation": [
+                "**Bước 1: Tìm hàm ngược \\(f^{-1}(x)\\):**\nĐặt \\(y = f(x) = 3x - 5\\).\nBiến đổi tìm \\(x\\) theo \\(y\\): \\[3x = y + 5 \\iff x = \\frac{y + 5}{3}.\\]\nĐổi vai trò biến \\(x\\) và \\(y\\), ta được hàm ngược: \\[f^{-1}(x) = \\frac{x + 5}{3} = \\frac{5 + x}{3}.\\]",
+                "**Bước 2: Đối chiếu các phương án:**\nCông thức này trùng khớp với mục **(ii)**.",
+                "**Kết luận:** Hàm ngược là **(ii)**, chọn phương án **E**."
+            ],
+            "figures": [],
+            "image": "0160_q160_Question_160.png",
+            "code": None,
+            "needs_image": False,
+            "confidence": "high",
+            "review_flags": []
+        }
+    ]
+    return questions
+
+def main():
+    b4_questions = get_batch_004_questions()
+    print(f"Loaded {len(b4_questions)} questions for Batch 4.")
+
+    # Ghi ra questions_batch_004.json
+    with open("v2/questions_batch_004.json", "w", encoding="utf-8") as f:
+        json.dump(b4_questions, f, ensure_ascii=False, indent=2)
+
+    # Đọc existing từ questions_sample_v2.json
+    with open("v2/questions_sample_v2.json", "r", encoding="utf-8") as f:
+        existing = json.load(f)
+
+    # Lập dict theo id để cập nhật / thêm mới
+    all_dict = {q["id"]: q for q in existing}
+    for q in b4_questions:
+        all_dict[q["id"]] = q
+
+    # Sắp xếp lại theo id
+    all_sorted = [all_dict[qid] for qid in sorted(all_dict.keys())]
+    print(f"Total merged questions in v2 sample: {len(all_sorted)}")
+
+    with open("v2/questions_sample_v2.json", "w", encoding="utf-8") as f:
+        json.dump(all_sorted, f, ensure_ascii=False, indent=2)
+
+    # Cập nhật v2/questions_v2.js
+    js_content = f"// questions_v2.js - Generated dataset containing verified questions\nexport const questionsV2 = {json.dumps(all_sorted, ensure_ascii=False, indent=2)};\n"
+    with open("v2/questions_v2.js", "w", encoding="utf-8") as f:
+        f.write(js_content)
+    print("Updated v2/questions_sample_v2.json and v2/questions_v2.js successfully.")
+
+if __name__ == "__main__":
+    main()

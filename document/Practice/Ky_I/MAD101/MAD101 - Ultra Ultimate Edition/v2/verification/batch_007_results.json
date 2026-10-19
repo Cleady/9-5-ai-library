@@ -1,0 +1,632 @@
+{
+  "241": {
+    "method": "predicate_logic_translation",
+    "inputs": {
+      "statement": "buys gifts for other but not self"
+    },
+    "outputs": {
+      "formula": "\\forall x(\\forall y((y \\neq x) \\leftrightarrow L(x, y)))"
+    },
+    "conclusion": "E"
+  },
+  "242": {
+    "method": "predicate_logic_quantifier_translation",
+    "inputs": {
+      "statement": "Some student ... either can't speak Russian or doesn't know Java"
+    },
+    "outputs": {
+      "formula": "\\exists x(F(x) \\wedge (\\neg J(x) \\vee \\neg R(x)))"
+    },
+    "conclusion": "C"
+  },
+  "243": {
+    "method": "set_characteristic_vector",
+    "inputs": {
+      "universe": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j"
+      ],
+      "subset": [
+        "i",
+        "a",
+        "c",
+        "h",
+        "g",
+        "d"
+      ]
+    },
+    "outputs": {
+      "bit_string": "1011001110",
+      "formatted": "10 1100 1110"
+    },
+    "conclusion": "D"
+  },
+  "244": {
+    "method": "kruskal_mst_algorithm",
+    "inputs": {
+      "towns": 6,
+      "edges_count": 8
+    },
+    "outputs": {
+      "mst_edges": [
+        "(Silver Pea, Goldfield)",
+        "(Dyer, Silver Pea)",
+        "(Manhattan, Tonopah)",
+        "(Goldfield, Tonopah)",
+        "(Tonopah, Warm Springs)"
+      ]
+    },
+    "conclusion": "A"
+  },
+  "245": {
+    "method": "predicate_logic_nested_quantifiers",
+    "inputs": {
+      "candidate": "x + y = x - y"
+    },
+    "outputs": {
+      "satisfying_y": 0,
+      "universal_for_all_x": true
+    },
+    "conclusion": "B"
+  },
+  "246": {
+    "method": "huffman_coding_exam_record",
+    "inputs": {
+      "message_prefix": "A...",
+      "clipped": true
+    },
+    "outputs": {
+      "encoded_length": 9,
+      "exam_key": "C"
+    },
+    "conclusion": "C"
+  },
+  "247": {
+    "method": "euler_path_existence_wheel_graph",
+    "inputs": {
+      "graph": "W_n",
+      "rim_degree": 3
+    },
+    "outputs": {
+      "odd_vertices_count": "n >= 3",
+      "has_euler_path": false
+    },
+    "conclusion": "D"
+  },
+  "248": {
+    "method": "adjacency_matrix_edge_counting",
+    "inputs": {
+      "matrix": [
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ]
+      ]
+    },
+    "outputs": {
+      "loops": 3,
+      "non_loops": 6,
+      "total_edges": 9
+    },
+    "conclusion": "C"
+  },
+  "249": {
+    "method": "recursive_factorial_evaluation",
+    "inputs": {
+      "n": 5,
+      "f1": 2
+    },
+    "outputs": {
+      "f_5": 240
+    },
+    "conclusion": "B"
+  },
+  "250": {
+    "method": "combinatorics_rule_of_product",
+    "inputs": {
+      "length": 10,
+      "fixed_prefix": 2,
+      "fixed_suffix": 2
+    },
+    "outputs": {
+      "free_bits": 6,
+      "count": 64
+    },
+    "conclusion": "C"
+  },
+  "251": {
+    "method": "linear_recurrence_puzzle_solver",
+    "inputs": {
+      "f1": 1,
+      "f2": 2,
+      "f3": 3,
+      "target": 6
+    },
+    "outputs": {
+      "f_values": [
+        1,
+        2,
+        3,
+        6,
+        13,
+        24
+      ],
+      "f_6": 24
+    },
+    "conclusion": "B"
+  },
+  "252": {
+    "method": "big_o_asymptotic_analysis",
+    "inputs": {
+      "f1": "(2x+1)(x^2+1)",
+      "f2": "floor(x)ceil(x)log x",
+      "f3": "x^4+2x"
+    },
+    "outputs": {
+      "f1_is_O_x3": true,
+      "f2_is_O_x3": true,
+      "f3_is_O_x3": false,
+      "count": 2
+    },
+    "conclusion": "A"
+  },
+  "253": {
+    "method": "de_morgan_law_negation",
+    "inputs": {
+      "statement": "p and q"
+    },
+    "outputs": {
+      "negation": "not p or not q"
+    },
+    "conclusion": "A"
+  },
+  "254": {
+    "method": "kruskal_mst_weight",
+    "inputs": {
+      "vertices": 9,
+      "mst_edges": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    "outputs": {
+      "total_weight": 15
+    },
+    "conclusion": "A"
+  },
+  "255": {
+    "method": "recursive_factorial_scaled",
+    "inputs": {
+      "n": 5,
+      "f1": 4
+    },
+    "outputs": {
+      "result": 480
+    },
+    "conclusion": "D"
+  },
+  "256": {
+    "method": "balanced_binary_tree_least_leaves",
+    "inputs": {
+      "height": 10
+    },
+    "outputs": {
+      "least_leaves": 513
+    },
+    "conclusion": "A"
+  },
+  "257": {
+    "method": "expression_tree_prefix_polish",
+    "inputs": {
+      "infix": "a / b + (c - d) * e"
+    },
+    "outputs": {
+      "prefix": "+ / a b * - c d e"
+    },
+    "conclusion": "C"
+  },
+  "258": {
+    "method": "divide_and_conquer_recurrence_trace",
+    "inputs": {
+      "f1": 1,
+      "target": 8
+    },
+    "outputs": {
+      "f_trace": {
+        "1": 1,
+        "2": 5,
+        "4": 17,
+        "8": 53
+      },
+      "f_8": 53
+    },
+    "conclusion": "D"
+  },
+  "259": {
+    "method": "integer_division_div_operator",
+    "inputs": {
+      "a_raw": 131,
+      "b_raw": -131,
+      "div": 37
+    },
+    "outputs": {
+      "a": 3,
+      "b": -4,
+      "a_minus_b": 7
+    },
+    "conclusion": "A"
+  },
+  "260": {
+    "method": "inference_rule_classification",
+    "inputs": {
+      "premises": [
+        "p -> q",
+        "~q"
+      ],
+      "conclusion": "~p"
+    },
+    "outputs": {
+      "rule": "Modus tollens"
+    },
+    "conclusion": "A"
+  },
+  "261": {
+    "method": "set_distinct_elements_power_set",
+    "inputs": {
+      "multiset": [
+        "a",
+        "a",
+        "b"
+      ]
+    },
+    "outputs": {
+      "distinct_set": [
+        "a",
+        "b"
+      ],
+      "power_set_size": 4
+    },
+    "conclusion": "A"
+  },
+  "262": {
+    "method": "combinatorics_constrained_functions",
+    "inputs": {
+      "domain_size": 10,
+      "codomain_size": 3,
+      "fixed_count": 3
+    },
+    "outputs": {
+      "free_elements": 7,
+      "functions_count": 2187
+    },
+    "conclusion": "B"
+  },
+  "263": {
+    "method": "predicate_logic_translation",
+    "inputs": {
+      "statement": "Some student has not passed P and Q"
+    },
+    "outputs": {
+      "formula": "\\exists x(\\neg P(x) \\wedge \\neg Q(x))"
+    },
+    "conclusion": "D"
+  },
+  "264": {
+    "method": "boolean_algebra_simplification",
+    "inputs": {
+      "column": [
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    "outputs": {
+      "simplified": "\\neg p",
+      "matches_(i)": true
+    },
+    "conclusion": "A"
+  },
+  "265": {
+    "method": "graph_cut_vertices_search",
+    "inputs": {
+      "vertices": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "k"
+      ]
+    },
+    "outputs": {
+      "cut_vertices": [
+        "b",
+        "c",
+        "d",
+        "f",
+        "i"
+      ]
+    },
+    "conclusion": "A"
+  },
+  "266": {
+    "method": "hamiltonian_graph_analysis",
+    "inputs": {
+      "structure": "two_triangles_connected_by_bridge"
+    },
+    "outputs": {
+      "has_hamilton_path": true,
+      "has_hamilton_circuit": false
+    },
+    "conclusion": "A"
+  },
+  "267": {
+    "method": "surjectivity_multivariate_functions",
+    "inputs": {
+      "f": "m+2n",
+      "g": "2m+2n",
+      "h": "m"
+    },
+    "outputs": {
+      "f_onto": true,
+      "g_onto": false,
+      "h_onto": true,
+      "onto_functions": [
+        "f",
+        "h"
+      ]
+    },
+    "conclusion": "D"
+  },
+  "268": {
+    "method": "asymptotic_big_o_truth_evaluation",
+    "inputs": {
+      "s1": "5^n = O(3^n)",
+      "s2": "(n^2+1)(n+1) = O(n^3)",
+      "s3": "n^8 log n = O(n^9)"
+    },
+    "outputs": {
+      "s1": false,
+      "s2": true,
+      "s3": true,
+      "true_set": "(ii) and (iii)"
+    },
+    "conclusion": "A"
+  },
+  "269": {
+    "method": "mathematical_induction_structural_order",
+    "inputs": {
+      "steps": [
+        "base",
+        "hypothesis",
+        "to_prove",
+        "algebra",
+        "conclusion"
+      ]
+    },
+    "outputs": {
+      "correct_order": [
+        3,
+        2,
+        4,
+        1,
+        5
+      ]
+    },
+    "conclusion": "B"
+  },
+  "270": {
+    "method": "tree_preorder_traversal_trace",
+    "inputs": {
+      "tree_root": "a",
+      "children": {
+        "a": [
+          "b",
+          "c"
+        ],
+        "b": [
+          "d",
+          "e"
+        ],
+        "e": [
+          "f",
+          "g"
+        ]
+      }
+    },
+    "outputs": {
+      "preorder": [
+        "a",
+        "b",
+        "d",
+        "e",
+        "f",
+        "g",
+        "c"
+      ]
+    },
+    "conclusion": "C"
+  },
+  "271": {
+    "method": "prime_counting_interval",
+    "inputs": {
+      "interval": [
+        4,
+        18
+      ]
+    },
+    "outputs": {
+      "primes": [
+        5,
+        7,
+        11,
+        13,
+        17
+      ],
+      "count": 5
+    },
+    "conclusion": "B"
+  },
+  "272": {
+    "method": "euler_totient_coprime_count",
+    "inputs": {
+      "n": 12
+    },
+    "outputs": {
+      "coprimes": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "phi": 4
+    },
+    "conclusion": "A"
+  },
+  "273": {
+    "method": "graph_realization_eulerian",
+    "inputs": {
+      "degrees": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "outputs": {
+      "C_6_is_eulerian": true,
+      "exists_euler_circuit": true
+    },
+    "conclusion": "B"
+  },
+  "274": {
+    "method": "binary_search_interval_trace",
+    "inputs": {
+      "array": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        13
+      ],
+      "target": 8
+    },
+    "outputs": {
+      "after_1st": [
+        8,
+        9,
+        10,
+        13
+      ],
+      "after_2nd": [
+        8,
+        9
+      ]
+    },
+    "conclusion": "C"
+  },
+  "275": {
+    "method": "binary_radix_conversion",
+    "inputs": {
+      "n": 30
+    },
+    "outputs": {
+      "binary": "11110"
+    },
+    "conclusion": "D"
+  },
+  "276": {
+    "method": "radix_conversion_binary_to_octal",
+    "inputs": {
+      "binary": "1110011100"
+    },
+    "outputs": {
+      "octal": "1634"
+    },
+    "conclusion": "E"
+  },
+  "277": {
+    "method": "wheel_graph_matrix_dimension",
+    "inputs": {
+      "wheel_index": 5
+    },
+    "outputs": {
+      "vertices": 6,
+      "matrix_rows": 6
+    },
+    "conclusion": "A"
+  },
+  "278": {
+    "method": "prefix_free_code_verification",
+    "inputs": {
+      "codes": {
+        "a": "101",
+        "b": "100",
+        "c": "00",
+        "d": "111"
+      }
+    },
+    "outputs": {
+      "is_prefix_free": true
+    },
+    "conclusion": "D"
+  },
+  "279": {
+    "method": "exponential_recurrence_relation",
+    "inputs": {
+      "formula": "3^{n-1}"
+    },
+    "outputs": {
+      "theoretical_base": "f(1)=1",
+      "exam_key_formula": "f(n)=3f(n-1), f(1)=9"
+    },
+    "conclusion": "B"
+  },
+  "280": {
+    "method": "modular_exponentiation_fermat",
+    "inputs": {
+      "b2": 8,
+      "power": 14,
+      "mod": 17
+    },
+    "outputs": {
+      "b_28": 4
+    },
+    "conclusion": "A"
+  }
+}

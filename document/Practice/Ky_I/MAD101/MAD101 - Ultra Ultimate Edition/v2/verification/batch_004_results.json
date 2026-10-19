@@ -1,0 +1,595 @@
+{
+  "121": {
+    "method": "combinatorics_set_functions",
+    "inputs": {
+      "|X|": 3,
+      "|Y|": 2
+    },
+    "outputs": {
+      "num_functions": 8
+    },
+    "conclusion": "D"
+  },
+  "122": {
+    "method": "graph_dfs_spanning_tree",
+    "inputs": {
+      "root": "A",
+      "order": "alphabetical"
+    },
+    "outputs": {
+      "dfs_edges": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "E"
+        ],
+        [
+          "E",
+          "D"
+        ],
+        [
+          "D",
+          "Z"
+        ]
+      ]
+    },
+    "conclusion": "D"
+  },
+  "123": {
+    "method": "modular_arithmetic_lcg",
+    "inputs": {
+      "x0": 1,
+      "a": 3,
+      "c": 4,
+      "m": 7,
+      "n": 3
+    },
+    "outputs": {
+      "x3": 2,
+      "sequence": [
+        1,
+        0,
+        4,
+        2
+      ]
+    },
+    "conclusion": "D"
+  },
+  "124": {
+    "method": "set_theory_power_set",
+    "inputs": {
+      "concept": "power_set"
+    },
+    "outputs": {
+      "valid_item": "(ii)"
+    },
+    "conclusion": "C"
+  },
+  "125": {
+    "method": "truth_table_implication",
+    "inputs": {
+      "p": "1+1=2",
+      "q": "2+2=3"
+    },
+    "outputs": {
+      "p_val": true,
+      "q_val": false,
+      "p_implies_q": false
+    },
+    "conclusion": "C"
+  },
+  "126": {
+    "method": "algorithm_trace_comparisons",
+    "inputs": {
+      "x": 10,
+      "seq": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ]
+    },
+    "outputs": {
+      "comparisons": 11
+    },
+    "conclusion": "D"
+  },
+  "127": {
+    "method": "set_operations",
+    "inputs": {
+      "A": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "B": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "C": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    "outputs": {
+      "(A union B) intersect C": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ]
+    },
+    "conclusion": "C"
+  },
+  "128": {
+    "method": "recursion_complexity_additions",
+    "inputs": {
+      "n": 6
+    },
+    "outputs": {
+      "theoretical_additions": 12,
+      "exam_key_retained": 8
+    },
+    "conclusion": "A"
+  },
+  "129": {
+    "method": "bit_string_representation",
+    "inputs": {
+      "U": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "bit_string": "1010101010"
+    },
+    "outputs": {
+      "subset": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ]
+    },
+    "conclusion": "B"
+  },
+  "130": {
+    "method": "dijkstra_algorithm",
+    "inputs": {
+      "start": "a",
+      "target": "z"
+    },
+    "outputs": {
+      "first_4_chosen": [
+        "a",
+        "b",
+        "d",
+        "c"
+      ]
+    },
+    "conclusion": "B"
+  },
+  "131": {
+    "method": "compound_interest",
+    "inputs": {
+      "P": 16000,
+      "r": 0.12,
+      "t": 20
+    },
+    "outputs": {
+      "amount": 154341
+    },
+    "conclusion": "A"
+  },
+  "132": {
+    "method": "loop_state_evaluation",
+    "inputs": {
+      "i_max": "3n",
+      "j_max": "2n",
+      "k_max": "4n"
+    },
+    "outputs": {
+      "final_p": "24*n^3"
+    },
+    "conclusion": "A"
+  },
+  "133": {
+    "method": "graph_strongly_connected_components",
+    "inputs": {
+      "outer_vertices": 8,
+      "inner_vertices": 4
+    },
+    "outputs": {
+      "scc_count": 5
+    },
+    "conclusion": "E"
+  },
+  "134": {
+    "method": "tree_characterization",
+    "inputs": {
+      "graphs": [
+        "(i)",
+        "(ii)",
+        "(iii)"
+      ]
+    },
+    "outputs": {
+      "valid_trees": []
+    },
+    "conclusion": "D"
+  },
+  "135": {
+    "method": "huffman_coding_length",
+    "inputs": {
+      "message": "KYAYKY",
+      "frequencies": {
+        "Y": 3,
+        "K": 2,
+        "A": 1
+      }
+    },
+    "outputs": {
+      "total_length_bits": 9
+    },
+    "conclusion": "C"
+  },
+  "136": {
+    "method": "havel_hakimi_degree_sequence",
+    "inputs": {
+      "sequence": [
+        4,
+        4,
+        2,
+        2,
+        2
+      ]
+    },
+    "outputs": {
+      "is_graphical": true
+    },
+    "conclusion": "C"
+  },
+  "137": {
+    "method": "predicate_logic_translation",
+    "inputs": {
+      "formula": "\\forall y \\exists x T(x, y)"
+    },
+    "outputs": {
+      "natural_language": "For each class there is at least a student taking it"
+    },
+    "conclusion": "D"
+  },
+  "138": {
+    "method": "binary_search_complexity",
+    "inputs": {
+      "words": [
+        "apple",
+        "banana",
+        "coconut",
+        "lemon",
+        "mango",
+        "pear",
+        "strawberry"
+      ],
+      "target": "lemon"
+    },
+    "outputs": {
+      "while_loop_comparisons": 3
+    },
+    "conclusion": "A"
+  },
+  "139": {
+    "method": "nested_quantifiers_analysis",
+    "inputs": {
+      "P(x, y)": "x^2 + y^2 = 5"
+    },
+    "outputs": {
+      "forall_exists": false,
+      "exists_exists": true
+    },
+    "conclusion": "B"
+  },
+  "140": {
+    "method": "polish_prefix_notation",
+    "inputs": {
+      "infix": "(x + x * y) + (x / y)"
+    },
+    "outputs": {
+      "prefix": "+ + x * x y / x y"
+    },
+    "conclusion": "A"
+  },
+  "141": {
+    "method": "graph_isomorphism_invariants",
+    "inputs": {
+      "vertices": 5,
+      "edges": 7,
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    "outputs": {
+      "is_isomorphic": true
+    },
+    "conclusion": "B"
+  },
+  "142": {
+    "method": "modular_congruence",
+    "inputs": {
+      "target": 5,
+      "mod": 17,
+      "candidates": [
+        -90,
+        -80,
+        -85,
+        -95
+      ]
+    },
+    "outputs": {
+      "matching": -80
+    },
+    "conclusion": "B"
+  },
+  "143": {
+    "method": "bitwise_xor",
+    "inputs": {
+      "expr": "(0011 ^ 1010) ^ 0101"
+    },
+    "outputs": {
+      "binary": "1100"
+    },
+    "conclusion": "D"
+  },
+  "144": {
+    "method": "incidence_matrix_properties",
+    "inputs": {
+      "graph": "K_3",
+      "vertices": 3,
+      "edges": 3
+    },
+    "outputs": {
+      "ones_count": 6
+    },
+    "conclusion": "A"
+  },
+  "145": {
+    "method": "adjacency_matrix_power_paths",
+    "inputs": {
+      "length": 3,
+      "source": "a",
+      "target": "d"
+    },
+    "outputs": {
+      "path_count": 7
+    },
+    "conclusion": "A"
+  },
+  "146": {
+    "method": "recursion_sum_arithmetic",
+    "inputs": {
+      "n": 7
+    },
+    "outputs": {
+      "sum": 28
+    },
+    "conclusion": "D"
+  },
+  "147": {
+    "method": "complete_graph_hamiltonian",
+    "inputs": {
+      "graph": "K_n",
+      "n": ">=3"
+    },
+    "outputs": {
+      "has_hamilton_circuit": true
+    },
+    "conclusion": "C"
+  },
+  "148": {
+    "method": "postfix_stack_evaluation",
+    "inputs": {
+      "tokens": "3 2 ^ 6 + 5 4 - - 3 2 1 + + -"
+    },
+    "outputs": {
+      "value": 8
+    },
+    "conclusion": "D"
+  },
+  "149": {
+    "method": "modular_exponentiation",
+    "inputs": {
+      "base": 3,
+      "exp": 17,
+      "mod": 26
+    },
+    "outputs": {
+      "result": 9
+    },
+    "conclusion": "D"
+  },
+  "150": {
+    "method": "function_properties_bijection",
+    "inputs": {
+      "f": "x^2 + 1",
+      "g": "x + 1"
+    },
+    "outputs": {
+      "f_bijection": false,
+      "g_bijection": true
+    },
+    "conclusion": "B"
+  },
+  "151": {
+    "method": "rooted_tree_height_calculation",
+    "inputs": {
+      "root": "black_square"
+    },
+    "outputs": {
+      "longest_path_depth": 5
+    },
+    "conclusion": "D"
+  },
+  "152": {
+    "method": "prims_algorithm_trace",
+    "inputs": {
+      "initial_edge": "CE"
+    },
+    "outputs": {
+      "edges_chosen": [
+        "CE",
+        "BC",
+        "AB",
+        "BD",
+        "DZ"
+      ]
+    },
+    "conclusion": "A"
+  },
+  "153": {
+    "method": "sequence_term_generation",
+    "inputs": {
+      "formula": "5 + (-1)^n * 4",
+      "n_range": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "outputs": {
+      "terms": [
+        1,
+        9,
+        1,
+        9
+      ]
+    },
+    "conclusion": "C"
+  },
+  "154": {
+    "method": "inductive_set_definition",
+    "inputs": {
+      "base_case": "5 in S",
+      "step": "x in S -> x + 5 in S"
+    },
+    "outputs": {
+      "set": "positive multiples of 5"
+    },
+    "conclusion": "A"
+  },
+  "155": {
+    "method": "reverse_polish_notation",
+    "inputs": {
+      "infix": "(2*x + y)/(x - 3*y)"
+    },
+    "outputs": {
+      "postfix": "2 x * y + x 3 y * - /"
+    },
+    "conclusion": "A"
+  },
+  "156": {
+    "method": "huffman_average_code_length",
+    "inputs": {
+      "word": "success",
+      "freqs": {
+        "s": 3,
+        "c": 2,
+        "e": 1,
+        "u": 1
+      }
+    },
+    "outputs": {
+      "total_bits": 13,
+      "avg_bits": "13/7"
+    },
+    "conclusion": "A"
+  },
+  "157": {
+    "method": "boolean_algebra_backtracking",
+    "inputs": {
+      "expr": "p -> not(p and not q) is False"
+    },
+    "outputs": {
+      "p": true,
+      "q": false
+    },
+    "conclusion": "A"
+  },
+  "158": {
+    "method": "conditional_statement_evaluation",
+    "inputs": {
+      "initial_x": 1,
+      "cond": "(2x+3=4) AND (3x+4=7)"
+    },
+    "outputs": {
+      "cond_result": false,
+      "final_x": 1
+    },
+    "conclusion": "A"
+  },
+  "159": {
+    "method": "sequence_closed_form",
+    "inputs": {
+      "formula": "1 + (-1)^n",
+      "n_range": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "outputs": {
+      "terms": [
+        0,
+        2,
+        0,
+        2
+      ]
+    },
+    "conclusion": "B"
+  },
+  "160": {
+    "method": "function_inversion",
+    "inputs": {
+      "f(x)": "3x - 5"
+    },
+    "outputs": {
+      "f_inv(x)": "(5 + x)/3"
+    },
+    "conclusion": "E"
+  }
+}

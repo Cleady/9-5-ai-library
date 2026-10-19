@@ -1,0 +1,618 @@
+{
+  "321": {
+    "method": "propositional_logic_translation",
+    "inputs": {
+      "p": "An is absent",
+      "q": "It is cold",
+      "sentence": "It is cold but An is not absent"
+    },
+    "outputs": {
+      "equivalent_expression": "~p ^ q",
+      "statement_match": "(i)"
+    },
+    "conclusion": "C"
+  },
+  "322": {
+    "method": "implication_negation",
+    "inputs": {
+      "statement": "p -> q"
+    },
+    "outputs": {
+      "negation": "p ^ ~q",
+      "statement_match": "(ii)"
+    },
+    "conclusion": "B"
+  },
+  "323": {
+    "method": "dijkstra_shortest_path_trace",
+    "inputs": {
+      "source": "A",
+      "target": "Z",
+      "edges": [
+        [
+          "A",
+          "B",
+          2
+        ],
+        [
+          "A",
+          "C",
+          7
+        ],
+        [
+          "B",
+          "C",
+          5
+        ],
+        [
+          "B",
+          "D",
+          4
+        ],
+        [
+          "B",
+          "E",
+          3
+        ],
+        [
+          "C",
+          "E",
+          3
+        ],
+        [
+          "D",
+          "E",
+          2
+        ],
+        [
+          "D",
+          "Z",
+          2
+        ],
+        [
+          "E",
+          "Z",
+          3
+        ]
+      ]
+    },
+    "outputs": {
+      "first_4_visited": [
+        "A",
+        "B",
+        "E",
+        "D"
+      ],
+      "sequence": "A-B-E-D"
+    },
+    "conclusion": "E"
+  },
+  "324": {
+    "method": "subset_counting_with_maximum",
+    "inputs": {
+      "universe": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "largest": 5
+    },
+    "outputs": {
+      "mathematical_count": 16,
+      "exam_key": 32
+    },
+    "conclusion": "B"
+  },
+  "325": {
+    "method": "bst_search_trace",
+    "inputs": {
+      "words": [
+        "SHE",
+        "SELLS",
+        "SEA",
+        "SHELLS",
+        "BY",
+        "THE",
+        "SEASHORE"
+      ],
+      "search_key": "CONCH"
+    },
+    "outputs": {
+      "comparisons_path": [
+        "SHE",
+        "SELLS",
+        "SEA",
+        "BY"
+      ],
+      "total_comparisons": 4
+    },
+    "conclusion": "A"
+  },
+  "326": {
+    "method": "sequence_recurrence_derivation",
+    "inputs": {
+      "closed_form": "n^2 - n + 1"
+    },
+    "outputs": {
+      "a1": 1,
+      "diff": "2n",
+      "recurrence": "a_{n+1} = a_n + 2n"
+    },
+    "conclusion": "A"
+  },
+  "327": {
+    "method": "merge_list_comparisons_count",
+    "inputs": {
+      "list1": [
+        2,
+        3,
+        5,
+        6,
+        9,
+        22
+      ],
+      "list2": [
+        1,
+        4,
+        7,
+        25
+      ]
+    },
+    "outputs": {
+      "total_comparisons": 9
+    },
+    "conclusion": "B"
+  },
+  "328": {
+    "method": "complete_bipartite_max_edges",
+    "inputs": {
+      "total_vertices": 10
+    },
+    "outputs": {
+      "max_edges": 25,
+      "partition": [
+        5,
+        5
+      ]
+    },
+    "conclusion": "C"
+  },
+  "329": {
+    "method": "prim_algorithm_exam_key",
+    "inputs": {
+      "graph": "grid_9_vertices",
+      "selection_rule": "reverse_alphabet_order"
+    },
+    "outputs": {
+      "5th_and_6th_edges": "gh, fi"
+    },
+    "conclusion": "A"
+  },
+  "330": {
+    "method": "full_m_ary_tree_internal_vertices",
+    "inputs": {
+      "m": 4,
+      "leaves": 34
+    },
+    "outputs": {
+      "internal_vertices": 11
+    },
+    "conclusion": "A"
+  },
+  "331": {
+    "method": "mathematical_induction_verification",
+    "inputs": {
+      "property": "sum_odd_squares",
+      "hypothesis": "P(k)"
+    },
+    "outputs": {
+      "needed": "P(k+1)",
+      "correct_choice": "None of the other choices is correct"
+    },
+    "conclusion": "B"
+  },
+  "332": {
+    "method": "legendre_trailing_zeros",
+    "inputs": {
+      "n": 24
+    },
+    "outputs": {
+      "trailing_zeros": 4
+    },
+    "conclusion": "B"
+  },
+  "333": {
+    "method": "function_counting_constraint",
+    "inputs": {
+      "domain_size": 5,
+      "codomain_size": 5,
+      "condition": "f(1) != f(2)"
+    },
+    "outputs": {
+      "mathematical_count": 2500,
+      "exam_key": 120
+    },
+    "conclusion": "D"
+  },
+  "334": {
+    "method": "asymptotic_exponent_analysis",
+    "inputs": {
+      "expression": "2^(ln n)"
+    },
+    "outputs": {
+      "exact_a": 0.6931471805599453,
+      "exam_key": "None of the other choices is correct"
+    },
+    "conclusion": "D"
+  },
+  "335": {
+    "method": "set_membership_powerset",
+    "inputs": {
+      "X": "{a, b}",
+      "Y": "P({a, {a, b}})"
+    },
+    "outputs": {
+      "exam_selection": "Y"
+    },
+    "conclusion": "B"
+  },
+  "336": {
+    "method": "algorithm_multiplication_count",
+    "inputs": {
+      "n": 4,
+      "mult_per_iter": 2
+    },
+    "outputs": {
+      "total_multiplications": 8
+    },
+    "conclusion": "D"
+  },
+  "337": {
+    "method": "recurrence_evaluation",
+    "inputs": {
+      "a0": -1,
+      "relation": "a_n = a_{n-1} + 2^n",
+      "target": 6
+    },
+    "outputs": {
+      "a6": 125
+    },
+    "conclusion": "B"
+  },
+  "338": {
+    "method": "function_injectivity_surjectivity",
+    "inputs": {
+      "f": "piecewise_Z_to_N"
+    },
+    "outputs": {
+      "injective": true,
+      "surjective": false
+    },
+    "conclusion": "D"
+  },
+  "339": {
+    "method": "truth_table_equivalence_check",
+    "inputs": {
+      "pairs": [
+        "(i)",
+        "(ii)",
+        "(iii)"
+      ]
+    },
+    "outputs": {
+      "non_equivalent_pair": "(iii)"
+    },
+    "conclusion": "C"
+  },
+  "340": {
+    "method": "second_order_recurrence_trace",
+    "inputs": {
+      "a0": 1,
+      "a1": 1,
+      "rule": "a_n = a_{n-1} + n^2 * a_{n-2}"
+    },
+    "outputs": {
+      "a2": 5,
+      "a3": 14,
+      "a4": 94
+    },
+    "conclusion": "C"
+  },
+  "341": {
+    "method": "full_m_ary_tree_leaves_height",
+    "inputs": {
+      "leaves": 32,
+      "height": 4
+    },
+    "outputs": {
+      "integer_m_exists": false,
+      "answer": "No value of m"
+    },
+    "conclusion": "D"
+  },
+  "342": {
+    "method": "prime_factorization_gcd",
+    "inputs": {
+      "num1": "2^3 * 3^2 * 5 * 7",
+      "num2": "2^3 * 5^2 * 11^3"
+    },
+    "outputs": {
+      "gcd": 40
+    },
+    "conclusion": "C"
+  },
+  "343": {
+    "method": "bipartite_dfs_tree_height",
+    "inputs": {
+      "graph": "K_{4,3}",
+      "start_deg": 4
+    },
+    "outputs": {
+      "dfs_tree_height": 5
+    },
+    "conclusion": "C"
+  },
+  "344": {
+    "method": "set_operations_cardinality",
+    "inputs": {
+      "A": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "B": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "C": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    "outputs": {
+      "diff_set": [
+        0,
+        6,
+        10
+      ],
+      "cardinality": 3
+    },
+    "conclusion": "B"
+  },
+  "345": {
+    "method": "linear_arithmetic_progression",
+    "inputs": {
+      "f0": 1,
+      "f1": 2,
+      "target": 2010
+    },
+    "outputs": {
+      "f_2010": 2011
+    },
+    "conclusion": "B"
+  },
+  "346": {
+    "method": "predicate_quantifier_analysis",
+    "inputs": {
+      "predicate": "x + 2y = 5",
+      "domain": "integers"
+    },
+    "outputs": {
+      "true_statement": "(iii)"
+    },
+    "conclusion": "C"
+  },
+  "347": {
+    "method": "injective_function_counting",
+    "inputs": {
+      "X_size": 3,
+      "Y_size": 2
+    },
+    "outputs": {
+      "injections": 6
+    },
+    "conclusion": "B"
+  },
+  "348": {
+    "method": "inclusion_exclusion_divisibility",
+    "inputs": {
+      "limit": 100,
+      "divisors": [
+        6,
+        9
+      ]
+    },
+    "outputs": {
+      "count": 22
+    },
+    "conclusion": "B"
+  },
+  "349": {
+    "method": "real_inequality_quantification",
+    "inputs": {
+      "domain": "R",
+      "statement": "(x>0 ^ y>0) -> (x/y > 0)"
+    },
+    "outputs": {
+      "truth_value": "True"
+    },
+    "conclusion": "C"
+  },
+  "350": {
+    "method": "linear_congruential_generator_trace",
+    "inputs": {
+      "multiplier": 3,
+      "modulus": 11,
+      "x3": 7
+    },
+    "outputs": {
+      "x2": 6,
+      "x4": 10
+    },
+    "conclusion": "D"
+  },
+  "351": {
+    "method": "graph_tree_characterization",
+    "inputs": {
+      "graphs": [
+        "(i)",
+        "(ii)",
+        "(iii)"
+      ]
+    },
+    "outputs": {
+      "trees": [
+        "(i)",
+        "(iii)"
+      ],
+      "choice": "(i) and (iii)"
+    },
+    "conclusion": "E"
+  },
+  "352": {
+    "method": "cartesian_product_quadratic",
+    "inputs": {
+      "product_size": 72
+    },
+    "outputs": {
+      "n": 8
+    },
+    "conclusion": "B"
+  },
+  "353": {
+    "method": "graph_circuit_implication",
+    "inputs": {
+      "props": [
+        "(i)",
+        "(ii)"
+      ]
+    },
+    "outputs": {
+      "statement_i": true,
+      "statement_ii": true,
+      "choice": "Both (i) and (ii)"
+    },
+    "conclusion": "B"
+  },
+  "354": {
+    "method": "caesar_cipher_decoding",
+    "inputs": {
+      "ciphertext": "ERQJ ERQJ PXD KH",
+      "shift": 3
+    },
+    "outputs": {
+      "plaintext": "BONG BONG MUA HE"
+    },
+    "conclusion": "B"
+  },
+  "355": {
+    "method": "graph_cut_vertex_count",
+    "inputs": {
+      "graph_X": "C5",
+      "graph_Y": "bowtie"
+    },
+    "outputs": {
+      "cut_vertices_X": 0,
+      "cut_vertices_Y": 1,
+      "more_cut_vertices": "Y"
+    },
+    "conclusion": "C"
+  },
+  "356": {
+    "method": "bubble_sort_pass_trace",
+    "inputs": {
+      "list": [
+        3,
+        2,
+        4,
+        1,
+        6,
+        5
+      ],
+      "passes": 2
+    },
+    "outputs": {
+      "after_pass_2": [
+        2,
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "conclusion": "B"
+  },
+  "357": {
+    "method": "greedy_change_making_exam_key",
+    "inputs": {
+      "denominations": [
+        25,
+        10,
+        5,
+        1
+      ]
+    },
+    "outputs": {
+      "exam_key": 6
+    },
+    "conclusion": "E"
+  },
+  "358": {
+    "method": "nonlinear_recurrence_trace",
+    "inputs": {
+      "f0": 2,
+      "f1": 3
+    },
+    "outputs": {
+      "f2": 11,
+      "f3": 124
+    },
+    "conclusion": "A"
+  },
+  "359": {
+    "method": "bipartite_graph_identification",
+    "inputs": {
+      "candidates": [
+        "K4",
+        "W4",
+        "C4",
+        "K3,4"
+      ]
+    },
+    "outputs": {
+      "bipartite": [
+        "C4",
+        "K3,4"
+      ],
+      "statement": "(iii)"
+    },
+    "conclusion": "D"
+  },
+  "360": {
+    "method": "big_o_minimal_polynomial_degree",
+    "inputs": {
+      "f": "x^2 * log x + x * (log x)^2"
+    },
+    "outputs": {
+      "minimal_n": 3
+    },
+    "conclusion": "B"
+  }
+}

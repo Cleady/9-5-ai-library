@@ -1,0 +1,1239 @@
+const fs = require('fs');
+const path = require('path');
+
+const batch16 = [
+  {
+    "id": 601,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "type": "single_choice",
+    "question": "Find the eigenvalues of the matrix \\(\\begin{bmatrix} 2 & 3 \\\\ 3 & 2 \\end{bmatrix}\\).",
+    "options": [
+      "-1 and 5",
+      "2 and 3",
+      "1 and -5",
+      "1 and 5",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Phương trình đặc trưng của ma trận \\(A = \\begin{bmatrix} 2 & 3 \\\\ 3 & 2 \\end{bmatrix}\\):",
+      "\\[\\det(A - \\lambda I) = \\det\\begin{bmatrix} 2 - \\lambda & 3 \\\\ 3 & 2 - \\lambda \\end{bmatrix} = (2 - \\lambda)^2 - 3^2 = 0\\]",
+      "\\[\\lambda^2 - 4\\lambda + 4 - 9 = 0 \\iff \\lambda^2 - 4\\lambda - 5 = 0\\]",
+      "\\[(\\lambda - 5)(\\lambda + 1) = 0 \\iff \\lambda = 5 \\quad \\text{hoặc} \\quad \\lambda = -1\\]",
+      "Vậy các giá trị riêng là -1 và 5, tương ứng với lựa chọn A."
+    ],
+    "image": "assets/questions/0601_q601_Question_601.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 602,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(T : \\mathbb{R}^2 \\to \\mathbb{R}^2\\) be the linear transformation such that \\[T([x \\quad y]^T) = \\left[\\frac{25x + 15y}{34} \\quad \\frac{15x + 9y}{34}\\right]^T.\\] Determine if \\(T\\) is projection on a line or reflection in a line.",
+    "options": [
+      "Reflection in the line \\(3x - 5y = 0\\)",
+      "Reflection in the line \\(5x - 3y = 0\\)",
+      "None of the other choices is correct",
+      "Projection on the line \\(5x - 3y = 0\\)",
+      "Projection on the line \\(3x - 5y = 0\\)"
+    ],
+    "answer": "E",
+    "answer_original": "D",
+    "answer_status": "conflict",
+    "explanation": [
+      "Ma trận chuẩn tắc của \\(T\\) là \\(A = \\frac{1}{34}\\begin{bmatrix} 25 & 15 \\\\ 15 & 9 \\end{bmatrix}\\).",
+      "Xét định thức: \\(\\det(A) = \\frac{25 \\times 9 - 15 \\times 15}{34^2} = \\frac{225 - 225}{34^2} = 0\\). Do đó \\(T\\) là phép chiếu (projection), không phải phép phản xạ (reflection có \\(\\det = -1\\)).",
+      "Các điểm bất động thỏa mãn \\(A \\mathbf{v} = \\mathbf{v}\\):",
+      "\\[\\frac{25x + 15y}{34} = x \\iff 25x + 15y = 34x \\iff 9x - 15y = 0 \\iff 3x - 5y = 0\\]",
+      "Với vectơ pháp tuyến \\((-3, 5)\\) trực giao với đường thẳng \\(3x - 5y = 0\\):",
+      "\\[A \\begin{bmatrix} -3 \\\\ 5 \\end{bmatrix} = \\frac{1}{34} \\begin{bmatrix} 25(-3) + 15(5) \\\\ 15(-3) + 9(5) \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}\\]",
+      "Do đó, \\(T\\) là phép chiếu trực giao lên đường thẳng \\(3x - 5y = 0\\) (Lựa chọn E).",
+      "Ngân hàng chọn nhầm D (nhầm lẫn giữa vectơ chỉ phương \\((5, 3)\\) và phương trình đường thẳng)."
+    ],
+    "image": "assets/questions/0602_q602_Question_602.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 603,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "type": "single_choice",
+    "question": "If \\(z = 4x^2 + 9y^2\\), \\(\\frac{dx}{dt} = 4\\), and \\(\\frac{dy}{dt} = 3\\), find \\(\\frac{dz}{dt}\\) when \\(x = 2\\) and \\(y = 1\\).",
+    "options": [
+      "None of the other choices is correct",
+      "12",
+      "118",
+      "25",
+      "7"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Áp dụng quy tắc đạo hàm theo chuỗi (Chain Rule):",
+      "\\[\\frac{dz}{dt} = \\frac{\\partial z}{\\partial x} \\frac{dx}{dt} + \\frac{\\partial z}{\\partial y} \\frac{dy}{dt} = (8x) \\frac{dx}{dt} + (18y) \\frac{dy}{dt}\\]",
+      "Thay các giá trị \\(x = 2\\), \\(y = 1\\), \\(\\frac{dx}{dt} = 4\\), \\(\\frac{dy}{dt} = 3\\):",
+      "\\[\\frac{dz}{dt} = 8(2)(4) + 18(1)(3) = 64 + 54 = 118\\]",
+      "Vậy đáp án chính xác là C."
+    ],
+    "image": "assets/questions/0603_q603_Question_603.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 604,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "type": "single_choice",
+    "question": "Evaluate the difference quotient \\(\\frac{f(x+h) - f(x)}{h}\\) for the function \\(f(x) = x^3\\).\n(i) \\(3x^2 + 3xh + h^2\\)\n(ii) \\(3x^2 + 3xh + h^2 - 1\\)\n(iii) \\(x^2 + xh + h^2\\)\n(iv) \\(3x^2 + h^2\\)",
+    "options": [
+      "(iv)",
+      "(ii)",
+      "None of the other choices is correct",
+      "(iii)",
+      "(i)"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "Khai triển biểu thức tỷ sai phân sai:",
+      "\\[\\frac{f(x+h) - f(x)}{h} = \\frac{(x+h)^3 - x^3}{h} = \\frac{x^3 + 3x^2 h + 3xh^2 + h^3 - x^3}{h}\\]",
+      "\\[= \\frac{h(3x^2 + 3xh + h^2)}{h} = 3x^2 + 3xh + h^2\\]",
+      "Biểu thức này trùng khớp với (i). Do đó lựa chọn đúng là E."
+    ],
+    "image": "assets/questions/0604_q604_Question_604.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 605,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "type": "single_choice",
+    "question": "From the graph of \\(y = f(x - 3) + 4\\), how do we obtain the graph of \\(y = f(x)\\)?",
+    "options": [
+      "Shift down by 4, and then shift to the right 3",
+      "Shift up by 4, and then shift to the right 3",
+      "Shift down by 4, and then shift to the left 3",
+      "Shift up by 4, and then shift to the left 3",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "B",
+    "answer_status": "conflict",
+    "explanation": [
+      "Đặt đồ thị ban đầu là \\(g(x) = f(x - 3) + 4\\). Ta cần tìm các phép tịnh tiến để từ \\(g(x)\\) thu được \\(f(x)\\).",
+      "Ta biểu diễn \\(f(x)\\) qua \\(g(x)\\):",
+      "\\[f(x) = g(x + 3) - 4\\]",
+      "- Phép biến đổi \\(x \\mapsto x + 3\\) tương ứng với việc dịch sang TRÁI (shift left) 3 đơn vị.",
+      "- Phép trừ 4 tương ứng với việc dịch XUỐNG (shift down) 4 đơn vị.",
+      "Vậy cần dịch xuống 4 đơn vị và sang trái 3 đơn vị (Lựa chọn C).",
+      "Ngân hàng chọn B vì làm nhầm chiều ngược lại (từ \\(f(x)\\) sang \\(f(x-3)+4\\))."
+    ],
+    "image": "assets/questions/0605_q605_Question_605.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 606,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A\\) satisfy \\[\\left(A^T + 3\\begin{bmatrix} 2 & -3 \\\\ -1 & 4 \\end{bmatrix}\\right)^T = \\frac{1}{2}\\begin{bmatrix} 0 & 4 \\\\ -2 & 2 \\end{bmatrix}.\\] Find the \\((2, 2)\\)-entry of \\(A\\).",
+    "options": [
+      "-11",
+      "6",
+      "8",
+      "5",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Lấy chuyển vị hai vế:",
+      "\\[A^T + 3\\begin{bmatrix} 2 & -3 \\\\ -1 & 4 \\end{bmatrix} = \\left(\\frac{1}{2}\\begin{bmatrix} 0 & 4 \\\\ -2 & 2 \\end{bmatrix}\\right)^T = \\frac{1}{2}\\begin{bmatrix} 0 & -2 \\\\ 4 & 2 \\end{bmatrix} = \\begin{bmatrix} 0 & -1 \\\\ 2 & 1 \\end{bmatrix}\\]",
+      "Suy ra:",
+      "\\[A^T = \\begin{bmatrix} 0 & -1 \\\\ 2 & 1 \\end{bmatrix} - \\begin{bmatrix} 6 & -9 \\\\ -3 & 12 \\end{bmatrix} = \\begin{bmatrix} -6 & 8 \\\\ 5 & -11 \\end{bmatrix}\\]",
+      "Do đó ma trận \\(A = (A^T)^T = \\begin{bmatrix} -6 & 5 \\\\ 8 & -11 \\end{bmatrix}\\).",
+      "Phần tử ở hàng 2 cột 2 của \\(A\\) là \\(a_{22} = -11\\). Chọn A."
+    ],
+    "image": "assets/questions/0606_q606_Question_606.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 607,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Evaluate \\(\\int 5e^{3x}\\,dx\\).\n(i) \\((5/3)e^{3x} + C\\)\n(ii) \\(\\frac{5}{3x}e^{3x} + C\\)\n(iii) \\((1/3)e^{3x} + C\\)\n(iv) \\(5e^{3x} + C\\)",
+    "options": [
+      "(iii)",
+      "(iv)",
+      "(ii)",
+      "None of the other choices is correct",
+      "(i)"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "Tính nguyên hàm trực tiếp:",
+      "\\[\\int 5e^{3x}\\,dx = 5 \\cdot \\frac{1}{3} e^{3x} + C = \\frac{5}{3}e^{3x} + C\\]",
+      "Biểu thức này tương ứng với (i). Do đó lựa chọn E là đáp án đúng."
+    ],
+    "image": "assets/questions/0607_q607_Question_607.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 608,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A = (a_{ij})\\) be the matrix of rotation in the plane through \\(\\pi/6\\). Find \\(a_{22}\\).\n(i) \\(\\frac{1}{2}\\)\n(ii) \\(-\\frac{1}{2}\\)\n(iii) \\(\\frac{\\sqrt{3}}{2}\\)\n(iv) \\(-\\frac{\\sqrt{3}}{2}\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Ma trận quay góc \\(\\theta\\) trong mặt phẳng \\(\\mathbb{R}^2\\) có dạng:",
+      "\\[R_\\theta = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{bmatrix}\\]",
+      "Với \\(\\theta = \\pi/6\\), phần tử \\(a_{22} = \\cos(\\pi/6) = \\frac{\\sqrt{3}}{2}\\).",
+      "Khẳng định (iii) đúng, tương ứng với lựa chọn C."
+    ],
+    "image": "assets/questions/0608_q608_Question_608.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 609,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "type": "single_choice",
+    "question": "Find all the values of \\(x\\) where the tangent line to the graph of the function is horizontal: \\[f(x) = x^3 + 4x^2 - 11x + 11.\\]",
+    "options": [
+      "1",
+      "-11/3; 11/3; 1",
+      "-11/3; 1",
+      "None of the other choices is correct",
+      "11/3; -1"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Tiếp tuyến nằm ngang khi và chỉ khi đạo hàm bằng 0:",
+      "\\[f'(x) = 3x^2 + 8x - 11 = 0\\]",
+      "Giải phương trình bậc hai:",
+      "Ta thấy tổng các hệ số \\(a + b + c = 3 + 8 - 11 = 0\\), do đó phương trình có hai nghiệm:",
+      "\\[x_1 = 1, \\quad x_2 = -\\frac{11}{3}\\]",
+      "Vậy các giá trị của \\(x\\) là \\(-11/3; 1\\). Chọn C."
+    ],
+    "image": "assets/questions/0609_q609_Question_609.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 610,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Find the third entry of the first row of the inverse of the matrix \\[\\begin{bmatrix} 1 & 0 & 3 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}.\\]",
+    "options": [
+      "3",
+      "None of them",
+      "1/3",
+      "-3",
+      "-1/3"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Ma trận đã cho là một ma trận sơ cấp tương ứng với phép biến đổi sơ cấp theo hàng \\(R_1 \\leftarrow R_1 + 3R_3\\):",
+      "\\[A = \\begin{bmatrix} 1 & 0 & 3 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}\\]",
+      "Ma trận nghịch đảo của nó tương ứng với phép biến đổi ngược lại \\(R_1 \\leftarrow R_1 - 3R_3\\):",
+      "\\[A^{-1} = \\begin{bmatrix} 1 & 0 & -3 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}\\]",
+      "Phần tử thứ 3 của hàng thứ nhất là \\(-3\\). Chọn D."
+    ],
+    "image": "assets/questions/0610_q610_Question_610.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 611,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "DinhLyGiaTriTrungBinh",
+    "type": "single_choice",
+    "question": "Find all the numbers \\(c\\) that satisfy the conclusion of the Mean Value Theorem: \\[f(x) = 3x^2 + 5x + 5;\\quad [-1, 1].\\]",
+    "options": [
+      "None of the other choices is correct",
+      "1/2",
+      "1",
+      "-1",
+      "0",
+      "-1/2"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "Theo định lý giá trị trung bình (MVT):",
+      "\\[f'(c) = \\frac{f(b) - f(a)}{b - a}\\]",
+      "Tính các giá trị tại hai đầu mút:",
+      "\\[f(1) = 3(1)^2 + 5(1) + 5 = 13\\]",
+      "\\[f(-1) = 3(-1)^2 + 5(-1) + 5 = 3 - 5 + 5 = 3\\]",
+      "\\[\\frac{f(1) - f(-1)}{1 - (-1)} = \\frac{13 - 3}{2} = 5\\]",
+      "Mặt khác, \\(f'(x) = 6x + 5\\). Do đó:",
+      "\\[6c + 5 = 5 \\iff 6c = 0 \\iff c = 0\\]",
+      "Vì \\(0 \\in (-1, 1)\\), giá trị cần tìm là \\(c = 0\\). Chọn E."
+    ],
+    "image": "assets/questions/0611_q611_Question_611.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 612,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "type": "single_choice",
+    "question": "Find the vertical asymptotes of the function \\[y = \\frac{x^2 - 3x + 2}{x^2 - 1}.\\]",
+    "options": [
+      "\\(x = -2\\)",
+      "\\(x = 1, x = -1\\)",
+      "\\(x = 2\\)",
+      "\\(x = -1\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Phân tích tử số và mẫu số thành nhân tử:",
+      "\\[y = \\frac{(x - 1)(x - 2)}{(x - 1)(x + 1)}\\]",
+      "Với \\(x \\ne 1\\), hàm số viết lại thành \\(y = \\frac{x - 2}{x + 1}\\).",
+      "- Tại \\(x = 1\\): \\(\\lim_{x \\to 1} y = \\frac{1 - 2}{1 + 1} = -\\frac{1}{2}\\), là điểm gián đoạn khử được (khuyết tật điểm), không phải tiệm cận đứng.",
+      "- Tại \\(x = -1\\): mẫu số bằng 0, tử số bằng \\(-1 - 2 = -3 \\ne 0\\), do đó \\(\\lim_{x \\to -1^\\pm} y = \\pm\\infty\\).",
+      "Vậy hàm số chỉ có duy nhất một tiệm cận đứng là \\(x = -1\\). Chọn D."
+    ],
+    "image": "assets/questions/0612_q612_Question_612.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 613,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Evaluate \\(\\int_1^{+\\infty} \\frac{1}{x^2}\\,dx\\).",
+    "options": [
+      "2",
+      "-1/2",
+      "1",
+      "diverges"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Tính tích phân suy rộng loại 1:",
+      "\\[\\int_1^{+\\infty} \\frac{1}{x^2}\\,dx = \\lim_{t \\to +\\infty} \\int_1^t x^{-2}\\,dx = \\lim_{t \\to +\\infty} \\left[ -\\frac{1}{x} \\right]_1^t = \\lim_{t \\to +\\infty} \\left( -\\frac{1}{t} - (-1) \\right) = 0 + 1 = 1\\]",
+      "Tích phân hội tụ và có giá trị bằng 1. Chọn C."
+    ],
+    "image": "assets/questions/0613_q613_Question_613.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 614,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Using the Midpoint Rule with \\(n = 4\\) to approximate \\[\\int_1^5 (x + 0.5)\\,dx.\\]",
+    "options": [
+      "20",
+      "14",
+      "16",
+      "12",
+      "None of the other choices is correct"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Độ dài khoảng \\([1, 5]\\) chia đều cho \\(n = 4\\) đoạn con:",
+      "\\[\\Delta x = \\frac{5 - 1}{4} = 1\\]",
+      "Các khoảng con là \\([1, 2], [2, 3], [3, 4], [4, 5]\\).",
+      "Trung điểm của các đoạn con là: \\(m_1 = 1.5\\), \\(m_2 = 2.5\\), \\(m_3 = 3.5\\), \\(m_4 = 4.5\\).",
+      "Giá trị hàm số tại các trung điểm:",
+      "\\[f(1.5) = 1.5 + 0.5 = 2\\]",
+      "\\[f(2.5) = 2.5 + 0.5 = 3\\]",
+      "\\[f(3.5) = 3.5 + 0.5 = 4\\]",
+      "\\[f(4.5) = 4.5 + 0.5 = 5\\]",
+      "Tổng xấp xỉ điểm giữa:",
+      "\\[M_4 = \\Delta x \\sum_{i=1}^4 f(m_i) = 1 \\times (2 + 3 + 4 + 5) = 14\\]",
+      "Chọn B."
+    ],
+    "image": "assets/questions/0614_q614_Question_614.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 615,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "DinhLyGiaTriTrungBinh",
+    "type": "single_choice",
+    "question": "Find all the numbers \\(c\\) that satisfy the conclusion of the Mean Value Theorem on \\([-1, 1]\\), if \\[f(x) = x^3 - 2x + 5.\\]\n(i) \\(\\frac{1}{\\sqrt{3}}\\)\n(ii) \\(\\pm\\frac{1}{\\sqrt{3}}\\)\n(iii) \\(0\\)\n(iv) \\(-\\frac{1}{\\sqrt{3}}\\)",
+    "options": [
+      "(iv)",
+      "None of the other choices is correct",
+      "(i)",
+      "(ii)",
+      "(iii)"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Theo định lý giá trị trung bình trên đoạn \\([-1, 1]\\):",
+      "\\[f'(c) = \\frac{f(1) - f(-1)}{1 - (-1)}\\]",
+      "Tính các giá trị hàm số:",
+      "\\[f(1) = 1 - 2 + 5 = 4\\]",
+      "\\[f(-1) = (-1)^3 - 2(-1) + 5 = -1 + 2 + 5 = 6\\]",
+      "\\[\\frac{f(1) - f(-1)}{2} = \\frac{4 - 6}{2} = -1\\]",
+      "Đạo hàm: \\(f'(x) = 3x^2 - 2\\). Do đó:",
+      "\\[3c^2 - 2 = -1 \\iff 3c^2 = 1 \\iff c^2 = \\frac{1}{3} \\iff c = \\pm\\frac{1}{\\sqrt{3}}\\]",
+      "Cả hai điểm đều thuộc \\((-1, 1)\\), khớp với khẳng định (ii). Chọn D."
+    ],
+    "image": "assets/questions/0615_q615_Question_615.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 616,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "type": "single_choice",
+    "question": "For \\(f(x) = 3x^2 - 4x + 1\\), which of the following limits is \\(f'(2)\\)?\n(i) \\(\\lim_{x \\to 2} \\frac{(x-2)(3x+2)}{x-2}\\)\n(ii) \\(\\lim_{x \\to 2} \\frac{(x-2)(2x+3)}{x-2}\\)\n(iii) \\(\\lim_{x \\to 2} \\frac{(x-2)(x+5)}{x-2}\\)\n(iv) \\(\\lim_{x \\to 2} \\frac{(x-2)(5x+1)}{x-2}\\)",
+    "options": [
+      "(iii)",
+      "(i)",
+      "(ii)",
+      "(iv)"
+    ],
+    "answer": "B",
+    "answer_original": "A",
+    "answer_status": "conflict",
+    "explanation": [
+      "Theo định nghĩa đạo hàm tại \\(x = 2\\):",
+      "\\[f'(2) = \\lim_{x \\to 2} \\frac{f(x) - f(2)}{x - 2}\\]",
+      "Ta có \\(f(2) = 3(2)^2 - 4(2) + 1 = 12 - 8 + 1 = 5\\).",
+      "Do đó tử số là:",
+      "\\[f(x) - f(2) = 3x^2 - 4x + 1 - 5 = 3x^2 - 4x - 4 = (x - 2)(3x + 2)\\]",
+      "Vậy giới hạn là:",
+      "\\[\\lim_{x \\to 2} \\frac{(x - 2)(3x + 2)}{x - 2}\\]",
+      "Khớp hoàn toàn với công thức (i), tương ứng với lựa chọn B.",
+      "Ngân hàng chọn A (tương ứng với (iii), cho kết quả \\(2 + 5 = 7 \\ne f'(2) = 8\\)) là sai."
+    ],
+    "image": "assets/questions/0616_q616_Question_616.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 617,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "type": "single_choice",
+    "question": "Find the most general antiderivative of \\(f(x) = \\frac{x^4 - 9x + 7}{x^2}\\).\n(i) \\((1/3)x^3 - 9\\ln|x| - (7/x) + C\\)\n(ii) \\(x^3 - 9\\ln|x| + (7/x) + C\\)\n(iii) \\((1/3)x^3 - (9/2)x^2 - (7/x) + C\\)\n(iv) \\((1/3)x^3 + (9/x^2) - (14/x^3) + C\\)",
+    "options": [
+      "(i)",
+      "(iii)",
+      "None of the other choices is correct",
+      "(ii)",
+      "(iv)"
+    ],
+    "answer": "A",
+    "answer_original": "C",
+    "answer_status": "conflict",
+    "explanation": [
+      "Chia từng hạng tử cho \\(x^2\\):",
+      "\\[f(x) = x^2 - \\frac{9}{x} + 7x^{-2}\\]",
+      "Lấy nguyên hàm từng hạng tử:",
+      "\\[\\int f(x)\\,dx = \\frac{1}{3}x^3 - 9\\ln|x| + 7 \\cdot \\frac{x^{-1}}{-1} + C = \\frac{1}{3}x^3 - 9\\ln|x| - \\frac{7}{x} + C\\]",
+      "Biểu thức này hoàn toàn trùng khớp với (i). Lựa chọn A chứa (i).",
+      "Ngân hàng chọn C (\"None of the other choices is correct\") là sai sót do nhầm dấu khi tính nguyên hàm của \\(7x^{-2}\\)."
+    ],
+    "image": "assets/questions/0617_q617_Question_617.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 618,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "PhuongPhapNewton",
+    "type": "single_choice",
+    "question": "Use Newton's method with the specified initial approximation \\(x_1\\) to find \\(x_3\\), the third approximation to the root of the given equation: \\[x^2 - 2x - 1 = 0,\\quad x_1 = 0.\\]",
+    "options": [
+      "1",
+      "-1/4",
+      "5/12",
+      "1/4",
+      "None of the other choices is correct",
+      "-5/12"
+    ],
+    "answer": "F",
+    "answer_original": "F",
+    "answer_status": "verified",
+    "explanation": [
+      "Hàm số \\(f(x) = x^2 - 2x - 1\\), đạo hàm \\(f'(x) = 2x - 2\\).",
+      "Công thức Newton-Raphson: \\(x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}\\).",
+      "Bước 1 với \\(x_1 = 0\\):",
+      "\\[f(0) = -1, \\quad f'(0) = -2 \\implies x_2 = 0 - \\frac{-1}{-2} = -\\frac{1}{2}\\]",
+      "Bước 2 với \\(x_2 = -1/2\\):",
+      "\\[f(-1/2) = (-1/2)^2 - 2(-1/2) - 1 = \\frac{1}{4} + 1 - 1 = \\frac{1}{4}\\]",
+      "\\[f'(-1/2) = 2(-1/2) - 2 = -1 - 2 = -3\\]",
+      "\\[x_3 = -\\frac{1}{2} - \\frac{1/4}{-3} = -\\frac{1}{2} + \\frac{1}{12} = -\\frac{5}{12}\\]",
+      "Vậy đáp án đúng là F (-5/12)."
+    ],
+    "image": "assets/questions/0618_q618_Question_618.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 619,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Use left-endpoint approximation to approximate the area under the curve of \\(f(x) = 2^x\\) on the interval \\([0, 2]\\) with \\(n = 4\\).",
+    "options": [
+      "5.12",
+      "3.62",
+      "7.24",
+      "9",
+      "10.24",
+      "None of the other choices is correct"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Độ dài mỗi khoảng con: \\(\\Delta x = \\frac{2 - 0}{4} = 0.5\\).",
+      "Các điểm mút trái là: \\(x_0 = 0\\), \\(x_1 = 0.5\\), \\(x_2 = 1.0\\), \\(x_3 = 1.5\\).",
+      "Giá trị hàm số tại các mút trái:",
+      "\\[f(0) = 2^0 = 1\\]",
+      "\\[f(0.5) = 2^{0.5} = \\sqrt{2} \\approx 1.4142\\]",
+      "\\[f(1) = 2^1 = 2\\]",
+      "\\[f(1.5) = 2^{1.5} = 2\\sqrt{2} \\approx 2.8284\\]",
+      "Tổng xấp xỉ mút trái:",
+      "\\[L_4 = \\Delta x \\sum_{i=0}^3 f(x_i) = 0.5 \\times (1 + 1.4142 + 2 + 2.8284) = 0.5 \\times 7.2426 \\approx 3.62\\]",
+      "Chọn B (3.62)."
+    ],
+    "image": "assets/questions/0619_q619_Question_619.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 620,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "type": "single_choice",
+    "question": "At which points on the curve \\(y = 5x + 10x^3 - 3x^5\\) do the tangent lines have largest slope?",
+    "options": [
+      "Does not exist",
+      "\\((-1, -12)\\) and \\((0, 0)\\)",
+      "\\((-1, -12)\\) and \\((1, 12)\\)",
+      "\\((0, 0)\\) and \\((1, 12)\\)",
+      "\\((0, 0)\\)"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Hệ số góc của tiếp tuyến tại điểm có hoành độ \\(x\\) là:",
+      "\\[m(x) = y' = 5 + 30x^2 - 15x^4\\]",
+      "Tìm cực đại của hàm số hệ số góc \\(m(x)\\):",
+      "\\[m'(x) = 60x - 60x^3 = 60x(1 - x^2) = 0 \\iff x = 0, \\quad x = 1, \\quad x = -1\\]",
+      "Tính giá trị của hệ số góc tại các điểm dừng:",
+      "\\[m(0) = 5\\]",
+      "\\[m(1) = 5 + 30 - 15 = 20\\]",
+      "\\[m(-1) = 5 + 30 - 15 = 20\\]",
+      "Vì \\(\\lim_{x \\to \\pm\\infty} m(x) = -\\infty\\), hệ số góc lớn nhất bằng 20 đạt tại \\(x = \\pm 1\\).",
+      "Tọa độ các điểm tương ứng trên đường cong:",
+      "- Với \\(x = 1\\): \\(y(1) = 5(1) + 10(1) - 3(1) = 12 \\implies (1, 12)\\).",
+      "- Với \\(x = -1\\): \\(y(-1) = 5(-1) + 10(-1) - 3(-1) = -12 \\implies (-1, -12)\\).",
+      "Vậy các điểm cần tìm là \\((-1, -12)\\) và \\((1, 12)\\). Chọn C."
+    ],
+    "image": "assets/questions/0620_q620_Question_620.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 621,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Express the limits as a definite integral over \\([0, 2]\\): \\[\\lim_{n \\to \\infty} \\sum_{i=1}^n (5(x_i^*)^2 - 3(x_i^*)^3)\\Delta x.\\]\n(i) \\(\\int_1^2 (5x^2 - 3x^3)\\,dx\\)\n(ii) \\(\\int_0^2 (5x^2 - 3x^3)\\,dx\\)\n(iii) \\(\\int_0^1 (5x^2 - 3x^3)\\,dx\\)\n(iv) \\(\\int_0^2 (4x^2 - 3x^3)\\,dx\\)",
+    "options": [
+      "(iv)",
+      "(ii)",
+      "(i)",
+      "(iii)",
+      "None of the other choices is correct"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Theo định nghĩa tích phân xác định Riemann trên đoạn \\([a, b] = [0, 2]\\):",
+      "\\[\\lim_{n \\to \\infty} \\sum_{i=1}^n f(x_i^*)\\Delta x = \\int_a^b f(x)\\,dx\\]",
+      "Ở đây hàm số dưới dấu tổng là \\(f(x_i^*) = 5(x_i^*)^2 - 3(x_i^*)^3\\), do đó:",
+      "\\[\\lim_{n \\to \\infty} \\sum_{i=1}^n (5(x_i^*)^2 - 3(x_i^*)^3)\\Delta x = \\int_0^2 (5x^2 - 3x^3)\\,dx\\]",
+      "Trùng khớp với biểu thức (ii). Chọn B."
+    ],
+    "image": "assets/questions/0621_q621_Question_621.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 622,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "type": "single_choice",
+    "question": "Find \\(f(1) + f(-3)\\) for the given function below: \\[f(x) = \\begin{cases} x^2 - 3x + 2, & x \\ge 0 \\\\ 3 - 4x, & x < 0 \\end{cases}\\]",
+    "options": [
+      "4",
+      "-3",
+      "15",
+      "1",
+      "14"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Tính giá trị của hàm số từng nhánh:",
+      "- Với \\(x = 1 \\ge 0\\), sử dụng nhánh trên: \\(f(1) = 1^2 - 3(1) + 2 = 0\\).",
+      "- Với \\(x = -3 < 0\\), sử dụng nhánh dưới: \\(f(-3) = 3 - 4(-3) = 3 + 12 = 15\\).",
+      "Do đó: \\(f(1) + f(-3) = 0 + 15 = 15\\).",
+      "Chọn C."
+    ],
+    "image": "assets/questions/0622_q622_Question_622.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 623,
+    "chapter": "GT1",
+    "folder": "GT1",
+    "topic": "HamLienTuc",
+    "type": "single_choice",
+    "question": "Find the constant \\(c\\) that makes \\(f\\) continuous on \\((-\\infty, \\infty)\\): \\[f(x) = \\begin{cases} x + c & \\text{if } x \\le 0 \\\\ 2x + 1 & \\text{if } x > 0 \\end{cases}\\]",
+    "options": [
+      "4",
+      "\\(c\\) doesn't exist",
+      "1",
+      "3",
+      "None of the other choices is correct",
+      "2"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Hàm số liên tục trên từng khoảng \\((-\\infty, 0)\\) và \\((0, \\infty)\\). Để hàm liên tục trên toàn bộ \\(\\mathbb{R}\\), hàm phải liên tục tại \\(x = 0\\):",
+      "\\[\\lim_{x \\to 0^-} f(x) = f(0) = 0 + c = c\\]",
+      "\\[\\lim_{x \\to 0^+} f(x) = 2(0) + 1 = 1\\]",
+      "Để liên tục tại \\(x = 0\\), cần có \\(\\lim_{x \\to 0^-} f(x) = \\lim_{x \\to 0^+} f(x) \\iff c = 1\\).",
+      "Chọn C."
+    ],
+    "image": "assets/questions/0623_q623_Question_623.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 624,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "HangCuaMaTran",
+    "type": "single_choice",
+    "question": "The rank of \\[\\begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 3 & 4 \\\\ 3 & 4 & m \\end{bmatrix}\\] is 2. Then \\(m\\) is ...",
+    "options": [
+      "5",
+      "0",
+      "any real number",
+      "any number but 5",
+      "any number but 0"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Biến đổi ma trận về dạng bậc thang qua các phép biến đổi sơ cấp theo hàng:",
+      "\\[\\begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 3 & 4 \\\\ 3 & 4 & m \\end{bmatrix}\\]",
+      "- Lấy \\(R_2 \\leftarrow R_2 - 2R_1\\): hàng 2 trở thành \\(\\begin{bmatrix} 0 & -1 & -2 \\end{bmatrix}\\).",
+      "- Lấy \\(R_3 \\leftarrow R_3 - 3R_1\\): hàng 3 trở thành \\(\\begin{bmatrix} 0 & -2 & m - 9 \\end{bmatrix}\\).",
+      "- Lấy \\(R_3 \\leftarrow R_3 - 2R_2\\): hàng 3 trở thành \\(\\begin{bmatrix} 0 & 0 & (m - 9) - 2(-2) \\end{bmatrix} = \\begin{bmatrix} 0 & 0 & m - 5 \\end{bmatrix}\\).",
+      "Để hạng của ma trận bằng 2, hàng thứ 3 phải hoàn toàn bằng 0, tức là:",
+      "\\[m - 5 = 0 \\iff m = 5\\]",
+      "Chọn A (5)."
+    ],
+    "image": "assets/questions/0624_q624_Question_624.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 625,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Which of the following matrices is in reduced row-echelon form?\n(i) \\(\\begin{bmatrix} 1 & 0 & 0 & 0 & -3 \\\\ 0 & 0 & 1 & 0 & 4 \\\\ 0 & 0 & 0 & 1 & 2 \\end{bmatrix}\\)\n(ii) \\(\\begin{bmatrix} 0 & 1 & 0 & 0 & 5 \\\\ 0 & 0 & 1 & 0 & -4 \\\\ 0 & 0 & 0 & -1 & 3 \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & -2 \\end{bmatrix}\\)",
+    "options": [
+      "(iii) only",
+      "(i) and (ii) only",
+      "(ii) and (iii) only",
+      "(i) only",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Tiêu chuẩn ma trận ở dạng bậc thang rút gọn (reduced row-echelon form - RREF):",
+      "1. Phần tử dẫn đầu (leading entry) của mỗi hàng khác 0 phải là 1.",
+      "2. Phần tử dẫn đầu của hàng dưới phải nằm bên phải phần tử dẫn đầu của hàng trên.",
+      "3. Trong cột chứa phần tử dẫn đầu 1, tất cả các phần tử khác đều phải bằng 0.",
+      "4. Các hàng toàn số 0 (nếu có) phải nằm ở dưới cùng.",
+      "Kiểm tra từng ma trận:",
+      "- (i): Các phần tử dẫn đầu ở hàng 1 (cột 1), hàng 2 (cột 3), hàng 3 (cột 4) đều bằng 1 và các phần tử khác trong các cột này đều bằng 0. Thỏa mãn RREF.",
+      "- (ii): Phần tử dẫn đầu của hàng 3 là -1 (không phải 1). Không thỏa mãn.",
+      "- (iii): Cột 2 có hai số 1 khác 0 (ở hàng 1 và hàng 3), vi phạm tiêu chuẩn. Không thỏa mãn.",
+      "Vậy chỉ có (i) ở dạng bậc thang rút gọn. Chọn D."
+    ],
+    "image": "assets/questions/0625_q625_Question_625.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 626,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "HangCuaMaTran",
+    "type": "single_choice",
+    "question": "Find \\(m\\) such that the matrix \\[\\begin{bmatrix} 1 & 1 & 1 \\\\ 2 & 3 & 4 \\\\ 5 & 6 & m \\end{bmatrix}\\] has rank 2.",
+    "options": [
+      "All numbers different from 5",
+      "\\(m = 7\\)",
+      "All numbers",
+      "All numbers different from 7",
+      "\\(m = 5\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Thực hiện phép khử Gauss theo hàng:",
+      "- \\(R_2 \\leftarrow R_2 - 2R_1\\): \\(\\begin{bmatrix} 0 & 1 & 2 \\end{bmatrix}\\).",
+      "- \\(R_3 \\leftarrow R_3 - 5R_1\\): \\(\\begin{bmatrix} 0 & 1 & m - 5 \\end{bmatrix}\\).",
+      "- \\(R_3 \\leftarrow R_3 - R_2\\): \\(\\begin{bmatrix} 0 & 0 & (m - 5) - 2 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 & m - 7 \\end{bmatrix}\\).",
+      "Để ma trận có hạng bằng 2 thì hàng thứ 3 phải triệt tiêu hoàn toàn, tức là:",
+      "\\[m - 7 = 0 \\iff m = 7\\]",
+      "Chọn B."
+    ],
+    "image": "assets/questions/0626_q626_Question_626.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 627,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinhTuyenTinh",
+    "type": "single_choice",
+    "question": "Solve the following system of linear equations: \\[\\begin{cases} x + y + z = 2 \\\\ 2x + 3y - z = 8 \\\\ x - y - z = -8 \\end{cases}\\]",
+    "options": [
+      "\\((-3; 19/4; 1/4)\\)",
+      "\\((-3; 17/4; -1/4)\\)",
+      "\\((3; 19/4; -1/4)\\)",
+      "the system is inconsistent",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Cộng phương trình (1) và (3):",
+      "\\[(x + y + z) + (x - y - z) = 2 + (-8) \\implies 2x = -6 \\implies x = -3\\]",
+      "Từ (1) suy ra: \\(y + z = 2 - x = 2 - (-3) = 5 \\implies z = 5 - y\\).",
+      "Thay \\(x = -3\\) và \\(z = 5 - y\\) vào phương trình (2):",
+      "\\[2(-3) + 3y - (5 - y) = 8 \\iff -6 + 3y - 5 + y = 8 \\iff 4y - 11 = 8 \\iff 4y = 19 \\iff y = \\frac{19}{4}\\]",
+      "Tính \\(z\\):",
+      "\\[z = 5 - \\frac{19}{4} = \\frac{1}{4}\\]",
+      "Vậy nghiệm duy nhất là \\((-3; 19/4; 1/4)\\). Chọn A."
+    ],
+    "image": "assets/questions/0627_q627_Question_627.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 628,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinhTuyenTinh",
+    "type": "single_choice",
+    "question": "Consider a homogeneous system of linear equations of 5 equations and in 8 variables. Assume that the row-echelon form of the coefficient matrix has a row of zeros. How many solutions would it have?",
+    "options": [
+      "There is not enough information to conclude",
+      "No solution",
+      "Unique solution",
+      "5 solutions",
+      "Infinitely many solutions"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "Hệ phương trình tuyến tính thuần nhất \\(A\\mathbf{x} = \\mathbf{0}\\) luôn có ít nhất nghiệm tầm thường \\(\\mathbf{x} = \\mathbf{0}\\), do đó không bao giờ vô nghiệm.",
+      "Số ẩn là \\(n = 8\\), số phương trình là \\(m = 5\\).",
+      "Vì ma trận hệ số có dạng bậc thang chứa một hàng bằng 0, hạng của ma trận \\(\\text{rank}(A) \\le 5 - 1 = 4\\).",
+      "Số ẩn tự do là \\(n - \\text{rank}(A) \\ge 8 - 4 = 4 > 0\\).",
+      "Do có ít nhất 4 ẩn tự do, hệ phương trình thuần nhất này có vô số nghiệm (Infinitely many solutions). Chọn E."
+    ],
+    "image": "assets/questions/0628_q628_Question_628.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 629,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinhTuyenTinh",
+    "type": "single_choice",
+    "question": "Let \\(A\\) be the augmented matrix of a homogeneous system of 3 equations in 6 variables. If \\(\\text{rank}(A) = 1\\), how many solutions and how many parameters does this system have?",
+    "options": [
+      "5 parameters and infinitely many solutions",
+      "2 parameters and infinitely many solutions",
+      "Unique solution",
+      "No solution",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Hệ phương trình tuyến tính thuần nhất có số ẩn là \\(n = 6\\).",
+      "Hạng của ma trận bổ sung \\(\\text{rank}(A) = 1\\).",
+      "Số tham số tự do trong nghiệm tổng quát là:",
+      "\\[\\text{số tham số} = n - \\text{rank}(A) = 6 - 1 = 5\\]",
+      "Vì hệ thuần nhất luôn có nghiệm và có 5 tham số tự do, hệ có vô số nghiệm.",
+      "Vậy hệ có 5 tham số và vô số nghiệm (5 parameters and infinitely many solutions). Chọn A."
+    ],
+    "image": "assets/questions/0629_q629_Question_629.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 630,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A\\) be the matrix satisfying \\[\\left(2A^T + 2\\begin{bmatrix} 1 & 0 \\\\ 0 & 2 \\end{bmatrix}\\right)^T = \\begin{bmatrix} 6 & 0 \\\\ 2 & 2 \\end{bmatrix}.\\] Find the \\((2, 1)\\)-entry of \\(A\\).",
+    "options": [
+      "-1",
+      "0",
+      "2",
+      "1",
+      "All of the other choices are incorrect"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Lấy chuyển vị hai vế của đẳng thức:",
+      "\\[2A^T + 2\\begin{bmatrix} 1 & 0 \\\\ 0 & 2 \\end{bmatrix} = \\begin{bmatrix} 6 & 0 \\\\ 2 & 2 \\end{bmatrix}^T = \\begin{bmatrix} 6 & 2 \\\\ 0 & 2 \\end{bmatrix}\\]",
+      "Chia cả hai vế cho 2:",
+      "\\[A^T + \\begin{bmatrix} 1 & 0 \\\\ 0 & 2 \\end{bmatrix} = \\begin{bmatrix} 3 & 1 \\\\ 0 & 1 \\end{bmatrix} \\implies A^T = \\begin{bmatrix} 3 - 1 & 1 - 0 \\\\ 0 - 0 & 1 - 2 \\end{bmatrix} = \\begin{bmatrix} 2 & 1 \\\\ 0 & -1 \\end{bmatrix}\\]",
+      "Chuyển vị một lần nữa để tìm \\(A\\):",
+      "\\[A = (A^T)^T = \\begin{bmatrix} 2 & 0 \\\\ 1 & -1 \\end{bmatrix}\\]",
+      "Phần tử ở vị trí hàng 2 cột 1 là \\(a_{21} = 1\\). Chọn D."
+    ],
+    "image": "assets/questions/0630_q630_Question_630.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 631,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "If \\[6\\begin{bmatrix} 3 & 2 & -4 \\\\ 0 & z & x/6 \\end{bmatrix} = \\begin{bmatrix} x & 4z & -y \\\\ 0 & y - 6 & 18 \\end{bmatrix},\\] then:",
+    "options": [
+      "\\(x = 3, y = 4, z = 1/2\\)",
+      "There is no solution",
+      "\\(x = 18, y = 24, z = 3\\)",
+      "\\(x = 6, y = 24, z = 6\\)",
+      "\\(x = 3, y = 4, z = 3\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Nhân vô hướng vế trái với 6:",
+      "\\[\\begin{bmatrix} 18 & 12 & -24 \\\\ 0 & 6z & x \\end{bmatrix} = \\begin{bmatrix} x & 4z & -y \\\\ 0 & y - 6 & 18 \\end{bmatrix}\\]",
+      "Đồng nhất các phần tử tương ứng:",
+      "- Hàng 1, cột 1: \\(18 = x \\implies x = 18\\).",
+      "- Hàng 1, cột 2: \\(12 = 4z \\implies z = 3\\).",
+      "- Hàng 1, cột 3: \\(-24 = -y \\implies y = 24\\).",
+      "- Hàng 2, cột 2: \\(6z = y - 6 \\implies 6(3) = 24 - 6 = 18\\) (đúng).",
+      "- Hàng 2, cột 3: \\(x = 18\\) (đúng).",
+      "Vậy nghiệm là \\(x = 18, y = 24, z = 3\\). Chọn C."
+    ],
+    "image": "assets/questions/0631_q631_Question_631.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 632,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Solve for \\(A\\), if \\[(10A - 2I)^T = 2A^T + \\begin{bmatrix} 1 & 4 \\\\ 0 & 5 \\end{bmatrix}.\\]\n(i) \\(\\frac{1}{8}\\begin{bmatrix} 3 & 0 \\\\ 4 & 7 \\end{bmatrix}\\)\n(ii) \\(\\frac{1}{8}\\begin{bmatrix} 3 & 4 \\\\ 0 & 7 \\end{bmatrix}\\)\n(iii) \\(\\frac{1}{8}\\begin{bmatrix} 5 & 0 \\\\ 2 & 0 \\end{bmatrix}\\)\n(iv) \\(\\frac{1}{8}\\begin{bmatrix} 5 & 2 \\\\ 0 & 0 \\end{bmatrix}\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Sử dụng tính chất chuyển vị: \\((10A - 2I)^T = 10A^T - 2I\\).",
+      "Phương trình trở thành:",
+      "\\[10A^T - 2I = 2A^T + \\begin{bmatrix} 1 & 4 \\\\ 0 & 5 \\end{bmatrix}\\]",
+      "\\[8A^T = 2I + \\begin{bmatrix} 1 & 4 \\\\ 0 & 5 \\end{bmatrix} = \\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix} + \\begin{bmatrix} 1 & 4 \\\\ 0 & 5 \\end{bmatrix} = \\begin{bmatrix} 3 & 4 \\\\ 0 & 7 \\end{bmatrix}\\]",
+      "\\[A^T = \\frac{1}{8} \\begin{bmatrix} 3 & 4 \\\\ 0 & 7 \\end{bmatrix}\\]",
+      "Lấy chuyển vị lần nữa để thu được \\(A\\):",
+      "\\[A = (A^T)^T = \\frac{1}{8} \\begin{bmatrix} 3 & 0 \\\\ 4 & 7 \\end{bmatrix}\\]",
+      "Khớp hoàn toàn với công thức (i). Chọn A."
+    ],
+    "image": "assets/questions/0632_q632_Question_632.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 633,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Solve for \\(A\\) if \\[3A - 2A^T = \\begin{bmatrix} 2 & 4 \\\\ -1 & 0 \\end{bmatrix}.\\]\n(i) \\(\\begin{bmatrix} 2 & 0 \\\\ 5 & 0 \\end{bmatrix}\\)\n(ii) \\(\\begin{bmatrix} 2 & 2 \\\\ 1 & 0 \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} 5 & 0 \\\\ 2 & 0 \\end{bmatrix}\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "None of the other choices is correct"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Giả sử \\(A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\). Khi đó \\(A^T = \\begin{bmatrix} a & c \\\\ b & d \\end{bmatrix}\\).",
+      "\\[3A - 2A^T = \\begin{bmatrix} 3a - 2a & 3b - 2c \\\\ 3c - 2b & 3d - 2d \\end{bmatrix} = \\begin{bmatrix} a & 3b - 2c \\\\ 3c - 2b & d \\end{bmatrix} = \\begin{bmatrix} 2 & 4 \\\\ -1 & 0 \\end{bmatrix}\\]",
+      "Từ đó suy ra:",
+      "- \\(a = 2\\), \\(d = 0\\).",
+      "- Hệ phương trình cho \\(b, c\\):",
+      "\\[\\begin{cases} 3b - 2c = 4 \\\\ -2b + 3c = -1 \\end{cases} \\implies b = 2, \\quad c = 1\\]",
+      "Do đó \\(A = \\begin{bmatrix} 2 & 2 \\\\ 1 & 0 \\end{bmatrix}\\), khớp với công thức (ii). Chọn B."
+    ],
+    "image": "assets/questions/0633_q633_Question_633.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 634,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A = \\begin{bmatrix} 1 & 3 \\\\ 2 & 4 \\end{bmatrix}\\) and \\(B = \\begin{bmatrix} 0 & 6 \\\\ 5 & 1 \\end{bmatrix}\\). Find the first row of the matrix \\(A + B^T\\).",
+    "options": [
+      "\\(\\begin{bmatrix} 1 & 6 \\end{bmatrix}\\)",
+      "\\(\\begin{bmatrix} 2 & 6 \\end{bmatrix}\\)",
+      "\\(\\begin{bmatrix} 1 & 8 \\end{bmatrix}\\)",
+      "\\(\\begin{bmatrix} 2 & 8 \\end{bmatrix}\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Tính chuyển vị của \\(B\\):",
+      "\\[B^T = \\begin{bmatrix} 0 & 5 \\\\ 6 & 1 \\end{bmatrix}\\]",
+      "Tính tổng \\(A + B^T\\):",
+      "\\[A + B^T = \\begin{bmatrix} 1 & 3 \\\\ 2 & 4 \\end{bmatrix} + \\begin{bmatrix} 0 & 5 \\\\ 6 & 1 \\end{bmatrix} = \\begin{bmatrix} 1+0 & 3+5 \\\\ 2+6 & 4+1 \\end{bmatrix} = \\begin{bmatrix} 1 & 8 \\\\ 8 & 5 \\end{bmatrix}\\]",
+      "Hàng thứ nhất của ma trận kết quả là \\(\\begin{bmatrix} 1 & 8 \\end{bmatrix}\\). Chọn C."
+    ],
+    "image": "assets/questions/0634_q634_Question_634.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 635,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(F\\) be a linear transformation in \\(\\mathbb{R}^2\\) whose matrix is \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\). What does this transformation represent?",
+    "options": [
+      "All of the other choices are incorrect",
+      "Projection on the y-axis.",
+      "Projection on the x-axis",
+      "Reflection in the y-axis.",
+      "Reflection in the x-axis"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "Tác động của ma trận biến đổi lên một vectơ \\(\\begin{bmatrix} x \\\\ y \\end{bmatrix}\\):",
+      "\\[F\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} x \\\\ -y \\end{bmatrix}\\]",
+      "Phép biến đổi này giữ nguyên hoành độ \\(x\\) và đổi dấu tung độ \\(y\\), đây chính là phép đối xứng gương (phản xạ) qua trục hoành \\(Ox\\) (Reflection in the x-axis).",
+      "Chọn E."
+    ],
+    "image": "assets/questions/0635_q635_Question_635.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 636,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinhTuyenTinh",
+    "type": "single_choice",
+    "question": "Rewrite the matrix equation as a system of linear equations: \\[\\begin{bmatrix} 14 & 5 \\\\ 5 & 17 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 11 \\\\ 7 \\end{bmatrix}.\\]",
+    "options": [
+      "\\(14x + 5y = 11, 5x + 17y = 7\\)",
+      "\\(14x + 5y = -11, 5x + 17y = -7\\)",
+      "\\(14x + 5y = 11, 17x + 5y = 7\\)",
+      "\\(5x + 14y = 11, 5x + 17y = 7\\)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "Thực hiện nhân ma trận ở vế trái:",
+      "\\[\\begin{bmatrix} 14 & 5 \\\\ 5 & 17 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 14x + 5y \\\\ 5x + 17y \\end{bmatrix}\\]",
+      "Đồng nhất với vế phải \\(\\begin{bmatrix} 11 \\\\ 7 \\end{bmatrix}\\), ta được hệ phương trình:",
+      "\\[\\begin{cases} 14x + 5y = 11 \\\\ 5x + 17y = 7 \\end{cases}\\]",
+      "Khớp hoàn toàn với lựa chọn A."
+    ],
+    "image": "assets/questions/0636_q636_Question_636.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 637,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Find the standard matrix for the linear transformation \\(T : \\mathbb{R}^3 \\to \\mathbb{R}^2\\) defined by \\[T(x, y, z) = (8z - 4y, 5x + 13z).\\]\n(i) \\(\\begin{bmatrix} 8 & 5 & 0 \\\\ -4 & 13 & 0 \\end{bmatrix}\\)\n(ii) \\(\\begin{bmatrix} 8 & 13 & 0 \\\\ 0 & 4 & 5 \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} 0 & -4 & 8 \\\\ 5 & 0 & 13 \\end{bmatrix}\\)\n(iv) \\(\\begin{bmatrix} 0 & 0 & 8 \\\\ 4 & 5 & 13 \\end{bmatrix}\\)",
+    "options": [
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "(i)",
+      "None of the other choices is correct"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "Viết các thành phần của ánh xạ tuyến tính theo thứ tự các biến \\(x, y, z\\):",
+      "- Thành phần thứ nhất: \\(0x - 4y + 8z\\).",
+      "- Thành phần thứ hai: \\(5x + 0y + 13z\\).",
+      "Do đó ma trận chính tắc của \\(T\\) có kích thước \\(2 \\times 3\\):",
+      "\\[[T] = \\begin{bmatrix} 0 & -4 & 8 \\\\ 5 & 0 & 13 \\end{bmatrix}\\]",
+      "Khớp với công thức (iii). Do đó chọn B."
+    ],
+    "image": "assets/questions/0637_q637_Question_637.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 638,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "A linear transformation \\(T : \\mathbb{R}^4 \\to \\mathbb{R}^2\\) is defined by \\[T(x, y, z, w) = (x - y + z, 2x - z + w).\\] Find the standard matrix of \\(T\\).\n(i) \\(\\begin{bmatrix} 1 & -1 & 1 & 0 \\\\ 2 & 0 & -1 & 1 \\end{bmatrix}\\)\n(ii) \\(\\begin{bmatrix} 1 & 2 \\\\ -1 & -1 \\\\ 1 & 1 \\end{bmatrix}\\)\n(iii) \\(\\begin{bmatrix} 1 & -1 & 1 \\\\ 2 & -1 & 1 \\end{bmatrix}\\)\n(iv) \\(\\begin{bmatrix} 1 & 2 \\\\ -1 & 0 \\\\ 1 & -1 \\\\ 0 & 1 \\end{bmatrix}\\)",
+    "options": [
+      "(iv)",
+      "(iii)",
+      "(ii)",
+      "(i)",
+      "None of the other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "Viết lại hai thành phần tọa độ của ảnh theo các biến \\(x, y, z, w\\):",
+      "- Tọa độ 1: \\(1x - 1y + 1z + 0w\\).",
+      "- Tọa độ 2: \\(2x + 0y - 1z + 1w\\).",
+      "Ma trận chính tắc có dạng:",
+      "\\[[T] = \\begin{bmatrix} 1 & -1 & 1 & 0 \\\\ 2 & 0 & -1 & 1 \\end{bmatrix}\\]",
+      "Khớp hoàn toàn với công thức (i). Do đó chọn D."
+    ],
+    "image": "assets/questions/0638_q638_Question_638.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 639,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A\\) be a matrix and \\(\\mathbf{x}\\) a vector defined by \\[A = \\begin{bmatrix} 0 & 8 & 3 & 6 \\\\ 9 & 0 & 8 & -4 \\end{bmatrix},\\quad \\mathbf{x} = \\begin{bmatrix} 5 \\\\ 8 \\\\ -2 \\\\ 7 \\end{bmatrix}.\\] Find the product \\(A\\mathbf{x}\\).\n(i) \\([100 \\quad 1]\\)\n(ii) \\([10 \\quad 10]^T\\)\n(iii) \\([100 \\quad 1]^T\\)\n(iv) \\([10 \\quad 10]\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "None of the choices is correct",
+      "(iv)"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "Thực hiện phép nhân ma trận \\(2 \\times 4\\) với vectơ cột \\(4 \\times 1\\):",
+      "\\[A\\mathbf{x} = \\begin{bmatrix} 0(5) + 8(8) + 3(-2) + 6(7) \\\\ 9(5) + 0(8) + 8(-2) + (-4)(7) \\end{bmatrix} = \\begin{bmatrix} 0 + 64 - 6 + 42 \\\\ 45 + 0 - 16 - 28 \\end{bmatrix} = \\begin{bmatrix} 100 \\\\ 1 \\end{bmatrix}\\]",
+      "Dưới dạng chuyển vị của vectơ hàng, vectơ cột này được viết là \\([100 \\quad 1]^T\\).",
+      "Khớp với công thức (iii). Chọn C."
+    ],
+    "image": "assets/questions/0639_q639_Question_639.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  },
+  {
+    "id": 640,
+    "chapter": "DSTT1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A = \\begin{bmatrix} 3 & -2 & 0 \\\\ 0 & -3 & 4 \\end{bmatrix}\\) and \\(\\mathbf{x} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}\\). Compute \\(A\\mathbf{x}\\).\n(i) \\([7 \\quad 6]^T\\)\n(ii) \\([3 \\quad -8]^T\\)\n(iii) \\([-7 \\quad 6]^T\\)\n(iv) \\([-3 \\quad -8]^T\\)",
+    "options": [
+      "(i)",
+      "(ii)",
+      "(iii)",
+      "(iv)",
+      "None of the other choices is correct"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "Thực hiện nhân ma trận \\(A\\) với vectơ \\(\\mathbf{x}\\):",
+      "\\[A\\mathbf{x} = \\begin{bmatrix} 3(1) + (-2)(2) + 0(3) \\\\ 0(1) + (-3)(2) + 4(3) \\end{bmatrix} = \\begin{bmatrix} 3 - 4 + 0 \\\\ 0 - 6 + 12 \\end{bmatrix} = \\begin{bmatrix} -1 \\\\ 6 \\end{bmatrix} = [-1 \\quad 6]^T\\]",
+      "Xét các lựa chọn trong đề bài:",
+      "- (i): \\([7 \\quad 6]^T\\)",
+      "- (ii): \\([3 \\quad -8]^T\\)",
+      "- (iii): \\([-7 \\quad 6]^T\\)",
+      "- (iv): \\([-3 \\quad -8]^T\\)",
+      "Không có công thức nào bằng \\([-1 \\quad 6]^T\\). Do đó lựa chọn đúng là E (\"None of the other choices is correct\")."
+    ],
+    "image": "assets/questions/0640_q640_Question_640.png",
+    "needs_image": false,
+    "confidence": "high",
+    "review_flags": []
+  }
+];
+
+const outputPath = path.join(__dirname, '..', 'data', 'v2', 'batches', 'batch_16.json');
+fs.writeFileSync(outputPath, JSON.stringify(batch16, null, 2), 'utf8');
+console.log(`Successfully generated batch_16.json with ${batch16.length} questions.`);

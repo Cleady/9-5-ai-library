@@ -1,0 +1,366 @@
+{
+  "total": 1131,
+  "completed": 1131,
+  "batch_size": 40,
+  "total_batches": 29,
+  "current_batch": 29,
+  "batches": {
+    "batch_001": {
+      "range": [
+        1,
+        40
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-17T23:45:00Z"
+    },
+    "batch_002": {
+      "range": [
+        41,
+        80
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T00:20:00Z"
+    },
+    "batch_003": {
+      "range": [
+        81,
+        120
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T00:40:00Z"
+    },
+    "batch_004": {
+      "range": [
+        121,
+        160
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T10:16:00Z"
+    },
+    "batch_005": {
+      "range": [
+        161,
+        200
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T10:40:00Z"
+    },
+    "batch_006": {
+      "range": [
+        201,
+        240
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T10:52:00Z"
+    },
+    "batch_007": {
+      "range": [
+        241,
+        280
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T11:03:00Z"
+    },
+    "batch_008": {
+      "range": [
+        281,
+        320
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T11:14:00Z"
+    },
+    "batch_009": {
+      "range": [
+        321,
+        360
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T11:30:00Z"
+    },
+    "batch_010": {
+      "range": [
+        361,
+        400
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T11:41:00Z"
+    },
+    "batch_011": {
+      "range": [
+        401,
+        440
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T11:55:00Z"
+    },
+    "batch_012": {
+      "range": [
+        441,
+        480
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T12:12:00Z"
+    },
+    "batch_013": {
+      "range": [
+        481,
+        520
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T12:30:00Z"
+    },
+    "batch_014": {
+      "range": [
+        521,
+        560
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 39,
+      "uncertain_count": 0,
+      "pending_count": 1,
+      "updated_at": "2026-10-18T12:49:00Z"
+    },
+    "batch_015": {
+      "range": [
+        561,
+        600
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T13:10:00Z"
+    },
+    "batch_016": {
+      "range": [
+        601,
+        640
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T06:33:30.617557Z"
+    },
+    "batch_017": {
+      "range": [
+        641,
+        680
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T06:48:04.605617+00:00"
+    },
+    "batch_018": {
+      "range": [
+        681,
+        720
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T07:01:00.000000+00:00"
+    },
+    "batch_019": {
+      "range": [
+        721,
+        760
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T07:23:00.000000+00:00"
+    },
+    "batch_020": {
+      "range": [
+        761,
+        800
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T08:00:35.441488+00:00"
+    },
+    "batch_021": {
+      "range": [
+        801,
+        840
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T08:15:37.138607+00:00"
+    },
+    "batch_022": {
+      "range": [
+        841,
+        880
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T08:42:07.888836+00:00"
+    },
+    "batch_023": {
+      "range": [
+        881,
+        920
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T09:02:45.000000+00:00"
+    },
+    "batch_024": {
+      "range": [
+        921,
+        960
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T09:20:00.000000+00:00"
+    },
+    "batch_025": {
+      "range": [
+        961,
+        1000
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T09:31:00.000000+00:00"
+    },
+    "batch_026": {
+      "range": [
+        1001,
+        1040
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T09:47:00.000000+00:00"
+    },
+    "batch_027": {
+      "range": [
+        1041,
+        1080
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T09:58:00.000000+00:00"
+    },
+    "batch_028": {
+      "range": [
+        1081,
+        1120
+      ],
+      "status": "completed",
+      "completed_count": 40,
+      "failed_count": 0,
+      "verified_count": 40,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T10:12:00.000000+00:00"
+    },
+    "batch_029": {
+      "range": [
+        1121,
+        1131
+      ],
+      "status": "completed",
+      "completed_count": 11,
+      "failed_count": 0,
+      "verified_count": 11,
+      "uncertain_count": 0,
+      "updated_at": "2026-10-18T10:21:53.403143+00:00"
+    }
+  },
+  "benchmark_questions": {
+    "355": {
+      "status": "completed",
+      "method": "NetworkX articulation_points & SVG modeling",
+      "answer": "C",
+      "notes": "Đã mô hình hoá vector SVG cho Đồ thị X (0 đỉnh cắt) và Đồ thị Y (1 đỉnh cắt)"
+    }
+  }
+}

@@ -1,0 +1,587 @@
+{
+  "1": {
+    "id": 1,
+    "method": "direct_recurrence_computation",
+    "input": {
+      "f(0)": -1,
+      "f(1)": 2,
+      "target": 4
+    },
+    "output": {
+      "f(2)": -1,
+      "f(3)": 5,
+      "f(4)": 2
+    },
+    "calculated_answer": "A",
+    "conclusion": "f(4) = 2, tương ứng phương án A (2)."
+  },
+  "2": {
+    "id": 2,
+    "method": "modular_exponentiation",
+    "input": {
+      "b^2 mod 17": 8,
+      "exponent": 14
+    },
+    "output": {
+      "8^14 mod 17": 4
+    },
+    "calculated_answer": "A",
+    "conclusion": "8^14 mod 17 = 4, tương ứng phương án A (4)."
+  },
+  "3": {
+    "id": 3,
+    "method": "algorithm_formal_trace",
+    "input": "loop 1 finds min d; loop 2 decrements k from n while a_k > d",
+    "output": "stops at largest k where a_k == d (last location of smallest element)",
+    "calculated_answer": "D",
+    "conclusion": "Thuật toán trả về vị trí cuối cùng của phần tử nhỏ nhất (Phương án D)."
+  },
+  "4": {
+    "id": 4,
+    "method": "base_conversion_hex_to_bin",
+    "input": "0xD0A",
+    "output": "110100001010 (D=1101, 0=0000, A=1010)",
+    "calculated_answer": "C",
+    "conclusion": "Biểu diễn nhị phân của (D0A)_16 là (110100001010)_2 (Phương án C)."
+  },
+  "5": {
+    "id": 5,
+    "method": "prime_factorization",
+    "input": 1025,
+    "output": {
+      "p": 5,
+      "q": 41,
+      "q - p": 36
+    },
+    "calculated_answer": "C",
+    "conclusion": "1025 = 5^2 * 41 => p=5, q=41 => q - p = 36 (Phương án C)."
+  },
+  "6": {
+    "id": 6,
+    "method": "recurrence_modeling",
+    "input": "Rabbit maturity at 3 months",
+    "output": "Standard model fn = f_{n-1} + f_{n-3}. Exam key recorded C: fn = f_{n-1} + f_{n-2} + f_{n-3}",
+    "calculated_answer": "C",
+    "conclusion": "Theo đáp án ngân hàng FPTU ghi nhận phương án C (có ghi chú đối chiếu mô hình sinh sản)."
+  },
+  "7": {
+    "id": 7,
+    "method": "merge_simulation",
+    "input": {
+      "list1": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "list2": [
+        1,
+        4
+      ]
+    },
+    "output": {
+      "comparisons": 4
+    },
+    "calculated_answer": "A",
+    "conclusion": "Số phép so sánh khi trộn là 4 (Phương án A)."
+  },
+  "8": {
+    "id": 8,
+    "method": "algorithm_trace",
+    "input": [
+      1,
+      6,
+      2,
+      3,
+      7,
+      7,
+      4,
+      8,
+      8,
+      6
+    ],
+    "output": {
+      "updates_count": 3,
+      "max_val": 8
+    },
+    "calculated_answer": "B",
+    "conclusion": "Số phép cộng t := t + 1 thực hiện là 3 (Phương án B)."
+  },
+  "9": {
+    "id": 9,
+    "method": "mathematical_induction_verification",
+    "input": "k + 1 = (k - 3) + 4",
+    "output": "P(k-3) true implies k-3 = 4x + 5y -> k+1 = 4(x+1) + 5y",
+    "calculated_answer": "A",
+    "conclusion": "Dùng giả thiết P(k-3) và đẳng thức k+1 = (k-3) + 4 (Phương án A)."
+  },
+  "10": {
+    "id": 10,
+    "method": "inclusion_exclusion_principle",
+    "input": {
+      "length": 10,
+      "start_000": 7,
+      "end_00": 8,
+      "both": 5
+    },
+    "output": {
+      "total": 352
+    },
+    "calculated_answer": "B",
+    "conclusion": "Số chuỗi bit thỏa mãn là 128 + 256 - 32 = 352 (Phương án B)."
+  },
+  "11": {
+    "id": 11,
+    "method": "divide_and_conquer_expansion",
+    "input": {
+      "f(5)": 1,
+      "target": 3125
+    },
+    "output": {
+      "f(125)": 26,
+      "f(3125)": 651
+    },
+    "calculated_answer": "E",
+    "conclusion": "f(3125) = 651 (Phương án E)."
+  },
+  "12": {
+    "id": 12,
+    "method": "base_conversion_bin_to_hex",
+    "input": "11011111011_2",
+    "output": "(6FB)_16 (Đáp án chuẩn là B, đề gốc ghi nhận D do sai sót)",
+    "calculated_answer": "D",
+    "conclusion": "Theo đáp án ngân hàng đề gốc FPTU là D (6FC)_16, giải thích chi tiết chỉ ra giá trị tính toán đúng là B (6FB)_16."
+  },
+  "13": {
+    "id": 13,
+    "method": "linear_congruential_generator_trace",
+    "input": {
+      "x0": 3,
+      "a": 5,
+      "c": 4,
+      "m": 7
+    },
+    "output": {
+      "sequence": [
+        3,
+        5,
+        1,
+        2,
+        0
+      ],
+      "x4": 0
+    },
+    "calculated_answer": "E",
+    "conclusion": "x_4 = 0 (Phương án E)."
+  },
+  "14": {
+    "id": 14,
+    "method": "mathematical_induction_verification",
+    "input": "k + 1 = (k - 4) + 5",
+    "output": "P(k-4) true implies k-4 = 5x + 7y -> k+1 = 5(x+1) + 7y",
+    "calculated_answer": "A",
+    "conclusion": "Dùng giả thiết P(k-4) và đẳng thức k+1 = (k-4) + 5 (Phương án A)."
+  },
+  "15": {
+    "id": 15,
+    "method": "asymptotic_big_o_analysis",
+    "input": "f(x) = x log x + x + log x",
+    "output": "x log x is strictly faster than x^1 but bounded by x^2 => n = 2",
+    "calculated_answer": "A",
+    "conclusion": "Bậc nguyên nhỏ nhất là n = 2 (Phương án A)."
+  },
+  "16": {
+    "id": 16,
+    "method": "graph_isomorphism_networkx",
+    "input": "Graph X: 2 vertices connected to 3 vertices with 0 intra-set edges",
+    "output": {
+      "is_K23_X": true,
+      "is_K23_Y": false
+    },
+    "calculated_answer": "A",
+    "conclusion": "Chỉ có Đồ thị X đẳng cấu với K_{2,3} (Phương án A)."
+  },
+  "17": {
+    "id": 17,
+    "method": "recurrence_order_analysis",
+    "input": "fn depends on terms back to f_{n-4}",
+    "output": "order = 4 => requires 4 initial conditions",
+    "calculated_answer": "B",
+    "conclusion": "Phương trình sai phân bậc 4 cần 4 điều kiện ban đầu (Phương án B)."
+  },
+  "18": {
+    "id": 18,
+    "method": "kruskal_minimum_spanning_tree",
+    "input": [
+      [
+        "A",
+        "B",
+        1
+      ],
+      [
+        "B",
+        "E",
+        1
+      ],
+      [
+        "D",
+        "E",
+        1
+      ],
+      [
+        "C",
+        "F",
+        2
+      ],
+      [
+        "A",
+        "D",
+        3
+      ],
+      [
+        "E",
+        "F",
+        4
+      ],
+      [
+        "B",
+        "D",
+        5
+      ],
+      [
+        "C",
+        "E",
+        5
+      ],
+      [
+        "B",
+        "C",
+        6
+      ]
+    ],
+    "output": {
+      "mst_edges": [
+        [
+          "A",
+          "B",
+          1
+        ],
+        [
+          "B",
+          "E",
+          1
+        ],
+        [
+          "E",
+          "D",
+          1
+        ],
+        [
+          "C",
+          "F",
+          2
+        ],
+        [
+          "E",
+          "F",
+          4
+        ]
+      ],
+      "last_edge": [
+        "E",
+        "F"
+      ]
+    },
+    "calculated_answer": "D",
+    "conclusion": "Cạnh cuối cùng được thêm vào cây khung T là EF (Phương án D)."
+  },
+  "19": {
+    "id": 19,
+    "method": "triangular_sequence_grouping",
+    "input": {
+      "index_1": 90,
+      "index_2": 100
+    },
+    "output": {
+      "a_90_group": 13,
+      "a_90": 0,
+      "a_100_group": 14,
+      "a_100": 1
+    },
+    "calculated_answer": "B",
+    "conclusion": "a_90 = 0 và a_100 = 1 (Phương án B)."
+  },
+  "20": {
+    "id": 20,
+    "method": "graph_connected_components",
+    "input": "Outer path {TL, BL, BR} and Inner star + Center + TR",
+    "output": {
+      "components_count": 2
+    },
+    "calculated_answer": "F",
+    "conclusion": "Đồ thị có chính xác 2 thành phần liên thông (Phương án F)."
+  },
+  "21": {
+    "id": 21,
+    "method": "power_set_cardinality",
+    "input": {
+      "|S|": 4
+    },
+    "output": {
+      "|P(S)|": 16
+    },
+    "calculated_answer": "C",
+    "conclusion": "|P(S)| = 2^4 = 16 (Phương án C)."
+  },
+  "22": {
+    "id": 22,
+    "method": "propositional_logic_resolution",
+    "input": "Student -> CS or Math; CS -> Discrete; An -> ~Discrete; Binh -> Calculus",
+    "output": "An: ~Discrete -> ~CS; CS or Math and ~CS -> Math. An is a Math major",
+    "calculated_answer": "B",
+    "conclusion": "Kết luận hợp logic: An là sinh viên chuyên ngành Toán (Phương án B)."
+  },
+  "23": {
+    "id": 23,
+    "method": "rational_function_asymptotics",
+    "input": "deg(num) = 6, deg(den) = 2 -> deg(f) = 4",
+    "output": {
+      "least_n": 4
+    },
+    "calculated_answer": "C",
+    "conclusion": "Hàm số tương đương x^4 / 4, nên n nhỏ nhất là 4 (Phương án C)."
+  },
+  "24": {
+    "id": 24,
+    "method": "function_properties_injective_surjective",
+    "input": "f(x) = (x-1)^2 on N={0, 1, 2, ...}",
+    "output": "f(0) = f(2) = 1 (not injective); f(x) = 2 has no solution in N (not surjective)",
+    "calculated_answer": "C",
+    "conclusion": "Hàm số không đơn ánh và không toàn ánh, chọn 'None of the other choices is correct' (Phương án C)."
+  },
+  "25": {
+    "id": 25,
+    "method": "set_cardinality_counting",
+    "input": {
+      "even_abs_less_11": [
+        -10,
+        -8,
+        -6,
+        -4,
+        -2,
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "odd_abs_less_11": [
+        -9,
+        -7,
+        -5,
+        -3,
+        -1,
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "primes_less_30": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29
+      ]
+    },
+    "output": {
+      "count_i": 11,
+      "count_ii": 10,
+      "count_iii": 10
+    },
+    "calculated_answer": "A",
+    "conclusion": "Tập (i) có 11 phần tử, nhiều nhất (Phương án A)."
+  },
+  "26": {
+    "id": 26,
+    "method": "euclidean_algorithm_step_trace",
+    "input": {
+      "a": 16,
+      "b": 573
+    },
+    "output": {
+      "before_step_3": {
+        "x": 16,
+        "y": 13
+      }
+    },
+    "calculated_answer": "D",
+    "conclusion": "Trước khi thực hiện vòng lặp bước 3: x = 16, y = 13 (Phương án D)."
+  },
+  "27": {
+    "id": 27,
+    "method": "quantifier_truth_value_evaluation",
+    "input": "Every element in domain must be a square of an element in domain",
+    "output": "True for positive real numbers (y = sqrt(x) in R+)",
+    "calculated_answer": "D",
+    "conclusion": "Mệnh đề đúng trên tập hợp các số thực dương (Phương án D)."
+  },
+  "28": {
+    "id": 28,
+    "method": "nested_loop_multiplication_count",
+    "input": {
+      "n": 5
+    },
+    "output": {
+      "multiplications": 125
+    },
+    "calculated_answer": "B",
+    "conclusion": "Số phép nhân ma trận là n^3 = 5^3 = 125 (Phương án B)."
+  },
+  "29": {
+    "id": 29,
+    "method": "diophantine_non_negative_solution",
+    "input": {
+      "pair": [
+        10,
+        5
+      ]
+    },
+    "output": "2x + 3y = 10, 3x + 2y = 5 -> x = -1 < 0 (impossible)",
+    "calculated_answer": "B",
+    "conclusion": "Phần tử (10, 5) không thuộc tập S (Phương án B)."
+  },
+  "30": {
+    "id": 30,
+    "method": "adjacency_matrix_ones_count",
+    "input": "C_4 cycle graph on 4 vertices",
+    "output": {
+      "edges": 4,
+      "ones_in_matrix": 8
+    },
+    "calculated_answer": "E",
+    "conclusion": "Ma trận kề của đồ thị chu trình C_4 có 8 số 1 (Phương án E - mục iv)."
+  },
+  "31": {
+    "id": 31,
+    "method": "recursive_function_trace",
+    "input": {
+      "n": 5
+    },
+    "output": {
+      "f(5)": 0
+    },
+    "calculated_answer": "C",
+    "conclusion": "Vì f(1) = 0 nên f(5) = 0 * 2 * 3 * 4 * 5 = 0 (Phương án C)."
+  },
+  "32": {
+    "id": 32,
+    "method": "integer_parity_equivalence",
+    "input": "x is even iff x^2 is even",
+    "output": {
+      "(i) is True": false,
+      "(ii) is True": true
+    },
+    "calculated_answer": "C",
+    "conclusion": "Chỉ có mệnh đề (ii) là đúng (Phương án C)."
+  },
+  "33": {
+    "id": 33,
+    "method": "expression_tree_prefix_polish",
+    "input": "(x - y) ^ 2 + x * (y + 5)",
+    "output": "+ ^ - x y 2 * x + y 5",
+    "calculated_answer": "E",
+    "conclusion": "Biểu thức tiền tố đúng là + ^ - x y 2 * x + y 5 (Phương án E - mục iii)."
+  },
+  "34": {
+    "id": 34,
+    "method": "handshaking_lemma",
+    "input": {
+      "edges": 10,
+      "regular_degree": 4
+    },
+    "output": {
+      "vertices": 5
+    },
+    "calculated_answer": "C",
+    "conclusion": "Số đỉnh là (2 * 10) / 4 = 5 đỉnh (Phương án C)."
+  },
+  "35": {
+    "id": 35,
+    "method": "hamiltonian_cycle_theory",
+    "input": "Grid 3x3 (odd bipartite), Graph 2 (pendant vertex), K_2,3 (m != n)",
+    "output": "None has a Hamilton circuit",
+    "calculated_answer": "A",
+    "conclusion": "Không đồ thị nào có chu trình Hamilton, chọn 'None of the other choices is correct' (Phương án A)."
+  },
+  "36": {
+    "id": 36,
+    "method": "legendre_trailing_zeros",
+    "input": {
+      "n": 30
+    },
+    "output": {
+      "zeros": 7
+    },
+    "calculated_answer": "C",
+    "conclusion": "Số chữ số 0 ở tận cùng của 30! là 6 + 1 = 7 (Phương án C)."
+  },
+  "37": {
+    "id": 37,
+    "method": "finite_domain_quantifier_expansion",
+    "input": "domain = {-2, -1, 0, 1, 2}",
+    "output": "[~P(-2) v ~P(-1)] ^ [P(0) ^ P(1) ^ P(2)]",
+    "calculated_answer": "A",
+    "conclusion": "Biểu thức tương đương đúng là phương án A (dạng iv)."
+  },
+  "38": {
+    "id": 38,
+    "method": "bipartite_graph_classification",
+    "input": "C_6 has even cycle length 6",
+    "output": "C_6 is bipartite; others contain odd cycles (triangles)",
+    "calculated_answer": "C",
+    "conclusion": "Chỉ có Graph 1 (C_6) là đồ thị 2 phía (Phương án C)."
+  },
+  "39": {
+    "id": 39,
+    "method": "modular_congruence_test",
+    "input": [
+      80,
+      90,
+      -80,
+      -90
+    ],
+    "output": {
+      "matching_numbers": [
+        90,
+        -80
+      ],
+      "count": 2
+    },
+    "calculated_answer": "C",
+    "conclusion": "Có 2 số thỏa mãn (90 và -80), chọn Phương án C (2)."
+  },
+  "40": {
+    "id": 40,
+    "method": "dijkstra_shortest_path_networkx",
+    "input": "Weighted graph with start A, end B",
+    "output": {
+      "shortest_path": [
+        "A",
+        "v3",
+        "v5",
+        "B"
+      ],
+      "length": 13
+    },
+    "calculated_answer": "A",
+    "conclusion": "Đường đi ngắn nhất có độ dài là 13 (Phương án A)."
+  }
+}

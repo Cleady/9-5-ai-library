@@ -1,0 +1,322 @@
+[
+  {
+    "id": 921,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI The echelon form of the augmented matrix of a system of Iinear equations is given as ~2 Which of the following statements is true? 5o DAP AN C",
+    "ocr_raw": "",
+    "image": "0921_q921_Question_921.png"
+  },
+  {
+    "id": 922,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Given 4' u = [1 -1 2]T and v = [~3 1]T . Choose the correct statement 56 DAP AN cAN CHON CAc DAP AN uis an eigenvector of A vis an eigenvector",
+    "ocr_raw": "",
+    "image": "0922_q922_Question_922.png"
+  },
+  {
+    "id": 923,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let P(1,1,0) . Find all points such that the vector PQ has the opposite direction to the vector 3 = (3,5, and such that 2 |lzll: 56 DAP AN cAN",
+    "ocr_raw": "",
+    "image": "0923_q923_Question_923.png"
+  },
+  {
+    "id": 924,
+    "folder": "DSTT1",
+    "bank_answer": "E",
+    "text": "CAU HOI If u = (3,6,6 and (2,1,-1) then the projection of u along v is 80 DAP AN CAN CHON CAc DAP AN None of the other choices is correct B. (~12,15,_",
+    "ocr_raw": "",
+    "image": "0924_q924_Question_924.png"
+  },
+  {
+    "id": 925,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find the area of the parallelogram with two adjacent sides 2T and v = [1 ~1 3]T . 6v2 (ii) 2v5 (iv) 40 50 DAP AN CAN CAc DAP AN B:  (ii) None ",
+    "ocr_raw": "",
+    "image": "0925_q925_Question_925.png"
+  },
+  {
+    "id": 926,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Let u = (1,1,2),v = (-1,0,1). Find the length of the vector (20Ou + Bv) X u: () V1l 3V11 (iii) V211 80 DAP AN CAN CHON CAc DAP AN B.  (i) None",
+    "ocr_raw": "",
+    "image": "0926_q926_Question_926.png"
+  },
+  {
+    "id": 927,
+    "folder": "DSTT1",
+    "bank_answer": "D",
+    "text": "CAU HOI The area of the parallelogram determined by the vectors u and v is 100. Find the area of the parallelogram determined by the vectors u and 2u ",
+    "ocr_raw": "",
+    "image": "0927_q927_Question_927.png"
+  },
+  {
+    "id": 928,
+    "folder": "DSTT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find the area of the triangle with the following vertices. A(3, ~1,2) , B(1,1,0), C(1,2,-1). Round your answer to two decimal places_ 56 DAP A",
+    "ocr_raw": "",
+    "image": "0928_q928_Question_928.png"
+  },
+  {
+    "id": 929,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI If u and are two nonzero vectors, then and v are parallel if and only if_ () Ilu x vll = -1 Ilu x vll = 1 80 DAP AN CAN CHON CAc DAP AN B.  (i",
+    "ocr_raw": "",
+    "image": "0929_q929_Question_929.png"
+  },
+  {
+    "id": 930,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Which of the following are subspaces of RB. () U = {(1,y,2) € RB x + y? _ 2 = 0} ()V = {(2,y,2) € R} 2 + 2y _ 32 = 0 and 21 _ 2 = 0} 56 DAP AN",
+    "ocr_raw": "",
+    "image": "0930_q930_Question_930.png"
+  },
+  {
+    "id": 931,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find all values of m such that the set {(2,m,1), (1,0,1) , (0,1,1)} is linearly independent: 56 DAP AN cAN CHON CAC DAP AN All numbers but - 1",
+    "ocr_raw": "",
+    "image": "0931_q931_Question_931.png"
+  },
+  {
+    "id": 932,
+    "folder": "DSTT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Which of the following subsets are independent in R? ? () {[1 3]T , [2 -1]T} (ii) {[1 4T , [1 7]T} (ii) {[2 1]T , [-1 1jT , [1 -1JT} s6 DAP AN",
+    "ocr_raw": "",
+    "image": "0932_q932_Question_932.png"
+  },
+  {
+    "id": 933,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Suppose that the set of vectors { Xi; Xz, Xz} is orthonormal: Which of the following set of vectors are also orthonormal? () {Xi, 7(Xz + X3)} ",
+    "ocr_raw": "",
+    "image": "0933_q933_Question_933.png"
+  },
+  {
+    "id": 934,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find conditions on @, b and such that the set of vectors {(1,0,1) , (1,2,-1) , (a,b,c)} is orthogonal in R3 . 56 DAP AN cAN CHON CAC DAP AN A:",
+    "ocr_raw": "",
+    "image": "0934_q934_Question_934.png"
+  },
+  {
+    "id": 935,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find all vectors in R3 that are orthogonal to both (~1,1,5) and (2,1,2). 80 DAP AN CAN CHON CAc DAP AN A. (t,-4t,t), where t is arbitrary B. (",
+    "ocr_raw": "",
+    "image": "0935_q935_Question_935.png"
+  },
+  {
+    "id": 936,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let {X,Y, Z} be an orthogonal set. Find IX _ 2Y + ZIl 80 DAP AN CAN CHON CAc DAP AN There is not enough information None of the other choices ",
+    "ocr_raw": "",
+    "image": "0936_q936_Question_936.png"
+  },
+  {
+    "id": 937,
+    "folder": "DSTT1",
+    "bank_answer": "E",
+    "text": "CAU HOI Find the dimension of the column space of _1 -3 -1 80 DAP AN CAN CHON CAc DAP AN A: 3 B: 1 C. 2 D: 5",
+    "ocr_raw": "",
+    "image": "0937_q937_Question_937.png"
+  },
+  {
+    "id": 938,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let A be the matrix -1 ~1 _1 ~2 Then dim(rowA) is_ 56 DAP AN cAN CHON CAC DAP AN A: 2 B: 3 C. 4 D: 4 x 3 E. 3 x 4",
+    "ocr_raw": "",
+    "image": "0938_q938_Question_938.png"
+  },
+  {
+    "id": 939,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let u = [2 3]T , 3 = [-4 3]T . Let € = [a,b,c]T be such that Find a_ 80 DAP AN CAN CAc DAP AN A: 12 B: 2 None of the other choices is correct ",
+    "ocr_raw": "",
+    "image": "0939_q939_Question_939.png"
+  },
+  {
+    "id": 940,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Let T : R2 R? be projection on the line y 31 followed by projection on the line y Find T([-2 1]T)_ 56 DAP AN cAN CHON CAc DAP AN [1/10 1/10]T ",
+    "ocr_raw": "",
+    "image": "0940_q940_Question_940.png"
+  },
+  {
+    "id": 941,
+    "folder": "GT1",
+    "bank_answer": "E",
+    "text": "CAU HOI Given the function f (x) Which of the following statements is TRUE? 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct The fun",
+    "ocr_raw": "",
+    "image": "0941_q941_Question_941.png"
+  },
+  {
+    "id": 942,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Simplify the quotient for f(c) = 32 + 31 80 DAP AN CAN CHON CAc DAP AN 2x - h+3 22 + h - 3 2x - h-3 2x - h+3 None of the other choices is corr",
+    "ocr_raw": "",
+    "image": "0942_q942_Question_942.png"
+  },
+  {
+    "id": 943,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find y' (1) for y 81+ 56 DAP AN cAN CHON CAC DAP AN A: 4 E 2 None of the other choices is correct",
+    "ocr_raw": "",
+    "image": "0943_q943_Question_943.png"
+  },
+  {
+    "id": 944,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Determine where the function is increasing and where it is decreasing 53 f(z) 32 + 1 Decreasing on 1) and (1,0), increasing on (~1,1) Increasi",
+    "ocr_raw": "",
+    "image": "0944_q944_Question_944.png"
+  },
+  {
+    "id": 945,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Find the minimum of the product of two numbers with the property that the first is 2 less than twice the second. 56 DAP AN cAN CHON CAc DAP AN",
+    "ocr_raw": "",
+    "image": "0945_q945_Question_945.png"
+  },
+  {
+    "id": 946,
+    "folder": "GT1",
+    "bank_answer": "E",
+    "text": "CAU HOI Evaluate J dx 56 DAP AN cAN CHON CAc DAP AN A. 1/3 None of the other choices is correct C. 5/16 D. 7/8 E. 7/24",
+    "ocr_raw": "",
+    "image": "0946_q946_Question_946.png"
+  },
+  {
+    "id": 947,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Evaluate the following improper integral 56 DAP AN cAN CHON CAC DAP AN A. Converges to In(2) _ 1/4 None of the other choice is correct: Conver",
+    "ocr_raw": "",
+    "image": "0947_q947_Question_947.png"
+  },
+  {
+    "id": 948,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI John and Joe earn a total of 24.6Owhen Johnworks2hoursand Joeworks3hours I fJohnworks3hoursandJoeworks2hours,theyget 23.90. Find their hourly ",
+    "ocr_raw": "",
+    "image": "0948_q948_Question_948.png"
+  },
+  {
+    "id": 949,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Which of the following statement is correct: (i) If AB and BA can both be formed then AB and BA have the same size_ (ii) If BA = CA and A is n",
+    "ocr_raw": "",
+    "image": "0949_q949_Question_949.png"
+  },
+  {
+    "id": 950,
+    "folder": "DSTT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find the volume of the parallelepiped determined by 2u, 3v, Jw , provided that u = [1,2,-1jT ,v=[0,2,4T ,w [1,4,a]t . 56 DAP AN cAN CHON CAc D",
+    "ocr_raw": "",
+    "image": "0950_q950_Question_950.png"
+  },
+  {
+    "id": 951,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find the first row of the adjugate of the matrix ~1 ~2 56 DAP AN cAN CHON CAC DAP AN A. [1 c. [1 -2 2] D: (-1 ~2  21 None of the other choices",
+    "ocr_raw": "",
+    "image": "0951_q951_Question_951.png"
+  },
+  {
+    "id": 952,
+    "folder": "GT1",
+    "bank_answer": "C",
+    "text": "CAU HOI A particle moves along straight line with displacement given by s(t) = t2 8t + 18. What is the instantaneous velocity when t 4? 56 DAP AN cAN ",
+    "ocr_raw": "",
+    "image": "0952_q952_Question_952.png"
+  },
+  {
+    "id": 953,
+    "folder": "GT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Differentiate y dy / dx dy/dx dy / dx dy / dx 50 DAP AN CAN CAc DAP AN None of the other choices is correct CHON",
+    "ocr_raw": "",
+    "image": "0953_q953_Question_953.png"
+  },
+  {
+    "id": 954,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find dy dx by implicit differentiation Ty? (52) / (Ty) (52)/7 (ii) (10z + 5)/(14y) (522)/(14y) 80 DAP AN CAN CHON CAc DAP AN (iv) None of the ",
+    "ocr_raw": "",
+    "image": "0954_q954_Question_954.png"
+  },
+  {
+    "id": 955,
+    "folder": "GT1",
+    "bank_answer": "D",
+    "text": "CAU HOI Find the relative extrema, if they exist, of the function f(z) = -\" 18x 32 S0 DAP AN CAN CHON CAc DAP AN Relative minimum at 9,49) , No relati",
+    "ocr_raw": "",
+    "image": "0955_q955_Question_955.png"
+  },
+  {
+    "id": 956,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Evaluate the sum indicated by the notation (2n + 1). 80 DAP AN CAN CAc DAP AN A. 120 B. 110 C.25 D.  65 E. 121 None of the other choices is co",
+    "ocr_raw": "",
+    "image": "0956_q956_Question_956.png"
+  },
+  {
+    "id": 957,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI 2 and J3 g(c)dz 3. Find 56 DAP AN cAN CHON CAC DAP AN ~9 D: 3 None of others",
+    "ocr_raw": "",
+    "image": "0957_q957_Question_957.png"
+  },
+  {
+    "id": 958,
+    "folder": "DSTT1",
+    "bank_answer": "C",
+    "text": "CAU HOI Find the average value of f(r) = 1 _ 1 on the interval [0, 3] 56 DAP AN cAN CHON CAC DAP AN B: 3 C. 2 E 0 None of the other choices is correct",
+    "ocr_raw": "",
+    "image": "0958_q958_Question_958.png"
+  },
+  {
+    "id": 959,
+    "folder": "DSTT1",
+    "bank_answer": "B",
+    "text": "CAU HOI Solve the following system of linear equations (2+y - 2 = 1 21 - y + 7z = 8 80 DAP AN CAN CHON CAc DAP AN A: € = 1,y =1,2 =1 B. € = ~2t + 3,y ",
+    "ocr_raw": "",
+    "image": "0959_q959_Question_959.png"
+  },
+  {
+    "id": 960,
+    "folder": "DSTT1",
+    "bank_answer": "A",
+    "text": "CAU HOI Let A Find A+4T. 10 10 _ 10 56 DAP AN cAN CHON CAC DAP AN B.  (i) None of the other choices is correct",
+    "ocr_raw": "",
+    "image": "0960_q960_Question_960.png"
+  }
+]

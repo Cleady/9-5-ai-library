@@ -1,0 +1,322 @@
+[
+  {
+    "id": 321,
+    "image": "0321_q321_Question_321.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI Find all values of m so that the system I - y - 2 = 1 ~2 + 3y + 2 = m has no solution. 56 DAP AN cAN CHON CAC DAP AN any number but any number"
+  },
+  {
+    "id": 322,
+    "image": "0322_q322_Question_322.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI If A = then the (2,1)-entry of the matrix ABT 4-TBis: 80 DAP AN CAN CHON CAc DAP AN -5/2 B. 3/2 None of the other choices is correct D: 13/2 E"
+  },
+  {
+    "id": 323,
+    "image": "0323_q323_Question_323.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let A = B = Find 24 + 3B. %9 1 ] 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct"
+  },
+  {
+    "id": 324,
+    "image": "0324_q324_Question_324.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let A, B, C be matrices. Choose the incorrect statement. C then B and C have the same size_ (i) If A is square then (4T)3 = (49)T (ii) If A # "
+  },
+  {
+    "id": 325,
+    "image": "0325_q325_Question_325.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Write the matrix equation as a system of linear equations ~3 -2 5o DAP AN CAN CAc DAP AN FUS None of the other choices is correct B. 2x + 3y ="
+  },
+  {
+    "id": 326,
+    "image": "0326_q326_Question_326.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Find a basis for the subspace U = {[x,y,2]T | 2 + 2y + 32 = 0} in RB. () [-2,-1,0JT and [3,0,1/1 (iv) [~2,-1,0jT and [-3,0,~1JT s6 DAP AN cAN "
+  },
+  {
+    "id": 327,
+    "image": "0327_q327_Question_327.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Find such that a + 1,0] is orthogonal to both 0,1,1] [2, -1,0: 80 DAP AN CAN CHON CAc DAP AN 1 and -1 2 and -1 None of other choices is correc"
+  },
+  {
+    "id": 328,
+    "image": "0328_q328_Question_328.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let A be a matrix of size 4 x 5. Which of the following statements are true? rank(A) < 4 dim(col A) < 4 56 DAP AN cAN CHON CAC DAP AN None of "
+  },
+  {
+    "id": 329,
+    "image": "0329_q329_Question_329.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Let T : R? _ R2 Determine whether T is rotation or projection on a line or reflection in a line. 56 DAP AN cAN CHON CAC DAP AN Tis reflection "
+  },
+  {
+    "id": 330,
+    "image": "0330_q330_Question_330.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Find t so that {[1/2, ~t], [1/t,2]} is an orthogonal set: 80 DAP AN CAN CHON CAc DAP AN A. 1/4and -1/4 B. 1/2 and -1/2 1 and -1 None of the ot"
+  },
+  {
+    "id": 331,
+    "image": "0331_q331_Question_331.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI The angle between vectors u [-1; 1;2 T and v [2; 1; -1JT is_ 56 DAP AN cAN CHON CAc DAP AN B:  (iii) None of other choices is correct"
+  },
+  {
+    "id": 332,
+    "image": "0332_q332_Question_332.png",
+    "bank_answer": "E",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Let A(3,-1,-1) , B(1,-2,0) , C(1,-1,2) be three vertices of the parallelogram with two adjacent sides AB and AC. Find the fourth vertex: 56 DA"
+  },
+  {
+    "id": 333,
+    "image": "0333_q333_Question_333.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Let T : R? R? be projection on the line y 31 followed by reflection in the line y = Find T([1 3/T)_ [3 3T (iii) [-3 (iv) [1 3]T 80 DAP AN CAN "
+  },
+  {
+    "id": 334,
+    "image": "0334_q334_Question_334.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Which of the following are subspaces of R3? {(a,4,0)/ a € R} {(a + b _ 3,0,b)| a,b € R} 56 DAP AN cAN CHON CAC DAP AN None of the other choice"
+  },
+  {
+    "id": 335,
+    "image": "0335_q335_Question_335.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Let A be the point in the line € = t,y = 2t, 2 = t that is closest to the point (1, ~2,3). Determine the first coordinate of A 56 DAP AN cAN C"
+  },
+  {
+    "id": 336,
+    "image": "0336_q336_Question_336.png",
+    "bank_answer": "C",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Let A be a 7 x 9 matrix. Which of the following statements are FALSE? Matrix A can have independent columns Matrix A can have independent rows"
+  },
+  {
+    "id": 337,
+    "image": "0337_q337_Question_337.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Which of the following are subspaces of R3? {(2,y,2)lx +y8 + 2 = {(1,y3, 2)lz,y, 2 € R} 56 DAP AN cAN CHON CAC DAP AN Both (i) and (ii) None o"
+  },
+  {
+    "id": 338,
+    "image": "0338_q338_Question_338.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "ocr_preview": "CAU HOI Find the relative extrema, if they exist, of the function f(c) 50 DAP AN CAN CAc DAP AN None of the other choices is correct No relative extre"
+  },
+  {
+    "id": 339,
+    "image": "0339_q339_Question_339.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "ocr_preview": "CAU HOI Find all real numbers such that the vector X = (1,2,a) lies in the subspace U = span{ (1,0,2) , (-1,1,0)}: 56 DAP AN cAN CHON CAc DAP AN A: 0 "
+  },
+  {
+    "id": 340,
+    "image": "0340_q340_Question_340.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "ocr_preview": "CAU HOI If C(w) = the cost of producing € units of a product, the rate of change of C (1) is called the marginal cost Let C (x) = 0. .00000323 + 200x "
+  },
+  {
+    "id": 341,
+    "image": "0341_q341_Question_341.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "GioiHan",
+    "ocr_preview": "CAU HOI Evaluate the limit, if it exists 3x + 2 lim 11 1 - 1 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct D. 2 E -2"
+  },
+  {
+    "id": 342,
+    "image": "0342_q342_Question_342.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Find a parametric equation of the line which goes through P(2,3,5) perpendicular to the plane 2x + 4y + 62 7 = 0. 56 DAP AN cAN CHON CAc DAP A"
+  },
+  {
+    "id": 343,
+    "image": "0343_q343_Question_343.png",
+    "bank_answer": "B",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "ocr_preview": "CAU HOI Find conditions on @, b and such that the set of vectors {(1,0,a), (0,1,6) , (c, 0,1)} is orthogonal in R?. 56 DAP AN cAN CHON CAc DAP AN A. b"
+  },
+  {
+    "id": 344,
+    "image": "0344_q344_Question_344.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Evaluate at x = 1 for y 22 + 80 DAP AN CAN CHON CAc DAP AN A. 9/4 B: 0 C. 7/4 FUS None of the other choices is correct"
+  },
+  {
+    "id": 345,
+    "image": "0345_q345_Question_345.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI The average value of f(x) = € + 1 over the interval [1, a] is 3. Find the number a. 80 DAP AN CAN CAc DAP AN A: 2 B. 3 CHON"
+  },
+  {
+    "id": 346,
+    "image": "0346_q346_Question_346.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "ocr_preview": "CAU HOI Find dy dx by implicit differentiation y\" + 4x = 0 121\" 54+1222 3y2-51 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct 51y "
+  },
+  {
+    "id": 347,
+    "image": "0347_q347_Question_347.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Evaluate the determinant of the matrix a + 2 6+2 c + 2 a _ 3 b _ 3 c _ 3 56 DAP AN cAN CHON CAC DAP AN AIl of the other choices are incorrect "
+  },
+  {
+    "id": 348,
+    "image": "0348_q348_Question_348.png",
+    "bank_answer": "A",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "ocr_preview": "CAU HOI Find the absolute maximum and absolute minimum values of f(c) = 2 31\" + 32 + 1 fo; 21. 56 DAP AN cAN CHON CAC DAP AN Absolute maximum: 3 absol"
+  },
+  {
+    "id": 349,
+    "image": "0349_q349_Question_349.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let A = Find the (1,1)-entry of 41O . 50 DAP AN CAN CAc DAP AN A. 1024 B. 10 20 D. 512 CHON"
+  },
+  {
+    "id": 350,
+    "image": "0350_q350_Question_350.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "AnhXaTuyenTinh",
+    "ocr_preview": "CAU HOI Let T : R2 _ R3 be the linear transformation such that Let T Find a. 80 DAP AN CAN CAc DAP AN B -1 None of the other choices is correct E: 1 C"
+  },
+  {
+    "id": 351,
+    "image": "0351_q351_Question_351.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Given that 22 FUS y + 4-[ 7] Find t + 8, 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct"
+  },
+  {
+    "id": 352,
+    "image": "0352_q352_Question_352.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Let A be annxn matrix. Choose correct statements: () If 4? _ Ithen A is invertible (ii) If A? _ _Athen A is invertible 56 DAP AN cAN CHON CAC "
+  },
+  {
+    "id": 353,
+    "image": "0353_q353_Question_353.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI How many horizontal asymptotes does the following function have? 3x '20 522 56 DAP AN cAN CHON CAC DAP AN B: 1 +1"
+  },
+  {
+    "id": 354,
+    "image": "0354_q354_Question_354.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "ocr_preview": "CAU HOI Differentiate y llx dy/dx dy/ dx dy / dx dy/dx 2V1z 56 DAP AN cAN CHON CAC DAP AN None of the other choices is correct"
+  },
+  {
+    "id": 355,
+    "image": "0355_q355_Question_355.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "ocr_preview": "CAU HOI Given that = 2 is a eigenvalue of the matrix 4 Find an eigenvector corresponding to eigenvalue A = 2. 56 DAP AN cAN CHON CAc DAP AN A. [1, 0,0"
+  },
+  {
+    "id": 356,
+    "image": "0356_q356_Question_356.png",
+    "bank_answer": "C",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Find 22 (In(22) + 1) + C (ii) 2x2 (In(21) _ 1)+C S0 DAP AN CAN CHON CAc DAP AN None of the other choices is correct E. (ii)"
+  },
+  {
+    "id": 357,
+    "image": "0357_q357_Question_357.png",
+    "bank_answer": "D",
+    "folder": "GT1",
+    "topic": "HamSo",
+    "ocr_preview": "CAU HOI Evaluate \"(2x + tdx (2x + +C +1+C +C 80 DAP AN CAN CHON CAc DAP AN None of them E.] (iv) IJer + 1)er\"+1"
+  },
+  {
+    "id": 358,
+    "image": "0358_q358_Question_358.png",
+    "bank_answer": "D",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "ocr_preview": "CAU HOI Find the inverse of the matrix 4 = [413] 3/2 1/2 1/2 1/2 3/2 -1/2 1/2 1/2 3/2 1/27 (iii) 1-1/2 ~3/2 1/2 1/2 1/2 56 DAP AN cAN CHON CAc DAP AN "
+  },
+  {
+    "id": 359,
+    "image": "0359_q359_Question_359.png",
+    "bank_answer": "A",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinh",
+    "ocr_preview": "CAU HOI How many solutions are possible for homogeneous linear system of three equations in six variables? 56 DAP AN cAN CHON CAc DAP AN Infinitely ma"
+  },
+  {
+    "id": 360,
+    "image": "0360_q360_Question_360.png",
+    "bank_answer": "B",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "ocr_preview": "CAU HOI Use right-endpoint approximation to approximate the area under the curve of f(r) =22 _ 2+4 [0, 2] with n = 4 subintervals_ 56 DAP AN cAN CHON "
+  }
+]

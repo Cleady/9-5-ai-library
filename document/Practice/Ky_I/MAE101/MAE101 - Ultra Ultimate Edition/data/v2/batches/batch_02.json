@@ -1,0 +1,1152 @@
+[
+  {
+    "id": 41,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Estimate the area of under the graph of \\[f(x) = 9 - x^2\\] from \\(x = 0\\) to \\(x = 3\\), using three approximating rectangles and left endpoints.",
+    "options": [
+      "22",
+      "13",
+      "21",
+      "14"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Khoảng \\([a, b] = [0, 3]\\) được chia làm \\(n = 3\\) đoạn con bằng nhau. Độ rộng mỗi đoạn là: \\[\\Delta x = \\dfrac{3 - 0}{3} = 1.\\]",
+      "**Bước 2:** Các điểm đầu mút trái (left endpoints) của 3 đoạn con là: \\(x_0 = 0\\), \\(x_1 = 1\\), \\(x_2 = 2\\).",
+      "**Bước 3:** Tính giá trị hàm số \\(f(x) = 9 - x^2\\) tại các điểm mút trái:\n- \\(f(0) = 9 - 0^2 = 9\\)\n- \\(f(1) = 9 - 1^2 = 8\\)\n- \\(f(2) = 9 - 2^2 = 5\\)",
+      "**Bước 4:** Tổng diện tích các hình chữ nhật xấp xỉ bằng tổng Riemann mút trái: \\[L_3 = \\Delta x \\cdot [f(0) + f(1) + f(2)] = 1 \\cdot (9 + 8 + 5) = 22.\\]",
+      "**Kết luận:** Diện tích xấp xỉ là 22, ứng với lựa chọn A."
+    ],
+    "image": "0041_q041_Question_41.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 42,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A\\) be a \\(3 \\times 5\\) matrix. What is the maximum value of \\(\\operatorname{rank}(A)\\)?",
+    "options": [
+      "2",
+      "4",
+      "5",
+      "None of the other choices is correct",
+      "3"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Hạng của ma trận \\(A\\) kích thước \\(m \\times n\\) được định nghĩa là số lượng hàng (hoặc cột) độc lập tuyến tính tối đa.",
+      "**Bước 2:** Theo tính chất cơ bản của hạng ma trận: \\[\\operatorname{rank}(A) \\le \\min(m, n).\\]",
+      "**Bước 3:** Với ma trận \\(A\\) có kích thước \\(3 \\times 5\\), ta có: \\[\\operatorname{rank}(A) \\le \\min(3, 5) = 3.\\]",
+      "**Kết luận:** Giá trị lớn nhất có thể của \\(\\operatorname{rank}(A)\\) là 3, ứng với lựa chọn E."
+    ],
+    "image": "0042_q042_Question_42.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 43,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "type": "single_choice",
+    "question": "Find the dimension of the subspace spanned by the set \\[\\{(1, -1, 2), (0, 2, -3), (1, -3, 5), (1, 1, -1)\\}\\]",
+    "options": [
+      "4",
+      "2",
+      "0",
+      "1",
+      "3"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Số chiều của không gian con sinh bởi tập vector bằng hạng của ma trận tạo bởi các vector đó: \\[A = \\begin{bmatrix} 1 & -1 & 2 \\\\ 0 & 2 & -3 \\\\ 1 & -3 & 5 \\\\ 1 & 1 & -1 \\end{bmatrix}.\\]",
+      "**Bước 2:** Biến đổi hàng sơ cấp:\n- \\(R_3 \\to R_3 - R_1 = (0, -2, 3) = -R_2\\).\n- \\(R_4 \\to R_4 - R_1 = (0, 2, -3) = R_2\\).",
+      "**Bước 3:** Sau khi triệt tiêu hàng 3 và hàng 4 bằng hàng 2, ta được 2 hàng độc lập tuyến tính khác không là \\(R_1 = (1, -1, 2)\\) và \\(R_2 = (0, 2, -3)\\).",
+      "**Kết luận:** Hạng ma trận bằng 2, vậy số chiều của không gian con là 2, ứng với lựa chọn B."
+    ],
+    "image": "0043_q043_Question_43.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 44,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinh",
+    "type": "single_choice",
+    "question": "Find values of \\(m\\) so that the system \\[\\begin{cases} x + 2y - 3z = 4 \\\\ 3x - 4y + 5z = 6 \\\\ -2x + y + mz = 0 \\end{cases}\\] has infinitely many solutions.",
+    "options": [
+      "None of the other choices is correct",
+      "1",
+      "All numbers",
+      "13",
+      "system cannot have infinitely many solutions",
+      "-1"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Lập ma trận bổ sung của hệ: \\[\\bar{A} = \\left[\\begin{array}{ccc|c} 1 & 2 & -3 & 4 \\\\ 3 & -4 & 5 & 6 \\\\ -2 & 1 & m & 0 \\end{array}\\right].\\]",
+      "**Bước 2:** Thực hiện các phép biến đổi hàng:\n- \\(R_2 \\to R_2 - 3R_1 = [0, -10, 14, -6]\\).\n- \\(R_3 \\to R_3 + 2R_1 = [0, 5, m - 6, 8]\\).",
+      "**Bước 3:** Chia \\(R_2\\) cho \\(-2\\) được \\([0, 5, -7, 3]\\). Lấy \\(R_3 - (R_2 / -2)\\):\n\\[R_3 = [0, 0, (m - 6) - (-7), 8 - 3] = [0, 0, m + 1, 5].\\]",
+      "**Bước 4:** Hàng cuối tương đương phương trình \\((m + 1)z = 5\\):\n- Nếu \\(m = -1\\): phương trình trở thành \\(0z = 5\\) (vô nghiệm).\n- Nếu \\(m \\neq -1\\): hệ có nghiệm duy nhất.\nDo đó không tồn tại giá trị nào của \\(m\\) để hệ có vô số nghiệm.",
+      "**Kết luận:** Hệ không thể có vô số nghiệm (\"system cannot have infinitely many solutions\"), ứng với lựa chọn E."
+    ],
+    "image": "0044_q044_Question_44.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 45,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "DinhThuc",
+    "type": "single_choice",
+    "question": "Let \\(A\\) be a \\(3 \\times 3\\) matrix. Choose correct statements:\n\\[(i) \\; \\det(-A) = -\\det(A)\\]\n\\[(ii) \\; \\text{If } A \\text{ has two equal rows, then } \\det(A) = 0\\]\n\\[(iii) \\; \\text{If } \\det(A) = 0, \\text{ then } A \\text{ has two equal rows.}\\]",
+    "options": [
+      "(ii) and (iii)",
+      "(i) and (ii)",
+      "All of (i), (ii) and (iii)",
+      "(iii)",
+      "(i) and (iii)"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xét khẳng định (i): Với ma trận vuông cấp \\(n\\), ta có công thức \\(\\det(cA) = c^n \\det(A)\\). Với \\(n = 3\\) và \\(c = -1\\), suy ra \\(\\det(-A) = (-1)^3 \\det(A) = -\\det(A)\\). Vậy (i) ĐÚNG.",
+      "**Bước 2:** Xét khẳng định (ii): Tính chất định thức chỉ ra rằng nếu ma trận có 2 hàng giống nhau thì định thức luôn bằng 0. Vậy (ii) ĐÚNG.",
+      "**Bước 3:** Xét khẳng định (iii): \\(\\det(A) = 0\\) chỉ yêu cầu các hàng phụ thuộc tuyến tính, không nhất thiết phải có 2 hàng giống nhau (ví dụ một hàng chứa toàn số 0, hoặc một hàng là tổng 2 hàng khác nhưng các hàng đôi một khác nhau). Vậy (iii) SAI.",
+      "**Kết luận:** Khẳng định (i) và (ii) đúng, tương ứng với lựa chọn B."
+    ],
+    "image": "0045_q045_Question_45.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 46,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Use the Simpson's Rule with \\(n = 4\\) steps to approximate the integral \\[\\int_1^5 x \\cos x \\, dx\\]",
+    "options": [
+      "-3.43",
+      "-5.92",
+      "None of the other choices is correct",
+      "-6.26",
+      "-6.89"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Khoảng tích phân \\([a, b] = [1, 5]\\) được chia thành \\(n = 4\\) đoạn con. Độ dài mỗi bước: \\[h = \\dfrac{b - a}{n} = \\dfrac{5 - 1}{4} = 1.\\] Các mốc điểm chia: \\(x_0 = 1, x_1 = 2, x_2 = 3, x_3 = 4, x_4 = 5\\).",
+      "**Bước 2:** Tính giá trị hàm số \\(f(x) = x \\cos x\\) tại các mốc (đo bằng radian): \\(f(1) \\approx 0.54030\\), \\(f(2) \\approx -0.83229\\), \\(f(3) \\approx -2.96998\\), \\(f(4) \\approx -2.61457\\), \\(f(5) \\approx 1.41831\\).",
+      "**Bước 3:** Áp dụng công thức Simpson: \\[S_4 = \\dfrac{h}{3} [f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + f(x_4)].\\]",
+      "**Bước 4:** Thay số: \\[S_4 = \\dfrac{1}{3} [0.54030 + 4(-0.83229) + 2(-2.96998) + 4(-2.61457) + 1.41831] = \\dfrac{1}{3} [-17.76881] \\approx -5.92.\\]",
+      "**Kết luận:** Giá trị xấp xỉ bằng \\(-5.92\\), tương ứng với lựa chọn B."
+    ],
+    "image": "0046_q046_Question_46.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 47,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Evaluate \\[\\int \\dfrac{15e^{7x}\\,dx}{e^{7x} + 1}\\]\n\\[(i) \\; 15\\ln(e^{7x} + 1) + C \\quad (ii) \\; (7/15)\\ln(e^{7x} + 1) + C \\quad (iii) \\; (5/7)\\ln(e^{7x} + 1) + C \\quad (iv) \\; (15/7)\\ln(e^{7x} + 1) + C\\]",
+    "options": [
+      "(iv)",
+      "(iii)",
+      "(i)",
+      "(ii)",
+      "None of the other choices is correct"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Đặt ẩn phụ \\(u = e^{7x} + 1\\).",
+      "**Bước 2:** Lấy vi phân hai vế: \\(du = 7e^{7x}\\,dx \\implies e^{7x}\\,dx = \\dfrac{du}{7}\\).",
+      "**Bước 3:** Thay vào tích phân ban đầu: \\[\\int \\dfrac{15e^{7x}\\,dx}{e^{7x} + 1} = \\int \\dfrac{15}{u} \\cdot \\dfrac{du}{7} = \\dfrac{15}{7} \\int \\dfrac{1}{u}\\,du = \\dfrac{15}{7}\\ln|u| + C = (15/7)\\ln(e^{7x} + 1) + C.\\]",
+      "**Kết luận:** Kết quả khớp với biểu thức (iv), ứng với lựa chọn A."
+    ],
+    "image": "0047_q047_Question_47.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 48,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinh",
+    "type": "single_choice",
+    "question": "Find \\(c\\) such that the graph of \\(y = a + bx + cx^2\\) passes through \\((0, 5)\\), \\((-1, -7)\\), \\((2, 11)\\).",
+    "options": [
+      "-3",
+      "9",
+      "None of the other choices is correct",
+      "3",
+      "-9"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Thay tọa độ điểm \\((0, 5)\\) vào phương trình: \\(5 = a + b(0) + c(0)^2 \\implies a = 5\\).",
+      "**Bước 2:** Thay \\(a = 5\\) và điểm \\((-1, -7)\\) vào phương trình: \\(-7 = 5 - b + c \\implies -b + c = -12 \\implies b - c = 12\\).",
+      "**Bước 3:** Thay \\(a = 5\\) và điểm \\((2, 11)\\) vào phương trình: \\(11 = 5 + 2b + 4c \\implies 2b + 4c = 6 \\implies b + 2c = 3\\).",
+      "**Bước 4:** Trừ hai phương trình: \\((b + 2c) - (b - c) = 3 - 12 \\implies 3c = -9 \\implies c = -3\\).",
+      "**Kết luận:** Giá trị \\(c = -3\\), ứng với lựa chọn A."
+    ],
+    "image": "0048_q048_Question_48.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 49,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Let \\[\\int_1^6 f(x)\\,dx = 12, \\quad \\int_5^6 f(x)\\,dx = 10.\\] Find \\[\\int_1^5 f(x)\\,dx.\\]",
+    "options": [
+      "None of the other choices is correct",
+      "-2",
+      "0",
+      "-22",
+      "22",
+      "2"
+    ],
+    "answer": "F",
+    "answer_original": "F",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Áp dụng tính chất cộng khoảng của tích phân xác định: \\[\\int_1^6 f(x)\\,dx = \\int_1^5 f(x)\\,dx + \\int_5^6 f(x)\\,dx.\\]",
+      "**Bước 2:** Suy ra: \\[\\int_1^5 f(x)\\,dx = \\int_1^6 f(x)\\,dx - \\int_5^6 f(x)\\,dx.\\]",
+      "**Bước 3:** Thay các giá trị đã cho: \\[\\int_1^5 f(x)\\,dx = 12 - 10 = 2.\\]",
+      "**Kết luận:** Giá trị cần tìm là 2, ứng với lựa chọn F."
+    ],
+    "image": "0049_q049_Question_49.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 50,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "AnhXaTuyenTinh",
+    "type": "single_choice",
+    "question": "Let \\(T : \\mathbb{R}^3 \\to \\mathbb{R}^2\\) be a linear map and \\[T \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} = \\begin{bmatrix} 5 \\\\ 1 \\end{bmatrix}, \\quad T \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\end{pmatrix} = \\begin{bmatrix} 2 \\\\ 0 \\end{bmatrix}.\\] Then \\(T \\begin{pmatrix} 5 \\\\ -1 \\\\ 2 \\end{pmatrix}\\) is...\n\\[(i) \\; \\begin{bmatrix} 4 \\\\ 2 \\end{bmatrix} \\quad (ii) \\; \\begin{bmatrix} 2 \\\\ 4 \\end{bmatrix} \\quad (iii) \\; \\begin{bmatrix} 2 \\\\ -3 \\end{bmatrix}\\]",
+    "options": [
+      "(iii)",
+      "None of the others",
+      "(i)",
+      "(ii)"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Biểu diễn vector \\((5, -1, 2)^T\\) qua hai vector đã biết: \\[\\begin{pmatrix} 5 \\\\ -1 \\\\ 2 \\end{pmatrix} = c_1 \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} + c_2 \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\end{pmatrix}.\\]",
+      "**Bước 2:** Xét tọa độ thứ ba: \\(2 = c_1(1) + c_2(0) \\implies c_1 = 2\\).",
+      "**Bước 3:** Xét tọa độ thứ hai: \\(-1 = c_1(1) + c_2(1) = 2 + c_2 \\implies c_2 = -3\\). Kiểm tra lại tọa độ thứ nhất: \\(2(1) + (-3)(-1) = 5\\) (hoàn toàn thỏa mãn).",
+      "**Bước 4:** Do tính tuyến tính của ánh xạ \\(T\\):\n\\[T \\begin{pmatrix} 5 \\\\ -1 \\\\ 2 \\end{pmatrix} = 2 T \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} - 3 T \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\end{pmatrix} = 2 \\begin{bmatrix} 5 \\\\ 1 \\end{bmatrix} - 3 \\begin{bmatrix} 2 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 10 - 6 \\\\ 2 - 0 \\end{bmatrix} = \\begin{bmatrix} 4 \\\\ 2 \\end{bmatrix}.\\]",
+      "**Kết luận:** Kết quả là (i), tương ứng với lựa chọn C."
+    ],
+    "image": "0050_q050_Question_50.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 51,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "TriRieng",
+    "type": "single_choice",
+    "question": "Given \\[A = \\begin{bmatrix} 0 & 1 \\\\ -2 & 3 \\end{bmatrix}.\\] Which of the following statements is true?",
+    "options": [
+      "2 is an eigenvalue",
+      "None of the other choices is correct",
+      "-3 is an eigenvalue",
+      "0 and 3 are eigenvalues"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Lập phương trình đặc trưng của ma trận \\(A\\): \\[\\det(A - \\lambda I) = \\begin{vmatrix} -\\lambda & 1 \\\\ -2 & 3 - \\lambda \\end{vmatrix} = 0.\\]",
+      "**Bước 2:** Khai triển định thức: \\[(-\\lambda)(3 - \\lambda) - (1)(-2) = \\lambda^2 - 3\\lambda + 2 = 0.\\]",
+      "**Bước 3:** Giải phương trình bậc hai: \\[\\lambda^2 - 3\\lambda + 2 = (\\lambda - 1)(\\lambda - 2) = 0 \\implies \\lambda_1 = 1, \\; \\lambda_2 = 2.\\]",
+      "**Kết luận:** Giá trị 2 là một trị riêng của ma trận (\"2 is an eigenvalue\"), ứng với lựa chọn A."
+    ],
+    "image": "0051_q051_Question_51.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 52,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "type": "single_choice",
+    "question": "If 1200 area units of material is available to make a box with a square base and an open top, find the largest possible volume of the box.",
+    "options": [
+      "32000",
+      "None of the other choices is correct",
+      "4000",
+      "2000",
+      "16000",
+      "8000"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Gọi cạnh đáy hình vuông là \\(x\\) (đơn vị độ dài) và chiều cao là \\(h\\). Do hộp không có nắp trên, diện tích toàn phần gồm 1 đáy và 4 mặt bên: \\[S = x^2 + 4xh = 1200 \\implies h = \\dfrac{1200 - x^2}{4x} = \\dfrac{300}{x} - \\dfrac{x}{4}.\\]",
+      "**Bước 2:** Thể tích của hộp là hàm theo \\(x\\): \\[V(x) = x^2 h = x^2 \\left(\\dfrac{300}{x} - \\dfrac{x}{4}\\right) = 300x - \\dfrac{x^3}{4}.\\]",
+      "**Bước 3:** Lấy đạo hàm tìm cực trị: \\[V'(x) = 300 - \\dfrac{3}{4}x^2 = 0 \\implies \\dfrac{3}{4}x^2 = 300 \\implies x^2 = 400 \\implies x = 20.\\]",
+      "**Bước 4:** Với \\(x = 20\\), chiều cao tương ứng: \\(h = \\dfrac{1200 - 400}{4(20)} = 10\\). Thể tích cực đại đạt được là: \\[V_{\\max} = 20^2 \\cdot 10 = 4000.\\]",
+      "**Kết luận:** Thể tích lớn nhất có thể là 4000, ứng với lựa chọn C."
+    ],
+    "image": "0052_q052_Question_52.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 53,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(A(1, 2, -4)\\), \\(B(0, 1, -2)\\), \\(C(3, 1, 0)\\). Find the distance from the point A to the line passing through the points B and C. \\[(i) \\; 7\\sqrt{\\dfrac{11}{13}} \\quad (ii) \\; 2\\sqrt{\\dfrac{77}{13}} \\quad (iii) \\; \\sqrt{\\dfrac{77}{13}} \\quad (iv) \\; 14\\sqrt{\\dfrac{11}{13}}\\]",
+    "options": [
+      "(iii)",
+      "None of the other choices is correct",
+      "(iv)",
+      "(i)",
+      "(ii)"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Tìm vector chỉ phương của đường thẳng \\(BC\\): \\[\\vec{BC} = C - B = (3 - 0, 1 - 1, 0 - (-2)) = (3, 0, 2).\\] Vector nối \\(B\\) với \\(A\\): \\[\\vec{BA} = A - B = (1 - 0, 2 - 1, -4 - (-2)) = (1, 1, -2).\\]",
+      "**Bước 2:** Tính tích có hướng: \\[\\vec{BC} \\times \\vec{BA} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 3 & 0 & 2 \\\\ 1 & 1 & -2 \\end{vmatrix} = (-2)\\mathbf{i} - (-6 - 2)\\mathbf{j} + (3)\\mathbf{k} = (-2, 8, 3).\\]",
+      "**Bước 3:** Tính độ dài các vector: \\(\\|\\vec{BC} \\times \\vec{BA}\\| = \\sqrt{(-2)^2 + 8^2 + 3^2} = \\sqrt{77}\\), và \\(\\|\\vec{BC}\\| = \\sqrt{3^2 + 0^2 + 2^2} = \\sqrt{13}\\).",
+      "**Bước 4:** Khoảng cách từ điểm \\(A\\) đến đường thẳng \\(BC\\) là: \\[d = \\dfrac{\\|\\vec{BC} \\times \\vec{BA}\\|}{\\|\\vec{BC}\\|} = \\dfrac{\\sqrt{77}}{\\sqrt{13}} = \\sqrt{\\dfrac{77}{13}}.\\] Biểu thức này khớp với (iii).",
+      "**Kết luận:** Đáp án đúng là A ((iii))."
+    ],
+    "image": "0053_q053_Question_53.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 54,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Given two vectors \\(X, Y\\) such that the vectors \\(\\dfrac{1}{3}X\\) and \\(\\dfrac{1}{2}Y\\) are unit vectors and orthogonal. Compute \\((X - 2Y) \\cdot (2X + Y)\\).",
+    "options": [
+      "4",
+      "12",
+      "6",
+      "8",
+      "10"
+    ],
+    "answer": "E",
+    "answer_original": "B",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Vì \\(\\dfrac{1}{3}X\\) và \\(\\dfrac{1}{2}Y\\) là các vector đơn vị nên:\n\\[\\left\\|\\dfrac{1}{3}X\\right\\| = 1 \\implies \\|X\\| = 3 \\implies \\|X\\|^2 = X \\cdot X = 9,\\]\n\\[\\left\\|\\dfrac{1}{2}Y\\right\\| = 1 \\implies \\|Y\\| = 2 \\implies \\|Y\\|^2 = Y \\cdot Y = 4.\\]",
+      "**Bước 2:** Vì hai vector trực giao nên tích vô hướng: \\[X \\cdot Y = 0.\\]",
+      "**Bước 3:** Khai triển tích vô hướng cần tính:\n\\[(X - 2Y) \\cdot (2X + Y) = 2(X \\cdot X) + X \\cdot Y - 4(Y \\cdot X) - 2(Y \\cdot Y) = 2\\|X\\|^2 - 3(X \\cdot Y) - 2\\|Y\\|^2.\\]",
+      "**Bước 4:** Thay các số trị vào biểu thức: \\[2(9) - 3(0) - 2(4) = 18 - 8 = 10.\\]",
+      "**Lưu ý lệch đáp án gốc:** Đề thi gốc đánh dấu đáp án B (12), tuy nhiên tính toán đại số vector chính xác tuyệt đối cho kết quả là 10 (lựa chọn E)."
+    ],
+    "image": "0054_q054_Question_54.png",
+    "needs_image": false,
+    "review_flags": [
+      "answer_conflict_original_B_math_E"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 55,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "type": "single_choice",
+    "question": "Let \\[U = \\{(a, b, c, d) \\mid 3a - 5d = 0, \\; b + c + d = 0\\}\\] be a subspace of \\(\\mathbb{R}^4\\). Find the dimension of \\(U\\).",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Không gian con \\(U\\) là không gian nghiệm (nullspace) của hệ gồm 2 phương trình tuyến tính thuần nhất trên 4 ẩn trong \\(\\mathbb{R}^4\\): \\[\\begin{cases} 3a + 0b + 0c - 5d = 0 \\\\ 0a + b + c + d = 0 \\end{cases}\\]",
+      "**Bước 2:** Ma trận hệ số của hệ là: \\[A = \\begin{bmatrix} 3 & 0 & 0 & -5 \\\\ 0 & 1 & 1 & 1 \\end{bmatrix}.\\] Do hai hàng độc lập tuyến tính nên hạng của ma trận \\(\\operatorname{rank}(A) = 2\\).",
+      "**Bước 3:** Áp dụng định lý hạng và số chiều (Rank-Nullity Theorem): số chiều của không gian nghiệm \\(U\\) bằng số ẩn trừ đi hạng: \\[\\dim(U) = n - \\operatorname{rank}(A) = 4 - 2 = 2.\\]",
+      "**Kết luận:** Số chiều của \\(U\\) bằng 2, ứng với lựa chọn C."
+    ],
+    "image": "0055_q055_Question_55.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 56,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Let \\(A\\) be a \\(4 \\times 3\\) matrix and \\(B\\) a \\(3 \\times 4\\) matrix. Assume that \\(AB\\) has rank 2. Find \\(\\dim(\\operatorname{Null}(AB))\\).",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "3"
+    ],
+    "answer": "B",
+    "answer_original": "C",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Xét kích thước của tích ma trận: Ma trận \\(A\\) có cỡ \\(4 \\times 3\\) và \\(B\\) có cỡ \\(3 \\times 4\\), nên ma trận tích \\(AB\\) có cỡ \\(4 \\times 4\\).",
+      "**Bước 2:** Số cột của ma trận \\(AB\\) là \\(n = 4\\).",
+      "**Bước 3:** Áp dụng Định lý Hạng và Số chiều (Rank-Nullity Theorem) cho ma trận \\(AB\\): \\[\\operatorname{rank}(AB) + \\dim(\\operatorname{Null}(AB)) = n = 4.\\]",
+      "**Bước 4:** Đề bài cho biết \\(\\operatorname{rank}(AB) = 2\\), do đó: \\[\\dim(\\operatorname{Null}(AB)) = 4 - 2 = 2.\\]",
+      "**Lưu ý lệch đáp án gốc:** Đề thi gốc đánh dấu đáp án C (0), tuy nhiên theo định lý Rank-Nullity cho ma trận vuông cấp 4 có hạng bằng 2 thì số chiều không gian hạch (nullity) bắt buộc phải là 2 (lựa chọn B)."
+    ],
+    "image": "0056_q056_Question_56.png",
+    "needs_image": false,
+    "review_flags": [
+      "answer_conflict_original_C_math_B"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 57,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(\\mathbf{u}, \\mathbf{v}\\) be two vectors in \\(\\mathbb{R}^3\\) such that \\(\\|\\mathbf{u}\\| = 4\\), \\(\\|\\mathbf{v}\\| = 5\\) and \\(\\mathbf{u}, \\mathbf{v}\\) are perpendicular. Find the length of the vector \\(2\\mathbf{u} - 3\\mathbf{v}\\).",
+    "options": [
+      "20",
+      "120",
+      "80",
+      "0",
+      "40"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "uncertain",
+    "explanation": [
+      "**Bước 1:** Xét tính toán toán học cho vector hiệu \\(2\\mathbf{u} - 3\\mathbf{v}\\): Do \\(\\mathbf{u} \\perp \\mathbf{v}\\) nên \\(\\mathbf{u} \\cdot \\mathbf{v} = 0\\). Bình phương độ dài: \\[\n\\|2\\mathbf{u} - 3\\mathbf{v}\\|^2 = 4\\|\\mathbf{u}\\|^2 + 9\\|\\mathbf{v}\\|^2 = 4(16) + 9(25) = 64 + 225 = 289 \\implies \\|2\\mathbf{u} - 3\\mathbf{v}\\| = 17.\\]",
+      "**Bước 2:** Nhận thấy giá trị 17 hoàn toàn không xuất hiện trong các phương án chọn \\(\\{20, 120, 80, 0, 40\\}\\). Bộ phương án này giống hệt các phương án của câu tích có hướng (xem câu 78: tính \\(\\|2\\mathbf{u} \\times 3\\mathbf{v}\\| = 120\\)).",
+      "**Bước 3:** Đáp án gốc của đề ghi nhận là E (40), tương ứng với phép tính nhầm \\(\\|2(\\mathbf{u} \\times \\mathbf{v})\\| = 2 \\times 4 \\times 5 = 40\\) hoặc lỗi đề thi trong ngân hàng trắc nghiệm.",
+      "**Kết luận & Cảnh báo:** Câu hỏi bị lỗi đề/phương án trong ngân hàng gốc. Tạm giữ đáp án theo key gốc E (40) kèm cờ xem xét."
+    ],
+    "image": "0057_q057_Question_57.png",
+    "needs_image": false,
+    "review_flags": [
+      "defective_question_options_mismatch",
+      "needs_teacher_review"
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": 58,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Find the projection of \\(v = [0; 1; -3]\\) on the plane with equation \\(x - y + 4z = 0\\).",
+    "options": [
+      "[13/18; -5/18; -1/9]",
+      "[-13/18; 5/18; -1/9]",
+      "[13/18; 5/18; 1/9]",
+      "[13/18; 5/18; -1/9]",
+      "None of other choices is correct"
+    ],
+    "answer": "D",
+    "answer_original": "E",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Vector pháp tuyến của mặt phẳng \\(P\\) là \\(\\mathbf{n} = [1, -1, 4]\\).",
+      "**Bước 2:** Tính hình chiếu vuông góc của \\(v\\) lên pháp tuyến \\(\\mathbf{n}\\):\n\\[v \\cdot \\mathbf{n} = 0(1) + 1(-1) + (-3)(4) = -13,\\]\n\\[\\|\\mathbf{n}\\|^2 = 1^2 + (-1)^2 + 4^2 = 18.\\]\n\\[\\operatorname{proj}_{\\mathbf{n}}(v) = \\dfrac{v \\cdot \\mathbf{n}}{\\|\\mathbf{n}\\|^2} \\mathbf{n} = -\\dfrac{13}{18}[1, -1, 4] = \\left[-\\dfrac{13}{18}, \\dfrac{13}{18}, -\\dfrac{26}{9}\\right].\\]",
+      "**Bước 3:** Hình chiếu của \\(v\\) lên mặt phẳng \\(P\\) là: \\[\\operatorname{proj}_P(v) = v - \\operatorname{proj}_{\\mathbf{n}}(v) = [0, 1, -3] - \\left[-\\dfrac{13}{18}, \\dfrac{13}{18}, -\\dfrac{26}{9}\\right] = \\left[\\dfrac{13}{18}, \\dfrac{5}{18}, -\\dfrac{1}{9}\\right].\\]",
+      "**Bước 4:** Kiểm tra: Thay vào phương trình mặt phẳng: \\(\\dfrac{13}{18} - \\dfrac{5}{18} + 4\\left(-\\dfrac{1}{9}\\right) = \\dfrac{8}{18} - \\dfrac{4}{9} = 0\\) (thuộc mặt phẳng).",
+      "**Lưu ý lệch đáp án gốc:** Đề thi gốc đánh dấu đáp án E (\"None\"), trong khi phương án D chính là kết quả toán học chính xác \\([13/18; 5/18; -1/9]\\)."
+    ],
+    "image": "0058_q058_Question_58.png",
+    "needs_image": false,
+    "review_flags": [
+      "answer_conflict_original_E_math_D"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 59,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Find an equation for the plane passing through \\(P(1, 3, -1)\\) and perpendicular to the vector \\([2, 1, -1]\\).",
+    "options": [
+      "x - y - 2z = 0",
+      "All of the other choices are incorrect",
+      "2(x - 1) + (y - 3) - (z + 1) = 0",
+      "(x - 2) + 3(y - 1) - (z + 1) = 0"
+    ],
+    "answer": "C",
+    "answer_original": "A",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Mặt phẳng đi qua điểm \\(P(x_0, y_0, z_0) = (1, 3, -1)\\) và vuông góc với vector \\(\\mathbf{n} = [A, B, C] = [2, 1, -1]\\) (nghĩa là \\(\\mathbf{n}\\) là vector pháp tuyến).",
+      "**Bước 2:** Phương trình tổng quát chuẩn của mặt phẳng có dạng: \\[A(x - x_0) + B(y - y_0) + C(z - z_0) = 0.\\]",
+      "**Bước 3:** Thay số trực tiếp: \\[2(x - 1) + 1(y - 3) - 1(z - (-1)) = 0 \\iff 2(x - 1) + (y - 3) - (z + 1) = 0.\\]",
+      "**Lưu ý lệch đáp án gốc:** Đề thi gốc đánh dấu đáp án A (\\(x - y - 2z = 0\\)), nhưng mặt phẳng A có pháp tuyến là \\([1, -1, -2]\\), không cùng phương với \\([2, 1, -1]\\). Phương án C mới là phương trình đúng chuẩn."
+    ],
+    "image": "0059_q059_Question_59.png",
+    "needs_image": false,
+    "review_flags": [
+      "answer_conflict_original_A_math_C"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 60,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "type": "single_choice",
+    "question": "Which of the following are subspace of \\(\\mathbb{R}^3\\)?\n\\[(i) \\; U = \\{(a + b, 3a - b, 2a + b) \\mid a, b \\in \\mathbb{R}\\}\\]\n\\[(ii) \\; U = \\{(a, b, c) \\mid a^2 + b^2 - c^2 = 0\\}\\]",
+    "options": [
+      "Neither (i) or (ii)",
+      "Only (i)",
+      "Both (i) and (ii)",
+      "Only (ii)"
+    ],
+    "answer": "B",
+    "answer_original": "C",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Xét tập (i): Vector \\((a+b, 3a-b, 2a+b) = a(1, 3, 2) + b(1, -1, 1)\\). Đây là bao tuyến tính \\(\\operatorname{span}\\{(1, 3, 2), (1, -1, 1)\\}\\). Mọi bao tuyến tính luôn là một không gian con của \\(\\mathbb{R}^3\\). Vậy (i) ĐÚNG.",
+      "**Bước 2:** Xét tập (ii): Điều kiện \\(a^2 + b^2 - c^2 = 0\\) là phương trình mặt nón bậc hai, không đóng kín đối với phép cộng vector. Phản ví dụ: Lấy \\(\\mathbf{u} = (1, 0, 1)\\) (thỏa \\(1^2 + 0^2 - 1^2 = 0\\)) và \\(\\mathbf{v} = (0, 1, 1)\\) (thỏa \\(0^2 + 1^2 - 1^2 = 0\\)). Khi đó \\(\\mathbf{u} + \\mathbf{v} = (1, 1, 2)\\), ta có: \\(1^2 + 1^2 - 2^2 = -2 \\neq 0\\). Do đó \\(\\mathbf{u} + \\mathbf{v} \\notin U\\). Vậy (ii) SAI.",
+      "**Lưu ý lệch đáp án gốc:** Đề thi gốc đánh dấu đáp án C (\"Both\"), nhưng tập phi tuyến bậc hai (ii) không thỏa tiên đề cộng của không gian vector. Đáp án toán học đúng là B (\"Only (i)\")."
+    ],
+    "image": "0060_q060_Question_60.png",
+    "needs_image": false,
+    "review_flags": [
+      "answer_conflict_original_C_math_B"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 61,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Find all points \\(C\\) on the line passing through the points \\(A(1, -1, 1)\\) and \\(B(3, 0, 5)\\) such that \\(\\|\\vec{AC}\\| = 3\\|\\vec{BC}\\|\\).",
+    "options": [
+      "C(4, 1/2, 7) or C(5/2, -1/4, 4)",
+      "None of the other choices is correct",
+      "C(2, 1/4, -3)",
+      "C(5/2, -1, 0) or C(1, -1/3, 0)"
+    ],
+    "answer": "A",
+    "answer_original": "B",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Vector chỉ phương đường thẳng \\(AB\\): \\[\\vec{AB} = B - A = (2, 1, 4).\\] Điểm \\(C\\) thuộc đường thẳng có tọa độ biểu diễn qua tham số \\(t\\): \\(\\vec{AC} = t\\vec{AB}\\).",
+      "**Bước 2:** Khi đó: \\[\\vec{BC} = \\vec{AC} - \\vec{AB} = (t - 1)\\vec{AB}.\\]",
+      "**Bước 3:** Điều kiện \\(\\|\\vec{AC}\\| = 3\\|\\vec{BC}\\|\\) tương đương với: \\[|t| = 3|t - 1|.\\]\n- Trường hợp 1: \\(t = 3(t - 1) \\implies 2t = 3 \\implies t = 3/2\\). Khi đó: \\[C = A + \\dfrac{3}{2}(2, 1, 4) = (1 + 3, -1 + 1/2, 1 + 6) = (4, 1/2, 7).\\]\n- Trường hợp 2: \\(t = -3(t - 1) \\implies 4t = 3 \\implies t = 3/4\\). Khi đó: \\[C = A + \\dfrac{3}{4}(2, 1, 4) = (1 + 3/2, -1 + 3/4, 1 + 3) = (5/2, -1/4, 4).\\]",
+      "**Lưu ý lệch đáp án gốc:** Đề thi gốc đánh dấu đáp án B (\"None\"), tuy nhiên phương án A chứa chính xác tọa độ của cả 2 điểm nghiệm tìm được."
+    ],
+    "image": "0061_q061_Question_61.png",
+    "needs_image": false,
+    "review_flags": [
+      "answer_conflict_original_B_math_A"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 62,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let ABCD be a parallelogram with \\(A(1, 2, 3), C(5, 0, 1)\\). Assume that \\(M(0, 1, 2)\\) is the midpoint of AB. Find the coordinates of vector \\(\\vec{BD}\\).",
+    "options": [
+      "(7, 1, 2)",
+      "(1, 1, -2)",
+      "(6, 2, 2)",
+      "(6, -2, -2)",
+      "None of the other choices is correct"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Vì \\(M(0, 1, 2)\\) là trung điểm của cạnh \\(AB\\), ta tìm được tọa độ đỉnh \\(B\\): \\[B = 2M - A = 2(0, 1, 2) - (1, 2, 3) = (-1, 0, 1).\\]",
+      "**Bước 2:** Trong hình bình hành \\(ABCD\\), hai đường chéo cắt nhau tại trung điểm \\(I\\) của mỗi đường. Trung điểm \\(I\\) của \\(AC\\) là: \\[I = \\dfrac{A + C}{2} = \\left(\\dfrac{1+5}{2}, \\dfrac{2+0}{2}, \\dfrac{3+1}{2}\\right) = (3, 1, 2).\\]",
+      "**Bước 3:** Vector \\(\\vec{BD}\\) có trung điểm là \\(I\\), do đó: \\[\\vec{BD} = 2\\vec{BI} = 2(I - B) = 2(3 - (-1), 1 - 0, 2 - 1) = 2(4, 1, 1) = (8, 2, 2).\\]",
+      "**Kết luận:** Vector \\(\\vec{BD} = (8, 2, 2)\\), không trùng với bất kỳ phương án A, B, C, D nào. Do đó đáp án đúng là E (\"None of the other choices is correct\")."
+    ],
+    "image": "0062_q062_Question_62.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 63,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Find parametric equations of the line containing \\((-5, 0, 1)\\) and parallel to the two planes \\(2x - 4y + z = 0\\) and \\(x - 3y - 2z = 1\\).",
+    "options": [
+      "x = -5t; y = 0; z = t",
+      "x = 5t; y = 0; z = t",
+      "x = -5 + 11t; y = 5t; z = 1 - 2t",
+      "x = -5 + 11t; y = -3t; z = 1 + 2t",
+      "None of the other choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Vector pháp tuyến của hai mặt phẳng lần lượt là: \\[\\mathbf{n}_1 = (2, -4, 1), \\quad \\mathbf{n}_2 = (1, -3, -2).\\]",
+      "**Bước 2:** Đường thẳng song song với cả hai mặt phẳng sẽ vuông góc với cả hai vector pháp tuyến, do đó có vector chỉ phương cùng phương với tích có hướng: \\[\\mathbf{v} = \\mathbf{n}_1 \\times \\mathbf{n}_2 = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 2 & -4 & 1 \\\\ 1 & -3 & -2 \\end{vmatrix} = (8 + 3)\\mathbf{i} - (-4 - 1)\\mathbf{j} + (-6 + 4)\\mathbf{k} = (11, 5, -2).\\]",
+      "**Bước 3:** Đường thẳng đi qua điểm \\((-5, 0, 1)\\) với vector chỉ phương \\((11, 5, -2)\\) có phương trình tham số: \\[x = -5 + 11t, \\quad y = 5t, \\quad z = 1 - 2t.\\]",
+      "**Kết luận:** Khớp hoàn toàn với phương án C."
+    ],
+    "image": "0063_q063_Question_63.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 64,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "type": "single_choice",
+    "question": "Which of the following are subspaces?\n\\[U = \\{[x, y] \\mid x = 2y\\}\\]\n\\[V = \\{[x, y] \\mid xy = 0\\}\\]",
+    "options": [
+      "Both U and V",
+      "U only",
+      "None of U and V",
+      "V only"
+    ],
+    "answer": "B",
+    "answer_original": "D",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Xét tập \\(U = \\{[x, y] \\mid x - 2y = 0\\}\\): Đây là đường thẳng đi qua gốc tọa độ trong \\(\\mathbb{R}^2\\), đóng kín với phép cộng và nhân vô hướng, do đó \\(U\\) là một không gian con.",
+      "**Bước 2:** Xét tập \\(V = \\{[x, y] \\mid xy = 0\\}\\): Tập này là hợp của trục hoành (\\(y = 0\\)) và trục tung (\\(x = 0\\)). Lấy \\(\\mathbf{u} = [1, 0] \\in V\\) và \\(\\mathbf{v} = [0, 1] \\in V\\). Khi đó \\(\\mathbf{u} + \\mathbf{v} = [1, 1]\\), nhưng \\(1 \\cdot 1 = 1 \\neq 0\\) nên \\(\\mathbf{u} + \\mathbf{v} \\notin V\\). Tập \\(V\\) không đóng kín đối với phép cộng nên không phải không gian con.",
+      "**Lưu ý lệch đáp án gốc:** Đề gốc đánh dấu đáp án D (\"V only\"), đây là sai lầm rõ ràng trong ngân hàng trắc nghiệm. Đáp án toán học chính xác là B (\"U only\")."
+    ],
+    "image": "0064_q064_Question_64.png",
+    "needs_image": false,
+    "review_flags": [
+      "answer_conflict_original_D_math_B"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 65,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Which of the following sets are orthogonal?\n\\[(i) \\; \\{[1, -2, 0, 3], [2, 1, 0, 0], [0, 0, 1, 1]\\}\\]\n\\[(ii) \\; \\{[1, 0, 0], [0, 1, 0], [0, 1, 1]\\}\\]\n\\[(iii) \\; \\{[1, -1, 3], [-2, 1, 1], [4, 7, 1]\\}\\]",
+    "options": [
+      "(iii)",
+      "(ii)",
+      "All of the other choices are incorrect",
+      "(i)"
+    ],
+    "answer": "A",
+    "answer_original": "C",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Tập vector trực giao khi và chỉ khi mọi cặp vector phân biệt đều có tích vô hướng bằng 0.",
+      "**Bước 2:** Xét tập (i): Vector 1 và vector 3 có tích vô hướng là \\(1(0) + (-2)(0) + 0(1) + 3(1) = 3 \\neq 0\\). Không trực giao.",
+      "**Bước 3:** Xét tập (ii): Vector 2 và vector 3 có tích vô hướng là \\(0(0) + 1(1) + 0(1) = 1 \\neq 0\\). Không trực giao.",
+      "**Bước 4:** Xét tập (iii):\n- \\(v_1 \\cdot v_2 = 1(-2) + (-1)(1) + 3(1) = -2 - 1 + 3 = 0\\).\n- \\(v_1 \\cdot v_3 = 1(4) + (-1)(7) + 3(1) = 4 - 7 + 3 = 0\\).\n- \\(v_2 \\cdot v_3 = (-2)(4) + 1(7) + 1(1) = -8 + 7 + 1 = 0\\).\nTất cả các cặp đều trực giao, do đó tập (iii) là tập trực giao.",
+      "**Lưu ý lệch đáp án gốc:** Đề gốc đánh dấu đáp án C (\"All incorrect\"), tuy nhiên tập (iii) thỏa mãn trực giao đôi một tuyệt đối, tương ứng phương án A."
+    ],
+    "image": "0065_q065_Question_65.png",
+    "needs_image": false,
+    "review_flags": [
+      "answer_conflict_original_C_math_A"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 66,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Calculate \\(\\mathbf{u} \\times (\\mathbf{v} \\times \\mathbf{w})\\) where \\[\\mathbf{u} = \\begin{bmatrix} 2 \\\\ 8 \\\\ 5 \\end{bmatrix}, \\quad \\mathbf{v} = \\begin{bmatrix} 1 \\\\ 4 \\\\ 7 \\end{bmatrix}, \\quad \\mathbf{w} = \\begin{bmatrix} 9 \\\\ 3 \\\\ 6 \\end{bmatrix}\\]\n\\[(i) \\; [-549, 81, 90]^T \\quad (ii) \\; [-550, 81, 90]^T \\quad (iii) \\; [-549, 82, 90]^T \\quad (iv) \\; [-549, 81, 91]^T\\]",
+    "options": [
+      "(iv)",
+      "(iii)",
+      "(i)",
+      "(ii)",
+      "None of the choices is correct"
+    ],
+    "answer": "C",
+    "answer_original": "B",
+    "answer_status": "conflict",
+    "explanation": [
+      "**Bước 1:** Tính tích có hướng \\(\\mathbf{v} \\times \\mathbf{w}\\): \\[\\mathbf{v} \\times \\mathbf{w} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 & 4 & 7 \\\\ 9 & 3 & 6 \\end{vmatrix} = (24 - 21)\\mathbf{i} - (6 - 63)\\mathbf{j} + (3 - 36)\\mathbf{k} = \\begin{bmatrix} 3 \\\\ 57 \\\\ -33 \\end{bmatrix}.\\]",
+      "**Bước 2:** Tính tích có hướng tiếp theo \\(\\mathbf{u} \\times (\\mathbf{v} \\times \\mathbf{w})\\): \\[\\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 2 & 8 & 5 \\\\ 3 & 57 & -33 \\end{vmatrix} = \\begin{bmatrix} 8(-33) - 5(57) \\\\ -(2(-33) - 5(3)) \\\\ 2(57) - 8(3) \\end{bmatrix} = \\begin{bmatrix} -264 - 285 \\\\ -(-66 - 15) \\\\ 114 - 24 \\end{bmatrix} = \\begin{bmatrix} -549 \\\\ 81 \\\\ 90 \\end{bmatrix}.\\]",
+      "**Bước 3:** Kết quả chính xác là \\([-549, 81, 90]^T\\), tương ứng biểu thức (i).",
+      "**Lưu ý lệch đáp án gốc:** Đề gốc đánh dấu đáp án B ((iii): thành phần giữa là 82 do cộng trừ nhầm), trong khi kết quả đúng là (i) ứng với lựa chọn C."
+    ],
+    "image": "0066_q066_Question_66.png",
+    "needs_image": false,
+    "review_flags": [
+      "answer_conflict_original_B_math_C"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": 67,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "AnhXaTuyenTinh",
+    "type": "single_choice",
+    "question": "If \\(T : \\mathbb{R}^2 \\to \\mathbb{R}^2\\) is reflection in the line \\(y = -3x\\) then \\(T \\begin{bmatrix} 2 \\\\ -3 \\end{bmatrix}\\) is\n\\[(i) \\; \\begin{bmatrix} 1/5 \\\\ -18/5 \\end{bmatrix} \\quad (ii) \\; \\begin{bmatrix} 18/5 \\\\ 6/5 \\end{bmatrix} \\quad (iii) \\; \\begin{bmatrix} -1/5 \\\\ 6/5 \\end{bmatrix} \\quad (iv) \\; \\begin{bmatrix} 1/5 \\\\ -6/5 \\end{bmatrix}\\]",
+    "options": [
+      "None of the other choices is correct",
+      "(iii)",
+      "(ii)",
+      "(iv)",
+      "(i)"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Đường thẳng phản xạ có phương trình \\(3x + y = 0\\), do đó vector pháp tuyến là \\(\\mathbf{n} = \\begin{bmatrix} 3 \\\\ 1 \\end{bmatrix}\\).",
+      "**Bước 2:** Công thức phản xạ của vector \\(v\\) qua đường thẳng có pháp tuyến \\(\\mathbf{n}\\): \\[T(v) = v - 2 \\operatorname{proj}_{\\mathbf{n}}(v) = v - 2 \\dfrac{v \\cdot \\mathbf{n}}{\\|\\mathbf{n}\\|^2} \\mathbf{n}.\\]",
+      "**Bước 3:** Tính các đại lượng với \\(v = \\begin{bmatrix} 2 \\\\ -3 \\end{bmatrix}\\):\n\\[v \\cdot \\mathbf{n} = 2(3) + (-3)(1) = 3, \\quad \\|\\mathbf{n}\\|^2 = 3^2 + 1^2 = 10.\\]\n\\[2 \\dfrac{v \\cdot \\mathbf{n}}{\\|\\mathbf{n}\\|^2} \\mathbf{n} = 2 \\cdot \\dfrac{3}{10} \\begin{bmatrix} 3 \\\\ 1 \\end{bmatrix} = \\dfrac{3}{5} \\begin{bmatrix} 3 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 9/5 \\\\ 3/5 \\end{bmatrix}.\\]",
+      "**Bước 4:** Thực hiện phép trừ: \\[T(v) = \\begin{bmatrix} 2 \\\\ -3 \\end{bmatrix} - \\begin{bmatrix} 9/5 \\\\ 3/5 \\end{bmatrix} = \\begin{bmatrix} 1/5 \\\\ -18/5 \\end{bmatrix}.\\]",
+      "**Kết luận:** Kết quả là (i), tương ứng với lựa chọn E."
+    ],
+    "image": "0067_q067_Question_67.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 68,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "CucTri",
+    "type": "single_choice",
+    "question": "Find the minimum of the product of two numbers with the property that the first minus 7 times the second is 28.",
+    "options": [
+      "-82",
+      "None of the other choices is correct",
+      "-14",
+      "-28",
+      "-2",
+      "-9"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Gọi số thứ nhất là \\(x\\) và số thứ hai là \\(y\\). Điều kiện đề bài: \\(x - 7y = 28 \\implies x = 28 + 7y\\).",
+      "**Bước 2:** Tích của hai số là hàm theo \\(y\\): \\[P(y) = xy = (28 + 7y)y = 7y^2 + 28y.\\]",
+      "**Bước 3:** Đạo hàm tìm cực tiểu: \\[P'(y) = 14y + 28 = 0 \\implies y = -2.\\]",
+      "**Bước 4:** Với \\(y = -2\\), ta có \\(x = 28 + 7(-2) = 14\\). Giá trị tích cực tiểu là: \\[P_{\\min} = 14 \\cdot (-2) = -28.\\]",
+      "**Kết luận:** Giá trị nhỏ nhất là \\(-28\\), tương ứng với lựa chọn D."
+    ],
+    "image": "0068_q068_Question_68.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 69,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Find a parametric equation of the line passing through \\(P(2, -1, 3)\\) and perpendicular to the plane \\(2x + y = 1\\).",
+    "options": [
+      "(x, y, z) = (2, -1, 3) + t(2, 1, 0)",
+      "(x, y, z) = (2, -1, 3) + t(2, 0, 1)",
+      "(x, y, z) = (2, 1, 0) + t(2, -1, 0)",
+      "(x, y, z) = (2, 0, 1) + t(2, -1, 0)",
+      "None of the others"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Mặt phẳng có phương trình \\(2x + y + 0z = 1\\), do đó vector pháp tuyến là \\(\\mathbf{n} = (2, 1, 0)\\).",
+      "**Bước 2:** Đường thẳng vuông góc với mặt phẳng nên nhận chính vector pháp tuyến \\(\\mathbf{n}\\) làm vector chỉ phương: \\(\\mathbf{v} = (2, 1, 0)\\).",
+      "**Bước 3:** Đường thẳng đi qua điểm \\(P(2, -1, 3)\\) có phương trình tham số dạng vector: \\[(x, y, z) = (2, -1, 3) + t(2, 1, 0).\\]",
+      "**Kết luận:** Khớp hoàn toàn với phương án A."
+    ],
+    "image": "0069_q069_Question_69.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 70,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Using Trapezoidal Rule with \\(n = 6\\) to approximate \\[\\int_1^7 \\sqrt{x^2 + 1}\\,dx\\]",
+    "options": [
+      "49.892",
+      "64.925",
+      "None of the other choices is correct",
+      "74.776",
+      "24.946"
+    ],
+    "answer": "E",
+    "answer_original": "E",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Khoảng tích phân \\([a, b] = [1, 7]\\) chia làm \\(n = 6\\) đoạn. Độ dài mỗi bước: \\[h = \\dfrac{7 - 1}{6} = 1.\\] Các mốc điểm chia: \\(x = 1, 2, 3, 4, 5, 6, 7\\).",
+      "**Bước 2:** Tính giá trị hàm số \\(f(x) = \\sqrt{x^2 + 1}\\):\n- \\(f(1) = \\sqrt{2} \\approx 1.41421\\)\n- \\(f(2) = \\sqrt{5} \\approx 2.23607\\)\n- \\(f(3) = \\sqrt{10} \\approx 3.16228\\)\n- \\(f(4) = \\sqrt{17} \\approx 4.12311\\)\n- \\(f(5) = \\sqrt{26} \\approx 5.09902\\)\n- \\(f(6) = \\sqrt{37} \\approx 6.08276\\)\n- \\(f(7) = \\sqrt{50} \\approx 7.07107\\)",
+      "**Bước 3:** Áp dụng công thức hình thang: \\[T_6 = \\dfrac{h}{2} [f(1) + 2(f(2) + f(3) + f(4) + f(5) + f(6)) + f(7)].\\]",
+      "**Bước 4:** Thay số: \\[T_6 = 0.5 [1.41421 + 2(20.70324) + 7.07107] = 0.5 [49.89176] \\approx 24.946.\\]",
+      "**Kết luận:** Giá trị xấp xỉ là 24.946, tương ứng với lựa chọn E."
+    ],
+    "image": "0070_q070_Question_70.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 71,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "PhuongPhapSo",
+    "type": "single_choice",
+    "question": "Use Newton's method with the initial approximation \\(x_1 = 1\\) to find \\(x_3\\) of the following equation \\[\\sin x = x^3 - 1\\]",
+    "options": [
+      "1.009",
+      "1.256",
+      "None of the other choices is correct",
+      "1.004",
+      "1.249"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Đưa phương trình về dạng \\(f(x) = x^3 - \\sin x - 1 = 0\\). Đạo hàm: \\(f'(x) = 3x^2 - \\cos x\\).",
+      "**Bước 2:** Công thức lặp Newton: \\[x_{n+1} = x_n - \\dfrac{f(x_n)}{f'(x_n)}.\\]",
+      "**Bước 3:** Lần lặp 1 (với \\(x_1 = 1\\)):\n- \\(f(1) = 1 - \\sin(1) - 1 = -\\sin(1) \\approx -0.84147\\)\n- \\(f'(1) = 3 - \\cos(1) \\approx 3 - 0.54030 = 2.45970\\)\n- \\(x_2 = 1 - \\dfrac{-0.84147}{2.45970} \\approx 1 + 0.34210 = 1.34210\\).",
+      "**Bước 4:** Lần lặp 2 (với \\(x_2 = 1.34210\\)):\n- \\(f(1.34210) = (1.34210)^3 - \\sin(1.34210) - 1 \\approx 2.41743 - 0.97374 - 1 = 0.44369\\)\n- \\(f'(1.34210) = 3(1.34210)^2 - \\cos(1.34210) \\approx 5.40370 - 0.22684 = 5.17686\\)\n- \\(x_3 = 1.34210 - \\dfrac{0.44369}{5.17686} \\approx 1.34210 - 0.08571 = 1.25639 \\approx 1.256\\).",
+      "**Kết luận:** Giá trị xấp xỉ \\(x_3 \\approx 1.256\\), ứng với lựa chọn B."
+    ],
+    "image": "0071_q071_Question_71.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 72,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "HePhuongTrinh",
+    "type": "single_choice",
+    "question": "Solve for \\(z\\) from the system \\[\\begin{cases} x - y + 2z + 3w = 2 \\\\ x - y + 3z + 2w = 5 \\\\ 2x - 2y + 4z + 7w = 5 \\end{cases}\\]",
+    "options": [
+      "0",
+      "4",
+      "2",
+      "All of the other choices are incorrect",
+      "1"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Đặt hệ ba phương trình lần lượt là (1), (2), (3). Nhân hai vế phương trình (1) với 2: \\[2x - 2y + 4z + 6w = 4.\\]",
+      "**Bước 2:** Lấy phương trình (3) trừ đi 2 lần phương trình (1): \\[(2x - 2y + 4z + 7w) - (2x - 2y + 4z + 6w) = 5 - 4 \\implies w = 1.\\]",
+      "**Bước 3:** Lấy phương trình (2) trừ đi phương trình (1): \\[(x - y + 3z + 2w) - (x - y + 2z + 3w) = 5 - 2 \\implies z - w = 3.\\]",
+      "**Bước 4:** Thay \\(w = 1\\) vào hệ thức trên: \\[z - 1 = 3 \\implies z = 4.\\]",
+      "**Kết luận:** Giá trị của \\(z\\) là 4, tương ứng với lựa chọn B."
+    ],
+    "image": "0072_q072_Question_72.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 73,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "type": "single_choice",
+    "question": "Let \\(u, v\\) be linearly independent vectors in \\(\\mathbb{R}^5\\). Let \\[U = \\operatorname{span}\\{u, v, 2u + 3v, u - v\\}.\\] Find \\(\\dim U\\).",
+    "options": [
+      "2",
+      "3",
+      "None of the other choices is correct",
+      "5",
+      "There is not enough information"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Nhận xét hai vector \\(2u + 3v\\) và \\(u - v\\) đều là tổ hợp tuyến tính của \\(u\\) và \\(v\\).",
+      "**Bước 2:** Do đó bao tuyến tính không thay đổi khi bỏ bớt các vector phụ thuộc: \\[\\operatorname{span}\\{u, v, 2u + 3v, u - v\\} = \\operatorname{span}\\{u, v\\}.\\]",
+      "**Bước 3:** Vì \\(u, v\\) độc lập tuyến tính nên tập \\(\\{u, v\\}\\) tạo thành một cơ sở của \\(U\\).",
+      "**Kết luận:** Số chiều của \\(U\\) bằng số vector trong cơ sở, tức là \\(\\dim U = 2\\), ứng với lựa chọn A."
+    ],
+    "image": "0073_q073_Question_73.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 74,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Which of the following improper integrals converge?\n\\[(i) \\; \\int_0^1 \\dfrac{dx}{(1 - x)^{3/2}}\\]\n\\[(ii) \\; \\int_0^1 \\dfrac{dx}{x^{1/2}}\\]",
+    "options": [
+      "(i)",
+      "(ii)",
+      "None of (i) and (ii) converge",
+      "Both (i) and (ii) converge"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Xét tích phân suy rộng chuẩn \\(\\int_0^a \\dfrac{dx}{u^p}\\): tích phân hội tụ khi và chỉ khi \\(p < 1\\).",
+      "**Bước 2:** Với (i): Đặt \\(u = 1 - x\\), khi \\(x \\to 1^-\\), \\(u \\to 0^+\\). Số mũ ở mẫu là \\(p = 3/2 > 1\\), do đó tích phân phân kỳ (diverges).",
+      "**Bước 3:** Với (ii): Số mũ ở mẫu là \\(p = 1/2 < 1\\). Tính trực tiếp: \\[\\int_0^1 x^{-1/2}\\,dx = [2\\sqrt{x}]_0^1 = 2 < \\infty,\\] do đó tích phân hội tụ (converges).",
+      "**Kết luận:** Chỉ có tích phân (ii) hội tụ, tương ứng với lựa chọn B."
+    ],
+    "image": "0074_q074_Question_74.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 75,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "type": "single_choice",
+    "question": "Differentiate implicitly to find the slope of the curve at the point \\((2, 1)\\)\n\\[x^4 y^4 = 16\\]",
+    "options": [
+      "-1/2",
+      "1/2",
+      "None of the other choices is correct",
+      "3/2",
+      "2"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Lấy đạo hàm hai vế theo \\(x\\) bằng quy tắc nhân đạo hàm hàm ẩn: \\[\\dfrac{d}{dx}(x^4 y^4) = 4x^3 y^4 + x^4 (4y^3 y') = 0.\\]",
+      "**Bước 2:** Rút gọn và biểu diễn \\(y'\\): \\[4x^4 y^3 y' = -4x^3 y^4 \\implies y' = -\\dfrac{4x^3 y^4}{4x^4 y^3} = -\\dfrac{y}{x}.\\]",
+      "**Bước 3:** Thay tọa độ điểm \\((x, y) = (2, 1)\\) vào biểu thức đạo hàm: \\[y'(2, 1) = -\\dfrac{1}{2}.\\]",
+      "**Kết luận:** Hệ số góc tiếp tuyến là \\(-1/2\\), tương ứng với lựa chọn A."
+    ],
+    "image": "0075_q075_Question_75.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 76,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "KhongGianVector",
+    "type": "single_choice",
+    "question": "Find the dimension of the space \\[U = \\operatorname{span} \\left\\{ \\begin{bmatrix} 0 \\\\ 3 \\\\ 1 \\end{bmatrix}, \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ -1 \\\\ 1 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 0 \\\\ 1 \\end{bmatrix} \\right\\}\\]",
+    "options": [
+      "4",
+      "1",
+      "3",
+      "2"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Số chiều của không gian sinh bởi 4 vector trong \\(\\mathbb{R}^3\\) bằng hạng của ma trận tạo bởi các cột vector đó: \\[A = \\begin{bmatrix} 0 & 1 & 2 & 3 \\\\ 3 & 1 & -1 & 0 \\\\ 1 & 1 & 1 & 1 \\end{bmatrix}.\\]",
+      "**Bước 2:** Do \\(U\\) là không gian con của \\(\\mathbb{R}^3\\), số chiều tối đa không vượt quá 3.",
+      "**Bước 3:** Xét định thức của 3 vector (cột 1, cột 2, cột 4): \\[\\begin{vmatrix} 0 & 1 & 3 \\\\ 3 & 1 & 0 \\\\ 1 & 1 & 1 \\end{vmatrix} = 0 - 1(3 - 0) + 3(3 - 1) = -3 + 6 = 3 \\neq 0.\\]",
+      "**Bước 4:** Do định thức khác 0 nên ba vector này độc lập tuyến tính và sinh toàn bộ \\(\\mathbb{R}^3\\).",
+      "**Kết luận:** Số chiều \\(\\dim U = 3\\), tương ứng với lựa chọn C."
+    ],
+    "image": "0076_q076_Question_76.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 77,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "MaTran",
+    "type": "single_choice",
+    "question": "Find the rank of the matrix \\[\\begin{bmatrix} 3 & 2 & 1 \\\\ 2 & 1 & 3 \\\\ 5 & 3 & 4 \\end{bmatrix}\\]",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "3"
+    ],
+    "answer": "A",
+    "answer_original": "A",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Quan sát các hàng của ma trận: Hàng 1 là \\([3, 2, 1]\\), Hàng 2 là \\([2, 1, 3]\\), Hàng 3 là \\([5, 3, 4]\\).",
+      "**Bước 2:** Nhận thấy: \\(R_1 + R_2 = [3+2, 2+1, 1+3] = [5, 3, 4] = R_3\\). Hàng thứ ba là tổng tuyến tính của hai hàng đầu.",
+      "**Bước 3:** Hai hàng đầu không tỉ lệ (\\(3/2 \\neq 2/1\\)), do đó có đúng 2 hàng độc lập tuyến tính.",
+      "**Kết luận:** Hạng của ma trận bằng 2, tương ứng với lựa chọn A."
+    ],
+    "image": "0077_q077_Question_77.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 78,
+    "chapter": "DSTT1 - Đại số tuyến tính 1",
+    "folder": "DSTT1",
+    "topic": "VectorHinhHoc",
+    "type": "single_choice",
+    "question": "Let \\(\\mathbf{u}, \\mathbf{v}\\) be two vectors in \\(\\mathbb{R}^3\\) such that \\(\\|\\mathbf{u}\\| = 4\\), \\(\\|\\mathbf{v}\\| = 5\\), \\(\\mathbf{u}\\) and \\(\\mathbf{v}\\) are perpendicular. Find the length of the vector \\(2\\mathbf{u} \\times 3\\mathbf{v}\\).",
+    "options": [
+      "40",
+      "20",
+      "120",
+      "0",
+      "80"
+    ],
+    "answer": "C",
+    "answer_original": "C",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Áp dụng tính chất của tích có hướng: \\[2\\mathbf{u} \\times 3\\mathbf{v} = (2 \\cdot 3)(\\mathbf{u} \\times \\mathbf{v}) = 6(\\mathbf{u} \\times \\mathbf{v}).\\]",
+      "**Bước 2:** Độ dài của vector tích có hướng được tính theo công thức: \\[\\|2\\mathbf{u} \\times 3\\mathbf{v}\\| = 6 \\|\\mathbf{u} \\times \\mathbf{v}\\| = 6 \\|\\mathbf{u}\\| \\|\\mathbf{v}\\| \\sin\\theta,\\] trong đó \\(\\theta\\) là góc giữa hai vector \\(\\mathbf{u}\\) và \\(\\mathbf{v}\\).",
+      "**Bước 3:** Vì \\(\\mathbf{u}\\) và \\(\\mathbf{v}\\) vuông góc nên \\(\\theta = 90^\\circ \\implies \\sin\\theta = 1\\).",
+      "**Bước 4:** Thay số: \\[\\|2\\mathbf{u} \\times 3\\mathbf{v}\\| = 6 \\cdot 4 \\cdot 5 \\cdot 1 = 120.\\]",
+      "**Kết luận:** Độ dài vector bằng 120, ứng với lựa chọn C."
+    ],
+    "image": "0078_q078_Question_78.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 79,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "DaoHam",
+    "type": "single_choice",
+    "question": "Use the linear approximation for the function \\(f(x) = x^{2/3}\\) at \\(x = 8\\) to estimate \\((8.06)^{2/3}\\).",
+    "options": [
+      "4.01",
+      "None of the other choices is correct",
+      "4.12",
+      "4.02",
+      "4.002",
+      "4.001"
+    ],
+    "answer": "D",
+    "answer_original": "D",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Công thức xấp xỉ tuyến tính tại \\(a = 8\\): \\[L(x) = f(a) + f'(a)(x - a).\\]",
+      "**Bước 2:** Tính giá trị hàm tại mốc: \\[f(8) = 8^{2/3} = (\\sqrt[3]{8})^2 = 2^2 = 4.\\]",
+      "**Bước 3:** Đạo hàm: \\[f'(x) = \\dfrac{2}{3} x^{-1/3} = \\dfrac{2}{3\\sqrt[3]{x}} \\implies f'(8) = \\dfrac{2}{3 \\cdot 2} = \\dfrac{1}{3}.\\]",
+      "**Bước 4:** Áp dụng cho \\(x = 8.06\\): \\[L(8.06) = 4 + \\dfrac{1}{3}(8.06 - 8) = 4 + \\dfrac{0.06}{3} = 4 + 0.02 = 4.02.\\]",
+      "**Kết luận:** Giá trị xấp xỉ bằng 4.02, tương ứng với lựa chọn D."
+    ],
+    "image": "0079_q079_Question_79.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  },
+  {
+    "id": 80,
+    "chapter": "GT1 - Giải tích 1",
+    "folder": "GT1",
+    "topic": "TichPhan",
+    "type": "single_choice",
+    "question": "Determine a region A whose area is equal to \\[\\lim_{n \\to \\infty} \\sum_{i=1}^n \\dfrac{\\pi}{4n} \\sin\\left( \\dfrac{(i + n)\\pi}{4n} \\right)\\]\n\\[(i) \\; \\text{under the graph of } f(x) = \\sin x \\text{ from } x = 0 \\text{ to } x = \\dfrac{\\pi}{4}\\]\n\\[(ii) \\; \\text{under the graph of } f(x) = \\dfrac{1}{4} \\sin x \\text{ from } x = 0 \\text{ to } x = \\dfrac{\\pi}{4}\\]\n\\[(iii) \\; \\text{under the graph of } f(x) = \\sin x \\text{ from } x = \\dfrac{\\pi}{4} \\text{ to } x = \\dfrac{\\pi}{2}\\]\n\\[(iv) \\; \\text{under the graph of } f(x) = \\dfrac{1}{4} \\sin x \\text{ from } x = \\dfrac{\\pi}{4} \\text{ to } x = \\dfrac{\\pi}{2}\\]",
+    "options": [
+      "(ii)",
+      "(iii)",
+      "(i)",
+      "(iv)"
+    ],
+    "answer": "B",
+    "answer_original": "B",
+    "answer_status": "verified",
+    "explanation": [
+      "**Bước 1:** Biến đổi số hạng góc bên trong hàm sin: \\[\\dfrac{(i + n)\\pi}{4n} = \\dfrac{n\\pi}{4n} + \\dfrac{i\\pi}{4n} = \\dfrac{\\pi}{4} + i \\cdot \\dfrac{\\pi}{4n}.\\]",
+      "**Bước 2:** Nhận diện tổng tích phân Riemann: Bước nhảy \\(\\Delta x = \\dfrac{\\pi}{4n}\\), điểm chia \\(x_i = a + i\\Delta x\\) với \\(a = \\dfrac{\\pi}{4}\\).",
+      "**Bước 3:** Cận trên \\(b = a + n\\Delta x = \\dfrac{\\pi}{4} + n \\cdot \\dfrac{\\pi}{4n} = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{4} = \\dfrac{\\pi}{2}\\).",
+      "**Bước 4:** Giới hạn của tổng Riemann chính là tích phân xác định: \\[\\lim_{n \\to \\infty} \\sum_{i=1}^n \\sin(x_i) \\Delta x = \\int_{\\pi/4}^{\\pi/2} \\sin x \\, dx.\\] Biểu thức này đại diện cho diện tích hình phẳng dưới đồ thị hàm số \\(f(x) = \\sin x\\) từ \\(x = \\pi/4\\) đến \\(x = \\pi/2\\) (mục (iii)).",
+      "**Kết luận:** Khớp với (iii), tương ứng với lựa chọn B."
+    ],
+    "image": "0080_q080_Question_80.png",
+    "needs_image": false,
+    "review_flags": [],
+    "confidence": "high"
+  }
+]
