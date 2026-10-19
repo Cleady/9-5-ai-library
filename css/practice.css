@@ -441,6 +441,12 @@
   margin-bottom: 0;
 }
 
+.prc-subject-icon-tile .subject7-icon {
+  background-image: url(/assets/icon/math.png);
+  background-color: transparent;
+  filter: hue-rotate(65deg);
+}
+
 .prc-icon-blue {
   background: linear-gradient(135deg, #dbeafe, #bfdbfe);
 }

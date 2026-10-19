@@ -1657,6 +1657,10 @@ html[data-theme="dark"] .nav-link.is-active .nav-icon {
     background: linear-gradient(135deg, #fce7f3, #fbcfe8);
 }
 
+.icon-rose {
+    background: linear-gradient(135deg, #ffe4e6, #fecdd3);
+}
+
 .icon-blue {
     background-image: url(/assets/icon/chip.png), linear-gradient(135deg, #dbeafe, #bfdbfe);
     background-size: contain;
@@ -1707,10 +1711,11 @@ html[data-theme="dark"] .nav-link.is-active .nav-icon {
 }
 
 .subject7-icon {
-    background-image: url(/assets/icon/math.png), linear-gradient(135deg, #ffe4e6, #fecdd3);
+    background-image: url(/assets/icon/math.png), linear-gradient(135deg, #f6e4fb, #eccef8);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    filter: hue-rotate(65deg);
 }
 
 .subject-actions {
@@ -2349,7 +2354,13 @@ html[data-theme="dark"] .icon-pink {
 }
 
 html[data-theme="dark"] .subject7-icon {
-    background-image: url(/assets/icon/math.png), linear-gradient(135deg, rgba(159, 18, 57, 0.45), rgba(244, 63, 94, 0.25));
+    background-image: url(/assets/icon/math.png), linear-gradient(135deg, rgba(91, 29, 151, 0.45), rgba(172, 71, 227, 0.25));
+    box-shadow: 0 0 16px rgba(244, 63, 94, 0.3);
+    filter: hue-rotate(65deg);
+}
+
+html[data-theme="dark"] .icon-rose {
+    background: linear-gradient(135deg, rgba(136, 19, 55, 0.55), rgba(225, 29, 72, 0.25));
     box-shadow: 0 0 16px rgba(244, 63, 94, 0.3);
 }
 
