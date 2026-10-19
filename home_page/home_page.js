@@ -14,38 +14,133 @@
     renderRecentActivity();
   }
 
+  // --- Seeded PRNG and Selection Utilities ---
+  function hashString(str) {
+    let hash = 2166136261 >>> 0;
+    for (let i = 0; i < str.length; i++) {
+      hash ^= str.charCodeAt(i);
+      hash = Math.imul(hash, 16777619) >>> 0;
+    }
+    return hash;
+  }
+
+  function mulberry32(seed) {
+    let s = seed >>> 0;
+    return function () {
+      s = (s + 0x6D2B79F5) >>> 0;
+      let t = Math.imul(s ^ (s >>> 15), 1 | s);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function shuffleArray(arr, randomFn) {
+    const result = arr.slice();
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(randomFn() * (i + 1));
+      const temp = result[i];
+      result[i] = result[j];
+      result[j] = temp;
+    }
+    return result;
+  }
+
+  function getLocalDateString() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function getUserId() {
+    try {
+      const raw = localStorage.getItem('user');
+      if (raw) {
+        const u = JSON.parse(raw);
+        if (u) {
+          return u.id || u._id || u.username || 'guest';
+        }
+      }
+    } catch (e) {}
+    return 'guest';
+  }
+
+  function getDailySeed() {
+    return `${getLocalDateString()}:${getUserId()}`;
+  }
+
+  function getSubjectProgress(sub) {
+    const totalQuizzes = (core.getQuizzes ? core.getQuizzes(sub.id) : []).length;
+    const allAttempts = (core.getAttempts ? core.getAttempts() : []).filter(function (a) {
+      return a && a.type === 'quiz' && Number(a.subjectId) === Number(sub.id);
+    });
+    const attemptedQuizIds = new Set(allAttempts.map(function (a) { return a.refId; }));
+    const attemptedQuizzes = attemptedQuizIds.size;
+    const percent = totalQuizzes > 0 ? Math.min(100, Math.round((attemptedQuizzes / totalQuizzes) * 100)) : 0;
+    const attemptCount = allAttempts.length;
+
+    return {
+      percent: percent,
+      attemptedQuizzes: attemptedQuizzes,
+      totalQuizzes: totalQuizzes,
+      attemptCount: attemptCount
+    };
+  }
+
+  function getFeaturedSubjects(items, limit, seed) {
+    if (limit === undefined) limit = 6;
+    if (!items || items.length === 0) return [];
+
+    const mapped = items.map(item => {
+      const pct = typeof item.percent === 'number'
+        ? item.percent
+        : (item.progress && typeof item.progress.percent === 'number' ? item.progress.percent : 0);
+      return { item, percent: pct };
+    });
+
+    const percentMap = new Map();
+    for (const entry of mapped) {
+      if (!percentMap.has(entry.percent)) {
+        percentMap.set(entry.percent, []);
+      }
+      percentMap.get(entry.percent).push(entry.item);
+    }
+
+    const sortedPercents = Array.from(percentMap.keys()).sort((a, b) => b - a);
+    const seedStr = String(seed !== undefined ? seed : getDailySeed());
+    const seedInt = hashString(seedStr);
+    const random = mulberry32(seedInt);
+
+    const result = [];
+    for (const pct of sortedPercents) {
+      const group = percentMap.get(pct);
+      const shuffledGroup = shuffleArray(group, random);
+      for (const item of shuffledGroup) {
+        result.push(item);
+      }
+    }
+
+    return result.slice(0, limit);
+  }
+
   function renderSubjects() {
     const grid = document.querySelector('.subject-grid');
     if (!grid) return;
 
-    const subjects = core.getSubjects();
-    let html = '';
-    
-    // Fallback names/icons if we want, but practice-data.js provides exactly what we need
-    subjects.forEach(sub => {
-      // Get some stats to show progress
-      const quizzes = core.getQuizzes(sub.id);
-      let totalQuestions = 0;
-      let answeredQuestions = 0;
-      
-      quizzes.forEach(q => {
-        totalQuestions += q.questionCount || 0;
-        const prog = core.getQuizProgress(q.id);
-        if (prog && prog.currentIndex) {
-            answeredQuestions += prog.currentIndex;
-        }
-      });
-      // also count attempts
-      const avgScore = core.getSubjectAverageScore(sub.id);
-      
-      let progressPct = 0;
-      if (totalQuestions > 0) {
-        progressPct = Math.round((answeredQuestions / totalQuestions) * 100);
-      }
-      if (progressPct > 100) progressPct = 100;
-      // Let's just use average score as progress if we want, or simple dummy progress for now
-      let displayProgress = avgScore > 0 ? avgScore : progressPct;
+    const allSubjects = core.getSubjects();
+    const subjectsWithProgress = allSubjects.map(sub => {
+      return {
+        ...sub,
+        progress: getSubjectProgress(sub)
+      };
+    });
 
+    const featured = getFeaturedSubjects(subjectsWithProgress, 6, getDailySeed());
+    let html = '';
+
+    featured.forEach(sub => {
+      const displayProgress = sub.progress.percent;
       const isFav = core.isSubjectFavorited ? core.isSubjectFavorited(sub.id) : false;
 
       html += `
@@ -73,7 +168,7 @@
         </li>
       `;
     });
-    
+
     grid.innerHTML = html;
 
     // Gắn sự kiện click cho nút ngôi sao yêu thích
