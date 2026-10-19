@@ -1706,6 +1706,13 @@ html[data-theme="dark"] .nav-link.is-active .nav-icon {
     background-position: center;
 }
 
+.subject7-icon {
+    background-image: url(/assets/icon/math.png), linear-gradient(135deg, #ffe4e6, #fecdd3);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .subject-actions {
     display: flex;
     gap: 8px;
@@ -2341,6 +2348,11 @@ html[data-theme="dark"] .icon-pink {
     box-shadow: 0 0 16px rgba(219, 39, 119, 0.3);
 }
 
+html[data-theme="dark"] .subject7-icon {
+    background-image: url(/assets/icon/math.png), linear-gradient(135deg, rgba(159, 18, 57, 0.45), rgba(244, 63, 94, 0.25));
+    box-shadow: 0 0 16px rgba(244, 63, 94, 0.3);
+}
+
 html[data-theme="dark"] .subject-arrow {
     background-color: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -2625,4 +2637,4 @@ html[data-theme="dark"] .topbar {
 
 
 
-
+

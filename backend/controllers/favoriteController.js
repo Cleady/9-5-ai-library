@@ -15,7 +15,7 @@ function formatSizeLabel(bytes) {
  * Danh sách ID môn học thực hành hợp lệ trong hệ thống
  * Nguồn: Mảng tĩnh Lib95.practice.data.subjects trong js/practice-data.js (gồm 5 môn: CEA201, DBI202, PFP191, CSD203, CSI106)
  */
-const VALID_PRACTICE_SUBJECT_IDS = [1, 2, 3, 4, 5];
+const VALID_PRACTICE_SUBJECT_IDS = [1, 2, 3, 4, 5, 6, 7];
 
 /**
  * 1. LẤY TOÀN BỘ DANH SÁCH YÊU THÍCH (GET /api/favorites)

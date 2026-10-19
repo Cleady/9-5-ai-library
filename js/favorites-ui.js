@@ -15,7 +15,9 @@
     2: { code: 'DBI202', name: 'Database', icon: '/assets/icon/data.png', semester: 'Semester II', colorClass: '2' },
     3: { code: 'PFP191', name: 'Programming Fundamentals', icon: '/assets/icon/program.png', semester: 'Semester I', colorClass: '3' },
     4: { code: 'CSD203', name: 'Data Structure & Algorithm', icon: '/assets/icon/mas.png', semester: 'Semester II', colorClass: '4' },
-    5: { code: 'CSI106', name: 'Foundations of Computer Science', icon: '/assets/icon/soft.png', semester: 'Semester I', colorClass: '5' }
+    5: { code: 'CSI106', name: 'Foundations of Computer Science', icon: '/assets/icon/soft.png', semester: 'Semester I', colorClass: '5' },
+    6: { code: 'MAD101', name: 'Discrete Mathematics', icon: '/assets/icon/math.png', semester: 'Semester I', colorClass: '2' },
+    7: { code: 'MAE101', name: 'Mathematics for Engineering', icon: '/assets/icon/math.png', semester: 'Semester I', colorClass: '1' }
   };
 
   // SVG icon mặc định
