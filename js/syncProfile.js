@@ -68,6 +68,16 @@ function renderProfile() {
         }
     });
 
+    // Đảm bảo nút đổi mật khẩu trong user menu luôn có icon password-icon
+    document.querySelectorAll('.user-menu-list a[href*="#password"]').forEach(link => {
+        if (!link.querySelector('.password-icon')) {
+            const icon = document.createElement('span');
+            icon.className = 'menu-icon password-icon';
+            icon.setAttribute('aria-hidden', 'true');
+            link.insertBefore(icon, link.firstChild);
+        }
+    });
+
     const welcomeHighlight = document.querySelector('.hero-title .highlight');
     if (welcomeHighlight) welcomeHighlight.textContent = displayName;
 }
@@ -75,6 +85,15 @@ function renderProfile() {
 document.addEventListener('DOMContentLoaded', renderProfile);
 window.addEventListener('storage', (e) => {
     if (e.key === 'user') renderProfile();
+});
+
+// Xử lý dọn token khi nhấn Đăng xuất trên bất kỳ trang nào
+document.addEventListener('click', (e) => {
+    const logoutLink = e.target.closest('.user-menu-list a[href*="login.html"], .user-menu-list a[href="#signout"], [data-com-logout], #user-logout-link, #logout-button');
+    if (logoutLink) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+    }
 });
 
 
