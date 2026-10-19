@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const lmsController = require('../controllers/lmsController');
 const { verifyToken, isStaffAdminOwner } = require('../middlewares/authMiddleware');
+const { extractYouTubeId, canonicalWatchUrl, thumbnailUrl } = require('../utils/youtube');
 
 // === COURSES / SUBJECTS ===
 // Lấy danh sách môn học (công khai cho học viên và khách)
@@ -24,6 +25,79 @@ router.post('/courses/:courseId/lectures', verifyToken, isStaffAdminOwner, lmsCo
 router.post('/lectures', verifyToken, isStaffAdminOwner, lmsController.createLecture);
 router.put('/lectures/:id', verifyToken, isStaffAdminOwner, lmsController.updateLecture);
 router.delete('/lectures/:id', verifyToken, isStaffAdminOwner, lmsController.deleteLecture);
+
+// Lấy thông tin oEmbed từ link YouTube (chỉ Owner, Admin, Staff)
+router.get('/youtube-info', verifyToken, isStaffAdminOwner, async (req, res) => {
+  try {
+    const { url } = req.query;
+    if (!url) {
+      return res.status(400).json({ code: 'INVALID_LINK', error: 'Vui lòng cung cấp link hoặc ID YouTube' });
+    }
+
+    const youtubeId = extractYouTubeId(url);
+    if (!youtubeId) {
+      return res.status(400).json({ code: 'INVALID_LINK', error: 'Link YouTube không hợp lệ' });
+    }
+
+    const canonicalUrl = canonicalWatchUrl(youtubeId);
+    const thumbUrl = thumbnailUrl(youtubeId);
+
+    // Dựng cố định URL oEmbed từ ID để ngăn chặn triệt để tấn công SSRF
+    const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${youtubeId}&format=json`;
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+    try {
+      const upstreamRes = await fetch(oembedUrl, {
+        signal: controller.signal,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; 9.5-AI-LMS/1.0)'
+        }
+      });
+      clearTimeout(timeoutId);
+
+      if (upstreamRes.status === 200) {
+        const data = await upstreamRes.json();
+        return res.json({
+          youtubeId,
+          canonicalUrl,
+          thumbnailUrl: thumbUrl,
+          title: typeof data.title === 'string' ? data.title : '',
+          authorName: typeof data.author_name === 'string' ? data.author_name : ''
+        });
+      }
+
+      if (upstreamRes.status === 401 || upstreamRes.status === 403) {
+        return res.status(422).json({
+          code: 'EMBED_DISABLED',
+          error: 'Video riêng tư hoặc đã tắt cho phép nhúng'
+        });
+      }
+
+      if (upstreamRes.status === 404) {
+        return res.status(404).json({
+          code: 'NOT_FOUND',
+          error: 'Video không tồn tại hoặc đã bị xóa'
+        });
+      }
+
+      return res.status(502).json({
+        code: 'UPSTREAM_UNAVAILABLE',
+        error: `YouTube phản hồi mã lỗi HTTP ${upstreamRes.status}`
+      });
+    } catch (fetchErr) {
+      clearTimeout(timeoutId);
+      return res.status(502).json({
+        code: 'UPSTREAM_UNAVAILABLE',
+        error: 'Không thể kết nối tới máy chủ YouTube (quá thời gian chờ hoặc lỗi mạng)'
+      });
+    }
+  } catch (err) {
+    console.error('Error /youtube-info:', err);
+    res.status(500).json({ error: 'Lỗi khi lấy thông tin YouTube: ' + err.message });
+  }
+});
 
 const multer = require('multer');
 const path = require('path');

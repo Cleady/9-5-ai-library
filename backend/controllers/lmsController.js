@@ -2,6 +2,7 @@ const db = require('../config/db');
 const fs = require('fs');
 const path = require('path');
 const { execFile } = require('child_process');
+const { extractYouTubeId, canonicalWatchUrl, thumbnailUrl } = require('../utils/youtube');
 
 function getVideoDurationSeconds(filePath) {
   return new Promise((resolve) => {
@@ -164,7 +165,8 @@ exports.getCourseLectures = async (req, res) => {
     const { courseId } = req.params;
     const [lectures] = await db.query(`
       SELECT id, course_id, chapter_order, title, type, duration_min, video_url, description,
-             status, DATE_FORMAT(created_at, '%Y-%m-%d') AS dateAdded
+             status, video_source, youtube_id, thumbnail_url,
+             DATE_FORMAT(created_at, '%Y-%m-%d') AS dateAdded
       FROM lectures
       WHERE course_id = ?
       ORDER BY chapter_order ASC, id ASC
@@ -227,17 +229,50 @@ exports.createLecture = async (req, res) => {
       title,
       chapter_order = 1,
       type = 'video',
-      duration_min = 15,
+      duration_min,
       video_url = '',
       description = '',
       key_takeaways = [],
       overview_html = '',
       status = 'in-progress',
-      resources = []
+      resources = [],
+      video_source = 'file'
     } = req.body;
 
     if (!course_id || !title) {
       return res.status(400).json({ error: 'ID khóa học và tiêu đề bài giảng là bắt buộc' });
+    }
+
+    if (video_source !== 'file' && video_source !== 'youtube') {
+      return res.status(400).json({ error: 'Nguồn video không hợp lệ (chỉ chấp nhận "file" hoặc "youtube")' });
+    }
+
+    let finalVideoUrl = typeof video_url === 'string' ? video_url.trim() : '';
+    let finalYoutubeId = null;
+    let finalThumbnailUrl = null;
+    let finalDurationMin = 15;
+
+    if (video_source === 'youtube') {
+      const rawInput = req.body.youtube_id || finalVideoUrl;
+      const extractedId = extractYouTubeId(rawInput);
+      if (!extractedId) {
+        return res.status(400).json({ error: 'Link YouTube không hợp lệ' });
+      }
+      finalYoutubeId = extractedId;
+      finalVideoUrl = canonicalWatchUrl(extractedId);
+      finalThumbnailUrl = thumbnailUrl(extractedId);
+
+      const parsedDur = parseInt(duration_min, 10);
+      if (isNaN(parsedDur) || parsedDur < 1) {
+        return res.status(400).json({ error: 'Vui lòng nhập thời lượng bài giảng (số phút >= 1)' });
+      }
+      finalDurationMin = parsedDur;
+    } else {
+      // video_source === 'file'
+      const parsedDur = parseInt(duration_min, 10);
+      if (!isNaN(parsedDur) && parsedDur >= 1) {
+        finalDurationMin = parsedDur;
+      }
     }
 
     const takeawaysJson = Array.isArray(key_takeaways) ? JSON.stringify(key_takeaways) : JSON.stringify([]);
@@ -246,9 +281,9 @@ exports.createLecture = async (req, res) => {
     await conn.beginTransaction();
 
     const [result] = await conn.query(`
-      INSERT INTO lectures (course_id, chapter_order, title, type, duration_min, video_url, description, key_takeaways, overview_html, status)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `, [course_id, chapter_order, title.trim(), type, duration_min, video_url.trim(), description, takeawaysJson, overview_html, status]);
+      INSERT INTO lectures (course_id, chapter_order, title, type, duration_min, video_url, description, key_takeaways, overview_html, status, video_source, youtube_id, thumbnail_url)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `, [course_id, chapter_order, title.trim(), type, finalDurationMin, finalVideoUrl, description, takeawaysJson, overview_html, status, video_source, finalYoutubeId, finalThumbnailUrl]);
 
     const newLectureId = result.insertId;
 
@@ -296,17 +331,28 @@ exports.updateLecture = async (req, res) => {
       key_takeaways,
       overview_html,
       status,
-      resources
+      resources,
+      video_source,
+      youtube_id
     } = req.body;
 
     conn = await db.getConnection();
     await conn.beginTransaction();
 
-    const [existing] = await conn.query('SELECT id FROM lectures WHERE id = ?', [id]);
+    const [existing] = await conn.query('SELECT id, video_source, youtube_id, video_url FROM lectures WHERE id = ?', [id]);
     if (existing.length === 0) {
       await conn.rollback();
       return res.status(404).json({ error: 'Không tìm thấy bài giảng để cập nhật' });
     }
+
+    const currentLecture = existing[0];
+
+    if (video_source !== undefined && video_source !== 'file' && video_source !== 'youtube') {
+      await conn.rollback();
+      return res.status(400).json({ error: 'Nguồn video không hợp lệ (chỉ chấp nhận "file" hoặc "youtube")' });
+    }
+
+    const targetSource = video_source !== undefined ? video_source : (currentLecture.video_source || 'file');
 
     const updates = [];
     const values = [];
@@ -315,8 +361,40 @@ exports.updateLecture = async (req, res) => {
     if (title) { updates.push('title = ?'); values.push(title.trim()); }
     if (chapter_order !== undefined) { updates.push('chapter_order = ?'); values.push(chapter_order); }
     if (type) { updates.push('type = ?'); values.push(type); }
-    if (duration_min !== undefined) { updates.push('duration_min = ?'); values.push(duration_min); }
-    if (video_url !== undefined) { updates.push('video_url = ?'); values.push(video_url.trim()); }
+
+    if (duration_min !== undefined) {
+      const parsedDur = parseInt(duration_min, 10);
+      if (isNaN(parsedDur) || parsedDur < 1) {
+        await conn.rollback();
+        return res.status(400).json({ error: 'Thời lượng bài giảng phải là số nguyên lớn hơn hoặc bằng 1 phút' });
+      }
+      updates.push('duration_min = ?');
+      values.push(parsedDur);
+    }
+
+    if (targetSource === 'youtube') {
+      const rawInput = youtube_id || video_url || (targetSource === currentLecture.video_source ? (currentLecture.youtube_id || currentLecture.video_url) : null);
+      if (video_source === 'youtube' || video_url !== undefined || youtube_id !== undefined) {
+        const extractedId = extractYouTubeId(rawInput);
+        if (!extractedId) {
+          await conn.rollback();
+          return res.status(400).json({ error: 'Link YouTube không hợp lệ' });
+        }
+        updates.push('video_source = ?', 'youtube_id = ?', 'thumbnail_url = ?', 'video_url = ?');
+        values.push('youtube', extractedId, thumbnailUrl(extractedId), canonicalWatchUrl(extractedId));
+      }
+    } else {
+      // targetSource === 'file'
+      if (video_source === 'file') {
+        updates.push('video_source = ?', 'youtube_id = ?', 'thumbnail_url = ?');
+        values.push('file', null, null);
+      }
+      if (video_url !== undefined) {
+        updates.push('video_url = ?');
+        values.push(video_url.trim());
+      }
+    }
+
     if (description !== undefined) { updates.push('description = ?'); values.push(description); }
     if (key_takeaways !== undefined) {
       updates.push('key_takeaways = ?');
@@ -349,7 +427,7 @@ exports.updateLecture = async (req, res) => {
   } catch (error) {
     if (conn) await conn.rollback();
     console.error('Error updateLecture:', error);
-    res.status(500).json({ error: 'Lỗi khi cập nhật bài giảng' });
+    res.status(500).json({ error: 'Lỗi khi cập nhật bài giảng: ' + error.message });
   } finally {
     if (conn) conn.release();
   }

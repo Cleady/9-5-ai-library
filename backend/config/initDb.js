@@ -36,6 +36,9 @@ async function initDatabase() {
         description TEXT,
         key_takeaways JSON,
         overview_html LONGTEXT,
+        video_source VARCHAR(20) NOT NULL DEFAULT 'file',
+        youtube_id VARCHAR(16) NULL,
+        thumbnail_url VARCHAR(500) NULL,
         status VARCHAR(20) DEFAULT 'in-progress',
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         INDEX (course_id),
@@ -519,6 +522,23 @@ async function initDatabase() {
       if (cols.length === 0) {
         await db.query(`ALTER TABLE ${tbl} ADD COLUMN is_hidden TINYINT(1) DEFAULT 0, ADD COLUMN hidden_by INT NULL, ADD COLUMN hidden_at TIMESTAMP NULL`);
         console.log(`✅ Added is_hidden columns to ${tbl}`);
+      }
+    }
+
+    // 7.1. Bổ sung các cột video_source, youtube_id, thumbnail_url vào bảng lectures (nếu chưa có)
+    const lectureColsToAdd = [
+      { name: 'video_source', sql: "ALTER TABLE lectures ADD COLUMN video_source VARCHAR(20) NOT NULL DEFAULT 'file'" },
+      { name: 'youtube_id', sql: "ALTER TABLE lectures ADD COLUMN youtube_id VARCHAR(16) NULL" },
+      { name: 'thumbnail_url', sql: "ALTER TABLE lectures ADD COLUMN thumbnail_url VARCHAR(500) NULL" }
+    ];
+    for (const col of lectureColsToAdd) {
+      const [cols] = await db.query(`
+        SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS
+        WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'lectures' AND COLUMN_NAME = ?
+      `, [col.name]);
+      if (cols.length === 0) {
+        await db.query(col.sql);
+        console.log(`✅ Added column lectures.${col.name}`);
       }
     }
 
