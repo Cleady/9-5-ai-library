@@ -19,10 +19,18 @@ const app = express();
 // Khởi tạo bảng dữ liệu và seeding nếu cần
 initDatabase().catch(err => console.error('Database initialization warning:', err.message));
 
-// Middleware
+// Kiểm tra an toàn cho JWT_SECRET khi khởi động hệ thống
+if (!process.env.JWT_SECRET || process.env.JWT_SECRET === 'your-secret-key-change-this' || process.env.JWT_SECRET.length < 16) {
+  console.warn('⚠️ CẢNH BÁO BẢO MẬT: JWT_SECRET đang sử dụng giá trị mặc định hoặc quá ngắn! Vui lòng cập nhật biến môi trường JWT_SECRET trong backend/.env trước khi triển khai sản xuất.');
+}
+
+// Middleware bảo mật & CORS
 app.use(cors());
 app.use((req, res, next) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
   next();
 });
 app.use(express.json({ limit: '10mb' }));
