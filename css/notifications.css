@@ -32,6 +32,26 @@
   font-weight: 600;
 }
 
+/* Nhãn phân mục trong danh sách thông báo (Pinned / Recent) */
+.notif-section-label {
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--card-bg-elevated) 92%, var(--color-primary-soft));
+  border-bottom: 1px solid var(--border-subtle, rgba(15, 23, 42, 0.04));
+  list-style: none;
+}
+
+/* Hiệu ứng nổi bật khi điều hướng tới bài viết từ thông báo */
+.com-post--highlight {
+  outline: 2px solid var(--color-primary) !important;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--color-primary) 40%, transparent) !important;
+  transition: outline 0.3s ease, box-shadow 0.3s ease;
+}
+
 /* 2. Chuông Thông báo Topbar (Dropdown Enhancements) */
 .notification-panel {
   display: flex;
@@ -117,12 +137,12 @@
 
 /* Mục thông báo của bài ghim (Pinned Notification) */
 .notif-item--pinned {
-  background: var(--color-primary-soft) !important;
-  border-left: 3px solid var(--color-primary);
+  background: color-mix(in srgb, var(--card-bg-elevated) 82%, var(--color-primary-soft)) !important;
+  border-left: 3px solid var(--color-primary) !important;
 }
 
 .notif-item--pinned:hover {
-  filter: brightness(0.97);
+  background: color-mix(in srgb, var(--card-bg-elevated) 72%, var(--color-primary-soft)) !important;
 }
 
 /* Avatar người gửi thông báo */

@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="../../css/admin-moderation.css">
     <link rel="stylesheet" href="../../css/admin-settings.css">
     <link rel="stylesheet" href="../../css/lectures.css">
+    <link rel="stylesheet" href="../../css/notifications.css">
     <style>
         /* Tinh chỉnh Placeholder: không in đậm, màu xám nhạt dịu mắt */
         input::placeholder,
@@ -113,39 +114,18 @@
                 </form>
                 <div class="topbar-actions">
                     <div class="notification">
-                        <button type="button" class="icon-button" aria-label="Thông báo (có 3 thông báo mới)"
+                        <button type="button" class="icon-button" aria-label="Thông báo"
                             aria-expanded="false" aria-controls="notification-panel"><span class="bell-icon"
                                 aria-hidden="true"></span><span class="notification-dot"
                                 aria-hidden="true"></span></button>
-                        <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
+                        <section class="notification-panel" id="notification-panel" aria-label="Thông báo" hidden>
                             <header class="notification-header">
                                 <p class="notification-title">Thông báo</p><button type="button"
-                                    class="notification-clear">Mark as read</button>
+                                    class="notification-clear" data-notif-mark-all>Đánh dấu tất cả đã đọc</button>
                             </header>
-                            <ul class="notification-list">
-                                <li class="notification-item is-unread"><span class="notification-item-icon"
-                                        aria-hidden="true"></span>
-                                    <div>
-                                        <p class="notification-text">Có 12 posts đang chờ kiểm duyệt.</p><time
-                                            class="notification-time">5 phút trước</time>
-                                    </div>
-                                </li>
-                                <li class="notification-item is-unread"><span class="notification-item-icon"
-                                        aria-hidden="true"></span>
-                                    <div>
-                                        <p class="notification-text">Thành viên mới đã đăng ký vào hệ thống.</p><time
-                                            class="notification-time">18 phút trước</time>
-                                    </div>
-                                </li>
-                                <li class="notification-item"><span class="notification-item-icon"
-                                        aria-hidden="true"></span>
-                                    <div>
-                                        <p class="notification-text">Reports hoạt động tuần đã sẵn sàng.</p><time
-                                            class="notification-time">1 hours ago</time>
-                                    </div>
-                                </li>
+                            <ul class="notification-list" role="list">
                             </ul>
-                            <a href="/pages/community/community-notifications.html" class="notification-footer">View all notifications</a>
+                            <a href="/pages/community/community-notifications.html" class="notification-footer">Xem tất cả thông báo</a>
                         </section>
                     </div>
                     <div class="user-menu">
@@ -1199,6 +1179,7 @@
     <script src="../../js/admin-dashboard.js"></script>
     <script src="../../js/admin-moderation.js"></script>
     <script src="../../js/admin-settings.js"></script>
+    <script src="../../js/notifications-bell.js"></script>
 </body>
 
 </html>

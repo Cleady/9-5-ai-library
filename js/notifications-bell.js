@@ -10,12 +10,53 @@
   if (window.Lib95BellInitialized) return;
   window.Lib95BellInitialized = true;
 
+  // Phát hiện trang Admin để bản địa hóa tiếng Việt
+  const isAdminPage = window.location.pathname.includes('/pages/admin/') ||
+    (window.location.pathname.includes('admin') && document.documentElement.lang === 'vi');
+
+  // Đọc cài đặt thông báo an toàn từ settings (try/catch)
+  function getMuteParam() {
+    try {
+      const raw = localStorage.getItem('lib95:settings:data');
+      if (!raw) return '';
+      const data = JSON.parse(raw);
+      const notifSettings = data?.notifications || {};
+      const mutes = [];
+      if (notifSettings.lectureUpdates === false) {
+        mutes.push('lecture');
+      }
+      if (notifSettings.communityActivity === false) {
+        mutes.push('community');
+      }
+      return mutes.length > 0 ? mutes.join(',') : '';
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function appendMuteParam(url) {
+    const mute = getMuteParam();
+    if (!mute) return url;
+    const separator = url.includes('?') ? '&' : '?';
+    return `${url}${separator}mute=${encodeURIComponent(mute)}`;
+  }
+
   // Helper tính thời gian tương đối
-  function formatRelativeTime(dateInput) {
+  function formatRelativeTime(dateInput, isVietnamese = false) {
     if (!dateInput) return '';
     const date = new Date(dateInput);
     if (isNaN(date.getTime())) return '';
     const diffSec = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    if (isVietnamese) {
+      if (diffSec < 45) return 'Vừa xong';
+      if (diffSec < 90) return '1 phút trước';
+      if (diffSec < 3600) return `${Math.floor(diffSec / 60)} phút trước`;
+      if (diffSec < 86400) return `${Math.floor(diffSec / 3600)} giờ trước`;
+      if (diffSec < 2592000) return `${Math.floor(diffSec / 86400)} ngày trước`;
+      return date.toLocaleDateString('vi-VN', { month: 'numeric', day: 'numeric' });
+    }
+
     if (diffSec < 45) return 'Just now';
     if (diffSec < 90) return '1m ago';
     if (diffSec < 3600) return `${Math.floor(diffSec / 60)}m ago`;
@@ -36,40 +77,101 @@
   }
 
   // Định nghĩa metadata theo loại thông báo
-  function getNotificationMeta(notif) {
-    const actorName = (notif.actor && notif.actor.name) || 'A member';
+  function getNotificationMeta(notif, isVietnamese = false) {
+    const actorName = (notif.actor && notif.actor.name) || (isVietnamese ? 'Một thành viên' : 'A member');
     let icon = '🔔';
-    let text = `${actorName} interacted with you`;
+    let text = isVietnamese ? `${actorName} đã tương tác với bạn` : `${actorName} interacted with you`;
     let url = '/pages/community/community-feed.html';
 
-    if (notif.type === 'post') {
+    if (notif.type === 'lecture') {
+      icon = '🎓';
+      const lectureTitle = notif.lecture_title || notif.meta || (isVietnamese ? 'Bài giảng mới' : 'New Lecture');
+      text = isVietnamese
+        ? `${actorName} đã thêm bài giảng mới: ${lectureTitle}`
+        : `${actorName} added a new lecture: ${lectureTitle}`;
+      url = notif.lecture_id ? `/pages/lectures/lecture.html?id=${notif.lecture_id}` : '/pages/lectures/lectures.html';
+    } else if (notif.type === 'resource') {
+      icon = '📁';
+      const resourceTitle = notif.resource_title || notif.meta || (isVietnamese ? 'Tài nguyên mới' : 'New Resource');
+      text = isVietnamese
+        ? `${actorName} đã tải lên tài nguyên: ${resourceTitle}`
+        : `${actorName} uploaded a resource: ${resourceTitle}`;
+      url = '/pages/lectures/resources.html';
+    } else if (notif.type === 'moderation') {
+      icon = '🛡️';
+      text = notif.meta || (isVietnamese ? 'Thông báo kiểm duyệt từ hệ thống' : 'System moderation notice');
+      url = '/pages/community/community-notifications.html';
+    } else if (notif.type === 'post') {
       icon = notif.is_pinned ? '📌' : '📝';
-      text = `${actorName} published a new post`;
+      text = isVietnamese ? `${actorName} đã đăng một bài viết mới` : `${actorName} published a new post`;
       url = notif.post_id ? `/pages/community/community-feed.html#post-${notif.post_id}` : '/pages/community/community-feed.html';
     } else if (notif.type === 'like') {
       icon = '♥';
-      text = `${actorName} liked your post`;
+      text = isVietnamese ? `${actorName} đã thích bài viết của bạn` : `${actorName} liked your post`;
       url = notif.post_id ? `/pages/community/community-feed.html#post-${notif.post_id}` : '/pages/community/community-feed.html';
     } else if (notif.type === 'comment') {
       icon = '💬';
-      text = `${actorName} commented on your post`;
+      text = isVietnamese ? `${actorName} đã bình luận về bài viết của bạn` : `${actorName} commented on your post`;
       url = notif.post_id ? `/pages/community/community-feed.html#post-${notif.post_id}` : '/pages/community/community-feed.html';
     } else if (notif.type === 'reply') {
       icon = '↩';
-      text = `${actorName} replied to your discussion`;
+      text = isVietnamese ? `${actorName} đã trả lời thảo luận của bạn` : `${actorName} replied to your discussion`;
       url = '/pages/community/community-discussions.html';
     } else if (notif.type === 'mention') {
       icon = '@';
-      text = `${actorName} mentioned you`;
+      text = isVietnamese ? `${actorName} đã nhắc đến bạn` : `${actorName} mentioned you`;
       url = notif.post_id ? `/pages/community/community-feed.html#post-${notif.post_id}` : '/pages/community/community-feed.html';
     } else if (notif.type === 'group') {
       icon = '👥';
-      text = `${actorName} updated group activity`;
+      text = isVietnamese ? `${actorName} đã cập nhật hoạt động nhóm` : `${actorName} updated group activity`;
       url = '/pages/community/community-groups.html';
     }
 
     return { icon, text, url };
   }
+
+  // Kênh đồng bộ đa tab (BroadcastChannel + storage fallback)
+  let notifChannel = null;
+  if (typeof BroadcastChannel !== 'undefined') {
+    try {
+      notifChannel = new BroadcastChannel('lib95_notifications');
+    } catch (e) {
+      notifChannel = null;
+    }
+  }
+
+  function broadcastChange(payload = { type: 'REFRESH' }) {
+    if (notifChannel) {
+      try {
+        notifChannel.postMessage(payload);
+      } catch (e) {}
+    }
+    try {
+      localStorage.setItem('lib95:notif:update', Date.now().toString());
+    } catch (e) {}
+  }
+
+  function handleExternalNotificationChange() {
+    updateUnreadBadge();
+    const panel = document.querySelector('#notification-panel, #home-notification-panel');
+    if (panel && !panel.hidden) {
+      renderDropdown(panel, true);
+    }
+  }
+
+  if (notifChannel) {
+    notifChannel.onmessage = (event) => {
+      if (event && event.data && event.data.type === 'REFRESH') {
+        handleExternalNotificationChange();
+      }
+    };
+  }
+
+  window.addEventListener('storage', (event) => {
+    if (event.key === 'lib95:notif:update') {
+      handleExternalNotificationChange();
+    }
+  });
 
   // Helper gọi API có kèm token
   async function apiFetch(endpoint, options = {}) {
@@ -111,7 +213,7 @@
   async function updateUnreadBadge() {
     if (!localStorage.getItem('token')) return;
     try {
-      const data = await apiFetch('/api/community/notifications/unread-count');
+      const data = await apiFetch(appendMuteParam('/api/community/notifications/unread-count'));
       const unreadCount = data.unread_count || data.unreadCount || 0;
       const dots = document.querySelectorAll('.notification-dot, .home-page__notification-dot');
       const bells = document.querySelectorAll('.notification .icon-button, [data-home-notifications]');
@@ -127,10 +229,17 @@
       });
 
       bells.forEach(bell => {
-        bell.setAttribute(
-          'aria-label',
-          unreadCount > 0 ? `Notifications (${unreadCount > 9 ? '9+' : unreadCount} unread)` : 'Notifications'
-        );
+        if (isAdminPage) {
+          bell.setAttribute(
+            'aria-label',
+            unreadCount > 0 ? `Thông báo (${unreadCount > 9 ? '9+' : unreadCount} chưa đọc)` : 'Thông báo'
+          );
+        } else {
+          bell.setAttribute(
+            'aria-label',
+            unreadCount > 0 ? `Notifications (${unreadCount > 9 ? '9+' : unreadCount} unread)` : 'Notifications'
+          );
+        }
       });
     } catch (e) {
       // Bỏ qua lỗi mạng nền
@@ -138,39 +247,45 @@
   }
 
   // Nạp và render danh sách thông báo vào dropdown
-  async function renderDropdown(panelEl) {
+  async function renderDropdown(panelEl, isSilent = false) {
     if (!panelEl) return;
 
-    // Cấu trúc khung panel chuẩn
-    panelEl.innerHTML = `
-      <header class="notification-header">
-        <p class="notification-title">Notifications</p>
-        <button type="button" class="notification-clear" data-notif-mark-all>Mark all as read</button>
-      </header>
-      <ul class="notification-list" role="list">
-        <li class="notif-skeleton-item">
-          <div class="notif-skeleton-avatar"></div>
-          <div class="notif-skeleton-lines">
-            <div class="notif-skeleton-line" style="width: 75%"></div>
-            <div class="notif-skeleton-line" style="width: 50%"></div>
-          </div>
-        </li>
-        <li class="notif-skeleton-item">
-          <div class="notif-skeleton-avatar"></div>
-          <div class="notif-skeleton-lines">
-            <div class="notif-skeleton-line" style="width: 60%"></div>
-            <div class="notif-skeleton-line" style="width: 40%"></div>
-          </div>
-        </li>
-      </ul>
-      <a href="/pages/community/community-notifications.html" class="notification-footer">View all notifications</a>
-    `;
+    const titleText = isAdminPage ? 'Thông báo' : 'Notifications';
+    const markAllText = isAdminPage ? 'Đánh dấu tất cả đã đọc' : 'Mark all as read';
+    const viewAllText = isAdminPage ? 'Xem tất cả thông báo' : 'View all notifications';
+
+    // Nếu không phải silent render, hiển thị skeleton loading
+    if (!isSilent) {
+      panelEl.innerHTML = `
+        <header class="notification-header">
+          <p class="notification-title">${escapeHtml(titleText)}</p>
+          <button type="button" class="notification-clear" data-notif-mark-all>${escapeHtml(markAllText)}</button>
+        </header>
+        <ul class="notification-list" role="list">
+          <li class="notif-skeleton-item">
+            <div class="notif-skeleton-avatar"></div>
+            <div class="notif-skeleton-lines">
+              <div class="notif-skeleton-line" style="width: 75%"></div>
+              <div class="notif-skeleton-line" style="width: 50%"></div>
+            </div>
+          </li>
+          <li class="notif-skeleton-item">
+            <div class="notif-skeleton-avatar"></div>
+            <div class="notif-skeleton-lines">
+              <div class="notif-skeleton-line" style="width: 60%"></div>
+              <div class="notif-skeleton-line" style="width: 40%"></div>
+            </div>
+          </li>
+        </ul>
+        <a href="/pages/community/community-notifications.html" class="notification-footer">${escapeHtml(viewAllText)}</a>
+      `;
+    }
 
     const listEl = panelEl.querySelector('.notification-list');
     const markAllBtn = panelEl.querySelector('[data-notif-mark-all]');
 
     if (markAllBtn) {
-      markAllBtn.addEventListener('click', async (e) => {
+      markAllBtn.onclick = async (e) => {
         e.stopPropagation();
         markAllBtn.disabled = true;
         try {
@@ -178,18 +293,18 @@
           panelEl.querySelectorAll('.notif-item.is-unread').forEach(el => el.classList.remove('is-unread'));
           panelEl.querySelectorAll('.notif-unread-dot').forEach(el => el.remove());
           updateUnreadBadge();
+          broadcastChange({ type: 'REFRESH' });
         } catch (err) {
           console.error('Failed to mark all read:', err);
         } finally {
           markAllBtn.disabled = false;
         }
-      });
+      };
     }
 
     try {
-      const data = await apiFetch('/api/community/notifications?page=1&limit=8');
+      const data = await apiFetch(appendMuteParam('/api/community/notifications?page=1&limit=8'));
       const notifications = data.notifications || [];
-      const unreadCount = data.unreadCount || data.unread_count || 0;
 
       // Cập nhật badge
       updateUnreadBadge();
@@ -198,8 +313,8 @@
         listEl.innerHTML = `
           <li class="notif-empty">
             <span class="notif-empty-icon" aria-hidden="true">🔔</span>
-            <p>You're all caught up!</p>
-            <small style="color: var(--color-text-muted);">No new notifications right now.</small>
+            <p>${isAdminPage ? 'Bạn đã xem hết thông báo!' : "You're all caught up!"}</p>
+            <small style="color: var(--color-text-muted);">${isAdminPage ? 'Không có thông báo mới lúc này.' : 'No new notifications right now.'}</small>
           </li>
         `;
         return;
@@ -207,17 +322,40 @@
 
       listEl.innerHTML = '';
 
+      const hasPinned = notifications.some(n => Boolean(n.is_pinned));
+      let renderedPinnedHeader = false;
+      let renderedRecentHeader = false;
+
       notifications.forEach(n => {
-        const meta = getNotificationMeta(n);
+        const isPinned = Boolean(n.is_pinned);
+
+        // Hiển thị nhãn nhóm bài ghim / bài gần đây
+        if (hasPinned && isPinned && !renderedPinnedHeader) {
+          const pinnedHeaderLi = document.createElement('li');
+          pinnedHeaderLi.className = 'notif-section-label';
+          pinnedHeaderLi.setAttribute('role', 'presentation');
+          pinnedHeaderLi.textContent = isAdminPage ? '📌 Thông báo đã ghim' : '📌 Pinned Announcements';
+          listEl.appendChild(pinnedHeaderLi);
+          renderedPinnedHeader = true;
+        } else if (hasPinned && !isPinned && !renderedRecentHeader) {
+          const recentHeaderLi = document.createElement('li');
+          recentHeaderLi.className = 'notif-section-label';
+          recentHeaderLi.setAttribute('role', 'presentation');
+          recentHeaderLi.textContent = isAdminPage ? 'Gần đây' : 'Recent';
+          listEl.appendChild(recentHeaderLi);
+          renderedRecentHeader = true;
+        }
+
+        const meta = getNotificationMeta(n, isAdminPage);
         const li = document.createElement('li');
-        li.className = `notif-item${!n.is_read ? ' is-unread' : ''}${n.is_pinned ? ' notif-item--pinned' : ''}`;
+        li.className = `notif-item${!n.is_read ? ' is-unread' : ''}${isPinned ? ' notif-item--pinned' : ''}`;
         li.setAttribute('role', 'button');
         li.setAttribute('tabindex', '0');
 
         // Avatar
         const avatarDiv = document.createElement('div');
         avatarDiv.className = 'notif-avatar';
-        const actorName = (n.actor && n.actor.name) || 'User';
+        const actorName = (n.actor && n.actor.name) || (isAdminPage ? 'Thành viên' : 'User');
         if (n.actor && n.actor.avatar_url) {
           avatarDiv.style.backgroundImage = `url(${n.actor.avatar_url})`;
         } else {
@@ -241,7 +379,8 @@
           roleBadgeHtml = `<span class="notif-role-badge notif-role-badge--${escapeHtml(n.actor_role)}">${escapeHtml(n.actor_role)}</span>`;
         }
 
-        textP.innerHTML = `<span class="notif-actor-name">${escapeHtml(actorName)}</span>${roleBadgeHtml} ${escapeHtml(meta.text.replace(actorName, '').trim())}`;
+        const remainingText = meta.text.replace(actorName, '').trim();
+        textP.innerHTML = `<span class="notif-actor-name">${escapeHtml(actorName)}</span>${roleBadgeHtml} ${escapeHtml(remainingText)}`;
         contentDiv.appendChild(textP);
 
         // Excerpt
@@ -258,13 +397,13 @@
 
         const timeSpan = document.createElement('time');
         timeSpan.className = 'notif-time';
-        timeSpan.textContent = formatRelativeTime(n.created_at);
+        timeSpan.textContent = formatRelativeTime(n.created_at, isAdminPage);
         metaRow.appendChild(timeSpan);
 
-        if (n.is_pinned) {
+        if (isPinned) {
           const pinnedBadge = document.createElement('span');
           pinnedBadge.className = 'notif-badge-pinned';
-          pinnedBadge.innerHTML = '📌 Pinned';
+          pinnedBadge.textContent = isAdminPage ? '📌 Đã ghim' : '📌 Pinned';
           metaRow.appendChild(pinnedBadge);
         }
 
@@ -290,8 +429,9 @@
               const unreadDot = li.querySelector('.notif-unread-dot');
               if (unreadDot) unreadDot.remove();
               updateUnreadBadge();
+              broadcastChange({ type: 'REFRESH' });
             } catch (e) {
-              // Tiếp tục chuyển trang kể cả khi API đánh dấu đọc thất bại
+              // Tiếp tục chuyển trang kể cả khi API đánh dấu đọc lỗi mạng
             }
           }
           window.location.href = meta.url;
@@ -313,8 +453,8 @@
       listEl.innerHTML = `
         <li class="notif-empty" style="color: var(--status-error, #dc2626);">
           <span class="notif-empty-icon" aria-hidden="true">⚠️</span>
-          <p>Failed to load notifications</p>
-          <small style="color: var(--color-text-muted);">Please check your network and try again.</small>
+          <p>${isAdminPage ? 'Không thể tải thông báo' : 'Failed to load notifications'}</p>
+          <small style="color: var(--color-text-muted);">${isAdminPage ? 'Vui lòng kiểm tra mạng và thử lại.' : 'Please check your network and try again.'}</small>
         </li>
       `;
     }
@@ -384,6 +524,7 @@
   // Cung cấp API toàn cục để các script khác có thể tương tác
   window.Lib95Notifications = {
     refreshBadge: updateUnreadBadge,
-    renderDropdown: renderDropdown
+    renderDropdown: renderDropdown,
+    broadcastChange: broadcastChange
   };
 })();

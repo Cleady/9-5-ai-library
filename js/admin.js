@@ -105,6 +105,9 @@ function initHeaderDropdowns() {
     document.querySelector('.user-menu')
   );
 
+  // Nếu notifications-bell.js quản lý chuông, bỏ qua xử lý tĩnh cũ
+  if (window.Lib95BellInitialized) return;
+
   const clearButton = document.querySelector('.notification-clear');
   const dot = document.querySelector('.notification-dot');
   if (!clearButton || !dot || !bell) return;
