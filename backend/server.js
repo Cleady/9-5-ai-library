@@ -40,7 +40,7 @@ app.use('/api/resources', resourceRoutes);
 app.use('/api/favorites', favoriteRoutes);
 app.use('/api', settingsRoutes);
 
-// 2. Siết bảo mật phục vụ file tĩnh: Chặn triệt để các đường dẫn nhạy cảm
+// 2. Lớp chặn bổ sung đặt trước static: trả 404 cho các đường dẫn nhạy cảm
 app.use((req, res, next) => {
   let safePath = '';
   try {
@@ -49,26 +49,51 @@ app.use((req, res, next) => {
     return res.status(400).send('Bad Request: Invalid URI encoding');
   }
 
-  // Chặn truy cập qua URL tới /backend/**, /node_modules/**, file bắt đầu bằng dấu chấm, package.json, README nội bộ, .env...
+  // Chặn truy cập nhạy cảm: /backend, /tools, /docs, /design, /flowchart testcase, /.git, /node_modules, tệp ngoài whitelist ở gốc...
   const isForbidden =
     safePath.startsWith('/backend') ||
+    safePath.startsWith('/tools') ||
+    safePath.startsWith('/docs') ||
+    safePath.startsWith('/design') ||
+    safePath.startsWith('/flowchart testcase') ||
     safePath.startsWith('/node_modules') ||
+    safePath.startsWith('/.git') ||
     /(^|\/)\.[^/]+/.test(safePath) ||
     /package(-lock)?\.json$/i.test(safePath) ||
     /README(\.md)?$/i.test(safePath) ||
-    /\.(bak|log|sql|env)$/i.test(safePath);
+    /.*_AUDIT\.md$/i.test(safePath) ||
+    /\.(bak|log|sql|env|pdn|docx|map|py)$/i.test(safePath);
 
   if (isForbidden) {
-    return res.status(403).send('Forbidden: Access to sensitive path is denied.');
+    return res.status(404).send('Not Found');
   }
 
   next();
 });
 
-// Phục vụ các file tĩnh hợp lệ từ thư mục gốc (pages, css, js, assets, document/Lectures...)
-app.use(express.static(path.join(__dirname, '../'), {
-  dotfiles: 'deny'
-}));
+// 3. Phục vụ tĩnh theo Whitelist nghiêm ngặt (không mount toàn bộ thư mục gốc)
+app.get(['/', '/index.html'], (req, res) => {
+  res.sendFile(path.join(__dirname, '../index.html'));
+});
+
+const staticOptions = {
+  dotfiles: 'deny',
+  index: false
+};
+
+app.use('/pages', express.static(path.join(__dirname, '../pages'), staticOptions));
+app.use('/css', express.static(path.join(__dirname, '../css'), staticOptions));
+app.use('/js', express.static(path.join(__dirname, '../js'), staticOptions));
+app.use('/assets', express.static(path.join(__dirname, '../assets'), staticOptions));
+app.use('/home_page', express.static(path.join(__dirname, '../home_page'), staticOptions));
+app.use('/document/Lectures', express.static(path.join(__dirname, '../document/Lectures'), staticOptions));
+app.use('/document/Practice', express.static(path.join(__dirname, '../document/Practice'), staticOptions));
+app.use('/document/uploads', express.static(path.join(__dirname, '../document/uploads'), staticOptions));
+
+// 4. Xử lý 404 cho bất kỳ route nào không khớp
+app.use((req, res) => {
+  res.status(404).send('Not Found');
+});
 
 // Chạy Server
 const PORT = process.env.PORT || 3000;
