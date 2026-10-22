@@ -33,45 +33,8 @@ function extractAndNormalizeTags(content, explicitTags) {
   return Array.from(set);
 }
 
-// Helper: Tạo thông báo tự động (không tự thông báo cho chính mình)
-async function createNotification(userId, actorId, type, postId = null) {
-  if (!userId || !actorId || Number(userId) === Number(actorId)) return;
-  try {
-    await db.query(
-      'INSERT INTO community_notifications (user_id, actor_id, type, post_id) VALUES (?, ?, ?, ?)',
-      [userId, actorId, type, postId]
-    );
-  } catch (err) {
-    console.error('Lỗi tạo notification:', err.message);
-  }
-}
-
-// Helper: Tạo thông báo tự động khi có bài đăng mới
-async function notifyNewPost(postId, authorId, authorRole) {
-  if (!postId || !authorId) return;
-  try {
-    const isStaffOrHigher = ['owner', 'admin', 'staff'].includes(authorRole);
-    if (isStaffOrHigher) {
-      // Tác giả là owner / admin / staff -> thông báo cho TẤT CẢ user active (trừ chính tác giả)
-      await db.query(`
-        INSERT INTO community_notifications (user_id, actor_id, type, post_id)
-        SELECT id, ?, 'post', ?
-        FROM users
-        WHERE status = 'active' AND id != ?
-      `, [authorId, postId, authorId]);
-    } else {
-      // Tác giả là member -> chỉ thông báo cho owner / admin / staff đang active (trừ tác giả)
-      await db.query(`
-        INSERT INTO community_notifications (user_id, actor_id, type, post_id)
-        SELECT id, ?, 'post', ?
-        FROM users
-        WHERE status = 'active' AND id != ? AND role IN ('owner', 'admin', 'staff')
-      `, [authorId, postId, authorId]);
-    }
-  } catch (err) {
-    console.error('Lỗi notifyNewPost:', err.message);
-  }
-}
+// Import helper thông báo từ utils/notify
+const { createNotification, notifyNewPost, notifyAllActive } = require('../utils/notify');
 
 // ==========================================
 // 1. POSTS (BÀI VIẾT)
@@ -418,24 +381,24 @@ exports.pinPost = async (req, res) => {
         [userId, postId]
       );
 
-      // Đảm bảo MỌI user active đều có thông báo type 'post' cho bài đó:
-      // 2a. Đặt lại is_read = 0 cho những user đã có thông báo
+      // Đảm bảo MỌI user active đều có thông báo type 'post' cho bài đó (trừ người ghim):
+      // 2a. Đặt lại is_read = 0 và cập nhật created_at cho những user đã có thông báo (trừ người ghim)
       await db.query(
-        "UPDATE community_notifications SET is_read = 0 WHERE post_id = ? AND type = 'post'",
-        [postId]
+        "UPDATE community_notifications SET is_read = 0, created_at = CURRENT_TIMESTAMP WHERE post_id = ? AND type = 'post' AND user_id != ?",
+        [postId, userId]
       );
 
-      // 2b. Thêm thông báo cho các user active chưa có thông báo của post này (trừ tác giả)
+      // 2b. Thêm thông báo cho các user active chưa có thông báo của post này (trừ tác giả và người ghim)
       await db.query(`
         INSERT INTO community_notifications (user_id, actor_id, type, post_id)
         SELECT u.id, ?, 'post', ?
         FROM users u
-        WHERE u.status = 'active' AND u.id != ?
+        WHERE u.status = 'active' AND u.id != ? AND u.id != ?
           AND NOT EXISTS (
             SELECT 1 FROM community_notifications n
             WHERE n.user_id = u.id AND n.post_id = ? AND n.type = 'post'
           )
-      `, [post.user_id, postId, post.user_id, postId]);
+      `, [post.user_id, postId, post.user_id, userId, postId]);
 
     } else {
       // Bỏ ghim bài viết (không xóa thông báo cũ)
@@ -1487,13 +1450,51 @@ exports.getLeaderboard = async (req, res) => {
 // 8. NOTIFICATIONS (THÔNG BÁO)
 // ==========================================
 
-// GET /api/community/notifications/unread-count
+// Helper xây dựng bộ lọc thông báo dùng chung cho cả getNotifications và getUnreadCount
+function buildNotificationFilter(userId, filter = 'all', mute = '') {
+  const whereConditions = ['n.user_id = ?'];
+  const whereParams = [userId];
+
+  // Chỉ lấy thông báo mà bài viết liên quan còn hiển thị (chưa bị ẩn bởi kiểm duyệt)
+  whereConditions.push('(p.id IS NULL OR p.is_hidden = 0 OR p.is_hidden IS NULL)');
+
+  // Bộ lọc trạng thái tab
+  if (filter === 'unread') {
+    whereConditions.push('n.is_read = 0');
+  } else if (filter === 'pinned') {
+    whereConditions.push('COALESCE(p.is_pinned, 0) = 1');
+  }
+
+  // Bộ lọc mute (whitelist: lecture, community)
+  if (mute && typeof mute === 'string') {
+    const muteList = mute.split(',').map(m => m.trim().toLowerCase());
+    if (muteList.includes('lecture')) {
+      whereConditions.push("n.type != 'lecture'");
+    }
+    if (muteList.includes('community')) {
+      // Mute các bài post/group từ thành viên thường và KHÔNG được ghim
+      whereConditions.push("NOT (n.type IN ('post', 'group') AND u.role = 'member' AND COALESCE(p.is_pinned, 0) = 0)");
+    }
+  }
+
+  return { whereConditions, whereParams };
+}
+
+// GET /api/community/notifications/unread-count (?mute=)
 exports.getUnreadCount = async (req, res) => {
   try {
     const userId = req.user.id;
+    const mute = req.query.mute || '';
+    const { whereConditions, whereParams } = buildNotificationFilter(userId, 'unread', mute);
+    const whereSql = `WHERE ${whereConditions.join(' AND ')}`;
+
     const [unreadRows] = await db.query(
-      'SELECT COUNT(*) as unreadCount FROM community_notifications WHERE user_id = ? AND is_read = 0',
-      [userId]
+      `SELECT COUNT(*) as unreadCount
+       FROM community_notifications n
+       JOIN users u ON n.actor_id = u.id
+       LEFT JOIN community_posts p ON n.post_id = p.id
+       ${whereSql}`,
+      whereParams
     );
     const count = Number(unreadRows[0].unreadCount || 0);
     res.json({
@@ -1507,7 +1508,7 @@ exports.getUnreadCount = async (req, res) => {
   }
 };
 
-// GET /api/community/notifications (?page=, ?limit=, ?filter=all|unread|pinned)
+// GET /api/community/notifications (?page=, ?limit=, ?filter=all|unread|pinned, ?mute=)
 exports.getNotifications = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -1515,22 +1516,16 @@ exports.getNotifications = async (req, res) => {
     const limit = Math.min(50, Math.max(1, parseInt(req.query.limit, 10) || 20));
     const offset = (page - 1) * limit;
     const filter = (req.query.filter || 'all').toLowerCase();
+    const mute = req.query.mute || '';
 
-    const whereConditions = ['n.user_id = ?'];
-    const whereParams = [userId];
-
-    if (filter === 'unread') {
-      whereConditions.push('n.is_read = 0');
-    } else if (filter === 'pinned') {
-      whereConditions.push('p.is_pinned = 1');
-    }
-
+    const { whereConditions, whereParams } = buildNotificationFilter(userId, filter, mute);
     const whereSql = `WHERE ${whereConditions.join(' AND ')}`;
 
     // 1. Đếm tổng số lượng thông báo phù hợp bộ lọc
     const [countRows] = await db.query(
       `SELECT COUNT(*) AS total
        FROM community_notifications n
+       JOIN users u ON n.actor_id = u.id
        LEFT JOIN community_posts p ON n.post_id = p.id
        ${whereSql}`,
       whereParams
@@ -1540,23 +1535,32 @@ exports.getNotifications = async (req, res) => {
     // 2. Lấy danh sách thông báo: Ưu tiên bài ghim (is_pinned DESC, pinned_at DESC), sau đó đến created_at DESC
     const queryParams = [...whereParams, limit, offset];
     const [notifications] = await db.query(
-      `SELECT n.id, n.user_id, n.actor_id, n.type, n.post_id, n.is_read, n.created_at,
+      `SELECT n.id, n.user_id, n.actor_id, n.type, n.post_id, n.lecture_id, n.resource_id, n.meta, n.is_read, n.created_at,
               u.full_name AS actor_name, u.username AS actor_username, u.avatar_url AS actor_avatar, u.role AS actor_role,
               p.content AS post_preview, p.kind AS post_kind,
-              COALESCE(p.is_pinned, 0) AS is_pinned, p.pinned_at
+              COALESCE(p.is_pinned, 0) AS is_pinned, p.pinned_at,
+              l.title AS lecture_title,
+              r.title AS resource_title
        FROM community_notifications n
        JOIN users u ON n.actor_id = u.id
        LEFT JOIN community_posts p ON n.post_id = p.id
+       LEFT JOIN lectures l ON n.lecture_id = l.id
+       LEFT JOIN resources r ON n.resource_id = r.id
        ${whereSql}
        ORDER BY COALESCE(p.is_pinned, 0) DESC, p.pinned_at DESC, n.created_at DESC
        LIMIT ? OFFSET ?`,
       queryParams
     );
 
-    // 3. Đếm tổng số thông báo chưa đọc (để cập nhật badge)
+    // 3. Đếm tổng số thông báo chưa đọc theo cùng bộ lọc mute (để cập nhật badge chính xác)
+    const { whereConditions: unreadWhereConds, whereParams: unreadWhereParams } = buildNotificationFilter(userId, 'unread', mute);
     const [unreadRows] = await db.query(
-      'SELECT COUNT(*) as unreadCount FROM community_notifications WHERE user_id = ? AND is_read = 0',
-      [userId]
+      `SELECT COUNT(*) as unreadCount
+       FROM community_notifications n
+       JOIN users u ON n.actor_id = u.id
+       LEFT JOIN community_posts p ON n.post_id = p.id
+       WHERE ${unreadWhereConds.join(' AND ')}`,
+      unreadWhereParams
     );
     const unreadCount = Number(unreadRows[0].unreadCount || 0);
 
@@ -1567,13 +1571,30 @@ exports.getNotifications = async (req, res) => {
       }
       const isPinned = Boolean(n.is_pinned);
 
+      // Xác định tiêu đề hiển thị phù hợp loại thông báo
+      let title = null;
+      if (n.type === 'lecture' && n.lecture_title) {
+        title = n.lecture_title;
+      } else if (n.type === 'resource' && n.resource_title) {
+        title = n.resource_title;
+      } else if (excerpt) {
+        title = excerpt;
+      }
+
       return {
         id: n.id,
         type: n.type,
         post_id: n.post_id,
+        lecture_id: n.lecture_id,
+        resource_id: n.resource_id,
+        meta: n.meta,
+        title: title,
+        lecture_title: n.lecture_title || null,
+        resource_title: n.resource_title || null,
         is_read: Boolean(n.is_read),
         created_at: n.created_at,
         is_pinned: isPinned,
+        pinned_at: n.pinned_at,
         post_kind: n.post_kind || 'post',
         post_excerpt: excerpt,
         post_preview: excerpt, // Tương thích ngược với frontend cũ
@@ -1623,7 +1644,10 @@ exports.markNotificationRead = async (req, res) => {
   try {
     const notifId = req.params.id;
     const userId = req.user.id;
-    await db.query('UPDATE community_notifications SET is_read = 1 WHERE id = ? AND user_id = ?', [notifId, userId]);
+    const [result] = await db.query('UPDATE community_notifications SET is_read = 1 WHERE id = ? AND user_id = ?', [notifId, userId]);
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: 'Không tìm thấy thông báo hoặc bạn không có quyền' });
+    }
     res.json({ success: true, message: 'Đã đánh dấu thông báo là đã đọc' });
   } catch (error) {
     console.error('Lỗi markNotificationRead:', error);

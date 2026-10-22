@@ -230,17 +230,24 @@ async function initDatabase() {
         id INT AUTO_INCREMENT PRIMARY KEY,
         user_id INT NOT NULL,
         actor_id INT NOT NULL,
-        type ENUM('like', 'comment', 'reply', 'mention', 'group', 'post') NOT NULL,
+        type ENUM('like', 'comment', 'reply', 'mention', 'group', 'post', 'lecture', 'resource', 'moderation') NOT NULL,
         post_id INT NULL,
+        lecture_id INT NULL,
+        resource_id INT NULL,
+        meta VARCHAR(255) NULL,
         is_read TINYINT(1) DEFAULT 0,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         INDEX idx_com_notif_user_read (user_id, is_read),
         INDEX idx_com_notif_user_created (user_id, created_at),
         INDEX idx_com_notif_actor (actor_id),
         INDEX idx_com_notif_post (post_id),
+        INDEX idx_com_notif_lecture (lecture_id),
+        INDEX idx_com_notif_resource (resource_id),
         CONSTRAINT fk_com_notif_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
         CONSTRAINT fk_com_notif_actor FOREIGN KEY (actor_id) REFERENCES users(id) ON DELETE CASCADE,
-        CONSTRAINT fk_com_notif_post FOREIGN KEY (post_id) REFERENCES community_posts(id) ON DELETE CASCADE
+        CONSTRAINT fk_com_notif_post FOREIGN KEY (post_id) REFERENCES community_posts(id) ON DELETE CASCADE,
+        CONSTRAINT fk_com_notif_lecture FOREIGN KEY (lecture_id) REFERENCES lectures(id) ON DELETE CASCADE,
+        CONSTRAINT fk_com_notif_resource FOREIGN KEY (resource_id) REFERENCES resources(id) ON DELETE CASCADE
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
     `);
 
@@ -645,30 +652,76 @@ async function initDatabase() {
       console.log('✅ Added index idx_com_posts_pinned to community_posts');
     }
 
-    // 2. Mở rộng ENUM type của bảng community_notifications thêm giá trị 'post'
+    // 2. Mở rộng ENUM type của bảng community_notifications thêm các loại 'post', 'lecture', 'resource', 'moderation'
     const [notifTypeCol] = await db.query(`
       SELECT COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS
       WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_notifications' AND COLUMN_NAME = 'type'
     `);
-    if (notifTypeCol.length > 0 && !notifTypeCol[0].COLUMN_TYPE.includes("'post'")) {
-      await db.query(`
-        ALTER TABLE community_notifications
-        MODIFY COLUMN type ENUM('like', 'comment', 'reply', 'mention', 'group', 'post') NOT NULL
-      `);
-      console.log("✅ Expanded community_notifications.type ENUM to include 'post'");
+    if (notifTypeCol.length > 0) {
+      const typeStr = notifTypeCol[0].COLUMN_TYPE;
+      if (!typeStr.includes("'lecture'") || !typeStr.includes("'resource'") || !typeStr.includes("'moderation'") || !typeStr.includes("'post'")) {
+        await db.query(`
+          ALTER TABLE community_notifications
+          MODIFY COLUMN type ENUM('like', 'comment', 'reply', 'mention', 'group', 'post', 'lecture', 'resource', 'moderation') NOT NULL
+        `);
+        console.log("✅ Expanded community_notifications.type ENUM to include 'lecture', 'resource', 'moderation', 'post'");
+      }
     }
 
-    // 3. Kiểm tra và bổ sung index (user_id, created_at) cho community_notifications
-    const [checkNotifIdx] = await db.query(`
-      SELECT INDEX_NAME FROM INFORMATION_SCHEMA.STATISTICS
-      WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_notifications' AND INDEX_NAME = 'idx_com_notif_user_created'
-    `);
-    if (checkNotifIdx.length === 0) {
-      await db.query(`
-        ALTER TABLE community_notifications
-        ADD INDEX idx_com_notif_user_created (user_id, created_at)
-      `);
-      console.log('✅ Added index idx_com_notif_user_created to community_notifications');
+    // 3. Kiểm tra và bổ sung các cột lecture_id, resource_id, meta vào bảng community_notifications
+    const notifColsToAdd = [
+      { name: 'lecture_id', sql: 'ALTER TABLE community_notifications ADD COLUMN lecture_id INT NULL' },
+      { name: 'resource_id', sql: 'ALTER TABLE community_notifications ADD COLUMN resource_id INT NULL' },
+      { name: 'meta', sql: 'ALTER TABLE community_notifications ADD COLUMN meta VARCHAR(255) NULL' }
+    ];
+    for (const col of notifColsToAdd) {
+      const [cols] = await db.query(`
+        SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS
+        WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_notifications' AND COLUMN_NAME = ?
+      `, [col.name]);
+      if (cols.length === 0) {
+        await db.query(col.sql);
+        console.log(`✅ Added column community_notifications.${col.name}`);
+      }
+    }
+
+    // 4. Kiểm tra và bổ sung các khóa ngoại fk_com_notif_lecture, fk_com_notif_resource
+    const notifFksToAdd = [
+      {
+        name: 'fk_com_notif_lecture',
+        sql: 'ALTER TABLE community_notifications ADD CONSTRAINT fk_com_notif_lecture FOREIGN KEY (lecture_id) REFERENCES lectures(id) ON DELETE CASCADE'
+      },
+      {
+        name: 'fk_com_notif_resource',
+        sql: 'ALTER TABLE community_notifications ADD CONSTRAINT fk_com_notif_resource FOREIGN KEY (resource_id) REFERENCES resources(id) ON DELETE CASCADE'
+      }
+    ];
+    for (const fk of notifFksToAdd) {
+      const [fks] = await db.query(`
+        SELECT CONSTRAINT_NAME FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+        WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_notifications' AND CONSTRAINT_NAME = ?
+      `, [fk.name]);
+      if (fks.length === 0) {
+        await db.query(fk.sql);
+        console.log(`✅ Added foreign key ${fk.name}`);
+      }
+    }
+
+    // 5. Kiểm tra và bổ sung các chỉ mục cho community_notifications
+    const notifIndexesToAdd = [
+      { name: 'idx_com_notif_user_created', sql: 'ALTER TABLE community_notifications ADD INDEX idx_com_notif_user_created (user_id, created_at)' },
+      { name: 'idx_com_notif_lecture', sql: 'ALTER TABLE community_notifications ADD INDEX idx_com_notif_lecture (lecture_id)' },
+      { name: 'idx_com_notif_resource', sql: 'ALTER TABLE community_notifications ADD INDEX idx_com_notif_resource (resource_id)' }
+    ];
+    for (const idx of notifIndexesToAdd) {
+      const [indexes] = await db.query(`
+        SELECT INDEX_NAME FROM INFORMATION_SCHEMA.STATISTICS
+        WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_notifications' AND INDEX_NAME = ?
+      `, [idx.name]);
+      if (indexes.length === 0) {
+        await db.query(idx.sql);
+        console.log(`✅ Added index ${idx.name} to community_notifications`);
+      }
     }
 
     console.log('🎉 Database tables initialized and ready.');
