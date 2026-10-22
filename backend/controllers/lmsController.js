@@ -529,19 +529,38 @@ exports.addComment = async (req, res) => {
     const { lectureId } = req.params;
     const { content } = req.body;
 
-    if (!content || !content.trim()) {
+    const parsedLecId = parseInt(lectureId, 10);
+    if (isNaN(parsedLecId) || parsedLecId <= 0) {
+      return res.status(400).json({ error: 'Mã bài giảng không hợp lệ' });
+    }
+
+    const [lectureRows] = await db.query('SELECT id FROM lectures WHERE id = ?', [parsedLecId]);
+    if (lectureRows.length === 0) {
+      return res.status(404).json({ error: 'Bài giảng không tồn tại' });
+    }
+
+    if (typeof content !== 'string' || !content.trim()) {
       return res.status(400).json({ error: 'Nội dung bình luận không được để trống' });
     }
 
-    const userName = req.user?.username || req.body.userName || 'Thành viên';
-    const userRole = req.user?.role || req.body.userRole || 'member';
-    const userId = req.user?.id || null;
-    const userAvatar = req.user?.avatar_url || userName.substring(0, 1).toUpperCase();
+    const trimmedContent = content.trim();
+    if (trimmedContent.length > 1000) {
+      return res.status(400).json({ error: 'Nội dung bình luận tối đa 1000 ký tự' });
+    }
+
+    if (!req.user || !req.user.id) {
+      return res.status(401).json({ error: 'Bạn cần đăng nhập để bình luận' });
+    }
+
+    const userId = req.user.id;
+    const userName = req.user.username || 'Thành viên';
+    const userRole = req.user.role || 'member';
+    const userAvatar = req.user.avatar_url || (userName ? userName.substring(0, 1).toUpperCase() : 'U');
 
     const [result] = await db.query(`
       INSERT INTO lecture_comments (lecture_id, user_id, user_name, user_role, user_avatar, content)
       VALUES (?, ?, ?, ?, ?, ?)
-    `, [lectureId, userId, userName, userRole, userAvatar, content.trim()]);
+    `, [parsedLecId, userId, userName, userRole, userAvatar, trimmedContent]);
 
     const [created] = await db.query(`
       SELECT id, user_id, user_name, user_role, user_avatar, content, DATE_FORMAT(created_at, '%H:%i %d/%m/%Y') AS created_at

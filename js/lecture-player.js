@@ -695,8 +695,18 @@
     var currentUser = null;
     try { currentUser = JSON.parse(userStr); } catch (e) {}
 
-    if (avatarEl && currentUser) {
-      avatarEl.textContent = (currentUser.username || 'U').substring(0, 1).toUpperCase();
+    if (avatarEl) {
+      avatarEl.textContent = (currentUser && currentUser.username) ? currentUser.username.substring(0, 1).toUpperCase() : '?';
+    }
+
+    // Nhắc nhở người dùng đăng nhập thân thiện nếu chưa có phiên
+    if (!token) {
+      if (inputEl) {
+        inputEl.placeholder = 'Vui lòng đăng nhập tài khoản để tham gia thảo luận bài giảng...';
+      }
+      if (btnSubmit) {
+        btnSubmit.textContent = 'Đăng nhập để gửi';
+      }
     }
 
     function loadComments() {
@@ -716,84 +726,115 @@
       if (!commentsListEl) return;
       if (countEl) countEl.textContent = comments.length + ' bình luận';
 
+      commentsListEl.innerHTML = '';
+
       if (comments.length === 0) {
-        commentsListEl.innerHTML = '<p style="color: #64748b; font-size: 14px; text-align: center; padding: 20px;">Chưa có bình luận nào. Hãy là người đầu tiên đặt câu hỏi hoặc chia sẻ ý kiến về bài học này!</p>';
+        var emptyP = document.createElement('p');
+        emptyP.style.cssText = 'color: #64748b; font-size: 14px; text-align: center; padding: 20px;';
+        emptyP.textContent = 'Chưa có bình luận nào. Hãy là người đầu tiên đặt câu hỏi hoặc chia sẻ ý kiến về bài học này!';
+        commentsListEl.appendChild(emptyP);
         return;
       }
 
-      var html = '';
       comments.forEach(function (c) {
         var isAuthor = currentUser && currentUser.id === c.user_id;
         var isPrivileged = currentUser && ['owner', 'admin', 'staff'].includes(currentUser.role);
         var canDelete = isAuthor || isPrivileged;
 
-        var roleBadge = '';
-        if (c.user_role === 'owner') roleBadge = '<span class="role-badge" style="background: #ef4444; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-left: 6px;">Owner</span>';
-        else if (c.user_role === 'admin') roleBadge = '<span class="role-badge" style="background: #3b82f6; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-left: 6px;">Admin</span>';
-        else if (c.user_role === 'staff') roleBadge = '<span class="role-badge" style="background: #10b981; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-left: 6px;">Staff</span>';
+        var item = document.createElement('div');
+        item.className = 'lec-comment-item';
+        item.style.cssText = 'display: flex; gap: 12px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9;';
 
-        html +=
-          '<div class="lec-comment-item" style="display: flex; gap: 12px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9;">' +
-            '<div style="width: 36px; height: 36px; border-radius: 50%; background: #e2e8f0; color: #1e293b; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;">' +
-              (c.user_avatar || (c.user_name ? c.user_name.substring(0,1).toUpperCase() : 'U')) +
-            '</div>' +
-            '<div style="flex: 1;">' +
-              '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">' +
-                '<div>' +
-                  '<strong style="font-size: 14px; color: #0f172a;">' + c.user_name + '</strong>' +
-                  roleBadge +
-                  '<span style="font-size: 12px; color: #94a3b8; margin-left: 8px;">' + c.created_at + '</span>' +
-                '</div>' +
-                (canDelete ? '<button type="button" class="lec-btn-del-cmt" data-id="' + c.id + '" style="background: none; border: none; color: #94a3b8; font-size: 12px; cursor: pointer;" title="Xóa bình luận">✕</button>' : '') +
-              '</div>' +
-              '<div style="font-size: 14px; color: #334155; line-height: 1.6; white-space: pre-wrap;">' + c.content + '</div>' +
-            '</div>' +
-          '</div>';
-      });
+        var avatar = document.createElement('div');
+        avatar.style.cssText = 'width: 36px; height: 36px; border-radius: 50%; background: #e2e8f0; color: #1e293b; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;';
+        avatar.textContent = c.user_avatar || (c.user_name ? c.user_name.substring(0, 1).toUpperCase() : 'U');
+        item.appendChild(avatar);
 
-      commentsListEl.innerHTML = html;
+        var body = document.createElement('div');
+        body.style.cssText = 'flex: 1;';
 
-      commentsListEl.querySelectorAll('.lec-btn-del-cmt').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var cId = btn.getAttribute('data-id');
-          if (!confirm('Bạn có muốn xóa bình luận này?')) return;
-          fetch('/api/lms/comments/' + cId, {
-            method: 'DELETE',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Bearer ' + (token || '')
-            }
-          })
-          .then(function (res) { return res.json(); })
-          .then(function (d) {
-            if (d.success) loadComments();
-            else alert(d.error || 'Lỗi khi xóa bình luận');
+        var header = document.createElement('div');
+        header.style.cssText = 'display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;';
+
+        var authorWrap = document.createElement('div');
+        var strong = document.createElement('strong');
+        strong.style.cssText = 'font-size: 14px; color: #0f172a;';
+        strong.textContent = c.user_name || 'Thành viên';
+        authorWrap.appendChild(strong);
+
+        if (c.user_role === 'owner' || c.user_role === 'admin' || c.user_role === 'staff') {
+          var badge = document.createElement('span');
+          badge.className = 'role-badge';
+          var badgeBg = c.user_role === 'owner' ? '#ef4444' : (c.user_role === 'admin' ? '#3b82f6' : '#10b981');
+          badge.style.cssText = 'background: ' + badgeBg + '; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-left: 6px;';
+          badge.textContent = c.user_role.toUpperCase();
+          authorWrap.appendChild(badge);
+        }
+
+        var timeSpan = document.createElement('span');
+        timeSpan.style.cssText = 'font-size: 12px; color: #94a3b8; margin-left: 8px;';
+        timeSpan.textContent = c.created_at || '';
+        authorWrap.appendChild(timeSpan);
+        header.appendChild(authorWrap);
+
+        if (canDelete) {
+          var delBtn = document.createElement('button');
+          delBtn.type = 'button';
+          delBtn.className = 'lec-btn-del-cmt';
+          delBtn.style.cssText = 'background: none; border: none; color: #94a3b8; font-size: 12px; cursor: pointer;';
+          delBtn.title = 'Xóa bình luận';
+          delBtn.textContent = '✕';
+          delBtn.addEventListener('click', function () {
+            if (!confirm('Bạn có muốn xóa bình luận này?')) return;
+            fetch('/api/lms/comments/' + c.id, {
+              method: 'DELETE',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + (token || '')
+              }
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (d) {
+              if (d.success) loadComments();
+              else alert(d.error || 'Lỗi khi xóa bình luận');
+            });
           });
-        });
+          header.appendChild(delBtn);
+        }
+
+        body.appendChild(header);
+
+        var contentDiv = document.createElement('div');
+        contentDiv.style.cssText = 'font-size: 14px; color: #334155; line-height: 1.6; white-space: pre-wrap; word-break: break-word;';
+        contentDiv.textContent = c.content || '';
+        body.appendChild(contentDiv);
+
+        item.appendChild(body);
+        commentsListEl.appendChild(item);
       });
     }
 
     if (btnSubmit) {
       btnSubmit.addEventListener('click', function () {
+        if (!token) {
+          alert('Vui lòng đăng nhập để gửi bình luận thảo luận!');
+          window.location.href = 'login.html';
+          return;
+        }
+
         var content = inputEl.value.trim();
         if (!content) {
           alert('Vui lòng nhập nội dung bình luận!');
           return;
         }
 
-        var headers = { 'Content-Type': 'application/json' };
-        if (token) headers['Authorization'] = 'Bearer ' + token;
-
-        var body = { content: content };
-        if (!token && currentUser) {
-          body.userName = currentUser.username;
-          body.userRole = currentUser.role;
-        }
-
         fetch('/api/lms/lectures/' + lectureId + '/comments', {
           method: 'POST',
-          headers: headers,
-          body: JSON.stringify(body)
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+          },
+          body: JSON.stringify({ content: content })
         })
         .then(function (res) { return res.json(); })
         .then(function (data) {

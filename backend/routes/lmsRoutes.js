@@ -233,14 +233,7 @@ router.get('/browse-videos', verifyToken, isStaffAdminOwner, lmsController.brows
 // === COMMENTS / THẢO LUẬN ===
 router.get('/lectures/:lectureId/comments', lmsController.getComments);
 // Thành viên đã đăng nhập đều có thể gửi bình luận
-router.post('/lectures/:lectureId/comments', (req, res, next) => {
-  // Cho phép verifyToken nếu có header, hoặc fallback
-  const token = req.headers['authorization'];
-  if (token) {
-    return verifyToken(req, res, next);
-  }
-  next();
-}, lmsController.addComment);
+router.post('/lectures/:lectureId/comments', verifyToken, lmsController.addComment);
 
 router.delete('/comments/:commentId', verifyToken, lmsController.deleteComment);
 
