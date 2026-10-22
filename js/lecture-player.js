@@ -90,8 +90,74 @@
   var currentPlayingLecture = null;
   var ytPlayerInstance = null;
   var ytProgressInterval = null;
+  var ytHasResumed = false;
+  var html5HasResumed = false;
+  var COMPLETION_THRESHOLD = (core && core.COMPLETION_THRESHOLD) || 90;
+
+  /* ====== HÀM LƯU TIẾN ĐỘ THỐNG NHẤT (FILE VIDEO & YOUTUBE) ====== */
+  function recordLectureProgress(lectureId, currentTime, duration, isEndedEvent) {
+    if (lectureId === undefined || lectureId === null) return;
+
+    // Chỉ tính khi duration là số hữu hạn > 0 và currentTime hữu hạn >= 0; ngược lại không ghi gì
+    if (typeof duration !== 'number' || !isFinite(duration) || isNaN(duration) || duration <= 0) {
+      return;
+    }
+    if (typeof currentTime !== 'number' || !isFinite(currentTime) || isNaN(currentTime) || currentTime < 0) {
+      return;
+    }
+
+    var calcPercent;
+    if (isEndedEvent) {
+      calcPercent = 100;
+    } else {
+      calcPercent = Math.floor((currentTime / duration) * 100);
+    }
+
+    if (isNaN(calcPercent) || !isFinite(calcPercent)) return;
+    calcPercent = Math.max(0, Math.min(100, calcPercent));
+
+    // Không bao giờ giảm tiến độ đã đạt: percent lưu = max(đã lưu, mới)
+    var currentProg = core.getLectureProgress ? core.getLectureProgress(lectureId) : null;
+    var existingPercent = currentProg ? currentProg.percent : (core.storageGet('watch:' + lectureId) || 0);
+    var isAlreadyCompleted = currentProg ? currentProg.completed : false;
+
+    var newPercent = Math.max(existingPercent, calcPercent);
+    if (isAlreadyCompleted) {
+      newPercent = 100;
+    }
+
+    // Lưu percent vào storage
+    core.storageSet('watch:' + lectureId, newPercent);
+
+    // Hoàn thành: khi percent >= ngưỡng (90) hoặc sự kiện ended thật
+    var reachedCompletion = isAlreadyCompleted || isEndedEvent || newPercent >= COMPLETION_THRESHOLD;
+    if (reachedCompletion) {
+      core.markCompleted(lectureId);
+      newPercent = 100;
+      core.storageSet('watch:' + lectureId, 100);
+    }
+
+    // Cập nhật giao diện sidebar hiện tại
+    updateSidebarProgress(lectureId);
+
+    // Phát sự kiện nội bộ cho cùng tab hoặc trang khác cập nhật
+    try {
+      if (typeof window.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
+        window.dispatchEvent(new CustomEvent('lib95:progress-update', {
+          detail: {
+            lectureId: lectureId,
+            percent: newPercent,
+            completed: reachedCompletion
+          }
+        }));
+      }
+    } catch (e) {}
+
+    return newPercent;
+  }
 
   function cleanupYouTubePlayer() {
+    ytHasResumed = false;
     if (ytProgressInterval) {
       clearInterval(ytProgressInterval);
       ytProgressInterval = null;
@@ -161,6 +227,24 @@
       return;
     }
 
+    function tryResumeYouTube() {
+      if (ytHasResumed || !ytPlayerInstance || typeof ytPlayerInstance.getDuration !== 'function') return;
+      var prog = core.getLectureProgress ? core.getLectureProgress(lecture.id) : null;
+      var savedPct = prog ? prog.percent : (core.storageGet('watch:' + lecture.id) || 0);
+      if (savedPct && typeof savedPct === 'number' && savedPct > 0 && savedPct < COMPLETION_THRESHOLD) {
+        try {
+          var dur = ytPlayerInstance.getDuration();
+          if (typeof dur === 'number' && isFinite(dur) && dur > 0) {
+            ytHasResumed = true;
+            var seekSec = Math.round((savedPct / 100) * dur);
+            if (seekSec > 0 && seekSec < dur && typeof ytPlayerInstance.seekTo === 'function') {
+              ytPlayerInstance.seekTo(seekSec, true);
+            }
+          }
+        } catch (e) {}
+      }
+    }
+
     window.Lib95.youtube.loadApi().then(function (YT) {
       ytPlayerInstance = new YT.Player('lec-youtube-player', {
         height: '100%',
@@ -177,50 +261,51 @@
         },
         events: {
           onReady: function () {
-            // Restore saved progress
-            var savedPct = core.storageGet('watch:' + lecture.id);
-            if (savedPct && typeof savedPct === 'number' && savedPct > 0 && savedPct < 90) {
-              try {
-                var dur = ytPlayerInstance.getDuration();
-                if (dur && dur > 0) {
-                  var seekSec = Math.round((savedPct / 100) * dur);
-                  ytPlayerInstance.seekTo(seekSec, true);
-                }
-              } catch (e) {}
-            }
+            tryResumeYouTube();
           },
           onStateChange: function (event) {
             if (event.data === YT.PlayerState.PLAYING) {
+              tryResumeYouTube();
               if (!ytProgressInterval) {
                 ytProgressInterval = setInterval(function () {
-                  if (!ytPlayerInstance || typeof ytPlayerInstance.getCurrentTime !== 'function') return;
+                  if (!ytPlayerInstance || typeof ytPlayerInstance.getCurrentTime !== 'function' || typeof ytPlayerInstance.getDuration !== 'function') return;
                   try {
                     var cur = ytPlayerInstance.getCurrentTime();
                     var dur = ytPlayerInstance.getDuration();
-                    if (dur && dur > 0) {
-                      var pct = Math.min(100, Math.round((cur / dur) * 100));
-                      core.storageSet('watch:' + lecture.id, pct);
-                      if (pct >= 90) {
-                        core.markCompleted(lecture.id);
-                        updateSidebarProgress(lecture.id);
-                      }
+                    if (typeof dur === 'number' && isFinite(dur) && dur > 0 && typeof cur === 'number' && isFinite(cur) && cur >= 0) {
+                      recordLectureProgress(lecture.id, cur, dur, false);
                     }
                   } catch (e) {}
-                }, 1000);
+                }, 3000);
               }
             } else {
               if (ytProgressInterval) {
                 clearInterval(ytProgressInterval);
                 ytProgressInterval = null;
               }
-              if (event.data === YT.PlayerState.ENDED) {
-                core.storageSet('watch:' + lecture.id, 100);
-                core.markCompleted(lecture.id);
-                updateSidebarProgress(lecture.id);
+              if (event.data === YT.PlayerState.PAUSED) {
+                try {
+                  var cur = ytPlayerInstance.getCurrentTime();
+                  var dur = ytPlayerInstance.getDuration();
+                  if (typeof dur === 'number' && isFinite(dur) && dur > 0 && typeof cur === 'number' && isFinite(cur) && cur >= 0) {
+                    recordLectureProgress(lecture.id, cur, dur, false);
+                  }
+                } catch (e) {}
+              } else if (event.data === YT.PlayerState.ENDED) {
+                try {
+                  var dur = ytPlayerInstance.getDuration();
+                  if (typeof dur === 'number' && isFinite(dur) && dur > 0) {
+                    recordLectureProgress(lecture.id, dur, dur, true);
+                  }
+                } catch (e) {}
               }
             }
           },
           onError: function (event) {
+            if (ytProgressInterval) {
+              clearInterval(ytProgressInterval);
+              ytProgressInterval = null;
+            }
             if (ytContainer) ytContainer.style.display = 'none';
             if (ytError) {
               var code = event.data;
@@ -285,6 +370,27 @@
     }
 
 
+    function tryResumeHtml5() {
+      if (html5HasResumed || !currentPlayingLecture) return;
+      var prog = core.getLectureProgress ? core.getLectureProgress(currentPlayingLecture.id) : null;
+      var savedPct = prog ? prog.percent : (core.storageGet('watch:' + currentPlayingLecture.id) || 0);
+      if (savedPct && typeof savedPct === 'number' && savedPct > 0 && savedPct < COMPLETION_THRESHOLD && video.duration && !isNaN(video.duration) && video.duration > 0) {
+        if (video.currentTime === 0) {
+          var resumeSec = (savedPct / 100) * video.duration;
+          if (resumeSec > 0 && resumeSec < video.duration) {
+            html5HasResumed = true;
+            try {
+              video.currentTime = resumeSec;
+            } catch (e) {}
+          }
+        }
+      }
+    }
+
+    if (video.readyState >= 1 && video.duration && !isNaN(video.duration)) {
+      tryResumeHtml5();
+    }
+
     /* Đảm bảo event listener chỉ được gắn DUY NHẤT 1 LẦN */
     if (isPlayerInitialized) return;
     isPlayerInitialized = true;
@@ -301,19 +407,7 @@
     var miniCloseBtn = document.getElementById('lec-mini-close');
     var miniTime = document.getElementById('lec-mini-time');
 
-    /* Lưu tiến độ với debounce */
-    var saveProgress = core.debounce(function (currentTime) {
-      if (!currentPlayingLecture || !video.duration) return;
-      var curId = currentPlayingLecture.id;
-      var percent = Math.round((currentTime / video.duration) * 100) || 0;
-      core.storageSet('watch:' + curId, percent);
-      
-      /* Đánh dấu hoàn thành nếu xem >= 90% */
-      if (percent >= 90) {
-        core.markCompleted(curId);
-        updateSidebarProgress(curId);
-      }
-    }, 1000);
+    var lastFileProgressTime = 0;
     
     /* Play / Pause an toàn với Promise .catch */
     function togglePlay() {
@@ -343,7 +437,6 @@
     if (bigPlayBtn) bigPlayBtn.addEventListener('click', togglePlay);
     video.addEventListener('click', togglePlay);
     video.addEventListener('play', updatePlayIcon);
-    video.addEventListener('pause', updatePlayIcon);
     
     if (miniPlayBtn) miniPlayBtn.addEventListener('click', togglePlay);
 
@@ -361,12 +454,13 @@
         var text = formatTime(video.currentTime) + ' / ' + formatTime(video.duration);
         if (timeDisplay) timeDisplay.textContent = text;
         if (miniTime) miniTime.textContent = text;
+        tryResumeHtml5();
       }
     });
 
-    /* Cập nhật seek bar và thời gian */
+    /* Cập nhật seek bar và thời gian, throttle ghi tiến độ mỗi 3 giây */
     video.addEventListener('timeupdate', function () {
-      if (!video.duration) return;
+      if (!video.duration || isNaN(video.duration) || video.duration <= 0) return;
       var curr = video.currentTime;
       var dur = video.duration;
       
@@ -375,7 +469,36 @@
       if (timeDisplay) timeDisplay.textContent = text;
       if (miniTime) miniTime.textContent = text;
       
-      saveProgress(curr);
+      var now = Date.now();
+      if (now - lastFileProgressTime >= 3000) {
+        lastFileProgressTime = now;
+        if (currentPlayingLecture) {
+          recordLectureProgress(currentPlayingLecture.id, curr, dur, false);
+        }
+      }
+    });
+
+    /* Ghi tiến độ ngay lập tức khi pause */
+    video.addEventListener('pause', function () {
+      updatePlayIcon();
+      if (currentPlayingLecture && video.duration && !isNaN(video.duration) && video.duration > 0) {
+        recordLectureProgress(currentPlayingLecture.id, video.currentTime, video.duration, false);
+      }
+    });
+
+    /* Ghi tiến độ ngay lập tức khi seeked */
+    video.addEventListener('seeked', function () {
+      if (currentPlayingLecture && video.duration && !isNaN(video.duration) && video.duration > 0) {
+        recordLectureProgress(currentPlayingLecture.id, video.currentTime, video.duration, false);
+      }
+    });
+
+    /* Ghi tiến độ 100% khi kết thúc video */
+    video.addEventListener('ended', function () {
+      updatePlayIcon();
+      if (currentPlayingLecture && video.duration && !isNaN(video.duration) && video.duration > 0) {
+        recordLectureProgress(currentPlayingLecture.id, video.duration, video.duration, true);
+      }
     });
 
     /* Kéo thanh thời gian */
@@ -524,8 +647,8 @@
   }
 
   function updateSidebarProgress(lectureId) {
-    var lec = core.getLectureById(lectureId);
-    if (lec) renderSidebar(lec.subjectId, lectureId);
+    var lec = (core.getLectureById ? core.getLectureById(lectureId) : null) || (currentPlayingLecture && currentPlayingLecture.id === lectureId ? currentPlayingLecture : null);
+    if (lec && lec.subjectId) renderSidebar(lec.subjectId, lectureId);
   }
 
   /* ====== HỖ TRỢ RENDER TOÁN KA-TEX ====== */
@@ -808,9 +931,41 @@
     initComments(lectureId);
   }
 
+  /* Xử lý lưu tiến độ khi người dùng rời trang, chuyển tab hoặc đóng trình duyệt */
+  function flushCurrentProgress() {
+    if (!currentPlayingLecture) return;
+    var curId = currentPlayingLecture.id;
+    var isYoutube = (currentPlayingLecture.videoSource === 'youtube') || Boolean(currentPlayingLecture.youtubeId);
+    if (isYoutube) {
+      if (ytPlayerInstance && typeof ytPlayerInstance.getCurrentTime === 'function' && typeof ytPlayerInstance.getDuration === 'function') {
+        try {
+          var dur = ytPlayerInstance.getDuration();
+          var cur = ytPlayerInstance.getCurrentTime();
+          if (typeof dur === 'number' && isFinite(dur) && dur > 0 && typeof cur === 'number' && isFinite(cur) && cur >= 0) {
+            recordLectureProgress(curId, cur, dur, false);
+          }
+        } catch (e) {}
+      }
+    } else {
+      var video = document.getElementById('lec-video');
+      if (video && typeof video.duration === 'number' && isFinite(video.duration) && video.duration > 0 && typeof video.currentTime === 'number' && isFinite(video.currentTime) && video.currentTime >= 0) {
+        recordLectureProgress(curId, video.currentTime, video.duration, false);
+      }
+    }
+  }
+
+  window.addEventListener('pagehide', flushCurrentProgress);
+  window.addEventListener('beforeunload', flushCurrentProgress);
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') {
+      flushCurrentProgress();
+    }
+  });
+
   /* EXPORT */
   window.Lib95.lectures.player = {
-    initPage: initPage
+    initPage: initPage,
+    recordLectureProgress: recordLectureProgress
   };
 
 })();
