@@ -169,8 +169,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     avatarHtml = `<i class="person-avatar ${colorClass}">${initials}</i>`;
                 }
 
+                const ROLE_WEIGHT = { owner: 4, admin: 3, staff: 2, member: 1 };
+                const myWeight = ROLE_WEIGHT[currentUser ? currentUser.role : ''] || 0;
+                const targetWeight = ROLE_WEIGHT[u.role || 'member'] || 1;
                 const isInternalAccount = u.username && u.username.endsWith('@internal.edu.vn');
-                const canChangeThisUser = canChangeRoleGlobal && !isInternalAccount && (currentUser && currentUser.id != u.id);
+                const canChangeThisUser = canChangeRoleGlobal && !isInternalAccount && (myWeight > targetWeight) && (currentUser && currentUser.id != u.id);
 
                 let statusHtml = '';
                 let actionHtml = '';
@@ -181,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (u.status === 'pending') {
                     statusHtml = `<span class="status" style="background: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 500;">Pending</span>`;
                     
-                    if (canChangeRoleGlobal) {
+                    if (canChangeThisUser) {
                         actionHtml = `<button class="row-action btn-approve" data-id="${u.id}" style="background: rgba(25, 135, 84, 0.15); color: #157347; border: 1.5px solid rgba(25, 135, 84, 0.3); padding: 6px 16px; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 12.5px; backdrop-filter: blur(4px); transition: all 0.2s ease;" onmouseover="this.style.background='rgba(25, 135, 84, 0.25)'" onmouseout="this.style.background='rgba(25, 135, 84, 0.15)'">Approve</button>`;
                     } else {
                         actionHtml = `<span class="admin-status-muted">No permission</span>`;
@@ -192,6 +195,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     statusHtml = `<span class="status active">Active</span>`;
                     
                     if (canChangeThisUser) {
+                        let optionsHtml = '';
+                        ['member', 'staff', 'admin', 'owner'].forEach(r => {
+                            if (ROLE_WEIGHT[r] < myWeight) {
+                                const isSel = (u.role || 'member') === r ? 'selected' : '';
+                                const rName = r.charAt(0).toUpperCase() + r.slice(1);
+                                optionsHtml += `<div class="custom-option ${isSel}" data-value="${r}" data-id="${u.id}">${rName}</div>`;
+                            }
+                        });
                         roleDisplayHtml = `
                             <div class="custom-select-wrapper">
                                 <div class="custom-select-trigger">
@@ -199,10 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <span style="font-size: 0.7em; margin-left: 8px;">▼</span>
                                 </div>
                                 <div class="custom-select-options">
-                                    <div class="custom-option ${u.role === 'member' ? 'selected' : ''}" data-value="member" data-id="${u.id}">Member</div>
-                                    <div class="custom-option ${u.role === 'staff' ? 'selected' : ''}" data-value="staff" data-id="${u.id}">Staff</div>
-                                    <div class="custom-option ${u.role === 'admin' ? 'selected' : ''}" data-value="admin" data-id="${u.id}">Admin</div>
-                                    <div class="custom-option ${u.role === 'owner' ? 'selected' : ''}" data-value="owner" data-id="${u.id}">Owner</div>
+                                    ${optionsHtml}
                                 </div>
                             </div>
                         `;
@@ -373,6 +381,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (targetUser.id == currentUser.id) {
             alert('Error: You cannot Ban/Unban yourself!');
+            return;
+        }
+
+        const ROLE_WEIGHT = { owner: 4, admin: 3, staff: 2, member: 1 };
+        const myWeight = ROLE_WEIGHT[currentUser ? currentUser.role : ''] || 0;
+        const targetWeight = ROLE_WEIGHT[targetUser.role || 'member'] || 1;
+        if (myWeight <= targetWeight) {
+            alert('Lỗi quyền hạn: Bạn chỉ có thể Ban/Unban người dùng có cấp bậc thấp hơn bạn!');
             return;
         }
         
