@@ -71,20 +71,44 @@ exports.changePassword = async (req, res) => {
 // 2. Xoá tài khoản người dùng
 exports.deleteAccount = async (req, res) => {
     const userId = req.user.id;
-    const { confirm_email } = req.body;
+    const { password, confirm_email, confirm_username } = req.body;
+
+    const confirmationInput = (confirm_username || confirm_email || '').trim().toLowerCase();
+
+    // Bắt buộc cả mật khẩu hiện tại VÀ chuỗi xác nhận tên đăng nhập
+    if (!password || !confirmationInput) {
+        return res.status(400).json({ error: 'Vui lòng nhập mật khẩu hiện tại và tên đăng nhập/email để xác nhận xóa tài khoản' });
+    }
 
     try {
-        const [rows] = await db.query('SELECT username FROM users WHERE id = ?', [userId]);
+        const [rows] = await db.query('SELECT id, username, password_hash, role FROM users WHERE id = ?', [userId]);
         if (rows.length === 0) {
             return res.status(404).json({ error: 'Không tìm thấy người dùng' });
         }
 
-        if (confirm_email && confirm_email.trim().toLowerCase() !== rows[0].username.toLowerCase()) {
-            return res.status(400).json({ error: 'Email xác nhận không khớp' });
+        const user = rows[0];
+
+        // So khớp mật khẩu hiện tại bằng bcrypt
+        const isMatch = await bcrypt.compare(password, user.password_hash);
+        if (!isMatch) {
+            return res.status(401).json({ error: 'Mật khẩu hiện tại không chính xác' });
+        }
+
+        // So khớp tên đăng nhập
+        if (confirmationInput !== user.username.toLowerCase()) {
+            return res.status(400).json({ error: 'Tên đăng nhập xác nhận không khớp' });
+        }
+
+        // Không thể xóa Owner cuối cùng của hệ thống
+        if (user.role === 'owner') {
+            const [[ownerCount]] = await db.query("SELECT COUNT(*) AS count FROM users WHERE role = 'owner' AND status = 'active'");
+            if (ownerCount.count <= 1) {
+                return res.status(403).json({ error: 'Không thể xóa tài khoản Owner duy nhất của hệ thống' });
+            }
         }
 
         await db.query('DELETE FROM users WHERE id = ?', [userId]);
-        res.json({ message: 'Tài khoản đã được xoá vĩnh viễn' });
+        res.json({ success: true, message: 'Tài khoản đã được xoá vĩnh viễn' });
     } catch (error) {
         console.error('Lỗi xoá tài khoản:', error);
         res.status(500).json({ error: 'Lỗi máy chủ khi xoá tài khoản' });

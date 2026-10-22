@@ -96,9 +96,17 @@
         console.error("Failed to parse user from localStorage", err);
       }
       
-      const confirmEmail = inputDelEmail.value.trim();
-      if(confirmEmail.toLowerCase() !== userEmail.toLowerCase()) {
-        delError.textContent = "Email xác nhận không khớp.";
+      const inputPass = document.getElementById("del-password-input");
+      const passwordVal = inputPass ? inputPass.value : "";
+      const confirmVal = inputDelEmail ? inputDelEmail.value.trim() : "";
+
+      if (!passwordVal) {
+        delError.textContent = "Vui lòng nhập mật khẩu hiện tại để xác nhận.";
+        return;
+      }
+
+      if (confirmVal.toLowerCase() !== userEmail.toLowerCase()) {
+        delError.textContent = "Tên đăng nhập/email xác nhận không khớp.";
         return;
       }
 
@@ -118,7 +126,11 @@
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
           },
-          body: JSON.stringify({ confirm_email: confirmEmail })
+          body: JSON.stringify({
+            password: passwordVal,
+            confirm_username: confirmVal,
+            confirm_email: confirmVal
+          })
         });
 
         const data = await res.json();

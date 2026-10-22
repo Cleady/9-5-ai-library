@@ -941,18 +941,21 @@
             </header>
             <form id="form-delete">
                 <div class="set-modal-body set-form">
-                    <p>This will permanently delete your account and all data. Please type your email to confirm:</p>
+                    <p style="margin-bottom: 12px;">This will permanently delete your account and all data. Please enter your current password and username/email to confirm:</p>
+                    <div class="set-form-group" style="margin-bottom: 12px;">
+                        <label for="del-password-input" style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px;">Current password:</label>
+                        <input type="password" id="del-password-input" class="set-input" required placeholder="Enter your current password" autocomplete="current-password">
+                    </div>
                     <div class="set-form-group">
-                        <input type="email" id="del-confirm-email" class="set-input" required
-                            placeholder="Email address">
-                        <span class="set-error-msg" id="del-error"></span>
+                        <label for="del-confirm-email" style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px;">Confirm username / email:</label>
+                        <input type="text" id="del-confirm-email" class="set-input" required placeholder="Enter username/email to confirm">
+                        <span class="set-error-msg" id="del-error" style="display: block; margin-top: 6px;"></span>
                     </div>
                 </div>
                 <footer class="set-modal-footer">
                     <button type="button" class="set-btn-secondary" data-close="modal-delete">Cancel</button>
                     <button type="submit" class="set-btn-primary"
-                        style="background-color: var(--set-danger-color);">Delete
-                        forever</button>
+                        style="background-color: var(--set-danger-color);">Delete forever</button>
                 </footer>
             </form>
         </div>
