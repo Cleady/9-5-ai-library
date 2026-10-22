@@ -149,6 +149,21 @@ exports.createResource = async (req, res) => {
 
     const newId = result.insertId;
 
+    // Phát thông báo tài nguyên mới nếu uploader là owner, admin, hoặc staff
+    try {
+      if (['owner', 'admin', 'staff'].includes(req.user.role)) {
+        const { notifyAllActive } = require('../utils/notify');
+        notifyAllActive(req.user.id, 'resource', {
+          resourceId: newId,
+          meta: rawTitle
+        }).catch(err => {
+          console.error('Lỗi khi phát thông báo tài nguyên mới:', err);
+        });
+      }
+    } catch (notifErr) {
+      console.error('Lỗi khởi tạo thông báo tài nguyên mới:', notifErr);
+    }
+
     res.status(201).json({
       success: true,
       message: 'Tải lên tài liệu thành công!',

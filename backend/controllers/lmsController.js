@@ -301,6 +301,21 @@ exports.createLecture = async (req, res) => {
 
     await conn.commit();
 
+    // Phát thông báo bài giảng mới cho tất cả thành viên active
+    try {
+      if (status !== 'draft' && status !== 'hidden') {
+        const { notifyAllActive } = require('../utils/notify');
+        notifyAllActive(req.user.id, 'lecture', {
+          lectureId: newLectureId,
+          meta: title.trim()
+        }).catch(err => {
+          console.error('Lỗi khi phát thông báo bài giảng mới:', err);
+        });
+      }
+    } catch (notifErr) {
+      console.error('Lỗi khởi tạo thông báo bài giảng mới:', notifErr);
+    }
+
     res.status(201).json({
       success: true,
       message: 'Tạo bài giảng mới thành công!',
