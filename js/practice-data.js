@@ -245,7 +245,7 @@
       "order": 2,
       "durationMin": 162,
       "difficulty": "Medium",
-      "questionCount": 108
+      "questionCount": 100
     },
     {
       "id": 102,
@@ -272,7 +272,7 @@
       "order": 5,
       "durationMin": 443,
       "difficulty": "Medium",
-      "questionCount": 295
+      "questionCount": 267
     },
     {
       "id": 105,
@@ -326,7 +326,7 @@
       "order": 15,
       "durationMin": 179,
       "difficulty": "Medium",
-      "questionCount": 119
+      "questionCount": 117
     },
     {
       "id": 111,
@@ -353,7 +353,7 @@
       "order": 18,
       "durationMin": 48,
       "difficulty": "Medium",
-      "questionCount": 32
+      "questionCount": 31
     },
     {
       "id": 114,
@@ -616,66 +616,546 @@
       "difficulty": "Medium",
       "questionCount": 37
     },
-    {"id": 501, "subjectId": 6, "title": "Chương 1: Cơ sở Logic & Mệnh đề – Phần 1", "order": 1, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 502, "subjectId": 6, "title": "Chương 1: Cơ sở Logic & Mệnh đề – Phần 2", "order": 2, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 503, "subjectId": 6, "title": "Chương 1: Cơ sở Logic & Mệnh đề – Phần 3", "order": 3, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 504, "subjectId": 6, "title": "Chương 1: Cơ sở Logic & Mệnh đề – Phần 4", "order": 4, "durationMin": 74, "difficulty": "Medium", "questionCount": 37},
-    {"id": 505, "subjectId": 6, "title": "Chương 2: Tập hợp, Hàm số & Dãy số – Phần 1", "order": 5, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 506, "subjectId": 6, "title": "Chương 2: Tập hợp, Hàm số & Dãy số – Phần 2", "order": 6, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 507, "subjectId": 6, "title": "Chương 2: Tập hợp, Hàm số & Dãy số – Phần 3", "order": 7, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 508, "subjectId": 6, "title": "Chương 2: Tập hợp, Hàm số & Dãy số – Phần 4", "order": 8, "durationMin": 62, "difficulty": "Medium", "questionCount": 31},
-    {"id": 509, "subjectId": 6, "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 1", "order": 9, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 510, "subjectId": 6, "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 2", "order": 10, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 511, "subjectId": 6, "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 3", "order": 11, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 512, "subjectId": 6, "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 4", "order": 12, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 513, "subjectId": 6, "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 5", "order": 13, "durationMin": 24, "difficulty": "Medium", "questionCount": 12},
-    {"id": 514, "subjectId": 6, "title": "Chương 4: Lý thuyết số & Mật mã – Phần 1", "order": 14, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 515, "subjectId": 6, "title": "Chương 4: Lý thuyết số & Mật mã – Phần 2", "order": 15, "durationMin": 64, "difficulty": "Medium", "questionCount": 32},
-    {"id": 516, "subjectId": 6, "title": "Chương 5: Quy nạp toán học & Đệ quy – Phần 1", "order": 16, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 517, "subjectId": 6, "title": "Chương 5: Quy nạp toán học & Đệ quy – Phần 2", "order": 17, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 518, "subjectId": 6, "title": "Chương 5: Quy nạp toán học & Đệ quy – Phần 3", "order": 18, "durationMin": 24, "difficulty": "Medium", "questionCount": 12},
-    {"id": 519, "subjectId": 6, "title": "Chương 6: Đại số tổ hợp & Phép đếm", "order": 19, "durationMin": 92, "difficulty": "Medium", "questionCount": 46},
-    {"id": 520, "subjectId": 6, "title": "Chương 7: Lý thuyết Đồ thị – Phần 1", "order": 20, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 521, "subjectId": 6, "title": "Chương 7: Lý thuyết Đồ thị – Phần 2", "order": 21, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 522, "subjectId": 6, "title": "Chương 7: Lý thuyết Đồ thị – Phần 3", "order": 22, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 523, "subjectId": 6, "title": "Chương 7: Lý thuyết Đồ thị – Phần 4", "order": 23, "durationMin": 62, "difficulty": "Medium", "questionCount": 31},
-    {"id": 524, "subjectId": 6, "title": "Chương 8: Cây (Trees) – Phần 1", "order": 24, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 525, "subjectId": 6, "title": "Chương 8: Cây (Trees) – Phần 2", "order": 25, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 526, "subjectId": 6, "title": "Chương 8: Cây (Trees) – Phần 3", "order": 26, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 527, "subjectId": 6, "title": "Chương 8: Cây (Trees) – Phần 4", "order": 27, "durationMin": 15, "difficulty": "Medium", "questionCount": 1},
-    {"id": 528, "subjectId": 6, "title": "Chương 9: Quan hệ & Đại số Boole", "order": 28, "durationMin": 15, "difficulty": "Medium", "questionCount": 1},
-    {"id": 529, "subjectId": 6, "title": "Chương 10: Ôn tập tổng hợp Toán rời rạc – Phần 1", "order": 29, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 530, "subjectId": 6, "title": "Chương 10: Ôn tập tổng hợp Toán rời rạc – Phần 2", "order": 30, "durationMin": 44, "difficulty": "Medium", "questionCount": 22},
-    {"id": 601, "subjectId": 7, "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 1", "order": 1, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 602, "subjectId": 7, "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 2", "order": 2, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 603, "subjectId": 7, "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 3", "order": 3, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 604, "subjectId": 7, "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 4", "order": 4, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 605, "subjectId": 7, "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 5", "order": 5, "durationMin": 15, "difficulty": "Medium", "questionCount": 1},
-    {"id": 606, "subjectId": 7, "title": "Chương 2: Định thức & Hệ phương trình tuyến tính – Phần 1", "order": 6, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 607, "subjectId": 7, "title": "Chương 2: Định thức & Hệ phương trình tuyến tính – Phần 2", "order": 7, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 608, "subjectId": 7, "title": "Chương 2: Định thức & Hệ phương trình tuyến tính – Phần 3", "order": 8, "durationMin": 48, "difficulty": "Medium", "questionCount": 24},
-    {"id": 609, "subjectId": 7, "title": "Chương 3: Không gian Vector & Trực giao – Phần 1", "order": 9, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 610, "subjectId": 7, "title": "Chương 3: Không gian Vector & Trực giao – Phần 2", "order": 10, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 611, "subjectId": 7, "title": "Chương 3: Không gian Vector & Trực giao – Phần 3", "order": 11, "durationMin": 15, "difficulty": "Medium", "questionCount": 7},
-    {"id": 612, "subjectId": 7, "title": "Chương 4: Trị riêng, Vector riêng & Chéo hóa", "order": 12, "durationMin": 64, "difficulty": "Medium", "questionCount": 32},
-    {"id": 613, "subjectId": 7, "title": "Chương 5: Vector & Hình học trong không gian – Phần 1", "order": 13, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 614, "subjectId": 7, "title": "Chương 5: Vector & Hình học trong không gian – Phần 2", "order": 14, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 615, "subjectId": 7, "title": "Chương 5: Vector & Hình học trong không gian – Phần 3", "order": 15, "durationMin": 32, "difficulty": "Medium", "questionCount": 16},
-    {"id": 616, "subjectId": 7, "title": "Chương 6: Hàm số, Giới hạn & Tính liên tục – Phần 1", "order": 16, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 617, "subjectId": 7, "title": "Chương 6: Hàm số, Giới hạn & Tính liên tục – Phần 2", "order": 17, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 618, "subjectId": 7, "title": "Chương 6: Hàm số, Giới hạn & Tính liên tục – Phần 3", "order": 18, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 619, "subjectId": 7, "title": "Chương 6: Hàm số, Giới hạn & Tính liên tục – Phần 4", "order": 19, "durationMin": 30, "difficulty": "Medium", "questionCount": 15},
-    {"id": 620, "subjectId": 7, "title": "Chương 7: Đạo hàm & Quy tắc tính đạo hàm – Phần 1", "order": 20, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 621, "subjectId": 7, "title": "Chương 7: Đạo hàm & Quy tắc tính đạo hàm – Phần 2", "order": 21, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 622, "subjectId": 7, "title": "Chương 7: Đạo hàm & Quy tắc tính đạo hàm – Phần 3", "order": 22, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 623, "subjectId": 7, "title": "Chương 7: Đạo hàm & Quy tắc tính đạo hàm – Phần 4", "order": 23, "durationMin": 58, "difficulty": "Medium", "questionCount": 29},
-    {"id": 624, "subjectId": 7, "title": "Chương 8: Ứng dụng đạo hàm, Cực trị & Tối ưu", "order": 24, "durationMin": 96, "difficulty": "Medium", "questionCount": 48},
-    {"id": 625, "subjectId": 7, "title": "Chương 9: Tích phân & Kỹ thuật tính tích phân – Phần 1", "order": 25, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 626, "subjectId": 7, "title": "Chương 9: Tích phân & Kỹ thuật tính tích phân – Phần 2", "order": 26, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 627, "subjectId": 7, "title": "Chương 9: Tích phân & Kỹ thuật tính tích phân – Phần 3", "order": 27, "durationMin": 90, "difficulty": "Medium", "questionCount": 45},
-    {"id": 628, "subjectId": 7, "title": "Chương 9: Tích phân & Kỹ thuật tính tích phân – Phần 4", "order": 28, "durationMin": 58, "difficulty": "Medium", "questionCount": 29},
-    {"id": 629, "subjectId": 7, "title": "Chương 10: Ứng dụng tích phân & Phương trình vi phân", "order": 29, "durationMin": 40, "difficulty": "Medium", "questionCount": 20},
-    {"id": 630, "subjectId": 7, "title": "Chương 11: Ôn tập tổng hợp Toán kỹ thuật", "order": 30, "durationMin": 15, "difficulty": "Medium", "questionCount": 3}
+    {
+      "id": 501,
+      "subjectId": 6,
+      "title": "Chương 1: Cơ sở Logic & Mệnh đề – Phần 1",
+      "order": 1,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 502,
+      "subjectId": 6,
+      "title": "Chương 1: Cơ sở Logic & Mệnh đề – Phần 2",
+      "order": 2,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 503,
+      "subjectId": 6,
+      "title": "Chương 1: Cơ sở Logic & Mệnh đề – Phần 3",
+      "order": 3,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 504,
+      "subjectId": 6,
+      "title": "Chương 1: Cơ sở Logic & Mệnh đề – Phần 4",
+      "order": 4,
+      "durationMin": 74,
+      "difficulty": "Medium",
+      "questionCount": 37
+    },
+    {
+      "id": 505,
+      "subjectId": 6,
+      "title": "Chương 2: Tập hợp, Hàm số & Dãy số – Phần 1",
+      "order": 5,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 506,
+      "subjectId": 6,
+      "title": "Chương 2: Tập hợp, Hàm số & Dãy số – Phần 2",
+      "order": 6,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 507,
+      "subjectId": 6,
+      "title": "Chương 2: Tập hợp, Hàm số & Dãy số – Phần 3",
+      "order": 7,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 508,
+      "subjectId": 6,
+      "title": "Chương 2: Tập hợp, Hàm số & Dãy số – Phần 4",
+      "order": 8,
+      "durationMin": 62,
+      "difficulty": "Medium",
+      "questionCount": 31
+    },
+    {
+      "id": 509,
+      "subjectId": 6,
+      "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 1",
+      "order": 9,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 510,
+      "subjectId": 6,
+      "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 2",
+      "order": 10,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 511,
+      "subjectId": 6,
+      "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 3",
+      "order": 11,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 512,
+      "subjectId": 6,
+      "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 4",
+      "order": 12,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 513,
+      "subjectId": 6,
+      "title": "Chương 3: Thuật toán & Độ phức tạp – Phần 5",
+      "order": 13,
+      "durationMin": 24,
+      "difficulty": "Medium",
+      "questionCount": 12
+    },
+    {
+      "id": 514,
+      "subjectId": 6,
+      "title": "Chương 4: Lý thuyết số & Mật mã – Phần 1",
+      "order": 14,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 515,
+      "subjectId": 6,
+      "title": "Chương 4: Lý thuyết số & Mật mã – Phần 2",
+      "order": 15,
+      "durationMin": 64,
+      "difficulty": "Medium",
+      "questionCount": 32
+    },
+    {
+      "id": 516,
+      "subjectId": 6,
+      "title": "Chương 5: Quy nạp toán học & Đệ quy – Phần 1",
+      "order": 16,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 517,
+      "subjectId": 6,
+      "title": "Chương 5: Quy nạp toán học & Đệ quy – Phần 2",
+      "order": 17,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 518,
+      "subjectId": 6,
+      "title": "Chương 5: Quy nạp toán học & Đệ quy – Phần 3",
+      "order": 18,
+      "durationMin": 24,
+      "difficulty": "Medium",
+      "questionCount": 12
+    },
+    {
+      "id": 519,
+      "subjectId": 6,
+      "title": "Chương 6: Đại số tổ hợp & Phép đếm",
+      "order": 19,
+      "durationMin": 92,
+      "difficulty": "Medium",
+      "questionCount": 46
+    },
+    {
+      "id": 520,
+      "subjectId": 6,
+      "title": "Chương 7: Lý thuyết Đồ thị – Phần 1",
+      "order": 20,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 521,
+      "subjectId": 6,
+      "title": "Chương 7: Lý thuyết Đồ thị – Phần 2",
+      "order": 21,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 522,
+      "subjectId": 6,
+      "title": "Chương 7: Lý thuyết Đồ thị – Phần 3",
+      "order": 22,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 523,
+      "subjectId": 6,
+      "title": "Chương 7: Lý thuyết Đồ thị – Phần 4",
+      "order": 23,
+      "durationMin": 62,
+      "difficulty": "Medium",
+      "questionCount": 31
+    },
+    {
+      "id": 524,
+      "subjectId": 6,
+      "title": "Chương 8: Cây (Trees) – Phần 1",
+      "order": 24,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 525,
+      "subjectId": 6,
+      "title": "Chương 8: Cây (Trees) – Phần 2",
+      "order": 25,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 526,
+      "subjectId": 6,
+      "title": "Chương 8: Cây (Trees) – Phần 3",
+      "order": 26,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 527,
+      "subjectId": 6,
+      "title": "Chương 8: Cây (Trees) – Phần 4",
+      "order": 27,
+      "durationMin": 15,
+      "difficulty": "Medium",
+      "questionCount": 1
+    },
+    {
+      "id": 528,
+      "subjectId": 6,
+      "title": "Chương 9: Quan hệ & Đại số Boole",
+      "order": 28,
+      "durationMin": 15,
+      "difficulty": "Medium",
+      "questionCount": 1
+    },
+    {
+      "id": 529,
+      "subjectId": 6,
+      "title": "Chương 10: Ôn tập tổng hợp Toán rời rạc – Phần 1",
+      "order": 29,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 530,
+      "subjectId": 6,
+      "title": "Chương 10: Ôn tập tổng hợp Toán rời rạc – Phần 2",
+      "order": 30,
+      "durationMin": 44,
+      "difficulty": "Medium",
+      "questionCount": 22
+    },
+    {
+      "id": 601,
+      "subjectId": 7,
+      "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 1",
+      "order": 1,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 602,
+      "subjectId": 7,
+      "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 2",
+      "order": 2,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 603,
+      "subjectId": 7,
+      "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 3",
+      "order": 3,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 604,
+      "subjectId": 7,
+      "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 4",
+      "order": 4,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 605,
+      "subjectId": 7,
+      "title": "Chương 1: Ma trận & Các phép toán ma trận – Phần 5",
+      "order": 5,
+      "durationMin": 15,
+      "difficulty": "Medium",
+      "questionCount": 1
+    },
+    {
+      "id": 606,
+      "subjectId": 7,
+      "title": "Chương 2: Định thức & Hệ phương trình tuyến tính – Phần 1",
+      "order": 6,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 607,
+      "subjectId": 7,
+      "title": "Chương 2: Định thức & Hệ phương trình tuyến tính – Phần 2",
+      "order": 7,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 608,
+      "subjectId": 7,
+      "title": "Chương 2: Định thức & Hệ phương trình tuyến tính – Phần 3",
+      "order": 8,
+      "durationMin": 48,
+      "difficulty": "Medium",
+      "questionCount": 24
+    },
+    {
+      "id": 609,
+      "subjectId": 7,
+      "title": "Chương 3: Không gian Vector & Trực giao – Phần 1",
+      "order": 9,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 610,
+      "subjectId": 7,
+      "title": "Chương 3: Không gian Vector & Trực giao – Phần 2",
+      "order": 10,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 611,
+      "subjectId": 7,
+      "title": "Chương 3: Không gian Vector & Trực giao – Phần 3",
+      "order": 11,
+      "durationMin": 15,
+      "difficulty": "Medium",
+      "questionCount": 7
+    },
+    {
+      "id": 612,
+      "subjectId": 7,
+      "title": "Chương 4: Trị riêng, Vector riêng & Chéo hóa",
+      "order": 12,
+      "durationMin": 64,
+      "difficulty": "Medium",
+      "questionCount": 32
+    },
+    {
+      "id": 613,
+      "subjectId": 7,
+      "title": "Chương 5: Vector & Hình học trong không gian – Phần 1",
+      "order": 13,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 614,
+      "subjectId": 7,
+      "title": "Chương 5: Vector & Hình học trong không gian – Phần 2",
+      "order": 14,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 615,
+      "subjectId": 7,
+      "title": "Chương 5: Vector & Hình học trong không gian – Phần 3",
+      "order": 15,
+      "durationMin": 32,
+      "difficulty": "Medium",
+      "questionCount": 16
+    },
+    {
+      "id": 616,
+      "subjectId": 7,
+      "title": "Chương 6: Hàm số, Giới hạn & Tính liên tục – Phần 1",
+      "order": 16,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 617,
+      "subjectId": 7,
+      "title": "Chương 6: Hàm số, Giới hạn & Tính liên tục – Phần 2",
+      "order": 17,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 618,
+      "subjectId": 7,
+      "title": "Chương 6: Hàm số, Giới hạn & Tính liên tục – Phần 3",
+      "order": 18,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 619,
+      "subjectId": 7,
+      "title": "Chương 6: Hàm số, Giới hạn & Tính liên tục – Phần 4",
+      "order": 19,
+      "durationMin": 30,
+      "difficulty": "Medium",
+      "questionCount": 15
+    },
+    {
+      "id": 620,
+      "subjectId": 7,
+      "title": "Chương 7: Đạo hàm & Quy tắc tính đạo hàm – Phần 1",
+      "order": 20,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 621,
+      "subjectId": 7,
+      "title": "Chương 7: Đạo hàm & Quy tắc tính đạo hàm – Phần 2",
+      "order": 21,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 622,
+      "subjectId": 7,
+      "title": "Chương 7: Đạo hàm & Quy tắc tính đạo hàm – Phần 3",
+      "order": 22,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 623,
+      "subjectId": 7,
+      "title": "Chương 7: Đạo hàm & Quy tắc tính đạo hàm – Phần 4",
+      "order": 23,
+      "durationMin": 58,
+      "difficulty": "Medium",
+      "questionCount": 29
+    },
+    {
+      "id": 624,
+      "subjectId": 7,
+      "title": "Chương 8: Ứng dụng đạo hàm, Cực trị & Tối ưu",
+      "order": 24,
+      "durationMin": 96,
+      "difficulty": "Medium",
+      "questionCount": 48
+    },
+    {
+      "id": 625,
+      "subjectId": 7,
+      "title": "Chương 9: Tích phân & Kỹ thuật tính tích phân – Phần 1",
+      "order": 25,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 626,
+      "subjectId": 7,
+      "title": "Chương 9: Tích phân & Kỹ thuật tính tích phân – Phần 2",
+      "order": 26,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 627,
+      "subjectId": 7,
+      "title": "Chương 9: Tích phân & Kỹ thuật tính tích phân – Phần 3",
+      "order": 27,
+      "durationMin": 90,
+      "difficulty": "Medium",
+      "questionCount": 45
+    },
+    {
+      "id": 628,
+      "subjectId": 7,
+      "title": "Chương 9: Tích phân & Kỹ thuật tính tích phân – Phần 4",
+      "order": 28,
+      "durationMin": 58,
+      "difficulty": "Medium",
+      "questionCount": 29
+    },
+    {
+      "id": 629,
+      "subjectId": 7,
+      "title": "Chương 10: Ứng dụng tích phân & Phương trình vi phân",
+      "order": 29,
+      "durationMin": 40,
+      "difficulty": "Medium",
+      "questionCount": 20
+    },
+    {
+      "id": 630,
+      "subjectId": 7,
+      "title": "Chương 11: Ôn tập tổng hợp Toán kỹ thuật",
+      "order": 30,
+      "durationMin": 15,
+      "difficulty": "Medium",
+      "questionCount": 3
+    }
   ],
   "questions": [
     {
@@ -8506,46 +8986,6 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Association.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Binary relationship/association nối hai kiểu thực thể/lớp; n-ary relationship có từ ba kiểu tham gia trở lên. Phân loại theo số entity set/class trong chính liên kết, không theo số thuộc tính của chúng.\n\nĐối chiếu phương án: A. Aggregation; B. Composition; D. Relation. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5075,
-      "quizId": 101,
-      "text": "In UML, a _____ between classes is called an association\na.binary relationship\nb.multi-way relationship\nc.none of the others",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Binary relationship/association nối hai kiểu thực thể/lớp; n-ary relationship có từ ba kiểu tham gia trở lên. Phân loại theo số entity set/class trong chính liên kết, không theo số thuộc tính của chúng.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5076,
-      "quizId": 101,
-      "text": "When an entity is called \"weak\"?\n(a) When it is used to represent weak objects, such as patients, elders\n(b) When all of its attributes can not identify itself\n(c) When It always needs support from other entity\n(d) When It is not really necessary in the ERD\na.(a) and (b) are correct\nb.(b) and (c) are correct\nc.(c) and (d) are correct\nd.(d) and (a) are correct",
-      "options": [],
-      "correctIndex": 1,
-      "explanation": "Đáp án lưu trong nguồn: B, C. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
-    },
-    {
-      "id": 5077,
-      "quizId": 101,
-      "text": "Consider the following statement:\n\"When drawing ERD, if an entity has no non-key attribute and it is the 'one' in many-one relationship, then we should set it to the attribute of other entities\"\nThat above statement describes which principle?\nA.Avoid Redundancy Principle\nB.Picking the right kind of element principle\nC.Limit the use of weak entity sets principle\nD.Faithfulness principle",
-      "options": [],
-      "correctIndex": 1,
-      "explanation": "Đáp án lưu trong nguồn: B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Thực thể yếu chưa có khóa độc lập; phải ghép khóa bộ phận của nó với khóa của thực thể chủ qua quan hệ định danh. Vì vậy, chỉ lấy thuộc tính của chủ hoặc chỉ lấy khóa bộ phận đều chưa nhận diện duy nhất được nó.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
-    },
-    {
-      "id": 5078,
-      "quizId": 101,
-      "text": "When drawing an ERD:\n(a)Entity sets and their attributes should reflect reality\n(b)Redundancy is not important, so we can ignore it\n(c) Avoid introducing more elements into the design than is absolutely necessary\n(d) Choosing the right relationships\nA.(a) and (b) and (c) are correct\nB.(a) and (c) and (d) are correct\nC.(a) and (b) and (d) are correct\nD.(b) and (c) and (d) are correct",
-      "options": [],
-      "correctIndex": 1,
-      "explanation": "Đáp án lưu trong nguồn: B, A, C, D. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5079,
-      "quizId": 101,
-      "text": "A weak entity\nA.does not depend on other entities\nB.does not have enough key attribute(s)\nC.is an entity that has not any key-attribute\nD.None of the others",
-      "options": [],
-      "correctIndex": 1,
-      "explanation": "Đáp án lưu trong nguồn: B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
       "id": 5080,
       "quizId": 101,
       "text": "Which of the followings is true?",
@@ -8935,14 +9375,6 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The order of the columns is not important.\n\nLời giải gốc: Trong mô hình quan hệ, thứ tự sắp xếp vật lý của các hàng (tuples) và cột (attributes) về mặt lý thuyết là không quan trọng.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. The order of both rows and columns is important; C. The order of the rows is important; D. The order of the columns is important. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5110,
-      "quizId": 101,
-      "text": "",
-      "options": [],
-      "correctIndex": 2,
-      "explanation": "Đáp án lưu trong nguồn: C. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nLời giải gốc: Mối quan hệ nhiều-nhiều (như Bookings giữa Customers và Rooms) khi chuyển đổi thành quan hệ sẽ tạo thành một bảng riêng chứa khóa chính của hai thực thể tham gia (SSN và Number) và các thuộc tính của mối quan hệ (Start_day, End_day). ---\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: câu hỏi dạng văn bản bị thiếu; hãy đối chiếu hình/đề gốc đính kèm trước khi kết luận từ đáp án.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
-    },
-    {
       "id": 5111,
       "quizId": 101,
       "text": "In the entity-relationship model, what is the entity?",
@@ -9019,14 +9451,6 @@
       ],
       "correctIndex": 1,
       "explanation": "Đáp án theo dữ liệu đề: B — B. One-to-Many Relationship.\n\nLời giải gốc: Định nghĩa trong câu hỏi chính là bản chất của mối quan hệ 1-N (Một-Nhiều): Một bản ghi của thực thể này liên kết với nhiều bản ghi của thực thể kia.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi chuyển ER sang quan hệ, quan hệ nhiều-nhiều thường cần một bảng kết nối riêng; bảng này mang khóa của các thực thể tham gia làm khóa ngoại và thường ghép chúng thành khóa chính. Quan hệ một-nhiều thường có thể biểu diễn bằng khóa ngoại ở phía nhiều.\n\nĐối chiếu phương án: A. One-to-One Relationship; C. Many-to-Many Relationship; D. Composite Relationship. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5117,
-      "quizId": 101,
-      "text": "",
-      "options": [],
-      "correctIndex": 3,
-      "explanation": "Đáp án lưu trong nguồn: D. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nLời giải gốc: Khi chuyển đổi thuộc tính phức hợp (Composite Attribute) như Address(Street, City) sang mô hình quan hệ, thuộc tính phức hợp sẽ được phân rã thành các thuộc tính đơn thành phần (Street, City).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: câu hỏi dạng văn bản bị thiếu; hãy đối chiếu hình/đề gốc đính kèm trước khi kết luận từ đáp án.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
     },
     {
       "id": 5118,
@@ -9573,14 +9997,6 @@
       ],
       "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. An attribute that is calculated from other attributes.\n\nLời giải gốc: Thuộc tính dẫn xuất là thuộc tính có giá trị được tính toán trực tiếp từ các thuộc tính hoặc dữ liệu khác.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Trong ký hiệu ER phổ biến, thuộc tính dẫn xuất (derived) được vẽ bằng oval nét đứt vì giá trị có thể tính từ thuộc tính khác, ví dụ tuổi tính từ ngày sinh. Nó khác thuộc tính đa trị (oval kép) hoặc khóa (thường gạch dưới).\n\nĐối chiếu phương án: B. An attribute that cannot be calculated; C. An attribute that is the primary key of an entity; D. An attribute that represents a relationship. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5160,
-      "quizId": 101,
-      "text": "",
-      "options": [],
-      "correctIndex": 1,
-      "explanation": "Đáp án lưu trong nguồn: B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nLời giải gốc: Thực thể/bảng ORDER chứa 3 thuộc tính: OrderNo, OrderDate và CustomerName.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: câu hỏi dạng văn bản bị thiếu; hãy đối chiếu hình/đề gốc đính kèm trước khi kết luận từ đáp án.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
     },
     {
       "id": 5161,
@@ -11282,22 +11698,6 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A view.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. Just another table; C. A relation; D. Query results. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5292,
-      "quizId": 104,
-      "text": "Suppose relation R(A,B) has the tuples:",
-      "options": [],
-      "correctIndex": 1,
-      "explanation": "Đáp án lưu trong nguồn: B, D. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5293,
-      "quizId": 104,
-      "text": "-------------------\n10 x\n30 y\n50 z\n70 t\nand the relation S(B,C,D) has tuples:",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A, B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
       "id": 5294,
       "quizId": 104,
       "text": "A _____ is a language for defining data structures",
@@ -11363,14 +11763,6 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Aggregate functions perform a calculation on a set of values and return a single value.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Aggregate function tính một kết quả từ một tập nhiều hàng/giá trị, ví dụ COUNT, SUM, AVG, MIN và MAX. Trong truy vấn nhóm, GROUP BY xác định từng tập đầu vào; HAVING lọc các nhóm sau khi tính tổng hợp.\n\nĐối chiếu phương án: B. Aggregate functions perform a calculation on a single value and return a single value; C. Aggregate functions perform a calculation on a set of values and return a relation; D. Aggregate functions perform a calculation on a set of values and return a row. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5299,
-      "quizId": 104,
-      "text": "Suppose the relation S(B,C,D) has tuples:",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
       "id": 5300,
       "quizId": 104,
       "text": "------------------------------------\na 4 6\nc 6 8\nc 5 5\ne 9 9\nF 10 10\nc 7 9\nCompute the result of the following query:\nSELECT SUM(D)\nFROM S\nWHERE D  5\nChoose the row that appears in the computed result.",
@@ -11382,14 +11774,6 @@
       ],
       "correctIndex": 1,
       "explanation": "Đáp án theo dữ liệu đề: B, C, D — B. 7; C. 8; D. 9.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. 6. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5301,
-      "quizId": 104,
-      "text": "Suppose the relation S(B,C,D) has tuples:",
-      "options": [],
-      "correctIndex": 2,
-      "explanation": "Đáp án lưu trong nguồn: C. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
     },
     {
       "id": 5302,
@@ -11587,14 +11971,6 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. ALTER TABLE Person ALTER COLUMN City SET DEFAULT 'SANDNES'.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, như thêm cột hoặc sửa cấu hình cột/ràng buộc theo cú pháp của DBMS. Nó khác UPDATE, vốn sửa các giá trị trong những hàng hiện hữu; cú pháp chính xác có thể khác giữa SQL Server và chuẩn SQL.\n\nĐối chiếu phương án: B. ALTER TABLE Person EDIT COLUMN City SET DEFAULT 'SANDNES'; C. ALTER TABLE Person UPDATE COLUMN City SET DEFAULT 'SANDNES'; D. ALTER TABLE Person MODIFY COLUMN City SET DEFAULT 'SANDNES'. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5317,
-      "quizId": 104,
-      "text": "Suppose we have a relation instance R(A,B,C) as following:\nR",
-      "options": [],
-      "correctIndex": 1,
-      "explanation": "Đáp án lưu trong nguồn: B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
       "id": 5318,
       "quizId": 104,
       "text": "----------------------------------\n1 2 3\n4 5 6\n7 8 9\nWhich is the result of the query:\nSELECT SUM(B) FROM R WHERE C > 10",
@@ -11620,14 +11996,6 @@
       ],
       "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. (4,4).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: B. (4,5); C. (4,6); D. (4,7); E. (4,8). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5320,
-      "quizId": 104,
-      "text": "Các hàng sẽ xuất hiện\n(a, 4)\n(c, 18)\n(e, 9)\n(f, 10)\nQN=34 (8501) Suppose the relation S(B,C,D) has tuples:",
-      "options": [],
-      "correctIndex": 3,
-      "explanation": "Đáp án lưu trong nguồn: D. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
     },
     {
       "id": 5321,
@@ -11656,14 +12024,6 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT DepartmentNo, COUNT(*) FROM Employee GROUP BY DepartmentNo.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. SELECT COUNT(*) FROM Employee; C. SELECT DepartmentNo, COUNT(*) FROM Employee; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5323,
-      "quizId": 104,
-      "text": "Suppose the relation S(B,C,D) has tuples:",
-      "options": [],
-      "correctIndex": 3,
-      "explanation": "Đáp án lưu trong nguồn: D. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
       "id": 5324,
       "quizId": 104,
       "text": "------------------------------------\na 4 6\nc 6 8\nc 5 5\ne 9 9\nf 10 10\nc 7 9\nWhat row that appears in the result of the following query:\nSELECT SUM(C), SUM(D)\nFROM S\nWHERE D  5",
@@ -11677,22 +12037,6 @@
       "explanation": "Đáp án theo dữ liệu đề: B, C, D — B. (10,12); C. (10,13); D. (10,14).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. (10,11). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5325,
-      "quizId": 104,
-      "text": "Here are two relations, R(A,B), S(C,D). Their current values are:\nR",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A, B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5326,
-      "quizId": 104,
-      "text": "-------------------\n1 4\n2 5\n8 6\n4 7\nS",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A, B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
       "id": 5327,
       "quizId": 104,
       "text": "-------------------\n0 1\n1 0\n2 1\n5 8\nCompute the result of the query:\nSELECT A, B, C, D\nFROM R RIGHT OUTER JOIN S\nON R.A = S.C\nIdentify, in the list below, 2 rows that appears in the result.",
@@ -11704,22 +12048,6 @@
       ],
       "correctIndex": 2,
       "explanation": "Đáp án theo dữ liệu đề: C, D — C. (8, 6, null, null); D. (4, 7, null, null).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. (null, null, 0, 1); B. (null, null, 5, 8). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5328,
-      "quizId": 104,
-      "text": "Here are three relations, R(A,B), S(C,D). Their current values are:\nR",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5329,
-      "quizId": 104,
-      "text": "-------------------\n1 4\n2 5\n3 6\n4 7\nS",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A, B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
     },
     {
       "id": 5330,
@@ -11925,86 +12253,6 @@
       ],
       "correctIndex": 4,
       "explanation": "Đáp án theo dữ liệu đề: E — E. All of the others.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. They allow faster execution; B. They can reduce network traffic; C. They allow modular programming; D. They can be used as a security mechanism. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5346,
-      "quizId": 104,
-      "text": "Here are three relations, R(A,B), S(C,D), and T(E,F). Their current values are:\nR",
-      "options": [],
-      "correctIndex": 1,
-      "explanation": "Đáp án lưu trong nguồn: B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5347,
-      "quizId": 104,
-      "text": "-------------------\n0 1\n1 0\n1 1\nS",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A, B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5348,
-      "quizId": 104,
-      "text": "-------------------\n0 1\n1 0\n1 1\nT",
-      "options": [],
-      "correctIndex": 2,
-      "explanation": "Đáp án lưu trong nguồn: C, D. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5349,
-      "quizId": 104,
-      "text": "-------------------\n0 1\n1 0\n1 1\nCompute the result of the query:\nSELECT A, F, SUM(C), SUM(D)\nFROM R, S, T\nWHERE B = C AND D = E\nGROUP BY A, F\nHAVING COUNT(*) > 1\nIdentify, in the list below, the row that appears in the result.\nA.(1,1,2,1)\nB.(1,1,2,2)\nC.(1,1,1,1)\nD.None of the others",
-      "options": [],
-      "correctIndex": 4,
-      "explanation": "Đáp án lưu trong nguồn: E, F. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5350,
-      "quizId": 104,
-      "text": "Choose the correct statement\nA.Except for COUNT, aggregate functions ignore null values\nB.Except for SUM, aggregate functions ignore null values\nC.Except for AVG, aggregate functions ignore null values\nD.Except for MIN, aggregate functions ignore null values\nE.Except for MAX, aggregate functions ignore null values",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5351,
-      "quizId": 104,
-      "text": "What is the difference between Where and Having Clause?\nA.WHERE is for Rows and HAVING is for Groups\nB.WHERE is for Groups and HAVING is for Rows\nC.WHERE and HAVING are the same\nD.We can use aggregation functions in WHERE clause",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
-    },
-    {
-      "id": 5352,
-      "quizId": 104,
-      "text": "Suppose relation R(a,b,c) has the following tuples:",
-      "options": [],
-      "correctIndex": 2,
-      "explanation": "Đáp án lưu trong nguồn: C. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5353,
-      "quizId": 104,
-      "text": "-----------------------------------\n1 1 3\n1 2 3\n2 1 4\n2 3 5\n2 4 1\n3 2 4\n3 3 6\nWhich tuple is contained in the result of the following query:\nSELECT a, COUNT(DISTINCT B) FROM R\nGROUP BY a\nHAVING SUM(B) >3;\nA.(2,10)\nB.(3,7)\nC.(2,3)\nD.(3,12)",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A, B, C. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong quan hệ, mỗi hàng dữ liệu là một tuple (bộ), mỗi cột là attribute (thuộc tính), còn relation là tập/bag các tuple theo một schema. Dùng đúng thuật ngữ này giúp tránh nhầm hàng với trường/cột hoặc toàn bộ bảng.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5354,
-      "quizId": 104,
-      "text": "What does the following SQL statement do:\nSELECT Customer, COUNT(Order)\nFROM Sales\nGROUP BY Customer\nHAVING COUNT(Order) > 5\nA.Selects the total number of orders from the Sales table, if this number is greater than 5\nB.Selects all Customers from the Sales table\nC.Selects all customers from table Sales that have made more than 5 orders.\nD.None of the other three",
-      "options": [],
-      "correctIndex": 2,
-      "explanation": "Đáp án lưu trong nguồn: C. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai.\n\nGiới hạn nguồn: phần văn bản có thể chỉ còn dữ liệu/bảng mà thiếu yêu cầu cần tính; cần mở đề gốc để xác định phép toán và kiểm tra kết quả cụ thể."
-    },
-    {
-      "id": 5355,
-      "quizId": 104,
-      "text": "The relation R(A,B) may have duplicate tuples. Choose the query that create non-duplicated results, regardless of what tuples R contains?\nA.SELECT A, B FROM R\nB.SELECT A, B FROM R GROUP BY A, B\nC.SELECT A FROM R WHERE A NOT IN (SELECT B FROM R)\nD.SELECT TOP 3 A, B FROM R",
-      "options": [],
-      "correctIndex": 1,
-      "explanation": "Đáp án lưu trong nguồn: B. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
     },
     {
       "id": 5356,
@@ -12788,16 +13036,6 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Return the field of all the 10 rows.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Return 10 rows with data and 90 blank rows without data; B. Return all the rows and all columns in the table; D. Return error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5416,
-      "quizId": 104,
-      "text": "UPDATE) in the same CREATE TRIGGER statement",
-      "options": [
-        "When a trigger fires, results are returned to the calling application, just like with stored procedures"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. When a trigger fires, results are returned to the calling application, just like with stored procedures.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nGiới hạn nguồn: chỉ còn một lựa chọn văn bản nên phần loại trừ phương án nhiễu không thể kiểm tra."
-    },
-    {
       "id": 5417,
       "quizId": 104,
       "text": "The predicate in a where clause can involve Boolean operations such as and. The result of true and unknown is false and unknown is while unknown and unknown is",
@@ -13280,18 +13518,6 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Group of Transact-SQL statements compiled into a single execution plan.\n\nLời giải gốc: Thủ tục lưu trữ (Stored Procedure) là một tập hợp các câu lệnh Transact-SQL được biên dịch và lưu trên máy chủ dưới dạng một kế hoạch thực thi duy nhất để tái sử dụng.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. Block of functions; C. Group of distinct SQL statements; D. None of the mentioned. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5454,
-      "quizId": 104,
-      "text": "Suppose relation R(A, B, C, D) has tuples. Which tuples are contained in the result of the query below?<pre>SELECT C, AVG(D) FROM R GROUP BY C HAVING AVG(D) &gt; 1000 ORDER BY C;</pre>A. (101, 11500); (102, 2500)",
-      "options": [
-        "(101, 2300); (102, 1250)",
-        "(101, 5); (102, 2)",
-        "(101, 11500); (102, 1250)"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. (101, 11500); (102, 1250).\n\nLời giải gốc: Sau khi nhóm theo cột C và tính giá trị trung bình của D thỏa mãn điều kiện AVG(D) > 1000, ta thu được các cặp giá trị nhóm tương ứng.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: B. (101, 2300); (102, 1250); C. (101, 5); (102, 2). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
       "id": 5455,
       "quizId": 104,
       "text": "To completely remove a table and its data in SQL, we use:",
@@ -13744,14 +13970,6 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. It allows you to traverse the result set of a query and process each row individually.\n\nLời giải gốc: Con trỏ SQL (Cursor) cho phép duyệt qua tập kết quả trả về của một truy vấn và xử lý từng dòng dữ liệu một cách độc lập.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ nên dùng khi xử lý từng bản ghi là cần thiết hoặc không thể biểu diễn gọn bằng thao tác tập hợp. Với INSERT/UPDATE/DELETE hàng loạt, truy vấn set-based thường đơn giản và hiệu quả hơn.\n\nĐối chiếu phương án: B. It is a precompiled collection of one or more SQL statements that can be executed as a single…; C. A field within a database; D. Cursors are not related to SQL. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5490,
-      "quizId": 104,
-      "text": "",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nLời giải gốc: Có 2 cách phổ biến để tìm bản ghi ở bảng cha (Customers) không có dữ liệu đối ứng ở bảng con (Orders): Dùng LEFT JOIN từ Customers sang Orders và lọc ra các dòng bị NULL ở bên Orders. Dùng toán tử NOT EXISTS kết hợp với Subquery truy vấn vào bảng Orders.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: câu hỏi dạng văn bản bị thiếu; hãy đối chiếu hình/đề gốc đính kèm trước khi kết luận từ đáp án.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
-    },
-    {
       "id": 5491,
       "quizId": 104,
       "text": "The CREATE TRIGGER statement is used to create a trigger. The ____ clause specifies the table name on which the trigger is to be attached. The ____ specifies that this is an AFTER INSERT trigger.",
@@ -13763,14 +13981,6 @@
       ],
       "correctIndex": 1,
       "explanation": "Đáp án theo dữ liệu đề: B — B. on, for insert.\n\nLời giải gốc: Cú pháp tạo trigger trong SQL Server dùng mệnh đề ON để chỉ định bảng và tùy chọn thời điểm thực thi như AFTER INSERT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: A. for insert, on; C. for, insert; D. None of the mentioned. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5492,
-      "quizId": 104,
-      "text": "",
-      "options": [],
-      "correctIndex": 2,
-      "explanation": "Đáp án lưu trong nguồn: C. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nLời giải gốc: Truy vấn con lấy ra danh sách các model là PC. Truy vấn ngoài lọc ra những nhà sản xuất (maker) có sản xuất những model không nằm trong danh sách PC đó. Do đó, kết quả là những nhà sản xuất có tham gia tạo ra các thiết bị không phải PC (như máy in, laptop...).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: câu hỏi dạng văn bản bị thiếu; hãy đối chiếu hình/đề gốc đính kèm trước khi kết luận từ đáp án.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
     },
     {
       "id": 5493,
@@ -14190,14 +14400,6 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT queries.\n\nLời giải gốc: ORDER BY dùng để sắp xếp thứ tự hiển thị dữ liệu đầu ra và nó là một phần bổ trợ nằm trong cấu trúc của câu lệnh truy vấn dữ liệu SELECT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. GROUP BY queries; C. HAVING queries; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5525,
-      "quizId": 104,
-      "text": "",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nLời giải gốc: Cú pháp chuẩn của câu lệnh UPDATE trong SQL là UPDATE tên_bảng SET Tên_cột = Giá_trị_mới WHERE Điều_kiện.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: câu hỏi dạng văn bản bị thiếu; hãy đối chiếu hình/đề gốc đính kèm trước khi kết luận từ đáp án.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
-    },
-    {
       "id": 5526,
       "quizId": 104,
       "text": "What makes stored procedures faster than sending a Transact-SQL statement to SQL Server?",
@@ -14288,18 +14490,6 @@
       ],
       "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. One.\n\nLời giải gốc: Lệnh DELETE FROM cơ bản luôn thực thi hành động xóa các dòng dữ liệu trực tiếp trên một quan hệ (bảng) duy nhất được chỉ định tại một thời điểm.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Một câu lệnh DELETE tác động lên một target table/relation trong mỗi câu lệnh, dù có thể xóa nhiều hàng của bảng đó theo WHERE. Các hàng tham chiếu ở bảng khác chỉ bị ảnh hưởng nếu có cascade/trigger được cấu hình.\n\nĐối chiếu phương án: B. Two; C. Several; D. Null. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5533,
-      "quizId": 104,
-      "text": "Suppose relation R1(A, B) and relation R2(C, A) each have tuples. Which tuples are contained in the result of the query below?<pre>SELECT R1.B, R2.C FROM R1 RIGHT JOIN R2 ON R1.A = R2.A;</pre>A. (a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (d, NULL); (e, NULL)",
-      "options": [
-        "(2, 101); (b, 102); (c, 103); (a, 104); (a, 105)",
-        "(a, 101); (b, 102); (e, 103)",
-        "(a, 101); (a, 104); (b, 102); (c, 103); (e, NULL)"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. (a, 101); (a, 104); (b, 102); (c, 103); (e, NULL).\n\nLời giải gốc: Phép RIGHT JOIN giữ lại toàn bộ bản ghi từ bảng bên phải (R2) và kết hợp với các bản ghi khớp ở bảng bên trái (R1); các bản ghi R2 không có giá trị R1 tương ứng sẽ nhận NULL.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: B. (2, 101); (b, 102); (c, 103); (a, 104); (a, 105); C. (a, 101); (b, 102); (e, 103). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5534,
@@ -14508,18 +14698,6 @@
       ],
       "correctIndex": 4,
       "explanation": "Đáp án theo dữ liệu đề: E — E. A and B are correct.\n\nLời giải gốc: Trong SQL Server, cú pháp thực thi procedure hỗ trợ từ khóa EXECUTE hoặc viết tắt là EXEC. Cú pháp CALL được dùng ở một số hệ quản trị khác (MySQL, Oracle) chứ không phải SQL Server.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. EXECUTE name_sp; B. EXEC name_sp; C. CALL name_sp; D. All of the answers above. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5550,
-      "quizId": 104,
-      "text": "In the query below, which keyword must be inserted?<pre>INSERT INTO Students ____ (32, N'Iona Bush', N'Female');</pre>A. INTO",
-      "options": [
-        "SET",
-        "WHERE",
-        "VALUES"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. VALUES.\n\nLời giải gốc: Cú pháp câu lệnh thêm mới dữ liệu chuẩn trong SQL yêu cầu từ khóa VALUES để chỉ định danh sách giá trị cần chèn.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SET; C. WHERE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5551,
@@ -16800,22 +16978,6 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. D-&gt;B and D-&gt;C.\n\nLời giải gốc: Theo quy tắc phân tách (Decomposition rule), phụ thuộc hàm $D \\to BC$ tương đương với hai phụ thuộc hàm riêng biệt là $D \\to B$ và $D \\to C$. ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. C-&gt;B and C-&gt;B; C. D-&gt;B and B-&gt;C; D. C-&gt;D and C-&gt;B. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5726,
-      "quizId": 110,
-      "text": "",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nLời giải gốc: Phân rã vế phải (theo luật phân rã): AB->CB tách thành AB->C và AB->B (tầm thường bỏ qua) => ta có AB->C. C->AD tách thành C->A và C->D. Kết hợp với lệnh A->C có sẵn. Gộp lại ta được tập tương đương là {AB->C, C->A, C->D, A->C}.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: câu hỏi dạng văn bản bị thiếu; hãy đối chiếu hình/đề gốc đính kèm trước khi kết luận từ đáp án.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
-    },
-    {
-      "id": 5727,
-      "quizId": 110,
-      "text": "",
-      "options": [],
-      "correctIndex": 3,
-      "explanation": "Đáp án lưu trong nguồn: D. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nLời giải gốc: Hệ tiên đề Armstrong gốc chỉ gồm 3 tiên đề: Reflexivity (Phản xạ - A), Augmentation (Gia tăng - B), và Transitivity (Bắc cầu - C). Phương án D là quy tắc phân rã (Decomposition rule) được suy ra từ các tiên đề chứ không phải là tiên đề gốc.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đọc kỹ từ khóa xác định phạm vi của câu hỏi, rồi đối chiếu định nghĩa/điều kiện đó với từng lựa chọn. Đáp án đã lưu phù hợp với yêu cầu; các lựa chọn khác mô tả một khái niệm lân cận hoặc không đáp ứng đầy đủ điều kiện được nêu.\n\nGiới hạn nguồn: câu hỏi dạng văn bản bị thiếu; hãy đối chiếu hình/đề gốc đính kèm trước khi kết luận từ đáp án.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
-    },
-    {
       "id": 5728,
       "quizId": 110,
       "text": "To convert a table to First Normal Form (1NF), what step must be taken?",
@@ -17047,14 +17209,6 @@
       ],
       "correctIndex": 3,
       "explanation": "Đáp án theo dữ liệu đề: D — D. When the sequence of tasks is complete, the SAVE POINT closes the transaction.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: A. In SQL Server, every DML operation is a transaction regardless of whether it has a BEGIN TRANS…; B. COMMITTING a transaction makes permanent the changes resulting from all SQL statements in the…; C. ROLLING back a transaction rejects any of the changes resulting from the SQL statements in the…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5746,
-      "quizId": 113,
-      "text": "How many properties we must use to measure the quality of a transaction?\nA.6\nB.4\nC.3\nD.5",
-      "options": [],
-      "correctIndex": 0,
-      "explanation": "Đáp án lưu trong nguồn: A, C, D. Tuy nhiên lựa chọn văn bản hiện có không chứa đủ phương án tương ứng; cần xem lại đề gốc trước khi coi đây là đáp án đã xác minh.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nGiới hạn nguồn: các lựa chọn không có trong CSV dạng văn bản, vì vậy chưa thể giải thích vì sao từng phương án nhiễu sai."
     },
     {
       "id": 5747,
