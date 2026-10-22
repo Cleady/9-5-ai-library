@@ -1,8 +1,9 @@
 const jwt = require('jsonwebtoken');
+const db = require('../config/db');
 const { recordApiActivity } = require('../utils/activityTracker');
 
-// Middleware xác thực xem user đã đăng nhập chưa
-exports.verifyToken = (req, res, next) => {
+// Middleware xác thực xem user đã đăng nhập chưa và kiểm tra trạng thái tươi từ DB
+exports.verifyToken = async (req, res, next) => {
     const token = req.headers['authorization'];
 
     if (!token) {
@@ -14,11 +15,27 @@ exports.verifyToken = (req, res, next) => {
         const tokenBody = token.split(' ')[1];
         const decoded = jwt.verify(tokenBody, process.env.JWT_SECRET);
         
-        // Gắn thông tin giải mã được vào req để các API sau sử dụng
-        req.user = decoded;
+        // Kiểm tra trạng thái tươi từ CSDL: vô hiệu hóa ngay nếu tài khoản bị khóa hoặc xóa
+        const [rows] = await db.query('SELECT id, username, role, status FROM users WHERE id = ?', [decoded.id]);
+        if (rows.length === 0) {
+            return res.status(401).json({ error: 'Tài khoản không còn tồn tại trên hệ thống' });
+        }
+
+        const freshUser = rows[0];
+        if (freshUser.status === 'banned') {
+            return res.status(403).json({ error: 'Tài khoản của bạn đã bị khóa (banned)' });
+        }
+
+        // Gắn thông tin mới nhất vào req để các controller phía sau sử dụng
+        req.user = {
+            id: freshUser.id,
+            username: freshUser.username,
+            role: freshUser.role,
+            status: freshUser.status
+        };
 
         // Ghi nhận người dùng hoạt động (fire-and-forget, throttle 5 phút/người dùng)
-        recordApiActivity(decoded);
+        recordApiActivity(req.user);
 
         next();
     } catch (error) {
