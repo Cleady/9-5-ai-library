@@ -22,6 +22,7 @@
   var currentFilter = 'all';     /* all | completed | in-progress | locked */
   var currentSort = 'newest';    /* newest | oldest | a-z */
   var currentSearch = '';
+  var activePageRefresh = null;  /* Callback làm mới trang khi quay lại */
 
   /* ====== ICON SVG NỘI TUYẾN ====== */
   /* Dùng inline SVG cho các icon mà thư mục assets/icon chưa có */
@@ -34,7 +35,8 @@
   var STATUS_ICONS = {
     completed: '<svg class="lec-status-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>',
     'in-progress': '<svg class="lec-status-svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l2.5 2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    locked: '<svg class="lec-status-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>'
+    locked: '<svg class="lec-status-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>',
+    'not-started': '<svg class="lec-status-svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="8" stroke-dasharray="2 2"/><polygon points="8,6 14,10 8,14" fill="currentColor"/></svg>'
   };
 
   /* ====== HELPER LẤY ICON CHUẨN CHO MÔN HỌC ====== */
@@ -216,7 +218,7 @@
       } catch (e) {}
 
       container.innerHTML =
-        '<div class="lec-empty" style="padding: 36px 20px; text-align: center; background: rgba(255, 255, 255, 0.7); border-radius: 16px; border: 1.5px dashed #cbd5e1; margin-top: 10px;">' +
+        '<div class="lec-empty" style="text-align: center; padding: 48px 20px; background: rgba(248, 250, 252, 0.6); border-radius: 14px; border: 1px dashed #cbd5e1; margin-top: 12px;">' +
           '<div style="font-size: 32px; margin-bottom: 8px;">🎬</div>' +
           '<h3 style="font-size: 16px; font-weight: 700; color: #1e293b; margin: 0 0 6px;">Môn ' + subName + ' chưa có bài giảng video</h3>' +
           '<p style="font-size: 13px; color: #64748b; margin: 0 0 16px;">Các bài giảng và video của môn này sẽ sớm được cập nhật.</p>' +
@@ -237,14 +239,20 @@
       var gradFrom = subject ? subject.gradientFrom : '#dbeafe';
       var gradTo = subject ? subject.gradientTo : '#bfdbfe';
 
-      /* Thanh tiến độ cho bài in-progress (giả lập 60%) */
+      /* Thanh tiến độ cho bài mở khoá: Not started (0%), In progress (% thật), Completed (100%) */
       var progressHtml = '';
-      if (lec.status === 'in-progress') {
-        var watchPct = core.storageGet('watch:' + lec.id) || 60;
+      if (!isLocked) {
+        var prog = core.getLectureProgress(lec.id);
+        var displayPct = prog.percent;
+        if (lec.status === 'completed') {
+          displayPct = 100;
+        } else if (lec.status === 'not-started') {
+          displayPct = 0;
+        }
         progressHtml =
           '<div class="progress-row lec-row-progress">' +
-            '<progress class="progress" value="' + watchPct + '" max="100">' + watchPct + '%</progress>' +
-            '<span class="progress-label">' + watchPct + '%</span>' +
+            '<progress class="progress" value="' + displayPct + '" max="100">' + displayPct + '%</progress>' +
+            '<span class="progress-label">' + displayPct + '%</span>' +
           '</div>';
       }
 
@@ -298,14 +306,17 @@
     var container = document.getElementById(containerId);
     if (!container) return;
 
-    var tabs = container.querySelectorAll('[role="tab"]');
+    var tabs = container.querySelectorAll('.lec-filter-tab');
     tabs.forEach(function (tab) {
       tab.addEventListener('click', function () {
-        /* Bỏ active cũ, đặt active mới */
-        tabs.forEach(function (t) { t.setAttribute('aria-selected', 'false'); });
+        tabs.forEach(function (t) {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('is-active');
         tab.setAttribute('aria-selected', 'true');
 
-        currentFilter = tab.dataset.filter || 'all';
+        currentFilter = tab.getAttribute('data-filter');
         if (renderCallback) renderCallback();
       });
     });
@@ -322,20 +333,20 @@
     });
   }
 
-  /* ====== SEARCH ====== */
+  /* ====== TÌM KIẾM ====== */
   function initSearch(inputId, renderCallback) {
     var input = document.getElementById(inputId);
     if (!input) return;
 
-    var debouncedRender = core.debounce(function () {
+    var onSearch = core.debounce(function () {
       currentSearch = input.value.trim();
       if (renderCallback) renderCallback();
     }, 200);
 
-    input.addEventListener('input', debouncedRender);
+    input.addEventListener('input', onSearch);
   }
 
-  /* ====== KHỞI TẠO TRANG LECTURES LIST ====== */
+  /* ====== KHỞI TẠO TRANG LECTURES.HTML ====== */
   function initLecturesPage() {
     var params = new URLSearchParams(window.location.search);
     var currentSubjectId = parseInt(params.get('subject'), 10) || 1;
@@ -363,6 +374,9 @@
       // 3. Render danh sách bài giảng video của môn học đang được chọn
       renderLectureList('lec-list', currentSubjectId);
     }
+
+    // Đăng ký hàm làm mới khi quay lại trang
+    activePageRefresh = rerender;
 
     // Hiển thị nút LMS Manager nếu là Owner, Admin hoặc Staff
     var userStr = localStorage.getItem('user');
@@ -402,20 +416,18 @@
     });
   }
 
-  /* ====== KHỞI TẠO TRANG SUBJECT ====== */
+  /* ====== KHỞI TẠO TRANG SUBJECT.HTML ====== */
   function initSubjectPage() {
     var params = new URLSearchParams(window.location.search);
     var subjectId = parseInt(params.get('id'), 10) || 1;
 
     function rerender() {
       var subject = core.getSubjectById(subjectId);
-      var progress = core.getSubjectProgress(subjectId);
       var allLectures = core.getLectures(subjectId);
+      var progress = core.getSubjectProgress(subjectId);
 
-      /* Cập nhật breadcrumb và page title */
+      /* Cập nhật tiêu đề trang */
       if (subject) {
-        var breadcrumbCurrent = document.querySelector('.lec-breadcrumb-current');
-        if (breadcrumbCurrent) breadcrumbCurrent.textContent = subject.name;
         var pageTitle = document.querySelector('.lec-page-title');
         if (pageTitle) pageTitle.textContent = subject.name + ' – ' + subject.title;
         var pageSub = document.querySelector('.lec-page-subtitle');
@@ -470,10 +482,16 @@
       renderLectureList('lec-list', subjectId);
     }
 
+    activePageRefresh = rerender;
+
     rerender();
     core.syncWithBackend(function () {
       rerender();
     });
+
+    initFilterTabs('lec-filter-tabs', rerender);
+    initSortDropdown('lec-sort', rerender);
+    initSearch('lec-search', rerender);
   }
 
   /* Hàm phụ: render 1 stat item cho Quick stats */
@@ -490,71 +508,108 @@
   /* ====== KHỞI TẠO TRANG NEXT LECTURES ====== */
   function initNextLecturesPage() {
     var subjectId = 1;
-    var allLectures = core.getLectures(subjectId);
 
-    /* Chỉ lấy các bài chưa completed */
-    var upcoming = allLectures.filter(function (l) { return l.status !== 'completed'; });
+    function renderNext() {
+      var allLectures = core.getLectures(subjectId);
+      var upcoming = allLectures.filter(function (l) { return l.status !== 'completed'; });
 
-    var container = document.getElementById('lec-next-list');
-    if (!container) return;
+      var container = document.getElementById('lec-next-list');
+      if (!container) return;
 
-    if (upcoming.length === 0) {
-      container.innerHTML =
-        '<div class="lec-empty">' +
-          '<p class="lec-empty-text">🎉 All lectures completed! Great job!</p>' +
-        '</div>';
-      return;
-    }
-
-    var html = '';
-    upcoming.forEach(function (lec) {
-      var isLocked = lec.status === 'locked';
-      var href = isLocked ? '#' : (lec.type === 'quiz' ? 'quiz.html?id=' + lec.id : 'lecture.html?id=' + lec.id);
-      var btnClass = isLocked ? 'lec-btn--locked' : 'lec-btn--start';
-      var btnText = isLocked ? 'Locked' : 'Start';
-
-      var subject = core.getSubjectById(lec.subjectId);
-      var gradFrom = subject ? subject.gradientFrom : '#dbeafe';
-      var gradTo = subject ? subject.gradientTo : '#bfdbfe';
-
-      var isYoutube = (lec.videoSource === 'youtube') || Boolean(lec.youtubeId);
-      var thumbImgHtml = '';
-      if (isYoutube || lec.thumbnailUrl) {
-        var thumbSrc = lec.thumbnailUrl || (lec.youtubeId ? ('https://i.ytimg.com/vi/' + lec.youtubeId + '/hqdefault.jpg') : '');
-        if (thumbSrc) {
-          thumbImgHtml = '<img class="lec-row-thumb-img" src="' + thumbSrc + '" alt="" loading="lazy">';
-        }
+      if (upcoming.length === 0) {
+        container.innerHTML =
+          '<div class="lec-empty">' +
+            '<p class="lec-empty-text">🎉 All lectures completed! Great job!</p>' +
+          '</div>';
+        return;
       }
 
-      html +=
-        '<div class="lec-next-row' + (isLocked ? ' lec-row--locked' : '') + '" data-lecture-id="' + lec.id + '">' +
-          '<div class="lec-row-thumb' + (thumbImgHtml ? ' has-image' : '') + '" style="background: linear-gradient(135deg, ' + gradFrom + ', ' + gradTo + ')">' +
-            thumbImgHtml +
-            '<span class="lec-row-type-badge lec-badge--' + lec.type + '">' + TYPE_ICONS[lec.type] + '</span>' +
-          '</div>' +
-          '<div class="lec-row-body">' +
-            '<h3 class="lec-row-title">Lecture ' + lec.order + ' – ' + lec.title + '</h3>' +
-            '<p class="lec-row-meta">' + core.formatMeta(lec) + '</p>' +
-            '<p class="lec-next-date">' + lec.dateAdded + '</p>' +
-          '</div>' +
-          '<div class="lec-row-end">' +
-            '<a href="' + href + '" class="lec-btn ' + btnClass + '"' + (isLocked ? ' tabindex="-1"' : '') + '>' +
-              btnText + (isLocked ? ' 🔒' : ' →') +
-            '</a>' +
-          '</div>' +
-        '</div>';
-    });
+      var html = '';
+      upcoming.forEach(function (lec) {
+        var isLocked = lec.status === 'locked';
+        var href = isLocked ? '#' : (lec.type === 'quiz' ? 'quiz.html?id=' + lec.id : 'lecture.html?id=' + lec.id);
+        var btnClass = isLocked ? 'lec-btn--locked' : 'lec-btn--start';
+        var btnText = isLocked ? 'Locked' : 'Start';
 
-    container.innerHTML = html;
+        var subject = core.getSubjectById(lec.subjectId);
+        var gradFrom = subject ? subject.gradientFrom : '#dbeafe';
+        var gradTo = subject ? subject.gradientTo : '#bfdbfe';
 
-    /* Toast cho nút Locked */
-    container.querySelectorAll('.lec-btn--locked').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        core.showToast('Complete the previous lecture to unlock this one.', 'warning');
+        var isYoutube = (lec.videoSource === 'youtube') || Boolean(lec.youtubeId);
+        var thumbImgHtml = '';
+        if (isYoutube || lec.thumbnailUrl) {
+          var thumbSrc = lec.thumbnailUrl || (lec.youtubeId ? ('https://i.ytimg.com/vi/' + lec.youtubeId + '/hqdefault.jpg') : '');
+          if (thumbSrc) {
+            thumbImgHtml = '<img class="lec-row-thumb-img" src="' + thumbSrc + '" alt="" loading="lazy">';
+          }
+        }
+
+        html +=
+          '<div class="lec-row' + (isLocked ? ' lec-row--locked' : '') + '">' +
+            '<div class="lec-row-thumb' + (thumbImgHtml ? ' has-image' : '') + '" style="background: linear-gradient(135deg, ' + gradFrom + ', ' + gradTo + ')">' +
+              thumbImgHtml +
+              '<span class="lec-row-type-badge lec-badge--' + lec.type + '">' + TYPE_ICONS[lec.type] + '</span>' +
+            '</div>' +
+            '<div class="lec-row-body">' +
+              '<h3 class="lec-row-title">Lecture ' + lec.order + ' – ' + lec.title + '</h3>' +
+              '<p class="lec-row-meta">' + core.formatMeta(lec) + '</p>' +
+              '<p class="lec-next-date">' + (lec.dateAdded || '') + '</p>' +
+            '</div>' +
+            '<div class="lec-row-end">' +
+              '<a href="' + href + '" class="lec-btn ' + btnClass + '"' + (isLocked ? ' tabindex="-1"' : '') + '>' +
+                btnText + (isLocked ? ' 🔒' : ' →') +
+              '</a>' +
+            '</div>' +
+          '</div>';
       });
+
+      container.innerHTML = html;
+
+      /* Toast cho nút Locked */
+      container.querySelectorAll('.lec-btn--locked').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          core.showToast('Complete the previous lecture to unlock this one.', 'warning');
+        });
+      });
+    }
+
+    activePageRefresh = renderNext;
+    renderNext();
+    core.syncWithBackend(function () {
+      renderNext();
     });
   }
+
+  /* ====== LÀM MỚI KHI QUAY LẠI TRANG (BFCACHE, VISIBILITY, STORAGE) ====== */
+  function handleProgressRefresh() {
+    if (core && typeof core.restoreProgress === 'function') {
+      core.restoreProgress();
+    }
+    if (typeof activePageRefresh === 'function') {
+      activePageRefresh();
+    }
+  }
+
+  window.addEventListener('pageshow', function () {
+    handleProgressRefresh();
+  });
+
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) {
+      handleProgressRefresh();
+    }
+  });
+
+  window.addEventListener('storage', function (e) {
+    if (e.key && e.key.indexOf('lib95:lectures:') === 0) {
+      handleProgressRefresh();
+    }
+  });
+
+  window.addEventListener('lib95:progress-update', function () {
+    handleProgressRefresh();
+  });
 
   /* ====== EXPORT ====== */
   window.Lib95.lectures.list = {
@@ -562,7 +617,8 @@
     initSubjectPage: initSubjectPage,
     initNextLecturesPage: initNextLecturesPage,
     renderLectureList: renderLectureList,
-    renderSubjectProgress: renderSubjectProgress
+    renderSubjectProgress: renderSubjectProgress,
+    refreshProgress: handleProgressRefresh
   };
 
 })();

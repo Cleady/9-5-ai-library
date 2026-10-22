@@ -22,6 +22,9 @@
   /* Tiền tố localStorage — tránh xung đột với các module khác */
   var STORAGE_PREFIX = 'lib95:lectures:';
 
+  /* Ngưỡng hoàn thành bài giảng (90%) */
+  var COMPLETION_THRESHOLD = 90;
+
   /* ====== TRUY VẤN DỮ LIỆU ====== */
   /* Lấy tất cả subjects */
   function getSubjects() {
@@ -67,21 +70,83 @@
     return DATA.notes.filter(function (n) { return n.lectureId === lectureId; });
   }
 
-  /* ====== QUY TẮC MỞ KHÓA ====== */
+  /* ====== LOCALSTORAGE ====== */
+  function storageGet(key) {
+    try {
+      var raw = localStorage.getItem(STORAGE_PREFIX + key);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function storageSet(key, value) {
+    try {
+      localStorage.setItem(STORAGE_PREFIX + key, JSON.stringify(value));
+    } catch (e) {
+      /* Bỏ qua nếu localStorage đầy hoặc bị chặn */
+    }
+  }
+
+  /* ====== TÍNH TIẾN ĐỘ BÀI GIẢNG ĐƠN LẺ ====== */
+  /* Trả về { percent: 0-100, started: bool, completed: bool } */
+  function getLectureProgress(lectureId) {
+    if (!lectureId) return { percent: 0, started: false, completed: false };
+
+    var strId = String(lectureId);
+    var completedList = storageGet('completedIds') || [];
+    var isCompletedById = completedList.some(function (id) {
+      return String(id) === strId;
+    });
+
+    var rawWatch = storageGet('watch:' + lectureId);
+    var num = 0;
+    if (rawWatch !== null && rawWatch !== undefined) {
+      var parsed = parseInt(rawWatch, 10);
+      if (!isNaN(parsed) && isFinite(parsed)) {
+        num = Math.max(0, Math.min(100, Math.floor(parsed)));
+      }
+    }
+
+    var isCompleted = isCompletedById || (num >= COMPLETION_THRESHOLD);
+
+    if (isCompleted) {
+      return { percent: 100, started: false, completed: true };
+    }
+
+    return {
+      percent: num,
+      started: num > 0,
+      completed: false
+    };
+  }
+
+  /* ====== QUY TẮC MỞ KHÓA VÀ TRẠNG THÁI HỌC VIÊN ====== */
   /* Bài giảng chỉ mở khóa khi bài trước đã "completed".
-     Bài đầu tiên luôn mở (completed hoặc in-progress). */
+     Bài đầu tiên luôn mở khóa.
+     Thứ tự ưu tiên trạng thái hiển thị: Locked > Completed > In progress > Not started. */
   function applyUnlockRule(sortedLectures) {
     var result = [];
     for (var i = 0; i < sortedLectures.length; i++) {
       var lec = Object.assign({}, sortedLectures[i]);
-      if (i === 0) {
-        /* Bài đầu tiên: nếu chưa completed thì là in-progress */
-        if (lec.status === 'locked') lec.status = 'in-progress';
-      } else {
-        /* Bài sau: chỉ mở khóa khi bài trước completed */
+      var isLockedByRule = false;
+      if (i > 0) {
         var prev = result[i - 1];
         if (prev.status !== 'completed') {
-          lec.status = 'locked';
+          isLockedByRule = true;
+        }
+      }
+
+      if (isLockedByRule) {
+        lec.status = 'locked';
+      } else {
+        var prog = getLectureProgress(lec.id);
+        if (prog.completed) {
+          lec.status = 'completed';
+        } else if (prog.started) {
+          lec.status = 'in-progress';
+        } else {
+          lec.status = 'not-started';
         }
       }
       result.push(lec);
@@ -115,41 +180,28 @@
     return minutes;
   }
 
-  /* ====== LOCALSTORAGE ====== */
-  function storageGet(key) {
-    try {
-      var raw = localStorage.getItem(STORAGE_PREFIX + key);
-      return raw ? JSON.parse(raw) : null;
-    } catch (e) {
-      return null;
-    }
-  }
-
-  function storageSet(key, value) {
-    try {
-      localStorage.setItem(STORAGE_PREFIX + key, JSON.stringify(value));
-    } catch (e) {
-      /* Bỏ qua nếu localStorage đầy hoặc bị chặn */
-    }
-  }
-
   /* Đánh dấu bài giảng đã hoàn thành — cập nhật trong data gốc */
   function markCompleted(lectureId) {
-    var lec = DATA.lectures.find(function (l) { return l.id === lectureId; });
-    if (lec) lec.status = 'completed';
-    /* Lưu trạng thái vào localStorage để giữ giữa các lần reload */
+    if (!lectureId) return;
+    var strId = String(lectureId);
     var completed = storageGet('completedIds') || [];
-    if (completed.indexOf(lectureId) === -1) {
+    var has = completed.some(function (id) { return String(id) === strId; });
+    if (!has) {
       completed.push(lectureId);
       storageSet('completedIds', completed);
     }
+    storageSet('watch:' + lectureId, 100);
+
+    var lec = DATA.lectures.find(function (l) { return String(l.id) === strId; });
+    if (lec) lec.status = 'completed';
   }
 
   /* Khôi phục trạng thái từ localStorage khi khởi tạo */
   function restoreProgress() {
     var completed = storageGet('completedIds') || [];
     completed.forEach(function (id) {
-      var lec = DATA.lectures.find(function (l) { return l.id === id; });
+      var strId = String(id);
+      var lec = DATA.lectures.find(function (l) { return String(l.id) === strId; });
       if (lec) lec.status = 'completed';
     });
   }
@@ -314,7 +366,8 @@
     var map = {
       'completed': 'Completed',
       'in-progress': 'In progress',
-      'locked': 'Locked'
+      'locked': 'Locked',
+      'not-started': 'Not started'
     };
     return map[status] || status;
   }
@@ -402,7 +455,6 @@
                       title: l.title,
                       type: l.type || 'video',
                       durationMin: l.duration_min || 15,
-                      status: l.status || 'in-progress',
                       videoSource: l.video_source || (l.youtube_id ? 'youtube' : 'file'),
                       youtubeId: l.youtube_id || null,
                       thumbnailUrl: l.thumbnail_url || null,
@@ -462,7 +514,6 @@
             title: l.title,
             type: l.type || 'video',
             durationMin: l.duration_min || 15,
-            status: l.status || 'in-progress',
             videoSource: l.video_source || (l.youtube_id ? 'youtube' : 'file'),
             youtubeId: l.youtube_id || null,
             thumbnailUrl: l.thumbnail_url || null,
@@ -508,12 +559,15 @@
     getResources: getResources,
     getQuizQuestions: getQuizQuestions,
     getNotes: getNotes,
+    getLectureProgress: getLectureProgress,
+    COMPLETION_THRESHOLD: COMPLETION_THRESHOLD,
     getSubjectProgress: getSubjectProgress,
     getNextLecture: getNextLecture,
     getRemainingTime: getRemainingTime,
     storageGet: storageGet,
     storageSet: storageSet,
     markCompleted: markCompleted,
+    restoreProgress: restoreProgress,
     formatType: formatType,
     formatMeta: formatMeta,
     formatStatus: formatStatus,
@@ -530,4 +584,3 @@
   };
 
 })();
-

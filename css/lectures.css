@@ -422,6 +422,12 @@
   background: var(--lec-color-locked-bg);
 }
 
+.lec-status--not-started {
+  color: var(--color-text-muted, #64748b);
+  background: color-mix(in srgb, var(--card-bg-elevated, #fff) 85%, var(--border-default, #cbd5e1));
+  border: 1px solid var(--card-border, rgba(148, 163, 184, 0.25));
+}
+
 /* Mũi tên ">" ở cuối hàng */
 .lec-row-chevron {
   width: 20px;
@@ -2920,6 +2926,12 @@ html[data-theme="dark"] .lec-status--in-progress {
 html[data-theme="dark"] .lec-status--locked {
   color: #94a3b8;
   background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .lec-status--not-started {
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
