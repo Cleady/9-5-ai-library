@@ -15,6 +15,7 @@
     <script src="js/theme-init.js"></script>
     <link rel="stylesheet" href="css/theme-tokens.css">
     <link rel="stylesheet" href="css/home_page.css">
+    <link rel="stylesheet" href="/css/notifications.css">
     <link rel="stylesheet" href="css/auth-guard.css">
 </head>
 
@@ -70,34 +71,16 @@
                     <button class="home-page__icon-button" type="button" data-home-notifications
                         aria-label="Notifications" aria-expanded="false" aria-controls="home-notification-panel">
                         <span class="home-page__bell-icon" aria-hidden="true"></span>
-                        <span class="home-page__notification-dot" aria-hidden="true"></span>
+                        <span class="home-page__notification-dot" aria-hidden="true" hidden></span>
                     </button>
                     <section class="home-page__notification-panel" id="home-notification-panel"
                         aria-label="Notifications" hidden>
                         <header class="home-page__notification-header">
                             <strong>Notifications</strong>
-                            <span>2 new</span>
+                            <button type="button" class="notification-clear" data-notif-mark-all>Mark all as read</button>
                         </header>
-                        <ul class="home-page__notification-list">
-                            <li class="home-page__notification-item is-unread">
-                                <span class="home-page__notification-mark" aria-hidden="true"></span>
-                                <div>
-                                    <p>New lecture: Machine Learning Basics, Lecture 4</p><time>2 hours ago</time>
-                                </div>
-                            </li>
-                            <li class="home-page__notification-item is-unread">
-                                <span class="home-page__notification-mark" aria-hidden="true"></span>
-                                <div>
-                                    <p>Your practice feedback is ready to review.</p><time>Yesterday</time>
-                                </div>
-                            </li>
-                            <li class="home-page__notification-item">
-                                <span class="home-page__notification-mark" aria-hidden="true"></span>
-                                <div>
-                                    <p>Welcome to the 9.5 AI CLUB community!</p><time>Sep 20, 2025</time>
-                                </div>
-                            </li>
-                        </ul>
+                        <ul class="notification-list"></ul>
+                        <a href="/pages/community/community-notifications.html" class="notification-footer">View all notifications</a>
                     </section>
                 </div>
                 <div class="home-page__guest-wrap">
@@ -370,6 +353,7 @@
                 <i>·</i> Better You</span></div>
     </footer>
     <script src="js/home_page.js" defer></script>
+    <script src="/js/notifications-bell.js" defer></script>
     <script src="js/auth-guard.js"></script>
 </body>
 

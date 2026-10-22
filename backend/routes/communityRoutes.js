@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const multer = require('multer');
 
 const communityController = require('../controllers/communityController');
-const { verifyToken, isStaffAdminOwner, canWriteCommunity } = require('../middlewares/authMiddleware');
+const { verifyToken, isStaffAdminOwner, canWriteCommunity, isAdminOrOwner } = require('../middlewares/authMiddleware');
 
 // === CẤU HÌNH UPLOAD ẢNH COMMUNITY BẰNG MULTER ===
 const uploadDir = path.join(__dirname, '../../document/uploads/community');
@@ -76,6 +76,7 @@ router.post('/upload-image', verifyToken, canWriteCommunity, handleUpload, (req,
 // === 2. BÀI VIẾT (POSTS) ===
 router.get('/posts', verifyToken, communityController.getPosts);
 router.post('/posts', verifyToken, canWriteCommunity, communityController.createPost);
+router.put('/posts/:id/pin', verifyToken, isAdminOrOwner, communityController.pinPost);
 router.put('/posts/:id', verifyToken, canWriteCommunity, communityController.updatePost);
 router.delete('/posts/:id', verifyToken, communityController.deletePost);
 
@@ -111,6 +112,7 @@ router.post('/groups/:id/leave', verifyToken, canWriteCommunity, communityContro
 router.get('/leaderboard', verifyToken, communityController.getLeaderboard);
 
 // === 9. THÔNG BÁO (NOTIFICATIONS) ===
+router.get('/notifications/unread-count', verifyToken, communityController.getUnreadCount);
 router.get('/notifications', verifyToken, communityController.getNotifications);
 router.post('/notifications/read-all', verifyToken, communityController.markAllNotificationsRead);
 router.post('/notifications/:id/read', verifyToken, communityController.markNotificationRead);

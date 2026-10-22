@@ -1,0 +1,494 @@
+/* ==========================================================================
+   NOTIFICATIONS DESIGN SYSTEM (css/notifications.css)
+   Phong cách Glassmorphism đồng bộ với style.css & theme-tokens.css
+   Hỗ trợ hoàn hảo Light/Dark mode và 5 accent colors
+   ========================================================================== */
+
+/* 1. Ghim bài (Pinned Post) trong Community Feed */
+.com-post--pinned {
+  border: 1px solid var(--color-primary) !important;
+  background: color-mix(in srgb, var(--card-bg) 94%, var(--color-primary)) !important;
+  position: relative;
+}
+
+.com-post-pinned-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 35%, transparent);
+  margin-bottom: 12px;
+}
+
+/* Nút Ghim/Bỏ ghim trong menu ba chấm của bài viết */
+.com-dropdown-item--pin {
+  color: var(--color-primary) !important;
+  font-weight: 600;
+}
+
+/* 2. Chuông Thông báo Topbar (Dropdown Enhancements) */
+.notification-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: 480px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), var(--card-shadow);
+}
+
+.notification-header {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--card-border);
+  background: var(--card-bg-elevated);
+  backdrop-filter: var(--card-blur);
+}
+
+.notification-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.notification-clear {
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.notification-clear:hover {
+  background: var(--color-primary-soft);
+}
+
+.notification-clear:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.notification-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  overflow-y: auto;
+  max-height: 360px;
+  overscroll-behavior: contain;
+  flex: 1;
+}
+
+/* Mục thông báo trong dropdown */
+.notif-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease;
+  position: relative;
+  border-bottom: 1px solid var(--border-subtle, rgba(15, 23, 42, 0.04));
+}
+
+.notif-item:hover {
+  background: var(--nav-hover-bg);
+}
+
+.notif-item.is-unread {
+  background: color-mix(in srgb, var(--card-bg-elevated) 88%, var(--color-primary-soft));
+}
+
+/* Mục thông báo của bài ghim (Pinned Notification) */
+.notif-item--pinned {
+  background: var(--color-primary-soft) !important;
+  border-left: 3px solid var(--color-primary);
+}
+
+.notif-item--pinned:hover {
+  filter: brightness(0.97);
+}
+
+/* Avatar người gửi thông báo */
+.notif-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 13px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--card-border);
+  position: relative;
+}
+
+/* Icon nhỏ gắn vào góc avatar biểu thị loại tương tác */
+.notif-type-bubble {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  background: var(--card-bg-elevated);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--card-border);
+}
+
+/* Nội dung thông báo */
+.notif-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.notif-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+.notif-actor-name {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Badge Role nhỏ cạnh tên người gửi */
+.notif-role-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.notif-role-badge--owner {
+  background: var(--badge-owner-bg, #fee2e2);
+  color: var(--badge-owner-color, #dc2626);
+  border: 1px solid var(--badge-owner-border, rgba(220, 38, 38, 0.2));
+}
+
+.notif-role-badge--admin {
+  background: var(--role-badge-bg, #dbeafe);
+  color: var(--role-badge-text, var(--color-primary));
+}
+
+.notif-role-badge--staff {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+/* Excerpt bài viết */
+.notif-excerpt {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.notif-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+.notif-time {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.notif-badge-pinned {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+/* Chấm xanh chưa đọc */
+.notif-unread-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* Chân Dropdown: View all notifications */
+.notification-footer {
+  display: block;
+  padding: 11px 16px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  background: var(--card-bg-elevated);
+  backdrop-filter: var(--card-blur);
+  border-top: 1px solid var(--card-border);
+  transition: background 0.15s ease;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+}
+
+.notification-footer:hover {
+  background: var(--nav-hover-bg);
+}
+
+/* Empty state trong dropdown */
+.notif-empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.notif-empty-icon {
+  font-size: 28px;
+  opacity: 0.6;
+}
+
+/* Skeleton Loading */
+.notif-skeleton-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.notif-skeleton-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--border-default, #e2e8f0);
+  opacity: 0.5;
+  animation: notifPulse 1.4s ease-in-out infinite;
+}
+
+.notif-skeleton-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.notif-skeleton-line {
+  height: 12px;
+  border-radius: 4px;
+  background: var(--border-default, #e2e8f0);
+  opacity: 0.5;
+  animation: notifPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes notifPulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.7; }
+}
+
+/* 3. Trang đầy đủ: community-notifications.html */
+.notif-full-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Tabs lọc: All | Unread | Pinned */
+.notif-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.notif-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.notif-tab:hover {
+  background: var(--nav-hover-bg);
+  color: var(--color-text);
+}
+
+.notif-tab.is-active {
+  background: var(--color-primary);
+  color: var(--color-on-accent, #ffffff);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.notif-tab-count {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.notif-tab:not(.is-active) .notif-tab-count {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+/* Phân mục thông báo ghim trên trang đầy đủ */
+.notif-pinned-section {
+  margin-bottom: 20px;
+}
+
+.notif-pinned-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+/* Thẻ thông báo trên trang đầy đủ */
+.notif-full-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: var(--card-bg);
+  backdrop-filter: var(--card-blur);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow-sm, var(--shadow-sm));
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.notif-full-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow);
+  background: var(--surface-elevated, rgba(255, 255, 255, 0.9));
+}
+
+.notif-full-card.is-unread {
+  background: color-mix(in srgb, var(--card-bg) 88%, var(--color-primary-soft));
+  border-color: color-mix(in srgb, var(--color-primary) 35%, transparent);
+}
+
+.notif-full-card--pinned {
+  background: var(--color-primary-soft) !important;
+  border: 1px solid var(--color-primary) !important;
+}
+
+/* Nút Load more */
+.notif-load-more-btn {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg-elevated);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notif-load-more-btn:hover {
+  background: var(--color-primary-soft);
+  transform: translateY(-1px);
+}
+
+.notif-load-more-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 4. Responsive Mobile (360px) */
+@media (max-width: 480px) {
+  .notification-panel,
+  .home-page__notification-panel {
+    width: min(340px, calc(100vw - 24px));
+    right: -12px;
+  }
+
+  .notif-item {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .notif-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .notif-full-card {
+    padding: 12px;
+    gap: 10px;
+  }
+}

@@ -726,6 +726,10 @@
       notifs.slice(0, 5).forEach((n) => {
         const li = document.createElement('li');
         li.className = `notification-item ${!n.is_read ? 'is-unread' : ''}`;
+        if (n.is_pinned) {
+          li.style.background = 'var(--color-primary-soft)';
+          li.style.borderLeft = '3px solid var(--color-primary)';
+        }
 
         const iconSpan = document.createElement('span');
         iconSpan.className = 'notification-item-icon';
@@ -734,7 +738,11 @@
         const div = document.createElement('div');
         const p = document.createElement('p');
         p.className = 'notification-text';
-        p.textContent = `${n.actor.name} đã tương tác với bạn`;
+        if (n.type === 'post') {
+          p.textContent = n.is_pinned ? `📌 [Pinned] ${n.actor.name} published a new post` : `${n.actor.name} published a new post`;
+        } else {
+          p.textContent = `${n.actor.name} đã tương tác với bạn`;
+        }
 
         const time = document.createElement('time');
         time.className = 'notification-time';

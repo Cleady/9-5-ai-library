@@ -155,6 +155,16 @@
         dropdown.appendChild(adminDelBtn);
       }
 
+      // Tùy chọn Ghim / Bỏ ghim bài viết (Chỉ dành cho Admin hoặc Owner)
+      if (isAdmin && post) {
+        var isPinned = Boolean(post.is_pinned);
+        var pinBtn = make('button', 'com-dropdown-item--pin', isPinned ? '📌 Unpin post' : '📌 Pin post');
+        pinBtn.type = 'button';
+        pinBtn.dataset.comPinPost = postId;
+        pinBtn.dataset.comPinTarget = isPinned ? 'unpin' : 'pin';
+        dropdown.appendChild(pinBtn);
+      }
+
       var copyLinkBtn = make('button', '', '↗️ Sao chép liên kết');
       copyLinkBtn.type = 'button';
       copyLinkBtn.dataset.comShare = postId;
@@ -285,6 +295,53 @@
         }
       } catch (err) {
         // Đã có toast
+      }
+      return;
+    }
+
+    // === C2. XỬ LÝ GHIM / BỎ GHIM BÀI VIẾT (PIN / UNPIN POST) ===
+    var pinBtnClick = event.target.closest('[data-com-pin-post]');
+    if (pinBtnClick) {
+      var pPostId = pinBtnClick.dataset.comPinPost;
+      var isPinAction = pinBtnClick.dataset.comPinTarget === 'pin';
+      closeAllDropdowns();
+
+      try {
+        var pinRes = await app.apiFetch('/api/community/posts/' + pPostId + '/pin', {
+          method: 'PUT',
+          body: { pinned: isPinAction }
+        });
+
+        if (pinRes.success) {
+          app.showToast(isPinAction ? 'Đã ghim bài viết lên đầu trang' : 'Đã bỏ ghim bài viết');
+
+          // Cập nhật lại danh sách bài viết từ server để bài ghim lập tức nhảy lên đầu
+          if (typeof app.loadPosts === 'function') {
+            app.loadPosts(1, false);
+          } else {
+            // Cập nhật DOM cục bộ nếu loadPosts không có sẵn
+            var postCard = document.querySelector('[data-com-post-id="' + pPostId + '"]');
+            if (postCard) {
+              if (isPinAction) {
+                postCard.classList.add('com-post--pinned');
+                if (!postCard.querySelector('.com-post-pinned-pill')) {
+                  var pPill = make('div', 'com-post-pinned-pill', '📌 Pinned Announcement');
+                  postCard.insertBefore(pPill, postCard.firstChild);
+                }
+              } else {
+                postCard.classList.remove('com-post--pinned');
+                var exPill = postCard.querySelector('.com-post-pinned-pill');
+                if (exPill) exPill.remove();
+              }
+            }
+          }
+
+          if (window.Lib95Notifications && window.Lib95Notifications.refreshBadge) {
+            window.Lib95Notifications.refreshBadge();
+          }
+        }
+      } catch (err) {
+        app.showToast(err.message || 'Lỗi khi ghim/bỏ ghim bài viết');
       }
       return;
     }

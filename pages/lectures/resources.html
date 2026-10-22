@@ -11,6 +11,7 @@
     <!-- Khởi tạo Theme chống chớp trắng (FOUC) -->
     <script src="/js/theme-init.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/notifications.css" />
     <link rel="stylesheet" href="/css/resources.css" />
 </head>
 
@@ -121,43 +122,21 @@
 
                     <!-- Chuông thông báo -->
                     <div class="notification">
-                        <button type="button" class="icon-button" aria-label="Notifications (có 2 thông báo mới)"
+                        <button type="button" class="icon-button" aria-label="Notifications"
                             aria-expanded="false" aria-controls="notification-panel">
                             <span class="bell-icon" aria-hidden="true"></span>
-                            <span class="notification-dot" aria-hidden="true"></span>
+                            <span class="notification-dot" aria-hidden="true" hidden></span>
                         </button>
 
                         <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
                             <header class="notification-header">
                                 <p class="notification-title">Notifications</p>
-                                <button type="button" class="notification-clear">Mark as read</button>
+                                <button type="button" class="notification-clear">Mark all as read</button>
                             </header>
 
-                            <ul class="notification-list">
-                                <li class="notification-item is-unread">
-                                    <span class="notification-item-icon" aria-hidden="true"></span>
-                                    <div>
-                                        <p class="notification-text">Tài liệu mới: Machine Learning – Cheat Sheet</p>
-                                        <time class="notification-time" datetime="2025-09-14T09:00">2 hours ago</time>
-                                    </div>
-                                </li>
-                                <li class="notification-item is-unread">
-                                    <span class="notification-item-icon" aria-hidden="true"></span>
-                                    <div>
-                                        <p class="notification-text">Python for Data Science đã sẵn sàng tải xuống</p>
-                                        <time class="notification-time" datetime="2025-09-13T15:30">Yesterday</time>
-                                    </div>
-                                </li>
-                                <li class="notification-item">
-                                    <span class="notification-item-icon" aria-hidden="true"></span>
-                                    <div>
-                                        <p class="notification-text">4 tài liệu mới được thêm vào thư viện</p>
-                                        <time class="notification-time" datetime="2025-09-12T10:00">2 days ago</time>
-                                    </div>
-                                </li>
-                            </ul>
+                            <ul class="notification-list"></ul>
 
-                            <a href="#" class="notification-footer">View all notifications</a>
+                            <a href="/pages/community/community-notifications.html" class="notification-footer">View all notifications</a>
                         </section>
                     </div>
 
@@ -615,6 +594,7 @@
         </symbol>
     </svg>
     <script src="/js/resources.js"></script>
+    <script src="/js/notifications-bell.js"></script>
     <script src="../../js/syncProfile.js"></script>
 </body>
 

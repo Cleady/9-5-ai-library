@@ -2,6 +2,7 @@ const db = require('../config/db');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { recordAudit } = require('../utils/audit');
 
 // Thư mục lưu trữ ảnh Community
 const uploadDir = path.join(__dirname, '../../document/uploads/community');
@@ -42,6 +43,33 @@ async function createNotification(userId, actorId, type, postId = null) {
     );
   } catch (err) {
     console.error('Lỗi tạo notification:', err.message);
+  }
+}
+
+// Helper: Tạo thông báo tự động khi có bài đăng mới
+async function notifyNewPost(postId, authorId, authorRole) {
+  if (!postId || !authorId) return;
+  try {
+    const isStaffOrHigher = ['owner', 'admin', 'staff'].includes(authorRole);
+    if (isStaffOrHigher) {
+      // Tác giả là owner / admin / staff -> thông báo cho TẤT CẢ user active (trừ chính tác giả)
+      await db.query(`
+        INSERT INTO community_notifications (user_id, actor_id, type, post_id)
+        SELECT id, ?, 'post', ?
+        FROM users
+        WHERE status = 'active' AND id != ?
+      `, [authorId, postId, authorId]);
+    } else {
+      // Tác giả là member -> chỉ thông báo cho owner / admin / staff đang active (trừ tác giả)
+      await db.query(`
+        INSERT INTO community_notifications (user_id, actor_id, type, post_id)
+        SELECT id, ?, 'post', ?
+        FROM users
+        WHERE status = 'active' AND id != ? AND role IN ('owner', 'admin', 'staff')
+      `, [authorId, postId, authorId]);
+    }
+  } catch (err) {
+    console.error('Lỗi notifyNewPost:', err.message);
   }
 }
 
@@ -94,6 +122,7 @@ exports.getPosts = async (req, res) => {
     const [posts] = await db.query(
       `SELECT 
         p.id, p.user_id, p.kind, p.content, p.media_url, p.link_url, p.created_at, p.updated_at,
+        p.is_pinned, p.pinned_at, p.pinned_by,
         u.full_name, u.username, u.avatar_url, u.role,
         (SELECT COUNT(*) FROM community_likes WHERE post_id = p.id) AS likeCount,
         (SELECT COUNT(*) FROM community_comments WHERE post_id = p.id) AS commentCount,
@@ -101,7 +130,7 @@ exports.getPosts = async (req, res) => {
       FROM community_posts p
       JOIN users u ON p.user_id = u.id
       ${whereSql}
-      ORDER BY p.created_at DESC
+      ORDER BY p.is_pinned DESC, p.pinned_at DESC, p.created_at DESC
       LIMIT ? OFFSET ?`,
       [currentUserId, ...queryParams]
     );
@@ -187,6 +216,9 @@ exports.getPosts = async (req, res) => {
         content: p.content,
         media_url: p.media_url,
         link_url: p.link_url,
+        is_pinned: Boolean(p.is_pinned),
+        pinned_at: p.pinned_at,
+        pinned_by: p.pinned_by,
         created_at: p.created_at,
         updated_at: p.updated_at,
         author: {
@@ -313,6 +345,9 @@ exports.createPost = async (req, res) => {
 
     const post = rows[0];
 
+    // Tạo thông báo tự động (bọc try/catch bên trong, không làm vỡ luồng đăng bài)
+    await notifyNewPost(post.id, post.user_id, post.role);
+
     res.status(201).json({
       success: true,
       message: 'Đăng bài thành công!',
@@ -323,6 +358,9 @@ exports.createPost = async (req, res) => {
         content: post.content,
         media_url: post.media_url,
         link_url: post.link_url,
+        is_pinned: Boolean(post.is_pinned),
+        pinned_at: post.pinned_at,
+        pinned_by: post.pinned_by,
         created_at: post.created_at,
         updated_at: post.updated_at,
         author: {
@@ -343,6 +381,89 @@ exports.createPost = async (req, res) => {
   } catch (error) {
     console.error('Lỗi createPost:', error);
     res.status(500).json({ error: 'Lỗi máy chủ khi đăng bài' });
+  }
+};
+
+// PUT /api/community/posts/:id/pin (Chỉ Admin hoặc Owner)
+exports.pinPost = async (req, res) => {
+  try {
+    const postId = req.params.id;
+    const userId = req.user.id;
+    const { pinned } = req.body;
+    const shouldPin = Boolean(pinned);
+
+    // 1. Kiểm tra bài viết tồn tại
+    const [rows] = await db.query('SELECT * FROM community_posts WHERE id = ?', [postId]);
+    if (rows.length === 0) {
+      return res.status(404).json({ error: 'Không tìm thấy bài viết' });
+    }
+    const post = rows[0];
+
+    // 2. Nếu ghim bài viết
+    if (shouldPin) {
+      // Giới hạn tối đa 3 bài ghim cùng lúc
+      const [countRows] = await db.query(
+        'SELECT COUNT(*) AS count FROM community_posts WHERE is_pinned = 1 AND id != ?',
+        [postId]
+      );
+      if (countRows[0].count >= 3) {
+        return res.status(400).json({
+          error: 'Tối đa chỉ được ghim 3 bài viết cùng lúc. Vui lòng bỏ ghim một bài khác trước khi ghim bài mới.'
+        });
+      }
+
+      // Cập nhật trạng thái ghim
+      await db.query(
+        'UPDATE community_posts SET is_pinned = 1, pinned_at = CURRENT_TIMESTAMP, pinned_by = ? WHERE id = ?',
+        [userId, postId]
+      );
+
+      // Đảm bảo MỌI user active đều có thông báo type 'post' cho bài đó:
+      // 2a. Đặt lại is_read = 0 cho những user đã có thông báo
+      await db.query(
+        "UPDATE community_notifications SET is_read = 0 WHERE post_id = ? AND type = 'post'",
+        [postId]
+      );
+
+      // 2b. Thêm thông báo cho các user active chưa có thông báo của post này (trừ tác giả)
+      await db.query(`
+        INSERT INTO community_notifications (user_id, actor_id, type, post_id)
+        SELECT u.id, ?, 'post', ?
+        FROM users u
+        WHERE u.status = 'active' AND u.id != ?
+          AND NOT EXISTS (
+            SELECT 1 FROM community_notifications n
+            WHERE n.user_id = u.id AND n.post_id = ? AND n.type = 'post'
+          )
+      `, [post.user_id, postId, post.user_id, postId]);
+
+    } else {
+      // Bỏ ghim bài viết (không xóa thông báo cũ)
+      await db.query(
+        'UPDATE community_posts SET is_pinned = 0, pinned_at = NULL, pinned_by = NULL WHERE id = ?',
+        [postId]
+      );
+    }
+
+    // 3. Ghi nhật ký quản trị (Audit Log)
+    recordAudit({
+      actorId: userId,
+      action: shouldPin ? 'post.pin' : 'post.unpin',
+      targetType: 'community_post',
+      targetId: postId,
+      details: { is_pinned: shouldPin },
+      req
+    });
+
+    res.json({
+      success: true,
+      is_pinned: shouldPin,
+      message: shouldPin ? 'Đã ghim bài viết lên đầu trang' : 'Đã bỏ ghim bài viết'
+    });
+
+  } catch (error) {
+    console.error('Lỗi pinPost:', error);
+    res.status(500).json({ error: 'Lỗi máy chủ khi ghim/bỏ ghim bài viết' });
   }
 };
 
@@ -1366,46 +1487,117 @@ exports.getLeaderboard = async (req, res) => {
 // 8. NOTIFICATIONS (THÔNG BÁO)
 // ==========================================
 
-// GET /api/community/notifications
-exports.getNotifications = async (req, res) => {
+// GET /api/community/notifications/unread-count
+exports.getUnreadCount = async (req, res) => {
   try {
     const userId = req.user.id;
-
-    const [notifications] = await db.query(
-      `SELECT n.id, n.user_id, n.actor_id, n.type, n.post_id, n.is_read, n.created_at,
-              u.full_name AS actor_name, u.username AS actor_username, u.avatar_url AS actor_avatar, u.role AS actor_role,
-              p.content AS post_preview
-       FROM community_notifications n
-       JOIN users u ON n.actor_id = u.id
-       LEFT JOIN community_posts p ON n.post_id = p.id
-       WHERE n.user_id = ?
-       ORDER BY n.created_at DESC
-       LIMIT 30`,
-      [userId]
-    );
-
     const [unreadRows] = await db.query(
       'SELECT COUNT(*) as unreadCount FROM community_notifications WHERE user_id = ? AND is_read = 0',
       [userId]
     );
-
+    const count = Number(unreadRows[0].unreadCount || 0);
     res.json({
       success: true,
-      unreadCount: Number(unreadRows[0].unreadCount),
-      notifications: notifications.map(n => ({
+      unreadCount: count,
+      unread_count: count
+    });
+  } catch (error) {
+    console.error('Lỗi getUnreadCount:', error);
+    res.status(500).json({ error: 'Lỗi máy chủ khi lấy số thông báo chưa đọc' });
+  }
+};
+
+// GET /api/community/notifications (?page=, ?limit=, ?filter=all|unread|pinned)
+exports.getNotifications = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+    const limit = Math.min(50, Math.max(1, parseInt(req.query.limit, 10) || 20));
+    const offset = (page - 1) * limit;
+    const filter = (req.query.filter || 'all').toLowerCase();
+
+    const whereConditions = ['n.user_id = ?'];
+    const whereParams = [userId];
+
+    if (filter === 'unread') {
+      whereConditions.push('n.is_read = 0');
+    } else if (filter === 'pinned') {
+      whereConditions.push('p.is_pinned = 1');
+    }
+
+    const whereSql = `WHERE ${whereConditions.join(' AND ')}`;
+
+    // 1. Đếm tổng số lượng thông báo phù hợp bộ lọc
+    const [countRows] = await db.query(
+      `SELECT COUNT(*) AS total
+       FROM community_notifications n
+       LEFT JOIN community_posts p ON n.post_id = p.id
+       ${whereSql}`,
+      whereParams
+    );
+    const total = Number(countRows[0].total || 0);
+
+    // 2. Lấy danh sách thông báo: Ưu tiên bài ghim (is_pinned DESC, pinned_at DESC), sau đó đến created_at DESC
+    const queryParams = [...whereParams, limit, offset];
+    const [notifications] = await db.query(
+      `SELECT n.id, n.user_id, n.actor_id, n.type, n.post_id, n.is_read, n.created_at,
+              u.full_name AS actor_name, u.username AS actor_username, u.avatar_url AS actor_avatar, u.role AS actor_role,
+              p.content AS post_preview, p.kind AS post_kind,
+              COALESCE(p.is_pinned, 0) AS is_pinned, p.pinned_at
+       FROM community_notifications n
+       JOIN users u ON n.actor_id = u.id
+       LEFT JOIN community_posts p ON n.post_id = p.id
+       ${whereSql}
+       ORDER BY COALESCE(p.is_pinned, 0) DESC, p.pinned_at DESC, n.created_at DESC
+       LIMIT ? OFFSET ?`,
+      queryParams
+    );
+
+    // 3. Đếm tổng số thông báo chưa đọc (để cập nhật badge)
+    const [unreadRows] = await db.query(
+      'SELECT COUNT(*) as unreadCount FROM community_notifications WHERE user_id = ? AND is_read = 0',
+      [userId]
+    );
+    const unreadCount = Number(unreadRows[0].unreadCount || 0);
+
+    const mappedNotifications = notifications.map(n => {
+      let excerpt = n.post_preview || null;
+      if (excerpt && excerpt.length > 100) {
+        excerpt = excerpt.slice(0, 100) + '...';
+      }
+      const isPinned = Boolean(n.is_pinned);
+
+      return {
         id: n.id,
         type: n.type,
         post_id: n.post_id,
         is_read: Boolean(n.is_read),
         created_at: n.created_at,
+        is_pinned: isPinned,
+        post_kind: n.post_kind || 'post',
+        post_excerpt: excerpt,
+        post_preview: excerpt, // Tương thích ngược với frontend cũ
         actor: {
           id: n.actor_id,
-          name: n.actor_name || n.actor_username.split('@')[0],
+          name: n.actor_name || (n.actor_username ? n.actor_username.split('@')[0] : 'User'),
           avatar_url: n.actor_avatar,
           role: n.actor_role
         },
-        post_preview: n.post_preview ? (n.post_preview.length > 60 ? n.post_preview.slice(0, 60) + '...' : n.post_preview) : null
-      }))
+        actor_role: n.actor_role
+      };
+    });
+
+    res.json({
+      success: true,
+      unreadCount: unreadCount,      // Cho code cũ
+      unread_count: unreadCount,     // Chuẩn mới
+      notifications: mappedNotifications,
+      pagination: {
+        page,
+        limit,
+        total,
+        has_more: offset + mappedNotifications.length < total
+      }
     });
 
   } catch (error) {

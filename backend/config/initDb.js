@@ -87,11 +87,16 @@ async function initDatabase() {
         content TEXT NOT NULL,
         media_url TEXT NULL,
         link_url TEXT NULL,
+        is_pinned TINYINT(1) NOT NULL DEFAULT 0,
+        pinned_at TIMESTAMP NULL DEFAULT NULL,
+        pinned_by INT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         INDEX idx_com_post_user (user_id),
         INDEX idx_com_post_created (created_at),
-        CONSTRAINT fk_com_posts_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+        INDEX idx_com_posts_pinned (is_pinned, pinned_at),
+        CONSTRAINT fk_com_posts_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+        CONSTRAINT fk_com_posts_pinned_by FOREIGN KEY (pinned_by) REFERENCES users(id) ON DELETE SET NULL
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
     `);
 
@@ -225,11 +230,12 @@ async function initDatabase() {
         id INT AUTO_INCREMENT PRIMARY KEY,
         user_id INT NOT NULL,
         actor_id INT NOT NULL,
-        type ENUM('like', 'comment', 'reply', 'mention', 'group') NOT NULL,
+        type ENUM('like', 'comment', 'reply', 'mention', 'group', 'post') NOT NULL,
         post_id INT NULL,
         is_read TINYINT(1) DEFAULT 0,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         INDEX idx_com_notif_user_read (user_id, is_read),
+        INDEX idx_com_notif_user_created (user_id, created_at),
         INDEX idx_com_notif_actor (actor_id),
         INDEX idx_com_notif_post (post_id),
         CONSTRAINT fk_com_notif_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
@@ -591,6 +597,78 @@ async function initDatabase() {
         'INSERT IGNORE INTO site_settings (setting_key, setting_value) VALUES (?, ?)',
         [key, val]
       );
+    }
+
+    // === NÂNG CẤP HỆ THỐNG THÔNG BÁO & GHIM BÀI (NOTIFICATION & PIN SYSTEM) ===
+    // 1. Kiểm tra và bổ sung các cột is_pinned, pinned_at, pinned_by vào bảng community_posts
+    const [checkPostPinned] = await db.query(`
+      SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS
+      WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_posts' AND COLUMN_NAME = 'is_pinned'
+    `);
+    if (checkPostPinned.length === 0) {
+      await db.query(`
+        ALTER TABLE community_posts
+        ADD COLUMN is_pinned TINYINT(1) NOT NULL DEFAULT 0,
+        ADD COLUMN pinned_at TIMESTAMP NULL DEFAULT NULL,
+        ADD COLUMN pinned_by INT NULL
+      `);
+      console.log('✅ Added columns is_pinned, pinned_at, pinned_by to community_posts');
+    }
+
+    // Kiểm tra và bổ sung FK fk_com_posts_pinned_by
+    const [checkPostPinnedFk] = await db.query(`
+      SELECT CONSTRAINT_NAME FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+      WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_posts' AND CONSTRAINT_NAME = 'fk_com_posts_pinned_by'
+    `);
+    if (checkPostPinnedFk.length === 0) {
+      try {
+        await db.query(`
+          ALTER TABLE community_posts
+          ADD CONSTRAINT fk_com_posts_pinned_by FOREIGN KEY (pinned_by) REFERENCES users(id) ON DELETE SET NULL
+        `);
+        console.log('✅ Added foreign key fk_com_posts_pinned_by');
+      } catch (e) {
+        console.warn('Notice fk_com_posts_pinned_by:', e.message);
+      }
+    }
+
+    // Kiểm tra và bổ sung index (is_pinned, pinned_at) cho community_posts
+    const [checkPostPinnedIdx] = await db.query(`
+      SELECT INDEX_NAME FROM INFORMATION_SCHEMA.STATISTICS
+      WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_posts' AND INDEX_NAME = 'idx_com_posts_pinned'
+    `);
+    if (checkPostPinnedIdx.length === 0) {
+      await db.query(`
+        ALTER TABLE community_posts
+        ADD INDEX idx_com_posts_pinned (is_pinned, pinned_at)
+      `);
+      console.log('✅ Added index idx_com_posts_pinned to community_posts');
+    }
+
+    // 2. Mở rộng ENUM type của bảng community_notifications thêm giá trị 'post'
+    const [notifTypeCol] = await db.query(`
+      SELECT COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS
+      WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_notifications' AND COLUMN_NAME = 'type'
+    `);
+    if (notifTypeCol.length > 0 && !notifTypeCol[0].COLUMN_TYPE.includes("'post'")) {
+      await db.query(`
+        ALTER TABLE community_notifications
+        MODIFY COLUMN type ENUM('like', 'comment', 'reply', 'mention', 'group', 'post') NOT NULL
+      `);
+      console.log("✅ Expanded community_notifications.type ENUM to include 'post'");
+    }
+
+    // 3. Kiểm tra và bổ sung index (user_id, created_at) cho community_notifications
+    const [checkNotifIdx] = await db.query(`
+      SELECT INDEX_NAME FROM INFORMATION_SCHEMA.STATISTICS
+      WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'community_notifications' AND INDEX_NAME = 'idx_com_notif_user_created'
+    `);
+    if (checkNotifIdx.length === 0) {
+      await db.query(`
+        ALTER TABLE community_notifications
+        ADD INDEX idx_com_notif_user_created (user_id, created_at)
+      `);
+      console.log('✅ Added index idx_com_notif_user_created to community_notifications');
     }
 
     console.log('🎉 Database tables initialized and ready.');

@@ -10,6 +10,7 @@
     <script src="/js/theme-init.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/history.css" />
+    <link rel="stylesheet" href="/css/notifications.css" />
     <link rel="icon" type="image/png" href="/assets/icon/favicon-32.png" />
 </head>
 
@@ -117,27 +118,19 @@
 
                     <!-- Chuông thông báo -->
                     <div class="notification">
-                        <button type="button" class="icon-button" aria-label="Notifications (có 2 thông báo mới)"
+                        <button type="button" class="icon-button" aria-label="Notifications"
                             aria-expanded="false" aria-controls="notification-panel">
                             <span class="bell-icon" aria-hidden="true"></span>
-                            <span class="notification-dot" aria-hidden="true"></span>
+                            <span class="notification-dot" aria-hidden="true" hidden></span>
                         </button>
 
                         <section class="notification-panel" id="notification-panel" aria-label="Notifications" hidden>
                             <header class="notification-header">
                                 <p class="notification-title">Notifications</p>
-                                <button type="button" class="notification-clear">Mark as read</button>
+                                <button type="button" class="notification-clear">Mark all as read</button>
                             </header>
-                            <ul class="notification-list">
-                                <li class="notification-item is-unread"><span class="notification-item-icon"
-                                        aria-hidden="true"></span>
-                                    <div>
-                                        <p class="notification-text">Your learning history is up to date.</p><time
-                                            class="notification-time">Today</time>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="#" class="notification-footer">View all notifications</a>
+                            <ul class="notification-list"></ul>
+                            <a href="/pages/community/community-notifications.html" class="notification-footer">View all notifications</a>
                         </section>
                     </div>
 
@@ -510,6 +503,7 @@
     <div class="his-toast" id="his-toast" role="status" aria-live="polite" hidden></div>
 
     <script src="/js/main.js"></script>
+    <script src="/js/notifications-bell.js"></script>
     <script src="/js/practice-data.js"></script>
     <script src="/js/practice-core.js"></script>
     <script src="/js/history.js"></script>

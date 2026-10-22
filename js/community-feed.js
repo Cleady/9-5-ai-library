@@ -86,8 +86,14 @@
   // 3. Render một bài viết (Card) hoàn chỉnh
   function renderPost(post) {
     var author = post.author || { full_name: 'Thành viên', role: 'member' };
-    var card = make('article', 'com-card com-post');
+    var card = make('article', 'com-card com-post' + (post.is_pinned ? ' com-post--pinned' : ''));
     card.dataset.comPostId = post.id;
+
+    // Nhãn Ghim bài viết lên đầu trang
+    if (post.is_pinned) {
+      var pinnedPill = make('div', 'com-post-pinned-pill', '📌 Pinned Announcement');
+      card.appendChild(pinnedPill);
+    }
 
     // Header tác giả
     var header = make('header', 'com-post-header');

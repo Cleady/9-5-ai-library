@@ -10,6 +10,7 @@
     <script src="/js/theme-init.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="/css/notifications.css">
     <link rel="icon" type="image/png" href="/assets/icon/favicon-32.png">
 </head>
 
@@ -159,6 +160,17 @@
 
             <div class="com-layout">
                 <section class="com-feed-column" aria-label="Danh sách tất cả thông báo">
+                    <div class="notif-tabs" role="tablist" aria-label="Notification Filters">
+                        <button type="button" class="notif-tab is-active" data-notif-tab="all" role="tab" aria-selected="true">
+                            All
+                        </button>
+                        <button type="button" class="notif-tab" data-notif-tab="unread" role="tab" aria-selected="false">
+                            Unread
+                        </button>
+                        <button type="button" class="notif-tab" data-notif-tab="pinned" role="tab" aria-selected="false">
+                            📌 Pinned
+                        </button>
+                    </div>
                     <div class="com-notif-full-list" data-com-notif-full-list aria-live="polite">
                         <!-- Danh sách thông báo đầy đủ nạp từ API -->
                     </div>
@@ -187,6 +199,7 @@
     <script src="/js/community-data.js"></script>
     <script src="/js/community-core.js"></script>
     <script src="/js/community-nav.js"></script>
+    <script src="/js/notifications-bell.js"></script>
     <script src="/js/community-notifications.js"></script>
     <script src="../../js/syncProfile.js"></script>
 </body>
