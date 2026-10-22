@@ -305,15 +305,13 @@ exports.createLecture = async (req, res) => {
     try {
       if (status !== 'draft' && status !== 'hidden') {
         const { notifyAllActive } = require('../utils/notify');
-        notifyAllActive(req.user.id, 'lecture', {
+        await notifyAllActive(req.user.id, 'lecture', {
           lectureId: newLectureId,
           meta: title.trim()
-        }).catch(err => {
-          console.error('Lỗi khi phát thông báo bài giảng mới:', err);
         });
       }
     } catch (notifErr) {
-      console.error('Lỗi khởi tạo thông báo bài giảng mới:', notifErr);
+      console.error('Lỗi khi phát thông báo bài giảng mới:', notifErr);
     }
 
     res.status(201).json({

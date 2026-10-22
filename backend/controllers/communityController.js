@@ -352,8 +352,6 @@ exports.pinPost = async (req, res) => {
   try {
     const postId = req.params.id;
     const userId = req.user.id;
-    const { pinned } = req.body;
-    const shouldPin = Boolean(pinned);
 
     // 1. Kiểm tra bài viết tồn tại
     const [rows] = await db.query('SELECT * FROM community_posts WHERE id = ?', [postId]);
@@ -361,6 +359,9 @@ exports.pinPost = async (req, res) => {
       return res.status(404).json({ error: 'Không tìm thấy bài viết' });
     }
     const post = rows[0];
+
+    const body = req.body || {};
+    const shouldPin = typeof body.pinned !== 'undefined' ? Boolean(body.pinned) : !post.is_pinned;
 
     // 2. Nếu ghim bài viết
     if (shouldPin) {
