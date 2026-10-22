@@ -87,6 +87,7 @@
   function renderPost(post) {
     var author = post.author || { full_name: 'Thành viên', role: 'member' };
     var card = make('article', 'com-card com-post' + (post.is_pinned ? ' com-post--pinned' : ''));
+    card.id = 'post-' + post.id;
     card.dataset.comPostId = post.id;
 
     // Nhãn Ghim bài viết lên đầu trang
@@ -350,6 +351,7 @@
 
       // Phân trang (Load more)
       var pagination = data.pagination || {};
+      app.state.page = pagination.page || page || 1;
       app.state.hasMore = pagination.page < pagination.totalPages;
 
       if (app.state.hasMore) {
@@ -768,16 +770,65 @@
     }
   }
 
+  // Cuộn mượt và highlight bài viết khi có hash #post-{id}
+  async function scrollToPostFromHash() {
+    var hash = window.location.hash;
+    if (!hash || !hash.match(/^#post-\d+$/)) return;
+
+    var postId = hash.replace('#post-', '');
+    var targetEl = document.getElementById('post-' + postId);
+
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      targetEl.classList.add('com-post--highlight');
+      setTimeout(function () {
+        targetEl.classList.remove('com-post--highlight');
+      }, 2000);
+      return;
+    }
+
+    // Nếu bài viết chưa có trong trang 1 (do phân trang): tự động tải trang kế (tối đa 3 trang tiếp theo) để tìm
+    var attempts = 0;
+    var maxAttempts = 3;
+    while (!targetEl && attempts < maxAttempts && app.state.hasMore) {
+      attempts++;
+      var nextPage = (app.state.page || 1) + 1;
+      await loadFeed(nextPage, true);
+      targetEl = document.getElementById('post-' + postId);
+    }
+
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      targetEl.classList.add('com-post--highlight');
+      setTimeout(function () {
+        targetEl.classList.remove('com-post--highlight');
+      }, 2000);
+    } else {
+      // Nếu sau 3 trang vẫn không thấy (bài quá cũ, bị ẩn, hoặc bị xoá): hiển thị thông báo nhẹ và xoá hash, KHÔNG báo lỗi console
+      if (typeof app.showToast === 'function') {
+        app.showToast('Bài viết này không còn hiển thị');
+      }
+      try {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      } catch (e) {}
+    }
+  }
+
   // Khởi chạy khi nạp trang
   app.state.currentTag = null;
   syncComposerUser();
-  loadFeed(1, false);
+  loadFeed(1, false).then(function () {
+    scrollToPostFromHash();
+  });
   loadTrending();
   loadContributors();
+
+  window.addEventListener('hashchange', scrollToPostFromHash);
 
   app.loadFeed = loadFeed;
   app.renderPost = renderPost;
   app.renderContentWithHashtags = renderContentWithHashtags;
   app.loadTrending = loadTrending;
   app.loadContributors = loadContributors;
+  app.scrollToPostFromHash = scrollToPostFromHash;
 }());

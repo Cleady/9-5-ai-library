@@ -6,6 +6,29 @@
   if (!app) return;
   var make = app.makeElement;
 
+  // Đọc cài đặt thông báo an toàn từ settings (try/catch)
+  function getMuteParam() {
+    try {
+      var raw = localStorage.getItem('lib95:settings:data');
+      if (!raw) return '';
+      var data = JSON.parse(raw);
+      var notifSettings = data && data.notifications ? data.notifications : {};
+      var mutes = [];
+      if (notifSettings.lectureUpdates === false) mutes.push('lecture');
+      if (notifSettings.communityActivity === false) mutes.push('community');
+      return mutes.length > 0 ? mutes.join(',') : '';
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function appendMuteParam(url) {
+    var mute = getMuteParam();
+    if (!mute) return url;
+    var sep = url.indexOf('?') !== -1 ? '&' : '?';
+    return url + sep + 'mute=' + encodeURIComponent(mute);
+  }
+
   // Lấy icon và mô tả thân thiện theo loại thông báo
   function getNotificationMeta(notif) {
     var actorName = (notif.actor && notif.actor.name) || 'A member';
@@ -13,7 +36,21 @@
     var text = actorName + ' interacted with you';
     var url = '/pages/community/community-feed.html';
 
-    if (notif.type === 'post') {
+    if (notif.type === 'lecture') {
+      icon = '🎓';
+      var lectureTitle = notif.lecture_title || notif.meta || 'New Lecture';
+      text = actorName + ' added a new lecture: ' + lectureTitle;
+      url = notif.lecture_id ? '/pages/lectures/lecture.html?id=' + notif.lecture_id : '/pages/lectures/lectures.html';
+    } else if (notif.type === 'resource') {
+      icon = '📁';
+      var resourceTitle = notif.resource_title || notif.meta || 'New Resource';
+      text = actorName + ' uploaded a resource: ' + resourceTitle;
+      url = '/pages/lectures/resources.html';
+    } else if (notif.type === 'moderation') {
+      icon = '🛡️';
+      text = notif.meta || 'System moderation notice';
+      url = '/pages/community/community-notifications.html';
+    } else if (notif.type === 'post') {
       icon = notif.is_pinned ? '📌' : '📝';
       text = actorName + ' published a new post';
       url = notif.post_id ? '/pages/community/community-feed.html#post-' + notif.post_id : '/pages/community/community-feed.html';
@@ -50,7 +87,6 @@
   var tabButtons = document.querySelectorAll('[data-notif-tab]');
 
   if (!fullListTarget) {
-    // Nếu không phải trang danh sách thông báo đầy đủ, kết thúc sớm
     return;
   }
 
@@ -63,7 +99,8 @@
   // Tạo phần tử card thông báo
   function createNotificationCard(n) {
     var meta = getNotificationMeta(n);
-    var card = make('a', 'notif-full-card' + (!n.is_read ? ' is-unread' : '') + (n.is_pinned ? ' notif-full-card--pinned' : ''));
+    var isPinned = Boolean(n.is_pinned);
+    var card = make('a', 'notif-full-card' + (!n.is_read ? ' is-unread' : '') + (isPinned ? ' notif-full-card--pinned' : ''));
     card.href = meta.url;
 
     // Avatar
@@ -90,7 +127,8 @@
       textP.appendChild(roleBadge);
     }
 
-    var actionSpan = document.createTextNode(' ' + meta.text.replace(actorName, '').trim());
+    var remainingText = meta.text.replace(actorName, '').trim();
+    var actionSpan = document.createTextNode(' ' + remainingText);
     textP.appendChild(actionSpan);
     contentDiv.appendChild(textP);
 
@@ -103,7 +141,7 @@
     var timeEl = make('time', 'notif-time', app.relativeTime(n.created_at));
     metaRow.appendChild(timeEl);
 
-    if (n.is_pinned) {
+    if (isPinned) {
       var pinnedBadge = make('span', 'notif-badge-pinned', '📌 Pinned');
       metaRow.appendChild(pinnedBadge);
     }
@@ -130,6 +168,9 @@
           if (window.Lib95Notifications && window.Lib95Notifications.refreshBadge) {
             window.Lib95Notifications.refreshBadge();
           }
+          if (window.Lib95Notifications && window.Lib95Notifications.broadcastChange) {
+            window.Lib95Notifications.broadcastChange();
+          }
         } catch (err) {}
       }
     });
@@ -148,21 +189,17 @@
       return;
     }
 
-    // Tách bài ghim lên section trên (chỉ khi đang ở tab All)
+    // Tách bài ghim lên section trên (ở tab All hoặc Pinned)
     var pinnedItems = [];
     var normalItems = [];
 
-    if (currentFilter === 'all') {
-      notificationsList.forEach(function (n) {
-        if (n.is_pinned) pinnedItems.push(n);
-        else normalItems.push(n);
-      });
-    } else {
-      normalItems = notificationsList;
-    }
+    notificationsList.forEach(function (n) {
+      if (Boolean(n.is_pinned)) pinnedItems.push(n);
+      else normalItems.push(n);
+    });
 
     // Render khu vực Pinned
-    if (pinnedItems.length > 0) {
+    if (pinnedItems.length > 0 && currentFilter !== 'pinned') {
       var pinnedSec = make('section', 'notif-pinned-section');
       var heading = make('div', 'notif-pinned-section-heading', '📌 Pinned Announcements');
       pinnedSec.appendChild(heading);
@@ -172,14 +209,21 @@
       });
 
       fullListTarget.appendChild(pinnedSec);
+    } else if (currentFilter === 'pinned') {
+      // Ở tab Pinned, hiển thị toàn bộ bài ghim
+      pinnedItems.forEach(function (n) {
+        fullListTarget.appendChild(createNotificationCard(n));
+      });
     }
 
     // Render danh sách thường
-    var regularContainer = make('div');
-    normalItems.forEach(function (n) {
-      regularContainer.appendChild(createNotificationCard(n));
-    });
-    fullListTarget.appendChild(regularContainer);
+    if (currentFilter !== 'pinned') {
+      var regularContainer = make('div');
+      normalItems.forEach(function (n) {
+        regularContainer.appendChild(createNotificationCard(n));
+      });
+      fullListTarget.appendChild(regularContainer);
+    }
 
     // Nút Load more
     if (hasMore) {
@@ -192,6 +236,34 @@
       });
       fullListTarget.appendChild(loadMoreBtn);
     }
+  }
+
+  // Cập nhật nhãn số lượng trên các tab
+  function updateTabCounts(totalCount, unreadCount) {
+    tabButtons.forEach(function (tab) {
+      var filter = tab.getAttribute('data-notif-tab');
+      var countBadge = tab.querySelector('.notif-tab-count');
+      if (!countBadge) {
+        countBadge = make('span', 'notif-tab-count');
+        tab.appendChild(countBadge);
+      }
+
+      if (filter === 'unread') {
+        if (typeof unreadCount === 'number' && unreadCount > 0) {
+          countBadge.textContent = unreadCount > 99 ? '99+' : unreadCount;
+          countBadge.style.display = 'inline-block';
+        } else {
+          countBadge.style.display = 'none';
+        }
+      } else if (filter === currentFilter) {
+        if (typeof totalCount === 'number' && totalCount > 0) {
+          countBadge.textContent = totalCount > 99 ? '99+' : totalCount;
+          countBadge.style.display = 'inline-block';
+        } else {
+          countBadge.style.display = 'none';
+        }
+      }
+    });
   }
 
   // Tải thông báo từ API
@@ -216,7 +288,8 @@
     }
 
     try {
-      var url = '/api/community/notifications?page=' + page + '&limit=15&filter=' + currentFilter;
+      var rawUrl = '/api/community/notifications?page=' + page + '&limit=15&filter=' + currentFilter;
+      var url = appendMuteParam(rawUrl);
       var data = await app.apiFetch(url);
 
       currentPage = page;
@@ -231,7 +304,11 @@
 
       renderNotificationsView();
 
-      // Cập nhật badge
+      var total = (data.pagination && data.pagination.total) || notificationsList.length;
+      var unread = typeof data.unreadCount === 'number' ? data.unreadCount : (data.unread_count || 0);
+      updateTabCounts(total, unread);
+
+      // Cập nhật badge chuông
       if (window.Lib95Notifications && window.Lib95Notifications.refreshBadge) {
         window.Lib95Notifications.refreshBadge();
       }
@@ -239,7 +316,20 @@
     } catch (err) {
       fullListTarget.replaceChildren();
       var errBox = make('div', 'notif-empty');
-      errBox.innerHTML = '<span class="notif-empty-icon" style="color: var(--status-error,#dc2626);">⚠️</span><p>Failed to load notifications</p><small style="color: var(--color-text-muted);">Please check your network connection and try again.</small>';
+      errBox.innerHTML = `
+        <span class="notif-empty-icon" style="color: var(--status-error,#dc2626);">⚠️</span>
+        <p>Failed to load notifications</p>
+        <small style="color: var(--color-text-muted);">Please check your network connection and try again.</small>
+        <button type="button" class="com-button com-button--soft notif-retry-btn" style="margin-top: 12px; cursor: pointer;">
+          🔄 Retry
+        </button>
+      `;
+      var retryBtn = errBox.querySelector('.notif-retry-btn');
+      if (retryBtn) {
+        retryBtn.onclick = function () {
+          loadNotifications(currentPage, false);
+        };
+      }
       fullListTarget.appendChild(errBox);
     } finally {
       isLoading = false;
@@ -275,8 +365,12 @@
           app.showToast('Marked all notifications as read');
           notificationsList.forEach(function (n) { n.is_read = true; });
           renderNotificationsView();
+          updateTabCounts(notificationsList.length, 0);
           if (window.Lib95Notifications && window.Lib95Notifications.refreshBadge) {
             window.Lib95Notifications.refreshBadge();
+          }
+          if (window.Lib95Notifications && window.Lib95Notifications.broadcastChange) {
+            window.Lib95Notifications.broadcastChange();
           }
         }
       } catch (err) {
@@ -286,6 +380,24 @@
       }
     });
   }
+
+  // Đồng bộ đa tab: BroadcastChannel + storage event fallback
+  if (typeof BroadcastChannel !== 'undefined') {
+    try {
+      var notifChannel = new BroadcastChannel('lib95_notifications');
+      notifChannel.onmessage = function (event) {
+        if (event && event.data && event.data.type === 'REFRESH') {
+          loadNotifications(1, false);
+        }
+      };
+    } catch (e) {}
+  }
+
+  window.addEventListener('storage', function (e) {
+    if (e.key === 'lib95:notif:update') {
+      loadNotifications(1, false);
+    }
+  });
 
   // Khởi chạy khi nạp trang
   loadNotifications(1, false);
