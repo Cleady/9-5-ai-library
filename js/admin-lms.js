@@ -940,11 +940,35 @@ document.addEventListener('DOMContentLoaded', function () {
   // =====================================================================
   // 5. FORM THÊM / SỬA BÀI GIẢNG
   // =====================================================================
+  if (inputLecOrder) {
+    inputLecOrder.addEventListener('input', function () {
+      var val = parseInt(inputLecOrder.value, 10);
+      var curLecId = inputLecId.value ? parseInt(inputLecId.value, 10) : null;
+      var isDuplicate = currentLectures.some(function (l) {
+        return l.chapter_order === val && l.id !== curLecId;
+      });
+      var warnEl = document.getElementById('lms-lec-order-warn');
+      if (isDuplicate) {
+        if (!warnEl) {
+          warnEl = document.createElement('div');
+          warnEl.id = 'lms-lec-order-warn';
+          warnEl.style.cssText = 'color: #d97706; font-size: 11px; margin-top: 4px; font-weight: 500;';
+          inputLecOrder.parentNode.appendChild(warnEl);
+        }
+        warnEl.textContent = '⚠️ Thứ tự ' + val + ' đã có trong môn học. Hệ thống sẽ sắp xếp hiển thị ổn định theo ID.';
+      } else if (warnEl) {
+        warnEl.remove();
+      }
+    });
+  }
+
   function resetLectureForm() {
     isEditingLecture = false;
     inputLecId.value = '';
     inputLecTitle.value = '';
     inputLecOrder.value = (currentLectures.length + 1) || 1;
+    var warnEl = document.getElementById('lms-lec-order-warn');
+    if (warnEl) warnEl.remove();
     inputLecDuration.value = 15;
     inputLecDesc.value = '';
     inputLecTakeaways.value = '';

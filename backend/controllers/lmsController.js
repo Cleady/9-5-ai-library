@@ -224,10 +224,10 @@ exports.getLectureDetail = async (req, res) => {
 exports.createLecture = async (req, res) => {
   let conn;
   try {
-    const {
+    let {
       course_id,
       title,
-      chapter_order = 1,
+      chapter_order,
       type = 'video',
       duration_min,
       video_url = '',
@@ -279,6 +279,13 @@ exports.createLecture = async (req, res) => {
 
     conn = await db.getConnection();
     await conn.beginTransaction();
+
+    if (chapter_order === undefined || chapter_order === null || isNaN(parseInt(chapter_order, 10))) {
+      const [[maxOrderRow]] = await conn.query('SELECT COALESCE(MAX(chapter_order), 0) + 1 AS nextOrder FROM lectures WHERE course_id = ?', [course_id]);
+      chapter_order = maxOrderRow.nextOrder;
+    } else {
+      chapter_order = parseInt(chapter_order, 10);
+    }
 
     const [result] = await conn.query(`
       INSERT INTO lectures (course_id, chapter_order, title, type, duration_min, video_url, description, key_takeaways, overview_html, status, video_source, youtube_id, thumbnail_url)
