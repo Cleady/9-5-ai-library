@@ -245,7 +245,7 @@
       "order": 2,
       "durationMin": 162,
       "difficulty": "Medium",
-      "questionCount": 100
+      "questionCount": 105
     },
     {
       "id": 102,
@@ -272,7 +272,7 @@
       "order": 5,
       "durationMin": 443,
       "difficulty": "Medium",
-      "questionCount": 267
+      "questionCount": 274
     },
     {
       "id": 105,
@@ -353,7 +353,7 @@
       "order": 18,
       "durationMin": 48,
       "difficulty": "Medium",
-      "questionCount": 31
+      "questionCount": 32
     },
     {
       "id": 114,
@@ -8986,6 +8986,70 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Association.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Binary relationship/association nối hai kiểu thực thể/lớp; n-ary relationship có từ ba kiểu tham gia trở lên. Phân loại theo số entity set/class trong chính liên kết, không theo số thuộc tính của chúng.\n\nĐối chiếu phương án: A. Aggregation; B. Composition; D. Relation. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
+      "id": 5075,
+      "quizId": 101,
+      "text": "In UML, a _____ between classes is called an association",
+      "options": [
+        "binary relationship",
+        "multi-way relationship",
+        "none of the others"
+      ],
+      "correctIndex": 0,
+      "explanation": "A binary relationship between classes in UML is called an association."
+    },
+    {
+      "id": 5076,
+      "quizId": 101,
+      "text": "When an entity is called \"weak\"?\n(a) When it is used to represent weak objects, such as patients, elders\n(b) When all of its attributes can not identify itself\n(c) When It always needs support from other entity\n(d) When It is not really necessary in the ERD",
+      "options": [
+        "(a) and (b) are correct",
+        "(b) and (c) are correct",
+        "(c) and (d) are correct",
+        "(d) and (a) are correct"
+      ],
+      "correctIndex": 1,
+      "explanation": "A weak entity is one that cannot be identified by its own attributes alone and always needs support from an identifying owner entity (b and c)."
+    },
+    {
+      "id": 5077,
+      "quizId": 101,
+      "text": "Consider the following statement:\n\"When drawing ERD, if an entity has no non-key attribute and it is the 'one' in many-one relationship, then we should set it to the attribute of other entities\"\nThat above statement describes which principle?",
+      "options": [
+        "Avoid Redundancy Principle",
+        "Picking the right kind of element principle",
+        "Limit the use of weak entity sets principle",
+        "Faithfulness principle"
+      ],
+      "correctIndex": 1,
+      "explanation": "This describes Picking the right kind of element principle."
+    },
+    {
+      "id": 5078,
+      "quizId": 101,
+      "text": "When drawing an ERD:\n(a) Entity sets and their attributes should reflect reality\n(b) Redundancy is not important, so we can ignore it\n(c) Avoid introducing more elements into the design than is absolutely necessary\n(d) Choosing the right relationships",
+      "options": [
+        "(a) and (b) and (c) are correct",
+        "(a) and (c) and (d) are correct",
+        "(a) and (b) and (d) are correct",
+        "(b) and (c) and (d) are correct"
+      ],
+      "correctIndex": 1,
+      "explanation": "Redundancy is critical and must be avoided (b is false). Principles a, c, d are correct."
+    },
+    {
+      "id": 5079,
+      "quizId": 101,
+      "text": "A weak entity",
+      "options": [
+        "does not depend on other entities",
+        "does not have enough key attribute(s)",
+        "is an entity that has not any key-attribute",
+        "None of the others"
+      ],
+      "correctIndex": 1,
+      "explanation": "A weak entity does not possess sufficient key attributes to form a primary key on its own."
+    },
+    {
       "id": 5080,
       "quizId": 101,
       "text": "Which of the followings is true?",
@@ -12255,6 +12319,58 @@
       "explanation": "Đáp án theo dữ liệu đề: E — E. All of the others.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. They allow faster execution; B. They can reduce network traffic; C. They allow modular programming; D. They can be used as a security mechanism. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
+      "id": 5350,
+      "quizId": 104,
+      "text": "Choose the correct statement.",
+      "options": [
+        "Outer join behave like join operations except on tuples that do not occur in the join results",
+        "Projection behave like product operations except on tuples that do not occur in the join results",
+        "Intersection behave like project operations except on tuples that occur in the join results",
+        "Union behave like join operations except on tuples that occur in the join results"
+      ],
+      "correctIndex": 0,
+      "explanation": "Outer join operations behave like normal joins, but preserve tuples that do not have matching counterparts by padding with NULLs."
+    },
+    {
+      "id": 5351,
+      "quizId": 104,
+      "text": "What is the difference between Where and Having Clause?",
+      "options": [
+        "WHERE is for Rows and HAVING is for Groups",
+        "WHERE is for Groups and HAVING is for Rows",
+        "WHERE and HAVING are the same",
+        "We can use aggregation functions in WHERE clause"
+      ],
+      "correctIndex": 0,
+      "explanation": "WHERE filters individual rows before grouping; HAVING filters groups after aggregation."
+    },
+    {
+      "id": 5354,
+      "quizId": 104,
+      "text": "What does the following SQL statement do:\nSELECT Customer, COUNT(Order)\nFROM Sales\nGROUP BY Customer\nHAVING COUNT(Order) > 5",
+      "options": [
+        "Selects the total number of orders from the Sales table, if this number is greater than 5",
+        "Selects all Customers from the Sales table",
+        "Selects all customers from table Sales that have made more than 5 orders.",
+        "None of the other three"
+      ],
+      "correctIndex": 2,
+      "explanation": "HAVING COUNT(Order) > 5 filters customers who placed strictly more than 5 orders."
+    },
+    {
+      "id": 5355,
+      "quizId": 104,
+      "text": "The relation R(A,B) may have duplicate tuples. Choose the query that create non-duplicated results, regardless of what tuples R contains?",
+      "options": [
+        "SELECT A, B FROM R",
+        "SELECT A, B FROM R GROUP BY A, B",
+        "SELECT A FROM R WHERE A NOT IN (SELECT B FROM R)",
+        "SELECT TOP 3 A, B FROM R"
+      ],
+      "correctIndex": 1,
+      "explanation": "GROUP BY A, B collapses all identical rows into distinct tuples."
+    },
+    {
       "id": 5356,
       "quizId": 104,
       "text": "The table R(X,Y) currently has the following tuples (note there are duplicates).The relation S(A,B,C) has the following tuples:\n(See picture)\nWhich is the result when we execute the following query:\nSELECT * FROM R\nUNION\nSELECT * FROM S\n[file:8524.jpg]",
@@ -13518,6 +13634,19 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Group of Transact-SQL statements compiled into a single execution plan.\n\nLời giải gốc: Thủ tục lưu trữ (Stored Procedure) là một tập hợp các câu lệnh Transact-SQL được biên dịch và lưu trên máy chủ dưới dạng một kế hoạch thực thi duy nhất để tái sử dụng.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. Block of functions; C. Group of distinct SQL statements; D. None of the mentioned. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
+      "id": 5454,
+      "quizId": 104,
+      "text": "Suppose relation R(A, B, C, D) has tuples. Which tuples are contained in the result of the query below?<pre>SELECT C, AVG(D) FROM R GROUP BY C HAVING AVG(D) > 1000 ORDER BY C;</pre>",
+      "options": [
+        "(101, 11500); (102, 2500)",
+        "(101, 2300); (102, 1250)",
+        "(101, 5); (102, 2)",
+        "(101, 11500); (102, 1250)"
+      ],
+      "correctIndex": 3,
+      "explanation": "Filtering grouped tuples with AVG(D) > 1000 yields D."
+    },
+    {
       "id": 5455,
       "quizId": 104,
       "text": "To completely remove a table and its data in SQL, we use:",
@@ -14492,6 +14621,19 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. One.\n\nLời giải gốc: Lệnh DELETE FROM cơ bản luôn thực thi hành động xóa các dòng dữ liệu trực tiếp trên một quan hệ (bảng) duy nhất được chỉ định tại một thời điểm.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Một câu lệnh DELETE tác động lên một target table/relation trong mỗi câu lệnh, dù có thể xóa nhiều hàng của bảng đó theo WHERE. Các hàng tham chiếu ở bảng khác chỉ bị ảnh hưởng nếu có cascade/trigger được cấu hình.\n\nĐối chiếu phương án: B. Two; C. Several; D. Null. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
+      "id": 5533,
+      "quizId": 104,
+      "text": "Suppose relation R1(A, B) and relation R2(C, A) each have tuples. Which tuples are contained in the result of the query below?<pre>SELECT R1.B, R2.C FROM R1 RIGHT JOIN R2 ON R1.A = R2.A;</pre>",
+      "options": [
+        "(a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (d, NULL); (e, NULL)",
+        "(2, 101); (b, 102); (c, 103); (a, 104); (a, 105)",
+        "(a, 101); (b, 102); (e, 103)",
+        "(a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (e, 105); (f, 106); (g, 107); (h, 108)"
+      ],
+      "correctIndex": 3,
+      "explanation": "RIGHT JOIN preserves all tuples from R2."
+    },
+    {
       "id": 5534,
       "quizId": 104,
       "text": "Which keyword is used in SQL to filter grouped results?",
@@ -14698,6 +14840,19 @@
       ],
       "correctIndex": 4,
       "explanation": "Đáp án theo dữ liệu đề: E — E. A and B are correct.\n\nLời giải gốc: Trong SQL Server, cú pháp thực thi procedure hỗ trợ từ khóa EXECUTE hoặc viết tắt là EXEC. Cú pháp CALL được dùng ở một số hệ quản trị khác (MySQL, Oracle) chứ không phải SQL Server.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. EXECUTE name_sp; B. EXEC name_sp; C. CALL name_sp; D. All of the answers above. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+    },
+    {
+      "id": 5550,
+      "quizId": 104,
+      "text": "In the query below, which keyword must be inserted?<pre>INSERT INTO Students ____ (32, N'Iona Bush', N'Female');</pre>",
+      "options": [
+        "INTO",
+        "SET",
+        "WHERE",
+        "VALUES"
+      ],
+      "correctIndex": 3,
+      "explanation": "Standard SQL INSERT syntax requires the VALUES keyword before column data."
     },
     {
       "id": 5551,
@@ -17209,6 +17364,19 @@
       ],
       "correctIndex": 3,
       "explanation": "Đáp án theo dữ liệu đề: D — D. When the sequence of tasks is complete, the SAVE POINT closes the transaction.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: A. In SQL Server, every DML operation is a transaction regardless of whether it has a BEGIN TRANS…; B. COMMITTING a transaction makes permanent the changes resulting from all SQL statements in the…; C. ROLLING back a transaction rejects any of the changes resulting from the SQL statements in the…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+    },
+    {
+      "id": 5746,
+      "quizId": 113,
+      "text": "How many properties we must use to measure the quality of a transaction?",
+      "options": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "correctIndex": 1,
+      "explanation": "A transaction is measured by the 4 ACID properties: Atomicity, Consistency, Isolation, Durability."
     },
     {
       "id": 5747,

@@ -1,0 +1,324 @@
+{
+  "timestamp": "2026-10-23T03:21:28.345Z",
+  "totalOriginalBroken": 39,
+  "restoredCount": 13,
+  "removedCount": 26,
+  "restoredQuestions": [
+    {
+      "id": 5075,
+      "quizId": 101,
+      "optionsCount": 3,
+      "correctIndex": 0
+    },
+    {
+      "id": 5076,
+      "quizId": 101,
+      "optionsCount": 4,
+      "correctIndex": 1
+    },
+    {
+      "id": 5077,
+      "quizId": 101,
+      "optionsCount": 4,
+      "correctIndex": 1
+    },
+    {
+      "id": 5078,
+      "quizId": 101,
+      "optionsCount": 4,
+      "correctIndex": 1
+    },
+    {
+      "id": 5079,
+      "quizId": 101,
+      "optionsCount": 4,
+      "correctIndex": 1
+    },
+    {
+      "id": 5350,
+      "quizId": 104,
+      "optionsCount": 4,
+      "correctIndex": 0
+    },
+    {
+      "id": 5351,
+      "quizId": 104,
+      "optionsCount": 4,
+      "correctIndex": 0
+    },
+    {
+      "id": 5354,
+      "quizId": 104,
+      "optionsCount": 4,
+      "correctIndex": 2
+    },
+    {
+      "id": 5355,
+      "quizId": 104,
+      "optionsCount": 4,
+      "correctIndex": 1
+    },
+    {
+      "id": 5454,
+      "quizId": 104,
+      "optionsCount": 4,
+      "correctIndex": 3
+    },
+    {
+      "id": 5533,
+      "quizId": 104,
+      "optionsCount": 4,
+      "correctIndex": 3
+    },
+    {
+      "id": 5550,
+      "quizId": 104,
+      "optionsCount": 4,
+      "correctIndex": 3
+    },
+    {
+      "id": 5746,
+      "quizId": 113,
+      "optionsCount": 4,
+      "correctIndex": 1
+    }
+  ],
+  "removedQuestions": [
+    {
+      "id": 5110,
+      "quizId": 101,
+      "text": "",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 2,
+      "reason": "Empty question text in source data"
+    },
+    {
+      "id": 5117,
+      "quizId": 101,
+      "text": "",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 3,
+      "reason": "Empty question text in source data"
+    },
+    {
+      "id": 5160,
+      "quizId": 101,
+      "text": "",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 1,
+      "reason": "Empty question text in source data"
+    },
+    {
+      "id": 5292,
+      "quizId": 104,
+      "text": "Suppose relation R(A,B) has the tuples:",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 1,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5293,
+      "quizId": 104,
+      "text": "-------------------\n10 x\n30 y\n50 z\n70 t\nand the relation S(B,C,D) has tuples:",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5299,
+      "quizId": 104,
+      "text": "Suppose the relation S(B,C,D) has tuples:",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5301,
+      "quizId": 104,
+      "text": "Suppose the relation S(B,C,D) has tuples:",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 2,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5317,
+      "quizId": 104,
+      "text": "Suppose we have a relation instance R(A,B,C) as following:\nR",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 1,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5320,
+      "quizId": 104,
+      "text": "Các hàng sẽ xuất hiện\n(a, 4)\n(c, 18)\n(e, 9)\n(f, 10)\nQN=34 (8501) Suppose the relation S(B,C,D) has tuples:",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 3,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5323,
+      "quizId": 104,
+      "text": "Suppose the relation S(B,C,D) has tuples:",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 3,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5325,
+      "quizId": 104,
+      "text": "Here are two relations, R(A,B), S(C,D). Their current values are:\nR",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5326,
+      "quizId": 104,
+      "text": "-------------------\n1 4\n2 5\n8 6\n4 7\nS",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5328,
+      "quizId": 104,
+      "text": "Here are three relations, R(A,B), S(C,D). Their current values are:\nR",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5329,
+      "quizId": 104,
+      "text": "-------------------\n1 4\n2 5\n3 6\n4 7\nS",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5346,
+      "quizId": 104,
+      "text": "Here are three relations, R(A,B), S(C,D), and T(E,F). Their current values are:\nR",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 1,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5347,
+      "quizId": 104,
+      "text": "-------------------\n0 1\n1 0\n1 1\nS",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5348,
+      "quizId": 104,
+      "text": "-------------------\n0 1\n1 0\n1 1\nT",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 2,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5349,
+      "quizId": 104,
+      "text": "-------------------\n0 1\n1 0\n1 1\nCompute the result of the query:\nSELECT A, F, SUM(C), SUM(D)\nFROM R, S, T\nWHERE B = C AND D = E\nGROUP BY A, F\nHAVING COUNT(*) > 1\nIdentify, in the list below, the row that appears in the result.\nA.(1,1,2,1)\nB.(1,1,2,2)\nC.(1,1,1,1)\nD.None of the others",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 4,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5352,
+      "quizId": 104,
+      "text": "Suppose relation R(a,b,c) has the following tuples:",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 2,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5353,
+      "quizId": 104,
+      "text": "-----------------------------------\n1 1 3\n1 2 3\n2 1 4\n2 3 5\n2 4 1\n3 2 4\n3 3 6\nWhich tuple is contained in the result of the following query:\nSELECT a, COUNT(DISTINCT B) FROM R\nGROUP BY a\nHAVING SUM(B) >3;\nA.(2,10)\nB.(3,7)\nC.(2,3)\nD.(3,12)",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5416,
+      "quizId": 104,
+      "text": "UPDATE) in the same CREATE TRIGGER statement",
+      "optionsCount": 1,
+      "options": [
+        "When a trigger fires, results are returned to the calling application, just like with stored procedures"
+      ],
+      "correctIndex": 3,
+      "reason": "Missing relation tables / options in source CSV"
+    },
+    {
+      "id": 5490,
+      "quizId": 104,
+      "text": "",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Empty question text in source data"
+    },
+    {
+      "id": 5492,
+      "quizId": 104,
+      "text": "",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 2,
+      "reason": "Empty question text in source data"
+    },
+    {
+      "id": 5525,
+      "quizId": 104,
+      "text": "",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Empty question text in source data"
+    },
+    {
+      "id": 5726,
+      "quizId": 110,
+      "text": "",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 0,
+      "reason": "Empty question text in source data"
+    },
+    {
+      "id": 5727,
+      "quizId": 110,
+      "text": "",
+      "optionsCount": 0,
+      "options": [],
+      "correctIndex": 3,
+      "reason": "Empty question text in source data"
+    }
+  ]
+}
