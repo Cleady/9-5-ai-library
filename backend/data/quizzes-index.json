@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-11T12:05:30.257Z",
+  "generatedAt": "2026-11-13T18:38:46.136Z",
   "totalSubjects": 9,
-  "totalQuizzes": 131,
+  "totalQuizzes": 132,
   "subjects": [
     {
       "id": 1,
@@ -66,9 +66,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 1 – Basic Concepts and Computer Evolution",
       "order": 1,
-      "durationMin": 41,
+      "durationMin": 83,
       "difficulty": "Medium",
-      "questionCount": 27
+      "questionCount": 55
     },
     {
       "id": 2,
@@ -77,9 +77,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 2 – Performance Concepts",
       "order": 2,
-      "durationMin": 24,
+      "durationMin": 18,
       "difficulty": "Medium",
-      "questionCount": 16
+      "questionCount": 12
     },
     {
       "id": 3,
@@ -88,9 +88,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 3 – A Top-Level View of Computer Function and Interconnection",
       "order": 3,
-      "durationMin": 54,
+      "durationMin": 77,
       "difficulty": "Medium",
-      "questionCount": 36
+      "questionCount": 51
     },
     {
       "id": 4,
@@ -99,9 +99,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 4 – The Memory Hierarchy Locality and Performance",
       "order": 4,
-      "durationMin": 2,
+      "durationMin": 27,
       "difficulty": "Medium",
-      "questionCount": 1
+      "questionCount": 18
     },
     {
       "id": 5,
@@ -110,9 +110,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 5 – Cache Memory",
       "order": 5,
-      "durationMin": 50,
+      "durationMin": 38,
       "difficulty": "Medium",
-      "questionCount": 33
+      "questionCount": 25
     },
     {
       "id": 6,
@@ -121,9 +121,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 6 – Internal Memory",
       "order": 6,
-      "durationMin": 30,
+      "durationMin": 56,
       "difficulty": "Medium",
-      "questionCount": 20
+      "questionCount": 37
     },
     {
       "id": 7,
@@ -132,9 +132,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 7 – External Memory",
       "order": 7,
-      "durationMin": 29,
+      "durationMin": 60,
       "difficulty": "Medium",
-      "questionCount": 19
+      "questionCount": 40
     },
     {
       "id": 8,
@@ -143,20 +143,20 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 8 – Input & Output",
       "order": 8,
-      "durationMin": 44,
+      "durationMin": 63,
       "difficulty": "Medium",
-      "questionCount": 29
+      "questionCount": 42
     },
     {
       "id": 9,
       "subjectId": 1,
       "subjectCode": "CEA201",
       "subjectName": "Computer Architecture",
-      "title": "Chương 9 – Operation System Support",
+      "title": "Chương 9 – Operating System Support",
       "order": 9,
-      "durationMin": 35,
+      "durationMin": 65,
       "difficulty": "Medium",
-      "questionCount": 23
+      "questionCount": 43
     },
     {
       "id": 10,
@@ -165,9 +165,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 10 – Number Systems",
       "order": 10,
-      "durationMin": 3,
+      "durationMin": 18,
       "difficulty": "Medium",
-      "questionCount": 2
+      "questionCount": 12
     },
     {
       "id": 11,
@@ -176,9 +176,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 11 – Computer Arithmetic",
       "order": 11,
-      "durationMin": 6,
+      "durationMin": 8,
       "difficulty": "Medium",
-      "questionCount": 4
+      "questionCount": 5
     },
     {
       "id": 12,
@@ -187,20 +187,20 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 12 – Digital Logic",
       "order": 12,
-      "durationMin": 167,
+      "durationMin": 69,
       "difficulty": "Medium",
-      "questionCount": 111
+      "questionCount": 46
     },
     {
       "id": 13,
       "subjectId": 1,
       "subjectCode": "CEA201",
       "subjectName": "Computer Architecture",
-      "title": "Chương 13 – Instruction Sets Characteristic and Functions",
+      "title": "Chương 13 – Instruction Sets: Characteristics and Functions",
       "order": 13,
-      "durationMin": 269,
+      "durationMin": 17,
       "difficulty": "Medium",
-      "questionCount": 179
+      "questionCount": 11
     },
     {
       "id": 14,
@@ -209,9 +209,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 14 – Instruction Sets: Addressing Modes and Formats",
       "order": 14,
-      "durationMin": 17,
+      "durationMin": 51,
       "difficulty": "Medium",
-      "questionCount": 11
+      "questionCount": 34
     },
     {
       "id": 15,
@@ -220,9 +220,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 15 – Assembly Language and Related Topics",
       "order": 15,
-      "durationMin": 5,
+      "durationMin": 6,
       "difficulty": "Medium",
-      "questionCount": 3
+      "questionCount": 4
     },
     {
       "id": 16,
@@ -231,20 +231,20 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 16 – Processor Structure and Function",
       "order": 16,
-      "durationMin": 20,
+      "durationMin": 80,
       "difficulty": "Medium",
-      "questionCount": 13
+      "questionCount": 53
     },
     {
       "id": 17,
       "subjectId": 1,
       "subjectCode": "CEA201",
       "subjectName": "Computer Architecture",
-      "title": "Chương 17 – Reduced Instruction Set Computers",
+      "title": "Chương 17 – Reduced Instruction Set Computers (RISC)",
       "order": 17,
-      "durationMin": 11,
+      "durationMin": 29,
       "difficulty": "Medium",
-      "questionCount": 7
+      "questionCount": 19
     },
     {
       "id": 18,
@@ -253,31 +253,42 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 18 – Instruction-Level Parallelism and Superscalar Processors",
       "order": 18,
-      "durationMin": 2,
+      "durationMin": 17,
       "difficulty": "Medium",
-      "questionCount": 1
+      "questionCount": 11
     },
     {
       "id": 19,
       "subjectId": 1,
       "subjectCode": "CEA201",
       "subjectName": "Computer Architecture",
-      "title": "Chương 20 – Parallel Processing",
-      "order": 20,
-      "durationMin": 2,
+      "title": "Chương 19 – Control Unit Operation and Microprogrammed Control",
+      "order": 19,
+      "durationMin": 5,
       "difficulty": "Medium",
-      "questionCount": 1
+      "questionCount": 2
     },
     {
       "id": 20,
       "subjectId": 1,
       "subjectCode": "CEA201",
       "subjectName": "Computer Architecture",
+      "title": "Chương 20 – Parallel Processing",
+      "order": 20,
+      "durationMin": 8,
+      "difficulty": "Medium",
+      "questionCount": 5
+    },
+    {
+      "id": 21,
+      "subjectId": 1,
+      "subjectCode": "CEA201",
+      "subjectName": "Computer Architecture",
       "title": "Chương 21 – Multicore Computers",
       "order": 21,
-      "durationMin": 2,
+      "durationMin": 9,
       "difficulty": "Medium",
-      "questionCount": 1
+      "questionCount": 6
     },
     {
       "id": 100,
@@ -500,61 +511,6 @@
       "questionCount": 1
     },
     {
-      "id": 300,
-      "subjectId": 4,
-      "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 1 – Cấu trúc dữ liệu tuyến tính (Linear Data Structures)",
-      "order": 1,
-      "durationMin": 135,
-      "difficulty": "Medium",
-      "questionCount": 90
-    },
-    {
-      "id": 301,
-      "subjectId": 4,
-      "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 2 – Cấu trúc Cây (Trees)",
-      "order": 2,
-      "durationMin": 93,
-      "difficulty": "Medium",
-      "questionCount": 62
-    },
-    {
-      "id": 302,
-      "subjectId": 4,
-      "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 3 – Bảng băm (Hash Table)",
-      "order": 3,
-      "durationMin": 81,
-      "difficulty": "Medium",
-      "questionCount": 54
-    },
-    {
-      "id": 303,
-      "subjectId": 4,
-      "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 4 – Đồ thị (Graphs)",
-      "order": 4,
-      "durationMin": 75,
-      "difficulty": "Medium",
-      "questionCount": 50
-    },
-    {
-      "id": 304,
-      "subjectId": 4,
-      "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 5 – Giải thuật đi kèm (Algorithms & Complexity)",
-      "order": 5,
-      "durationMin": 180,
-      "difficulty": "Medium",
-      "questionCount": 120
-    },
-    {
       "id": 201,
       "subjectId": 3,
       "subjectCode": "PFP191",
@@ -608,6 +564,61 @@
       "durationMin": 50,
       "difficulty": "Medium",
       "questionCount": 33
+    },
+    {
+      "id": 300,
+      "subjectId": 4,
+      "subjectCode": "CSD203",
+      "subjectName": "Data Structure & Algorithm",
+      "title": "Chương 1 – Cấu trúc dữ liệu tuyến tính (Linear Data Structures)",
+      "order": 1,
+      "durationMin": 135,
+      "difficulty": "Medium",
+      "questionCount": 90
+    },
+    {
+      "id": 301,
+      "subjectId": 4,
+      "subjectCode": "CSD203",
+      "subjectName": "Data Structure & Algorithm",
+      "title": "Chương 2 – Cấu trúc Cây (Trees)",
+      "order": 2,
+      "durationMin": 93,
+      "difficulty": "Medium",
+      "questionCount": 62
+    },
+    {
+      "id": 302,
+      "subjectId": 4,
+      "subjectCode": "CSD203",
+      "subjectName": "Data Structure & Algorithm",
+      "title": "Chương 3 – Bảng băm (Hash Table)",
+      "order": 3,
+      "durationMin": 81,
+      "difficulty": "Medium",
+      "questionCount": 54
+    },
+    {
+      "id": 303,
+      "subjectId": 4,
+      "subjectCode": "CSD203",
+      "subjectName": "Data Structure & Algorithm",
+      "title": "Chương 4 – Đồ thị (Graphs)",
+      "order": 4,
+      "durationMin": 75,
+      "difficulty": "Medium",
+      "questionCount": 50
+    },
+    {
+      "id": 304,
+      "subjectId": 4,
+      "subjectCode": "CSD203",
+      "subjectName": "Data Structure & Algorithm",
+      "title": "Chương 5 – Giải thuật đi kèm (Algorithms & Complexity)",
+      "order": 5,
+      "durationMin": 180,
+      "difficulty": "Medium",
+      "questionCount": 120
     },
     {
       "id": 400,

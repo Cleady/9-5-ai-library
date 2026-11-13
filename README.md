@@ -330,6 +330,55 @@ Trang Quản trị Admin (`pages/admin/admin.html`) đã được nâng cấp to
 - `PUT /api/admin/reports/:id`: Admin/Owner thực hiện xử lý báo cáo (`hide`, `restore`, `dismiss`, `delete`).
 - `GET /api/admin/audit?action=&targetType=&page=&limit=`: Tra cứu nhật ký thao tác quản trị hệ thống.
 
+---
+
+## 5. Quy Trình Vận Hành & Cập Nhật Code (Production 24/7)
+
+### 1. Thông Tin Triển Khai Production
+- **Tên miền chính thức:** `https://95ai.io.vn` và `https://www.95ai.io.vn`
+- **Giao thức bảo mật:** Cloudflare Universal SSL (HTTPS), Cloudflare Tunnel (QUIC/HTTP2)
+- **Port máy chủ nội bộ:** `3005` (quản lý bởi PM2: `95ai-library` và `cf-tunnel`)
+
+### 2. Danh Sách Tài Khoản Quản Trị
+| Vai trò | Email / Username | Mật khẩu mẫu | Ghi chú quyền hạn |
+| :--- | :--- | :--- | :--- |
+| **Owner** | `owner95aiclub@internal.edu.vn` | `owner1234` | Toàn quyền cao nhất (Hệ thống, CSDL, Quản trị viên, Kiểm duyệt) |
+| **Admin** | `admin95aidev@internal.edu.vn` | `admin1234` | Quản lý người dùng, duyệt nội dung, kiểm duyệt bài viết |
+| **Member** | `anhquan2007nek@gmail.com` | `123456` | Học tập, làm bài quiz, tham gia cộng đồng |
+
+*(Lưu ý: Mật khẩu trên là mẫu kiểm thử môi trường nội bộ. Mật khẩu production thực tế được mã hóa bcrypt trong MySQL).*
+
+### 3. Quy Trình Cập Nhật Code Chuẩn (2 Bước)
+
+#### Bước 1: Đẩy mã nguồn từ máy cá nhân lên GitHub
+```bash
+git add .
+git commit -m "feat/fix: mô tả nội dung cập nhật"
+git push origin main
+```
+
+#### Bước 2: Đồng bộ lên máy chủ Ubuntu (Terminal Cockpit)
+Chạy 1 dòng lệnh duy nhất:
+```bash
+cd ~/9-5-ai-library && git pull origin main && pm2 restart 95ai-library
+```
+
+#### Xử lý nhanh các tình huống phát sinh:
+- **Nếu có cài thêm thư viện npm mới ở backend:**
+  ```bash
+  cd ~/9-5-ai-library/backend && npm install && pm2 restart 95ai-library
+  ```
+- **Nếu server báo xung đột file (Merge conflict khi git pull):**
+  ```bash
+  cd ~/9-5-ai-library && git stash && git pull origin main && pm2 restart 95ai-library
+  ```
+- **Kiểm tra trạng thái & nhật ký log dịch vụ:**
+  ```bash
+  pm2 status
+  pm2 logs 95ai-library --lines 30
+  ```
+
+
 
 
 
