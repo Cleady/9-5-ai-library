@@ -2363,15 +2363,15 @@ td small {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    min-height: 0;
-    margin: 0 0 10px;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+    min-height: 54px;
+    margin: 0 0 14px;
+    padding: 8px 16px;
+    border: 1px solid var(--admin-border, rgba(206, 222, 244, 0.8));
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 4px 20px rgba(29, 78, 216, 0.06);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
 
 .search {
@@ -3343,12 +3343,13 @@ html[data-theme="dark"] .promo-arrow::after {
 }
 
 html[data-theme="dark"] .topbar {
-    background: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    border: none !important;
+    background: rgba(15, 23, 42, 0.92) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border-radius: 16px !important;
+    padding: 8px 16px !important;
+    border: 1px solid rgba(56, 189, 248, 0.2) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 html[data-theme="dark"] .search {

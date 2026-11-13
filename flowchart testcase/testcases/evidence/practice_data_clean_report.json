@@ -1,0 +1,281 @@
+{
+  "timestamp": "2026-10-22T13:35:49.100Z",
+  "initialCount": 2359,
+  "removedCount": 39,
+  "remainingCount": 2320,
+  "excludedQuestions": [
+    {
+      "id": 5075,
+      "quizId": 101,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5076,
+      "quizId": 101,
+      "reason": "empty_options",
+      "correctIndex": 1,
+      "optionsCount": 0
+    },
+    {
+      "id": 5077,
+      "quizId": 101,
+      "reason": "empty_options",
+      "correctIndex": 1,
+      "optionsCount": 0
+    },
+    {
+      "id": 5078,
+      "quizId": 101,
+      "reason": "empty_options",
+      "correctIndex": 1,
+      "optionsCount": 0
+    },
+    {
+      "id": 5079,
+      "quizId": 101,
+      "reason": "empty_options",
+      "correctIndex": 1,
+      "optionsCount": 0
+    },
+    {
+      "id": 5110,
+      "quizId": 101,
+      "reason": "empty_options",
+      "correctIndex": 2,
+      "optionsCount": 0
+    },
+    {
+      "id": 5117,
+      "quizId": 101,
+      "reason": "empty_options",
+      "correctIndex": 3,
+      "optionsCount": 0
+    },
+    {
+      "id": 5160,
+      "quizId": 101,
+      "reason": "empty_options",
+      "correctIndex": 1,
+      "optionsCount": 0
+    },
+    {
+      "id": 5292,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 1,
+      "optionsCount": 0
+    },
+    {
+      "id": 5293,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5299,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5301,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 2,
+      "optionsCount": 0
+    },
+    {
+      "id": 5317,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 1,
+      "optionsCount": 0
+    },
+    {
+      "id": 5320,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 3,
+      "optionsCount": 0
+    },
+    {
+      "id": 5323,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 3,
+      "optionsCount": 0
+    },
+    {
+      "id": 5325,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5326,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5328,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5329,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5346,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 1,
+      "optionsCount": 0
+    },
+    {
+      "id": 5347,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5348,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 2,
+      "optionsCount": 0
+    },
+    {
+      "id": 5349,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 4,
+      "optionsCount": 0
+    },
+    {
+      "id": 5350,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5351,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5352,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 2,
+      "optionsCount": 0
+    },
+    {
+      "id": 5353,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5354,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 2,
+      "optionsCount": 0
+    },
+    {
+      "id": 5355,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 1,
+      "optionsCount": 0
+    },
+    {
+      "id": 5416,
+      "quizId": 104,
+      "reason": "out_of_bounds_correctIndex",
+      "correctIndex": 3,
+      "optionsCount": 1
+    },
+    {
+      "id": 5454,
+      "quizId": 104,
+      "reason": "out_of_bounds_correctIndex",
+      "correctIndex": 3,
+      "optionsCount": 3
+    },
+    {
+      "id": 5490,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5492,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 2,
+      "optionsCount": 0
+    },
+    {
+      "id": 5525,
+      "quizId": 104,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5533,
+      "quizId": 104,
+      "reason": "out_of_bounds_correctIndex",
+      "correctIndex": 3,
+      "optionsCount": 3
+    },
+    {
+      "id": 5550,
+      "quizId": 104,
+      "reason": "out_of_bounds_correctIndex",
+      "correctIndex": 3,
+      "optionsCount": 3
+    },
+    {
+      "id": 5726,
+      "quizId": 110,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    },
+    {
+      "id": 5727,
+      "quizId": 110,
+      "reason": "empty_options",
+      "correctIndex": 3,
+      "optionsCount": 0
+    },
+    {
+      "id": 5746,
+      "quizId": 113,
+      "reason": "empty_options",
+      "correctIndex": 0,
+      "optionsCount": 0
+    }
+  ]
+}

@@ -174,6 +174,26 @@
         grid.appendChild(renderGroupCard(group));
       });
 
+      // Hỗ trợ Deep-linking: cuộn đến nhóm theo ?id= và làm nổi bật
+      var targetId = new URLSearchParams(window.location.search).get('id') ||
+        (window.location.hash ? window.location.hash.replace('#group-', '').replace('#', '') : null);
+
+      if (targetId) {
+        setTimeout(function () {
+          var targetCard = grid.querySelector('[data-com-group-id="' + targetId + '"]');
+          if (targetCard) {
+            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            targetCard.style.outline = '2px solid var(--color-primary, #2563eb)';
+            targetCard.style.boxShadow = '0 0 16px rgba(37, 99, 235, 0.35)';
+            targetCard.style.transition = 'outline 0.3s ease, box-shadow 0.3s ease';
+            setTimeout(function () {
+              targetCard.style.outline = '';
+              targetCard.style.boxShadow = '';
+            }, 3000);
+          }
+        }, 300);
+      }
+
     } catch (err) {
       grid.replaceChildren();
       grid.appendChild(make('p', 'com-discussion-empty', 'Lỗi khi tải danh sách nhóm.'));

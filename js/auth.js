@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const res = await fetch('http://localhost:3000/api/auth/register', {
+                const res = await fetch('/api/auth/register', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username: email, password: password, name: name })
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // XỬ LÝ ĐĂNG NHẬP
             try {
-                const res = await fetch('http://localhost:3000/api/auth/login', {
+                const res = await fetch('/api/auth/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username: email, password: password })
@@ -85,7 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     // Đợi 1 giây rồi chuyển trang
                     setTimeout(() => {
-                        window.location.href = '../../home_page/home_page.html';
+                        const redirectUrl = sessionStorage.getItem('redirectUrl');
+                        sessionStorage.removeItem('redirectUrl');
+                        if (redirectUrl && !redirectUrl.includes('login.html') && !redirectUrl.includes('signup.html')) {
+                            if (redirectUrl.startsWith('/') || redirectUrl.startsWith('http')) {
+                                window.location.href = redirectUrl;
+                            } else if (redirectUrl.startsWith('../')) {
+                                window.location.href = redirectUrl;
+                            } else {
+                                window.location.href = '../../' + redirectUrl;
+                            }
+                        } else {
+                            window.location.href = '../../home_page/home_page.html';
+                        }
                     }, 1000);
                 }
             } catch (err) {

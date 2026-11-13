@@ -39,7 +39,7 @@
         subjects.forEach(function(sub) {
           listHtml += '<li style="padding:12px; border-bottom:1px solid #e5e7eb;">' +
                       '<a href="practice-subject.html?subject=' + sub.id + '" style="text-decoration:none; color:#1f2937; font-weight:500; display:flex; align-items:center; gap:12px;">' +
-                      '<div class="prc-subject-icon-tile ' + ({1:'prc-icon-blue',2:'prc-icon-teal',3:'prc-icon-blue',4:'prc-icon-orange',5:'prc-icon-pink',6:'prc-icon-purple',7:'prc-icon-rose'}[sub.id]||'prc-icon-blue') + '" style="width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;">' +
+                      '<div class="prc-subject-icon-tile ' + ({1:'prc-icon-blue',2:'prc-icon-teal',3:'prc-icon-blue',4:'prc-icon-green',5:'prc-icon-pink',6:'prc-icon-purple',7: 'prc-icon-rose', 8: 'prc-icon-pink', 9: 'prc-icon-indigo'}[sub.id]||'prc-icon-blue') + '" style="width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;">' +
                       '<span class="subject-icon ' + sub.icon + '" style="font-size:16px;"></span></div>' +
                       '<span>' + sub.name + ' <span style="color:#6b7280; font-size:14px; margin-left:8px;">' + sub.title + '</span></span>' +
                       '</a></li>';
@@ -219,10 +219,12 @@
         1: 'prc-icon-blue',
         2: 'prc-icon-teal',
         3: 'prc-icon-blue',
-        4: 'prc-icon-orange',
+        4: 'prc-icon-green',
         5: 'prc-icon-pink',
         6: 'prc-icon-purple',
-        7: 'prc-icon-rose'
+        7: 'prc-icon-rose',
+        8: 'prc-icon-pink',
+        9: 'prc-icon-indigo'
       };
       var iconTint = iconTints[subject.id] || 'prc-icon-blue';
       var isFav = core.isSubjectFavorited ? core.isSubjectFavorited(subject.id) : false;

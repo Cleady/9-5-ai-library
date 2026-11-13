@@ -136,8 +136,12 @@
         1: '/assets/icon/chip.png',
         2: '/assets/icon/data.png',
         3: '/assets/icon/program.png',
-        4: '/assets/icon/mas.png',
-        5: '/assets/icon/soft.png'
+        4: '/assets/icon/mas_green.png',
+        5: '/assets/icon/soft.png',
+        6: '/assets/icon/math.png',
+        7: '/assets/icon/math.png',
+        8: '/assets/icon/japanese_icon.png',
+        9: '/assets/icon/Better_Icon/artificial-intellegence.png'
       };
       const iconUrl = subIconMap[sub.id] || (F.getSubjectIcon ? F.getSubjectIcon(sub.title || sub.name) : '/assets/icon/chip.png');
 

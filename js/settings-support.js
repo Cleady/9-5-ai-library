@@ -101,6 +101,12 @@
                         await Promise.all(keys.map(k => caches.delete(k)));
                     }
                     sessionStorage.clear();
+                    // Clear search history
+                    Object.keys(localStorage).forEach(k => {
+                        if (k.startsWith('lib95:search:recent:')) {
+                            localStorage.removeItem(k);
+                        }
+                    });
                     await loadStorage();
                     S.core.showToast("Cache cleared successfully!");
                 } catch (err) {

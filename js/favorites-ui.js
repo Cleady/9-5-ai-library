@@ -14,10 +14,12 @@
     1: { code: 'CEA201', name: 'Computer Architecture', icon: '/assets/icon/chip.png', semester: 'Semester II', colorClass: '1' },
     2: { code: 'DBI202', name: 'Database', icon: '/assets/icon/data.png', semester: 'Semester II', colorClass: '2' },
     3: { code: 'PFP191', name: 'Programming Fundamentals', icon: '/assets/icon/program.png', semester: 'Semester I', colorClass: '3' },
-    4: { code: 'CSD203', name: 'Data Structure & Algorithm', icon: '/assets/icon/mas.png', semester: 'Semester II', colorClass: '4' },
+    4: { code: 'CSD203', name: 'Data Structure & Algorithm', icon: '/assets/icon/mas_green.png', semester: 'Semester II', colorClass: '4' },
     5: { code: 'CSI106', name: 'Foundations of Computer Science', icon: '/assets/icon/soft.png', semester: 'Semester I', colorClass: '5' },
     6: { code: 'MAD101', name: 'Discrete Mathematics', icon: '/assets/icon/math.png', semester: 'Semester I', colorClass: '2' },
-    7: { code: 'MAE101', name: 'Mathematics for Engineering', icon: '/assets/icon/math.png', semester: 'Semester I', colorClass: '1' }
+    7: { code: 'MAE101', name: 'Mathematics for Engineering', icon: '/assets/icon/math.png', semester: 'Semester I', colorClass: '1' },
+    8: { code: 'JPD113', name: 'Elementary Japanese 1- A1.1', icon: '/assets/icon/japanese_icon.png', semester: 'Semester II', colorClass: '5' },
+    9: { code: 'AIG202c', name: 'Artificial Intelligence Foundation IBM', icon: '/assets/icon/Better_Icon/artificial-intellegence.png', semester: 'Semester II', colorClass: '3' }
   };
 
   // SVG icon mặc định
@@ -54,10 +56,12 @@
 
   function getSubjectIcon(code) {
     const c = (code || '').toUpperCase();
+    if (c.indexOf('CSD') !== -1 || c.indexOf('ALGO') !== -1) return '/assets/icon/mas_green.png';
+    if (c.indexOf('JPD') !== -1 || c.indexOf('JAP') !== -1) return '/assets/icon/japanese_icon.png';
     if (c.indexOf('DB') !== -1 || c.indexOf('DATA') !== -1) return '/assets/icon/data.png';
     if (c.indexOf('PRO') !== -1 || c.indexOf('WEB') !== -1 || c.indexOf('PRJ') !== -1) return '/assets/icon/program.png';
     if (c.indexOf('MAS') !== -1 || c.indexOf('MATH') !== -1) return '/assets/icon/math.png';
-    if (c.indexOf('AI') !== -1 || c.indexOf('ML') !== -1) return '/assets/icon/chip.png';
+    if (c.indexOf('AIG') !== -1 || c.indexOf('AI') !== -1 || c.indexOf('ML') !== -1) return '/assets/icon/Better_Icon/artificial-intellegence.png';
     return '/assets/icon/chip.png';
   }
 

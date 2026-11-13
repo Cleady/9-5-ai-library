@@ -146,12 +146,18 @@ document.addEventListener("DOMContentLoaded", () => {
             // Bỏ qua các nút công khai: Log in, Sign up ở Guest Menu
             if (href.includes("login.html") || href.includes("signup.html")) return;
 
-            if (href.includes("lectures.html")) {
+            if (href.includes("home_page") || a.classList.contains("home-page__button--primary") || a.textContent.trim().includes("Get Started")) {
+                e.preventDefault();
+                openModal("You need to log in to get started.", href || "home_page/home_page.html");
+            } else if (href.includes("lectures.html")) {
                 e.preventDefault();
                 openModal("You need to log in to view Lectures.", href);
             } else if (href.includes("practice.html")) {
                 e.preventDefault();
                 openModal("You need to log in to do Practice.", href);
+            } else if (href.includes("community")) {
+                e.preventDefault();
+                openModal("You need to log in to access the Community.", href);
             } else if (href.includes("history.html")) {
                 e.preventDefault();
                 openModal("You need to log in to view History.", href);
@@ -170,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Chặn chuông thông báo
-        const bell = e.target.closest(".home-page__notifications-btn");
+        const bell = e.target.closest(".home-page__notifications-btn, [data-home-notifications], .home-page__icon-button");
         if (bell) {
             e.preventDefault();
             openModal("Please log in to view Notifications.", null);

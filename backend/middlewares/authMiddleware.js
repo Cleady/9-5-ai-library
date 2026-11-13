@@ -83,3 +83,32 @@ exports.canWriteCommunity = (req, res, next) => {
     }
     next();
 };
+
+// Middleware xác thực token không bắt buộc (Optional JWT Auth)
+// Dùng cho tìm kiếm và các endpoint công khai nhưng có thể cá nhân hóa/phân quyền khi đã đăng nhập
+exports.verifyOptionalToken = async (req, res, next) => {
+    const token = req.headers['authorization'];
+    req.user = null;
+
+    if (!token) {
+        return next();
+    }
+
+    try {
+        const tokenBody = token.startsWith('Bearer ') ? token.slice(7) : (token.split(' ')[1] || token);
+        const decoded = jwt.verify(tokenBody, process.env.JWT_SECRET);
+        
+        const [rows] = await db.query('SELECT id, username, role, status FROM users WHERE id = ?', [decoded.id]);
+        if (rows.length > 0 && rows[0].status !== 'banned') {
+            req.user = {
+                id: rows[0].id,
+                username: rows[0].username,
+                role: rows[0].role,
+                status: rows[0].status
+            };
+        }
+    } catch (error) {
+        req.user = null;
+    }
+    next();
+};

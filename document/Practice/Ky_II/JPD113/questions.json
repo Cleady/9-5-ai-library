@@ -1,0 +1,2386 @@
+{
+  "subject": "JPD113",
+  "updatedAt": "2026-10-24T13:52:27.902Z",
+  "totalQuizzes": 4,
+  "totalQuestions": 180,
+  "quizzes": [
+    {
+      "id": 701,
+      "subjectId": 8,
+      "title": "Chương 1 – Chữ Hán & Từ vựng (Kanji & Vocabulary)",
+      "order": 1,
+      "durationMin": 59,
+      "difficulty": "Medium",
+      "questionCount": 39
+    },
+    {
+      "id": 702,
+      "subjectId": 8,
+      "title": "Chương 2 – Ngữ pháp & Trợ từ cốt lõi (Core Grammar & Particles)",
+      "order": 2,
+      "durationMin": 95,
+      "difficulty": "Medium",
+      "questionCount": 63
+    },
+    {
+      "id": 703,
+      "subjectId": 8,
+      "title": "Chương 3 – Hội thoại & Mẫu câu Giao tiếp (Daily Dialogues & Expressions)",
+      "order": 3,
+      "durationMin": 108,
+      "difficulty": "Medium",
+      "questionCount": 72
+    },
+    {
+      "id": 704,
+      "subjectId": 8,
+      "title": "Chương 4 – Sắp xếp từ thành câu hoàn chỉnh (Sentence Reordering & Syntax)",
+      "order": 4,
+      "durationMin": 9,
+      "difficulty": "Medium",
+      "questionCount": 6
+    }
+  ],
+  "questions": [
+    {
+      "id": 60001,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D: ミンさんは 日本語【学校】の 先生です。",
+      "options": [
+        "がこう",
+        "がっこう",
+        "かっこ",
+        "かくこう"
+      ],
+      "correctIndex": 1,
+      "explanation": "Từ 【学校】 (Học giáo - trường học) có cách đọc chuẩn là 「がっこう」 (gakkou) với âm ngắt 「っ」. Các phương án A, C, D đều viết sai âm ngắt hoặc trường âm.\n\nXuất hiện trong: Q1_1_20251121082846.webp"
+    },
+    {
+      "id": 60002,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D: マリーさんは【二十一才】ですか。",
+      "options": [
+        "にじゅういっさい",
+        "にじゅうはっさい",
+        "にじゅういちさい",
+        "じゅうにさい"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc đếm tuổi trong tiếng Nhật: 1 tuổi là 「いっさい」 (issai), do đó 21 tuổi là 「にじゅういっさい」 (nijuuissai). Không đọc là 「にじゅういちさい」.\n\nXuất hiện trong: Q26_71_20251121082837.webp"
+    },
+    {
+      "id": 60003,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\n【私】はイレナです。",
+      "options": [
+        "はたし",
+        "わたし",
+        "わだし",
+        "ばたし"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Chữ Hán 【私】(Tư) có cách đọc kun'yomi là 「わたし」(tôi).\n- Các phương án A, C, D đều là cách biến âm sai.\n\nXuất hiện trong: 6.webp"
+    },
+    {
+      "id": 60004,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nまいにち、3【時間】べんきょうします。",
+      "options": [
+        "じっかん",
+        "しがん",
+        "じかん",
+        "しかん"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đáp án đúng là C. Chữ Hán 【時間】(Thời gian) đọc là 「じかん」. Ở đây 「3時間」(さんじかん) nghĩa là 3 tiếng đồng hồ (khoảng thời gian).\n- A, B, D là các cách phát âm sai.\n\nXuất hiện trong: 19.webp"
+    },
+    {
+      "id": 60005,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nマリーさんは【学生】ですか。",
+      "options": [
+        "かくせい",
+        "がくせい",
+        "せんせい",
+        "ぜんせい"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Từ Hán tự 【学生】(Học sinh, sinh viên) đọc là 「がくせい」.\n- C (せんせい) là chữ 【先生】(Tiên sinh - thầy cô giáo).\n- A và D là các cách đọc phát âm sai.\n\nXuất hiện trong: 24.webp"
+    },
+    {
+      "id": 60006,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nきょうは【何日】ですか。",
+      "options": [
+        "なんひ",
+        "なにひ",
+        "なんにち",
+        "なににち"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đáp án đúng là C. Chữ Hán 【何日】dùng để hỏi về ngày mấy / ngày bao nhiêu trong tháng, có cách đọc chuẩn là 「なんにち」.\n- A, B, D đều là các cách đọc ghép âm sai.\n\nXuất hiện trong: 27.webp"
+    },
+    {
+      "id": 60007,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D;\nここは【百円】ショップです。",
+      "options": [
+        "いちひゃくえん",
+        "ひゃくえん",
+        "びゃくえん",
+        "いちひゃえん"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Số 100 trong tiếng Nhật đọc là 「ひゃく」(không có いち phía trước như tiếng Việt \"một trăm\"). Do đó 100 Yên 【百円】đọc chuẩn là 「ひゃくえん」.\n- A và D thêm いち là sai ngữ pháp tiếng Nhật.\n- C là cách biến âm sai (chỉ có 300 mới đọc là さんびゃく).\n\nXuất hiện trong: Q1.jpg"
+    },
+    {
+      "id": 60008,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D;\nこのほんは【三千】円です。",
+      "options": [
+        "さんせん",
+        "さんぜん",
+        "さんまん",
+        "さんびゃく"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Chữ Hán 【三千】(3000) chịu hiện tượng biến âm sau âm /n/ của さん, chuyển từ せん thành ぜん: 「さんぜん」(3000).\n- A (さんせん): Chưa biến âm, sai quy tắc phát âm.\n- C (さんまん): 30.000 (ba vạn).\n- D (さんびゃく): 300 (ba trăm).\n\nXuất hiện trong: Q2.jpg"
+    },
+    {
+      "id": 60009,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nハノイは　いま　ごぜん【四時】です。",
+      "options": [
+        "ごじ",
+        "よじ",
+        "よんじ",
+        "しじ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Trong cách đếm giờ tiếng Nhật, 4 giờ 【四時】là trường hợp phát âm đặc biệt bắt buộc phải đọc là 「よじ」.\n- C (よんじ) và D (しじ) là các lỗi phát âm người học thường mắc phải nhưng không tồn tại trong tiếng Nhật chuẩn.\n- A (ごじ): 5 giờ.\n\nXuất hiện trong: Q3.jpg"
+    },
+    {
+      "id": 60010,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nA: たんじょうびは　いつですか。\nB: 【九月】一日です。",
+      "options": [
+        "ろうがつ",
+        "くがつ",
+        "きゅうがつ",
+        "はちがつ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Trong cách đếm tháng tiếng Nhật, tháng 9 【九月】luôn được đọc là 「くがつ」(không đọc là きゅうがつ).\n- C (きゅうがつ): Sai quy tắc đếm tháng.\n- D (はちがつ): Tháng 8.\n- A (ろうがつ): Không có từ này.\n\nXuất hiện trong: Q4.jpg"
+    },
+    {
+      "id": 60011,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nA: いま、何時ですか。\nB: 六時【八分】です。",
+      "options": [
+        "はふん",
+        "はっぷん",
+        "はちふん",
+        "はつふん"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trong tiếng Nhật, số đếm phút với số 8 (八分) có biến âm âm ngắt促音 đọc là はっぷん (happun). Các phương án A, C, D đều sai cách biến âm chuẩn.\n\nXuất hiện trong: Q1.jpg"
+    },
+    {
+      "id": 60012,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D.\nとしょかんの　やすみは　土曜日と　【日曜日】です。",
+      "options": [
+        "かようび",
+        "にちようび",
+        "どようび",
+        "きんようび"
+      ],
+      "correctIndex": 1,
+      "explanation": "Chữ Hán 日曜日 (Chủ nhật) có cách đọc là にちようび (nichiyoubi). A (かようび: Thứ Ba / 火曜日), C (どようび: Thứ Bảy / 土曜日), D (きんようび: Thứ Sáu / 金曜日).\n\nXuất hiện trong: Q2.jpg"
+    },
+    {
+      "id": 60013,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nA: いま、何時ですか。\nB: 三時【十分】です。",
+      "options": [
+        "じゅうぷん",
+        "じゅっぷん",
+        "じゅうふん",
+        "じゅふん"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trong tiếng Nhật, 10 phút (十分) đọc chuẩn là じゅっぷん (juppun) hoặc じっぷん (jippun) với âm ngắt. Do đó B là đáp án chính xác.\n\nXuất hiện trong: Q3.jpg"
+    },
+    {
+      "id": 60014,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nすみません、いま　何時　【何分】ですか",
+      "options": [
+        "なんふん",
+        "なんぷん",
+        "なんぶん",
+        "なんじ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Từ để hỏi số phút 何分 đọc là なんぷん (nanpun) với âm bán đục (p-). A, C sai cách phát âm; D (なんじ) là hỏi mấy giờ (何時).\n\nXuất hiện trong: Q4.jpg"
+    },
+    {
+      "id": 60015,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\n田中（たなか）さんは【十才】です。",
+      "options": [
+        "じゅうさい",
+        "じゅさい",
+        "じゅっさい",
+        "じゅざい"
+      ],
+      "correctIndex": 2,
+      "explanation": "Trong tiếng Nhật, đếm 10 tuổi (十才 / 十歳) có biến âm âm ngắt đọc là じゅっさい (juussai) hoặc じっさい (jissai). Do đó C là đáp án đúng.\n\nXuất hiện trong: Q1.webp"
+    },
+    {
+      "id": 60016,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nきょうは　【何日】ですか。",
+      "options": [
+        "なんひ",
+        "なにひ",
+        "なんにち",
+        "なににち"
+      ],
+      "correctIndex": 2,
+      "explanation": "Từ để hỏi ngày mấy 【何日】 đọc là なんにち (nannichi). Các phương án khác đều sai cách đọc chuẩn.\n\nXuất hiện trong: Q2.webp"
+    },
+    {
+      "id": 60017,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\n田中（たなか）さんは【八才】です。",
+      "options": [
+        "はちさい",
+        "はちざい",
+        "はっさい",
+        "はっざい"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đếm 8 tuổi 【八才】 có biến âm âm ngắt đọc là はっさい (hassai). A (hachisai) là cách đếm chưa biến âm, B và D biến âm sai.\n\nXuất hiện trong: Q3.webp"
+    },
+    {
+      "id": 60018,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\n田中（たなか）さんは【八才】です。",
+      "options": [
+        "はちさい",
+        "はちざい",
+        "はっさい",
+        "はっざい"
+      ],
+      "correctIndex": 2,
+      "explanation": "Trong tiếng Nhật, đếm 8 tuổi 【八才】 có biến âm âm ngắt đọc là はっさい (hassai). Các phương án khác sai cách đọc biến âm.\n\nXuất hiện trong: Q1 (1).webp"
+    },
+    {
+      "id": 60019,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\n【私】はイレナです。",
+      "options": [
+        "はたし",
+        "わたし",
+        "わだし",
+        "ばたし"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đại từ xưng hô ngôi thứ nhất 【私】 (Tư) đọc chuẩn là わたし (watashi). Các phương án A, C, D đều phát âm sai.\n\nXuất hiện trong: Q2.webp"
+    },
+    {
+      "id": 60020,
+      "quizId": 701,
+      "text": "Các chữ Hán trong ngoặc [ ] có cách đọc tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D\nやまださんは　【日本人】です。",
+      "options": [
+        "にほんにん",
+        "にほんひと",
+        "にっぽんにん",
+        "にほんじん"
+      ],
+      "correctIndex": 3,
+      "explanation": "Chữ Hán 【日本人】 (người Nhật) gồm tên nước 日本 (にほん) ghép với hậu tố chỉ quốc tịch 人 (じん) \\(\\rightarrow\\) にほんじん (nihonjin).\n\nXuất hiện trong: Q3.webp"
+    },
+    {
+      "id": 60021,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D: アリさんは【なんさい】ですか。",
+      "options": [
+        "何ナ",
+        "可ナ",
+        "何才",
+        "可才"
+      ],
+      "correctIndex": 2,
+      "explanation": "Từ hỏi tuổi 「なんさい」 tương ứng với chữ Hán là 【何才】 (hoặc 何歳, trong trình độ sơ cấp thường viết chữ 才 thay cho 歳). Các phương án khác dùng chữ sai (chữ 可 hoặc chữ Katakana ナ).\n\nXuất hiện trong: Q12_6_20251121082817.webp"
+    },
+    {
+      "id": 60022,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D: いま、【ごじ】です。",
+      "options": [
+        "六時",
+        "五時",
+        "五寺",
+        "六寺"
+      ],
+      "correctIndex": 1,
+      "explanation": "Số 5 là 【五】 và giờ là 【時】. Do đó 【ごじ】 (5 giờ) được viết bằng chữ Hán là 【五時】. Chữ 寺 nghĩa là chùa.\n\nXuất hiện trong: Q22_76_20251121082832.webp"
+    },
+    {
+      "id": 60023,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nアリさんは【なんさい】ですか。",
+      "options": [
+        "何ナ",
+        "可才",
+        "何才",
+        "可ナ"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đáp án đúng là C. Từ 「なんさい」trong chữ Hán được viết là 「何才」(hoặc dạng chính quy hơn là 「何歳」). Ở đây chữ 「何」(Hà - cái gì, mấy) kết hợp với 「才」(Tài - thay thế thông dụng cho chữ Tuế 歳 trong biểu thị tuổi tác).\n- A và D có chữ ナ (katakana na), sai hoàn toàn.\n- B có chữ 可 (khả), không phải chữ 何 (hà).\n\nXuất hiện trong: 3.webp"
+    },
+    {
+      "id": 60024,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nこれは【ほん】ですか。",
+      "options": [
+        "木",
+        "本",
+        "体",
+        "休"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Từ 「ほん」(sách, quyển sách) có chữ Hán tương ứng là 【本】(Bản).\n- A (木): Mộc (cây, gỗ).\n- C (体): Thể (cơ thể).\n- D (休): Hưu (nghỉ ngơi).\n\nXuất hiện trong: 12.webp"
+    },
+    {
+      "id": 60025,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nこのとけいは【にひゃくまん】えんです。",
+      "options": [
+        "十百万",
+        "一百万",
+        "三百万",
+        "二百万"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp án đúng là D. 【二百万】: 二 (に - 2) + 百 (ひゃく - 100) + 万 (まん - 10.000) = 2.000.000 (hai triệu).\n- A (十百万): Sai cách cấu tạo số trong tiếng Nhật.\n- B (一百万): いっぴゃくまん (1 triệu).\n- C (三百万): さんびゃくまん (3 triệu).\n\nXuất hiện trong: 13.webp"
+    },
+    {
+      "id": 60026,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nA: おしごとは？\nB: 私は　【フランスご】の　きょうしです。",
+      "options": [
+        "フランス言",
+        "フランス語",
+        "フランス認",
+        "フランス観"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Hậu tố chỉ ngôn ngữ của một quốc gia là chữ 【語】(Ngữ), đọc là 「ご」: フランス語 (tiếng Pháp).\n- A là chữ 言 (ngôn - lời nói, không dùng làm hậu tố chỉ tiếng quốc gia).\n- C là chữ 認 (nhận).\n- D là chữ 観 (quan).\n\nXuất hiện trong: Q5.jpg"
+    },
+    {
+      "id": 60027,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nたいいくかんの　やすみは　【もくようび】です。",
+      "options": [
+        "水曜日",
+        "木曜日",
+        "月曜日",
+        "土曜日"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Thứ năm 【もくようび】có Hán tự là 【木曜日】(Mộc diệu nhật).\n- A (水曜日): すいようび (Thứ tư).\n- C (月曜日): げつようび (Thứ hai).\n- D (土曜日): どようび (Thứ bảy).\n\nXuất hiện trong: Q6.jpg"
+    },
+    {
+      "id": 60028,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nA: たんじょうびは　いつですか。\nB: 3月【はつか】です。",
+      "options": [
+        "二十日",
+        "二十才",
+        "二十八日",
+        "五日"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Ngày 20 trong tháng có cách đọc đặc biệt là 「はつか」, chữ Hán là 【二十日】.\n- B (二十才): 20 tuổi (はたち).\n- C (二十八日): Ngày 28 (にじゅうはちにち).\n- D (五日): Ngày 5 (いつか).\n\nXuất hiện trong: Q7.jpg"
+    },
+    {
+      "id": 60029,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nたんじょうびは　2月【ついたち】です。",
+      "options": [
+        "三日",
+        "二日",
+        "一日",
+        "四日"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đáp án đúng là C. Ngày mùng 1 hàng tháng đọc đặc biệt là 「ついたち」, chữ Hán là 【一日】.\n- A (三日): みっか (Ngày mùng 3).\n- B (二日): ふつか (Ngày mùng 2).\n- D (四日): よっか (Ngày mùng 4).\n\nXuất hiện trong: Q8.jpg"
+    },
+    {
+      "id": 60030,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nA: おくには　どちらですか。\nB: 【にほん】です。",
+      "options": [
+        "日本",
+        "目木",
+        "目本",
+        "日木"
+      ],
+      "correctIndex": 0,
+      "explanation": "にほん (Nhật Bản) viết bằng chữ Hán là 日本 (Nhật Bản). Các chữ trong B, C, D ghép sai bộ thủ (dùng chữ 目 thay vì 日, hoặc 木 thay vì 本).\n\nXuất hiện trong: Q5.jpg"
+    },
+    {
+      "id": 60031,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D.\nキムさんは　インド　【じん】じゃありません。",
+      "options": [
+        "人",
+        "入",
+        "肉",
+        "八"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hậu tố chỉ người nước nào đó 【じん】 viết bằng chữ Hán là chữ Nhân: 人 (インド人: người Ấn Độ). B (入 - nhập/vào), C (肉 - nhục/thịt), D (八 - bát/số 8).\n\nXuất hiện trong: Q6.jpg"
+    },
+    {
+      "id": 60032,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nいま、なんじ　【なんぷん】ですか。",
+      "options": [
+        "何分",
+        "何時",
+        "何才",
+        "何人"
+      ],
+      "correctIndex": 0,
+      "explanation": "Từ なんぷん (mấy phút) tương ứng với chữ Hán 何分. B (何時: なんじ - mấy giờ), C (何才: なんさい - mấy tuổi), D (何人: なんにん - mấy người).\n\nXuất hiện trong: Q7.jpg"
+    },
+    {
+      "id": 60033,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nたなかさんは　【ごじゅうにさい】です。",
+      "options": [
+        "六十一才",
+        "五十二才",
+        "五十三才",
+        "六十二才"
+      ],
+      "correctIndex": 1,
+      "explanation": "ごじゅうにさい (52 tuổi) gồm: ご (5 - 五), じゅう (10 - 十), に (2 - 二), さい (tuổi - 才) \\(\\rightarrow\\) 五十二才. A là 61 tuổi, C là 53 tuổi, D là 62 tuổi.\n\nXuất hiện trong: Q8.jpg"
+    },
+    {
+      "id": 60034,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nまいあさ、【なんじ】に　がっこうへ　いきますか。",
+      "options": [
+        "荷寺",
+        "荷時",
+        "何寺",
+        "何時"
+      ],
+      "correctIndex": 3,
+      "explanation": "Từ なんじ (mấy giờ) tương ứng với chữ Hán là 何時 (Hà Thời). Các phương án khác dùng nhầm chữ 荷 (hà/hành lý) hoặc 寺 (tự/chùa).\n\nXuất hiện trong: Q4.webp"
+    },
+    {
+      "id": 60035,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nやすみは【げつようび】です。",
+      "options": [
+        "金曜日",
+        "月曜日",
+        "土曜日",
+        "火曜日"
+      ],
+      "correctIndex": 1,
+      "explanation": "げつようび (Thứ Hai) viết bằng chữ Hán là 月曜日 (Nguyệt diệu nhật). A (Kim diệu nhật - Thứ Sáu), C (Thổ diệu nhật - Thứ Bảy), D (Hỏa diệu nhật - Thứ Ba).\n\nXuất hiện trong: Q5.webp"
+    },
+    {
+      "id": 60036,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nこれは【ほん】ですか。",
+      "options": [
+        "木",
+        "本",
+        "体",
+        "休"
+      ],
+      "correctIndex": 1,
+      "explanation": "Từ ほん (sách) viết bằng chữ Hán là chữ Bản/Bổn: 本. A (木: mộc/cây), C (体: thể/cơ thể), D (休: hưu/nghỉ ngơi).\n\nXuất hiện trong: Q6.webp"
+    },
+    {
+      "id": 60037,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nこれは【ほん】ですか。",
+      "options": [
+        "木",
+        "本",
+        "体",
+        "休"
+      ],
+      "correctIndex": 1,
+      "explanation": "Từ ほん (sách) tương ứng với chữ Hán là 本. A (木: cây), C (体: cơ thể), D (休: nghỉ ngơi).\n\nXuất hiện trong: Q4.webp"
+    },
+    {
+      "id": 60038,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nアリさんは【がくせい】ですか。",
+      "options": [
+        "学生",
+        "字生",
+        "学性",
+        "字性"
+      ],
+      "correctIndex": 0,
+      "explanation": "Từ がくせい (học sinh/sinh viên) viết bằng chữ Hán là 学生 (Học Sinh). B, C, D ghép sai chữ Hán.\n\nXuất hiện trong: Q5.webp"
+    },
+    {
+      "id": 60039,
+      "quizId": 701,
+      "text": "Các từ trong ngoặc [ ] dưới đây có chữ Hán tương ứng như thế nào? Hãy chọn đáp án đúng trong A, B, C, D:\nまいあさ、【なんじ】に　がっこうへ　いきますか。",
+      "options": [
+        "荷寺",
+        "荷時",
+        "何寺",
+        "何時"
+      ],
+      "correctIndex": 3,
+      "explanation": "Từ なんじ (mấy giờ) tương ứng với chữ Hán là 何時 (Hà Thời). Các chữ khác dùng sai chữ Hà hoặc chữ Thời.\n\nXuất hiện trong: Q6.webp"
+    },
+    {
+      "id": 60040,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: あしたも 7時に 学校へ（＿＿＿＿）。",
+      "options": [
+        "きます",
+        "きました",
+        "こない",
+        "きません"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trạng từ thời gian 「あしたも」 (ngày mai cũng) chỉ hành động trong tương lai, nên động từ phải ở thì hiện tại/tương lai thể lịch sự 「きます」 (đến). B (きました - quá khứ), C (こない - thể ngắn phủ định), D (きません - phủ định, không hợp logic với 「あしたも」).\n\nXuất hiện trong: Q2_46_20251121082801.webp"
+    },
+    {
+      "id": 60041,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: 日曜日、うち（＿＿＿）おんがくを（＿＿＿＿＿）。",
+      "options": [
+        "に／かいます",
+        "に／よみます",
+        "で／はたらきます",
+        "で／ききます"
+      ],
+      "correctIndex": 3,
+      "explanation": "Trợ từ 「で」 biểu thị nơi chốn diễn ra hành động: 「うちで」 (ở nhà). Tân ngữ 「おんがくを」 (âm nhạc) kết hợp với động từ 「ききます」 (nghe) tạo thành cụm 「おんがくを ききます」 (nghe nhạc).\n\nXuất hiện trong: Q9_106_20251121082813.webp"
+    },
+    {
+      "id": 60042,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: これは えいご（ ）なんですか。",
+      "options": [
+        "に",
+        "まで",
+        "で",
+        "は"
+      ],
+      "correctIndex": 2,
+      "explanation": "Trợ từ 「で」 chỉ ngôn ngữ/công cụ phương tiện: 「えいごで」 = bằng tiếng Anh. 「これは えいごで なんですか。」 = Cái này trong tiếng Anh là gì?\n\nXuất hiện trong: Q10_66_20251121082814.webp"
+    },
+    {
+      "id": 60043,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: お誕生日(たんじょうび)は（ ）ですか。",
+      "options": [
+        "なん",
+        "どこ",
+        "いつ",
+        "どちら"
+      ],
+      "correctIndex": 2,
+      "explanation": "Từ để hỏi về mốc thời gian là 「いつ」 (khi nào / bao giờ): 「おたんじょうびは いつですか。」 (Sinh nhật bạn là khi nào?).\n\nXuất hiện trong: Q13_41_20251121082819.webp"
+    },
+    {
+      "id": 60044,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau: それは（ ）の ワインです。",
+      "options": [
+        "ライス",
+        "コーヒー",
+        "フランス",
+        "レジ"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rượu vang có xuất xứ từ nước Pháp: 「フランスの ワイン」 (rượu vang Pháp). Các từ khác: ライス (cơm), コーヒー (cà phê), レジ (quầy thu ngân).\n\nXuất hiện trong: Q14_51_20251121082820.webp"
+    },
+    {
+      "id": 60045,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: 私は IMSの（＿＿＿＿＿＿）です。",
+      "options": [
+        "かいしゃいん",
+        "しゃいん",
+        "だいがく",
+        "ぎんこう"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ngữ pháp bài 1 Minna no Nihongo: Khi nói là nhân viên của một công ty cụ thể, danh từ chỉ công ty đi với 「〜の 社員（しゃいん）」, không dùng 「かいしゃいん」. Cụm đúng là 「IMSの しゃいん」 (nhân viên công ty IMS).\n\nXuất hiện trong: Q16_121_20251121082823.webp"
+    },
+    {
+      "id": 60046,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau: (＿＿＿＿)ズボンは 私のです。",
+      "options": [
+        "それ",
+        "そこ",
+        "これ",
+        "この"
+      ],
+      "correctIndex": 3,
+      "explanation": "Để bổ nghĩa trực tiếp cho danh từ đứng ngay sau (ở đây là 「ズボン」 - cái quần), ta phải dùng liên thể từ 「この / その / あの」. Các từ 「これ / それ / あれ」 đứng độc lập làm chủ ngữ, không thể bổ nghĩa trực tiếp cho danh từ.\n\nXuất hiện trong: Q23_141_20251121082834.webp"
+    },
+    {
+      "id": 60047,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: 私は ＿＿＿＿で かばんを かいます",
+      "options": [
+        "まいばん",
+        "ホームステイ",
+        "スーパー",
+        "おべんとう"
+      ],
+      "correctIndex": 2,
+      "explanation": "Hành động mua túi xách (かばんを かいます) diễn ra tại địa điểm mua sắm là siêu thị: 「スーパーで」. まいばん (mỗi tối), ホームステイ (ở nhà bản xứ/homestay), おべんとう (cơm hộp).\n\nXuất hiện trong: Q28_136_20251121082841.webp"
+    },
+    {
+      "id": 60048,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: ＿＿＿＿で しんぶんを かいます。",
+      "options": [
+        "うち",
+        "うみ",
+        "コンビニ",
+        "じゅぎょう"
+      ],
+      "correctIndex": 2,
+      "explanation": "Mua báo tại cửa hàng tiện lợi: 「コンビニで しんぶんを かいます」 (Mua báo ở combini). Các từ khác: うち (nhà), うみ (biển), じゅぎょう (tiết học) không phải là nơi để mua báo.\n\nXuất hiện trong: Q30_126_20251121082844.webp"
+    },
+    {
+      "id": 60049,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nこれは（　　）の　かばんです。",
+      "options": [
+        "しゃいん",
+        "がくせい",
+        "すいえい",
+        "おんがく"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Danh từ 「がくせい」(học sinh, sinh viên) đứng trước 「の かばん」(cặp sách) tạo thành cụm nghĩa tự nhiên và đúng chuẩn ngữ pháp bài 1-2: \"Đây là cặp sách của học sinh/sinh viên\".\n- A (しゃいん): Nhân viên (thường đi kèm tên công ty phía trước như IMCのしゃいん).\n- C (すいえい): Môn bơi lội.\n- D (おんがく): Âm nhạc.\n\nXuất hiện trong: 4.webp"
+    },
+    {
+      "id": 60050,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nまいあさ（　　）で　たべますか。",
+      "options": [
+        "いつ",
+        "どこ",
+        "なんようび",
+        "だれ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Trợ từ 「で」ở đây đi sau từ chỉ nơi chốn để biểu thị địa điểm diễn ra hành động ăn (たべます): 「どこでたべますか」(Bạn ăn ở đâu?).\n- A (いつ): Khi nào (không đi với trợ từ で để chỉ nơi chốn).\n- C (なんようび): Thứ mấy (chỉ thời gian, không dùng で chỉ địa điểm hành động).\n- D (だれ): Ai (nếu cùng ai thì dùng と: だれと).\n\nXuất hiện trong: 8.webp"
+    },
+    {
+      "id": 60051,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nこれは（　　）です。",
+      "options": [
+        "トイレットペーパー",
+        "トイレ",
+        "スーパー",
+        "アルバイト"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Đại từ chỉ định 「これ」(cái này) chỉ đồ vật cầm trên tay hoặc ở gần người nói. Trong các phương án, chỉ có 「トイレットペーパー」(giấy vệ sinh) là danh từ chỉ vật thể.\n- B (トイレ): Nhà vệ sinh (nơi chốn, dùng ここ).\n- C (スーパー): Siêu thị (nơi chốn, dùng ここ).\n- D (アルバイト): Việc làm thêm (công việc/hành động).\n\nXuất hiện trong: 9.webp"
+    },
+    {
+      "id": 60052,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nあさ 6じ（　　）おきます。",
+      "options": [
+        "に",
+        "まで",
+        "で",
+        "は"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Trợ từ 「に」đi sau mốc thời gian có chứa con số cụ thể (6じ) để chỉ thời điểm diễn ra hành động: 「6じにおきます」(Thức dậy vào lúc 6 giờ).\n- B (まで): Đến tận (6 giờ mới thức dậy thì mang nghĩa khác và không dùng câu đơn thức dậy vào lúc 6h thông thường).\n- C (で): Dùng cho phạm vi/nơi chốn/phương tiện.\n- D (は): Dùng làm chủ đề, không thay thế cho trợ từ thời điểm に trong câu này.\n\nXuất hiện trong: 10.webp"
+    },
+    {
+      "id": 60053,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nこれは かんこく（　　）かばんです。",
+      "options": [
+        "で",
+        "も",
+        "×",
+        "の"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp án đúng là D. Mẫu câu N1 (xuất xứ/quốc gia) + の + N2 (đồ vật): 「かんこくのかばん」(cặp sách sản xuất tại Hàn Quốc / của Hàn Quốc). Trợ từ 「の」nối hai danh từ.\n\nXuất hiện trong: 11.webp"
+    },
+    {
+      "id": 60054,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nやまださんは（　　）で とけいを かいます。",
+      "options": [
+        "たいいくかん",
+        "びょういん",
+        "スーパー",
+        "ゆうびんきょく"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đáp án đúng là C. Hành động là 「とけいを かいます」(mua đồng hồ) diễn ra tại địa điểm 「スーパー」(siêu thị / trung tâm mua sắm).\n- A (たいいくかん): Nhà thi đấu thể thao.\n- B (びょういん): Bệnh viện.\n- D (ゆうびんきょく): Bưu điện.\n\nXuất hiện trong: 14.webp"
+    },
+    {
+      "id": 60055,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\n（　　）にほんごを べんきょうします。",
+      "options": [
+        "あさごはん",
+        "まいにち",
+        "うち",
+        "やすみ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. 「まいにち」(mỗi ngày, hàng ngày) là phó từ / danh từ chỉ tần suất thời gian, có thể làm trạng ngữ đứng đầu câu không cần trợ từ: 「まいにち にほんごを べんきょうします」(Hàng ngày tôi học tiếng Nhật).\n- A (あさごはん): Bữa sáng (cần trợ từ sau nó nếu chỉ thời gian).\n- C (うち): Nhà (chỉ nơi chốn cần trợ từ で).\n- D (やすみ): Ngày nghỉ.\n\nXuất hiện trong: 16.webp"
+    },
+    {
+      "id": 60056,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nそれは とりにくの（　　）です。",
+      "options": [
+        "カレー",
+        "ケーキ",
+        "ジュース",
+        "イチゴ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. 「カレー」(món cà ri) kết hợp với 「とりにく」(thịt gà) tạo thành món 「とりにくのカレー」(cà ri thịt gà - chicken curry).\n- B (ケーキ): Bánh ngọt.\n- C (ジュース): Nước ép.\n- D (イチゴ): Quả dâu tây.\n\nXuất hiện trong: 17.webp"
+    },
+    {
+      "id": 60057,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\n（　　）をください。",
+      "options": [
+        "ビール",
+        "エスカレーター",
+        "レストラン",
+        "エレベーター"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Mẫu câu 「〜をください」dùng để gọi món hoặc yêu cầu mua một món hàng: 「ビールをください」(Xin cho tôi một cốc bia / vui lòng cho tôi bia).\n- B (エスカレーター): Thang cuốn.\n- C (レストラン): Nhà hàng.\n- D (エレベーター): Thang máy.\nKhông thể dùng 「〜をください」với các cơ sở vật chất hay địa điểm này.\n\nXuất hiện trong: 23.webp"
+    },
+    {
+      "id": 60058,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\n私は まいばん、10時に しんぶんを（　　）。",
+      "options": [
+        "よみます",
+        "ねます",
+        "のみます",
+        "かいます"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Tân ngữ là 「しんぶん」(báo, tờ báo) đi với trợ từ を thì động từ phù hợp nhất là 「よみます」(đọc): 「しんぶんをよみます」(đọc báo).\n- B (ねます): Ngủ (nội động từ, không đi với しんぶんを).\n- C (のみます): Uống.\n- D (かいます): Mua (vào 10 giờ đêm mỗi tối đọc báo hợp lý hơn nhiều so với mua báo hàng tối).\n\nXuất hiện trong: 28.webp"
+    },
+    {
+      "id": 60059,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nカレーを 2つ（　　）コーヒーを 2つ（　　）ください。",
+      "options": [
+        "と / ×",
+        "と / を",
+        "× / と",
+        "の / を"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. \n- Vị trí thứ nhất nối hai nhóm món đồ: [Cà ri 2 suất] VÀ (と) [Cà phê 2 cốc].\n- Vị trí thứ hai đứng ngay trước ください sau từ chỉ số lượng (2つ), trong tiếng Nhật khi số lượng từ đứng trực tiếp trước ください thì không cần thêm trợ từ (×). Hoặc mẫu câu: A を [số lượng] と B を [số lượng] ください. Do đó cặp đáp án chuẩn là 「と / ×」.\n\nXuất hiện trong: 29.webp"
+    },
+    {
+      "id": 60060,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nてんいん「（　　）。」\nアリさん「すみません。でんしじしょは どこですか。」",
+      "options": [
+        "あのう、すみません",
+        "いらっしゃいませ",
+        "どちらですか",
+        "だれですか"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Nhân viên cửa hàng (てんいん) khi đón khách luôn dùng câu chào chuẩn mực: 「いらっしゃいませ」(Kính chào quý khách!). Sau đó khách (Ali-san) mới hỏi tiếp: \"Xin lỗi, từ điển điện tử ở đâu ạ?\".\n- A (あのう、すみません): Lời của khách khi gọi nhân viên, không phải lời nhân viên chào khách.\n- C và D là câu hỏi nơi chốn/người.\n\nXuất hiện trong: 30.webp"
+    },
+    {
+      "id": 60061,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nはじめまして。私は（＿＿＿＿＿）です。\nよろしく おねがいします。",
+      "options": [
+        "じゅうはっさい",
+        "マルコさん",
+        "マルコ",
+        "日本"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đáp án đúng là C. Trong văn hóa và ngữ pháp tiếng Nhật, khi tự xưng tên mình tuyệt đối không thêm hậu tố kính ngữ 「〜さん」: 「私はマルコです」(Tôi là Marco).\n- B (マルコさん) sai vì thêm さん cho chính mình.\n- A (じゅうはっさい): 18 tuổi, không phải câu giới thiệu tên mở đầu.\n- D (日本): Phải là 日本人 (người Nhật) mới đúng cấu trúc giới thiệu quốc tịch.\n\nXuất hiện trong: Q11.jpg"
+    },
+    {
+      "id": 60062,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nあさ、何時（＿＿＿＿＿）　大学(だいがく)へ　きますか。",
+      "options": [
+        "へ",
+        "に",
+        "X",
+        "も"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Đi sau từ nghi vấn hỏi giờ 「何時」(mấy giờ) để biểu thị thời điểm thực hiện hành động di chuyển (きます) cần trợ từ 「に」: 「何時に 大学へ きますか」(Buổi sáng bạn đến trường đại học lúc mấy giờ?).\n- A (へ) chỉ phương hướng đích đến (đã có 大学へ).\n- D (も) mang nghĩa cũng/nhấn mạnh.\n\nXuất hiện trong: Q17.jpg"
+    },
+    {
+      "id": 60063,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nなつやすみ、くに　へ　＿＿＿＿＿＿＿。",
+      "options": [
+        "たべますか",
+        "かえりますか",
+        "いきますか",
+        "よみますか"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Trong tiếng Nhật, khi nói về hành động trở về quê hương hoặc đất nước của mình (くに - 国), động từ chuẩn xác bắt buộc dùng là 「かえります」(về): 「くにへ かえりますか」(Kỳ nghỉ hè bạn có về nước không?).\n- C (いきます) chỉ dùng khi đi tới một nơi khác không phải nơi mình thuộc về.\n- A (ăn) và D (đọc) không đi với trợ từ へ chỉ điểm đến.\n\nXuất hiện trong: Q18.jpg"
+    },
+    {
+      "id": 60064,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\n私は、まいあさ（＿＿＿＿）6時　（＿＿＿＿）おきます。",
+      "options": [
+        "に / X",
+        "X / に",
+        "も / に",
+        "に / に"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B.\n- 「まいあさ」(mỗi sáng) là từ chỉ thời gian có tính lặp lại chu kỳ không chứa con số cụ thể, do đó không thêm trợ từ に (đánh dấu X).\n- 「6時」(6 giờ) là mốc thời gian có con số cụ thể, bắt buộc đi với trợ từ thời điểm 「に」: 「まいあさ 6時に おきます」(Mỗi sáng tôi thức dậy lúc 6 giờ).\n\nXuất hiện trong: Q21.jpg"
+    },
+    {
+      "id": 60065,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nパーティーで、＿＿＿＿＿＿をのみます。",
+      "options": [
+        "おさけ",
+        "カレー",
+        "チーズ",
+        "おすし"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Động từ là 「のみます」(uống). Trong các danh từ được cho, chỉ có 「おさけ」(rượu) là đồ uống: 「おさけをのみます」(uống rượu).\n- B (カレー): Cà ri (đồ ăn - たべます).\n- C (チーズ): Phô mai (đồ ăn - たべます).\n- D (おすし): Sushi (đồ ăn - たべます).\n\nXuất hiện trong: Q23.jpg"
+    },
+    {
+      "id": 60066,
+      "quizId": 702,
+      "text": "Hãy tìm nghĩa tiếng Việt tương ứng cho từ sau:\n“アルバイト”",
+      "options": [
+        "Lễ hội",
+        "Việc làm thêm",
+        "Tiệc nướng ngoài trời",
+        "Giờ học"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Từ mượn Katakana 「アルバイト」(viết tắt thông dụng là バイト) có nguồn gốc từ tiếng Đức \"Arbeit\", trong tiếng Nhật có nghĩa là công việc làm thêm / bán thời gian của học sinh, sinh viên.\n- A (Lễ hội): おまつり.\n- C (Tiệc nướng ngoài trời): バーベキュー.\n- D (Giờ học): じゅぎょう.\n\nXuất hiện trong: Q24.jpg"
+    },
+    {
+      "id": 60067,
+      "quizId": 702,
+      "text": "Hãy tìm nghĩa tiếng Việt tương ứng cho từ sau:\n“とんかつ”",
+      "options": [
+        "Thịt lợn băm viên",
+        "Thịt lợn chiên xù",
+        "Súp gà",
+        "Nước hoa quả"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. 「とんかつ」(Tonkatsu) là món thịt cốt lết lợn tẩm bột chiên xù truyền thống rất phổ biến của Nhật Bản.\n- とん (豚): Lợn/heo.\n- かつ: Viết tắt của cutlet (thịt cốt lết tẩm bột chiên xù).\n\nXuất hiện trong: Q27.jpg"
+    },
+    {
+      "id": 60068,
+      "quizId": 702,
+      "text": "Hãy tìm nghĩa tiếng Việt tương ứng cho từ sau:\n“スケジュール”",
+      "options": [
+        "Tiệc nướng ngoài trời",
+        "Kế hoạch",
+        "Ở cùng người bản địa",
+        "Cơm hộp"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Từ Katakana 「スケジュール」bắt nguồn từ từ tiếng Anh \"schedule\", có nghĩa là lịch trình / kế hoạch làm việc.\n- A (Tiệc nướng ngoài trời): バーベキュー.\n- C (Ở cùng người bản địa): ホームステイ.\n- D (Cơm hộp): おべんとう.\n\nXuất hiện trong: Q29.jpg"
+    },
+    {
+      "id": 60069,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\n日曜日、うち　（＿＿＿＿）おんがくを（＿＿＿＿）。",
+      "options": [
+        "で／はたらきます",
+        "で／ききます",
+        "に／かいます",
+        "に／よみます"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trợ từ で chỉ địa điểm diễn ra hành động (うちで: ở nhà). Đi với おんがく (âm nhạc) là động từ ききます (nghe nhạc: おんがくを ききます). Do đó đáp án đúng là で／ききます.\n\nXuất hiện trong: Q9.jpg"
+    },
+    {
+      "id": 60070,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nあきやすみ、アルバイトを　＿＿＿＿＿＿＿＿。",
+      "options": [
+        "たべますか",
+        "しますか",
+        "みますか",
+        "よみますか"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cụm từ cố định trong tiếng Nhật: アルバイトを します (làm thêm). Do đó câu hỏi là アルバイトを しますか (Bạn có làm thêm không?). Các động từ khác: たべます (ăn), みます (xem/nhìn), よみます (đọc) không kết hợp với アルバイト.\n\nXuất hiện trong: Q10.jpg"
+    },
+    {
+      "id": 60071,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nこれは　オーストラリア（＿＿＿＿）りんごです。",
+      "options": [
+        "が",
+        "の",
+        "も",
+        "で"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trợ từ の dùng để nối hai danh từ biểu thị xuất xứ/nguồn gốc: N1 (nơi xuất xứ) + の + N2 (sản phẩm) \\(\\rightarrow\\) オーストラリアの りんご (Táo của/xuất xứ từ Australia).\n\nXuất hiện trong: Q11.jpg"
+    },
+    {
+      "id": 60072,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nしゅみ（＿＿＿＿）スポーツ（＿＿＿＿）りょこうです。",
+      "options": [
+        "と／は",
+        "も／も",
+        "は／と",
+        "と／も"
+      ],
+      "correctIndex": 2,
+      "explanation": "しゅみは (Sở thích của tôi là...) dùng trợ từ は đánh dấu chủ ngữ/chủ đề. スポーツと りょこう (thể thao và du lịch) dùng trợ từ と để liệt kê hai danh từ. Do đó đáp án là は／と.\n\nXuất hiện trong: Q18.jpg"
+    },
+    {
+      "id": 60073,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nまいにち、何時（＿＿＿＿）何時（＿＿＿＿）べんきょうしますか。",
+      "options": [
+        "まで／から",
+        "から／まで",
+        "に／まで",
+        "から／に"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cấu trúc chỉ khoảng thời gian từ điểm bắt đầu đến điểm kết thúc: ～から ～まで (từ... đến...). Cụm 何時から 何時まで có nghĩa là \\\"từ mấy giờ đến mấy giờ\\\".\n\nXuất hiện trong: Q21.jpg"
+    },
+    {
+      "id": 60074,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nふゆやすみ、りょこうを　＿＿＿＿＿＿＿＿。",
+      "options": [
+        "ききますか",
+        "しますか",
+        "みますか",
+        "よみますか"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cụm động từ: りょこうを します (đi du lịch). Do đó câu hỏi là ふゆやすみ、りょこうを しますか (Kỳ nghỉ đông bạn có đi du lịch không?). Các động từ khác (nghe, xem, đọc) không kết hợp với りょこう.\n\nXuất hiện trong: Q22.jpg"
+    },
+    {
+      "id": 60075,
+      "quizId": 702,
+      "text": "Hãy chọn từ khác loại trong các từ sau:\n① スーパー\n② カメラ\n③ 100円ショップ\n④ レストラン",
+      "options": [
+        "スーパー",
+        "カメラ",
+        "100円ショップ",
+        "レストラン"
+      ],
+      "correctIndex": 1,
+      "explanation": "① スーパー (siêu thị), ③ 100円ショップ (cửa hàng 100 yên), ④ レストラン (nhà hàng) đều là các địa điểm/cửa hàng buôn bán dịch vụ. Còn ② カメラ (máy ảnh) là đồ vật. Do đó カメラ khác loại.\n\nXuất hiện trong: Q23.jpg"
+    },
+    {
+      "id": 60076,
+      "quizId": 702,
+      "text": "Hãy chọn từ khác loại trong các từ sau:\n① トイレットペーパー\n② レストラン\n③ ペン\n④ けしゴム",
+      "options": [
+        "トイレットペーパー",
+        "レストラン",
+        "ペン",
+        "けしゴム"
+      ],
+      "correctIndex": 1,
+      "explanation": "① トイレットペーパー (giấy vệ sinh), ③ ペン (bút), ④ けしゴム (cục tẩy) đều là đồ dùng/vật dụng thường ngày. Còn ② レストラン (nhà hàng) là địa điểm ăn uống. Do đó レストラン khác loại.\n\nXuất hiện trong: Q24.jpg"
+    },
+    {
+      "id": 60077,
+      "quizId": 702,
+      "text": "Từ nào có ý nghĩa KHÔNG CÙNG NHÓM với các từ còn lại.\n① ぎゅうにゅう\n② ごはん\n③ たまご\n④ ぶたにく",
+      "options": [
+        "ぎゅうにゅう",
+        "ごはん",
+        "たまご",
+        "ぶたにく"
+      ],
+      "correctIndex": 0,
+      "explanation": "① ぎゅうにゅう (sữa bò) là đồ uống (のみもの), trong khi ② ごはん (cơm), ③ たまご (trứng), ④ ぶたにく (thịt lợn) đều là đồ ăn (たべもの). Do đó ぎゅうにゅう khác nhóm.\n\nXuất hiện trong: Q25.jpg"
+    },
+    {
+      "id": 60078,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\n＿＿＿＿で　くだものを　かいます。",
+      "options": [
+        "スーパー",
+        "じゅぎょう",
+        "やすみ",
+        "テスト"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đi với trợ từ で chỉ nơi chốn mua hoa quả (くだものを かいます) phải là một địa điểm mua sắm: スーパー (siêu thị). B (じゅぎょう: tiết học), C (やすみ: ngày nghỉ), D (テスト: bài kiểm tra) không phải địa điểm mua hàng.\n\nXuất hiện trong: Q26.jpg"
+    },
+    {
+      "id": 60079,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nこれは（＿＿＿＿）です。",
+      "options": [
+        "さいふ",
+        "スーパー",
+        "びょういん",
+        "トイレ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đại từ chỉ vật これ (cái này) chỉ dùng cho đồ vật. Trong các phương án, chỉ có A (さいふ: ví tiền) là đồ vật. B (siêu thị), C (bệnh viện), D (nhà vệ sinh) là địa điểm nơi chốn, phải dùng ここ (ở đây).\n\nXuất hiện trong: Q27.jpg"
+    },
+    {
+      "id": 60080,
+      "quizId": 702,
+      "text": "Từ nào có ý nghĩa KHÔNG CÙNG NHÓM với các từ còn lại.\n① おまつり\n② としょかん\n③ こうえん\n④ びょういん",
+      "options": [
+        "おまつり",
+        "としょかん",
+        "こうえん",
+        "びょういん"
+      ],
+      "correctIndex": 0,
+      "explanation": "② としょかん (thư viện), ③ こうえん (công viên), ④ びょういん (bệnh viện) đều là các địa điểm công cộng/cơ sở vật chất cố định. Còn ① おまつり (lễ hội) là một sự kiện (event). Do đó おまつり khác nhóm.\n\nXuất hiện trong: Q28.jpg"
+    },
+    {
+      "id": 60081,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nてんいん「（＿＿＿＿）。」\nアリさん「すみません。でんしじしょは　どこですか。」",
+      "options": [
+        "あのう、すみません",
+        "いらっしゃいませ",
+        "どちらですか",
+        "だれですか"
+      ],
+      "correctIndex": 1,
+      "explanation": "Khi khách bước vào cửa hàng, nhân viên bán hàng (てんいん) luôn chào đón bằng câu cửa miệng: 「いらっしゃいませ」 (Xin kính chào quý khách).\n\nXuất hiện trong: Q15.webp"
+    },
+    {
+      "id": 60082,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nとしょかんは（＿＿＿＿）から（＿＿＿＿）までですか。",
+      "options": [
+        "なん／なん",
+        "なん曜／なん曜",
+        "なん曜日／なん曜日",
+        "日／日"
+      ],
+      "correctIndex": 2,
+      "explanation": "Từ để hỏi về các ngày trong tuần (thứ mấy) là なんようび (何曜日). Cụm câu hỏi đầy đủ: なん曜日から なん曜日までですか (Thư viện mở cửa từ thứ mấy đến thứ mấy?).\n\nXuất hiện trong: Q18.webp"
+    },
+    {
+      "id": 60083,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\n（＿＿＿＿）に　かいしゃへ　いきますか。",
+      "options": [
+        "どこ",
+        "なんじ",
+        "いつ",
+        "だれ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đi sau bởi trợ từ に chỉ thời điểm xác định phải là từ chỉ giờ giấc cụ thể: なんじに (vào mấy giờ). Từ いつ (khi nào) không dùng trợ từ に phía sau.\n\nXuất hiện trong: Q19.webp"
+    },
+    {
+      "id": 60084,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\n日曜日、（＿＿＿＿）も　いきません。",
+      "options": [
+        "だれ",
+        "なに",
+        "どこ",
+        "いつ"
+      ],
+      "correctIndex": 2,
+      "explanation": "Cấu trúc phủ định hoàn toàn địa điểm với động từ chuyển động いきません: どこ[へ]も いきません (Không đi đâu cả).\n\nXuất hiện trong: Q21.webp"
+    },
+    {
+      "id": 60085,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nなつやすみ、くにへ　（＿＿＿＿）か。",
+      "options": [
+        "かえります",
+        "いきます",
+        "べんきょうします",
+        "します"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cụm từ chỉ hành động trở về đất nước của mình là くにへ かえります (về nước). Do đó câu hỏi là くにへ かえりますか.\n\nXuất hiện trong: Q22.webp"
+    },
+    {
+      "id": 60086,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nここは（＿＿＿＿）です。",
+      "options": [
+        "でんしじしょ",
+        "かいしゃいん",
+        "きっさてん",
+        "あき"
+      ],
+      "correctIndex": 2,
+      "explanation": "ここは (Ở đây là...) dùng đại từ chỉ nơi chốn, vị ngữ phải là một danh từ chỉ địa điểm: きっさてん (quán cà phê/quán giải khát). A (từ điển điện tử - đồ vật), B (nhân viên công ty - người), D (mùa thu - thời gian).\n\nXuất hiện trong: Q23.webp"
+    },
+    {
+      "id": 60087,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nとんかつは（＿＿＿＿）の　りょうりです。",
+      "options": [
+        "とりにく",
+        "さかな",
+        "ぶたにく",
+        "やさい"
+      ],
+      "correctIndex": 2,
+      "explanation": "Món とんかつ (tonkatsu - thịt cốt lết tẩm bột chiên xù) làm từ thịt heo (chữ とん/豚 là thịt heo = ぶたにく). A (thịt gà), B (cá), D (rau).\n\nXuất hiện trong: Q24.webp"
+    },
+    {
+      "id": 60088,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nこれは（＿＿＿＿）の　かばんです。",
+      "options": [
+        "りょうり",
+        "がくせい",
+        "すいえい",
+        "おんがく"
+      ],
+      "correctIndex": 1,
+      "explanation": "Từ thích hợp chỉ người sở hữu chiếc cặp (かばん) là がくせい (học sinh/sinh viên): がくせいの かばん (cặp của học sinh). Các từ khác: nấu ăn, bơi lội, âm nhạc không hợp nghĩa sở hữu.\n\nXuất hiện trong: Q25.webp"
+    },
+    {
+      "id": 60089,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nそれは（＿＿＿＿）の　ワインです。",
+      "options": [
+        "ライス",
+        "コーヒー",
+        "フランス",
+        "レジ"
+      ],
+      "correctIndex": 2,
+      "explanation": "フランスの ワイン (rượu vang Pháp) mang ý nghĩa chỉ xuất xứ, nguồn gốc quốc gia của chai rượu. Các từ khác: cơm, cà phê, quầy thu ngân không phù hợp.\n\nXuất hiện trong: Q26.webp"
+    },
+    {
+      "id": 60090,
+      "quizId": 702,
+      "text": "Chọn từ thích hợp điền vào chỗ trống ＿＿＿＿①＿＿＿＿",
+      "options": [
+        "そうですか",
+        "こちらこそ",
+        "いらっしゃいませ",
+        "あのう"
+      ],
+      "correctIndex": 1,
+      "explanation": "Khi người đối diện nói よろしくお願いします, Marco đáp lại bằng cấu trúc lịch sự 「こちらこそ、よろしくお願いします」 (Chính tôi mới mong được anh giúp đỡ).\n\nXuất hiện trong: Q28.webp"
+    },
+    {
+      "id": 60091,
+      "quizId": 702,
+      "text": "Chọn từ thích hợp điền vào chỗ trống ＿＿＿＿②＿＿＿＿",
+      "options": [
+        "へえ",
+        "すみません",
+        "どうぞ",
+        "いくらですか"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trước khi hỏi thông tin của người khác (おなまえは？ - tên bạn là gì?), Nishikawa dùng từ lịch sự để thu hút sự chú ý: 「すみません、おなまえは？」 (Xin lỗi, tên bạn là gì?).\n\nXuất hiện trong: Q29.webp"
+    },
+    {
+      "id": 60092,
+      "quizId": 702,
+      "text": "マルコさんの　おしごとは　何ですか。",
+      "options": [
+        "さくら日本語学校のきょうし",
+        "さくら日本語学校の学生",
+        "さくら日本語大(だい)学のきょうし",
+        "さくら日本語大(だい)学の学生"
+      ],
+      "correctIndex": 1,
+      "explanation": "Căn cứ vào câu thoại trong đoạn văn: マルコ:「さくら日本語学校の学生です。」, nghề nghiệp của Marco là học sinh trường tiếng Nhật Sakura (さくら日本語学校の学生). Còn Nishikawa mới là giáo viên (きょうし).\n\nXuất hiện trong: Q30.webp"
+    },
+    {
+      "id": 60093,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nアリさん「すみません、ちゅうもんを　おねがいします。」\nてんいん「（＿＿＿＿）。」",
+      "options": [
+        "あのう、すみません",
+        "いらっしゃいませ",
+        "どうぞ",
+        "ありがとうございました"
+      ],
+      "correctIndex": 2,
+      "explanation": "Khi khách hàng gọi món: 「すみません、ちゅうもんを おねがいします」 (Xin lỗi, cho tôi gọi món), nhân viên phục vụ mời khách gọi: 「どうぞ」 (Vâng, xin mời quý khách).\n\nXuất hiện trong: Q16.webp"
+    },
+    {
+      "id": 60094,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nにちようび、（＿＿＿＿）も　しません。",
+      "options": [
+        "だれ",
+        "なに",
+        "どこ",
+        "いつ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đi với động từ phủ định しません (không làm) thì từ để hỏi phù hợp nhất là なに: なにも しません (Không làm gì cả). Đi với どこ phải là どこ[へ]も いきません.\n\nXuất hiện trong: Q17.webp"
+    },
+    {
+      "id": 60095,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nライスを（＿＿＿＿）ください。",
+      "options": [
+        "ひとつ",
+        "ひとり",
+        "いちつ",
+        "いっつ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đếm đồ vật/suất ăn số lượng 1 phần dùng từ đếm thuần Nhật: ひとつ (hitotsu). ひとり là đếm 1 người (người). C và D không tồn tại trong tiếng Nhật.\n\nXuất hiện trong: Q23.webp"
+    },
+    {
+      "id": 60096,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\n私は　まいばん、１０時に　しんぶんを（＿＿＿＿）。",
+      "options": [
+        "かいます",
+        "のみます",
+        "ねます",
+        "よみます"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đi với tân ngữ しんぶん (báo chí) là động từ よみます (đọc): しんぶんを よみます (đọc báo). A (mua), B (uống), C (ngủ).\n\nXuất hiện trong: Q24.webp"
+    },
+    {
+      "id": 60097,
+      "quizId": 702,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nなつやすみ、くにへ　（＿＿＿＿）か。",
+      "options": [
+        "かえります",
+        "いきます",
+        "べんきょうします",
+        "します"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cụm từ chỉ hành động trở về đất nước nơi mình sinh ra là くにへ かえります (về nước). Câu hỏi: なつやすみ、くにへ かえりますか (Kỳ nghỉ hè bạn có về nước không?).\n\nXuất hiện trong: Q25.webp"
+    },
+    {
+      "id": 60098,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nまいばん　11時まで（＿＿＿＿）。",
+      "options": [
+        "おきます",
+        "はたらきます",
+        "します",
+        "かいます"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đi với trạng ngữ chỉ khoảng thời gian kéo dài đến 11 giờ đêm (11時まで) là động từ diễn tả hành động liên tục: はたらきます (làm việc đến 11 giờ đêm). Động từ おきます (thức dậy) chỉ một thời điểm dứt điểm, không đi với まで trong ngữ cảnh này.\n\nXuất hiện trong: Q26.webp"
+    },
+    {
+      "id": 60099,
+      "quizId": 702,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nあしたも　7時に　学校へ（＿＿＿＿）。",
+      "options": [
+        "きます",
+        "ききます",
+        "はたらきます",
+        "おきます"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đi với địa điểm đích đến 学校へ (đến trường) là động từ chuyển động きます (đến) hoặc いきます (đi). Ở đây phương án A là きます (đến). B là nghe/hỏi, C là làm việc, D là thức dậy.\n\nXuất hiện trong: Q27.webp"
+    },
+    {
+      "id": 60100,
+      "quizId": 702,
+      "text": "Chọn từ thích hợp điền vào chỗ trống ＿＿＿＿①＿＿＿＿",
+      "options": [
+        "かいしゃいんじゃありません",
+        "かいしゃいん",
+        "学生",
+        "学生じゃありません"
+      ],
+      "correctIndex": 1,
+      "explanation": "Carlos giới thiệu: 「かいしゃいんです」 (Tôi là nhân viên công ty). Miller đáp lại: 「私もかいしゃいんです」 (Tôi cũng là nhân viên công ty) dùng trợ từ も để đồng nhất đặc điểm.\n\nXuất hiện trong: Q28.webp"
+    },
+    {
+      "id": 60101,
+      "quizId": 702,
+      "text": "Chọn từ thích hợp điền vào chỗ trống ＿＿＿＿②＿＿＿＿",
+      "options": [
+        "アメリカじんですか",
+        "おくには　どちらですか",
+        "おくには　アメリカですか",
+        "おなまえは？"
+      ],
+      "correctIndex": 1,
+      "explanation": "Miller trả lời: 「アメリカです」 (Là nước Mỹ), do đó câu hỏi của Carlos là hỏi lịch sự về đất nước/quê quán: 「おくには どちらですか」 (Đất nước của bạn ở đâu?).\n\nXuất hiện trong: Q29.webp"
+    },
+    {
+      "id": 60102,
+      "quizId": 702,
+      "text": "Chọn câu có nội dung KHÔNG ĐÚNG:",
+      "options": [
+        "カルロスさんは　イタリアじんです。",
+        "ミラーさんは　アメリカじんです。",
+        "カルロスさんと　ミラーさんの　しゅみは　サッカーです。",
+        "カルロスさんの　しゅみは　テニスと　りょこうです。"
+      ],
+      "correctIndex": 3,
+      "explanation": "Trong bài hội thoại, Carlos nói: 「私の しゅみは サッカーと りょこうです」 (Sở thích của tôi là bóng đá và du lịch), không hề có môn quần vợt (テニス). Do đó câu D là câu có nội dung không đúng.\n\nXuất hiện trong: Q30.webp"
+    },
+    {
+      "id": 60103,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: さかなは えいご（＿＿＿＿）なんですか。/ B: 「fish」です。",
+      "options": [
+        "へ",
+        "に",
+        "で",
+        "を"
+      ],
+      "correctIndex": 2,
+      "explanation": "Trợ từ 「で」 dùng để chỉ phương tiện, công cụ hoặc ngôn ngữ: 「えいごで」 = bằng tiếng Anh. Mẫu câu hỏi ý nghĩa/cách gọi trong ngôn ngữ khác: 「N1 は [ngôn ngữ] で なんですか。」\n\nXuất hiện trong: Q3_116_20251121082803.webp"
+    },
+    {
+      "id": 60104,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A「（＿＿＿＿）。おなまえは？」/ B「あ、サントスです。」",
+      "options": [
+        "はじめまして",
+        "ごめんなさい",
+        "しつれいですが",
+        "あのう、すみません"
+      ],
+      "correctIndex": 3,
+      "explanation": "Trong ngữ cảnh này, A muốn bắt chuyện nhẹ nhàng để hỏi tên người kia nên dùng 「あのう、すみません」 (Xin lỗi / Bạn ơi cho mình hỏi). Phương án A 「はじめまして」 thường đi với 「〜です。よろしくおねがいします」. C 「しつれいですが」 nếu đầy đủ thì là 「しつれいですが、おなまえは？」 nhưng đề bài để D 「あのう、すみません」 rất tự nhiên để ngập ngừng bắt chuyện.\n\nXuất hiện trong: Q4_31_20251121082805.webp"
+    },
+    {
+      "id": 60105,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: Bさん、ごご、どこへ いきますか。/ B: としょかんへ いきます。としょかんで えいごを ＿＿＿＿＿＿＿＿。",
+      "options": [
+        "はたらきます",
+        "べんきょうします",
+        "ねます",
+        "かいます"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ở thư viện (としょかん) thì thực hiện hành động \"học tiếng Anh\" 「えいごを べんきょうします」. A (làm việc), C (ngủ), D (mua sắm) không phù hợp với tân ngữ 「えいごを」 và địa điểm thư viện.\n\nXuất hiện trong: Q6_146_20251121082809.webp"
+    },
+    {
+      "id": 60106,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: 毎日(まいにち)、あさごはんを 食(た)べますか。/ B: いいえ、私は あさ、なに( )食(た)べません。",
+      "options": [
+        "を",
+        "も",
+        "へ",
+        "で"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cấu trúc phủ định hoàn toàn: 「Từ để hỏi + も + Động từ phủ định」. Trong đó 「なにも 食べません」 có nghĩa là \"hoàn toàn không ăn gì cả\".\n\nXuất hiện trong: Q8_61_20251121082812.webp"
+    },
+    {
+      "id": 60107,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: これは（ ）のスープですか。/ B: さかなとやさいのスープです。",
+      "options": [
+        "どこ",
+        "いつ",
+        "だれ",
+        "なん"
+      ],
+      "correctIndex": 3,
+      "explanation": "Câu trả lời nêu loại nguyên liệu/thành phần của món súp: 「さかなとやさいのスープです」 (súp cá và rau). Do đó câu hỏi về thể loại/nội dung phải dùng 「なんの スープですか」 (Súp gì vậy?). A (ở đâu), B (khi nào), C (ai) đều không phù hợp.\n\nXuất hiện trong: Q11_36_20251121082816.webp"
+    },
+    {
+      "id": 60108,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: これは（ ）。/ B: あ、それは わたしの カメラです。",
+      "options": [
+        "だれの カメラですか",
+        "わたしの カメラですか",
+        "どこの カメラですか",
+        "なんの カメラですか"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu trả lời xác nhận quyền sở hữu: 「あ、それは わたしの カメラです」 (A, đó là máy ảnh của tôi). Vậy câu hỏi phải hỏi về quyền sở hữu: 「だれの カメラですか」 (Máy ảnh của ai vậy?).\n\nXuất hiện trong: Q15_21_20251121082822.webp"
+    },
+    {
+      "id": 60109,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: キムさんは かいしゃいんですか。/ キム: いいえ、（＿＿＿＿＿）。",
+      "options": [
+        "しゃいんではありません",
+        "そうです",
+        "かいしゃいんじゃありません",
+        "かいしゃいんです"
+      ],
+      "correctIndex": 2,
+      "explanation": "Trả lời phủ định cho câu hỏi 「かいしゃいんですか」 là 「いいえ、かいしゃいんじゃありません」 (hoặc かいしゃいんではありません). Khi đứng độc lập không có tên công ty thì dùng かいしゃいん, do đó C là chính xác nhất.\n\nXuất hiện trong: Q17_101_20251121082825.webp"
+    },
+    {
+      "id": 60110,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: サントスさん、おくには どちらですか。/ B: （ ）です。",
+      "options": [
+        "オーストラリア",
+        "りょこう",
+        "かいしゃいん",
+        "にじゅうごさい"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu hỏi 「お国（くに）は どちらですか」 là mẫu câu lịch sự hỏi về quốc gia/quê hương của người đối thoại. Câu trả lời phải là tên quốc gia: 「オーストラリアです」 (Là nước Úc).\n\nXuất hiện trong: Q18_56_20251121082827.webp"
+    },
+    {
+      "id": 60111,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A「にほんへ いきます。」/ B「へえ。( )。」",
+      "options": [
+        "えっ",
+        "そうですか",
+        "いいです",
+        "そうです"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cụm 「へえ、そうですか。」 biểu thị sự ngạc nhiên và tiếp nhận thông tin mới từ người nói (\"Ồ, vậy hả / thế à\").\n\nXuất hiện trong: Q19_26_20251121082828.webp"
+    },
+    {
+      "id": 60112,
+      "quizId": 703,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau: A: すみません、これは なんの スープですか。/ てんいん: (＿＿＿)の スープです。",
+      "options": [
+        "はなび",
+        "かばん",
+        "ぶたにく",
+        "こうえん"
+      ],
+      "correctIndex": 2,
+      "explanation": "Nguyên liệu nấu món súp là thực phẩm: 「ぶたにく」 (thịt heo/lợn) -> 「ぶたにくの スープ」 (súp thịt heo). Các từ khác: はなび (pháo hoa), かばん (cặp), こうえん (công viên).\n\nXuất hiện trong: Q20_131_20251121082830.webp"
+    },
+    {
+      "id": 60113,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: ふゆやすみ、りょこうを しますか。/ B: いいえ、( )。",
+      "options": [
+        "りょこうではありません",
+        "りょこうじゃありません",
+        "りょこうをします",
+        "りょこうをしません"
+      ],
+      "correctIndex": 3,
+      "explanation": "Câu hỏi dùng động từ 「りょこうを しますか」 (Bạn có đi du lịch không?). Trả lời phủ định 「いいえ」 đi với dạng phủ định của động từ 「〜ません」: 「いいえ、りょこうを しません」 (Không, tôi không đi du lịch).\n\nXuất hiện trong: Q21_16_20251121082831.webp"
+    },
+    {
+      "id": 60114,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: これは いくらですか。/ B: ( )は 千円です。",
+      "options": [
+        "それ",
+        "あれ",
+        "そこ",
+        "あそこ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi người hỏi A dùng 「これ」 (vật ở gần người hỏi, xa người nghe), người trả lời B đứng ở vị trí đối diện sẽ dùng 「それ」 để chỉ vật đó (vật ở gần người nghe, xa mình): 「それは 千円です。」\n\nXuất hiện trong: Q24_11_20251121082834.webp"
+    },
+    {
+      "id": 60115,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: Namさんは ベトナムじんですか。/ Nam: (＿＿＿＿)、ベトナムじんです。",
+      "options": [
+        "あのう",
+        "はい",
+        "あっ",
+        "いいえ"
+      ],
+      "correctIndex": 1,
+      "explanation": "A hỏi Nam có phải người Việt Nam không: 「Namさんは ベトナムじんですか。」 Nam trả lời khẳng định lại đúng là người Việt Nam: 「はい、ベトナムじんです。」 (Vâng, tôi là người Việt Nam).\n\nXuất hiện trong: Q27_111_20251121082838.webp"
+    },
+    {
+      "id": 60116,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống: A: レストラン(＿＿＿＿)どこです(＿＿＿＿)。",
+      "options": [
+        "Ｘ／Ｘ",
+        "か／は",
+        "も／か",
+        "は／か"
+      ],
+      "correctIndex": 3,
+      "explanation": "Mẫu câu hỏi nơi chốn/địa điểm bài 3 Minna no Nihongo: 「[Địa điểm] は どこですか。」 (Nhà hàng ở đâu vậy?). Chỗ trống 1 điền trợ từ chủ đề 「は」, chỗ trống 2 điền trợ từ nghi vấn kết thúc câu 「か」.\n\nXuất hiện trong: Q29_86_20251121082843.webp"
+    },
+    {
+      "id": 60117,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA: すみません、インフォメーションは（　　）ですか。\nB: あちらです。",
+      "options": [
+        "だれ",
+        "なに",
+        "どこ",
+        "いつ"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đáp án đúng là C. Trong câu đối thoại, người B trả lời là 「あちらです」(Ở đằng kia kìa - chỉ phương hướng/địa điểm). Do đó câu hỏi phải hỏi về nơi chốn, sử dụng từ để hỏi là 「どこ」(ở đâu) hoặc lịch sự hơn là 「どちら」.\n- A (だれ): Ai (hỏi người).\n- B (なに): Cái gì (hỏi đồ vật/sự việc).\n- D (いつ): Khi nào (hỏi thời gian).\nNgữ pháp: N + は + どこ/どちら + ですか (N ở đâu?).\n\nXuất hiện trong: 1.webp"
+    },
+    {
+      "id": 60118,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA「（　　）。おなまえは？」\nB「あ、サントスです。」",
+      "options": [
+        "そうですか",
+        "こちらこそ",
+        "おねがいします",
+        "あのう、すみません"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp án đúng là D. 「あのう、すみません」được dùng khi muốn bắt chuyện, làm phiền người khác một cách lịch sự trước khi đặt câu hỏi: \"Xin lỗi, cho tôi hỏi... Tên bạn là gì ạ?\".\n- A (そうですか): Thế à / Ra là vậy (thể hiện tiếp nhận thông tin).\n- B (こちらこそ): Chính tôi mới phải (đáp lại lời chào, cảm ơn).\n- C (おねがいします): Xin vui lòng / nhờ anh giúp đỡ.\nMẫu câu giao tiếp Minna no Nihongo Bài 1: あのう、すみません。お名前は？\n\nXuất hiện trong: 2.webp"
+    },
+    {
+      "id": 60119,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA「けいたいでんわは　どこですか。」\nB「けいたいでんわは　あちらです。」\nA「（　　）、ありがとうございます。」",
+      "options": [
+        "じゃ",
+        "そうです",
+        "そうですよ",
+        "あ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp án đúng là D. Thán từ 「あ」dùng để biểu thị sự nhận ra thông tin sau khi được người khác chỉ dẫn: 「あ、ありがとうございます」(À, xin cảm ơn anh/chị).\n- A (じゃ): Vậy thì (dùng để chuyển ý hoặc chia tay).\n- B (そうです): Đúng vậy (xác nhận khẳng định).\n- C (そうですよ): Đúng vậy đấy (nhấn mạnh cung cấp thông tin).\n\nXuất hiện trong: 5.webp"
+    },
+    {
+      "id": 60120,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA:これは（　　）の　ペンですか。\nB:せんせいの です。",
+      "options": [
+        "どちら",
+        "どこ",
+        "なに",
+        "だれ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp án đúng là D. Câu trả lời của B là 「せんせいの です」(Của giáo viên), chỉ quyền sở hữu thuộc về người. Do đó câu hỏi sở hữu người phải dùng từ nghi vấn 「だれ」(ai): 「だれのペンですか」(Cây bút của ai vậy?).\n- A (どちら): Đằng nào, phía nào, cái nào (trong 2 cái).\n- B (どこ): Ở đâu.\n- C (なに): Cái gì (nếu là なにのペン thì hỏi về bút gì/loại bút gì, câu trả lời không phải là người sở hữu せんせい).\n\nXuất hiện trong: 7.webp"
+    },
+    {
+      "id": 60121,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: このりょうりは 何ですか。\nB: （　　）です。",
+      "options": [
+        "ぶたにく りょうり",
+        "ぶたにくの りょうり",
+        "ぶたにくで りょうり",
+        "ぶたにくから りょうり"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Trong tiếng Nhật, hai danh từ nối với nhau bởi trợ từ 「の」: 「ぶたにくの りょうり」(món ăn làm từ thịt lợn / món thịt lợn).\n- A thiếu trợ từ nối の.\n- C và D dùng trợ từ で và から sai cấu trúc cụm danh từ làm vị ngữ.\n\nXuất hiện trong: 15.webp"
+    },
+    {
+      "id": 60122,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA: 百円ショップは なんかいですか。\nB: （　　）です。",
+      "options": [
+        "さんさい",
+        "さんかい",
+        "さんにん",
+        "みっつ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Câu hỏi dùng từ để hỏi số tầng: 「なんかいですか」(Tầng mấy ạ?). Do đó câu trả lời phải dùng đơn vị đếm tầng 「〜かい」(hoặc 〜がい): 「さんかいです」(Tầng 3 ạ).\n- A (さんさい): 3 tuổi (đếm tuổi).\n- C (さんにん): 3 người (đếm người).\n- D (みっつ): 3 cái (đếm đồ vật nói chung).\n\nXuất hiện trong: 18.webp"
+    },
+    {
+      "id": 60123,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA: おしごと（　　）？\nB: きょうしです。",
+      "options": [
+        "の",
+        "も",
+        "で",
+        "は"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp án đúng là D. Trong hội thoại rút gọn, mẫu câu 「Danh từ + は？」dùng để hỏi về đối tượng đã rõ ngữ cảnh: 「おしごとは？」= 「おしごとは何ですか？」(Công việc của bạn là gì?). Người B trả lời: 「きょうしです」(Tôi là giáo viên).\n- Các trợ từ A (の), B (も), C (で) không phù hợp về mặt ngữ nghĩa và cấu trúc câu hỏi tỉnh lược.\n\nXuất hiện trong: 20.webp"
+    },
+    {
+      "id": 60124,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA: Tシャツは（　　）ですか。\nB: 700円です。",
+      "options": [
+        "どこ",
+        "なん",
+        "だれ",
+        "いくら"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp án đúng là D. Câu trả lời là 「700円です」(700 Yên - giá tiền). Từ để hỏi giá tiền trong tiếng Nhật là 「いくら」(Bao nhiêu tiền): 「Tシャツはいくらですか」(Áo phông giá bao nhiêu tiền?).\n- A (どこ): Ở đâu.\n- B (なん): Cái gì.\n- C (だれ): Ai.\n\nXuất hiện trong: 21.webp"
+    },
+    {
+      "id": 60125,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: ふゆやすみ、りょこうを　しますか。\nB: いいえ、（　　）。",
+      "options": [
+        "りょこうをします",
+        "りょこうをしません",
+        "りょこうではありません",
+        "りょこうじゃありません"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Câu hỏi dùng động từ 「しますか」(có làm ... không?). Khi trả lời phủ định bắt đầu bằng 「いいえ」(Không), ta chia động từ về thể phủ định thời hiện tại/tương lai lịch sự 「〜しません」: 「いいえ、りょこうをしません」(Không, tôi không đi du lịch).\n- A khẳng định (trái ngược với いいえ).\n- C và D phủ định dạng danh từ (じゃありません), không phải phủ định dạng động từ (します).\n\nXuất hiện trong: 22.webp"
+    },
+    {
+      "id": 60126,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: エレベーターは あそこですか。\nB: （　　）、あちらです。",
+      "options": [
+        "そうですね",
+        "はい",
+        "そうですか",
+        "いいえ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp án đúng là D. A hỏi \"Thang máy ở đằng kia (あそこ) phải không?\". B đính chính lại hướng: \"Không (いいえ), ở đằng kia (あちら) cơ\". Do phủ định vị trí A phán đoán nên B phải dùng 「いいえ」.\n- A (そうですね): Đồng tình (\"Đúng thế nhỉ\").\n- B (はい): Đồng ý (\"Vâng, đúng vậy\" - nếu はい thì vế sau không chỉnh lại vị trí).\n- C (そうですか): Tiếp nhận thông tin (\"Thế à\").\n\nXuất hiện trong: 25.webp"
+    },
+    {
+      "id": 60127,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA「日曜日 こうえんで バーベキューを します。」\nB「（　　）。」",
+      "options": [
+        "いいですね",
+        "おねがいします",
+        "ありがとうございます",
+        "じゃ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Khi đối phương đưa ra lời đề nghị hoặc chia sẻ một kế hoạch thú vị (Chủ nhật nướng BBQ ở công viên), người nghe hưởng ứng bằng 「いいですね」(Hay quá nhỉ / Tuyệt quá!).\n- B (おねがいします): Xin làm ơn.\n- C (ありがとうございます): Cảm ơn.\n- D (じゃ): Vậy thì.\n\nXuất hiện trong: 26.webp"
+    },
+    {
+      "id": 60128,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: これは（＿＿＿＿＿）の こうちゃですか。\nてんいん: ベトナムの こうちゃです。",
+      "options": [
+        "なん",
+        "どこ",
+        "いつ",
+        "だれ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Câu trả lời là 「ベトナムの こうちゃです」(Trà đen của Việt Nam / sản xuất tại Việt Nam - xuất xứ quốc gia). Mẫu câu hỏi nơi sản xuất / xuất xứ đồ vật là: 「どこの + N + ですか」(N của nước nào / hãng nào?).\n- A (なん): Hỏi loại trà gì.\n- C (いつ): Khi nào.\n- D (だれ): Của ai sở hữu.\n\nXuất hiện trong: Q10.jpg"
+    },
+    {
+      "id": 60129,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: あのう、すみません。＿＿＿＿＿？\nB: ワンです。よろしく　おねがいします。",
+      "options": [
+        "なんさい",
+        "おくは　どちらですか",
+        "おなまえは",
+        "おしごとは"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đáp án đúng là C. Người B trả lời tên mình: 「ワンです」(Tôi là Wang). Do đó A phải hỏi tên: 「おなまえは？」(Tên bạn là gì?).\n- A (なんさい): Hỏi tuổi.\n- B: Hỏi quê quán / đất nước.\n- D: Hỏi nghề nghiệp.\n\nXuất hiện trong: Q12.jpg"
+    },
+    {
+      "id": 60130,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nA: キムさんは　かいしゃいんですか。\nキム: いいえ、（＿＿＿＿＿）。",
+      "options": [
+        "かいしゃいんです",
+        "かいしゃいんじゃありません",
+        "そうです",
+        "しゃいんではありません"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Khi trả lời phủ định cho câu hỏi danh từ 「N ですか」bằng 「いいえ」, ta dùng cấu trúc 「N じゃありません」: 「いいえ、かいしゃいんじゃありません」(Không, tôi không phải nhân viên công ty).\n- A và C mang nghĩa khẳng định, mâu thuẫn với いいえ.\n- D dùng しゃいん thay vì lặp lại danh từ かいしゃいん của câu hỏi.\n\nXuất hiện trong: Q13.jpg"
+    },
+    {
+      "id": 60131,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nA: これは　だれの　カメラですか。\nB: あ、それは　（＿＿＿＿＿）の　カメラです。",
+      "options": [
+        "さいふ",
+        "たなかさん",
+        "さかな",
+        "アメリカ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Câu hỏi dùng 「だれのカメラ」(máy ảnh của ai) để hỏi người sở hữu. Người B trả lời 「たなかさんのカメラ」(máy ảnh của anh/chị Tanaka).\n- A (さいふ): Ví tiền.\n- C (さかな): Con cá.\n- D (アメリカ): Nước Mỹ (nếu hỏi xuất xứ phải dùng どこ).\n\nXuất hiện trong: Q15.jpg"
+    },
+    {
+      "id": 60132,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nてんいん: いらっしゃいませ。\nA: すみません、カメラは　いくらですか。\nてんいん: （＿＿＿＿＿）。",
+      "options": [
+        "二階(にかい)です。",
+        "2800円です。",
+        "こちらです。",
+        "あそこです。"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Khách hàng hỏi giá tiền: 「カメラはいくらですか」(Máy ảnh này bao nhiêu tiền?). Nhân viên cửa hàng báo giá: 「2800円です」(2800 Yên ạ).\n- A báo vị trí tầng (tầng 2).\n- C và D chỉ phương hướng/vị trí.\n\nXuất hiện trong: Q16.jpg"
+    },
+    {
+      "id": 60133,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: まいにち、あさごはんを　たべますか。\nB: いいえ、私は、あさ、＿＿＿＿＿＿＿＿。",
+      "options": [
+        "たべます",
+        "なにも　たべません",
+        "なにを　たべますか",
+        "なにも　たべます"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Câu trả lời phủ định hoàn toàn: Từ nghi vấn + も + Thể phủ định (〜ません): 「なにも たべません」(Tôi không ăn gì cả).\n- A và D dùng động từ khẳng định たべます là sai sau いいえ.\n- C là câu hỏi.\n\nXuất hiện trong: Q19.jpg"
+    },
+    {
+      "id": 60134,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nてんいん: いらっしゃいませ。\nA: すみません、（＿＿＿＿＿）Tシャツは　いくらですか。\nてんいん: 5000円です。",
+      "options": [
+        "この",
+        "これ",
+        "ここ",
+        "あれ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Phía sau chỗ trống là danh từ 「Tシャツ」(áo phông). Từ chỉ định bổ nghĩa trực tiếp cho danh từ là nhóm 「この／その／あの」+ N: 「この Tシャツ」(chiếc áo phông này).\n- B (これ) và D (あれ) là đại từ chỉ vật đứng độc lập, không đi kèm trực tiếp danh từ.\n- C (ここ) là đại từ chỉ nơi chốn.\n\nXuất hiện trong: Q20.jpg"
+    },
+    {
+      "id": 60135,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: レストラン（＿＿＿＿＿）どこです（＿＿＿＿＿）。",
+      "options": [
+        "X / X",
+        "は / か",
+        "か / は",
+        "も / か"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Cấu trúc câu hỏi vị trí/nơi chốn: Danh từ + は + どこですか: 「レストランは どこですか」(Nhà hàng ở đâu vậy?).\n- Vị trí 1 là trợ từ chủ đề 「は」.\n- Vị trí 2 là trợ từ nghi vấn kết thúc câu 「か」.\n\nXuất hiện trong: Q22.jpg"
+    },
+    {
+      "id": 60136,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: Bさん、ごご、どこへ　いきますか。\nB: としょかんへ　いきます。としょかんで＿＿＿＿＿＿を　べんきょうします。",
+      "options": [
+        "日本語",
+        "日本",
+        "しんぶん",
+        "かいしゃ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Động từ là 「べんきょうします」(học), tân ngữ của hành động học là một môn học/ngôn ngữ: 「日本語を べんきょうします」(học tiếng Nhật).\n- B (日本): Nước Nhật (không nói là học nước Nhật).\n- C (しんぶん): Báo (đi với よみます - đọc báo).\n- D (かいしゃ): Công ty.\n\nXuất hiện trong: Q25.jpg"
+    },
+    {
+      "id": 60137,
+      "quizId": 703,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nA: しゅみは　なんですか。\nB: （＿＿＿＿＿）です。",
+      "options": [
+        "りょうり",
+        "ぎんこう",
+        "きっさてん",
+        "かんこく"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án đúng là A. Câu hỏi về sở thích: 「しゅみは なんですか」(Sở thích của bạn là gì?). Danh từ chỉ sở thích phù hợp duy nhất là 「りょうり」(nấu ăn / món ăn).\n- B (ぎんこう): Ngân hàng.\n- C (きっさてん): Quán cà phê / giải khát.\n- D (かんこく): Hàn Quốc.\n\nXuất hiện trong: Q26.jpg"
+    },
+    {
+      "id": 60138,
+      "quizId": 703,
+      "text": "Chọn đáp án thích hợp trong A, B, C, D để điền vào ngoặc cho câu sau:\nA: りんごは（＿＿＿＿＿）で　なんですか。\nB: 「Táо」です。",
+      "options": [
+        "タイ語",
+        "フランス語",
+        "日本語",
+        "ベトナム語"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp án đúng là D. Câu trả lời là từ tiếng Việt \"Táo\". Mẫu câu hỏi cách diễn đạt trong một ngôn ngữ: 「Từ ngữ + は + Ngôn ngữ + で 何ですか」: 「りんごは ベトナム語で 何ですか」(Ringo trong tiếng Việt là gì?).\n- A: Tiếng Thái.\n- B: Tiếng Pháp.\n- C: Tiếng Nhật.\n\nXuất hiện trong: Q28.jpg"
+    },
+    {
+      "id": 60139,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: あさ、何時に　＿＿＿＿＿＿へ　きますか。\nB: 8時に　きます。",
+      "options": [
+        "はる",
+        "学校",
+        "くだもの",
+        "しんぶん"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Trước trợ từ điểm đến 「へ」và động từ di chuyển 「きます」(đến) phải là một địa điểm: 「学校へ きますか」(Buổi sáng bạn đến trường lúc mấy giờ?).\n- A (はる): Mùa xuân.\n- C (くだもの): Hoa quả / trái cây.\n- D (しんぶん): Báo.\n\nXuất hiện trong: Q30.jpg"
+    },
+    {
+      "id": 60140,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA:これは　（＿＿＿＿）の　さいふですか。\nB:あ、それは　私の　さいふです。",
+      "options": [
+        "なん",
+        "だれ",
+        "どこ",
+        "いつ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Câu trả lời là 私の さいふ (ví của tôi) nên từ để hỏi về người sở hữu phải là だれ (ai): だれの さいふ (ví của ai). なん (cái gì), どこ (ở đâu), いつ (khi nào).\n\nXuất hiện trong: Q12.jpg"
+    },
+    {
+      "id": 60141,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: はじめまして。ワンです。\nB: （＿＿＿＿）よろしく　おねがいします。",
+      "options": [
+        "すみません",
+        "あのう",
+        "はじめて",
+        "こちらこそ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Khi chào hỏi làm quen lần đầu, người thứ hai đáp lại lời chào bằng cách nói 「こちらこそ よろしく おねがいします」 (Chính tôi mới là người cần được giúp đỡ/rất vui được làm quen với bạn).\n\nXuất hiện trong: Q13.jpg"
+    },
+    {
+      "id": 60142,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: 4月10日は　おはなみです。\nB: えっ！おはなみ？（＿＿＿＿＿＿＿＿）。\nA: さくらをみます。おべんとうを　たべます。",
+      "options": [
+        "どこで　しますか",
+        "なにを　しますか",
+        "どこへ　いきますか",
+        "いつ　しますか"
+      ],
+      "correctIndex": 1,
+      "explanation": "A trả lời về các hoạt động cụ thể: ngắm hoa anh đào, ăn cơm hộp (さくらをみます。おべんとうをたべます), nên câu hỏi phù hợp nhất là なにを しますか (Sẽ làm gì vậy?).\n\nXuất hiện trong: Q14.jpg"
+    },
+    {
+      "id": 60143,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nA:さかなは　えいご（＿＿＿＿）なんですか。\nB:「fish」です。",
+      "options": [
+        "も",
+        "で",
+        "は",
+        "へ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trợ từ で đi sau danh từ ngôn ngữ chỉ phương tiện diễn đạt: えいごで (bằng tiếng Anh). Ngữ pháp Minna L7: [Từ/ngữ] は [ngôn ngữ] で なんですか.\n\nXuất hiện trong: Q15.jpg"
+    },
+    {
+      "id": 60144,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: Bさん、（＿＿＿＿）\nB: 私は　日本語の　きょうしです。",
+      "options": [
+        "おなまえは？",
+        "おくには　どちらですか。",
+        "おしごとは？",
+        "いつですか。"
+      ],
+      "correctIndex": 2,
+      "explanation": "B trả lời về nghề nghiệp của mình: 私は 日本語の きょうしです (Tôi là giáo viên tiếng Nhật), do đó A phải hỏi về nghề nghiệp: おしごとは？ (Công việc của bạn là gì?). A là hỏi tên, B là hỏi quốc gia, D là hỏi khi nào.\n\nXuất hiện trong: Q17.jpg"
+    },
+    {
+      "id": 60145,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nてんいん: いらっしゃいませ\nA: すみません、けいたいでんわは　どこですか。\nてんいん: けいたいでんわは　（＿＿＿＿）です。",
+      "options": [
+        "これ",
+        "こちら",
+        "その",
+        "それ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Nhân viên bán hàng chỉ vị trí hoặc hướng nơi để hàng cho khách một cách lịch sự bằng cách dùng đại từ chỉ phương hướng lịch sự: こちら (ở phía này). これ/それ/その là đại từ chỉ đồ vật thông thường.\n\nXuất hiện trong: Q19.jpg"
+    },
+    {
+      "id": 60146,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: しゅみは　なんですか。\nB: （＿＿＿＿）です。",
+      "options": [
+        "タイじん",
+        "サッカー",
+        "さんじゅっさい",
+        "きょうし"
+      ],
+      "correctIndex": 1,
+      "explanation": "Câu hỏi về sở thích (しゅみは なんですか). Trong các phương án, chỉ có B (サッカー - bóng đá) là môn thể thao/sở thích. A (タイじん: người Thái), C (さんじゅっさい: 30 tuổi), D (きょうし: giáo viên).\n\nXuất hiện trong: Q20.jpg"
+    },
+    {
+      "id": 60147,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: 4月10日は　おはなみです。\nB: えっ！おはなみ？なにを　しますか。\nA: さくらを＿＿①＿＿。おべんとうを　＿＿②＿＿。",
+      "options": [
+        "①みます／②たべます",
+        "①みます／②のみます",
+        "①たべます／②みます",
+        "①のみます／②たべます"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hành động đi với さくら (hoa anh đào) là ngắm hoa: みます (xem/ngắm). Hành động đi với おべんとう (cơm hộp) là ăn: たべます. Kết hợp chuẩn là ①みます／②たべます.\n\nXuất hiện trong: Q29.jpg"
+    },
+    {
+      "id": 60148,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: 4月10日は　おはなみです。\nB: えっ！おはなみ？なにを　しますか。\nA: ＿＿①＿＿をみます。＿＿②＿＿を　たべます。",
+      "options": [
+        "①さくら／②おべんとう",
+        "①おべんとう／②さくら",
+        "①カレー／②はな",
+        "①とんかつ／②はなび"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trong dịp lễ hội ngắm hoa おはなみ (ohanami), đối tượng ngắm là さくら (hoa anh đào \\(\\rightarrow\\) さくらを みます), và đồ ăn mang theo để ăn là cơm hộp (おべんとう \\(\\rightarrow\\) おべんとうを たべます). Do đó A là đáp án đúng.\n\nXuất hiện trong: Q30.jpg"
+    },
+    {
+      "id": 60149,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: エレベーターは　あそこですか。\nB: （＿＿＿＿）、あちらです。",
+      "options": [
+        "はい",
+        "いいえ",
+        "そうですね",
+        "そうですか"
+      ],
+      "correctIndex": 1,
+      "explanation": "A hỏi \\\"Thang máy ở đằng kia à?\\\". B đính chính vị trí khác (\\\"ở phía kia kìa - あちらです\\\"), do đó B phải bắt đầu bằng sự phủ định: いいえ (Không).\n\nXuất hiện trong: Q7.webp"
+    },
+    {
+      "id": 60150,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nA: （＿＿＿＿）くつは　いくらですか。\nB: 千円です。",
+      "options": [
+        "これ",
+        "これの",
+        "この",
+        "こちら"
+      ],
+      "correctIndex": 2,
+      "explanation": "Từ chỉ định đi liền trước bổ nghĩa cho danh từ くつ (đôi giày) phải là dạng liên thể: この (この＋Danh từ \\(\\rightarrow\\) このくつ: đôi giày này). これ, こちら là đại từ độc lập, không đi trực tiếp trước danh từ.\n\nXuất hiện trong: Q8.webp"
+    },
+    {
+      "id": 60151,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: このりょうりは　何ですか。\nB: （＿＿＿＿）です。",
+      "options": [
+        "ぶたにく　りょうり",
+        "ぶたくにの　りょうり",
+        "ぶたにくで　りょうり",
+        "ぶたにくから　りょうり"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cụm danh từ ghép chỉ món thịt heo là ぶたにくりょうり (豚肉料理). Phương án B viết sai chính tả (ぶたくに - bu-ta-ku-ni thay vì bu-ta-ni-ku). C và D dùng sai trợ từ.\n\nXuất hiện trong: Q9.webp"
+    },
+    {
+      "id": 60152,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: これは　いくらですか。\nB: （＿＿＿＿）は　千円です。",
+      "options": [
+        "それ",
+        "あれ",
+        "そこ",
+        "あそこ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc đối thoại cự ly: Khi người hỏi chỉ vật ở gần mình dùng これ (cái này), người trả lời nhìn về phía người hỏi sẽ xưng là それ (cái đó). Do đó đáp án là それ.\n\nXuất hiện trong: Q10.webp"
+    },
+    {
+      "id": 60153,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: ふゆやすみ、りょこうを　しますか。\nB: いいえ、（＿＿＿＿）。",
+      "options": [
+        "りょこうをします",
+        "りょこうじゃありません",
+        "りょこうをしません",
+        "りょこうではありません"
+      ],
+      "correctIndex": 2,
+      "explanation": "Câu hỏi dùng động từ kết thúc bằng しますか. Trả lời phủ định với いいえ phải chia động từ sang thể phủ định: りょこうを しません (Tôi không đi du lịch). B và D là phủ định của danh từ.\n\nXuất hiện trong: Q11.webp"
+    },
+    {
+      "id": 60154,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nA: はじめまして、パクです。よろしくおねがいします。\nB:ナタポンです。（＿＿＿＿）よろしくおねがいします。",
+      "options": [
+        "そうですか",
+        "こちらこそ",
+        "どういたしまして",
+        "ありがとう"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp lại câu chào lần đầu gặp mặt 「よろしくおねがいします」 thì người thứ hai sẽ nói 「こちらこそ よろしくおねがいします」 (Chính tôi mới là người cần được giúp đỡ).\n\nXuất hiện trong: Q12.webp"
+    },
+    {
+      "id": 60155,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA「（＿＿＿＿）。おなまえは？」\nB「あ、サントスです。」",
+      "options": [
+        "そうですか",
+        "こちらこそ",
+        "おねがいします",
+        "あのう、すみません"
+      ],
+      "correctIndex": 3,
+      "explanation": "Khi muốn bắt chuyện hoặc hỏi thăm thông tin người khác một cách lịch sự, người Nhật dùng câu đệm mở đầu: 「あのう、すみません」 (Xin lỗi/Cho tôi hỏi chút...).\n\nXuất hiện trong: Q13.webp"
+    },
+    {
+      "id": 60156,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA「けいたいでんわは　どこですか。」\nB「けいたいでんわは　あちらです。」\nA「（＿＿＿＿）、ありがとうございます。」",
+      "options": [
+        "あ",
+        "じゃ",
+        "そうですよ",
+        "そうです"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thán từ 「あ」 biểu thị người nói đã hiểu ra hoặc vừa tiếp nhận thông tin được người khác chỉ dẫn: 「あ、ありがとうございます。」 (A, tôi hiểu rồi, cảm ơn anh/chị).\n\nXuất hiện trong: Q14.webp"
+    },
+    {
+      "id": 60157,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: ただいま。\nB: （＿＿＿＿）。",
+      "options": [
+        "いってきます",
+        "いっていらっしゃい",
+        "いきます",
+        "おかえりなさい"
+      ],
+      "correctIndex": 3,
+      "explanation": "Khi một người về nhà nói 「ただいま」 (Tôi đã về rồi đây), người ở nhà sẽ đáp lại bằng 「おかえりなさい」 (Mừng bạn/anh/chị đã về).\n\nXuất hiện trong: Q16.webp"
+    },
+    {
+      "id": 60158,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA:これは（＿＿＿＿）の　ペンですか。\nB:せんせいの　です。",
+      "options": [
+        "どちら",
+        "どこ",
+        "なに",
+        "だれ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Câu trả lời của B là せんせいの です (của thầy cô giáo), do đó từ để hỏi chủ sở hữu phải là だれ (ai): だれの ペンですか (Cây bút của ai vậy?).\n\nXuất hiện trong: Q17.webp"
+    },
+    {
+      "id": 60159,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nA: すみません、インフォメーションは（＿＿＿＿）ですか。\nB: あちらです。",
+      "options": [
+        "だれ",
+        "なに",
+        "どこ",
+        "いつ"
+      ],
+      "correctIndex": 2,
+      "explanation": "B trả lời bằng phương hướng/vị trí: あちらです (ở đằng kia kìa). Do đó câu hỏi của A phải hỏi vị trí: どこですか (ở đâu vậy?).\n\nXuất hiện trong: Q20.webp"
+    },
+    {
+      "id": 60160,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: 「Trứng」は　日本語で　何ですか。\nB: （＿＿＿＿）です。",
+      "options": [
+        "とりにく",
+        "たまご",
+        "ぎゅうにく",
+        "たばこ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Từ \\\"Trứng\\\" trong tiếng Nhật là たまご (tamago). A (とりにく: thịt gà), C (ぎゅうにく: thịt bò), D (たばこ: thuốc lá).\n\nXuất hiện trong: Q27.webp"
+    },
+    {
+      "id": 60161,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nA: 百円ショップは　なんかいですか。\nB: （＿＿＿＿）です。",
+      "options": [
+        "さんさい",
+        "さんかい",
+        "さんにん",
+        "みっつ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Câu hỏi về số tầng (なんかい: tầng mấy). Trả lời tương ứng là đơn vị đếm tầng: さんかい (tầng 3). A (さんさい: 3 tuổi), C (さんにん: 3 người), D (みっつ: 3 cái).\n\nXuất hiện trong: Q7.webp"
+    },
+    {
+      "id": 60162,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nA: これは　どこの　おさけですか。\nB: （＿＿＿＿）のです。",
+      "options": [
+        "かんこく",
+        "とりにく",
+        "さかな",
+        "たまご"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu hỏi どこの おさけ (rượu xuất xứ từ đâu/nước nào) cần trả lời bằng tên nơi chốn/quốc gia: かんこく (Hàn Quốc \\(\\rightarrow\\) かんこくの です: Rượu của Hàn Quốc). Thịt gà, cá, trứng không phù hợp.\n\nXuất hiện trong: Q8.webp"
+    },
+    {
+      "id": 60163,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: あさ　なにを　たべますか。\nB: （＿＿＿＿）たべません。",
+      "options": [
+        "なにを",
+        "なに",
+        "なにも",
+        "なんも"
+      ],
+      "correctIndex": 2,
+      "explanation": "Cấu trúc phủ định hoàn toàn đối tượng hành động: Từ để hỏi なに + も + Động từ phủ định \\(\\rightarrow\\) なにも たべません (Tôi không ăn gì cả).\n\nXuất hiện trong: Q9.webp"
+    },
+    {
+      "id": 60164,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: このりょうりは　何ですか。\nB: （＿＿＿＿）です。",
+      "options": [
+        "ぶたにく　りょうり",
+        "ぶたくにの　りょうり",
+        "ぶたにくで　りょうり",
+        "ぶたにくから　りょうり"
+      ],
+      "correctIndex": 0,
+      "explanation": "Món thịt heo dùng danh từ ghép là ぶたにくりょうり (豚肉料理). Phương án B đảo nhầm thứ tự chữ kana (ぶたくに - sai chính tả). C và D dùng sai trợ từ.\n\nXuất hiện trong: Q10.webp"
+    },
+    {
+      "id": 60165,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: これは　いくらですか。\nB: （＿＿＿＿）は　千円です。",
+      "options": [
+        "それ",
+        "あれ",
+        "そこ",
+        "あそこ"
+      ],
+      "correctIndex": 0,
+      "explanation": "A ở gần vật nên hỏi bằng 「これ」 (cái này). B đứng ở vị trí đối diện trả lời bằng 「それ」 (cái đó). Do đó đáp án là それ.\n\nXuất hiện trong: Q11.webp"
+    },
+    {
+      "id": 60166,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA「（＿＿＿＿）いま　何時ですか。」\nB「10時です」",
+      "options": [
+        "すみません",
+        "はじめまして",
+        "おねがいします",
+        "どうも"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi muốn hỏi người khác thông tin (hỏi giờ, hỏi đường), dùng lời mở đầu xin lỗi/nhờ vả lịch sự: 「すみません、いま何時ですか。」 (Xin lỗi, bây giờ là mấy giờ ạ?).\n\nXuất hiện trong: Q12.webp"
+    },
+    {
+      "id": 60167,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: ただいま。\nB: （＿＿＿＿）。",
+      "options": [
+        "いってきます",
+        "いっていらっしゃい",
+        "いきます",
+        "おかえりなさい"
+      ],
+      "correctIndex": 3,
+      "explanation": "Đáp lại câu chào khi về đến nhà 「ただいま」 (Tôi đã về rồi) là 「おかえりなさい」 (Mừng bạn đã về nhà).\n\nXuất hiện trong: Q13.webp"
+    },
+    {
+      "id": 60168,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA「にほんへ　いきます。」\nB「へえ。（＿＿＿＿）。」",
+      "options": [
+        "そうです",
+        "そうですか",
+        "いいです",
+        "えっ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Khi nghe người đối thoại kể thông tin mới về dự định của họ, người nghe đáp lại để thể hiện sự quan tâm, tiếp nhận: 「へえ。そうですか。」 (Chà, thế à?).\n\nXuất hiện trong: Q14.webp"
+    },
+    {
+      "id": 60169,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA「けいたいでんわは　どこですか。」\nB「けいたいでんわは　あちらです。」\nA「（＿＿＿＿）、ありがとうございます。」",
+      "options": [
+        "あ",
+        "じゃ",
+        "そうですよ",
+        "そうです"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thán từ 「あ」 thể hiện phản xạ nhận thức khi vừa được chỉ dẫn thông tin: 「あ、ありがとうございます。」 (A, tôi biết rồi, xin cảm ơn).\n\nXuất hiện trong: Q15.webp"
+    },
+    {
+      "id": 60170,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA: これは（＿＿＿＿）の　ペンですか。\nB: せんせいの　です。",
+      "options": [
+        "どちら",
+        "どこ",
+        "なに",
+        "だれ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Vị ngữ trả lời là せんせいの です (của thầy cô), nên câu hỏi sở hữu phải là だれの ペンですか (Bút của ai?).\n\nXuất hiện trong: Q18.webp"
+    },
+    {
+      "id": 60171,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA: やすみは（＿＿＿＿）ですか。\nB: 日曜日です。",
+      "options": [
+        "なん",
+        "なんじ",
+        "いくら",
+        "いつ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Câu trả lời là 日曜日です (Chủ nhật - chỉ thời điểm), do đó từ để hỏi thời điểm là いつ: やすみは いつですか (Ngày nghỉ là khi nào?).\n\nXuất hiện trong: Q19.webp"
+    },
+    {
+      "id": 60172,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống;\nA: すみません、インフォメーションは（＿＿＿＿）ですか。\nB: あちらです。",
+      "options": [
+        "だれ",
+        "なに",
+        "どこ",
+        "いつ"
+      ],
+      "correctIndex": 2,
+      "explanation": "B trả lời bằng phương hướng vị trí あちらです (ở đằng kia kìa) nên câu hỏi của A là hỏi địa điểm vị trí: どこですか (ở đâu?).\n\nXuất hiện trong: Q20.webp"
+    },
+    {
+      "id": 60173,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống:\nA: Tシャツは（＿＿＿＿）ですか。\nB: 700円です。",
+      "options": [
+        "いくら",
+        "だれ",
+        "どこ",
+        "なん"
+      ],
+      "correctIndex": 0,
+      "explanation": "B trả lời về giá tiền là 700円 (700 yên), nên từ để hỏi giá tiền là いくら: Tシャツは いくらですか (Áo thun giá bao nhiêu?).\n\nXuất hiện trong: Q21.webp"
+    },
+    {
+      "id": 60174,
+      "quizId": 703,
+      "text": "Chọn trong A, B, C, D đáp án thích hợp để điền vào chỗ trống\nA: サントスさん、おくには　どちらですか。\nB: （＿＿＿＿）です。",
+      "options": [
+        "オーストラリア",
+        "りょこう",
+        "かいしゃいん",
+        "にじゅうごさい"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu hỏi 「おくには どちらですか」 là mẫu câu hỏi lịch sự về đất nước/quê hương của người khác. Trong các đáp án, chỉ có オーストラリア (nước Úc) là tên quốc gia.\n\nXuất hiện trong: Q22.webp"
+    },
+    {
+      "id": 60175,
+      "quizId": 704,
+      "text": "Dựa vào các từ gợi ý cho sẵn hãy chọn câu có ý nghĩa hoàn chỉnh trong các phương án A,B,C,D dưới đây: 私／学生／ふじみだいがく／です",
+      "options": [
+        "ふじみだいがくは 私の 学生です。",
+        "私は 学生の ふじみだいがくです。",
+        "学生は 私の ふじみだいがくです。",
+        "私は ふじみだいがくの 学生です。"
+      ],
+      "correctIndex": 3,
+      "explanation": "Cấu trúc câu khẳng định danh từ: 「N1 は N2 の N3 です」 (N1 là N3 của N2 / N1 là sinh viên của trường đại học Fujimi). Do đó câu đúng ngữ pháp và ngữ nghĩa là 「私は ふじみだいがくの 学生です。」 (Tôi là sinh viên trường Đại học Fujimi).\n\nXuất hiện trong: Q5_91_20251121082807.webp"
+    },
+    {
+      "id": 60176,
+      "quizId": 704,
+      "text": "Dựa vào các từ gợi ý cho sẵn hãy chọn câu có ý nghĩa hoàn chỉnh trong các phương án A,B,C,D dưới đây: じゃありません／ 私／ かいしゃいん",
+      "options": [
+        "私は かいしゃいん じゃありません。",
+        "かいしゃいんは じゃありません 私。",
+        "じゃありませんは 私の かいしゃいん。",
+        "かいしゃいんは じゃありませんの 私"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mẫu câu phủ định danh từ cơ bản bài 1 Minna no Nihongo: 「N1 は N2 じゃありません」 (Tôi không phải là nhân viên công ty). Đáp án A có trật tự từ chính xác.\n\nXuất hiện trong: Q7_81_20251121082810.webp"
+    },
+    {
+      "id": 60177,
+      "quizId": 704,
+      "text": "Dựa vào các từ gợi ý cho sẵn hãy chọn câu có ý nghĩa hoàn chỉnh trong các phương án A,B,C,D dưới đây: これ／です／タイ／りょうり",
+      "options": [
+        "タイは これ りょうりです。",
+        "これ りょうりは タイです。",
+        "りょうりは タイこれです。",
+        "これは タイの りょうりです。"
+      ],
+      "correctIndex": 3,
+      "explanation": "Mẫu câu chỉ định vật kết hợp sở hữu/xuất xứ: 「これは [đất nước] の りょうりです。」 (Đây là món ăn của Thái Lan). Phương án D sắp xếp chính xác và có trợ từ の nối hai danh từ.\n\nXuất hiện trong: Q25_96_20251121082836.webp"
+    },
+    {
+      "id": 60178,
+      "quizId": 704,
+      "text": "Dựa vào các từ gợi ý cho sẵn hãy chọn câu có ý nghĩa hoàn chỉnh trong các phương án A,B,C,D dưới đây:\nしゅみ／私／おんがく／りょうり／です",
+      "options": [
+        "しゅみの 私は おんがくと りょうり です。",
+        "私の しゅみは おんがくと りょうり です。",
+        "おんがくは 私の しゅみと りょうり です。",
+        "おんがくと しゅみは 私の りょうり です。"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Cấu trúc câu giới thiệu sở thích trong Minna no Nihongo: 「私の しゅみは N1 と N2 です」(Sở thích của tôi là âm nhạc và nấu ăn).\n- Các phương án A, C, D đảo lộn trật tự ngữ pháp làm sai nghĩa hoàn toàn.\n\nXuất hiện trong: Q9.jpg"
+    },
+    {
+      "id": 60179,
+      "quizId": 704,
+      "text": "Dựa vào các từ gợi ý cho sẵn hãy chọn câu có ý nghĩa hoàn chỉnh trong các phương án A,B,C,D dưới đây:\nぶたにく／とんかつ／りょうり／です",
+      "options": [
+        "りょうりは　とんかつ　ぶたにく　です",
+        "とんかつは　ぶたにくの　りょうりです。",
+        "ぶたにくは　とんかつの　りょうりです。",
+        "ぶたにくは　りょうりの　とんかつです。"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng là B. Cấu trúc câu miêu tả: Chủ ngữ + は + Bổ ngữ の Danh từ + です. \"Tonkatsu là món ăn làm từ thịt lợn\": 「とんかつは ぶたにくの りょうりです」。\n- C nói ngược nghĩa (Thịt lợn là món ăn của Tonkatsu).\n- A và D sai trật tự từ và trợ từ.\n\nXuất hiện trong: Q14.jpg"
+    },
+    {
+      "id": 60180,
+      "quizId": 704,
+      "text": "Dựa vào các từ gợi ý cho sẵn hãy chọn câu có ý nghĩa hoàn chỉnh trong các phương án A,B,C,D dưới đây:\nじゃありません／私／かいしゃいん",
+      "options": [
+        "かいしゃいんは　じゃありませんの　私",
+        "かいしゃいんは　じゃありません　私。",
+        "私は　かいしゃいん　じゃありません。",
+        "じゃありませんは　私の　かいしゃいん。"
+      ],
+      "correctIndex": 2,
+      "explanation": "Cấu trúc câu phủ định danh từ trong tiếng Nhật (Minna bài 1): N1 は N2 じゃありません (N1 không phải là N2). Sắp xếp đúng: 私は かいしゃいん じゃありません (Tôi không phải là nhân viên công ty).\n\nXuất hiện trong: Q16.jpg"
+    }
+  ]
+}

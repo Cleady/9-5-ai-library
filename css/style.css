@@ -1714,7 +1714,7 @@ html[data-theme="dark"] .nav-link.is-active .nav-icon {
 }
 
 .subject5-icon {
-    background-image: url(/assets/icon/mas.png), linear-gradient(135deg, #ffedd5, #fed7aa);
+    background-image: url(/assets/icon/mas_green.png), linear-gradient(135deg, #dcfce7, #bbf7d0);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1740,6 +1740,20 @@ html[data-theme="dark"] .nav-link.is-active .nav-icon {
     background-repeat: no-repeat;
     background-position: center;
     filter: hue-rotate(65deg);
+}
+
+.subject8-icon {
+    background-image: url(/assets/icon/japanese_icon.png), linear-gradient(135deg, #fce7f3, #fbcfe8);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.subject9-icon {
+    background-image: url(/assets/icon/Better_Icon/artificial-intellegence.png), linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .subject-actions {
@@ -2631,7 +2645,11 @@ html[data-theme="dark"] .subject4-icon {
     box-shadow: 0 0 16px rgba(20, 184, 166, 0.3);
 }
 
-html[data-theme="dark"] .subject5-icon,
+html[data-theme="dark"] .subject5-icon {
+    background-image: url(/assets/icon/mas_green.png), linear-gradient(135deg, rgba(20, 83, 45, 0.55), rgba(34, 197, 94, 0.25));
+    box-shadow: 0 0 16px rgba(34, 197, 94, 0.3);
+}
+
 html[data-theme="dark"] .icon-orange {
     background-image: url(/assets/icon/mas.png), linear-gradient(135deg, rgba(124, 45, 18, 0.45), rgba(234, 88, 12, 0.25));
     box-shadow: 0 0 16px rgba(234, 88, 12, 0.3);
@@ -2647,6 +2665,16 @@ html[data-theme="dark"] .subject7-icon {
     background-image: url(/assets/icon/math.png), linear-gradient(135deg, rgba(91, 29, 151, 0.45), rgba(172, 71, 227, 0.25));
     box-shadow: 0 0 16px rgba(244, 63, 94, 0.3);
     filter: hue-rotate(65deg);
+}
+
+html[data-theme="dark"] .subject8-icon {
+    background-image: url(/assets/icon/japanese_icon.png), linear-gradient(135deg, rgba(131, 24, 67, 0.45), rgba(219, 39, 119, 0.25));
+    box-shadow: 0 0 16px rgba(219, 39, 119, 0.3);
+}
+
+html[data-theme="dark"] .subject9-icon {
+    background-image: url(/assets/icon/Better_Icon/artificial-intellegence.png), linear-gradient(135deg, rgba(49, 46, 129, 0.45), rgba(99, 102, 241, 0.25));
+    box-shadow: 0 0 16px rgba(99, 102, 241, 0.3);
 }
 
 html[data-theme="dark"] .icon-rose {

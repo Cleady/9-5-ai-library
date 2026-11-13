@@ -1751,6 +1751,19 @@
     initTopbar();
     initDialogs();
 
+    // Hỗ trợ Deep-linking: Đọc tham số ?q= từ URL nếu được chuyển hướng từ tìm kiếm toàn cục
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get('q');
+    if (initialQuery && initialQuery.trim()) {
+      const q = initialQuery.trim();
+      resourceState.keyword = q;
+      if ($('#resource-search')) $('#resource-search').value = q;
+      if ($('#site-search')) $('#site-search').value = q;
+      setTimeout(() => {
+        $('#resource-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 500);
+    }
+
     // Tải dữ liệu ban đầu từ API máy chủ
     await Promise.all([
       fetchResources(1, false),

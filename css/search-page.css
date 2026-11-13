@@ -1,0 +1,497 @@
+/* ==========================================================================
+   SEARCH RESULTS PAGE STYLES (css/search-page.css)
+   Trang kết quả tìm kiếm toàn cục đồng bộ với style.css & theme-tokens.css
+   ========================================================================== */
+
+.search-page-container {
+  padding: 24px 32px 64px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 1. Header & Khung tìm kiếm chính */
+.search-page-hero {
+  margin-bottom: 28px;
+}
+
+.search-page-title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--color-text, #0f172a);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+html[data-theme="dark"] .search-page-title {
+  color: var(--text-main, #f8fafc);
+}
+
+.search-page-title-icon {
+  color: var(--color-primary, #2563eb);
+}
+
+html[data-theme="dark"] .search-page-title-icon {
+  color: var(--accent-bright, #38bdf8);
+}
+
+/* Ô tìm kiếm lớn độc lập */
+.search-hero-bar {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg, rgba(255, 255, 255, 0.9));
+  border: 1px solid var(--card-border, rgba(203, 213, 225, 0.8));
+  border-radius: 16px;
+  padding: 6px 8px 6px 18px;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.08);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  backdrop-filter: var(--card-blur, blur(12px));
+  max-width: 760px;
+}
+
+.search-hero-bar:focus-within {
+  border-color: var(--color-primary, #2563eb);
+  box-shadow: 0 0 0 3px var(--color-primary-soft, rgba(37, 99, 235, 0.15));
+}
+
+html[data-theme="dark"] .search-hero-bar {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow: 0 6px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .search-hero-bar:focus-within {
+  border-color: var(--accent-bright, #38bdf8);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.search-hero-icon {
+  color: var(--color-text-muted, #94a3b8);
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.search-hero-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: var(--color-text, #1e293b);
+  outline: none;
+  font-family: inherit;
+}
+
+html[data-theme="dark"] .search-hero-input {
+  color: var(--text-main, #f8fafc);
+}
+
+.search-hero-clear {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted, #94a3b8);
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 14px;
+  display: none;
+}
+
+.search-hero-clear:hover {
+  color: var(--color-text, #1e293b);
+}
+
+.search-hero-btn {
+  background: var(--color-primary, #2563eb);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.search-hero-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+html[data-theme="dark"] .search-hero-btn {
+  background: var(--accent-bright, #38bdf8);
+  color: #0f172a;
+}
+
+/* Thông tin tổng kết */
+.search-page-summary {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--color-text-muted, #64748b);
+}
+
+.search-page-summary strong {
+  color: var(--color-text, #0f172a);
+}
+
+html[data-theme="dark"] .search-page-summary {
+  color: var(--text-muted, #94a3b8);
+}
+
+html[data-theme="dark"] .search-page-summary strong {
+  color: var(--text-main, #f8fafc);
+}
+
+/* 2. Thanh Tabs danh mục */
+.search-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--card-border, rgba(226, 232, 240, 0.8));
+  scrollbar-width: thin;
+}
+
+.search-tab-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-muted, #64748b);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.search-tab-btn:hover {
+  background: var(--bg-hover, rgba(15, 23, 42, 0.05));
+  color: var(--color-text, #0f172a);
+}
+
+.search-tab-btn.is-active {
+  background: var(--color-primary-soft, rgba(37, 99, 235, 0.1));
+  color: var(--color-primary, #2563eb);
+}
+
+html[data-theme="dark"] .search-tab-btn {
+  color: var(--text-muted, #94a3b8);
+}
+
+html[data-theme="dark"] .search-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main, #f8fafc);
+}
+
+html[data-theme="dark"] .search-tab-btn.is-active {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent-bright, #38bdf8);
+}
+
+.search-tab-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.2);
+  color: inherit;
+}
+
+.search-tab-btn.is-active .search-tab-badge {
+  background: var(--color-primary, #2563eb);
+  color: #fff;
+}
+
+html[data-theme="dark"] .search-tab-btn.is-active .search-tab-badge {
+  background: var(--accent-bright, #38bdf8);
+  color: #0f172a;
+}
+
+/* 3. Lưới kết quả tìm kiếm */
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.search-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, rgba(226, 232, 240, 0.9));
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  position: relative;
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.05);
+}
+
+.search-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(15, 23, 42, 0.1);
+  border-color: var(--color-primary, #2563eb);
+}
+
+html[data-theme="dark"] .search-card {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(56, 189, 248, 0.14);
+}
+
+html[data-theme="dark"] .search-card:hover {
+  border-color: var(--accent-bright, #38bdf8);
+  box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(56, 189, 248, 0.2);
+}
+
+.search-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.search-card-pill {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--color-primary-soft, rgba(37, 99, 235, 0.1));
+  color: var(--color-primary, #2563eb);
+}
+
+html[data-theme="dark"] .search-card-pill {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent-bright, #38bdf8);
+}
+
+.search-card-badge {
+  font-size: 11.5px;
+  color: var(--color-text-muted, #94a3b8);
+}
+
+.search-card-main {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+  margin-bottom: 14px;
+}
+
+.search-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--bg-hover, rgba(15, 23, 42, 0.05));
+  color: var(--color-primary, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+html[data-theme="dark"] .search-card-icon {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--accent-bright, #38bdf8);
+}
+
+.search-card-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.search-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text, #0f172a);
+  margin-bottom: 4px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+html[data-theme="dark"] .search-card-title {
+  color: var(--text-main, #f8fafc);
+}
+
+.search-card-subtitle {
+  font-size: 13px;
+  color: var(--color-text-muted, #64748b);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+html[data-theme="dark"] .search-card-subtitle {
+  color: var(--text-muted, #94a3b8);
+}
+
+.search-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid var(--card-border, rgba(226, 232, 240, 0.6));
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+html[data-theme="dark"] .search-card-footer {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.search-card-action {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary, #2563eb);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap 0.15s ease;
+}
+
+.search-card-action:hover {
+  gap: 8px;
+}
+
+html[data-theme="dark"] .search-card-action {
+  color: var(--accent-bright, #38bdf8);
+}
+
+/* 4. Trạng thái Trống (Empty State) */
+.search-page-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--card-bg, rgba(255, 255, 255, 0.5));
+  border: 1px dashed var(--card-border, rgba(203, 213, 225, 0.8));
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+html[data-theme="dark"] .search-page-empty {
+  background: rgba(15, 23, 42, 0.4);
+  border-color: rgba(56, 189, 248, 0.2);
+}
+
+.search-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.search-empty-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text, #0f172a);
+  margin-bottom: 8px;
+}
+
+html[data-theme="dark"] .search-empty-title {
+  color: var(--text-main, #f8fafc);
+}
+
+.search-empty-desc {
+  font-size: 14px;
+  color: var(--color-text-muted, #64748b);
+  max-width: 480px;
+  margin: 0 auto 20px auto;
+  line-height: 1.5;
+}
+
+html[data-theme="dark"] .search-empty-desc {
+  color: var(--text-muted, #94a3b8);
+}
+
+.search-suggest-chips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.search-suggest-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--bg-hover, rgba(15, 23, 42, 0.06));
+  border: 1px solid var(--card-border, rgba(203, 213, 225, 0.6));
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text, #1e293b);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.search-suggest-chip:hover {
+  background: var(--color-primary-soft, rgba(37, 99, 235, 0.12));
+  border-color: var(--color-primary, #2563eb);
+  color: var(--color-primary, #2563eb);
+}
+
+html[data-theme="dark"] .search-suggest-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--text-main, #f8fafc);
+}
+
+html[data-theme="dark"] .search-suggest-chip:hover {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: var(--accent-bright, #38bdf8);
+  color: var(--accent-bright, #38bdf8);
+}
+
+/* 5. Skeleton Loading */
+.search-card-skeleton {
+  pointer-events: none;
+}
+
+.search-card-skeleton .search-card-pill,
+.search-card-skeleton .search-card-icon,
+.search-card-skeleton .search-card-title,
+.search-card-skeleton .search-card-subtitle,
+.search-card-skeleton .search-card-action {
+  background: rgba(148, 163, 184, 0.15);
+  border-radius: 6px;
+  color: transparent !important;
+  animation: searchPageShimmer 1.5s infinite linear;
+}
+
+@keyframes searchPageShimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.4; }
+}
+
+@media (max-width: 640px) {
+  .search-page-container {
+    padding: 16px;
+  }
+  .search-results-grid {
+    grid-template-columns: 1fr;
+  }
+  .search-hero-bar {
+    padding: 6px 10px;
+  }
+}

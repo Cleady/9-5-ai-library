@@ -514,11 +514,39 @@
     }
   });
 
+  // Tự động nạp CSS và JS cho Global Search nếu trang có ô tìm kiếm topbar
+  function autoLoadGlobalSearch() {
+    if (window.Lib95GlobalSearchInitialized) return;
+    const hasSearch = document.getElementById('site-search') ||
+      document.getElementById('admin-search') ||
+      document.querySelector('.topbar .search, .search');
+
+    if (hasSearch) {
+      if (!document.querySelector('link[href*="global-search.css"]')) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/css/global-search.css';
+        document.head.appendChild(link);
+      }
+      if (!document.querySelector('script[src*="global-search.js"]')) {
+        const script = document.createElement('script');
+        script.src = '/js/global-search.js';
+        script.defer = true;
+        document.head.appendChild(script);
+      }
+    }
+  }
+
   // Chạy khi DOM sẵn sàng
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initBellComponent);
-  } else {
+  function onDOMReady() {
     initBellComponent();
+    autoLoadGlobalSearch();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onDOMReady);
+  } else {
+    onDOMReady();
   }
 
   // Cung cấp API toàn cục để các script khác có thể tương tác

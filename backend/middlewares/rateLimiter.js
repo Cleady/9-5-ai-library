@@ -48,5 +48,10 @@ module.exports = {
         maxAttempts: 10,
         message: 'Quá nhiều lần thử đăng nhập hoặc đăng ký. Vui lòng thử lại sau 15 phút.'
     }),
+    searchRateLimiter: createRateLimiter({
+        windowMs: 60 * 1000,
+        maxAttempts: 120,
+        message: 'Bạn đã thực hiện quá nhiều lượt tìm kiếm. Vui lòng thử lại sau giây lát.'
+    }),
     createRateLimiter
 };

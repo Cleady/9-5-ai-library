@@ -12,6 +12,7 @@ const communityRoutes = require('./routes/communityRoutes');
 const resourceRoutes = require('./routes/resourceRoutes');
 const favoriteRoutes = require('./routes/favoriteRoutes');
 const settingsRoutes = require('./routes/settingsRoutes');
+const searchRoutes = require('./routes/searchRoutes');
 const { initDatabase } = require('./config/initDb');
 
 const app = express();
@@ -47,6 +48,7 @@ app.use('/api/community', communityRoutes);
 app.use('/api/resources', resourceRoutes);
 app.use('/api/favorites', favoriteRoutes);
 app.use('/api', settingsRoutes);
+app.use('/api/search', searchRoutes);
 
 // 2. Lớp chặn bổ sung đặt trước static: trả 404 cho các đường dẫn nhạy cảm
 app.use((req, res, next) => {

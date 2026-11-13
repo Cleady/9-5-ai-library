@@ -45,6 +45,15 @@
     var duration = Number(quiz.durationMin) || Math.round((quiz.questionCount || 10) * 1.5) || 30;
     var difficulty = quiz.difficulty || 'Medium';
 
+    var savedStudy = core.storageGet('study-' + quiz.id);
+    var hasStudyProgress = savedStudy && (
+      (savedStudy.elapsedSeconds && savedStudy.elapsedSeconds > 0) ||
+      (Array.isArray(savedStudy.answers) && savedStudy.answers.some(function (a) { return a !== null; })) ||
+      (Array.isArray(savedStudy.checked) && savedStudy.checked.some(Boolean)) ||
+      (Array.isArray(savedStudy.revealed) && savedStudy.revealed.some(Boolean))
+    );
+    var studyBtnLabel = hasStudyProgress ? 'Continue Study' : 'Start Study';
+
     var container = document.getElementById('prc-quiz-intro-content');
     container.innerHTML =
       '<a href="practice-subject.html?subject=' + quiz.subjectId + '" class="prc-back-link">' +
@@ -99,9 +108,39 @@
             '</div>' +
           '</div>' +
 
-          '<button type="button" class="prc-btn prc-btn-primary" id="prc-start-quiz-btn">Start Quiz</button>' +
+          '<div class="prc-quiz-intro-actions">' +
+            '<button type="button" class="prc-btn prc-btn-primary" id="prc-start-quiz-btn">Start Quiz</button>' +
+            '<button type="button" class="prc-btn prc-btn-outline" id="prc-start-study-btn">' + studyBtnLabel + '</button>' +
+            (hasStudyProgress ? '<button type="button" class="prc-btn prc-btn-outline prc-btn-reset-study" id="prc-reset-study-btn" title="Reset all saved study progress for this quiz"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:-2px;"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>Reset Study</button>' : '') +
+          '</div>' +
         '</div>' +
       '</div>';
+
+    /* Nút Start / Continue Study - chế độ học */
+    var startStudyBtn = document.getElementById('prc-start-study-btn');
+    if (startStudyBtn) {
+      startStudyBtn.addEventListener('click', function () {
+        window.location.href = 'practice-quiz.html?quiz=' + quiz.id + '&mode=study';
+      });
+    }
+
+    /* Nút Reset Study - xóa tiến trình học */
+    var resetStudyBtn = document.getElementById('prc-reset-study-btn');
+    if (resetStudyBtn) {
+      resetStudyBtn.addEventListener('click', function () {
+        core.showModal({
+          title: 'Reset Study Progress?',
+          message: 'Reset study progress? All answers, checks, and time for this session will be cleared so you can study again from the beginning.',
+          confirmText: 'Reset',
+          cancelText: 'Cancel',
+          onConfirm: function () {
+            core.storageRemove('study-' + quiz.id);
+            core.showToast('Study progress has been reset.');
+            initQuizIntro();
+          }
+        });
+      });
+    }
 
     /* Nút Start Quiz — bắt đầu quiz */
     document.getElementById('prc-start-quiz-btn').addEventListener('click', function () {
@@ -134,6 +173,9 @@
   function initQuizRun() {
     var page = document.getElementById('prc-quiz-page');
     if (!page) return;
+
+    /* Chế độ học do practice-study.js tiếp quản */
+    if (core.getUrlParam('mode') === 'study') return;
 
     var quizId = core.getUrlParam('quiz');
     if (!quizId) { window.location.href = 'practice.html'; return; }
@@ -354,8 +396,25 @@
     });
   }
 
+  function getDisplayQuestionText(q) {
+    if (!q || !q.text) return '';
+    if (q.diagrams && q.diagrams.length) {
+      return q.text.replace(/\s*\[Diagram:[\s\S]*$/, '').trim();
+    }
+    return q.text;
+  }
+
+  function renderQuestionDiagrams(q) {
+    if (!q || !q.diagrams || !q.diagrams.length) return '';
+    return q.diagrams.map(function (d) {
+      return '<div class="prc-question-diagram" style="text-align:center;margin:16px 0;overflow-x:auto;"><img src="data:image/svg+xml;charset=utf-8,' + encodeURIComponent(d.svg) + '" alt="' + (d.alt || 'Sơ đồ câu hỏi') + '" style="max-width:100%;max-height:360px;background:#ffffff;border-radius:12px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:inline-block;" /></div>';
+    }).join('');
+  }
+
   window.Lib95.practice.typesetMath = typesetMath;
   window.Lib95.practice.formatMathText = formatMathText;
+  window.Lib95.practice.getDisplayQuestionText = getDisplayQuestionText;
+  window.Lib95.practice.renderQuestionDiagrams = renderQuestionDiagrams;
 
   /* Render một câu hỏi */
   function renderQuestion(quiz, questions, progress, index) {
@@ -367,7 +426,8 @@
 
     var html =
       '<p class="prc-question-label">Multiple choice</p>' +
-      '<p class="prc-question-text">' + formatMathText(q.text) + '</p>' +
+      '<p class="prc-question-text">' + formatMathText(getDisplayQuestionText(q)) + '</p>' +
+      renderQuestionDiagrams(q) +
       '<ul class="prc-options-list" role="radiogroup" aria-label="Đáp án">';
 
     q.options.forEach(function (opt, i) {
@@ -448,14 +508,23 @@
 
     questions.forEach(function (q, i) {
       var cls = 'prc-question-nav-btn';
+      if (progress.answers && progress.answers[i] !== null) cls += ' prc-nav-answered';
       if (i === currentIdx) cls += ' prc-nav-current';
-      else if (progress.answers[i] !== null) cls += ' prc-nav-answered';
 
       html += '<button type="button" class="' + cls + '" data-index="' + i + '">' + (i + 1) + '</button>';
     });
 
     html += '</div>';
     nav.innerHTML = html;
+
+    /* Tự động cuộn ô câu hỏi hiện tại vào tầm nhìn nếu danh sách dài */
+    var activeBtn = nav.querySelector('.prc-question-nav-btn.prc-nav-current');
+    var navGrid = nav.querySelector('.prc-question-nav-grid');
+    if (activeBtn && navGrid && navGrid.scrollHeight > navGrid.clientHeight) {
+      if (typeof activeBtn.scrollIntoView === 'function') {
+        activeBtn.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
+    }
 
     /* Gắn sự kiện click vào các nút navigator */
     nav.querySelectorAll('.prc-question-nav-btn').forEach(function (btn) {
@@ -730,7 +799,8 @@
 
       html += '<div class="prc-review-question">';
       html += '<p class="prc-review-q-num">Question ' + (i + 1) + '</p>';
-      html += '<p class="prc-review-q-text">' + formatMathText(q.text) + '</p>';
+      html += '<p class="prc-review-q-text">' + formatMathText(getDisplayQuestionText(q)) + '</p>';
+      html += renderQuestionDiagrams(q);
 
       html += '<ul class="prc-options-list" style="pointer-events:none">';
       q.options.forEach(function (opt, j) {

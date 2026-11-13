@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="main" />
     <title>9.5 AI CLUB</title>
+    <script>
+        (function() {
+            if (!localStorage.getItem('token')) {
+                window.location.replace('/pages/auth/login.html');
+            }
+        })();
+    </script>
     <!-- Khởi tạo Theme chống chớp trắng (FOUC) -->
     <script src="/js/theme-init.js"></script>
     <link rel="stylesheet" href="/css/style.css" />

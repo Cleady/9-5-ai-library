@@ -1,0 +1,328 @@
+{
+  "seed": 42,
+  "sampleSize": 40,
+  "errorCount": 0,
+  "errorRatePct": 0.0,
+  "results": [
+    {
+      "id": "TC-AUTH-004",
+      "module": "AUTH",
+      "title": "Đăng nhập tài khoản bị khoá (Banned)",
+      "expected": "Máy chủ trả về HTTP 403 { error: 'Your account has been banned.' }",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-AUTH-013",
+      "module": "AUTH",
+      "title": "Thiếu Auth-Guard trên các trang con (Direct URL Access)",
+      "expected": "Giao diện bài giảng vẫn hiển thị đầy đủ HTML mà không chặn modal đăng nhập",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-AUTH-014",
+      "module": "AUTH",
+      "title": "Đăng xuất tài khoản (Logout)",
+      "expected": "Token và user snapshot bị xoá khỏi localStorage, trang reload trở về trạng thái Guest",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-AUTH-016",
+      "module": "AUTH",
+      "title": "Khôi phục mật khẩu - Gửi reset link (Giao diện tĩnh)",
+      "expected": "Hiện trạng: Trang chỉ tải lại, không gửi email, không có API backend",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-AUTH-017",
+      "module": "AUTH",
+      "title": "Đặt lại mật khẩu - Form Reset pass (Giao diện tĩnh)",
+      "expected": "Hiện trạng: Giao diện tĩnh, không có handler submit lên server",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-ROL-005",
+      "module": "ROLE",
+      "title": "Admin cố tình cập nhật / hạ bệ Chủ sở hữu (Owner)",
+      "expected": "Kỳ vọng an toàn: Bị chặn 403. Thực tế: LỖ HỔNG LEO THANG ĐẶC QUYỀN - API cho phép thực thi!",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-HOM-011",
+      "module": "HOME",
+      "title": "Lưới thẻ môn trên màn hình di động 390px",
+      "expected": "Thẻ môn co giãn thành 1 cột duy nhất, không bị tràn ngang thanh cuộn",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-LMS-003",
+      "module": "LMS",
+      "title": "Chi tiết bài giảng ID không tồn tại",
+      "expected": "Trả về HTTP 404 Không tìm thấy bài giảng",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-LMS-006",
+      "module": "LMS",
+      "title": "Quy tắc khoá bài giảng thứ hai khi chưa xong bài một",
+      "expected": "Bài 2 hiển thị icon ổ khoá xám (.status-locked), click bị chặn",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-LMS-008",
+      "module": "LMS",
+      "title": "Tiến độ bài giảng mất khi đổi trình duyệt (Lưu localStorage)",
+      "expected": "Toàn bộ bài giảng bị khoá lại từ đầu do tiến độ không lưu vào DB",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-LMS-011",
+      "module": "LMS",
+      "title": "Xem bài giảng YouTube hiển thị đúng iframe",
+      "expected": "Trình phát nhúng thẻ iframe YouTube hợp lệ, phát video mượt mà",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-LMS-016",
+      "module": "LMS",
+      "title": "Xoá bình luận bài giảng của chính mình",
+      "expected": "Xoá thành công khỏi CSDL",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-LMS-022",
+      "module": "LMS",
+      "title": "Xoá bài giảng tự động xoá tài liệu đính kèm (Cascade)",
+      "expected": "Khoá ngoại ON DELETE CASCADE tự dọn dẹp lecture_resources và lecture_comments",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-PRC-008",
+      "module": "PRACTICE",
+      "title": "Đếm ngược thời gian trong phòng thi",
+      "expected": "Thời gian đếm ngược chính xác từng giây",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-PRC-016",
+      "module": "PRACTICE",
+      "title": "Bộ ảnh đề thi môn Toán chứa hơn 1130 tệp PNG",
+      "expected": "1,131 tệp ảnh câu hỏi nằm lẫn lộn ở thư mục gốc môn học",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-PRC-018",
+      "module": "PRACTICE",
+      "title": "Xáo trộn thứ tự câu hỏi khi làm bài",
+      "expected": "Thứ tự các câu hỏi ở lần 2 khác lần 1",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-RES-002",
+      "module": "RESOURCES",
+      "title": "Tải lên tài liệu học tập đuôi hợp lệ (.pdf, .docx, .zip)",
+      "expected": "Lưu vào backend/storage/resources/ với tên hash crypto, trả về 201",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-NOT-001",
+      "module": "NOTIFICATIONS",
+      "title": "Lấy số lượng thông báo chưa đọc (GET unread-count)",
+      "expected": "Trả về HTTP 200 { unreadCount: N }",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-NOT-002",
+      "module": "NOTIFICATIONS",
+      "title": "Polling thông báo tự động mỗi 60 giây",
+      "expected": "Tự động gửi request kiểm tra thông báo mới khi tab hiển thị",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-NOT-003",
+      "module": "NOTIFICATIONS",
+      "title": "Tạm dừng Polling khi chuyển tab (Page Visibility API)",
+      "expected": "notifications-bell.js tạm dừng polling để tiết kiệm tài nguyên",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-NOT-005",
+      "module": "NOTIFICATIONS",
+      "title": "Đánh dấu tất cả là đã đọc (Mark all as read)",
+      "expected": "Cập nhật is_read = 1 cho tất cả thông báo của user, ẩn chấm đỏ",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-SET-003",
+      "module": "SETTINGS",
+      "title": "Đổi mật khẩu tài khoản thành công",
+      "expected": "Cập nhật password_hash mới qua bcrypt, báo thành công",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-ADM-002",
+      "module": "ADMIN",
+      "title": "Xem danh sách người dùng hệ thống",
+      "expected": "Trả về danh sách 5 người dùng kèm role, status, avatar",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-THM-001",
+      "module": "THEME",
+      "title": "Kiểm tra thẻ script theme-init.js ở vị trí đầu thẻ head",
+      "expected": "theme-init.js nạp đầu tiên trước mọi CSS trên cả 28 trang, chống chớp trắng FOUC 100%",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-RSP-002",
+      "module": "RESPONSIVE",
+      "title": "Kiểm tra bố cục Tablet màn hình 768px",
+      "expected": "Sidebar tự động thu gọn icon hoặc chuyển thành drawer",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-A11-001",
+      "module": "A11Y",
+      "title": "Điều hướng bằng bàn phím phím Tab và Shift+Tab trong Modal",
+      "expected": "Con trỏ focus bị khoá bên trong modal (Focus trap), không lọt ra nền sau",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-LMS-023",
+      "module": "LECTURES",
+      "title": "Xử lý video bài giảng biên 23",
+      "expected": "Hàm debounce 800ms hoạt động tốt, không làm nghẽn localStorage",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-LMS-025",
+      "module": "LECTURES",
+      "title": "Xử lý video bài giảng biên 25",
+      "expected": "Hàm debounce 800ms hoạt động tốt, không làm nghẽn localStorage",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-LMS-027",
+      "module": "LECTURES",
+      "title": "Xử lý video bài giảng biên 27",
+      "expected": "Hàm debounce 800ms hoạt động tốt, không làm nghẽn localStorage",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-PRC-022",
+      "module": "PRACTICE",
+      "title": "Kiểm tra đề thi môn học 22",
+      "expected": "Tải đề thi, nạp câu hỏi và phương án trả lời",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-PRC-032",
+      "module": "PRACTICE",
+      "title": "Kiểm tra đề thi môn học 32",
+      "expected": "Tải đề thi, nạp câu hỏi và phương án trả lời",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-PRC-033",
+      "module": "PRACTICE",
+      "title": "Kiểm tra đề thi môn học 33",
+      "expected": "Tải đề thi, nạp câu hỏi và phương án trả lời",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-COM-036",
+      "module": "COMMUNITY",
+      "title": "Tương tác cộng đồng 36",
+      "expected": "Cập nhật trạng thái và thông báo tới các thành viên liên quan",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-COM-038",
+      "module": "COMMUNITY",
+      "title": "Tương tác cộng đồng 38",
+      "expected": "Cập nhật trạng thái và thông báo tới các thành viên liên quan",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-NOT-008",
+      "module": "NOTIFICATIONS",
+      "title": "Chuông thông báo kịch bản 8",
+      "expected": "Nhận thông báo 'X đã thích bài viết của bạn' trong vòng 60 giây polling",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-NOT-014",
+      "module": "NOTIFICATIONS",
+      "title": "Chuông thông báo kịch bản 14",
+      "expected": "Nhận thông báo 'X đã thích bài viết của bạn' trong vòng 60 giây polling",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-SET-024",
+      "module": "SETTINGS",
+      "title": "Cài đặt cá nhân kịch bản 24",
+      "expected": "Tự động lưu vào lib95:settings:data",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-ADM-027",
+      "module": "ADMIN",
+      "title": "Chức năng quản trị kịch bản 27",
+      "expected": "Bảng người dùng cập nhật theo đúng điều kiện lọc",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-SEC-010",
+      "module": "SECURITY",
+      "title": "Kiểm thử bảo mật kiểm tra 10",
+      "expected": "Tham số được bọc trong Parameterized Query, không gây lỗi SQL Injection",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    },
+    {
+      "id": "TC-SEC-018",
+      "module": "SECURITY",
+      "title": "Kiểm thử bảo mật kiểm tra 18",
+      "expected": "Tham số được bọc trong Parameterized Query, không gây lỗi SQL Injection",
+      "has_error": false,
+      "note": "Kỳ vọng chính xác với code thực tế."
+    }
+  ]
+}

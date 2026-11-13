@@ -209,6 +209,8 @@
   /* Helper lấy icon phù hợp cho môn học */
   function getSubjectIcon(code) {
     var c = (code || '').toUpperCase();
+    if (c.indexOf('CSD') !== -1 || c.indexOf('ALGO') !== -1) return '/assets/icon/mas_green.png';
+    if (c.indexOf('JPD') !== -1 || c.indexOf('JAP') !== -1) return '/assets/icon/japanese_icon.png';
     if (c.indexOf('DB') !== -1 || c.indexOf('DATA') !== -1) return '/assets/icon/data.png';
     if (c.indexOf('PRO') !== -1 || c.indexOf('WEB') !== -1 || c.indexOf('PRJ') !== -1) return '/assets/icon/program.png';
     if (c.indexOf('MAS') !== -1 || c.indexOf('MATH') !== -1) return '/assets/icon/math.png';
