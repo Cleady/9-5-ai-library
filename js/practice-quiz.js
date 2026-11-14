@@ -521,6 +521,41 @@
   window.Lib95.practice.getDisplayQuestionText = getDisplayQuestionText;
   window.Lib95.practice.renderQuestionDiagrams = renderQuestionDiagrams;
 
+  /* Helper: Kiểm tra câu hỏi có nhiều đáp án không */
+  function isMultiQuestion(q) {
+    if (!q) return false;
+    if (q.multiple === true) return true;
+    if (Array.isArray(q.correctIndices) && q.correctIndices.length > 1) return true;
+    return false;
+  }
+
+  /* Helper: Kiểm tra câu hỏi đã được trả lời chưa */
+  function isQuestionAnswered(answer) {
+    if (answer === null || answer === undefined) return false;
+    if (Array.isArray(answer)) return answer.length > 0;
+    return true;
+  }
+
+  /* Helper: Kiểm tra câu trả lời có đúng không */
+  function isAnswerCorrect(q, answer) {
+    if (!q || !isQuestionAnswered(answer)) return false;
+    if (isMultiQuestion(q)) {
+      if (!Array.isArray(answer)) return false;
+      var targetIndices = (q.correctIndices || (typeof q.correctIndex === 'number' ? [q.correctIndex] : [])).slice().sort(function (a, b) { return a - b; });
+      var userIndices = answer.slice().sort(function (a, b) { return a - b; });
+      if (targetIndices.length !== userIndices.length) return false;
+      for (var k = 0; k < targetIndices.length; k++) {
+        if (targetIndices[k] !== userIndices[k]) return false;
+      }
+      return true;
+    }
+    return answer === q.correctIndex;
+  }
+
+  window.Lib95.practice.isMultiQuestion = isMultiQuestion;
+  window.Lib95.practice.isQuestionAnswered = isQuestionAnswered;
+  window.Lib95.practice.isAnswerCorrect = isAnswerCorrect;
+
   /* Render một câu hỏi */
   function renderQuestion(quiz, questions, progress, index) {
     var q = questions[index];
@@ -528,19 +563,33 @@
     if (!card || !q) return;
 
     var selectedAnswer = progress.answers[index];
+    var isMulti = isMultiQuestion(q);
+
+    var labelHtml = isMulti
+      ? '<p class="prc-question-label prc-label-multi"><span class="prc-badge-multi">Multiple select</span> (Chọn nhiều đáp án)</p>'
+      : '<p class="prc-question-label">Multiple choice</p>';
 
     var html =
-      '<p class="prc-question-label">Multiple choice</p>' +
+      labelHtml +
       '<div class="prc-question-text">' + formatMathText(getDisplayQuestionText(q)) + '</div>' +
       renderQuestionDiagrams(q) +
-      '<ul class="prc-options-list" role="radiogroup" aria-label="Đáp án">';
+      '<ul class="prc-options-list' + (isMulti ? ' prc-options-list-multi' : '') + '" role="' + (isMulti ? 'group' : 'radiogroup') + '" aria-label="Đáp án">';
+
+    var inputType = isMulti ? 'checkbox' : 'radio';
 
     q.options.forEach(function (opt, i) {
-      var checked = selectedAnswer === i ? ' checked' : '';
+      var isChecked = false;
+      if (isMulti) {
+        isChecked = Array.isArray(selectedAnswer) && selectedAnswer.indexOf(i) !== -1;
+      } else {
+        isChecked = selectedAnswer === i;
+      }
+      var checked = isChecked ? ' checked' : '';
       var id = 'prc-opt-' + index + '-' + i;
+      var optionClass = 'prc-option' + (isMulti ? ' prc-option-multi' : '');
       html +=
-        '<li class="prc-option">' +
-          '<input type="radio" class="prc-option-input" name="prc-answer" id="' + id + '" value="' + i + '"' + checked + ' />' +
+        '<li class="' + optionClass + '">' +
+          '<input type="' + inputType + '" class="prc-option-input' + (isMulti ? ' prc-option-checkbox' : '') + '" name="prc-answer" id="' + id + '" value="' + i + '"' + checked + ' />' +
           '<label class="prc-option-label" for="' + id + '">' +
             '<span class="prc-option-letter">' + LETTERS[i] + '</span>' +
             '<span class="prc-option-text">' + formatMathText(opt) + '</span>' +
@@ -552,11 +601,11 @@
     card.innerHTML = html;
     typesetMath(card);
 
-    /* Gắn sự kiện chọn đáp án qua click radio */
-    var radios = card.querySelectorAll('.prc-option-input');
-    radios.forEach(function (radio) {
-      radio.addEventListener('change', function () {
-        selectAnswer(quiz, questions, progress, parseInt(this.value));
+    /* Gắn sự kiện chọn đáp án */
+    var inputs = card.querySelectorAll('.prc-option-input');
+    inputs.forEach(function (input) {
+      input.addEventListener('change', function () {
+        selectAnswer(quiz, questions, progress, parseInt(this.value, 10));
       });
     });
   }
@@ -566,14 +615,37 @@
     var q = questions[progress.currentIndex];
     if (!q || answerIndex >= q.options.length) return;
 
-    progress.answers[progress.currentIndex] = answerIndex;
+    var isMulti = isMultiQuestion(q);
+
+    if (isMulti) {
+      var currentSelected = Array.isArray(progress.answers[progress.currentIndex])
+        ? progress.answers[progress.currentIndex].slice()
+        : [];
+      var pos = currentSelected.indexOf(answerIndex);
+      if (pos !== -1) {
+        currentSelected.splice(pos, 1);
+      } else {
+        currentSelected.push(answerIndex);
+        currentSelected.sort(function (a, b) { return a - b; });
+      }
+      progress.answers[progress.currentIndex] = currentSelected.length > 0 ? currentSelected : null;
+    } else {
+      progress.answers[progress.currentIndex] = answerIndex;
+    }
+
     /* Lưu ngay vào localStorage để reload không mất */
     core.storageSet('quiz-progress-' + quiz.id, progress);
 
-    /* Cập nhật radio UI */
-    var radios = document.querySelectorAll('.prc-option-input');
-    radios.forEach(function (r) {
-      r.checked = parseInt(r.value) === answerIndex;
+    /* Cập nhật UI inputs */
+    var inputs = document.querySelectorAll('.prc-option-input');
+    var val = progress.answers[progress.currentIndex];
+    inputs.forEach(function (inp) {
+      var v = parseInt(inp.value, 10);
+      if (isMulti) {
+        inp.checked = Array.isArray(val) && val.indexOf(v) !== -1;
+      } else {
+        inp.checked = v === val;
+      }
     });
 
     /* Cập nhật navigator */
@@ -613,7 +685,7 @@
 
     questions.forEach(function (q, i) {
       var cls = 'prc-question-nav-btn';
-      if (progress.answers && progress.answers[i] !== null) cls += ' prc-nav-answered';
+      if (progress.answers && isQuestionAnswered(progress.answers[i])) cls += ' prc-nav-answered';
       if (i === currentIdx) cls += ' prc-nav-current';
 
       html += '<button type="button" class="' + cls + '" data-index="' + i + '">' + (i + 1) + '</button>';
@@ -651,7 +723,7 @@
 
   /* Cập nhật progress bar */
   function updateProgressBar(progress, total) {
-    var answered = progress.answers.filter(function (a) { return a !== null; }).length;
+    var answered = progress.answers.filter(isQuestionAnswered).length;
     var bar = document.getElementById('prc-quiz-progressbar');
     var text = document.getElementById('prc-quiz-progress-text');
     if (bar) bar.value = answered;
@@ -693,7 +765,7 @@
 
   /* Resolve khi bấm Submit — kiểm tra câu chưa trả lời */
   function handleSubmit(quiz, questions, progress) {
-    var unanswered = progress.answers.filter(function (a) { return a === null; }).length;
+    var unanswered = progress.answers.filter(function (a) { return !isQuestionAnswered(a); }).length;
 
     if (unanswered > 0) {
       /* Hiện modal xác nhận — không dùng alert/confirm */
@@ -719,9 +791,9 @@
     var correct = 0;
     var incorrect = 0;
     progress.answers.forEach(function (answer, i) {
-      if (answer === null) {
+      if (!isQuestionAnswered(answer)) {
         incorrect++;
-      } else if (questions[i] && answer === questions[i].correctIndex) {
+      } else if (questions[i] && isAnswerCorrect(questions[i], answer)) {
         correct++;
       } else {
         incorrect++;
@@ -900,21 +972,43 @@
 
     questions.forEach(function (q, i) {
       var userAnswer = attempt.answers[i];
-      var isCorrect = userAnswer === q.correctIndex;
+      var isMulti = isMultiQuestion(q);
+      var isCorrect = isAnswerCorrect(q, userAnswer);
+      var correctArr = isMulti ? (q.correctIndices || (typeof q.correctIndex === 'number' ? [q.correctIndex] : [])) : [q.correctIndex];
+
+      var labelHtml = isMulti
+        ? '<span class="prc-badge-multi" style="margin-left:8px;font-size:11px;">Multiple select</span>'
+        : '';
 
       html += '<div class="prc-review-question">';
-      html += '<p class="prc-review-q-num">Question ' + (i + 1) + '</p>';
+      html += '<p class="prc-review-q-num">Question ' + (i + 1) + labelHtml + '</p>';
       html += '<div class="prc-review-q-text">' + formatMathText(getDisplayQuestionText(q)) + '</div>';
       html += renderQuestionDiagrams(q);
 
-      html += '<ul class="prc-options-list" style="pointer-events:none">';
+      html += '<ul class="prc-options-list' + (isMulti ? ' prc-options-list-multi' : '') + '" style="pointer-events:none">';
       q.options.forEach(function (opt, j) {
-        var optClass = 'prc-option';
-        if (j === q.correctIndex) optClass += ' prc-option-correct';
-        else if (j === userAnswer && !isCorrect) optClass += ' prc-option-wrong';
+        var optClass = 'prc-option' + (isMulti ? ' prc-option-multi' : '');
+        var isThisCorrect = correctArr.indexOf(j) !== -1;
+        var isThisUserSelected = false;
+
+        if (isMulti) {
+          isThisUserSelected = Array.isArray(userAnswer) && userAnswer.indexOf(j) !== -1;
+        } else {
+          isThisUserSelected = userAnswer === j;
+        }
+
+        if (isThisCorrect) {
+          optClass += ' prc-option-correct';
+        } else if (isThisUserSelected) {
+          optClass += ' prc-option-wrong';
+        }
+
+        var checkedAttr = isThisUserSelected ? ' checked' : '';
+        var inputType = isMulti ? 'checkbox' : 'radio';
 
         html +=
           '<li class="' + optClass + '">' +
+            '<input type="' + inputType + '" class="prc-option-input' + (isMulti ? ' prc-option-checkbox' : '') + '"' + checkedAttr + ' disabled />' +
             '<label class="prc-option-label">' +
               '<span class="prc-option-letter">' + LETTERS[j] + '</span>' +
               '<span class="prc-option-text">' + formatMathText(opt) + '</span>' +

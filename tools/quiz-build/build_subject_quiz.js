@@ -523,6 +523,7 @@ const newQuestions = rawQuestions.map(q => {
   };
   if (q.correctIndices && q.correctIndices.length > 1) {
     item.correctIndices = q.correctIndices;
+    item.multiple = true;
   }
   return item;
 });

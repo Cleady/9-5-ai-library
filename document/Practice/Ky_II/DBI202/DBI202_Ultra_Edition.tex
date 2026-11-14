@@ -1232,7 +1232,7 @@ Choose all correct answers:
 \choice R has no key
 \choice None of the others
 \end{choices}
-\textbf{Đáp án:} B
+\textbf{Đáp án:} BC
 \textbf{Giải thích:} Bảng R có các dòng trùng lặp hoàn toàn (1, 1, 2 xuất hiện 2 lần). Theo ngữ nghĩa quan hệ túi (bag semantics / multiset) của SQL, R vẫn là một quan hệ (relation), nhưng không có khóa hợp lệ.
 \end{question}
 
@@ -2330,22 +2330,27 @@ Phân tích: XML biểu diễn dữ liệu phân cấp bằng phần tử/thuộ
 \begin{question}{107}
 % [ID gốc: 22.4]
 % [Nguồn: DBI202 Order 22 Q4]
-Nói thật nếu đề như này thì chả đáp án nào đúng cả, kể cả B. Viết thì sai chính tả, đóng mở ngoặc thì thiếu đúng cái gì
-Select the well-formed XML
+Which of the following statements is TRUE about a well-formed XML document?
 \begin{choices}
-\choice All of the others
-\choice 1997
-\choice 1997
-\choice 1997
+\choice XML tags are case-insensitive
+\choice All XML elements must have a closing tag and be properly nested
+\choice XML attribute values do not need to be enclosed in quotation marks
+\choice An XML document can have more than one root element
 \end{choices}
 \textbf{Đáp án:} B
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. 1997.
+\textbf{Giải thích:} Đáp án đúng: B — All XML elements must have a closing tag and be properly nested.
 
-Nền tảng kiến thức: CSDL Internet kết hợp ứng dụng web với lưu trữ/truy vấn dữ liệu; XML là dạng dữ liệu có cấu trúc phân cấp nhưng có thể linh hoạt hơn bảng cố định. DTD mô tả cấu trúc và các phần tử/thuộc tính hợp lệ; XML có thể được coi là dữ liệu bán cấu trúc.
+Nền tảng kiến thức: Một tài liệu XML được coi là chuẩn cú pháp (Well-formed XML) khi tuân thủ nghiêm ngặt các quy tắc:
+1. Có duy nhất một phần tử gốc (single root element) bao bọc toàn bộ nội dung tài liệu.
+2. Mọi thẻ mở đều phải có thẻ đóng tương ứng và phân biệt chữ hoa/thường (Case-sensitive).
+3. Các thẻ lồng nhau phải đóng/mở theo đúng thứ tự (Properly nested), không được chồng lấn nhau.
+4. Các giá trị thuộc tính phải luôn được đặt trong dấu ngoặc kép hoặc ngoặc đơn (ví dụ: title="value").
 
-Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.
-
-Đối chiếu phương án: A. All of the others; C. 1997; D. 1997. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích các phương án:
+- Phương án B đúng vì đây là quy tắc cốt lõi của XML well-formed.
+- Phương án A sai vì XML luôn phân biệt chữ hoa và chữ thường (Case-sensitive).
+- Phương án C sai vì thuộc tính trong XML bắt buộc phải nằm trong dấu ngoặc kép.
+- Phương án D sai vì tài liệu XML chỉ được phép có duy nhất 1 phần tử gốc bao bọc bên ngoài.
 \end{question}
 
 \begin{question}{108}
@@ -3955,7 +3960,7 @@ DB1202_SP26_RE | Multiple Choice Question 29 (Choose 2 answers) During database 
 \choice To select the most appropriate primary key
 \choice To remove NULL values
 \end{choices}
-\textbf{Đáp án:} B
+\textbf{Đáp án:} BC
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: B, C — B. To normalize tables faster; C. To select the most appropriate primary key.
 
 Lời giải gốc: Việc xác định các khóa ứng viên (Candidate keys) trong quá trình thiết kế là bắt buộc để: Giúp chúng ta phân tích các phụ thuộc hàm nhằm tiến hành chuẩn hóa các bảng dữ liệu nhanh chóng và chính xác (B đúng). Từ danh sách các khóa ứng viên đó, người thiết kế sẽ chọn ra một khóa phù hợp nhất để làm khóa chính (Primary key) cho bảng (C đúng).
@@ -6455,7 +6460,7 @@ Which two statements about foreign key constraints are true? (Choose two correct
 \choice They can be defined using ALTER TABLE
 \choice They replace the need for primary keys
 \end{choices}
-\textbf{Đáp án:} A
+\textbf{Đáp án:} AC
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. They enforce referential integrity.
 
 Lời giải gốc: Khóa ngoại (Foreign Key) là công cụ chính để duy trì tính toàn vẹn tham chiếu (referential integrity) giữa các bảng. Nó có thể được tạo ra lúc định nghĩa bảng (CREATE TABLE) hoặc bổ sung sau này thông qua lệnh ALTER TABLE.
@@ -7238,8 +7243,8 @@ Identify, in the list below, 2 rows that appear in the result:
 \choice (8, 6, null, null)
 \choice (4, 7, null, null)
 \end{choices}
-\textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: C, D — C. (8, 6, null, null); D. (4, 7, null, null).
+\textbf{Đáp án:} AB
+\textbf{Giải thích:} Đáp án theo dữ liệu đề: A, B — A. (null, null, 0, 1); B. (null, null, 5, 8).
 
 Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
 
@@ -8466,7 +8471,7 @@ Phân tích: NVARCHAR lưu văn bản Unicode nên phù hợp với tiếng Vi�
 \choice INSERT
 \choice USE
 \end{choices}
-\textbf{Đáp án:} A
+\textbf{Đáp án:} ACD
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A, C, D — A. DELETE; C. INSERT; D. USE.
 
 Lời giải gốc: CREATE DATABASE là lệnh DDL duy nhất trong danh sách (định nghĩa cấu trúc). DELETE và INSERT thuộc DML vì thao tác trên dữ liệu, còn USE chỉ là lệnh tiện ích chọn database đang làm việc cho phiên hiện tại, không định nghĩa hay thay đổi cấu trúc nào.
@@ -10418,7 +10423,7 @@ Which indexes can be automatically created by defining constraints in a table? (
 \choice UNIQUE
 \choice FOREIGN KEY
 \end{choices}
-\textbf{Đáp án:} A
+\textbf{Đáp án:} AC
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A, C — A. PRIMARY KEY; C. UNIQUE.
 
 Lời giải gốc: Hệ quản trị cơ sở dữ liệu (như SQL Server) sẽ tự động tạo một Chỉ mục cụm (Clustered Index) khi người dùng định nghĩa ràng buộc PRIMARY KEY, và tự động tạo Chỉ mục không cụm (Non-clustered Index) khi định nghĩa ràng buộc duy nhất UNIQUE.
@@ -11055,8 +11060,8 @@ Which of the following accurately represents the purpose of a transaction in a d
 \choice To ensure a sequence of operations is completed fully or not at all
 \choice To allow concurrent modifications without restrictions
 \end{choices}
-\textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. To maintain data integrity and consistency..
+\textbf{Đáp án:} AC
+\textbf{Giải thích:} Đáp án theo dữ liệu đề: A, C — A. To maintain data integrity and consistency.; C. To ensure a sequence of operations is completed fully or not at all.
 
 Lời giải gốc: Mục tiêu của giao dịch (Transaction) là đảm bảo tính an toàn của CSDL (A - Toàn vẹn, nhất quán). Ngoài ra, nó thực thi nguyên lý "All or Nothing" (C - Tính nguyên tử/Atomicity), tức là mọi lệnh trong giao dịch phải cùng thành công, hoặc không có lệnh nào được lưu nếu xảy ra lỗi.
 
@@ -12191,7 +12196,7 @@ Which two statements correctly describe stored procedures? (Choose two correct a
 \choice They support conditional logic like IF...ELSE
 \choice They replace the need for triggers
 \end{choices}
-\textbf{Đáp án:} A
+\textbf{Đáp án:} AC
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A, C — A. They can return multiple result sets; C. They support conditional logic like IF...ELSE.
 
 Lời giải gốc: Thủ tục lưu trữ (Stored Procedure) có khả năng trả về nhiều tập kết quả khác nhau từ các câu lệnh SELECT bên trong nó (A), hỗ trợ đầy đủ cấu trúc điều khiển logic lập trình như IF...ELSE, vòng lặp (C). Chúng được biên dịch sẵn một lần chứ không phải biên dịch lại mỗi lần chạy (B sai) và không thay thế hoàn toàn được trigger (D sai).

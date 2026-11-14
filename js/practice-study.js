@@ -124,7 +124,12 @@
       if (state.correct && state.correct[i] === true) return 'correct';
       if (state.correct && state.correct[i] === false) return 'wrong';
       if (state.revealed && state.revealed[i] === true) return 'revealed';
-      if (state.answers && state.answers[i] !== null && state.answers[i] !== undefined) return 'answered';
+      if (state.answers && state.answers[i] !== null && state.answers[i] !== undefined) {
+        if (Array.isArray(state.answers[i])) {
+          return state.answers[i].length > 0 ? 'answered' : 'none';
+        }
+        return 'answered';
+      }
       return 'none';
     },
 
@@ -141,7 +146,7 @@
 
       for (var i = 0; i < n; i++) {
         var isViewed = state.visited && state.visited[i];
-        var hasAns = state.answers && state.answers[i] !== null;
+        var hasAns = state.answers && state.answers[i] !== null && state.answers[i] !== undefined && (!Array.isArray(state.answers[i]) || state.answers[i].length > 0);
         var isChk = state.checked && state.checked[i];
         var isRev = state.revealed && state.revealed[i];
 
@@ -336,25 +341,38 @@
     var formatMath = practiceNS.formatMathText || function (s) { return s || ''; };
     var getDisplayQuestionText = practiceNS.getDisplayQuestionText || function (item) { return (item && item.text) || ''; };
     var renderQuestionDiagrams = practiceNS.renderQuestionDiagrams || function () { return ''; };
+    var isMulti = practiceNS.isMultiQuestion ? practiceNS.isMultiQuestion(q) : (q.multiple || (Array.isArray(q.correctIndices) && q.correctIndices.length > 1));
+
+    var labelHtml = isMulti
+      ? '<p class="prc-question-label prc-label-multi"><span class="prc-badge-multi">Multiple select</span> (Chọn nhiều đáp án)</p>'
+      : '<p class="prc-question-label">Multiple choice</p>';
 
     var html =
-      '<p class="prc-question-label">Multiple choice</p>' +
+      labelHtml +
       '<div class="prc-question-text">' + formatMath(getDisplayQuestionText(q)) + '</div>' +
       renderQuestionDiagrams(q) +
-      '<ul class="prc-options-list" role="radiogroup" aria-label="Đáp án">';
+      '<ul class="prc-options-list' + (isMulti ? ' prc-options-list-multi' : '') + '" role="' + (isMulti ? 'group' : 'radiogroup') + '" aria-label="Đáp án">';
+
+    var inputType = isMulti ? 'checkbox' : 'radio';
+    var correctArr = isMulti ? (q.correctIndices || (typeof q.correctIndex === 'number' ? [q.correctIndex] : [])) : [q.correctIndex];
 
     q.options.forEach(function (opt, i) {
-      var isChecked = selectedAnswer === i;
-      var optClass = 'prc-option';
+      var isChecked = false;
+      if (isMulti) {
+        isChecked = Array.isArray(selectedAnswer) && selectedAnswer.indexOf(i) !== -1;
+      } else {
+        isChecked = selectedAnswer === i;
+      }
+      var optClass = 'prc-option' + (isMulti ? ' prc-option-multi' : '');
 
       /* Khôi phục trạng thái đúng / sai nếu câu đã được check hoặc show */
       if (studyState.checked[index]) {
-        if (i === q.correctIndex) {
+        if (correctArr.indexOf(i) !== -1) {
           optClass += ' prc-option-correct';
         } else if (isChecked && !studyState.correct[index]) {
           optClass += ' prc-option-wrong';
         }
-      } else if (studyState.revealed[index] && i === q.correctIndex) {
+      } else if (studyState.revealed[index] && correctArr.indexOf(i) !== -1) {
         optClass += ' prc-option-correct';
       }
 
@@ -363,7 +381,7 @@
 
       html +=
         '<li class="' + optClass + '">' +
-          '<input type="radio" class="prc-option-input" name="prc-answer" id="' + optId + '" value="' + i + '"' + checkedAttr + ' />' +
+          '<input type="' + inputType + '" class="prc-option-input' + (isMulti ? ' prc-option-checkbox' : '') + '" name="prc-answer" id="' + optId + '" value="' + i + '"' + checkedAttr + ' />' +
           '<label class="prc-option-label" for="' + optId + '">' +
             '<span class="prc-option-letter">' + LETTERS[i] + '</span>' +
             '<span class="prc-option-text">' + formatMath(opt) + '</span>' +
@@ -374,7 +392,13 @@
     html += '</ul>';
 
     /* Hàng nút Check và Show answer */
-    var isCheckDisabled = selectedAnswer === null;
+    var isCheckDisabled = false;
+    if (isMulti) {
+      isCheckDisabled = !Array.isArray(selectedAnswer) || selectedAnswer.length === 0;
+    } else {
+      isCheckDisabled = selectedAnswer === null || selectedAnswer === undefined;
+    }
+
     html +=
       '<div class="prc-study-actions">' +
         '<button type="button" class="prc-btn prc-btn-primary prc-study-btn-check" id="prc-study-check-btn"' + (isCheckDisabled ? ' disabled' : '') + '>Check</button>' +
@@ -385,7 +409,9 @@
     var fbText = '';
     var fbClass = 'prc-study-feedback';
     var isExpOpen = false;
-    var hasValidKey = typeof q.correctIndex === 'number' && q.correctIndex >= 0 && q.correctIndex < q.options.length;
+    var hasValidKey = isMulti
+      ? (Array.isArray(q.correctIndices) && q.correctIndices.length > 0)
+      : (typeof q.correctIndex === 'number' && q.correctIndex >= 0 && q.correctIndex < q.options.length);
 
     if (studyState.checked[index]) {
       isExpOpen = true;
@@ -396,8 +422,13 @@
         fbText = 'Correct!';
         fbClass += ' prc-study-feedback-correct';
       } else if (studyState.correct[index] === false) {
-        var correctLetter = LETTERS[q.correctIndex] || '?';
-        fbText = 'Not quite. The correct answer is ' + correctLetter + '.';
+        if (isMulti) {
+          var correctLetters = correctArr.map(function (idx) { return LETTERS[idx]; }).join(' & ');
+          fbText = 'Not quite. The correct answers are ' + correctLetters + '.';
+        } else {
+          var correctLetter = LETTERS[q.correctIndex] || '?';
+          fbText = 'Not quite. The correct answer is ' + correctLetter + '.';
+        }
         fbClass += ' prc-study-feedback-wrong';
       }
     } else if (studyState.revealed[index]) {
@@ -432,9 +463,9 @@
       typeset(card);
     }
 
-    /* Gắn sự kiện chọn radio */
-    card.querySelectorAll('.prc-option-input').forEach(function (radio) {
-      radio.addEventListener('change', function () {
+    /* Gắn sự kiện chọn đáp án */
+    card.querySelectorAll('.prc-option-input').forEach(function (inp) {
+      inp.addEventListener('change', function () {
         selectStudyAnswer(index, parseInt(this.value, 10));
       });
     });
@@ -469,7 +500,24 @@
     var q = currentQuestions[questionIndex];
     if (!q || answerIndex >= q.options.length) return;
 
-    studyState.answers[questionIndex] = answerIndex;
+    var practiceNS = (window.Lib95 && window.Lib95.practice) || {};
+    var isMulti = practiceNS.isMultiQuestion ? practiceNS.isMultiQuestion(q) : (q.multiple || (Array.isArray(q.correctIndices) && q.correctIndices.length > 1));
+
+    if (isMulti) {
+      var current = Array.isArray(studyState.answers[questionIndex])
+        ? studyState.answers[questionIndex].slice()
+        : [];
+      var pos = current.indexOf(answerIndex);
+      if (pos !== -1) {
+        current.splice(pos, 1);
+      } else {
+        current.push(answerIndex);
+        current.sort(function (a, b) { return a - b; });
+      }
+      studyState.answers[questionIndex] = current.length > 0 ? current : null;
+    } else {
+      studyState.answers[questionIndex] = answerIndex;
+    }
 
     /* Nếu câu đã từng Check trước đó, gọi hàm dùng chung xoá feedback để người dùng kiểm tra lại */
     resetQuestionFeedback(questionIndex);
@@ -479,10 +527,13 @@
     /* Bật lại nút Check */
     var checkBtn = document.getElementById('prc-study-check-btn');
     if (checkBtn) {
-      checkBtn.disabled = false;
+      var hasAns = isMulti
+        ? (Array.isArray(studyState.answers[questionIndex]) && studyState.answers[questionIndex].length > 0)
+        : (studyState.answers[questionIndex] !== null && studyState.answers[questionIndex] !== undefined);
+      checkBtn.disabled = !hasAns;
     }
 
-    /* Re-render để dọn sạch class đúng/sai cũ và cập nhật radio */
+    /* Re-render để dọn sạch class đúng/sai cũ và cập nhật input */
     renderStudyQuestion(questionIndex);
     renderStudyNavigator(questionIndex);
     updateStudyProgressBar();
@@ -493,13 +544,37 @@
     var userAns = studyState.answers[index];
     if (!q || userAns === null || userAns === undefined) return;
 
+    var practiceNS = (window.Lib95 && window.Lib95.practice) || {};
+    var isMulti = practiceNS.isMultiQuestion ? practiceNS.isMultiQuestion(q) : (q.multiple || (Array.isArray(q.correctIndices) && q.correctIndices.length > 1));
+
     studyState.checked[index] = true;
 
-    var hasValidKey = typeof q.correctIndex === 'number' && q.correctIndex >= 0 && q.correctIndex < q.options.length;
-    if (hasValidKey) {
-      studyState.correct[index] = (userAns === q.correctIndex);
+    if (isMulti) {
+      if (!Array.isArray(userAns) || userAns.length === 0) {
+        studyState.correct[index] = false;
+      } else {
+        var targetArr = (q.correctIndices || (typeof q.correctIndex === 'number' ? [q.correctIndex] : [])).slice().sort(function (a, b) { return a - b; });
+        var userArr = userAns.slice().sort(function (a, b) { return a - b; });
+        if (targetArr.length !== userArr.length) {
+          studyState.correct[index] = false;
+        } else {
+          var matched = true;
+          for (var k = 0; k < targetArr.length; k++) {
+            if (targetArr[k] !== userArr[k]) {
+              matched = false;
+              break;
+            }
+          }
+          studyState.correct[index] = matched;
+        }
+      }
     } else {
-      studyState.correct[index] = null;
+      var hasValidKey = typeof q.correctIndex === 'number' && q.correctIndex >= 0 && q.correctIndex < q.options.length;
+      if (hasValidKey) {
+        studyState.correct[index] = (userAns === q.correctIndex);
+      } else {
+        studyState.correct[index] = null;
+      }
     }
 
     saveStudyState();

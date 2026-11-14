@@ -814,6 +814,28 @@ html[data-theme="dark"] .prc-subject-icon-tile .subject9-icon {
   color: var(--color-primary);
 }
 
+.prc-label-multi {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b45309;
+  font-weight: 600;
+}
+
+.prc-badge-multi {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
 .prc-question-text {
   margin: 0 0 20px;
   font-size: 16px;
@@ -931,6 +953,12 @@ html[data-theme="dark"] .prc-subject-icon-tile .subject9-icon {
   border-radius: 50%;
   flex-shrink: 0;
   transition: border-color var(--prc-transition), color var(--prc-transition), background-color var(--prc-transition);
+}
+
+/* Kiểu dáng ô chữ nhật bo góc nhẹ cho câu hỏi nhiều lựa chọn (Checkbox) */
+.prc-option-checkbox + .prc-option-label .prc-option-letter,
+.prc-option-multi .prc-option-letter {
+  border-radius: 7px;
 }
 
 .prc-option-input:checked+.prc-option-label .prc-option-letter {
@@ -2337,6 +2365,21 @@ html[data-theme="dark"] .prc-quiz-timer {
 
 html[data-theme="dark"] .prc-question-label {
   color: var(--accent-bright);
+}
+
+html[data-theme="dark"] .prc-label-multi {
+  color: #fbbf24;
+}
+
+html[data-theme="dark"] .prc-badge-multi {
+  background-color: rgba(245, 158, 11, 0.22);
+  color: #fde68a;
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+html[data-theme="dark"] .prc-option-checkbox + .prc-option-label .prc-option-letter,
+html[data-theme="dark"] .prc-option-multi .prc-option-letter {
+  border-radius: 7px;
 }
 
 /* Bảng quiz trong Dark Mode */

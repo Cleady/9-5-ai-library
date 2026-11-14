@@ -1,6 +1,6 @@
 {
   "subject": "DBI202",
-  "updatedAt": "2026-11-14T13:03:09.774Z",
+  "updatedAt": "2026-11-14T16:17:05.593Z",
   "totalQuizzes": 8,
   "totalQuestions": 573,
   "quizzes": [
@@ -686,7 +686,8 @@
         0,
         2,
         3
-      ]
+      ],
+      "multiple": true
     },
     {
       "id": 5048,
@@ -812,7 +813,12 @@
         "None of the others"
       ],
       "correctIndex": 1,
-      "explanation": "Bảng R có các dòng trùng lặp hoàn toàn (1, 1, 2 xuất hiện 2 lần). Theo ngữ nghĩa quan hệ túi (bag semantics / multiset) của SQL, R vẫn là một quan hệ (relation), nhưng không có khóa hợp lệ."
+      "explanation": "**Đáp án đúng**: B & C\n\nBảng R có các dòng trùng lặp hoàn toàn (1, 1, 2 xuất hiện 2 lần). Theo ngữ nghĩa quan hệ túi (bag semantics / multiset) của SQL, R vẫn là một quan hệ (relation), nhưng không có khóa hợp lệ.",
+      "correctIndices": [
+        1,
+        2
+      ],
+      "multiple": true
     },
     {
       "id": 5058,
@@ -1241,7 +1247,8 @@
       "correctIndices": [
         1,
         3
-      ]
+      ],
+      "multiple": true
     },
     {
       "id": 5091,
@@ -1272,7 +1279,8 @@
         0,
         1,
         2
-      ]
+      ],
+      "multiple": true
     },
     {
       "id": 5093,
@@ -1458,15 +1466,15 @@
     {
       "id": 5107,
       "quizId": 102,
-      "text": "Nói thật nếu đề như này thì chả đáp án nào đúng cả, kể cả B. Viết thì sai chính tả, đóng mở ngoặc thì thiếu đúng cái gì\r\nSelect the well-formed XML",
+      "text": "Which of the following statements is TRUE about a well-formed XML document?",
       "options": [
-        "All of the others",
-        "1997",
-        "1997",
-        "1997"
+        "XML tags are case-insensitive",
+        "All XML elements must have a closing tag and be properly nested",
+        "XML attribute values do not need to be enclosed in quotation marks",
+        "An XML document can have more than one root element"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. 1997.\r\n\nNền tảng kiến thức: CSDL Internet kết hợp ứng dụng web với lưu trữ/truy vấn dữ liệu; XML là dạng dữ liệu có cấu trúc phân cấp nhưng có thể linh hoạt hơn bảng cố định. DTD mô tả cấu trúc và các phần tử/thuộc tính hợp lệ; XML có thể được coi là dữ liệu bán cấu trúc.\r\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\r\n\nĐối chiếu phương án: A. All of the others; C. 1997; D. 1997. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: B — All XML elements must have a closing tag and be properly nested.\r\n\nNền tảng kiến thức: Một tài liệu XML được coi là chuẩn cú pháp (Well-formed XML) khi tuân thủ nghiêm ngặt các quy tắc:\r\n1. Có duy nhất một phần tử gốc (single root element) bao bọc toàn bộ nội dung tài liệu.\r\n2. Mọi thẻ mở đều phải có thẻ đóng tương ứng và phân biệt chữ hoa/thường (Case-sensitive).\r\n3. Các thẻ lồng nhau phải đóng/mở theo đúng thứ tự (Properly nested), không được chồng lấn nhau.\r\n4. Các giá trị thuộc tính phải luôn được đặt trong dấu ngoặc kép hoặc ngoặc đơn (ví dụ: title=\"value\").\r\n\nPhân tích các phương án:\r\n- Phương án B đúng vì đây là quy tắc cốt lõi của XML well-formed.\r\n- Phương án A sai vì XML luôn phân biệt chữ hoa và chữ thường (Case-sensitive).\r\n- Phương án C sai vì thuộc tính trong XML bắt buộc phải nằm trong dấu ngoặc kép.\r\n- Phương án D sai vì tài liệu XML chỉ được phép có duy nhất 1 phần tử gốc bao bọc bên ngoài."
     },
     {
       "id": 5108,
@@ -2450,7 +2458,12 @@
         "To remove NULL values"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B, C — B. To normalize tables faster; C. To select the most appropriate primary key.\r\n\nLời giải gốc: Việc xác định các khóa ứng viên (Candidate keys) trong quá trình thiết kế là bắt buộc để: Giúp chúng ta phân tích các phụ thuộc hàm nhằm tiến hành chuẩn hóa các bảng dữ liệu nhanh chóng và chính xác (B đúng). Từ danh sách các khóa ứng viên đó, người thiết kế sẽ chọn ra một khóa phù hợp nhất để làm khóa chính (Primary key) cho bảng (C đúng).\r\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\r\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\r\n\nĐối chiếu phương án: A. To reduce data type complexity.; D. To remove NULL values. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng**: B & C\n\nĐáp án theo dữ liệu đề: B, C — B. To normalize tables faster; C. To select the most appropriate primary key.\r\n\nLời giải gốc: Việc xác định các khóa ứng viên (Candidate keys) trong quá trình thiết kế là bắt buộc để: Giúp chúng ta phân tích các phụ thuộc hàm nhằm tiến hành chuẩn hóa các bảng dữ liệu nhanh chóng và chính xác (B đúng). Từ danh sách các khóa ứng viên đó, người thiết kế sẽ chọn ra một khóa phù hợp nhất để làm khóa chính (Primary key) cho bảng (C đúng).\r\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\r\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\r\n\nĐối chiếu phương án: A. To reduce data type complexity.; D. To remove NULL values. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
+      "correctIndices": [
+        1,
+        2
+      ],
+      "multiple": true
     },
     {
       "id": 5184,
@@ -2468,7 +2481,8 @@
         0,
         2,
         3
-      ]
+      ],
+      "multiple": true
     },
     {
       "id": 5185,
@@ -3962,7 +3976,12 @@
         "They replace the need for primary keys"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. They enforce referential integrity.\r\n\nLời giải gốc: Khóa ngoại (Foreign Key) là công cụ chính để duy trì tính toàn vẹn tham chiếu (referential integrity) giữa các bảng. Nó có thể được tạo ra lúc định nghĩa bảng (CREATE TABLE) hoặc bổ sung sau này thông qua lệnh ALTER TABLE.\r\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\r\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\r\n\nĐối chiếu phương án: B. They allow orphaned rows in child tables; C. They can be defined using ALTER TABLE; D. They replace the need for primary keys. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng**: A & C\n\nĐáp án theo dữ liệu đề: A — A. They enforce referential integrity.\r\n\nLời giải gốc: Khóa ngoại (Foreign Key) là công cụ chính để duy trì tính toàn vẹn tham chiếu (referential integrity) giữa các bảng. Nó có thể được tạo ra lúc định nghĩa bảng (CREATE TABLE) hoặc bổ sung sau này thông qua lệnh ALTER TABLE.\r\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\r\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\r\n\nĐối chiếu phương án: B. They allow orphaned rows in child tables; C. They can be defined using ALTER TABLE; D. They replace the need for primary keys. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
+      "correctIndices": [
+        0,
+        2
+      ],
+      "multiple": true
     },
     {
       "id": 5300,
@@ -4389,7 +4408,12 @@
         "(4, 7, null, null)"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: C, D — C. (8, 6, null, null); D. (4, 7, null, null).\r\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\r\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\r\n\nĐối chiếu phương án: A. (null, null, 0, 1); B. (null, null, 5, 8). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng**: A & B\n\nĐáp án theo dữ liệu đề: A, B — A. (null, null, 0, 1); B. (null, null, 5, 8).\r\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\r\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\r\n\nĐối chiếu phương án: A. (null, null, 0, 1); B. (null, null, 5, 8). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
+      "correctIndices": [
+        0,
+        1
+      ],
+      "multiple": true
     },
     {
       "id": 5333,
@@ -5168,7 +5192,13 @@
         "USE"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A, C, D — A. DELETE; C. INSERT; D. USE.\r\n\nLời giải gốc: CREATE DATABASE là lệnh DDL duy nhất trong danh sách (định nghĩa cấu trúc). DELETE và INSERT thuộc DML vì thao tác trên dữ liệu, còn USE chỉ là lệnh tiện ích chọn database đang làm việc cho phiên hiện tại, không định nghĩa hay thay đổi cấu trúc nào.\r\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\r\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\r\n\nĐối chiếu phương án: B. CREATE DATABASE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng**: A & C & D\n\nĐáp án theo dữ liệu đề: A, C, D — A. DELETE; C. INSERT; D. USE.\r\n\nLời giải gốc: CREATE DATABASE là lệnh DDL duy nhất trong danh sách (định nghĩa cấu trúc). DELETE và INSERT thuộc DML vì thao tác trên dữ liệu, còn USE chỉ là lệnh tiện ích chọn database đang làm việc cho phiên hiện tại, không định nghĩa hay thay đổi cấu trúc nào.\r\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\r\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\r\n\nĐối chiếu phương án: B. CREATE DATABASE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
+      "correctIndices": [
+        0,
+        2,
+        3
+      ],
+      "multiple": true
     },
     {
       "id": 5393,
@@ -5485,7 +5515,8 @@
       "correctIndices": [
         0,
         2
-      ]
+      ],
+      "multiple": true
     },
     {
       "id": 5417,
@@ -6359,7 +6390,12 @@
         "FOREIGN KEY"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A, C — A. PRIMARY KEY; C. UNIQUE.\r\n\nLời giải gốc: Hệ quản trị cơ sở dữ liệu (như SQL Server) sẽ tự động tạo một Chỉ mục cụm (Clustered Index) khi người dùng định nghĩa ràng buộc PRIMARY KEY, và tự động tạo Chỉ mục không cụm (Non-clustered Index) khi định nghĩa ràng buộc duy nhất UNIQUE.\r\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\r\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\r\n\nĐối chiếu phương án: B. CHECK; D. FOREIGN KEY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng**: A & C\n\nĐáp án theo dữ liệu đề: A, C — A. PRIMARY KEY; C. UNIQUE.\r\n\nLời giải gốc: Hệ quản trị cơ sở dữ liệu (như SQL Server) sẽ tự động tạo một Chỉ mục cụm (Clustered Index) khi người dùng định nghĩa ràng buộc PRIMARY KEY, và tự động tạo Chỉ mục không cụm (Non-clustered Index) khi định nghĩa ràng buộc duy nhất UNIQUE.\r\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\r\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\r\n\nĐối chiếu phương án: B. CHECK; D. FOREIGN KEY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
+      "correctIndices": [
+        0,
+        2
+      ],
+      "multiple": true
     },
     {
       "id": 5484,
@@ -6726,7 +6762,8 @@
       "correctIndices": [
         0,
         3
-      ]
+      ],
+      "multiple": true
     },
     {
       "id": 5512,
@@ -6752,7 +6789,12 @@
         "To allow concurrent modifications without restrictions"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. To maintain data integrity and consistency..\r\n\nLời giải gốc: Mục tiêu của giao dịch (Transaction) là đảm bảo tính an toàn của CSDL (A - Toàn vẹn, nhất quán). Ngoài ra, nó thực thi nguyên lý \"All or Nothing\" (C - Tính nguyên tử/Atomicity), tức là mọi lệnh trong giao dịch phải cùng thành công, hoặc không có lệnh nào được lưu nếu xảy ra lỗi.\r\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\r\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\r\n\nĐối chiếu phương án: B. To define access permissions; C. To ensure a sequence of operations is completed fully or not at all; D. To allow concurrent modifications without restrictions. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng**: A & C\n\nĐáp án theo dữ liệu đề: A, C — A. To maintain data integrity and consistency.; C. To ensure a sequence of operations is completed fully or not at all.\r\n\nLời giải gốc: Mục tiêu của giao dịch (Transaction) là đảm bảo tính an toàn của CSDL (A - Toàn vẹn, nhất quán). Ngoài ra, nó thực thi nguyên lý \"All or Nothing\" (C - Tính nguyên tử/Atomicity), tức là mọi lệnh trong giao dịch phải cùng thành công, hoặc không có lệnh nào được lưu nếu xảy ra lỗi.\r\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\r\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\r\n\nĐối chiếu phương án: B. To define access permissions; C. To ensure a sequence of operations is completed fully or not at all; D. To allow concurrent modifications without restrictions. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
+      "correctIndices": [
+        0,
+        2
+      ],
+      "multiple": true
     },
     {
       "id": 5514,
@@ -7459,7 +7501,12 @@
         "They replace the need for triggers"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A, C — A. They can return multiple result sets; C. They support conditional logic like IF...ELSE.\r\n\nLời giải gốc: Thủ tục lưu trữ (Stored Procedure) có khả năng trả về nhiều tập kết quả khác nhau từ các câu lệnh SELECT bên trong nó (A), hỗ trợ đầy đủ cấu trúc điều khiển logic lập trình như IF...ELSE, vòng lặp (C). Chúng được biên dịch sẵn một lần chứ không phải biên dịch lại mỗi lần chạy (B sai) và không thay thế hoàn toàn được trigger (D sai).\r\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\r\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\r\n\nĐối chiếu phương án: B. They are compiled each time they run; D. They replace the need for triggers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng**: A & C\n\nĐáp án theo dữ liệu đề: A, C — A. They can return multiple result sets; C. They support conditional logic like IF...ELSE.\r\n\nLời giải gốc: Thủ tục lưu trữ (Stored Procedure) có khả năng trả về nhiều tập kết quả khác nhau từ các câu lệnh SELECT bên trong nó (A), hỗ trợ đầy đủ cấu trúc điều khiển logic lập trình như IF...ELSE, vòng lặp (C). Chúng được biên dịch sẵn một lần chứ không phải biên dịch lại mỗi lần chạy (B sai) và không thay thế hoàn toàn được trigger (D sai).\r\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\r\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\r\n\nĐối chiếu phương án: B. They are compiled each time they run; D. They replace the need for triggers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
+      "correctIndices": [
+        0,
+        2
+      ],
+      "multiple": true
     },
     {
       "id": 5568,
