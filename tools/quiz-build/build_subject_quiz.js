@@ -141,7 +141,7 @@ function convertTabularToMarkdown(tex) {
     }
     const mdLines = [];
     mdLines.push('| ' + rows[0].join(' | ') + ' |');
-    mdLines.push('| ' + rows[0].map(() => '---').join(' | ') + ' |');
+    mdLines.push('| ' + rows[0].map(() => ':---:').join(' | ') + ' |');
     for (let i = 1; i < rows.length; i++) {
       mdLines.push('| ' + rows[i].join(' | ') + ' |');
     }
@@ -342,6 +342,9 @@ if (isChoicesFormat) {
     const ansMatch = afterChoices.match(/\\textbf\{Đáp án:\}\s*([A-Za-z]+)/i);
     let answerLetter = ansMatch ? ansMatch[1].trim().toUpperCase() : 'A';
     const correctIndex = answerLetter.charCodeAt(0) - 65;
+    const correctIndices = answerLetter.length > 1
+      ? answerLetter.split('').map(c => c.charCodeAt(0) - 65).filter(i => i >= 0 && i < options.length)
+      : undefined;
 
     let explanation = '';
     const expMatch = afterChoices.match(/\\textbf\{Giải thích:\}\s*([\s\S]*?)$/i);
@@ -360,7 +363,8 @@ if (isChoicesFormat) {
       text: cleanTexWithMath(promptRaw),
       options,
       answerLetter,
-      correctIndex,
+      correctIndex: correctIndices && correctIndices.length > 0 ? correctIndices[0] : correctIndex,
+      correctIndices: correctIndices && correctIndices.length > 1 ? correctIndices : undefined,
       explanation
     });
   }

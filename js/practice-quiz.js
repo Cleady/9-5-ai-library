@@ -321,22 +321,121 @@
       .replace(/>/g, '&gt;');
   }
 
-  /* Định dạng an toàn cho chuỗi có công thức toán */
+  function formatTableCell(cell) {
+    if (!cell) return '&nbsp;';
+    var trimmed = cell.trim();
+    if (!trimmed) return '&nbsp;';
+    var parts = trimmed.split(/(\\\(.*?\\\)|\\\[[\s\S]*?\\\])/g);
+    var res = '';
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      if (p.startsWith('\\(') || p.startsWith('\\[')) {
+        res += p;
+      } else {
+        var esc = escapeHtml(p);
+        esc = esc.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        res += esc;
+      }
+    }
+    return res || '&nbsp;';
+  }
+
+  function parseMarkdownTables(str) {
+    if (!str || str.indexOf('|') === -1) return str;
+    var lines = str.split('\n');
+    var result = [];
+    var i = 0;
+
+    while (i < lines.length) {
+      var line = lines[i];
+      var trimmed = line.trim();
+
+      if (trimmed.startsWith('|') && i + 1 < lines.length && /^\|\s*[:?-]+[-\s|:]*\|$/.test(lines[i + 1].trim())) {
+        var tableLines = [trimmed];
+        var sepLine = lines[i + 1].trim();
+        i += 2;
+
+        while (i < lines.length && lines[i].trim().startsWith('|')) {
+          tableLines.push(lines[i].trim());
+          i++;
+        }
+
+        var alignments = sepLine
+          .slice(1, -1)
+          .split('|')
+          .map(function (s) {
+            s = s.trim();
+            if (s.startsWith(':') && s.endsWith(':')) return 'center';
+            if (s.endsWith(':')) return 'right';
+            if (s.startsWith(':')) return 'left';
+            return 'center';
+          });
+
+        var headers = tableLines[0]
+          .slice(1, -1)
+          .split('|')
+          .map(function (c) { return c.trim(); });
+
+        var tableHtml = '<div class="prc-table-wrapper"><table class="prc-quiz-table"><thead><tr>';
+        headers.forEach(function (h, colIdx) {
+          var align = alignments[colIdx] || 'center';
+          tableHtml += '<th style="text-align:' + align + ';">' + formatTableCell(h) + '</th>';
+        });
+        tableHtml += '</tr></thead><tbody>';
+
+        for (var r = 1; r < tableLines.length; r++) {
+          var cells = tableLines[r]
+            .slice(1, -1)
+            .split('|')
+            .map(function (c) { return c.trim(); });
+          tableHtml += '<tr>';
+          cells.forEach(function (c, colIdx) {
+            var align = alignments[colIdx] || 'center';
+            tableHtml += '<td style="text-align:' + align + ';">' + formatTableCell(c) + '</td>';
+          });
+          tableHtml += '</tr>';
+        }
+        tableHtml += '</tbody></table></div>';
+        result.push(tableHtml);
+      } else {
+        result.push(line);
+        i++;
+      }
+    }
+
+    return result.join('\n');
+  }
+
+  /* Định dạng an toàn cho chuỗi có công thức toán và bảng dữ liệu */
   function formatMathText(text, isExplanation) {
     if (!text) return '';
     var str = String(text);
-    var regex = /(\\\[[\s\S]*?\\\]|\\\(.*?\\\))/g;
-    var parts = str.split(regex);
-    var result = '';
-    for (var i = 0; i < parts.length; i++) {
-      var part = parts[i];
-      if (!part) continue;
-      if (part.startsWith('\\(') || part.startsWith('\\[')) {
-        result += escapeHtml(part);
+
+    // 1. Bảo vệ các khối MathJax
+    var mathTokens = [];
+    var withMathTokens = str.replace(/(\\\[[\s\S]*?\\\]|\\\(.*?\\\))/g, function (match) {
+      var token = '___MATH_TOKEN_' + mathTokens.length + '___';
+      mathTokens.push(match);
+      return token;
+    });
+
+    // 2. Chuyển đổi bảng Markdown sang HTML table
+    var withTables = parseMarkdownTables(withMathTokens);
+
+    // 3. Xử lý các khối text bên ngoài thẻ table
+    var tableBlockRegex = /(<div class="prc-table-wrapper">[\s\S]*?<\/div>)/g;
+    var segments = withTables.split(tableBlockRegex);
+    var out = '';
+
+    for (var k = 0; k < segments.length; k++) {
+      var seg = segments[k];
+      if (!seg) continue;
+      if (seg.startsWith('<div class="prc-table-wrapper">')) {
+        out += seg;
       } else {
-        var esc = escapeHtml(part);
+        var esc = escapeHtml(seg);
+        esc = esc.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
         if (isExplanation) {
-          esc = esc.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
           var lines = esc.split('\n');
           var formattedLines = [];
           var inList = false;
@@ -362,10 +461,16 @@
           }
           esc = formattedLines.join('<br>').replace(/<\/ul><br>/g, '</ul>').replace(/<br><ul/g, '<ul');
         }
-        result += esc;
+        out += esc;
       }
     }
-    return result;
+
+    // 4. Phục hồi MathJax
+    out = out.replace(/___MATH_TOKEN_(\d+)___/g, function (_, idx) {
+      return mathTokens[parseInt(idx, 10)];
+    });
+
+    return out;
   }
 
   /* Render MathJax cho một phần tử DOM cụ thể */
@@ -426,7 +531,7 @@
 
     var html =
       '<p class="prc-question-label">Multiple choice</p>' +
-      '<p class="prc-question-text">' + formatMathText(getDisplayQuestionText(q)) + '</p>' +
+      '<div class="prc-question-text">' + formatMathText(getDisplayQuestionText(q)) + '</div>' +
       renderQuestionDiagrams(q) +
       '<ul class="prc-options-list" role="radiogroup" aria-label="Đáp án">';
 
@@ -799,7 +904,7 @@
 
       html += '<div class="prc-review-question">';
       html += '<p class="prc-review-q-num">Question ' + (i + 1) + '</p>';
-      html += '<p class="prc-review-q-text">' + formatMathText(getDisplayQuestionText(q)) + '</p>';
+      html += '<div class="prc-review-q-text">' + formatMathText(getDisplayQuestionText(q)) + '</div>';
       html += renderQuestionDiagrams(q);
 
       html += '<ul class="prc-options-list" style="pointer-events:none">';

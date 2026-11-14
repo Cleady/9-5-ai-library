@@ -823,6 +823,59 @@ html[data-theme="dark"] .prc-subject-icon-tile .subject9-icon {
   white-space: pre-wrap;
 }
 
+/* Bảng dữ liệu câu hỏi vuông vức chuẩn generator (Karnaugh Map, Truth Table, Benchmark...) */
+.prc-table-wrapper {
+  margin: 16px 0;
+  overflow-x: auto;
+  white-space: normal;
+  display: block;
+}
+
+.prc-quiz-table {
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.4;
+  background-color: #ffffff;
+  border: 2px solid #64748b;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  white-space: normal;
+  margin: 4px 0 12px;
+}
+
+.prc-quiz-table th {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  font-weight: 700;
+  padding: 10px 18px;
+  border: 1.5px solid #64748b;
+  text-align: center;
+  min-width: 48px;
+  white-space: nowrap;
+}
+
+.prc-quiz-table td {
+  padding: 10px 18px;
+  border: 1.5px solid #64748b;
+  text-align: center;
+  color: #1e293b;
+  font-weight: 600;
+  min-width: 48px;
+  background-color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Cột đầu tiên trong bảng chân lý hoặc Karnaugh map */
+.prc-quiz-table tbody tr td:first-child {
+  font-weight: 700;
+  background-color: #f8fafc;
+}
+
+.prc-quiz-table tbody tr:hover td {
+  background-color: #f1f5f9;
+}
+
 /* Danh sách đáp án */
 .prc-options-list {
   display: flex;
@@ -2284,6 +2337,34 @@ html[data-theme="dark"] .prc-quiz-timer {
 
 html[data-theme="dark"] .prc-question-label {
   color: var(--accent-bright);
+}
+
+/* Bảng quiz trong Dark Mode */
+html[data-theme="dark"] .prc-quiz-table {
+  background-color: #1e293b;
+  border: 2px solid #64748b;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .prc-quiz-table th {
+  background-color: #334155;
+  color: #f8fafc;
+  border: 1.5px solid #64748b;
+}
+
+html[data-theme="dark"] .prc-quiz-table td {
+  border: 1.5px solid #64748b;
+  color: #e2e8f0;
+  background-color: #1e293b;
+}
+
+html[data-theme="dark"] .prc-quiz-table tbody tr td:first-child {
+  background-color: #273549;
+  color: #f8fafc;
+}
+
+html[data-theme="dark"] .prc-quiz-table tbody tr:hover td {
+  background-color: #334155;
 }
 
 /* Quiz Option Items (A, B, C, D) */

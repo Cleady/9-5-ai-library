@@ -339,7 +339,7 @@
 
     var html =
       '<p class="prc-question-label">Multiple choice</p>' +
-      '<p class="prc-question-text">' + formatMath(getDisplayQuestionText(q)) + '</p>' +
+      '<div class="prc-question-text">' + formatMath(getDisplayQuestionText(q)) + '</div>' +
       renderQuestionDiagrams(q) +
       '<ul class="prc-options-list" role="radiogroup" aria-label="Đáp án">';
 

@@ -1,6 +1,6 @@
 {
   "subject": "CEA201",
-  "updatedAt": "2026-11-13T18:38:45.942Z",
+  "updatedAt": "2026-11-14T12:09:13.712Z",
   "totalQuizzes": 21,
   "totalQuestions": 531,
   "quizzes": [
@@ -973,7 +973,7 @@
     {
       "id": 1061,
       "quizId": 2,
-      "text": "A benchmark program is running on a 400 MHz processor. The executed program consists of 500 instruction executions, with the following instruction mix and clock cycle count in the table below:\r\n\n| Instruction type | Instruction count | Cycles per Instruction |\n| --- | --- | --- |\n| Arithmetic | 300 | 1 |\n| Data transfer | 100 | 2 |\n| Control transfer | 100 | 2 |\n\nCalculate MIPS rate for this case.",
+      "text": "A benchmark program is running on a 400 MHz processor. The executed program consists of 500 instruction executions, with the following instruction mix and clock cycle count in the table below:\r\n\n| Instruction type | Instruction count | Cycles per Instruction |\n| :---: | :---: | :---: |\n| Arithmetic | 300 | 1 |\n| Data transfer | 100 | 2 |\n| Control transfer | 100 | 2 |\n\nCalculate MIPS rate for this case.",
       "options": [
         "MIPS rate = 285.7",
         "MIPS rate = 275.7",
@@ -4617,7 +4617,7 @@
     {
       "id": 1345,
       "quizId": 12,
-      "text": "For the following Boolean expression \\(AB + AB'\\) and the truth table:\r\n\n| A | B | B' | Output |\n| --- | --- | --- | --- |\n| 1 | 0 | 1 | ? |\n| 1 | 1 | 0 | ? |\n| 0 | 0 | 1 | ? |\n| 0 | 1 | 0 | ? |\n\nChoose the correct option to replace at \"?\" (order top to bottom):",
+      "text": "For the following Boolean expression \\(AB + AB'\\) and the truth table:\r\n\n| A | B | B' | Output |\n| :---: | :---: | :---: | :---: |\n| 1 | 0 | 1 | ? |\n| 1 | 1 | 0 | ? |\n| 0 | 0 | 1 | ? |\n| 0 | 1 | 0 | ? |\n\nChoose the correct option to replace at \"?\" (order top to bottom):",
       "options": [
         "1,1,1,0",
         "1,1,1,1",
@@ -4696,7 +4696,7 @@
     {
       "id": 1351,
       "quizId": 12,
-      "text": "Assume the following truth table:\r\n\n| X | Y | OUTPUT |\n| --- | --- | --- |\n| 1 | 1 | 1 |\n| 1 | 0 | 1 |\n| 0 | 1 | 1 |\n| 0 | 0 | 0 |\n\nWhich basic operator matches the table above?",
+      "text": "Assume the following truth table:\r\n\n| X | Y | OUTPUT |\n| :---: | :---: | :---: |\n| 1 | 1 | 1 |\n| 1 | 0 | 1 |\n| 0 | 1 | 1 |\n| 0 | 0 | 0 |\n\nWhich basic operator matches the table above?",
       "options": [
         "AND",
         "OR",
@@ -4788,7 +4788,7 @@
     {
       "id": 1358,
       "quizId": 12,
-      "text": "Given the Karnaugh map with inputs \\(CD\\) (rows) and \\(AB\\) (columns) as shown below:\r\n\n| \\(CD \\backslash AB\\) | 00 | 01 | 11 | 10 |\n| --- | --- | --- | --- | --- |\n| 00 | 1 | 1 | | |\n| 01 | 1 | 1 | | |\n| 11 | | | 1 | 1 |\n| 10 | | | 1 | 1 |\n\nChoose the corresponding canonical sum-of-products expression:",
+      "text": "Given the Karnaugh map with inputs \\(CD\\) (rows) and \\(AB\\) (columns) as shown below:\r\n\n| \\(CD \\backslash AB\\) | 00 | 01 | 11 | 10 |\n| :---: | :---: | :---: | :---: | :---: |\n| 00 | 1 | 1 | | |\n| 01 | 1 | 1 | | |\n| 11 | | | 1 | 1 |\n| 10 | | | 1 | 1 |\n\nChoose the corresponding canonical sum-of-products expression:",
       "options": [
         "F(A,B,C,D) = A'B'C'D' + A'B'C'D + A'BC'D' + A'BC'D + AB'CD + ABC'D' + ABCD' + ABCD",
         "F(A,B,C,D) = A'B'C'D' + A'B'C'D + A'BC'D' + A'BC'D + AB'CD + AB'CD' + ABCD' + ABCD",
@@ -5020,7 +5020,7 @@
     {
       "id": 1376,
       "quizId": 12,
-      "text": "Given the following Karnaugh map, what is the optimal expression in the sum of product format (\\(X'\\) means NOT \\(X\\))?\r\n\n| \\(AB \\backslash CD\\) | 00 | 01 | 11 | 10 |\n| --- | --- | --- | --- | --- |\n| 00 | | | | |\n| 01 | 1 | 1 | 1 | 1 |\n| 11 | | 1 | | 1 |\n| 10 | | 1 | | 1 |",
+      "text": "Given the following Karnaugh map, what is the optimal expression in the sum of product format (\\(X'\\) means NOT \\(X\\))?\r\n\n| \\(AB \\backslash CD\\) | 00 | 01 | 11 | 10 |\n| :---: | :---: | :---: | :---: | :---: |\n| 00 | | | | |\n| 01 | 1 | 1 | 1 | 1 |\n| 11 | | 1 | | 1 |\n| 10 | | 1 | | 1 |",
       "options": [
         "A'B + AC'D + ACD'",
         "AB + AC' + ACD'",
@@ -5033,7 +5033,7 @@
     {
       "id": 1377,
       "quizId": 12,
-      "text": "Given the following Karnaugh map, what is the optimal expression in the sum of product format (\\(X'\\) means NOT \\(X\\))?\r\n\n| \\(A \\backslash BC\\) | 00 | 01 | 11 | 10 |\n| --- | --- | --- | --- | --- |\n| 0 | 1 | 1 | 1 | 1 |\n| 1 | 1 | | | 1 |",
+      "text": "Given the following Karnaugh map, what is the optimal expression in the sum of product format (\\(X'\\) means NOT \\(X\\))?\r\n\n| \\(A \\backslash BC\\) | 00 | 01 | 11 | 10 |\n| :---: | :---: | :---: | :---: | :---: |\n| 0 | 1 | 1 | 1 | 1 |\n| 1 | 1 | | | 1 |",
       "options": [
         "\\(A' + C'\\)",
         "\\(A + B\\)",
@@ -5046,7 +5046,7 @@
     {
       "id": 1378,
       "quizId": 12,
-      "text": "Consider the truth table:\r\n\n| A | B | F |\n| --- | --- | --- |\n| 0 | 0 | 1 |\n| 0 | 1 | 0 |\n| 1 | 0 | 0 |\n| 1 | 1 | 0 |\n\nChoose the correct Algebraic Function matching the given truth table:",
+      "text": "Consider the truth table:\r\n\n| A | B | F |\n| :---: | :---: | :---: |\n| 0 | 0 | 1 |\n| 0 | 1 | 0 |\n| 1 | 0 | 0 |\n| 1 | 1 | 0 |\n\nChoose the correct Algebraic Function matching the given truth table:",
       "options": [
         "F = NOT (A + B)",
         "F = A XOR B",
@@ -5059,7 +5059,7 @@
     {
       "id": 1379,
       "quizId": 12,
-      "text": "Given the following Karnaugh map, what is the optimal expression in the sum of product format (\\(X'\\) means NOT \\(X\\))?\r\n\n| \\(A \\backslash BC\\) | 00 | 01 | 11 | 10 |\n| --- | --- | --- | --- | --- |\n| 0 | | | 1 | 1 |\n| 1 | 1 | | 1 | 1 |",
+      "text": "Given the following Karnaugh map, what is the optimal expression in the sum of product format (\\(X'\\) means NOT \\(X\\))?\r\n\n| \\(A \\backslash BC\\) | 00 | 01 | 11 | 10 |\n| :---: | :---: | :---: | :---: | :---: |\n| 0 | | | 1 | 1 |\n| 1 | 1 | | 1 | 1 |",
       "options": [
         "B + AC'",
         "B + AB'C'",

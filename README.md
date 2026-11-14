@@ -362,6 +362,11 @@ Chạy 1 dòng lệnh duy nhất:
 ```bash
 cd ~/9-5-ai-library && git pull origin main && pm2 restart 95ai-library
 ```
+### tai khoan 
+```
+username: 95aiadmin
+password: 95AIclub@#
+```
 
 #### Xử lý nhanh các tình huống phát sinh:
 - **Nếu có cài thêm thư viện npm mới ở backend:**

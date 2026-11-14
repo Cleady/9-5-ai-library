@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-13T18:38:46.136Z",
+  "generatedAt": "2026-11-14T13:03:09.967Z",
   "totalSubjects": 9,
-  "totalQuizzes": 132,
+  "totalQuizzes": 120,
   "subjects": [
     {
       "id": 1,
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "name": "Database",
+      "name": "Database Systems",
       "code": "DBI202",
       "icon": "subject4-icon"
     },
@@ -291,224 +291,92 @@
       "questionCount": 6
     },
     {
-      "id": 100,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 1 – INTRODUCTION TO DATABASE SYSTEMS",
-      "order": 1,
-      "durationMin": 99,
-      "difficulty": "Medium",
-      "questionCount": 66
-    },
-    {
       "id": 101,
       "subjectId": 2,
       "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 2 – THE ENTITY-RELATIONSHIP MODEL",
-      "order": 2,
-      "durationMin": 162,
+      "subjectName": "Database Systems",
+      "title": "Chương 1 – Introduction to Database Systems",
+      "order": 1,
+      "durationMin": 65,
       "difficulty": "Medium",
-      "questionCount": 105
+      "questionCount": 43
     },
     {
       "id": 102,
       "subjectId": 2,
       "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 3 – THE RELATIONAL MODEL",
-      "order": 3,
-      "durationMin": 108,
+      "subjectName": "Database Systems",
+      "title": "Chương 2 – The Relational Data Model",
+      "order": 2,
+      "durationMin": 102,
       "difficulty": "Medium",
-      "questionCount": 72
+      "questionCount": 68
     },
     {
       "id": 103,
       "subjectId": 2,
       "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 4 – RELATIONAL ALGEBRA AND CALCULUS",
-      "order": 4,
-      "durationMin": 68,
+      "subjectName": "Database Systems",
+      "title": "Chương 3 – Design Theory for Relational Databases",
+      "order": 3,
+      "durationMin": 138,
       "difficulty": "Medium",
-      "questionCount": 45
+      "questionCount": 92
     },
     {
       "id": 104,
       "subjectId": 2,
       "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 5 – SQL: QUERIES, PROGRAMMING, TRIGGERS",
-      "order": 5,
-      "durationMin": 443,
+      "subjectName": "Database Systems",
+      "title": "Chương 4 – High-Level Database Models",
+      "order": 4,
+      "durationMin": 104,
       "difficulty": "Medium",
-      "questionCount": 274
+      "questionCount": 69
     },
     {
       "id": 105,
       "subjectId": 2,
       "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 7 – STORING DATA: DISKS AND FILES",
-      "order": 7,
-      "durationMin": 5,
+      "subjectName": "Database Systems",
+      "title": "Chương 5 – Algebraic and Logical Query Languages",
+      "order": 5,
+      "durationMin": 11,
       "difficulty": "Medium",
-      "questionCount": 3
+      "questionCount": 7
     },
     {
       "id": 106,
       "subjectId": 2,
       "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 8 – FILE ORGANIZATIONS AND INDEXES",
-      "order": 8,
-      "durationMin": 18,
+      "subjectName": "Database Systems",
+      "title": "Chương 6 – The Database Language SQL",
+      "order": 6,
+      "durationMin": 261,
       "difficulty": "Medium",
-      "questionCount": 12
+      "questionCount": 174
     },
     {
       "id": 107,
       "subjectId": 2,
       "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 12 – EVALUATION OF RELATIONAL OPERATORS",
-      "order": 12,
-      "durationMin": 2,
+      "subjectName": "Database Systems",
+      "title": "Chương 7 – Constraints and Triggers",
+      "order": 7,
+      "durationMin": 104,
       "difficulty": "Medium",
-      "questionCount": 1
+      "questionCount": 69
     },
     {
       "id": 108,
       "subjectId": 2,
       "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 13 – INTRODUCTION TO QUERY OPTIMIZATION",
-      "order": 13,
-      "durationMin": 8,
+      "subjectName": "Database Systems",
+      "title": "Chương 8 – Views and Indexes",
+      "order": 8,
+      "durationMin": 77,
       "difficulty": "Medium",
-      "questionCount": 5
-    },
-    {
-      "id": 109,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 14 – A TYPICAL RELATIONAL QUERY OPTIMIZER",
-      "order": 14,
-      "durationMin": 8,
-      "difficulty": "Medium",
-      "questionCount": 5
-    },
-    {
-      "id": 110,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 15 – SCHEMA REFINEMENT AND NORMAL FORMS",
-      "order": 15,
-      "durationMin": 179,
-      "difficulty": "Medium",
-      "questionCount": 117
-    },
-    {
-      "id": 111,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 16 – PHYSICAL DATABASE DESIGN AND TUNING",
-      "order": 16,
-      "durationMin": 14,
-      "difficulty": "Medium",
-      "questionCount": 9
-    },
-    {
-      "id": 112,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 17 – SECURITY",
-      "order": 17,
-      "durationMin": 3,
-      "difficulty": "Medium",
-      "questionCount": 2
-    },
-    {
-      "id": 113,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 18 – TRANSACTION MANAGEMENT OVERVIEW",
-      "order": 18,
-      "durationMin": 48,
-      "difficulty": "Medium",
-      "questionCount": 32
-    },
-    {
-      "id": 114,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 19 – CONCURRENCY CONTROL",
-      "order": 19,
-      "durationMin": 15,
-      "difficulty": "Medium",
-      "questionCount": 10
-    },
-    {
-      "id": 115,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 22 – INTERNET DATABASES",
-      "order": 22,
-      "durationMin": 8,
-      "difficulty": "Medium",
-      "questionCount": 5
-    },
-    {
-      "id": 116,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 23 – DECISION SUPPORT",
-      "order": 23,
-      "durationMin": 5,
-      "difficulty": "Medium",
-      "questionCount": 3
-    },
-    {
-      "id": 117,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 25 – OBJECT-DATABASE SYSTEMS",
-      "order": 25,
-      "durationMin": 3,
-      "difficulty": "Medium",
-      "questionCount": 2
-    },
-    {
-      "id": 118,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 27 – DEDUCTIVE DATABASES",
-      "order": 27,
-      "durationMin": 5,
-      "difficulty": "Medium",
-      "questionCount": 3
-    },
-    {
-      "id": 119,
-      "subjectId": 2,
-      "subjectCode": "DBI202",
-      "subjectName": "Database",
-      "title": "Chương 28 – ADDITIONAL TOPICS",
-      "order": 28,
-      "durationMin": 2,
-      "difficulty": "Medium",
-      "questionCount": 1
+      "questionCount": 51
     },
     {
       "id": 201,
