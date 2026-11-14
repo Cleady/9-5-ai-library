@@ -6033,8 +6033,10 @@ Then identify 2 tuples of R that do not appear in the computed result:
 \choice (50,z)
 \choice (70,t)
 \end{choices}
-\textbf{Đáp án:} B
-\textbf{Giải thích:} Trong phép Right Outer Join (R RIGHT JOIN S ON R.B = S.B), mọi hàng của S được giữ lại. Bảng S chỉ chứa các giá trị B in {x, z}. Do đó, các bộ của R có B = 'y' là (30, y) và B = 't' là (70, t) sẽ không xuất hiện trong kết quả.
+\textbf{Đáp án:} BD
+\textbf{Giải thích:} Đáp án theo dữ liệu đề: B, D — B. (30,y); D. (70,t).
+
+Trong phép Right Outer Join (R RIGHT JOIN S ON R.B = S.B), mọi hàng của S được giữ lại. Bảng S chỉ chứa các giá trị B in {x, z}. Do đó, các bộ của R có B = 'y' là (30, y) và B = 't' là (70, t) sẽ không xuất hiện trong kết quả.
 \end{question}
 
 

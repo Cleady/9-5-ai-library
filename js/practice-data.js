@@ -11596,7 +11596,12 @@
         "(70,t)"
       ],
       "correctIndex": 1,
-      "explanation": "Trong phép Right Outer Join (R RIGHT JOIN S ON R.B = S.B), mọi hàng của S được giữ lại. Bảng S chỉ chứa các giá trị B in x, z. Do đó, các bộ của R có B = 'y' là (30, y) và B = 't' là (70, t) sẽ không xuất hiện trong kết quả."
+      "explanation": "**Đáp án đúng**: B & D\n\nĐáp án theo dữ liệu đề: B, D — B. (30,y); D. (70,t).\r\n\nTrong phép Right Outer Join (R RIGHT JOIN S ON R.B = S.B), mọi hàng của S được giữ lại. Bảng S chỉ chứa các giá trị B in x, z. Do đó, các bộ của R có B = 'y' là (30, y) và B = 't' là (70, t) sẽ không xuất hiện trong kết quả.",
+      "correctIndices": [
+        1,
+        3
+      ],
+      "multiple": true
     },
     {
       "id": 5280,
