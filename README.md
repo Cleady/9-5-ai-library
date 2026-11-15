@@ -363,7 +363,7 @@ Chạy 1 dòng lệnh duy nhất:
 cd ~/9-5-ai-library && git pull origin main && pm2 restart 95ai-library
 ```
 ### tai khoan 
-```
+```bash
 username: 95aiadmin
 password: 95AIclub@#
 ```

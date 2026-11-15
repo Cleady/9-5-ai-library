@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T17:26:04.262Z",
+  "generatedAt": "2026-11-15T16:25:46.980Z",
   "totalSubjects": 9,
   "totalQuizzes": 120,
   "subjects": [
@@ -1298,9 +1298,9 @@
       "subjectName": "Elementary Japanese 1- A1.1",
       "title": "Chương 1 – Chữ Hán & Từ vựng (Kanji & Vocabulary)",
       "order": 1,
-      "durationMin": 59,
+      "durationMin": 48,
       "difficulty": "Medium",
-      "questionCount": 39
+      "questionCount": 32
     },
     {
       "id": 702,
@@ -1309,9 +1309,9 @@
       "subjectName": "Elementary Japanese 1- A1.1",
       "title": "Chương 2 – Ngữ pháp & Trợ từ cốt lõi (Core Grammar & Particles)",
       "order": 2,
-      "durationMin": 95,
+      "durationMin": 86,
       "difficulty": "Medium",
-      "questionCount": 63
+      "questionCount": 57
     },
     {
       "id": 703,
@@ -1320,9 +1320,9 @@
       "subjectName": "Elementary Japanese 1- A1.1",
       "title": "Chương 3 – Hội thoại & Mẫu câu Giao tiếp (Daily Dialogues & Expressions)",
       "order": 3,
-      "durationMin": 108,
+      "durationMin": 75,
       "difficulty": "Medium",
-      "questionCount": 72
+      "questionCount": 50
     },
     {
       "id": 704,
@@ -1331,9 +1331,9 @@
       "subjectName": "Elementary Japanese 1- A1.1",
       "title": "Chương 4 – Sắp xếp từ thành câu hoàn chỉnh (Sentence Reordering & Syntax)",
       "order": 4,
-      "durationMin": 9,
+      "durationMin": 8,
       "difficulty": "Medium",
-      "questionCount": 6
+      "questionCount": 5
     },
     {
       "id": 801,

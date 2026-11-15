@@ -481,6 +481,72 @@ if (isChoicesFormat) {
       explanation
     });
   }
+} else if (isEnvironmentFormat) {
+  // Format JPD113 / Ultra Edition: \begin{question}{num} ... \choice{A}{...} ... \answer{...} ... \explain{...} ... \end{question}
+  console.log(`    (Định dạng phát hiện: Môi trường \\begin{question} kèm \\choice / \\answer / \\explain)`);
+  const qRegex = /\\begin\{question\}\{([^}]+)\}([\s\S]*?)\\end\{question\}/g;
+  let qm;
+  while ((qm = qRegex.exec(content)) !== null) {
+    const qNum = qm[1].trim();
+    const body = qm[2];
+    const qPos = qm.index;
+
+    const chIndex = chapters.findIndex((c, i) => {
+      const nextCh = chapters[i + 1];
+      return qPos >= c.index && (!nextCh || qPos < nextCh.index);
+    });
+    const chapter = chapters[chIndex >= 0 ? chIndex : 0];
+
+    const sourceM = body.match(/\\source\{([^}]+)\}/);
+    const source = sourceM ? sourceM[1].trim() : '';
+
+    let promptRaw = '';
+    const textM = body.match(/\\text\{([\s\S]*?)\}\s*(?=\\choice)/);
+    if (textM) {
+      promptRaw = textM[1];
+    } else {
+      const beforeChoice = body.split(/\\choice/)[0];
+      promptRaw = beforeChoice.replace(/\\source\{[^}]*\}/g, '').trim();
+    }
+    promptRaw = convertTabularToMarkdown(promptRaw);
+    const promptText = cleanTexWithMath(promptRaw);
+
+    const choiceMatches = [...body.matchAll(/\\choice\{([A-Za-z0-9]+)\}\{([\s\S]*?)\}/g)];
+    const options = choiceMatches.map(m => cleanTexWithMath(m[2]));
+
+    const ansM = body.match(/\\answer\{([A-Za-z]+)\}/i);
+    const answerLetter = ansM ? ansM[1].trim().toUpperCase() : 'A';
+    const correctIndex = answerLetter.charCodeAt(0) - 65;
+    const correctIndices = answerLetter.length > 1
+      ? answerLetter.split('').map(c => c.charCodeAt(0) - 65).filter(i => i >= 0 && i < options.length)
+      : undefined;
+
+    const expM = body.match(/\\explain\{([\s\S]*?)\}(?=\s*(?:\\end\{question\}|$))/);
+    let explanation = expM ? cleanTexWithMath(expM[1]) : '';
+    if (source && !explanation.includes(source)) {
+      explanation += `\n\nXuất hiện trong: ${source}`;
+    }
+
+    if (answerLetter.length > 1) {
+      const letters = (correctIndices || []).map(i => String.fromCharCode(65 + i));
+      if (!explanation.includes('Đáp án đúng')) {
+        explanation = `**Đáp án đúng**: ${letters.join(' & ')}\n\n` + explanation;
+      }
+    }
+
+    rawQuestions.push({
+      rawQNum: qNum,
+      chapterIndex: chIndex,
+      chapterNum: chapter.num,
+      chapterTitle: chapter.title,
+      text: promptText,
+      options,
+      answerLetter,
+      correctIndex: correctIndices && correctIndices.length > 0 ? correctIndices[0] : Math.max(0, correctIndex),
+      correctIndices: correctIndices && correctIndices.length > 1 ? correctIndices : undefined,
+      explanation
+    });
+  }
 } else {
   console.error(`[ERROR] Không xác định được định dạng câu hỏi trong file .tex!`);
   process.exit(1);
