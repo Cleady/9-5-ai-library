@@ -2375,21 +2375,28 @@ Phân tích: XML biểu diễn dữ liệu phân cấp bằng phần tử/thuộ
 \begin{question}{109}
 % [ID gốc: 27.1]
 % [Nguồn: DBI202 Order 27 Q1]
-The Datalog rule H(x,y)  2 AND y  2 and y  2 AND y < 6. Relation S(x, y) has 3 tuples (2, 3), (3, 5), and (4, 6). What is about H?
+Consider the Datalog rule:
+\(H(x,y) \leftarrow S(x,y) \text{ AND } x > 2 \text{ AND } y < 6\)
+
+Relation \(S(x, y)\) has 3 tuples: \((2, 3)\), \((3, 5)\), and \((4, 6)\). What is true about \(H\)?
 \begin{choices}
-\choice H has a tuple (3, 5)
-\choice H has a tuple (2, 3)
-\choice H has 2 tuples (2, 3) and (3, 5)
-\choice H has 3 tuples (2, 3) and (3, 5) and (4, 6)
+\choice \(H\) has a tuple \((3, 5)\)
+\choice \(H\) has a tuple \((2, 3)\)
+\choice \(H\) has 2 tuples \((2, 3)\) and \((3, 5)\)
+\choice \(H\) has 3 tuples \((2, 3)\) and \((3, 5)\) and \((4, 6)\)
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. H has a tuple (3, 5).
+\textbf{Giải thích:} **Đáp án đúng: A. \(H\) has a tuple \((3, 5)\)**
 
-Nền tảng kiến thức: CSDL suy diễn dùng facts và rules để suy ra facts mới; Datalog thường biểu diễn head :- body, trong đó body là các điều kiện cần đồng thời đúng. Truy vấn đệ quy được tính lặp tới điểm cố định, nên cần kiểm tra biến, phép nối và điều kiện lọc trên từng bộ.
+Xét luật Datalog: \(H(x,y) \leftarrow S(x,y) \text{ AND } x > 2 \text{ AND } y < 6\)
+Điều kiện để một bộ \((x, y)\) thuộc quan hệ \(H\) là phải thuộc \(S\) và thỏa mãn đồng thời cả hai điều kiện: \(x > 2\) và \(y < 6\).
 
-Phân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.
+Kiểm tra từng bộ trong quan hệ \(S\):
+- Bộ \((2, 3)\): có \(x = 2 \ngtr 2\) (không thỏa mãn \(x > 2\)) \(\rightarrow\) loại.
+- Bộ \((3, 5)\): có \(x = 3 > 2\) (thỏa mãn) và \(y = 5 < 6\) (thỏa mãn) \(\rightarrow (3, 5) \in H\).
+- Bộ \((4, 6)\): có \(x = 4 > 2\) (thỏa mãn), nhưng \(y = 6 \nless 6\) (không thỏa mãn \(y < 6\)) \(\rightarrow\) loại.
 
-Đối chiếu phương án: B. H has a tuple (2, 3); C. H has 2 tuples (2, 3) and (3, 5); D. H has 3 tuples (2, 3) and (3, 5) and (4, 6). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Do đó, quan hệ \(H\) chỉ chứa duy nhất 1 bộ là \((3, 5)\). Phương án đúng là **A**.
 \end{question}
 
 \begin{question}{110}
