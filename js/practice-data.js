@@ -9040,13 +9040,13 @@
       "quizId": 102,
       "text": "For the following relation:\r\n\n\\(\\textbf{Student}\\)\r\n\\(\\begin{array}{|c|c|c|c|}\r\n\\hline\r\n\\text{ID} & \\text{Name} & \\text{City} & \\text{Gender} \\\\\r\n\\hline\r\n\\text{SE1234} & \\text{Le Hong Phong} & \\text{HCM} & \\text{Male} \\\\\r\n\\hline\r\n\\text{SE1235} & \\text{Le Hong Hanh} & \\text{HCM} & \\text{Female} \\\\\r\n\\hline\r\n\\text{SE1236} & \\text{Tran Binh Trong} & \\text{HN} & \\text{Male} \\\\\r\n\\hline\r\n\\end{array}\\)\r\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
       "options": [
-        "\\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\'HCM\\' \\land \\text{Gender}=\\'Male\\'}(\\text{Student}))\\)",
-        "\\(\\pi_{\\text{Name}, \\text{City}}[\\sigma_{\\text{City}=\\'HCM\\' \\land \\text{Gender}=\\'Male\\'}(\\text{Student})]\\)",
-        "\\(\\sigma_{\\text{Name}, \\text{City}}(\\pi_{\\text{City}=\\'HCM\\' \\land \\text{Gender}=\\'Male\\'}(\\text{Student}))\\)",
+        "\\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
+        "\\(\\pi_{\\text{Name}, \\text{City}}[\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})]\\)",
+        "\\(\\sigma_{\\text{Name}, \\text{City}}(\\pi_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
         "None of the others"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. Name, City (City='HCM' AND Gender='Male' (Student)).\r\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\r\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\r\n\nĐối chiếu phương án: B. Name, City([City='HCM' AND Gender='Male' (Student)); C. Name, City (City='HCM' && Gender='Male' (Student)); D. Name, City (City='HCM' && Gender='Male' (Student). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng: A. \\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)**\r\n\nYêu cầu đề bài: Lấy danh sách tên (\\textName) và thành phố (\\textCity) của các sinh viên sống tại HCM và có giới tính Male.\r\n- **Phép chọn (Selection \\(\\sigma\\))**: Lọc các bộ dữ liệu thỏa mãn điều kiện kết hợp: \\(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})\\).\r\n- **Phép chiếu (Projection \\(\\pi\\))**: Chiếu lấy các thuộc tính cần hiển thị trên kết quả đã lọc: \\(\\pi_{\\text{Name}, \\text{City}}(...)\\).\r\n- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \\(\\pi_{\\text{Danh\\_sách\\_cột}}(\\sigma_{\\text{Điều\\_kiện}}(\\text{Bảng}))\\).\r\n\nDo đó phương án **A** là chính xác. Phương án B dùng sai ngoặc vuông \\([...]\\), phương án C đảo ngược thứ tự chiếu trước khi chọn làm mất thuộc tính \\(\\text{Gender}\\)."
     },
     {
       "id": 5085,
