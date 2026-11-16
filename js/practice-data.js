@@ -9397,15 +9397,15 @@
     {
       "id": 5111,
       "quizId": 102,
-      "text": "Need to be deleted\r\nConsider the Datalog rule H(xy) 2 AND y < 6. Relation S(x y) has 3 tuples (2.3). (3.5). and (4.6). What is about H?",
+      "text": "Consider the Datalog rule:\r\n\\(H(x,y)\\leftarrow S(x,y)\\text{\\ AND\\ }x>2\\text{\\ AND\\ }y<6\\)\r\n\nRelation \\(S(x, y)\\) has 3 tuples: \\((2, 3)\\), \\((3, 5)\\), and \\((4, 6)\\). What is true about \\(H\\)?",
       "options": [
-        "H has a tuple (2.3)",
-        "H has 3 tuples (2.3) and (3.5) and (4.6)",
-        "H has 2 tuples (2.3) and (3.5)",
-        "H has a tuple (3.5)"
+        "\\(H\\) has a tuple \\((2, 3)\\)",
+        "\\(H\\) has 3 tuples \\((2, 3)\\), \\((3, 5)\\), and \\((4, 6)\\)",
+        "\\(H\\) has 2 tuples \\((2, 3)\\) and \\((3, 5)\\)",
+        "\\(H\\) has a tuple \\((3, 5)\\)"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. H has a tuple (3.5).\r\n\nNền tảng kiến thức: CSDL suy diễn dùng facts và rules để suy ra facts mới; Datalog thường biểu diễn head :- body, trong đó body là các điều kiện cần đồng thời đúng. Truy vấn đệ quy được tính lặp tới điểm cố định, nên cần kiểm tra biến, phép nối và điều kiện lọc trên từng bộ.\r\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\r\n\nĐối chiếu phương án: A. H has a tuple (2.3); B. H has 3 tuples (2.3) and (3.5) and (4.6); C. H has 2 tuples (2.3) and (3.5). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng: D. \\(H\\) has a tuple \\((3, 5)\\)**\r\n\nXét luật Datalog: \\(H(x,y) \\leftarrow S(x,y) \\text{ AND } x > 2 \\text{ AND } y < 6\\)\r\nĐiều kiện để một bộ \\((x, y)\\) thuộc quan hệ \\(H\\) là phải thuộc \\(S\\) và thỏa mãn đồng thời cả hai điều kiện: \\(x > 2\\) và \\(y < 6\\).\r\n\nKiểm tra từng bộ trong quan hệ \\(S\\):\r\n- Bộ \\((2, 3)\\): có \\(x = 2 \\ngtr 2\\) (không thỏa mãn \\(x > 2\\)) \\(\\rightarrow\\) loại.\r\n- Bộ \\((3, 5)\\): có \\(x = 3 > 2\\) (thỏa mãn) và \\(y = 5 < 6\\) (thỏa mãn) \\(\\rightarrow (3, 5) \\in H\\).\r\n- Bộ \\((4, 6)\\): có \\(x = 4 > 2\\) (thỏa mãn), nhưng \\(y = 6 \\nless 6\\) (không thỏa mãn \\(y < 6\\)) \\(\\rightarrow\\) loại.\r\n\nDo đó, quan hệ \\(H\\) chỉ chứa duy nhất 1 bộ là \\((3, 5)\\). Phương án đúng là **D**."
     },
     {
       "id": 5112,
