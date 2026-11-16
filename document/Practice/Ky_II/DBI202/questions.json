@@ -1,6 +1,6 @@
 {
   "subject": "DBI202",
-  "updatedAt": "2026-11-14T17:26:03.604Z",
+  "updatedAt": "2026-11-16T19:07:20.797Z",
   "totalQuizzes": 8,
   "totalQuestions": 573,
   "quizzes": [
@@ -231,7 +231,7 @@
         "5",
         "6"
       ],
-      "correctIndex": 2,
+      "correctIndex": 3,
       "explanation": "Đáp án theo dữ liệu đề: D — D. 6.\r\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\r\n\nPhân tích: Đây là câu đếm theo phạm vi giáo trình cụ thể, không có một con số phổ quát cho mọi môn CSDL. Đối chiếu danh sách mô hình đã được giảng/ghi trong đề cương của học phần; đáp án giữ nguyên theo khóa nguồn, còn phần giải thích không khẳng định ngoài phạm vi tài liệu môn.\r\n\nĐối chiếu phương án: A. 3; B. 4; C. 5. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
