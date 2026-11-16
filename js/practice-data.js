@@ -9397,7 +9397,7 @@
     {
       "id": 5111,
       "quizId": 102,
-      "text": "Consider the Datalog rule:\r\n\\(H(x,y)\\leftarrow S(x,y)\\text{\\ AND\\ }x>2\\text{\\ AND\\ }y<6\\)\r\n\nRelation \\(S(x, y)\\) has 3 tuples: \\((2, 3)\\), \\((3, 5)\\), and \\((4, 6)\\). What is true about \\(H\\)?",
+      "text": "Consider the Datalog rule:\r\n\\(H(x,y) \\leftarrow S(x,y) \\text{ AND } x > 2 \\text{ AND } y < 6\\)\r\n\nRelation \\(S(x, y)\\) has 3 tuples: \\((2, 3)\\), \\((3, 5)\\), and \\((4, 6)\\). What is true about \\(H\\)?",
       "options": [
         "\\(H\\) has a tuple \\((2, 3)\\)",
         "\\(H\\) has 3 tuples \\((2, 3)\\), \\((3, 5)\\), and \\((4, 6)\\)",
