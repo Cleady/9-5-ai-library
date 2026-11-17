@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T19:45:56.198Z",
+  "generatedAt": "2026-11-17T20:30:38.428Z",
   "totalSubjects": 9,
   "totalQuizzes": 123,
   "subjects": [
@@ -361,7 +361,7 @@
       "subjectId": 2,
       "subjectCode": "DBI202",
       "subjectName": "Database Systems",
-      "title": "Chương 7 – Constraints and Triggers",
+      "title": "Chương 7 – Views and Indexes",
       "order": 7,
       "durationMin": 104,
       "difficulty": "Medium",
@@ -372,7 +372,7 @@
       "subjectId": 2,
       "subjectCode": "DBI202",
       "subjectName": "Database Systems",
-      "title": "Chương 8 – Views and Indexes",
+      "title": "Chương 8 – Constraints and Triggers",
       "order": 8,
       "durationMin": 77,
       "difficulty": "Medium",

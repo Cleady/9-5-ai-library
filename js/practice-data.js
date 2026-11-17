@@ -307,7 +307,7 @@
     {
       "id": 107,
       "subjectId": 2,
-      "title": "Chương 7 – Constraints and Triggers",
+      "title": "Chương 7 – Views and Indexes",
       "order": 7,
       "durationMin": 104,
       "difficulty": "Medium",
@@ -316,7 +316,7 @@
     {
       "id": 108,
       "subjectId": 2,
-      "title": "Chương 8 – Views and Indexes",
+      "title": "Chương 8 – Constraints and Triggers",
       "order": 8,
       "durationMin": 77,
       "difficulty": "Medium",
