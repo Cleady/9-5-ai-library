@@ -1,6 +1,6 @@
 {
   "subject": "DBI202",
-  "updatedAt": "2026-11-17T17:34:02.391Z",
+  "updatedAt": "2026-11-17T17:50:47.533Z",
   "totalQuizzes": 8,
   "totalQuestions": 573,
   "quizzes": [
@@ -4382,16 +4382,16 @@
     {
       "id": 5330,
       "quizId": 106,
-      "text": "The table Arc(x,y) currently has the following tuples (note there are duplicates):\n(See picture)\nCompute the result of the query:\nSELECT x, COUNT(y)\nFROM Arc\nGROUP BY x;\nWhich of the following tuples is in the result?\n[file:8522.jpg]",
+      "text": "The table \\(\\textbf{Arc}(x, y)\\) currently has the following tuples (note there are duplicate rows):\n\n\\(\\textbf{Arc}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{x} & \\textbf{y} \\\\\n\\hline\n1 & 2 \\\\\n\\hline\n1 & 2 \\\\\n\\hline\n2 & 3 \\\\\n\\hline\n3 & 4 \\\\\n\\hline\n3 & 4 \\\\\n\\hline\n4 & 1 \\\\\n\\hline\n4 & 1 \\\\\n\\hline\n4 & 1 \\\\\n\\hline\n4 & 2 \\\\\n\\hline\n\\end{array}\\)\n\nCompute the result of the query:\n\nSELECT x, COUNT(y)\nFROM Arc\nGROUP BY x;\n\nWhich of the following tuples is in the result?",
       "options": [
-        "(4,4)",
-        "(4,5)",
-        "(4,6)",
-        "(4,7)",
-        "(4,8)"
+        "(4, 4)",
+        "(4, 5)",
+        "(4, 6)",
+        "(4, 7)",
+        "(4, 8)"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. (4,4).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: B. (4,5); C. (4,6); D. (4,7); E. (4,8). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: A — (4, 4).\n\nPhân tích chi tiết:\nMệnh đề `GROUP BY x` thực hiện gom các hàng có cùng giá trị \\(x\\) lại thành từng nhóm và tính `COUNT(y)` (đếm số giá trị \\(y\\) trong mỗi nhóm):\n- Nhóm \\(x = 1\\): có 2 hàng gồm \\((1, 2), (1, 2) \\implies \\text{COUNT}(y) = 2 \\implies\\) tuple kết quả là \\((1, 2)\\).\n- Nhóm \\(x = 2\\): có 1 hàng \\((2, 3) \\implies \\text{COUNT}(y) = 1 \\implies\\) tuple kết quả là \\((2, 1)\\).\n- Nhóm \\(x = 3\\): có 2 hàng \\((3, 4), (3, 4) \\implies \\text{COUNT}(y) = 2 \\implies\\) tuple kết quả là \\((3, 2)\\).\n- Nhóm \\(x = 4\\): có 4 hàng gồm \\((4, 1), (4, 1), (4, 1), (4, 2) \\implies \\text{COUNT}(y) = 4 \\implies\\) tuple kết quả là \\((4, 4)\\).\n\nĐối chiếu với các phương án lựa chọn, tuple \\((4, 4)\\) xuất hiện trong kết quả truy vấn.\nDo đó, phương án đúng là A."
     },
     {
       "id": 5331,
@@ -4567,15 +4567,15 @@
     {
       "id": 5344,
       "quizId": 106,
-      "text": "The table R(X,Y) currently has the following tuples (note there are duplicates).The relation S(A,B,C) has the following tuples:\n(See picture)\nWhich is the result when we execute the following query:\nSELECT * FROM R\nUNION\nSELECT * FROM S\n[file:8524.jpg]",
+      "text": "The table \\(\\textbf{R}(X, Y)\\) currently has the following tuples, and the relation \\(\\textbf{S}(A, B, C)\\) has the following tuples:\n\n\\(\\textbf{R} \\qquad\\qquad\\qquad \\textbf{S}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{X} & \\textbf{Y} \\\\\n\\hline\n1 & 2 \\\\\n\\hline\n2 & 3 \\\\\n\\hline\n3 & 4 \\\\\n\\hline\n4 & 5 \\\\\n\\hline\n5 & 6 \\\\\n\\hline\n6 & 7 \\\\\n\\hline\n7 & 8 \\\\\n\\hline\n8 & 9 \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} & \\textbf{C} \\\\\n\\hline\n1 & 2 & 3 \\\\\n\\hline\n2 & 3 & 4 \\\\\n\\hline\n3 & 4 & 5 \\\\\n\\hline\n4 & 5 & 6 \\\\\n\\hline\n5 & 6 & 7 \\\\\n\\hline\n6 & 7 & 8 \\\\\n\\hline\n7 & 8 & 9 \\\\\n\\hline\n8 & 9 & 10 \\\\\n\\hline\n9 & 10 & 11 \\\\\n\\hline\n\\end{array}\\)\n\nWhich is the result when we execute the following query?\n\nSELECT * FROM R\nUNION\nSELECT * FROM S;",
       "options": [
-        "There is an error a",
+        "There is an error",
         "The output has 15 rows",
         "The output has 16 rows",
         "The output has 17 rows"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. There is an error a.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: B. The output has 15 rows; C. The output has 16 rows; D. The output has 17 rows. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: A — There is an error.\n\nNền tảng kiến thức & Phân tích chi tiết:\n- Trong SQL, toán tử tập hợp `UNION` yêu cầu hai tập kết quả phải thỏa mãn tính **tương thích tập hợp (Union Compatibility)**:\n 1. Cả hai câu truy vấn `SELECT` phải có **cùng số lượng cột (cùng số thuộc tính)**.\n 2. Các cột tương ứng theo thứ tự phải có kiểu dữ liệu tương thích với nhau.\n- Ở đây:\n + Bảng \\(R(X, Y)\\) chỉ có **2 cột** (\\(X, Y\\)).\n + Bảng \\(S(A, B, C)\\) có **3 cột** (\\(A, B, C\\)).\n- Khi thực thi lệnh `SELECT * FROM R UNION SELECT * FROM S;`, SQL Server / DBMS sẽ báo lỗi cú pháp do không tương thích số lượng cột:\n *`\"All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists.\"`*\n\nDo đó, truy vấn sẽ phát sinh lỗi (There is an error). Phương án đúng là A."
     },
     {
       "id": 5345,

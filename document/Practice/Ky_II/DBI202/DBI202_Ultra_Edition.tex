@@ -7266,29 +7266,60 @@ WHERE C > 10;
 \begin{question}{330}
 % [ID gốc: 5.24]
 % [Nguồn: DBI202 Order 5 Q24]
-The table Arc(x,y) currently has the following tuples (note there are duplicates):
-(See picture)
+The table \(\textbf{Arc}(x, y)\) currently has the following tuples (note there are duplicate rows):
+
+\[\textbf{Arc}\]
+\[\begin{array}{|c|c|}
+\hline
+\textbf{x} & \textbf{y} \\
+\hline
+1 & 2 \\
+\hline
+1 & 2 \\
+\hline
+2 & 3 \\
+\hline
+3 & 4 \\
+\hline
+3 & 4 \\
+\hline
+4 & 1 \\
+\hline
+4 & 1 \\
+\hline
+4 & 1 \\
+\hline
+4 & 2 \\
+\hline
+\end{array}\]
+
 Compute the result of the query:
+\begin{codebox}
 SELECT x, COUNT(y)
 FROM Arc
 GROUP BY x;
+\end{codebox}
+
 Which of the following tuples is in the result?
-[file:8522.jpg]
 \begin{choices}
-\choice (4,4)
-\choice (4,5)
-\choice (4,6)
-\choice (4,7)
-\choice (4,8)
+\choice (4, 4)
+\choice (4, 5)
+\choice (4, 6)
+\choice (4, 7)
+\choice (4, 8)
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. (4,4).
+\textbf{Giải thích:} Đáp án đúng: A — (4, 4).
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+Phân tích chi tiết:
+Mệnh đề `GROUP BY x` thực hiện gom các hàng có cùng giá trị \(x\) lại thành từng nhóm và tính `COUNT(y)` (đếm số giá trị \(y\) trong mỗi nhóm):
+- Nhóm \(x = 1\): có 2 hàng gồm \((1, 2), (1, 2) \implies \text{COUNT}(y) = 2 \implies\) tuple kết quả là \((1, 2)\).
+- Nhóm \(x = 2\): có 1 hàng \((2, 3) \implies \text{COUNT}(y) = 1 \implies\) tuple kết quả là \((2, 1)\).
+- Nhóm \(x = 3\): có 2 hàng \((3, 4), (3, 4) \implies \text{COUNT}(y) = 2 \implies\) tuple kết quả là \((3, 2)\).
+- Nhóm \(x = 4\): có 4 hàng gồm \((4, 1), (4, 1), (4, 1), (4, 2) \implies \text{COUNT}(y) = 4 \implies\) tuple kết quả là \((4, 4)\).
 
-Phân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.
-
-Đối chiếu phương án: B. (4,5); C. (4,6); D. (4,7); E. (4,8). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu với các phương án lựa chọn, tuple \((4, 4)\) xuất hiện trong kết quả truy vấn.
+Do đó, phương án đúng là A.
 \end{question}
 
 \begin{question}{331}
@@ -7588,27 +7619,81 @@ The relation R(A,B) may have duplicate tuples. Choose the query that create non-
 \begin{question}{344}
 % [ID gốc: 5.49]
 % [Nguồn: DBI202 Order 5 Q49]
-The table R(X,Y) currently has the following tuples (note there are duplicates).The relation S(A,B,C) has the following tuples:
-(See picture)
-Which is the result when we execute the following query:
+The table \(\textbf{R}(X, Y)\) currently has the following tuples, and the relation \(\textbf{S}(A, B, C)\) has the following tuples:
+
+\[\textbf{R} \qquad\qquad\qquad \textbf{S}\]
+\[\begin{array}{|c|c|}
+\hline
+\textbf{X} & \textbf{Y} \\
+\hline
+1 & 2 \\
+\hline
+2 & 3 \\
+\hline
+3 & 4 \\
+\hline
+4 & 5 \\
+\hline
+5 & 6 \\
+\hline
+6 & 7 \\
+\hline
+7 & 8 \\
+\hline
+8 & 9 \\
+\hline
+\end{array}
+\qquad\qquad
+\begin{array}{|c|c|c|}
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} \\
+\hline
+1 & 2 & 3 \\
+\hline
+2 & 3 & 4 \\
+\hline
+3 & 4 & 5 \\
+\hline
+4 & 5 & 6 \\
+\hline
+5 & 6 & 7 \\
+\hline
+6 & 7 & 8 \\
+\hline
+7 & 8 & 9 \\
+\hline
+8 & 9 & 10 \\
+\hline
+9 & 10 & 11 \\
+\hline
+\end{array}\]
+
+Which is the result when we execute the following query?
+\begin{codebox}
 SELECT * FROM R
 UNION
-SELECT * FROM S
-[file:8524.jpg]
+SELECT * FROM S;
+\end{codebox}
 \begin{choices}
-\choice There is an error a
+\choice There is an error
 \choice The output has 15 rows
 \choice The output has 16 rows
 \choice The output has 17 rows
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. There is an error a.
+\textbf{Giải thích:} Đáp án đúng: A — There is an error.
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+Nền tảng kiến thức & Phân tích chi tiết:
+- Trong SQL, toán tử tập hợp `UNION` yêu cầu hai tập kết quả phải thỏa mãn tính **tương thích tập hợp (Union Compatibility)**:
+  1. Cả hai câu truy vấn `SELECT` phải có **cùng số lượng cột (cùng số thuộc tính)**.
+  2. Các cột tương ứng theo thứ tự phải có kiểu dữ liệu tương thích với nhau.
+- Ở đây:
+  + Bảng \(R(X, Y)\) chỉ có **2 cột** (\(X, Y\)).
+  + Bảng \(S(A, B, C)\) có **3 cột** (\(A, B, C\)).
+- Khi thực thi lệnh `SELECT * FROM R UNION SELECT * FROM S;`, SQL Server / DBMS sẽ báo lỗi cú pháp do không tương thích số lượng cột:
+  *`"All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists."`*
 
-Phân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.
-
-Đối chiếu phương án: B. The output has 15 rows; C. The output has 16 rows; D. The output has 17 rows. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Do đó, truy vấn sẽ phát sinh lỗi (There is an error). Phương án đúng là A.
 \end{question}
 
 \begin{question}{345}
