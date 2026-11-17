@@ -255,36 +255,36 @@
       "subjectId": 2,
       "title": "Chương 1 – Introduction to Database Systems",
       "order": 1,
-      "durationMin": 65,
+      "durationMin": 56,
       "difficulty": "Medium",
-      "questionCount": 43
+      "questionCount": 37
     },
     {
       "id": 102,
       "subjectId": 2,
       "title": "Chương 2 – The Relational Data Model",
       "order": 2,
-      "durationMin": 102,
+      "durationMin": 96,
       "difficulty": "Medium",
-      "questionCount": 68
+      "questionCount": 64
     },
     {
       "id": 103,
       "subjectId": 2,
       "title": "Chương 3 – Design Theory for Relational Databases",
       "order": 3,
-      "durationMin": 138,
+      "durationMin": 116,
       "difficulty": "Medium",
-      "questionCount": 92
+      "questionCount": 77
     },
     {
       "id": 104,
       "subjectId": 2,
       "title": "Chương 4 – High-Level Database Models",
       "order": 4,
-      "durationMin": 104,
+      "durationMin": 90,
       "difficulty": "Medium",
-      "questionCount": 69
+      "questionCount": 60
     },
     {
       "id": 105,
@@ -300,27 +300,27 @@
       "subjectId": 2,
       "title": "Chương 6 – The Database Language SQL",
       "order": 6,
-      "durationMin": 263,
+      "durationMin": 234,
       "difficulty": "Medium",
-      "questionCount": 175
+      "questionCount": 156
     },
     {
       "id": 107,
       "subjectId": 2,
       "title": "Chương 7 – Views and Indexes",
       "order": 7,
-      "durationMin": 104,
+      "durationMin": 90,
       "difficulty": "Medium",
-      "questionCount": 69
+      "questionCount": 60
     },
     {
       "id": 108,
       "subjectId": 2,
       "title": "Chương 8 – Constraints and Triggers",
       "order": 8,
-      "durationMin": 77,
+      "durationMin": 72,
       "difficulty": "Medium",
-      "questionCount": 51
+      "questionCount": 48
     },
     {
       "id": 201,
@@ -8145,19 +8145,6 @@
     {
       "id": 5013,
       "quizId": 101,
-      "text": "Database data models usually have a way to go describe limitations on what the data can be, is called",
-      "options": [
-        "Constraints on the data",
-        "Operations on the data",
-        "Structure of the data",
-        "definition of data"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. Constraints on the data.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Constraint là quy tắc giới hạn giá trị/hình dạng dữ liệu hợp lệ, như miền giá trị, khóa hoặc tham chiếu. Operations mô tả thao tác trên dữ liệu, còn structure mô tả thành phần dữ liệu; constraint trả lời trực tiếp câu hỏi “giá trị nào được phép”.\n\nĐối chiếu phương án: B. Operations on the data; C. Structure of the data; D. definition of data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5014,
-      "quizId": 101,
       "text": "What are the disadvantages of network data model?",
       "options": [
         "Not support the high-level query language",
@@ -8169,7 +8156,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Not support the high-level query language.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Mô hình đồ thị/mạng biểu diễn đối tượng thành nút và liên kết thành cạnh; mô hình phân cấp thường tổ chức quan hệ cha-con dạng cây. Hãy dựa vào cấu trúc liên kết được mô tả để phân biệt, không chỉ nhìn thấy từ “node”.\n\nĐối chiếu phương án: B. Not support the relationships between nodes; C. Not support the database management system; D. Not support the storage method of very large amounts of data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5015,
+      "id": 5014,
       "quizId": 101,
       "text": "What is information?",
       "options": [
@@ -8182,20 +8169,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A collection of processed data.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Information là dữ liệu đã được xử lý/diễn giải để có ý nghĩa đối với mục tiêu sử dụng. Dữ liệu thô là các giá trị ghi nhận ban đầu; sau khi được tổng hợp hoặc đặt vào ngữ cảnh, chúng có thể trở thành thông tin.\n\nĐối chiếu phương án: A. A collection of unprocessed data; C. A collection of processed information; D. A collection of unprocessed information. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5016,
-      "quizId": 101,
-      "text": "Which of the following is not a feature of DBMS?",
-      "options": [
-        "Minimum duplication of data",
-        "Redundancy of data",
-        "Single-user access only",
-        "Support ACID Property"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Single-user access only.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Minimum duplication of data; B. Redundancy of data; D. Support ACID Property. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5017,
+      "id": 5015,
       "quizId": 101,
       "text": "What is the full form of DBMS?",
       "options": [
@@ -8208,7 +8182,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Database Management System.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: DBMS là viết tắt của Database Management System, tức hệ quản trị cơ sở dữ liệu. Nó cung cấp chức năng định nghĩa, lưu trữ, truy vấn, cập nhật và quản lý quyền trên CSDL; DBMS là phần mềm, còn database là dữ liệu được phần mềm quản lý.\n\nĐối chiếu phương án: A. Data of Binary Management System; C. Database Management Service; D. Data Backup Management System. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5018,
+      "id": 5016,
       "quizId": 101,
       "text": "A database administrator: a person or persons responsible for the struc-ture or schema of the database.",
       "options": [
@@ -8219,7 +8193,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. True.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Database administrator (DBA) chịu trách nhiệm quản trị và vận hành CSDL, bao gồm tổ chức schema, quyền truy cập, sao lưu/khôi phục và hiệu năng. DBA quản lý cấu trúc/hệ thống chứ không phải một bảng dữ liệu hay ngôn ngữ truy vấn.\n\nĐối chiếu phương án: B. False. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5019,
+      "id": 5017,
       "quizId": 101,
       "text": "What data structure will be represented for the hierarchical data model?",
       "options": [
@@ -8232,7 +8206,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Tree structure.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Mô hình đồ thị/mạng biểu diễn đối tượng thành nút và liên kết thành cạnh; mô hình phân cấp thường tổ chức quan hệ cha-con dạng cây. Hãy dựa vào cấu trúc liên kết được mô tả để phân biệt, không chỉ nhìn thấy từ “node”.\n\nĐối chiếu phương án: A. Array structure; B. Table structure; D. Pointers structure. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5020,
+      "id": 5018,
       "quizId": 101,
       "text": "In a network data model, a node can be linked to multiple other nodes. What is this relationship called?",
       "options": [
@@ -8245,7 +8219,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Many-to-many.\n\nLời giải gốc: Mô hình dữ liệu mạng (Network Data Model) cho phép một bản ghi con có nhiều bản ghi cha và ngược lại, tạo thành mối quan hệ nhiều-nhiều (Many-to-many).\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Mô hình đồ thị/mạng biểu diễn đối tượng thành nút và liên kết thành cạnh; mô hình phân cấp thường tổ chức quan hệ cha-con dạng cây. Hãy dựa vào cấu trúc liên kết được mô tả để phân biệt, không chỉ nhìn thấy từ “node”.\n\nĐối chiếu phương án: A. Many-to-one; B. One-to-many; D. One-to-one. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5021,
+      "id": 5019,
       "quizId": 101,
       "text": "Which of the following best defines a database?",
       "options": [
@@ -8258,7 +8232,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. A structured collection of data.\n\nLời giải gốc: Định nghĩa cơ bản nhất của Cơ sở dữ liệu (Database) là một tập hợp dữ liệu được tổ chức có cấu trúc, giúp việc lưu trữ, tìm kiếm và truy xuất thông tin hiệu quả.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Cơ sở dữ liệu là tập dữ liệu/thông tin có liên hệ, được tổ chức và duy trì để phục vụ một mục đích; DBMS là phần mềm quản lý tập dữ liệu ấy. Vì vậy, database không đồng nghĩa với một tệp đơn lẻ, một lần chụp dữ liệu (instance) hay phần mềm quản trị.\n\nĐối chiếu phương án: A. A collection of unorganized files; B. A program used to analyze data; D. A spreadsheet. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5022,
+      "id": 5020,
       "quizId": 101,
       "text": "The people whose jobs require access to the database for querying, updating, and generating reports; the database primarily exists for their use. What type of user is this?",
       "options": [
@@ -8271,7 +8245,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. End users.\n\nLời giải gốc: Người dùng cuối (End users) là những người trực tiếp sử dụng cơ sở dữ liệu để truy vấn, cập nhật dữ liệu và tạo báo cáo phục vụ cho công việc hàng ngày của họ.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: OLTP ghi nhận giao dịch nghiệp vụ ngắn và cập nhật thường xuyên; decision support/OLAP tập trung truy vấn phân tích, tổng hợp và báo cáo. Hãy phân loại theo mục đích thao tác chứ không theo việc cả hai cùng đọc dữ liệu.\n\nĐối chiếu phương án: A. DBA; C. Database designer; D. System Analysts and Application Programmers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5023,
+      "id": 5021,
       "quizId": 101,
       "text": "Which of the following is the appropriate characteristic of a database?",
       "options": [
@@ -8284,7 +8258,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. It can be accessed by multiple users at the same time due to an exclusive control function..\n\nLời giải gốc: Đặc điểm quan trọng của Cơ sở dữ liệu (Database) là hỗ trợ tính đồng thời (Concurrency). Nhiều người dùng có thể truy cập cùng lúc nhờ vào các cơ chế khóa (locking) hoặc kiểm soát giao dịch (exclusive control) nhằm đảm bảo dữ liệu không bị sai lệch.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. Because a database is created to suit the format of the data, it cannot respond flexibly to da…; B. The procedure for making backups is complicated.; C. It is difficult to share data between operations due to an exclusive control function.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5024,
+      "id": 5022,
       "quizId": 101,
       "text": "Which statement about the network data model is true?",
       "options": [
@@ -8297,7 +8271,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. It allows each record to have multiple parents and children..\n\nLời giải gốc: Đặc trưng của mô hình dữ liệu mạng là cho phép mỗi bản ghi có nhiều nút cha và nhiều nút con, phức tạp hơn mô hình phân cấp.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Mô hình đồ thị/mạng biểu diễn đối tượng thành nút và liên kết thành cạnh; mô hình phân cấp thường tổ chức quan hệ cha-con dạng cây. Hãy dựa vào cấu trúc liên kết được mô tả để phân biệt, không chỉ nhìn thấy từ “node”.\n\nĐối chiếu phương án: A. It supports high-level query languages like SQL.; B. It only allows one parent per record.; C. It organizes data using tables and relations.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5025,
+      "id": 5023,
       "quizId": 101,
       "text": "What is a disadvantage of the network data model?",
       "options": [
@@ -8310,7 +8284,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. It does not support a high-level query language.\n\nLời giải gốc: Nhược điểm lớn của mô hình mạng là cấu trúc phức tạp và không hỗ trợ ngôn ngữ truy vấn cấp cao linh hoạt như SQL.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Mô hình đồ thị/mạng biểu diễn đối tượng thành nút và liên kết thành cạnh; mô hình phân cấp thường tổ chức quan hệ cha-con dạng cây. Hãy dựa vào cấu trúc liên kết được mô tả để phân biệt, không chỉ nhìn thấy từ “node”.\n\nĐối chiếu phương án: B. It does not support relationships between nodes; C. It does not support the database management system; D. It does not support storing very large amounts of data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5026,
+      "id": 5024,
       "quizId": 101,
       "text": "A database administrator is a person or persons responsible for the structure or schema of the database.",
       "options": [
@@ -8321,7 +8295,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. True.\n\nLời giải gốc: Quản trị viên cơ sở dữ liệu (DBA) là người chịu trách nhiệm quản lý cấu trúc, bảo mật và lược đồ cơ sở dữ liệu.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Database administrator (DBA) chịu trách nhiệm quản trị và vận hành CSDL, bao gồm tổ chức schema, quyền truy cập, sao lưu/khôi phục và hiệu năng. DBA quản lý cấu trúc/hệ thống chứ không phải một bảng dữ liệu hay ngôn ngữ truy vấn.\n\nĐối chiếu phương án: B. False. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5027,
+      "id": 5025,
       "quizId": 101,
       "text": "Which of the following is NOT a feature of a DBMS?",
       "options": [
@@ -8334,7 +8308,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Single-user access only.\n\nLời giải gốc: Hệ quản trị cơ sở dữ liệu được thiết kế để hỗ trợ đa người dùng truy cập đồng thời, do đó \"Single-user access only\" không phải là đặc điểm của DBMS.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Minimum duplication of data; B. Redundancy of data; D. Support for the ACID property. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5028,
+      "id": 5026,
       "quizId": 101,
       "text": "In an employee table, to include the attributes whose value always have some value, which of the following constraints must be used?",
       "options": [
@@ -8347,7 +8321,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Not null.\n\nLời giải gốc: Ràng buộc NOT NULL bắt buộc một cột phải luôn chứa giá trị, không được để trống.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: NOT NULL là constraint cấm giá trị NULL ở cột, phù hợp khi mỗi hàng bắt buộc phải có giá trị. Nó không tự bảo đảm giá trị duy nhất (UNIQUE/PRIMARY KEY) và cũng không kiểm tra miền/range như CHECK.\n\nĐối chiếu phương án: A. Null; C. Unique; D. Distinct. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5029,
+      "id": 5027,
       "quizId": 101,
       "text": "What data structure represents the hierarchical data model?",
       "options": [
@@ -8360,33 +8334,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Tree structure.\n\nLời giải gốc: Mô hình dữ liệu phân cấp sử dụng cấu trúc cây (tree structure) để tổ chức mối quan hệ cha-con giữa các dữ liệu.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Mô hình đồ thị/mạng biểu diễn đối tượng thành nút và liên kết thành cạnh; mô hình phân cấp thường tổ chức quan hệ cha-con dạng cây. Hãy dựa vào cấu trúc liên kết được mô tả để phân biệt, không chỉ nhìn thấy từ “node”.\n\nĐối chiếu phương án: A. Array structure; B. Table structure; D. Pointer structure. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5030,
-      "quizId": 101,
-      "text": "Which of the following is an appropriate characteristic of a database?",
-      "options": [
-        "Because a database is created to suit the format of the data, it cannot respond flexibly to data format changes.",
-        "The procedure for making backups is complicated.",
-        "It is difficult to share data between operations due to an exclusive control function.",
-        "It can be accessed by multiple users at the same time due to an exclusive control function."
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. It can be accessed by multiple users at the same time due to an exclusive control function..\n\nLời giải gốc: Cơ sở dữ liệu cho phép nhiều người dùng truy cập đồng thời nhờ các cơ chế điều khiển tranh chấp và kiểm soát đồng thời.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. Because a database is created to suit the format of the data, it cannot respond flexibly to da…; B. The procedure for making backups is complicated.; C. It is difficult to share data between operations due to an exclusive control function.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5031,
-      "quizId": 101,
-      "text": "A _ _ _ is a logically coherent collection of data with some inherent meaning, representing some aspect of the real world, and which is designed, built, and populated with data for a specific purpose.",
-      "options": [
-        "Database",
-        "Schema Instance",
-        "Schema",
-        "Database Instance"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. Database.\n\nLời giải gốc: Khái niệm này định nghĩa về Cơ sở dữ liệu (Database). ---\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Cơ sở dữ liệu là tập dữ liệu/thông tin có liên hệ, được tổ chức và duy trì để phục vụ một mục đích; DBMS là phần mềm quản lý tập dữ liệu ấy. Vì vậy, database không đồng nghĩa với một tệp đơn lẻ, một lần chụp dữ liệu (instance) hay phần mềm quản trị.\n\nĐối chiếu phương án: B. Schema Instance; C. Schema; D. Database Instance. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5032,
+      "id": 5028,
       "quizId": 101,
       "text": "A. person or persons responsible for the structure or schema of the database is _ _ _ _ _.",
       "options": [
@@ -8399,7 +8347,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. A database administrator.\n\nLời giải gốc: Người quản trị cơ sở dữ liệu (Database Administrator - DBA) chịu trách nhiệm chính trong việc thiết kế, quản lý cấu trúc, sơ đồ (schema) và vận hành cơ sở dữ liệu.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Database administrator (DBA) chịu trách nhiệm quản trị và vận hành CSDL, bao gồm tổ chức schema, quyền truy cập, sao lưu/khôi phục và hiệu năng. DBA quản lý cấu trúc/hệ thống chứ không phải một bảng dữ liệu hay ngôn ngữ truy vấn.\n\nĐối chiếu phương án: A. A User; B. A Coder; C. A Customer. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5033,
+      "id": 5029,
       "quizId": 101,
       "text": "Which of the following is a function of a DBMS?",
       "options": [
@@ -8412,7 +8360,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Give users the ability to query the data.\n\nLời giải gốc: Một trong những chức năng cốt lõi của Hệ quản trị cơ sở dữ liệu (DBMS) là cung cấp ngôn ngữ và giao diện cho phép người dùng truy vấn (query) và quản lý dữ liệu.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Designing web pages; C. Performing system backups; D. Compiling source code. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5034,
+      "id": 5030,
       "quizId": 101,
       "text": "Assume that you are required to develop an application to manage courses at the university, which requires: Structured data (tables, rows, columns), strict consistency, and the need to use complex queries. The enforcement of ACID properties (Atomicity, Consistency, Isolation, Durability). In the context of databases, which most appropriate data model should you choose for developing this application?",
       "options": [
@@ -8425,7 +8373,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Relational data model (example: Microsoft SQL Server, MySQL, ..).\n\nLời giải gốc: Dữ liệu có cấu trúc dạng bảng, yêu cầu tính nhất quán cao, truy vấn phức tạp và tuân thủ tính chất ACID là đặc trưng chính của Mô hình dữ liệu quan hệ (Relational data model).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: B. Document-based data model (example: MongoDB, Cassandra, Couch DB); C. Key-value data model (example: Redis, DynamoDB, Riak); D. Hierarchical data model. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5035,
+      "id": 5031,
       "quizId": 101,
       "text": "When the Relational Data Model first proposed?",
       "options": [
@@ -8438,20 +8386,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. 1970.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: A. 1940; B. 1950; C. 1960. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5036,
-      "quizId": 101,
-      "text": "In query compiler, which unit transforms the initial query plan into the best available sequence of operations on the actual data?",
-      "options": [
-        "A query parser",
-        "A query preprocessor",
-        "A query optimizer",
-        "A query processor"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. A query optimizer.\n\nNền tảng kiến thức: Tối ưu hóa truy vấn biến biểu thức logic thành các kế hoạch tương đương rồi ước lượng chi phí để chọn kế hoạch có khả năng rẻ hơn. Đẩy selection/projection sớm và dùng thống kê có thể giảm dữ liệu trung gian, nhưng kế hoạch cụ thể phụ thuộc hệ quản trị và dữ liệu.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. A query parser; B. A query preprocessor; D. A query processor. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5037,
+      "id": 5032,
       "quizId": 101,
       "text": "What is query processing?",
       "options": [
@@ -8464,7 +8399,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The process of executing SQL statements..\n\nLời giải gốc: Xử lý truy vấn (query processing) là quá trình biên dịch và thực thi các câu lệnh SQL trong hệ thống cơ sở dữ liệu. ---\n\nNền tảng kiến thức: Tối ưu hóa truy vấn biến biểu thức logic thành các kế hoạch tương đương rồi ước lượng chi phí để chọn kế hoạch có khả năng rẻ hơn. Đẩy selection/projection sớm và dùng thống kê có thể giảm dữ liệu trung gian, nhưng kế hoạch cụ thể phụ thuộc hệ quản trị và dữ liệu.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. The process of defining database schemas.; C. The process of designing user interfaces.; D. The process of backing up data.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5038,
+      "id": 5033,
       "quizId": 101,
       "text": "In a query compiler, which unit transforms the initial query plan into the best available sequence of operations on the actual data?",
       "options": [
@@ -8477,7 +8412,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. A query optimizer.\n\nLời giải gốc: Bộ tối ưu hóa truy vấn (Query optimizer) chịu trách nhiệm phân tích và chuyển kế hoạch truy vấn ban đầu thành chuỗi thao tác thực thi tối ưu nhất.\n\nNền tảng kiến thức: Tối ưu hóa truy vấn biến biểu thức logic thành các kế hoạch tương đương rồi ước lượng chi phí để chọn kế hoạch có khả năng rẻ hơn. Đẩy selection/projection sớm và dùng thống kê có thể giảm dữ liệu trung gian, nhưng kế hoạch cụ thể phụ thuộc hệ quản trị và dữ liệu.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. A query parser; B. A query preprocessor; D. A query processor. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5039,
+      "id": 5034,
       "quizId": 101,
       "text": "Today, in a modern DBMS, the queries are parsed and optimized by",
       "options": [
@@ -8490,20 +8425,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. query compiler.\n\nNền tảng kiến thức: Trong pipeline truy vấn, parser kiểm tra cú pháp và dựng cây; các bước phân tích ngữ nghĩa/tiền xử lý kiểm tra tên và kiểu; optimizer chọn kế hoạch; execution engine thực thi kế hoạch. Không nên nhầm vai trò biên dịch với vai trò chạy truy vấn.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. all of the others; B. execution engine; C. buffer manager. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5040,
-      "quizId": 101,
-      "text": "In query compiler, which unit builds a tree structure from the text form of the query?",
-      "options": [
-        "A query parser",
-        "A query preprocessor",
-        "A query optimizer",
-        "A query processor"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. A query parser.\n\nNền tảng kiến thức: Trong pipeline truy vấn, parser kiểm tra cú pháp và dựng cây; các bước phân tích ngữ nghĩa/tiền xử lý kiểm tra tên và kiểu; optimizer chọn kế hoạch; execution engine thực thi kế hoạch. Không nên nhầm vai trò biên dịch với vai trò chạy truy vấn.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. A query preprocessor; C. A query optimizer; D. A query processor. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5041,
+      "id": 5035,
       "quizId": 101,
       "text": "In a query compiler, which unit builds a tree structure from the text form of the query?",
       "options": [
@@ -8516,7 +8438,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. A query parser.\n\nLời giải gốc: Bộ phân tích cú pháp truy vấn (query parser) chịu trách nhiệm kiểm tra câu lệnh và xây dựng cấu trúc cây cú pháp từ văn bản truy vấn.\n\nNền tảng kiến thức: Trong pipeline truy vấn, parser kiểm tra cú pháp và dựng cây; các bước phân tích ngữ nghĩa/tiền xử lý kiểm tra tên và kiểu; optimizer chọn kế hoạch; execution engine thực thi kế hoạch. Không nên nhầm vai trò biên dịch với vai trò chạy truy vấn.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. A query preprocessor; C. A query optimizer; D. A query processor. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5042,
+      "id": 5036,
       "quizId": 101,
       "text": "The aim for the Object-relational database is to bridge the gap between conceptual data modelling techniques such as Entity-relationship diagram (ERD) and object-relational mapping (ORM), which often use classes and inheritance, and relational databases, which do not directly support them",
       "options": [
@@ -8527,7 +8449,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. True.\n\nNền tảng kiến thức: CSDL đối tượng và đối tượng-quan hệ đưa khái niệm kiểu do người dùng định nghĩa, giá trị phức hợp hoặc đặc tính đối tượng vào hệ quản trị quan hệ. Mục tiêu là biểu diễn kiểu ứng dụng gần hơn mà vẫn tận dụng lưu trữ/truy vấn quan hệ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: B. False. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5043,
+      "id": 5037,
       "quizId": 101,
       "text": "Which of the following is an example of a NoSQL database system that is not based on the relational model?",
       "options": [
@@ -8540,7 +8462,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. MongoDB.\n\nLời giải gốc: MongoDB là hệ quản trị cơ sở dữ liệu phi quan hệ (NoSQL) lưu trữ dữ liệu theo tài liệu (document-oriented).\n\nNền tảng kiến thức: Chương bổ sung gom các chủ đề mở rộng như CSDL thời gian, di động, đa phương tiện, bộ nhớ chính và tích hợp nhiều nguồn. Trả lời cần dựa vào đặc điểm chuyên biệt được nêu trong câu, không áp máy móc giả định của bảng quan hệ truyền thống.\n\nPhân tích: MongoDB là hệ quản trị NoSQL thiên về tài liệu JSON/BSON, nên không dựa vào quan hệ bảng hàng-cột như MySQL, PostgreSQL hay Oracle. “NoSQL” không có nghĩa là không thể truy vấn; nó chỉ chỉ một nhóm mô hình lưu trữ khác quan hệ truyền thống.\n\nĐối chiếu phương án: A. MySQL; B. PostgreSQL; D. Oracle Database. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5044,
+      "id": 5038,
       "quizId": 102,
       "text": "Today, the two important data models are:",
       "options": [
@@ -8553,20 +8475,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. The relational data model (including object-relational extensions) and the semi-structured data model (including XML and related standards).\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Mô hình đồ thị/mạng biểu diễn đối tượng thành nút và liên kết thành cạnh; mô hình phân cấp thường tổ chức quan hệ cha-con dạng cây. Hãy dựa vào cấu trúc liên kết được mô tả để phân biệt, không chỉ nhìn thấy từ “node”.\n\nĐối chiếu phương án: A. The semi-structured data model (including XML and related standards) and the network data model; C. The network data model and the flat file data model; D. The flat file data model and the semi-structured data model (including XML and related standar…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5045,
-      "quizId": 102,
-      "text": "A data model is a notation for describing data or information. The description generally consists ?",
-      "options": [
-        "Structure of the data",
-        "Operations on the data",
-        "Constraints on the data.",
-        "All of the others"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. All of the others.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: A. Structure of the data; B. Operations on the data; C. Constraints on the data.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5046,
+      "id": 5039,
       "quizId": 102,
       "text": "Which data model introduced the concept of tables with rows and columns?",
       "options": [
@@ -8579,7 +8488,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Relational Model.\n\nLời giải gốc: Mô hình quan hệ (Relational Model) giới thiệu cách tổ chức dữ liệu dưới dạng các bảng (tables) gồm các dòng (rows/tuples) và các cột (columns/attributes).\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: A. Hierarchical Model; B. Network Model; C. Object-Oriented Model. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5047,
+      "id": 5040,
       "quizId": 102,
       "text": "In the relational model of data, a data model is a notation for describing data or information. What are the three descriptions of data and information? Choose three answers.",
       "options": [
@@ -8598,7 +8507,7 @@
       "multiple": true
     },
     {
-      "id": 5048,
+      "id": 5041,
       "quizId": 102,
       "text": "Database data models usually have a way to describe limitations on what the data can be, which is called _ _ _ _ _.",
       "options": [
@@ -8611,7 +8520,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Constraints on the data.\n\nLời giải gốc: Giới hạn hoặc quy tắc áp đặt lên dữ liệu để đảm bảo tính đúng đắn và nhất quán được gọi là các ràng buộc dữ liệu (Constraints on the data).\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Constraint là quy tắc giới hạn giá trị/hình dạng dữ liệu hợp lệ, như miền giá trị, khóa hoặc tham chiếu. Operations mô tả thao tác trên dữ liệu, còn structure mô tả thành phần dữ liệu; constraint trả lời trực tiếp câu hỏi “giá trị nào được phép”.\n\nĐối chiếu phương án: B. Operations on the data; C. Structure of the data; D. Definition of data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5049,
+      "id": 5042,
       "quizId": 102,
       "text": "Generally, what parts does a data model include in the context of a database?",
       "options": [
@@ -8624,7 +8533,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Structure of the data, operations on the data, and constraints on the data.\n\nLời giải gốc: Một mô hình dữ liệu chuẩn bao gồm cấu trúc dữ liệu, các phép toán trên dữ liệu và các ràng buộc dữ liệu.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: B. Metadata of the data, action logs, and data files; C. Keys on the table, records accepted in the table, and attributes of the table; D. Data schema, domain of attributes, and keys. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5050,
+      "id": 5043,
       "quizId": 102,
       "text": "A data model is a notation for describing data or information. The description generally consists of:",
       "options": [
@@ -8637,7 +8546,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. All of the others.\n\nLời giải gốc: Một mô hình dữ liệu hoàn chỉnh bao gồm ba thành phần: cấu trúc dữ liệu, các phép toán trên dữ liệu và các ràng buộc dữ liệu.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: A. Structure of the data; B. Operations on the data; C. Constraints on the data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5051,
+      "id": 5044,
       "quizId": 102,
       "text": "A ____ is a relation name, together with the attributes of that relation.",
       "options": [
@@ -8650,7 +8559,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. schema.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Schema mô tả cấu trúc tương đối ổn định (tên quan hệ, thuộc tính và kiểu/ràng buộc); instance là các bộ dữ liệu hiện có tại một thời điểm. Câu hỏi định nghĩa relation name cùng các thuộc tính đang hỏi schema, không phải nội dung hàng hiện tại.\n\nĐối chiếu phương án: B. database; C. database instance; D. schema instance. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5052,
+      "id": 5045,
       "quizId": 102,
       "text": "What is another term for a row in a relational table?",
       "options": [
@@ -8663,7 +8572,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Tuple.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Trong quan hệ, mỗi hàng dữ liệu là một tuple (bộ), mỗi cột là attribute (thuộc tính), còn relation là tập/bag các tuple theo một schema. Dùng đúng thuật ngữ này giúp tránh nhầm hàng với trường/cột hoặc toàn bộ bảng.\n\nĐối chiếu phương án: A. Attribute; C. Field; D. Relation. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5053,
+      "id": 5046,
       "quizId": 102,
       "text": "Suppose R is a relation with attributes A1, A2, A3, A4.\nThe only key of R is A1, A2. So, how many super-keys do R have?",
       "options": [
@@ -8676,7 +8585,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. 4.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: B. 8; C. 12; D. 16. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5054,
+      "id": 5047,
       "quizId": 102,
       "text": "In relational data model, an attribute is a column",
       "options": [
@@ -8687,7 +8596,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. False.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: A. True. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5055,
+      "id": 5048,
       "quizId": 102,
       "text": "Look at this line:\nMOVIES (Id, Name, Description)\nWhat the above represent?",
       "options": [
@@ -8700,7 +8609,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A schema.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: A. A relation; C. A schema instance; D. A relation instance b // Theo mình con này chọn BC The correct answers are [B] and [C]. R is a…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5056,
+      "id": 5049,
       "quizId": 102,
       "text": "In relational data model, a tuple is a record or a row.",
       "options": [
@@ -8711,7 +8620,7 @@
       "explanation": "Trong mô hình dữ liệu quan hệ, một bộ (tuple) tương ứng chính xác với một bản ghi (record) hoặc một hàng (row) trong bảng quan hệ."
     },
     {
-      "id": 5057,
+      "id": 5050,
       "quizId": 102,
       "text": "Look at the following data for table R:\n\n\\(\\begin{array}{|c|c|c|}\\hline 1 & 1 & 2 \\\\\\hline 1 & 1 & 2 \\\\\\hline 1 & 1 & 3 \\\\\\hline\\end{array}\\)\n\nChoose all correct answers:",
       "options": [
@@ -8729,7 +8638,7 @@
       "multiple": true
     },
     {
-      "id": 5058,
+      "id": 5051,
       "quizId": 102,
       "text": "A relation is not a list of tuples, but rather a set of tuples with the same attributes. In a set, the order of elements does not matter and there are no duplicate elements. In contrast, a list is an ordered collection of elements where duplicates are allowed.\nA relation is a list of tuples",
       "options": [
@@ -8740,7 +8649,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. False.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. True. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5059,
+      "id": 5052,
       "quizId": 102,
       "text": "A relation is a set of tuples",
       "options": [
@@ -8751,7 +8660,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. True.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Quan hệ theo mô hình toán học là tập các tuple nên thứ tự hàng không mang ý nghĩa; đổi vị trí hàng không đổi quan hệ. List thì có thứ tự, vì vậy không đồng nhất hai cấu trúc; thứ tự chỉ được đảm bảo trong kết quả SQL khi có ORDER BY.\n\nĐối chiếu phương án: B. False. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5060,
+      "id": 5053,
       "quizId": 102,
       "text": "A key:",
       "options": [
@@ -8764,7 +8673,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. identifies a row..\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: A. must always be composed of two or more columns.; B. can only be one column.; D. identifies a column.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5061,
+      "id": 5054,
       "quizId": 102,
       "text": "Which of the following statements about relational databases is true?",
       "options": [
@@ -8777,7 +8686,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The database is built on a relational data model..\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: B. The database is created from excel software.; C. Relational databases are only relations with attributes that are not primary keys.; D. Relational database is the relationship between rows and columns in a data table.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5062,
+      "id": 5055,
       "quizId": 102,
       "text": "What does the attribute domain define in the relational model?",
       "options": [
@@ -8790,7 +8699,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. The data type and range of values that an attribute can hold.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. The primary key of the table; B. The foreign key references; C. The cardinality of relationships. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5063,
+      "id": 5056,
       "quizId": 102,
       "text": "What is a Relational Database?",
       "options": [
@@ -8803,7 +8712,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. A collection of two or more tables that are joined using relationships.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: OLTP ghi nhận giao dịch nghiệp vụ ngắn và cập nhật thường xuyên; decision support/OLAP tập trung truy vấn phân tích, tổng hợp và báo cáo. Hãy phân loại theo mục đích thao tác chứ không theo việc cả hai cùng đọc dữ liệu.\n\nĐối chiếu phương án: A. A collection of two or more tables; B. A database that is able to process queries, forms, reports and macro; C. The same as an Excel file database. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5064,
+      "id": 5057,
       "quizId": 102,
       "text": "_______is a set of one or more attributes taken collectively to uniquely identify a record.",
       "options": [
@@ -8816,7 +8725,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Super key.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Primary Key; B. Foreign key; D. Candidate key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5065,
+      "id": 5058,
       "quizId": 102,
       "text": "What does an RDBMS consist of?",
       "options": [
@@ -8829,7 +8738,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Collection of Tables.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: RDBMS tổ chức dữ liệu logic thành các bảng/quan hệ gồm hàng và cột, liên kết bằng khóa và được truy vấn bằng SQL. Record/tuple là hàng trong một bảng; một collection of tables mô tả cấu trúc tổng thể phù hợp hơn một collection of records.\n\nĐối chiếu phương án: B. Collection of Records; C. Collection of Keys; D. Collection of Field. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5066,
+      "id": 5059,
       "quizId": 102,
       "text": "Which of the following statements is correct when converting from the ERD model to the relational model?",
       "options": [
@@ -8842,7 +8751,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The order of the columns is not important.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. The order of both rows and columns is important; C. The order of the rows is important; D. The order of the columns is important. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5067,
+      "id": 5060,
       "quizId": 102,
       "text": "If there is more than one key for relation schema in DBMS then each key relation schema is classified as",
       "options": [
@@ -8855,7 +8764,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Candidate key.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. Prime key; B. Super key; D. Primary key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5068,
+      "id": 5061,
       "quizId": 102,
       "text": "Consider a table named \"Boat\". Which option is the correct relation schema for the table?",
       "options": [
@@ -8868,7 +8777,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Boat(BoatID, BoatName, Color, Status).\n\nLời giải gốc: Ký hiệu tiêu chuẩn cho lược đồ quan hệ là tên quan hệ kèm danh sách thuộc tính đặt trong dấu ngoặc đơn, dạng RelationName(Attribute1, Attribute2, ...).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. Boat: BoatID, BoatName, Color, Status; C. Boat(BoatID: String, BoatName: String, Color: String, Status: String); D. Boat: BoatID, BoatName, Color, Status. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5069,
+      "id": 5062,
       "quizId": 102,
       "text": "The rows of a relation, other than the header row containing the attribute names, are called ______.",
       "options": [
@@ -8881,7 +8790,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Tuples.\n\nLời giải gốc: Trong mô hình dữ liệu quan hệ, các hàng (rows) dữ liệu trong một bảng được gọi thuật ngữ học thuật là bộ dữ liệu (Tuples). Các cột gọi là Attributes và tiêu đề là Schema.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Schemas; C. Domains; D. Attributes. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5070,
+      "id": 5063,
       "quizId": 102,
       "text": "A(n) _ _ _ _ _ is a property of the entire relation, rather than of the individual tuples in which each tuple is unique.",
       "options": [
@@ -8894,7 +8803,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Key.\n\nLời giải gốc: Khóa (Key) là thuộc tính áp dụng cho toàn bộ quan hệ để đảm bảo tính duy nhất của từng dòng (tuple).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Row; C. Attribute; D. Field. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5071,
+      "id": 5064,
       "quizId": 102,
       "text": "The subset of a super key is a candidate key under what condition?",
       "options": [
@@ -8907,7 +8816,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. No proper subset is a super key.\n\nLời giải gốc: Khóa dự tuyển (Candidate key) định nghĩa là một siêu khóa tối tiểu (Minimal superkey). Do đó, một tập con của siêu khóa trở thành khóa dự tuyển khi và chỉ khi không có tập con thực sự nào của nó còn là một siêu khóa nữa.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.\n\nĐối chiếu phương án: B. All subsets are super keys; C. Subset is a super key; D. Each subset is a super key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5072,
+      "id": 5065,
       "quizId": 102,
       "text": "What is a superkey?",
       "options": [
@@ -8920,7 +8829,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Any set of attributes that contains a key..\n\nLời giải gốc: Siêu khóa (Superkey) là bất kỳ tập hợp thuộc tính nào có chứa một khóa (Candidate key) và có khả năng định danh duy nhất một dòng trong bảng.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.\n\nĐối chiếu phương án: A. A minimal set of attributes that uniquely identifies a row.; C. An attribute that is not part of any key.; D. A foreign key in a table.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5073,
+      "id": 5066,
       "quizId": 102,
       "text": "In a relation, rows are called:",
       "options": [
@@ -8933,7 +8842,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Tuples.\n\nLời giải gốc: Trong mô hình quan hệ, một bảng (Table) được gọi là Quan hệ (Relation), cột (Column) là Thuộc tính (Attribute), và hàng (Row) được gọi là Bộ (Tuple).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Attributes; B. Fields; D. Keys. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5074,
+      "id": 5067,
       "quizId": 102,
       "text": "The name of a relation and the set of attributes for a relation is called:",
       "options": [
@@ -8946,7 +8855,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Schema.\n\nLời giải gốc: Tên của quan hệ đi kèm tập hợp các thuộc tính của nó tạo thành lược đồ quan hệ (Schema).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Trong quan hệ, mỗi hàng dữ liệu là một tuple (bộ), mỗi cột là attribute (thuộc tính), còn relation là tập/bag các tuple theo một schema. Dùng đúng thuật ngữ này giúp tránh nhầm hàng với trường/cột hoặc toàn bộ bảng.\n\nĐối chiếu phương án: B. Tuple; C. Domain; D. Attribute. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5075,
+      "id": 5068,
       "quizId": 102,
       "text": "What is a relation in the relational model?",
       "options": [
@@ -8959,7 +8868,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A table with rows and columns..\n\nLời giải gốc: Trong mô hình quan hệ, một relation (quan hệ) chính là một bảng dữ liệu bao gồm các hàng và cột. ---\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Relation là một bảng logic gồm các tuple cùng schema; mỗi tuple có giá trị cho các thuộc tính đã định nghĩa. Theo lý thuyết tập hợp, thứ tự hàng không xác định quan hệ, dù DBMS có thể trả kết quả theo một thứ tự tình cờ nếu không dùng ORDER BY.\n\nĐối chiếu phương án: A. A collection of files.; C. A hierarchical structure.; D. A network of data elements.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5076,
+      "id": 5069,
       "quizId": 102,
       "text": "Suppose relation R(A,B).\nChoose the SQL statement that is equivalent to the following Relational Algebra expression:\n\n\\(\\pi_{A+B \\rightarrow C}(\\sigma_{A+B > 10}(R))\\)",
       "options": [
@@ -8972,7 +8881,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT (A+B) AS C FROM R WHERE (A+B) > 10.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. SELECT * FROM R; C. SELECT (A+B) AS C FROM R; D. There is not any choice. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5077,
+      "id": 5070,
       "quizId": 102,
       "text": "Given relations R(A,B) and S(B,C,D). The result of natural join of the relations R and S has",
       "options": [
@@ -8985,7 +8894,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Attributes A, B, C, D.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. Only attribute B; B. Only two attributes R.B and S.B; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5078,
+      "id": 5071,
       "quizId": 102,
       "text": "Given table A with n rows and table B with m rows. How many rows of table result by Cartesian product on AxB?",
       "options": [
@@ -8998,7 +8907,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. m*n rows.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Tích Descartes tạo một bộ cho mỗi cặp (một hàng từ quan hệ thứ nhất, một hàng từ quan hệ thứ hai). Vì thế nếu hai đầu vào có m và n hàng thì kết quả có m×n hàng; điều kiện join thường lọc bớt các cặp này.\n\nĐối chiếu phương án: B. m*n +1 rows; C. m*n-1 rows; D. m+n rows. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5079,
+      "id": 5072,
       "quizId": 102,
       "text": "Which of the following is NOT the binary operation in the relational Algebra?",
       "options": [
@@ -9011,7 +8920,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Project.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: B. Cartesian product; C. Union; D. Set difference. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5080,
+      "id": 5073,
       "quizId": 102,
       "text": "_____ returns a relation instance containing all tuples that occur in both R and S",
       "options": [
@@ -9024,20 +8933,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Intersection.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: B. Set-difference; C. Union; D. Cross-product. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5081,
-      "quizId": 102,
-      "text": "The result which operation contains all pairs of tuples from the two relations, regardless of whether their attribute values match.",
-      "options": [
-        "Join",
-        "Cartesian product",
-        "Intersection",
-        "Set difference"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Cartesian product.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Join; C. Intersection; D. Set difference. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5082,
+      "id": 5074,
       "quizId": 102,
       "text": "What is relational algebra?",
       "options": [
@@ -9050,7 +8946,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Relational algebra is a set of operations on relations..\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: B. Relational algebra is the decomposition of relations.; C. Relational algebra is eliminated from relations.; D. Relational algebra is gone from relations.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5083,
+      "id": 5075,
       "quizId": 102,
       "text": "For the following relations and a Set operation:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n\\(\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\end{array}\n\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\n\\hline\n\\end{array}\\)\n\nWhat is the result of the Union operation (Employee \\cup Customer)?",
       "options": [
@@ -9063,7 +8959,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Name | City | Gender Nguyen Trung Truc | HCM | Male Le Hong Son | HCM | Male Tran Tuyet Nhi | HN | Female.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. Name | City | Gender Nguyen Trung Truc | HCM | Male Le Hong Son | HCM | Male; B. Name | City | Gender Nguyen Trung Truc | HCM | Male Tran Tuyet Nhi | HN | Female; C. Name | City | Gender Nguyen Trung Truc | HCM | Male Le Hong Son | HCM | Male Nguyen Trung Truc…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5084,
+      "id": 5076,
       "quizId": 102,
       "text": "For the following relation:\n\n\\(\\textbf{Student}\\)\n\\(\\begin{array}{|c|c|c|c|}\n\\hline\n\\text{ID} & \\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{SE1234} & \\text{Le Hong Phong} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{SE1235} & \\text{Le Hong Hanh} & \\text{HCM} & \\text{Female} \\\\\n\\hline\n\\text{SE1236} & \\text{Tran Binh Trong} & \\text{HN} & \\text{Male} \\\\\n\\hline\n\\end{array}\\)\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
       "options": [
@@ -9076,20 +8972,7 @@
       "explanation": "**Đáp án đúng: A. \\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)**\n\nYêu cầu đề bài: Lấy danh sách tên (\\textName) và thành phố (\\textCity) của các sinh viên sống tại HCM và có giới tính Male.\n- **Phép chọn (Selection \\(\\sigma\\))**: Lọc các bộ dữ liệu thỏa mãn điều kiện kết hợp: \\(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})\\).\n- **Phép chiếu (Projection \\(\\pi\\))**: Chiếu lấy các thuộc tính cần hiển thị trên kết quả đã lọc: \\(\\pi_{\\text{Name}, \\text{City}}(...)\\).\n- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \\(\\pi_{\\text{Danh_sách_cột}}(\\sigma_{\\text{Điều_kiện}}(\\text{Bảng}))\\).\n\nDo đó phương án **A** là chính xác. Phương án B dùng sai ngoặc vuông \\([...]\\), phương án C đảo ngược thứ tự chiếu trước khi chọn làm mất thuộc tính \\(\\text{Gender}\\)."
     },
     {
-      "id": 5085,
-      "quizId": 102,
-      "text": "The ___ operation allows the combining of two relations by merging pairs of tuples, one from each relation, into a single tuple.",
-      "options": [
-        "Select",
-        "Join",
-        "Union",
-        "Intersection"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Join.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Select; C. Union; D. Intersection. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5086,
+      "id": 5077,
       "quizId": 102,
       "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n\\(\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\end{array}\n\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\n\\hline\n\\end{array}\\)\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
       "options": [
@@ -9102,7 +8985,7 @@
       "explanation": "Đáp án đúng: A — Nguyen Trung Truc | HCM | Male.\n\nNền tảng kiến thức: Phép giao (Intersection: \\(R \\cap S\\)) trong đại số quan hệ trả về tập hợp các bộ (tuples) cùng xuất hiện ở cả hai quan hệ \\(R\\) và \\(S\\).\n\nPhân tích bảng dữ liệu:\n- Bảng Employee gồm: (Nguyen Trung Truc, HCM, Male) và (Le Hong Son, HCM, Male).\n- Bảng Customer gồm: (Nguyen Trung Truc, HCM, Male) và (Tran Tuyet Nhi, HN, Female).\n- Phần tử chung duy nhất xuất hiện ở cả 2 bảng là (Nguyen Trung Truc, HCM, Male), tương ứng với phương án A."
     },
     {
-      "id": 5087,
+      "id": 5078,
       "quizId": 102,
       "text": "In the relational model of data, what is the result of an algebraic query language?",
       "options": [
@@ -9115,7 +8998,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Relation.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Data series; B. Data file; D. database. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5088,
+      "id": 5079,
       "quizId": 102,
       "text": "The result of which operation contains all pairs of tuples from the two relations, regardless of whether their attribute values match?",
       "options": [
@@ -9128,7 +9011,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Cartesian product.\n\nLời giải gốc: Phép tích Descartes (Cartesian product) kết hợp mọi bộ dữ liệu của quan hệ này với mọi bộ dữ liệu của quan hệ kia mà không cần điều kiện khớp thuộc tính.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Join; C. Intersection; D. Set difference. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5089,
+      "id": 5080,
       "quizId": 102,
       "text": "Which syntax is commonly used for the rename operation in Relational Algebra?",
       "options": [
@@ -9141,7 +9024,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. SELECT * FROM relation AS new_relation.\n\nLời giải gốc: Trong SQL (ngôn ngữ dựa trên đại số quan hệ), từ khóa AS được dùng làm bí danh (alias) để đổi tên tạm thời cho một bảng hoặc một tập kết quả của câu lệnh truy vấn.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. RENAME relation TO new_relation; B. RENAME attribute IN relation TO new_attribute; C. ALTER TABLE relation RENAME TO new_relation. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5090,
+      "id": 5081,
       "quizId": 102,
       "text": "Which of the following operations cannot be used in relational algebra? (Choose two answers)",
       "options": [
@@ -9159,7 +9042,7 @@
       "multiple": true
     },
     {
-      "id": 5091,
+      "id": 5082,
       "quizId": 102,
       "text": "Which relational algebra operator removes attributes from a relation?",
       "options": [
@@ -9172,7 +9055,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Projection (π).\n\nLời giải gốc: Phép chiếu (Projection - π) được dùng để chọn ra một số thuộc tính (cột) nhất định và loại bỏ đi những thuộc tính không cần thiết khác khỏi quan hệ ban đầu.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. Selection (σ); C. Join (⨝); D. Union (∪). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5092,
+      "id": 5083,
       "quizId": 102,
       "text": "What is the purpose of the RENAME operation in relational algebra? (Choose three answers)",
       "options": [
@@ -9191,7 +9074,7 @@
       "multiple": true
     },
     {
-      "id": 5093,
+      "id": 5084,
       "quizId": 102,
       "text": "A natural join joins two relations by:",
       "options": [
@@ -9204,7 +9087,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Matching common attributes.\n\nLời giải gốc: Phép kết nối tự nhiên (Natural join) thực hiện nối hai quan hệ dựa trên các thuộc tính chung có cùng tên và kiểu dữ liệu. ---\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. All attributes; B. Only key attributes; D. Cartesian product. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5094,
+      "id": 5085,
       "quizId": 102,
       "text": "The operation that combines two relations by merging pairs of tuples, one from each relation, into a single tuple is:",
       "options": [
@@ -9217,7 +9100,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Join.\n\nLời giải gốc: Phép kết nối (Join) cho phép kết hợp hai quan hệ bằng cách ghép nối các bộ dữ liệu từ hai bảng thỏa mãn điều kiện kết nối.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Select; C. Union; D. Intersection. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5095,
+      "id": 5086,
       "quizId": 102,
       "text": "In relational algebra, the natural join operation can be viewed as:",
       "options": [
@@ -9230,7 +9113,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. A Cartesian product followed by a selection and projection.\n\nLời giải gốc: Phép kết tự nhiên (Natural Join) tương đương với việc thực hiện tích Descartes của hai bảng, sau đó lọc các hàng có giá trị thuộc tính chung bằng nhau (Selection) và loại bỏ các cột trùng lặp (Projection).\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. A projection followed by a union; B. A selection followed by a projection; D. A product followed by a union. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5096,
+      "id": 5087,
       "quizId": 102,
       "text": "Which operator is used to produce a new relation from a relation R that contains only some of R's columns?",
       "options": [
@@ -9243,7 +9126,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Projection.\n\nLời giải gốc: Phép chiếu (Projection) trong đại số quan hệ lọc ra các cột được chỉ định từ quan hệ ban đầu.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. Selection; C. Intersection; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5097,
+      "id": 5088,
       "quizId": 102,
       "text": "The intersection operator is used to get the ____ tuples.",
       "options": [
@@ -9256,7 +9139,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Common.\n\nLời giải gốc: Phép giao (Intersection) được dùng để lấy các bộ dữ liệu chung xuất hiện ở cả hai quan hệ.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Different; C. All; D. Repeating. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5098,
+      "id": 5089,
       "quizId": 102,
       "text": "Which operation is commonly used to display selected columns (attributes) from the original relation?",
       "options": [
@@ -9269,7 +9152,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Projection.\n\nLời giải gốc: Phép chiếu (Projection) chọn ra các cột (thuộc tính) cụ thể từ quan hệ ban đầu.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. Union; B. Intersection; C. Closure. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5099,
+      "id": 5090,
       "quizId": 102,
       "text": "Which of the following is a relational algebra operation?",
       "options": [
@@ -9282,7 +9165,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Selection.\n\nLời giải gốc: Phép chọn (Selection) là một trong các phép toán cơ bản của đại số quan hệ, dùng để lọc các bộ thỏa mãn điều kiện.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. Sorting; B. Indexing; D. Comping. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5100,
+      "id": 5091,
       "quizId": 102,
       "text": "What does the relational algebra operation \"Projection\" do?",
       "options": [
@@ -9295,7 +9178,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Selects columns from a table..\n\nLời giải gốc: Phép chiếu (Projection) trong đại số quan hệ thực hiện việc trích xuất các cột (thuộc tính) chỉ định từ một quan hệ.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. Selects rows based on a condition.; B. Combines rows from two tables.; D. Renames a table.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5101,
+      "id": 5092,
       "quizId": 102,
       "text": "For two relations Employee and Customer sharing the columns (Name, City, Gender), what is the result of the Union operation between Employee and Customer?",
       "options": [
@@ -9308,7 +9191,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. All distinct rows from both relations, with duplicates removed.\n\nLời giải gốc: Phép hợp (UNION) gộp các bản ghi từ hai quan hệ và tự động loại bỏ các dòng bị trùng lặp hoàn toàn, giữ lại danh sách đầy đủ các bản ghi độc nhất.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. Only the rows common to both relations; B. All rows from Employee only; C. All rows from Customer only. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5102,
+      "id": 5093,
       "quizId": 102,
       "text": "When we apply set operators (UNION, INTERSECT, EXCEPT) to two relations R and S, which conditions on R and S must be satisfied?",
       "options": [
@@ -9320,7 +9203,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. All of the others.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. R and S must have schemas with identical sets of attributes and the types (domains) for each a…; B. Before we compute the set-theoretic union, intersection, or difference of sets of tuples, the…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5103,
+      "id": 5094,
       "quizId": 102,
       "text": "Consider the join of a relation R with a relation S. If R has m tuples and S has n tuples, then the maximum size of the join is:",
       "options": [
@@ -9333,7 +9216,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. m * n.\n\nLời giải gốc: Trong trường hợp xấu nhất (mọi bộ trong R đều khớp với mọi bộ trong S, tương tự phép tích Descartes), số bộ tối đa trong kết quả phép join là tích số bộ của hai quan hệ, tức m * n.\n\nNền tảng kiến thức: Đánh giá toán tử quan hệ chọn thuật toán theo kích thước quan hệ, số trang, mức chọn lọc, thứ tự dữ liệu và chỉ mục sẵn có. Với join, nested-loop, sort-merge và hash join có chi phí/điều kiện phù hợp khác nhau; kích thước kết quả không đồng nhất với chi phí thực thi.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: B. m + n; C. (m + n) / 2; D. 2(m + n). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5104,
+      "id": 5095,
       "quizId": 102,
       "text": "______ is a set of markup declarations that define a document type for SGML-family markup languages (SGML, XML, HTML)",
       "options": [
@@ -9346,7 +9229,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Document Type Definition (DTD).\n\nNền tảng kiến thức: CSDL Internet kết hợp ứng dụng web với lưu trữ/truy vấn dữ liệu; XML là dạng dữ liệu có cấu trúc phân cấp nhưng có thể linh hoạt hơn bảng cố định. DTD mô tả cấu trúc và các phần tử/thuộc tính hợp lệ; XML có thể được coi là dữ liệu bán cấu trúc.\n\nPhân tích: XML biểu diễn dữ liệu phân cấp bằng phần tử/thuộc tính. Tài liệu well-formed tuân cú pháp XML; DTD mô tả cấu trúc/khai báo hợp lệ. Ký hiệu xuất hiện 0 hoặc 1 lần thường là `?` trong content model DTD, khác `*` (0 trở lên) và `+` (1 trở lên).\n\nĐối chiếu phương án: B. Document Definition Language; C. Document Manipulation Language; D. Document Control Language. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5105,
+      "id": 5096,
       "quizId": 102,
       "text": "A ____ document defines the XML document structure with a list of legal elements and attributes",
       "options": [
@@ -9359,7 +9242,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. DTD.\n\nNền tảng kiến thức: CSDL Internet kết hợp ứng dụng web với lưu trữ/truy vấn dữ liệu; XML là dạng dữ liệu có cấu trúc phân cấp nhưng có thể linh hoạt hơn bảng cố định. DTD mô tả cấu trúc và các phần tử/thuộc tính hợp lệ; XML có thể được coi là dữ liệu bán cấu trúc.\n\nPhân tích: XML biểu diễn dữ liệu phân cấp bằng phần tử/thuộc tính. Tài liệu well-formed tuân cú pháp XML; DTD mô tả cấu trúc/khai báo hợp lệ. Ký hiệu xuất hiện 0 hoặc 1 lần thường là `?` trong content model DTD, khác `*` (0 trở lên) và `+` (1 trở lên).\n\nĐối chiếu phương án: A. XML; C. XSLT; D. SGML. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5106,
+      "id": 5097,
       "quizId": 102,
       "text": "Choose the right symbol to declare zero or one occurrence of an element in XML DTD:",
       "options": [
@@ -9372,7 +9255,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. .\n\nNền tảng kiến thức: CSDL Internet kết hợp ứng dụng web với lưu trữ/truy vấn dữ liệu; XML là dạng dữ liệu có cấu trúc phân cấp nhưng có thể linh hoạt hơn bảng cố định. DTD mô tả cấu trúc và các phần tử/thuộc tính hợp lệ; XML có thể được coi là dữ liệu bán cấu trúc.\n\nPhân tích: XML biểu diễn dữ liệu phân cấp bằng phần tử/thuộc tính. Tài liệu well-formed tuân cú pháp XML; DTD mô tả cấu trúc/khai báo hợp lệ. Ký hiệu xuất hiện 0 hoặc 1 lần thường là `?` trong content model DTD, khác `*` (0 trở lên) và `+` (1 trở lên).\n\nĐối chiếu phương án: B. ; C. [D]. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5107,
+      "id": 5098,
       "quizId": 102,
       "text": "Which of the following statements is TRUE about a well-formed XML document?",
       "options": [
@@ -9385,7 +9268,7 @@
       "explanation": "Đáp án đúng: B — All XML elements must have a closing tag and be properly nested.\n\nNền tảng kiến thức: Một tài liệu XML được coi là chuẩn cú pháp (Well-formed XML) khi tuân thủ nghiêm ngặt các quy tắc:\n1. Có duy nhất một phần tử gốc (single root element) bao bọc toàn bộ nội dung tài liệu.\n2. Mọi thẻ mở đều phải có thẻ đóng tương ứng và phân biệt chữ hoa/thường (Case-sensitive).\n3. Các thẻ lồng nhau phải đóng/mở theo đúng thứ tự (Properly nested), không được chồng lấn nhau.\n4. Các giá trị thuộc tính phải luôn được đặt trong dấu ngoặc kép hoặc ngoặc đơn (ví dụ: title=\"value\").\n\nPhân tích các phương án:\n- Phương án B đúng vì đây là quy tắc cốt lõi của XML well-formed.\n- Phương án A sai vì XML luôn phân biệt chữ hoa và chữ thường (Case-sensitive).\n- Phương án C sai vì thuộc tính trong XML bắt buộc phải nằm trong dấu ngoặc kép.\n- Phương án D sai vì tài liệu XML chỉ được phép có duy nhất 1 phần tử gốc bao bọc bên ngoài."
     },
     {
-      "id": 5108,
+      "id": 5099,
       "quizId": 102,
       "text": "XML files are semi-structured data",
       "options": [
@@ -9396,7 +9279,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. True.\n\nNền tảng kiến thức: CSDL Internet kết hợp ứng dụng web với lưu trữ/truy vấn dữ liệu; XML là dạng dữ liệu có cấu trúc phân cấp nhưng có thể linh hoạt hơn bảng cố định. DTD mô tả cấu trúc và các phần tử/thuộc tính hợp lệ; XML có thể được coi là dữ liệu bán cấu trúc.\n\nPhân tích: XML biểu diễn dữ liệu phân cấp bằng phần tử/thuộc tính. Tài liệu well-formed tuân cú pháp XML; DTD mô tả cấu trúc/khai báo hợp lệ. Ký hiệu xuất hiện 0 hoặc 1 lần thường là `?` trong content model DTD, khác `*` (0 trở lên) và `+` (1 trở lên).\n\nĐối chiếu phương án: B. False. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5109,
+      "id": 5100,
       "quizId": 102,
       "text": "Consider the Datalog rule:\n\\(H(x,y) \\leftarrow S(x,y) \\text{ AND } x > 2 \\text{ AND } y < 6\\)\n\nRelation \\(S(x, y)\\) has 3 tuples: \\((2, 3)\\), \\((3, 5)\\), and \\((4, 6)\\). What is true about \\(H\\)?",
       "options": [
@@ -9409,7 +9292,7 @@
       "explanation": "**Đáp án đúng: A. \\(H\\) has a tuple \\((3, 5)\\)**\n\nXét luật Datalog: \\(H(x,y) \\leftarrow S(x,y) \\text{ AND } x > 2 \\text{ AND } y < 6\\)\nĐiều kiện để một bộ \\((x, y)\\) thuộc quan hệ \\(H\\) là phải thuộc \\(S\\) và thỏa mãn đồng thời cả hai điều kiện: \\(x > 2\\) và \\(y < 6\\).\n\nKiểm tra từng bộ trong quan hệ \\(S\\):\n- Bộ \\((2, 3)\\): có \\(x = 2 \\ngtr 2\\) (không thỏa mãn \\(x > 2\\)) \\(\\rightarrow\\) loại.\n- Bộ \\((3, 5)\\): có \\(x = 3 > 2\\) (thỏa mãn) và \\(y = 5 < 6\\) (thỏa mãn) \\(\\rightarrow (3, 5) \\in H\\).\n- Bộ \\((4, 6)\\): có \\(x = 4 > 2\\) (thỏa mãn), nhưng \\(y = 6 \\nless 6\\) (không thỏa mãn \\(y < 6\\)) \\(\\rightarrow\\) loại.\n\nDo đó, quan hệ \\(H\\) chỉ chứa duy nhất 1 bộ là \\((3, 5)\\). Phương án đúng là **A**."
     },
     {
-      "id": 5110,
+      "id": 5101,
       "quizId": 102,
       "text": "In Datalog rules with equality and inequality subgoals, which of the following conditions ensures that variable w is safe if z already appears in a positive relational subgoal?",
       "options": [
@@ -9422,20 +9305,7 @@
       "explanation": "Trong Datalog, một biến w chưa xuất hiện trong quan hệ gốc vẫn an toàn (safe) nếu nó được gán bằng một biến z đã an toàn thông qua điều kiện đẳng thức w = z."
     },
     {
-      "id": 5111,
-      "quizId": 102,
-      "text": "Consider the Datalog rule:\n\\(H(x,y) \\leftarrow S(x,y) \\text{ AND } x > 2 \\text{ AND } y < 6\\)\n\nRelation \\(S(x, y)\\) has 3 tuples: \\((2, 3)\\), \\((3, 5)\\), and \\((4, 6)\\). What is true about \\(H\\)?",
-      "options": [
-        "\\(H\\) has a tuple \\((2, 3)\\)",
-        "\\(H\\) has 3 tuples \\((2, 3)\\), \\((3, 5)\\), and \\((4, 6)\\)",
-        "\\(H\\) has 2 tuples \\((2, 3)\\) and \\((3, 5)\\)",
-        "\\(H\\) has a tuple \\((3, 5)\\)"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Đáp án đúng: D. \\(H\\) has a tuple \\((3, 5)\\)**\n\nXét luật Datalog: \\(H(x,y) \\leftarrow S(x,y) \\text{ AND } x > 2 \\text{ AND } y < 6\\)\nĐiều kiện để một bộ \\((x, y)\\) thuộc quan hệ \\(H\\) là phải thuộc \\(S\\) và thỏa mãn đồng thời cả hai điều kiện: \\(x > 2\\) và \\(y < 6\\).\n\nKiểm tra từng bộ trong quan hệ \\(S\\):\n- Bộ \\((2, 3)\\): có \\(x = 2 \\ngtr 2\\) (không thỏa mãn \\(x > 2\\)) \\(\\rightarrow\\) loại.\n- Bộ \\((3, 5)\\): có \\(x = 3 > 2\\) (thỏa mãn) và \\(y = 5 < 6\\) (thỏa mãn) \\(\\rightarrow (3, 5) \\in H\\).\n- Bộ \\((4, 6)\\): có \\(x = 4 > 2\\) (thỏa mãn), nhưng \\(y = 6 \\nless 6\\) (không thỏa mãn \\(y < 6\\)) \\(\\rightarrow\\) loại.\n\nDo đó, quan hệ \\(H\\) chỉ chứa duy nhất 1 bộ là \\((3, 5)\\). Phương án đúng là **D**."
-    },
-    {
-      "id": 5112,
+      "id": 5102,
       "quizId": 103,
       "text": "Given a relation \\(R(A, B, C, D)\\). Which of the following dependencies is trivial?",
       "options": [
@@ -9448,7 +9318,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. A->->BCD.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Để xác định một ràng buộc/phụ thuộc tầm thường, kiểm tra xem nó có đúng chỉ từ định nghĩa tập thuộc tính của quan hệ hay không, không cần giả định thêm về dữ liệu. Với MVD X ↠ Y, điều kiện tầm thường là Y ⊆ X hoặc X ∪ Y bằng toàn bộ thuộc tính; cần phân biệt ký hiệu ↠ với phụ thuộc hàm →.\n\nĐối chiếu phương án: A. A->AB; B. A->->AB; C. A->BCD. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5113,
+      "id": 5103,
       "quizId": 103,
       "text": "Let \\(R(A, B, C, D)\\) be a relation with functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad C \\rightarrow B, \\quad B \\rightarrow D \\}\\)\n\nWhat is the candidate key for \\(R\\)?",
       "options": [
@@ -9461,7 +9331,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. AC.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.\n\nĐối chiếu phương án: A. AB; C. AD; D. BD. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5114,
+      "id": 5104,
       "quizId": 103,
       "text": "Consider the following functional dependencies:\n\\(\\begin{aligned}\n&a, b \\rightarrow c, d &\\quad &e, g, h \\rightarrow f, j \\\\\n&a, c \\rightarrow b, d &\\quad &p, q \\rightarrow r, s \\\\\n&e, f, g \\rightarrow h, i &\\quad &s \\rightarrow t \\\\\n&f, g \\rightarrow j &\\quad &q \\rightarrow u \\\\\n&g, h \\rightarrow i\n\\end{aligned}\\)\n\nWhich of the following best describes the relation \\(R(e, f, g, h, i, j)\\)?",
       "options": [
@@ -9474,7 +9344,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. R is in First Normal Form.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. R is in Second Normal Form; C. R is in Third Normal Form; D. R is in Boyce Codd Normal Form. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5115,
+      "id": 5105,
       "quizId": 103,
       "text": "The relation \\(R(A, B, C, D)\\) has the following functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad B \\rightarrow A, \\quad A \\rightarrow D, \\quad D \\rightarrow B \\}\\)\n\nChoose the correct statement about \\(R\\):",
       "options": [
@@ -9487,7 +9357,7 @@
       "explanation": "Xét quan hệ \\(R(ABCD)\\) với tập phụ thuộc hàm: \\(A \\rightarrow B\\), \\(B \\rightarrow A\\), \\(A \\rightarrow D\\), \\(D \\rightarrow B\\).\n- Thuộc tính \\(C\\) không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào, nên \\(C\\) bắt buộc phải có mặt trong mọi khóa ứng viên (candidate key).\n- Tính bao đóng để tìm các khóa ứng viên:\n + \\(\\{AC\\}^+ = \\{A, B, C, D\\} \\Rightarrow AC\\) là khóa ứng viên.\n + \\(\\{BC\\}^+ = \\{A, B, C, D\\} \\Rightarrow BC\\) là khóa ứng viên.\n + \\(\\{DC\\}^+ = \\{A, B, C, D\\} \\Rightarrow DC\\) là khóa ứng viên.\n- Tất cả các thuộc tính trong \\(R\\) gồm \\(\\{A, B, C, D\\}\\) đều là thuộc tính khóa (prime attributes).\n- Theo định nghĩa dạng chuẩn 3 (3NF): Với mọi phụ thuộc hàm không tầm thường \\(X \\rightarrow Y\\), lược đồ đạt 3NF nếu \\(X\\) là siêu khóa HOẶC mọi thuộc tính trong \\(Y\\) là thuộc tính khóa.\n- Do mọi thuộc tính ở vế phải của các phụ thuộc hàm đều là thuộc tính khóa, quan hệ \\(R\\) thỏa mãn dạng chuẩn 3 (R is in 3NF)."
     },
     {
-      "id": 5116,
+      "id": 5106,
       "quizId": 103,
       "text": "Given relation \\(R(A, B, C, D)\\) with the following functional dependencies:\n\\(F = \\{ AB \\rightarrow D, \\quad BC \\rightarrow A, \\quad AD \\rightarrow B, \\quad CD \\rightarrow B, \\quad AD \\rightarrow C \\}\\)\n\nChoose the correct statement about \\(R\\):",
       "options": [
@@ -9499,7 +9369,7 @@
       "explanation": "Xét quan hệ \\(R(A, B, C, D)\\) với tập phụ thuộc hàm \\(F\\):\n1. Kiểm tra tính chuẩn tắc (Canonical / Minimal cover):\n- Xét phụ thuộc hàm \\(AD \\rightarrow B\\): Nếu tạm bỏ \\(AD \\rightarrow B\\), tính bao đóng \\(\\{AD\\}^+\\) theo các phụ thuộc hàm còn lại:\n + Từ \\(AD \\rightarrow C \\Rightarrow \\{A, C, D\\}\\).\n + Từ \\(CD \\rightarrow B \\Rightarrow \\{A, B, C, D\\}\\), chứa \\(B\\).\n- Như vậy \\(AD \\rightarrow B\\) là phụ thuộc hàm dư thừa (redundant) vì có thể suy ra từ \\(AD \\rightarrow C\\) và \\(CD \\rightarrow B\\).\n- Vì tập phụ thuộc hàm chứa phụ thuộc hàm dư thừa nên không chuẩn tắc (The FD set of \\(R\\) is not canonical).\n\n2. Kiểm tra dạng chuẩn BCNF:\n- Tìm các khóa ứng viên:\n + \\(\\{AB\\}^+ = \\{A, B, C, D\\} \\Rightarrow AB\\) là siêu khóa.\n + \\(\\{BC\\}^+ = \\{A, B, C, D\\} \\Rightarrow BC\\) là siêu khóa.\n + \\(\\{AD\\}^+ = \\{A, B, C, D\\} \\Rightarrow AD\\) là siêu khóa.\n + \\(\\{CD\\}^+ = \\{A, B, C, D\\} \\Rightarrow CD\\) là siêu khóa.\n- Mọi phụ thuộc hàm trong đề bài đều có vế trái (\\(AB, BC, AD, CD\\)) là siêu khóa.\n- Theo định nghĩa BCNF: Một quan hệ đạt BCNF nếu mọi vế trái của phụ thuộc hàm không tầm thường đều là siêu khóa \\(\\Rightarrow\\) \\(R\\) đạt BCNF (R is in BCNF).\n\nDo đó phương án đúng là: The FD set of R is not canonical and R is in BCNF (Đáp án A)."
     },
     {
-      "id": 5117,
+      "id": 5107,
       "quizId": 103,
       "text": "What is the difference between the 2NF and the 3NF?",
       "options": [
@@ -9510,7 +9380,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. 2NF deals with partial functional dependency, while 3NF deals with transitive functional dependency.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: B. 2NF deals with transitive functional dependency, while 3NF deals with partial functional depen…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5118,
+      "id": 5108,
       "quizId": 103,
       "text": "Which of the following relations is in Boyce-Codd Normal Form (BCNF)?",
       "options": [
@@ -9523,7 +9393,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. R(ABCD) with FD's: BD -> C ; AB -> D ; AC -> B ; BD -> A.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: B. R(ABCD) with FD's: BC -> A ; AD -> C ; CD -> B ; BD -> C; C. R(ABCD) with FD's: A -> C ; B -> A ; A -> D ; AD -> C; D. R(ABCD) with FD's: A -> D ; C -> A ; D -> B ; AC -> B. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5119,
+      "id": 5109,
       "quizId": 103,
       "text": "3NFconcept is related to (choose 1 answer only):",
       "options": [
@@ -9537,7 +9407,7 @@
       "explanation": "Đáp án theo dữ liệu đề: E — E. All of the others.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: 3NF tập trung loại phụ thuộc bắc cầu của thuộc tính không khóa vào khóa, đồng thời có ngoại lệ cho phụ thuộc khi vế phải là thuộc tính prime. Phân biệt với 2NF, vốn nhắm tới phụ thuộc bộ phận vào một phần của khóa ghép.\n\nĐối chiếu phương án: A. Atomic definition; B. Full dependency definition; C. Transitive dependency definition; D. Super Key definition. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5120,
+      "id": 5110,
       "quizId": 103,
       "text": "The relation \\(R(A, B, C, D)\\) has the following functional dependencies:\n\\(F = \\{ ACD \\rightarrow B, \\quad AC \\rightarrow D, \\quad D \\rightarrow C, \\quad AC \\rightarrow B \\}\\)\n\nChoose the correct statement about \\(R\\):",
       "options": [
@@ -9550,7 +9420,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. R is in 3NF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. R is in 2NF only, not higher; C. R is in 1NF only, not higher; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5121,
+      "id": 5111,
       "quizId": 103,
       "text": "Let relation \\(R(A, B, C, D)\\) with the following functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad AC \\rightarrow B, \\quad AD \\rightarrow C \\}\\)\n\nChoose the correct statement about \\(R\\):",
       "options": [
@@ -9563,19 +9433,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. R is in 2NF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. R is in BCNF; B. R is in 3NF; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5122,
-      "quizId": 103,
-      "text": "Which of the following statements is correct?",
-      "options": [
-        "All relations in 3NF are also in BCNF",
-        "For any relation schema, there is a dependency-preserving decomposition into 3NF",
-        "All relations in 2NF are also in BCNF"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. For any relation schema, there is a dependency-preserving decomposition into 3NF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. All relations in 3NF are also in BCNF; C. All relations in 2NF are also in BCNF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5123,
+      "id": 5112,
       "quizId": 103,
       "text": "Which of the following statements is true?",
       "options": [
@@ -9588,7 +9446,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. All of the others..\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Để xác định một ràng buộc/phụ thuộc tầm thường, kiểm tra xem nó có đúng chỉ từ định nghĩa tập thuộc tính của quan hệ hay không, không cần giả định thêm về dữ liệu. Với MVD X ↠ Y, điều kiện tầm thường là Y ⊆ X hoặc X ∪ Y bằng toàn bộ thuộc tính; cần phân biệt ký hiệu ↠ với phụ thuộc hàm →.\n\nĐối chiếu phương án: A. BCNF condition guarantees the non existence of the anomalies.; B. In BCNF condition, the left side of every non trivial FD must be a super key.; C. Any two-attribute relation is in BCNF.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5124,
+      "id": 5113,
       "quizId": 103,
       "text": "How to eliminate anomalies when we design a database?",
       "options": [
@@ -9601,7 +9459,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. We should decompose relation to eliminate anomalies.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: B. We should join relations to eliminate anomalies; C. We should union relations to eliminate anomalies; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5125,
+      "id": 5114,
       "quizId": 103,
       "text": "What is the goal of decomposition when designing a database?",
       "options": [
@@ -9614,20 +9472,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The goal of decomposition is to replace a relation by several relations that do not exhibit anomalies.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Decomposition tách một quan hệ thành các quan hệ nhỏ hơn để giảm dư thừa và các bất thường chèn/sửa/xóa. Một phép tách tốt còn cần lossless join (ghép lại không sinh tuple giả); tùy bài toán còn xét bảo toàn phụ thuộc.\n\nĐối chiếu phương án: B. The goal of decomposition is to increase the speed of the database; C. The goal of decomposition is to increase the security of the database; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5126,
-      "quizId": 103,
-      "text": "Given a relation \\(R(A, B, C, D)\\). Which of the following dependencies is trivial?",
-      "options": [
-        "\\(A \\rightarrow BCD\\)",
-        "\\(A \\twoheadrightarrow BCD\\)",
-        "\\(A \\rightarrow AB\\)",
-        "\\(A \\twoheadrightarrow AB\\)"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. A->->BCD.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Để xác định một ràng buộc/phụ thuộc tầm thường, kiểm tra xem nó có đúng chỉ từ định nghĩa tập thuộc tính của quan hệ hay không, không cần giả định thêm về dữ liệu. Với MVD X ↠ Y, điều kiện tầm thường là Y ⊆ X hoặc X ∪ Y bằng toàn bộ thuộc tính; cần phân biệt ký hiệu ↠ với phụ thuộc hàm →.\n\nĐối chiếu phương án: A. A->BCD; C. A->AB; D. A->->AB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5127,
+      "id": 5115,
       "quizId": 103,
       "text": "Given the relation \\(R(X, Y, Z, T)\\) with the following functional dependencies:\n\\(F = \\{ XY \\rightarrow Z, \\quad XYT \\rightarrow Z, \\quad XYZ \\rightarrow T, \\quad XZ \\rightarrow T \\}\\)\n\nDetermine the candidate key for \\(R\\) and choose the correct statement:",
       "options": [
@@ -9638,7 +9483,7 @@
       "explanation": "Xét quan hệ \\(R(XYZT)\\) với tập phụ thuộc hàm \\(F = \\{XY \\rightarrow Z, XYT \\rightarrow Z, XYZ \\rightarrow T, XZ \\rightarrow T\\}\\):\n1. Xác định khóa chính (Primary Key):\n- Hai thuộc tính \\(X, Y\\) không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào, do đó \\(\\{XY\\}\\) bắt buộc phải là một phần của mọi khóa.\n- Tính bao đóng của \\(\\{XY\\}\\):\n + Từ \\(XY \\rightarrow Z \\Rightarrow \\{X, Y, Z\\}\\).\n + Từ \\(XZ \\subseteq \\{X, Y, Z\\}\\) và \\(XZ \\rightarrow T \\Rightarrow \\{X, Y, Z, T\\} = R\\).\n- Vì \\(\\{XY\\}^+ = R\\) và không thể rút gọn, \\(\\{XY\\}\\) là khóa chính duy nhất của \\(R\\).\n\n2. Kiểm tra dạng chuẩn BCNF:\n- Một quan hệ đạt chuẩn BCNF nếu mọi phụ thuộc hàm không tầm thường đều có vế trái là siêu khóa (superkey).\n- Xét phụ thuộc hàm \\(XZ \\rightarrow T\\):\n + Bao đóng \\(\\{XZ\\}^+ = \\{X, Z, T\\}\\) (không chứa \\(Y\\)).\n + Do đó vế trái \\(XZ\\) không phải là siêu khóa.\n- Vì tồn tại phụ thuộc hàm \\(XZ \\rightarrow T\\) có vế trái không là siêu khóa, nên \\(R\\) vi phạm định nghĩa BCNF \\(\\Rightarrow\\) \\(R\\) không đạt BCNF (R is not in BCNF).\n\nDo đó phương án đúng là: R is not in BCNF (Đáp án B)."
     },
     {
-      "id": 5128,
+      "id": 5116,
       "quizId": 103,
       "text": "Given the relation schema \\(R(X, Y, Z, T)\\) and functional dependencies:\n\\(F = \\{ X \\rightarrow Z, \\quad T \\rightarrow Y \\}\\)\n\nWhich functional dependency causes a violation of second normal form (2NF)?",
       "options": [
@@ -9651,33 +9496,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. both X->Z and T->Y.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. X->Z; B. T->Y; D. none of the above. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5129,
-      "quizId": 103,
-      "text": "What are some benefits of normalization when converting an ERD to a relational model?",
-      "options": [
-        "Increased storage space efficiency",
-        "Reduced update anomalies",
-        "Simplified database queries",
-        "Enhanced data security"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Reduced update anomalies.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. Increased storage space efficiency; C. Simplified database queries; D. Enhanced data security. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5130,
-      "quizId": 103,
-      "text": "What is the purpose of data normalization in the context of the database design?",
-      "options": [
-        "Ensure data security",
-        "Avoid information anomalies",
-        "Make sure data is inherited",
-        "Ensuring better data storage"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Avoid information anomalies.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Phân biệt tệp dữ liệu chứa trang/bảng với tệp transaction log ghi lại thay đổi phục vụ commit và recovery. Một trang/khối là đơn vị I/O cơ bản; lựa chọn tổ chức vật lý ảnh hưởng số lần đọc ghi và cách tìm bản ghi.\n\nĐối chiếu phương án: A. Ensure data security; C. Make sure data is inherited; D. Ensuring better data storage. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5131,
+      "id": 5117,
       "quizId": 103,
       "text": "Given the following schema \\(R(A, B, C, D)\\) and functional dependencies \\(S = \\{ A \\rightarrow B, B \\rightarrow C, C \\rightarrow D \\}\\). Compute \\(A^+\\)?",
       "options": [
@@ -9690,7 +9509,7 @@
       "explanation": "**Đáp án đúng: C. ABCD**\n\nCho lược đồ quan hệ \\(R(A, B, C, D)\\) và tập phụ thuộc hàm \\(S = \\{ A \\rightarrow B, B \\rightarrow C, C \\rightarrow D \\}\\).\n\nCác bước tính bao đóng \\(A^+\\):\n1. Khởi tạo: \\(A^+ = \\{A\\}\\).\n2. Áp dụng \\(A \\rightarrow B\\): Vế trái \\(A \\subseteq A^+ \\Rightarrow A^+ = \\{A, B\\}\\).\n3. Áp dụng \\(B \\rightarrow C\\): Vế trái \\(B \\subseteq A^+ \\Rightarrow A^+ = \\{A, B, C\\}\\).\n4. Áp dụng \\(C \\rightarrow D\\): Vế trái \\(C \\subseteq A^+ \\Rightarrow A^+ = \\{A, B, C, D\\}\\).\n\nVậy bao đóng của \\(A\\) là \\(A^+ = \\{A, B, C, D\\}\\) (tương ứng phương án **ABCD**). Phương án đúng là **C**."
     },
     {
-      "id": 5132,
+      "id": 5118,
       "quizId": 103,
       "text": "Suppose that we have a relation that possesses data about an individual entity. In Addition, it should not have any multi-valued dependencies.\nWhich of the following is the highest normal form for this relation?",
       "options": [
@@ -9703,7 +9522,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. 4NF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. 1NF; B. 2NF; C. 3NF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5133,
+      "id": 5119,
       "quizId": 103,
       "text": "Which of the following statements is true about data normalization:",
       "options": [
@@ -9716,7 +9535,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. 1NF: Is a relationship with a primary key and no repeating groups.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: B. 2NF: Is 1NF without transitive functional dependencies; C. 3NF is: 1 NF without partial functional dependencies; D. All of the above answers are wrong.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5134,
+      "id": 5120,
       "quizId": 103,
       "text": "Which normalization level ensures that each attribute is dependent only on the primary key?",
       "options": [
@@ -9729,20 +9548,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Third Normal Form (3NF).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.\n\nĐối chiếu phương án: A. First Normal Form (1NF); B. Second Normal Form (2NF); D. Boyce-Codd Normal Form (BCNF). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5135,
-      "quizId": 103,
-      "text": "Suppose that there is a relation \\(R(A, B, C, D, E, G)\\) and functional dependencies:\n\\(S = \\{ AB \\rightarrow C, \\quad D \\rightarrow EG, \\quad C \\rightarrow A, \\quad BE \\rightarrow C, \\quad BC \\rightarrow D, \\quad CG \\rightarrow BD, \\quad ACD \\rightarrow B, \\quad CE \\rightarrow AG \\}\\)\n\nCompute \\((AB)^+\\)?",
-      "options": [
-        "ABCD",
-        "ABCDE",
-        "ABCDG",
-        "ABCDEG"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Đáp án đúng: D. ABCDEG**\n\nCho quan hệ \\(R(A, B, C, D, E, G)\\) và tập phụ thuộc hàm \\(S\\).\n\nCác bước tính bao đóng \\((AB)^+\\):\n1. Khởi tạo: \\((AB)^+ = \\{A, B\\}\\).\n2. Áp dụng \\(AB \\rightarrow C\\): \\(AB \\subseteq (AB)^+ \\Rightarrow (AB)^+ = \\{A, B, C\\}\\).\n3. Áp dụng \\(BC \\rightarrow D\\): \\(BC \\subseteq (AB)^+ \\Rightarrow (AB)^+ = \\{A, B, C, D\\}\\).\n4. Áp dụng \\(D \\rightarrow EG\\): \\(D \\subseteq (AB)^+ \\Rightarrow (AB)^+ = \\{A, B, C, D, E, G\\}\\).\n\nBao đóng đã chứa tất cả các thuộc tính của \\(R\\).\nVậy \\((AB)^+ = \\{A, B, C, D, E, G\\}\\) (tương ứng **ABCDEG**). Phương án đúng là **D**."
-    },
-    {
-      "id": 5136,
+      "id": 5121,
       "quizId": 103,
       "text": "Which of the following represents Armstrong's Axiom of Transitivity?",
       "options": [
@@ -9755,7 +9561,7 @@
       "explanation": "Đáp án đúng: B — If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n2. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n3. Tiên đề phản xạ (Reflexivity Axiom): Nếu \\(Y \\subseteq X\\) thì suy ra \\(X \\to Y\\).\n4. Quy tắc phân rã (Decomposition Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n5. Quy tắc hợp (Union Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n\nPhân tích: Phương án B biểu diễn chính xác Tiên đề bắc cầu (Transitivity Axiom). Phương án A là Tiên đề tăng trưởng (Augmentation Axiom), phương án C sai (phụ thuộc hàm không có tính đối xứng), phương án D sai (thiếu điều kiện \\(A \\to C\\))."
     },
     {
-      "id": 5137,
+      "id": 5122,
       "quizId": 103,
       "text": "Which statement best represents Armstrong's Rule of Decomposition?",
       "options": [
@@ -9768,7 +9574,7 @@
       "explanation": "Đáp án đúng: D — If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n2. Quy tắc hợp (Union / Additivity Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n3. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n4. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n\nPhân tích: Phương án D biểu diễn chính xác Quy tắc phân rã (Decomposition Rule). Phương án A là Quy tắc hợp (Union Rule), phương án B là Tiên đề bắc cầu (Transitivity Axiom), và phương án C là Tiên đề tăng trưởng (Augmentation Axiom)."
     },
     {
-      "id": 5138,
+      "id": 5123,
       "quizId": 103,
       "text": "What are logical constraints?",
       "options": [
@@ -9781,7 +9587,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. The relationships between attributes are represented by functional dependencies..\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. The relationships between attributes are represented by relational operations.; B. The relationships between attributes are represented by comparisons operator.; C. The relationships between attributes are represented by mathematical expressions.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5139,
+      "id": 5124,
       "quizId": 103,
       "text": "If attribute A determines both attributes B and C, then it is also true that:",
       "options": [
@@ -9794,7 +9600,7 @@
       "explanation": "Đáp án đúng: D — \\(A \\to B\\).\n\nNền tảng kiến thức: Nếu thuộc tính \\(A\\) xác định đồng thời \\(B\\) và \\(C\\), tức là ta có \\(A \\to BC\\). Theo Quy tắc phân rã (Decomposition Rule) của hệ tiên đề Armstrong:\n- Từ \\(A \\to BC\\), ta luôn suy ra được \\(A \\to B\\) và \\(A \\to C\\).\n\nPhân tích: Phương án D (\\(A \\to B\\)) là hệ quả trực tiếp đúng đắn. Các phương án A, B, C đảo ngược chiều phụ thuộc đều không hợp lệ vì phụ thuộc hàm không có tính chất đối xứng."
     },
     {
-      "id": 5140,
+      "id": 5125,
       "quizId": 103,
       "text": "Which operation is commonly used to display all the properties derived from the original property?",
       "options": [
@@ -9807,7 +9613,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Closure.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. Union; B. Intersection; D. Projection. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5141,
+      "id": 5126,
       "quizId": 103,
       "text": "If a relation is in BCNF, then it is also in",
       "options": [
@@ -9820,7 +9626,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. All of the mentioned.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. 1 NF; B. 2 NF; C. 3 NF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5142,
+      "id": 5127,
       "quizId": 103,
       "text": "_______has a right side that is a subset of its left side",
       "options": [
@@ -9833,7 +9639,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. A trivial FD.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: B. A non_trivial FD; C. A key of relation; D. A super key of relation. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5143,
+      "id": 5128,
       "quizId": 103,
       "text": "Given R as a relation, which of the following statements is correct about normalizing data in 3NF form:",
       "options": [
@@ -9847,7 +9653,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. If R: Has a primary key, no repeating groups, no multivalued attributes/complex attributes, no transitive functional dependencies, no partial functional dependencies..\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. If R: Has a primary key, no repeating groups, no multivalued attributes/composite attributes; B. If R: Has a primary key, no repeating groups, no multivalued attributes/complex attributes, no…; C. If R: Has a primary key, no repeating groups, no multivalued/composite attributes, no transiti…; E. If R: has complete functional dependency.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5144,
+      "id": 5129,
       "quizId": 103,
       "text": "Which of the following statements is true regarding Third Normal Form (3NF)?",
       "options": [
@@ -9860,7 +9666,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. It eliminates transitive dependencies.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: B. It allows for redundant data; C. It only considers partial dependencies; D. It doesn't address any anomalies in a database. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5145,
+      "id": 5130,
       "quizId": 103,
       "text": "What is Database Normalization?",
       "options": [
@@ -9873,7 +9679,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. A process whereby the design of a table (relation) is decomposed into more tables that more precisely fit the relational mode.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Normalization tổ chức/ phân rã quan hệ dựa trên phụ thuộc và khóa để giảm dư thừa, tránh bất thường khi thêm/sửa/xóa. Không phải mục tiêu đơn thuần là tăng tốc hay tăng bảo mật; sau khi phân rã còn cần kiểm tra khả năng ghép nối không mất mát.\n\nĐối chiếu phương án: A. A process where by a limit is put on the number of fields a record can contain; B. The process of ensuring that each table has a key; C. The process of ensuring that a relational database has at least two tables in it. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5146,
+      "id": 5131,
       "quizId": 103,
       "text": "Consider relation \\(R(A, B, C, D, E)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad B \\rightarrow C, \\quad E \\rightarrow D, \\quad C \\rightarrow E \\}\\)\n\nWhat is/are the candidate key(s) for \\(R\\)?",
       "options": [
@@ -9886,7 +9692,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. AB.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. AC; B. AD; D. AE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5147,
+      "id": 5132,
       "quizId": 103,
       "text": "Suppose that we have a relation \\(R(B, C, D)\\) that satisfies functional dependencies: \\(D \\rightarrow B\\) and \\(D \\rightarrow C\\). Which of the following functional dependencies is equivalent to the given dependencies?",
       "options": [
@@ -9899,7 +9705,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. D->BC.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: D. that satisfies FD's:D->B and D->; C. Which of the following FD is equivalent to the given dependency functions?; B. D->DB; C. DB->B; D. DC->DB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5148,
+      "id": 5133,
       "quizId": 103,
       "text": "Which normalization level ensures that there are no repeating groups in tables?",
       "options": [
@@ -9912,7 +9718,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. First Normal Form (1NF).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: B. Second Normal Form (2NF); C. Third Normal Form (3NF); D. Boyce-Codd Normal Form (BCNF). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5149,
+      "id": 5134,
       "quizId": 103,
       "text": "What is the primary goal of normalization in database design?",
       "options": [
@@ -9925,7 +9731,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. To simplify data retrieval.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. To increase data redundancy; C. To introduce duplicate data; D. To violate functional dependencies. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5150,
+      "id": 5135,
       "quizId": 103,
       "text": "Consider the relation:\n\\(\\text{OrderDetail}(\\text{orderNumber}, \\text{productCode}, \\text{productName}, \\text{quantity}, \\text{dateOrdered}, \\text{salesDiscount})\\)\n\nwith functional dependencies:\n\\(\\begin{aligned}\nF = \\{ &\\text{orderNumber}, \\text{productCode} \\rightarrow \\text{quantity}, \\\\\n       &\\text{orderNumber} \\rightarrow \\text{dateOrdered}, \\\\\n       &\\text{productCode} \\rightarrow \\text{productName}, \\text{salesDiscount} \\}\n\\end{aligned}\\)\n\nGiven that the candidate key of \\(\\text{OrderDetail}\\) is \\(\\{\\text{orderNumber}, \\text{productCode}\\}\\).\n\nWhich of the following is a full functional dependency on the key?",
       "options": [
@@ -9938,7 +9744,7 @@
       "explanation": "Khóa chính (candidate key) của quan hệ \\(\\text{OrderDetail}\\) là khóa ghép gồm hai thuộc tính: \\(\\{\\text{orderNumber}, \\text{productCode}\\}\\).\n\n- Định nghĩa phụ thuộc hàm đầy đủ (Full functional dependency): Phụ thuộc hàm \\(X \\rightarrow Y\\) là đầy đủ nếu loại bỏ bất kỳ thuộc tính nào khỏi \\(X\\) thì phụ thuộc hàm đó không còn đúng nữa (tức \\(Y\\) phụ thuộc vào toàn bộ khóa ghép \\(X\\), không phụ thuộc vào bất kỳ tập con thực sự nào của \\(X\\)).\n- Phụ thuộc hàm bộ phận (Partial dependency): Nếu một thuộc tính không khóa chỉ phụ thuộc vào một phần của khóa ghép.\n- Đối chiếu các phương án:\n + \\(\\text{orderNumber}, \\text{productCode} \\rightarrow \\text{quantity}\\): Vế trái chứa đầy đủ toàn bộ khóa ghép \\(\\{\\text{orderNumber}, \\text{productCode}\\}\\), do đó đây là phụ thuộc hàm đầy đủ (Full functional dependency).\n + \\(\\text{orderNumber} \\rightarrow \\text{dateOrdered}\\): Chỉ phụ thuộc vào \\(\\text{orderNumber}\\) (một phần của khóa), là phụ thuộc bộ phận.\n + \\(\\text{productCode} \\rightarrow \\text{productName}\\): Chỉ phụ thuộc vào \\(\\text{productCode}\\) (một phần của khóa), là phụ thuộc bộ phận.\n + \\(\\text{productCode} \\rightarrow \\text{productName}, \\text{salesDiscount}\\): Chỉ phụ thuộc vào \\(\\text{productCode}\\), là phụ thuộc bộ phận.\nDo đó, phương án đúng là A."
     },
     {
-      "id": 5151,
+      "id": 5136,
       "quizId": 103,
       "text": "Problems such as redundancy that occur when we try to cram too much into a single relation are called _____",
       "options": [
@@ -9951,7 +9757,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Anomalies.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. Normal Form; C. Decomposing Relations; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5152,
+      "id": 5137,
       "quizId": 103,
       "text": "The highest normal form for relation schema \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad D \\rightarrow B, \\quad C \\rightarrow ABD \\}\\) is:",
       "options": [
@@ -9964,7 +9770,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. 3NF.\n\nLời giải gốc: Quan hệ đạt 3NF nhưng không đạt BCNF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. 2NF; B. 1NF; D. BCNF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5153,
+      "id": 5138,
       "quizId": 103,
       "text": "What is Boyce-Codd Normal Form (BCNF)?",
       "options": [
@@ -9977,7 +9783,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A normal form where every determinant is a candidate key..\n\nLời giải gốc: Dạng chuẩn Boyce-Codd (BCNF) là phiên bản nghiêm ngặt hơn của 3NF, trong đó với mọi phụ thuộc hàm không tầm thường, vế trái (determinant) bắt buộc phải là một siêu khóa hoặc khóa ứng viên.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. The weakest normal form.; C. A normal form that allows redundancy.; D. The same as first normal form.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5154,
+      "id": 5139,
       "quizId": 103,
       "text": "Suppose we have a relation R(ID, full_name, address) with functional dependencies:\nF = ID \\(\\to\\) full_name, ID \\(\\to\\) address \n\nWhat is the highest normal form of R in relational database design?",
       "options": [
@@ -9990,7 +9796,7 @@
       "explanation": "Đáp án đúng: D — BCNF.\n\nLời giải chi tiết: Với khóa chính là ID, mọi phụ thuộc hàm đều có vế trái là siêu khóa (ID → full_name, ID → address), do đó quan hệ đạt dạng chuẩn cao nhất là Boyce-Codd Normal Form (BCNF).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật:\n- 1NF: Các giá trị thuộc tính là nguyên tố (atomic).\n- 2NF: Đạt 1NF và không có thuộc tính không khóa nào phụ thuộc bộ phận vào một phần khóa chính.\n- 3NF: Đạt 2NF và không có thuộc tính không khóa nào phụ thuộc bắc cầu vào khóa chính.\n- BCNF: Mọi phụ thuộc hàm không tầm thường X → Y thì X đều phải là siêu khóa (superkey).\n\nPhân tích: Vì ID là khóa chính xác định duy nhất toàn bộ các thuộc tính còn lại (full_name và address), nên mọi determinant đều là siêu khóa, lược đồ quan hệ đạt dạng chuẩn BCNF."
     },
     {
-      "id": 5155,
+      "id": 5140,
       "quizId": 103,
       "text": "What is the purpose of data normalization in the context of database design?",
       "options": [
@@ -10003,7 +9809,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Avoid information anomalies.\n\nLời giải gốc: Chuẩn hóa dữ liệu (Data Normalization) nhằm mục đích giảm thiểu sự trùng lặp dữ liệu và tránh các hiện tượng bất thường (anomalies) như Insertion Anomaly, Deletion Anomaly, và Update Anomaly.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Phân biệt tệp dữ liệu chứa trang/bảng với tệp transaction log ghi lại thay đổi phục vụ commit và recovery. Một trang/khối là đơn vị I/O cơ bản; lựa chọn tổ chức vật lý ảnh hưởng số lần đọc ghi và cách tìm bản ghi.\n\nĐối chiếu phương án: A. Ensure data security; C. Make sure data is inherited; D. Ensuring better data storage. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5156,
+      "id": 5141,
       "quizId": 103,
       "text": "Consider a relation \\(R(A, B, C, D)\\) and the following rules:\n- Rule 1: If \\(A \\rightarrow C\\) then \\(C \\rightarrow A\\)\n- Rule 2: If \\(B \\rightarrow C\\) then \\(BC \\rightarrow C\\)\n- Rule 3: If \\(AB \\rightarrow C\\) then \\(A \\rightarrow C\\) and \\(B \\rightarrow C\\)\n\nWhich of the following rules is NOT valid?",
       "options": [
@@ -10016,7 +9822,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Rule 1, Rule 3.\n\nLời giải gốc: Rule 1 (đối xứng không phải là luật hợp lệ của phụ thuộc hàm) và Rule 3 (tách vế trái không đảm bảo tính đúng đắn) đều không hợp lệ. Rule 2 hợp lệ theo luật phản xạ/gia tăng.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Rule 1 không hợp lệ vì phụ thuộc A → C không cho phép đảo chiều thành C → A. Rule 2 hợp lệ do C nằm trong BC nên BC → C đúng theo phản xạ; Rule 3 không hợp lệ vì không thể tự ý bỏ A hoặc B khỏi vế trái AB → C. Do đó các rule sai là 1 và 3.\n\nĐối chiếu phương án: A. Only Rule 1; B. None of the given rules are valid; C. Rule 2, Rule 3. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5157,
+      "id": 5142,
       "quizId": 103,
       "text": "Suppose we have a relation \\(R(A, B, C, D, E, F, N)\\) and functional dependencies:\n\\(F = \\{ F \\rightarrow A, \\quad A \\rightarrow B, \\quad B \\rightarrow C, \\quad BC \\rightarrow A, \\quad A \\rightarrow D, \\quad E \\rightarrow A, \\quad D \\rightarrow E \\}\\)\n\nWhich of the following is NOT a candidate key for \\(R\\)? (Choose all that apply)",
       "options": [
@@ -10035,7 +9841,7 @@
       "multiple": true
     },
     {
-      "id": 5158,
+      "id": 5143,
       "quizId": 103,
       "text": "What is the main requirement of the First Normal Form (1NF) in database design?",
       "options": [
@@ -10048,7 +9854,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Each attribute contains only atomic values, not repeating groups or arrays of values..\n\nLời giải gốc: Dạng chuẩn 1 (1NF) yêu cầu mỗi thuộc tính trong bảng phải chứa các giá trị nguyên tử (atomic), không chứa các nhóm lặp hoặc mảng giá trị. ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. Each table contains only one foreign key.; C. Each table must have at least one primary key.; D. Non-key attributes must be completely dependent on the primary key.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5159,
+      "id": 5144,
       "quizId": 103,
       "text": "Consider the relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad C \\rightarrow D \\}\\)\n\nFind the candidate key of this relation:",
       "options": [
@@ -10061,7 +9867,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. The key includes two columns (A,C).\n\nLời giải gốc: Không có thuộc tính nào xác định được A và C. Do đó, A và C bắt buộc phải là một phần của khóa. Bao đóng của (A,C)+ = A, B, C, D, vừa đủ xác định toàn bộ bảng R. Khóa chính là (A,C).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. The key is the A column; C. The key is the A column or C column; D. The key is the C column. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5160,
+      "id": 5145,
       "quizId": 103,
       "text": "Consider a user table with columns \\(\\text{ID}\\), \\(\\text{NAME}\\), \\(\\text{Password}\\), and \\(\\text{email}\\). Which functional dependency exists in this table?",
       "options": [
@@ -10074,7 +9880,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. ID → NAME.\n\nLời giải gốc: Trong cấu trúc quản lý dữ liệu thông thường, mã định danh ID xác định duy nhất tên người dùng NAME.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. Password → email; C. Password → NAME; D. NAME → email. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5161,
+      "id": 5146,
       "quizId": 103,
       "text": "Consider a relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ A \\rightarrow C, \\quad AB \\rightarrow A, \\quad C \\rightarrow CB, \\quad AD \\rightarrow ABC \\}\\)\n\nWhich of the following is a trivial functional dependency of the relation?",
       "options": [
@@ -10087,7 +9893,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. AB → A.\n\nLời giải gốc: Phụ thuộc hàm \\(X \\rightarrow Y\\) được gọi là hiển nhiên (Trivial) nếu tập thuộc tính \\(Y\\) là tập con của tập thuộc tính \\(X\\) (\\(Y \\subseteq X\\)). Ở đây \\(A \\subseteq AB\\), do đó AB \\(\\rightarrow\\) A là phụ thuộc hàm hiển nhiên.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Để xác định một ràng buộc/phụ thuộc tầm thường, kiểm tra xem nó có đúng chỉ từ định nghĩa tập thuộc tính của quan hệ hay không, không cần giả định thêm về dữ liệu. Với MVD X ↠ Y, điều kiện tầm thường là Y ⊆ X hoặc X ∪ Y bằng toàn bộ thuộc tính; cần phân biệt ký hiệu ↠ với phụ thuộc hàm →.\n\nĐối chiếu phương án: B. AD → ABC; C. C → CB; D. AB → A, C→ CB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5162,
+      "id": 5147,
       "quizId": 103,
       "text": "Which of the following best describes an anomaly that normalization helps to eliminate in relational database design?",
       "options": [
@@ -10100,7 +9906,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Insertion, update, or deletion anomalies.\n\nLời giải gốc: Chuẩn hóa dữ liệu giúp loại bỏ trực tiếp các bất thường (anomalies) xảy ra khi thêm, sửa hoặc xóa dữ liệu trong bảng.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Inconsistent data types within a table; B. Redundant data that leads to storage inefficiency; D. Lack of referential integrity between tables. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5163,
+      "id": 5148,
       "quizId": 103,
       "text": "Which of the following is the main requirement of 1NF (First Normal Form)?",
       "options": [
@@ -10113,33 +9919,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. No column in the table should contain repeating values or arrays..\n\nLời giải gốc: Điều kiện cốt lõi của Dạng chuẩn 1 (1NF) là mọi thuộc tính phải chứa các giá trị nguyên tố (nguyên tử - atomic), nghĩa là một ô dữ liệu không được chứa danh sách, mảng hoặc các nhóm lặp lại của nhiều giá trị.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: B. Each table contains only one foreign key.; C. Each table has at least one primary key.; D. All non-key attributes must be fully dependent on the primary key.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5164,
-      "quizId": 103,
-      "text": "Consider a user table with columns ID, NAME, Password, and email. Which functional dependency exists in this table?",
-      "options": [
-        "ID \\(\\to\\) NAME",
-        "Password \\(\\to\\) email",
-        "Password \\(\\to\\) NAME",
-        "NAME \\(\\to\\) email"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án đúng: A — ID \\(\\to\\) NAME.\n\nNền tảng kiến thức: Trong thiết kế cơ sở dữ liệu quan hệ, thuộc tính khóa chính (Primary Key / Candidate Key) như `ID` xác định duy nhất mọi thuộc tính còn lại trong cùng một bộ (tuple).\n\nPhân tích: ID là mã định danh duy nhất của mỗi người dùng, do đó với mỗi giá trị ID chỉ có duy nhất một giá trị NAME tương ứng (ID \\(\\to\\) NAME). Password và NAME đều có thể bị trùng lặp giữa các người dùng nên không thể làm vế trái suy ra các trường khác."
-    },
-    {
-      "id": 5165,
-      "quizId": 103,
-      "text": "Consider relation \\(R(A, B, C, D, E)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad B \\rightarrow C, \\quad E \\rightarrow D, \\quad C \\rightarrow E \\}\\)\n\nWhat is/are the candidate key(s) for \\(R\\)?",
-      "options": [
-        "AC",
-        "AD",
-        "AB",
-        "AE"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. AB.\n\nLời giải gốc: Nhìn vào các phụ thuộc hàm, ta thấy thuộc tính A và B không bao giờ xuất hiện ở vế phải (không bị suy ra bởi ai). Vậy bất kỳ khóa nào cũng phải chứa ít nhất A và B. Ta tính bao đóng của tập (A,B): A,B+ = A, B, C, E, D. Bao đóng này bao phủ toàn bộ các thuộc tính, nên AB chính là khóa.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. AC; B. AD; D. AE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5166,
+      "id": 5149,
       "quizId": 103,
       "text": "Consider a relation with schema \\(R(A, B, C, D)\\) and functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad B \\rightarrow C, \\quad B \\rightarrow D, \\quad D \\rightarrow A \\}\\)\n\nWhich of the following is the closure \\(A^+\\)?",
       "options": [
@@ -10152,7 +9932,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A, B, C, D.\n\nLời giải gốc: Tìm bao đóng của A: Đầu tiên A+ = A. Từ A → B, thêm B thành A, B. Từ B → C và B → D, thêm C, D thành A, B, C, D. Vậy A+ = A, B, C, D.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. A; C. A, B, C; D. A, B. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5167,
+      "id": 5150,
       "quizId": 103,
       "text": "In the relational model, what does \"functional dependency\" imply?",
       "options": [
@@ -10165,7 +9945,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. One attribute uniquely determines another attribute.\n\nLời giải gốc: Phụ thuộc hàm biểu thị mối quan hệ mà một tập thuộc tính này xác định duy nhất giá trị của một tập thuộc tính khác.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. Each relation depends on another relation; C. Relations can be modified without affecting each other; D. All attributes must be independent of each other. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5168,
+      "id": 5151,
       "quizId": 103,
       "text": "A relation \\(R(X, Y, Z)\\) has functional dependencies:\n\\(F = \\{ XY \\rightarrow Z, \\quad Z \\rightarrow Y \\}\\)\n\nAssuming \\(X, Y, Z\\) are single attributes and \\(\\{X, Y\\}\\) is the only candidate key, what is the highest normal form that \\(R\\) satisfies?",
       "options": [
@@ -10178,7 +9958,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Third Normal Form (3NF) but not Boyce-Codd Normal Form (BCNF).\n\nLời giải gốc: Phụ thuộc hàm Z → Y có vế trái Z không phải là siêu khóa, vi phạm điều kiện BCNF. Tuy nhiên Y là thuộc tính khóa (nằm trong khóa X, Y) nên vẫn thỏa 3NF. Do đó dạng chuẩn cao nhất là 3NF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. First Normal Form (1NF) only; B. Second Normal Form (2NF) but not Third Normal Form (3NF); D. Boyce-Codd Normal Form (BCNF). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5169,
+      "id": 5152,
       "quizId": 103,
       "text": "In a student registration system, which normal form is violated if one field contains multiple course IDs for the same student?",
       "options": [
@@ -10191,7 +9971,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. 1NF.\n\nLời giải gốc: Như giải thích ở Câu 12, việc một trường dữ liệu (field) chứa nhiều giá trị đồng thời (nhiều mã môn học - course IDs) đã vi phạm tính nguyên tố của dữ liệu, trực tiếp vi phạm Dạng chuẩn 1 (1NF).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: B. 2NF; C. 3NF; D. 4NF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5170,
+      "id": 5153,
       "quizId": 103,
       "text": "In relational database design, which normal form eliminates multi-valued attributes and ensures that data is organized at a fundamental level?",
       "options": [
@@ -10204,7 +9984,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. 1NF.\n\nLời giải gốc: Dạng chuẩn 1 (1NF) yêu cầu các thuộc tính phải là nguyên tố, qua đó loại bỏ các thuộc tính đa trị hoặc nhóm lặp lại.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: B. 2NF; C. 3NF; D. 4NF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5171,
+      "id": 5154,
       "quizId": 103,
       "text": "Which normalization form eliminates transitive dependency?",
       "options": [
@@ -10217,7 +9997,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. 3NF.\n\nLời giải gốc: Dạng chuẩn 3 (3NF) yêu cầu bảng phải đạt chuẩn 2NF và loại bỏ hoàn toàn các phụ thuộc hàm bắc cầu (Transitive dependencies) của các thuộc tính không phải khóa vào khóa chính.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. 1NF; B. 2NF; D. BCNF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5172,
+      "id": 5155,
       "quizId": 103,
       "text": "Suppose that there is a relation \\(R(A, B, C, D, E, G)\\) and functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad D \\rightarrow EG, \\quad C \\rightarrow A, \\quad BE \\rightarrow C, \\quad BC \\rightarrow D, \\quad CG \\rightarrow BD, \\quad ACD \\rightarrow B, \\quad CE \\rightarrow AG \\}\\)\n\nCompute the closure \\((AB)^+\\)?",
       "options": [
@@ -10230,7 +10010,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. ABCDEG.\n\nLời giải gốc: Dựa vào tập phụ thuộc hàm, bao đóng của AB tính được chứa toàn bộ các thuộc tính A, B, C, D, E, G của quan hệ. Bắt đầu từ AB: AB → C, có C → A và BC → D nên thêm D, D → EG nên thêm E, G. Kết quả là ABCDEG.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. ABCD; B. ABCDE; C. ABCDG. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5173,
+      "id": 5156,
       "quizId": 103,
       "text": "Consider relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad C \\rightarrow D, \\quad D \\rightarrow A \\}\\)\n\nWhat are all the candidate keys of \\(R\\)?",
       "options": [
@@ -10243,20 +10023,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. AB, BC, BD.\n\nLời giải gốc: Dựa vào các phụ thuộc hàm, các khóa tối thiểu của quan hệ gồm các tập A, B, B, C và B, D. Thuộc tính B luôn phải có mặt vì không FD nào sinh ra B.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. AB, BC, AD; C. BC, BD; D. AB, AD. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5174,
-      "quizId": 103,
-      "text": "Suppose that we have a relation \\(R(B, C, D)\\) that satisfies functional dependencies: \\(D \\rightarrow B\\) and \\(D \\rightarrow C\\). Which of the following functional dependencies is equivalent to the given dependencies?",
-      "options": [
-        "\\(D \\rightarrow BC\\)",
-        "\\(D \\rightarrow DB\\)",
-        "\\(DB \\rightarrow B\\)",
-        "\\(DC \\rightarrow DB\\)"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. D->BC.\n\nLời giải gốc: Theo quy tắc hợp (Union rule) trong hệ tiên đề Armstrong, nếu \\(D \\to B\\) và \\(D \\to C\\) thì tương đương với \\(D \\to BC\\). ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. D->DB; C. DB->B; D. DC->DB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5175,
+      "id": 5157,
       "quizId": 103,
       "text": "Consider a relation \\(R(A, B, C, D, E, F)\\) with the following set of functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad C \\rightarrow D, \\quad D \\rightarrow E, \\quad E \\rightarrow F \\}\\)\n\nConsider the following candidate functional dependencies:\n- \\(f_1: A \\rightarrow D\\)\n- \\(f_2: AB \\rightarrow D\\)\n- \\(f_3: AB \\rightarrow E\\)\n- \\(f_4: AB \\rightarrow F\\)\n\nBased on Armstrong's inference rules, which of the functional dependencies can be derived from \\(F\\)?",
       "options": [
@@ -10269,7 +10036,7 @@
       "explanation": "Áp dụng luật bắc cầu (Transitivity) của hệ tiên đề Armstrong: từ AB -> C và C -> D suy ra AB -> D (f2); từ AB -> D và D -> E suy ra AB -> E (f3); từ AB -> E và E -> F suy ra AB -> F (f4). Phụ thuộc hàm f1: A -> D không thể suy diễn được vì thiếu thuộc tính B để suy ra C."
     },
     {
-      "id": 5176,
+      "id": 5158,
       "quizId": 103,
       "text": "If \\(A \\to B\\) and \\(B \\to C\\), which rule allows us to infer \\(A \\to C\\)?",
       "options": [
@@ -10282,7 +10049,7 @@
       "explanation": "Đáp án đúng: C — Transitivity.\n\nNền tảng kiến thức: Hệ tiên đề Armstrong gồm:\n- Tiên đề bắc cầu (Transitivity): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n- Tiên đề phản xạ (Reflexivity): Nếu \\(Y \\subseteq X\\) thì suy ra \\(X \\to Y\\).\n- Tiên đề tăng trưởng (Augmentation): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n\nPhân tích: Quy tắc cho phép suy diễn từ \\(A \\to B\\) và \\(B \\to C\\) ra \\(A \\to C\\) chính là Tiên đề bắc cầu (Transitivity Rule)."
     },
     {
-      "id": 5177,
+      "id": 5159,
       "quizId": 103,
       "text": "Given relation \\(R(A, B, C, D)\\) and the set of functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad C \\rightarrow D \\}\\)\n\nDetermine the highest normal form of the relation \\(R\\):",
       "options": [
@@ -10295,7 +10062,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. 2NF.\n\nLời giải gốc: Khóa chính của quan hệ là \\(AB\\). Do có phụ thuộc hàm bắc cầu \\(AB \\to C \\to D\\) (trong đó \\(C\\) không phải là siêu khóa), bảng không đạt chuẩn 3NF mà chỉ đạt chuẩn 2NF. ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. 1NF; C. 3NF; D. BCNF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5178,
+      "id": 5160,
       "quizId": 103,
       "text": "What is a benefit of normalization when converting an ERD to a relational model?",
       "options": [
@@ -10308,20 +10075,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Reduced update anomalies.\n\nLời giải gốc: Chuẩn hóa giúp giảm thiểu tối đa các bất thường khi cập nhật dữ liệu (update anomalies).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. Increased storage space efficiency; C. Simplified database queries; D. Enhanced data security. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5179,
-      "quizId": 103,
-      "text": "The highest normal form for relation schema \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad D \\rightarrow B, \\quad C \\rightarrow ABD \\}\\) is:",
-      "options": [
-        "2NF",
-        "1NF",
-        "3NF",
-        "BCNF"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. 3NF.\n\nLời giải gốc: Khóa của R gồm: C, A,B, A,D. Nhờ đó, cả 4 thuộc tính đều là thuộc tính khóa (prime attributes). Bất kỳ lược đồ nào mà tất cả các thuộc tính đều là thuộc tính khóa thì chắc chắn đạt 3NF (không có sự phụ thuộc bắc cầu của thuộc tính không khóa). Nó vi phạm BCNF vì phụ thuộc D->B có vế trái (D) không phải là siêu khóa. Vậy dạng chuẩn cao nhất đạt được là 3NF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. 2NF; B. 1NF; D. BCNF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5180,
+      "id": 5161,
       "quizId": 103,
       "text": "Which condition best describes a table that is in Second Normal Form (2NF)?",
       "options": [
@@ -10334,7 +10088,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. It has no partial dependency on a composite key..\n\nLời giải gốc: Một bảng đạt dạng chuẩn 2 (2NF) khi nó ở dạng chuẩn 1 và không có phụ thuộc một phần (partial dependency) của các thuộc tính không khóa vào khóa chính phức hợp. ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. It has no primary key.; B. It has atomic attributes.; D. It allows repeating groups and no transitive dependency exists.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5181,
+      "id": 5162,
       "quizId": 103,
       "text": "Given relation \\(R(X, Y, Z, W)\\) with the set of functional dependencies:\n\\(F = \\{ X \\rightarrow Y, \\quad Y \\rightarrow Z, \\quad Z \\rightarrow W \\}\\)\n\nWhich of the following is a candidate key for \\(R\\)?",
       "options": [
@@ -10347,7 +10101,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. X.\n\nLời giải gốc: Xét bao đóng của X: \\(X^+ = \\{X, Y, Z, W\\}\\). Vì \\(X^+\\) chứa tất cả các thuộc tính của R nên X là khóa (Key) của R.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: B. Y; C. XZ; D. XY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5182,
+      "id": 5163,
       "quizId": 103,
       "text": "In a functional dependency \\(A \\rightarrow B\\), what can be said about \\(B\\)?",
       "options": [
@@ -10360,7 +10114,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. B is functionally dependent on A.\n\nLời giải gốc: Trong phụ thuộc hàm A → B, thuộc tính B phụ thuộc hàm vào tập thuộc tính A.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. B is also a superkey; B. B is a determinant; D. B is a foreign key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5183,
+      "id": 5164,
       "quizId": 103,
       "text": "During database design, why is it necessary to identify candidate keys? Choose two answers",
       "options": [
@@ -10378,26 +10132,7 @@
       "multiple": true
     },
     {
-      "id": 5184,
-      "quizId": 103,
-      "text": "Suppose we have a relation \\(R(A, B, C, D, E, F, N)\\) and functional dependencies:\n\\(F = \\{ F \\rightarrow A, \\quad A \\rightarrow B, \\quad B \\rightarrow C, \\quad BC \\rightarrow A, \\quad A \\rightarrow D, \\quad E \\rightarrow A, \\quad D \\rightarrow E \\}\\)\n\nWhich of the following is NOT a candidate key for \\(R\\)? (Choose all that apply)",
-      "options": [
-        "AB",
-        "FN",
-        "E",
-        "D"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Đáp án đúng**: A & C & D\n\nĐáp án theo dữ liệu đề: A, C, D — A. AB; C. E; D. D.\n\nLời giải gốc: Để là khóa, bao đóng của tập thuộc tính phải chứa tất cả thuộc tính A,B,C,D,E,F,N. Ta thấy thuộc tính \\(N\\) không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào, nên bất kỳ khóa nào cũng bắt buộc phải chứa \\(N\\). Các tập \\(AB\\), \\(E\\), \\(D\\) không chứa \\(N\\) nên chắc chắn không phải là khóa. Chỉ có \\(FN\\) có \\((FN)^+ = {F,N,A,B,C,D,E}\\) là khóa. Do đó các phương án không phải khóa là A, C, D.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: B. FN. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
-      "correctIndices": [
-        0,
-        2,
-        3
-      ],
-      "multiple": true
-    },
-    {
-      "id": 5185,
+      "id": 5165,
       "quizId": 103,
       "text": "Normalization is:",
       "options": [
@@ -10410,7 +10145,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. The process of organizing data efficiently and minimizing repetition, helping maintain data consistency and reducing the risk of errors.\n\nLời giải gốc: Chuẩn hóa là quá trình tổ chức dữ liệu hiệu quả nhằm giảm thiểu sự lặp lại, duy trì tính nhất quán và giảm thiểu lỗi dữ liệu.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: A. The process of ensuring that each table has a key; B. The process whereby a limit is put on the number of fields a record can contain; D. The process of ensuring that a relational database has at least two tables. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5186,
+      "id": 5166,
       "quizId": 103,
       "text": "Suppose we have a relation that stores data about a single entity and has no multi-valued dependencies. Which of the following is the highest normal form for this relation?",
       "options": [
@@ -10423,20 +10158,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. 4NF.\n\nLời giải gốc: Dạng chuẩn 4 (4NF) loại bỏ các phụ thuộc đa trị, đảm bảo mô hình đạt mức tối ưu cao hơn 3NF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. 1NF; B. 2NF; C. 3NF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5187,
-      "quizId": 103,
-      "text": "Which statement best represents Armstrong's Rule of Decomposition?",
-      "options": [
-        "If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\)",
-        "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
-        "If \\(A \\to B\\), then \\(AC \\to BC\\)",
-        "If \\(A \\to B\\), then \\(B \\to C\\)"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án đúng: A — If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n2. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n3. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n4. Quy tắc hợp (Union / Additivity Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n\nPhân tích: Phương án A biểu diễn chính xác Quy tắc phân rã (Decomposition Rule). Phương án B là Tiên đề bắc cầu (Transitivity Axiom), phương án C là Tiên đề tăng trưởng (Augmentation Axiom), phương án D sai."
-    },
-    {
-      "id": 5188,
+      "id": 5167,
       "quizId": 103,
       "text": "Which of the following is an example of a violation of 2NF?",
       "options": [
@@ -10449,20 +10171,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. A non-prime attribute is functionally dependent on part of a primary key..\n\nLời giải gốc: Vi phạm chuẩn 2 xảy ra khi thuộc tính không khóa phụ thuộc hàm vào một phần của khóa chính phức hợp. ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: B. A non-prime attribute is functionally dependent on a non-prime attribute.; C. A non-prime attribute is functionally dependent on the entire candidate key.; D. There is a transitive dependency between candidate keys.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5189,
-      "quizId": 103,
-      "text": "Consider the relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad C \\rightarrow D \\}\\)\n\nFind the candidate key of this relation:",
-      "options": [
-        "The key is column A",
-        "The key includes two columns (A, C)",
-        "The key is column A or column C",
-        "The key is column C"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. The key includes two columns (A, C).\n\nLời giải gốc: Từ tập phụ thuộc hàm, bao đóng của A, C sinh ra toàn bộ các thuộc tính A, B, C, D, do đó A, C là khóa của quan hệ.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. The key is column A; C. The key is column A or column C; D. The key is column C. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5190,
+      "id": 5168,
       "quizId": 103,
       "text": "A table can be in 3NF but not in 1NF.",
       "options": [
@@ -10473,7 +10182,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. False.\n\nLời giải gốc: Phát biểu này sai vì để đạt các dạng chuẩn cao hơn như 3NF, một bảng bắt buộc phải thỏa mãn các dạng chuẩn thấp hơn là 1NF và 2NF theo thứ tự phân cấp.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. True. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5191,
+      "id": 5169,
       "quizId": 103,
       "text": "Which of the following violates 1NF (First Normal Form)?",
       "options": [
@@ -10486,7 +10195,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Repeating groups of values in a column.\n\nLời giải gốc: Chuẩn 1NF yêu cầu mọi thuộc tính phải chứa các giá trị nguyên tố (Atomic values). Việc chứa nhóm giá trị lặp lại (Repeating groups) hoặc đa trị trong cùng một cột sẽ vi phạm 1NF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. Having a NULL in a column; C. Having a primary key and all single attributes; D. Not exist multi-value attributes. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5192,
+      "id": 5170,
       "quizId": 103,
       "text": "Given the relational schema \\(R(A, B, C, D, E)\\) and the set of functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad B \\rightarrow D, \\quad C \\rightarrow E, \\quad D \\rightarrow B \\}\\)\n\nWhat is the closure of the attribute set \\(\\{A, B\\}\\)?",
       "options": [
@@ -10499,20 +10208,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A, B, C, D, E.\n\nLời giải gốc: Tính bao đóng \\(\\{A, B\\}^+\\): Ban đầu: \\(\\{A, B\\}\\) Dùng \\(AB \\rightarrow C \\Rightarrow \\{A, B, C\\}\\) Dùng \\(B \\rightarrow D \\Rightarrow \\{A, B, C, D\\}\\) Dùng \\(C \\rightarrow E \\Rightarrow \\{A, B, C, D, E\\}\\) Vậy bao đóng của \\(\\{A, B\\}\\) là \\(\\{A, B, C, D, E\\}\\).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. AB, CD; C. AB, CE; D. A, B, D. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5193,
-      "quizId": 103,
-      "text": "In SQL, which of the following statements is correct?",
-      "options": [
-        "All relations in 2NF are also in BCNF",
-        "All relations in 1NF are also in BCNF",
-        "All relations in 3NF are also in BCNF",
-        "For any relation schema, there is a dependency-preserving decomposition into 3NF"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. For any relation schema, there is a dependency-preserving decomposition into 3NF.\n\nLời giải gốc: Đối với bất kỳ lược đồ quan hệ nào, luôn tồn tại phép phân rã bảo toàn phụ thuộc hàm đạt dạng chuẩn 3NF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. All relations in 2NF are also in BCNF; B. All relations in 1NF are also in BCNF; C. All relations in 3NF are also in BCNF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5194,
+      "id": 5171,
       "quizId": 103,
       "text": "Consider a relation \\(R(A, B, C, D, E, F)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad C \\rightarrow D, \\quad D \\rightarrow AE \\}\\)\n\nWhich of the following is the closure of \\(\\{B, D\\}\\)?",
       "options": [
@@ -10526,7 +10222,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. ABCDE.\n\nLời giải gốc: Bao đóng của B, D: từ D → AE thêm A và E, nay có A, B, D, E; từ AB → C thêm C, được A, B, C, D, E. Kết quả là ABCDE.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. BCDE; C. ABDEF; D. ABCEF; E. BCEF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5195,
+      "id": 5172,
       "quizId": 103,
       "text": "A relation is in Third Normal Form (3NF) if:",
       "options": [
@@ -10539,34 +10235,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. It is in 2NF and has no transitive dependencies..\n\nLời giải gốc: Một quan hệ đạt chuẩn 3 (3NF) khi nó ở dạng chuẩn 2 và không chứa các phụ thuộc bắc cầu (transitive dependencies). ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. It is in 2NF and has only one attribute per tuple.; C. It is in BCNF.; D. All attributes are keys.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5196,
-      "quizId": 103,
-      "text": "Given R as a relation, which of the following statements is correct about normalizing data to 3NF?",
-      "options": [
-        "R has a primary key, no repeating groups, no multivalued/composite attributes",
-        "R has a primary key, no repeating groups, no multivalued/complex attributes, no partial functional dependencies",
-        "R has a primary key, no repeating groups, no multivalued/composite attributes, no transitive dependencies",
-        "R has a primary key, no repeating groups, no multivalued/complex attributes, no transitive functional dependencies, no partial functional dependencies",
-        "R has complete functional dependency"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. R has a primary key, no repeating groups, no multivalued/complex attributes, no transitive functional dependencies, no partial functional dependencies.\n\nLời giải gốc: Dạng chuẩn 3 (3NF) đòi hỏi quan hệ đạt chuẩn 2 (không có phụ thuộc hàm bộ phận) và đồng thời không chứa phụ thuộc hàm bắc cầu (transitive functional dependencies).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. R has a primary key, no repeating groups, no multivalued/composite attributes; B. R has a primary key, no repeating groups, no multivalued/complex attributes, no partial functi…; C. R has a primary key, no repeating groups, no multivalued/composite attributes, no transitive d…; E. R has complete functional dependency. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5197,
-      "quizId": 103,
-      "text": "Consider the relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad C \\rightarrow D \\}\\)\n\nFind the candidate key of this relation:",
-      "options": [
-        "The key is the A column",
-        "The key includes two columns (A, C)",
-        "The key is the A column or C column",
-        "The key is the C column"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. The key includes two columns (A, C).\n\nLời giải gốc: Tính bao đóng của \\((AC)^+\\): \\(AC \\rightarrow AC\\), từ \\(A \\rightarrow B\\) có \\(ABC\\), từ \\(C \\rightarrow D\\) có \\(ABCD\\). Do đó \\(\\{A, C\\}\\) là khóa của quan hệ R.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. The key is the A column; C. The key is the A column or C column; D. The key is the C column. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5198,
+      "id": 5173,
       "quizId": 103,
       "text": "Suppose that we have a relation \\(R(A, B, C, D)\\) and functional dependency: \\(D \\rightarrow BC\\). Which of the following is equivalent to the given dependency?",
       "options": [
@@ -10579,7 +10248,7 @@
       "explanation": "Đáp án đúng: A — \\(D \\to B\\) and \\(D \\to C\\).\n\nNền tảng kiến thức: Theo Quy tắc phân rã (Decomposition Rule) và Quy tắc hợp (Union Rule):\n- \\(D \\to BC \\iff (D \\to B \\text{ và } D \\to C)\\).\n\nPhân tích: Phụ thuộc hàm \\(D \\to BC\\) có vế phải gồm 2 thuộc tính phân biệt \\(B\\) và \\(C\\), do đó hoàn toàn tương đương với cặp phụ thuộc hàm \\(D \\to B\\) và \\(D \\to C\\)."
     },
     {
-      "id": 5199,
+      "id": 5174,
       "quizId": 103,
       "text": "To convert a table to First Normal Form (1NF), what step must be taken?",
       "options": [
@@ -10592,7 +10261,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Ensure each attribute contains atomic values.\n\nLời giải gốc: Để đạt dạng chuẩn 1 (1NF), mỗi thuộc tính trong bảng phải chứa các giá trị nguyên tố (atomic values), không chứa nhóm lặp hay thuộc tính đa trị.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. Remove redundant data; B. Ensure each attribute has a unique value; C. Split the table into smaller tables. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5200,
+      "id": 5175,
       "quizId": 103,
       "text": "In SQL normalization theory, which of the following statements is correct?",
       "options": [
@@ -10605,7 +10274,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. For any relation schema, there is a dependency-preserving decomposition into 3NF..\n\nLời giải gốc: Mọi lược đồ quan hệ đều luôn có thể phân rã thành dạng chuẩn 3 (3NF) mà vẫn bảo toàn được các phụ thuộc hàm. Điều này không luôn đúng với BCNF.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. All relations in 2NF are also in BCNF.; B. All relations in 1NF are also in BCNF.; C. All relations in 3NF are also in BCNF.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5201,
+      "id": 5176,
       "quizId": 103,
       "text": "Consider the relation \\(R(A, B, C, D, E, F, G, K)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad B \\rightarrow C, \\quad C \\rightarrow AD, \\quad D \\rightarrow E, \\quad CF \\rightarrow B, \\quad G \\rightarrow K \\}\\)\n\nWhat is the closure of \\(\\{AB\\}\\)?",
       "options": [
@@ -10619,7 +10288,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. ABCDE.\n\nLời giải gốc: Bao đóng của AB: AB → C thêm C; C → AD thêm D; D → E thêm E. Kết quả là A, B, C, D, E, tức ABCDE.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. ABCDEF; C. CDE; D. ABCD; E. ABCFG. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5202,
+      "id": 5177,
       "quizId": 103,
       "text": "What is \"de-normalization\"?",
       "options": [
@@ -10632,7 +10301,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. De-normalization means allowing redundancy in a table.\n\nNền tảng kiến thức: Thiết kế vật lý chọn chỉ mục, cách tổ chức tệp và các tối ưu theo workload thực tế. Denormalization hoặc thêm chỉ mục có thể giảm chi phí đọc nhưng đổi lại tăng lưu trữ, chi phí ghi và nguy cơ phải đồng bộ dữ liệu dư thừa.\n\nPhân tích: Denormalization chủ động chấp nhận một phần dư thừa hoặc lưu trước kết quả để giảm join/tính toán ở workload đọc. Nó có thể tăng tốc truy xuất, nhưng làm tăng dung lượng và buộc hệ thống cập nhật đồng bộ các bản sao; đây là quyết định theo workload, không phải quy tắc luôn có lợi.\n\nĐối chiếu phương án: B. De-normalization means allowing duplicate columns appeared in a table; C. De-normalization means allowing a table to have more than 3 columns; D. De-normalization means allowing a table to have more than 1024 columns. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5203,
+      "id": 5178,
       "quizId": 103,
       "text": "What is the benefit of \"de-normalization\"?",
       "options": [
@@ -10644,7 +10313,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. The main benefit of de-normalization is improved performance with simplified data retrieval (this is done by reduction in the number of joins needed for data processing).\n\nNền tảng kiến thức: Thiết kế vật lý chọn chỉ mục, cách tổ chức tệp và các tối ưu theo workload thực tế. Denormalization hoặc thêm chỉ mục có thể giảm chi phí đọc nhưng đổi lại tăng lưu trữ, chi phí ghi và nguy cơ phải đồng bộ dữ liệu dư thừa.\n\nPhân tích: Denormalization chủ động chấp nhận một phần dư thừa hoặc lưu trước kết quả để giảm join/tính toán ở workload đọc. Nó có thể tăng tốc truy xuất, nhưng làm tăng dung lượng và buộc hệ thống cập nhật đồng bộ các bản sao; đây là quyết định theo workload, không phải quy tắc luôn có lợi.\n\nĐối chiếu phương án: A. \"de-normalization\" has no benefit; C. The main benefit of de-normalization is eliminating redundant information from a table and org…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5204,
+      "id": 5179,
       "quizId": 104,
       "text": "Which of the following is not a data model in the database?",
       "options": [
@@ -10657,7 +10326,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Conceptual data model.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: B. Object-Oriented data model; C. Network data model; D. Hierarchical data model. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5205,
+      "id": 5180,
       "quizId": 104,
       "text": "The conceptual model is:",
       "options": [
@@ -10670,7 +10339,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Independent of both hardware and software.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Mô hình khái niệm mô tả dữ liệu và quy tắc nghiệp vụ ở mức độc lập với chi tiết cài đặt cụ thể. Vì vậy, nó được dùng để trao đổi yêu cầu trước khi quyết định DBMS, cấu trúc tệp hay cấu hình phần cứng.\n\nĐối chiếu phương án: B. Dependent on both hardware and software.; C. Dependent on software.; D. Dependent on hardware.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5206,
+      "id": 5181,
       "quizId": 104,
       "text": "Which of the following is expressed by an E-R diagram?",
       "options": [
@@ -10683,7 +10352,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Relation between entities.\n\nLời giải gốc: Biểu đồ ER tập trung biểu diễn các dữ liệu tĩnh mang tính cấu trúc, mô tả mối quan hệ giữa các thực thể dữ liệu với nhau (Relation between entities), không mô tả các quy trình xử lý động (processes).\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. Relation between process and relationship; B. Relation between entity and process; C. Relation between processes. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5207,
+      "id": 5182,
       "quizId": 104,
       "text": "The key for a weak entity set E is .........",
       "options": [
@@ -10696,7 +10365,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Zero or more attributes of E and key attributes from supporting entity sets.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Ba thành phần nền tảng của ER là entity set, attribute và relationship set. Entity mô tả loại đối tượng, attribute mô tả dữ liệu của đối tượng/liên kết, relationship biểu diễn kết nối giữa entity set.\n\nĐối chiếu phương án: A. Zero or more attributes of E; B. The set of attributes of supporting relationships for E; C. The set of attributes of supporting entity sets. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5208,
+      "id": 5183,
       "quizId": 104,
       "text": "A class in UML is similar to...........",
       "options": [
@@ -10709,7 +10378,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. An entity set in E/R model.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. An attribute in E/R model; C. A Relationship in E/R model; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5209,
+      "id": 5184,
       "quizId": 104,
       "text": "A(n) _____ provides a means to analyze business requirements so as to standardize organizational vocabulary, enforce business rules, and ensure adequate data quality",
       "options": [
@@ -10722,7 +10391,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Entity Relationship Diagram.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: B. Relation Schema Design; C. All of the others; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5210,
+      "id": 5185,
       "quizId": 104,
       "text": "An association class in UML is similar to ______ in the ER model",
       "options": [
@@ -10735,7 +10404,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. attributes on a relationship.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. Attributes; C. Entities; D. entity sets. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5211,
+      "id": 5186,
       "quizId": 104,
       "text": "In UML, what is the difference between an aggregation and a composition?",
       "options": [
@@ -10748,7 +10417,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. In composition, when the owning object is destroyed, so are the contained objects. In aggregation, this is not necessarily true..\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: B. In aggregation, when the owning object is destroyed, so are the contained objects. In composit…; C. All of the others; D. There is no difference between an aggregation and a composition. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5212,
+      "id": 5187,
       "quizId": 104,
       "text": "Consider the following statement:\n\"Entity Sets and their attributes should reflect the reality\"\nThat above statement describes which principle?",
       "options": [
@@ -10761,7 +10430,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Faithfulness principle.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Thực thể yếu chưa có khóa độc lập; phải ghép khóa bộ phận của nó với khóa của thực thể chủ qua quan hệ định danh. Vì vậy, chỉ lấy thuộc tính của chủ hoặc chỉ lấy khóa bộ phận đều chưa nhận diện duy nhất được nó.\n\nĐối chiếu phương án: A. Avoid Redundancy Principle; B. Simplicity Count Principle; C. Limit the use of weak entity sets principle. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5213,
+      "id": 5188,
       "quizId": 104,
       "text": "Look at the following statements:\n(a) We should pick the right kind of elements\n(b) When an entity has no non-primary key attribute, we should convert that entity to an attribute\n(c) Use weak entities when-ever possible\n(d) Always make redundancies",
       "options": [
@@ -10774,7 +10443,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A, B — A. (a) and (b) are correct; B. (a) and (c) are correct.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Thực thể yếu chưa có khóa độc lập; phải ghép khóa bộ phận của nó với khóa của thực thể chủ qua quan hệ định danh. Vì vậy, chỉ lấy thuộc tính của chủ hoặc chỉ lấy khóa bộ phận đều chưa nhận diện duy nhất được nó.\n\nĐối chiếu phương án: C. (a) and (d) are correct; D. (b) and (c) are correct. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5214,
+      "id": 5189,
       "quizId": 104,
       "text": "The ER Diagram uses three principle element types:",
       "options": [
@@ -10787,7 +10456,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Entity sets, Attributes, and Relationships.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. Entity sets, Attributes and Constraints; C. Attributes, Constraints, and Relationships; D. Entity sets, Constraints, and Relationships. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5215,
+      "id": 5190,
       "quizId": 104,
       "text": "The binary relationship between classes in UML is called ...",
       "options": [
@@ -10800,7 +10469,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Association.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Binary relationship/association nối hai kiểu thực thể/lớp; n-ary relationship có từ ba kiểu tham gia trở lên. Phân loại theo số entity set/class trong chính liên kết, không theo số thuộc tính của chúng.\n\nĐối chiếu phương án: A. Aggregation; B. Composition; D. Relation. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5216,
+      "id": 5191,
       "quizId": 104,
       "text": "In UML, a _____ between classes is called an association",
       "options": [
@@ -10812,7 +10481,7 @@
       "explanation": "A binary relationship between classes in UML is called an association."
     },
     {
-      "id": 5217,
+      "id": 5192,
       "quizId": 104,
       "text": "When an entity is called \"weak\"?\n(a) When it is used to represent weak objects, such as patients, elders\n(b) When all of its attributes can not identify itself\n(c) When It always needs support from other entity\n(d) When It is not really necessary in the ERD",
       "options": [
@@ -10825,7 +10494,7 @@
       "explanation": "A weak entity is one that cannot be identified by its own attributes alone and always needs support from an identifying owner entity (b and c)."
     },
     {
-      "id": 5218,
+      "id": 5193,
       "quizId": 104,
       "text": "Consider the following statement:\n\"When drawing ERD, if an entity has no non-key attribute and it is the 'one' in many-one relationship, then we should set it to the attribute of other entities\"\nThat above statement describes which principle?",
       "options": [
@@ -10838,7 +10507,7 @@
       "explanation": "This describes Picking the right kind of element principle."
     },
     {
-      "id": 5219,
+      "id": 5194,
       "quizId": 104,
       "text": "When drawing an ERD:\n(a) Entity sets and their attributes should reflect reality\n(b) Redundancy is not important, so we can ignore it\n(c) Avoid introducing more elements into the design than is absolutely necessary\n(d) Choosing the right relationships",
       "options": [
@@ -10851,7 +10520,7 @@
       "explanation": "Redundancy is critical and must be avoided (b is false). Principles a, c, d are correct."
     },
     {
-      "id": 5220,
+      "id": 5195,
       "quizId": 104,
       "text": "A weak entity",
       "options": [
@@ -10864,7 +10533,7 @@
       "explanation": "A weak entity does not possess sufficient key attributes to form a primary key on its own."
     },
     {
-      "id": 5221,
+      "id": 5196,
       "quizId": 104,
       "text": "Which of the followings is true?",
       "options": [
@@ -10876,7 +10545,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The Entity Relationship (ER) model represents the structure of data graphically.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. The ER model is a low level database design IC] The ER model represents the operation on data; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5222,
+      "id": 5197,
       "quizId": 104,
       "text": "5. The ER model is meant to",
       "options": [
@@ -10889,7 +10558,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. be close to a users perception of the data.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. replace relational design; B. enable detailed descriptions of data query processing; C. enable low level descriptions of data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5223,
+      "id": 5198,
       "quizId": 104,
       "text": "In databse design precesses, data requirements are expressed through......\n(a) Schema Design\n(b)ERD\n(c)UML\n(d) Table Design",
       "options": [
@@ -10902,7 +10571,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B, C — B. (b) and (c); C. (a) and (b).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. (c) and (d); D. (d) and (a). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5224,
+      "id": 5199,
       "quizId": 104,
       "text": "What is a weak entity in an ERD?",
       "options": [
@@ -10915,7 +10584,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. An entity that cannot exist without being related to another entity.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Thực thể yếu chưa có khóa độc lập; phải ghép khóa bộ phận của nó với khóa của thực thể chủ qua quan hệ định danh. Vì vậy, chỉ lấy thuộc tính của chủ hoặc chỉ lấy khóa bộ phận đều chưa nhận diện duy nhất được nó.\n\nĐối chiếu phương án: A. An entity with no attributes; B. An entity that participates in a one-to-many relationship; D. An entity with a composite key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5225,
+      "id": 5200,
       "quizId": 104,
       "text": "The key for a weak entity set is_____?",
       "options": [
@@ -10928,7 +10597,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. It is possible for an entity set's key to be composed of attributes, some or all of which belong to another entity set.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Thực thể yếu chưa có khóa độc lập; phải ghép khóa bộ phận của nó với khóa của thực thể chủ qua quan hệ định danh. Vì vậy, chỉ lấy thuộc tính của chủ hoặc chỉ lấy khóa bộ phận đều chưa nhận diện duy nhất được nó.\n\nĐối chiếu phương án: A. Zero or more attributes; B. The set of attributes of supporting relationships; D. The set of attributes of supporting entity sets. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5226,
+      "id": 5201,
       "quizId": 104,
       "text": "What happens to derived attributes when converting an ERD to a relational model?",
       "options": [
@@ -10941,7 +10610,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. They are ignored during the conversion process.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Trong ký hiệu ER phổ biến, thuộc tính dẫn xuất (derived) được vẽ bằng oval nét đứt vì giá trị có thể tính từ thuộc tính khác, ví dụ tuổi tính từ ngày sinh. Nó khác thuộc tính đa trị (oval kép) hoặc khóa (thường gạch dưới).\n\nĐối chiếu phương án: A. They become primary keys in the related tables; B. They are calculated and stored as regular attributes in the related tables; C. They become foreign keys in the related tables. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5227,
+      "id": 5202,
       "quizId": 104,
       "text": "To covert an entity- relationship diagram to a logical diagram, which of the following will create a new relation that will typically include primary keys from both entities and any additional attributes related to the relationship?",
       "options": [
@@ -10954,7 +10623,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. A many-to-many relationship.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi chuyển ER sang quan hệ, quan hệ nhiều-nhiều thường cần một bảng kết nối riêng; bảng này mang khóa của các thực thể tham gia làm khóa ngoại và thường ghép chúng thành khóa chính. Quan hệ một-nhiều thường có thể biểu diễn bằng khóa ngoại ở phía nhiều.\n\nĐối chiếu phương án: B. A recursive relationship; C. A one-to-many relationship; D. A one-to-one relationship. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5228,
+      "id": 5203,
       "quizId": 104,
       "text": "What is a derived attribute in an ERD?",
       "options": [
@@ -10967,33 +10636,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. An attribute that is calculated from other attributes.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Trong ký hiệu ER phổ biến, thuộc tính dẫn xuất (derived) được vẽ bằng oval nét đứt vì giá trị có thể tính từ thuộc tính khác, ví dụ tuổi tính từ ngày sinh. Nó khác thuộc tính đa trị (oval kép) hoặc khóa (thường gạch dưới).\n\nĐối chiếu phương án: B. An attribute that cannot be calculated; C. An attribute that is the primary key of an entity; D. An attribute that represents a relationship. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5229,
-      "quizId": 104,
-      "text": "In relational database design, which of the following is known as a set of entities of the same type that share the same properties or attributes?",
-      "options": [
-        "Entity Relation model",
-        "Entity set",
-        "Field set",
-        "Record set"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Entity set.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. Entity Relation model; C. Field set; D. Record set. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5230,
-      "quizId": 104,
-      "text": "An E/R diagram is a graphical representation of sets, __________?",
-      "options": [
-        "Entity",
-        "Attributes",
-        "Relationships",
-        "All of the others"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. All of the others.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. Entity; B. Attributes; C. Relationships. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5231,
+      "id": 5204,
       "quizId": 104,
       "text": "To convert from ER Diagram to Relational Model, 1-M relationship:",
       "options": [
@@ -11006,7 +10649,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Put key attribute of one-side to M-side.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. Put key attribute of M-side to one-side; C. Generate 1 relation, Primary key of this relation combined from two relations; D. Build a table with two columns, one column for each participating entity set's primary key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5232,
+      "id": 5205,
       "quizId": 104,
       "text": "The descriptive property possessed by each entity set is ______",
       "options": [
@@ -11019,33 +10662,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Attribute.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. Entity; C. Relation; D. Model. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5233,
-      "quizId": 104,
-      "text": "In SQL, ERD use three types of principle elements to form relationships:",
-      "options": [
-        "Entity sets, Constraints and Relationships",
-        "Attributes, Constraints, and Relationships",
-        "Entity sets, Attributes, and Relationships",
-        "Entity sets, Attributes and Constraints"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Entity sets, Attributes, and Relationships.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. Entity sets, Constraints and Relationships; B. Attributes, Constraints, and Relationships; D. Entity sets, Attributes and Constraints. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5234,
-      "quizId": 104,
-      "text": "Which of the following is known as a set of entities of the same type that share same properties, or attributes?",
-      "options": [
-        "Relation set",
-        "Tuples",
-        "Entity set",
-        "Entity Relation mode"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Entity set.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Relation set; B. Tuples; D. Entity Relation mode. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5235,
+      "id": 5206,
       "quizId": 104,
       "text": "How are weak entity sets represented in an Entity Relationship Diagram (ERD)?",
       "options": [
@@ -11058,7 +10675,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. With a double-line rectangle.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Thực thể yếu chưa có khóa độc lập; phải ghép khóa bộ phận của nó với khóa của thực thể chủ qua quan hệ định danh. Vì vậy, chỉ lấy thuộc tính của chủ hoặc chỉ lấy khóa bộ phận đều chưa nhận diện duy nhất được nó.\n\nĐối chiếu phương án: A. With rectangle; B. With diamond shape; D. With a dashed oval. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5236,
+      "id": 5207,
       "quizId": 104,
       "text": "How are composite attributes represented in the relational model?",
       "options": [
@@ -11071,7 +10688,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. As individual attributes in the related tables.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Composite attribute gồm các thành phần có ý nghĩa riêng, chẳng hạn FullName tách thành FirstName và LastName. Khi ánh xạ sang quan hệ, thường lưu các thành phần nguyên tố thành các cột riêng để truy vấn/sắp lọc từng phần.\n\nĐối chiếu phương án: B. By creating a new table for each composite attribute; C. By using a single attribute in the related tables; D. By using a composite key in the related table. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5237,
+      "id": 5208,
       "quizId": 104,
       "text": "In which of the following is a single-entity instance of one type related to many entity instances of another type?",
       "options": [
@@ -11084,7 +10701,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. One-to-Many Relationship.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi chuyển ER sang quan hệ, quan hệ nhiều-nhiều thường cần một bảng kết nối riêng; bảng này mang khóa của các thực thể tham gia làm khóa ngoại và thường ghép chúng thành khóa chính. Quan hệ một-nhiều thường có thể biểu diễn bằng khóa ngoại ở phía nhiều.\n\nĐối chiếu phương án: A. One-to-One Relationship; C. Many-to-Many Relationship; D. Composite Relationship. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5238,
+      "id": 5209,
       "quizId": 104,
       "text": "In an ERD, what does a line connecting two entities represent?",
       "options": [
@@ -11097,20 +10714,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A relationship.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. An attribute; C. A primary key; D. A foreign key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5239,
-      "quizId": 104,
-      "text": "Given that Cartoons and Murder Mysteries are special Movie genres, what is the relationship between entities Cartoons, Murder Mysteries and Movie?",
-      "options": [
-        "isa relationship",
-        "ais relationship",
-        "supporting relationship",
-        "referential integrity relationship"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. isa relationship.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: B. ais relationship; C. supporting relationship; D. referential integrity relationship. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5240,
+      "id": 5210,
       "quizId": 104,
       "text": "Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this model?",
       "options": [
@@ -11123,7 +10727,7 @@
       "explanation": "Đáp án đúng: B — 3.\n\nNền tảng kiến thức & Phân tích chi tiết:\nKhi chuyển đổi từ mô hình thực thể - mối quan hệ (E/R Diagram) sang mô hình quan hệ (Relational Model):\n1. Mỗi thực thể E1 và E2 cần 1 bảng riêng \\(\\to\\) Cần 2 bảng.\n2. Mối quan hệ 1-N (R1) không có thuộc tính riêng nên có thể gộp vào bảng ở phía \"nhiều\" dưới dạng khóa ngoại \\(\\to\\) Không tốn thêm bảng mới.\n3. Mối quan hệ N-N (R2) bắt buộc phải tách thành 1 bảng trung gian (Junction table) riêng \\(\\to\\) Cần 1 bảng.\n\nTổng số bảng tối thiểu cần có = 2 + 1 = 3 bảng."
     },
     {
-      "id": 5241,
+      "id": 5211,
       "quizId": 104,
       "text": "What is the purpose of a foreign key in an ERD?",
       "options": [
@@ -11136,7 +10740,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. It establishes a link between two tables.\n\nLời giải gốc: Khóa ngoại được dùng để thiết lập mối liên kết và đảm bảo tính toàn vẹn tham chiếu giữa hai bảng trong cơ sở dữ liệu.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. It defines the data type of attributes; B. It determines the cardinality of relationships; C. It serves as the primary identifier for a table. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5242,
+      "id": 5212,
       "quizId": 104,
       "text": "In a binary relationship with cardinality (1, N), what does it signify?",
       "options": [
@@ -11149,7 +10753,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. One entity can be related to multiple instances of another entity, but not vice versa.\n\nLời giải gốc: Quan hệ 1-N (One-to-Many) nghĩa là một thực thể thuộc tập thực thể này có thể liên kết với nhiều thực thể thuộc tập thực thể kia, nhưng chiều ngược lại mỗi thực thể chỉ liên kết với duy nhất một thực thể.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Binary relationship/association nối hai kiểu thực thể/lớp; n-ary relationship có từ ba kiểu tham gia trở lên. Phân loại theo số entity set/class trong chính liên kết, không theo số thuộc tính của chúng.\n\nĐối chiếu phương án: B. Multiple instances of one entity can relate to multiple instances of another entity; C. One entity can relate to only one instance of another entity; D. Each instance of one entity must relate to a unique instance of another entity. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5243,
+      "id": 5213,
       "quizId": 104,
       "text": "An E/R diagram is a graphical representation of sets of what?",
       "options": [
@@ -11162,7 +10766,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. All of the others.\n\nLời giải gốc: Sơ đồ thực thể kết hợp (E/R diagram) là mô hình đồ họa biểu diễn tập thực thể, tập thuộc tính và tập mối quan hệ giữa chúng.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. Entities; B. Attributes; C. Relationships. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5244,
+      "id": 5214,
       "quizId": 104,
       "text": "Which of the following best describes an entity in an ERD (Entity-Relationship Diagram)?",
       "options": [
@@ -11175,33 +10779,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A real-world object or concept with attributes.\n\nLời giải gốc: Trong sơ đồ ERD, thực thể (Entity) đại diện cho một đối tượng hoặc khái niệm trong thế giới thực có các thuộc tính mô tả.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. A table with rows and columns; C. A set of rows, columns, and constraints; D. A table with rows, columns, and domain constraints. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5245,
-      "quizId": 104,
-      "text": "Which of the following statements is correct when converting from the ERD model to the relational model?",
-      "options": [
-        "The order of the columns is not important",
-        "The order of both rows and columns is important",
-        "The order of the rows is important",
-        "The order of the columns is important"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. The order of the columns is not important.\n\nLời giải gốc: Trong mô hình quan hệ, thứ tự sắp xếp vật lý của các hàng (tuples) và cột (attributes) về mặt lý thuyết là không quan trọng.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. The order of both rows and columns is important; C. The order of the rows is important; D. The order of the columns is important. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5246,
-      "quizId": 104,
-      "text": "In the entity-relationship model, what is the entity?",
-      "options": [
-        "Relationships",
-        "Relationships between objects",
-        "Objects and relationships between objects",
-        "Data objects"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. Data objects.\n\nLời giải gốc: Thực thể (Entity) trong mô hình ER đại diện cho các đối tượng dữ liệu (Data objects) hoặc sự vật trong thế giới thực.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Entity là một đối tượng/sự vật có thể phân biệt trong miền ứng dụng và cần lưu thông tin; entity set là tập các entity cùng loại. Ví dụ một sinh viên cụ thể là entity, còn Student là entity set/type.\n\nĐối chiếu phương án: A. Relationships; B. Relationships between objects; C. Objects and relationships between objects. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5247,
+      "id": 5215,
       "quizId": 104,
       "text": "How are many-to-many relationships typically represented in the relational model?",
       "options": [
@@ -11214,7 +10792,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. By creating a new table with foreign keys from both related tables.\n\nLời giải gốc: Mối quan hệ nhiều-nhiều được biểu diễn bằng cách tạo một bảng liên kết (junction table) chứa các khóa ngoại trỏ đến khóa chính của hai bảng liên quan.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi chuyển ER sang quan hệ, quan hệ nhiều-nhiều thường cần một bảng kết nối riêng; bảng này mang khóa của các thực thể tham gia làm khóa ngoại và thường ghép chúng thành khóa chính. Quan hệ một-nhiều thường có thể biểu diễn bằng khóa ngoại ở phía nhiều.\n\nĐối chiếu phương án: A. By adding attributes to one of the related tables; C. By denormalizing the database; D. By creating a new table for each related entity. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5248,
+      "id": 5216,
       "quizId": 104,
       "text": "Which of the following best describes a \"many-to-many\" relationship?",
       "options": [
@@ -11227,7 +10805,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Many entities are related to many other entities.\n\nLời giải gốc: Mối quan hệ nhiều-nhiều (Many-to-many) là mối quan hệ trong đó nhiều thể hiện của thực thể này liên kết với nhiều thể hiện của thực thể kia.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi chuyển ER sang quan hệ, quan hệ nhiều-nhiều thường cần một bảng kết nối riêng; bảng này mang khóa của các thực thể tham gia làm khóa ngoại và thường ghép chúng thành khóa chính. Quan hệ một-nhiều thường có thể biểu diễn bằng khóa ngoại ở phía nhiều.\n\nĐối chiếu phương án: A. One entity is related to one other entity; B. One entity is related to many other entities; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5249,
+      "id": 5217,
       "quizId": 104,
       "text": "To convert from an ER Diagram to the Relational Model, a 1-M relationship is represented by:",
       "options": [
@@ -11240,7 +10818,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Putting the key attribute of the one-side into the M-side.\n\nLời giải gốc: Khi chuyển đổi mối quan hệ một-nhiều (1-M) sang mô hình quan hệ, ta đưa khóa chính của phía \"1\" sang làm khóa ngoại ở phía \"M\".\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. Putting the key attribute of the M-side into the one-side; C. Generating 1 relation whose primary key is combined from two relations; D. Building a table with two columns, one for each participating entity set's primary key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5250,
+      "id": 5218,
       "quizId": 104,
       "text": "Which of the following is an example of a composite attribute?",
       "options": [
@@ -11253,7 +10831,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. FullName (split into FirstName and LastName).\n\nLời giải gốc: Thuộc tính phức hợp (Composite attribute) là thuộc tính có thể chia nhỏ thành các thuộc tính đơn giản hơn, ví dụ FullName gồm FirstName và LastName.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Composite attribute gồm các thành phần có ý nghĩa riêng, chẳng hạn FullName tách thành FirstName và LastName. Khi ánh xạ sang quan hệ, thường lưu các thành phần nguyên tố thành các cột riêng để truy vấn/sắp lọc từng phần.\n\nĐối chiếu phương án: A. StudentID with unique value; C. EmailAddress with multi-values; D. DateOfBirth value is accepted with format \"dd/mm/yyyy\". Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5251,
+      "id": 5219,
       "quizId": 104,
       "text": "Given that Cartoons and Murder Mysteries are special Movie genres, what is the relationship between the entities Cartoons, Murder Mysteries, and Movie?",
       "options": [
@@ -11266,7 +10844,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Is-a relationship.\n\nLời giải gốc: Đây là mối quan hệ tổng quát hóa/chuyên biệt hóa (Generalization/Specialization), thể hiện qua mối quan hệ \"is-a\" (Cartoons là một dạng của Movie).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: B. A-is relationship; C. Supporting relationship; D. Referential integrity relationship. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5252,
+      "id": 5220,
       "quizId": 104,
       "text": "In an ERD, which of the following best describes a one-to-many (1:M) relationship?",
       "options": [
@@ -11279,20 +10857,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Each instance of Entity A is related to many instances of Entity B.\n\nLời giải gốc: Mối quan hệ 1-N được định nghĩa là: Mỗi một bản ghi ở thực thể A có thể liên kết (tham chiếu) tới nhiều bản ghi ở thực thể B.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. Each instance of Entity A is related to exactly one instance of Entity B; C. Each instance of both entities is related to exactly one other instance; D. Entities are not related at all. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5253,
-      "quizId": 104,
-      "text": "In SQL, ERD use three types of principal elements to form relationships:",
-      "options": [
-        "Entity sets, Constraints and Relationships",
-        "Attributes, Constraints, and Relationships",
-        "Entity sets, Attributes, and Relationships",
-        "Entity sets, Attributes and Constraints"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Entity sets, Attributes, and Relationships.\n\nLời giải gốc: Ba thành phần chính cơ bản của Sơ đồ thực thể mối quan hệ (ERD) bao gồm: Tập thực thể (Entity sets), Thuộc tính (Attributes) và Mối quan hệ (Relationships).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. Entity sets, Constraints and Relationships; B. Attributes, Constraints, and Relationships; D. Entity sets, Attributes and Constraints. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5254,
+      "id": 5221,
       "quizId": 104,
       "text": "What is the relationship between a weak entity set and its owner entity in an E/R diagram?",
       "options": [
@@ -11305,7 +10870,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. One-to-many relationship..\n\nLời giải gốc: Một thực thể cha (owner) có thể sở hữu/định danh cho nhiều thực thể con thuộc tập thực thể yếu (weak entity set). Ngược lại, một thực thể yếu chỉ thuộc về duy nhất một thực thể cha. Do đó mối quan hệ từ phía Owner sang Weak Entity là mối quan hệ 1 - Nhiều (One-to-many).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. One-to-one relationship.; B. Many-to-many relationship.; C. Many-to-one relationship.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5255,
+      "id": 5222,
       "quizId": 104,
       "text": "Which of the following is a set of entities of the same type that share the same properties or attributes?",
       "options": [
@@ -11318,7 +10883,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Entity set.\n\nLời giải gốc: Tập thực thể (Entity set) là tập hợp tất cả các thực thể có cùng kiểu và chia sẻ các thuộc tính giống nhau.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. Relation set; B. Tuples; D. Entity Relationship model. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5256,
+      "id": 5223,
       "quizId": 104,
       "text": "What type of attribute in an ER diagram is represented with a dashed oval?",
       "options": [
@@ -11331,7 +10896,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Derived attribute.\n\nLời giải gốc: Trong biểu đồ ER (Chen's notation), thuộc tính dẫn xuất (Derived attribute) - thuộc tính có thể được tính toán ra từ thuộc tính khác (ví dụ: Tuổi suy ra từ Ngày sinh) - được biểu diễn bằng hình oval nét đứt.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. Multivalued attribute; C. Composite attribute; D. Primary attribute. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5257,
+      "id": 5224,
       "quizId": 104,
       "text": "What is the main purpose of a conceptual data model in database design?",
       "options": [
@@ -11344,20 +10909,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. To represent high-level business entities and relationships.\n\nLời giải gốc: Mục đích chính của mô hình dữ liệu khái niệm là mô tả các thực thể nghiệp vụ cấp cao và mối quan hệ giữa chúng, độc lập với hệ quản trị cơ sở dữ liệu vật lý.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: A. To write SQL queries for the database; B. To define the physical structure of tables and indexes; D. To optimize database performance by normalization and decomposition. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5258,
-      "quizId": 104,
-      "text": "______ Real-world thing, distinguishable from other objects, in ERD.",
-      "options": [
-        "Entity",
-        "Diagram",
-        "Relationship",
-        "Primary entity"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. Entity.\n\nLời giải gốc: Thực thể (Entity) là một đối tượng tồn tại trong thế giới thực và có thể phân biệt rõ ràng được với các đối tượng khác xung quanh.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: B. Diagram; C. Relationship; D. Primary entity. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5259,
+      "id": 5225,
       "quizId": 104,
       "text": "If two entities in an ER model share the same attribute name but represent different meanings, what should be done during schema transformation?",
       "options": [
@@ -11370,7 +10922,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Rename one of the attributes to avoid ambiguity.\n\nLời giải gốc: Khi hai thuộc tính trùng tên nhưng mang ý nghĩa khác nhau ở các thực thể khác nhau, việc đổi tên (Rename) thuộc tính là bắt buộc để tránh sự mơ hồ khi chuyển sang lược đồ quan hệ.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. Always add entity name to the attribute name to make the meaning clear.; C. Merge both entities; D. Ignore the attribute names. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5260,
+      "id": 5226,
       "quizId": 104,
       "text": "When converting an ER diagram to relational schema, how is a one-to-many relationship between entities implemented?",
       "options": [
@@ -11383,7 +10935,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Add the primary key of the \"one\" side as a foreign key in the \"many\" side..\n\nLời giải gốc: Khi chuyển đổi quan hệ một-nhiều, ta đưa khóa chính của phía \"một\" vào phía \"nhiều\" để làm khóa ngoại. ---\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. Create two tables with separate keys.; B. Merge both entities into one. We accept the duplicated values in all columns of the “one” side.; D. Create a view combining both tables.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5261,
+      "id": 5227,
       "quizId": 104,
       "text": "A real-world thing, distinguishable from other objects, in an ERD is called:",
       "options": [
@@ -11396,7 +10948,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Entity.\n\nLời giải gốc: Thực thể (Entity) là đối tượng trong thế giới thực có thể phân biệt rõ ràng với các đối tượng khác.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: B. Diagram; C. Relationship; D. Primary entity. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5262,
+      "id": 5228,
       "quizId": 104,
       "text": "In an ERD, what role does a primary key play?",
       "options": [
@@ -11409,7 +10961,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. It uniquely identifies each record in a table.\n\nLời giải gốc: Khóa chính (Primary key) định danh duy nhất từng bản ghi trong bảng dữ liệu.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: B. It establishes relationships between tables; C. It determines the data type of attributes; D. It defines the cardinality of relationships. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5263,
+      "id": 5229,
       "quizId": 104,
       "text": "An ERD uses three types of principal elements to form relationships:",
       "options": [
@@ -11422,7 +10974,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Entity sets, Attributes, and Relationships.\n\nLời giải gốc: Ba thành phần chính cấu thành sơ đồ thực thể kết hợp (ERD) gồm các tập thực thể (Entity sets), các thuộc tính (Attributes) và các mối quan hệ (Relationships).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. Entity sets, Constraints, and Relationships; B. Attributes, Constraints, and Relationships; D. Entity sets, Attributes, and Constraints. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5264,
+      "id": 5230,
       "quizId": 104,
       "text": "If R is neither many-one from E to F nor from F to E, then we say R is:",
       "options": [
@@ -11435,7 +10987,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Many-many.\n\nLời giải gốc: Nếu quan hệ không phải là nhiều-một theo cả hai chiều thì đó là quan hệ nhiều-nhiều (Many-many).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. Many-one; B. One-one; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5265,
+      "id": 5231,
       "quizId": 104,
       "text": "What is a composite key in an ERD?",
       "options": [
@@ -11448,7 +11000,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. A key made up of multiple attributes.\n\nLời giải gốc: Khóa phức hợp (composite key) là khóa được tạo thành từ sự kết hợp của hai hay nhiều thuộc tính.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. A key that represents a many-to-many relationship; B. A key that uniquely identifies each record in a table; C. A key used to link two entities. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5266,
+      "id": 5232,
       "quizId": 104,
       "text": "In relational database design, which of the following is a set of entities of the same type that share the same properties or attributes?",
       "options": [
@@ -11461,7 +11013,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Entity set.\n\nLời giải gốc: Tập thực thể (Entity set) là tập hợp tất cả các thực thể cùng loại có chung các thuộc tính.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. Entity Relationship model; C. Field set; D. Record set. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5267,
+      "id": 5233,
       "quizId": 104,
       "text": "In the entity-relationship model, what is an entity?",
       "options": [
@@ -11474,7 +11026,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Data objects.\n\nLời giải gốc: Trong mô hình thực thể kết hợp, thực thể đại diện cho một đối tượng có thực trong thế giới thực có thể phân biệt được (data object).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Entity là một đối tượng/sự vật có thể phân biệt trong miền ứng dụng và cần lưu thông tin; entity set là tập các entity cùng loại. Ví dụ một sinh viên cụ thể là entity, còn Student là entity set/type.\n\nĐối chiếu phương án: A. Relationships; B. Relationships between objects; C. Objects and relationships between objects. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5268,
+      "id": 5234,
       "quizId": 104,
       "text": "Converting an E/R design to a relational database schema includes:",
       "options": [
@@ -11487,7 +11039,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. All of the others.\n\nLời giải gốc: Quy trình chuyển đổi mô hình E/R sang lược đồ quan hệ bao gồm việc chuyển tập thực thể thành quan hệ và xử lý các mối quan hệ thành bảng trung gian hoặc khóa ngoại.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Ba thành phần nền tảng của ER là entity set, attribute và relationship set. Entity mô tả loại đối tượng, attribute mô tả dữ liệu của đối tượng/liên kết, relationship biểu diễn kết nối giữa entity set.\n\nĐối chiếu phương án: A. Turning each entity set into a relation with the same set of attributes; B. Replacing a relationship by a relation whose attributes are the keys for the connected entity…; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5269,
+      "id": 5235,
       "quizId": 104,
       "text": "Which diagram is used to model entities and relationships?",
       "options": [
@@ -11500,7 +11052,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. E/R diagram.\n\nLời giải gốc: Sơ đồ ER (E/R diagram - Entity-Relationship diagram) là công cụ chuyên dụng dùng để mô hình hóa các thực thể và mối quan hệ giữa chúng.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Sơ đồ ER/E-R dùng để mô hình hóa entity và relationship ở mức khái niệm. Khi một câu hỏi hỏi quan hệ giữa các entity, đó là liên kết dữ liệu; sơ đồ không nhằm biểu diễn quan hệ giữa các tiến trình thực thi.\n\nĐối chiếu phương án: A. UML class diagram; B. Flowchart; D. Dependency graph. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5270,
+      "id": 5236,
       "quizId": 104,
       "text": "In ER modeling, what does a weak entity require in order to be uniquely identified?",
       "options": [
@@ -11513,7 +11065,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. A relationship with an identifying entity.\n\nLời giải gốc: Thực thể yếu (Weak Entity) không có đủ thuộc tính để tự làm khóa chính, nó cần một mối quan hệ định danh (Identifying relationship) kết nối với một thực thể chủ/thực thể mạnh (Identifying/Owner entity).\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. A surrogate key; B. A composite attribute with an identity constraint; D. A multi-valued attribute. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5271,
+      "id": 5237,
       "quizId": 104,
       "text": "In the relational model, how are relationships represented between tables?",
       "options": [
@@ -11526,7 +11078,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. By adding foreign keys to related tables.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.\n\nĐối chiếu phương án: A. By adding attributes to each table; B. By creating a new table for each relationship; D. By creating a primary key in each table. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5272,
+      "id": 5238,
       "quizId": 104,
       "text": "Assume there is a table \"Employee\" with functional dependencies. You are required to specify the primary key and unique key for the table. Choose the most appropriate option.",
       "options": [
@@ -11539,7 +11091,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The primary key is the ID column, the unique key is the TAX_NUMBER column.\n\nLời giải gốc: Cột ID thường làm khóa chính chuẩn xác cho định danh bản ghi, trong khi TAX_NUMBER (mã số thuế) đảm bảo tính duy nhất và làm khóa ứng viên/unique key.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.\n\nĐối chiếu phương án: B. The primary key is the TAX_NUMBER column, the unique key is the ID column; C. The primary key includes two columns (ID, TAX_NUMBER) and there should not be a unique key; D. The primary key is the TAX_NUMBER column, and there should not be a unique key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5273,
+      "id": 5239,
       "quizId": 105,
       "text": "Consider the law, that holds for set relations:\nT intersect(R union S) = (T intersect R) union (T intersect S)\nThe above law still hold for bag relations?",
       "options": [
@@ -11550,7 +11102,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. False.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. True. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5274,
+      "id": 5240,
       "quizId": 105,
       "text": "A tuple which fails to participate in a join is called:",
       "options": [
@@ -11563,7 +11115,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. dangling tuple.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Trong quan hệ, mỗi hàng dữ liệu là một tuple (bộ), mỗi cột là attribute (thuộc tính), còn relation là tập/bag các tuple theo một schema. Dùng đúng thuật ngữ này giúp tránh nhầm hàng với trường/cột hoặc toàn bộ bảng.\n\nĐối chiếu phương án: B. child tuple; C. parent tuple; D. neighbor tuple. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5275,
+      "id": 5241,
       "quizId": 105,
       "text": "In the context of databases, a bag (or multiset) is an unordered collection of elements where duplicates are allowed. This is in contrast to a set, which is an unordered collection of elements without duplicates\n--------------------\nTo understand the distinction between sets, bags, and lists, remember that a set has unordered elements, and only one occurrence of each element. A bag allows more than one occurrence of an element, but the elements and their occurrences are unordered. A list allows more than one occurrence of an element, but the occurrences are ordered. Thus, 1, 2, 1 and 2, 1, 1 are the same bag, but (1, 2, 1) and (2, 1, 1) are not the same list.\nTo apply a selection to bag:",
       "options": [
@@ -11576,7 +11128,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. We apply the selection condition to each tuple independently..\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. None of others.; C. We apply the selection condition to each attribute independently.; D. All of the other.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5276,
+      "id": 5242,
       "quizId": 105,
       "text": "Consider the distrubutive law, that holds for set relation:\n(R U S)- T =(R-T)U(S-T)\nThe above distributive still hold for bag relations?",
       "options": [
@@ -11591,7 +11143,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. (2,3) appears three times in the result..\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên set loại bản sao và thường đòi hai quan hệ union-compatible. Với bag, cần theo dõi số lần xuất hiện của mỗi bộ; vì vậy không thể tự động áp dụng mọi đẳng thức tập hợp mà bỏ qua multiplicity.\n\nĐối chiếu phương án: A. TRUE; A. (2,3) appears twice in the result.; C. (3,3) appears once in the result.; D. (2,2) appears once in the result.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5277,
+      "id": 5243,
       "quizId": 105,
       "text": "Choose the correct statement.",
       "options": [
@@ -11604,7 +11156,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Outer join behave like join operations except on tuples that do not occur in the join results.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: B. Projection behave like product operations except on tuples that do not occur in the join resul…; C. Intersection behave like project operations except on tuples that occur in the join results; D. Union behave like join operations except on tuples that occur in the join results. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5278,
+      "id": 5244,
       "quizId": 105,
       "text": "Which operation is not part of basic relational algebra?",
       "options": [
@@ -11617,7 +11169,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Sorting.\n\nLời giải gốc: Sắp xếp (Sorting) là một thao tác hiển thị dữ liệu chứ không thuộc nhóm các phép toán cơ bản cấu thành nên đại số quan hệ (như Chọn σ, Chiếu π, Kết ⨝).\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. Projection; B. Join; D. Selection. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5279,
+      "id": 5245,
       "quizId": 105,
       "text": "Cho hai quan hệ R(A, B) và S(B, C, D):\n\n\\(\\textbf{R} \\qquad\\qquad \\textbf{S}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} \\\\\n\\hline\n10 & \\text{x} \\\\\n\\hline\n30 & \\text{y} \\\\\n\\hline\n50 & \\text{z} \\\\\n\\hline\n70 & \\text{t} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\textbf{B} & \\textbf{C} & \\textbf{D} \\\\\n\\hline\n\\text{x} & 40 & 60 \\\\\n\\hline\n\\text{z} & 60 & 80 \\\\\n\\hline\n\\text{z} & 50 & 50 \\\\\n\\hline\n\\text{z} & 70 & 90 \\\\\n\\hline\n\\end{array}\\)\n\nCompute the right outer join of R and S, where the condition is: R.B = S.B.\nThen identify 2 tuples of R that do not appear in the computed result:",
       "options": [
@@ -11635,20 +11187,7 @@
       "multiple": true
     },
     {
-      "id": 5280,
-      "quizId": 106,
-      "text": "A primary key is combined with a foreign key creates:",
-      "options": [
-        "Parent-Child relationship between the tables that connect them.",
-        "Many to many relationship between the tables that connect them.",
-        "Network model between the tables that connect them.",
-        "None of the mentioned."
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. Parent-Child relationship between the tables that connect them..\n\nLời giải gốc: Sự kết hợp giữa khóa chính (từ bảng cha) và khóa ngoại (ở bảng con) tạo ra mối quan hệ Cha - Con (Parent-Child relationship) giữa các bảng. ---\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: B. Many to many relationship between the tables that connect them.; C. Network model between the tables that connect them.; D. None of the mentioned.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5281,
+      "id": 5246,
       "quizId": 106,
       "text": "Three basic types of database integrity constraints are:\n(a)Entity integrity\n(b) Domain integrity\n(c) Referential integrity\n(d) Primary key integrity",
       "options": [
@@ -11661,7 +11200,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A, B, C — A. (a) and (b) and (c) are true; B. (a) and (b) and (d) are true; C. (a) and (c) and (d) are true.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Toàn vẹn dữ liệu nghĩa là các giá trị vẫn chính xác, hợp lệ và nhất quán với ràng buộc. Khôi phục sau lỗi, xử lý nhiều truy vấn đồng thời và mã hóa bảo mật là các khả năng quan trọng khác của DBMS nhưng không phải định nghĩa trực tiếp của integrity.\n\nĐối chiếu phương án: D. (b) and (c) and (d) are true. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5282,
+      "id": 5247,
       "quizId": 106,
       "text": "A(an) _____ asserts that a value appearing in one relation must also appear in the primary-key component(s) of another relation",
       "options": [
@@ -11674,7 +11213,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Foreign key constraint.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Unique key constraint; B. Primary key constraint; D. Candidate key constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5283,
+      "id": 5248,
       "quizId": 106,
       "text": "Choose the most correct statement about PRIMARY KEY:",
       "options": [
@@ -11688,7 +11227,7 @@
       "explanation": "Đáp án theo dữ liệu đề: E — E. All of the others.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.\n\nĐối chiếu phương án: A. The PRIMARY KEY constraint uniquely identifies each record in a database table; B. Primary keys must contain unique values; C. A primary key column cannot contain NULL values; D. Each table should have a primary key, and each table can have only ONE primary key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5284,
+      "id": 5249,
       "quizId": 106,
       "text": "Referential integrity Constraints control relationships between ....",
       "options": [
@@ -11701,7 +11240,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. tables in a database.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Toàn vẹn dữ liệu nghĩa là các giá trị vẫn chính xác, hợp lệ và nhất quán với ràng buộc. Khôi phục sau lỗi, xử lý nhiều truy vấn đồng thời và mã hóa bảo mật là các khả năng quan trọng khác của DBMS nhưng không phải định nghĩa trực tiếp của integrity.\n\nĐối chiếu phương án: A. attributes in a table; B. operations of an object; C. database instances. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5285,
+      "id": 5250,
       "quizId": 106,
       "text": "Database integrity ensures that:",
       "options": [
@@ -11714,7 +11253,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. data entered into the database is accurate, valid, and consistent.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Toàn vẹn dữ liệu nghĩa là các giá trị vẫn chính xác, hợp lệ và nhất quán với ràng buộc. Khôi phục sau lỗi, xử lý nhiều truy vấn đồng thời và mã hóa bảo mật là các khả năng quan trọng khác của DBMS nhưng không phải định nghĩa trực tiếp của integrity.\n\nĐối chiếu phương án: B. data entered into the database is accurate, and consistent; C. data entered into the database is valid, and consistent; D. data entered into the database is accurate, and valid. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5286,
+      "id": 5251,
       "quizId": 106,
       "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{Artist_id} & \\textbf{Artist_Name} \\\\\n\\hline\n1 & \\text{Bono} \\\\\n\\hline\n2 & \\text{Cher} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{artist_id} & \\textbf{Album_name} \\\\\n\\hline\n3 & \\text{Eat the rich} \\\\\n\\hline\n\\end{array}\\)\n\nLook at the tables above and then choose the correct statement:",
       "options": [
@@ -11727,7 +11266,7 @@
       "explanation": "Bảng ALBUMS có artist_id = 3 tham chiếu đến Artist_id trong bảng ARTISTS, nhưng giá trị 3 không tồn tại trong bảng ARTISTS. Đây là một ví dụ về việc cơ sở dữ liệu vi phạm ràng buộc toàn vẹn tham chiếu (referential integrity)."
     },
     {
-      "id": 5287,
+      "id": 5252,
       "quizId": 106,
       "text": "When declaring foreign key constraint for relation A thai references relation B. the referenced attribute(s) of the relation B must be declare as_______",
       "options": [
@@ -11740,20 +11279,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. UNIQUE or PRIMARY KEY.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: B. FOREIGN KEY; C. INDEX KEY; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5288,
-      "quizId": 106,
-      "text": "Domain constraints, functional dependency and referential integrity are special forms of _____",
-      "options": [
-        "Foreign key",
-        "Primary key",
-        "Assertion",
-        "Referential constraint"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Assertion.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Foreign key; B. Primary key; D. Referential constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5289,
+      "id": 5253,
       "quizId": 106,
       "text": "Which of the following is false about a foreign key?",
       "options": [
@@ -11766,7 +11292,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Whereas only one foreign key is allowed in a table..\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: B. It refers to the field in a table which is the primary key of another table.; C. It can contain duplicate values and a table in a relational database.; D. It can also contain NULL values.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5290,
+      "id": 5254,
       "quizId": 106,
       "text": "What is the foreign key?",
       "options": [
@@ -11779,7 +11305,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. It is a relational constraint that enforces referential integrity between two tables.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: B. It is a relational constraint that that ensures the values in a specific column or set of colu…; C. The key that need to make a data in another table; D. A collection of data that allows to access and use of that data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5291,
+      "id": 5255,
       "quizId": 106,
       "text": "Foreign key is the one in which the\nof one relation is referenced in another relation.",
       "options": [
@@ -11792,7 +11318,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Primary key.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Foreign key; C. References; D. Check constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5292,
+      "id": 5256,
       "quizId": 106,
       "text": "The values appearing in given attributes of any tuple in the referencing relation must likewise occur in specified attributes of at least one tuple in the referenced relation, according to ________ constraint integrity",
       "options": [
@@ -11805,20 +11331,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Referential.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Trong quan hệ, mỗi hàng dữ liệu là một tuple (bộ), mỗi cột là attribute (thuộc tính), còn relation là tập/bag các tuple theo một schema. Dùng đúng thuật ngữ này giúp tránh nhầm hàng với trường/cột hoặc toàn bộ bảng.\n\nĐối chiếu phương án: B. Primary; C. Referencing; D. Specific. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5293,
-      "quizId": 106,
-      "text": "Which key does not accept the null value?",
-      "options": [
-        "Unique Key",
-        "Primary Key",
-        "Foreign Key",
-        "Candidate key"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Primary Key.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. Unique Key; C. Foreign Key; D. Candidate key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5294,
+      "id": 5257,
       "quizId": 106,
       "text": "Regarding difference between a primary key vs. unique key, which of the following is false?",
       "options": [
@@ -11831,20 +11344,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. There can be only one unique key for a table.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: B. A primary key is a key that uniquely identifies each record in a table but cannot store NULL v…; C. A unique key prevents duplicate values in a column and can store NULL values.; D. Only one primary key is allowed to use in a table.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5295,
-      "quizId": 106,
-      "text": "What is the purpose of a foreign key in an ERD?",
-      "options": [
-        "It defines the data type of attributes",
-        "It determines the cardinality of relationships",
-        "It serves as the primary identifier for a table",
-        "It establishes a link between two tables"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. It establishes a link between two tables.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đối tượng, relationship set là liên kết giữa các loại đối tượng, còn cardinality/participation là ràng buộc số lượng hoặc mức tham gia. Đáp án đúng phải gọi đúng thành phần mà câu hỏi mô tả.\n\nĐối chiếu phương án: A. It defines the data type of attributes; B. It determines the cardinality of relationships; C. It serves as the primary identifier for a table. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5296,
+      "id": 5258,
       "quizId": 106,
       "text": "In the context of a DBMS, what is meant by \"data integrity\"?",
       "options": [
@@ -11857,7 +11357,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Ensuring data is consistent, accurate, and reliable.\n\nLời giải gốc: Toàn vẹn dữ liệu (Data integrity) trong hệ quản trị cơ sở dữ liệu (DBMS) là việc đảm bảo dữ liệu luôn chính xác, nhất quán và đáng tin cậy trong suốt vòng đời của nó.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Toàn vẹn dữ liệu nghĩa là các giá trị vẫn chính xác, hợp lệ và nhất quán với ràng buộc. Khôi phục sau lỗi, xử lý nhiều truy vấn đồng thời và mã hóa bảo mật là các khả năng quan trọng khác của DBMS nhưng không phải định nghĩa trực tiếp của integrity.\n\nĐối chiếu phương án: A. The ability to perform multiple queries simultaneously; C. The ability to recover data after a failure; D. Encrypting data to protect it from unauthorized access. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5297,
+      "id": 5259,
       "quizId": 106,
       "text": "In the relational model, what is the main purpose of using a primary key in a table?",
       "options": [
@@ -11870,7 +11370,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. To identify each row uniquely.\n\nLời giải gốc: Mục đích chính của Khóa chính (Primary Key) là để định danh duy nhất mỗi hàng (bản ghi) trong một bảng cơ sở dữ liệu.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.\n\nĐối chiếu phương án: A. To allow duplicate records; C. To store data temporarily; D. To improve database aesthetics. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5298,
+      "id": 5260,
       "quizId": 106,
       "text": "Choose the correct statement about the impact of declaring a key for a relation R using PRIMARY KEY or UNIQUE.",
       "options": [
@@ -11883,7 +11383,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. PRIMARY KEY: does not allow NULL values. UNIQUE: allows NULL values..\n\nLời giải gốc: Khóa chính (PRIMARY KEY) bắt buộc có giá trị duy nhất và không cho phép giá trị NULL, trong khi khóa độc nhất (UNIQUE) đảm bảo tính duy nhất nhưng vẫn cho phép chứa giá trị NULL (một giá trị NULL trong SQL Server).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: B. PRIMARY KEY: allows NULL values. UNIQUE: does not allow NULL values.; C. PRIMARY KEY: does not allow NULL values. UNIQUE: does not allow NULL values.; D. PRIMARY KEY: allows NULL values. UNIQUE: allows NULL values.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5299,
+      "id": 5261,
       "quizId": 106,
       "text": "Which two statements about foreign key constraints are true? (Choose two correct answers)",
       "options": [
@@ -11901,7 +11401,7 @@
       "multiple": true
     },
     {
-      "id": 5300,
+      "id": 5262,
       "quizId": 106,
       "text": "Which statement is used to disable a foreign key constraint named fk_name during INSERT and UPDATE transactions in table B?",
       "options": [
@@ -11914,7 +11414,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. ALTER TABLE B NOCHECK CONSTRAINT fk_name.\n\nLời giải gốc: Trong SQL Server, cú pháp để vô hiệu hóa tạm thời ràng buộc kiểm tra/khóa ngoại mà không xóa nó là ALTER TABLE table_name CHECK CONSTRAINT constraint_name hoặc NOCHECK CONSTRAINT constraint_name.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. ALTER TABLE B DROP CONSTRAINT fk_name; B. ALTER TABLE B DISABLE CONSTRAINT fk_name; C. ALTER TABLE B DISABLE fk_name. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5301,
+      "id": 5263,
       "quizId": 106,
       "text": "Which constraint ensures that the values of certain attributes in a relation uniquely identify tuples in that relation?",
       "options": [
@@ -11927,20 +11427,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Primary key constraint.\n\nLời giải gốc: Ràng buộc khóa chính (Primary key constraint) đảm bảo các giá trị trong thuộc tính xác định duy nhất từng bộ dữ liệu trong quan hệ và không chứa giá trị NULL.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: A. Foreign key constraint; C. Check constraint; D. Unique constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5302,
-      "quizId": 106,
-      "text": "In the relational model, how are relationships represented between tables?",
-      "options": [
-        "By adding attributes to each table",
-        "By creating a new table for each relationship",
-        "By adding foreign keys to related tables",
-        "By creating a primary key in each table"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. By adding foreign keys to related tables.\n\nLời giải gốc: Mối quan hệ giữa các bảng trong mô hình quan hệ được thiết lập thông qua việc sử dụng các khóa ngoại (Foreign keys).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.\n\nĐối chiếu phương án: A. By adding attributes to each table; B. By creating a new table for each relationship; D. By creating a primary key in each table. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5303,
+      "id": 5264,
       "quizId": 106,
       "text": "A primary key combined with a foreign key creates:",
       "options": [
@@ -11953,7 +11440,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. A parent-child relationship between the tables that connect them.\n\nLời giải gốc: Việc kết hợp khóa chính (ở bảng cha) và khóa ngoại (ở bảng con) tạo ra mối quan hệ cha-con (parent-child relationship) giữa hai bảng.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: B. A many-to-many relationship between the tables that connect them; C. A network model between the tables that connect them; D. None of the mentioned. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5304,
+      "id": 5265,
       "quizId": 106,
       "text": "Which of the following statements is/are TRUE? (1) A column with a FOREIGN KEY constraint does not allow duplicate values. (2) A FOREIGN KEY constraint can be defined to refer to columns with the UNIQUE constraint in another table.",
       "options": [
@@ -11966,7 +11453,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Only statement 2 is True.\n\nLời giải gốc: Khóa ngoại (FOREIGN KEY) hoàn toàn cho phép các giá trị trùng lặp và có thể tham chiếu đến cột có khóa chính hoặc cột có ràng buộc UNIQUE ở bảng khác. Do đó phát biểu 1 sai, phát biểu 2 đúng.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Both statements are True; B. Both statements are False; C. Only statement 1 is True. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5305,
+      "id": 5266,
       "quizId": 106,
       "text": "There is a foreign-key F in Relation1 that references set of attributes G of Relation2. Suppose a tuple t of Relation1 has non-NULL values in all the attributes of F, call the list of t's values in these attributes t[F], then in Relation2 there must be some tuple that ___ with t[F] on the attributes G.",
       "options": [
@@ -11979,7 +11466,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. agrees.\n\nLời giải gốc: Khái niệm ràng buộc toàn vẹn tham chiếu (Referential integrity): Giá trị của một khóa ngoại F (nếu không null) bắt buộc phải trùng khớp/khớp giá trị (agrees) với giá trị của thuộc tính G tương ứng đang làm khóa chính ở bảng được tham chiếu (Relation2).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: B. disagrees; C. is not relative; D. differs with. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5306,
+      "id": 5267,
       "quizId": 106,
       "text": "To ensure that each row in a table refers to a valid entry in another table, which constraint should be used?",
       "options": [
@@ -11992,7 +11479,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. FOREIGN KEY.\n\nLời giải gốc: Ràng buộc khóa ngoại (FOREIGN KEY) đảm bảo tính toàn vẹn tham chiếu giữa các bảng.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. CHECK; B. UNIQUE; C. PRIMARY KEY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5307,
+      "id": 5268,
       "quizId": 106,
       "text": "In a relational DBMS, what is the difference between PRIMARY KEY and UNIQUE KEY?",
       "options": [
@@ -12005,7 +11492,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. A table can have more than one UNIQUE KEY constraint but only one PRIMARY KEY.\n\nLời giải gốc: Một bảng chỉ có duy nhất 1 Primary Key nhưng có thể có nhiều ràng buộc Unique Key. Ngoài ra, Primary Key không chấp nhận giá trị NULL còn Unique Key chấp nhận giá trị NULL (tùy thuộc vào RDBMS).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. UNIQUE KEY doesn't accept the NULL value but PRIMARY KEY does; B. UNIQUE KEY and PRIMARY KEY are the same; C. A table can have more than one PRIMARY KEY constraint but only one UNIQUE KEY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5308,
+      "id": 5269,
       "quizId": 106,
       "text": "Which key does not accept a null value?",
       "options": [
@@ -12018,7 +11505,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Primary Key.\n\nLời giải gốc: Khóa chính (Primary Key) bắt buộc phải có giá trị duy nhất và không được phép chứa giá trị NULL.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. Unique Key; C. Foreign Key; D. Candidate Key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5309,
+      "id": 5270,
       "quizId": 106,
       "text": "In SQL, the statement SELECT * FROM R, S is equivalent to which of the following?",
       "options": [
@@ -12031,7 +11518,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. SELECT * FROM R CROSS JOIN S.\n\nLời giải gốc: Cú pháp liệt kê các bảng cách nhau bằng dấu phẩy trong mệnh đề FROM tương đương với phép kết chéo (CROSS JOIN) giữa hai bảng.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. SELECT * FROM R INNER JOIN S; B. SELECT * FROM R NATURAL JOIN S; D. SELECT * FROM R UNION JOIN S. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5310,
+      "id": 5271,
       "quizId": 106,
       "text": "Consider the two relations from our running movie database: Movies (title, year, length, genre, studioName, producerC#) MovieExec(name, address, cert#, netWorth) The producerC# component of each Movies tuple must also appear in the cert# component of some MovieExec tuple. How can we express this integrity constraint in relational algebra?",
       "options": [
@@ -12044,7 +11531,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. п_(producerC#) (Movies) n_(cert#) (MovieExec).\n\nLời giải gốc: Ràng buộc khóa ngoại (Referential Integrity Constraint) phát biểu rằng tập hợp tất cả các mã nhà sản xuất trong bảng Movies phải là tập con (\\(\\subseteq\\)) của tập hợp các chứng chỉ/mã nhà quản lý trong bảng MovieExec.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. п_(producerC#) (Movies)=n_(cert#) (MovieExec); C. п_(cert#) (MovieExec)n_(producerC#) (Movies); D. n_(producerC#) (Movies)≠n_(cert#) (MovieExec). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5311,
+      "id": 5272,
       "quizId": 106,
       "text": "Which operation is NOT typically associated with relational data manipulation?",
       "options": [
@@ -12057,7 +11544,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Deleting attributes.\n\nLời giải gốc: Thao tác dữ liệu (DML) tác động lên các bộ (tuples/dòng) của quan hệ như thêm, sửa, xóa dữ liệu; việc xóa cấu trúc cột (attributes) thuộc về nhóm DDL.\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: DML thao tác trên các tuple: INSERT thêm hàng, UPDATE sửa giá trị hàng và DELETE xóa hàng. Thêm/xóa thuộc tính làm thay đổi schema nên thuộc DDL/ALTER TABLE, không phải xóa dữ liệu hàng.\n\nĐối chiếu phương án: B. Inserting tuples into a relation; C. Modifying tuples in a relation; D. Deleting tuples from a relation. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5312,
+      "id": 5273,
       "quizId": 106,
       "text": "A _____ is a language for defining data structures",
       "options": [
@@ -12070,7 +11557,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. DDL.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: B. DML; C. DCL; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5313,
+      "id": 5274,
       "quizId": 106,
       "text": "Which statement is used to remove a relation named R?",
       "options": [
@@ -12083,7 +11570,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. DROP TABLE R;.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu phụ thuộc theo quy tắc DBMS; DELETE xóa các hàng nhưng giữ bảng, còn TRUNCATE xóa nhanh toàn bộ hàng trong khi vẫn giữ cấu trúc. Cần chọn lệnh đúng cấp độ tác động.\n\nĐối chiếu phương án: B. REMOVE TABLE R;; C. DELETE TABLE R;; D. TRUNCATE TABLE R;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5314,
+      "id": 5275,
       "quizId": 106,
       "text": "Which of the following is NOT a standard aggregation operator?",
       "options": [
@@ -12096,7 +11583,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. GROUP.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong UML, composition biểu thị sở hữu mạnh: vòng đời phần phụ thuộc chủ thể sở hữu; aggregation biểu thị quan hệ whole–part yếu hơn và phần có thể tồn tại độc lập. Hãy đối chiếu phương án với điều kiện vòng đời được nêu.\n\nĐối chiếu phương án: B. SUM; C. COUNT; D. AVG. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5315,
+      "id": 5276,
       "quizId": 106,
       "text": "Choose the correct statement:",
       "options": [
@@ -12109,7 +11596,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Aggregate functions perform a calculation on a set of values and return a single value.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Aggregate function tính một kết quả từ một tập nhiều hàng/giá trị, ví dụ COUNT, SUM, AVG, MIN và MAX. Trong truy vấn nhóm, GROUP BY xác định từng tập đầu vào; HAVING lọc các nhóm sau khi tính tổng hợp.\n\nĐối chiếu phương án: B. Aggregate functions perform a calculation on a single value and return a single value; C. Aggregate functions perform a calculation on a set of values and return a relation; D. Aggregate functions perform a calculation on a set of values and return a row. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5316,
+      "id": 5277,
       "quizId": 106,
       "text": "Cho quan hệ S(B, C, D) với dữ liệu như sau:\n\n\\(\\begin{array}{|c|c|c|}\n\\hline\n\\textbf{B} & \\textbf{C} & \\textbf{D} \\\\\n\\hline\n\\text{a} & 4 & 6 \\\\\n\\hline\n\\text{c} & 6 & 8 \\\\\n\\hline\n\\text{c} & 5 & 5 \\\\\n\\hline\n\\text{e} & 9 & 9 \\\\\n\\hline\n\\text{f} & 10 & 10 \\\\\n\\hline\n\\text{c} & 7 & 9 \\\\\n\\hline\n\\end{array}\\)\n\nCompute the result of the following query:\n\nSELECT SUM(D)\nFROM S\nWHERE D < 8 AND D > 5;\n\nChoose the row that appears in the computed result:",
       "options": [
@@ -12122,7 +11609,7 @@
       "explanation": "Điều kiện WHERE D < 8 AND D > 5 (5 < D < 8) chỉ khớp với hàng duy nhất (a, 4, 6) có D = 6. Do đó SUM(D) = 6."
     },
     {
-      "id": 5317,
+      "id": 5278,
       "quizId": 106,
       "text": "Column A of a relation has the following list of values in the six rows of the table:\nNULL, NULL, 10, 10, 20, 30\nIn SQL Server, which of the following is the correct value of\nAVG(DISTINCT A)?",
       "options": [
@@ -12135,7 +11622,7 @@
       "explanation": "Đáp án đúng: C — 20.\n\nNền tảng kiến thức: Trong SQL Server, các hàm tổng hợp (Aggregate functions) như AVG() tự động loại bỏ các giá trị NULL trước khi tính toán. Khi sử dụng từ khóa DISTINCT bên trong AVG (AVG(DISTINCT A)), hệ thống sẽ loại bỏ các giá trị trùng lặp trước khi thực hiện tính trung bình cộng.\n\nPhân tích:\n- Dãy giá trị ban đầu của cột A gồm 6 hàng: NULL, NULL, 10, 10, 20, 30.\n- Bước 1: Loại bỏ các giá trị NULL, còn lại tập số: 10, 10, 20, 30.\n- Bước 2: Áp dụng DISTINCT để lọc các giá trị trùng lặp, thu được tập hợp: 10, 20, 30.\n- Bước 3: Tính giá trị trung bình: (10 + 20 + 30) / 3 = 60 / 3 = 20.\n\nĐối chiếu phương án: A. 14; B. 17.5; D. NULL. Chỉ có phương án C là chính xác."
     },
     {
-      "id": 5318,
+      "id": 5279,
       "quizId": 106,
       "text": "How we can understand about this statement:\n\"All aggregate functions are deterministic\"?",
       "options": [
@@ -12148,7 +11635,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. This means aggregate functions return the same value any time they are called by using a specific set of input values.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Aggregate function tính một kết quả từ một tập nhiều hàng/giá trị, ví dụ COUNT, SUM, AVG, MIN và MAX. Trong truy vấn nhóm, GROUP BY xác định từng tập đầu vào; HAVING lọc các nhóm sau khi tính tổng hợp.\n\nĐối chiếu phương án: B. This means aggregate functions return the different values each time they are called by using…; C. This means aggregate functions return the same value any time they are called by using any set…; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5319,
+      "id": 5280,
       "quizId": 106,
       "text": "How many JOIN conditions are necessary to combine five tables based on common attributes?",
       "options": [
@@ -12161,7 +11648,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. 4.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. 1; B. 2; C. 3. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5320,
+      "id": 5281,
       "quizId": 106,
       "text": "For what values of \\(x\\), \\(y\\), and \\(z\\), including NULL, does the Boolean expression:\n\\(x \\le 4 \\text{ OR NOT}(y \\ge 2 \\text{ AND } z = 10)\\)\nhave the truth value FALSE? Identify one of those values from the list below:",
       "options": [
@@ -12174,7 +11661,7 @@
       "explanation": "Biểu thức logic đã cho: \\(x \\le 4 \\text{ OR NOT}(y \\ge 2 \\text{ AND } z = 10)\\).\n\nTrong logic SQL, phép toán \\(A \\text{ OR } B\\) chỉ có giá trị **FALSE** khi và chỉ khi CẢ HAI vế \\(A\\) và \\(B\\) đều mang giá trị **FALSE**.\n\nXét từng phương án:\n- Với phương án **A** (\\(x = 5, \\quad y = 3, \\quad z = 10\\)):\n + Vế trái: \\(x \\le 4 \\iff 5 \\le 4 \\implies \\textbf{FALSE}\\).\n + Vế phải: \\(\\text{NOT}(y \\ge 2 \\text{ AND } z = 10)\\):\n * \\(y \\ge 2 \\iff 3 \\ge 2 \\implies \\text{TRUE}\\).\n * \\(z = 10 \\iff 10 = 10 \\implies \\text{TRUE}\\).\n * \\(\\text{TRUE AND TRUE} \\implies \\text{TRUE}\\).\n * Phủ định: \\(\\text{NOT}(\\text{TRUE}) \\implies \\textbf{FALSE}\\).\n + Kết hợp: \\(\\textbf{FALSE} \\text{ OR } \\textbf{FALSE} \\implies \\textbf{FALSE}\\).\n + Thỏa mãn yêu cầu bài toán!\n- Với các phương án còn lại:\n + Phương án B (\\(x = 3, y = 1, z = 10\\)): Vế trái \\(3 \\le 4 \\implies \\text{TRUE}\\), do đó biểu thức luôn cho \\(\\text{TRUE}\\).\n + Phương án C & D (\\(x = \\text{NULL}\\)): Vế trái cho giá trị \\(\\text{UNKNOWN}\\), do đó biểu thức không thể nhận giá trị \\(\\text{FALSE}\\) (trong logic 3 giá trị, \\(\\text{UNKNOWN OR FALSE} \\implies \\text{UNKNOWN}\\)).\n\nDo đó, phương án đúng là A."
     },
     {
-      "id": 5321,
+      "id": 5282,
       "quizId": 106,
       "text": "What operator tests column for the absence of data?",
       "options": [
@@ -12187,7 +11674,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. IS NULL operator.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. IS BLANK operator; B. IS ZERO operator; D. ISNULL operator. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5322,
+      "id": 5283,
       "quizId": 106,
       "text": "What does NULL mean?",
       "options": [
@@ -12200,7 +11687,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The value NULL means UNKNOWN.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: B. The value NULL means \" (empty string); C. The value NULL means ' ' (space character); D. The value NULL means ZERO. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5323,
+      "id": 5284,
       "quizId": 106,
       "text": "What is the value of the query:\nSELECT 'Nancy' + NULL + 'Smith'\nwhen evaluated on Microsoft SQL Server?",
       "options": [
@@ -12213,7 +11700,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. NULL.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. 'Nancy Smith'; B. 'Nancy'; C. 'NancySmith'. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5324,
+      "id": 5285,
       "quizId": 106,
       "text": "Which SQL keyword is used to sort the result-set?",
       "options": [
@@ -12226,7 +11713,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. ORDER BY.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SORT BY; C. ORDER; D. SORT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5325,
+      "id": 5286,
       "quizId": 106,
       "text": "What is the difference between the WHERE and HAVING SQL clauses?",
       "options": [
@@ -12239,7 +11726,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. The WHERE SQL clause condition(s) is applied to all rows in the result set before the HAVING clause is applied (if present). The HAVING clause is used only with SELECT SQL statements and specifies a search condition for….\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. The WHERE and the HAVING clauses are identical; B. The HAVING SQL clause condition(s) is applied to all rows in the result set before the WHERE c…; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5326,
+      "id": 5287,
       "quizId": 106,
       "text": "Suppose R and S are 2 relations. R is the parent of S.\nAnd the relationship between R and S is set to\n\"ON DELETE CASCADE\".\nThis means that:",
       "options": [
@@ -12250,7 +11737,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. We can delete a row from R although that row has children in S (and in this case, all the children will be deleted too).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. We can delete a row from R if that row has children in S (and in this case, the database serve…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5327,
+      "id": 5288,
       "quizId": 106,
       "text": "What one is a wildcard used for pattern matching?",
       "options": [
@@ -12262,7 +11749,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. \"%\" (for multi-character substitution).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự và `_` khớp đúng một ký tự. ESCAPE cho phép coi ký tự wildcard như ký tự thường bằng cách đặt trước chúng một ký tự thoát; nó không thay thế mẫu bằng chuỗi bất kỳ.\n\nĐối chiếu phương án: B. \"?\" (for single character substitution); C. \"?\" (for multi-character substitution). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5328,
+      "id": 5289,
       "quizId": 106,
       "text": "To create a DEFAULT constraint on the \"City\" column of the table PERSON which is already created, use the following SQL:",
       "options": [
@@ -12275,7 +11762,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. ALTER TABLE Person ALTER COLUMN City SET DEFAULT 'SANDNES'.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, như thêm cột hoặc sửa cấu hình cột/ràng buộc theo cú pháp của DBMS. Nó khác UPDATE, vốn sửa các giá trị trong những hàng hiện hữu; cú pháp chính xác có thể khác giữa SQL Server và chuẩn SQL.\n\nĐối chiếu phương án: B. ALTER TABLE Person EDIT COLUMN City SET DEFAULT 'SANDNES'; C. ALTER TABLE Person UPDATE COLUMN City SET DEFAULT 'SANDNES'; D. ALTER TABLE Person MODIFY COLUMN City SET DEFAULT 'SANDNES'. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5329,
+      "id": 5290,
       "quizId": 106,
       "text": "Cho quan hệ R(A, B, C) với dữ liệu như sau:\n\n\\(\\begin{array}{|c|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} & \\textbf{C} \\\\\n\\hline\n1 & 2 & 3 \\\\\n\\hline\n4 & 5 & 6 \\\\\n\\hline\n7 & 8 & 9 \\\\\n\\hline\n\\end{array}\\)\n\nWhich is the result of the following query:\n\nSELECT SUM(B)\nFROM R\nWHERE C > 10;",
       "options": [
@@ -12288,7 +11775,7 @@
       "explanation": "Điều kiện WHERE C > 10 không có hàng nào thỏa mãn (các giá trị của C là 3, 6, 9 đều <= 10). Trong chuẩn SQL, khi hàm tổng hợp SUM() tính trên một tập rỗng (empty set), kết quả trả về là NULL."
     },
     {
-      "id": 5330,
+      "id": 5291,
       "quizId": 106,
       "text": "The table \\(\\textbf{Arc}(x, y)\\) currently has the following tuples (note there are duplicate rows):\n\n\\(\\textbf{Arc}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{x} & \\textbf{y} \\\\\n\\hline\n1 & 2 \\\\\n\\hline\n1 & 2 \\\\\n\\hline\n2 & 3 \\\\\n\\hline\n3 & 4 \\\\\n\\hline\n3 & 4 \\\\\n\\hline\n4 & 1 \\\\\n\\hline\n4 & 1 \\\\\n\\hline\n4 & 1 \\\\\n\\hline\n4 & 2 \\\\\n\\hline\n\\end{array}\\)\n\nCompute the result of the query:\n\nSELECT x, COUNT(y)\nFROM Arc\nGROUP BY x;\n\nWhich of the following tuples is in the result?",
       "options": [
@@ -12302,7 +11789,7 @@
       "explanation": "Đáp án đúng: A — (4, 4).\n\nPhân tích chi tiết:\nMệnh đề `GROUP BY x` thực hiện gom các hàng có cùng giá trị \\(x\\) lại thành từng nhóm và tính `COUNT(y)` (đếm số giá trị \\(y\\) trong mỗi nhóm):\n- Nhóm \\(x = 1\\): có 2 hàng gồm \\((1, 2), (1, 2) \\implies \\text{COUNT}(y) = 2 \\implies\\) tuple kết quả là \\((1, 2)\\).\n- Nhóm \\(x = 2\\): có 1 hàng \\((2, 3) \\implies \\text{COUNT}(y) = 1 \\implies\\) tuple kết quả là \\((2, 1)\\).\n- Nhóm \\(x = 3\\): có 2 hàng \\((3, 4), (3, 4) \\implies \\text{COUNT}(y) = 2 \\implies\\) tuple kết quả là \\((3, 2)\\).\n- Nhóm \\(x = 4\\): có 4 hàng gồm \\((4, 1), (4, 1), (4, 1), (4, 2) \\implies \\text{COUNT}(y) = 4 \\implies\\) tuple kết quả là \\((4, 4)\\).\n\nĐối chiếu với các phương án lựa chọn, tuple \\((4, 4)\\) xuất hiện trong kết quả truy vấn.\nDo đó, phương án đúng là A."
     },
     {
-      "id": 5331,
+      "id": 5292,
       "quizId": 106,
       "text": "Given the relation Employee(SSN, FNAME, LNAME, SALARY, DepartmentNo). Select the right query below to count the number of employees in each department.",
       "options": [
@@ -12315,7 +11802,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT DepartmentNo, COUNT(*) FROM Employee GROUP BY DepartmentNo.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. SELECT COUNT(*) FROM Employee; C. SELECT DepartmentNo, COUNT(*) FROM Employee; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5332,
+      "id": 5293,
       "quizId": 106,
       "text": "Cho hai quan hệ R(A, B) và S(C, D):\n\n\\(\\textbf{R} \\qquad\\qquad \\textbf{S}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} \\\\\n\\hline\n1 & 4 \\\\\n\\hline\n2 & 5 \\\\\n\\hline\n8 & 6 \\\\\n\\hline\n4 & 7 \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{C} & \\textbf{D} \\\\\n\\hline\n0 & 1 \\\\\n\\hline\n1 & 0 \\\\\n\\hline\n2 & 1 \\\\\n\\hline\n5 & 8 \\\\\n\\hline\n\\end{array}\\)\n\nCompute the result of the query:\n\nSELECT A, B, C, D\nFROM R RIGHT OUTER JOIN S\nON R.A = S.C;\n\nIdentify, in the list below, 2 rows that appear in the result:",
       "options": [
@@ -12333,7 +11820,7 @@
       "multiple": true
     },
     {
-      "id": 5333,
+      "id": 5294,
       "quizId": 106,
       "text": "(TRUE OR NULL) return:",
       "options": [
@@ -12346,7 +11833,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. TRUE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: B. FALSE; C. NULL; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5334,
+      "id": 5295,
       "quizId": 106,
       "text": "Choose one correct statement:",
       "options": [
@@ -12358,7 +11845,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Comparisons between two null values, or between a NULL and any other value, return UNKNOWN.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. Two null values are equal; C. Comparisons between two null values, or between a NULL and any other value, return FALSE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5335,
+      "id": 5296,
       "quizId": 106,
       "text": "For what values of \\(x\\), \\(y\\), and \\(z\\), including NULL, does the Boolean expression:\n\\(x \\le 100 \\text{ AND NOT}(y \\ge 15 \\text{ OR } z = 35)\\)\nhave the truth value UNKNOWN? Identify one of those values from the list below:",
       "options": [
@@ -12371,7 +11858,7 @@
       "explanation": "Biểu thức logic đã cho: \\(x \\le 100 \\text{ AND NOT}(y \\ge 15 \\text{ OR } z = 35)\\).\n\nTrong logic ba giá trị (Three-Valued Logic - 3VL) của SQL:\n- Phép toán \\(A \\text{ AND } B\\) nhận giá trị **UNKNOWN** khi một vế là **UNKNOWN** và vế còn lại là **TRUE** (hoặc UNKNOWN).\n\nXét phương án **A** (\\(x = \\text{NULL}, \\quad y = 0, \\quad z = 4\\)):\n- Vế trái: \\(x \\le 100 \\iff \\text{NULL} \\le 100 \\implies \\textbf{UNKNOWN}\\) (mọi phép so sánh giá trị với NULL đều cho UNKNOWN).\n- Vế phải: \\(\\text{NOT}(y \\ge 15 \\text{ OR } z = 35)\\):\n + \\(y \\ge 15 \\iff 0 \\ge 15 \\implies \\text{FALSE}\\).\n + \\(z = 35 \\iff 4 = 35 \\implies \\text{FALSE}\\).\n + \\(\\text{FALSE OR FALSE} \\implies \\text{FALSE}\\).\n + Phủ định: \\(\\text{NOT}(\\text{FALSE}) \\implies \\textbf{TRUE}\\).\n- Kết hợp hai vế: \\(\\textbf{UNKNOWN} \\text{ AND } \\textbf{TRUE} \\implies \\textbf{UNKNOWN}\\).\nThỏa mãn yêu cầu bài toán!\n\nDo đó, phương án đúng là A."
     },
     {
-      "id": 5336,
+      "id": 5297,
       "quizId": 106,
       "text": "Foreign key constraints are created by using \"_____\" keyword to refer to the primary key of another table",
       "options": [
@@ -12384,7 +11871,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. REFERENCES.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: B. POINT TO; C. REFER; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5337,
+      "id": 5298,
       "quizId": 106,
       "text": "Pay attention into the following query:\nSELECT * FROM R\nWHERE A LIKE '%a%';\nSo, in the above case, the wildcard % represents what?",
       "options": [
@@ -12395,7 +11882,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. % (percent sign) represents zero, one, or more character.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự và `_` khớp đúng một ký tự. ESCAPE cho phép coi ký tự wildcard như ký tự thường bằng cách đặt trước chúng một ký tự thoát; nó không thay thế mẫu bằng chuỗi bất kỳ.\n\nĐối chiếu phương án: B. % (percent sign) represents exactly 1 character. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5338,
+      "id": 5299,
       "quizId": 106,
       "text": "With SQL, how do you select all the records from a table named \"Persons\" where the value of the column \"FirstName\" starts with an \"a\"?",
       "options": [
@@ -12408,7 +11895,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. SELECT * FROM Persons WHERE FirstName LIKE 'a%'.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. SELECT * FROM Persons WHERE FirstName='a'; B. SELECT * FROM Persons WHERE FirstName LIKE '%a'; C. SELECT * FROM Persons WHERE FirstName='%a%'. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5339,
+      "id": 5300,
       "quizId": 106,
       "text": "What does the keyword ESCAPE mean?",
       "options": [
@@ -12421,7 +11908,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The keyword ESCAPE is used to match any string that contains the characters \"%\" or \"_\".\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự và `_` khớp đúng một ký tự. ESCAPE cho phép coi ký tự wildcard như ký tự thường bằng cách đặt trước chúng một ký tự thoát; nó không thay thế mẫu bằng chuỗi bất kỳ.\n\nĐối chiếu phương án: B. There is no keyword named ESCAPE; C. The keyword ESCAPE is used to match any string that contains the characters \"?\" or \"*\"; D. The keyword ESCAPE is used to match any string that contains the characters \"@\" or \"$\". Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5340,
+      "id": 5301,
       "quizId": 106,
       "text": "The SQL BETWEEN operator:",
       "options": [
@@ -12434,7 +11921,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Specifies a range to test..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: B. Specifies which tables we are selecting from.; C. Specifies that a column is a primary key.; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5341,
+      "id": 5302,
       "quizId": 106,
       "text": "What is the difference between Where and Having Clause?",
       "options": [
@@ -12447,7 +11934,7 @@
       "explanation": "WHERE filters individual rows before grouping; HAVING filters groups after aggregation."
     },
     {
-      "id": 5342,
+      "id": 5303,
       "quizId": 106,
       "text": "What does the following SQL statement do:\nSELECT Customer, COUNT(Order)\nFROM Sales\nGROUP BY Customer\nHAVING COUNT(Order) > 5",
       "options": [
@@ -12460,7 +11947,7 @@
       "explanation": "HAVING COUNT(Order) > 5 filters customers who placed strictly more than 5 orders."
     },
     {
-      "id": 5343,
+      "id": 5304,
       "quizId": 106,
       "text": "The relation R(A,B) may have duplicate tuples. Choose the query that create non-duplicated results, regardless of what tuples R contains?",
       "options": [
@@ -12473,7 +11960,7 @@
       "explanation": "GROUP BY A, B collapses all identical rows into distinct tuples."
     },
     {
-      "id": 5344,
+      "id": 5305,
       "quizId": 106,
       "text": "The table \\(\\textbf{R}(X, Y)\\) currently has the following tuples, and the relation \\(\\textbf{S}(A, B, C)\\) has the following tuples:\n\n\\(\\textbf{R} \\qquad\\qquad\\qquad \\textbf{S}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{X} & \\textbf{Y} \\\\\n\\hline\n1 & 2 \\\\\n\\hline\n2 & 3 \\\\\n\\hline\n3 & 4 \\\\\n\\hline\n4 & 5 \\\\\n\\hline\n5 & 6 \\\\\n\\hline\n6 & 7 \\\\\n\\hline\n7 & 8 \\\\\n\\hline\n8 & 9 \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} & \\textbf{C} \\\\\n\\hline\n1 & 2 & 3 \\\\\n\\hline\n2 & 3 & 4 \\\\\n\\hline\n3 & 4 & 5 \\\\\n\\hline\n4 & 5 & 6 \\\\\n\\hline\n5 & 6 & 7 \\\\\n\\hline\n6 & 7 & 8 \\\\\n\\hline\n7 & 8 & 9 \\\\\n\\hline\n8 & 9 & 10 \\\\\n\\hline\n9 & 10 & 11 \\\\\n\\hline\n\\end{array}\\)\n\nWhich is the result when we execute the following query?\n\nSELECT * FROM R\nUNION\nSELECT * FROM S;",
       "options": [
@@ -12486,7 +11973,7 @@
       "explanation": "Đáp án đúng: A — There is an error.\n\nNền tảng kiến thức & Phân tích chi tiết:\n- Trong SQL, toán tử tập hợp `UNION` yêu cầu hai tập kết quả phải thỏa mãn tính **tương thích tập hợp (Union Compatibility)**:\n 1. Cả hai câu truy vấn `SELECT` phải có **cùng số lượng cột (cùng số thuộc tính)**.\n 2. Các cột tương ứng theo thứ tự phải có kiểu dữ liệu tương thích với nhau.\n- Ở đây:\n + Bảng \\(R(X, Y)\\) chỉ có **2 cột** (\\(X, Y\\)).\n + Bảng \\(S(A, B, C)\\) có **3 cột** (\\(A, B, C\\)).\n- Khi thực thi lệnh `SELECT * FROM R UNION SELECT * FROM S;`, SQL Server / DBMS sẽ báo lỗi cú pháp do không tương thích số lượng cột:\n *`\"All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists.\"`*\n\nDo đó, truy vấn sẽ phát sinh lỗi (There is an error). Phương án đúng là A."
     },
     {
-      "id": 5345,
+      "id": 5306,
       "quizId": 106,
       "text": "What is a \"join\"?",
       "options": [
@@ -12499,7 +11986,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. 'join' used to connect two or more tables logically with or without common field(s).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: B. 'join' used to connect two or more tables logically with common field(s); C. 'join' used to connect two or more tables logically without common field(s); D. 'join' used to connect two or more tables logically with aliases. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5346,
+      "id": 5307,
       "quizId": 106,
       "text": "When join R and S, we want to display all the records in R we must use:",
       "options": [
@@ -12512,7 +11999,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. LEFT OUTER JOIN a.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: B. RIGHT OUTER JOIN; C. INNER JOIN; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5347,
+      "id": 5308,
       "quizId": 106,
       "text": "Relation R(x,y) currently consists of only one tuple (NULL, NULL). Which of the following queries will produce a nonempty output? That is, at least one tuple will be produced, although the tuple(s) may have NULL's.",
       "options": [
@@ -12525,7 +12012,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT * FROM R WHERE x IS NULL.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: B. SELECT * FROM R WHERE x = NULL; C. SELECT * FROM R WHERE x = y; D. SELECT * FROM R WHERE x <> 10. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5348,
+      "id": 5309,
       "quizId": 106,
       "text": "(TRUE AND NULL) returns: ???",
       "options": [
@@ -12538,7 +12025,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. NULL.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: B. TRUE; C. FALSE; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5349,
+      "id": 5310,
       "quizId": 106,
       "text": "In order to modify or delete an existing constraint, it is necessary that:",
       "options": [
@@ -12550,7 +12037,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. the constraint has a name.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Muốn sửa/xóa một constraint cụ thể, cần định danh constraint đó để phát lệnh ALTER TABLE DROP CONSTRAINT hoặc thao tác tương ứng. Đặt tên tường minh khi tạo giúp quản trị ổn định hơn so với tên tự sinh phụ thuộc môi trường.\n\nĐối chiếu phương án: B. the constraint has an ID; C. the constraint has some attributes. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5350,
+      "id": 5311,
       "quizId": 106,
       "text": "The IN SQL keyword",
       "options": [
@@ -12563,20 +12050,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Determines if a value any of the values in a list or a sub-query.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: A. Is used with the DISTINCT SQL keyword only; B. Is used with the INSERT SQL keyword only; D. Defines the tables we are selecting or deleting data from. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5351,
-      "quizId": 106,
-      "text": "Given the relation Employee(SSN. FNAME. LNAME. SALARY). Select the right query below to find the employee(s) who has the lowest salary in the company",
-      "options": [
-        "SELECT LNAME. FNAME. SALARY FROM Employee WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee)",
-        "SELECT LNAME. FNAME. SALARY FROM Employee WHERE SALARY >= ALL (SELECT SALARY FROM Employee)",
-        "SELECT LNAME. FNAME. SALARY FROM Employee WHERE SALARY < MAX (SELECT SALARY FROM Employee)",
-        "None of the others"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT LNAME. FNAME. SALARY FROM Employee WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT LNAME. FNAME. SALARY FROM Employee WHERE SALARY >= ALL (SELECT SALARY FROM Employee); C. SELECT LNAME. FNAME. SALARY FROM Employee WHERE SALARY < MAX (SELECT SALARY FROM Employee); D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5352,
+      "id": 5312,
       "quizId": 106,
       "text": "In SQL language, the command/statement that let you add an attribute to a relation is_",
       "options": [
@@ -12589,7 +12063,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Alter.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: B. None of the others; C. Insert; D. Update. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5353,
+      "id": 5313,
       "quizId": 106,
       "text": "Select the valid query to declare the foreign key presC# of the relation Studio(name, address, presC#) that references the cert# of the relation MovieExec(name, address, cert#, netWorth):",
       "options": [
@@ -12602,7 +12076,7 @@
       "explanation": "Đáp án đúng: D — CREATE TABLE Studio (name CHAR(30) PRIMARY KEY, address VARCHAR(256), presC# INT REFERENCES MovieExec (cert#));.\n\nNền tảng kiến thức: Trong cú pháp SQL DDL, để định nghĩa một ràng buộc khóa ngoại (foreign key constraint) tham chiếu đến cột của bảng khác, ta dùng mệnh đề `REFERENCES TargetTable (TargetColumn)`.\n\nĐối chiếu phương án:\n- Phương án D sử dụng đúng cú pháp: `presC# INT REFERENCES MovieExec (cert#)`.\n- Phương án B thiếu mệnh đề `REFERENCES`.\n- Phương án C dùng sai cú pháp `UNIQUE KEY REFERENCES` và thiếu cột được tham chiếu."
     },
     {
-      "id": 5354,
+      "id": 5314,
       "quizId": 106,
       "text": "Select the right statement",
       "options": [
@@ -12615,7 +12089,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. All of the others.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. Every constraint has a name. If we don't define constraint's name explicitly, then DBMS automa…; C. We can create constraint on a tuple as a whole.; D. We can create constraint on a single attribute. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5355,
+      "id": 5315,
       "quizId": 106,
       "text": "The Boolean expression \\((FALSE \\text{ AND } NULL)\\) returns:",
       "options": [
@@ -12628,7 +12102,7 @@
       "explanation": "Đáp án đúng: C — FALSE.\n\nNền tảng kiến thức: Trong SQL, các phép so sánh và logic tuân theo chuẩn logic ba giá trị (Three-Valued Logic - 3VL), gồm các giá trị chân lý: TRUE, FALSE và UNKNOWN (kết quả trả về khi biểu thức chứa hoặc so sánh với NULL).\n\nPhân tích: \nBảng chân trị của toán tử AND trong logic ba giá trị:\n- \\(\\text{TRUE AND UNKNOWN} \\rightarrow \\text{UNKNOWN}\\)\n- \\(\\text{FALSE AND UNKNOWN} \\rightarrow \\text{FALSE}\\)\n- \\(\\text{UNKNOWN AND UNKNOWN} \\rightarrow \\text{UNKNOWN}\\)\n\nDo trong biểu thức \\((FALSE \\text{ AND } NULL)\\) có một toán hạng chắc chắn nhận giá trị FALSE, theo luật ngắn mạch (short-circuit) và định nghĩa toán tử AND trong SQL, chỉ cần một vế là FALSE thì kết quả của toàn bộ biểu thức luôn luôn là FALSE bất kể toán hạng còn lại là TRUE, FALSE hay NULL (UNKNOWN).\n\nĐối chiếu phương án:\n- A. NULL: Sai, biểu thức chỉ cho UNKNOWN (NULL) khi toán hạng còn lại là TRUE hoặc UNKNOWN.\n- B. TRUE: Sai vì một vế đã là FALSE.\n- C. FALSE: Đúng hoàn toàn theo bảng chân trị 3VL của SQL.\n- D. None of the others: Sai."
     },
     {
-      "id": 5356,
+      "id": 5316,
       "quizId": 106,
       "text": "Given the relation Employee(SSN, FNAME, LNAME, SALARY). Select the right query below to find the employee(s) who has the lowest salary in the company:",
       "options": [
@@ -12641,7 +12115,7 @@
       "explanation": "Đáp án đúng: A — SELECT LNAME, FNAME, SALARY FROM Employee WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee).\n\nNền tảng kiến thức: Để tìm các bản ghi thỏa mãn một giá trị cực trị (tối thiểu/tối đa) trong SQL, ta thường kết hợp mệnh đề WHERE với một truy vấn con (subquery) chứa hàm tổng hợp (aggregate function) như MIN() hoặc MAX().\n\nPhân tích:\n- Truy vấn con `SELECT MIN(SALARY) FROM Employee` trả về một giá trị vô hướng (scalar value) là mức lương thấp nhất của toàn bộ nhân viên trong bảng Employee.\n- Mệnh đề lọc `WHERE SALARY IN (...)` (hoặc `WHERE SALARY = (...)`) sẽ đối chiếu và lấy ra tất cả nhân viên có mức lương bằng đúng mức lương tối thiểu này. Nếu có nhiều nhân viên cùng có mức lương thấp nhất, câu lệnh vẫn trả về đầy đủ tất cả những người đó.\n\nĐối chiếu phương án:\n- A. `SELECT LNAME, FNAME, SALARY FROM Employee WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee)`: Chính xác về cả cú pháp và ngữ nghĩa lọc giá trị nhỏ nhất.\n- B. `WHERE SALARY >= ALL (SELECT MIN(SALARY) FROM Employee)`: Sai, điều kiện này sẽ lấy tất cả nhân viên có lương lớn hơn hoặc bằng mức lương nhỏ nhất (tức toàn bộ nhân viên có lương hợp lệ trong công ty).\n- C. `WHERE SALARY < MAX (SELECT MIN(SALARY) FROM Employee)`: Sai cú pháp SQL (toán tử `< MAX` không hợp lệ khi so với subquery, phải là `< ALL` hoặc `< ANY` hoặc `< (SELECT MAX...))`.\n- D. None of the others: Sai vì phương án A là truy vấn đúng."
     },
     {
-      "id": 5357,
+      "id": 5317,
       "quizId": 106,
       "text": "What SQL keyword can be use to return data from two non-related tables as a combined set of rows?",
       "options": [
@@ -12654,7 +12128,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. UNION ALL.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: A. DISTINCT ALL; B. DISTINCT; D. COMBINED. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5358,
+      "id": 5318,
       "quizId": 106,
       "text": "This simple SQL queries, uses the three keywords that characterize SQL is ____ ?",
       "options": [
@@ -12667,7 +12141,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Select, From, and Where.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Count, Sum and Avg; B. Insert, Update and Delete; D. And, Or, and Not. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5359,
+      "id": 5319,
       "quizId": 106,
       "text": "To modify the schema of an existing relation use ______",
       "options": [
@@ -12680,7 +12154,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Alter table.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, như thêm cột hoặc sửa cấu hình cột/ràng buộc theo cú pháp của DBMS. Nó khác UPDATE, vốn sửa các giá trị trong những hàng hiện hữu; cú pháp chính xác có thể khác giữa SQL Server và chuẩn SQL.\n\nĐối chiếu phương án: A. Create table; B. Modify table; D. Drop table. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5360,
+      "id": 5320,
       "quizId": 106,
       "text": "Choose the incorrect statement about DELETE and TRUNCAT in SQL Server.",
       "options": [
@@ -12693,33 +12167,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. DELETE is used for unconditional removal of data records from Tables; TRUNCATE is used for conditional removal of data records from Tables..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: B. DELETE is a DML command and the operations are logged, whereas TRUNCATE is a DDL command and t…; C. DELETE removes records and records each deletion in the transaction log whereas TRUNCATE deall…; D. TRUNCATE is generally considered quicker as it makes less use of the transaction log. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5361,
-      "quizId": 106,
-      "text": "Which command is used to remove a relation from an SQL?",
-      "options": [
-        "Drop table",
-        "Delete",
-        "Purge",
-        "Remove"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. Drop table.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu phụ thuộc theo quy tắc DBMS; DELETE xóa các hàng nhưng giữ bảng, còn TRUNCATE xóa nhanh toàn bộ hàng trong khi vẫn giữ cấu trúc. Cần chọn lệnh đúng cấp độ tác động.\n\nĐối chiếu phương án: B. Delete; C. Purge; D. Remove. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5362,
-      "quizId": 106,
-      "text": "In an employee table to include the attributes whose value always have some value which of the following constraint must be used?",
-      "options": [
-        "Null",
-        "Not null",
-        "Unique",
-        "Distinct"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Not null.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NOT NULL là constraint cấm giá trị NULL ở cột, phù hợp khi mỗi hàng bắt buộc phải có giá trị. Nó không tự bảo đảm giá trị duy nhất (UNIQUE/PRIMARY KEY) và cũng không kiểm tra miền/range như CHECK.\n\nĐối chiếu phương án: A. Null; C. Unique; D. Distinct. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5363,
+      "id": 5321,
       "quizId": 106,
       "text": "Choose the correct statement that belongs to DML.",
       "options": [
@@ -12732,7 +12180,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT, DELETE, INSERT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: B. CREATE, UPDATE, SELECT; C. TRUNCAT, DELETE, UPDATE; D. UPDATE, DELETE, ALTER. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5364,
+      "id": 5322,
       "quizId": 106,
       "text": "A Delete command operates on _____ relation.",
       "options": [
@@ -12745,7 +12193,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. One.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Một câu lệnh DELETE tác động lên một target table/relation trong mỗi câu lệnh, dù có thể xóa nhiều hàng của bảng đó theo WHERE. Các hàng tham chiếu ở bảng khác chỉ bị ảnh hưởng nếu có cascade/trigger được cấu hình.\n\nĐối chiếu phương án: B. Two; C. Several; D. Null. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5365,
+      "id": 5323,
       "quizId": 106,
       "text": "You have a table named Books that has columns named Book Title and Description. There is a full-text index on these columns. You need to return rows from the table in which the word 'computer' exists in either column. Which code segment should you use?",
       "options": [
@@ -12758,20 +12206,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT * FROM Books WHERE FREETEXT(*, 'computer').\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\n\nĐối chiếu phương án: B. SELECT * FROM Books WHERE Book Title LIKE '%computer%'; C. SELECT * FROM Books WHERE Book Title = '%computer%' OR Description = '%computer%'; D. SELECT * FROM Books WHERE FREETEXT(Book Title, 'computer'). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5366,
-      "quizId": 106,
-      "text": "In SQL, to update a relation's schema, which one of the following statements can be used?",
-      "options": [
-        "Insert",
-        "Update",
-        "Alter",
-        "Alter table"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. Alter table.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, như thêm cột hoặc sửa cấu hình cột/ràng buộc theo cú pháp của DBMS. Nó khác UPDATE, vốn sửa các giá trị trong những hàng hiện hữu; cú pháp chính xác có thể khác giữa SQL Server và chuẩn SQL.\n\nĐối chiếu phương án: A. Insert; B. Update; C. Alter. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5367,
+      "id": 5324,
       "quizId": 106,
       "text": "The DROP TABLE statement:",
       "options": [
@@ -12784,7 +12219,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. deletes the table structure along with the table data..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu phụ thuộc theo quy tắc DBMS; DELETE xóa các hàng nhưng giữ bảng, còn TRUNCATE xóa nhanh toàn bộ hàng trong khi vẫn giữ cấu trúc. Cần chọn lệnh đúng cấp độ tác động.\n\nĐối chiếu phương án: A. deletes the table structure only.; C. works whether or not referential integrity constraints would be violated.; D. is not an SQL statement.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5368,
+      "id": 5325,
       "quizId": 106,
       "text": "Which of the following aggregate functions does not ignore nulls in its results?",
       "options": [
@@ -12797,7 +12232,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. COUNT (*).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Aggregate function tính một kết quả từ một tập nhiều hàng/giá trị, ví dụ COUNT, SUM, AVG, MIN và MAX. Trong truy vấn nhóm, GROUP BY xác định từng tập đầu vào; HAVING lọc các nhóm sau khi tính tổng hợp.\n\nĐối chiếu phương án: A. MIN; B. MAX; D. COUNT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5369,
+      "id": 5326,
       "quizId": 106,
       "text": "Which of the following statements is false regarding SQL Correlated sub-queries?",
       "options": [
@@ -12810,7 +12245,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. A correlated subquery is not evaluated once for each row processed by the parent statement..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. Correlated subqueries are used for row-by-row processing.; C. Each subquery is executed once for every row of the outer query.; D. Subqueries always process the innermost query first and the work outward.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5370,
+      "id": 5327,
       "quizId": 106,
       "text": "Suppose relation R(A, B) has the following tuples:\n\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} \\\\\n\\hline\n1 & \\text{a} \\\\\n\\hline\n2 & \\text{b} \\\\\n\\hline\n3 & \\text{a} \\\\\n\\hline\n4 & \\text{d} \\\\\n\\hline\n5 & \\text{e} \\\\\n\\hline\n6 & \\text{a} \\\\\n\\hline\n7 & \\text{g} \\\\\n\\hline\n\\end{array}\\)\n\nChoose the SQL statement to count distinct rows from column B in relation R:",
       "options": [
@@ -12823,7 +12258,7 @@
       "explanation": "Trong SQL, cú pháp đếm số giá trị phân biệt (loại bỏ trùng lặp) của một cột là COUNT(DISTINCT cột). Do đó SELECT COUNT(DISTINCT(B)) AS 'total_rows' FROM R; là câu lệnh chính xác."
     },
     {
-      "id": 5371,
+      "id": 5328,
       "quizId": 106,
       "text": "Which statement is used to change the data type of a column named E in table A?",
       "options": [
@@ -12836,7 +12271,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. ALTER TABLE A ALTER COLUMN E [DataType].\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, như thêm cột hoặc sửa cấu hình cột/ràng buộc theo cú pháp của DBMS. Nó khác UPDATE, vốn sửa các giá trị trong những hàng hiện hữu; cú pháp chính xác có thể khác giữa SQL Server và chuẩn SQL.\n\nĐối chiếu phương án: B. ALTER TABLE A ALTER COLUMN E; C. ALTER TABLE A ALTER E [DataType]; D. ALTER TABLE A DROP COLUMN E [DataType]. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5372,
+      "id": 5329,
       "quizId": 106,
       "text": "The ability to query data, as well as insert, delete, and alter tuples, is offered by ____",
       "options": [
@@ -12849,7 +12284,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. DML (Data Manipulation Language).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. TCL (Transaction Control Language); B. DCL (Data Control Language); C. DDL (Data Definition Language). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5373,
+      "id": 5330,
       "quizId": 106,
       "text": "Which of the following is correct?",
       "options": [
@@ -12862,7 +12297,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. SELECT datepart(DAY,'10-jan-24').\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. SELECT datepart(DATE, '10-jan-24'); B. SELECT datepart('10-jan-24', DATE); C. SELECT datepart('10-jan-24', DAY). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5374,
+      "id": 5331,
       "quizId": 106,
       "text": "You have a column named TelephoneNumber that stores numbers as varchar(20). You need to write a query that returns the first three characters of a telephone number. Which expression should you use?",
       "options": [
@@ -12875,7 +12310,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. LEFT(TelephoneNumber, 3).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. CHARINDEX('[0-9][0-9][0-9]', TelephoneNumber, 3); B. SUBSTRING (Telephone Number, 3, 1); C. SUBSTRING(TelephoneNumber, 3, 3). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5375,
+      "id": 5332,
       "quizId": 106,
       "text": "Which SQL statement selects all rows from table called Contest, with column ContestDate having values greater or equal to May 25,2006?",
       "options": [
@@ -12887,7 +12322,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT * FROM Contest WHERE ContestDate >= '05/25/2006'.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT * FROM Contest GROUPBY ContestDate >= '05/25/2006'.; C. SELECT * FROM Contest WHERE ContestDate = '05/25/2006'.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5376,
+      "id": 5333,
       "quizId": 106,
       "text": "The latter clause consists of the keyword followed by a condition about the group.",
       "options": [
@@ -12900,7 +12335,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Having.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. Group-by; C. Order by; D. Where. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5377,
+      "id": 5334,
       "quizId": 106,
       "text": "In MS-SQL Server, which of the following is true about join operator?\nSELECT * FROM tbICUSTOMER, tbIORDER",
       "options": [
@@ -12913,20 +12348,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Cartesian join.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: B. Equi-join; C. Natural join; D. Outer join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5378,
-      "quizId": 106,
-      "text": "UPDATE \n____ salary= salary * 1.05;\nFill in with correct keyword to update the instructor relation.",
-      "options": [
-        "Where",
-        "Set",
-        "In",
-        "Select"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Set.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Where; C. In; D. Select. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5379,
+      "id": 5335,
       "quizId": 106,
       "text": "Which one of the following SQL statements returns the name of the employee (employeename, dept_code,\nsalary) receiving the maximum salary in a particular department?",
       "options": [
@@ -12939,7 +12361,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Select employeename, dept_code, salary From employee Where employee.salary in (select Max(salary)from Employee group by dept_code).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Select employeename, dept_code, salary From employee Where employee.salary in (select (salary)…; C. Select employeename, dept_code, salary From employee Where employee.salary in (select Max(sala…; D. Select employeename, dept_code, salary From employee Where employee.salary =(select Max(salary…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5380,
+      "id": 5336,
       "quizId": 106,
       "text": "Insert into Students (32, N'lona Bush', N'Female');In the given query which of the keyword has to be inserted ?",
       "options": [
@@ -12952,20 +12374,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Values.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Into; B. Set; C. Where. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5381,
-      "quizId": 106,
-      "text": "Foreign key constraints are created by using the \" \"keyword to refer to the primary key of another table.",
-      "options": [
-        "Refer",
-        "References",
-        "Referential",
-        "All of the others"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. References.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Refer; C. Referential; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5382,
+      "id": 5337,
       "quizId": 106,
       "text": "Which of the following belongs to DDL (data definition language)?",
       "options": [
@@ -12978,7 +12387,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. create, alter, drop.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: B. Insert, update, delete, select; C. Truncate, select, invoke; D. Deny, create, drop. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5383,
+      "id": 5338,
       "quizId": 106,
       "text": "\"SELECT TOP 100 FROM \" is the statement and suppose if there are 10 rows in the table then that what will be the result?",
       "options": [
@@ -12991,7 +12400,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Return the field of all the 10 rows.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Return 10 rows with data and 90 blank rows without data; B. Return all the rows and all columns in the table; D. Return error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5384,
+      "id": 5339,
       "quizId": 106,
       "text": "The predicate in a WHERE clause can involve Boolean operations such as AND. The result of (TRUE AND UNKNOWN) is ____, (FALSE AND UNKNOWN) is ____, while (UNKNOWN AND UNKNOWN) is ____:",
       "options": [
@@ -13004,20 +12413,7 @@
       "explanation": "Đáp án đúng: D — Unknown, false, unknown.\n\nNền tảng kiến thức: Trong logic ba giá trị (Three-Valued Logic - 3VL) của SQL:\n- TRUE AND UNKNOWN \\(\\to\\) UNKNOWN\n- FALSE AND UNKNOWN \\(\\to\\) FALSE\n- UNKNOWN AND UNKNOWN \\(\\to\\) UNKNOWN"
     },
     {
-      "id": 5385,
-      "quizId": 106,
-      "text": "UPDATE instructor\nsalary= salary * 1.05;\nFill in with correct keyword to update the instructor relation.",
-      "options": [
-        "Where",
-        "Set",
-        "In",
-        "Select"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Set.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Where; C. In; D. Select. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5386,
+      "id": 5340,
       "quizId": 106,
       "text": "In an UPDATE statement, what does the WHERE clause determine?",
       "options": [
@@ -13030,33 +12426,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. The condition for selecting rows to be updated.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. The order of update; B. The columns to be updated; D. The table to be updated. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5387,
-      "quizId": 106,
-      "text": "What data type is best suited for Vietnamese name? (in SQL Server)",
-      "options": [
-        "Varchar(30)",
-        "Nvarchar(30)",
-        "Text(30)",
-        "Char(30)"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Nvarchar(30).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NVARCHAR lưu văn bản Unicode nên phù hợp với tiếng Việt có dấu; VARCHAR không Unicode có thể phụ thuộc code page. Kích thước trong ngoặc là giới hạn số đơn vị ký tự theo SQL Server, cần chọn dựa trên độ dài dữ liệu thực tế.\n\nĐối chiếu phương án: A. Varchar(30); C. Text(30); D. Char(30). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5388,
-      "quizId": 106,
-      "text": "Assuming UserProfile is a table containing a column Proession which accepts NULL value. What is the result of the below query. SET ANSI_NULLS OFF SELECT Profession FROM UserProfile WHERE (Profession <>NULL)",
-      "options": [
-        "Gives an error.",
-        "<> is not an operator in SQL Server",
-        "Returns all Professions which has not null values",
-        "None of the above."
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Returns all Professions which has not null values.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. Gives an error.; B. <> is not an operator in SQL Server; D. None of the above.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5389,
+      "id": 5341,
       "quizId": 106,
       "text": "In MS-SQL Server, which of the following is true about join operator?\nSELECT *\nFROM tbICUSTOMER, tbIORDER\nWHERE tbICUSTOMER.CUSTOMER_ID = tblORDER. CUSTOMER_ID",
       "options": [
@@ -13069,7 +12439,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Natural join.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. Full outer-join; C. Outer join; D. Cartesian join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5390,
+      "id": 5342,
       "quizId": 106,
       "text": "In SQL query, choose the correct statement about the order of execution.",
       "options": [
@@ -13082,7 +12452,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT-FROM-WHERE - GROUP BY - HAVING - ORDER BY.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT - FROM - GROUP BY - WHERE - HAVING - ORDER BY; C. SELECT-FROM-HAVING GROUP BY - WHERE-ORDER BY; D. SELECT-FROM-OREDER BY WHERE HAVING - GROUP BY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5391,
+      "id": 5343,
       "quizId": 106,
       "text": "In MS-SQL Server, there are three primary SQL commands (INSERT, UPDATE, and DELETE) to modify data\nin a table. Which of the following is false about function of these commands?",
       "options": [
@@ -13095,7 +12465,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. These commands allow you to change the data type of a column, add or drop columns, and rename columns, among other operations..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: B. These commands enable the alteration of data within database tables.; C. Each command has its specific syntax, usage, and allowing you to insert new rows, modifies exi…; D. These commands belong to the Data Manipulation Language (DML) subset of SQL.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5392,
+      "id": 5344,
       "quizId": 106,
       "text": "What data type is best suited for a Vietnamese name in SQL Server?",
       "options": [
@@ -13108,7 +12478,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Nvarchar(30).\n\nLời giải gốc: Kiểu dữ liệu Nvarchar hỗ trợ mã Unicode, cho phép lưu trữ chính xác các ký tự tiếng Việt có dấu mà không bị lỗi font, phù hợp nhất để lưu tên tiếng Việt trong SQL Server.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NVARCHAR lưu văn bản Unicode nên phù hợp với tiếng Việt có dấu; VARCHAR không Unicode có thể phụ thuộc code page. Kích thước trong ngoặc là giới hạn số đơn vị ký tự theo SQL Server, cần chọn dựa trên độ dài dữ liệu thực tế.\n\nĐối chiếu phương án: A. Varchar(30); C. Text(30); D. Char(30). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5393,
+      "id": 5345,
       "quizId": 106,
       "text": "Which one of the following is NOT a DDL command? (Choose 3 answers)",
       "options": [
@@ -13127,20 +12497,7 @@
       "multiple": true
     },
     {
-      "id": 5394,
-      "quizId": 106,
-      "text": "In SQL, to update a relation schema, which one of the following statements can be used?",
-      "options": [
-        "Insert",
-        "Update",
-        "Alter",
-        "Alter table"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. Alter table.\n\nLời giải gốc: Lệnh ALTER TABLE được sử dụng trong SQL để cập nhật cấu trúc (schema) của một quan hệ hoặc bảng đã tồn tại trong cơ sở dữ liệu. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. Insert; B. Update; C. Alter. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5395,
+      "id": 5346,
       "quizId": 106,
       "text": "A DELETE command operates on how many relations?",
       "options": [
@@ -13153,7 +12510,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. One.\n\nLời giải gốc: Câu lệnh DELETE trong SQL tiêu chuẩn chỉ thực hiện thao tác xóa dữ liệu trên một bảng (relation) tại mỗi câu lệnh.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Một câu lệnh DELETE tác động lên một target table/relation trong mỗi câu lệnh, dù có thể xóa nhiều hàng của bảng đó theo WHERE. Các hàng tham chiếu ở bảng khác chỉ bị ảnh hưởng nếu có cascade/trigger được cấu hình.\n\nĐối chiếu phương án: B. Two; C. Several; D. Null. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5396,
+      "id": 5347,
       "quizId": 106,
       "text": "Suppose relation R(A, B, C, D) has the following tuples:\n\n\\(\\begin{array}{|c|c|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} & \\textbf{C} & \\textbf{D} \\\\\n\\hline\n1 & 10 & 101 & 2000 \\\\\n\\hline\n2 & 20 & 101 & 2200 \\\\\n\\hline\n3 & 30 & 101 & 2500 \\\\\n\\hline\n4 & 40 & 101 & 2800 \\\\\n\\hline\n5 & 50 & 101 & 2000 \\\\\n\\hline\n6 & 60 & 102 & 1000 \\\\\n\\hline\n7 & 70 & 102 & 1500 \\\\\n\\hline\n\\end{array}\\)\n\nWhich tuples are contained in the result of the query below?\n\nSELECT C, AVG(D)\nFROM R\nGROUP BY C\nHAVING AVG(D) > 1000\nORDER BY C;",
       "options": [
@@ -13166,7 +12523,7 @@
       "explanation": "Đáp án đúng: B — (101, 2300); (102, 1250).\n\nNền tảng kiến thức:\n- Mệnh đề `GROUP BY C` gom các hàng có cùng giá trị thuộc tính C vào một nhóm.\n- Hàm tổng hợp `AVG(D)` tính giá trị trung bình cộng của cột D trong từng nhóm: \\(\\text{AVG}(D) = \\frac{\\sum D}{\\text{COUNT}(*)}\\).\n- Mệnh đề `HAVING AVG(D) > 1000` lọc và chỉ giữ lại các nhóm có giá trị trung bình lớn hơn 1000.\n- `ORDER BY C` sắp xếp kết quả tăng dần theo thuộc tính C.\n\nPhân tích tính toán:\n1. Nhóm \\(C = 101\\):\n - Gồm 5 bộ: các giá trị D lần lượt là 2000, 2200, 2500, 2800, 2000.\n - Tổng \\(\\text{SUM}(D) = 2000 + 2200 + 2500 + 2800 + 2000 = 11500\\).\n - Số lượng bộ: \\(\\text{COUNT}(*) = 5\\).\n - Giá trị trung bình: \\(\\text{AVG}(D) = 11500 / 5 = 2300\\).\n - Vì \\(2300 > 1000\\) nên nhóm này thỏa mãn điều kiện HAVING \\(\\rightarrow\\) kết quả có bộ `(101, 2300)`.\n\n2. Nhóm \\(C = 102\\):\n - Gồm 2 bộ: các giá trị D lần lượt là 1000, 1500.\n - Tổng \\(\\text{SUM}(D) = 1000 + 1500 = 2500\\).\n - Số lượng bộ: \\(\\text{COUNT}(*) = 2\\).\n - Giá trị trung bình: \\(\\text{AVG}(D) = 2500 / 2 = 1250\\).\n - Vì \\(1250 > 1000\\) nên nhóm này thỏa mãn điều kiện HAVING \\(\\rightarrow\\) kết quả có bộ `(102, 1250)`.\n\nTổng hợp kết quả sau khi sắp xếp theo C: `(101, 2300); (102, 1250)`.\n\nĐối chiếu phương án:\n- A. `(101, 11500); (102, 2500)`: Sai, đây là kết quả của hàm `SUM(D)` thay vì `AVG(D)`.\n- B. `(101, 2300); (102, 1250)`: Đúng hoàn toàn.\n- C. `(101, 5); (102, 2)`: Sai, đây là kết quả của hàm `COUNT(*)` đếm số lượng bộ.\n- D. `(101, 11500); (102, 1250)`: Sai, bị tính nhầm giữa SUM và AVG."
     },
     {
-      "id": 5397,
+      "id": 5348,
       "quizId": 106,
       "text": "To completely remove a table and its data in SQL, we use:",
       "options": [
@@ -13179,7 +12536,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. DROP.\n\nLời giải gốc: Lệnh DROP được dùng để xóa hoàn toàn bảng cùng với toàn bộ dữ liệu và cấu trúc của nó khỏi cơ sở dữ liệu. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu phụ thuộc theo quy tắc DBMS; DELETE xóa các hàng nhưng giữ bảng, còn TRUNCATE xóa nhanh toàn bộ hàng trong khi vẫn giữ cấu trúc. Cần chọn lệnh đúng cấp độ tác động.\n\nĐối chiếu phương án: A. DELETE; C. REMOVE; D. RASE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5398,
+      "id": 5349,
       "quizId": 106,
       "text": "Which SQL clause is used to add a new column to an existing table?",
       "options": [
@@ -13192,7 +12549,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. ALTER TABLE ADD COLUMN.\n\nLời giải gốc: Lệnh ALTER TABLE table_name ADD column_name datatype được dùng để thêm một cột mới vào bảng hiện có.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, như thêm cột hoặc sửa cấu hình cột/ràng buộc theo cú pháp của DBMS. Nó khác UPDATE, vốn sửa các giá trị trong những hàng hiện hữu; cú pháp chính xác có thể khác giữa SQL Server và chuẩn SQL.\n\nĐối chiếu phương án: A. ADD COLUMN; C. INSERT INTO; D. CREATE COLUMN. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5399,
+      "id": 5350,
       "quizId": 106,
       "text": "Which command is used to create a stored procedure in SQL Server?",
       "options": [
@@ -13205,7 +12562,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. CREATE PROCEDURE.\n\nLời giải gốc: Lệnh CREATE PROCEDURE được sử dụng để tạo một thủ tục lưu trữ (stored procedure) trong SQL Server. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. CREATE FUNCTION; B. CREATE TABLE; D. CREATE VIEW. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5400,
+      "id": 5351,
       "quizId": 106,
       "text": "Fill in the correct keyword to update the instructor relation:\n\nUPDATE instructor ____ salary = salary * 1.05;",
       "options": [
@@ -13218,7 +12575,7 @@
       "explanation": "Đáp án đúng: B — SET.\n\nLời giải gốc: Trong cú pháp câu lệnh UPDATE của SQL, từ khóa SET được dùng để chỉ định cột cần cập nhật giá trị mới.\n\nNền tảng kiến thức: Trong cú pháp chuẩn của câu lệnh SQL `UPDATE`, từ khóa `SET` được sử dụng để chỉ định (gán) các cột cần cập nhật giá trị mới:\n`UPDATE <table_name> SET <column_name> = <expression> [WHERE <condition>];`\n\nPhân tích: Trong câu lệnh `UPDATE instructor ____ salary = salary * 1.05;`, vị trí chỗ trống đứng ngay trước biểu thức gán `salary = salary * 1.05`, do đó từ khóa chính xác bắt buộc phải là `SET`.\n\nĐối chiếu phương án:\n- A. WHERE: Dùng để lọc điều kiện các hàng được cập nhật, không đứng trước biểu thức gán.\n- B. SET: Đúng cú pháp chuẩn SQL UPDATE.\n- C. FROM: Không dùng ở vị trí này trong cú pháp UPDATE chuẩn.\n- D. SELECT: Dùng để truy vấn dữ liệu."
     },
     {
-      "id": 5401,
+      "id": 5352,
       "quizId": 106,
       "text": "Which SQL command is used to define a table schema?",
       "options": [
@@ -13231,7 +12588,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. CREATE TABLE.\n\nLời giải gốc: Lệnh CREATE TABLE thuộc nhóm ngôn ngữ định nghĩa dữ liệu (DDL), được dùng để tạo mới và định nghĩa lược đồ cấu trúc cấu thành của một bảng.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, như thêm cột hoặc sửa cấu hình cột/ràng buộc theo cú pháp của DBMS. Nó khác UPDATE, vốn sửa các giá trị trong những hàng hiện hữu; cú pháp chính xác có thể khác giữa SQL Server và chuẩn SQL.\n\nĐối chiếu phương án: A. ALTER TABLE; B. SELECT; D. INSERT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5402,
+      "id": 5353,
       "quizId": 106,
       "text": "When designing a database for a library system, which constraint ensures that every book has exactly one unique ISBN?",
       "options": [
@@ -13244,7 +12601,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Unique constraint.\n\nLời giải gốc: Ràng buộc UNIQUE đảm bảo rằng các giá trị trong cột ISBN là duy nhất cho mỗi cuốn sách. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. Foreign key constraint; B. NOT NULL constraint; D. Default constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5403,
+      "id": 5354,
       "quizId": 106,
       "text": "What is the difference between DELETE and TRUNCATE in SQL?",
       "options": [
@@ -13257,7 +12614,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. DELETE removes rows based on a condition, and TRUNCATE removes all rows from the table.\n\nLời giải gốc: Lệnh DELETE cho phép xóa các hàng có điều kiện (dùng WHERE) và ghi log từng dòng, trong khi TRUNCATE xóa toàn bộ dữ liệu nhanh hơn mà không cần điều kiện.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: B. DELETE is faster and does not generate logs; C. TRUNCATE allows rollback, but DELETE does not; D. TRUNCATE can delete specific rows, while DELETE removes all rows. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5404,
+      "id": 5355,
       "quizId": 106,
       "text": "Given two relations: PC(model, speed, ram, hd, type) and Laptop(model, speed, ram, hd, screen, price). Which subquery gets the model of laptops with the same price as any PC?",
       "options": [
@@ -13270,7 +12627,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT model FROM Laptop WHERE price IN (SELECT price FROM PC);.\n\nLời giải gốc: Để tìm các laptop có giá bằng với bất kỳ PC nào, ta sử dụng toán tử IN kết hợp với tập hợp giá của các PC. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT model FROM Laptop WHERE price = ALL (SELECT price FROM PC);; C. SELECT model FROM Laptop WHERE price > ALL (SELECT price FROM PC);; D. SELECT model FROM Laptop WHERE price < ALL (SELECT price FROM PC);. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5405,
+      "id": 5356,
       "quizId": 106,
       "text": "Which function gets the day value (of the month) in SQL?",
       "options": [
@@ -13284,7 +12641,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. DAY(date).\n\nLời giải gốc: Hàm DAY(date) trong SQL Server được dùng để trích xuất phần ngày trong tháng từ một giá trị ngày tháng.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. DAYOFMONTH(date); B. DATE(date); D. MONTHDAY(date); E. None of the above answers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5406,
+      "id": 5357,
       "quizId": 106,
       "text": "Assuming UserProfile is a table containing a column Profession which accepts NULL value. What is the result of the below query? SET ANSI_NULLS OFF SELECT Profession FROM UserProfile WHERE (Profession <> NULL)",
       "options": [
@@ -13297,7 +12654,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Returns all Professions which has not null values..\n\nLời giải gốc: Khi thiết lập SET ANSI_NULLS OFF, toán tử <> có thể đánh giá giá trị NULL theo cú pháp cũ, trả về tất cả các giá trị nghề nghiệp khác NULL (không chứa giá trị rỗng). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. Gives an error.; B. <> is not an operator in SQL Server; D. None of the above.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5407,
+      "id": 5358,
       "quizId": 106,
       "text": "In SQL, to update a relation's schema, which statement can be used?",
       "options": [
@@ -13310,7 +12667,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. ALTER TABLE.\n\nLời giải gốc: Lệnh ALTER TABLE thuộc nhóm DDL, dùng để chỉnh sửa cấu trúc (schema) của một quan hệ/bảng.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, như thêm cột hoặc sửa cấu hình cột/ràng buộc theo cú pháp của DBMS. Nó khác UPDATE, vốn sửa các giá trị trong những hàng hiện hữu; cú pháp chính xác có thể khác giữa SQL Server và chuẩn SQL.\n\nĐối chiếu phương án: A. INSERT; B. UPDATE; C. ALTER. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5408,
+      "id": 5359,
       "quizId": 106,
       "text": "Which of the following is NOT the OPTIONAL clause in a SELECT statement?",
       "options": [
@@ -13323,7 +12680,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. FROM.\n\nLời giải gốc: Trong câu lệnh SELECT, mệnh đề FROM là bắt buộc phải có, trong khi WHERE, ORDER BY, và HAVING là các mệnh đề tùy chọn. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. WHERE; B. ORDER BY; D. HAVING. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5409,
+      "id": 5360,
       "quizId": 106,
       "text": "Which command is used to remove a relation from SQL?",
       "options": [
@@ -13336,7 +12693,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Drop table.\n\nLời giải gốc: Lệnh DROP TABLE được sử dụng trong SQL để xóa hoàn toàn cấu trúc bảng (relation) cùng toàn bộ dữ liệu của nó khỏi cơ sở dữ liệu.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu phụ thuộc theo quy tắc DBMS; DELETE xóa các hàng nhưng giữ bảng, còn TRUNCATE xóa nhanh toàn bộ hàng trong khi vẫn giữ cấu trúc. Cần chọn lệnh đúng cấp độ tác động.\n\nĐối chiếu phương án: B. Delete; C. Purge; D. Remove. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5410,
+      "id": 5361,
       "quizId": 106,
       "text": "Given two relations: Product(maker, model, type) PC(model, speed, ram, hd, price) What does this query return? SELECT maker FROM Product WHERE model NOT IN ( SELECT model FROM PC );",
       "options": [
@@ -13349,7 +12706,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Makers of non-PC devices.\n\nLời giải gốc: Truy vấn con lấy danh sách tất cả các model của PC. Mệnh đề WHERE model NOT IN (...) lọc ra các sản phẩm không thuộc PC, do đó kết quả trả về nhà sản xuất của các thiết bị không phải PC.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. Makers of all devices; B. Makers that also build PCs; D. Makers of PCs only. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5411,
+      "id": 5362,
       "quizId": 106,
       "text": "What is the main difference between DELETE and TRUNCATE?",
       "options": [
@@ -13362,7 +12719,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. TRUNCATE deletes all data in a table faster and logs minimally, while DELETE can delete data based on the WHERE condition.\n\nLời giải gốc: TRUNCATE xóa toàn bộ dữ liệu trong bảng nhanh hơn do ghi log tối thiểu (minimal logging) và không áp dụng điều kiện WHERE, trong khi DELETE ghi log chi tiết từng dòng và có thể xóa theo điều kiện WHERE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. DELETE cannot be undone (ROLLBACK), while TRUNCATE can.; C. DELETE is for tables, while TRUNCATE is for Views.; D. There is no difference.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5412,
+      "id": 5363,
       "quizId": 106,
       "text": "In SQL, after grouping data using the GROUP BY clause, which clause is used to filter the groups based on specific conditions?",
       "options": [
@@ -13375,7 +12732,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. HAVING.\n\nLời giải gốc: Mệnh đề HAVING được dùng để lọc các nhóm sau khi đã gom nhóm bằng GROUP BY, hỗ trợ cả các hàm tổng hợp.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. WHERE; C. GROUP BY; D. WITH. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5413,
+      "id": 5364,
       "quizId": 106,
       "text": "What is a NOT NULL constraint?",
       "options": [
@@ -13388,7 +12745,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A constraint that prevents NULL values in a column.\n\nLời giải gốc: Ràng buộc NOT NULL đảm bảo cột không được phép chứa giá trị trống/rỗng (NULL).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. A constraint that allows only NULL values.; C. A constraint that sets default values to NULL.; D. A constraint that converts NULL values to a specific data type.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5414,
+      "id": 5365,
       "quizId": 106,
       "text": "The % wildcard, when used with the LIKE keyword, represents a string of characters that:",
       "options": [
@@ -13402,7 +12759,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Has a minimum length of 0 characters.\n\nLời giải gốc: Ký tự đại diện % trong mệnh đề LIKE đại diện cho một chuỗi gồm 0 hoặc nhiều ký tự bất kỳ.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự và `_` khớp đúng một ký tự. ESCAPE cho phép coi ký tự wildcard như ký tự thường bằng cách đặt trước chúng một ký tự thoát; nó không thay thế mẫu bằng chuỗi bất kỳ.\n\nĐối chiếu phương án: B. Has a minimum length of 1 character, a maximum length of n characters; C. Has a minimum length of 1 character, a maximum length of 255 characters; D. Has a minimum length of 1 character, a maximum length of 256 characters; E. None of the above answers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5415,
+      "id": 5366,
       "quizId": 106,
       "text": "Consider two relations MovieStar(name, address, gender, birthdate) and MovieExec(name, address, cert, netWorth). You want the names and addresses of all female movie stars who are also movie executives with a net worth over $10,000,000. What is the correct statement?",
       "options": [
@@ -13415,7 +12772,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE netWorth > 10000000.\n\nLời giải gốc: Để tìm những người vừa là nữ diễn viên vừa là nhà điều hành phim thỏa mãn điều kiện, ta dùng phép giao INTERSECT giữa hai tập kết quả.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. SELECT name, address FROM MovieStar WHERE gender = 'F' UNION SELECT name, address FROM MovieEx…; C. SELECT name, address FROM MovieStar WHERE gender = 'F' EXCEPT SELECT name, address FROM MovieE…; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5416,
+      "id": 5367,
       "quizId": 106,
       "text": "Given the table Orders(order_id, customer_id, amount), which SQL query returns the customer with the lowest total order amount?",
       "options": [
@@ -13428,25 +12785,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT TOP 1 customer_id FROM Orders GROUP BY customer_id ORDER BY SUM(amount);.\n\nLời giải gốc: Câu lệnh nhóm theo khách hàng, tính tổng tiền và sắp xếp tăng dần (ORDER BY SUM(amount)), sau đó lấy dòng đầu tiên bằng TOP 1 sẽ trả về khách hàng có tổng giá trị đơn hàng thấp nhất. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. SELECT TOP 1 customer_id FROM Orders GROUP BY customer_id ORDER BY SUM(amount) DESC;; C. SELECT customer_id FROM Orders WHERE amount = MIN(amount);; D. SELECT customer_id, MAX(amount) FROM Orders;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5417,
-      "quizId": 106,
-      "text": "Which one of the following is NOT a DDL command?",
-      "options": [
-        "DELETE",
-        "CREATE DATABASE",
-        "INSERT",
-        "USE"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Đáp án đúng**: A & C\n\nĐáp án theo dữ liệu đề: A — A. DELETE.\n\nLời giải gốc: Lệnh DELETE thuộc nhóm ngôn ngữ thao tác dữ liệu (DML), trong khi CREATE thuộc nhóm ngôn ngữ định nghĩa dữ liệu (DDL). Lưu ý: INSERT cũng là DML, nên nếu đề yêu cầu chọn nhiều đáp án thì cả A và C đều không phải DDL.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: B. CREATE DATABASE; C. INSERT; D. USE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
-      "correctIndices": [
-        0,
-        2
-      ],
-      "multiple": true
-    },
-    {
-      "id": 5418,
+      "id": 5368,
       "quizId": 106,
       "text": "Regarding the difference between WHERE and HAVING in SQL, which of the following is true?",
       "options": [
@@ -13459,7 +12798,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. WHERE filters data on non-aggregated values, HAVING filters on aggregated ones..\n\nLời giải gốc: Mệnh đề WHERE lọc dữ liệu trên các giá trị thông thường trước khi nhóm, còn HAVING lọc dữ liệu trên các giá trị đã qua hàm tổng hợp (aggregate functions) sau khi nhóm.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. WHERE filters data on aggregated values, HAVING filters on non-aggregated ones.; B. WHERE is written after GROUP BY, while HAVING comes before GROUP BY.; D. Both HAVING and WHERE are written before GROUP BY, and HAVING comes before WHERE.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5419,
+      "id": 5369,
       "quizId": 106,
       "text": "With SQL, how do you select all records from a table named \"Customers\" where the value of the column \"FirstName\" ends with an \"a\"?",
       "options": [
@@ -13472,7 +12811,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. SELECT * FROM Customers WHERE FirstName LIKE '%a'.\n\nLời giải gốc: Toán tử LIKE '%a' dùng để tìm các chuỗi ký tự kết thúc bằng chữ 'a'. Ngược lại, LIKE 'a%' tìm chuỗi bắt đầu bằng 'a'.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. SELECT * FROM Customers WHERE FirstName = 'a'; B. SELECT * FROM Customers WHERE FirstName LIKE 'a%'; D. SELECT * FROM Customers WHERE FirstName = '%a%'. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5420,
+      "id": 5370,
       "quizId": 106,
       "text": "What does the ON UPDATE CASCADE option do in SQL Server when defined for a foreign key constraint?",
       "options": [
@@ -13485,33 +12824,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Automatically updates the foreign key value when the referenced primary key is updated.\n\nLời giải gốc: Tùy chọn ON UPDATE CASCADE tự động cập nhật giá trị khóa ngoại ở bảng con tương ứng khi giá trị khóa chính ở bảng cha được chỉnh sửa.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: B. Automatically deletes the foreign key row when the referenced row is updated; C. Prevents the update of foreign key values; D. Sets the foreign key value to NULL when the referenced primary key is updated. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5421,
-      "quizId": 106,
-      "text": "In SQL, after grouping data using the GROUP BY clause, the ______ clause is used to filter the groups based on specific conditions.",
-      "options": [
-        "Where",
-        "Having",
-        "Group by",
-        "With"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Having.\n\nLời giải gốc: Điều kiện lọc dùng cho các hàm tổng hợp (aggregate functions) sau khi đã gom nhóm dữ liệu bằng GROUP BY phải được đặt ở mệnh đề HAVING. Mệnh đề WHERE chỉ lọc các hàng dữ liệu thô trước khi gom nhóm.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Where; C. Group by; D. With. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5422,
-      "quizId": 106,
-      "text": "In SQL query, choose the correct statement about the logical order of execution.",
-      "options": [
-        "SELECT - FROM - WHERE - GROUP BY - HAVING - ORDER BY",
-        "SELECT - FROM - GROUP BY - WHERE - HAVING - ORDER BY",
-        "SELECT - FROM - HAVING - GROUP BY - WHERE - ORDER BY",
-        "SELECT - FROM - ORDER BY - WHERE - HAVING - GROUP BY"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT - FROM - WHERE - GROUP BY - HAVING - ORDER BY.\n\nLời giải gốc: Thứ tự xử lý logic của các mệnh đề SQL là: FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY. Phương án A trình bày đúng trình tự các mệnh đề viết theo cú pháp tiêu chuẩn.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT - FROM - GROUP BY - WHERE - HAVING - ORDER BY; C. SELECT - FROM - HAVING - GROUP BY - WHERE - ORDER BY; D. SELECT - FROM - ORDER BY - WHERE - HAVING - GROUP BY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5423,
+      "id": 5371,
       "quizId": 106,
       "text": "In a relational database, which SQL command is used to modify the structure of an existing table?",
       "options": [
@@ -13524,7 +12837,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. ALTER.\n\nLời giải gốc: Để chỉnh sửa cấu trúc của một bảng đã tồn tại (như thêm/xóa cột, đổi kiểu dữ liệu), người ta sử dụng câu lệnh ALTER TABLE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, như thêm cột hoặc sửa cấu hình cột/ràng buộc theo cú pháp của DBMS. Nó khác UPDATE, vốn sửa các giá trị trong những hàng hiện hữu; cú pháp chính xác có thể khác giữa SQL Server và chuẩn SQL.\n\nĐối chiếu phương án: A. UPDATE; C. MODIFY; D. CHANGE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5424,
+      "id": 5372,
       "quizId": 106,
       "text": "Which of the following SQL statements returns all rows from Cars where year is greater than 2019?",
       "options": [
@@ -13537,7 +12850,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT * FROM Cars WHERE year > 2019;.\n\nLời giải gốc: Cú pháp chuẩn để lọc các dòng dựa trên điều kiện là sử dụng mệnh đề WHERE với toán tử so sánh >.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT * FROM Cars HAVING year > 2019;; C. SELECT * FROM Cars WHEN year > 2019;; D. SELECT * FROM Cars WHERE year => 2019;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5425,
+      "id": 5373,
       "quizId": 106,
       "text": "What is the value of the query: SELECT 'Agnes' + NULL + 'Allison'",
       "options": [
@@ -13550,7 +12863,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. NULL.\n\nLời giải gốc: Trong SQL Server, khi thực hiện phép nối chuỗi (+) với bất kỳ giá trị NULL nào, kết quả trả về sẽ luôn là NULL.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. Agnes; B. Allison; D. Agnes Allison. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5426,
+      "id": 5374,
       "quizId": 106,
       "text": "The ORDER BY clause can only be used in cases ______",
       "options": [
@@ -13563,7 +12876,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT queries.\n\nLời giải gốc: ORDER BY dùng để sắp xếp thứ tự hiển thị dữ liệu đầu ra và nó là một phần bổ trợ nằm trong cấu trúc của câu lệnh truy vấn dữ liệu SELECT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. GROUP BY queries; C. HAVING queries; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5427,
+      "id": 5375,
       "quizId": 106,
       "text": "In an employee table, to ensure an attribute always has a value, which constraint must be used?",
       "options": [
@@ -13576,7 +12889,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. NOT NULL.\n\nLời giải gốc: Ràng buộc NOT NULL đảm bảo rằng cột dữ liệu không được phép để trống (luôn phải có giá trị).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NOT NULL là constraint cấm giá trị NULL ở cột, phù hợp khi mỗi hàng bắt buộc phải có giá trị. Nó không tự bảo đảm giá trị duy nhất (UNIQUE/PRIMARY KEY) và cũng không kiểm tra miền/range như CHECK.\n\nĐối chiếu phương án: A. NULL; C. UNIQUE; D. DISTINCT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5428,
+      "id": 5376,
       "quizId": 106,
       "text": "Suppose we need to sort all students in the STUDENTS(id, name, age) table in descending order of name and descending order of age. Which command should we use?",
       "options": [
@@ -13590,7 +12903,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT * FROM Students ORDER BY name DESC, age DESC.\n\nLời giải gốc: Để sắp xếp giảm dần trên cả hai cột name và age, từ khóa DESC phải được áp dụng tường minh cho từng cột. Ở phương án A, cột name không có DESC nên mặc định sắp xếp tăng dần.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. SELECT * FROM Students ORDER BY name, age DESC; C. Both A and B are correct; D. Both A and B are wrong; E. This request cannot be fulfilled. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5429,
+      "id": 5377,
       "quizId": 106,
       "text": "While executing a join operation between two tables, what type of join returns all rows from the left table and matched rows from the right table?",
       "options": [
@@ -13603,7 +12916,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Left Join.\n\nLời giải gốc: Phép nối LEFT JOIN (hoặc Left Outer Join) sẽ trả về toàn bộ tất cả các dòng dữ liệu ở bảng bên trái, kết hợp với các dòng có dữ liệu trùng khớp ở bảng bên phải. Nếu bên phải không có dữ liệu khớp, các cột bên phải sẽ mang giá trị NULL.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. Inner Join; B. Right Join; C. Full Outer Join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5430,
+      "id": 5378,
       "quizId": 106,
       "text": "Cho hai quan hệ \\(R_1(A, B)\\) và \\(R_2(C, A)\\) có dữ liệu như sau:\n\nQuan hệ \\(R_1(A, B)\\):\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} \\\\\n\\hline\n1 & \\text{a} \\\\\n\\hline\n2 & \\text{b} \\\\\n\\hline\n3 & \\text{c} \\\\\n\\hline\n4 & \\text{d} \\\\\n\\hline\n5 & \\text{e} \\\\\n\\hline\n6 & \\text{f} \\\\\n\\hline\n7 & \\text{g} \\\\\n\\hline\n8 & \\text{h} \\\\\n\\hline\n\\end{array}\\)\n\nQuan hệ \\(R_2(C, A)\\):\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{C} & \\textbf{A} \\\\\n\\hline\n101 & 1 \\\\\n\\hline\n102 & 2 \\\\\n\\hline\n103 & 3 \\\\\n\\hline\n104 & 1 \\\\\n\\hline\n105 & 5 \\\\\n\\hline\n106 & 6 \\\\\n\\hline\n107 & 7 \\\\\n\\hline\n108 & 8 \\\\\n\\hline\n109 & 1 \\\\\n\\hline\n\\end{array}\\)\n\nWhich tuples are contained in the result of the query below?\n\nSELECT R1.B, R2.C\nFROM R1 RIGHT JOIN R2 ON R1.A = R2.A;",
       "options": [
@@ -13616,7 +12929,7 @@
       "explanation": "Đáp án đúng: D — (a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (e, 105); (f, 106); (g, 107); (h, 108).\n\nNền tảng kiến thức:\nPhép `RIGHT OUTER JOIN` (hoặc `RIGHT JOIN`) giữa hai bảng `R1` và `R2` theo điều kiện kết nối `ON R1.A = R2.A` sẽ bảo toàn toàn bộ tất cả các bộ (hàng) của bảng bên phải (`R2`).\n- Với mỗi bộ trong `R2`, nếu có bộ tương ứng trong `R1` thỏa mãn `R1.A = R2.A`, các giá trị thuộc tính tương ứng của `R1` sẽ được ghép cặp.\n- Nếu không có bộ nào của `R1` khớp, thuộc tính từ `R1` sẽ nhận giá trị `NULL`.\n- Ngược lại, các hàng trong `R1` không khớp với bất kỳ hàng nào trong `R2` (như bộ có A=4, B='d') sẽ bị loại bỏ khỏi kết quả.\n\nPhân tích kết quả:\n- Bảng `R2` có 9 hàng với các giá trị C từ 101 đến 109. Cả 9 hàng này đều được giữ lại trong kết quả.\n- Ánh xạ giá trị theo điều kiện `R1.A = R2.A`:\n + C = 101 (A=1) \\(\\rightarrow\\) R1.B = 'a' \\(\\rightarrow\\) (a, 101)\n + C = 102 (A=2) \\(\\rightarrow\\) R1.B = 'b' \\(\\rightarrow\\) (b, 102)\n + C = 103 (A=3) \\(\\rightarrow\\) R1.B = 'c' \\(\\rightarrow\\) (c, 103)\n + C = 104 (A=1) \\(\\rightarrow\\) R1.B = 'a' \\(\\rightarrow\\) (a, 104)\n + C = 105 (A=5) \\(\\rightarrow\\) R1.B = 'e' \\(\\rightarrow\\) (e, 105)\n + C = 106 (A=6) \\(\\rightarrow\\) R1.B = 'f' \\(\\rightarrow\\) (f, 106)\n + C = 107 (A=7) \\(\\rightarrow\\) R1.B = 'g' \\(\\rightarrow\\) (g, 107)\n + C = 108 (A=8) \\(\\rightarrow\\) R1.B = 'h' \\(\\rightarrow\\) (h, 108)\n + C = 109 (A=1) \\(\\rightarrow\\) R1.B = 'a' \\(\\rightarrow\\) (a, 109)\nKết quả thu được đầy đủ 9 cặp bộ như phương án D.\n\nĐối chiếu phương án:\n- A. Bị nhầm sang phép LEFT JOIN (giữ lại các bộ chỉ có trong R1 như d).\n- B, C. Thiếu bộ dữ liệu của R2.\n- D. Đúng hoàn toàn theo định nghĩa RIGHT JOIN."
     },
     {
-      "id": 5431,
+      "id": 5379,
       "quizId": 106,
       "text": "Which keyword is used in SQL to filter grouped results?",
       "options": [
@@ -13629,7 +12942,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. HAVING.\n\nLời giải gốc: Tương tự câu 30, từ khóa để lọc các kết quả sau khi đã áp dụng gom nhóm là HAVING.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. WHERE; B. TOP; C. GROUP BY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5432,
+      "id": 5380,
       "quizId": 106,
       "text": "In SQL, what happens when you use a RIGHT JOIN between two tables with unmatched records in the left table?",
       "options": [
@@ -13642,7 +12955,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. NULL values are filled for unmatched rows from the right..\n\nLời giải gốc: Phép RIGHT JOIN giữ lại toàn bộ các hàng từ bảng bên phải và điền giá trị NULL cho các hàng không có cặp tương ứng từ bảng bên trái. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. All records from the left table are returned.; B. Only matching records are returned.; C. NULL values are filled for unmatched rows from the left.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5433,
+      "id": 5381,
       "quizId": 106,
       "text": "Which of the following is used to delete rows where \"model\" is \"ford\" from the Cars table?",
       "options": [
@@ -13655,7 +12968,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. DELETE FROM Cars WHERE model = 'ford';.\n\nLời giải gốc: Cú pháp chuẩn của lệnh xóa bản ghi trong SQL là DELETE FROM table_name WHERE condition;.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. DELETE Cars WHERE model = 'ford';; C. DELETE FROM Cars WITH TIE model IS 'ford';; D. DELETE model = 'ford' WHERE Cars;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5434,
+      "id": 5382,
       "quizId": 106,
       "text": "How many joins are required to join 6 tables in a straight chain?",
       "options": [
@@ -13668,7 +12981,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. 5.\n\nLời giải gốc: Để kết nối thẳng n bảng với nhau, số lượng phép kết nối (joins) cần thiết luôn là n - 1. Với 6 bảng, cần 6 - 1 = 5 phép join.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. 4; C. 6; D. 12. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5435,
+      "id": 5383,
       "quizId": 106,
       "text": "Which statement best describes the DELETE command?",
       "options": [
@@ -13680,7 +12993,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Deletes specific rows and can be rolled back.\n\nLời giải gốc: Lệnh DELETE thuộc nhóm DML, dùng để xóa các hàng cụ thể (hoặc toàn bộ hàng nếu không có WHERE) dựa trên điều kiện và hành động này được ghi vào log nên hoàn toàn có thể khôi phục (rollback) lại được nếu nằm trong một transaction chưa commit. (Khác với TRUNCATE không thể rollback dễ dàng hoặc DROP làm mất luôn cấu trúc bảng).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DELETE loại bỏ các hàng thỏa điều kiện WHERE; bỏ WHERE thì có thể xóa mọi hàng nhưng vẫn giữ cấu trúc bảng. Đây khác DROP TABLE (xóa đối tượng bảng) và UPDATE (sửa giá trị); có thể xóa một hoặc nhiều hàng trong cùng một bảng.\n\nĐối chiếu phương án: A. Deletes all rows and cannot be rolled back; B. Deletes the table structure and all its data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5436,
+      "id": 5384,
       "quizId": 106,
       "text": "What is the result of a CROSS JOIN in SQL?",
       "options": [
@@ -13693,21 +13006,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Cartesian product.\n\nLời giải gốc: Truy vấn CROSS JOIN (hay phép tích chéo) sẽ ghép từng dòng của bảng A với toàn bộ các dòng của bảng B, tạo thành một Tích Đề-các (Cartesian product). Số lượng dòng kết quả bằng (số dòng bảng A) x (số dòng bảng B).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. Union of tables; B. Intersection of tables; D. Natural join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5437,
-      "quizId": 106,
-      "text": "The % wildcard when used with the LIKE keyword is used to represent a string of characters:",
-      "options": [
-        "Has a minimum length of 0 characters.",
-        "Has a minimum length of 1 character, a maximum length of n characters.",
-        "Has a minimum length of 1 character, a maximum length of 255 characters.",
-        "Has a minimum length of 1 character, a maximum length of 256 characters.",
-        "None of the above answers."
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. Has a minimum length of 0 characters..\n\nLời giải gốc: Ký tự đại diện % trong lệnh LIKE đại diện cho một chuỗi gồm bất kỳ ký tự nào, có chiều dài tối thiểu là 0 ký tự. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự và `_` khớp đúng một ký tự. ESCAPE cho phép coi ký tự wildcard như ký tự thường bằng cách đặt trước chúng một ký tự thoát; nó không thay thế mẫu bằng chuỗi bất kỳ.\n\nĐối chiếu phương án: B. Has a minimum length of 1 character, a maximum length of n characters.; C. Has a minimum length of 1 character, a maximum length of 255 characters.; D. Has a minimum length of 1 character, a maximum length of 256 characters.; E. None of the above answers.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5438,
+      "id": 5385,
       "quizId": 106,
       "text": "Suppose relation \\(R(A, B)\\) has tuples: \\((3, 5), (3, 9), (a, 7), (h, 8), (2, 9)\\). Which tuples are contained in the result of the query below?\n\nSELECT * FROM R WHERE A LIKE 'a%' UNION SELECT * FROM R WHERE B > 7;",
       "options": [
@@ -13720,7 +13019,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. (3, 9); (b, 7); (h, 8).\n\nLời giải gốc: Phép UNION kết hợp các bản ghi thỏa mãn điều kiện A bắt đầu bằng 'a' hoặc có giá trị B lớn hơn 7, đồng thời loại bỏ các bản ghi trùng lặp.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: B. (3, 5); (3, 9); (h, 8); D. (2, 9). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5439,
+      "id": 5386,
       "quizId": 106,
       "text": "Which of the following SQL statements returns only matching records between Customers and SalesInvoice based on custID?",
       "options": [
@@ -13733,7 +13032,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT * FROM Customers INNER JOIN SalesInvoice ON Customers.custID = SalesInvoice.custID;.\n\nLời giải gốc: Phép kết nội (INNER JOIN) chỉ trả về các bản ghi khớp nhau ở cả hai bảng dựa trên điều kiện kết nối.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. SELECT * FROM Customers LEFT JOIN SalesInvoice ON Customers.custID = SalesInvoice.custID;; C. SELECT * FROM Customers RIGHT JOIN SalesInvoice ON Customers.custID = SalesInvoice.custID;; D. SELECT * FROM Customers FULL JOIN SalesInvoice ON Customers.custID = SalesInvoice.custID;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5440,
+      "id": 5387,
       "quizId": 106,
       "text": "What does the following SQL query return? SELECT name FROM Products WHERE price > 100;",
       "options": [
@@ -13746,7 +13045,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Product names with price greater than 100.\n\nLời giải gốc: Câu truy vấn chọn cột name từ bảng Products thỏa mãn điều kiện giá price lớn hơn 100.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. All product names with price less than 100; B. All product names regardless of price; D. Syntax error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5441,
+      "id": 5388,
       "quizId": 106,
       "text": "The Data Definition Language (DDL) in SQL is used to:",
       "options": [
@@ -13759,7 +13058,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Define and modify the structure of database objects such as tables, views, and indexes.\n\nLời giải gốc: Ngôn ngữ định nghĩa dữ liệu (DDL) được dùng để tạo, sửa đổi và xóa bỏ cấu trúc các đối tượng cơ sở dữ liệu.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: A. Insert, update, and delete data from a database; C. Query and retrieve data from a database; D. Manage user permissions and access rights. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5442,
+      "id": 5389,
       "quizId": 106,
       "text": "Given two relations: R(A, B, C, D) with the primary key is A, S(D, E, F) with the unique key is D. How to make a R.D foreign key referencing S.D?",
       "options": [
@@ -13772,7 +13071,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. ALTER TABLE R ADD CONSTRAINT fk_R_D FOREIGN KEY (D) REFERENCES S(D).\n\nLời giải gốc: Cú pháp chuẩn để thêm khóa ngoại tham chiếu đến bảng khác trong SQL là ALTER TABLE R ADD CONSTRAINT fk_R_D FOREIGN KEY (D) REFERENCES S(D). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. ADD CONSTRAINT fk_R_D FOREIGN KEY R(D) REFERENCES S(D); B. ALTER TABLE R ALTER CONSTRAINT fk_R_D FOREIGN KEY (D) REFERENCES S(D); C. Can not add a foreign key in the R table because the S's D column is not the primary key.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5443,
+      "id": 5390,
       "quizId": 106,
       "text": "In the query below, which keyword must be inserted?\n\nINSERT INTO Students ____ (32, N'Iona Bush', N'Female');",
       "options": [
@@ -13785,7 +13084,7 @@
       "explanation": "Đáp án đúng: D — VALUES.\n\nNền tảng kiến thức: Trong SQL DML, cú pháp chuẩn để chèn một bản ghi dữ liệu mới vào bảng là:\n`INSERT INTO <table_name> [(column1, column2, ...)] VALUES (value1, value2, ...);`\n\nPhân tích: Vị trí chỗ trống nằm giữa tên bảng `Students` và danh sách các giá trị dữ liệu cần chèn `(32, N'Iona Bush', N'Female')`. Từ khóa bắt buộc trong cú pháp INSERT này là `VALUES`.\n\nĐối chiếu phương án:\n- A. INTO: Đã xuất hiện trước tên bảng `INSERT INTO Students`.\n- B. SET: Dùng trong câu lệnh UPDATE.\n- C. WHERE: Dùng để lọc điều kiện trong SELECT, UPDATE, DELETE.\n- D. VALUES: Cú pháp chuẩn của câu lệnh INSERT."
     },
     {
-      "id": 5444,
+      "id": 5391,
       "quizId": 106,
       "text": "Which SQL statements will correctly update the salary of all employees by 10% where job title is 'Manager'?",
       "options": [
@@ -13798,7 +13097,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. UPDATE Employees SET salary = salary * 1.1 WHERE job = 'Manager';.\n\nLời giải gốc: Cú pháp chuẩn của câu lệnh UPDATE trong SQL: UPDATE table_name SET column = value WHERE condition;.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. UPDATE Employees WHERE job = 'Manager' SET salary = salary * 1.1;; C. UPDATE Employees SET salary *= 1.1 WHERE job = 'Manager';; D. MODIFY Employees SET salary = salary + salary*0.1 WHERE job = 'Manager';. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5445,
+      "id": 5392,
       "quizId": 106,
       "text": "Given a relation: R(A,B,C,D) with the key is A, the foreign key is D And the query: \"select A, count(D) from R group by D\" What is the output of the query?",
       "options": [
@@ -13811,7 +13110,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. This query will cause an error in standard SQL.\n\nLời giải gốc: Trong chuẩn SQL, các cột xuất hiện ở mệnh đề SELECT không nằm trong hàm gom nhóm (Aggregate Function) bắt buộc phải xuất hiện trong mệnh đề GROUP BY. Do cột A không nằm trong GROUP BY D nên truy vấn bị lỗi.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. It will return all rows from the R table; B. It returns only the A column where the value in D column is grouped; D. There is no GROUP BY with a HAVING clause.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5446,
+      "id": 5393,
       "quizId": 106,
       "text": "Which of the following is NOT true about an aggregate function?",
       "options": [
@@ -13829,7 +13128,7 @@
       "multiple": true
     },
     {
-      "id": 5447,
+      "id": 5394,
       "quizId": 106,
       "text": "Which of the following queries deletes employees who are not assigned to any department?",
       "options": [
@@ -13842,7 +13141,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. DELETE FROM Employees WHERE DepartmentID IS NULL;.\n\nLời giải gốc: Để tìm hoặc xóa các bản ghi mang giá trị trống/không xác định, ta dùng toán tử chuẩn IS NULL. Không thể so sánh NULL bằng dấu = như trong phương án B, C.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: B. DELETE FROM Employees WHERE DepartmentID = \";; C. DELETE FROM Employees WHERE DepartmentID = 0;; D. DELETE FROM Employees WHERE DepartmentID IS NOT NULL;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5448,
+      "id": 5395,
       "quizId": 106,
       "text": "Which of the following wildcard characters matches any sequence of zero or more characters in a string comparison in SQL?",
       "options": [
@@ -13855,7 +13154,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. %.\n\nLời giải gốc: Trong SQL, ký tự đại diện % khớp với một chuỗi gồm 0 hoặc nhiều ký tự bất kỳ (ký tự _ chỉ khớp với đúng 1 ký tự).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự và `_` khớp đúng một ký tự. ESCAPE cho phép coi ký tự wildcard như ký tự thường bằng cách đặt trước chúng một ký tự thoát; nó không thay thế mẫu bằng chuỗi bất kỳ.\n\nĐối chiếu phương án: A. &; B. $; C. _. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5449,
+      "id": 5396,
       "quizId": 106,
       "text": "Which of the following is NOT a type of join?",
       "options": [
@@ -13868,7 +13167,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Super join.\n\nLời giải gốc: Super join không phải là một loại phép kết nối trong SQL, trong khi Inner join, Outer join và Cross join là các phép join chuẩn.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ không ghép được; LEFT/RIGHT OUTER JOIN giữ mọi bộ từ phía được chỉ định và điền NULL phía thiếu. Natural join tự ghép các thuộc tính trùng tên và chỉ xuất một cột cho mỗi thuộc tính ghép.\n\nĐối chiếu phương án: A. Inner join; B. Outer join; C. Cross join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5450,
+      "id": 5397,
       "quizId": 106,
       "text": "Suppose you have a table Employees (id, name, salary). To increase the salary of employees with a salary below 5000 by 10%, which of the following statements is correc",
       "options": [
@@ -13881,7 +13180,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. UPDATE Employees SET salary = salary * 1.1 WHERE salary < 5000.\n\nLời giải gốc: Tăng lương thêm 10% đồng nghĩa với việc nhân mức lương hiện tại với hệ số \\(1 + 0.1 = 1.1\\). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary < 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary < 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5451,
+      "id": 5398,
       "quizId": 106,
       "text": "Which of the following is NOT a type of SQL constraint?",
       "options": [
@@ -13894,7 +13193,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. INDEX KEY.\n\nLời giải gốc: INDEX KEY không phải là một loại ràng buộc (constraint) chuẩn trong SQL, trong khi PRIMARY KEY, FOREIGN KEY, và CHECK đều là các ràng buộc dữ liệu.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. PRIMARY KEY; B. FOREIGN KEY; D. CHECK. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5452,
+      "id": 5399,
       "quizId": 106,
       "text": "Domain constraints, functional dependency and referential integrity are special forms of:",
       "options": [
@@ -13907,7 +13206,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Assertion.\n\nLời giải gốc: Trong lý thuyết CSDL, \"Assertion\" (Khẳng định/Lời xác nhận) là một thuật ngữ chung nhất để định nghĩa các quy tắc ràng buộc trạng thái mà cơ sở dữ liệu phải luôn tuân thủ. Các ràng buộc toàn vẹn, miền giá trị hay khóa ngoại đều là dạng đặc biệt của assertion.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Foreign key; B. Primary key; D. Referential constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5453,
+      "id": 5400,
       "quizId": 106,
       "text": "Choose a right answer",
       "options": [
@@ -13920,7 +13219,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. An authorization ID may be granted privileges from others or may give its privileges to others.\n\nNền tảng kiến thức: Bảo mật CSDL dựa trên xác thực và phân quyền theo nguyên tắc quyền tối thiểu. GRANT cấp quyền; REVOKE thu hồi; WITH GRANT OPTION cho phép người nhận tiếp tục cấp quyền trong phạm vi được cho.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. When a privilege is granted, it cannot be revoked; B. Privileges cannot be granted on a view; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5454,
+      "id": 5401,
       "quizId": 106,
       "text": "Choose the right statement to grant the INSERT and SELECT privileges on table Movies to users torn' and jerry'",
       "options": [
@@ -13933,20 +13232,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. GRANT SELECT, INSERT on Movies TO torn, jerry WITH GRANT OPTION.\n\nNền tảng kiến thức: Bảo mật CSDL dựa trên xác thực và phân quyền theo nguyên tắc quyền tối thiểu. GRANT cấp quyền; REVOKE thu hồi; WITH GRANT OPTION cho phép người nhận tiếp tục cấp quyền trong phạm vi được cho.\n\nPhân tích: GRANT cấp một quyền xác định trên đối tượng cho principal/role. WITH GRANT OPTION mới cho phép người nhận chuyển tiếp quyền; quyền cấp không đồng nghĩa với quyền sở hữu bảng và có thể bị thu hồi theo cơ chế REVOKE.\n\nĐối chiếu phương án: A. GRANT SELECT, INSERT on Movies; B. GRANT SELECT, INSERT on Movies TO torn, jerry CASCADE; D. GRANT SELECT, INSERT on Movies TO ALL. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5455,
-      "quizId": 107,
-      "text": "Which of the following is the appropriate characteristic of a database?",
-      "options": [
-        "Because a database is created to suit the format of the data, it cannot respond flexibly to data format changes.",
-        "The procedure for making backups is complicated.",
-        "It is difficult to share data between operations due to an exclusive control function.",
-        "It can be accessed by multiple users at the same time due to an exclusive control function."
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. It can be accessed by multiple users at the same time due to an exclusive control function..\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. Because a database is created to suit the format of the data, it cannot respond flexibly to da…; B. The procedure for making backups is complicated.; C. It is difficult to share data between operations due to an exclusive control function.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5456,
+      "id": 5402,
       "quizId": 107,
       "text": "You need to develop an application to manage university courses, which requires structured data (tables, rows, columns), strict consistency, complex queries, and enforcement of ACID properties. Which data model is most appropriate?",
       "options": [
@@ -13959,7 +13245,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Relational data model (e.g. Microsoft SQL Server, MySQL).\n\nLời giải gốc: Mô hình dữ liệu quan hệ phù hợp nhất cho các ứng dụng yêu cầu tính cấu trúc bảng, tính nhất quán nghiêm ngặt và hỗ trợ giao dịch ACID.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc dữ liệu, quan hệ giữa dữ liệu và các ràng buộc. Relational, hierarchical, network và graph là các mô hình có thật; cần chọn mô hình khớp đặc điểm được hỏi, không nhầm mô hình với DBMS hay ngôn ngữ thao tác.\n\nĐối chiếu phương án: B. Document-based data model (e.g. MongoDB, Cassandra, CouchDB); C. Key-value data model (e.g. Redis, DynamoDB, Riak); D. Hierarchical data model. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5457,
+      "id": 5403,
       "quizId": 107,
       "text": "What is an SQL virtual table that is constructed from other tables?",
       "options": [
@@ -13972,7 +13258,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. A view.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. Just another table; C. A relation; D. Query results. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5458,
+      "id": 5404,
       "quizId": 107,
       "text": "The SQL operations that are performed while a connection is active form a ____",
       "options": [
@@ -13985,7 +13271,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Session.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: B. Catalog; C. Module; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5459,
+      "id": 5405,
       "quizId": 107,
       "text": "A ____ is the framework under which data may exist and SQL operations on data may be executed",
       "options": [
@@ -13998,7 +13284,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. SQL Environment.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: B. SQL Statement; C. SQL Parser; D. SQL Optimizer. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5460,
+      "id": 5406,
       "quizId": 107,
       "text": "What is a view?",
       "options": [
@@ -14011,7 +13297,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. A view is a virtual table which results of executing a pre-compiled query. A view is not a part of the physical database schema, while the regular tables are..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. A view is a database diagram; B. A view is a special stored procedure executed when certain event occurs; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5461,
+      "id": 5407,
       "quizId": 107,
       "text": "An updatable view is a view that allows data modification through INSERT, UPDATE, and DELETE statements. When an update is made to an updatable view, the changes are translated into the underlying base table.\nSuppose an updatable view ParamountMovies is associated with Movies relation. Choose a correct answer.",
       "options": [
@@ -14024,7 +13310,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. An update on ParamountMovies is translated into Movies.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. Drop Movies relation also delete the view ParamountMovies; B. Drop ParamountMovies also delete Movies; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5462,
+      "id": 5408,
       "quizId": 107,
       "text": "Choose a right answer.",
       "options": [
@@ -14037,7 +13323,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. All of the others.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. A SOL environment is the framework under which data may exist and SQL operations on data may b…; C. Within a SQL environment are two special kinds of processes: SQL clients and SQL servers.; D. A SQL environment is a DBMS running at some installation.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5463,
+      "id": 5409,
       "quizId": 107,
       "text": "Which one of the following is not true for a view?",
       "options": [
@@ -14050,7 +13336,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. View never contains derived columns..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: B. A view definition is permanently stored as part of the database.; C. View is a virtual table.; D. View is derived from other tables. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5464,
+      "id": 5410,
       "quizId": 107,
       "text": "Which is the SQL statement that creates an updatable view? In this question, all the tables in the SQL\nstatements are updatable.",
       "options": [
@@ -14063,7 +13349,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No,Product_Name FROM Product WHERE Product_Unit_Price>1000.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. CREATE VIEW Ordered_Product(Product_No) AS SELECT DISTINCT Product_No FROM Order; B. CREATE VIEW Order_List(Order_No, Product_Name, Order_Quantity) AS SELECT Order_No,Product_Name…; C. CREATE VIEW Product_Order(Product_No, Order_Quantity) AS SELECT Product_No,SUM(Order_Quantity)…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5465,
+      "id": 5411,
       "quizId": 107,
       "text": "Your database contains a table named Purchases. The table includes a DATETIME column named PurchaseTime that stores the date and time each purchase is made. There is a non-clustered index on the Purchase Time column. The business team wants a report that displays the total number of purchases made on the current day. You need to write a query that will return the correct results in the most efficient manner.Which Transact-SQL query should you use?",
       "options": [
@@ -14076,21 +13362,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. SELECT COUNT(*) FROM Purchases WHERE PurchaseTime >= CONVERT(DATE, GETDATE()) AND PurchaseTime < DATEADD(DAY, 1, CONVERT(DATE, GETDATE()).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: A. SELECT COUNT(*) FROM Purchases WHERE PurchaseTime = CONVERT(DATE, GETDATE()); B. SELECT COUNT(*) FROM Purchases WHERE PurchaseTime = GETDATE(); C. SELECT COUNT(*) FROM Purchases WHERE CONVERT(VARCHAR, PurchaseTime, 112) = CONVERT(VARCHAR, GE…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5466,
-      "quizId": 107,
-      "text": "Through VIEW, is it possible to update data in the original table (that VIEW sees)?",
-      "options": [
-        "Always updateable",
-        "Can never update",
-        "Some cases can be updated, some cases cannot",
-        "If the View sees a table, it can be updated",
-        "All of the mentioned answers are wrong"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Some cases can be updated, some cases cannot.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. Always updateable; B. Can never update; D. If the View sees a table, it can be updated; E. All of the mentioned answers are wrong. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5467,
+      "id": 5412,
       "quizId": 107,
       "text": "What is the difference between a view and a table in SQL?",
       "options": [
@@ -14103,7 +13375,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Tables are created with the CREATE TABLE statement, while views use CREATE VIEW.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. Tables can be updated, while the view is displaying data from the query; B. Views can store data permanently, while tables are temporary; D. Views and tables are functionally equivalent in SQL. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5468,
+      "id": 5413,
       "quizId": 107,
       "text": "In SQL, what is a view?",
       "options": [
@@ -14116,7 +13388,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. A virtual table based on the result of a SELECT query.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: B. A physical table containing aggregated data; C. A temporary table used for transactions; D. A stored procedure with read-only access. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5469,
+      "id": 5414,
       "quizId": 107,
       "text": "A view's definition can be modified using which statement, while a view's data can be modified using which statement?",
       "options": [
@@ -14129,7 +13401,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. ALTER VIEW, UPDATE.\n\nLời giải gốc: Cấu trúc/định nghĩa của một view được chỉnh sửa bằng lệnh ALTER VIEW, trong khi dữ liệu ở bảng cơ sở thông qua view có thể được thao tác bằng câu lệnh UPDATE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. ALTER VIEW, ALTER; B. ALTER VIEW, EDIT; D. UPDATE, ALTER VIEW. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5470,
+      "id": 5415,
       "quizId": 107,
       "text": "Which SQL statement creates an updatable view?",
       "options": [
@@ -14142,7 +13414,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No, Product_Name FROM Product WHERE Product_Unit_Price > 1000.\n\nLời giải gốc: View có thể cập nhật được thường là view tham chiếu trực tiếp từ một bảng cơ sở duy nhất, không chứa DISTINCT, hàm gộp nhóm hay GROUP BY. Chỉ có phương án D thỏa mãn.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. CREATE VIEW Ordered_Product(Product_No) AS SELECT DISTINCT Product_No FROM \"Order\"; B. CREATE VIEW Order_List(Order_No, Product_Name, Order_Quantity) AS SELECT Order_No, Product_Nam…; C. CREATE VIEW Product_Order(Product_No, Order_Quantity) AS SELECT Product_No, SUM(Order_Quantity…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5471,
+      "id": 5416,
       "quizId": 107,
       "text": "In SQL, a view is a virtual table based on the result-set of an SQL statement. Which statement is NOT correct about a view?",
       "options": [
@@ -14155,7 +13427,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The UPDATE command is applicable to all views..\n\nLời giải gốc: Không phải mọi view đều có thể cập nhật (UPDATE). Các view chứa phép kết phức tạp, hàm gom nhóm hoặc DISTINCT thường không cho phép cập nhật trực tiếp.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: B. The fields in a view are fields from one or more real tables in the database.; C. The database engine recreates the view every time a user queries it.; D. A view always shows up-to-date data.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5472,
+      "id": 5417,
       "quizId": 107,
       "text": "Suppose we have defined VIEW ParamountMovies from the Movies table. When we execute the command: DROP TABLE Movies Which of the following statements is correct?",
       "options": [
@@ -14168,7 +13440,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. The Movies table goes away and VIEW ParamountMovies cannot be used..\n\nLời giải gốc: Bảng Movies sẽ bị xóa. Do View chỉ là bảng ảo tham chiếu tới dữ liệu bảng gốc, nên khi bảng gốc bị xóa, ParamountMovies sẽ bị lỗi không sử dụng được nữa (Invalid/Broken View).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. The Movies table goes away, but VIEW ParamountMovies can still be used.; C. The Movies table cannot be dropped because VIEW ParamountMovies still references it.; D. The Movies table cannot be dropped, but VIEW ParamountMovies is dropped.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5473,
+      "id": 5418,
       "quizId": 107,
       "text": "Through a VIEW, is it possible to update data in the original table (that the VIEW sees)?",
       "options": [
@@ -14182,7 +13454,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Some cases can be updated, some cases cannot.\n\nLời giải gốc: Dữ liệu qua VIEW có thể cập nhật được trong một số trường hợp đơn giản, nhưng không thể cập nhật nếu VIEW chứa các phép tính toán hoặc gom nhóm phức tạp.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. Always updateable; B. Can never update; D. If the VIEW sees a table, it can be updated; E. All of the mentioned answers are wrong. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5474,
+      "id": 5419,
       "quizId": 107,
       "text": "Which files are created automatically by SQL Server when you create a new database?",
       "options": [
@@ -14196,7 +13468,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Primary data file and log file.\n\nLời giải gốc: Khi tạo một cơ sở dữ liệu mới trong SQL Server, hệ thống luôn tự động tạo ít nhất một tệp dữ liệu chính (Primary data file - .mdf) và một tệp nhật ký giao dịch (Log file - .ldf).\n\nNền tảng kiến thức: DBMS lưu dữ liệu lâu dài trên thiết bị lưu trữ theo trang/khối; thao tác đọc ghi đĩa thường đắt hơn xử lý trong bộ nhớ. Khi phân tích câu hỏi, phân biệt tệp dữ liệu với log và tập trung vào số lần I/O.\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\n\nĐối chiếu phương án: A. Primary data file and secondary data file; C. Index file and log file; D. Secondary data file and log file; E. Backup file and metadata file. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5475,
+      "id": 5420,
       "quizId": 107,
       "text": "The most useful index on a relation is an index on its key. This is because:",
       "options": [
@@ -14209,7 +13481,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. The search operation based on the primary key is commonly used..\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\n\nĐối chiếu phương án: A. The index on non key attribute(s) runs slower; C. The index on non key attribute(s) makes update operations to the relation more complex and tim…; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5476,
+      "id": 5421,
       "quizId": 107,
       "text": "What structure can you implement for the database to speed up table reads?",
       "options": [
@@ -14222,7 +13494,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. indexes.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\n\nĐối chiếu phương án: B. triggers; C. store-procedures; D. synonyms. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5477,
+      "id": 5422,
       "quizId": 107,
       "text": "Often, a DBMS allows us to build a single index on multiple attributes. This type of index takes values for several attributes and efficiently finds the tuples with the given values for these attributes. (P.343)\nOften, a DBMS allows us to build a single index on ____ attribute(s)\n(choose the most correct answer)",
       "options": [
@@ -14235,7 +13507,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. multiple.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. only one; B. two; C. three. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5478,
+      "id": 5423,
       "quizId": 107,
       "text": "Which SQL statement is used to remove an existing index from a table?",
       "options": [
@@ -14248,20 +13520,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Atomicity, Consistency, Isolation, Durability.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu phụ thuộc theo quy tắc DBMS; DELETE xóa các hàng nhưng giữ bảng, còn TRUNCATE xóa nhanh toàn bộ hàng trong khi vẫn giữ cấu trúc. Cần chọn lệnh đúng cấp độ tác động.\n\nĐối chiếu phương án: B. REMOVE INDEX; C. DELETE INDEX; D. UNINDEX TABLE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5479,
-      "quizId": 107,
-      "text": "What is not the purpose of the index in MS-SQL Server?",
-      "options": [
-        "To use less hardware resources",
-        "To enhance the query performance",
-        "To provide an index to a record",
-        "To perform fast in searching"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. To use less hardware resources.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\n\nĐối chiếu phương án: B. To enhance the query performance; C. To provide an index to a record; D. To perform fast in searching. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5480,
+      "id": 5424,
       "quizId": 107,
       "text": "What is NOT a purpose of the index in MS SQL Server?",
       "options": [
@@ -14274,7 +13533,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. To use fewer hardware resources.\n\nLời giải gốc: Chỉ mục (index) giúp tăng tốc độ tìm kiếm và tối ưu hiệu suất truy vấn, nhưng đổi lại nó tiêu tốn thêm tài nguyên phần cứng (dung lượng lưu trữ và bộ nhớ) để duy trì cấu trúc index.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\n\nĐối chiếu phương án: B. To enhance query performance; C. To provide an index to a record; D. To perform fast searching. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5481,
+      "id": 5425,
       "quizId": 107,
       "text": "Select the most correct answer:",
       "options": [
@@ -14287,7 +13546,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. An index is a data structure used to speed access to tuples of a relation, given values of one or more attributes..\n\nLời giải gốc: Chỉ mục (Index) là một cấu trúc dữ liệu được dùng để tăng tốc độ truy cập vào các bộ của một quan hệ dựa trên giá trị của một hoặc nhiều thuộc tính.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. An index is not a data structure used to speed access to tuples of a relation, given values of…; B. The key to an index cannot be any attribute or set of attributes, and need not be the key to t…; C. We can think of the index as a binary search tree of (key, locations) pairs in which a key is…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5482,
+      "id": 5426,
       "quizId": 107,
       "text": "What is an index?",
       "options": [
@@ -14300,7 +13559,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. An index is a database table attribute that speeds up data search within a table..\n\nLời giải gốc: Chỉ mục (Index) là một cấu trúc dữ liệu liên kết với các thuộc tính của bảng giúp tăng tốc độ tìm kiếm và truy vấn dữ liệu.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\n\nĐối chiếu phương án: B. An index is the same as an alias.; C. An index is a special way to join 2 or more tables.; D. An index is a database row attribute that speeds up data search within a table.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5483,
+      "id": 5427,
       "quizId": 107,
       "text": "Which SQL command is used to create a non-clustered index on the EmployeeName column in the Employees table?",
       "options": [
@@ -14313,7 +13572,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. CREATE NONCLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName);.\n\nLời giải gốc: Cú pháp tạo Non-clustered index rõ ràng nhất trong SQL Server là dùng từ khóa CREATE NONCLUSTERED INDEX.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản ghi nhanh hơn thay vì quét toàn bộ bảng. Bù lại, nó dùng thêm dung lượng và phải được duy trì khi INSERT/UPDATE/DELETE; vì thế “càng nhiều index càng tốt” không đúng cho mọi workload.\n\nĐối chiếu phương án: A. CREATE INDEX EmployeeName_Index ON Employees(EmployeeName);; C. CREATE PRIMARY KEY INDEX EmployeeName_Index ON Employees(EmployeeName);; D. CREATE CLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName);. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5484,
+      "id": 5428,
       "quizId": 107,
       "text": "Which indexes can be automatically created by defining constraints in a table? (Choose two correct answers)",
       "options": [
@@ -14331,7 +13590,7 @@
       "multiple": true
     },
     {
-      "id": 5485,
+      "id": 5429,
       "quizId": 107,
       "text": "Which of the following statements is the most correct?",
       "options": [
@@ -14344,7 +13603,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. All of the others.\n\nNền tảng kiến thức: Thiết kế vật lý chọn chỉ mục, cách tổ chức tệp và các tối ưu theo workload thực tế. Denormalization hoặc thêm chỉ mục có thể giảm chi phí đọc nhưng đổi lại tăng lưu trữ, chi phí ghi và nguy cơ phải đồng bộ dữ liệu dư thừa.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. Poorly designed indexes and a lack of indexes are primary sources of database application bott…; B. Designing efficient indexes is paramount to achieve good database and application performance; C. The selection of the right indexes for a database and its workload is a complex balancing act…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5486,
+      "id": 5430,
       "quizId": 107,
       "text": "A materialized view is a database object that contains the results of a query. It is a precomputed data set that can be used to replicate data to other locations, eliminating the need to run expensive queries every time you retrieve data from a database. Since materialized views store their output data, querying them is faster than running queries directly on base relations (tables).\nMaterialized views can be set to refresh on a schedule so that the updated information won't fall through the cracks. When used in conjunction with other development tools, a materialized view can create a more secure environment for your database.\nGiven relations Movies(title, year, length, genre. studioName. producer#). MovieExec(name. address. cert#). and Studio(name. address. presC#). Suppose we have the materialized view that finds the name - of the producer of a given movie as follows:\nCREATE MATERIALIZED VIEW MovieProd AS\nSELECT title, year, name\nFROM Movies. MovieExec\nWHERE producer# - cert#\nWhich of the following modification will affect the MovieProd materialized view?",
       "options": [
@@ -14357,7 +13616,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Insert a new tuple into Movies or delete a tuple from Movies.\n\nNền tảng kiến thức: Thiết kế vật lý chọn chỉ mục, cách tổ chức tệp và các tối ưu theo workload thực tế. Denormalization hoặc thêm chỉ mục có thể giảm chi phí đọc nhưng đổi lại tăng lưu trữ, chi phí ghi và nguy cơ phải đồng bộ dữ liệu dư thừa.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. Insert a new tuple into Studio; B. Delete a tuple from Studio; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5487,
+      "id": 5431,
       "quizId": 107,
       "text": "What is the main disadvantage of having too many indexes on a table?",
       "options": [
@@ -14370,7 +13629,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Increased storage space.\n\nNền tảng kiến thức: Thiết kế vật lý chọn chỉ mục, cách tổ chức tệp và các tối ưu theo workload thực tế. Denormalization hoặc thêm chỉ mục có thể giảm chi phí đọc nhưng đổi lại tăng lưu trữ, chi phí ghi và nguy cơ phải đồng bộ dữ liệu dư thừa.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Improved query performance; C. Enhanced data integrity; D. Fast data modification operations. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5488,
+      "id": 5432,
       "quizId": 107,
       "text": "In query optimization, why is it beneficial for the database engine to use indexes?",
       "options": [
@@ -14382,7 +13641,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. To speed up data retrieval.\n\nLời giải gốc: Mục đích chính và quan trọng nhất của việc tạo Chỉ mục (Index) trong cơ sở dữ liệu là để giúp tối ưu hóa truy vấn, tăng tốc độ tìm kiếm và truy xuất dữ liệu (speed up data retrieval).\n\nNền tảng kiến thức: Thiết kế vật lý chọn chỉ mục, cách tổ chức tệp và các tối ưu theo workload thực tế. Denormalization hoặc thêm chỉ mục có thể giảm chi phí đọc nhưng đổi lại tăng lưu trữ, chi phí ghi và nguy cơ phải đồng bộ dữ liệu dư thừa.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. To reduce table size; B. To enforce foreign key constraints. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5489,
+      "id": 5433,
       "quizId": 107,
       "text": "In which scenario would denormalization be considered a good design choice?",
       "options": [
@@ -14395,7 +13654,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. When performance of read-heavy queries is critical.\n\nLời giải gốc: Phi chuẩn hóa (Denormalization) là kỹ thuật \"phá vỡ\" các dạng chuẩn, cố tình gộp dữ liệu trùng lặp. Việc này giúp giảm số lượng lệnh JOIN, từ đó tăng tốc độ cho các hệ thống cần truy vấn (đọc) cực nhanh. Câu 38\n\nNền tảng kiến thức: Thiết kế vật lý chọn chỉ mục, cách tổ chức tệp và các tối ưu theo workload thực tế. Denormalization hoặc thêm chỉ mục có thể giảm chi phí đọc nhưng đổi lại tăng lưu trữ, chi phí ghi và nguy cơ phải đồng bộ dữ liệu dư thừa.\n\nPhân tích: Denormalization chủ động chấp nhận một phần dư thừa hoặc lưu trước kết quả để giảm join/tính toán ở workload đọc. Nó có thể tăng tốc truy xuất, nhưng làm tăng dung lượng và buộc hệ thống cập nhật đồng bộ các bản sao; đây là quyết định theo workload, không phải quy tắc luôn có lợi.\n\nĐối chiếu phương án: A. When maximizing disk usage is a priority; B. When minimizing data redundancy is the main goal; D. When multiple developers are working on schema design. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5490,
+      "id": 5434,
       "quizId": 107,
       "text": "A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does \"Durable\" mean?",
       "options": [
@@ -14408,7 +13667,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. \"Durable\" means that: Transactions that have committed will survive permanently.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. \"Durable\" means that: Transactions provide an \"all-or-nothing\" proposition, stating that each…; B. \"Durable\" means that: Transactions must not violate any integrity constraints during its execu…; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5491,
+      "id": 5435,
       "quizId": 107,
       "text": "A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does \"Isolated\" mean?",
       "options": [
@@ -14421,7 +13680,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. \"Isolated\" means that: how/when the changes made by one operation in one transaction become visible to other concurrent operations in other transactions.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. \"Isolated\" means that: Transactions provide an \"all-or-nothing\" proposition, stating that each…; B. \"Isolated\" means that: Transactions must not violate any integrity constraints during its exec…; C. \"Isolated\" means that: Transactions that have committed will survive permanently. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5492,
+      "id": 5436,
       "quizId": 107,
       "text": "Regardless of whatever any other transaction is doing, a transaction must be able to continue with the exact same data set it started with.\nThe above describes which property of a transaction?",
       "options": [
@@ -14434,7 +13693,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Isolation.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Atomic; C. Consistency; D. Durability. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5493,
+      "id": 5437,
       "quizId": 107,
       "text": "Choose the in-correct statement:",
       "options": [
@@ -14447,7 +13706,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. When the sequence of tasks is complete, the SAVE POINT closes the transaction.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: A. In SQL Server, every DML operation is a transaction regardless of whether it has a BEGIN TRANS…; B. COMMITTING a transaction makes permanent the changes resulting from all SQL statements in the…; C. ROLLING back a transaction rejects any of the changes resulting from the SQL statements in the…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5494,
+      "id": 5438,
       "quizId": 107,
       "text": "How many properties we must use to measure the quality of a transaction?",
       "options": [
@@ -14460,7 +13719,7 @@
       "explanation": "A transaction is measured by the 4 ACID properties: Atomicity, Consistency, Isolation, Durability."
     },
     {
-      "id": 5495,
+      "id": 5439,
       "quizId": 107,
       "text": "Every row and value must agree with all constraints right after the transaction is complete. The above describes which property of a transaction?",
       "options": [
@@ -14473,7 +13732,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Consistency.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Isolation; C. Atomic.; D. Durability. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5496,
+      "id": 5440,
       "quizId": 107,
       "text": "What happens if an error occurs during a transaction and it is not explicitly handled or rolled back?",
       "options": [
@@ -14486,20 +13745,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. The transaction is automatically rolled back.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. The transaction is automatically committed; C. The database becomes read-only; D. The transaction remains in a pending state. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5497,
-      "quizId": 107,
-      "text": "The transaction methods is used with the Connection object to save or cancel changes made to the data source.",
-      "options": [
-        "Begin Transaction, Rollback Transaction",
-        "Begin Transaction, Commit Transaction",
-        "Begin Transaction, Commit Transaction, Rollback Transaction",
-        "Commit Transaction, Rollback Transaction"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Begin Transaction, Commit Transaction, Rollback Transaction.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; D. Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5498,
+      "id": 5441,
       "quizId": 107,
       "text": "What are the ACID properties of DBMS Transactions?",
       "options": [
@@ -14512,7 +13758,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Atomicity, Consistency, Isolation, Durability.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: B. Atomicity, Consistency, Interpolate, Database; C. Atomicity, Consistency, Inconsistent, Durability; D. Automatic, Concurrent, Inconsistent, Deadlock-freedom. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5499,
+      "id": 5442,
       "quizId": 107,
       "text": "Which of the following makes the transaction permanent in the database?",
       "options": [
@@ -14525,7 +13771,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Commit.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. View; C. Rollback; D. Flashback. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5500,
+      "id": 5443,
       "quizId": 107,
       "text": "In order to undo the work of transaction after last commit which one should be used?",
       "options": [
@@ -14538,7 +13784,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Rollback.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. View; B. Commit; D. Flashback. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5501,
+      "id": 5444,
       "quizId": 107,
       "text": "The Isolation property in transactions ensures that:",
       "options": [
@@ -14551,7 +13797,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Transactions do not interfere with each other.\n\nLời giải gốc: Tính cô lập (Isolation) trong thuộc tính ACID của giao dịch (transaction) đảm bảo rằng các giao dịch thực thi đồng thời không can thiệp hoặc ảnh hưởng lẫn nhau cho đến khi chúng hoàn tất.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Each transaction is encrypted; B. No two transactions run concurrently; D. Only one user accesses the system. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5502,
+      "id": 5445,
       "quizId": 107,
       "text": "Which SQL command is used to undo changes made by a transaction?",
       "options": [
@@ -14564,7 +13810,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. ROLLBACK.\n\nLời giải gốc: Lệnh ROLLBACK dùng để hủy bỏ các thay đổi chưa được lưu của một giao dịch và đưa cơ sở dữ liệu về trạng thái ban đầu.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. COMMIT; C. SAVEPOINT; D. UNDO. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5503,
+      "id": 5446,
       "quizId": 107,
       "text": "Which property of ACID transactions ensures that a transaction, once committed, remains committed even in the event of a system failure?",
       "options": [
@@ -14577,7 +13823,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Durability.\n\nLời giải gốc: Tính bền vững (Durability) đảm bảo rằng dữ liệu của các giao dịch đã commit sẽ được lưu trữ an toàn ngay cả khi xảy ra sự cố hệ thống.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Atomicity; B. Consistency; C. Isolation. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5504,
+      "id": 5447,
       "quizId": 107,
       "text": "Within the context of ACID properties, which property ensures that even if the system crashes during a transaction, the database will eventually reflect either the full completion or the complete rollback of that transaction?",
       "options": [
@@ -14590,7 +13836,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Atomicity.\n\nLời giải gốc: Tính nguyên tử (Atomicity) đảm bảo giao dịch thực thi toàn bộ hoặc không thực hiện gì cả, không có trạng thái nửa vời.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: B. Consistency; C. Isolation; D. Durability. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5505,
+      "id": 5448,
       "quizId": 107,
       "text": "The transaction methods are used with the Connection object to save or cancel changes made to the data source.",
       "options": [
@@ -14603,7 +13849,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Commit Transaction, Rollback Transaction.\n\nLời giải gốc: Các phương thức dùng để xác nhận lưu hoặc hủy bỏ các thay đổi dữ liệu trong giao dịch là Commit Transaction và Rollback Transaction. ---\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; C. Begin Transaction, Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5506,
+      "id": 5449,
       "quizId": 107,
       "text": "Which of the following best describes Atomicity in transactions?",
       "options": [
@@ -14616,7 +13862,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. All operations in a transaction succeed or none are applied.\n\nLời giải gốc: Tính nguyên tố (Atomicity - thuộc tính 'A' trong ACID) đảm bảo rằng tất cả các thao tác trong một giao dịch phải được thực hiện thành công toàn bộ hoặc không có thao tác nào được áp dụng (All or Nothing).\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Transactions run in parallel; B. Transactions are executed step by step; D. Data is stored permanently. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5507,
+      "id": 5450,
       "quizId": 107,
       "text": "What is the default behavior if autocommit is ON?",
       "options": [
@@ -14629,33 +13875,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Every command is saved.\n\nLời giải gốc: Khi chế độ autocommit ở trạng thái ON, mỗi câu lệnh SQL thay đổi dữ liệu được tự động thực thi và lưu (commit) ngay lập tức vào cơ sở dữ liệu.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Manual COMMIT needed; C. No command is saved; D. Only SELECT works. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5508,
-      "quizId": 107,
-      "text": "The transaction methods are used with the Connection object to save or cancel changes made to the data source.",
-      "options": [
-        "Begin Transaction, Rollback Transaction",
-        "Begin Transaction, Commit Transaction",
-        "Begin Transaction, Commit Transaction, Rollback Transaction",
-        "Commit Transaction, Rollback Transaction"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Begin Transaction, Commit Transaction, Rollback Transaction.\n\nLời giải gốc: Vòng đời của một giao dịch (Transaction) có 3 lệnh chính: Begin (bắt đầu), Commit (lưu kết quả vĩnh viễn), và Rollback (hủy bỏ, quay về trạng thái lúc mới Begin khi có lỗi).\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; D. Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5509,
-      "quizId": 107,
-      "text": "Which transaction methods are used with the Connection object to save or cancel changes made to the data source?",
-      "options": [
-        "Begin Transaction, Rollback Transaction",
-        "Begin Transaction, Commit Transaction",
-        "Begin Transaction, Commit Transaction, Rollback Transaction",
-        "Commit Transaction, Rollback Transaction"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Begin Transaction, Commit Transaction, Rollback Transaction.\n\nLời giải gốc: Để quản lý một giao dịch hoàn chỉnh (lưu hoặc hủy thay đổi), các phương thức kết hợp gồm bắt đầu (Begin), xác nhận lưu (Commit) và hủy bỏ (Rollback).\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; D. Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5510,
+      "id": 5451,
       "quizId": 107,
       "text": "In the context of a relational database, what is the correct term for \"A set of changes that must all be made together\"?",
       "options": [
@@ -14668,7 +13888,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Transaction.\n\nLời giải gốc: Giao dịch (Transaction) là một tập hợp các thay đổi thao tác dữ liệu phải được thực hiện đồng thời trọn vẹn.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Consistency; B. Concurrency; D. Atom. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5511,
+      "id": 5452,
       "quizId": 107,
       "text": "In SQL, what does the acronym ACID stand for concerning transactions?",
       "options": [
@@ -14681,7 +13901,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Atomicity, Consistency, Isolation, Durability.\n\nLời giải gốc: ACID viết tắt cho tính nguyên tử (Atomicity), tính nhất quán (Consistency), tính cô lập (Isolation) và tính bền vững (Durability) của giao dịch.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: B. Association, Concurrency, Integrity, Database; C. Aggregate, Criteria, Index, Delete; D. All Columns, Insertion, Deletion. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5512,
+      "id": 5453,
       "quizId": 107,
       "text": "In the context of a banking application, which of the following best represents a transaction that violates atomicity? (Choose two answers)",
       "options": [
@@ -14699,7 +13919,7 @@
       "multiple": true
     },
     {
-      "id": 5513,
+      "id": 5454,
       "quizId": 107,
       "text": "Consider the statement: \"Once money is transferred, it won't disappear due to a power outage.\" In database transactions, which property does this statement exemplify?",
       "options": [
@@ -14712,7 +13932,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Durability.\n\nLời giải gốc: Tính bền vững (Durability) đảm bảo rằng một khi giao dịch đã hoàn tất thành công, dữ liệu được lưu trữ vĩnh viễn và không bị mất ngay cả khi có sự cố mất điện. ---\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: B. Isolation; C. Consistency; D. Atomicity. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5514,
+      "id": 5455,
       "quizId": 107,
       "text": "Which of the following accurately represents the purpose of a transaction in a database system? Choose two answers.",
       "options": [
@@ -14730,7 +13950,7 @@
       "multiple": true
     },
     {
-      "id": 5515,
+      "id": 5456,
       "quizId": 107,
       "text": "Three properties of a lock in DBMS are:\na) Granularity: the size of the lock",
       "options": [
@@ -14746,20 +13966,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A, C, D — A. (a) and (c) and (d) are true; C. (b) and (c) and (d) are true; D. (a) and (b) and (c) are true.\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Concurrency control điều phối lịch xen kẽ để tránh anomaly. Shared lock thường cho phép nhiều reader; exclusive lock bảo vệ cập nhật; hai giao dịch chờ tài nguyên vòng tròn có thể deadlock và DBMS thường phá vòng chờ bằng cách hủy/rollback một giao dịch.\n\nĐối chiếu phương án: B. Granularity: the type of the lock; B. (a) and (b) and (d) are true. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5516,
-      "quizId": 107,
-      "text": "Two concurrent executing transactions T1 and T2 are allowed to update the same record in an uncontrolled manner. In such a scenario. The following problem may not occur if database system has no concurrency module and allows concurrent execution of above two transactions.Which of the following is correct in this case?",
-      "options": [
-        "Transaction failure",
-        "Dirty read problem",
-        "Lost update problem",
-        "Inconsistent database state"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Lost update problem.\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Concurrency control điều phối lịch xen kẽ để tránh anomaly. Shared lock thường cho phép nhiều reader; exclusive lock bảo vệ cập nhật; hai giao dịch chờ tài nguyên vòng tròn có thể deadlock và DBMS thường phá vòng chờ bằng cách hủy/rollback một giao dịch.\n\nĐối chiếu phương án: A. Transaction failure; B. Dirty read problem; D. Inconsistent database state. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5517,
+      "id": 5457,
       "quizId": 107,
       "text": "According to the technology deployed by the database management system, which of the following is correct?",
       "options": [
@@ -14772,20 +13979,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Locks are used to maintain transactional integrity and consistency..\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: B. Cursors are used to maintain transactional integrity and consistency.; C. Procedures are used to maintain transactional integrity and consistency.; D. Functions are used to maintain transactional integrity and consistency.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5518,
-      "quizId": 107,
-      "text": "The deadlock state can be changed back to stable state by using\nstatement.",
-      "options": [
-        "Delete",
-        "Deadlock",
-        "Commit",
-        "Rollback"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. Rollback.\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Concurrency control điều phối lịch xen kẽ để tránh anomaly. Shared lock thường cho phép nhiều reader; exclusive lock bảo vệ cập nhật; hai giao dịch chờ tài nguyên vòng tròn có thể deadlock và DBMS thường phá vòng chờ bằng cách hủy/rollback một giao dịch.\n\nĐối chiếu phương án: A. Delete; B. Deadlock; C. Commit. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5519,
+      "id": 5458,
       "quizId": 107,
       "text": "Two concurrently executing transactions T1 and T2 are allowed to update the same record in an uncontrolled manner. If the database system has no concurrency module, which of the following problems may occur?",
       "options": [
@@ -14798,7 +13992,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Lost update problem.\n\nLời giải gốc: Khi hai giao dịch cùng cập nhật một bản ghi mà không được kiểm soát đồng thời, giao dịch ghi sau sẽ ghi đè lên kết quả của giao dịch ghi trước, dẫn đến vấn đề mất cập nhật (Lost update problem).\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Concurrency control điều phối lịch xen kẽ để tránh anomaly. Shared lock thường cho phép nhiều reader; exclusive lock bảo vệ cập nhật; hai giao dịch chờ tài nguyên vòng tròn có thể deadlock và DBMS thường phá vòng chờ bằng cách hủy/rollback một giao dịch.\n\nĐối chiếu phương án: A. Transaction failure; B. Dirty read problem; D. Inconsistent database state. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5520,
+      "id": 5459,
       "quizId": 107,
       "text": "The deadlock state can be changed back to a stable state by using which statement?",
       "options": [
@@ -14811,7 +14005,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. ROLLBACK.\n\nLời giải gốc: Khi xảy ra bế tắc (deadlock), hệ quản trị cơ sở dữ liệu thường hủy bỏ một giao dịch (qua ROLLBACK hoặc hủy tiến trình) để giải phóng tài nguyên và đưa hệ thống về trạng thái ổn định.\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Concurrency control điều phối lịch xen kẽ để tránh anomaly. Shared lock thường cho phép nhiều reader; exclusive lock bảo vệ cập nhật; hai giao dịch chờ tài nguyên vòng tròn có thể deadlock và DBMS thường phá vòng chờ bằng cách hủy/rollback một giao dịch.\n\nĐối chiếu phương án: A. DELETE; B. DEADLOCK; C. COMMIT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5521,
+      "id": 5460,
       "quizId": 107,
       "text": "In database transactions, which isolation level is most restrictive?",
       "options": [
@@ -14824,20 +14018,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. SERIALIZABLE.\n\nLời giải gốc: Cấp độ cô lập SERIALIZABLE là nghiêm ngặt, hạn chế và an toàn nhất. Nó ép buộc các giao dịch phải thực thi tuần tự tuần tự như thể không có sự đồng thời, giúp ngăn chặn toàn bộ các lỗi đồng thời (Dirty read, Non-repeatable read, Phantom read) nhưng làm giảm hiệu năng hệ thống.\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. READ UNCOMMITTED; B. READ COMMITTED; C. REPEATABLE READ. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5522,
-      "quizId": 107,
-      "text": "The deadlock state can be changed back to a stable state by using _ _ _ _ _ statement.",
-      "options": [
-        "Delete",
-        "Deadlock",
-        "Commit",
-        "Rollback"
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. Rollback.\n\nLời giải gốc: Khi xảy ra deadlock (bế tắc), hệ thống sẽ hủy bỏ (Rollback) một giao dịch \"nạn nhân\" để đưa hệ thống trở lại trạng thái an toàn/ổn định.\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Concurrency control điều phối lịch xen kẽ để tránh anomaly. Shared lock thường cho phép nhiều reader; exclusive lock bảo vệ cập nhật; hai giao dịch chờ tài nguyên vòng tròn có thể deadlock và DBMS thường phá vòng chờ bằng cách hủy/rollback một giao dịch.\n\nĐối chiếu phương án: A. Delete; B. Deadlock; C. Commit. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5523,
+      "id": 5461,
       "quizId": 107,
       "text": "Transaction processing is associated with everything below except.",
       "options": [
@@ -14850,7 +14031,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Producing detail, summery, or exception reports.\n\nNền tảng kiến thức: Decision support và OLAP phục vụ phân tích, tổng hợp và báo cáo trên khối lượng dữ liệu lớn; chúng khác với OLTP vốn ưu tiên ghi nhận các giao dịch ngắn, thường xuyên. Kho dữ liệu, chiều phân tích và phép tổng hợp hỗ trợ câu hỏi quản trị.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: B. Recording a business activity; C. Confirming an action or triggering a response; D. Maintaining data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5524,
+      "id": 5462,
       "quizId": 108,
       "text": "In the three-tier architecture, the database tier's function is to",
       "options": [
@@ -14863,7 +14044,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Execute queries that are requested from the application tier..\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Kiến trúc ba tầng tách giao diện (presentation), xử lý nghiệp vụ (application) và lưu trữ/truy vấn dữ liệu (database). Xác định tầng được hỏi đang nhận yêu cầu từ tầng nào và thực hiện trách nhiệm nào; không gán xử lý giao diện hay nghiệp vụ cho tầng dữ liệu.\n\nĐối chiếu phương án: A. All of the others.; B. Execute the business logic of the organization operating the database.; C. Manage the interactions with the user.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5525,
+      "id": 5463,
       "quizId": 108,
       "text": "Choose the correct statement.",
       "options": [
@@ -14876,7 +14057,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. All of the others..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. You can remove a trigger by dropping it or by dropping the trigger table.; B. The syntax to remove a trigger is: DROP TRIGGER; C. Use ALTER TRIGGER to change the definition of a trigger. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5526,
+      "id": 5464,
       "quizId": 108,
       "text": "In PSM (Persistent Stored Modules), the difference between a stored procedure and a function is that:",
       "options": [
@@ -14889,7 +14070,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. A function has the return statement..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: B. We can declare local variables in a function.; C. Loops are not allowed in a function.; D. All of the others.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5527,
+      "id": 5465,
       "quizId": 108,
       "text": "Why we should use stored procedures?",
       "options": [
@@ -14903,7 +14084,7 @@
       "explanation": "Đáp án theo dữ liệu đề: E — E. All of the others.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. They allow faster execution; B. They can reduce network traffic; C. They allow modular programming; D. They can be used as a security mechanism. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5528,
+      "id": 5466,
       "quizId": 108,
       "text": "Exception handler in PSM is defined as follows:\nDECLARE HANDLER FOR condition list> \nThe clause can be:",
       "options": [
@@ -14916,7 +14097,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. All of the others.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. UNDO; B. EXIT; D. CONTINUE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5529,
+      "id": 5467,
       "quizId": 108,
       "text": "In SQL, what is the primary advantage of using stored procedures?",
       "options": [
@@ -14929,7 +14110,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. They provide a way to encapsulate and reuse a set of SQL statements.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. They allow for the creation of tables; B. They enhance security by restricting access to data; D. They are more efficient than regular SQL queries. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5530,
+      "id": 5468,
       "quizId": 108,
       "text": "Which type of user-defined function in SQL returns a single value?",
       "options": [
@@ -14942,7 +14123,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Scalar function.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Aggregate function tính một kết quả từ một tập nhiều hàng/giá trị, ví dụ COUNT, SUM, AVG, MIN và MAX. Trong truy vấn nhóm, GROUP BY xác định từng tập đầu vào; HAVING lọc các nhóm sau khi tính tổng hợp.\n\nĐối chiếu phương án: B. Table-valued function; C. Inline function; D. Aggregate function. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5531,
+      "id": 5469,
       "quizId": 108,
       "text": "Which of the following is true about stored procedure in MS-SQL Server?",
       "options": [
@@ -14955,7 +14136,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. They include procedural and SQL statements..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: B. They are stored in Rules folder; C. They do not need to have a unique name; D. They are same as void function. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5532,
+      "id": 5470,
       "quizId": 108,
       "text": "______ A variable is local, and its value is not preserved by the DBMS after a run-ning of the function or\nprocedure.",
       "options": [
@@ -14968,7 +14149,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. DECLARE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: B. RETURN; C. CALL; D. EXEC. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5533,
+      "id": 5471,
       "quizId": 108,
       "text": "What is NOT true about the cursor in SQL?",
       "options": [
@@ -14981,7 +14162,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. It is considered the best practice to use when we want insert, update, or delete data in a table of SQL Server..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ nên dùng khi xử lý từng bản ghi là cần thiết hoặc không thể biểu diễn gọn bằng thao tác tập hợp. Với INSERT/UPDATE/DELETE hàng loạt, truy vấn set-based thường đơn giản và hiệu quả hơn.\n\nĐối chiếu phương án: B. The cursor allows users to process data from a result set, one row at a time.; C. Cursors are an alternative to commands, which operate on all rows in a result set at the same…; D. Unlike commands, cursors can be used to update data on a row-by-row basis.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5534,
+      "id": 5472,
       "quizId": 108,
       "text": "How can you delete a user-defined function in SQL?",
       "options": [
@@ -14994,7 +14175,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. DROP FUNCTION function_name.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DROP FUNCTION xóa đối tượng hàm do người dùng định nghĩa; tên hàm/schema cần chỉ đúng đối tượng. ALTER FUNCTION sửa định nghĩa còn EXECUTE gọi hàm/thủ tục, nên không dùng để loại bỏ hàm.\n\nĐối chiếu phương án: A. DELETE FUNCTION function_name; B. REMOVE FUNCTION function_name; D. ERASE FUNCTION function_name. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5535,
+      "id": 5473,
       "quizId": 108,
       "text": "Triggers are stored blocks of code that have to be called in order to operate.",
       "options": [
@@ -15005,7 +14186,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. False.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phân biệt tệp dữ liệu chứa trang/bảng với tệp transaction log ghi lại thay đổi phục vụ commit và recovery. Một trang/khối là đơn vị I/O cơ bản; lựa chọn tổ chức vật lý ảnh hưởng số lần đọc ghi và cách tìm bản ghi.\n\nĐối chiếu phương án: A. True. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5536,
+      "id": 5474,
       "quizId": 108,
       "text": "In SQL, when does a BEFORE INSERT trigger fire",
       "options": [
@@ -15018,7 +14199,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Before a new record is inserted into a table.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: A. Before the execution of a SELECT statement; C. Before a transaction is committed; D. Before a table is dropped. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5537,
+      "id": 5475,
       "quizId": 108,
       "text": "In SQL, what is the purpose of the CLOSE statement in relation to cursors?",
       "options": [
@@ -15031,7 +14212,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. To close the cursor and release associated resources.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ nên dùng khi xử lý từng bản ghi là cần thiết hoặc không thể biểu diễn gọn bằng thao tác tập hợp. Với INSERT/UPDATE/DELETE hàng loạt, truy vấn set-based thường đơn giản và hiệu quả hơn.\n\nĐối chiếu phương án: A. To close the database connection; C. To close the transaction; D. To close the result set. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5538,
+      "id": 5476,
       "quizId": 108,
       "text": "Which SQL statement is used to declare a cursor?",
       "options": [
@@ -15044,7 +14225,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. DECLARE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ nên dùng khi xử lý từng bản ghi là cần thiết hoặc không thể biểu diễn gọn bằng thao tác tập hợp. Với INSERT/UPDATE/DELETE hàng loạt, truy vấn set-based thường đơn giản và hiệu quả hơn.\n\nĐối chiếu phương án: A. OPEN; C. CREATE CURSOR; D. BEGIN CURSOR. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5539,
+      "id": 5477,
       "quizId": 108,
       "text": "How is User-defined function different from Store Procedure?",
       "options": [
@@ -15057,7 +14238,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. User-defined functions cannot contain transactions, Store Procedures can.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. User-defined functions do not have input parameters, Store Procedures do; C. Store Procedure does not have return results, User-defined function does; D. All of the mentioned answers are incorrect. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5540,
+      "id": 5478,
       "quizId": 108,
       "text": "How to execute a procedure",
       "options": [
@@ -15071,7 +14252,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. execute name_sp.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: B. exe name_sp; C. call name_sp; D. All the answers above; E. a and b are correct. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5541,
+      "id": 5479,
       "quizId": 108,
       "text": "A stored procedure in SQL is a",
       "options": [
@@ -15084,7 +14265,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Group of Transact-SQL statements compiled into a single execution plan.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. Block of functions; C. Group of distinct SQL statements; D. None of the mentioned. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5542,
+      "id": 5480,
       "quizId": 108,
       "text": "When is it recommended to use a cursor in SQL?",
       "options": [
@@ -15097,7 +14278,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. When processing data row by row is necessary or unavoidable.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ nên dùng khi xử lý từng bản ghi là cần thiết hoặc không thể biểu diễn gọn bằng thao tác tập hợp. Với INSERT/UPDATE/DELETE hàng loạt, truy vấn set-based thường đơn giản và hiệu quả hơn.\n\nĐối chiếu phương án: A. Always, as cursors are the most efficient way to process data; C. Only when creating complex joins between tables; D. Never, as set-based operations are always more efficient. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5543,
+      "id": 5481,
       "quizId": 108,
       "text": "How can you invoke a user-defined function in a SQL query?",
       "options": [
@@ -15110,20 +14291,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Using the SELECT statement.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Using the EXECUTE statement; B. Using the CALL statement; D. Using the RUN statement. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5544,
-      "quizId": 108,
-      "text": "Which of the following is not mentioned how does a local variable is defined using T-SQL?",
-      "options": [
-        "The name of the local variable should begin with \"@@\" sign as the first character of its name.",
-        "A local variable is defined using T-SQL by using statement \"DECLARE\".",
-        "When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.",
-        "The data type of local variable is declared after its name and assigned a system-supplied or user-defined data type and a length"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. The name of the local variable should begin with \"@@\" sign as the first character of its name..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: B. A local variable is defined using T-SQL by using statement \"DECLARE\".; C. When a variable is first declared, its value is set to NULL. To assign a value to a variable,…; D. The data type of local variable is declared after its name and assigned a system-supplied or u…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5545,
+      "id": 5482,
       "quizId": 108,
       "text": "A/An ___ is a statement gives the user a number of different options in the event, condition, and action parts",
       "options": [
@@ -15136,7 +14304,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Trigger.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: B. Stored-function; C. Index; D. Stored-procedure. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5546,
+      "id": 5483,
       "quizId": 108,
       "text": "Which of the following describes an SQL cursor?",
       "options": [
@@ -15149,7 +14317,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. It allows you to traverse the result set of a query and process each row individually.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ nên dùng khi xử lý từng bản ghi là cần thiết hoặc không thể biểu diễn gọn bằng thao tác tập hợp. Với INSERT/UPDATE/DELETE hàng loạt, truy vấn set-based thường đơn giản và hiệu quả hơn.\n\nĐối chiếu phương án: C. A field within a database; B. is a precompiled collection of one or more SQL statements that can be executed as a single unit; D. Cursors are not related to SQL. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5547,
+      "id": 5484,
       "quizId": 108,
       "text": "How many types of variables are there in Stored Procedure",
       "options": [
@@ -15162,7 +14330,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Input variable and output variable.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. Default variable and input variable; B. Default variable and output variable; D. Local variables and global variables. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5548,
+      "id": 5485,
       "quizId": 108,
       "text": "What are the different events in Triggers?",
       "options": [
@@ -15175,7 +14343,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. Insert, Update, Delete.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Select, Insert; B. Select, Update; C. Select, Commit. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5549,
+      "id": 5486,
       "quizId": 108,
       "text": "Which of the following methods fetch data from cursor to access data?",
       "options": [
@@ -15188,7 +14356,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. First, last, next, prior, absolute, relative.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ nên dùng khi xử lý từng bản ghi là cần thiết hoặc không thể biểu diễn gọn bằng thao tác tập hợp. Với INSERT/UPDATE/DELETE hàng loạt, truy vấn set-based thường đơn giản và hiệu quả hơn.\n\nĐối chiếu phương án: B. First, last, next; C. First, last, next, prior; D. First, absolute, relative. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5550,
+      "id": 5487,
       "quizId": 108,
       "text": "When does the Deleted temporary trigger table become populated?",
       "options": [
@@ -15201,7 +14369,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. With DELETE and UPDATE triggers.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: A. With DELETE and INSERT triggers; B. With DELETE triggers only; C. With DELETE, UPDATE, and INSERT triggers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5551,
+      "id": 5488,
       "quizId": 108,
       "text": "Which of the following is used to define code that is fired when certain actions or event occur?",
       "options": [
@@ -15214,7 +14382,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. You use an application Trigger to fire when certain actions or event occur..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ nên dùng khi xử lý từng bản ghi là cần thiết hoặc không thể biểu diễn gọn bằng thao tác tập hợp. Với INSERT/UPDATE/DELETE hàng loạt, truy vấn set-based thường đơn giản và hiệu quả hơn.\n\nĐối chiếu phương án: B. You use an application Cursor to fire when certain actions or event occur.; C. You use an application Replace to fire when certain actions or event occur.; D. You use an application Keyword to fire when certain actions or event occur.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5552,
+      "id": 5489,
       "quizId": 108,
       "text": "Which of the following is not a typical trigger action?",
       "options": [
@@ -15227,7 +14395,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Select.\n\nLời giải gốc: Trigger trong SQL được kích hoạt tự động khi có sự thay đổi dữ liệu thông qua các lệnh DML bao gồm INSERT, UPDATE, hoặc DELETE. Lệnh SELECT chỉ dùng để truy vấn, không làm thay đổi dữ liệu nên không kích hoạt trigger.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: A. Insert; C. Update; D. Delete. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5553,
+      "id": 5490,
       "quizId": 108,
       "text": "Which of the following is NOT mentioned on how a local variable is defined using T-SQL?",
       "options": [
@@ -15240,7 +14408,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The name of the local variable should begin with \"@\" sign as the first character of its name..\n\nLời giải gốc: Biến cục bộ trong T-SQL chỉ bắt đầu bằng một ký tự @ (ví dụ: @VarName). Phương án A ghi sai thành ký tự @@ (vì @@ trong T-SQL được dùng cho các biến hệ thống/biến toàn cục).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: B. A local variable is defined using T-SQL by using statement \"DECLARE\".; C. When a variable is first declared, its value is set to NULL. To assign a value to a variable,…; D. The data type of local variable is declared after its name and assigned a system-supplied or u…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5554,
+      "id": 5491,
       "quizId": 108,
       "text": "When does the Inserted temporary trigger table become populated?",
       "options": [
@@ -15253,7 +14421,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. With INSERT and UPDATE triggers.\n\nLời giải gốc: Bảng tạm Inserted lưu trữ các bản ghi mới được thêm vào hoặc giá trị sau khi cập nhật, do đó nó được điền dữ liệu trong các trigger INSERT và UPDATE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: B. With DELETE triggers only; C. With INSERT, UPDATE, and DELETE triggers; D. With UPDATE and DELETE triggers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5555,
+      "id": 5492,
       "quizId": 108,
       "text": "Which of the following is FALSE about database triggers?",
       "options": [
@@ -15266,20 +14434,7 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. When a trigger fires, results are returned to the calling application, just like with stored procedures..\n\nLời giải gốc: Trigger hoạt động ngầm bên trong cơ sở dữ liệu để đáp ứng các sự kiện thay đổi dữ liệu và thường không trả về tập kết quả trực tiếp cho ứng dụng gọi giống như stored procedure.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: A. It automatically runs when an event occurs in the database server; B. DML triggers are frequently used for enforcing business rules and data integrity; C. The same trigger action cannot be defined for more than one user action (for example, INSERT a…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5556,
-      "quizId": 108,
-      "text": "Which of the following is used to define code that is fired when certain actions or events occur?",
-      "options": [
-        "You use an application Trigger to fire when certain actions or events occur.",
-        "You use an application Cursor to fire when certain actions or events occur.",
-        "You use an application Replace to fire when certain actions or events occur.",
-        "You use an application Keyword to fire when certain actions or events occur."
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. You use an application Trigger to fire when certain actions or events occur..\n\nLời giải gốc: Trigger là một đoạn mã tự động thực thi (fire) khi có một sự kiện thao tác dữ liệu cụ thể (INSERT, UPDATE, DELETE) xảy ra trên bảng.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ nên dùng khi xử lý từng bản ghi là cần thiết hoặc không thể biểu diễn gọn bằng thao tác tập hợp. Với INSERT/UPDATE/DELETE hàng loạt, truy vấn set-based thường đơn giản và hiệu quả hơn.\n\nĐối chiếu phương án: B. You use an application Cursor to fire when certain actions or events occur.; C. You use an application Replace to fire when certain actions or events occur.; D. You use an application Keyword to fire when certain actions or events occur.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5557,
+      "id": 5493,
       "quizId": 108,
       "text": "In which line of the following code is the error? CREATE TRIGGER trigger1 --1 ON dbo.EMPLOYEE -- 2 AFTER FOR INSERT AS -- 3 BEGIN -- 4 INSERT INTO EMPLOYEE BACKUP -- 5 SELECT * FROM INSERTED -- 6 END -- 7",
       "options": [
@@ -15293,7 +14448,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Line 3.\n\nLời giải gốc: Dòng 3 bị thừa từ khóa. Cú pháp đúng phải là AFTER INSERT hoặc FOR INSERT, không dùng đồng thời cả AFTER FOR INSERT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Line 1; B. Line 2; D. Line 5; E. Line 6 F. There are no lines in error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5558,
+      "id": 5494,
       "quizId": 108,
       "text": "The CREATE TRIGGER statement is used to create a trigger. The ____ clause specifies the table name on which the trigger is to be attached. The ____ specifies that this is an AFTER INSERT trigger.",
       "options": [
@@ -15306,7 +14461,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. on, for insert.\n\nLời giải gốc: Cú pháp tạo trigger trong SQL Server dùng mệnh đề ON để chỉ định bảng và tùy chọn thời điểm thực thi như AFTER INSERT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: A. for insert, on; C. for, insert; D. None of the mentioned. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5559,
+      "id": 5495,
       "quizId": 108,
       "text": "How can you pass parameters to a stored procedure in SQL Server?",
       "options": [
@@ -15319,7 +14474,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Using @parameter_name = value.\n\nLời giải gốc: Trong SQL Server, các biến và tham số truyền vào Stored Procedure luôn bắt đầu bằng ký tự @ (ví dụ: @parameter_name = value).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: B. Using ?parameter_name = value; C. Using :parameter_name = value; D. Using param_name = value. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5560,
+      "id": 5496,
       "quizId": 108,
       "text": "Consider a recursive CTE with OPTION (MAXRECURSION 100) that would generate 101 levels. What is the result of executing this code?",
       "options": [
@@ -15332,7 +14487,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. 101 rows will be returned with a maximum recursion error..\n\nLời giải gốc: Mệnh đề OPTION (MAXRECURSION 100) giới hạn số lần đệ quy tối đa là 100; khi vượt quá giới hạn này, hệ thống dừng lại và phát sinh lỗi tràn giới hạn đệ quy (maximum recursion error).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong SQL Server, MAXRECURSION đặt giới hạn mức đệ quy của CTE để ngăn vòng lặp vô hạn. Nếu truy vấn cần vượt giới hạn cấu hình, nó phát sinh lỗi/không trả về kết quả thành công đầy đủ; không nên suy luận rằng mọi mức vượt giới hạn vẫn được trả như một kết quả hoàn chỉnh.\n\nĐối chiếu phương án: A. 101 rows will be returned with no error.; B. 10,001 rows will be returned with no error.; D. 10,001 rows will be returned with a maximum recursion error.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5561,
+      "id": 5497,
       "quizId": 108,
       "text": "Which of the following is NOT correct about how a local variable is defined using T-SQL?",
       "options": [
@@ -15345,7 +14500,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. The name of the local variable should begin with the \"@@\" sign as the first character of its name..\n\nLời giải gốc: Biến cục bộ trong T-SQL phải bắt đầu bằng một ký tự @ (một dấu a-còng); tiền tố @@ được dành riêng cho các biến toàn cục hệ thống. Do đó phát biểu A là sai.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: B. A local variable is defined using T-SQL with the statement DECLARE.; C. When a variable is first declared, its value is set to NULL. To assign a value, use the SET st…; D. The data type of a local variable is declared after its name, assigned a system-supplied or us…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5562,
+      "id": 5498,
       "quizId": 108,
       "text": "Which of the following is used to invoke a procedure in SQL?",
       "options": [
@@ -15358,7 +14513,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. EXECUTE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: B. SELECT; C. PERFORM; D. SHOW. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5563,
+      "id": 5499,
       "quizId": 108,
       "text": "Which of the following is the correct way to execute a stored procedure?",
       "options": [
@@ -15371,7 +14526,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA11DP';.\n\nLời giải gốc: Cú pháp chuẩn để thực thi một stored procedure có tham số trong SQL Server dùng từ khóa EXEC hoặc EXECUTE kèm theo tên tham số và giá trị tương ứng.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: B. EXECUTE SelectAllCustomers 'London', 'WA11DP' OUTPUT; C. EXEC @City = 'London', @PostalCode = 'WA11DP'; D. EXECUTE SelectAllCustomers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5564,
+      "id": 5500,
       "quizId": 108,
       "text": "What makes stored procedures faster than sending a Transact-SQL statement to SQL Server?",
       "options": [
@@ -15384,7 +14539,7 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. The query plan is compiled and cached on the server..\n\nLời giải gốc: Stored Procedure được biên dịch sẵn và kế hoạch thực thi (Query execution plan) được lưu vào bộ nhớ đệm (cache) trên server, giúp giảm thời gian biên dịch lại ở các lần gọi sau.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: A. They are not faster.; C. The Transact-SQL statements are shorter.; D. There are less commands available, so parsing time is shorter.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5565,
+      "id": 5501,
       "quizId": 108,
       "text": "Which of the following statements is true about INSTEAD OF DELETE triggers?",
       "options": [
@@ -15397,7 +14552,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. They execute in place of the standard DELETE operation..\n\nLời giải gốc: Trigger INSTEAD OF DELETE thực thi thay cho (in place of) thao tác xóa tiêu chuẩn trên bảng hoặc view. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: INSTEAD OF DELETE trigger chạy thay cho thao tác DELETE thông thường trên đối tượng được gắn trigger. Trigger có thể kiểm tra hoặc thay đổi hành động; nó khác AFTER trigger, vốn chạy sau khi thao tác gốc được thực hiện.\n\nĐối chiếu phương án: B. They execute before the standard DELETE operation.; C. They cannot modify the DELETED table.; D. They cannot be used on tables.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5566,
+      "id": 5502,
       "quizId": 108,
       "text": "How do you execute a stored procedure named name_sp?",
       "options": [
@@ -15411,7 +14566,7 @@
       "explanation": "Đáp án theo dữ liệu đề: E — E. A and B are correct.\n\nLời giải gốc: Trong SQL Server, cú pháp thực thi procedure hỗ trợ từ khóa EXECUTE hoặc viết tắt là EXEC. Cú pháp CALL được dùng ở một số hệ quản trị khác (MySQL, Oracle) chứ không phải SQL Server.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: A. EXECUTE name_sp; B. EXEC name_sp; C. CALL name_sp; D. All of the answers above. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5567,
+      "id": 5503,
       "quizId": 108,
       "text": "Can a stored procedure call another stored procedure?",
       "options": [
@@ -15424,7 +14579,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. Yes, a stored procedure can call another stored procedure.\n\nLời giải gốc: Một stored procedure hoàn toàn có thể gọi đến một stored procedure khác bên trong nội dung của nó (nested stored procedure).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: B. No, stored procedures cannot call each other; C. Only if both procedures are in the same schema; D. Only if one procedure is a system procedure. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5568,
+      "id": 5504,
       "quizId": 108,
       "text": "Which two statements correctly describe stored procedures? (Choose two correct answers)",
       "options": [
@@ -15442,7 +14597,7 @@
       "multiple": true
     },
     {
-      "id": 5569,
+      "id": 5505,
       "quizId": 108,
       "text": "Which is the correct statement about Stored Procedures?",
       "options": [
@@ -15455,7 +14610,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. It is a set of SQL statements used to perform a certain task and works like a function in other programming languages.\n\nLời giải gốc: Stored Procedure là một tập hợp các câu lệnh SQL được lưu trữ để thực hiện một tác vụ cụ thể, hoạt động tương tự như một hàm trong ngôn ngữ lập trình.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, được gọi để thực thi một thủ tục; nó có thể nhận tham số và chứa nhiều câu lệnh. Đừng nhầm với trigger tự chạy khi có sự kiện hoặc function có quy tắc trả về giá trị.\n\nĐối chiếu phương án: B. It is a single SQL statement used to perform a certain task and works like a function in other…; C. It is a set of SQL statements used to perform many different tasks and works like a function i…; D. a and b are correct. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5570,
+      "id": 5506,
       "quizId": 108,
       "text": "Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:\n\nCREATE FUNCTION dbo.GetLaptopPrice(@model int)\nRETURNS decimal(10,2) AS\nBEGIN\n DECLARE @price decimal(10,2);\n SELECT @price = price FROM Laptop WHERE model = @model;\n RETURN @price;\nEND;\n\nWhat will this function return when called with dbo.GetLaptopPrice(1)?",
       "options": [
@@ -15468,7 +14623,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. The price of laptop with model = 1.\n\nLời giải gốc: Nhìn vào đoạn code: SELECT @price = price FROM Laptop WHERE model = @model. Khi truyền giá trị tham số đầu vào @model = 1, câu lệnh sẽ tìm hàng có model = 1 và lấy ra giá trị cột giá (price) của máy đó để trả về.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Hàm vô hướng `dbo.GetLaptopPrice(1)` nhận mã model 1 rồi trả về cột `price` của hàng Laptop có model đó. Đối số truyền vào là điều kiện tìm model, không phải tốc độ/RAM/ổ cứng; giá trị số cụ thể phụ thuộc dữ liệu bảng.\n\nĐối chiếu phương án: A. The average laptop price with model = 1; B. The price of all laptops; D. The model of laptop with price = 1. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5571,
+      "id": 5507,
       "quizId": 108,
       "text": "The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the \"Customers\" table: CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10) AS BEGIN SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode; END; GO Which of the following is the way to execute a procedure?",
       "options": [
@@ -15481,7 +14636,7 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA11DP';.\n\nLời giải gốc: Cú pháp gọi Stored Procedure có tham số truyền vào đúng tên là EXEC ProcedureName @Param1 = Value1, @Param2 = Value2.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NVARCHAR lưu văn bản Unicode nên phù hợp với tiếng Việt có dấu; VARCHAR không Unicode có thể phụ thuộc code page. Kích thước trong ngoặc là giới hạn số đơn vị ký tự theo SQL Server, cần chọn dựa trên độ dài dữ liệu thực tế.\n\nĐối chiếu phương án: B. EXECUTE SelectAllCustomers 'London', 'WA11DP' OUTPUT; C. EXEC @City = 'London', @PostalCode = 'WA11DP';; D. EXECUTE SelectAllCustomers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5572,
+      "id": 5508,
       "quizId": 108,
       "text": "The ____ object is used to execute SQL queries and update statements in JDBC.",
       "options": [
@@ -15494,7 +14649,7 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Statement.\n\nLời giải gốc: Trong JDBC, đối tượng Statement được dùng để gửi các câu lệnh truy vấn và cập nhật SQL tới cơ sở dữ liệu.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong JDBC, Statement đại diện câu lệnh SQL gửi tới DBMS; PreparedStatement phù hợp khi truy vấn có tham số và giúp tách giá trị khỏi câu lệnh. ResultSet thường chứa các hàng trả về từ truy vấn SELECT.\n\nĐối chiếu phương án: A. ResultSet; B. Connection; D. CallableStatement. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5573,
+      "id": 5509,
       "quizId": 108,
       "text": "In which objects can a Transaction be used?",
       "options": [
@@ -15506,20 +14661,6 @@
       ],
       "correctIndex": 4,
       "explanation": "Đáp án theo dữ liệu đề: E — E. All of the mentioned answers are wrong.\n\nLời giải gốc: Giao dịch (Transaction) thường được đặt trong Stored Procedures và Triggers, nhưng không thể dùng bên trong User-defined functions hoặc View. Do đó các lựa chọn A, B, C, D đều chứa đối tượng không hợp lệ.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. View, User-defined function; B. User-defined function, Stored Procedure; C. Stored Procedure, Trigger, View; D. User-defined function, Stored Procedure, Trigger. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
-    {
-      "id": 5574,
-      "quizId": 108,
-      "text": "In which objects can Transaction be used?",
-      "options": [
-        "View, User-defined function",
-        "User-defined function, Store Procedure",
-        "Store Procedure, Trigger, View",
-        "User-defined function, Store Procedure, Trigger",
-        "All of the mentioned answers are wrong"
-      ],
-      "correctIndex": 4,
-      "explanation": "Đáp án theo dữ liệu đề: E — E. All of the mentioned answers are wrong.\n\nLời giải gốc: Giao dịch (Transaction) không được phép sử dụng trong User-defined functions (UDF). Do đó các phương án chứa UDF đều sai. Phương án E là chính xác.\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. View, User-defined function; B. User-defined function, Store Procedure; C. Store Procedure, Trigger, View; D. User-defined function, Store Procedure, Trigger. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 10001,

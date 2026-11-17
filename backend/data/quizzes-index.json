@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T20:30:38.428Z",
+  "generatedAt": "2026-11-17T20:49:37.772Z",
   "totalSubjects": 9,
   "totalQuizzes": 123,
   "subjects": [
@@ -297,9 +297,9 @@
       "subjectName": "Database Systems",
       "title": "Chương 1 – Introduction to Database Systems",
       "order": 1,
-      "durationMin": 65,
+      "durationMin": 56,
       "difficulty": "Medium",
-      "questionCount": 43
+      "questionCount": 37
     },
     {
       "id": 102,
@@ -308,9 +308,9 @@
       "subjectName": "Database Systems",
       "title": "Chương 2 – The Relational Data Model",
       "order": 2,
-      "durationMin": 102,
+      "durationMin": 96,
       "difficulty": "Medium",
-      "questionCount": 68
+      "questionCount": 64
     },
     {
       "id": 103,
@@ -319,9 +319,9 @@
       "subjectName": "Database Systems",
       "title": "Chương 3 – Design Theory for Relational Databases",
       "order": 3,
-      "durationMin": 138,
+      "durationMin": 116,
       "difficulty": "Medium",
-      "questionCount": 92
+      "questionCount": 77
     },
     {
       "id": 104,
@@ -330,9 +330,9 @@
       "subjectName": "Database Systems",
       "title": "Chương 4 – High-Level Database Models",
       "order": 4,
-      "durationMin": 104,
+      "durationMin": 90,
       "difficulty": "Medium",
-      "questionCount": 69
+      "questionCount": 60
     },
     {
       "id": 105,
@@ -352,9 +352,9 @@
       "subjectName": "Database Systems",
       "title": "Chương 6 – The Database Language SQL",
       "order": 6,
-      "durationMin": 263,
+      "durationMin": 234,
       "difficulty": "Medium",
-      "questionCount": 175
+      "questionCount": 156
     },
     {
       "id": 107,
@@ -363,9 +363,9 @@
       "subjectName": "Database Systems",
       "title": "Chương 7 – Views and Indexes",
       "order": 7,
-      "durationMin": 104,
+      "durationMin": 90,
       "difficulty": "Medium",
-      "questionCount": 69
+      "questionCount": 60
     },
     {
       "id": 108,
@@ -374,9 +374,9 @@
       "subjectName": "Database Systems",
       "title": "Chương 8 – Constraints and Triggers",
       "order": 8,
-      "durationMin": 77,
+      "durationMin": 72,
       "difficulty": "Medium",
-      "questionCount": 51
+      "questionCount": 48
     },
     {
       "id": 201,
