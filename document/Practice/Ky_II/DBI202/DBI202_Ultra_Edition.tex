@@ -8768,15 +8768,73 @@ Phân tích: Một câu lệnh DELETE tác động lên một target table/relat
 \begin{question}{396}
 % [ID gốc: 5.146]
 % [Nguồn: DBI202 Order 5 Q146]
-Suppose relation R(A, B, C, D) has tuples. Which tuples are contained in the result of the query below?<pre>SELECT C, AVG(D) FROM R GROUP BY C HAVING AVG(D) > 1000 ORDER BY C;</pre>
+Suppose relation R(A, B, C, D) has the following tuples:
+
+\(\begin{array}{|c|c|c|c|}
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+1 & 10 & 101 & 2000 \\
+\hline
+2 & 20 & 101 & 2200 \\
+\hline
+3 & 30 & 101 & 2500 \\
+\hline
+4 & 40 & 101 & 2800 \\
+\hline
+5 & 50 & 101 & 2000 \\
+\hline
+6 & 60 & 102 & 1000 \\
+\hline
+7 & 70 & 102 & 1500 \\
+\hline
+\end{array}\)
+
+Which tuples are contained in the result of the query below?
+
+SELECT C, AVG(D)
+FROM R
+GROUP BY C
+HAVING AVG(D) > 1000
+ORDER BY C;
+
 \begin{choices}
 \choice (101, 11500); (102, 2500)
 \choice (101, 2300); (102, 1250)
 \choice (101, 5); (102, 2)
 \choice (101, 11500); (102, 1250)
 \end{choices}
-\textbf{Đáp án:} D
-\textbf{Giải thích:} Filtering grouped tuples with AVG(D) > 1000 yields D.
+\textbf{Đáp án:} B
+\textbf{Giải thích:} Đáp án đúng: B — (101, 2300); (102, 1250).
+
+Nền tảng kiến thức:
+- Mệnh đề `GROUP BY C` gom các hàng có cùng giá trị thuộc tính C vào một nhóm.
+- Hàm tổng hợp `AVG(D)` tính giá trị trung bình cộng của cột D trong từng nhóm: $\text{AVG}(D) = \frac{\sum D}{\text{COUNT}(*)}$.
+- Mệnh đề `HAVING AVG(D) > 1000` lọc và chỉ giữ lại các nhóm có giá trị trung bình lớn hơn 1000.
+- `ORDER BY C` sắp xếp kết quả tăng dần theo thuộc tính C.
+
+Phân tích tính toán:
+1. Nhóm $C = 101$:
+   - Gồm 5 bộ: các giá trị D lần lượt là 2000, 2200, 2500, 2800, 2000.
+   - Tổng $\text{SUM}(D) = 2000 + 2200 + 2500 + 2800 + 2000 = 11500$.
+   - Số lượng bộ: $\text{COUNT}(*) = 5$.
+   - Giá trị trung bình: $\text{AVG}(D) = 11500 / 5 = 2300$.
+   - Vì $2300 > 1000$ nên nhóm này thỏa mãn điều kiện HAVING $\rightarrow$ kết quả có bộ `(101, 2300)`.
+
+2. Nhóm $C = 102$:
+   - Gồm 2 bộ: các giá trị D lần lượt là 1000, 1500.
+   - Tổng $\text{SUM}(D) = 1000 + 1500 = 2500$.
+   - Số lượng bộ: $\text{COUNT}(*) = 2$.
+   - Giá trị trung bình: $\text{AVG}(D) = 2500 / 2 = 1250$.
+   - Vì $1250 > 1000$ nên nhóm này thỏa mãn điều kiện HAVING $\rightarrow$ kết quả có bộ `(102, 1250)`.
+
+Tổng hợp kết quả sau khi sắp xếp theo C: `(101, 2300); (102, 1250)`.
+
+Đối chiếu phương án:
+- A. `(101, 11500); (102, 2500)`: Sai, đây là kết quả của hàm `SUM(D)` thay vì `AVG(D)`.
+- B. `(101, 2300); (102, 1250)`: Đúng hoàn toàn.
+- C. `(101, 5); (102, 2)`: Sai, đây là kết quả của hàm `COUNT(*)` đếm số lượng bộ.
+- D. `(101, 11500); (102, 1250)`: Sai, bị tính nhầm giữa SUM và AVG.
 \end{question}
 
 \begin{question}{397}
@@ -8848,22 +8906,31 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 \begin{question}{400}
 % [ID gốc: 5.153]
 % [Nguồn: DBI202 Order 5 Q153]
-Fill in the correct keyword to update the instructor relation.<pre>UPDATE instructor ____ salary = salary * 1.05;</pre>A. WHERE
+Fill in the correct keyword to update the instructor relation:
+
+UPDATE instructor ____ salary = salary * 1.05;
+
 \begin{choices}
+\choice WHERE
 \choice SET
 \choice FROM
 \choice SELECT
 \end{choices}
-\textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. SET.
+\textbf{Đáp án:} B
+\textbf{Giải thích:} Đáp án đúng: B — SET.
 
 Lời giải gốc: Trong cú pháp câu lệnh UPDATE của SQL, từ khóa SET được dùng để chỉ định cột cần cập nhật giá trị mới.
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+Nền tảng kiến thức: Trong cú pháp chuẩn của câu lệnh SQL `UPDATE`, từ khóa `SET` được sử dụng để chỉ định (gán) các cột cần cập nhật giá trị mới:
+`UPDATE <table_name> SET <column_name> = <expression> [WHERE <condition>];`
 
-Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.
+Phân tích: Trong câu lệnh `UPDATE instructor ____ salary = salary * 1.05;`, vị trí chỗ trống đứng ngay trước biểu thức gán `salary = salary * 1.05`, do đó từ khóa chính xác bắt buộc phải là `SET`.
 
-Đối chiếu phương án: C. FROM; D. SELECT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu phương án:
+- A. WHERE: Dùng để lọc điều kiện các hàng được cập nhật, không đứng trước biểu thức gán.
+- B. SET: Đúng cú pháp chuẩn SQL UPDATE.
+- C. FROM: Không dùng ở vị trí này trong cú pháp UPDATE chuẩn.
+- D. SELECT: Dùng để truy vấn dữ liệu.
 \end{question}
 
 \begin{question}{401}
@@ -9068,7 +9135,7 @@ Phân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu ph�
 \begin{question}{410}
 % [ID gốc: 5.179]
 % [Nguồn: DBI202 Order 5 Q179]
-Given two relations: Printer(maker, model, type) PC(model, speed, ram,hd,, price) What does this query return? SELECT maker FROM Product WHERE model NOT IN ( SELECT model FROM PC );
+Given two relations: Product(maker, model, type) PC(model, speed, ram, hd, price) What does this query return? SELECT maker FROM Product WHERE model NOT IN ( SELECT model FROM PC );
 \begin{choices}
 \choice Makers of all devices
 \choice Makers that also build PCs
@@ -9510,7 +9577,61 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 \begin{question}{430}
 % [ID gốc: 5.222]
 % [Nguồn: DBI202 Order 5 Q222]
-Suppose relation R1(A, B) and relation R2(C, A) each have tuples. Which tuples are contained in the result of the query below?<pre>SELECT R1.B, R2.C FROM R1 RIGHT JOIN R2 ON R1.A = R2.A;</pre>
+Cho hai quan hệ \(R_1(A, B)\) và \(R_2(C, A)\) có dữ liệu như sau:
+
+Quan hệ \(R_1(A, B)\):
+\(\begin{array}{|c|c|}
+\hline
+\textbf{A} & \textbf{B} \\
+\hline
+1 & \text{a} \\
+\hline
+2 & \text{b} \\
+\hline
+3 & \text{c} \\
+\hline
+4 & \text{d} \\
+\hline
+5 & \text{e} \\
+\hline
+6 & \text{f} \\
+\hline
+7 & \text{g} \\
+\hline
+8 & \text{h} \\
+\hline
+\end{array}\)
+
+Quan hệ \(R_2(C, A)\):
+\(\begin{array}{|c|c|}
+\hline
+\textbf{C} & \textbf{A} \\
+\hline
+101 & 1 \\
+\hline
+102 & 2 \\
+\hline
+103 & 3 \\
+\hline
+104 & 1 \\
+\hline
+105 & 5 \\
+\hline
+106 & 6 \\
+\hline
+107 & 7 \\
+\hline
+108 & 8 \\
+\hline
+109 & 1 \\
+\hline
+\end{array}\)
+
+Which tuples are contained in the result of the query below?
+
+SELECT R1.B, R2.C
+FROM R1 RIGHT JOIN R2 ON R1.A = R2.A;
+
 \begin{choices}
 \choice (a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (d, NULL); (e, NULL)
 \choice (2, 101); (b, 102); (c, 103); (a, 104); (a, 105)
@@ -9518,7 +9639,32 @@ Suppose relation R1(A, B) and relation R2(C, A) each have tuples. Which tuples a
 \choice (a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (e, 105); (f, 106); (g, 107); (h, 108)
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} RIGHT JOIN preserves all tuples from R2.
+\textbf{Giải thích:} Đáp án đúng: D — (a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (e, 105); (f, 106); (g, 107); (h, 108).
+
+Nền tảng kiến thức:
+Phép `RIGHT OUTER JOIN` (hoặc `RIGHT JOIN`) giữa hai bảng `R1` và `R2` theo điều kiện kết nối `ON R1.A = R2.A` sẽ bảo toàn toàn bộ tất cả các bộ (hàng) của bảng bên phải (`R2`).
+- Với mỗi bộ trong `R2`, nếu có bộ tương ứng trong `R1` thỏa mãn `R1.A = R2.A`, các giá trị thuộc tính tương ứng của `R1` sẽ được ghép cặp.
+- Nếu không có bộ nào của `R1` khớp, thuộc tính từ `R1` sẽ nhận giá trị `NULL`.
+- Ngược lại, các hàng trong `R1` không khớp với bất kỳ hàng nào trong `R2` (như bộ có A=4, B='d') sẽ bị loại bỏ khỏi kết quả.
+
+Phân tích kết quả:
+- Bảng `R2` có 9 hàng với các giá trị C từ 101 đến 109. Cả 9 hàng này đều được giữ lại trong kết quả.
+- Ánh xạ giá trị theo điều kiện `R1.A = R2.A`:
+  + C = 101 (A=1) $\rightarrow$ R1.B = 'a' $\rightarrow$ (a, 101)
+  + C = 102 (A=2) $\rightarrow$ R1.B = 'b' $\rightarrow$ (b, 102)
+  + C = 103 (A=3) $\rightarrow$ R1.B = 'c' $\rightarrow$ (c, 103)
+  + C = 104 (A=1) $\rightarrow$ R1.B = 'a' $\rightarrow$ (a, 104)
+  + C = 105 (A=5) $\rightarrow$ R1.B = 'e' $\rightarrow$ (e, 105)
+  + C = 106 (A=6) $\rightarrow$ R1.B = 'f' $\rightarrow$ (f, 106)
+  + C = 107 (A=7) $\rightarrow$ R1.B = 'g' $\rightarrow$ (g, 107)
+  + C = 108 (A=8) $\rightarrow$ R1.B = 'h' $\rightarrow$ (h, 108)
+  + C = 109 (A=1) $\rightarrow$ R1.B = 'a' $\rightarrow$ (a, 109)
+Kết quả thu được đầy đủ 9 cặp bộ như phương án D.
+
+Đối chiếu phương án:
+- A. Bị nhầm sang phép LEFT JOIN (giữ lại các bộ chỉ có trong R1 như d).
+- B, C. Thiếu bộ dữ liệu của R2.
+- D. Đúng hoàn toàn theo định nghĩa RIGHT JOIN.
 \end{question}
 
 \begin{question}{431}
@@ -9791,7 +9937,10 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 \begin{question}{443}
 % [ID gốc: 5.239]
 % [Nguồn: DBI202 Order 5 Q239]
-In the query below, which keyword must be inserted?<pre>INSERT INTO Students ____ (32, N'Iona Bush', N'Female');</pre>
+In the query below, which keyword must be inserted?
+
+INSERT INTO Students ____ (32, N'Iona Bush', N'Female');
+
 \begin{choices}
 \choice INTO
 \choice SET
@@ -9799,7 +9948,18 @@ In the query below, which keyword must be inserted?<pre>INSERT INTO Students ___
 \choice VALUES
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Standard SQL INSERT syntax requires the VALUES keyword before column data.
+\textbf{Giải thích:} Đáp án đúng: D — VALUES.
+
+Nền tảng kiến thức: Trong SQL DML, cú pháp chuẩn để chèn một bản ghi dữ liệu mới vào bảng là:
+`INSERT INTO <table_name> [(column1, column2, ...)] VALUES (value1, value2, ...);`
+
+Phân tích: Vị trí chỗ trống nằm giữa tên bảng `Students` và danh sách các giá trị dữ liệu cần chèn `(32, N'Iona Bush', N'Female')`. Từ khóa bắt buộc trong cú pháp INSERT này là `VALUES`.
+
+Đối chiếu phương án:
+- A. INTO: Đã xuất hiện trước tên bảng `INSERT INTO Students`.
+- B. SET: Dùng trong câu lệnh UPDATE.
+- C. WHERE: Dùng để lọc điều kiện trong SELECT, UPDATE, DELETE.
+- D. VALUES: Cú pháp chuẩn của câu lệnh INSERT.
 \end{question}
 
 \begin{question}{444}
@@ -12472,7 +12632,6 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 % [Nguồn: DBI202 Order 5 Q258]
 Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:
 
-\begin{verbatim}
 CREATE FUNCTION dbo.GetLaptopPrice(@model int)
 RETURNS decimal(10,2) AS
 BEGIN
@@ -12480,7 +12639,6 @@ BEGIN
     SELECT @price = price FROM Laptop WHERE model = @model;
     RETURN @price;
 END;
-\end{verbatim}
 
 What will this function return when called with dbo.GetLaptopPrice(1)?
 \begin{choices}

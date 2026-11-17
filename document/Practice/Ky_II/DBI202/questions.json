@@ -1,6 +1,6 @@
 {
   "subject": "DBI202",
-  "updatedAt": "2026-11-17T18:05:05.249Z",
+  "updatedAt": "2026-11-17T18:37:35.120Z",
   "totalQuizzes": 8,
   "totalQuestions": 574,
   "quizzes": [
@@ -5247,15 +5247,15 @@
     {
       "id": 5396,
       "quizId": 106,
-      "text": "Suppose relation R(A, B, C, D) has tuples. Which tuples are contained in the result of the query below?<pre>SELECT C, AVG(D) FROM R GROUP BY C HAVING AVG(D) > 1000 ORDER BY C;</pre>",
+      "text": "Suppose relation R(A, B, C, D) has the following tuples:\n\n\\(\\begin{array}{|c|c|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} & \\textbf{C} & \\textbf{D} \\\\\n\\hline\n1 & 10 & 101 & 2000 \\\\\n\\hline\n2 & 20 & 101 & 2200 \\\\\n\\hline\n3 & 30 & 101 & 2500 \\\\\n\\hline\n4 & 40 & 101 & 2800 \\\\\n\\hline\n5 & 50 & 101 & 2000 \\\\\n\\hline\n6 & 60 & 102 & 1000 \\\\\n\\hline\n7 & 70 & 102 & 1500 \\\\\n\\hline\n\\end{array}\\)\n\nWhich tuples are contained in the result of the query below?\n\nSELECT C, AVG(D)\nFROM R\nGROUP BY C\nHAVING AVG(D) > 1000\nORDER BY C;",
       "options": [
         "(101, 11500); (102, 2500)",
         "(101, 2300); (102, 1250)",
         "(101, 5); (102, 2)",
         "(101, 11500); (102, 1250)"
       ],
-      "correctIndex": 3,
-      "explanation": "Filtering grouped tuples with AVG(D) > 1000 yields D."
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng: B — (101, 2300); (102, 1250).\n\nNền tảng kiến thức:\n- Mệnh đề `GROUP BY C` gom các hàng có cùng giá trị thuộc tính C vào một nhóm.\n- Hàm tổng hợp `AVG(D)` tính giá trị trung bình cộng của cột D trong từng nhóm: \\(\\text{AVG}(D) = \\frac{\\sum D}{\\text{COUNT}(*)}\\).\n- Mệnh đề `HAVING AVG(D) > 1000` lọc và chỉ giữ lại các nhóm có giá trị trung bình lớn hơn 1000.\n- `ORDER BY C` sắp xếp kết quả tăng dần theo thuộc tính C.\n\nPhân tích tính toán:\n1. Nhóm \\(C = 101\\):\n - Gồm 5 bộ: các giá trị D lần lượt là 2000, 2200, 2500, 2800, 2000.\n - Tổng \\(\\text{SUM}(D) = 2000 + 2200 + 2500 + 2800 + 2000 = 11500\\).\n - Số lượng bộ: \\(\\text{COUNT}(*) = 5\\).\n - Giá trị trung bình: \\(\\text{AVG}(D) = 11500 / 5 = 2300\\).\n - Vì \\(2300 > 1000\\) nên nhóm này thỏa mãn điều kiện HAVING \\(\\rightarrow\\) kết quả có bộ `(101, 2300)`.\n\n2. Nhóm \\(C = 102\\):\n - Gồm 2 bộ: các giá trị D lần lượt là 1000, 1500.\n - Tổng \\(\\text{SUM}(D) = 1000 + 1500 = 2500\\).\n - Số lượng bộ: \\(\\text{COUNT}(*) = 2\\).\n - Giá trị trung bình: \\(\\text{AVG}(D) = 2500 / 2 = 1250\\).\n - Vì \\(1250 > 1000\\) nên nhóm này thỏa mãn điều kiện HAVING \\(\\rightarrow\\) kết quả có bộ `(102, 1250)`.\n\nTổng hợp kết quả sau khi sắp xếp theo C: `(101, 2300); (102, 1250)`.\n\nĐối chiếu phương án:\n- A. `(101, 11500); (102, 2500)`: Sai, đây là kết quả của hàm `SUM(D)` thay vì `AVG(D)`.\n- B. `(101, 2300); (102, 1250)`: Đúng hoàn toàn.\n- C. `(101, 5); (102, 2)`: Sai, đây là kết quả của hàm `COUNT(*)` đếm số lượng bộ.\n- D. `(101, 11500); (102, 1250)`: Sai, bị tính nhầm giữa SUM và AVG."
     },
     {
       "id": 5397,
@@ -5299,14 +5299,15 @@
     {
       "id": 5400,
       "quizId": 106,
-      "text": "Fill in the correct keyword to update the instructor relation.<pre>UPDATE instructor ____ salary = salary * 1.05;</pre>A. WHERE",
+      "text": "Fill in the correct keyword to update the instructor relation:\n\nUPDATE instructor ____ salary = salary * 1.05;",
       "options": [
+        "WHERE",
         "SET",
         "FROM",
         "SELECT"
       ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. SET.\n\nLời giải gốc: Trong cú pháp câu lệnh UPDATE của SQL, từ khóa SET được dùng để chỉ định cột cần cập nhật giá trị mới.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: C. FROM; D. SELECT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng: B — SET.\n\nLời giải gốc: Trong cú pháp câu lệnh UPDATE của SQL, từ khóa SET được dùng để chỉ định cột cần cập nhật giá trị mới.\n\nNền tảng kiến thức: Trong cú pháp chuẩn của câu lệnh SQL `UPDATE`, từ khóa `SET` được sử dụng để chỉ định (gán) các cột cần cập nhật giá trị mới:\n`UPDATE <table_name> SET <column_name> = <expression> [WHERE <condition>];`\n\nPhân tích: Trong câu lệnh `UPDATE instructor ____ salary = salary * 1.05;`, vị trí chỗ trống đứng ngay trước biểu thức gán `salary = salary * 1.05`, do đó từ khóa chính xác bắt buộc phải là `SET`.\n\nĐối chiếu phương án:\n- A. WHERE: Dùng để lọc điều kiện các hàng được cập nhật, không đứng trước biểu thức gán.\n- B. SET: Đúng cú pháp chuẩn SQL UPDATE.\n- C. FROM: Không dùng ở vị trí này trong cú pháp UPDATE chuẩn.\n- D. SELECT: Dùng để truy vấn dữ liệu."
     },
     {
       "id": 5401,
@@ -5429,7 +5430,7 @@
     {
       "id": 5410,
       "quizId": 106,
-      "text": "Given two relations: Printer(maker, model, type) PC(model, speed, ram,hd,, price) What does this query return? SELECT maker FROM Product WHERE model NOT IN ( SELECT model FROM PC );",
+      "text": "Given two relations: Product(maker, model, type) PC(model, speed, ram, hd, price) What does this query return? SELECT maker FROM Product WHERE model NOT IN ( SELECT model FROM PC );",
       "options": [
         "Makers of all devices",
         "Makers that also build PCs",
@@ -5696,7 +5697,7 @@
     {
       "id": 5430,
       "quizId": 106,
-      "text": "Suppose relation R1(A, B) and relation R2(C, A) each have tuples. Which tuples are contained in the result of the query below?<pre>SELECT R1.B, R2.C FROM R1 RIGHT JOIN R2 ON R1.A = R2.A;</pre>",
+      "text": "Cho hai quan hệ \\(R_1(A, B)\\) và \\(R_2(C, A)\\) có dữ liệu như sau:\n\nQuan hệ \\(R_1(A, B)\\):\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{A} & \\textbf{B} \\\\\n\\hline\n1 & \\text{a} \\\\\n\\hline\n2 & \\text{b} \\\\\n\\hline\n3 & \\text{c} \\\\\n\\hline\n4 & \\text{d} \\\\\n\\hline\n5 & \\text{e} \\\\\n\\hline\n6 & \\text{f} \\\\\n\\hline\n7 & \\text{g} \\\\\n\\hline\n8 & \\text{h} \\\\\n\\hline\n\\end{array}\\)\n\nQuan hệ \\(R_2(C, A)\\):\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{C} & \\textbf{A} \\\\\n\\hline\n101 & 1 \\\\\n\\hline\n102 & 2 \\\\\n\\hline\n103 & 3 \\\\\n\\hline\n104 & 1 \\\\\n\\hline\n105 & 5 \\\\\n\\hline\n106 & 6 \\\\\n\\hline\n107 & 7 \\\\\n\\hline\n108 & 8 \\\\\n\\hline\n109 & 1 \\\\\n\\hline\n\\end{array}\\)\n\nWhich tuples are contained in the result of the query below?\n\nSELECT R1.B, R2.C\nFROM R1 RIGHT JOIN R2 ON R1.A = R2.A;",
       "options": [
         "(a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (d, NULL); (e, NULL)",
         "(2, 101); (b, 102); (c, 103); (a, 104); (a, 105)",
@@ -5704,7 +5705,7 @@
         "(a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (e, 105); (f, 106); (g, 107); (h, 108)"
       ],
       "correctIndex": 3,
-      "explanation": "RIGHT JOIN preserves all tuples from R2."
+      "explanation": "Đáp án đúng: D — (a, 101); (a, 104); (a, 109); (b, 102); (c, 103); (e, 105); (f, 106); (g, 107); (h, 108).\n\nNền tảng kiến thức:\nPhép `RIGHT OUTER JOIN` (hoặc `RIGHT JOIN`) giữa hai bảng `R1` và `R2` theo điều kiện kết nối `ON R1.A = R2.A` sẽ bảo toàn toàn bộ tất cả các bộ (hàng) của bảng bên phải (`R2`).\n- Với mỗi bộ trong `R2`, nếu có bộ tương ứng trong `R1` thỏa mãn `R1.A = R2.A`, các giá trị thuộc tính tương ứng của `R1` sẽ được ghép cặp.\n- Nếu không có bộ nào của `R1` khớp, thuộc tính từ `R1` sẽ nhận giá trị `NULL`.\n- Ngược lại, các hàng trong `R1` không khớp với bất kỳ hàng nào trong `R2` (như bộ có A=4, B='d') sẽ bị loại bỏ khỏi kết quả.\n\nPhân tích kết quả:\n- Bảng `R2` có 9 hàng với các giá trị C từ 101 đến 109. Cả 9 hàng này đều được giữ lại trong kết quả.\n- Ánh xạ giá trị theo điều kiện `R1.A = R2.A`:\n + C = 101 (A=1) \\(\\rightarrow\\) R1.B = 'a' \\(\\rightarrow\\) (a, 101)\n + C = 102 (A=2) \\(\\rightarrow\\) R1.B = 'b' \\(\\rightarrow\\) (b, 102)\n + C = 103 (A=3) \\(\\rightarrow\\) R1.B = 'c' \\(\\rightarrow\\) (c, 103)\n + C = 104 (A=1) \\(\\rightarrow\\) R1.B = 'a' \\(\\rightarrow\\) (a, 104)\n + C = 105 (A=5) \\(\\rightarrow\\) R1.B = 'e' \\(\\rightarrow\\) (e, 105)\n + C = 106 (A=6) \\(\\rightarrow\\) R1.B = 'f' \\(\\rightarrow\\) (f, 106)\n + C = 107 (A=7) \\(\\rightarrow\\) R1.B = 'g' \\(\\rightarrow\\) (g, 107)\n + C = 108 (A=8) \\(\\rightarrow\\) R1.B = 'h' \\(\\rightarrow\\) (h, 108)\n + C = 109 (A=1) \\(\\rightarrow\\) R1.B = 'a' \\(\\rightarrow\\) (a, 109)\nKết quả thu được đầy đủ 9 cặp bộ như phương án D.\n\nĐối chiếu phương án:\n- A. Bị nhầm sang phép LEFT JOIN (giữ lại các bộ chỉ có trong R1 như d).\n- B, C. Thiếu bộ dữ liệu của R2.\n- D. Đúng hoàn toàn theo định nghĩa RIGHT JOIN."
     },
     {
       "id": 5431,
@@ -5865,7 +5866,7 @@
     {
       "id": 5443,
       "quizId": 106,
-      "text": "In the query below, which keyword must be inserted?<pre>INSERT INTO Students ____ (32, N'Iona Bush', N'Female');</pre>",
+      "text": "In the query below, which keyword must be inserted?\n\nINSERT INTO Students ____ (32, N'Iona Bush', N'Female');",
       "options": [
         "INTO",
         "SET",
@@ -5873,7 +5874,7 @@
         "VALUES"
       ],
       "correctIndex": 3,
-      "explanation": "Standard SQL INSERT syntax requires the VALUES keyword before column data."
+      "explanation": "Đáp án đúng: D — VALUES.\n\nNền tảng kiến thức: Trong SQL DML, cú pháp chuẩn để chèn một bản ghi dữ liệu mới vào bảng là:\n`INSERT INTO <table_name> [(column1, column2, ...)] VALUES (value1, value2, ...);`\n\nPhân tích: Vị trí chỗ trống nằm giữa tên bảng `Students` và danh sách các giá trị dữ liệu cần chèn `(32, N'Iona Bush', N'Female')`. Từ khóa bắt buộc trong cú pháp INSERT này là `VALUES`.\n\nĐối chiếu phương án:\n- A. INTO: Đã xuất hiện trước tên bảng `INSERT INTO Students`.\n- B. SET: Dùng trong câu lệnh UPDATE.\n- C. WHERE: Dùng để lọc điều kiện trong SELECT, UPDATE, DELETE.\n- D. VALUES: Cú pháp chuẩn của câu lệnh INSERT."
     },
     {
       "id": 5444,
@@ -7543,7 +7544,7 @@
     {
       "id": 5570,
       "quizId": 108,
-      "text": "Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:\n\n\\beginverbatim\nCREATE FUNCTION dbo.GetLaptopPrice(@model int)\nRETURNS decimal(10,2) AS\nBEGIN\n DECLARE @price decimal(10,2);\n SELECT @price = price FROM Laptop WHERE model = @model;\n RETURN @price;\nEND;\n\\endverbatim\n\nWhat will this function return when called with dbo.GetLaptopPrice(1)?",
+      "text": "Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:\n\nCREATE FUNCTION dbo.GetLaptopPrice(@model int)\nRETURNS decimal(10,2) AS\nBEGIN\n DECLARE @price decimal(10,2);\n SELECT @price = price FROM Laptop WHERE model = @model;\n RETURN @price;\nEND;\n\nWhat will this function return when called with dbo.GetLaptopPrice(1)?",
       "options": [
         "The average laptop price with model = 1",
         "The price of all laptops",

@@ -125,7 +125,7 @@ const content = fs.readFileSync(texFilePath, 'utf8');
 function convertTabularToMarkdown(tex) {
   if (!tex) return '';
   let res = tex.replace(/\\renewcommand\{\\arraystretch\}\{[^{}]*\}/g, '');
-  res = res.replace(/\\begin\{tabular\}\{[^{}]*\}([\s\S]*?)\\end\{tabular\}/g, (m, tabContent) => {
+  res = res.replace(/\\begin\{tabular\}\s*\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}([\s\S]*?)\\end\{tabular\}/g, (m, tabContent) => {
     const lines = tabContent.split(/\\\\/).map(l => l.trim()).filter(Boolean);
     const rows = [];
     for (const line of lines) {
@@ -166,6 +166,9 @@ function cleanTexWithMath(str) {
 
   // 1. Loại bỏ \includegraphics hoặc includegraphics
   s = s.replace(/\\?includegraphics(?:\[[^\]]*\])?\{?[^}\n\r]*/gi, '');
+
+  // 1a. Loại bỏ các thẻ html thô nếu còn sót lại như <pre>, </pre>, <code>, </code>
+  s = s.replace(/<\/?(?:pre|code)>/gi, '');
 
   // 1b. Chuẩn hóa và làm sạch bảng beginarray nếu có
   s = s.replace(/\\?\s*\[?\s*\\?\s*beginarray[\s\S]*?\\?\s*endarray\s*\\?\s*\]?/gi, match => {
@@ -330,7 +333,10 @@ if (isChoicesFormat) {
     let promptRaw = body.substring(0, cs);
     promptRaw = promptRaw.replace(/^[\t ]*%[^\r\n]*/gm, '');
 
+    promptRaw = convertTabularToMarkdown(promptRaw);
     promptRaw = promptRaw.replace(/\\begin\{codebox\}([\s\S]*?)\\end\{codebox\}/g, (_, code) => '\n' + code.trim() + '\n');
+    promptRaw = promptRaw.replace(/\\begin\{verbatim\}([\s\S]*?)\\end\{verbatim\}/g, (_, code) => '\n' + code.trim() + '\n');
+    promptRaw = promptRaw.replace(/<pre>([\s\S]*?)<\/pre>/gi, (_, code) => '\n' + code.trim() + '\n');
     promptRaw = promptRaw.replace(/\\begin\{center\}([\s\S]*?)\\end\{center\}/g, (b) => b.includes('tikzpicture') ? '' : b);
     promptRaw = promptRaw.replace(/\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/g, '');
 

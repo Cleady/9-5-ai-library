@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-17T18:05:05.502Z",
+  "generatedAt": "2026-11-17T18:37:40.471Z",
   "totalSubjects": 9,
-  "totalQuizzes": 120,
+  "totalQuizzes": 123,
   "subjects": [
     {
       "id": 1,
@@ -23,7 +23,7 @@
     },
     {
       "id": 4,
-      "name": "Data Structure & Algorithm",
+      "name": "Data Structures and Algorithms",
       "code": "CSD203",
       "icon": "subject5-icon"
     },
@@ -434,59 +434,92 @@
       "questionCount": 33
     },
     {
-      "id": 300,
-      "subjectId": 4,
-      "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 1 – Cấu trúc dữ liệu tuyến tính (Linear Data Structures)",
-      "order": 1,
-      "durationMin": 135,
-      "difficulty": "Medium",
-      "questionCount": 90
-    },
-    {
       "id": 301,
       "subjectId": 4,
       "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 2 – Cấu trúc Cây (Trees)",
-      "order": 2,
-      "durationMin": 93,
+      "subjectName": "Data Structures and Algorithms",
+      "title": "Chương 1 – Mảng (Arrays, Lists, Slicing & Operations)",
+      "order": 1,
+      "durationMin": 38,
       "difficulty": "Medium",
-      "questionCount": 62
+      "questionCount": 25
     },
     {
       "id": 302,
       "subjectId": 4,
       "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 3 – Bảng băm (Hash Table)",
-      "order": 3,
-      "durationMin": 81,
+      "subjectName": "Data Structures and Algorithms",
+      "title": "Chương 2 – Danh sách liên kết (Linked Lists)",
+      "order": 2,
+      "durationMin": 45,
       "difficulty": "Medium",
-      "questionCount": 54
+      "questionCount": 30
     },
     {
       "id": 303,
       "subjectId": 4,
       "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 4 – Đồ thị (Graphs)",
-      "order": 4,
-      "durationMin": 75,
+      "subjectName": "Data Structures and Algorithms",
+      "title": "Chương 3 – Ngăn xếp (Stacks)",
+      "order": 3,
+      "durationMin": 29,
       "difficulty": "Medium",
-      "questionCount": 50
+      "questionCount": 19
     },
     {
       "id": 304,
       "subjectId": 4,
       "subjectCode": "CSD203",
-      "subjectName": "Data Structure & Algorithm",
-      "title": "Chương 5 – Giải thuật đi kèm (Algorithms & Complexity)",
-      "order": 5,
-      "durationMin": 180,
+      "subjectName": "Data Structures and Algorithms",
+      "title": "Chương 4 – Hàng đợi (Queues)",
+      "order": 4,
+      "durationMin": 24,
       "difficulty": "Medium",
-      "questionCount": 120
+      "questionCount": 16
+    },
+    {
+      "id": 305,
+      "subjectId": 4,
+      "subjectCode": "CSD203",
+      "subjectName": "Data Structures and Algorithms",
+      "title": "Chương 5 – Bảng băm (Hash Tables)",
+      "order": 5,
+      "durationMin": 81,
+      "difficulty": "Medium",
+      "questionCount": 54
+    },
+    {
+      "id": 306,
+      "subjectId": 4,
+      "subjectCode": "CSD203",
+      "subjectName": "Data Structures and Algorithms",
+      "title": "Chương 6 – Cây tìm kiếm nhị phân và Đồ thị (Binary Search Tree & Graph)",
+      "order": 6,
+      "durationMin": 168,
+      "difficulty": "Medium",
+      "questionCount": 112
+    },
+    {
+      "id": 307,
+      "subjectId": 4,
+      "subjectCode": "CSD203",
+      "subjectName": "Data Structures and Algorithms",
+      "title": "Chương 7 – Thuật toán sắp xếp (Sorting Algorithms)",
+      "order": 7,
+      "durationMin": 44,
+      "difficulty": "Medium",
+      "questionCount": 29
+    },
+    {
+      "id": 308,
+      "subjectId": 4,
+      "subjectCode": "CSD203",
+      "subjectName": "Data Structures and Algorithms",
+      "title": "Chương 8 – Các giải thuật bổ trợ (Độ phức tạp, Đệ quy, Tìm kiếm, Huffman & Xử lý chuỗi)",
+      "order": 8,
+      "durationMin": 137,
+      "difficulty": "Medium",
+      "questionCount": 91
     },
     {
       "id": 400,
