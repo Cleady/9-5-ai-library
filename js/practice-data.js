@@ -13505,17 +13505,17 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. multiple.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. only one; B. two; C. three. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5423,
-      "quizId": 107,
-      "text": "Which SQL statement is used to remove an existing index from a table?",
-      "options": [
-        "Atomicity, Consistency, Isolation, Durability",
-        "REMOVE INDEX",
-        "DELETE INDEX",
-        "UNINDEX TABLE"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. Atomicity, Consistency, Isolation, Durability.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu phụ thuộc theo quy tắc DBMS; DELETE xóa các hàng nhưng giữ bảng, còn TRUNCATE xóa nhanh toàn bộ hàng trong khi vẫn giữ cấu trúc. Cần chọn lệnh đúng cấp độ tác động.\n\nĐối chiếu phương án: B. REMOVE INDEX; C. DELETE INDEX; D. UNINDEX TABLE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+          "id": 5423,
+          "quizId": 107,
+          "text": "Which SQL statement is used to remove an existing index from a table?",
+          "options": [
+                "DROP INDEX",
+                "REMOVE INDEX",
+                "DELETE INDEX",
+                "UNINDEX TABLE"
+          ],
+          "correctIndex": 0,
+          "explanation": "Đáp án đúng: A — DROP INDEX.\n\nNền tảng kiến thức: Trong SQL / DBMS, câu lệnh DDL dùng để xóa một chỉ mục (index) đã tồn tại khỏi bảng là DROP INDEX (cú pháp chuẩn: DROP INDEX index_name ON table_name; hoặc DROP INDEX table_name.index_name tùy hệ quản trị cơ sở dữ liệu như SQL Server, MySQL, PostgreSQL).\n\nPhân tích các phương án:\n- A. DROP INDEX: Lệnh SQL chuẩn dùng để xóa chỉ mục khỏi cấu trúc bảng.\n- B. REMOVE INDEX: Không phải cú pháp SQL hợp lệ.\n- C. DELETE INDEX: DELETE là lệnh DML dùng để xóa dòng/bản ghi dữ liệu trong bảng, không dùng để xóa đối tượng cấu trúc như index.\n- D. UNINDEX TABLE: Không tồn tại câu lệnh này trong SQL."
     },
     {
       "id": 5424,
