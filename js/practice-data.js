@@ -9064,16 +9064,16 @@
     {
       "id": 5086,
       "quizId": 102,
-      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n\\(\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\end{array}\n\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\n\\hline\n\\end{array}\\)\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
+      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n$\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textLe Hong Son & \\textHCM & \\textMale \n\n\\hline\n\\endarray\n\n\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textTran Tuyet Nhi & \\textHN & \\textFemale \n\n\\hline\n\\endarray$\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
       "options": [
-            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
-            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
-            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\\hline\\end{array}\\)",
-            "None of the others"
+        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
+        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
+        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\\hline\\end{array}\\)",
+        "None of the others"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án đúng: A — Nguyen Trung Truc | HCM | Male.\n\nNền tảng kiến thức: Phép giao (Intersection: \\(R \\cap S\\)) trong đại số quan hệ trả về tập hợp các bộ (tuples) cùng xuất hiện ở cả hai quan hệ \\(R\\) và \\(S\\).\n\nPhân tích bảng dữ liệu:\n- Bảng Employee gồm: (Nguyen Trung Truc, HCM, Male) và (Le Hong Son, HCM, Male).\n- Bảng Customer gồm: (Nguyen Trung Truc, HCM, Male) và (Tran Tuyet Nhi, HN, Female).\n- Phần tử chung duy nhất xuất hiện ở cả 2 bảng là (Nguyen Trung Truc, HCM, Male), tương ứng với phương án A."
-},
+    },
     {
       "id": 5087,
       "quizId": 102,
@@ -9719,27 +9719,27 @@
       "quizId": 103,
       "text": "Which of the following represents Armstrong's Axiom of Transitivity?",
       "options": [
-            "If \\(A \\to B\\), then \\(AC \\to BC\\)",
-            "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
-            "If \\(A \\to B\\), then \\(B \\to A\\)",
-            "If \\(A \\to B\\), then \\(A \\to BC\\)"
+        "If \\(A \\to B\\), then \\(AC \\to BC\\)",
+        "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
+        "If \\(A \\to B\\), then \\(B \\to A\\)",
+        "If \\(A \\to B\\), then \\(A \\to BC\\)"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án đúng: B — If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n2. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n3. Tiên đề phản xạ (Reflexivity Axiom): Nếu \\(Y \\subseteq X\\) thì suy ra \\(X \\to Y\\).\n4. Quy tắc phân rã (Decomposition Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n5. Quy tắc hợp (Union Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n\nPhân tích:\n- Phương án B biểu diễn chính xác Tiên đề bắc cầu (Transitivity Axiom).\n- Phương án A là Tiên đề tăng trưởng (Augmentation Axiom).\n- Phương án C sai (phụ thuộc hàm không có tính đối xứng).\n- Phương án D sai (thiếu điều kiện \\(A \\to C\\) để suy ra quy tắc hợp)."
-},
+      "explanation": "Đáp án đúng: B — If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n2. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n3. Tiên đề phản xạ (Reflexivity Axiom): Nếu \\(Y \\subseteq X\\) thì suy ra \\(X \\to Y\\).\n4. Quy tắc phân rã (Decomposition Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n5. Quy tắc hợp (Union Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n\nPhân tích: Phương án B biểu diễn chính xác Tiên đề bắc cầu (Transitivity Axiom). Phương án A là Tiên đề tăng trưởng (Augmentation Axiom), phương án C sai (phụ thuộc hàm không có tính đối xứng), phương án D sai (thiếu điều kiện \\(A \\to C\\))."
+    },
     {
       "id": 5137,
       "quizId": 103,
       "text": "Which statement best represents Armstrong's Rule of Decomposition?",
       "options": [
-            "If \\(A \\to B\\) and \\(A \\to C\\), then \\(A \\to BC\\)",
-            "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
-            "If \\(A \\to B\\), then \\(AC \\to BC\\)",
-            "If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\)"
+        "If \\(A \\to B\\) and \\(A \\to C\\), then \\(A \\to BC\\)",
+        "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
+        "If \\(A \\to B\\), then \\(AC \\to BC\\)",
+        "If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\)"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án đúng: D — If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n2. Quy tắc hợp (Union / Additivity Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n3. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n4. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n\nPhân tích:\n- Phương án D biểu diễn chính xác Quy tắc phân rã (Decomposition Rule).\n- Phương án A là Quy tắc hợp (Union Rule).\n- Phương án B là Tiên đề bắc cầu (Transitivity Axiom).\n- Phương án C là Tiên đề tăng trưởng (Augmentation Axiom)."
-},
+      "explanation": "Đáp án đúng: D — If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n2. Quy tắc hợp (Union / Additivity Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n3. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n4. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n\nPhân tích: Phương án D biểu diễn chính xác Quy tắc phân rã (Decomposition Rule). Phương án A là Quy tắc hợp (Union Rule), phương án B là Tiên đề bắc cầu (Transitivity Axiom), và phương án C là Tiên đề tăng trưởng (Augmentation Axiom)."
+    },
     {
       "id": 5138,
       "quizId": 103,
@@ -9758,14 +9758,14 @@
       "quizId": 103,
       "text": "If attribute A determines both attributes B and C, then it is also true that:",
       "options": [
-            "\\((B, C) \\to A\\)",
-            "\\(C \\to A\\)",
-            "\\(B \\to A\\)",
-            "\\(A \\to B\\)"
+        "\\((B, C) \\to A\\)",
+        "\\(C \\to A\\)",
+        "\\(B \\to A\\)",
+        "\\(A \\to B\\)"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án đúng: D — \\(A \\to B\\).\n\nNền tảng kiến thức: Nếu thuộc tính \\(A\\) xác định đồng thời \\(B\\) và \\(C\\), tức là ta có \\(A \\to BC\\). Theo Quy tắc phân rã (Decomposition Rule) của hệ tiên đề Armstrong:\n- Từ \\(A \\to BC\\), ta luôn suy ra được \\(A \\to B\\) và \\(A \\to C\\).\n\nPhân tích các phương án:\n- Phương án D (\\(A \\to B\\)) là hệ quả trực tiếp đúng đắn.\n- Các phương án A, B, C đảo ngược chiều phụ thuộc (\\(B \\to A\\), \\(C \\to A\\), \\((B, C) \\to A\\)) đều không hợp lệ vì phụ thuộc hàm không có tính chất đối xứng."
-},
+      "explanation": "Đáp án đúng: D — \\(A \\to B\\).\n\nNền tảng kiến thức: Nếu thuộc tính \\(A\\) xác định đồng thời \\(B\\) và \\(C\\), tức là ta có \\(A \\to BC\\). Theo Quy tắc phân rã (Decomposition Rule) của hệ tiên đề Armstrong:\n- Từ \\(A \\to BC\\), ta luôn suy ra được \\(A \\to B\\) và \\(A \\to C\\).\n\nPhân tích: Phương án D (\\(A \\to B\\)) là hệ quả trực tiếp đúng đắn. Các phương án A, B, C đảo ngược chiều phụ thuộc đều không hợp lệ vì phụ thuộc hàm không có tính chất đối xứng."
+    },
     {
       "id": 5140,
       "quizId": 103,
@@ -9900,15 +9900,15 @@
     {
       "id": 5150,
       "quizId": 103,
-      "text": "Consider the relation:\nOrderDetail (orderNumber, productCode, productName, quantity, dateOrdered, salesDiscount)\nAnd FDs orderNumber, productCode->quantity,\norderNumber->dateOrdered,\nproductCode->productName, salesDiscount\nAnd the key of OrderDetail is orderNumber, productCode\nWhich of the following is full dependency on the key?",
+      "text": "Consider the relation:\n\\(\\text{OrderDetail}(\\text{orderNumber}, \\text{productCode}, \\text{productName}, \\text{quantity}, \\text{dateOrdered}, \\text{salesDiscount})\\)\n\nwith functional dependencies:\n\\(\\begin{aligned}\nF = \\{ &\\text{orderNumber}, \\text{productCode} \\rightarrow \\text{quantity}, \\\\\n       &\\text{orderNumber} \\rightarrow \\text{dateOrdered}, \\\\\n       &\\text{productCode} \\rightarrow \\text{productName}, \\text{salesDiscount} \\}\n\\end{aligned}\\)\n\nGiven that the candidate key of \\(\\text{OrderDetail}\\) is \\(\\{\\text{orderNumber}, \\text{productCode}\\}\\).\n\nWhich of the following is a full functional dependency on the key?",
       "options": [
-        "orderNumber, productCode->quantity",
-        "orderNumber->dateOrdered",
-        "productCode->productName",
-        "productCode->productName, salesDiscount"
+        "\\(\\text{orderNumber}, \\text{productCode} \\rightarrow \\text{quantity}\\)",
+        "\\(\\text{orderNumber} \\rightarrow \\text{dateOrdered}\\)",
+        "\\(\\text{productCode} \\rightarrow \\text{productName}\\)",
+        "\\(\\text{productCode} \\rightarrow \\text{productName}, \\text{salesDiscount}\\)"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. orderNumber, productCode->quantity.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. orderNumber->dateOrdered; C. productCode->productName; D. productCode->productName, salesDiscount. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Khóa chính (candidate key) của quan hệ \\(\\text{OrderDetail}\\) là khóa ghép gồm hai thuộc tính: \\(\\{\\text{orderNumber}, \\text{productCode}\\}\\).\n\n- Định nghĩa phụ thuộc hàm đầy đủ (Full functional dependency): Phụ thuộc hàm \\(X \\rightarrow Y\\) là đầy đủ nếu loại bỏ bất kỳ thuộc tính nào khỏi \\(X\\) thì phụ thuộc hàm đó không còn đúng nữa (tức \\(Y\\) phụ thuộc vào toàn bộ khóa ghép \\(X\\), không phụ thuộc vào bất kỳ tập con thực sự nào của \\(X\\)).\n- Phụ thuộc hàm bộ phận (Partial dependency): Nếu một thuộc tính không khóa chỉ phụ thuộc vào một phần của khóa ghép.\n- Đối chiếu các phương án:\n + \\(\\text{orderNumber}, \\text{productCode} \\rightarrow \\text{quantity}\\): Vế trái chứa đầy đủ toàn bộ khóa ghép \\(\\{\\text{orderNumber}, \\text{productCode}\\}\\), do đó đây là phụ thuộc hàm đầy đủ (Full functional dependency).\n + \\(\\text{orderNumber} \\rightarrow \\text{dateOrdered}\\): Chỉ phụ thuộc vào \\(\\text{orderNumber}\\) (một phần của khóa), là phụ thuộc bộ phận.\n + \\(\\text{productCode} \\rightarrow \\text{productName}\\): Chỉ phụ thuộc vào \\(\\text{productCode}\\) (một phần của khóa), là phụ thuộc bộ phận.\n + \\(\\text{productCode} \\rightarrow \\text{productName}, \\text{salesDiscount}\\): Chỉ phụ thuộc vào \\(\\text{productCode}\\), là phụ thuộc bộ phận.\nDo đó, phương án đúng là A."
     },
     {
       "id": 5151,
@@ -10084,14 +10084,14 @@
       "quizId": 103,
       "text": "Consider a user table with columns ID, NAME, Password, and email. Which functional dependency exists in this table?",
       "options": [
-            "ID → NAME",
-            "Password → email",
-            "Password → NAME",
-            "NAME → email"
+        "ID \\(\\to\\) NAME",
+        "Password \\(\\to\\) email",
+        "Password \\(\\to\\) NAME",
+        "NAME \\(\\to\\) email"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án đúng: A — ID → NAME.\n\nNền tảng kiến thức: Trong thiết kế cơ sở dữ liệu quan hệ, thuộc tính khóa chính (Primary Key / Candidate Key) như `ID` xác định duy nhất mọi thuộc tính còn lại trong cùng một bộ (tuple).\n\nPhân tích:\n- ID là mã định danh duy nhất của mỗi người dùng, do đó với mỗi giá trị ID chỉ có duy nhất một giá trị NAME tương ứng (ID → NAME).\n- Password không xác định email hay NAME vì nhiều người dùng có thể đặt trùng mật khẩu.\n- NAME không thể xác định email vì nhiều người dùng có thể trùng họ tên nhưng có email khác nhau."
-},
+      "explanation": "Đáp án đúng: A — ID \\(\\to\\) NAME.\n\nNền tảng kiến thức: Trong thiết kế cơ sở dữ liệu quan hệ, thuộc tính khóa chính (Primary Key / Candidate Key) như `ID` xác định duy nhất mọi thuộc tính còn lại trong cùng một bộ (tuple).\n\nPhân tích: ID là mã định danh duy nhất của mỗi người dùng, do đó với mỗi giá trị ID chỉ có duy nhất một giá trị NAME tương ứng (ID \\(\\to\\) NAME). Password và NAME đều có thể bị trùng lặp giữa các người dùng nên không thể làm vế trái suy ra các trường khác."
+    },
     {
       "id": 5165,
       "quizId": 103,
@@ -10240,14 +10240,14 @@
       "quizId": 103,
       "text": "If \\(A \\to B\\) and \\(B \\to C\\), which rule allows us to infer \\(A \\to C\\)?",
       "options": [
-            "Reflexivity",
-            "Augmentation",
-            "Transitivity",
-            "Projection"
+        "Reflexivity",
+        "Augmentation",
+        "Transitivity",
+        "Projection"
       ],
       "correctIndex": 2,
-      "explanation": "Đáp án đúng: C — Transitivity.\n\nNền tảng kiến thức: Hệ tiên đề Armstrong gồm:\n- Tiên đề bắc cầu (Transitivity): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n- Tiên đề phản xạ (Reflexivity): Nếu \\(Y \\subseteq X\\) thì \\(X \\to Y\\).\n- Tiên đề tăng trưởng (Augmentation): Nếu \\(A \\to B\\) thì \\(AC \\to BC\\).\n\nPhân tích: Quy tắc cho phép suy diễn từ \\(A \\to B\\) và \\(B \\to C\\) ra \\(A \\to C\\) chính là Tiên đề bắc cầu (Transitivity Rule)."
-},
+      "explanation": "Đáp án đúng: C — Transitivity.\n\nNền tảng kiến thức: Hệ tiên đề Armstrong gồm:\n- Tiên đề bắc cầu (Transitivity): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n- Tiên đề phản xạ (Reflexivity): Nếu \\(Y \\subseteq X\\) thì suy ra \\(X \\to Y\\).\n- Tiên đề tăng trưởng (Augmentation): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n\nPhân tích: Quy tắc cho phép suy diễn từ \\(A \\to B\\) và \\(B \\to C\\) ra \\(A \\to C\\) chính là Tiên đề bắc cầu (Transitivity Rule)."
+    },
     {
       "id": 5177,
       "quizId": 103,
@@ -10394,14 +10394,14 @@
       "quizId": 103,
       "text": "Which statement best represents Armstrong's Rule of Decomposition?",
       "options": [
-            "If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\)",
-            "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
-            "If \\(A \\to B\\), then \\(AC \\to BC\\)",
-            "If \\(A \\to B\\), then \\(B \\to C\\)"
+        "If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\)",
+        "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
+        "If \\(A \\to B\\), then \\(AC \\to BC\\)",
+        "If \\(A \\to B\\), then \\(B \\to C\\)"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án đúng: A — If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n2. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n3. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n4. Quy tắc hợp (Union / Additivity Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n\nPhân tích:\n- Phương án A biểu diễn chính xác Quy tắc phân rã (Decomposition Rule).\n- Phương án B là Tiên đề bắc cầu (Transitivity Axiom).\n- Phương án C là Tiên đề tăng trưởng (Augmentation Axiom).\n- Phương án D sai vì từ \\(A \\to B\\) không thể suy diễn được \\(B \\to C\\)."
-},
+      "explanation": "Đáp án đúng: A — If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n2. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n3. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n4. Quy tắc hợp (Union / Additivity Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n\nPhân tích: Phương án A biểu diễn chính xác Quy tắc phân rã (Decomposition Rule). Phương án B là Tiên đề bắc cầu (Transitivity Axiom), phương án C là Tiên đề tăng trưởng (Augmentation Axiom), phương án D sai."
+    },
     {
       "id": 5188,
       "quizId": 103,
@@ -10537,14 +10537,14 @@
       "quizId": 103,
       "text": "Suppose that we have a relation \\(R(A, B, C, D)\\) and functional dependency: \\(D \\to BC\\). Which of the following is equivalent to the given dependency?",
       "options": [
-            "\\(D \\to B\\) and \\(D \\to C\\)",
-            "\\(C \\to B\\) and \\(C \\to B\\)",
-            "\\(D \\to B\\) and \\(B \\to C\\)",
-            "\\(C \\to D\\) and \\(C \\to B\\)"
+        "\\(D \\to B\\) and \\(D \\to C\\)",
+        "\\(C \\to B\\) and \\(C \\to B\\)",
+        "\\(D \\to B\\) and \\(B \\to C\\)",
+        "\\(C \\to D\\) and \\(C \\to B\\)"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án đúng: A — \\(D \\to B\\) and \\(D \\to C\\).\n\nNền tảng kiến thức: Theo Quy tắc phân rã (Decomposition Rule) và Quy tắc hợp (Union Rule):\n- \\(D \\to BC \\iff (D \\to B \\text{ và } D \\to C)\\).\n\nPhân tích: Phụ thuộc hàm \\(D \\to BC\\) có vế phải gồm 2 thuộc tính phân biệt \\(B\\) và \\(C\\), do đó hoàn toàn tương đương với cặp phụ thuộc hàm \\(D \\to B\\) và \\(D \\to C\\)."
-},
+    },
     {
       "id": 5199,
       "quizId": 103,

@@ -3272,26 +3272,35 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 % [ID gốc: 15.40]
 % [Nguồn: DBI202 Order 15 Q40]
 Consider the relation:
-OrderDetail (orderNumber, productCode, productName, quantity, dateOrdered, salesDiscount)
-And FDs{ orderNumber, productCode->quantity,
-orderNumber->dateOrdered,
-productCode->productName, salesDiscount}
-And the key of OrderDetail is {orderNumber, productCode}
-Which of the following is full dependency on the key?
+\(\text{OrderDetail}(\text{orderNumber}, \text{productCode}, \text{productName}, \text{quantity}, \text{dateOrdered}, \text{salesDiscount})\)
+
+with functional dependencies:
+\(\begin{aligned}
+F = \{ &\text{orderNumber}, \text{productCode} \rightarrow \text{quantity}, \\
+       &\text{orderNumber} \rightarrow \text{dateOrdered}, \\
+       &\text{productCode} \rightarrow \text{productName}, \text{salesDiscount} \}
+\end{aligned}\)
+
+Given that the candidate key of \(\text{OrderDetail}\) is \(\{\text{orderNumber}, \text{productCode}\}\).
+
+Which of the following is a full functional dependency on the key?
 \begin{choices}
-\choice orderNumber, productCode->quantity
-\choice orderNumber->dateOrdered
-\choice productCode->productName
-\choice productCode->productName, salesDiscount
+\choice \(\text{orderNumber}, \text{productCode} \rightarrow \text{quantity}\)
+\choice \(\text{orderNumber} \rightarrow \text{dateOrdered}\)
+\choice \(\text{productCode} \rightarrow \text{productName}\)
+\choice \(\text{productCode} \rightarrow \text{productName}, \text{salesDiscount}\)
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. orderNumber, productCode->quantity.
+\textbf{Giải thích:} Khóa chính (candidate key) của quan hệ \(\text{OrderDetail}\) là khóa ghép gồm hai thuộc tính: \(\{\text{orderNumber}, \text{productCode}\}\).
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
-
-Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.
-
-Đối chiếu phương án: B. orderNumber->dateOrdered; C. productCode->productName; D. productCode->productName, salesDiscount. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+- Định nghĩa phụ thuộc hàm đầy đủ (Full functional dependency): Phụ thuộc hàm \(X \rightarrow Y\) là đầy đủ nếu loại bỏ bất kỳ thuộc tính nào khỏi \(X\) thì phụ thuộc hàm đó không còn đúng nữa (tức \(Y\) phụ thuộc vào toàn bộ khóa ghép \(X\), không phụ thuộc vào bất kỳ tập con thực sự nào của \(X\)).
+- Phụ thuộc hàm bộ phận (Partial dependency): Nếu một thuộc tính không khóa chỉ phụ thuộc vào một phần của khóa ghép.
+- Đối chiếu các phương án:
+  + \(\text{orderNumber}, \text{productCode} \rightarrow \text{quantity}\): Vế trái chứa đầy đủ toàn bộ khóa ghép \(\{\text{orderNumber}, \text{productCode}\}\), do đó đây là phụ thuộc hàm đầy đủ (Full functional dependency).
+  + \(\text{orderNumber} \rightarrow \text{dateOrdered}\): Chỉ phụ thuộc vào \(\text{orderNumber}\) (một phần của khóa), là phụ thuộc bộ phận.
+  + \(\text{productCode} \rightarrow \text{productName}\): Chỉ phụ thuộc vào \(\text{productCode}\) (một phần của khóa), là phụ thuộc bộ phận.
+  + \(\text{productCode} \rightarrow \text{productName}, \text{salesDiscount}\): Chỉ phụ thuộc vào \(\text{productCode}\), là phụ thuộc bộ phận.
+Do đó, phương án đúng là A.
 \end{question}
 
 \begin{question}{151}
