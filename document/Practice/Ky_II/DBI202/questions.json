@@ -3204,7 +3204,7 @@
     {
       "id": 5240,
       "quizId": 104,
-      "text": "Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum",
+      "text": "Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this model?",
       "options": [
         "2",
         "3",
@@ -3212,7 +3212,7 @@
         "5"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. 3.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: A. 2; C. 4; D. 5. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: B — 3.\n\nNền tảng kiến thức & Phân tích chi tiết:\nKhi chuyển đổi từ mô hình thực thể - mối quan hệ (E/R Diagram) sang mô hình quan hệ (Relational Model):\n1. **Thực thể E1 và E2**: Mỗi thực thể cần tối thiểu 1 bảng riêng biệt chứa các thuộc tính của nó -> Cần 2 bảng (E1 và E2).\n2. **Mối quan hệ 1-N (R1)**: Vì R1 là quan hệ một - nhiều và không có thuộc tính riêng, ta có thể gộp R1 vào bảng ở phía \"nhiều\" (Many side) bằng cách đưa khóa chính của phía \"một\" sang làm khóa ngoại -> Không cần tạo thêm bảng mới cho R1.\n3. **Mối quan hệ N-N (R2)**: Vì R2 là quan hệ nhiều - nhiều, bắt buộc phải tạo 1 bảng trung gian (Junction table) riêng chứa cặp khóa chính của cả E1 và E2 làm khóa -> Cần thêm 1 bảng riêng cho R2.\n\nTổng số bảng tối thiểu cần có = 2 (cho E1, E2) + 1 (cho R2) = 3 bảng."
     },
     {
       "id": 5241,
@@ -5076,7 +5076,7 @@
     {
       "id": 5383,
       "quizId": 106,
-      "text": "The predicate in a where clause can involve Boolean operations such as and. The result of true and unknown is false and unknown is while unknown and unknown is",
+      "text": "The predicate in a WHERE clause can involve Boolean operations such as AND. The result of (TRUE AND UNKNOWN) is ____, (FALSE AND UNKNOWN) is ____, while (UNKNOWN AND UNKNOWN) is ____:",
       "options": [
         "Unknown, unknown, false",
         "True, false, unknown",
@@ -5290,14 +5290,15 @@
     {
       "id": 5399,
       "quizId": 106,
-      "text": "Fill in the correct keyword to update the instructor relation.<pre>UPDATE instructor ____ salary = salary * 1.05;</pre>A. WHERE",
+      "text": "Fill in the correct keyword to update the instructor relation:\n<pre><code>UPDATE instructor ____ salary = salary * 1.05;</code></pre>",
       "options": [
+        "WHERE",
         "SET",
-        "FROM",
+        "IN",
         "SELECT"
       ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. SET.\n\nLời giải gốc: Trong cú pháp câu lệnh UPDATE của SQL, từ khóa SET được dùng để chỉ định cột cần cập nhật giá trị mới.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: C. FROM; D. SELECT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "correctIndex": 1,
+      "explanation": "Đáp án đúng: B — SET.\n\nLời giải chi tiết: Trong cú pháp câu lệnh UPDATE của SQL, từ khóa SET được dùng để chỉ định các cột cần gán giá trị mới: UPDATE <tên_bảng> SET <cột> = <giá_trị> [WHERE <điều_kiện>]."
     },
     {
       "id": 5400,
@@ -5946,15 +5947,15 @@
     {
       "id": 5449,
       "quizId": 106,
-      "text": "Suppose you have a table Employees (id, name, salary). To increase the salary of employees with a salary below 5000 by 10%, which of the following statements is correc",
+      "text": "Suppose you have a table Employees (id, name, salary). To increase the salary of employees with a salary below 5000 by 10%, which of the following statements is correct?",
       "options": [
-        "UPDATE Employees SET salary = salary + 0.1 WHERE salary &lt; 5000",
-        "UPDATE Employees SET salary = salary * 1.1 WHERE salary &lt; 5000",
-        "UPDATE Employees\nSET salary = salary * 0.1 WHERE salary &lt; 5000",
-        "UPDATE Employees\nSET salary = 1.1 WHERE salary &lt; 5000"
+        "UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000",
+        "UPDATE Employees SET salary = salary * 1.1 WHERE salary < 5000",
+        "UPDATE Employees SET salary = salary * 0.1 WHERE salary < 5000",
+        "UPDATE Employees SET salary = 1.1 WHERE salary < 5000"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. UPDATE Employees SET salary = salary * 1.1 WHERE salary &lt; 5000.\n\nLời giải gốc: Tăng lương thêm 10% đồng nghĩa với việc nhân mức lương hiện tại với hệ số \\(1 + 0.1 = 1.1\\). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary &lt; 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary &lt; 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary &lt; 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án theo dữ liệu đề: B — B. UPDATE Employees SET salary = salary * 1.1 WHERE salary < 5000.\n\nLời giải gốc: Tăng lương thêm 10% đồng nghĩa với việc nhân mức lương hiện tại với hệ số \\(1 + 0.1 = 1.1\\). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary < 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary < 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5450,

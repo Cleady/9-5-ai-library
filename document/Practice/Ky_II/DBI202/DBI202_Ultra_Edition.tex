@@ -5240,21 +5240,23 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 \begin{question}{240}
 % [ID gốc: 2.36]
 % [Nguồn: DBI202 Order 2 Q36]
-Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum
-\begin{choices}
+Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this model?
+egin{choices}
 \choice 2
 \choice 3
 \choice 4
 \choice 5
 \end{choices}
 \textbf{Đáp án:} B
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. 3.
+\textbf{Giải thích:} Đáp án đúng: B — 3.
 
-Nền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.
+Nền tảng kiến thức \& Phân tích chi tiết:
+Khi chuyển đổi từ mô hình thực thể - mối quan hệ (E/R Diagram) sang mô hình quan hệ (Relational Model):
+1. Mỗi thực thể E1 và E2 cần 1 bảng riêng $\to$ Cần 2 bảng.
+2. Mối quan hệ 1-N (R1) không có thuộc tính riêng nên có thể gộp vào bảng ở phía "nhiều" dưới dạng khóa ngoại $\to$ Không tốn thêm bảng mới.
+3. Mối quan hệ N-N (R2) bắt buộc phải tách thành 1 bảng trung gian (Junction table) riêng $\to$ Cần 1 bảng.
 
-Phân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.
-
-Đối chiếu phương án: A. 2; C. 4; D. 5. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Tổng số bảng tối thiểu cần có = 2 + 1 = 3 bảng.
 \end{question}
 
 \begin{question}{241}
@@ -8376,7 +8378,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 \begin{question}{383}
 % [ID gốc: 5.109]
 % [Nguồn: DBI202 Order 5 Q109]
-The predicate in a where clause can involve Boolean operations such as and. The result of true and unknown is false and unknown is while unknown and unknown is
+The predicate in a WHERE clause can involve Boolean operations such as AND. The result of (TRUE AND UNKNOWN) is ____, (FALSE AND UNKNOWN) is ____, while (UNKNOWN AND UNKNOWN) is ____:
 \begin{choices}
 \choice Unknown, unknown, false
 \choice True, false, unknown
@@ -8384,13 +8386,12 @@ The predicate in a where clause can involve Boolean operations such as and. The 
 \choice Unknown, false, unknown
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: D — D. Unknown, false, unknown.
+\textbf{Giải thích:} Đáp án đúng: D — Unknown, false, unknown.
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
-
-Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.
-
-Đối chiếu phương án: A. Unknown, unknown, false; B. True, false, unknown; C. True, unknown, unknown. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Nền tảng kiến thức: Trong logic ba giá trị (Three-Valued Logic - 3VL) của SQL:
+- TRUE AND UNKNOWN $\to$ UNKNOWN
+- FALSE AND UNKNOWN $\to$ FALSE
+- UNKNOWN AND UNKNOWN $\to$ UNKNOWN
 \end{question}
 
 \begin{question}{384}
