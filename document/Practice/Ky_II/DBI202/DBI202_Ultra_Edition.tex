@@ -847,8 +847,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 \begin{question}{39}
 % [ID gốc: 14.1]
 % [Nguồn: DBI202 Order 14 Q1]
-The query is parsed and optimized by a query compiler. The resulting query plan, or sequence of actions the DBMS will perform to answer the query, is passed to the execution engine.
-QN=6 (6798) Today, in a modern DBMS, the queries are parsed and optimized by
+Today, in a modern DBMS, the queries are parsed and optimized by
 \begin{choices}
 \choice all of the others
 \choice execution engine
@@ -1144,8 +1143,7 @@ Phân tích: Trong quan hệ, mỗi hàng dữ liệu là một tuple (bộ), m�
 \begin{question}{53}
 % [ID gốc: 3.3]
 % [Nguồn: DBI202 Order 3 Q3]
-A superkey is a set of attributes that can uniquely identify a tuple in a relation. Since the only key of R is {A1, A2}, it means that this combination of attributes can uniquely identify a tuple in the relation. However, any superset of this key is also considered a superkey. So the possible superkeys for R are: {A1,A2}, {A1,A2,A3}, {A1,A2,A4} and {A1,A2,A3,A4}. Therefore, R has 4 superkeys.
-QN=11 (7966) Suppose R is a relation with attributes A1, A2, A3, A4.
+Suppose R is a relation with attributes A1, A2, A3, A4.
 The only key of R is {A1, A2}. So, how many super-keys do R have?
 \begin{choices}
 \choice 4
@@ -1166,9 +1164,6 @@ Phân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nh�
 \begin{question}{54}
 % [ID gốc: 3.11]
 % [Nguồn: DBI202 Order 3 Q11]
-Relation = bảng (table)
-Tuple = hàng (row)
-Attribute = tên cột
 In relational data model, an attribute is a column
 \begin{choices}
 \choice True
@@ -1262,7 +1257,6 @@ Phân tích: Các hàng dữ liệu của một relation được gọi là tupl
 \begin{question}{59}
 % [ID gốc: 3.16]
 % [Nguồn: DBI202 Order 3 Q16]
-Cần phân biệt được set và list: List thì quan trọng thứ tự, còn set thì không. Một relation gồm các hàng (tuples) thì thứ tự các hàng trong bảng thay đổi thì vẫn là bảng ban đầu
 A relation is a set of tuples
 \begin{choices}
 \choice True
@@ -2451,8 +2445,7 @@ Do đó, quan hệ \(H\) chỉ chứa duy nhất 1 bộ là \((3, 5)\). Phương
 \begin{question}{112}
 % [ID gốc: 15.1]
 % [Nguồn: DBI202 Order 15 Q1]
-A constraint of any kind on a relation is said to be trivial if it holds for every instance of the relation, regardless of what other constraints are assumed.
-QN=9 (7961) Given a relation R(A,B,C,D). Which of the followings is trivial?
+Given a relation R(A,B,C,D). Which of the followings is trivial?
 \begin{choices}
 \choice A->AB
 \choice A->->AB
@@ -2472,8 +2465,7 @@ Phân tích: Để xác định một ràng buộc/phụ thuộc tầm thường
 \begin{question}{113}
 % [ID gốc: 15.2]
 % [Nguồn: DBI202 Order 15 Q2]
-Từ A -> B và D, từ C -> B. Suy ra bộ AC là key
-QN=10 (7972) Let R(ABCD) be a relation with functional dependencies
+Let R(ABCD) be a relation with functional dependencies
 {A -> B,
 C -> B,
 B -> D}
@@ -2523,7 +2515,7 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{115}
 % [ID gốc: 15.4]
 % [Nguồn: DBI202 Order 15 Q4]
-QN=13 (7978) The relation R(ABCD) has following FDs:
+The relation R(ABCD) has following FDs:
 { A -> B ; B -> A ; A -> D ; D -> B }
 \begin{choices}
 \choice R is in 3NF
@@ -2962,9 +2954,10 @@ Phân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải 
 \begin{question}{135}
 % [ID gốc: 15.24]
 % [Nguồn: DBI202 Order 15 Q24]
-Suppose that there is a relation R (A, B, C, D, E, G)
-And functional dependencies S = {AB→C, DEG, CA, BEC, BC→D, CG → BD, ACD → B, CE → AG}
-Compute {AB}+
+Suppose that there is a relation \(R(A, B, C, D, E, G)\) and functional dependencies:
+\(S = \{ AB \rightarrow C, \quad D \rightarrow EG, \quad C \rightarrow A, \quad BE \rightarrow C, \quad BC \rightarrow D, \quad CG \rightarrow BD, \quad ACD \rightarrow B, \quad CE \rightarrow AG \}\)
+
+Compute \((AB)^+\)?
 \begin{choices}
 \choice ABCD
 \choice ABCDE
@@ -2972,13 +2965,18 @@ Compute {AB}+
 \choice ABCDEG
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: D — D. ABCDEG.
+\textbf{Giải thích:} **Đáp án đúng: D. ABCDEG**
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
+Cho quan hệ \(R(A, B, C, D, E, G)\) và tập phụ thuộc hàm \(S\).
 
-Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.
+Các bước tính bao đóng \((AB)^+\):
+1. Khởi tạo: \((AB)^+ = \{A, B\}\).
+2. Áp dụng \(AB \rightarrow C\): \(AB \subseteq (AB)^+ \Rightarrow (AB)^+ = \{A, B, C\}\).
+3. Áp dụng \(BC \rightarrow D\): \(BC \subseteq (AB)^+ \Rightarrow (AB)^+ = \{A, B, C, D\}\).
+4. Áp dụng \(D \rightarrow EG\): \(D \subseteq (AB)^+ \Rightarrow (AB)^+ = \{A, B, C, D, E, G\}\).
 
-Đối chiếu phương án: A. ABCD; B. ABCDE; C. ABCDG. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Bao đóng đã chứa tất cả các thuộc tính của \(R\).
+Vậy \((AB)^+ = \{A, B, C, D, E, G\}\) (tương ứng **ABCDEG**). Phương án đúng là **D**.
 \end{question}
 
 \begin{question}{136}
@@ -4520,8 +4518,7 @@ Phân tích: ER diagram mô tả các entity set, thuộc tính và relationship
 \begin{question}{207}
 % [ID gốc: 2.1]
 % [Nguồn: DBI202 Order 2 Q1]
-A weak entity set is an entity set that does not have a sufficient attribute to form a primary key. The key for a weak entity set E is formed by the combination of zero or more attributes of E and key attributes from supporting entity sets. This means that the key for a weak entity set is partially derived from the key of another entity set that it is related to through an identifying relationship.
-QN=18 (8022) The key for a weak entity set E is .........
+The key for a weak entity set E is .........
 \begin{choices}
 \choice Zero or more attributes of E
 \choice The set of attributes of supporting relationships for E
@@ -4643,12 +4640,8 @@ Phân tích: Thực thể yếu chưa có khóa độc lập; phải ghép khóa
 \begin{question}{213}
 % [ID gốc: 2.7]
 % [Nguồn: DBI202 Order 2 Q7]
-Statement (a) is correct. It's important to pick the right kind of elements when designing a database to ensure that it accurately represents the data and supports efficient querying and updating.
-Statement (b) is also correct. When an entity has no non-primary key attributes (i.e., it has only one attribute which is also its primary key), it can be converted into an attribute of another entity or relationship. This can simplify the schema and reduce redundancy.
-Statement © is incorrect. Weak entities should be used when an entity cannot be identified by its own attributes alone and depends on another entity for its existence. However, using weak entities whenever possible is not a good design principle.
-Statement (d) is incorrect. Redundancies in a database can lead to inconsistencies and should generally be avoided.
-QN=25 (8010) Look at the following statements:
-(a)We should pick the right kind of elements
+Look at the following statements:
+(a) We should pick the right kind of elements
 (b) When an entity has no non-primary key attribute, we should convert that entity to an attribute
 (c) Use weak entities when-ever possible
 (d) Always make redundancies
@@ -4691,13 +4684,7 @@ Phân tích: ER diagram mô tả các entity set, thuộc tính và relationship
 \begin{question}{215}
 % [ID gốc: 2.9]
 % [Nguồn: DBI202 Order 2 Q9]
-Class = Entity set
-Association = Binary relationship
-Association class = Attributes on a relationship
-Subclass = Isa hierarchy
-Aggregation = Many-one relationship
-Composition = Many-one relationship with referential integrity
-QN=27 (8030) The binary relationship between classes in UML is called ...
+The binary relationship between classes in UML is called ...
 \begin{choices}
 \choice Aggregation
 \choice Composition
@@ -6909,19 +6896,23 @@ NULL, NULL, 10, 10, 20, 30
 In SQL Server, which of the following is the correct value of
 AVG(DISTINCT A)?
 \begin{choices}
-\choice (3,1,2)
-\choice (1,3,4)
-\choice (2,4,6)
-\choice (3,2,6)
+\choice 14
+\choice 17.5
+\choice 20
+\choice NULL
 \end{choices}
 \textbf{Đáp án:} C
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: C — C. (2,4,6).
+\textbf{Giải thích:} Đáp án đúng: C — 20.
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+Nền tảng kiến thức: Trong SQL Server, các hàm tổng hợp (Aggregate functions) như AVG() tự động loại bỏ các giá trị NULL trước khi tính toán. Khi sử dụng từ khóa DISTINCT bên trong AVG (AVG(DISTINCT A)), hệ thống sẽ loại bỏ các giá trị trùng lặp trước khi thực hiện tính trung bình cộng.
 
-Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.
+Phân tích:
+- Dãy giá trị ban đầu của cột A gồm 6 hàng: NULL, NULL, 10, 10, 20, 30.
+- Bước 1: Loại bỏ các giá trị NULL, còn lại tập số: {10, 10, 20, 30}.
+- Bước 2: Áp dụng DISTINCT để lọc các giá trị trùng lặp, thu được tập hợp: {10, 20, 30}.
+- Bước 3: Tính giá trị trung bình: (10 + 20 + 30) / 3 = 60 / 3 = 20.
 
-Đối chiếu phương án: A. 15; B. NULL; D. 10 a [Dap an sai, chua fix] Dap an la (3, 1, 6) cơ QN=29 (8513) The table Arc(x,y) currently h…; A. (3,1,2); B. (1,3,4). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu phương án: A. 14; B. 17.5; D. NULL. Chỉ có phương án C là chính xác.
 \end{question}
 
 \begin{question}{318}
@@ -6968,9 +6959,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 \begin{question}{320}
 % [ID gốc: 5.13]
 % [Nguồn: DBI202 Order 5 Q13]
-The given Boolean expression x = 2 AND z = 10) will have the truth value FALSE when both x = 2 AND z = 10) are FALSE. This means that x > 4 and (y >= 2 AND z = 10) must both be TRUE.
-From the given options, only a. x = 5, y = 3, z = 10 satisfies these conditions. In this case, x > 4 is TRUE because x = 5 and (y >= 2 AND z = 10) is also TRUE because y =3 and z=10. So the correct answer is a. x =5 , y=3 ,z=10.
-QN=34 (8539) For what values of x, y, and z, including NULL, does the Boolean expression
+For what values of x, y, and z, including NULL, does the Boolean expression
 x = 2 AND z = 10)
 have the truth value FALSE? Identify one of those values from the list below
 \begin{choices}
@@ -7032,9 +7021,7 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 \begin{question}{323}
 % [ID gốc: 5.16]
 % [Nguồn: DBI202 Order 5 Q16]
-In Microsoft SQL Server, when you concatenate a NULL value with any non-null value using the + operator, the result is always NULL. This is because NULL represents missing or unknown data and any operation that involves NULL will also result in NULL.
-In this case, the query SELECT 'Nancy' + NULL + 'Smith' concatenates the string 'Nancy' with a NULL value and then with the string 'Smith'. Since one of the values being concatenated is NULL, the result of the entire expression will be NULL.
-QN=37 (8550) What is the value of the query:
+What is the value of the query:
 SELECT 'Nancy' + NULL + 'Smith'
 when evaluated on Microsoft SQL Server?
 \begin{choices}
@@ -7096,8 +7083,7 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 \begin{question}{326}
 % [ID gốc: 5.20]
 % [Nguồn: DBI202 Order 5 Q20]
-"ON DELETE CASCADE" is a referential action for a foreign key that allows you to automatically delete data from child tables when you delete data from the parent table. It goes on the foreign key of the child table so that when you delete a parent row, all children rows are delete. This ensures referential integrity by automatically removing any dependent rows in the child relation when a row in the parent relation is deleted.
-QN=44 (8585) Suppose R and S are 2 relations. R is the parent of S.
+Suppose R and S are 2 relations. R is the parent of S.
 And the relationship between R and S is set to
 "ON DELETE CASCADE".
 This means that:
@@ -7118,9 +7104,7 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 \begin{question}{327}
 % [ID gốc: 5.21]
 % [Nguồn: DBI202 Order 5 Q21]
-\% for multi-character
-_ for single-character
-QN=47 (8578) What one is a wildcard used for pattern matching?
+What one is a wildcard used for pattern matching?
 \begin{choices}
 \choice "%" (for multi-character substitution)
 \choice "?" (for single character substitution)
@@ -7340,8 +7324,7 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 \begin{question}{335}
 % [ID gốc: 5.32]
 % [Nguồn: DBI202 Order 5 Q32]
-Muốn UNKNOWN thì buộc một cái phải NULL, chọn A luôn
-QN=43 (8554) For what values of x, y, and z, including NULL, does the Boolean expression
+For what values of x, y, and z, including NULL, does the Boolean expression
 x = 15 OR z = 35)
 have the truth value UNKNOWN? Identify one of those values from the list below.
 \begin{choices}
@@ -10593,11 +10576,7 @@ Phân tích: Denormalization chủ động chấp nhận một phần dư thừa
 \begin{question}{489}
 % [ID gốc: 18.1]
 % [Nguồn: DBI202 Order 18 Q1]
-atomicity the all-or-nothing execution of transactions
-consistency all databases have consistency constraints, or expectations about relationships among data elements (e.g., account balances may not be negative after a transaction finishes). Transactions are expected to preserve the consistency of the database.
-isolation the fact that each transaction must appear to be executed as if no other transaction is executing at the same time.
-durability the effect on the database of a transaction must never be lost, once the transaction has completed.
-QN=40 (8560) A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does "Durable" mean?
+A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does "Durable" mean?
 \begin{choices}
 \choice "Durable" means that: Transactions provide an "all-or-nothing" proposition, stating that each work-unit performed in a database must either complete in its entirety or have no effect whatsoever
 \choice "Durable" means that: Transactions must not violate any integrity constraints during its execution
@@ -11120,9 +11099,8 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 \begin{question}{514}
 % [ID gốc: 19.1]
 % [Nguồn: DBI202 Order 19 Q1]
-A lock in DBMS is a mechanism used to control concurrent access to data. It is a variable associated with a data item that describes the status of the item with respect to possible operations that can be applied to it12. Locks are used as a means of synchronizing access by concurrent transactions to database items2.
-QN=39 (8558) Three properties of a lock in DBMS are:
-a)Granularity: the size of the lock
+Three properties of a lock in DBMS are:
+a) Granularity: the size of the lock
 \begin{choices}
 \choice Granularity: the type of the lock
 \choice Mode: the type of the lock
@@ -12278,7 +12256,19 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 \begin{question}{569}
 % [ID gốc: 5.258]
 % [Nguồn: DBI202 Order 5 Q258]
-Given a relation: Laptop(model, speed, ram, hd, price) What will this function return when called with dbo.GetLaptopPrice(1)? (Đoạn code định nghĩa hàm chọn price của model = @model)
+Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:
+
+\begin{verbatim}
+CREATE FUNCTION dbo.GetLaptopPrice(@model int)
+RETURNS decimal(10,2) AS
+BEGIN
+    DECLARE @price decimal(10,2);
+    SELECT @price = price FROM Laptop WHERE model = @model;
+    RETURN @price;
+END;
+\end{verbatim}
+
+What will this function return when called with dbo.GetLaptopPrice(1)?
 \begin{choices}
 \choice The average laptop price with model = 1
 \choice The price of all laptops
