@@ -14390,17 +14390,17 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Select.\n\nLời giải gốc: Trigger trong SQL được kích hoạt tự động khi có sự thay đổi dữ liệu thông qua các lệnh DML bao gồm INSERT, UPDATE, hoặc DELETE. Lệnh SELECT chỉ dùng để truy vấn, không làm thay đổi dữ liệu nên không kích hoạt trigger.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: A. Insert; C. Update; D. Delete. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5490,
-      "quizId": 108,
-      "text": "Which of the following is NOT mentioned on how a local variable is defined using T-SQL?",
-      "options": [
-        "The name of the local variable should begin with \"@\" sign as the first character of its name.",
-        "A local variable is defined using T-SQL by using statement \"DECLARE\".",
-        "When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.",
-        "The data type of local variable is declared after its name and assigned a system-supplied or user-defined data type and a length."
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. The name of the local variable should begin with \"@\" sign as the first character of its name..\n\nLời giải gốc: Biến cục bộ trong T-SQL chỉ bắt đầu bằng một ký tự @ (ví dụ: @VarName). Phương án A ghi sai thành ký tự @@ (vì @@ trong T-SQL được dùng cho các biến hệ thống/biến toàn cục).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: B. A local variable is defined using T-SQL by using statement \"DECLARE\".; C. When a variable is first declared, its value is set to NULL. To assign a value to a variable,…; D. The data type of local variable is declared after its name and assigned a system-supplied or u…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+          "id": 5490,
+          "quizId": 108,
+          "text": "Which of the following is NOT mentioned on how a local variable is defined using T-SQL?",
+          "options": [
+                "The name of the local variable should begin with \"@\" sign as the first character of its name.",
+                "A local variable is defined using T-SQL by using statement \"DECLARE\".",
+                "When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.",
+                "The data type of local variable is declared after its name and assigned a system-supplied or user-defined data type and a length."
+          ],
+          "correctIndex": 2,
+          "explanation": "Đáp án đúng: C — When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.\n\nNền tảng kiến thức: Trong T-SQL, các quy tắc định nghĩa / khai báo biến cục bộ (Defining local variables) bao gồm 3 điểm chính:\n1. Khai báo biến bằng câu lệnh DECLARE (Phương án B).\n2. Tên biến phải bắt đầu bằng ký tự '@' (Phương án A).\n3. Kiểu dữ liệu được chỉ định ngay sau tên biến kèm độ dài nếu có (Phương án D).\n\nPhân tích: Phương án C mô tả hành vi giá trị khởi tạo (mặc định là NULL) và cách gán giá trị cho biến bằng câu lệnh SET (Assigning values to variables), đây là bước thao tác / gán trị chứ KHÔNG thuộc quy tắc định nghĩa / cú pháp khai báo biến (how a local variable is defined). Vì vậy, C là đáp án chính xác cho câu hỏi \"Which of the following is NOT mentioned on how a local variable is defined using T-SQL?\"."
     },
     {
       "id": 5491,
