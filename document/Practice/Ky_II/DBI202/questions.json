@@ -2209,13 +2209,13 @@
       "quizId": 103,
       "text": "Consider a user table with columns ID, NAME, Password, and email. Which functional dependency exists in this table?",
       "options": [
-        "ID \\(\\to\\) NAME",
-        "Password \\(\\to\\) email",
-        "Password \\(\\to\\) NAME",
-        "NAME \\(\\to\\) email"
+        "ID → NAME",
+        "Password → email",
+        "Password → NAME",
+        "NAME → email"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án đúng: A — ID \\(\\to\\) NAME.\n\nNền tảng kiến thức: Trong thiết kế cơ sở dữ liệu quan hệ, thuộc tính khóa chính (Primary Key / Candidate Key) như `ID` xác định duy nhất mọi thuộc tính còn lại trong cùng một bộ (tuple).\n\nPhân tích: ID là mã định danh duy nhất của mỗi người dùng, do đó với mỗi giá trị ID chỉ có duy nhất một giá trị NAME tương ứng (ID \\(\\to\\) NAME). Password và NAME đều có thể bị trùng lặp giữa các người dùng nên không thể làm vế trái suy ra các trường khác."
+      "explanation": "Đáp án đúng: A — ID → NAME.\n\nNền tảng kiến thức: Trong thiết kế cơ sở dữ liệu quan hệ, thuộc tính khóa chính (Primary Key / Candidate Key) như `ID` xác định duy nhất mọi thuộc tính còn lại trong cùng một bộ (tuple).\n\nPhân tích: ID là mã định danh duy nhất của mỗi người dùng, do đó với mỗi giá trị ID chỉ có duy nhất một giá trị NAME tương ứng (ID → NAME). Password và NAME đều có thể bị trùng lặp giữa các người dùng nên không thể làm vế trái suy ra các trường khác."
     },
     {
       "id": 5165,

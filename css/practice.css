@@ -2801,9 +2801,12 @@ mjx-container[jax="SVG"][display="true"] {
 mjx-container[jax="SVG"]:not([display="true"]) {
   display: inline-block;
   max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: visible;
   vertical-align: -0.2em;
+}
+
+.prc-option-text mjx-container {
+  overflow: visible !important;
 }
 
 .prc-exp-list {
