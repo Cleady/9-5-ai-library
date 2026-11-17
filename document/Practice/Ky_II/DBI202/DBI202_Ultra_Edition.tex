@@ -10016,16 +10016,16 @@ Which of the following is NOT true about an aggregate function?
 \choice Aggregate functions such as COUNT(*) ignore null values.
 \choice Aggregate functions are often used with the GROUP BY clause of the SELECT statement.
 \end{choices}
-\textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. All aggregate functions are nondeterministic..
+\textbf{Đáp án:} AC
+\textbf{Giải thích:} Cả hai phương án A và C đều là các phát biểu KHÔNG ĐÚNG (NOT true) về hàm tổng hợp trong SQL:
 
-Lời giải gốc: Phát biểu này không đúng vì các hàm tổng hợp chuẩn (như SUM, AVG, MIN, MAX) là hàm xác định (deterministic) - cùng đầu vào luôn cho cùng kết quả.
+1. **Phương án A không đúng:** Các hàm tổng hợp tích hợp sẵn của SQL (như SUM, AVG, MIN, MAX, COUNT) là các hàm **xác định (deterministic)**. Với cùng một tập hợp dữ liệu đầu vào trong cùng một trạng thái cơ sở dữ liệu, chúng luôn luôn trả về cùng một kết quả duy nhất. Do đó phát biểu "All aggregate functions are nondeterministic" là sai.
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+2. **Phương án C không đúng:** Trong SQL, hàm `COUNT(*)` đếm **toàn bộ số lượng bản ghi (hàng)**, bao gồm cả các hàng chứa giá trị NULL. Chỉ có `COUNT(tên_cột)` hoặc các hàm `SUM`, `AVG`, `MIN`, `MAX` mới bỏ qua (ignore) các giá trị NULL. Do đó phát biểu "Aggregate functions such as COUNT(*) ignore null values" là sai.
 
-Phân tích: Aggregate function tính một kết quả từ một tập nhiều hàng/giá trị, ví dụ COUNT, SUM, AVG, MIN và MAX. Trong truy vấn nhóm, GROUP BY xác định từng tập đầu vào; HAVING lọc các nhóm sau khi tính tổng hợp.
-
-Đối chiếu phương án: B. It performs a calculation on a set of values and returns a single value.; C. Aggregate functions such as COUNT(*) ignore null values.; D. Aggregate functions are often used with the GROUP BY clause of the SELECT statement.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+**Các phương án còn lại là phát biểu đúng:**
+- **B (Đúng):** Hàm tổng hợp thực hiện tính toán trên một tập hợp các giá trị và trả về một giá trị vô hướng (single scalar value).
+- **D (Đúng):** Các hàm tổng hợp thường xuyên được kết hợp với mệnh đề `GROUP BY` trong câu lệnh `SELECT` để phân nhóm và tính toán.
 \end{question}
 
 \begin{question}{447}
