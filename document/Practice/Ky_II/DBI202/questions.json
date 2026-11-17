@@ -2110,7 +2110,7 @@
     {
       "id": 5157,
       "quizId": 103,
-      "text": "Suppose we have a relation \\(R(A, B, C, D, E, F, N)\\) and functional dependencies:\n\\(F = \\{ F \\rightarrow A, \\quad A \\rightarrow B, \\quad B \\rightarrow C, \\quad BC \\rightarrow A, \\quad A \\rightarrow D, \\quad E \\rightarrow A, \\quad D \\rightarrow E \\}\\)\n\nWhich of the following is NOT a candidate key for \\(R\\)?",
+      "text": "Suppose we have a relation \\(R(A, B, C, D, E, F, N)\\) and functional dependencies:\n\\(F = \\{ F \\rightarrow A, \\quad A \\rightarrow B, \\quad B \\rightarrow C, \\quad BC \\rightarrow A, \\quad A \\rightarrow D, \\quad E \\rightarrow A, \\quad D \\rightarrow E \\}\\)\n\nWhich of the following is NOT a candidate key for \\(R\\)? (Choose all that apply)",
       "options": [
         "AB",
         "FN",
@@ -2118,7 +2118,13 @@
         "D"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. AB.\n\nLời giải gốc: Tập thuộc tính A, B không chứa N và không thể suy ra N từ tập phụ thuộc hàm, do đó không thể là khóa của quan hệ.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nhận diện duy nhất một bộ/hàng. Khóa có thể gồm một hay nhiều cột, nên không bắt buộc luôn là cột đơn hoặc luôn gồm nhiều cột; nó cũng không “nhận diện một cột”.\n\nĐối chiếu phương án: B. FN; C. E; D. D. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "**Đáp án đúng**: A & C & D\n\nĐáp án theo dữ liệu đề: A, C, D — A. AB; C. E; D. D.\n\nLời giải chi tiết:\n- Thuộc tính \\(N\\) không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào trong \\(F\\). Do đó, bất kỳ siêu khóa hoặc khóa ứng viên nào của lược đồ \\(R\\) cũng bắt buộc phải chứa thuộc tính \\(N\\).\n- Xét các phương án:\n  + \\(AB\\): không chứa \\(N\\), bao đóng \\((AB)^+ = \\{A, B, C, D, E\\} \\neq R\\) (không phải khóa ứng viên).\n  + \\(E\\): không chứa \\(N\\), bao đóng \\(E^+ = \\{E, A, B, C, D\\} \\neq R\\) (không phải khóa ứng viên).\n  + \\(D\\): không chứa \\(N\\), bao đóng \\(D^+ = \\{D, E, A, B, C\\} \\neq R\\) (không phải khóa ứng viên).\n  + \\(FN\\): có chứa \\(N\\), bao đóng \\((FN)^+ = \\{A, B, C, D, E, F, N\\} = R\\) (đây là khóa ứng viên duy nhất).\n\nVì câu hỏi yêu cầu chọn tập thuộc tính KHÔNG phải là khóa ứng viên (NOT a candidate key), nên cả ba phương án A, C, D đều đúng.",
+      "correctIndices": [
+        0,
+        2,
+        3
+      ],
+      "multiple": true
     },
     {
       "id": 5158,
