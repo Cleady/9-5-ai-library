@@ -1859,8 +1859,8 @@ Phân tích: Các hàng dữ liệu của một relation được gọi là tupl
 % [Nguồn: DBI202 Order 4 Q16]
 For the following relations:
 
-$$\textbf{Employee} \qquad \textbf{Customer}$$
-$$\begin{array}{|c|c|c|}
+$\textbf{Employee} \qquad \textbf{Customer}$
+$\begin{array}{|c|c|c|}
 \hline
 \text{Name} & \text{City} & \text{Gender} \\
 \hline
@@ -1878,23 +1878,24 @@ $$\begin{array}{|c|c|c|}
 \hline
 \text{Tran Tuyet Nhi} & \text{HN} & \text{Female} \\
 \hline
-\end{array}$$
+\end{array}$
 
 What is the result of the Intersection operation (Employee \cap Customer)?
 \begin{choices}
-\choice $$\begin{array}{|c|c|c|}\hline \text{Name} & \text{City} & \text{Gender} \\\hline \text{Nguyen Trung Truc} & \text{HCM} & \text{Male} \\\hline\end{array}$$
-\choice $$\begin{array}{|c|c|c|}\hline \text{Name} & \text{City} & \text{Gender} \\\hline \text{Le Hong Son} & \text{HCM} & \text{Male} \\\hline\end{array}$$
-\choice $$\begin{array}{|c|c|c|}\hline \text{Name} & \text{City} & \text{Gender} \\\hline \text{Tran Tuyet Nhi} & \text{HN} & \text{Female} \\\hline\end{array}$$
+\choice $\begin{array}{|c|c|c|}\hline \text{Name} & \text{City} & \text{Gender} \\\hline \text{Nguyen Trung Truc} & \text{HCM} & \text{Male} \\\hline\end{array}$
+\choice $\begin{array}{|c|c|c|}\hline \text{Name} & \text{City} & \text{Gender} \\\hline \text{Le Hong Son} & \text{HCM} & \text{Male} \\\hline\end{array}$
+\choice $\begin{array}{|c|c|c|}\hline \text{Name} & \text{City} & \text{Gender} \\\hline \text{Tran Tuyet Nhi} & \text{HN} & \text{Female} \\\hline\end{array}$
 \choice None of the others
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: C — C. maker (type='PC' (Product)) \ maker (type='Laptop' (Product)).
+\textbf{Giải thích:} Đáp án đúng: A — Nguyen Trung Truc | HCM | Male.
 
-Nền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.
+Nền tảng kiến thức: Phép giao (Intersection: $R \cap S$) trong đại số quan hệ trả về tập hợp các bộ (tuples) cùng xuất hiện ở cả hai quan hệ $R$ và $S$.
 
-Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.
-
-Đối chiếu phương án: A. maker (type='Laptop' (Product)) \[maker (type='Laptop' (Product)); B. maker (type='Laptop' (Product)) \maker (type='PC' (Product)); D. Omaker (type='PC' (Product)) \ [maker ([type='PC' (Product)). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích bảng dữ liệu:
+- Bảng Employee gồm: (Nguyen Trung Truc, HCM, Male) và (Le Hong Son, HCM, Male).
+- Bảng Customer gồm: (Nguyen Trung Truc, HCM, Male) và (Tran Tuyet Nhi, HN, Female).
+- Phần tử chung duy nhất xuất hiện ở cả 2 bảng là (Nguyen Trung Truc, HCM, Male), tương ứng với phương án A.
 \end{question}
 
 \begin{question}{87}
@@ -2984,19 +2985,22 @@ Vậy \((AB)^+ = \{A, B, C, D, E, G\}\) (tương ứng **ABCDEG**). Phương án
 % [Nguồn: DBI202 Order 15 Q25]
 Which of the following represents Armstrong's Axiom of Transitivity?
 \begin{choices}
-\choice If AB, then AC → BC
-\choice If A B and B → C, then A → C
-\choice If A B, then B → A
-\choice If A B, then A → BC
+\choice If $A \to B$, then $AC \to BC$
+\choice If $A \to B$ and $B \to C$, then $A \to C$
+\choice If $A \to B$, then $B \to A$
+\choice If $A \to B$, then $A \to BC$
 \end{choices}
 \textbf{Đáp án:} B
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. If A B and B → C, then A → C.
+\textbf{Giải thích:} Đáp án đúng: B — If $A \to B$ and $B \to C$, then $A \to C$.
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
+Nền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:
+1. Tiên đề bắc cầu (Transitivity Axiom): Nếu $A \to B$ và $B \to C$ thì suy ra $A \to C$.
+2. Tiên đề tăng trưởng (Augmentation Axiom): Nếu $A \to B$ thì suy ra $AC \to BC$.
+3. Tiên đề phản xạ (Reflexivity Axiom): Nếu $Y \subseteq X$ thì suy ra $X \to Y$.
+4. Quy tắc phân rã (Decomposition Rule): Nếu $A \to BC$ thì suy ra $A \to B$ và $A \to C$.
+5. Quy tắc hợp (Union Rule): Nếu $A \to B$ và $A \to C$ thì suy ra $A \to BC$.
 
-Phân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z thì suy ra X → Z. Phải kiểm tra hai phụ thuộc nối tiếp cùng vế giữa Y; các tiên đề phản xạ và tăng trưởng mô tả quy tắc khác.
-
-Đối chiếu phương án: A. If AB, then AC → BC; C. If A B, then B → A; D. If A B, then A → BC. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích: Phương án B biểu diễn chính xác Tiên đề bắc cầu (Transitivity Axiom). Phương án A là Tiên đề tăng trưởng (Augmentation Axiom), phương án C sai (phụ thuộc hàm không có tính đối xứng), phương án D sai (thiếu điều kiện $A \to C$).
 \end{question}
 
 \begin{question}{137}
@@ -3046,19 +3050,18 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 % [Nguồn: DBI202 Order 15 Q28]
 If attribute A determines both attributes B and C, then it is also true that:
 \begin{choices}
-\choice (B,C) -> A.
-\choice C -> A.
-\choice B -> A.
-\choice A -> B
+\choice $(B, C) \to A$
+\choice $C \to A$
+\choice $B \to A$
+\choice $A \to B$
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: D — D. A -> B.
+\textbf{Giải thích:} Đáp án đúng: D — $A \to B$.
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
+Nền tảng kiến thức: Nếu thuộc tính $A$ xác định đồng thời $B$ và $C$, tức là ta có $A \to BC$. Theo Quy tắc phân rã (Decomposition Rule) của hệ tiên đề Armstrong:
+- Từ $A \to BC$, ta luôn suy ra được $A \to B$ và $A \to C$.
 
-Phân tích: Nếu A xác định đồng thời B và C thì theo quy tắc phân rã của phụ thuộc hàm, A → B và A → C đều suy ra; theo quy tắc hợp, có thể viết A → BC. Đây là hệ quả trực tiếp của ý nghĩa “cùng A thì cùng giá trị của mọi thuộc tính ở vế phải”.
-
-Đối chiếu phương án: A. (B,C) -> A.; B. C -> A.; C. B -> A.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích: Phương án D ($A \to B$) là hệ quả trực tiếp đúng đắn. Các phương án A, B, C đảo ngược chiều phụ thuộc đều không hợp lệ vì phụ thuộc hàm không có tính chất đối xứng.
 \end{question}
 
 \begin{question}{140}
@@ -3588,23 +3591,19 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{164}
 % [ID gốc: 15.59]
 % [Nguồn: DBI202 Order 15 Q59]
-Consider the table: Which functional dependency exists in the above table?
+Consider a user table with columns ID, NAME, Password, and email. Which functional dependency exists in this table?
 \begin{choices}
-\choice ID NAME
-\choice Password → email
-\choice Password →NAME
-\choice NAME email
+\choice ID $\to$ NAME
+\choice Password $\to$ email
+\choice Password $\to$ NAME
+\choice NAME $\to$ email
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. ID NAME.
+\textbf{Giải thích:} Đáp án đúng: A — ID $\to$ NAME.
 
-Lời giải gốc: Theo quy tắc thiết kế cơ sở dữ liệu tiêu chuẩn, khóa chính (ID) sẽ xác định duy nhất các thuộc tính còn lại. Do đó, phụ thuộc hàm ID -> NAME là hoàn toàn hợp lý.
+Nền tảng kiến thức: Trong thiết kế cơ sở dữ liệu quan hệ, thuộc tính khóa chính (Primary Key / Candidate Key) như `ID` xác định duy nhất mọi thuộc tính còn lại trong cùng một bộ (tuple).
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
-
-Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.
-
-Đối chiếu phương án: B. Password → email; C. Password →NAME; D. NAME email. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích: ID là mã định danh duy nhất của mỗi người dùng, do đó với mỗi giá trị ID chỉ có duy nhất một giá trị NAME tương ứng (ID $\to$ NAME). Password và NAME đều có thể bị trùng lặp giữa các người dùng nên không thể làm vế trái suy ra các trường khác.
 \end{question}
 
 \begin{question}{165}
@@ -3864,7 +3863,7 @@ Based on Armstrong's inference rules, which of the functional dependencies can b
 \begin{question}{176}
 % [ID gốc: 15.77]
 % [Nguồn: DBI202 Order 15 Q77]
-If A → B and B → C, which rule allows us to infer A → C?
+If $A \to B$ and $B \to C$, which rule allows us to infer $A \to C$?
 \begin{choices}
 \choice Reflexivity
 \choice Augmentation
@@ -3872,15 +3871,14 @@ If A → B and B → C, which rule allows us to infer A → C?
 \choice Projection
 \end{choices}
 \textbf{Đáp án:} C
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: C — C. Transitivity.
+\textbf{Giải thích:} Đáp án đúng: C — Transitivity.
 
-Lời giải gốc: Đây là luật bắc cầu (Transitivity rule) trong hệ tiên đề Armstrong.
+Nền tảng kiến thức: Hệ tiên đề Armstrong gồm:
+- Tiên đề bắc cầu (Transitivity): Nếu $A \to B$ và $B \to C$ thì suy ra $A \to C$.
+- Tiên đề phản xạ (Reflexivity): Nếu $Y \subseteq X$ thì suy ra $X \to Y$.
+- Tiên đề tăng trưởng (Augmentation): Nếu $A \to B$ thì suy ra $AC \to BC$.
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
-
-Phân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z thì suy ra X → Z. Phải kiểm tra hai phụ thuộc nối tiếp cùng vế giữa Y; các tiên đề phản xạ và tăng trưởng mô tả quy tắc khác.
-
-Đối chiếu phương án: A. Reflexivity; B. Augmentation; D. Projection. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích: Quy tắc cho phép suy diễn từ $A \to B$ và $B \to C$ ra $A \to C$ chính là Tiên đề bắc cầu (Transitivity Rule).
 \end{question}
 
 \begin{question}{177}
@@ -4116,23 +4114,23 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{187}
 % [ID gốc: 15.96]
 % [Nguồn: DBI202 Order 15 Q96]
-Which statement best represents Armstrong's Axiom of Decomposition?
+Which statement best represents Armstrong's Rule of Decomposition?
 \begin{choices}
-\choice If A → BC, then A → B and A → C
-\choice If A → B and B → C, then A → C
-\choice If A → B, then AC → BC
-\choice If A → B, then B → C
+\choice If $A \to BC$, then $A \to B$ and $A \to C$
+\choice If $A \to B$ and $B \to C$, then $A \to C$
+\choice If $A \to B$, then $AC \to BC$
+\choice If $A \to B$, then $B \to C$
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. If A → BC, then A → B and A → C.
+\textbf{Giải thích:} Đáp án đúng: A — If $A \to BC$, then $A \to B$ and $A \to C$.
 
-Lời giải gốc: Luật phân rã (Decomposition rule) trong hệ tiên đề Armstrong phát biểu rằng nếu A → BC thì A → B và A → C.
+Nền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:
+1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu $A \to BC$ thì suy ra $A \to B$ và $A \to C$.
+2. Tiên đề bắc cầu (Transitivity Axiom): Nếu $A \to B$ và $B \to C$ thì suy ra $A \to C$.
+3. Tiên đề tăng trưởng (Augmentation Axiom): Nếu $A \to B$ thì suy ra $AC \to BC$.
+4. Quy tắc hợp (Union / Additivity Rule): Nếu $A \to B$ và $A \to C$ thì suy ra $A \to BC$.
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
-
-Phân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z thì suy ra X → Z. Phải kiểm tra hai phụ thuộc nối tiếp cùng vế giữa Y; các tiên đề phản xạ và tăng trưởng mô tả quy tắc khác.
-
-Đối chiếu phương án: B. If A → B and B → C, then A → C; C. If A → B, then AC → BC; D. If A → B, then B → C. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích: Phương án A biểu diễn chính xác Quy tắc phân rã (Decomposition Rule). Phương án B là Tiên đề bắc cầu (Transitivity Axiom), phương án C là Tiên đề tăng trưởng (Augmentation Axiom), phương án D sai.
 \end{question}
 
 \begin{question}{188}
@@ -4370,23 +4368,20 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{198}
 % [ID gốc: 15.114]
 % [Nguồn: DBI202 Order 15 Q114]
-Suppose that we have a relation \(R(A, B, C, D)\) and functional dependency: \(D \rightarrow BC\). Which of the following is equivalent to the given dependency?
+Suppose that we have a relation $R(A, B, C, D)$ and functional dependency: $D \to BC$. Which of the following is equivalent to the given dependency?
 \begin{choices}
-\choice \(D \rightarrow B\) and \(D \rightarrow C\)
-\choice \(C \rightarrow B\) and \(C \rightarrow B\)
-\choice \(D \rightarrow B\) and \(B \rightarrow C\)
-\choice \(C \rightarrow D\) and \(C \rightarrow B\)
+\choice $D \to B$ and $D \to C$
+\choice $C \to B$ and $C \to B$
+\choice $D \to B$ and $B \to C$
+\choice $C \to D$ and $C \to B$
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. D-&gt;B and D-&gt;C.
+\textbf{Giải thích:} Đáp án đúng: A — $D \to B$ and $D \to C$.
 
-Lời giải gốc: Theo quy tắc phân tách (Decomposition rule), phụ thuộc hàm $D \to BC$ tương đương với hai phụ thuộc hàm riêng biệt là $D \to B$ và $D \to C$. ---
+Nền tảng kiến thức: Theo Quy tắc phân rã (Decomposition Rule) và Quy tắc hợp (Union Rule):
+- $D \to BC \iff (D \to B \text{ và } D \to C)$.
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
-
-Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.
-
-Đối chiếu phương án: B. C-&gt;B and C-&gt;B; C. D-&gt;B and B-&gt;C; D. C-&gt;D and C-&gt;B. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích: Phụ thuộc hàm $D \to BC$ có vế phải gồm 2 thuộc tính phân biệt $B$ và $C$, do đó hoàn toàn tương đương với cặp phụ thuộc hàm $D \to B$ và $D \to C$.
 \end{question}
 
 \begin{question}{199}

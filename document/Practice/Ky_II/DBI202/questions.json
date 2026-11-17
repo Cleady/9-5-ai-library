@@ -1191,7 +1191,7 @@
         "None of the others"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. maker (type='PC' (Product)) \\ maker (type='Laptop' (Product)).\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. maker (type='Laptop' (Product)) \\[maker (type='Laptop' (Product)); B. maker (type='Laptop' (Product)) \\maker (type='PC' (Product)); D. Omaker (type='PC' (Product)) \\ [maker ([type='PC' (Product)). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: A — Nguyen Trung Truc | HCM | Male.\n\nNền tảng kiến thức: Phép giao (Intersection: \\(R \\cap S\\)) trong đại số quan hệ trả về tập hợp các bộ (tuples) cùng xuất hiện ở cả hai quan hệ \\(R\\) và \\(S\\).\n\nPhân tích bảng dữ liệu:\n- Bảng Employee gồm: (Nguyen Trung Truc, HCM, Male) và (Le Hong Son, HCM, Male).\n- Bảng Customer gồm: (Nguyen Trung Truc, HCM, Male) và (Tran Tuyet Nhi, HN, Female).\n- Phần tử chung duy nhất xuất hiện ở cả 2 bảng là (Nguyen Trung Truc, HCM, Male), tương ứng với phương án A."
     },
     {
       "id": 5087,
@@ -1838,13 +1838,13 @@
       "quizId": 103,
       "text": "Which of the following represents Armstrong's Axiom of Transitivity?",
       "options": [
-        "If AB, then AC → BC",
-        "If A B and B → C, then A → C",
-        "If A B, then B → A",
-        "If A B, then A → BC"
+        "If \\(A \\to B\\), then \\(AC \\to BC\\)",
+        "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
+        "If \\(A \\to B\\), then \\(B \\to A\\)",
+        "If \\(A \\to B\\), then \\(A \\to BC\\)"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. If A B and B → C, then A → C.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z thì suy ra X → Z. Phải kiểm tra hai phụ thuộc nối tiếp cùng vế giữa Y; các tiên đề phản xạ và tăng trưởng mô tả quy tắc khác.\n\nĐối chiếu phương án: A. If AB, then AC → BC; C. If A B, then B → A; D. If A B, then A → BC. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: B — If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n2. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n3. Tiên đề phản xạ (Reflexivity Axiom): Nếu \\(Y \\subseteq X\\) thì suy ra \\(X \\to Y\\).\n4. Quy tắc phân rã (Decomposition Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n5. Quy tắc hợp (Union Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n\nPhân tích:\n- Phương án B biểu diễn chính xác Tiên đề bắc cầu (Transitivity Axiom).\n- Phương án A là Tiên đề tăng trưởng (Augmentation Axiom).\n- Phương án C sai (phụ thuộc hàm không có tính đối xứng).\n- Phương án D sai (thiếu điều kiện \\(A \\to C\\) để suy ra quy tắc hợp)."
     },
     {
       "id": 5137,
@@ -1877,13 +1877,13 @@
       "quizId": 103,
       "text": "If attribute A determines both attributes B and C, then it is also true that:",
       "options": [
-        "(B,C) -> A.",
-        "C -> A.",
-        "B -> A.",
-        "A -> B"
+        "\\((B, C) \\to A\\)",
+        "\\(C \\to A\\)",
+        "\\(B \\to A\\)",
+        "\\(A \\to B\\)"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. A -> B.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Nếu A xác định đồng thời B và C thì theo quy tắc phân rã của phụ thuộc hàm, A → B và A → C đều suy ra; theo quy tắc hợp, có thể viết A → BC. Đây là hệ quả trực tiếp của ý nghĩa “cùng A thì cùng giá trị của mọi thuộc tính ở vế phải”.\n\nĐối chiếu phương án: A. (B,C) -> A.; B. C -> A.; C. B -> A.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: D — \\(A \\to B\\).\n\nNền tảng kiến thức: Nếu thuộc tính \\(A\\) xác định đồng thời \\(B\\) và \\(C\\), tức là ta có \\(A \\to BC\\). Theo Quy tắc phân rã (Decomposition Rule) của hệ tiên đề Armstrong:\n- Từ \\(A \\to BC\\), ta luôn suy ra được \\(A \\to B\\) và \\(A \\to C\\).\n\nPhân tích các phương án:\n- Phương án D (\\(A \\to B\\)) là hệ quả trực tiếp đúng đắn.\n- Các phương án A, B, C đảo ngược chiều phụ thuộc (\\(B \\to A\\), \\(C \\to A\\), \\((B, C) \\to A\\)) đều không hợp lệ vì phụ thuộc hàm không có tính chất đối xứng."
     },
     {
       "id": 5140,
@@ -2201,15 +2201,15 @@
     {
       "id": 5164,
       "quizId": 103,
-      "text": "Consider the table: Which functional dependency exists in the above table?",
+      "text": "Consider a user table with columns ID, NAME, Password, and email. Which functional dependency exists in this table?",
       "options": [
-        "ID NAME",
+        "ID → NAME",
         "Password → email",
-        "Password →NAME",
-        "NAME email"
+        "Password → NAME",
+        "NAME → email"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. ID NAME.\n\nLời giải gốc: Theo quy tắc thiết kế cơ sở dữ liệu tiêu chuẩn, khóa chính (ID) sẽ xác định duy nhất các thuộc tính còn lại. Do đó, phụ thuộc hàm ID -> NAME là hoàn toàn hợp lý.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. Password → email; C. Password →NAME; D. NAME email. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: A — ID → NAME.\n\nNền tảng kiến thức: Trong thiết kế cơ sở dữ liệu quan hệ, thuộc tính khóa chính (Primary Key / Candidate Key) như `ID` xác định duy nhất mọi thuộc tính còn lại trong cùng một bộ (tuple).\n\nPhân tích:\n- ID là mã định danh duy nhất của mỗi người dùng, do đó với mỗi giá trị ID chỉ có duy nhất một giá trị NAME tương ứng (ID → NAME).\n- Password không xác định email hay NAME vì nhiều người dùng có thể đặt trùng mật khẩu.\n- NAME không thể xác định email vì nhiều người dùng có thể trùng họ tên nhưng có email khác nhau."
     },
     {
       "id": 5165,
@@ -2357,7 +2357,7 @@
     {
       "id": 5176,
       "quizId": 103,
-      "text": "If A → B and B → C, which rule allows us to infer A → C?",
+      "text": "If \\(A \\to B\\) and \\(B \\to C\\), which rule allows us to infer \\(A \\to C\\)?",
       "options": [
         "Reflexivity",
         "Augmentation",
@@ -2365,7 +2365,7 @@
         "Projection"
       ],
       "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Transitivity.\n\nLời giải gốc: Đây là luật bắc cầu (Transitivity rule) trong hệ tiên đề Armstrong.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z thì suy ra X → Z. Phải kiểm tra hai phụ thuộc nối tiếp cùng vế giữa Y; các tiên đề phản xạ và tăng trưởng mô tả quy tắc khác.\n\nĐối chiếu phương án: A. Reflexivity; B. Augmentation; D. Projection. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: C — Transitivity.\n\nNền tảng kiến thức: Hệ tiên đề Armstrong gồm:\n- Tiên đề bắc cầu (Transitivity): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n- Tiên đề phản xạ (Reflexivity): Nếu \\(Y \\subseteq X\\) thì \\(X \\to Y\\).\n- Tiên đề tăng trưởng (Augmentation): Nếu \\(A \\to B\\) thì \\(AC \\to BC\\).\n\nPhân tích: Quy tắc cho phép suy diễn từ \\(A \\to B\\) và \\(B \\to C\\) ra \\(A \\to C\\) chính là Tiên đề bắc cầu (Transitivity Rule)."
     },
     {
       "id": 5177,
@@ -2511,15 +2511,15 @@
     {
       "id": 5187,
       "quizId": 103,
-      "text": "Which statement best represents Armstrong's Axiom of Decomposition?",
+      "text": "Which statement best represents Armstrong's Rule of Decomposition?",
       "options": [
-        "If A → BC, then A → B and A → C",
-        "If A → B and B → C, then A → C",
-        "If A → B, then AC → BC",
-        "If A → B, then B → C"
+        "If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\)",
+        "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
+        "If \\(A \\to B\\), then \\(AC \\to BC\\)",
+        "If \\(A \\to B\\), then \\(B \\to C\\)"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. If A → BC, then A → B and A → C.\n\nLời giải gốc: Luật phân rã (Decomposition rule) trong hệ tiên đề Armstrong phát biểu rằng nếu A → BC thì A → B và A → C.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z thì suy ra X → Z. Phải kiểm tra hai phụ thuộc nối tiếp cùng vế giữa Y; các tiên đề phản xạ và tăng trưởng mô tả quy tắc khác.\n\nĐối chiếu phương án: B. If A → B and B → C, then A → C; C. If A → B, then AC → BC; D. If A → B, then B → C. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: A — If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n2. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n3. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n4. Quy tắc hợp (Union / Additivity Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n\nPhân tích:\n- Phương án A biểu diễn chính xác Quy tắc phân rã (Decomposition Rule).\n- Phương án B là Tiên đề bắc cầu (Transitivity Axiom).\n- Phương án C là Tiên đề tăng trưởng (Augmentation Axiom).\n- Phương án D sai vì từ \\(A \\to B\\) không thể suy diễn được \\(B \\to C\\)."
     },
     {
       "id": 5188,
@@ -2654,15 +2654,15 @@
     {
       "id": 5198,
       "quizId": 103,
-      "text": "Suppose that we have a relation \\(R(A, B, C, D)\\) and functional dependency: \\(D \\rightarrow BC\\). Which of the following is equivalent to the given dependency?",
+      "text": "Suppose that we have a relation \\(R(A, B, C, D)\\) and functional dependency: \\(D \\to BC\\). Which of the following is equivalent to the given dependency?",
       "options": [
-        "\\(D \\rightarrow B\\) and \\(D \\rightarrow C\\)",
-        "\\(C \\rightarrow B\\) and \\(C \\rightarrow B\\)",
-        "\\(D \\rightarrow B\\) and \\(B \\rightarrow C\\)",
-        "\\(C \\rightarrow D\\) and \\(C \\rightarrow B\\)"
+        "\\(D \\to B\\) and \\(D \\to C\\)",
+        "\\(C \\to B\\) and \\(C \\to B\\)",
+        "\\(D \\to B\\) and \\(B \\to C\\)",
+        "\\(C \\to D\\) and \\(C \\to B\\)"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. D-&gt;B and D-&gt;C.\n\nLời giải gốc: Theo quy tắc phân tách (Decomposition rule), phụ thuộc hàm \\(D \\to BC\\) tương đương với hai phụ thuộc hàm riêng biệt là \\(D \\to B\\) và \\(D \\to C\\). ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. C-&gt;B and C-&gt;B; C. D-&gt;B and B-&gt;C; D. C-&gt;D and C-&gt;B. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: A — \\(D \\to B\\) and \\(D \\to C\\).\n\nNền tảng kiến thức: Theo Quy tắc phân rã (Decomposition Rule) và Quy tắc hợp (Union Rule):\n- \\(D \\to BC \\iff (D \\to B \\text{ và } D \\to C)\\).\n\nPhân tích: Phụ thuộc hàm \\(D \\to BC\\) có vế phải gồm 2 thuộc tính phân biệt \\(B\\) và \\(C\\), do đó hoàn toàn tương đương với cặp phụ thuộc hàm \\(D \\to B\\) và \\(D \\to C\\)."
     },
     {
       "id": 5199,
