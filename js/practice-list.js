@@ -347,6 +347,11 @@
       if (tabId === 'quizzes') renderQuizList(subject);
       else if (tabId === 'exercises') renderExerciseList(subject);
       else if (tabId === 'flashcards') renderFlashcardLink(subject);
+      else if (tabId === 'mock-exam') {
+        if (window.Lib95 && window.Lib95.practice && window.Lib95.practice.mockExam && window.Lib95.practice.mockExam.renderPanel) {
+          window.Lib95.practice.mockExam.renderPanel(subject);
+        }
+      }
     }
 
     /* Khởi tạo tab ban đầu */

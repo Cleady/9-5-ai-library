@@ -850,12 +850,33 @@
     var attempt = attempts.find(function (a) { return a.id === attemptId; });
     if (!attempt) { window.location.href = 'practice.html'; return; }
 
-    var quiz = core.getQuizById(attempt.refId);
+    var isMock = attempt.type === 'mock_exam';
+    var quiz = isMock ? null : core.getQuizById(attempt.refId);
     var subject = core.getSubjectById(attempt.subjectId);
-    var questions = core.getQuestionsByQuizId(attempt.refId);
+    var questions = [];
+
+    if (isMock) {
+      var allQ = window.Lib95.practice.data.questions || [];
+      var qMap = {};
+      for (var i = 0; i < allQ.length; i++) {
+        if (allQ[i] && allQ[i].id) {
+          qMap[allQ[i].id] = allQ[i];
+        }
+      }
+      questions = (attempt.questionIds || []).map(function (qid) {
+        return qMap[qid];
+      }).filter(Boolean);
+    } else {
+      questions = core.getQuestionsByQuizId(attempt.refId);
+    }
+
     var userName = core.getUserName();
 
-    document.title = 'Result – Quiz ' + (quiz ? quiz.order : '') + ' – 9.5 AI CLUB';
+    if (isMock) {
+      document.title = 'Result – ' + (attempt.examTitle || 'Thi thử') + ' – 9.5 AI CLUB';
+    } else {
+      document.title = 'Result – Quiz ' + (quiz ? quiz.order : '') + ' – 9.5 AI CLUB';
+    }
 
     renderResultPage(attempt, quiz, subject, questions, userName);
   }
@@ -865,6 +886,7 @@
     var container = document.getElementById('prc-result-content');
 
     /* Tính giá trị hiển thị từ attempt (không hardcode) */
+    var isMock = attempt.type === 'mock_exam';
     var score = attempt.score;
     var correct = attempt.correct;
     var incorrect = attempt.incorrect;
@@ -883,7 +905,11 @@
 
     /* Link quay về subject hoặc quiz tiếp theo */
     var nextQuizHref = 'practice-subject.html?subject=' + attempt.subjectId;
-    if (quiz) {
+    var continueBtnText = 'Continue';
+    if (isMock) {
+      nextQuizHref = 'practice-subject.html?subject=' + attempt.subjectId + '#mock-exam';
+      continueBtnText = 'Thi thử lại';
+    } else if (quiz) {
       /* Tìm quiz tiếp theo cùng subject */
       var allQuizzes = core.getQuizzes(quiz.subjectId);
       var nextQuiz = allQuizzes.find(function (q) { return q.order > quiz.order; });
@@ -891,6 +917,10 @@
         nextQuizHref = 'practice-quiz-intro.html?quiz=' + nextQuiz.id;
       }
     }
+
+    var subtitleHtml = isMock
+      ? 'You scored ' + correct + ' out of ' + total + ' (' + (score / 10).toFixed(1) + ' / 10 điểm)'
+      : 'You scored ' + correct + ' out of ' + total;
 
     container.innerHTML =
       '<div class="prc-result-page">' +
@@ -910,8 +940,8 @@
           '</svg>' +
         '</div>' +
 
-        '<h1 class="prc-result-title">' + congrats + '</h1>' +
-        '<p class="prc-result-subtitle">You scored ' + correct + ' out of ' + total + '</p>' +
+        '<h1 class="prc-result-title">' + (isMock ? (attempt.examTitle || 'Thi thử hoàn tất') : congrats) + '</h1>' +
+        '<p class="prc-result-subtitle">' + subtitleHtml + '</p>' +
 
         /* Score ring */
         '<div class="prc-result-ring">' +
@@ -938,7 +968,7 @@
         /* Buttons */
         '<div class="prc-result-actions">' +
           '<button type="button" class="prc-btn prc-btn-outline" id="prc-review-btn">Review answers</button>' +
-          '<a href="' + nextQuizHref + '" class="prc-btn prc-btn-primary" id="prc-continue-btn">Continue</a>' +
+          '<a href="' + nextQuizHref + '" class="prc-btn prc-btn-primary" id="prc-continue-btn">' + continueBtnText + '</a>' +
         '</div>' +
 
         /* Review section — ban đầu ẩn, hiện khi bấm Review */

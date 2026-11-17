@@ -255,6 +255,12 @@
   background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
 }
 
+.his-icon--mock_exam,
+.his-type-icon--mock_exam {
+  color: #b45309;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+}
+
 .his-icon--practice,
 .his-type-icon--practice {
   color: #047857;
@@ -1582,6 +1588,14 @@ html[data-theme="dark"] .his-type-icon--quiz {
   border: 1px solid rgba(167, 139, 250, 0.3) !important;
   color: #a78bfa !important;
   box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+html[data-theme="dark"] .his-icon--mock_exam,
+html[data-theme="dark"] .his-type-icon--mock_exam {
+  background: linear-gradient(135deg, rgba(146, 64, 14, 0.45), rgba(245, 158, 11, 0.2)) !important;
+  border: 1px solid rgba(251, 191, 36, 0.3) !important;
+  color: #fcd34d !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
 }
 
 html[data-theme="dark"] .his-icon--practice,

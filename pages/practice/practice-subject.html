@@ -162,7 +162,7 @@
                         exercises.</p>
                 </div>
 
-                <!-- Tabs: Quizzes / Exercises / Flashcards -->
+                <!-- Tabs: Quizzes / Exercises / Flashcards / Mock Exam -->
                 <!-- JS dùng id prc-subject-tabs và data-tab -->
                 <div class="prc-filter-row">
                     <div id="prc-subject-tabs" class="prc-tab-list" role="tablist" aria-label="Chọn loại bài tập">
@@ -172,6 +172,8 @@
                             aria-controls="prc-panel-exercises">Exercises</button>
                         <button type="button" class="prc-tab" role="tab" data-tab="flashcards" aria-selected="false"
                             aria-controls="prc-panel-flashcards">Flashcards</button>
+                        <button type="button" class="prc-tab" role="tab" data-tab="mock-exam" aria-selected="false"
+                            aria-controls="prc-panel-mock-exam">Mock Exam</button>
                     </div>
                 </div>
 
@@ -189,6 +191,11 @@
                 <!-- Panel Flashcards — JS render link flashcards vào đây -->
                 <div id="prc-panel-flashcards" class="prc-tab-panel" role="tabpanel" hidden>
                     <div id="prc-flashcard-panel"></div>
+                </div>
+
+                <!-- Panel Mock Exam — JS render nội dung thi thử vào đây -->
+                <div id="prc-panel-mock-exam" class="prc-tab-panel" role="tabpanel" hidden>
+                    <div id="prc-mock-exam-panel"></div>
                 </div>
 
             </div>
@@ -227,6 +234,7 @@
     <script src="/js/practice-data-mae101.js"></script>
     <script src="/js/practice-core.js?v=20261117v21"></script>
     <script src="/js/practice-list.js?v=20261117v21"></script>
+    <script src="/js/practice-mock-exam.js?v=20261117v21"></script>
     <script src="../../js/syncProfile.js"></script>
 </body>
 

@@ -89,7 +89,16 @@
 
   /* Lấy câu hỏi cho một quiz */
   function getQuestionsByQuizId(quizId) {
-    return DATA.questions.filter(function (q) { return q.quizId === Number(quizId); });
+    return (DATA.questions || []).filter(function (q) { return q && q.quizId === Number(quizId); });
+  }
+
+  /* Lấy toàn bộ câu hỏi của một môn học (qua tất cả các quiz/chương) */
+  function getQuestionsBySubjectId(subjectId) {
+    var quizzes = getQuizzes(subjectId);
+    var quizIds = quizzes.map(function (q) { return q.id; });
+    return (DATA.questions || []).filter(function (q) {
+      return q && quizIds.indexOf(q.quizId) !== -1;
+    });
   }
 
   /* Lấy tất cả exercises, có thể lọc theo subjectId */
@@ -191,15 +200,32 @@
     return completed ? 'completed' : 'not-started';
   }
 
-  /* Tính điểm trung bình của một subject dựa trên tất cả attempts */
+  /* Tính điểm trung bình của một subject dựa trên tất cả attempts (loại trừ mock_exam để không làm sai lệch thống kê quiz) */
   function getSubjectAverageScore(subjectId) {
     var attempts = getAttempts();
     var subjectAttempts = attempts.filter(function (a) {
-      return a.subjectId === Number(subjectId);
+      return a.subjectId === Number(subjectId) && a.type !== 'mock_exam';
     });
     if (subjectAttempts.length === 0) return 0;
     var total = subjectAttempts.reduce(function (sum, a) { return sum + a.score; }, 0);
     return Math.round(total / subjectAttempts.length);
+  }
+
+  /* ====== MOCK EXAM (THI THỬ) ====== */
+
+  /* Lấy danh sách các lần thi thử của môn học (hoặc tất cả nếu không truyền subjectId) */
+  function getMockAttempts(subjectId) {
+    var attempts = getAttempts();
+    return attempts.filter(function (a) {
+      return a.type === 'mock_exam' && (subjectId ? a.subjectId === Number(subjectId) : true);
+    });
+  }
+
+  /* Lấy điểm cao nhất của các lần thi thử môn học */
+  function getMockBestScore(subjectId) {
+    var mockAttempts = getMockAttempts(subjectId);
+    if (mockAttempts.length === 0) return null;
+    return Math.max.apply(null, mockAttempts.map(function (a) { return a.score; }));
   }
 
   /* Tìm attempt đang làm dở gần nhất để hiện "Continue practicing" */
@@ -543,12 +569,15 @@
     getQuizzes: getQuizzes,
     getQuizById: getQuizById,
     getQuestionsByQuizId: getQuestionsByQuizId,
+    getQuestionsBySubjectId: getQuestionsBySubjectId,
     getExercises: getExercises,
     getExerciseById: getExerciseById,
     getFlashcards: getFlashcards,
     getAttempts: getAttempts,
     saveAttempt: saveAttempt,
     generateAttemptId: generateAttemptId,
+    getMockAttempts: getMockAttempts,
+    getMockBestScore: getMockBestScore,
     getQuizStatus: getQuizStatus,
     getQuizBestScore: getQuizBestScore,
     getQuizProgress: getQuizProgress,

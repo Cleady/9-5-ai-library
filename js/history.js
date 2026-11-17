@@ -9,6 +9,7 @@
     const attempts = core.getAttempts();
     records = attempts.map(att => {
       const isQuiz = att.type === 'quiz';
+      const isMock = att.type === 'mock_exam';
       let title = 'Unknown';
       let subtitle = '';
       let subjectName = 'Unknown Subject';
@@ -22,7 +23,18 @@
         subjectName = subject.name;
       }
 
-      if (isQuiz) {
+      if (isMock) {
+        title = att.examTitle || ('Thi thử – ' + subjectName);
+        subtitle = subjectName + ' · Mock Exam';
+        const totalQ = att.totalQuestions || (att.correct + att.incorrect) || 60;
+        durationStr = totalQ + ' questions';
+        desc = 'Bài thi thử đánh giá năng lực môn ' + subjectName;
+        takeaways = [
+          att.correct + ' questions answered correctly out of ' + totalQ,
+          'Your score was ' + att.score + '% (' + (att.score / 10).toFixed(1) + ' / 10)'
+        ];
+        res = [{ title: 'Exam answer review', meta: 'Review', url: '/pages/practice/practice-result.html?attempt=' + att.id }];
+      } else if (isQuiz) {
         const quiz = core.getQuizById(att.refId);
         if (quiz) {
           title = quiz.title;
@@ -33,7 +45,7 @@
             att.correct + ' questions answered correctly',
             'Your score was ' + att.score + '%'
           ];
-          res = [{ title: 'Quiz answer review', meta: 'Review' }];
+          res = [{ title: 'Quiz answer review', meta: 'Review', url: '/pages/practice/practice-result.html?attempt=' + att.id }];
         }
       } else {
         const ex = core.getExerciseById(att.refId);
@@ -83,7 +95,7 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  const iconText = { lecture: '▶', quiz: '▤', practice: '‹/›', resource: '▣' };
+  const iconText = { lecture: '▶', quiz: '▤', practice: '‹/›', resource: '▣', mock_exam: '📝' };
   const statusClass = { Completed: 'completed', 'In progress': 'in-progress', Viewed: 'viewed', Failed: 'failed' };
 
   let activeView = 'activity';
@@ -122,7 +134,10 @@
     const query = ($('#site-search')?.value || '').trim().toLowerCase();
     const sort = $('#his-sort')?.value || 'newest';
     const items = records.filter((record) => {
-      const matchesType = type === 'all' || record.type === type;
+      let matchesType = type === 'all' || record.type === type;
+      if (type === 'quiz') {
+        matchesType = record.type === 'quiz' || record.type === 'mock_exam';
+      }
       const matchesQuery = !query || `${record.title} ${record.subtitle} ${record.subject} ${record.status}`.toLowerCase().includes(query);
       return matchesType && matchesQuery;
     });
@@ -144,7 +159,7 @@
 
   function renderQuizHistory() {
     const query = ($('#site-search')?.value || '').trim().toLowerCase();
-    const items = records.filter((record) => record.type === 'quiz' && (quizFilter === 'all' || record.status === quizFilter))
+    const items = records.filter((record) => (record.type === 'quiz' || record.type === 'mock_exam') && (quizFilter === 'all' || record.status === quizFilter))
       .filter((record) => !query || `${record.title} ${record.subject} ${record.status}`.toLowerCase().includes(query))
       .sort((a, b) => b.date.localeCompare(a.date));
     $('#his-quiz-table-body').innerHTML = items.map((record) => `<tr>
@@ -200,7 +215,7 @@
     $('#his-detail-icon').className = `his-type-icon his-type-icon--${selectedRecord.type}`;
     $('#his-detail-icon').textContent = iconText[selectedRecord.type];
     $('#his-detail-progress-label').textContent = selectedRecord.status;
-    $('#his-detail-progress-meta').textContent = selectedRecord.type === 'quiz' ? `${selectedRecord.score}% score` : `${selectedRecord.duration} activity`;
+    $('#his-detail-progress-meta').textContent = (selectedRecord.type === 'quiz' || selectedRecord.type === 'mock_exam') ? `${selectedRecord.score}% score` : `${selectedRecord.duration} activity`;
     $('#his-detail-percent').textContent = `${selectedRecord.progress}%`;
     $('#his-detail-ring').style.setProperty('--his-ring-value', `${selectedRecord.progress}%`);
     $('#his-detail-ring').setAttribute('aria-label', `${selectedRecord.progress} percent complete`);
@@ -246,7 +261,7 @@
     const resources = record.resources.length ? record.resources : [{ title: 'Course overview', meta: `${record.subject} · Learning material` }];
     $('#his-detail-resources-list').innerHTML = resources.map((resource) => `<article class="his-resource-item">
       <span class="his-resource-icon" aria-hidden="true">▣</span><span class="his-resource-copy"><strong>${resource.title}</strong><span>${resource.meta}</span></span>
-      <button type="button" class="his-resource-download" data-resource-name="${resource.title}">Open</button>
+      <button type="button" class="his-resource-download" data-resource-name="${resource.title}" ${resource.url ? `data-resource-url="${resource.url}"` : ''}>Open</button>
     </article>`).join('');
   }
 
@@ -365,7 +380,14 @@
       const detailTab = event.target.closest('[data-detail-tab]');
       if (detailTab) { setDetailTab(detailTab.dataset.detailTab); return; }
       const resourceButton = event.target.closest('[data-resource-name]');
-      if (resourceButton) showToast(`“${resourceButton.dataset.resourceName}” will open when course files are connected.`);
+      if (resourceButton) {
+        const resUrl = resourceButton.dataset.resourceUrl;
+        if (resUrl) {
+          window.location.href = resUrl;
+          return;
+        }
+        showToast(`“${resourceButton.dataset.resourceName}” will open when course files are connected.`);
+      }
     });
 
     $('#his-detail-back').addEventListener('click', () => setView(returnView));
