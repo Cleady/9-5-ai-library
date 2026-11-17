@@ -9038,16 +9038,16 @@
     {
       "id": 5084,
       "quizId": 102,
-      "text": "For the following relation:\n\n\\(\\textbf{Student}\\)\n\\(\\begin{array}{|c|c|c|c|}\n\\hline\n\\text{ID} & \\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{SE1234} & \\text{Le Hong Phong} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{SE1235} & \\text{Le Hong Hanh} & \\text{HCM} & \\text{Female} \\\\\n\\hline\n\\text{SE1236} & \\text{Tran Binh Trong} & \\text{HN} & \\text{Male} \\\\\n\\hline\n\\end{array}\\)\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
+      "text": "For the following relation:\n\n\\(\\textbf{Student}\\)\n$\\beginarray|c|c|c|c|\n\\hline\n\\textID & \\textName & \\textCity & \\textGender \n\n\\hline\n\\textSE1234 & \\textLe Hong Phong & \\textHCM & \\textMale \n\n\\hline\n\\textSE1235 & \\textLe Hong Hanh & \\textHCM & \\textFemale \n\n\\hline\n\\textSE1236 & \\textTran Binh Trong & \\textHN & \\textMale \n\n\\hline\n\\endarray$\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
       "options": [
-            "\\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
-            "\\(\\pi_{\\text{Name}, \\text{City}}[\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})]\\)",
-            "\\(\\sigma_{\\text{Name}, \\text{City}}(\\pi_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
-            "None of the others"
+        "\\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
+        "\\(\\pi_{\\text{Name}, \\text{City}}[\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})]\\)",
+        "\\(\\sigma_{\\text{Name}, \\text{City}}(\\pi_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
+        "None of the others"
       ],
       "correctIndex": 0,
-      "explanation": "**Đáp án đúng: A. \\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)**\n\nYêu cầu đề bài: Lấy danh sách tên (\\text{Name}) và thành phố (\\text{City}) của các sinh viên sống tại HCM và có giới tính Male.\n- **Phép chọn (Selection \\(\\sigma\\))**: Lọc các bộ dữ liệu thỏa mãn điều kiện kết hợp: \\(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})\\).\n- **Phép chiếu (Projection \\(\\pi\\))**: Chiếu lấy các thuộc tính cần hiển thị trên kết quả đã lọc: \\(\\pi_{\\text{Name}, \\text{City}}(...)\\).\n- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \\(\\pi_{\\text{Danh_sách_cột}}(\\sigma_{\\text{Điều_kiện}}(\\text{Bảng}))\\).\n\nDo đó phương án **A** là chính xác. Phương án B dùng sai ngoặc vuông \\([...]\\), phương án C đảo ngược thứ tự chiếu trước khi chọn làm mất thuộc tính \\(\\text{Gender}\\)."
-},
+      "explanation": "**Đáp án đúng: A. \\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)**\n\nYêu cầu đề bài: Lấy danh sách tên (\\textName) và thành phố (\\textCity) của các sinh viên sống tại HCM và có giới tính Male.\n- **Phép chọn (Selection \\(\\sigma\\))**: Lọc các bộ dữ liệu thỏa mãn điều kiện kết hợp: \\(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})\\).\n- **Phép chiếu (Projection \\(\\pi\\))**: Chiếu lấy các thuộc tính cần hiển thị trên kết quả đã lọc: \\(\\pi_{\\text{Name}, \\text{City}}(...)\\).\n- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \\(\\pi_{\\text{Danh_sách_cột}}(\\sigma_{\\text{Điều_kiện}}(\\text{Bảng}))\\).\n\nDo đó phương án **A** là chính xác. Phương án B dùng sai ngoặc vuông \\([...]\\), phương án C đảo ngược thứ tự chiếu trước khi chọn làm mất thuộc tính \\(\\text{Gender}\\)."
+    },
     {
       "id": 5085,
       "quizId": 102,
@@ -9064,16 +9064,16 @@
     {
       "id": 5086,
       "quizId": 102,
-      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n\\(\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\end{array}\n\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\n\\hline\n\\end{array}\\)\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
+      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n$\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textLe Hong Son & \\textHCM & \\textMale \n\n\\hline\n\\endarray\n\n\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textTran Tuyet Nhi & \\textHN & \\textFemale \n\n\\hline\n\\endarray$\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
       "options": [
-            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
-            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
-            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\\hline\\end{array}\\)",
-            "None of the others"
+        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
+        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
+        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\\hline\\end{array}\\)",
+        "None of the others"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án đúng: A — Nguyen Trung Truc | HCM | Male.\n\nNền tảng kiến thức: Phép giao (Intersection: \\(R \\cap S\\)) trong đại số quan hệ trả về tập hợp các bộ (tuples) cùng xuất hiện ở cả hai quan hệ \\(R\\) và \\(S\\).\n\nPhân tích bảng dữ liệu:\n- Bảng Employee gồm: (Nguyen Trung Truc, HCM, Male) và (Le Hong Son, HCM, Male).\n- Bảng Customer gồm: (Nguyen Trung Truc, HCM, Male) và (Tran Tuyet Nhi, HN, Female).\n- Phần tử chung duy nhất xuất hiện ở cả 2 bảng là (Nguyen Trung Truc, HCM, Male), tương ứng với phương án A."
-},
+    },
     {
       "id": 5087,
       "quizId": 102,
@@ -9952,16 +9952,16 @@
     {
       "id": 5154,
       "quizId": 103,
-      "text": "Suppose we have a relation R(ID, full_name, address) with functional dependencies:\nF = { ID → full_name, ID → address }\n\nWhat is the highest normal form of R in relational database design?",
+      "text": "Suppose we have a relation R(ID, full_name, address) with functional dependencies:\nF = ID \\(\\to\\) full_name, ID \\(\\to\\) address \n\nWhat is the highest normal form of R in relational database design?",
       "options": [
-            "2NF",
-            "1NF",
-            "3NF",
-            "BCNF"
+        "2NF",
+        "1NF",
+        "3NF",
+        "BCNF"
       ],
       "correctIndex": 3,
       "explanation": "Đáp án đúng: D — BCNF.\n\nLời giải chi tiết: Với khóa chính là ID, mọi phụ thuộc hàm đều có vế trái là siêu khóa (ID → full_name, ID → address), do đó quan hệ đạt dạng chuẩn cao nhất là Boyce-Codd Normal Form (BCNF).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật:\n- 1NF: Các giá trị thuộc tính là nguyên tố (atomic).\n- 2NF: Đạt 1NF và không có thuộc tính không khóa nào phụ thuộc bộ phận vào một phần khóa chính.\n- 3NF: Đạt 2NF và không có thuộc tính không khóa nào phụ thuộc bắc cầu vào khóa chính.\n- BCNF: Mọi phụ thuộc hàm không tầm thường X → Y thì X đều phải là siêu khóa (superkey).\n\nPhân tích: Vì ID là khóa chính xác định duy nhất toàn bộ các thuộc tính còn lại (full_name và address), nên mọi determinant đều là siêu khóa, lược đồ quan hệ đạt dạng chuẩn BCNF."
-},
+    },
     {
       "id": 5155,
       "quizId": 103,
@@ -9993,20 +9993,20 @@
       "quizId": 103,
       "text": "Suppose we have a relation \\(R(A, B, C, D, E, F, N)\\) and functional dependencies:\n\\(F = \\{ F \\rightarrow A, \\quad A \\rightarrow B, \\quad B \\rightarrow C, \\quad BC \\rightarrow A, \\quad A \\rightarrow D, \\quad E \\rightarrow A, \\quad D \\rightarrow E \\}\\)\n\nWhich of the following is NOT a candidate key for \\(R\\)? (Choose all that apply)",
       "options": [
-            "AB",
-            "FN",
-            "E",
-            "D"
+        "AB",
+        "FN",
+        "E",
+        "D"
       ],
       "correctIndex": 0,
-      "explanation": "**Đáp án đúng**: A & C & D\n\nĐáp án theo dữ liệu đề: A, C, D — A. AB; C. E; D. D.\n\nLời giải chi tiết:\n- Thuộc tính \\(N\\) không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào trong \\(F\\). Do đó, bất kỳ siêu khóa hoặc khóa ứng viên nào của lược đồ \\(R\\) cũng bắt buộc phải chứa thuộc tính \\(N\\).\n- Xét các phương án:\n  + \\(AB\\): không chứa \\(N\\), bao đóng \\((AB)^+ = \\{A, B, C, D, E\\} \\neq R\\) (không phải khóa ứng viên).\n  + \\(E\\): không chứa \\(N\\), bao đóng \\(E^+ = \\{E, A, B, C, D\\} \\neq R\\) (không phải khóa ứng viên).\n  + \\(D\\): không chứa \\(N\\), bao đóng \\(D^+ = \\{D, E, A, B, C\\} \\neq R\\) (không phải khóa ứng viên).\n  + \\(FN\\): có chứa \\(N\\), bao đóng \\((FN)^+ = \\{A, B, C, D, E, F, N\\} = R\\) (đây là khóa ứng viên duy nhất).\n\nVì câu hỏi yêu cầu chọn tập thuộc tính KHÔNG phải là khóa ứng viên (NOT a candidate key), nên cả ba phương án A, C, D đều đúng.",
+      "explanation": "**Đáp án đúng**: A & C & D\n\nĐáp án theo dữ liệu đề: A, C, D — A. AB; C. E; D. D.\n\nLời giải chi tiết:\n- Thuộc tính \\(N\\) không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào trong \\(F\\). Do đó, bất kỳ siêu khóa hoặc khóa ứng viên nào của lược đồ \\(R\\) cũng bắt buộc phải chứa thuộc tính \\(N\\).\n- Xét các phương án:\n + \\(AB\\): không chứa \\(N\\), bao đóng \\((AB)^+ = \\{A, B, C, D, E\\} \\neq R\\) (không phải khóa ứng viên).\n + \\(E\\): không chứa \\(N\\), bao đóng \\(E^+ = \\{E, A, B, C, D\\} \\neq R\\) (không phải khóa ứng viên).\n + \\(D\\): không chứa \\(N\\), bao đóng \\(D^+ = \\{D, E, A, B, C\\} \\neq R\\) (không phải khóa ứng viên).\n + \\(FN\\): có chứa \\(N\\), bao đóng \\((FN)^+ = \\{A, B, C, D, E, F, N\\} = R\\) (đây là khóa ứng viên duy nhất).\n\nVì câu hỏi yêu cầu chọn tập thuộc tính KHÔNG phải là khóa ứng viên (NOT a candidate key), nên cả ba phương án A, C, D đều đúng.",
       "correctIndices": [
-            0,
-            2,
-            3
+        0,
+        2,
+        3
       ],
       "multiple": true
-},
+    },
     {
       "id": 5158,
       "quizId": 103,
@@ -10090,14 +10090,14 @@
       "quizId": 103,
       "text": "Consider a user table with columns ID, NAME, Password, and email. Which functional dependency exists in this table?",
       "options": [
-            "ID → NAME",
-            "Password → email",
-            "Password → NAME",
-            "NAME → email"
+        "ID \\(\\to\\) NAME",
+        "Password \\(\\to\\) email",
+        "Password \\(\\to\\) NAME",
+        "NAME \\(\\to\\) email"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án đúng: A — ID → NAME.\n\nNền tảng kiến thức: Trong thiết kế cơ sở dữ liệu quan hệ, thuộc tính khóa chính (Primary Key / Candidate Key) như `ID` xác định duy nhất mọi thuộc tính còn lại trong cùng một bộ (tuple).\n\nPhân tích: ID là mã định danh duy nhất của mỗi người dùng, do đó với mỗi giá trị ID chỉ có duy nhất một giá trị NAME tương ứng (ID → NAME). Password và NAME đều có thể bị trùng lặp giữa các người dùng nên không thể làm vế trái suy ra các trường khác."
-},
+      "explanation": "Đáp án đúng: A — ID \\(\\to\\) NAME.\n\nNền tảng kiến thức: Trong thiết kế cơ sở dữ liệu quan hệ, thuộc tính khóa chính (Primary Key / Candidate Key) như `ID` xác định duy nhất mọi thuộc tính còn lại trong cùng một bộ (tuple).\n\nPhân tích: ID là mã định danh duy nhất của mỗi người dùng, do đó với mỗi giá trị ID chỉ có duy nhất một giá trị NAME tương ứng (ID \\(\\to\\) NAME). Password và NAME đều có thể bị trùng lặp giữa các người dùng nên không thể làm vế trái suy ra các trường khác."
+    },
     {
       "id": 5165,
       "quizId": 103,
@@ -10337,19 +10337,19 @@
       "quizId": 103,
       "text": "During database design, why is it necessary to identify candidate keys? Choose two answers",
       "options": [
-            "To reduce data type complexity.",
-            "To normalize tables faster",
-            "To select the most appropriate primary key",
-            "To remove NULL values"
+        "To reduce data type complexity.",
+        "To normalize tables faster",
+        "To select the most appropriate primary key",
+        "To remove NULL values"
       ],
       "correctIndex": 1,
       "explanation": "**Đáp án đúng**: B & C\n\nĐáp án theo dữ liệu đề: B, C — B. To normalize tables faster; C. To select the most appropriate primary key.\n\nLời giải gốc: Việc xác định các khóa ứng viên (Candidate keys) trong quá trình thiết kế là bắt buộc để: Giúp chúng ta phân tích các phụ thuộc hàm nhằm tiến hành chuẩn hóa các bảng dữ liệu nhanh chóng và chính xác (B đúng). Từ danh sách các khóa ứng viên đó, người thiết kế sẽ chọn ra một khóa phù hợp nhất để làm khóa chính (Primary key) cho bảng (C đúng).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. To reduce data type complexity.; D. To remove NULL values. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
       "correctIndices": [
-            1,
-            2
+        1,
+        2
       ],
       "multiple": true
-},
+    },
     {
       "id": 5184,
       "quizId": 103,
@@ -11087,14 +11087,14 @@
       "quizId": 104,
       "text": "Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this model?",
       "options": [
-            "2",
-            "3",
-            "4",
-            "5"
+        "2",
+        "3",
+        "4",
+        "5"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án đúng: B — 3.\n\nNền tảng kiến thức & Phân tích chi tiết:\nKhi chuyển đổi từ mô hình thực thể - mối quan hệ (E/R Diagram) sang mô hình quan hệ (Relational Model):\n1. **Thực thể E1 và E2**: Mỗi thực thể cần tối thiểu 1 bảng riêng biệt chứa các thuộc tính của nó -> Cần 2 bảng (E1 và E2).\n2. **Mối quan hệ 1-N (R1)**: Vì R1 là quan hệ một - nhiều và không có thuộc tính riêng, ta có thể gộp R1 vào bảng ở phía \"nhiều\" (Many side) bằng cách đưa khóa chính của phía \"một\" sang làm khóa ngoại -> Không cần tạo thêm bảng mới cho R1.\n3. **Mối quan hệ N-N (R2)**: Vì R2 là quan hệ nhiều - nhiều, bắt buộc phải tạo 1 bảng trung gian (Junction table) riêng chứa cặp khóa chính của cả E1 và E2 làm khóa -> Cần thêm 1 bảng riêng cho R2.\n\nTổng số bảng tối thiểu cần có = 2 (cho E1, E2) + 1 (cho R2) = 3 bảng."
-},
+      "explanation": "Đáp án đúng: B — 3.\n\nNền tảng kiến thức & Phân tích chi tiết:\nKhi chuyển đổi từ mô hình thực thể - mối quan hệ (E/R Diagram) sang mô hình quan hệ (Relational Model):\n1. Mỗi thực thể E1 và E2 cần 1 bảng riêng \\(\\to\\) Cần 2 bảng.\n2. Mối quan hệ 1-N (R1) không có thuộc tính riêng nên có thể gộp vào bảng ở phía \"nhiều\" dưới dạng khóa ngoại \\(\\to\\) Không tốn thêm bảng mới.\n3. Mối quan hệ N-N (R2) bắt buộc phải tách thành 1 bảng trung gian (Junction table) riêng \\(\\to\\) Cần 1 bảng.\n\nTổng số bảng tối thiểu cần có = 2 + 1 = 3 bảng."
+    },
     {
       "id": 5241,
       "quizId": 104,
@@ -11689,16 +11689,16 @@
     {
       "id": 5286,
       "quizId": 106,
-      "text": "Cho hai bảng dữ liệu **ARTISTS** và **ALBUMS**:\n\n**ARTISTS**\n| Artist_id | Artist_Name |\n| :---: | :---: |\n| 1 | Bono |\n| 2 | Cher |\n\n**ALBUMS**\n| artist_id | Album_name |\n| :---: | :---: |\n| 3 | Eat the rich |\n\nLook at the tables above and then choose the correct statement:",
+      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n$\\beginarray|c|c|\n\\hline\nArtist_id & Artist_Name \n\n\\hline\n1 & \\textBono \n\n\\hline\n2 & \\textCher \n\n\\hline\n\\endarray\n\n\\beginarray|c|c|\n\\hline\nartist_id & Album_name \n\n\\hline\n3 & \\textEat the rich \n\n\\hline\n\\endarray$\n\nLook at the tables above and then choose the correct statement:",
       "options": [
-            "The above picture is an example of a database that has not enforced referential integrity",
-            "The above picture is an example of a database that has not enforced entity integrity",
-            "The above picture is an example of a database that has not enforced domain integrity",
-            "All of the others"
+        "The above picture is an example of a database that has not enforced referential integrity",
+        "The above picture is an example of a database that has not enforced entity integrity",
+        "The above picture is an example of a database that has not enforced domain integrity",
+        "All of the others"
       ],
       "correctIndex": 0,
       "explanation": "Bảng ALBUMS có artist_id = 3 tham chiếu đến Artist_id trong bảng ARTISTS, nhưng giá trị 3 không tồn tại trong bảng ARTISTS. Đây là một ví dụ về việc cơ sở dữ liệu vi phạm ràng buộc toàn vẹn tham chiếu (referential integrity)."
-},
+    },
     {
       "id": 5287,
       "quizId": 106,
@@ -12136,15 +12136,15 @@
     {
       "id": 5320,
       "quizId": 106,
-      "text": "For what values of x, y, and z, including NULL, does the Boolean expression\nx = 2 AND z = 10)\nhave the truth value FALSE? Identify one of those values from the list below",
+      "text": "For what values of \\(x\\), \\(y\\), and \\(z\\), including NULL, does the Boolean expression:\n\\(x \\le 4 \\text{ OR NOT}(y \\ge 2 \\text{ AND } z = 10)\\)\nhave the truth value FALSE? Identify one of those values from the list below:",
       "options": [
-        "x = 5, y = 3, z = 10",
-        "x = 3, y = 1, z = 10.",
-        "x = NULL, y = 2, z = 10.",
-        "x = NULL, y = 3, z = 10."
+        "\\(x = 5, \\quad y = 3, \\quad z = 10\\)",
+        "\\(x = 3, \\quad y = 1, \\quad z = 10\\)",
+        "\\(x = \\text{NULL}, \\quad y = 2, \\quad z = 10\\)",
+        "\\(x = \\text{NULL}, \\quad y = 3, \\quad z = 10\\)"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. x = 5, y = 3, z = 10.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: B. x = 3, y = 1, z = 10.; C. x = NULL, y = 2, z = 10.; D. x = NULL, y = 3, z = 10.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Biểu thức logic đã cho: \\(x \\le 4 \\text{ OR NOT}(y \\ge 2 \\text{ AND } z = 10)\\).\n\nTrong logic SQL, phép toán \\(A \\text{ OR } B\\) chỉ có giá trị **FALSE** khi và chỉ khi CẢ HAI vế \\(A\\) và \\(B\\) đều mang giá trị **FALSE**.\n\nXét từng phương án:\n- Với phương án **A** (\\(x = 5, \\quad y = 3, \\quad z = 10\\)):\n + Vế trái: \\(x \\le 4 \\iff 5 \\le 4 \\implies \\textbf{FALSE}\\).\n + Vế phải: \\(\\text{NOT}(y \\ge 2 \\text{ AND } z = 10)\\):\n * \\(y \\ge 2 \\iff 3 \\ge 2 \\implies \\text{TRUE}\\).\n * \\(z = 10 \\iff 10 = 10 \\implies \\text{TRUE}\\).\n * \\(\\text{TRUE AND TRUE} \\implies \\text{TRUE}\\).\n * Phủ định: \\(\\text{NOT}(\\text{TRUE}) \\implies \\textbf{FALSE}\\).\n + Kết hợp: \\(\\textbf{FALSE} \\text{ OR } \\textbf{FALSE} \\implies \\textbf{FALSE}\\).\n + Thỏa mãn yêu cầu bài toán!\n- Với các phương án còn lại:\n + Phương án B (\\(x = 3, y = 1, z = 10\\)): Vế trái \\(3 \\le 4 \\implies \\text{TRUE}\\), do đó biểu thức luôn cho \\(\\text{TRUE}\\).\n + Phương án C & D (\\(x = \\text{NULL}\\)): Vế trái cho giá trị \\(\\text{UNKNOWN}\\), do đó biểu thức không thể nhận giá trị \\(\\text{FALSE}\\) (trong logic 3 giá trị, \\(\\text{UNKNOWN OR FALSE} \\implies \\text{UNKNOWN}\\)).\n\nDo đó, phương án đúng là A."
     },
     {
       "id": 5321,
@@ -12333,15 +12333,15 @@
     {
       "id": 5335,
       "quizId": 106,
-      "text": "For what values of x, y, and z, including NULL, does the Boolean expression\nx = 15 OR z = 35)\nhave the truth value UNKNOWN? Identify one of those values from the list below.",
+      "text": "For what values of \\(x\\), \\(y\\), and \\(z\\), including NULL, does the Boolean expression:\n\\(x \\le 100 \\text{ AND NOT}(y \\ge 15 \\text{ OR } z = 35)\\)\nhave the truth value UNKNOWN? Identify one of those values from the list below:",
       "options": [
-        "x = NULL, y = 0, z = 4.",
-        "x = -2, y = -2, z = -2.",
-        "x = 3, y = 0, z = 7.",
-        "x = 2, y = -1, z = 6."
+        "\\(x = \\text{NULL}, \\quad y = 0, \\quad z = 4\\)",
+        "\\(x = -2, \\quad y = -2, \\quad z = -2\\)",
+        "\\(x = 3, \\quad y = 0, \\quad z = 7\\)",
+        "\\(x = 2, \\quad y = -1, \\quad z = 6\\)"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. x = NULL, y = 0, z = 4..\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: B. x = -2, y = -2, z = -2.; C. x = 3, y = 0, z = 7.; D. x = 2, y = -1, z = 6.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Biểu thức logic đã cho: \\(x \\le 100 \\text{ AND NOT}(y \\ge 15 \\text{ OR } z = 35)\\).\n\nTrong logic ba giá trị (Three-Valued Logic - 3VL) của SQL:\n- Phép toán \\(A \\text{ AND } B\\) nhận giá trị **UNKNOWN** khi một vế là **UNKNOWN** và vế còn lại là **TRUE** (hoặc UNKNOWN).\n\nXét phương án **A** (\\(x = \\text{NULL}, \\quad y = 0, \\quad z = 4\\)):\n- Vế trái: \\(x \\le 100 \\iff \\text{NULL} \\le 100 \\implies \\textbf{UNKNOWN}\\) (mọi phép so sánh giá trị với NULL đều cho UNKNOWN).\n- Vế phải: \\(\\text{NOT}(y \\ge 15 \\text{ OR } z = 35)\\):\n + \\(y \\ge 15 \\iff 0 \\ge 15 \\implies \\text{FALSE}\\).\n + \\(z = 35 \\iff 4 = 35 \\implies \\text{FALSE}\\).\n + \\(\\text{FALSE OR FALSE} \\implies \\text{FALSE}\\).\n + Phủ định: \\(\\text{NOT}(\\text{FALSE}) \\implies \\textbf{TRUE}\\).\n- Kết hợp hai vế: \\(\\textbf{UNKNOWN} \\text{ AND } \\textbf{TRUE} \\implies \\textbf{UNKNOWN}\\).\nThỏa mãn yêu cầu bài toán!\n\nDo đó, phương án đúng là A."
     },
     {
       "id": 5336,
@@ -12564,15 +12564,15 @@
     {
       "id": 5353,
       "quizId": 106,
-      "text": "Select the valid query to declare the foreign key presC# of the relation Studiolname. address. presC#) that references the cert of the relation MovieExeclname. address. cert#. netWorth):",
+      "text": "Select the valid query to declare the foreign key presC# of the relation Studio(name, address, presC#) that references the cert# of the relation MovieExec(name, address, cert#, netWorth):",
       "options": [
         "All of the others.",
-        "CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT FOREIGN KEY):",
-        "CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT UNIQUE KEY REFERENCES MovieExec):",
-        "CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT REFERENCES Movie Exec (cert#));"
+        "CREATE TABLE Studio (name CHAR(30) PRIMARY KEY, address VARCHAR(256), presC# INT FOREIGN KEY);",
+        "CREATE TABLE Studio (name CHAR(30) PRIMARY KEY, address VARCHAR(256), presC# INT UNIQUE KEY REFERENCES MovieExec);",
+        "CREATE TABLE Studio (name CHAR(30) PRIMARY KEY, address VARCHAR(256), presC# INT REFERENCES MovieExec (cert#));"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT REFERENCES Movie Exec (cert#));.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. All of the others.; B. CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT FOREIGN KEY):; C. CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT UNIQUE KEY RE…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: D — CREATE TABLE Studio (name CHAR(30) PRIMARY KEY, address VARCHAR(256), presC# INT REFERENCES MovieExec (cert#));.\n\nNền tảng kiến thức: Trong cú pháp SQL DDL, để định nghĩa một ràng buộc khóa ngoại (foreign key constraint) tham chiếu đến cột của bảng khác, ta dùng mệnh đề `REFERENCES TargetTable (TargetColumn)`.\n\nĐối chiếu phương án:\n- Phương án D sử dụng đúng cú pháp: `presC# INT REFERENCES MovieExec (cert#)`.\n- Phương án B thiếu mệnh đề `REFERENCES`.\n- Phương án C dùng sai cú pháp `UNIQUE KEY REFERENCES` và thiếu cột được tham chiếu."
     },
     {
       "id": 5354,
@@ -12959,14 +12959,14 @@
       "quizId": 106,
       "text": "The predicate in a WHERE clause can involve Boolean operations such as AND. The result of (TRUE AND UNKNOWN) is ____, (FALSE AND UNKNOWN) is ____, while (UNKNOWN AND UNKNOWN) is ____:",
       "options": [
-            "Unknown, unknown, false",
-            "True, false, unknown",
-            "True, unknown, unknown",
-            "Unknown, false, unknown"
+        "Unknown, unknown, false",
+        "True, false, unknown",
+        "True, unknown, unknown",
+        "Unknown, false, unknown"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. Unknown, false, unknown.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Unknown, unknown, false; B. True, false, unknown; C. True, unknown, unknown. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-},
+      "explanation": "Đáp án đúng: D — Unknown, false, unknown.\n\nNền tảng kiến thức: Trong logic ba giá trị (Three-Valued Logic - 3VL) của SQL:\n- TRUE AND UNKNOWN \\(\\to\\) UNKNOWN\n- FALSE AND UNKNOWN \\(\\to\\) FALSE\n- UNKNOWN AND UNKNOWN \\(\\to\\) UNKNOWN"
+    },
     {
       "id": 5384,
       "quizId": 106,
@@ -13076,20 +13076,20 @@
       "quizId": 106,
       "text": "Which one of the following is NOT a DDL command? (Choose 3 answers)",
       "options": [
-            "DELETE",
-            "CREATE DATABASE",
-            "INSERT",
-            "USE"
+        "DELETE",
+        "CREATE DATABASE",
+        "INSERT",
+        "USE"
       ],
       "correctIndex": 0,
       "explanation": "**Đáp án đúng**: A & C & D\n\nĐáp án theo dữ liệu đề: A, C, D — A. DELETE; C. INSERT; D. USE.\n\nLời giải gốc: CREATE DATABASE là lệnh DDL duy nhất trong danh sách (định nghĩa cấu trúc). DELETE và INSERT thuộc DML vì thao tác trên dữ liệu, còn USE chỉ là lệnh tiện ích chọn database đang làm việc cho phiên hiện tại, không định nghĩa hay thay đổi cấu trúc nào.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: B. CREATE DATABASE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
       "correctIndices": [
-            0,
-            2,
-            3
+        0,
+        2,
+        3
       ],
       "multiple": true
-},
+    },
     {
       "id": 5393,
       "quizId": 106,
@@ -13171,16 +13171,15 @@
     {
       "id": 5399,
       "quizId": 106,
-      "text": "Fill in the correct keyword to update the instructor relation:\n<pre><code>UPDATE instructor ____ salary = salary * 1.05;</code></pre>",
+      "text": "Fill in the correct keyword to update the instructor relation.<pre>UPDATE instructor ____ salary = salary * 1.05;</pre>A. WHERE",
       "options": [
-            "WHERE",
-            "SET",
-            "IN",
-            "SELECT"
+        "SET",
+        "FROM",
+        "SELECT"
       ],
-      "correctIndex": 1,
-      "explanation": "Đáp án đúng: B — SET.\n\nLời giải chi tiết: Trong cú pháp câu lệnh UPDATE của SQL, từ khóa SET được dùng để chỉ định các cột cần gán giá trị mới: UPDATE <tên_bảng> SET <cột> = <giá_trị> [WHERE <điều_kiện>]."
-},
+      "correctIndex": 0,
+      "explanation": "Đáp án theo dữ liệu đề: B — B. SET.\n\nLời giải gốc: Trong cú pháp câu lệnh UPDATE của SQL, từ khóa SET được dùng để chỉ định cột cần cập nhật giá trị mới.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: C. FROM; D. SELECT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+    },
     {
       "id": 5400,
       "quizId": 106,
@@ -13828,16 +13827,16 @@
     {
       "id": 5449,
       "quizId": 106,
-      "text": "Suppose you have a table Employees (id, name, salary). To increase the salary of employees with a salary below 5000 by 10%, which of the following statements is correct?",
+      "text": "Suppose you have a table Employees (id, name, salary). To increase the salary of employees with a salary below 5000 by 10%, which of the following statements is correc",
       "options": [
-            "UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000",
-            "UPDATE Employees SET salary = salary * 1.1 WHERE salary < 5000",
-            "UPDATE Employees SET salary = salary * 0.1 WHERE salary < 5000",
-            "UPDATE Employees SET salary = 1.1 WHERE salary < 5000"
+        "UPDATE Employees SET salary = salary + 0.1 WHERE salary &lt; 5000",
+        "UPDATE Employees SET salary = salary * 1.1 WHERE salary &lt; 5000",
+        "UPDATE Employees\nSET salary = salary * 0.1 WHERE salary &lt; 5000",
+        "UPDATE Employees\nSET salary = 1.1 WHERE salary &lt; 5000"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. UPDATE Employees SET salary = salary * 1.1 WHERE salary < 5000.\n\nLời giải gốc: Tăng lương thêm 10% đồng nghĩa với việc nhân mức lương hiện tại với hệ số \\(1 + 0.1 = 1.1\\). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary < 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary < 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-},
+      "explanation": "Đáp án theo dữ liệu đề: B — B. UPDATE Employees SET salary = salary * 1.1 WHERE salary &lt; 5000.\n\nLời giải gốc: Tăng lương thêm 10% đồng nghĩa với việc nhân mức lương hiện tại với hệ số \\(1 + 0.1 = 1.1\\). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary &lt; 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary &lt; 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary &lt; 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+    },
     {
       "id": 5450,
       "quizId": 106,
@@ -13856,14 +13855,14 @@
       "quizId": 106,
       "text": "Domain constraints, functional dependency and referential integrity are special forms of:",
       "options": [
-            "Foreign key",
-            "Primary key",
-            "Assertion",
-            "Referential constraint"
+        "Foreign key",
+        "Primary key",
+        "Assertion",
+        "Referential constraint"
       ],
       "correctIndex": 2,
       "explanation": "Đáp án theo dữ liệu đề: C — C. Assertion.\n\nLời giải gốc: Trong lý thuyết CSDL, \"Assertion\" (Khẳng định/Lời xác nhận) là một thuật ngữ chung nhất để định nghĩa các quy tắc ràng buộc trạng thái mà cơ sở dữ liệu phải luôn tuân thủ. Các ràng buộc toàn vẹn, miền giá trị hay khóa ngoại đều là dạng đặc biệt của assertion.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Foreign key; B. Primary key; D. Referential constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-},
+    },
     {
       "id": 5452,
       "quizId": 106,
@@ -14591,14 +14590,14 @@
       "quizId": 107,
       "text": "The transaction methods are used with the Connection object to save or cancel changes made to the data source.",
       "options": [
-            "Begin Transaction, Rollback Transaction",
-            "Begin Transaction, Commit Transaction",
-            "Begin Transaction, Commit Transaction, Rollback Transaction",
-            "Commit Transaction, Rollback Transaction"
+        "Begin Transaction, Rollback Transaction",
+        "Begin Transaction, Commit Transaction",
+        "Begin Transaction, Commit Transaction, Rollback Transaction",
+        "Commit Transaction, Rollback Transaction"
       ],
       "correctIndex": 2,
       "explanation": "Đáp án theo dữ liệu đề: C — C. Begin Transaction, Commit Transaction, Rollback Transaction.\n\nLời giải gốc: Vòng đời của một giao dịch (Transaction) có 3 lệnh chính: Begin (bắt đầu), Commit (lưu kết quả vĩnh viễn), và Rollback (hủy bỏ, quay về trạng thái lúc mới Begin khi có lỗi).\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; D. Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-},
+    },
     {
       "id": 5508,
       "quizId": 107,
@@ -15415,16 +15414,16 @@
     {
       "id": 5569,
       "quizId": 108,
-      "text": "Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:\n\n<pre><code>CREATE FUNCTION dbo.GetLaptopPrice(@model int)\nRETURNS decimal(10,2) AS\nBEGIN\n    DECLARE @price decimal(10,2);\n    SELECT @price = price FROM Laptop WHERE model = @model;\n    RETURN @price;\nEND;</code></pre>\n\nWhat will this function return when called with dbo.GetLaptopPrice(1)?",
+      "text": "Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:\n\n\\beginverbatim\nCREATE FUNCTION dbo.GetLaptopPrice(@model int)\nRETURNS decimal(10,2) AS\nBEGIN\n DECLARE @price decimal(10,2);\n SELECT @price = price FROM Laptop WHERE model = @model;\n RETURN @price;\nEND;\n\\endverbatim\n\nWhat will this function return when called with dbo.GetLaptopPrice(1)?",
       "options": [
-            "The average laptop price with model = 1",
-            "The price of all laptops",
-            "The price of laptop with model = 1",
-            "The model of laptop with price = 1"
+        "The average laptop price with model = 1",
+        "The price of all laptops",
+        "The price of laptop with model = 1",
+        "The model of laptop with price = 1"
       ],
       "correctIndex": 2,
       "explanation": "Đáp án theo dữ liệu đề: C — C. The price of laptop with model = 1.\n\nLời giải gốc: Nhìn vào đoạn code: SELECT @price = price FROM Laptop WHERE model = @model. Khi truyền giá trị tham số đầu vào @model = 1, câu lệnh sẽ tìm hàng có model = 1 và lấy ra giá trị cột giá (price) của máy đó để trả về.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Hàm vô hướng `dbo.GetLaptopPrice(1)` nhận mã model 1 rồi trả về cột `price` của hàng Laptop có model đó. Đối số truyền vào là điều kiện tìm model, không phải tốc độ/RAM/ổ cứng; giá trị số cụ thể phụ thuộc dữ liệu bảng.\n\nĐối chiếu phương án: A. The average laptop price with model = 1; B. The price of all laptops; D. The model of laptop with price = 1. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-},
+    },
     {
       "id": 5570,
       "quizId": 108,

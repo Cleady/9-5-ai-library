@@ -5241,7 +5241,7 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 % [ID gốc: 2.36]
 % [Nguồn: DBI202 Order 2 Q36]
 Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this model?
-egin{choices}
+\begin{choices}
 \choice 2
 \choice 3
 \choice 4
@@ -7033,23 +7033,35 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 \begin{question}{320}
 % [ID gốc: 5.13]
 % [Nguồn: DBI202 Order 5 Q13]
-For what values of x, y, and z, including NULL, does the Boolean expression
-x = 2 AND z = 10)
-have the truth value FALSE? Identify one of those values from the list below
+For what values of \(x\), \(y\), and \(z\), including NULL, does the Boolean expression:
+\[x \le 4 \text{ OR NOT}(y \ge 2 \text{ AND } z = 10)\]
+have the truth value FALSE? Identify one of those values from the list below:
 \begin{choices}
-\choice x = 5, y = 3, z = 10
-\choice x = 3, y = 1, z = 10.
-\choice x = NULL, y = 2, z = 10.
-\choice x = NULL, y = 3, z = 10.
+\choice \(x = 5, \quad y = 3, \quad z = 10\)
+\choice \(x = 3, \quad y = 1, \quad z = 10\)
+\choice \(x = \text{NULL}, \quad y = 2, \quad z = 10\)
+\choice \(x = \text{NULL}, \quad y = 3, \quad z = 10\)
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. x = 5, y = 3, z = 10.
+\textbf{Giải thích:} Biểu thức logic đã cho: \(x \le 4 \text{ OR NOT}(y \ge 2 \text{ AND } z = 10)\).
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+Trong logic SQL, phép toán \(A \text{ OR } B\) chỉ có giá trị **FALSE** khi và chỉ khi CẢ HAI vế \(A\) và \(B\) đều mang giá trị **FALSE**.
 
-Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.
+Xét từng phương án:
+- Với phương án **A** (\(x = 5, \quad y = 3, \quad z = 10\)):
+  + Vế trái: \(x \le 4 \iff 5 \le 4 \implies \textbf{FALSE}\).
+  + Vế phải: \(\text{NOT}(y \ge 2 \text{ AND } z = 10)\):
+    * \(y \ge 2 \iff 3 \ge 2 \implies \text{TRUE}\).
+    * \(z = 10 \iff 10 = 10 \implies \text{TRUE}\).
+    * \(\text{TRUE AND TRUE} \implies \text{TRUE}\).
+    * Phủ định: \(\text{NOT}(\text{TRUE}) \implies \textbf{FALSE}\).
+  + Kết hợp: \(\textbf{FALSE} \text{ OR } \textbf{FALSE} \implies \textbf{FALSE}\).
+  + Thỏa mãn yêu cầu bài toán!
+- Với các phương án còn lại:
+  + Phương án B (\(x = 3, y = 1, z = 10\)): Vế trái \(3 \le 4 \implies \text{TRUE}\), do đó biểu thức luôn cho \(\text{TRUE}\).
+  + Phương án C & D (\(x = \text{NULL}\)): Vế trái cho giá trị \(\text{UNKNOWN}\), do đó biểu thức không thể nhận giá trị \(\text{FALSE}\) (trong logic 3 giá trị, \(\text{UNKNOWN OR FALSE} \implies \text{UNKNOWN}\)).
 
-Đối chiếu phương án: B. x = 3, y = 1, z = 10.; C. x = NULL, y = 2, z = 10.; D. x = NULL, y = 3, z = 10.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Do đó, phương án đúng là A.
 \end{question}
 
 \begin{question}{321}
@@ -7398,23 +7410,32 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 \begin{question}{335}
 % [ID gốc: 5.32]
 % [Nguồn: DBI202 Order 5 Q32]
-For what values of x, y, and z, including NULL, does the Boolean expression
-x = 15 OR z = 35)
-have the truth value UNKNOWN? Identify one of those values from the list below.
+For what values of \(x\), \(y\), and \(z\), including NULL, does the Boolean expression:
+\[x \le 100 \text{ AND NOT}(y \ge 15 \text{ OR } z = 35)\]
+have the truth value UNKNOWN? Identify one of those values from the list below:
 \begin{choices}
-\choice x = NULL, y = 0, z = 4.
-\choice x = -2, y = -2, z = -2.
-\choice x = 3, y = 0, z = 7.
-\choice x = 2, y = -1, z = 6.
+\choice \(x = \text{NULL}, \quad y = 0, \quad z = 4\)
+\choice \(x = -2, \quad y = -2, \quad z = -2\)
+\choice \(x = 3, \quad y = 0, \quad z = 7\)
+\choice \(x = 2, \quad y = -1, \quad z = 6\)
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. x = NULL, y = 0, z = 4..
+\textbf{Giải thích:} Biểu thức logic đã cho: \(x \le 100 \text{ AND NOT}(y \ge 15 \text{ OR } z = 35)\).
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+Trong logic ba giá trị (Three-Valued Logic - 3VL) của SQL:
+- Phép toán \(A \text{ AND } B\) nhận giá trị **UNKNOWN** khi một vế là **UNKNOWN** và vế còn lại là **TRUE** (hoặc UNKNOWN).
 
-Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.
+Xét phương án **A** (\(x = \text{NULL}, \quad y = 0, \quad z = 4\)):
+- Vế trái: \(x \le 100 \iff \text{NULL} \le 100 \implies \textbf{UNKNOWN}\) (mọi phép so sánh giá trị với NULL đều cho UNKNOWN).
+- Vế phải: \(\text{NOT}(y \ge 15 \text{ OR } z = 35)\):
+  + \(y \ge 15 \iff 0 \ge 15 \implies \text{FALSE}\).
+  + \(z = 35 \iff 4 = 35 \implies \text{FALSE}\).
+  + \(\text{FALSE OR FALSE} \implies \text{FALSE}\).
+  + Phủ định: \(\text{NOT}(\text{FALSE}) \implies \textbf{TRUE}\).
+- Kết hợp hai vế: \(\textbf{UNKNOWN} \text{ AND } \textbf{TRUE} \implies \textbf{UNKNOWN}\).
+Thỏa mãn yêu cầu bài toán!
 
-Đối chiếu phương án: B. x = -2, y = -2, z = -2.; C. x = 3, y = 0, z = 7.; D. x = 2, y = -1, z = 6.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Do đó, phương án đúng là A.
 \end{question}
 
 \begin{question}{336}
@@ -7753,21 +7774,22 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 \begin{question}{353}
 % [ID gốc: 5.60]
 % [Nguồn: DBI202 Order 5 Q60]
-Select the valid query to declare the foreign key presC# of the relation Studiolname. address. presC#) that references the cert of the relation MovieExeclname. address. cert#. netWorth):
+Select the valid query to declare the foreign key presC# of the relation Studio(name, address, presC#) that references the cert# of the relation MovieExec(name, address, cert#, netWorth):
 \begin{choices}
 \choice All of the others.
-\choice CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT FOREIGN KEY):
-\choice CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT UNIQUE KEY REFERENCES MovieExec):
-\choice CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT REFERENCES Movie Exec (cert#));
+\choice CREATE TABLE Studio (name CHAR(30) PRIMARY KEY, address VARCHAR(256), presC# INT FOREIGN KEY);
+\choice CREATE TABLE Studio (name CHAR(30) PRIMARY KEY, address VARCHAR(256), presC# INT UNIQUE KEY REFERENCES MovieExec);
+\choice CREATE TABLE Studio (name CHAR(30) PRIMARY KEY, address VARCHAR(256), presC# INT REFERENCES MovieExec (cert#));
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: D — D. CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT REFERENCES Movie Exec (cert#));.
+\textbf{Giải thích:} Đáp án đúng: D — CREATE TABLE Studio (name CHAR(30) PRIMARY KEY, address VARCHAR(256), presC# INT REFERENCES MovieExec (cert#));.
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+Nền tảng kiến thức: Trong cú pháp SQL DDL, để định nghĩa một ràng buộc khóa ngoại (foreign key constraint) tham chiếu đến cột của bảng khác, ta dùng mệnh đề `REFERENCES TargetTable (TargetColumn)`.
 
-Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.
-
-Đối chiếu phương án: A. All of the others.; B. CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT FOREIGN KEY):; C. CREATE TABLE Studio (name CHAR(30) PRIMARY KEY. address VARCHAR(256). presC# INT UNIQUE KEY RE…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu phương án:
+- Phương án D sử dụng đúng cú pháp: `presC# INT REFERENCES MovieExec (cert#)`.
+- Phương án B thiếu mệnh đề `REFERENCES`.
+- Phương án C dùng sai cú pháp `UNIQUE KEY REFERENCES` và thiếu cột được tham chiếu.
 \end{question}
 
 \begin{question}{354}
