@@ -1803,8 +1803,8 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 % [Nguồn: DBI202 Order 4 Q13]
 For the following relation:
 
-$$\textbf{Student}$$
-$$\begin{array}{|c|c|c|c|}
+$\textbf{Student}$
+$\begin{array}{|c|c|c|c|}
 \hline
 \text{ID} & \text{Name} & \text{City} & \text{Gender} \\
 \hline
@@ -1814,7 +1814,7 @@ $$\begin{array}{|c|c|c|c|}
 \hline
 \text{SE1236} & \text{Tran Binh Trong} & \text{HN} & \text{Male} \\
 \hline
-\end{array}$$
+\end{array}$
 
 Use Algebraic query language to list all name and city of students in HCM and Male?
 \begin{choices}
@@ -1829,7 +1829,7 @@ Use Algebraic query language to list all name and city of students in HCM and Ma
 Yêu cầu đề bài: Lấy danh sách tên (\text{Name}) và thành phố (\text{City}) của các sinh viên sống tại HCM và có giới tính Male.
 - **Phép chọn (Selection \(\sigma\))**: Lọc các bộ dữ liệu thỏa mãn điều kiện kết hợp: \(\sigma_{\text{City}=\text{'HCM'} \land \text{Gender}=\text{'Male'}}(\text{Student})\).
 - **Phép chiếu (Projection \(\pi\))**: Chiếu lấy các thuộc tính cần hiển thị trên kết quả đã lọc: \(\pi_{\text{Name}, \text{City}}(...)\).
-- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \(\pi_{\text{Danh\_sách\_cột}}(\sigma_{\text{Điều\_kiện}}(\text{Bảng}))\).
+- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \(\pi_{\text{Danh_sách_cột}}(\sigma_{\text{Điều_kiện}}(\text{Bảng}))\).
 
 Do đó phương án **A** là chính xác. Phương án B dùng sai ngoặc vuông \([...]\), phương án C đảo ngược thứ tự chiếu trước khi chọn làm mất thuộc tính \(\text{Gender}\).
 \end{question}
@@ -3371,10 +3371,10 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{154}
 % [ID gốc: 15.44]
 % [Nguồn: DBI202 Order 15 Q44]
-Suppose we have a relation \(R(\text{ID}, \text{full\_name}, \text{address})\) with functional dependencies:
-\(F = \{ \text{ID} \rightarrow \text{full\_name}, \quad \text{ID} \rightarrow \text{address} \}\)
+Suppose we have a relation $R(\text{ID}, \text{full\_name}, \text{address})$ with functional dependencies:
+$F = \{ \text{ID} \to \text{full\_name}, \quad \text{ID} \to \text{address} \}$
 
-What is the highest normal form of \(R\) in relational database design?
+What is the highest normal form of $R$ in relational database design?
 \begin{choices}
 \choice 2NF
 \choice 1NF
@@ -3382,7 +3382,7 @@ What is the highest normal form of \(R\) in relational database design?
 \choice BCNF
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: D — D. BCNF.
+\textbf{Giải thích:} Đáp án đúng: D — BCNF.
 
 Lời giải gốc: Với khóa chính là ID, mọi phụ thuộc hàm đều có vế trái là siêu khóa (ID → full_name, ID → address), do đó quan hệ đạt dạng chuẩn cao nhất là Boyce-Codd Normal Form (BCNF).
 
