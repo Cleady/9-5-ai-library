@@ -1,6 +1,6 @@
 {
   "subject": "DBI202",
-  "updatedAt": "2026-11-17T07:13:06.014Z",
+  "updatedAt": "2026-11-17T09:27:56.256Z",
   "totalQuizzes": 8,
   "totalQuestions": 573,
   "quizzes": [
@@ -1568,7 +1568,7 @@
     {
       "id": 5115,
       "quizId": 103,
-      "text": "Based on the given functional dependencies A -> B; B -> A; A -> D; D -> B, we can derive that A and B are both candidate keys for relation R(ABCD). Since all attributes in R are either part of a candidate key or fully functionally dependent on it, we can conclude that relation R is in Third Normal Form (3NF)\r\nQN=13 (7978) The relation R(ABCD) has following FDs:\r\n A -> B ; B -> A ; A -> D ; D -> B",
+      "text": "QN=13 (7978) The relation R(ABCD) has following FDs:\r\n A -> B ; B -> A ; A -> D ; D -> B",
       "options": [
         "R is in 3NF",
         "R is not in 3NF",
@@ -1576,7 +1576,7 @@
         "None of the others"
       ],
       "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. R is in 3NF.\r\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\r\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\r\n\nĐối chiếu phương án: B. R is not in 3NF; C. R is not in 2NF; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Xét lược đồ quan hệ \\(R(ABCD)\\) với các phụ thuộc hàm: \\(A \\rightarrow B\\), \\(B \\rightarrow A\\), \\(A \\rightarrow D\\), \\(D \\rightarrow B\\).\r\n- Thuộc tính \\(C\\) không xuất hiện ở bất kỳ vế phải nào của tập phụ thuộc hàm, nên \\(C\\) bắt buộc phải có mặt trong mọi khóa ứng viên (candidate key).\r\n- Tìm các khóa ứng viên: \\(\\{AC\\}^+ = ABCD\\), \\(\\{BC\\}^+ = ABCD\\), \\(\\{DC\\}^+ = ABCD\\). Các khóa ứng viên gồm: \\(\\{AC\\}\\), \\(\\{BC\\}\\), \\(\\{DC\\}\\).\r\n- Xét phụ thuộc hàm \\(A \\rightarrow D\\): Vế trái \\(A\\) là một tập con thực sự (proper subset) của khóa chính/khóa ứng viên \\(\\{AC\\}\\), dẫn đến sự phụ thuộc bộ phận (partial dependency). Vì vậy quan hệ \\(R\\) không đạt dạng chuẩn 2 (R is not in 2NF)."
     },
     {
       "id": 5116,
