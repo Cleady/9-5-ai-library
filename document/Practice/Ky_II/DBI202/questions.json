@@ -1,6 +1,6 @@
 {
   "subject": "DBI202",
-  "updatedAt": "2026-11-16T19:54:20.785Z",
+  "updatedAt": "2026-11-17T07:13:06.014Z",
   "totalQuizzes": 8,
   "totalQuestions": 573,
   "quizzes": [
@@ -812,10 +812,10 @@
         "R has no key",
         "None of the others"
       ],
-      "correctIndex": 1,
-      "explanation": "**Đáp án đúng**: B & C\n\nBảng R có các dòng trùng lặp hoàn toàn (1, 1, 2 xuất hiện 2 lần). Theo ngữ nghĩa quan hệ túi (bag semantics / multiset) của SQL, R vẫn là một quan hệ (relation), nhưng không có khóa hợp lệ.",
+      "correctIndex": 0,
+      "explanation": "**Đáp án đúng**: A & C\n\nBảng R có hai dòng trùng lặp hoàn toàn: (1, 1, 2) xuất hiện 2 lần.\r\n- A đúng: Theo lý thuyết mô hình dữ liệu quan hệ (Relational Model), một quan hệ được định nghĩa là một tập hợp các bộ dữ liệu (set of tuples). Đã là tập hợp thì không được phép chứa các phần tử trùng lặp (no duplicate tuples). Do có hai dòng giống nhau nên R không phải là quan hệ hợp lệ (R is not a relation).\r\n- C đúng: Khóa (key) là tập thuộc tính tối thiểu xác định duy nhất từng dòng trong bảng. Do có các dòng trùng lặp hoàn toàn, không thể có bất kỳ tập thuộc tính nào phân biệt duy nhất giữa chúng, do đó R không có khóa (R has no key).\r\n- B sai: Do bảng R chứa các dòng trùng nhau nên vi phạm định nghĩa tập hợp của quan hệ.\r\n- D sai: Do phương án A và C đều đúng.",
       "correctIndices": [
-        1,
+        0,
         2
       ],
       "multiple": true
