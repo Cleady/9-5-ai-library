@@ -1,6 +1,6 @@
 {
   "subject": "DBI202",
-  "updatedAt": "2026-11-17T18:51:58.122Z",
+  "updatedAt": "2026-11-17T19:45:49.460Z",
   "totalQuizzes": 8,
   "totalQuestions": 574,
   "quizzes": [
@@ -3808,7 +3808,7 @@
     {
       "id": 5286,
       "quizId": 106,
-      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{Artist\\_id} & \\textbf{Artist\\_Name} \\\\\n\\hline\n1 & \\text{Bono} \\\\\n\\hline\n2 & \\text{Cher} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{artist\\_id} & \\textbf{Album\\_name} \\\\\n\\hline\n3 & \\text{Eat the rich} \\\\\n\\hline\n\\end{array}\\)\n\nLook at the tables above and then choose the correct statement:",
+      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{Artist_id} & \\textbf{Artist_Name} \\\\\n\\hline\n1 & \\text{Bono} \\\\\n\\hline\n2 & \\text{Cher} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{artist_id} & \\textbf{Album_name} \\\\\n\\hline\n3 & \\text{Eat the rich} \\\\\n\\hline\n\\end{array}\\)\n\nLook at the tables above and then choose the correct statement:",
       "options": [
         "The above picture is an example of a database that has not enforced referential integrity",
         "The above picture is an example of a database that has not enforced entity integrity",

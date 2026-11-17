@@ -11716,7 +11716,7 @@
     {
       "id": 5286,
       "quizId": 106,
-      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{Artist\\_id} & \\textbf{Artist\\_Name} \\\\\n\\hline\n1 & \\text{Bono} \\\\\n\\hline\n2 & \\text{Cher} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{artist\\_id} & \\textbf{Album\\_name} \\\\\n\\hline\n3 & \\text{Eat the rich} \\\\\n\\hline\n\\end{array}\\)\n\nLook at the tables above and then choose the correct statement:",
+      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{Artist_id} & \\textbf{Artist_Name} \\\\\n\\hline\n1 & \\text{Bono} \\\\\n\\hline\n2 & \\text{Cher} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{artist_id} & \\textbf{Album_name} \\\\\n\\hline\n3 & \\text{Eat the rich} \\\\\n\\hline\n\\end{array}\\)\n\nLook at the tables above and then choose the correct statement:",
       "options": [
         "The above picture is an example of a database that has not enforced referential integrity",
         "The above picture is an example of a database that has not enforced entity integrity",
@@ -18751,10 +18751,10 @@
         "\\(\\frac{n(n-1)}{2}\\)",
         "\\(2^n\\)",
         "n!",
-        "\\(2^{\\)\\fracn(n-1)2\\(}\\)"
+        "\\(2^{\\frac{n(n-1)}{2}}\\)"
       ],
       "correctIndex": 3,
-      "explanation": "Một đồ thị vô hướng với n đỉnh có tối đa \\(\\frac{n(n-1)}{2}\\) cạnh có thể xảy ra. Mỗi cạnh có 2 trạng thái (tồn tại hoặc không), nên tổng số đồ thị có thể tạo ra là \\(2^{\\)\\fracn(n-1)2\\(}\\)."
+      "explanation": "Một đồ thị vô hướng với n đỉnh có tối đa \\(\\frac{n(n-1)}{2}\\) cạnh có thể xảy ra. Mỗi cạnh có 2 trạng thái (tồn tại hoặc không), nên tổng số đồ thị có thể tạo ra là \\(2^{\\frac{n(n-1)}{2}}\\)."
     },
     {
       "id": 10249,
