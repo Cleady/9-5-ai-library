@@ -8105,16 +8105,17 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Database Management System.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: DBMS là viết tắt của Database Management System, tức hệ quản trị cơ sở dữ liệu. Nó cung cấp chức năng định nghĩa, lưu trữ, truy vấn, cập nhật và quản lý quyền trên CSDL; DBMS là phần mềm, còn database là dữ liệu được phần mềm quản lý.\n\nĐối chiếu phương án: A. Database Managing Systems; C. Database Manage System; D. Database Managable System. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5010,
-      "quizId": 101,
-      "text": "Choose an incorrect statement",
-      "options": [
-        "None of the others",
-        "Database is created and maintained by a DMBS\nIC]\nDatabase is a collection of information that exists over a long opened of time",
-        "Database is a collection of data that is managed by a DBMS"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. None of the others.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: B. Database is created and maintained by a DMBS IC] Database is a collection of information that…; D. Database is a collection of data that is managed by a DBMS. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+          "id": 5010,
+          "quizId": 101,
+          "text": "Choose an incorrect statement",
+          "options": [
+                "None of the others",
+                "Database is created and maintained by a DBMS",
+                "Database is a collection of information that exists over a long period of time",
+                "Database is a collection of data that is managed by a DBMS"
+          ],
+          "correctIndex": 0,
+          "explanation": "Đáp án theo dữ liệu đề: A — A. None of the others.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: B. Database is created and maintained by a DMBS IC] Database is a collection of information that…; D. Database is a collection of data that is managed by a DBMS. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5011,
@@ -8764,17 +8765,17 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Candidate key.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. Prime key; B. Super key; D. Primary key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5061,
-      "quizId": 102,
-      "text": "Consider a table named \"Boat\". Which option is the correct relation schema for the table?",
-      "options": [
-        "Boat: BoatID, BoatName, Color, Status",
-        "Boat(BoatID, BoatName, Color, Status)",
-        "Boat(BoatID: String, BoatName: String, Color: String, Status: String)",
-        "Boat: BoatID, BoatName, Color, Status"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. Boat(BoatID, BoatName, Color, Status).\n\nLời giải gốc: Ký hiệu tiêu chuẩn cho lược đồ quan hệ là tên quan hệ kèm danh sách thuộc tính đặt trong dấu ngoặc đơn, dạng RelationName(Attribute1, Attribute2, ...).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. Boat: BoatID, BoatName, Color, Status; C. Boat(BoatID: String, BoatName: String, Color: String, Status: String); D. Boat: BoatID, BoatName, Color, Status. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+          "id": 5061,
+          "quizId": 102,
+          "text": "Consider a table named \"Boat\". Which option is the correct relation schema for the table?",
+          "options": [
+                "Boat: BoatID, BoatName, Color, Status",
+                "Boat(BoatID, BoatName, Color, Status)",
+                "Boat(BoatID: String, BoatName: String, Color: String, Status: String)",
+                "Boat: {BoatID, BoatName, Color, Status}"
+          ],
+          "correctIndex": 1,
+          "explanation": "Đáp án theo dữ liệu đề: B — B. Boat(BoatID, BoatName, Color, Status).\n\nLời giải gốc: Ký hiệu tiêu chuẩn cho lược đồ quan hệ là tên quan hệ kèm danh sách thuộc tính đặt trong dấu ngoặc đơn, dạng RelationName(Attribute1, Attribute2, ...).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. Boat: BoatID, BoatName, Color, Status; C. Boat(BoatID: String, BoatName: String, Color: String, Status: String); D. Boat: BoatID, BoatName, Color, Status. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5062,
@@ -10533,16 +10534,17 @@
       "explanation": "A weak entity does not possess sufficient key attributes to form a primary key on its own."
     },
     {
-      "id": 5196,
-      "quizId": 104,
-      "text": "Which of the followings is true?",
-      "options": [
-        "The Entity Relationship (ER) model represents the structure of data graphically",
-        "The ER model is a low level database design\nIC]\nThe ER model represents the operation on data",
-        "All of the others"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. The Entity Relationship (ER) model represents the structure of data graphically.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. The ER model is a low level database design IC] The ER model represents the operation on data; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+          "id": 5196,
+          "quizId": 104,
+          "text": "Which of the followings is true?",
+          "options": [
+                "The Entity Relationship (ER) model represents the structure of data graphically",
+                "The ER model is a low level database design",
+                "The ER model represents the operation on data",
+                "All of the others"
+          ],
+          "correctIndex": 0,
+          "explanation": "Đáp án theo dữ liệu đề: A — A. The Entity Relationship (ER) model represents the structure of data graphically.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. The ER model is a low level database design IC] The ER model represents the operation on data; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5197,
@@ -11128,19 +11130,15 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. We apply the selection condition to each tuple independently..\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. None of others.; C. We apply the selection condition to each attribute independently.; D. All of the other.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5242,
-      "quizId": 105,
-      "text": "Consider the distrubutive law, that holds for set relation:\n(R U S)- T =(R-T)U(S-T)\nThe above distributive still hold for bag relations?",
-      "options": [
-        "TRUE",
-        "FALSE\na",
-        "(2,3) appears twice in the result.",
-        "(2,3) appears three times in the result.",
-        "(3,3) appears once in the result.",
-        "(2,2) appears once in the result."
-      ],
-      "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. (2,3) appears three times in the result..\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên set loại bản sao và thường đòi hai quan hệ union-compatible. Với bag, cần theo dõi số lần xuất hiện của mỗi bộ; vì vậy không thể tự động áp dụng mọi đẳng thức tập hợp mà bỏ qua multiplicity.\n\nĐối chiếu phương án: A. TRUE; A. (2,3) appears twice in the result.; C. (3,3) appears once in the result.; D. (2,2) appears once in the result.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+          "id": 5242,
+          "quizId": 105,
+          "text": "Consider the distributive law, that holds for set relation:\n(R U S) - T = (R - T) U (S - T)\nDoes the above distributive law still hold for bag relations?",
+          "options": [
+                "TRUE",
+                "FALSE"
+          ],
+          "correctIndex": 1,
+          "explanation": "Đáp án đúng: B — FALSE.\n\nLuật phân phối (R U S) - T = (R - T) U (S - T) đúng với quan hệ tập hợp (set relations), nhưng KHÔNG đúng với quan hệ multiset/bag (bag relations).\n\nVí dụ phản chứng:\nGiả sử phần tử x xuất hiện 1 lần trong R, 1 lần trong S, và 1 lần trong T.\n- Vế trái: R U S có 1 + 1 = 2 lần x. Trừ đi T (1 lần) còn 2 - 1 = 1 lần x.\n- Vế phải: R - T có max(0, 1 - 1) = 0 lần x; S - T có max(0, 1 - 1) = 0 lần x. Hợp lại (R - T) U (S - T) có 0 + 0 = 0 lần x.\nVì 1 ≠ 0 nên luật phân phối không thỏa mãn trên bag relations."
     },
     {
       "id": 5243,
@@ -13950,20 +13948,17 @@
       "multiple": true
     },
     {
-      "id": 5456,
-      "quizId": 107,
-      "text": "Three properties of a lock in DBMS are:\na) Granularity: the size of the lock",
-      "options": [
-        "Granularity: the type of the lock",
-        "Mode: the type of the lock",
-        "Duration: the time in seconds that the DBMS waits for a lock to be released",
-        "(a) and (c) and (d) are true",
-        "(a) and (b) and (d) are true",
-        "(b) and (c) and (d) are true",
-        "(a) and (b) and (c) are true"
-      ],
-      "correctIndex": 6,
-      "explanation": "Đáp án theo dữ liệu đề: A, C, D — A. (a) and (c) and (d) are true; C. (b) and (c) and (d) are true; D. (a) and (b) and (c) are true.\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Concurrency control điều phối lịch xen kẽ để tránh anomaly. Shared lock thường cho phép nhiều reader; exclusive lock bảo vệ cập nhật; hai giao dịch chờ tài nguyên vòng tròn có thể deadlock và DBMS thường phá vòng chờ bằng cách hủy/rollback một giao dịch.\n\nĐối chiếu phương án: B. Granularity: the type of the lock; B. (a) and (b) and (d) are true. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+          "id": 5456,
+          "quizId": 107,
+          "text": "Three properties of a lock in DBMS are:\n(a) Granularity: the size of the lock\n(b) Granularity: the type of the lock\n(c) Mode: the type of the lock\n(d) Duration: the time in seconds that the DBMS waits for a lock to be released\n\nWhich of the following statements is correct?",
+          "options": [
+                "(a) and (c) and (d) are true",
+                "(a) and (b) and (d) are true",
+                "(b) and (c) and (d) are true",
+                "(a) and (b) and (c) are true"
+          ],
+          "correctIndex": 0,
+          "explanation": "Đáp án đúng: A — (a) and (c) and (d) are true.\n\nNền tảng kiến thức: Các thuộc tính cơ bản của khóa (Lock) trong DBMS:\n- (a) Granularity (Độ mịn / Phạm vi): Xác định kích thước của đơn vị dữ liệu bị khóa (như Database, Table, Page, hay Row/Record). Do đó phát biểu (a) là ĐÚNG.\n- (b) Granularity: the type of the lock — SAI (Granularity là kích thước / phạm vi, không phải loại khóa; Mode mới là loại khóa).\n- (c) Mode (Chế độ / Kiểu khóa): Xác định loại quyền truy cập được áp dụng (Shared Lock S cho phép đọc, Exclusive Lock X cho phép ghi). Do đó phát biểu (c) là ĐÚNG.\n- (d) Duration (Thời lượng khóa): Khoảng thời gian khóa tồn tại trước khi được giải phóng. Theo quy ước bài thi, phát biểu (d) là ĐÚNG.\n\nPhân tích: Phát biểu (b) sai hoàn toàn nên các phương án chứa (b) đều sai (loại B, C, D). Phương án đúng duy nhất là A: (a) and (c) and (d) are true."
     },
     {
       "id": 5457,
@@ -14434,18 +14429,19 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. When a trigger fires, results are returned to the calling application, just like with stored procedures..\n\nLời giải gốc: Trigger hoạt động ngầm bên trong cơ sở dữ liệu để đáp ứng các sự kiện thay đổi dữ liệu và thường không trả về tập kết quả trực tiếp cho ứng dụng gọi giống như stored procedure.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: A. It automatically runs when an event occurs in the database server; B. DML triggers are frequently used for enforcing business rules and data integrity; C. The same trigger action cannot be defined for more than one user action (for example, INSERT a…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5493,
-      "quizId": 108,
-      "text": "In which line of the following code is the error? CREATE TRIGGER trigger1 --1 ON dbo.EMPLOYEE -- 2 AFTER FOR INSERT AS -- 3 BEGIN -- 4 INSERT INTO EMPLOYEE BACKUP -- 5 SELECT * FROM INSERTED -- 6 END -- 7",
-      "options": [
-        "Line 1",
-        "Line 2",
-        "Line 3",
-        "Line 5",
-        "Line 6\nF. There are no lines in error"
-      ],
-      "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Line 3.\n\nLời giải gốc: Dòng 3 bị thừa từ khóa. Cú pháp đúng phải là AFTER INSERT hoặc FOR INSERT, không dùng đồng thời cả AFTER FOR INSERT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Line 1; B. Line 2; D. Line 5; E. Line 6 F. There are no lines in error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+          "id": 5493,
+          "quizId": 108,
+          "text": "In which line of the following code is the error?\n\nCREATE TRIGGER trigger1 --1\nON dbo.EMPLOYEE -- 2\nAFTER FOR INSERT AS -- 3\nBEGIN -- 4\nINSERT INTO EMPLOYEE BACKUP -- 5\nSELECT * FROM INSERTED -- 6\nEND -- 7",
+          "options": [
+                "Line 1",
+                "Line 2",
+                "Line 3",
+                "Line 5",
+                "Line 6",
+                "There are no lines in error"
+          ],
+          "correctIndex": 2,
+          "explanation": "Đáp án theo dữ liệu đề: C — C. Line 3.\n\nLời giải gốc: Dòng 3 bị thừa từ khóa. Cú pháp đúng phải là AFTER INSERT hoặc FOR INSERT, không dùng đồng thời cả AFTER FOR INSERT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Line 1; B. Line 2; D. Line 5; E. Line 6 F. There are no lines in error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5494,

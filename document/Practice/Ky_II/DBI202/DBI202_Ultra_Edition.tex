@@ -5321,17 +5321,12 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 \begin{question}{242}
 % [ID gốc: 4.6]
 % [Nguồn: DBI202 Order 4 Q6]
-Consider the distrubutive law, that holds for set relation:
-(R U S)- T =(R-T)U(S-T)
-The above distributive still hold for bag relations?
+Consider the distributive law, that holds for set relation:
+(R U S) - T = (R - T) U (S - T)
+Does the above distributive law still hold for bag relations?
 \begin{choices}
 \choice TRUE
 \choice FALSE
-a
-\choice (2,3) appears twice in the result.
-\choice (2,3) appears three times in the result.
-\choice (3,3) appears once in the result.
-\choice (2,2) appears once in the result.
 \end{choices}
 \textbf{Đáp án:} B
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. (2,3) appears three times in the result..
@@ -10261,17 +10256,20 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 % [ID gốc: 19.1]
 % [Nguồn: DBI202 Order 19 Q1]
 Three properties of a lock in DBMS are:
-a) Granularity: the size of the lock
+\begin{itemize}[label={}, leftmargin=1.5em, itemsep=0.2em]
+    \item[(a)] Granularity: the size of the lock
+    \item[(b)] Granularity: the type of the lock
+    \item[(c)] Mode: the type of the lock
+    \item[(d)] Duration: the time in seconds that the DBMS waits for a lock to be released
+\end{itemize}
+Which of the following statements is correct?
 \begin{choices}
-\choice Granularity: the type of the lock
-\choice Mode: the type of the lock
-\choice Duration: the time in seconds that the DBMS waits for a lock to be released
 \choice (a) and (c) and (d) are true
 \choice (a) and (b) and (d) are true
 \choice (b) and (c) and (d) are true
 \choice (a) and (b) and (c) are true
 \end{choices}
-\textbf{Đáp án:} G
+\textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A, C, D — A. (a) and (c) and (d) are true; C. (b) and (c) and (d) are true; D. (a) and (b) and (c) are true.
 
 Nền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.
@@ -11037,7 +11035,7 @@ In which line of the following code is the error? CREATE TRIGGER trigger1 --1 ON
 \choice Line 3
 \choice Line 5
 \choice Line 6
-F. There are no lines in error
+\choice There are no lines in error
 \end{choices}
 \textbf{Đáp án:} C
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: C — C. Line 3.
