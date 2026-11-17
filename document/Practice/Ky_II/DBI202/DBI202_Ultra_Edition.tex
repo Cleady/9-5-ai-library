@@ -2877,7 +2877,7 @@ Phân tích: Phân biệt tệp dữ liệu chứa trang/bảng với tệp tran
 \begin{question}{131}
 % [ID gốc: 15.20]
 % [Nguồn: DBI202 Order 15 Q20]
-Given following schema R(A, B, C, D) and S={A→B, BC, C→D}Compute {A}+?
+Given the following schema \(R(A, B, C, D)\) and functional dependencies \(S = \{ A \rightarrow B, B \rightarrow C, C \rightarrow D \}\). Compute \(A^+\)?
 \begin{choices}
 \choice AB
 \choice ABC
@@ -2885,13 +2885,17 @@ Given following schema R(A, B, C, D) and S={A→B, BC, C→D}Compute {A}+?
 \choice BCD
 \end{choices}
 \textbf{Đáp án:} C
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: C — C. ABCD.
+\textbf{Giải thích:} **Đáp án đúng: C. ABCD**
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
+Cho lược đồ quan hệ \(R(A, B, C, D)\) và tập phụ thuộc hàm \(S = \{ A \rightarrow B, B \rightarrow C, C \rightarrow D \}\).
 
-Phân tích: Tính bao đóng bằng cách bắt đầu A⁺ = {A}, rồi áp dụng lần lượt mọi phụ thuộc có toàn bộ vế trái đã nằm trong bao đóng. Ký hiệu phụ thuộc ở nguồn có vẻ bị thiếu mũi tên sau `BC`; nếu ý nguồn là A → B, B → C, C → D thì suy ra A⁺ = {A,B,C,D} theo chuỗi bắc cầu. Cần đối chiếu bản đề gốc để xác nhận phần ký hiệu bị thiếu trước khi chốt đáp án.
+Các bước tính bao đóng \(A^+\):
+1. Khởi tạo: \(A^+ = \{A\}\).
+2. Áp dụng \(A \rightarrow B\): Vế trái \(A \subseteq A^+ \Rightarrow A^+ = \{A, B\}\).
+3. Áp dụng \(B \rightarrow C\): Vế trái \(B \subseteq A^+ \Rightarrow A^+ = \{A, B, C\}\).
+4. Áp dụng \(C \rightarrow D\): Vế trái \(C \subseteq A^+ \Rightarrow A^+ = \{A, B, C, D\}\).
 
-Đối chiếu phương án: A. AB; B. ABC; D. BCD. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Vậy bao đóng của \(A\) là \(A^+ = \{A, B, C, D\}\) (tương ứng phương án **ABCD**). Phương án đúng là **C**.
 \end{question}
 
 \begin{question}{132}
