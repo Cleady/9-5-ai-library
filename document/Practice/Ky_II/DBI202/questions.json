@@ -1,6 +1,6 @@
 {
   "subject": "DBI202",
-  "updatedAt": "2026-11-17T21:58:00.640Z",
+  "updatedAt": "2026-11-17T22:00:39.086Z",
   "totalQuizzes": 8,
   "totalQuestions": 509,
   "quizzes": [
@@ -6491,8 +6491,13 @@
         "When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.",
         "The data type of local variable is declared after its name and assigned a system-supplied or user-defined data type and a length."
       ],
-      "correctIndex": 2,
-      "explanation": "Đáp án đúng: C — When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.\n\nNền tảng kiến thức: Trong T-SQL, các quy tắc định nghĩa / khai báo biến cục bộ (Defining local variables) bao gồm 3 điểm chính:\n1. Khai báo biến bằng câu lệnh DECLARE (Phương án B).\n2. Tên biến phải bắt đầu bằng ký tự '@' (Phương án A).\n3. Kiểu dữ liệu được chỉ định ngay sau tên biến kèm độ dài nếu có (Phương án D).\n\nPhân tích: Phương án C mô tả hành vi giá trị khởi tạo (mặc định là NULL) và cách gán giá trị cho biến bằng câu lệnh SET (Assigning values to variables), đây là bước thao tác / gán trị chứ KHÔNG thuộc quy tắc định nghĩa / cú pháp khai báo biến (how a local variable is defined). Vì vậy, C là đáp án chính xác cho câu hỏi \"Which of the following is NOT mentioned on how a local variable is defined using T-SQL?\"."
+      "correctIndex": 0,
+      "explanation": "**Đáp án đúng**: A & C (Cả A và C đều được chấp nhận là đáp án đúng)\n\nNền tảng kiến thức:\n- **Theo dữ liệu ngân hàng đề thi gốc**: Đáp án A được chọn trong ngân hàng đề thi FPT (dựa trên giải thích về quy ước đặt tên biến hệ thống @@ so với biến cục bộ @).\n- **Theo bản chất kiến thức T-SQL**: Đáp án C cũng hoàn toàn chính xác vì nhận định C (\"When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement\") nói về việc khởi tạo giá trị và gán giá trị (Assigning values to variables), chứ KHÔNG thuộc các quy tắc định nghĩa / khai báo cú pháp biến (Defining local variables: DECLARE, tên biến @, kiểu dữ liệu).\n\nVì vậy hệ thống ghi nhận cả **A và C** đều là đáp án hợp lệ cho câu hỏi này.",
+      "correctIndices": [
+        0,
+        2
+      ],
+      "multiple": true
     },
     {
       "id": 5491,
