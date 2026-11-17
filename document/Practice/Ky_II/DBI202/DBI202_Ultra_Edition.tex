@@ -359,7 +359,7 @@ Phân tích: DBMS là viết tắt của Database Management System, tức hệ 
 \begin{question}{16}
 % [ID gốc: 1.26]
 % [Nguồn: DBI202 Order 1 Q26]
-A database administrator: a person or persons responsible for the struc-ture or schema of the database.
+A database administrator: a person or persons responsible for the structure or schema of the database.
 \begin{choices}
 \choice True
 \choice False
@@ -4187,7 +4187,7 @@ Phân tích: Thực thể yếu chưa có khóa độc lập; phải ghép khóa
 Look at the following statements:
 (a) We should pick the right kind of elements
 (b) When an entity has no non-primary key attribute, we should convert that entity to an attribute
-(c) Use weak entities when-ever possible
+(c) Use weak entities whenever possible
 (d) Always make redundancies
 \begin{choices}
 \choice (a) and (b) are correct
@@ -10477,8 +10477,10 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 % [ID gốc: 5.58]
 % [Nguồn: DBI202 Order 5 Q58]
 Exception handler in PSM is defined as follows:
-DECLARE  HANDLER FOR condition list> 
-The  clause can be:
+\begin{codebox}
+DECLARE <action> HANDLER FOR <condition list> <statement>;
+\end{codebox}
+The \texttt{<action>} clause can be:
 \begin{choices}
 \choice UNDO
 \choice EXIT
@@ -10486,13 +10488,18 @@ The  clause can be:
 \choice CONTINUE
 \end{choices}
 \textbf{Đáp án:} C
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: C — C. All of the others.
+\textbf{Giải thích:} Đáp án đúng: C — All of the others.
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+Trong chuẩn SQL/PSM (Persistent Stored Modules), cú pháp khai báo bộ xử lý ngoại lệ (Exception Handler) có dạng:
 
-Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.
+`DECLARE <action> HANDLER FOR <condition list> <statement>;`
 
-Đối chiếu phương án: A. UNDO; B. EXIT; D. CONTINUE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Trong đó, mệnh đề `<action>` quy định hành động tiếp theo sau khi bẫy lỗi và có thể nhận một trong các giá trị:
+- **CONTINUE**: Sau khi câu lệnh xử lý ngoại lệ thực thi xong, chương trình tiếp tục thực thi câu lệnh kế tiếp.
+- **EXIT**: Lập tức kết thúc khối lệnh `BEGIN...END` hiện tại chứa khai báo handler.
+- **UNDO**: Khôi phục (rollback) tất cả các thay đổi do khối lệnh hiện tại đã tạo ra và thoát khỏi khối lệnh.
+
+Do đó, mệnh đề `<action>` có thể nhận bất kỳ giá trị nào trong các lựa chọn UNDO, EXIT hoặc CONTINUE $\to$ Phương án đúng là **All of the others**.
 \end{question}
 
 \begin{question}{467}
@@ -11033,7 +11040,16 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 \begin{question}{493}
 % [ID gốc: 5.176]
 % [Nguồn: DBI202 Order 5 Q176]
-In which line of the following code is the error? CREATE TRIGGER trigger1 --1 ON dbo.EMPLOYEE -- 2 AFTER FOR INSERT AS -- 3 BEGIN -- 4 INSERT INTO EMPLOYEE BACKUP -- 5 SELECT * FROM INSERTED -- 6 END -- 7
+In which line of the following code is the error?
+\begin{codebox}
+CREATE TRIGGER trigger1          -- Line 1
+ON dbo.EMPLOYEE                  -- Line 2
+AFTER FOR INSERT AS              -- Line 3
+BEGIN                            -- Line 4
+    INSERT INTO EMPLOYEE_BACKUP  -- Line 5
+    SELECT * FROM INSERTED       -- Line 6
+END                              -- Line 7
+\end{codebox}
 \begin{choices}
 \choice Line 1
 \choice Line 2
@@ -11321,7 +11337,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 % [ID gốc: 5.258]
 % [Nguồn: DBI202 Order 5 Q258]
 Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:
-
+\begin{codebox}
 CREATE FUNCTION dbo.GetLaptopPrice(@model int)
 RETURNS decimal(10,2) AS
 BEGIN
@@ -11329,7 +11345,7 @@ BEGIN
     SELECT @price = price FROM Laptop WHERE model = @model;
     RETURN @price;
 END;
-
+\end{codebox}
 What will this function return when called with dbo.GetLaptopPrice(1)?
 \begin{choices}
 \choice The average laptop price with model = 1
@@ -11352,7 +11368,16 @@ Phân tích: Hàm vô hướng `dbo.GetLaptopPrice(1)` nhận mã model 1 rồi 
 \begin{question}{507}
 % [ID gốc: 5.263]
 % [Nguồn: DBI202 Order 5 Q263]
-The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the "Customers" table: CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10) AS BEGIN SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode; END; GO Which of the following is the way to execute a procedure?
+The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the \texttt{Customers} table:
+\begin{codebox}
+CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10)
+AS
+BEGIN
+    SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode;
+END;
+GO
+\end{codebox}
+Which of the following is the correct way to execute this procedure?
 \begin{choices}
 \choice EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA11DP';
 \choice EXECUTE SelectAllCustomers 'London', 'WA11DP' OUTPUT

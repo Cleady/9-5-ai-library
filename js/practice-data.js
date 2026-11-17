@@ -8105,17 +8105,16 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Database Management System.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: DBMS là viết tắt của Database Management System, tức hệ quản trị cơ sở dữ liệu. Nó cung cấp chức năng định nghĩa, lưu trữ, truy vấn, cập nhật và quản lý quyền trên CSDL; DBMS là phần mềm, còn database là dữ liệu được phần mềm quản lý.\n\nĐối chiếu phương án: A. Database Managing Systems; C. Database Manage System; D. Database Managable System. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-          "id": 5010,
-          "quizId": 101,
-          "text": "Choose an incorrect statement",
-          "options": [
-                "None of the others",
-                "Database is created and maintained by a DBMS",
-                "Database is a collection of information that exists over a long period of time",
-                "Database is a collection of data that is managed by a DBMS"
-          ],
-          "correctIndex": 0,
-          "explanation": "Đáp án theo dữ liệu đề: A — A. None of the others.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: B. Database is created and maintained by a DMBS IC] Database is a collection of information that…; D. Database is a collection of data that is managed by a DBMS. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "id": 5010,
+      "quizId": 101,
+      "text": "Choose an incorrect statement",
+      "options": [
+        "None of the others",
+        "Database is created and maintained by a DMBS\nIC]\nDatabase is a collection of information that exists over a long opened of time",
+        "Database is a collection of data that is managed by a DBMS"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án theo dữ liệu đề: A — A. None of the others.\n\nNền tảng kiến thức: Chương này phân biệt dữ liệu, cơ sở dữ liệu, hệ quản trị CSDL (DBMS), mô hình dữ liệu, lược đồ và trạng thái dữ liệu. Cơ sở dữ liệu lưu dữ liệu có liên hệ; DBMS là phần mềm định nghĩa, truy vấn, cập nhật và bảo vệ dữ liệu đó.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: B. Database is created and maintained by a DMBS IC] Database is a collection of information that…; D. Database is a collection of data that is managed by a DBMS. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5011,
@@ -8185,7 +8184,7 @@
     {
       "id": 5016,
       "quizId": 101,
-      "text": "A database administrator: a person or persons responsible for the struc-ture or schema of the database.",
+      "text": "A database administrator: a person or persons responsible for the structure or schema of the database.",
       "options": [
         "True",
         "False"
@@ -8765,17 +8764,17 @@
       "explanation": "Đáp án theo dữ liệu đề: C — C. Candidate key.\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. Prime key; B. Super key; D. Primary key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-          "id": 5061,
-          "quizId": 102,
-          "text": "Consider a table named \"Boat\". Which option is the correct relation schema for the table?",
-          "options": [
-                "Boat: BoatID, BoatName, Color, Status",
-                "Boat(BoatID, BoatName, Color, Status)",
-                "Boat(BoatID: String, BoatName: String, Color: String, Status: String)",
-                "Boat: {BoatID, BoatName, Color, Status}"
-          ],
-          "correctIndex": 1,
-          "explanation": "Đáp án theo dữ liệu đề: B — B. Boat(BoatID, BoatName, Color, Status).\n\nLời giải gốc: Ký hiệu tiêu chuẩn cho lược đồ quan hệ là tên quan hệ kèm danh sách thuộc tính đặt trong dấu ngoặc đơn, dạng RelationName(Attribute1, Attribute2, ...).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. Boat: BoatID, BoatName, Color, Status; C. Boat(BoatID: String, BoatName: String, Color: String, Status: String); D. Boat: BoatID, BoatName, Color, Status. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "id": 5061,
+      "quizId": 102,
+      "text": "Consider a table named \"Boat\". Which option is the correct relation schema for the table?",
+      "options": [
+        "Boat: BoatID, BoatName, Color, Status",
+        "Boat(BoatID, BoatName, Color, Status)",
+        "Boat(BoatID: String, BoatName: String, Color: String, Status: String)",
+        "Boat: BoatID, BoatName, Color, Status"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án theo dữ liệu đề: B — B. Boat(BoatID, BoatName, Color, Status).\n\nLời giải gốc: Ký hiệu tiêu chuẩn cho lược đồ quan hệ là tên quan hệ kèm danh sách thuộc tính đặt trong dấu ngoặc đơn, dạng RelationName(Attribute1, Attribute2, ...).\n\nNền tảng kiến thức: Mô hình quan hệ biểu diễn dữ liệu bằng quan hệ (bảng), bộ (hàng), thuộc tính (cột) và miền giá trị. Khóa nhận diện bộ; khóa ngoại và các ràng buộc toàn vẹn ngăn dữ liệu tham chiếu sai hoặc vi phạm miền.\n\nPhân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc tính, thường theo dạng `Boat(BoatID, BoatName, Color, Status)`. Nếu đề hỏi schema thuần túy, không nhất thiết phải kèm kiểu dữ liệu hay các bộ dữ liệu đang lưu.\n\nĐối chiếu phương án: A. Boat: BoatID, BoatName, Color, Status; C. Boat(BoatID: String, BoatName: String, Color: String, Status: String); D. Boat: BoatID, BoatName, Color, Status. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5062,
@@ -10433,7 +10432,7 @@
     {
       "id": 5188,
       "quizId": 104,
-      "text": "Look at the following statements:\n(a) We should pick the right kind of elements\n(b) When an entity has no non-primary key attribute, we should convert that entity to an attribute\n(c) Use weak entities when-ever possible\n(d) Always make redundancies",
+      "text": "Look at the following statements:\n(a) We should pick the right kind of elements\n(b) When an entity has no non-primary key attribute, we should convert that entity to an attribute\n(c) Use weak entities whenever possible\n(d) Always make redundancies",
       "options": [
         "(a) and (b) are correct",
         "(a) and (c) are correct",
@@ -10534,17 +10533,16 @@
       "explanation": "A weak entity does not possess sufficient key attributes to form a primary key on its own."
     },
     {
-          "id": 5196,
-          "quizId": 104,
-          "text": "Which of the followings is true?",
-          "options": [
-                "The Entity Relationship (ER) model represents the structure of data graphically",
-                "The ER model is a low level database design",
-                "The ER model represents the operation on data",
-                "All of the others"
-          ],
-          "correctIndex": 0,
-          "explanation": "Đáp án theo dữ liệu đề: A — A. The Entity Relationship (ER) model represents the structure of data graphically.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. The ER model is a low level database design IC] The ER model represents the operation on data; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "id": 5196,
+      "quizId": 104,
+      "text": "Which of the followings is true?",
+      "options": [
+        "The Entity Relationship (ER) model represents the structure of data graphically",
+        "The ER model is a low level database design\nIC]\nThe ER model represents the operation on data",
+        "All of the others"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án theo dữ liệu đề: A — A. The Entity Relationship (ER) model represents the structure of data graphically.\n\nNền tảng kiến thức: Mô hình ER mô tả yêu cầu ở mức khái niệm: thực thể là đối tượng cần lưu, thuộc tính mô tả thực thể hoặc mối quan hệ, còn lực lượng (cardinality) và participation diễn tả các ràng buộc kết hợp. Khóa của thực thể yếu thường ghép khóa bộ phận với khóa của thực thể chủ.\n\nPhân tích: ER diagram mô tả các entity set, thuộc tính và relationship set, cùng các ràng buộc cần thiết. Nó tập trung vào đối tượng dữ liệu và liên kết giữa chúng, không mô tả luồng xử lý/chương trình như sơ đồ quy trình.\n\nĐối chiếu phương án: B. The ER model is a low level database design IC] The ER model represents the operation on data; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5197,
@@ -11130,15 +11128,15 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. We apply the selection condition to each tuple independently..\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. None of others.; C. We apply the selection condition to each attribute independently.; D. All of the other.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-          "id": 5242,
-          "quizId": 105,
-          "text": "Consider the distributive law, that holds for set relation:\n(R U S) - T = (R - T) U (S - T)\nDoes the above distributive law still hold for bag relations?",
-          "options": [
-                "TRUE",
-                "FALSE"
-          ],
-          "correctIndex": 1,
-          "explanation": "Đáp án đúng: B — FALSE.\n\nLuật phân phối (R U S) - T = (R - T) U (S - T) đúng với quan hệ tập hợp (set relations), nhưng KHÔNG đúng với quan hệ multiset/bag (bag relations).\n\nVí dụ phản chứng:\nGiả sử phần tử x xuất hiện 1 lần trong R, 1 lần trong S, và 1 lần trong T.\n- Vế trái: R U S có 1 + 1 = 2 lần x. Trừ đi T (1 lần) còn 2 - 1 = 1 lần x.\n- Vế phải: R - T có max(0, 1 - 1) = 0 lần x; S - T có max(0, 1 - 1) = 0 lần x. Hợp lại (R - T) U (S - T) có 0 + 0 = 0 lần x.\nVì 1 ≠ 0 nên luật phân phối không thỏa mãn trên bag relations."
+      "id": 5242,
+      "quizId": 105,
+      "text": "Consider the distributive law, that holds for set relation:\n(R U S) - T = (R - T) U (S - T)\nDoes the above distributive law still hold for bag relations?",
+      "options": [
+        "TRUE",
+        "FALSE"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đáp án theo dữ liệu đề: B — B. (2,3) appears three times in the result..\n\nNền tảng kiến thức: Đại số quan hệ thao tác trên quan hệ: selection lọc hàng, projection chọn cột, join ghép bộ theo điều kiện, còn union/difference/intersection là các phép tập hợp. Cần phân biệt ngữ nghĩa tập hợp với bag/multiset vì bag cho phép bản sao và có quy tắc bội số riêng.\n\nPhân tích: Phép tập hợp trên set loại bản sao và thường đòi hai quan hệ union-compatible. Với bag, cần theo dõi số lần xuất hiện của mỗi bộ; vì vậy không thể tự động áp dụng mọi đẳng thức tập hợp mà bỏ qua multiplicity.\n\nĐối chiếu phương án: A. TRUE; A. (2,3) appears twice in the result.; C. (3,3) appears once in the result.; D. (2,2) appears once in the result.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5243,
@@ -13505,17 +13503,17 @@
       "explanation": "Đáp án theo dữ liệu đề: D — D. multiple.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: Các hàng dữ liệu của một relation được gọi là tuple; header chứa tên thuộc tính không phải tuple dữ liệu. Trong bảng, tuple tương ứng một bản ghi, còn attribute tương ứng cột.\n\nĐối chiếu phương án: A. only one; B. two; C. three. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-          "id": 5423,
-          "quizId": 107,
-          "text": "Which SQL statement is used to remove an existing index from a table?",
-          "options": [
-                "DROP INDEX",
-                "REMOVE INDEX",
-                "DELETE INDEX",
-                "UNINDEX TABLE"
-          ],
-          "correctIndex": 0,
-          "explanation": "Đáp án đúng: A — DROP INDEX.\n\nNền tảng kiến thức: Trong SQL / DBMS, câu lệnh DDL dùng để xóa một chỉ mục (index) đã tồn tại khỏi bảng là DROP INDEX (cú pháp chuẩn: DROP INDEX index_name ON table_name; hoặc DROP INDEX table_name.index_name tùy hệ quản trị cơ sở dữ liệu như SQL Server, MySQL, PostgreSQL).\n\nPhân tích các phương án:\n- A. DROP INDEX: Lệnh SQL chuẩn dùng để xóa chỉ mục khỏi cấu trúc bảng.\n- B. REMOVE INDEX: Không phải cú pháp SQL hợp lệ.\n- C. DELETE INDEX: DELETE là lệnh DML dùng để xóa dòng/bản ghi dữ liệu trong bảng, không dùng để xóa đối tượng cấu trúc như index.\n- D. UNINDEX TABLE: Không tồn tại câu lệnh này trong SQL."
+      "id": 5423,
+      "quizId": 107,
+      "text": "Which SQL statement is used to remove an existing index from a table?",
+      "options": [
+        "DROP INDEX",
+        "REMOVE INDEX",
+        "DELETE INDEX",
+        "UNINDEX TABLE"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án theo dữ liệu đề: A — A. DROP INDEX.\n\nNền tảng kiến thức: Tổ chức tệp quyết định cách bản ghi nằm trên trang; chỉ mục ánh xạ giá trị khóa tìm kiếm tới vị trí bản ghi để giảm số trang phải đọc. Chỉ mục tăng tốc một số truy vấn nhưng tiêu tốn dung lượng và cần cập nhật khi dữ liệu thay đổi.\n\nPhân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu phụ thuộc theo quy tắc DBMS; DELETE xóa các hàng nhưng giữ bảng, còn TRUNCATE xóa nhanh toàn bộ hàng trong khi vẫn giữ cấu trúc. Cần chọn lệnh đúng cấp độ tác động.\n\nĐối chiếu phương án: B. REMOVE INDEX; C. DELETE INDEX; D. UNINDEX TABLE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5424,
@@ -13948,17 +13946,17 @@
       "multiple": true
     },
     {
-          "id": 5456,
-          "quizId": 107,
-          "text": "Three properties of a lock in DBMS are:\n(a) Granularity: the size of the lock\n(b) Granularity: the type of the lock\n(c) Mode: the type of the lock\n(d) Duration: the time in seconds that the DBMS waits for a lock to be released\n\nWhich of the following statements is correct?",
-          "options": [
-                "(a) and (c) and (d) are true",
-                "(a) and (b) and (d) are true",
-                "(b) and (c) and (d) are true",
-                "(a) and (b) and (c) are true"
-          ],
-          "correctIndex": 0,
-          "explanation": "Đáp án đúng: A — (a) and (c) and (d) are true.\n\nNền tảng kiến thức: Các thuộc tính cơ bản của khóa (Lock) trong DBMS:\n- (a) Granularity (Độ mịn / Phạm vi): Xác định kích thước của đơn vị dữ liệu bị khóa (như Database, Table, Page, hay Row/Record). Do đó phát biểu (a) là ĐÚNG.\n- (b) Granularity: the type of the lock — SAI (Granularity là kích thước / phạm vi, không phải loại khóa; Mode mới là loại khóa).\n- (c) Mode (Chế độ / Kiểu khóa): Xác định loại quyền truy cập được áp dụng (Shared Lock S cho phép đọc, Exclusive Lock X cho phép ghi). Do đó phát biểu (c) là ĐÚNG.\n- (d) Duration (Thời lượng khóa): Khoảng thời gian khóa tồn tại trước khi được giải phóng. Theo quy ước bài thi, phát biểu (d) là ĐÚNG.\n\nPhân tích: Phát biểu (b) sai hoàn toàn nên các phương án chứa (b) đều sai (loại B, C, D). Phương án đúng duy nhất là A: (a) and (c) and (d) are true."
+      "id": 5456,
+      "quizId": 107,
+      "text": "Three properties of a lock in DBMS are:\n\\beginitemize[label=, leftmargin=1.5em, itemsep=0.2em]\n \\item[(a)] Granularity: the size of the lock\n \\item[(b)] Granularity: the type of the lock\n \\item[(c)] Mode: the type of the lock\n \\item[(d)] Duration: the time in seconds that the DBMS waits for a lock to be released\n\\enditemize\nWhich of the following statements is correct?",
+      "options": [
+        "(a) and (c) and (d) are true",
+        "(a) and (b) and (d) are true",
+        "(b) and (c) and (d) are true",
+        "(a) and (b) and (c) are true"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đáp án theo dữ liệu đề: A, C, D — A. (a) and (c) and (d) are true; C. (b) and (c) and (d) are true; D. (a) and (b) and (c) are true.\n\nNền tảng kiến thức: Điều khiển đồng thời giữ lịch thực thi nhiều giao dịch tương đương một thứ tự an toàn. Khóa điều phối đọc/ghi; protocol như two-phase locking hỗ trợ serializability, còn phát hiện deadlock và xử lý các anomaly như lost update/dirty read là phần riêng.\n\nPhân tích: Concurrency control điều phối lịch xen kẽ để tránh anomaly. Shared lock thường cho phép nhiều reader; exclusive lock bảo vệ cập nhật; hai giao dịch chờ tài nguyên vòng tròn có thể deadlock và DBMS thường phá vòng chờ bằng cách hủy/rollback một giao dịch.\n\nĐối chiếu phương án: B. Granularity: the type of the lock; B. (a) and (b) and (d) are true. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5457,
@@ -14081,7 +14079,7 @@
     {
       "id": 5466,
       "quizId": 108,
-      "text": "Exception handler in PSM is defined as follows:\nDECLARE HANDLER FOR condition list> \nThe clause can be:",
+      "text": "Exception handler in PSM is defined as follows:\n\nDECLARE <action> HANDLER FOR <condition list> <statement>;\n\nThe <action> clause can be:",
       "options": [
         "UNDO",
         "EXIT",
@@ -14089,7 +14087,7 @@
         "CONTINUE"
       ],
       "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. All of the others.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: kiểm tra từng phát biểu độc lập. “All of the others/above” chỉ đúng khi mọi phát biểu còn lại đúng; “None” chỉ đúng khi không phát biểu nào trong nhóm thỏa yêu cầu. Đáp án lưu cần được đọc cùng các mệnh đề thành phần.\n\nĐối chiếu phương án: A. UNDO; B. EXIT; D. CONTINUE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: C — All of the others.\n\nTrong chuẩn SQL/PSM (Persistent Stored Modules), cú pháp khai báo bộ xử lý ngoại lệ (Exception Handler) có dạng:\n\n`DECLARE <action> HANDLER FOR <condition list> <statement>;`\n\nTrong đó, mệnh đề `<action>` quy định hành động tiếp theo sau khi bẫy lỗi và có thể nhận một trong các giá trị:\n- **CONTINUE**: Sau khi câu lệnh xử lý ngoại lệ thực thi xong, chương trình tiếp tục thực thi câu lệnh kế tiếp.\n- **EXIT**: Lập tức kết thúc khối lệnh `BEGIN...END` hiện tại chứa khai báo handler.\n- **UNDO**: Khôi phục (rollback) tất cả các thay đổi do khối lệnh hiện tại đã tạo ra và thoát khỏi khối lệnh.\n\nDo đó, mệnh đề `<action>` có thể nhận bất kỳ giá trị nào trong các lựa chọn UNDO, EXIT hoặc CONTINUE \\(\\to\\) Phương án đúng là **All of the others**."
     },
     {
       "id": 5467,
@@ -14390,22 +14388,22 @@
       "explanation": "Đáp án theo dữ liệu đề: B — B. Select.\n\nLời giải gốc: Trigger trong SQL được kích hoạt tự động khi có sự thay đổi dữ liệu thông qua các lệnh DML bao gồm INSERT, UPDATE, hoặc DELETE. Lệnh SELECT chỉ dùng để truy vấn, không làm thay đổi dữ liệu nên không kích hoạt trigger.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: A. Insert; C. Update; D. Delete. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-          "id": 5490,
-          "quizId": 108,
-          "text": "Which of the following is NOT mentioned on how a local variable is defined using T-SQL?",
-          "options": [
-                "The name of the local variable should begin with \"@\" sign as the first character of its name.",
-                "A local variable is defined using T-SQL by using statement \"DECLARE\".",
-                "When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.",
-                "The data type of local variable is declared after its name and assigned a system-supplied or user-defined data type and a length."
-          ],
-          "correctIndex": 0,
-          "explanation": "**Đáp án đúng**: A & C (Cả A và C đều được chấp nhận là đáp án đúng)\n\nNền tảng kiến thức:\n- **Theo dữ liệu ngân hàng đề thi gốc**: Đáp án A được chọn trong ngân hàng đề thi FPT (dựa trên giải thích về quy ước đặt tên biến hệ thống @@ so với biến cục bộ @).\n- **Theo bản chất kiến thức T-SQL**: Đáp án C cũng hoàn toàn chính xác vì nhận định C (\"When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement\") nói về việc khởi tạo giá trị và gán giá trị (Assigning values to variables), chứ KHÔNG thuộc các quy tắc định nghĩa / khai báo cú pháp biến (Defining local variables: DECLARE, tên biến @, kiểu dữ liệu).\n\nVì vậy hệ thống ghi nhận cả **A và C** đều là đáp án hợp lệ cho câu hỏi này.",
-          "correctIndices": [
-                0,
-                2
-          ],
-          "multiple": true
+      "id": 5490,
+      "quizId": 108,
+      "text": "Which of the following is NOT mentioned on how a local variable is defined using T-SQL?",
+      "options": [
+        "The name of the local variable should begin with \"@\" sign as the first character of its name.",
+        "A local variable is defined using T-SQL by using statement \"DECLARE\".",
+        "When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement.",
+        "The data type of local variable is declared after its name and assigned a system-supplied or user-defined data type and a length."
+      ],
+      "correctIndex": 0,
+      "explanation": "**Đáp án đúng**: A & C\n\nĐáp án theo dữ liệu đề: A, C — A. The name of the local variable should begin with \"@\" sign as the first character of its name.; C. When a variable is first declared, its value is set to NULL. To assign a value to a variable, use the SET statement..\n\nNền tảng kiến thức:\n- Theo dữ liệu ngân hàng đề thi: Phương án A được ghi nhận trong đáp án gốc.\n- Theo bản chất kỹ thuật: Phương án C mô tả việc khởi tạo/gán trị cho biến (Assigning values) chứ không thuộc quy tắc định nghĩa/cú pháp khai báo biến (how a local variable is defined).\nDo đó, cả A và C đều được ghi nhận là đáp án đúng.\n\nLời giải gốc: Biến cục bộ trong T-SQL chỉ bắt đầu bằng một ký tự @ (ví dụ: @VarName). Phương án A ghi sai thành ký tự @@ (vì @@ trong T-SQL được dùng cho các biến hệ thống/biến toàn cục).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đầu bằng một dấu `@` (ví dụ `@count`); tên bắt đầu `@@` được dùng cho các hàm/biến hệ thống. Đừng nhầm tiền tố biến cục bộ với các biến hệ thống như `@@ROWCOUNT`.\n\nĐối chiếu phương án: B. A local variable is defined using T-SQL by using statement \"DECLARE\".; C. When a variable is first declared, its value is set to NULL. To assign a value to a variable,…; D. The data type of local variable is declared after its name and assigned a system-supplied or u…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
+      "correctIndices": [
+        0,
+        2
+      ],
+      "multiple": true
     },
     {
       "id": 5491,
@@ -14421,37 +14419,37 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. With INSERT and UPDATE triggers.\n\nLời giải gốc: Bảng tạm Inserted lưu trữ các bản ghi mới được thêm vào hoặc giá trị sau khi cập nhật, do đó nó được điền dữ liệu trong các trigger INSERT và UPDATE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: B. With DELETE triggers only; C. With INSERT, UPDATE, and DELETE triggers; D. With UPDATE and DELETE triggers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-          "id": 5492,
-          "quizId": 108,
-          "text": "Which of the following is FALSE about database triggers?",
-          "options": [
-                "It automatically runs when an event occurs in the database server",
-                "DML triggers are frequently used for enforcing business rules and data integrity",
-                "The same trigger action cannot be defined for more than one user action (for example, INSERT and UPDATE) within a single CREATE TRIGGER statement",
-                "When a trigger fires, results are returned to the calling application, just like with stored procedures."
-          ],
-          "correctIndex": 2,
-          "explanation": "**Đáp án đúng**: C & D (Cả C và D đều là phát biểu sai về Trigger)\n\nNền tảng kiến thức:\n- Phát biểu A: ĐÚNG. Trigger là đoạn mã tự động thực thi khi có sự kiện (DML hoặc DDL) xảy ra trên database server.\n- Phát biểu B: ĐÚNG. DML Triggers thường được dùng để thực thi các quy tắc nghiệp vụ phức tạp và bảo vệ tính toàn vẹn dữ liệu.\n- Phát biểu C: SAI. Trong SQL Server / T-SQL, ta hoàn toàn CÓ THỂ định nghĩa một trigger cho nhiều hành động người dùng cùng lúc (ví dụ: `CREATE TRIGGER trg ON table AFTER INSERT, UPDATE AS ...`). Do đó nhận định \"cannot be defined for more than one user action\" là SAI.\n- Phát biểu D: SAI. Khi trigger kích hoạt, nó chạy ngầm phía server và KHÔNG trả kết quả / tham số đầu ra về cho ứng dụng gọi giống như Stored Procedure.\n\nVì câu hỏi yêu cầu chọn phát biểu SAI (*Which of the following is FALSE about database triggers?*), cả C và D đều là đáp án chính xác.",
-          "correctIndices": [
-                2,
-                3
-          ],
-          "multiple": true
+      "id": 5492,
+      "quizId": 108,
+      "text": "Which of the following is FALSE about database triggers?",
+      "options": [
+        "It automatically runs when an event occurs in the database server",
+        "DML triggers are frequently used for enforcing business rules and data integrity",
+        "The same trigger action cannot be defined for more than one user action (for example, INSERT and UPDATE) within a single CREATE TRIGGER statement",
+        "When a trigger fires, results are returned to the calling application, just like with stored procedures."
+      ],
+      "correctIndex": 2,
+      "explanation": "**Đáp án đúng**: C & D\n\nĐáp án theo dữ liệu đề: C, D — C. The same trigger action cannot be defined for more than one user action (for example, INSERT and UPDATE) within a single CREATE TRIGGER statement; D. When a trigger fires, results are returned to the calling application, just like with stored procedures..\n\nLời giải gốc: Trigger hoạt động ngầm bên trong cơ sở dữ liệu để đáp ứng các sự kiện thay đổi dữ liệu và thường không trả về tập kết quả trực tiếp cho ứng dụng gọi giống như stored procedure.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: A. It automatically runs when an event occurs in the database server; B. DML triggers are frequently used for enforcing business rules and data integrity; C. The same trigger action cannot be defined for more than one user action (for example, INSERT a…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
+      "correctIndices": [
+        2,
+        3
+      ],
+      "multiple": true
     },
     {
-          "id": 5493,
-          "quizId": 108,
-          "text": "In which line of the following code is the error?\n\nCREATE TRIGGER trigger1 --1\nON dbo.EMPLOYEE -- 2\nAFTER FOR INSERT AS -- 3\nBEGIN -- 4\nINSERT INTO EMPLOYEE BACKUP -- 5\nSELECT * FROM INSERTED -- 6\nEND -- 7",
-          "options": [
-                "Line 1",
-                "Line 2",
-                "Line 3",
-                "Line 5",
-                "Line 6",
-                "There are no lines in error"
-          ],
-          "correctIndex": 2,
-          "explanation": "Đáp án theo dữ liệu đề: C — C. Line 3.\n\nLời giải gốc: Dòng 3 bị thừa từ khóa. Cú pháp đúng phải là AFTER INSERT hoặc FOR INSERT, không dùng đồng thời cả AFTER FOR INSERT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Line 1; B. Line 2; D. Line 5; E. Line 6 F. There are no lines in error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "id": 5493,
+      "quizId": 108,
+      "text": "In which line of the following code is the error?\n\nCREATE TRIGGER trigger1 -- Line 1\nON dbo.EMPLOYEE -- Line 2\nAFTER FOR INSERT AS -- Line 3\nBEGIN -- Line 4\n INSERT INTO EMPLOYEE_BACKUP -- Line 5\n SELECT * FROM INSERTED -- Line 6\nEND -- Line 7",
+      "options": [
+        "Line 1",
+        "Line 2",
+        "Line 3",
+        "Line 5",
+        "Line 6",
+        "There are no lines in error"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đáp án theo dữ liệu đề: C — C. Line 3.\n\nLời giải gốc: Dòng 3 bị thừa từ khóa. Cú pháp đúng phải là AFTER INSERT hoặc FOR INSERT, không dùng đồng thời cả AFTER FOR INSERT.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. Line 1; B. Line 2; D. Line 5; E. Line 6 F. There are no lines in error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5494,
@@ -14631,7 +14629,7 @@
     {
       "id": 5507,
       "quizId": 108,
-      "text": "The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the \"Customers\" table: CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10) AS BEGIN SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode; END; GO Which of the following is the way to execute a procedure?",
+      "text": "The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the Customers table:\n\nCREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10)\nAS\nBEGIN\n SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode;\nEND;\nGO\n\nWhich of the following is the correct way to execute this procedure?",
       "options": [
         "EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA11DP';",
         "EXECUTE SelectAllCustomers 'London', 'WA11DP' OUTPUT",
