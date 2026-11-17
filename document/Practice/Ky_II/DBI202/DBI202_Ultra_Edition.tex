@@ -2465,11 +2465,10 @@ Phân tích: Để xác định một ràng buộc/phụ thuộc tầm thường
 \begin{question}{113}
 % [ID gốc: 15.2]
 % [Nguồn: DBI202 Order 15 Q2]
-Let R(ABCD) be a relation with functional dependencies
-{A -> B,
-C -> B,
-B -> D}
-What is the key for R (choose one)
+Let \(R(A, B, C, D)\) be a relation with functional dependencies:
+\(F = \{ A \rightarrow B, \quad C \rightarrow B, \quad B \rightarrow D \}\)
+
+What is the candidate key for \(R\)?
 \begin{choices}
 \choice AB
 \choice AC
@@ -2515,8 +2514,10 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{115}
 % [ID gốc: 15.4]
 % [Nguồn: DBI202 Order 15 Q4]
-The relation R(ABCD) has following FDs:
-{ A -> B ; B -> A ; A -> D ; D -> B }
+The relation \(R(A, B, C, D)\) has the following functional dependencies:
+\(F = \{ A \rightarrow B, \quad B \rightarrow A, \quad A \rightarrow D, \quad D \rightarrow B \}\)
+
+Choose the correct statement about \(R\):
 \begin{choices}
 \choice R is in 3NF
 \choice R is not in 3NF
@@ -2538,13 +2539,10 @@ The relation R(ABCD) has following FDs:
 \begin{question}{116}
 % [ID gốc: 15.5]
 % [Nguồn: DBI202 Order 15 Q5]
-Given a R(A,B,C,D) with the following FDs:
-AB->D
-BC->A
-AD->B
-CD->B
-AD->C
-Choose a correct statement about R:
+Given relation \(R(A, B, C, D)\) with the following functional dependencies:
+\(F = \{ AB \rightarrow D, \quad BC \rightarrow A, \quad AD \rightarrow B, \quad CD \rightarrow B, \quad AD \rightarrow C \}\)
+
+Choose the correct statement about \(R\):
 \begin{choices}
 \choice The FD set of R is not canonical and R is in BCNF
 \choice The FD set of R is canonical and R is not in BCNF
@@ -2633,12 +2631,10 @@ Phân tích: 3NF tập trung loại phụ thuộc bắc cầu của thuộc tín
 \begin{question}{120}
 % [ID gốc: 15.9]
 % [Nguồn: DBI202 Order 15 Q9]
-The relation R(ABCD) has following FDs:
-{ACD -> B ;
-AC -> D ;
-D -> C ;
-AC -> B}
-Choose the correct statement about R:
+The relation \(R(A, B, C, D)\) has the following functional dependencies:
+\(F = \{ ACD \rightarrow B, \quad AC \rightarrow D, \quad D \rightarrow C, \quad AC \rightarrow B \}\)
+
+Choose the correct statement about \(R\):
 \begin{choices}
 \choice R is in 3NF
 \choice R is in 2NF only, not higher
@@ -2658,8 +2654,10 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{121}
 % [ID gốc: 15.10]
 % [Nguồn: DBI202 Order 15 Q10]
-Let R(A,B,C,D) with the following FDs: {AB->C, AC->B, AD->C}
-Choose a correct statement about R:
+Let relation \(R(A, B, C, D)\) with the following functional dependencies:
+\(F = \{ AB \rightarrow C, \quad AC \rightarrow B, \quad AD \rightarrow C \}\)
+
+Choose the correct statement about \(R\):
 \begin{choices}
 \choice R is in BCNF
 \choice R is in 3NF
@@ -2778,9 +2776,10 @@ Phân tích: Để xác định một ràng buộc/phụ thuộc tầm thường
 \begin{question}{127}
 % [ID gốc: 15.16]
 % [Nguồn: DBI202 Order 15 Q16]
-Give the relation R(XYZT) with the following FD's:
-XY -> Z ; XYT -> Z ; XYZ -> T ; XZ -> T
-Determine the primary key for R and then choose the correct statement
+Given the relation \(R(X, Y, Z, T)\) with the following functional dependencies:
+\(F = \{ XY \rightarrow Z, \quad XYT \rightarrow Z, \quad XYZ \rightarrow T, \quad XZ \rightarrow T \}\)
+
+Determine the candidate key for \(R\) and choose the correct statement:
 \begin{choices}
 \choice R is in BCNF
 \choice R is not in BCNF
@@ -2807,13 +2806,14 @@ Do đó phương án đúng là: R is not in BCNF (Đáp án B).
 \begin{question}{128}
 % [ID gốc: 15.17]
 % [Nguồn: DBI202 Order 15 Q17]
-Given the relation schema R(XYZT) and functional dependencies
-F = {X->Z, T->Y}.
-Which functional dependency causes a violation of second normal form (2NF) ?
+Given the relation schema \(R(X, Y, Z, T)\) and functional dependencies:
+\(F = \{ X \rightarrow Z, \quad T \rightarrow Y \}\)
+
+Which functional dependency causes a violation of second normal form (2NF)?
 \begin{choices}
-\choice X->Z
-\choice T->Y
-\choice both X->Z and T->Y
+\choice \(X \rightarrow Z\)
+\choice \(T \rightarrow Y\)
+\choice both \(X \rightarrow Z\) and \(T \rightarrow Y\)
 \choice none of the above
 \end{choices}
 \textbf{Đáp án:} C
@@ -3183,8 +3183,10 @@ Phân tích: Normalization tổ chức/ phân rã quan hệ dựa trên phụ th
 \begin{question}{146}
 % [ID gốc: 15.36]
 % [Nguồn: DBI202 Order 15 Q36]
-Consider a relation R(A,B,C,D,E) with functional dependencies:
-AB->C, B->C, E->D and C->E.What is/are the key(s) for R
+Consider relation \(R(A, B, C, D, E)\) with functional dependencies:
+\(F = \{ AB \rightarrow C, \quad B \rightarrow C, \quad E \rightarrow D, \quad C \rightarrow E \}\)
+
+What is/are the candidate key(s) for \(R\)?
 \begin{choices}
 \choice AC
 \choice AD
@@ -3204,16 +3206,14 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{147}
 % [ID gốc: 15.37]
 % [Nguồn: DBI202 Order 15 Q37]
-Suppose that we have a relation R (B, C,
+Suppose that we have a relation \(R(B, C, D)\) that satisfies functional dependencies: \(D \rightarrow B\) and \(D \rightarrow C\). Which of the following functional dependencies is equivalent to the given dependencies?
 \begin{choices}
-\choice that satisfies FD's:D->B and D->
-\choice Which of the following FD is equivalent to the given dependency functions?
-\choice D->BC
-\choice D->DB
-\choice DB->B
-\choice DC->DB
+\choice \(D \rightarrow BC\)
+\choice \(D \rightarrow DB\)
+\choice \(DB \rightarrow B\)
+\choice \(DC \rightarrow DB\)
 \end{choices}
-\textbf{Đáp án:} C
+\textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. D->BC.
 
 Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
@@ -3312,7 +3312,8 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 \begin{question}{152}
 % [ID gốc: 15.42]
 % [Nguồn: DBI202 Order 15 Q42]
-The highest normal form for relation schema R(ABCD) with functional dependencies: F = {AB-> C; D->B, C->ABD} is:
+The highest normal form for relation schema \(R(A, B, C, D)\) with functional dependencies:
+\(F = \{ AB \rightarrow C, \quad D \rightarrow B, \quad C \rightarrow ABD \}\) is:
 \begin{choices}
 \choice 2NF
 \choice 1NF
@@ -3356,7 +3357,10 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{154}
 % [ID gốc: 15.44]
 % [Nguồn: DBI202 Order 15 Q44]
-Suppose we have a relation R(ID, full_name, address) with functional dependencies {ID → full_name, ID → address}. What is the highest normal form of R in relational database design?
+Suppose we have a relation \(R(\text{ID}, \text{full\_name}, \text{address})\) with functional dependencies:
+\(F = \{ \text{ID} \rightarrow \text{full\_name}, \quad \text{ID} \rightarrow \text{address} \}\)
+
+What is the highest normal form of \(R\) in relational database design?
 \begin{choices}
 \choice 2NF
 \choice 1NF
@@ -3422,7 +3426,10 @@ Phân tích: Rule 1 không hợp lệ vì phụ thuộc A → C không cho phép
 \begin{question}{157}
 % [ID gốc: 15.47]
 % [Nguồn: DBI202 Order 15 Q47]
-Suppose we have a relation R(A, B, C, D, E, F, N) with functional dependencies: F → A, A → B, B → C, BC → A, A → D, E → A, D → E. Which of the following is NOT a key?
+Suppose we have a relation \(R(A, B, C, D, E, F, N)\) and functional dependencies:
+\(F = \{ F \rightarrow A, \quad A \rightarrow B, \quad B \rightarrow C, \quad BC \rightarrow A, \quad A \rightarrow D, \quad E \rightarrow A, \quad D \rightarrow E \}\)
+
+Which of the following is NOT a candidate key for \(R\)?
 \begin{choices}
 \choice AB
 \choice FN
@@ -3466,10 +3473,13 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{159}
 % [ID gốc: 15.51]
 % [Nguồn: DBI202 Order 15 Q51]
-Consider the relation R(A,B,C,D) and functional dependencies: A→B, C→D. Find key of the above relation.
+Consider the relation \(R(A, B, C, D)\) with functional dependencies:
+\(F = \{ A \rightarrow B, \quad C \rightarrow D \}\)
+
+Find the candidate key of this relation:
 \begin{choices}
 \choice The key is the A column
-\choice The key includes two columns (A,C)
+\choice The key includes two columns (A, C)
 \choice The key is the A column or C column
 \choice The key is the C column
 \end{choices}
@@ -3598,7 +3608,10 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{165}
 % [ID gốc: 15.62]
 % [Nguồn: DBI202 Order 15 Q62]
-Consider a relation R(A,B,C,D,E) with functional dependencies: AB-&gt;C, B-&gt;C, E-&gt;D and C-&gt;E. What is/are the key(s) for R
+Consider relation \(R(A, B, C, D, E)\) with functional dependencies:
+\(F = \{ AB \rightarrow C, \quad B \rightarrow C, \quad E \rightarrow D, \quad C \rightarrow E \}\)
+
+What is/are the candidate key(s) for \(R\)?
 \begin{choices}
 \choice AC
 \choice AD
@@ -3620,12 +3633,15 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{166}
 % [ID gốc: 15.64]
 % [Nguồn: DBI202 Order 15 Q64]
-Consider a relation with schema R(A, B, C, D) and FD's (A → B, B → C, B → D, D → A). Which of the following is the {A}+ ?
+Consider a relation with schema \(R(A, B, C, D)\) and functional dependencies:
+\(F = \{ A \rightarrow B, \quad B \rightarrow C, \quad B \rightarrow D, \quad D \rightarrow A \}\)
+
+Which of the following is the closure \(A^+\)?
 \begin{choices}
-\choice {A}
-\choice {A, B, C, D}
-\choice {A, B, C}
-\choice {A, B}
+\choice \{A\}
+\choice \{A, B, C, D\}
+\choice \{A, B, C\}
+\choice \{A, B\}
 \end{choices}
 \textbf{Đáp án:} B
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. {A, B, C, D}.
@@ -3752,7 +3768,10 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{172}
 % [ID gốc: 15.73]
 % [Nguồn: DBI202 Order 15 Q73]
-Suppose there is a relation R(A, B, C, D, E, G) and functional dependencies F = {AB → C, D → EG, C → A, BE → C, BC → D, CG → BD, ACD → B, CE → AG}. Compute the closure {AB}+.
+Suppose that there is a relation \(R(A, B, C, D, E, G)\) and functional dependencies:
+\(F = \{ AB \rightarrow C, \quad D \rightarrow EG, \quad C \rightarrow A, \quad BE \rightarrow C, \quad BC \rightarrow D, \quad CG \rightarrow BD, \quad ACD \rightarrow B, \quad CE \rightarrow AG \}\)
+
+Compute the closure \((AB)^+\)?
 \begin{choices}
 \choice ABCD
 \choice ABCDE
@@ -3774,7 +3793,10 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{173}
 % [ID gốc: 15.74]
 % [Nguồn: DBI202 Order 15 Q74]
-Consider a relation R(A, B, C, D) with functional dependencies {AB → C, C → D, D → A}. What are all the keys of R?
+Consider relation \(R(A, B, C, D)\) with functional dependencies:
+\(F = \{ AB \rightarrow C, \quad C \rightarrow D, \quad D \rightarrow A \}\)
+
+What are all the candidate keys of \(R\)?
 \begin{choices}
 \choice AB, BC, BD
 \choice AB, BC, AD
@@ -3796,12 +3818,12 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{174}
 % [ID gốc: 15.75]
 % [Nguồn: DBI202 Order 15 Q75]
-Suppose that we have a relation R (B, C, D) that satisfies FD's: D-&gt;B and D-&gt;C. Which of the following FD is equivalent to the given dependency functions?
+Suppose that we have a relation \(R(B, C, D)\) that satisfies functional dependencies: \(D \rightarrow B\) and \(D \rightarrow C\). Which of the following functional dependencies is equivalent to the given dependencies?
 \begin{choices}
-\choice D-&gt;BC
-\choice D-&gt;DB
-\choice DB-&gt;B
-\choice DC-&gt;DB
+\choice \(D \rightarrow BC\)
+\choice \(D \rightarrow DB\)
+\choice \(DB \rightarrow B\)
+\choice \(DC \rightarrow DB\)
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. D-&gt;BC.
@@ -3862,7 +3884,10 @@ Phân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z 
 \begin{question}{177}
 % [ID gốc: 15.80]
 % [Nguồn: DBI202 Order 15 Q80]
-Given the set of functional dependencies F={AB→C,C→D}. Determine the highest normal form of the relation R(A,B,C,D).
+Given relation \(R(A, B, C, D)\) and the set of functional dependencies:
+\(F = \{ AB \rightarrow C, \quad C \rightarrow D \}\)
+
+Determine the highest normal form of the relation \(R\):
 \begin{choices}
 \choice 1NF
 \choice 2NF
@@ -3906,7 +3931,8 @@ Phân tích: Khi đọc mô hình ER, tách ba thứ: entity set là loại đ�
 \begin{question}{179}
 % [ID gốc: 15.83]
 % [Nguồn: DBI202 Order 15 Q83]
-The highest normal form for relation schema R(ABCD) with functional dependencies: F = {AB-&gt; C; D-&gt;B, C-&gt;ABD} is:
+The highest normal form for relation schema \(R(A, B, C, D)\) with functional dependencies:
+\(F = \{ AB \rightarrow C, \quad D \rightarrow B, \quad C \rightarrow ABD \}\) is:
 \begin{choices}
 \choice 2NF
 \choice 1NF
@@ -3950,7 +3976,10 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{181}
 % [ID gốc: 15.85]
 % [Nguồn: DBI202 Order 15 Q85]
-Given relation R(X, Y, Z, W) with the set of functional dependencies: F = {X→Y, Y→Z, Z→W} Which of the following is a key for R?
+Given relation \(R(X, Y, Z, W)\) with the set of functional dependencies:
+\(F = \{ X \rightarrow Y, \quad Y \rightarrow Z, \quad Z \rightarrow W \}\)
+
+Which of the following is a candidate key for \(R\)?
 \begin{choices}
 \choice X
 \choice Y
@@ -4016,7 +4045,10 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 \begin{question}{184}
 % [ID gốc: 15.92]
 % [Nguồn: DBI202 Order 15 Q92]
-Suppose we a relation R(A,B,C,D,E,F,N) and functional dependencies: F-&gt;A, A-&gt;B, B-&gt;C, BC-&gt;A, A-&gt;D, E-&gt;A, D-&gt;E Which of the following is not a key? Choose correct answers
+Suppose we have a relation \(R(A, B, C, D, E, F, N)\) and functional dependencies:
+\(F = \{ F \rightarrow A, \quad A \rightarrow B, \quad B \rightarrow C, \quad BC \rightarrow A, \quad A \rightarrow D, \quad E \rightarrow A, \quad D \rightarrow E \}\)
+
+Which of the following is NOT a candidate key for \(R\)? (Choose all that apply)
 \begin{choices}
 \choice AB
 \choice FN
@@ -4126,7 +4158,10 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{189}
 % [ID gốc: 15.98]
 % [Nguồn: DBI202 Order 15 Q98]
-Consider the relation R(A, B, C, D) with functional dependencies A → B and C → D. Find the key of this relation.
+Consider the relation \(R(A, B, C, D)\) with functional dependencies:
+\(F = \{ A \rightarrow B, \quad C \rightarrow D \}\)
+
+Find the candidate key of this relation:
 \begin{choices}
 \choice The key is column A
 \choice The key includes two columns (A, C)
@@ -4190,12 +4225,15 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{192}
 % [ID gốc: 15.101]
 % [Nguồn: DBI202 Order 15 Q101]
-Given the relational schema R(A, B, C, D, E) and the set of functional dependencies: F = {AB -&gt; C, B -&gt; D, C -&gt; E, D -&gt; B}. What is the closure of the attribute set {A, B}?
+Given the relational schema \(R(A, B, C, D, E)\) and the set of functional dependencies:
+\(F = \{ AB \rightarrow C, \quad B \rightarrow D, \quad C \rightarrow E, \quad D \rightarrow B \}\)
+
+What is the closure of the attribute set \(\{A, B\}\)?
 \begin{choices}
-\choice {AB, CD}
-\choice {A, B, C, D, E}
-\choice {AB, CE}
-\choice {A, B, D}
+\choice \{AB, CD\}
+\choice \{A, B, C, D, E\}
+\choice \{AB, CE\}
+\choice \{A, B, D\}
 \end{choices}
 \textbf{Đáp án:} B
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. {A, B, C, D, E}.
@@ -4234,13 +4272,16 @@ Phân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc 
 \begin{question}{194}
 % [ID gốc: 15.104]
 % [Nguồn: DBI202 Order 15 Q104]
-Consider a relation R(A, B, C, D, E, F) with functional dependencies {AB → C, C → D, D → AE}. Which of the following is the closure of {B, D}?
+Consider a relation \(R(A, B, C, D, E, F)\) with functional dependencies:
+\(F = \{ AB \rightarrow C, \quad C \rightarrow D, \quad D \rightarrow AE \}\)
+
+Which of the following is the closure of \(\{B, D\}\)?
 \begin{choices}
-\choice {ABCDE}
-\choice {BCDE}
-\choice {ABDEF}
-\choice {ABCEF}
-\choice {BCEF}
+\choice ABCDE
+\choice BCDE
+\choice ABDEF
+\choice ABCEF
+\choice BCEF
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. {ABCDE}.
@@ -4302,7 +4343,10 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{197}
 % [ID gốc: 15.113]
 % [Nguồn: DBI202 Order 15 Q113]
-Consider the relation R(A, B, C, D) and functional dependencies: A -&gt; B, C -&gt; D. Find key of the above relation.
+Consider the relation \(R(A, B, C, D)\) with functional dependencies:
+\(F = \{ A \rightarrow B, \quad C \rightarrow D \}\)
+
+Find the candidate key of this relation:
 \begin{choices}
 \choice The key is the A column
 \choice The key includes two columns (A, C)
@@ -4324,12 +4368,12 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{198}
 % [ID gốc: 15.114]
 % [Nguồn: DBI202 Order 15 Q114]
-Suppose that we have a relation: R(A,B,C,D) and FD : D-&gt;BC Which of the following is equivalent to the given dependency function?
+Suppose that we have a relation \(R(A, B, C, D)\) and functional dependency: \(D \rightarrow BC\). Which of the following is equivalent to the given dependency?
 \begin{choices}
-\choice D-&gt;B and D-&gt;C
-\choice C-&gt;B and C-&gt;B
-\choice D-&gt;B and B-&gt;C
-\choice C-&gt;D and C-&gt;B
+\choice \(D \rightarrow B\) and \(D \rightarrow C\)
+\choice \(C \rightarrow B\) and \(C \rightarrow B\)
+\choice \(D \rightarrow B\) and \(B \rightarrow C\)
+\choice \(C \rightarrow D\) and \(C \rightarrow B\)
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. D-&gt;B and D-&gt;C.
@@ -4390,13 +4434,16 @@ Phân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc 
 \begin{question}{201}
 % [ID gốc: 15.117]
 % [Nguồn: DBI202 Order 15 Q117]
-Consider the relation R(A, B, C, D, E, F, G, K) with functional dependencies AB → C, B → C, C → AD, D → E, CF → B, G → K. What is the closure of {AB}?
+Consider the relation \(R(A, B, C, D, E, F, G, K)\) with functional dependencies:
+\(F = \{ AB \rightarrow C, \quad B \rightarrow C, \quad C \rightarrow AD, \quad D \rightarrow E, \quad CF \rightarrow B, \quad G \rightarrow K \}\)
+
+What is the closure of \(\{AB\}\)?
 \begin{choices}
-\choice {ABCDE}
-\choice {ABCDEF}
-\choice {CDE}
-\choice {ABCD}
-\choice {ABCFG}
+\choice ABCDE
+\choice ABCDEF
+\choice CDE
+\choice ABCD
+\choice ABCFG
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. {ABCDE}.

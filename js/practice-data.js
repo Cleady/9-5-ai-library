@@ -9423,7 +9423,7 @@
     {
       "id": 5113,
       "quizId": 103,
-      "text": "Let R(ABCD) be a relation with functional dependencies\nA -> B,\nC -> B,\nB -> D\nWhat is the key for R (choose one)",
+      "text": "Let \\(R(A, B, C, D)\\) be a relation with functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad C \\rightarrow B, \\quad B \\rightarrow D \\}\\)\n\nWhat is the candidate key for \\(R\\)?",
       "options": [
         "AB",
         "AC",
@@ -9449,7 +9449,7 @@
     {
       "id": 5115,
       "quizId": 103,
-      "text": "The relation R(ABCD) has following FDs:\n A -> B ; B -> A ; A -> D ; D -> B",
+      "text": "The relation \\(R(A, B, C, D)\\) has the following functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad B \\rightarrow A, \\quad A \\rightarrow D, \\quad D \\rightarrow B \\}\\)\n\nChoose the correct statement about \\(R\\):",
       "options": [
         "R is in 3NF",
         "R is not in 3NF",
@@ -9462,7 +9462,7 @@
     {
       "id": 5116,
       "quizId": 103,
-      "text": "Given a R(A,B,C,D) with the following FDs:\nAB->D\nBC->A\nAD->B\nCD->B\nAD->C\nChoose a correct statement about R:",
+      "text": "Given relation \\(R(A, B, C, D)\\) with the following functional dependencies:\n\\(F = \\{ AB \\rightarrow D, \\quad BC \\rightarrow A, \\quad AD \\rightarrow B, \\quad CD \\rightarrow B, \\quad AD \\rightarrow C \\}\\)\n\nChoose the correct statement about \\(R\\):",
       "options": [
         "The FD set of R is not canonical and R is in BCNF",
         "The FD set of R is canonical and R is not in BCNF",
@@ -9512,7 +9512,7 @@
     {
       "id": 5120,
       "quizId": 103,
-      "text": "The relation R(ABCD) has following FDs:\nACD -> B ;\nAC -> D ;\nD -> C ;\nAC -> B\nChoose the correct statement about R:",
+      "text": "The relation \\(R(A, B, C, D)\\) has the following functional dependencies:\n\\(F = \\{ ACD \\rightarrow B, \\quad AC \\rightarrow D, \\quad D \\rightarrow C, \\quad AC \\rightarrow B \\}\\)\n\nChoose the correct statement about \\(R\\):",
       "options": [
         "R is in 3NF",
         "R is in 2NF only, not higher",
@@ -9525,7 +9525,7 @@
     {
       "id": 5121,
       "quizId": 103,
-      "text": "Let R(A,B,C,D) with the following FDs: AB->C, AC->B, AD->C\nChoose a correct statement about R:",
+      "text": "Let relation \\(R(A, B, C, D)\\) with the following functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad AC \\rightarrow B, \\quad AD \\rightarrow C \\}\\)\n\nChoose the correct statement about \\(R\\):",
       "options": [
         "R is in BCNF",
         "R is in 3NF",
@@ -9602,7 +9602,7 @@
     {
       "id": 5127,
       "quizId": 103,
-      "text": "Give the relation R(XYZT) with the following FD's:\nXY -> Z ; XYT -> Z ; XYZ -> T ; XZ -> T\nDetermine the primary key for R and then choose the correct statement",
+      "text": "Given the relation \\(R(X, Y, Z, T)\\) with the following functional dependencies:\n\\(F = \\{ XY \\rightarrow Z, \\quad XYT \\rightarrow Z, \\quad XYZ \\rightarrow T, \\quad XZ \\rightarrow T \\}\\)\n\nDetermine the candidate key for \\(R\\) and choose the correct statement:",
       "options": [
         "R is in BCNF",
         "R is not in BCNF"
@@ -9613,11 +9613,11 @@
     {
       "id": 5128,
       "quizId": 103,
-      "text": "Given the relation schema R(XYZT) and functional dependencies\nF = X->Z, T->Y.\nWhich functional dependency causes a violation of second normal form (2NF) ?",
+      "text": "Given the relation schema \\(R(X, Y, Z, T)\\) and functional dependencies:\n\\(F = \\{ X \\rightarrow Z, \\quad T \\rightarrow Y \\}\\)\n\nWhich functional dependency causes a violation of second normal form (2NF)?",
       "options": [
-        "X->Z",
-        "T->Y",
-        "both X->Z and T->Y",
+        "\\(X \\rightarrow Z\\)",
+        "\\(T \\rightarrow Y\\)",
+        "both \\(X \\rightarrow Z\\) and \\(T \\rightarrow Y\\)",
         "none of the above"
       ],
       "correctIndex": 2,
@@ -9848,7 +9848,7 @@
     {
       "id": 5146,
       "quizId": 103,
-      "text": "Consider a relation R(A,B,C,D,E) with functional dependencies:\nAB->C, B->C, E->D and C->E.What is/are the key(s) for R",
+      "text": "Consider relation \\(R(A, B, C, D, E)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad B \\rightarrow C, \\quad E \\rightarrow D, \\quad C \\rightarrow E \\}\\)\n\nWhat is/are the candidate key(s) for \\(R\\)?",
       "options": [
         "AC",
         "AD",
@@ -9861,16 +9861,14 @@
     {
       "id": 5147,
       "quizId": 103,
-      "text": "Suppose that we have a relation R (B, C,",
+      "text": "Suppose that we have a relation \\(R(B, C, D)\\) that satisfies functional dependencies: \\(D \\rightarrow B\\) and \\(D \\rightarrow C\\). Which of the following functional dependencies is equivalent to the given dependencies?",
       "options": [
-        "that satisfies FD's:D->B and D->",
-        "Which of the following FD is equivalent to the given dependency functions?",
-        "D->BC",
-        "D->DB",
-        "DB->B",
-        "DC->DB"
+        "\\(D \\rightarrow BC\\)",
+        "\\(D \\rightarrow DB\\)",
+        "\\(DB \\rightarrow B\\)",
+        "\\(DC \\rightarrow DB\\)"
       ],
-      "correctIndex": 2,
+      "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. D->BC.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: D. that satisfies FD's:D->B and D->; C. Which of the following FD is equivalent to the given dependency functions?; B. D->DB; C. DB->B; D. DC->DB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
@@ -9928,7 +9926,7 @@
     {
       "id": 5152,
       "quizId": 103,
-      "text": "The highest normal form for relation schema R(ABCD) with functional dependencies: F = AB-> C; D->B, C->ABD is:",
+      "text": "The highest normal form for relation schema \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad D \\rightarrow B, \\quad C \\rightarrow ABD \\}\\) is:",
       "options": [
         "2NF",
         "1NF",
@@ -9954,7 +9952,7 @@
     {
       "id": 5154,
       "quizId": 103,
-      "text": "Suppose we have a relation R(ID, full_name, address) with functional dependencies ID → full_name, ID → address. What is the highest normal form of R in relational database design?",
+      "text": "Suppose we have a relation \\(R(\\text{ID}, \\text{full\\_name}, \\text{address})\\) with functional dependencies:\n\\(F = \\{ \\text{ID} \\rightarrow \\text{full\\_name}, \\quad \\text{ID} \\rightarrow \\text{address} \\}\\)\n\nWhat is the highest normal form of \\(R\\) in relational database design?",
       "options": [
         "2NF",
         "1NF",
@@ -9993,7 +9991,7 @@
     {
       "id": 5157,
       "quizId": 103,
-      "text": "Suppose we have a relation R(A, B, C, D, E, F, N) with functional dependencies: F → A, A → B, B → C, BC → A, A → D, E → A, D → E. Which of the following is NOT a key?",
+      "text": "Suppose we have a relation \\(R(A, B, C, D, E, F, N)\\) and functional dependencies:\n\\(F = \\{ F \\rightarrow A, \\quad A \\rightarrow B, \\quad B \\rightarrow C, \\quad BC \\rightarrow A, \\quad A \\rightarrow D, \\quad E \\rightarrow A, \\quad D \\rightarrow E \\}\\)\n\nWhich of the following is NOT a candidate key for \\(R\\)?",
       "options": [
         "AB",
         "FN",
@@ -10019,10 +10017,10 @@
     {
       "id": 5159,
       "quizId": 103,
-      "text": "Consider the relation R(A,B,C,D) and functional dependencies: A→B, C→D. Find key of the above relation.",
+      "text": "Consider the relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad C \\rightarrow D \\}\\)\n\nFind the candidate key of this relation:",
       "options": [
         "The key is the A column",
-        "The key includes two columns (A,C)",
+        "The key includes two columns (A, C)",
         "The key is the A column or C column",
         "The key is the C column"
       ],
@@ -10097,7 +10095,7 @@
     {
       "id": 5165,
       "quizId": 103,
-      "text": "Consider a relation R(A,B,C,D,E) with functional dependencies: AB-&gt;C, B-&gt;C, E-&gt;D and C-&gt;E. What is/are the key(s) for R",
+      "text": "Consider relation \\(R(A, B, C, D, E)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad B \\rightarrow C, \\quad E \\rightarrow D, \\quad C \\rightarrow E \\}\\)\n\nWhat is/are the candidate key(s) for \\(R\\)?",
       "options": [
         "AC",
         "AD",
@@ -10110,7 +10108,7 @@
     {
       "id": 5166,
       "quizId": 103,
-      "text": "Consider a relation with schema R(A, B, C, D) and FD's (A → B, B → C, B → D, D → A). Which of the following is the A+ ?",
+      "text": "Consider a relation with schema \\(R(A, B, C, D)\\) and functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad B \\rightarrow C, \\quad B \\rightarrow D, \\quad D \\rightarrow A \\}\\)\n\nWhich of the following is the closure \\(A^+\\)?",
       "options": [
         "A",
         "A, B, C, D",
@@ -10188,7 +10186,7 @@
     {
       "id": 5172,
       "quizId": 103,
-      "text": "Suppose there is a relation R(A, B, C, D, E, G) and functional dependencies F = AB → C, D → EG, C → A, BE → C, BC → D, CG → BD, ACD → B, CE → AG. Compute the closure AB+.",
+      "text": "Suppose that there is a relation \\(R(A, B, C, D, E, G)\\) and functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad D \\rightarrow EG, \\quad C \\rightarrow A, \\quad BE \\rightarrow C, \\quad BC \\rightarrow D, \\quad CG \\rightarrow BD, \\quad ACD \\rightarrow B, \\quad CE \\rightarrow AG \\}\\)\n\nCompute the closure \\((AB)^+\\)?",
       "options": [
         "ABCD",
         "ABCDE",
@@ -10201,7 +10199,7 @@
     {
       "id": 5173,
       "quizId": 103,
-      "text": "Consider a relation R(A, B, C, D) with functional dependencies AB → C, C → D, D → A. What are all the keys of R?",
+      "text": "Consider relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad C \\rightarrow D, \\quad D \\rightarrow A \\}\\)\n\nWhat are all the candidate keys of \\(R\\)?",
       "options": [
         "AB, BC, BD",
         "AB, BC, AD",
@@ -10214,12 +10212,12 @@
     {
       "id": 5174,
       "quizId": 103,
-      "text": "Suppose that we have a relation R (B, C, D) that satisfies FD's: D-&gt;B and D-&gt;C. Which of the following FD is equivalent to the given dependency functions?",
+      "text": "Suppose that we have a relation \\(R(B, C, D)\\) that satisfies functional dependencies: \\(D \\rightarrow B\\) and \\(D \\rightarrow C\\). Which of the following functional dependencies is equivalent to the given dependencies?",
       "options": [
-        "D-&gt;BC",
-        "D-&gt;DB",
-        "DB-&gt;B",
-        "DC-&gt;DB"
+        "\\(D \\rightarrow BC\\)",
+        "\\(D \\rightarrow DB\\)",
+        "\\(DB \\rightarrow B\\)",
+        "\\(DC \\rightarrow DB\\)"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. D-&gt;BC.\n\nLời giải gốc: Theo quy tắc hợp (Union rule) trong hệ tiên đề Armstrong, nếu \\(D \\to B\\) và \\(D \\to C\\) thì tương đương với \\(D \\to BC\\). ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. D-&gt;DB; C. DB-&gt;B; D. DC-&gt;DB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
@@ -10253,7 +10251,7 @@
     {
       "id": 5177,
       "quizId": 103,
-      "text": "Given the set of functional dependencies F=AB→C,C→D. Determine the highest normal form of the relation R(A,B,C,D).",
+      "text": "Given relation \\(R(A, B, C, D)\\) and the set of functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad C \\rightarrow D \\}\\)\n\nDetermine the highest normal form of the relation \\(R\\):",
       "options": [
         "1NF",
         "2NF",
@@ -10279,7 +10277,7 @@
     {
       "id": 5179,
       "quizId": 103,
-      "text": "The highest normal form for relation schema R(ABCD) with functional dependencies: F = AB-&gt; C; D-&gt;B, C-&gt;ABD is:",
+      "text": "The highest normal form for relation schema \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad D \\rightarrow B, \\quad C \\rightarrow ABD \\}\\) is:",
       "options": [
         "2NF",
         "1NF",
@@ -10305,7 +10303,7 @@
     {
       "id": 5181,
       "quizId": 103,
-      "text": "Given relation R(X, Y, Z, W) with the set of functional dependencies: F = X→Y, Y→Z, Z→W Which of the following is a key for R?",
+      "text": "Given relation \\(R(X, Y, Z, W)\\) with the set of functional dependencies:\n\\(F = \\{ X \\rightarrow Y, \\quad Y \\rightarrow Z, \\quad Z \\rightarrow W \\}\\)\n\nWhich of the following is a candidate key for \\(R\\)?",
       "options": [
         "X",
         "Y",
@@ -10349,7 +10347,7 @@
     {
       "id": 5184,
       "quizId": 103,
-      "text": "Suppose we a relation R(A,B,C,D,E,F,N) and functional dependencies: F-&gt;A, A-&gt;B, B-&gt;C, BC-&gt;A, A-&gt;D, E-&gt;A, D-&gt;E Which of the following is not a key? Choose correct answers",
+      "text": "Suppose we have a relation \\(R(A, B, C, D, E, F, N)\\) and functional dependencies:\n\\(F = \\{ F \\rightarrow A, \\quad A \\rightarrow B, \\quad B \\rightarrow C, \\quad BC \\rightarrow A, \\quad A \\rightarrow D, \\quad E \\rightarrow A, \\quad D \\rightarrow E \\}\\)\n\nWhich of the following is NOT a candidate key for \\(R\\)? (Choose all that apply)",
       "options": [
         "AB",
         "FN",
@@ -10420,7 +10418,7 @@
     {
       "id": 5189,
       "quizId": 103,
-      "text": "Consider the relation R(A, B, C, D) with functional dependencies A → B and C → D. Find the key of this relation.",
+      "text": "Consider the relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad C \\rightarrow D \\}\\)\n\nFind the candidate key of this relation:",
       "options": [
         "The key is column A",
         "The key includes two columns (A, C)",
@@ -10457,7 +10455,7 @@
     {
       "id": 5192,
       "quizId": 103,
-      "text": "Given the relational schema R(A, B, C, D, E) and the set of functional dependencies: F = AB -&gt; C, B -&gt; D, C -&gt; E, D -&gt; B. What is the closure of the attribute set A, B?",
+      "text": "Given the relational schema \\(R(A, B, C, D, E)\\) and the set of functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad B \\rightarrow D, \\quad C \\rightarrow E, \\quad D \\rightarrow B \\}\\)\n\nWhat is the closure of the attribute set \\(\\{A, B\\}\\)?",
       "options": [
         "AB, CD",
         "A, B, C, D, E",
@@ -10483,7 +10481,7 @@
     {
       "id": 5194,
       "quizId": 103,
-      "text": "Consider a relation R(A, B, C, D, E, F) with functional dependencies AB → C, C → D, D → AE. Which of the following is the closure of B, D?",
+      "text": "Consider a relation \\(R(A, B, C, D, E, F)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad C \\rightarrow D, \\quad D \\rightarrow AE \\}\\)\n\nWhich of the following is the closure of \\(\\{B, D\\}\\)?",
       "options": [
         "ABCDE",
         "BCDE",
@@ -10524,7 +10522,7 @@
     {
       "id": 5197,
       "quizId": 103,
-      "text": "Consider the relation R(A, B, C, D) and functional dependencies: A -&gt; B, C -&gt; D. Find key of the above relation.",
+      "text": "Consider the relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ A \\rightarrow B, \\quad C \\rightarrow D \\}\\)\n\nFind the candidate key of this relation:",
       "options": [
         "The key is the A column",
         "The key includes two columns (A, C)",
@@ -10537,12 +10535,12 @@
     {
       "id": 5198,
       "quizId": 103,
-      "text": "Suppose that we have a relation: R(A,B,C,D) and FD : D-&gt;BC Which of the following is equivalent to the given dependency function?",
+      "text": "Suppose that we have a relation \\(R(A, B, C, D)\\) and functional dependency: \\(D \\rightarrow BC\\). Which of the following is equivalent to the given dependency?",
       "options": [
-        "D-&gt;B and D-&gt;C",
-        "C-&gt;B and C-&gt;B",
-        "D-&gt;B and B-&gt;C",
-        "C-&gt;D and C-&gt;B"
+        "\\(D \\rightarrow B\\) and \\(D \\rightarrow C\\)",
+        "\\(C \\rightarrow B\\) and \\(C \\rightarrow B\\)",
+        "\\(D \\rightarrow B\\) and \\(B \\rightarrow C\\)",
+        "\\(C \\rightarrow D\\) and \\(C \\rightarrow B\\)"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. D-&gt;B and D-&gt;C.\n\nLời giải gốc: Theo quy tắc phân tách (Decomposition rule), phụ thuộc hàm \\(D \\to BC\\) tương đương với hai phụ thuộc hàm riêng biệt là \\(D \\to B\\) và \\(D \\to C\\). ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. C-&gt;B and C-&gt;B; C. D-&gt;B and B-&gt;C; D. C-&gt;D and C-&gt;B. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
@@ -10576,7 +10574,7 @@
     {
       "id": 5201,
       "quizId": 103,
-      "text": "Consider the relation R(A, B, C, D, E, F, G, K) with functional dependencies AB → C, B → C, C → AD, D → E, CF → B, G → K. What is the closure of AB?",
+      "text": "Consider the relation \\(R(A, B, C, D, E, F, G, K)\\) with functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad B \\rightarrow C, \\quad C \\rightarrow AD, \\quad D \\rightarrow E, \\quad CF \\rightarrow B, \\quad G \\rightarrow K \\}\\)\n\nWhat is the closure of \\(\\{AB\\}\\)?",
       "options": [
         "ABCDE",
         "ABCDEF",
