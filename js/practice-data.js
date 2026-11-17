@@ -9038,16 +9038,16 @@
     {
       "id": 5084,
       "quizId": 102,
-      "text": "For the following relation:\n\n\\(\\textbf{Student}\\)\n$\\beginarray|c|c|c|c|\n\\hline\n\\textID & \\textName & \\textCity & \\textGender \n\n\\hline\n\\textSE1234 & \\textLe Hong Phong & \\textHCM & \\textMale \n\n\\hline\n\\textSE1235 & \\textLe Hong Hanh & \\textHCM & \\textFemale \n\n\\hline\n\\textSE1236 & \\textTran Binh Trong & \\textHN & \\textMale \n\n\\hline\n\\endarray$\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
+      "text": "For the following relation:\n\n\\(\\textbf{Student}\\)\n\\(\\begin{array}{|c|c|c|c|}\n\\hline\n\\text{ID} & \\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{SE1234} & \\text{Le Hong Phong} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{SE1235} & \\text{Le Hong Hanh} & \\text{HCM} & \\text{Female} \\\\\n\\hline\n\\text{SE1236} & \\text{Tran Binh Trong} & \\text{HN} & \\text{Male} \\\\\n\\hline\n\\end{array}\\)\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
       "options": [
-        "\\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
-        "\\(\\pi_{\\text{Name}, \\text{City}}[\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})]\\)",
-        "\\(\\sigma_{\\text{Name}, \\text{City}}(\\pi_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
-        "None of the others"
+            "\\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
+            "\\(\\pi_{\\text{Name}, \\text{City}}[\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})]\\)",
+            "\\(\\sigma_{\\text{Name}, \\text{City}}(\\pi_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
+            "None of the others"
       ],
       "correctIndex": 0,
-      "explanation": "**Đáp án đúng: A. \\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)**\n\nYêu cầu đề bài: Lấy danh sách tên (\\textName) và thành phố (\\textCity) của các sinh viên sống tại HCM và có giới tính Male.\n- **Phép chọn (Selection \\(\\sigma\\))**: Lọc các bộ dữ liệu thỏa mãn điều kiện kết hợp: \\(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})\\).\n- **Phép chiếu (Projection \\(\\pi\\))**: Chiếu lấy các thuộc tính cần hiển thị trên kết quả đã lọc: \\(\\pi_{\\text{Name}, \\text{City}}(...)\\).\n- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \\(\\pi_{\\text{Danh_sách_cột}}(\\sigma_{\\text{Điều_kiện}}(\\text{Bảng}))\\).\n\nDo đó phương án **A** là chính xác. Phương án B dùng sai ngoặc vuông \\([...]\\), phương án C đảo ngược thứ tự chiếu trước khi chọn làm mất thuộc tính \\(\\text{Gender}\\)."
-    },
+      "explanation": "**Đáp án đúng: A. \\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)**\n\nYêu cầu đề bài: Lấy danh sách tên (\\text{Name}) và thành phố (\\text{City}) của các sinh viên sống tại HCM và có giới tính Male.\n- **Phép chọn (Selection \\(\\sigma\\))**: Lọc các bộ dữ liệu thỏa mãn điều kiện kết hợp: \\(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})\\).\n- **Phép chiếu (Projection \\(\\pi\\))**: Chiếu lấy các thuộc tính cần hiển thị trên kết quả đã lọc: \\(\\pi_{\\text{Name}, \\text{City}}(...)\\).\n- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \\(\\pi_{\\text{Danh_sách_cột}}(\\sigma_{\\text{Điều_kiện}}(\\text{Bảng}))\\).\n\nDo đó phương án **A** là chính xác. Phương án B dùng sai ngoặc vuông \\([...]\\), phương án C đảo ngược thứ tự chiếu trước khi chọn làm mất thuộc tính \\(\\text{Gender}\\)."
+},
     {
       "id": 5085,
       "quizId": 102,
@@ -9064,16 +9064,16 @@
     {
       "id": 5086,
       "quizId": 102,
-      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n$\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textLe Hong Son & \\textHCM & \\textMale \n\n\\hline\n\\endarray\n\n\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textTran Tuyet Nhi & \\textHN & \\textFemale \n\n\\hline\n\\endarray$\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
+      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n\\(\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\end{array}\n\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\n\\hline\n\\end{array}\\)\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
       "options": [
-        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
-        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
-        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\\hline\\end{array}\\)",
-        "None of the others"
+            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
+            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
+            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\\hline\\end{array}\\)",
+            "None of the others"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án đúng: A — Nguyen Trung Truc | HCM | Male.\n\nNền tảng kiến thức: Phép giao (Intersection: \\(R \\cap S\\)) trong đại số quan hệ trả về tập hợp các bộ (tuples) cùng xuất hiện ở cả hai quan hệ \\(R\\) và \\(S\\).\n\nPhân tích bảng dữ liệu:\n- Bảng Employee gồm: (Nguyen Trung Truc, HCM, Male) và (Le Hong Son, HCM, Male).\n- Bảng Customer gồm: (Nguyen Trung Truc, HCM, Male) và (Tran Tuyet Nhi, HN, Female).\n- Phần tử chung duy nhất xuất hiện ở cả 2 bảng là (Nguyen Trung Truc, HCM, Male), tương ứng với phương án A."
-    },
+},
     {
       "id": 5087,
       "quizId": 102,
@@ -9952,16 +9952,16 @@
     {
       "id": 5154,
       "quizId": 103,
-      "text": "Suppose we have a relation \\(R(\\text{ID}, \\text{full\\_name}, \\text{address})\\) with functional dependencies:\n\\(F = \\{ \\text{ID} \\to \\text{full\\_name}, \\quad \\text{ID} \\to \\text{address} \\}\\)\n\nWhat is the highest normal form of \\(R\\) in relational database design?",
+      "text": "Suppose we have a relation R(ID, full_name, address) with functional dependencies:\nF = { ID → full_name, ID → address }\n\nWhat is the highest normal form of R in relational database design?",
       "options": [
-        "2NF",
-        "1NF",
-        "3NF",
-        "BCNF"
+            "2NF",
+            "1NF",
+            "3NF",
+            "BCNF"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án đúng: D — BCNF.\n\nLời giải gốc: Với khóa chính là ID, mọi phụ thuộc hàm đều có vế trái là siêu khóa (ID → full_name, ID → address), do đó quan hệ đạt dạng chuẩn cao nhất là Boyce-Codd Normal Form (BCNF).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. 2NF; B. 1NF; C. 3NF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
+      "explanation": "Đáp án đúng: D — BCNF.\n\nLời giải chi tiết: Với khóa chính là ID, mọi phụ thuộc hàm đều có vế trái là siêu khóa (ID → full_name, ID → address), do đó quan hệ đạt dạng chuẩn cao nhất là Boyce-Codd Normal Form (BCNF).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật:\n- 1NF: Các giá trị thuộc tính là nguyên tố (atomic).\n- 2NF: Đạt 1NF và không có thuộc tính không khóa nào phụ thuộc bộ phận vào một phần khóa chính.\n- 3NF: Đạt 2NF và không có thuộc tính không khóa nào phụ thuộc bắc cầu vào khóa chính.\n- BCNF: Mọi phụ thuộc hàm không tầm thường X → Y thì X đều phải là siêu khóa (superkey).\n\nPhân tích: Vì ID là khóa chính xác định duy nhất toàn bộ các thuộc tính còn lại (full_name và address), nên mọi determinant đều là siêu khóa, lược đồ quan hệ đạt dạng chuẩn BCNF."
+},
     {
       "id": 5155,
       "quizId": 103,
@@ -11689,16 +11689,16 @@
     {
       "id": 5286,
       "quizId": 106,
-      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{Artist\\_id} & \\textbf{Artist\\_Name} \\\\\n\\hline\n1 & \\text{Bono} \\\\\n\\hline\n2 & \\text{Cher} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{artist\\_id} & \\textbf{Album\\_name} \\\\\n\\hline\n3 & \\text{Eat the rich} \\\\\n\\hline\n\\end{array}\\)\n\nLook at the tables above and then choose the correct statement:",
+      "text": "Cho hai bảng dữ liệu **ARTISTS** và **ALBUMS**:\n\n**ARTISTS**\n| Artist_id | Artist_Name |\n| :---: | :---: |\n| 1 | Bono |\n| 2 | Cher |\n\n**ALBUMS**\n| artist_id | Album_name |\n| :---: | :---: |\n| 3 | Eat the rich |\n\nLook at the tables above and then choose the correct statement:",
       "options": [
-        "The above picture is an example of a database that has not enforced referential integrity",
-        "The above picture is an example of a database that has not enforced entity integrity",
-        "The above picture is an example of a database that has not enforced domain integrity",
-        "All of the others"
+            "The above picture is an example of a database that has not enforced referential integrity",
+            "The above picture is an example of a database that has not enforced entity integrity",
+            "The above picture is an example of a database that has not enforced domain integrity",
+            "All of the others"
       ],
       "correctIndex": 0,
       "explanation": "Bảng ALBUMS có artist_id = 3 tham chiếu đến Artist_id trong bảng ARTISTS, nhưng giá trị 3 không tồn tại trong bảng ARTISTS. Đây là một ví dụ về việc cơ sở dữ liệu vi phạm ràng buộc toàn vẹn tham chiếu (referential integrity)."
-    },
+},
     {
       "id": 5287,
       "quizId": 106,
@@ -15414,16 +15414,16 @@
     {
       "id": 5569,
       "quizId": 108,
-      "text": "Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:\n\n\\beginverbatim\nCREATE FUNCTION dbo.GetLaptopPrice(@model int)\nRETURNS decimal(10,2) AS\nBEGIN\n DECLARE @price decimal(10,2);\n SELECT @price = price FROM Laptop WHERE model = @model;\n RETURN @price;\nEND;\n\\endverbatim\n\nWhat will this function return when called with dbo.GetLaptopPrice(1)?",
+      "text": "Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:\n\n<pre><code>CREATE FUNCTION dbo.GetLaptopPrice(@model int)\nRETURNS decimal(10,2) AS\nBEGIN\n    DECLARE @price decimal(10,2);\n    SELECT @price = price FROM Laptop WHERE model = @model;\n    RETURN @price;\nEND;</code></pre>\n\nWhat will this function return when called with dbo.GetLaptopPrice(1)?",
       "options": [
-        "The average laptop price with model = 1",
-        "The price of all laptops",
-        "The price of laptop with model = 1",
-        "The model of laptop with price = 1"
+            "The average laptop price with model = 1",
+            "The price of all laptops",
+            "The price of laptop with model = 1",
+            "The model of laptop with price = 1"
       ],
       "correctIndex": 2,
       "explanation": "Đáp án theo dữ liệu đề: C — C. The price of laptop with model = 1.\n\nLời giải gốc: Nhìn vào đoạn code: SELECT @price = price FROM Laptop WHERE model = @model. Khi truyền giá trị tham số đầu vào @model = 1, câu lệnh sẽ tìm hàng có model = 1 và lấy ra giá trị cột giá (price) của máy đó để trả về.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Hàm vô hướng `dbo.GetLaptopPrice(1)` nhận mã model 1 rồi trả về cột `price` của hàng Laptop có model đó. Đối số truyền vào là điều kiện tìm model, không phải tốc độ/RAM/ổ cứng; giá trị số cụ thể phụ thuộc dữ liệu bảng.\n\nĐối chiếu phương án: A. The average laptop price with model = 1; B. The price of all laptops; D. The model of laptop with price = 1. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
+},
     {
       "id": 5570,
       "quizId": 108,

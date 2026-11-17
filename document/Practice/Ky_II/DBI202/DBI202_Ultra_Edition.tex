@@ -3374,10 +3374,10 @@ Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá tr�
 \begin{question}{154}
 % [ID gốc: 15.44]
 % [Nguồn: DBI202 Order 15 Q44]
-Suppose we have a relation $R(\text{ID}, \text{full\_name}, \text{address})$ with functional dependencies:
-$F = \{ \text{ID} \to \text{full\_name}, \quad \text{ID} \to \text{address} \}$
+Suppose we have a relation R(ID, full_name, address) with functional dependencies:
+F = \{ ID $\to$ full_name, ID $\to$ address \}
 
-What is the highest normal form of $R$ in relational database design?
+What is the highest normal form of R in relational database design?
 \begin{choices}
 \choice 2NF
 \choice 1NF
@@ -3387,13 +3387,15 @@ What is the highest normal form of $R$ in relational database design?
 \textbf{Đáp án:} D
 \textbf{Giải thích:} Đáp án đúng: D — BCNF.
 
-Lời giải gốc: Với khóa chính là ID, mọi phụ thuộc hàm đều có vế trái là siêu khóa (ID → full_name, ID → address), do đó quan hệ đạt dạng chuẩn cao nhất là Boyce-Codd Normal Form (BCNF).
+Lời giải chi tiết: Với khóa chính là ID, mọi phụ thuộc hàm đều có vế trái là siêu khóa (ID → full_name, ID → address), do đó quan hệ đạt dạng chuẩn cao nhất là Boyce-Codd Normal Form (BCNF).
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
+Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật:
+- 1NF: Các giá trị thuộc tính là nguyên tố (atomic).
+- 2NF: Đạt 1NF và không có thuộc tính không khóa nào phụ thuộc bộ phận vào một phần khóa chính.
+- 3NF: Đạt 2NF và không có thuộc tính không khóa nào phụ thuộc bắc cầu vào khóa chính.
+- BCNF: Mọi phụ thuộc hàm không tầm thường X → Y thì X đều phải là siêu khóa (superkey).
 
-Phân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.
-
-Đối chiếu phương án: A. 2NF; B. 1NF; C. 3NF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích: Vì ID là khóa chính xác định duy nhất toàn bộ các thuộc tính còn lại (full_name và address), nên mọi determinant đều là siêu khóa, lược đồ quan hệ đạt dạng chuẩn BCNF.
 \end{question}
 
 \begin{question}{155}
@@ -6275,8 +6277,8 @@ Phân tích: Toàn vẹn dữ liệu nghĩa là các giá trị vẫn chính xá
 % [Nguồn: DBI202 Order 3 Q9]
 Cho hai bảng dữ liệu \textbf{ARTISTS} và \textbf{ALBUMS}:
 
-$$\textbf{ARTISTS} \qquad\qquad \textbf{ALBUMS}$$
-$$\begin{array}{|c|c|}
+$\textbf{ARTISTS} \qquad\qquad \textbf{ALBUMS}$
+$\begin{array}{|c|c|}
 \hline
 \textbf{Artist\_id} & \textbf{Artist\_Name} \\
 \hline
@@ -6292,7 +6294,7 @@ $$\begin{array}{|c|c|}
 \hline
 3 & \text{Eat the rich} \\
 \hline
-\end{array}$$
+\end{array}$
 
 Look at the tables above and then choose the correct statement:
 \begin{choices}
