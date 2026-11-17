@@ -401,8 +401,8 @@
 
     html +=
       '<div class="prc-study-actions">' +
-        '<button type="button" class="prc-btn prc-btn-primary prc-study-btn-check" id="prc-study-check-btn"' + (isCheckDisabled ? ' disabled' : '') + '>Check</button>' +
-        '<button type="button" class="prc-btn prc-btn-outline prc-study-btn-show" id="prc-study-show-btn" aria-controls="prc-study-exp-box" aria-expanded="false">Show answer</button>' +
+        '<button type="button" class="prc-btn prc-btn-primary prc-study-btn-check" id="prc-study-check-btn"' + (isCheckDisabled ? ' disabled' : '') + ' title="Kiểm tra đáp án (Phím tắt: Space hoặc C)" aria-keyshortcuts="Space C">Check <kbd class="prc-btn-kbd">Space</kbd></button>' +
+        '<button type="button" class="prc-btn prc-btn-outline prc-study-btn-show" id="prc-study-show-btn" aria-controls="prc-study-exp-box" aria-expanded="false" title="Xem đáp án và giải thích (Phím tắt: Shift hoặc S)" aria-keyshortcuts="Shift S">Show answer <kbd class="prc-btn-kbd">Shift</kbd></button>' +
       '</div>';
 
     /* Dòng phản hồi trạng thái Check/Show answer */
@@ -546,6 +546,8 @@
 
     var practiceNS = (window.Lib95 && window.Lib95.practice) || {};
     var isMulti = practiceNS.isMultiQuestion ? practiceNS.isMultiQuestion(q) : (q.multiple || (Array.isArray(q.correctIndices) && q.correctIndices.length > 1));
+
+    if (isMulti && (!Array.isArray(userAns) || userAns.length === 0)) return;
 
     studyState.checked[index] = true;
 
@@ -831,38 +833,62 @@
 
       /* Bỏ qua khi đang gõ text hoặc phím tổ hợp */
       var tag = e.target.tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || e.target.isContentEditable) return;
+      var isTextInput = tag === 'TEXTAREA' || tag === 'SELECT' || e.target.isContentEditable ||
+        (tag === 'INPUT' && ['radio', 'checkbox', 'button', 'submit', 'reset'].indexOf((e.target.type || '').toLowerCase()) === -1);
+      if (isTextInput) return;
       if (e.ctrlKey || e.metaKey || e.altKey) return;
 
-      var key = e.key.toUpperCase();
+      /* Phím Space: Check đáp án */
+      if (e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar' || e.keyCode === 32) {
+        e.preventDefault();
+        handleCheckAnswer(studyState.currentIndex);
+        return;
+      }
+
+      /* Phím Shift: Show đáp án */
+      if (e.key === 'Shift' || e.code === 'ShiftLeft' || e.code === 'ShiftRight' || e.keyCode === 16) {
+        e.preventDefault();
+        handleShowAnswer(studyState.currentIndex);
+        return;
+      }
+
+      var key = e.key ? e.key.toUpperCase() : '';
 
       /* A-H chọn đáp án */
       if (['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'].indexOf(key) !== -1) {
         var idx = key.charCodeAt(0) - 65;
         selectStudyAnswer(studyState.currentIndex, idx);
+        return;
       }
 
       /* 1-8 chọn đáp án */
       if (['1', '2', '3', '4', '5', '6', '7', '8'].indexOf(e.key) !== -1) {
         selectStudyAnswer(studyState.currentIndex, parseInt(e.key, 10) - 1);
+        return;
       }
 
       /* Mũi tên trái/phải đổi câu */
       if (e.key === 'ArrowLeft') {
+        e.preventDefault();
         navigateStudyQuestion(-1);
+        return;
       }
       if (e.key === 'ArrowRight') {
+        e.preventDefault();
         navigateStudyQuestion(1);
+        return;
       }
 
-      /* C = Check */
+      /* C = Check (phím tắt phụ) */
       if (key === 'C') {
         handleCheckAnswer(studyState.currentIndex);
+        return;
       }
 
-      /* S = Show answer */
+      /* S = Show answer (phím tắt phụ) */
       if (key === 'S') {
         handleShowAnswer(studyState.currentIndex);
+        return;
       }
     });
   }
