@@ -2793,14 +2793,23 @@ Determine the primary key for R and then choose the correct statement
 \choice R is in BCNF
 \choice R is not in BCNF
 \end{choices}
-\textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. R is not in BCNF.
+\textbf{Đáp án:} B
+\textbf{Giải thích:} Xét quan hệ $R(XYZT)$ với tập phụ thuộc hàm $F = \{XY \rightarrow Z, XYT \rightarrow Z, XYZ \rightarrow T, XZ \rightarrow T\}$:
+1. Xác định khóa chính (Primary Key):
+- Hai thuộc tính $X, Y$ không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào, do đó $\{XY\}$ bắt buộc phải là một phần của mọi khóa.
+- Tính bao đóng của $\{XY\}$:
+  + Từ $XY \rightarrow Z \Rightarrow \{X, Y, Z\}$.
+  + Từ $XZ \subseteq \{X, Y, Z\}$ và $XZ \rightarrow T \Rightarrow \{X, Y, Z, T\} = R$.
+- Vì $\{XY\}^+ = R$ và không thể rút gọn, $\{XY\}$ là khóa chính duy nhất của $R$.
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
+2. Kiểm tra dạng chuẩn BCNF:
+- Một quan hệ đạt chuẩn BCNF nếu mọi phụ thuộc hàm không tầm thường đều có vế trái là siêu khóa (superkey).
+- Xét phụ thuộc hàm $XZ \rightarrow T$:
+  + Bao đóng $\{XZ\}^+ = \{X, Z, T\}$ (không chứa $Y$).
+  + Do đó vế trái $XZ$ không phải là siêu khóa.
+- Vì tồn tại phụ thuộc hàm $XZ \rightarrow T$ có vế trái không là siêu khóa, nên $R$ vi phạm định nghĩa BCNF $\Rightarrow$ $R$ không đạt BCNF (R is not in BCNF).
 
-Phân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải xác định duy nhất mọi bộ (tính siêu khóa), và nếu là candidate key thì phải tối thiểu, tức bỏ bất kỳ thuộc tính nào cũng mất tính duy nhất. PRIMARY KEY chọn một candidate key và không nhận NULL.
-
-Đối chiếu phương án: A. R is in BCNF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Do đó phương án đúng là: R is not in BCNF (Đáp án B).
 \end{question}
 
 \begin{question}{128}
