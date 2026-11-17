@@ -2558,14 +2558,25 @@ Choose a correct statement about R:
 \choice The FD set of R is canonical and R is not in BCNF
 \choice The FD set of R is not canonical and R is not in BCNF
 \end{choices}
-\textbf{Đáp án:} C
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. The FD set of R is not canonical and R is in BCNF.
+\textbf{Đáp án:} A
+\textbf{Giải thích:} Xét quan hệ $R(A, B, C, D)$ với tập phụ thuộc hàm $F$:
+1. Kiểm tra tính chuẩn tắc (Canonical / Minimal cover):
+- Xét phụ thuộc hàm $AD \rightarrow B$: Nếu tạm bỏ $AD \rightarrow B$, tính bao đóng $\{AD\}^+$ theo các phụ thuộc hàm còn lại:
+  + Từ $AD \rightarrow C \Rightarrow \{A, C, D\}$.
+  + Từ $CD \rightarrow B \Rightarrow \{A, B, C, D\}$, chứa $B$.
+- Như vậy $AD \rightarrow B$ là phụ thuộc hàm dư thừa (redundant) vì có thể suy ra từ $AD \rightarrow C$ và $CD \rightarrow B$.
+- Vì tập phụ thuộc hàm chứa phụ thuộc hàm dư thừa nên không chuẩn tắc (The FD set of $R$ is not canonical).
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
+2. Kiểm tra dạng chuẩn BCNF:
+- Tìm các khóa ứng viên:
+  + $\{AB\}^+ = \{A, B, C, D\} \Rightarrow AB$ là siêu khóa.
+  + $\{BC\}^+ = \{A, B, C, D\} \Rightarrow BC$ là siêu khóa.
+  + $\{AD\}^+ = \{A, B, C, D\} \Rightarrow AD$ là siêu khóa.
+  + $\{CD\}^+ = \{A, B, C, D\} \Rightarrow CD$ là siêu khóa.
+- Mọi phụ thuộc hàm trong đề bài đều có vế trái ($AB, BC, AD, CD$) là siêu khóa.
+- Theo định nghĩa BCNF: Một quan hệ đạt BCNF nếu mọi vế trái của phụ thuộc hàm không tầm thường đều là siêu khóa $\Rightarrow$ $R$ đạt BCNF (R is in BCNF).
 
-Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.
-
-Đối chiếu phương án: B. The FD set of R is canonical and R is not in BCNF; C. The FD set of R is not canonical and R is not in BCNF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Do đó phương án đúng là: The FD set of R is not canonical and R is in BCNF (Đáp án A).
 \end{question}
 
 \begin{question}{117}
