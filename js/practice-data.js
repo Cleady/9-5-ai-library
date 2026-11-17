@@ -14416,17 +14416,22 @@
       "explanation": "Đáp án theo dữ liệu đề: A — A. With INSERT and UPDATE triggers.\n\nLời giải gốc: Bảng tạm Inserted lưu trữ các bản ghi mới được thêm vào hoặc giá trị sau khi cập nhật, do đó nó được điền dữ liệu trong các trigger INSERT và UPDATE.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự kiện dữ liệu như INSERT, UPDATE hoặc DELETE xảy ra trên đối tượng đã khai báo. Nó khác stored procedure vốn thường được gọi tường minh; đáp án đúng cần thể hiện đúng sự kiện kích hoạt.\n\nĐối chiếu phương án: B. With DELETE triggers only; C. With INSERT, UPDATE, and DELETE triggers; D. With UPDATE and DELETE triggers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
-      "id": 5492,
-      "quizId": 108,
-      "text": "Which of the following is FALSE about database triggers?",
-      "options": [
-        "It automatically runs when an event occurs in the database server",
-        "DML triggers are frequently used for enforcing business rules and data integrity",
-        "The same trigger action cannot be defined for more than one user action (for example, INSERT and UPDATE) within a single CREATE TRIGGER statement",
-        "When a trigger fires, results are returned to the calling application, just like with stored procedures."
-      ],
-      "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. When a trigger fires, results are returned to the calling application, just like with stored procedures..\n\nLời giải gốc: Trigger hoạt động ngầm bên trong cơ sở dữ liệu để đáp ứng các sự kiện thay đổi dữ liệu và thường không trả về tập kết quả trực tiếp cho ứng dụng gọi giống như stored procedure.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: A. It automatically runs when an event occurs in the database server; B. DML triggers are frequently used for enforcing business rules and data integrity; C. The same trigger action cannot be defined for more than one user action (for example, INSERT a…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+          "id": 5492,
+          "quizId": 108,
+          "text": "Which of the following is FALSE about database triggers?",
+          "options": [
+                "It automatically runs when an event occurs in the database server",
+                "DML triggers are frequently used for enforcing business rules and data integrity",
+                "The same trigger action cannot be defined for more than one user action (for example, INSERT and UPDATE) within a single CREATE TRIGGER statement",
+                "When a trigger fires, results are returned to the calling application, just like with stored procedures."
+          ],
+          "correctIndex": 2,
+          "explanation": "**Đáp án đúng**: C & D (Cả C và D đều là phát biểu sai về Trigger)\n\nNền tảng kiến thức:\n- Phát biểu A: ĐÚNG. Trigger là đoạn mã tự động thực thi khi có sự kiện (DML hoặc DDL) xảy ra trên database server.\n- Phát biểu B: ĐÚNG. DML Triggers thường được dùng để thực thi các quy tắc nghiệp vụ phức tạp và bảo vệ tính toàn vẹn dữ liệu.\n- Phát biểu C: SAI. Trong SQL Server / T-SQL, ta hoàn toàn CÓ THỂ định nghĩa một trigger cho nhiều hành động người dùng cùng lúc (ví dụ: `CREATE TRIGGER trg ON table AFTER INSERT, UPDATE AS ...`). Do đó nhận định \"cannot be defined for more than one user action\" là SAI.\n- Phát biểu D: SAI. Khi trigger kích hoạt, nó chạy ngầm phía server và KHÔNG trả kết quả / tham số đầu ra về cho ứng dụng gọi giống như Stored Procedure.\n\nVì câu hỏi yêu cầu chọn phát biểu SAI (*Which of the following is FALSE about database triggers?*), cả C và D đều là đáp án chính xác.",
+          "correctIndices": [
+                2,
+                3
+          ],
+          "multiple": true
     },
     {
           "id": 5493,
