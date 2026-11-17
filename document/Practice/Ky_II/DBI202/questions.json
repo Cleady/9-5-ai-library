@@ -2454,7 +2454,7 @@
     {
       "id": 5183,
       "quizId": 103,
-      "text": "DB1202_SP26_RE | Multiple Choice Question 29 (Choose 2 answers) During database design, why is it necessary to identify candidate keys? Choose two answers",
+      "text": "During database design, why is it necessary to identify candidate keys? Choose two answers",
       "options": [
         "To reduce data type complexity.",
         "To normalize tables faster",
@@ -5193,7 +5193,7 @@
     {
       "id": 5392,
       "quizId": 106,
-      "text": "(Choose 3 answers) Which one of the following is NOT a DDL command? Choose correct answers.",
+      "text": "Which one of the following is NOT a DDL command? (Choose 3 answers)",
       "options": [
         "DELETE",
         "CREATE DATABASE",
@@ -5972,7 +5972,7 @@
     {
       "id": 5451,
       "quizId": 106,
-      "text": "DB1202_SP26_RE | Multiple Choice Question 15 (Choose 1 answer) Domain constraints, functional dependency and referential integrity are special forms of",
+      "text": "Domain constraints, functional dependency and referential integrity are special forms of:",
       "options": [
         "Foreign key",
         "Primary key",
@@ -6707,7 +6707,7 @@
     {
       "id": 5507,
       "quizId": 107,
-      "text": "DB1202_SP26_RE | Multiple Choice Question 34 (Choose 1 answer) The transaction methods is used with the Connection object to save or cancel changes made to the data source.",
+      "text": "The transaction methods are used with the Connection object to save or cancel changes made to the data source.",
       "options": [
         "Begin Transaction, Rollback Transaction",
         "Begin Transaction, Commit Transaction",

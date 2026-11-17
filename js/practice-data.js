@@ -10335,21 +10335,21 @@
     {
       "id": 5183,
       "quizId": 103,
-      "text": "DB1202_SP26_RE | Multiple Choice Question 29 (Choose 2 answers) During database design, why is it necessary to identify candidate keys? Choose two answers",
+      "text": "During database design, why is it necessary to identify candidate keys? Choose two answers",
       "options": [
-        "To reduce data type complexity.",
-        "To normalize tables faster",
-        "To select the most appropriate primary key",
-        "To remove NULL values"
+            "To reduce data type complexity.",
+            "To normalize tables faster",
+            "To select the most appropriate primary key",
+            "To remove NULL values"
       ],
       "correctIndex": 1,
       "explanation": "**Đáp án đúng**: B & C\n\nĐáp án theo dữ liệu đề: B, C — B. To normalize tables faster; C. To select the most appropriate primary key.\n\nLời giải gốc: Việc xác định các khóa ứng viên (Candidate keys) trong quá trình thiết kế là bắt buộc để: Giúp chúng ta phân tích các phụ thuộc hàm nhằm tiến hành chuẩn hóa các bảng dữ liệu nhanh chóng và chính xác (B đúng). Từ danh sách các khóa ứng viên đó, người thiết kế sẽ chọn ra một khóa phù hợp nhất để làm khóa chính (Primary key) cho bảng (C đúng).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. To reduce data type complexity.; D. To remove NULL values. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
       "correctIndices": [
-        1,
-        2
+            1,
+            2
       ],
       "multiple": true
-    },
+},
     {
       "id": 5184,
       "quizId": 103,
@@ -13074,22 +13074,22 @@
     {
       "id": 5392,
       "quizId": 106,
-      "text": "(Choose 3 answers) Which one of the following is NOT a DDL command? Choose correct answers.",
+      "text": "Which one of the following is NOT a DDL command? (Choose 3 answers)",
       "options": [
-        "DELETE",
-        "CREATE DATABASE",
-        "INSERT",
-        "USE"
+            "DELETE",
+            "CREATE DATABASE",
+            "INSERT",
+            "USE"
       ],
       "correctIndex": 0,
       "explanation": "**Đáp án đúng**: A & C & D\n\nĐáp án theo dữ liệu đề: A, C, D — A. DELETE; C. INSERT; D. USE.\n\nLời giải gốc: CREATE DATABASE là lệnh DDL duy nhất trong danh sách (định nghĩa cấu trúc). DELETE và INSERT thuộc DML vì thao tác trên dữ liệu, còn USE chỉ là lệnh tiện ích chọn database đang làm việc cho phiên hiện tại, không định nghĩa hay thay đổi cấu trúc nào.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc như bảng và schema; DML truy vấn/thêm/sửa/xóa dữ liệu; DCL quản lý quyền. Chọn theo đối tượng bị tác động: cấu trúc, các hàng hay quyền truy cập.\n\nĐối chiếu phương án: B. CREATE DATABASE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.",
       "correctIndices": [
-        0,
-        2,
-        3
+            0,
+            2,
+            3
       ],
       "multiple": true
-    },
+},
     {
       "id": 5393,
       "quizId": 106,
@@ -13853,16 +13853,16 @@
     {
       "id": 5451,
       "quizId": 106,
-      "text": "DB1202_SP26_RE | Multiple Choice Question 15 (Choose 1 answer) Domain constraints, functional dependency and referential integrity are special forms of",
+      "text": "Domain constraints, functional dependency and referential integrity are special forms of:",
       "options": [
-        "Foreign key",
-        "Primary key",
-        "Assertion",
-        "Referential constraint"
+            "Foreign key",
+            "Primary key",
+            "Assertion",
+            "Referential constraint"
       ],
       "correctIndex": 2,
       "explanation": "Đáp án theo dữ liệu đề: C — C. Assertion.\n\nLời giải gốc: Trong lý thuyết CSDL, \"Assertion\" (Khẳng định/Lời xác nhận) là một thuật ngữ chung nhất để định nghĩa các quy tắc ràng buộc trạng thái mà cơ sở dữ liệu phải luôn tuân thủ. Các ràng buộc toàn vẹn, miền giá trị hay khóa ngoại đều là dạng đặc biệt của assertion.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một khóa được tham chiếu ở quan hệ đích (hoặc NULL nếu ràng buộc cho phép). Đây là toàn vẹn tham chiếu; nó khác tính duy nhất của primary/candidate key.\n\nĐối chiếu phương án: A. Foreign key; B. Primary key; D. Referential constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
+},
     {
       "id": 5452,
       "quizId": 106,
@@ -14588,16 +14588,16 @@
     {
       "id": 5507,
       "quizId": 107,
-      "text": "DB1202_SP26_RE | Multiple Choice Question 34 (Choose 1 answer) The transaction methods is used with the Connection object to save or cancel changes made to the data source.",
+      "text": "The transaction methods are used with the Connection object to save or cancel changes made to the data source.",
       "options": [
-        "Begin Transaction, Rollback Transaction",
-        "Begin Transaction, Commit Transaction",
-        "Begin Transaction, Commit Transaction, Rollback Transaction",
-        "Commit Transaction, Rollback Transaction"
+            "Begin Transaction, Rollback Transaction",
+            "Begin Transaction, Commit Transaction",
+            "Begin Transaction, Commit Transaction, Rollback Transaction",
+            "Commit Transaction, Rollback Transaction"
       ],
       "correctIndex": 2,
       "explanation": "Đáp án theo dữ liệu đề: C — C. Begin Transaction, Commit Transaction, Rollback Transaction.\n\nLời giải gốc: Vòng đời của một giao dịch (Transaction) có 3 lệnh chính: Begin (bắt đầu), Commit (lưu kết quả vĩnh viễn), và Rollback (hủy bỏ, quay về trạng thái lúc mới Begin khi có lỗi).\n\nNền tảng kiến thức: Giao dịch là một đơn vị công việc cần thỏa ACID: atomicity (trọn vẹn hoặc hủy), consistency (giữ ràng buộc), isolation (hạn chế ảnh hưởng xen kẽ), durability (đã commit thì bền vững qua sự cố). COMMIT và ROLLBACK kết thúc theo hai hướng khác nhau.\n\nPhân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity là tất-cả-hoặc-không; consistency giữ các ràng buộc; isolation kiểm soát ảnh hưởng giữa giao dịch đồng thời; durability bảo đảm giao dịch đã commit sống sót qua sự cố. COMMIT xác nhận, ROLLBACK hủy thay đổi chưa xác nhận.\n\nĐối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; D. Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-    },
+},
     {
       "id": 5508,
       "quizId": 107,
