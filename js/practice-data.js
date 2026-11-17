@@ -9038,7 +9038,7 @@
     {
       "id": 5084,
       "quizId": 102,
-      "text": "For the following relation:\n\n\\(\\textbf{Student}\\)\n$\\beginarray|c|c|c|c|\n\\hline\n\\textID & \\textName & \\textCity & \\textGender \n\n\\hline\n\\textSE1234 & \\textLe Hong Phong & \\textHCM & \\textMale \n\n\\hline\n\\textSE1235 & \\textLe Hong Hanh & \\textHCM & \\textFemale \n\n\\hline\n\\textSE1236 & \\textTran Binh Trong & \\textHN & \\textMale \n\n\\hline\n\\endarray$\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
+      "text": "For the following relation:\n\n\\(\\textbf{Student}\\)\n\\(\\begin{array}{|c|c|c|c|}\n\\hline\n\\text{ID} & \\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{SE1234} & \\text{Le Hong Phong} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{SE1235} & \\text{Le Hong Hanh} & \\text{HCM} & \\text{Female} \\\\\n\\hline\n\\text{SE1236} & \\text{Tran Binh Trong} & \\text{HN} & \\text{Male} \\\\\n\\hline\n\\end{array}\\)\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
       "options": [
         "\\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
         "\\(\\pi_{\\text{Name}, \\text{City}}[\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})]\\)",
@@ -9064,7 +9064,7 @@
     {
       "id": 5086,
       "quizId": 102,
-      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n$\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textLe Hong Son & \\textHCM & \\textMale \n\n\\hline\n\\endarray\n\n\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textTran Tuyet Nhi & \\textHN & \\textFemale \n\n\\hline\n\\endarray$\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
+      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n\\(\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\end{array}\n\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\n\\hline\n\\end{array}\\)\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
       "options": [
         "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
         "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
@@ -10226,7 +10226,7 @@
         "\\(DC \\rightarrow DB\\)"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. D-&gt;BC.\n\nLời giải gốc: Theo quy tắc hợp (Union rule) trong hệ tiên đề Armstrong, nếu \\(D \\to B\\) và \\(D \\to C\\) thì tương đương với \\(D \\to BC\\). ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. D-&gt;DB; C. DB-&gt;B; D. DC-&gt;DB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án theo dữ liệu đề: A — A. D->BC.\n\nLời giải gốc: Theo quy tắc hợp (Union rule) trong hệ tiên đề Armstrong, nếu \\(D \\to B\\) và \\(D \\to C\\) thì tương đương với \\(D \\to BC\\). ---\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. D->DB; C. DB->B; D. DC->DB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5175,
@@ -11689,7 +11689,7 @@
     {
       "id": 5286,
       "quizId": 106,
-      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n$\\beginarray|c|c|\n\\hline\nArtist_id & Artist_Name \n\n\\hline\n1 & \\textBono \n\n\\hline\n2 & \\textCher \n\n\\hline\n\\endarray\n\n\\beginarray|c|c|\n\\hline\nartist_id & Album_name \n\n\\hline\n3 & \\textEat the rich \n\n\\hline\n\\endarray$\n\nLook at the tables above and then choose the correct statement:",
+      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{Artist\\_id} & \\textbf{Artist\\_Name} \\\\\n\\hline\n1 & \\text{Bono} \\\\\n\\hline\n2 & \\text{Cher} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{artist\\_id} & \\textbf{Album\\_name} \\\\\n\\hline\n3 & \\text{Eat the rich} \\\\\n\\hline\n\\end{array}\\)\n\nLook at the tables above and then choose the correct statement:",
       "options": [
         "The above picture is an example of a database that has not enforced referential integrity",
         "The above picture is an example of a database that has not enforced entity integrity",
@@ -13226,11 +13226,11 @@
       "options": [
         "SELECT model FROM Laptop WHERE price IN (SELECT price FROM PC);",
         "SELECT model FROM Laptop WHERE price = ALL (SELECT price FROM PC);",
-        "SELECT model FROM Laptop WHERE price &gt; ALL (SELECT price FROM PC);",
-        "SELECT model FROM Laptop WHERE price &lt; ALL (SELECT price FROM PC);"
+        "SELECT model FROM Laptop WHERE price > ALL (SELECT price FROM PC);",
+        "SELECT model FROM Laptop WHERE price < ALL (SELECT price FROM PC);"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT model FROM Laptop WHERE price IN (SELECT price FROM PC);.\n\nLời giải gốc: Để tìm các laptop có giá bằng với bất kỳ PC nào, ta sử dụng toán tử IN kết hợp với tập hợp giá của các PC. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT model FROM Laptop WHERE price = ALL (SELECT price FROM PC);; C. SELECT model FROM Laptop WHERE price &gt; ALL (SELECT price FROM PC);; D. SELECT model FROM Laptop WHERE price &lt; ALL (SELECT price FROM PC);. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT model FROM Laptop WHERE price IN (SELECT price FROM PC);.\n\nLời giải gốc: Để tìm các laptop có giá bằng với bất kỳ PC nào, ta sử dụng toán tử IN kết hợp với tập hợp giá của các PC. ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT model FROM Laptop WHERE price = ALL (SELECT price FROM PC);; C. SELECT model FROM Laptop WHERE price > ALL (SELECT price FROM PC);; D. SELECT model FROM Laptop WHERE price < ALL (SELECT price FROM PC);. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5404,
@@ -13249,15 +13249,15 @@
     {
       "id": 5405,
       "quizId": 106,
-      "text": "Assuming UserProfile is a table containing a column Profession which accepts NULL value. What is the result of the below query? SET ANSI_NULLS OFF SELECT Profession FROM UserProfile WHERE (Profession &lt;&gt; NULL)",
+      "text": "Assuming UserProfile is a table containing a column Profession which accepts NULL value. What is the result of the below query? SET ANSI_NULLS OFF SELECT Profession FROM UserProfile WHERE (Profession <> NULL)",
       "options": [
         "Gives an error.",
-        "&lt;&gt; is not an operator in SQL Server",
+        "<> is not an operator in SQL Server",
         "Returns all Professions which has not null values.",
         "None of the above."
       ],
       "correctIndex": 2,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. Returns all Professions which has not null values..\n\nLời giải gốc: Khi thiết lập SET ANSI_NULLS OFF, toán tử <> có thể đánh giá giá trị NULL theo cú pháp cũ, trả về tất cả các giá trị nghề nghiệp khác NULL (không chứa giá trị rỗng). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. Gives an error.; B. &lt;&gt; is not an operator in SQL Server; D. None of the above.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án theo dữ liệu đề: C — C. Returns all Professions which has not null values..\n\nLời giải gốc: Khi thiết lập SET ANSI_NULLS OFF, toán tử <> có thể đánh giá giá trị NULL theo cú pháp cũ, trả về tất cả các giá trị nghề nghiệp khác NULL (không chứa giá trị rỗng). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.\n\nĐối chiếu phương án: A. Gives an error.; B. <> is not an operator in SQL Server; D. None of the above.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5406,
@@ -13369,13 +13369,13 @@
       "quizId": 106,
       "text": "Consider two relations MovieStar(name, address, gender, birthdate) and MovieExec(name, address, cert, netWorth). You want the names and addresses of all female movie stars who are also movie executives with a net worth over $10,000,000. What is the correct statement?",
       "options": [
-        "SELECT name, address FROM MovieStar WHERE gender = 'F' UNION SELECT name, address FROM MovieExec WHERE netWorth &gt; 10000000",
-        "SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE netWorth &gt; 10000000",
-        "SELECT name, address FROM MovieStar WHERE gender = 'F' EXCEPT SELECT name, address FROM MovieExec WHERE netWorth &gt; 10000000",
+        "SELECT name, address FROM MovieStar WHERE gender = 'F' UNION SELECT name, address FROM MovieExec WHERE netWorth > 10000000",
+        "SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE netWorth > 10000000",
+        "SELECT name, address FROM MovieStar WHERE gender = 'F' EXCEPT SELECT name, address FROM MovieExec WHERE netWorth > 10000000",
         "None of the others"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE netWorth &gt; 10000000.\n\nLời giải gốc: Để tìm những người vừa là nữ diễn viên vừa là nhà điều hành phim thỏa mãn điều kiện, ta dùng phép giao INTERSECT giữa hai tập kết quả.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. SELECT name, address FROM MovieStar WHERE gender = 'F' UNION SELECT name, address FROM MovieEx…; C. SELECT name, address FROM MovieStar WHERE gender = 'F' EXCEPT SELECT name, address FROM MovieE…; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án theo dữ liệu đề: B — B. SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE netWorth > 10000000.\n\nLời giải gốc: Để tìm những người vừa là nữ diễn viên vừa là nhà điều hành phim thỏa mãn điều kiện, ta dùng phép giao INTERSECT giữa hai tập kết quả.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo thuộc tính tương ứng; union lấy hợp, intersection lấy phần chung và difference lấy phần có ở vế trái mà không có ở vế phải. Trước tiên kiểm tra tính tương thích schema, sau đó áp phép theo đúng hướng/toán tử.\n\nĐối chiếu phương án: A. SELECT name, address FROM MovieStar WHERE gender = 'F' UNION SELECT name, address FROM MovieEx…; C. SELECT name, address FROM MovieStar WHERE gender = 'F' EXCEPT SELECT name, address FROM MovieE…; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5415,
@@ -13491,13 +13491,13 @@
       "quizId": 106,
       "text": "Which of the following SQL statements returns all rows from Cars where year is greater than 2019?",
       "options": [
-        "SELECT * FROM Cars WHERE year &gt; 2019;",
-        "SELECT * FROM Cars HAVING year &gt; 2019;",
-        "SELECT * FROM Cars WHEN year &gt; 2019;",
-        "SELECT * FROM Cars WHERE year =&gt; 2019;"
+        "SELECT * FROM Cars WHERE year > 2019;",
+        "SELECT * FROM Cars HAVING year > 2019;",
+        "SELECT * FROM Cars WHEN year > 2019;",
+        "SELECT * FROM Cars WHERE year => 2019;"
       ],
       "correctIndex": 0,
-      "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT * FROM Cars WHERE year &gt; 2019;.\n\nLời giải gốc: Cú pháp chuẩn để lọc các dòng dựa trên điều kiện là sử dụng mệnh đề WHERE với toán tử so sánh >.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT * FROM Cars HAVING year &gt; 2019;; C. SELECT * FROM Cars WHEN year &gt; 2019;; D. SELECT * FROM Cars WHERE year =&gt; 2019;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án theo dữ liệu đề: A — A. SELECT * FROM Cars WHERE year > 2019;.\n\nLời giải gốc: Cú pháp chuẩn để lọc các dòng dựa trên điều kiện là sử dụng mệnh đề WHERE với toán tử so sánh >.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: B. SELECT * FROM Cars HAVING year > 2019;; C. SELECT * FROM Cars WHEN year > 2019;; D. SELECT * FROM Cars WHERE year => 2019;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5424,
@@ -13672,10 +13672,11 @@
     {
       "id": 5437,
       "quizId": 106,
-      "text": "Suppose relation R(A, B) has tuples. Which tuples are contained in the result of the query below?<pre>SELECT * FROM R WHERE A LIKE 'a%' UNION SELECT * FROM R WHERE B &gt; 7;</pre>A. (3, 5); (h, 8)",
+      "text": "Suppose relation \\(R(A, B)\\) has tuples: \\((3, 5), (3, 9), (a, 7), (h, 8), (2, 9)\\). Which tuples are contained in the result of the query below?\n\nSELECT * FROM R WHERE A LIKE 'a%' UNION SELECT * FROM R WHERE B > 7;",
       "options": [
+        "(3, 5); (h, 8)",
         "(3, 5); (3, 9); (h, 8)",
-        "(3, 9); (b, 7); (h, 8)",
+        "(3, 9); (a, 7); (h, 8)",
         "(2, 9)"
       ],
       "correctIndex": 2,
@@ -13697,7 +13698,7 @@
     {
       "id": 5439,
       "quizId": 106,
-      "text": "What does the following SQL query return? SELECT name FROM Products WHERE price &gt; 100;",
+      "text": "What does the following SQL query return? SELECT name FROM Products WHERE price > 100;",
       "options": [
         "All product names with price less than 100",
         "All product names regardless of price",
@@ -13803,13 +13804,13 @@
       "quizId": 106,
       "text": "Which of the following wildcard characters matches any sequence of zero or more characters in a string comparison in SQL?",
       "options": [
-        "&amp;",
+        "&",
         "$",
         "_",
         "%"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. %.\n\nLời giải gốc: Trong SQL, ký tự đại diện % khớp với một chuỗi gồm 0 hoặc nhiều ký tự bất kỳ (ký tự _ chỉ khớp với đúng 1 ký tự).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự và `_` khớp đúng một ký tự. ESCAPE cho phép coi ký tự wildcard như ký tự thường bằng cách đặt trước chúng một ký tự thoát; nó không thay thế mẫu bằng chuỗi bất kỳ.\n\nĐối chiếu phương án: A. &amp;; B. $; C. _. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án theo dữ liệu đề: D — D. %.\n\nLời giải gốc: Trong SQL, ký tự đại diện % khớp với một chuỗi gồm 0 hoặc nhiều ký tự bất kỳ (ký tự _ chỉ khớp với đúng 1 ký tự).\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự và `_` khớp đúng một ký tự. ESCAPE cho phép coi ký tự wildcard như ký tự thường bằng cách đặt trước chúng một ký tự thoát; nó không thay thế mẫu bằng chuỗi bất kỳ.\n\nĐối chiếu phương án: A. &; B. $; C. _. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5448,
@@ -13829,13 +13830,13 @@
       "quizId": 106,
       "text": "Suppose you have a table Employees (id, name, salary). To increase the salary of employees with a salary below 5000 by 10%, which of the following statements is correc",
       "options": [
-        "UPDATE Employees SET salary = salary + 0.1 WHERE salary &lt; 5000",
-        "UPDATE Employees SET salary = salary * 1.1 WHERE salary &lt; 5000",
-        "UPDATE Employees\nSET salary = salary * 0.1 WHERE salary &lt; 5000",
-        "UPDATE Employees\nSET salary = 1.1 WHERE salary &lt; 5000"
+        "UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000",
+        "UPDATE Employees SET salary = salary * 1.1 WHERE salary < 5000",
+        "UPDATE Employees\nSET salary = salary * 0.1 WHERE salary < 5000",
+        "UPDATE Employees\nSET salary = 1.1 WHERE salary < 5000"
       ],
       "correctIndex": 1,
-      "explanation": "Đáp án theo dữ liệu đề: B — B. UPDATE Employees SET salary = salary * 1.1 WHERE salary &lt; 5000.\n\nLời giải gốc: Tăng lương thêm 10% đồng nghĩa với việc nhân mức lương hiện tại với hệ số \\(1 + 0.1 = 1.1\\). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary &lt; 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary &lt; 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary &lt; 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án theo dữ liệu đề: B — B. UPDATE Employees SET salary = salary * 1.1 WHERE salary < 5000.\n\nLời giải gốc: Tăng lương thêm 10% đồng nghĩa với việc nhân mức lương hiện tại với hệ số \\(1 + 0.1 = 1.1\\). ---\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.\n\nĐối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary < 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary < 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5450,
@@ -14093,10 +14094,10 @@
         "CREATE VIEW Ordered_Product(Product_No) AS SELECT DISTINCT Product_No FROM \"Order\"",
         "CREATE VIEW Order_List(Order_No, Product_Name, Order_Quantity) AS SELECT Order_No, Product_Name, Order_Quantity FROM \"Order\", Product WHERE \"Order\".Product_No = Product.Product_No",
         "CREATE VIEW Product_Order(Product_No, Order_Quantity) AS SELECT Product_No, SUM(Order_Quantity) FROM \"Order\" GROUP BY Product_No",
-        "CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No, Product_Name FROM Product WHERE Product_Unit_Price &gt; 1000"
+        "CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No, Product_Name FROM Product WHERE Product_Unit_Price > 1000"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No, Product_Name FROM Product WHERE Product_Unit_Price &gt; 1000.\n\nLời giải gốc: View có thể cập nhật được thường là view tham chiếu trực tiếp từ một bảng cơ sở duy nhất, không chứa DISTINCT, hàm gộp nhóm hay GROUP BY. Chỉ có phương án D thỏa mãn.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. CREATE VIEW Ordered_Product(Product_No) AS SELECT DISTINCT Product_No FROM \"Order\"; B. CREATE VIEW Order_List(Order_No, Product_Name, Order_Quantity) AS SELECT Order_No, Product_Nam…; C. CREATE VIEW Product_Order(Product_No, Order_Quantity) AS SELECT Product_No, SUM(Order_Quantity…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án theo dữ liệu đề: D — D. CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No, Product_Name FROM Product WHERE Product_Unit_Price > 1000.\n\nLời giải gốc: View có thể cập nhật được thường là view tham chiếu trực tiếp từ một bảng cơ sở duy nhất, không chứa DISTINCT, hàm gộp nhóm hay GROUP BY. Chỉ có phương án D thỏa mãn.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: View là quan hệ ảo được định nghĩa bằng truy vấn trên một hay nhiều bảng/view; thông thường nó lưu định nghĩa truy vấn chứ không lưu bản sao kết quả như materialized view. Do đó đáp án phải chỉ đối tượng được tạo từ truy vấn, không nhầm với bảng vật lý.\n\nĐối chiếu phương án: A. CREATE VIEW Ordered_Product(Product_No) AS SELECT DISTINCT Product_No FROM \"Order\"; B. CREATE VIEW Order_List(Order_No, Product_Name, Order_Quantity) AS SELECT Order_No, Product_Nam…; C. CREATE VIEW Product_Order(Product_No, Order_Quantity) AS SELECT Product_No, SUM(Order_Quantity…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
     },
     {
       "id": 5470,

@@ -1803,8 +1803,8 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 % [Nguồn: DBI202 Order 4 Q13]
 For the following relation:
 
-$\textbf{Student}$
-$\begin{array}{|c|c|c|c|}
+\[\textbf{Student}\]
+\[\begin{array}{|c|c|c|c|}
 \hline
 \text{ID} & \text{Name} & \text{City} & \text{Gender} \\
 \hline
@@ -1814,7 +1814,7 @@ $\begin{array}{|c|c|c|c|}
 \hline
 \text{SE1236} & \text{Tran Binh Trong} & \text{HN} & \text{Male} \\
 \hline
-\end{array}$
+\end{array}\]
 
 Use Algebraic query language to list all name and city of students in HCM and Male?
 \begin{choices}
@@ -1859,8 +1859,8 @@ Phân tích: Các hàng dữ liệu của một relation được gọi là tupl
 % [Nguồn: DBI202 Order 4 Q16]
 For the following relations:
 
-$\textbf{Employee} \qquad \textbf{Customer}$
-$\begin{array}{|c|c|c|}
+\[\textbf{Employee} \qquad \textbf{Customer}\]
+\[\begin{array}{|c|c|c|}
 \hline
 \text{Name} & \text{City} & \text{Gender} \\
 \hline
@@ -1878,7 +1878,7 @@ $\begin{array}{|c|c|c|}
 \hline
 \text{Tran Tuyet Nhi} & \text{HN} & \text{Female} \\
 \hline
-\end{array}$
+\end{array}\]
 
 What is the result of the Intersection operation (Employee \cap Customer)?
 \begin{choices}
@@ -3854,7 +3854,7 @@ Suppose that we have a relation \(R(B, C, D)\) that satisfies functional depende
 \choice \(DC \rightarrow DB\)
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. D-&gt;BC.
+\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. D->BC.
 
 Lời giải gốc: Theo quy tắc hợp (Union rule) trong hệ tiên đề Armstrong, nếu $D \to B$ và $D \to C$ thì tương đương với $D \to BC$. ---
 
@@ -3862,7 +3862,7 @@ Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa đ�
 
 Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.
 
-Đối chiếu phương án: B. D-&gt;DB; C. DB-&gt;B; D. DC-&gt;DB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu phương án: B. D->DB; C. DB->B; D. DC->DB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
 \begin{question}{175}
@@ -6279,8 +6279,8 @@ Phân tích: Toàn vẹn dữ liệu nghĩa là các giá trị vẫn chính xá
 % [Nguồn: DBI202 Order 3 Q9]
 Cho hai bảng dữ liệu \textbf{ARTISTS} và \textbf{ALBUMS}:
 
-$\textbf{ARTISTS} \qquad\qquad \textbf{ALBUMS}$
-$\begin{array}{|c|c|}
+\[\textbf{ARTISTS} \qquad\qquad \textbf{ALBUMS}\]
+\[\begin{array}{|c|c|}
 \hline
 \textbf{Artist\_id} & \textbf{Artist\_Name} \\
 \hline
@@ -6296,7 +6296,7 @@ $\begin{array}{|c|c|}
 \hline
 3 & \text{Eat the rich} \\
 \hline
-\end{array}$
+\end{array}\]
 
 Look at the tables above and then choose the correct statement:
 \begin{choices}
@@ -8824,8 +8824,8 @@ Given two relations: PC(model, speed, ram, hd, type) and Laptop(model, speed, ra
 \begin{choices}
 \choice SELECT model FROM Laptop WHERE price IN (SELECT price FROM PC);
 \choice SELECT model FROM Laptop WHERE price = ALL (SELECT price FROM PC);
-\choice SELECT model FROM Laptop WHERE price &gt; ALL (SELECT price FROM PC);
-\choice SELECT model FROM Laptop WHERE price &lt; ALL (SELECT price FROM PC);
+\choice SELECT model FROM Laptop WHERE price > ALL (SELECT price FROM PC);
+\choice SELECT model FROM Laptop WHERE price < ALL (SELECT price FROM PC);
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. SELECT model FROM Laptop WHERE price IN (SELECT price FROM PC);.
@@ -8836,7 +8836,7 @@ Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi địn
 
 Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.
 
-Đối chiếu phương án: B. SELECT model FROM Laptop WHERE price = ALL (SELECT price FROM PC);; C. SELECT model FROM Laptop WHERE price &gt; ALL (SELECT price FROM PC);; D. SELECT model FROM Laptop WHERE price &lt; ALL (SELECT price FROM PC);. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu phương án: B. SELECT model FROM Laptop WHERE price = ALL (SELECT price FROM PC);; C. SELECT model FROM Laptop WHERE price > ALL (SELECT price FROM PC);; D. SELECT model FROM Laptop WHERE price < ALL (SELECT price FROM PC);. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
 \begin{question}{404}
@@ -8865,10 +8865,10 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 \begin{question}{405}
 % [ID gốc: 5.167]
 % [Nguồn: DBI202 Order 5 Q167]
-Assuming UserProfile is a table containing a column Profession which accepts NULL value. What is the result of the below query? SET ANSI_NULLS OFF SELECT Profession FROM UserProfile WHERE (Profession &lt;&gt; NULL)
+Assuming UserProfile is a table containing a column Profession which accepts NULL value. What is the result of the below query? SET ANSI_NULLS OFF SELECT Profession FROM UserProfile WHERE (Profession <> NULL)
 \begin{choices}
 \choice Gives an error.
-\choice &lt;&gt; is not an operator in SQL Server
+\choice <> is not an operator in SQL Server
 \choice Returns all Professions which has not null values.
 \choice None of the above.
 \end{choices}
@@ -8881,7 +8881,7 @@ Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi địn
 
 Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.
 
-Đối chiếu phương án: A. Gives an error.; B. &lt;&gt; is not an operator in SQL Server; D. None of the above.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu phương án: A. Gives an error.; B. <> is not an operator in SQL Server; D. None of the above.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
 \begin{question}{406}
@@ -9066,13 +9066,13 @@ Phân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự v
 % [Nguồn: DBI202 Order 5 Q187]
 Consider two relations MovieStar(name, address, gender, birthdate) and MovieExec(name, address, cert, netWorth). You want the names and addresses of all female movie stars who are also movie executives with a net worth over $10,000,000. What is the correct statement?
 \begin{choices}
-\choice SELECT name, address FROM MovieStar WHERE gender = 'F' UNION SELECT name, address FROM MovieExec WHERE netWorth &gt; 10000000
-\choice SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE netWorth &gt; 10000000
-\choice SELECT name, address FROM MovieStar WHERE gender = 'F' EXCEPT SELECT name, address FROM MovieExec WHERE netWorth &gt; 10000000
+\choice SELECT name, address FROM MovieStar WHERE gender = 'F' UNION SELECT name, address FROM MovieExec WHERE netWorth > 10000000
+\choice SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE netWorth > 10000000
+\choice SELECT name, address FROM MovieStar WHERE gender = 'F' EXCEPT SELECT name, address FROM MovieExec WHERE netWorth > 10000000
 \choice None of the others
 \end{choices}
 \textbf{Đáp án:} B
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE netWorth &gt; 10000000.
+\textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. SELECT name, address FROM MovieStar WHERE gender = 'F' INTERSECT SELECT name, address FROM MovieExec WHERE netWorth > 10000000.
 
 Lời giải gốc: Để tìm những người vừa là nữ diễn viên vừa là nhà điều hành phim thỏa mãn điều kiện, ta dùng phép giao INTERSECT giữa hai tập kết quả.
 
@@ -9264,13 +9264,13 @@ Phân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, nh�
 % [Nguồn: DBI202 Order 5 Q211]
 Which of the following SQL statements returns all rows from Cars where year is greater than 2019?
 \begin{choices}
-\choice SELECT * FROM Cars WHERE year &gt; 2019;
-\choice SELECT * FROM Cars HAVING year &gt; 2019;
-\choice SELECT * FROM Cars WHEN year &gt; 2019;
-\choice SELECT * FROM Cars WHERE year =&gt; 2019;
+\choice SELECT * FROM Cars WHERE year > 2019;
+\choice SELECT * FROM Cars HAVING year > 2019;
+\choice SELECT * FROM Cars WHEN year > 2019;
+\choice SELECT * FROM Cars WHERE year => 2019;
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. SELECT * FROM Cars WHERE year &gt; 2019;.
+\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. SELECT * FROM Cars WHERE year > 2019;.
 
 Lời giải gốc: Cú pháp chuẩn để lọc các dòng dựa trên điều kiện là sử dụng mệnh đề WHERE với toán tử so sánh >.
 
@@ -9278,7 +9278,7 @@ Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi địn
 
 Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.
 
-Đối chiếu phương án: B. SELECT * FROM Cars HAVING year &gt; 2019;; C. SELECT * FROM Cars WHEN year &gt; 2019;; D. SELECT * FROM Cars WHERE year =&gt; 2019;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu phương án: B. SELECT * FROM Cars HAVING year > 2019;; C. SELECT * FROM Cars WHEN year > 2019;; D. SELECT * FROM Cars WHERE year => 2019;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
 \begin{question}{424}
@@ -9563,10 +9563,14 @@ Phân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự v
 \begin{question}{437}
 % [ID gốc: 5.232]
 % [Nguồn: DBI202 Order 5 Q232]
-Suppose relation R(A, B) has tuples. Which tuples are contained in the result of the query below?<pre>SELECT * FROM R WHERE A LIKE 'a%' UNION SELECT * FROM R WHERE B &gt; 7;</pre>A. (3, 5); (h, 8)
+Suppose relation \(R(A, B)\) has tuples: \((3, 5), (3, 9), (a, 7), (h, 8), (2, 9)\). Which tuples are contained in the result of the query below?
+\begin{codebox}
+SELECT * FROM R WHERE A LIKE 'a%' UNION SELECT * FROM R WHERE B > 7;
+\end{codebox}
 \begin{choices}
+\choice (3, 5); (h, 8)
 \choice (3, 5); (3, 9); (h, 8)
-\choice (3, 9); (b, 7); (h, 8)
+\choice (3, 9); (a, 7); (h, 8)
 \choice (2, 9)
 \end{choices}
 \textbf{Đáp án:} C
@@ -9606,7 +9610,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 \begin{question}{439}
 % [ID gốc: 5.234]
 % [Nguồn: DBI202 Order 5 Q234]
-What does the following SQL query return? SELECT name FROM Products WHERE price &gt; 100;
+What does the following SQL query return? SELECT name FROM Products WHERE price > 100;
 \begin{choices}
 \choice All product names with price less than 100
 \choice All product names regardless of price
@@ -9776,7 +9780,7 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 % [Nguồn: DBI202 Order 5 Q267]
 Which of the following wildcard characters matches any sequence of zero or more characters in a string comparison in SQL?
 \begin{choices}
-\choice &amp;
+\choice &
 \choice $
 \choice _
 \choice %
@@ -9790,7 +9794,7 @@ Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi địn
 
 Phân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự và `_` khớp đúng một ký tự. ESCAPE cho phép coi ký tự wildcard như ký tự thường bằng cách đặt trước chúng một ký tự thoát; nó không thay thế mẫu bằng chuỗi bất kỳ.
 
-Đối chiếu phương án: A. &amp;; B. $; C. _. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu phương án: A. &; B. $; C. _. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
 \begin{question}{448}
@@ -9820,15 +9824,15 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 % [Nguồn: DBI202 Order 5 Q271]
 Suppose you have a table Employees (id, name, salary). To increase the salary of employees with a salary below 5000 by 10%, which of the following statements is correc
 \begin{choices}
-\choice UPDATE Employees SET salary = salary + 0.1 WHERE salary &lt; 5000
-\choice UPDATE Employees SET salary = salary * 1.1 WHERE salary &lt; 5000
+\choice UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000
+\choice UPDATE Employees SET salary = salary * 1.1 WHERE salary < 5000
 \choice UPDATE Employees
-SET salary = salary * 0.1 WHERE salary &lt; 5000
+SET salary = salary * 0.1 WHERE salary < 5000
 \choice UPDATE Employees
-SET salary = 1.1 WHERE salary &lt; 5000
+SET salary = 1.1 WHERE salary < 5000
 \end{choices}
 \textbf{Đáp án:} B
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. UPDATE Employees SET salary = salary * 1.1 WHERE salary &lt; 5000.
+\textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. UPDATE Employees SET salary = salary * 1.1 WHERE salary < 5000.
 
 Lời giải gốc: Tăng lương thêm 10\% đồng nghĩa với việc nhân mức lương hiện tại với hệ số $1 + 0.1 = 1.1$. ---
 
@@ -9836,7 +9840,7 @@ Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi địn
 
 Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo dữ liệu nguồn, WHERE lọc từng hàng, GROUP BY tạo nhóm, HAVING lọc nhóm, SELECT xác định biểu thức đầu ra và ORDER BY sắp kết quả. Với phép join, kiểm tra điều kiện ghép và các hàng không khớp trước khi tính kết quả.
 
-Đối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary &lt; 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary &lt; 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary &lt; 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Đối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary < 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary < 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
 \begin{question}{450}
@@ -10242,10 +10246,10 @@ Which SQL statement creates an updatable view?
 \choice CREATE VIEW Ordered_Product(Product_No) AS SELECT DISTINCT Product_No FROM "Order"
 \choice CREATE VIEW Order_List(Order_No, Product_Name, Order_Quantity) AS SELECT Order_No, Product_Name, Order_Quantity FROM "Order", Product WHERE "Order".Product_No = Product.Product_No
 \choice CREATE VIEW Product_Order(Product_No, Order_Quantity) AS SELECT Product_No, SUM(Order_Quantity) FROM "Order" GROUP BY Product_No
-\choice CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No, Product_Name FROM Product WHERE Product_Unit_Price &gt; 1000
+\choice CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No, Product_Name FROM Product WHERE Product_Unit_Price > 1000
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: D — D. CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No, Product_Name FROM Product WHERE Product_Unit_Price &gt; 1000.
+\textbf{Giải thích:} Đáp án theo dữ liệu đề: D — D. CREATE VIEW Expensive_Product(Product_No, Product_Name) AS SELECT Product_No, Product_Name FROM Product WHERE Product_Unit_Price > 1000.
 
 Lời giải gốc: View có thể cập nhật được thường là view tham chiếu trực tiếp từ một bảng cơ sở duy nhất, không chứa DISTINCT, hàm gộp nhóm hay GROUP BY. Chỉ có phương án D thỏa mãn.
 
