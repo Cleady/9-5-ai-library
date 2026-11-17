@@ -7900,30 +7900,60 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 \begin{question}{355}
 % [ID gốc: 5.62]
 % [Nguồn: DBI202 Order 5 Q62]
-(FALSE AND NULL) return:
+The Boolean expression \((FALSE \text{ AND } NULL)\) returns:
 \begin{choices}
 \choice NULL
 \choice TRUE
 \choice FALSE
 \choice None of the others
-a 
-Give the relation Employee(SSN,FNAME,LNAME,SALARY).Select the right query below to find the employee(s) who has the lowest salary in the company
-\choice SELECT LNAME,FNAME,SALARY FROM Employee WHERE SALARY IN ( SELECT MIN(SALARY) FROM Employee)
-\choice SELECT LNAME,FNAME,SALARY FROM Employee WHERE SALARY >=ALL( SELECT MIN(SALARY) FROM Employee)
-\choice SELECT LNAME,FNAME,SALARY FROM Employee WHERE SALARY < MAX ( SELECT MIN(SALARY) FROM Employee)
-\choice None of the others
 \end{choices}
 \textbf{Đáp án:} C
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. SELECT LNAME,FNAME,SALARY FROM Employee WHERE SALARY IN ( SELECT MIN(SALARY) FROM Employee).
+\textbf{Giải thích:} Đáp án đúng: C — FALSE.
 
-Nền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.
+Nền tảng kiến thức: Trong SQL, các phép so sánh và logic tuân theo chuẩn logic ba giá trị (Three-Valued Logic - 3VL), gồm các giá trị chân lý: TRUE, FALSE và UNKNOWN (kết quả trả về khi biểu thức chứa hoặc so sánh với NULL).
 
-Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không phải số 0 hay chuỗi rỗng. So sánh với NULL bằng `=` không cho TRUE/FALSE mà cho UNKNOWN; dùng `IS NULL`/`IS NOT NULL`. Trong logic ba giá trị, AND/OR/NOT phải được tính theo cả trạng thái UNKNOWN.
+Phân tích: 
+Bảng chân trị của toán tử AND trong logic ba giá trị:
+- $\text{TRUE AND UNKNOWN} \rightarrow \text{UNKNOWN}$
+- $\text{FALSE AND UNKNOWN} \rightarrow \text{FALSE}$
+- $\text{UNKNOWN AND UNKNOWN} \rightarrow \text{UNKNOWN}$
 
-Đối chiếu phương án: B. TRUE; C. FALSE; D. None of the others a Give the relation Employee(SSN,FNAME,LNAME,SALARY).Select the right query…; B. SELECT LNAME,FNAME,SALARY FROM Employee WHERE SALARY >=ALL( SELECT MIN(SALARY) FROM Employee); C. SELECT LNAME,FNAME,SALARY FROM Employee WHERE SALARY < MAX ( SELECT MIN(SALARY) FROM Employee). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Do trong biểu thức \((FALSE \text{ AND } NULL)\) có một toán hạng chắc chắn nhận giá trị FALSE, theo luật ngắn mạch (short-circuit) và định nghĩa toán tử AND trong SQL, chỉ cần một vế là FALSE thì kết quả của toàn bộ biểu thức luôn luôn là FALSE bất kể toán hạng còn lại là TRUE, FALSE hay NULL (UNKNOWN).
+
+Đối chiếu phương án:
+- A. NULL: Sai, biểu thức chỉ cho UNKNOWN (NULL) khi toán hạng còn lại là TRUE hoặc UNKNOWN.
+- B. TRUE: Sai vì một vế đã là FALSE.
+- C. FALSE: Đúng hoàn toàn theo bảng chân trị 3VL của SQL.
+- D. None of the others: Sai.
 \end{question}
 
 \begin{question}{356}
+% [ID gốc: 5.63]
+% [Nguồn: DBI202 Order 5 Q63]
+Given the relation Employee(SSN, FNAME, LNAME, SALARY). Select the right query below to find the employee(s) who has the lowest salary in the company:
+\begin{choices}
+\choice SELECT LNAME, FNAME, SALARY FROM Employee WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee)
+\choice SELECT LNAME, FNAME, SALARY FROM Employee WHERE SALARY >= ALL (SELECT MIN(SALARY) FROM Employee)
+\choice SELECT LNAME, FNAME, SALARY FROM Employee WHERE SALARY < MAX (SELECT MIN(SALARY) FROM Employee)
+\choice None of the others
+\end{choices}
+\textbf{Đáp án:} A
+\textbf{Giải thích:} Đáp án đúng: A — SELECT LNAME, FNAME, SALARY FROM Employee WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee).
+
+Nền tảng kiến thức: Để tìm các bản ghi thỏa mãn một giá trị cực trị (tối thiểu/tối đa) trong SQL, ta thường kết hợp mệnh đề WHERE với một truy vấn con (subquery) chứa hàm tổng hợp (aggregate function) như MIN() hoặc MAX().
+
+Phân tích:
+- Truy vấn con `SELECT MIN(SALARY) FROM Employee` trả về một giá trị vô hướng (scalar value) là mức lương thấp nhất của toàn bộ nhân viên trong bảng Employee.
+- Mệnh đề lọc `WHERE SALARY IN (...)` (hoặc `WHERE SALARY = (...)`) sẽ đối chiếu và lấy ra tất cả nhân viên có mức lương bằng đúng mức lương tối thiểu này. Nếu có nhiều nhân viên cùng có mức lương thấp nhất, câu lệnh vẫn trả về đầy đủ tất cả những người đó.
+
+Đối chiếu phương án:
+- A. `SELECT LNAME, FNAME, SALARY FROM Employee WHERE SALARY IN (SELECT MIN(SALARY) FROM Employee)`: Chính xác về cả cú pháp và ngữ nghĩa lọc giá trị nhỏ nhất.
+- B. `WHERE SALARY >= ALL (SELECT MIN(SALARY) FROM Employee)`: Sai, điều kiện này sẽ lấy tất cả nhân viên có lương lớn hơn hoặc bằng mức lương nhỏ nhất (tức toàn bộ nhân viên có lương hợp lệ trong công ty).
+- C. `WHERE SALARY < MAX (SELECT MIN(SALARY) FROM Employee)`: Sai cú pháp SQL (toán tử `< MAX` không hợp lệ khi so với subquery, phải là `< ALL` hoặc `< ANY` hoặc `< (SELECT MAX...))`.
+- D. None of the others: Sai vì phương án A là truy vấn đúng.
+\end{question}
+
+\begin{question}{357}
 % [ID gốc: 5.64]
 % [Nguồn: DBI202 Order 5 Q64]
 What SQL keyword can be use to return data from two non-related tables as a combined set of rows?
@@ -7943,7 +7973,7 @@ Phân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đ
 Đối chiếu phương án: A. DISTINCT ALL; B. DISTINCT; D. COMBINED. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{357}
+\begin{question}{358}
 % [ID gốc: 5.67]
 % [Nguồn: DBI202 Order 5 Q67]
 This simple SQL queries, uses the three keywords that characterize SQL is ____ ?
@@ -7963,7 +7993,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Count, Sum and Avg; B. Insert, Update and Delete; D. And, Or, and Not. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{358}
+\begin{question}{359}
 % [ID gốc: 5.68]
 % [Nguồn: DBI202 Order 5 Q68]
 To modify the schema of an existing relation use ______
@@ -7983,7 +8013,7 @@ Phân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, nh�
 Đối chiếu phương án: A. Create table; B. Modify table; D. Drop table. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{359}
+\begin{question}{360}
 % [ID gốc: 5.69]
 % [Nguồn: DBI202 Order 5 Q69]
 Choose the incorrect statement about DELETE and TRUNCAT in SQL Server.
@@ -8003,7 +8033,7 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 Đối chiếu phương án: B. DELETE is a DML command and the operations are logged, whereas TRUNCATE is a DDL command and t…; C. DELETE removes records and records each deletion in the transaction log whereas TRUNCATE deall…; D. TRUNCATE is generally considered quicker as it makes less use of the transaction log. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{360}
+\begin{question}{361}
 % [ID gốc: 5.74]
 % [Nguồn: DBI202 Order 5 Q74]
 Which command is used to remove a relation from an SQL?
@@ -8023,7 +8053,7 @@ Phân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu ph�
 Đối chiếu phương án: B. Delete; C. Purge; D. Remove. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{361}
+\begin{question}{362}
 % [ID gốc: 5.75]
 % [Nguồn: DBI202 Order 5 Q75]
 In an employee table to include the attributes whose value always have some value which of the following constraint must be used?
@@ -8043,7 +8073,7 @@ Phân tích: NOT NULL là constraint cấm giá trị NULL ở cột, phù hợp
 Đối chiếu phương án: A. Null; C. Unique; D. Distinct. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{362}
+\begin{question}{363}
 % [ID gốc: 5.76]
 % [Nguồn: DBI202 Order 5 Q76]
 Choose the correct statement that belongs to DML.
@@ -8063,7 +8093,7 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 Đối chiếu phương án: B. CREATE, UPDATE, SELECT; C. TRUNCAT, DELETE, UPDATE; D. UPDATE, DELETE, ALTER. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{363}
+\begin{question}{364}
 % [ID gốc: 5.77]
 % [Nguồn: DBI202 Order 5 Q77]
 A Delete command operates on _____ relation.
@@ -8083,7 +8113,7 @@ Phân tích: Một câu lệnh DELETE tác động lên một target table/relat
 Đối chiếu phương án: B. Two; C. Several; D. Null. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{364}
+\begin{question}{365}
 % [ID gốc: 5.78]
 % [Nguồn: DBI202 Order 5 Q78]
 You have a table named Books that has columns named Book Title and Description. There is a full-text index on these columns. You need to return rows from the table in which the word 'computer' exists in either column. Which code segment should you use?
@@ -8103,7 +8133,7 @@ Phân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản g
 Đối chiếu phương án: B. SELECT * FROM Books WHERE Book Title LIKE '\%computer%'; C. SELECT * FROM Books WHERE Book Title = '\%computer%' OR Description = '\%computer%'; D. SELECT * FROM Books WHERE FREETEXT(Book Title, 'computer'). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{365}
+\begin{question}{366}
 % [ID gốc: 5.79]
 % [Nguồn: DBI202 Order 5 Q79]
 In SQL, to update a relation's schema, which one of the following statements can be used?
@@ -8123,7 +8153,7 @@ Phân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, nh�
 Đối chiếu phương án: A. Insert; B. Update; C. Alter. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{366}
+\begin{question}{367}
 % [ID gốc: 5.80]
 % [Nguồn: DBI202 Order 5 Q80]
 The DROP TABLE statement:
@@ -8143,7 +8173,7 @@ Phân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu ph�
 Đối chiếu phương án: A. deletes the table structure only.; C. works whether or not referential integrity constraints would be violated.; D. is not an SQL statement.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{367}
+\begin{question}{368}
 % [ID gốc: 5.81]
 % [Nguồn: DBI202 Order 5 Q81]
 Which of the following aggregate functions does not ignore nulls in its results?
@@ -8163,7 +8193,7 @@ Phân tích: Aggregate function tính một kết quả từ một tập nhiều
 Đối chiếu phương án: A. MIN; B. MAX; D. COUNT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{368}
+\begin{question}{369}
 % [ID gốc: 5.82]
 % [Nguồn: DBI202 Order 5 Q82]
 Which of the following statements is false regarding SQL Correlated sub-queries?
@@ -8183,7 +8213,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: B. Correlated subqueries are used for row-by-row processing.; C. Each subquery is executed once for every row of the outer query.; D. Subqueries always process the innermost query first and the work outward.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{369}
+\begin{question}{370}
 % [ID gốc: 5.83]
 % [Nguồn: DBI202 Order 5 Q83]
 Suppose relation \textbf{R(A, B)} has the following tuples:
@@ -8219,7 +8249,7 @@ Choose the SQL statement to count distinct rows from column B in relation R:
 \textbf{Giải thích:} Trong SQL, cú pháp đếm số giá trị phân biệt (loại bỏ trùng lặp) của một cột là COUNT(DISTINCT cột). Do đó SELECT COUNT(DISTINCT(B)) AS 'total_rows' FROM R; là câu lệnh chính xác.
 \end{question}
 
-\begin{question}{370}
+\begin{question}{371}
 % [ID gốc: 5.84]
 % [Nguồn: DBI202 Order 5 Q84]
 Which statement is used to change the data type of a column named E in table A?
@@ -8239,7 +8269,7 @@ Phân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, nh�
 Đối chiếu phương án: B. ALTER TABLE A ALTER COLUMN E; C. ALTER TABLE A ALTER E [DataType]; D. ALTER TABLE A DROP COLUMN E [DataType]. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{371}
+\begin{question}{372}
 % [ID gốc: 5.85]
 % [Nguồn: DBI202 Order 5 Q85]
 The ability to query data, as well as insert, delete, and alter tuples, is offered by ____
@@ -8259,7 +8289,7 @@ Phân tích: Các hàng dữ liệu của một relation được gọi là tupl
 Đối chiếu phương án: A. TCL (Transaction Control Language); B. DCL (Data Control Language); C. DDL (Data Definition Language). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{372}
+\begin{question}{373}
 % [ID gốc: 5.86]
 % [Nguồn: DBI202 Order 5 Q86]
 Which of the following is correct?
@@ -8279,7 +8309,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. SELECT datepart(DATE, '10-jan-24'); B. SELECT datepart('10-jan-24', DATE); C. SELECT datepart('10-jan-24', DAY). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{373}
+\begin{question}{374}
 % [ID gốc: 5.88]
 % [Nguồn: DBI202 Order 5 Q88]
 You have a column named TelephoneNumber that stores numbers as varchar(20). You need to write a query that returns the first three characters of a telephone number. Which expression should you use?
@@ -8299,7 +8329,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. CHARINDEX('[0-9][0-9][0-9]', TelephoneNumber, 3); B. SUBSTRING (Telephone Number, 3, 1); C. SUBSTRING(TelephoneNumber, 3, 3). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{374}
+\begin{question}{375}
 % [ID gốc: 5.89]
 % [Nguồn: DBI202 Order 5 Q89]
 Which SQL statement selects all rows from table called Contest, with column ContestDate having values greater or equal to May 25,2006?
@@ -8318,7 +8348,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: B. SELECT * FROM Contest GROUPBY ContestDate >= '05/25/2006'.; C. SELECT * FROM Contest WHERE ContestDate = '05/25/2006'.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{375}
+\begin{question}{376}
 % [ID gốc: 5.90]
 % [Nguồn: DBI202 Order 5 Q90]
 The latter clause consists of the keyword followed by a condition about the group.
@@ -8338,7 +8368,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: B. Group-by; C. Order by; D. Where. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{376}
+\begin{question}{377}
 % [ID gốc: 5.91]
 % [Nguồn: DBI202 Order 5 Q91]
 In MS-SQL Server, which of the following is true about join operator?
@@ -8359,7 +8389,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 Đối chiếu phương án: B. Equi-join; C. Natural join; D. Outer join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{377}
+\begin{question}{378}
 % [ID gốc: 5.92]
 % [Nguồn: DBI202 Order 5 Q92]
 UPDATE 
@@ -8381,7 +8411,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Where; C. In; D. Select. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{378}
+\begin{question}{379}
 % [ID gốc: 5.93]
 % [Nguồn: DBI202 Order 5 Q93]
 Which one of the following SQL statements returns the name of the employee (employeename, dept_code,
@@ -8402,7 +8432,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Select employeename, dept_code, salary From employee Where employee.salary in (select (salary)…; C. Select employeename, dept_code, salary From employee Where employee.salary in (select Max(sala…; D. Select employeename, dept_code, salary From employee Where employee.salary =(select Max(salary…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{379}
+\begin{question}{380}
 % [ID gốc: 5.94]
 % [Nguồn: DBI202 Order 5 Q94]
 Insert into Students (32, N'lona Bush', N'Female');In the given query which of the keyword has to be inserted ?
@@ -8422,7 +8452,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Into; B. Set; C. Where. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{380}
+\begin{question}{381}
 % [ID gốc: 5.95]
 % [Nguồn: DBI202 Order 5 Q95]
 Foreign key constraints are created by using the " "keyword to refer to the primary key of another table.
@@ -8442,7 +8472,7 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 Đối chiếu phương án: A. Refer; C. Referential; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{381}
+\begin{question}{382}
 % [ID gốc: 5.107]
 % [Nguồn: DBI202 Order 5 Q107]
 Which of the following belongs to DDL (data definition language)?
@@ -8462,7 +8492,7 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 Đối chiếu phương án: B. Insert, update, delete, select; C. Truncate, select, invoke; D. Deny, create, drop. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{382}
+\begin{question}{383}
 % [ID gốc: 5.108]
 % [Nguồn: DBI202 Order 5 Q108]
 "SELECT TOP 100  FROM  " is the statement and suppose if there are 10 rows in the table then that what will be the result?
@@ -8482,7 +8512,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Return 10 rows with data and 90 blank rows without data; B. Return all the rows and all columns in the table; D. Return error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{383}
+\begin{question}{384}
 % [ID gốc: 5.109]
 % [Nguồn: DBI202 Order 5 Q109]
 The predicate in a WHERE clause can involve Boolean operations such as AND. The result of (TRUE AND UNKNOWN) is ____, (FALSE AND UNKNOWN) is ____, while (UNKNOWN AND UNKNOWN) is ____:
@@ -8501,7 +8531,7 @@ Nền tảng kiến thức: Trong logic ba giá trị (Three-Valued Logic - 3VL)
 - UNKNOWN AND UNKNOWN $\to$ UNKNOWN
 \end{question}
 
-\begin{question}{384}
+\begin{question}{385}
 % [ID gốc: 5.111]
 % [Nguồn: DBI202 Order 5 Q111]
 UPDATE instructor
@@ -8523,7 +8553,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Where; C. In; D. Select. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{385}
+\begin{question}{386}
 % [ID gốc: 5.113]
 % [Nguồn: DBI202 Order 5 Q113]
 In an UPDATE statement, what does the WHERE clause determine?
@@ -8543,7 +8573,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. The order of update; B. The columns to be updated; D. The table to be updated. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{386}
+\begin{question}{387}
 % [ID gốc: 5.121]
 % [Nguồn: DBI202 Order 5 Q121]
 What data type is best suited for Vietnamese name? (in SQL Server)
@@ -8563,7 +8593,7 @@ Phân tích: NVARCHAR lưu văn bản Unicode nên phù hợp với tiếng Vi�
 Đối chiếu phương án: A. Varchar(30); C. Text(30); D. Char(30). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{387}
+\begin{question}{388}
 % [ID gốc: 5.122]
 % [Nguồn: DBI202 Order 5 Q122]
 Assuming UserProfile is a table containing a column Proession which accepts NULL value. What is the result of the below query. SET ANSI_NULLS OFF SELECT Profession FROM UserProfile WHERE (Profession <>NULL)
@@ -8583,7 +8613,7 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 Đối chiếu phương án: A. Gives an error.; B. <> is not an operator in SQL Server; D. None of the above.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{388}
+\begin{question}{389}
 % [ID gốc: 5.123]
 % [Nguồn: DBI202 Order 5 Q123]
 In MS-SQL Server, which of the following is true about join operator?
@@ -8606,7 +8636,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 Đối chiếu phương án: A. Full outer-join; C. Outer join; D. Cartesian join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{389}
+\begin{question}{390}
 % [ID gốc: 5.124]
 % [Nguồn: DBI202 Order 5 Q124]
 In SQL query, choose the correct statement about the order of execution.
@@ -8626,7 +8656,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: B. SELECT - FROM - GROUP BY - WHERE - HAVING - ORDER BY; C. SELECT-FROM-HAVING GROUP BY - WHERE-ORDER BY; D. SELECT-FROM-OREDER BY WHERE HAVING - GROUP BY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{390}
+\begin{question}{391}
 % [ID gốc: 5.125]
 % [Nguồn: DBI202 Order 5 Q125]
 In MS-SQL Server, there are three primary SQL commands (INSERT, UPDATE, and DELETE) to modify data
@@ -8647,7 +8677,7 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 Đối chiếu phương án: B. These commands enable the alteration of data within database tables.; C. Each command has its specific syntax, usage, and allowing you to insert new rows, modifies exi…; D. These commands belong to the Data Manipulation Language (DML) subset of SQL.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{391}
+\begin{question}{392}
 % [ID gốc: 5.131]
 % [Nguồn: DBI202 Order 5 Q131]
 What data type is best suited for a Vietnamese name in SQL Server?
@@ -8669,7 +8699,7 @@ Phân tích: NVARCHAR lưu văn bản Unicode nên phù hợp với tiếng Vi�
 Đối chiếu phương án: A. Varchar(30); C. Text(30); D. Char(30). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{392}
+\begin{question}{393}
 % [ID gốc: 5.132]
 % [Nguồn: DBI202 Order 5 Q132]
 Which one of the following is NOT a DDL command? (Choose 3 answers)
@@ -8691,7 +8721,7 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 Đối chiếu phương án: B. CREATE DATABASE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{393}
+\begin{question}{394}
 % [ID gốc: 5.136]
 % [Nguồn: DBI202 Order 5 Q136]
 In SQL, to update a relation schema, which one of the following statements can be used?
@@ -8713,7 +8743,7 @@ Phân tích: Lược đồ quan hệ ghi tên quan hệ kèm danh sách thuộc 
 Đối chiếu phương án: A. Insert; B. Update; C. Alter. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{394}
+\begin{question}{395}
 % [ID gốc: 5.140]
 % [Nguồn: DBI202 Order 5 Q140]
 A DELETE command operates on how many relations?
@@ -8735,7 +8765,7 @@ Phân tích: Một câu lệnh DELETE tác động lên một target table/relat
 Đối chiếu phương án: B. Two; C. Several; D. Null. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{395}
+\begin{question}{396}
 % [ID gốc: 5.146]
 % [Nguồn: DBI202 Order 5 Q146]
 Suppose relation R(A, B, C, D) has tuples. Which tuples are contained in the result of the query below?<pre>SELECT C, AVG(D) FROM R GROUP BY C HAVING AVG(D) > 1000 ORDER BY C;</pre>
@@ -8749,7 +8779,7 @@ Suppose relation R(A, B, C, D) has tuples. Which tuples are contained in the res
 \textbf{Giải thích:} Filtering grouped tuples with AVG(D) > 1000 yields D.
 \end{question}
 
-\begin{question}{396}
+\begin{question}{397}
 % [ID gốc: 5.147]
 % [Nguồn: DBI202 Order 5 Q147]
 To completely remove a table and its data in SQL, we use:
@@ -8771,7 +8801,7 @@ Phân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu ph�
 Đối chiếu phương án: A. DELETE; C. REMOVE; D. RASE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{397}
+\begin{question}{398}
 % [ID gốc: 5.151]
 % [Nguồn: DBI202 Order 5 Q151]
 Which SQL clause is used to add a new column to an existing table?
@@ -8793,7 +8823,7 @@ Phân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, nh�
 Đối chiếu phương án: A. ADD COLUMN; C. INSERT INTO; D. CREATE COLUMN. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{398}
+\begin{question}{399}
 % [ID gốc: 5.152]
 % [Nguồn: DBI202 Order 5 Q152]
 Which command is used to create a stored procedure in SQL Server?
@@ -8815,7 +8845,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: A. CREATE FUNCTION; B. CREATE TABLE; D. CREATE VIEW. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{399}
+\begin{question}{400}
 % [ID gốc: 5.153]
 % [Nguồn: DBI202 Order 5 Q153]
 Fill in the correct keyword to update the instructor relation.<pre>UPDATE instructor ____ salary = salary * 1.05;</pre>A. WHERE
@@ -8836,7 +8866,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: C. FROM; D. SELECT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{400}
+\begin{question}{401}
 % [ID gốc: 5.155]
 % [Nguồn: DBI202 Order 5 Q155]
 Which SQL command is used to define a table schema?
@@ -8858,7 +8888,7 @@ Phân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, nh�
 Đối chiếu phương án: A. ALTER TABLE; B. SELECT; D. INSERT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{401}
+\begin{question}{402}
 % [ID gốc: 5.156]
 % [Nguồn: DBI202 Order 5 Q156]
 When designing a database for a library system, which constraint ensures that every book has exactly one unique ISBN?
@@ -8880,7 +8910,7 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 Đối chiếu phương án: A. Foreign key constraint; B. NOT NULL constraint; D. Default constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{402}
+\begin{question}{403}
 % [ID gốc: 5.157]
 % [Nguồn: DBI202 Order 5 Q157]
 What is the difference between DELETE and TRUNCATE in SQL?
@@ -8902,7 +8932,7 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 Đối chiếu phương án: B. DELETE is faster and does not generate logs; C. TRUNCATE allows rollback, but DELETE does not; D. TRUNCATE can delete specific rows, while DELETE removes all rows. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{403}
+\begin{question}{404}
 % [ID gốc: 5.161]
 % [Nguồn: DBI202 Order 5 Q161]
 Given two relations: PC(model, speed, ram, hd, type) and Laptop(model, speed, ram, hd, screen, price). Which subquery gets the model of laptops with the same price as any PC?
@@ -8924,7 +8954,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: B. SELECT model FROM Laptop WHERE price = ALL (SELECT price FROM PC);; C. SELECT model FROM Laptop WHERE price > ALL (SELECT price FROM PC);; D. SELECT model FROM Laptop WHERE price < ALL (SELECT price FROM PC);. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{404}
+\begin{question}{405}
 % [ID gốc: 5.166]
 % [Nguồn: DBI202 Order 5 Q166]
 Which function gets the day value (of the month) in SQL?
@@ -8947,7 +8977,7 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 Đối chiếu phương án: A. DAYOFMONTH(date); B. DATE(date); D. MONTHDAY(date); E. None of the above answers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{405}
+\begin{question}{406}
 % [ID gốc: 5.167]
 % [Nguồn: DBI202 Order 5 Q167]
 Assuming UserProfile is a table containing a column Profession which accepts NULL value. What is the result of the below query? SET ANSI_NULLS OFF SELECT Profession FROM UserProfile WHERE (Profession <> NULL)
@@ -8969,7 +8999,7 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 Đối chiếu phương án: A. Gives an error.; B. <> is not an operator in SQL Server; D. None of the above.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{406}
+\begin{question}{407}
 % [ID gốc: 5.172]
 % [Nguồn: DBI202 Order 5 Q172]
 In SQL, to update a relation's schema, which statement can be used?
@@ -8991,7 +9021,7 @@ Phân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, nh�
 Đối chiếu phương án: A. INSERT; B. UPDATE; C. ALTER. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{407}
+\begin{question}{408}
 % [ID gốc: 5.174]
 % [Nguồn: DBI202 Order 5 Q174]
 Which of the following is NOT the OPTIONAL clause in a SELECT statement?
@@ -9013,7 +9043,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. WHERE; B. ORDER BY; D. HAVING. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{408}
+\begin{question}{409}
 % [ID gốc: 5.175]
 % [Nguồn: DBI202 Order 5 Q175]
 Which command is used to remove a relation from SQL?
@@ -9035,7 +9065,7 @@ Phân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu ph�
 Đối chiếu phương án: B. Delete; C. Purge; D. Remove. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{409}
+\begin{question}{410}
 % [ID gốc: 5.179]
 % [Nguồn: DBI202 Order 5 Q179]
 Given two relations: Printer(maker, model, type) PC(model, speed, ram,hd,, price) What does this query return? SELECT maker FROM Product WHERE model NOT IN ( SELECT model FROM PC );
@@ -9057,7 +9087,7 @@ Phân tích: ER diagram mô tả các entity set, thuộc tính và relationship
 Đối chiếu phương án: A. Makers of all devices; B. Makers that also build PCs; D. Makers of PCs only. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{410}
+\begin{question}{411}
 % [ID gốc: 5.180]
 % [Nguồn: DBI202 Order 5 Q180]
 What is the main difference between DELETE and TRUNCATE?
@@ -9079,7 +9109,7 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 Đối chiếu phương án: A. DELETE cannot be undone (ROLLBACK), while TRUNCATE can.; C. DELETE is for tables, while TRUNCATE is for Views.; D. There is no difference.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{411}
+\begin{question}{412}
 % [ID gốc: 5.183]
 % [Nguồn: DBI202 Order 5 Q183]
 In SQL, after grouping data using the GROUP BY clause, which clause is used to filter the groups based on specific conditions?
@@ -9101,7 +9131,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. WHERE; C. GROUP BY; D. WITH. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{412}
+\begin{question}{413}
 % [ID gốc: 5.184]
 % [Nguồn: DBI202 Order 5 Q184]
 What is a NOT NULL constraint?
@@ -9123,7 +9153,7 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 Đối chiếu phương án: A. A constraint that allows only NULL values.; C. A constraint that sets default values to NULL.; D. A constraint that converts NULL values to a specific data type.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{413}
+\begin{question}{414}
 % [ID gốc: 5.185]
 % [Nguồn: DBI202 Order 5 Q185]
 The \% wildcard, when used with the LIKE keyword, represents a string of characters that:
@@ -9146,7 +9176,7 @@ Phân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự v
 Đối chiếu phương án: B. Has a minimum length of 1 character, a maximum length of n characters; C. Has a minimum length of 1 character, a maximum length of 255 characters; D. Has a minimum length of 1 character, a maximum length of 256 characters; E. None of the above answers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{414}
+\begin{question}{415}
 % [ID gốc: 5.187]
 % [Nguồn: DBI202 Order 5 Q187]
 Consider two relations MovieStar(name, address, gender, birthdate) and MovieExec(name, address, cert, netWorth). You want the names and addresses of all female movie stars who are also movie executives with a net worth over $10,000,000. What is the correct statement?
@@ -9168,7 +9198,7 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 Đối chiếu phương án: A. SELECT name, address FROM MovieStar WHERE gender = 'F' UNION SELECT name, address FROM MovieEx…; C. SELECT name, address FROM MovieStar WHERE gender = 'F' EXCEPT SELECT name, address FROM MovieE…; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{415}
+\begin{question}{416}
 % [ID gốc: 5.193]
 % [Nguồn: DBI202 Order 5 Q193]
 Given the table Orders(order_id, customer_id, amount), which SQL query returns the customer with the lowest total order amount?
@@ -9190,7 +9220,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. SELECT TOP 1 customer_id FROM Orders GROUP BY customer_id ORDER BY SUM(amount) DESC;; C. SELECT customer_id FROM Orders WHERE amount = MIN(amount);; D. SELECT customer_id, MAX(amount) FROM Orders;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{416}
+\begin{question}{417}
 % [ID gốc: 5.195]
 % [Nguồn: DBI202 Order 5 Q195]
 Which one of the following is NOT a DDL command?
@@ -9212,7 +9242,7 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 Đối chiếu phương án: B. CREATE DATABASE; C. INSERT; D. USE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{417}
+\begin{question}{418}
 % [ID gốc: 5.198]
 % [Nguồn: DBI202 Order 5 Q198]
 Regarding the difference between WHERE and HAVING in SQL, which of the following is true?
@@ -9234,7 +9264,7 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 Đối chiếu phương án: A. WHERE filters data on aggregated values, HAVING filters on non-aggregated ones.; B. WHERE is written after GROUP BY, while HAVING comes before GROUP BY.; D. Both HAVING and WHERE are written before GROUP BY, and HAVING comes before WHERE.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{418}
+\begin{question}{419}
 % [ID gốc: 5.199]
 % [Nguồn: DBI202 Order 5 Q199]
 With SQL, how do you select all records from a table named "Customers" where the value of the column "FirstName" ends with an "a"?
@@ -9256,7 +9286,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. SELECT * FROM Customers WHERE FirstName = 'a'; B. SELECT * FROM Customers WHERE FirstName LIKE 'a%'; D. SELECT * FROM Customers WHERE FirstName = '\%a%'. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{419}
+\begin{question}{420}
 % [ID gốc: 5.200]
 % [Nguồn: DBI202 Order 5 Q200]
 What does the ON UPDATE CASCADE option do in SQL Server when defined for a foreign key constraint?
@@ -9278,7 +9308,7 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 Đối chiếu phương án: B. Automatically deletes the foreign key row when the referenced row is updated; C. Prevents the update of foreign key values; D. Sets the foreign key value to NULL when the referenced primary key is updated. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{420}
+\begin{question}{421}
 % [ID gốc: 5.204]
 % [Nguồn: DBI202 Order 5 Q204]
 In SQL, after grouping data using the GROUP BY clause, the ______ clause is used to filter the groups based on specific conditions.
@@ -9300,7 +9330,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Where; C. Group by; D. With. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{421}
+\begin{question}{422}
 % [ID gốc: 5.206]
 % [Nguồn: DBI202 Order 5 Q206]
 In SQL query, choose the correct statement about the logical order of execution.
@@ -9322,7 +9352,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: B. SELECT - FROM - GROUP BY - WHERE - HAVING - ORDER BY; C. SELECT - FROM - HAVING - GROUP BY - WHERE - ORDER BY; D. SELECT - FROM - ORDER BY - WHERE - HAVING - GROUP BY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{422}
+\begin{question}{423}
 % [ID gốc: 5.207]
 % [Nguồn: DBI202 Order 5 Q207]
 In a relational database, which SQL command is used to modify the structure of an existing table?
@@ -9344,7 +9374,7 @@ Phân tích: ALTER TABLE thay đổi định nghĩa bảng đã tồn tại, nh�
 Đối chiếu phương án: A. UPDATE; C. MODIFY; D. CHANGE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{423}
+\begin{question}{424}
 % [ID gốc: 5.211]
 % [Nguồn: DBI202 Order 5 Q211]
 Which of the following SQL statements returns all rows from Cars where year is greater than 2019?
@@ -9366,7 +9396,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: B. SELECT * FROM Cars HAVING year > 2019;; C. SELECT * FROM Cars WHEN year > 2019;; D. SELECT * FROM Cars WHERE year => 2019;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{424}
+\begin{question}{425}
 % [ID gốc: 5.212]
 % [Nguồn: DBI202 Order 5 Q212]
 What is the value of the query: SELECT 'Agnes' + NULL + 'Allison'
@@ -9388,7 +9418,7 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 Đối chiếu phương án: A. Agnes; B. Allison; D. Agnes Allison. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{425}
+\begin{question}{426}
 % [ID gốc: 5.214]
 % [Nguồn: DBI202 Order 5 Q214]
 The ORDER BY clause can only be used in cases ______
@@ -9410,7 +9440,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. GROUP BY queries; C. HAVING queries; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{426}
+\begin{question}{427}
 % [ID gốc: 5.217]
 % [Nguồn: DBI202 Order 5 Q217]
 In an employee table, to ensure an attribute always has a value, which constraint must be used?
@@ -9432,7 +9462,7 @@ Phân tích: NOT NULL là constraint cấm giá trị NULL ở cột, phù hợp
 Đối chiếu phương án: A. NULL; C. UNIQUE; D. DISTINCT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{427}
+\begin{question}{428}
 % [ID gốc: 5.218]
 % [Nguồn: DBI202 Order 5 Q218]
 Suppose we need to sort all students in the STUDENTS(id, name, age) table in descending order of name and descending order of age. Which command should we use?
@@ -9455,7 +9485,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. SELECT * FROM Students ORDER BY name, age DESC; C. Both A and B are correct; D. Both A and B are wrong; E. This request cannot be fulfilled. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{428}
+\begin{question}{429}
 % [ID gốc: 5.219]
 % [Nguồn: DBI202 Order 5 Q219]
 While executing a join operation between two tables, what type of join returns all rows from the left table and matched rows from the right table?
@@ -9477,7 +9507,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 Đối chiếu phương án: A. Inner Join; B. Right Join; C. Full Outer Join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{429}
+\begin{question}{430}
 % [ID gốc: 5.222]
 % [Nguồn: DBI202 Order 5 Q222]
 Suppose relation R1(A, B) and relation R2(C, A) each have tuples. Which tuples are contained in the result of the query below?<pre>SELECT R1.B, R2.C FROM R1 RIGHT JOIN R2 ON R1.A = R2.A;</pre>
@@ -9491,7 +9521,7 @@ Suppose relation R1(A, B) and relation R2(C, A) each have tuples. Which tuples a
 \textbf{Giải thích:} RIGHT JOIN preserves all tuples from R2.
 \end{question}
 
-\begin{question}{430}
+\begin{question}{431}
 % [ID gốc: 5.223]
 % [Nguồn: DBI202 Order 5 Q223]
 Which keyword is used in SQL to filter grouped results?
@@ -9513,7 +9543,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. WHERE; B. TOP; C. GROUP BY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{431}
+\begin{question}{432}
 % [ID gốc: 5.224]
 % [Nguồn: DBI202 Order 5 Q224]
 In SQL, what happens when you use a RIGHT JOIN between two tables with unmatched records in the left table?
@@ -9535,7 +9565,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 Đối chiếu phương án: A. All records from the left table are returned.; B. Only matching records are returned.; C. NULL values are filled for unmatched rows from the left.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{432}
+\begin{question}{433}
 % [ID gốc: 5.225]
 % [Nguồn: DBI202 Order 5 Q225]
 Which of the following is used to delete rows where "model" is "ford" from the Cars table?
@@ -9557,7 +9587,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: B. DELETE Cars WHERE model = 'ford';; C. DELETE FROM Cars WITH TIE model IS 'ford';; D. DELETE model = 'ford' WHERE Cars;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{433}
+\begin{question}{434}
 % [ID gốc: 5.226]
 % [Nguồn: DBI202 Order 5 Q226]
 How many joins are required to join 6 tables in a straight chain?
@@ -9579,7 +9609,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 Đối chiếu phương án: A. 4; C. 6; D. 12. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{434}
+\begin{question}{435}
 % [ID gốc: 5.227]
 % [Nguồn: DBI202 Order 5 Q227]
 Which statement best describes the DELETE command?
@@ -9600,7 +9630,7 @@ Phân tích: DELETE loại bỏ các hàng thỏa điều kiện WHERE; bỏ WHE
 Đối chiếu phương án: A. Deletes all rows and cannot be rolled back; B. Deletes the table structure and all its data. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{435}
+\begin{question}{436}
 % [ID gốc: 5.228]
 % [Nguồn: DBI202 Order 5 Q228]
 What is the result of a CROSS JOIN in SQL?
@@ -9622,7 +9652,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 Đối chiếu phương án: A. Union of tables; B. Intersection of tables; D. Natural join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{436}
+\begin{question}{437}
 % [ID gốc: 5.229]
 % [Nguồn: DBI202 Order 5 Q229]
 The \% wildcard when used with the LIKE keyword is used to represent a string of characters:
@@ -9645,7 +9675,7 @@ Phân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự v
 Đối chiếu phương án: B. Has a minimum length of 1 character, a maximum length of n characters.; C. Has a minimum length of 1 character, a maximum length of 255 characters.; D. Has a minimum length of 1 character, a maximum length of 256 characters.; E. None of the above answers.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{437}
+\begin{question}{438}
 % [ID gốc: 5.232]
 % [Nguồn: DBI202 Order 5 Q232]
 Suppose relation \(R(A, B)\) has tuples: \((3, 5), (3, 9), (a, 7), (h, 8), (2, 9)\). Which tuples are contained in the result of the query below?
@@ -9670,7 +9700,7 @@ Phân tích: Các hàng dữ liệu của một relation được gọi là tupl
 Đối chiếu phương án: B. (3, 5); (3, 9); (h, 8); D. (2, 9). Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{438}
+\begin{question}{439}
 % [ID gốc: 5.233]
 % [Nguồn: DBI202 Order 5 Q233]
 Which of the following SQL statements returns only matching records between Customers and SalesInvoice based on custID?
@@ -9692,7 +9722,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 Đối chiếu phương án: A. SELECT * FROM Customers LEFT JOIN SalesInvoice ON Customers.custID = SalesInvoice.custID;; C. SELECT * FROM Customers RIGHT JOIN SalesInvoice ON Customers.custID = SalesInvoice.custID;; D. SELECT * FROM Customers FULL JOIN SalesInvoice ON Customers.custID = SalesInvoice.custID;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{439}
+\begin{question}{440}
 % [ID gốc: 5.234]
 % [Nguồn: DBI202 Order 5 Q234]
 What does the following SQL query return? SELECT name FROM Products WHERE price > 100;
@@ -9714,7 +9744,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. All product names with price less than 100; B. All product names regardless of price; D. Syntax error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{440}
+\begin{question}{441}
 % [ID gốc: 5.235]
 % [Nguồn: DBI202 Order 5 Q235]
 The Data Definition Language (DDL) in SQL is used to:
@@ -9736,7 +9766,7 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 Đối chiếu phương án: A. Insert, update, and delete data from a database; C. Query and retrieve data from a database; D. Manage user permissions and access rights. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{441}
+\begin{question}{442}
 % [ID gốc: 5.236]
 % [Nguồn: DBI202 Order 5 Q236]
 Given two relations: R(A, B, C, D) with the primary key is A, S(D, E, F) with the unique key is D. How to make a R.D foreign key referencing S.D?
@@ -9758,7 +9788,7 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 Đối chiếu phương án: A. ADD CONSTRAINT fk_R_D FOREIGN KEY R(D) REFERENCES S(D); B. ALTER TABLE R ALTER CONSTRAINT fk_R_D FOREIGN KEY (D) REFERENCES S(D); C. Can not add a foreign key in the R table because the S's D column is not the primary key.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{442}
+\begin{question}{443}
 % [ID gốc: 5.239]
 % [Nguồn: DBI202 Order 5 Q239]
 In the query below, which keyword must be inserted?<pre>INSERT INTO Students ____ (32, N'Iona Bush', N'Female');</pre>
@@ -9772,7 +9802,7 @@ In the query below, which keyword must be inserted?<pre>INSERT INTO Students ___
 \textbf{Giải thích:} Standard SQL INSERT syntax requires the VALUES keyword before column data.
 \end{question}
 
-\begin{question}{443}
+\begin{question}{444}
 % [ID gốc: 5.250]
 % [Nguồn: DBI202 Order 5 Q250]
 Which SQL statements will correctly update the salary of all employees by 10\% where job title is 'Manager'?
@@ -9794,7 +9824,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: B. UPDATE Employees WHERE job = 'Manager' SET salary = salary * 1.1;; C. UPDATE Employees SET salary *= 1.1 WHERE job = 'Manager';; D. MODIFY Employees SET salary = salary + salary*0.1 WHERE job = 'Manager';. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{444}
+\begin{question}{445}
 % [ID gốc: 5.252]
 % [Nguồn: DBI202 Order 5 Q252]
 Given a relation: R(A,B,C,D) with the key is A, the foreign key is D And the query: "select A, count(D) from R group by D" What is the output of the query?
@@ -9816,7 +9846,7 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 Đối chiếu phương án: A. It will return all rows from the R table; B. It returns only the A column where the value in D column is grouped; D. There is no GROUP BY with a HAVING clause.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{445}
+\begin{question}{446}
 % [ID gốc: 5.257]
 % [Nguồn: DBI202 Order 5 Q257]
 Which of the following is NOT true about an aggregate function?
@@ -9838,7 +9868,7 @@ Phân tích: Aggregate function tính một kết quả từ một tập nhiều
 Đối chiếu phương án: B. It performs a calculation on a set of values and returns a single value.; C. Aggregate functions such as COUNT(*) ignore null values.; D. Aggregate functions are often used with the GROUP BY clause of the SELECT statement.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{446}
+\begin{question}{447}
 % [ID gốc: 5.260]
 % [Nguồn: DBI202 Order 5 Q260]
 Which of the following queries deletes employees who are not assigned to any department?
@@ -9860,7 +9890,7 @@ Phân tích: NULL biểu thị thiếu/không biết/không áp dụng, không p
 Đối chiếu phương án: B. DELETE FROM Employees WHERE DepartmentID = '';; C. DELETE FROM Employees WHERE DepartmentID = 0;; D. DELETE FROM Employees WHERE DepartmentID IS NOT NULL;. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{447}
+\begin{question}{448}
 % [ID gốc: 5.267]
 % [Nguồn: DBI202 Order 5 Q267]
 Which of the following wildcard characters matches any sequence of zero or more characters in a string comparison in SQL?
@@ -9882,7 +9912,7 @@ Phân tích: Trong LIKE của SQL Server, `%` khớp 0 hoặc nhiều ký tự v
 Đối chiếu phương án: A. &; B. $; C. _. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{448}
+\begin{question}{449}
 % [ID gốc: 5.269]
 % [Nguồn: DBI202 Order 5 Q269]
 Which of the following is NOT a type of join?
@@ -9904,7 +9934,7 @@ Phân tích: Join ghép các bộ thỏa điều kiện. Inner join loại bộ 
 Đối chiếu phương án: A. Inner join; B. Outer join; C. Cross join. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{449}
+\begin{question}{450}
 % [ID gốc: 5.271]
 % [Nguồn: DBI202 Order 5 Q271]
 Suppose you have a table Employees (id, name, salary). To increase the salary of employees with a salary below 5000 by 10%, which of the following statements is correc
@@ -9928,7 +9958,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. UPDATE Employees SET salary = salary + 0.1 WHERE salary < 5000; C. UPDATE Employees SET salary = salary * 0.1 WHERE salary < 5000; D. UPDATE Employees SET salary = 1.1 WHERE salary < 5000. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{450}
+\begin{question}{451}
 % [ID gốc: 5.273]
 % [Nguồn: DBI202 Order 5 Q273]
 Which of the following is NOT a type of SQL constraint?
@@ -9950,7 +9980,7 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 Đối chiếu phương án: A. PRIMARY KEY; B. FOREIGN KEY; D. CHECK. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{451}
+\begin{question}{452}
 % [ID gốc: 15.49]
 % [Nguồn: DBI202 Order 15 Q49]
 Domain constraints, functional dependency and referential integrity are special forms of:
@@ -9972,7 +10002,7 @@ Phân tích: Khóa ngoại buộc giá trị tham chiếu phải khớp một kh
 Đối chiếu phương án: A. Foreign key; B. Primary key; D. Referential constraint. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{452}
+\begin{question}{453}
 % [ID gốc: 17.1]
 % [Nguồn: DBI202 Order 17 Q1]
 Choose a right answer
@@ -9992,7 +10022,7 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 Đối chiếu phương án: A. When a privilege is granted, it cannot be revoked; B. Privileges cannot be granted on a view; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{453}
+\begin{question}{454}
 % [ID gốc: 17.2]
 % [Nguồn: DBI202 Order 17 Q2]
 Choose the right statement to grant the INSERT and SELECT privileges on table Movies to users torn' and jerry'
@@ -10016,7 +10046,7 @@ Phân tích: GRANT cấp một quyền xác định trên đối tượng cho pr
 \newpage
 \section*{Chương 7: Constraints and Triggers}
 
-\begin{question}{454}
+\begin{question}{455}
 % [ID gốc: 1.25]
 % [Nguồn: DBI202 Order 1 Q25]
 Which of the following is the appropriate characteristic of a database?
@@ -10036,7 +10066,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: A. Because a database is created to suit the format of the data, it cannot respond flexibly to da…; B. The procedure for making backups is complicated.; C. It is difficult to share data between operations due to an exclusive control function.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{455}
+\begin{question}{456}
 % [ID gốc: 3.54]
 % [Nguồn: DBI202 Order 3 Q54]
 You need to develop an application to manage university courses, which requires structured data (tables, rows, columns), strict consistency, complex queries, and enforcement of ACID properties. Which data model is most appropriate?
@@ -10058,7 +10088,7 @@ Phân tích: Data model là bộ khái niệm dùng để mô tả cấu trúc d
 Đối chiếu phương án: B. Document-based data model (e.g. MongoDB, Cassandra, CouchDB); C. Key-value data model (e.g. Redis, DynamoDB, Riak); D. Hierarchical data model. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{456}
+\begin{question}{457}
 % [ID gốc: 5.1]
 % [Nguồn: DBI202 Order 5 Q1]
 What is an SQL virtual table that is constructed from other tables?
@@ -10078,7 +10108,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. Just another table; C. A relation; D. Query results. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{457}
+\begin{question}{458}
 % [ID gốc: 5.35]
 % [Nguồn: DBI202 Order 5 Q35]
 The SQL operations that are performed while a connection is active form a ____
@@ -10098,7 +10128,7 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 Đối chiếu phương án: B. Catalog; C. Module; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{458}
+\begin{question}{459}
 % [ID gốc: 5.37]
 % [Nguồn: DBI202 Order 5 Q37]
 A ____ is the framework under which data may exist and SQL operations on data may be executed
@@ -10118,7 +10148,7 @@ Phân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đ
 Đối chiếu phương án: B. SQL Statement; C. SQL Parser; D. SQL Optimizer. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{459}
+\begin{question}{460}
 % [ID gốc: 5.42]
 % [Nguồn: DBI202 Order 5 Q42]
 What is a view?
@@ -10138,7 +10168,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. A view is a database diagram; B. A view is a special stored procedure executed when certain event occurs; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{460}
+\begin{question}{461}
 % [ID gốc: 5.43]
 % [Nguồn: DBI202 Order 5 Q43]
 An updatable view is a view that allows data modification through INSERT, UPDATE, and DELETE statements. When an update is made to an updatable view, the changes are translated into the underlying base table.
@@ -10159,7 +10189,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. Drop Movies relation also delete the view ParamountMovies; B. Drop ParamountMovies also delete Movies; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{461}
+\begin{question}{462}
 % [ID gốc: 5.56]
 % [Nguồn: DBI202 Order 5 Q56]
 Choose a right answer.
@@ -10179,7 +10209,7 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 Đối chiếu phương án: A. A SOL environment is the framework under which data may exist and SQL operations on data may b…; C. Within a SQL environment are two special kinds of processes: SQL clients and SQL servers.; D. A SQL environment is a DBMS running at some installation.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{462}
+\begin{question}{463}
 % [ID gốc: 5.96]
 % [Nguồn: DBI202 Order 5 Q96]
 Which one of the following is not true for a view?
@@ -10199,7 +10229,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: B. A view definition is permanently stored as part of the database.; C. View is a virtual table.; D. View is derived from other tables. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{463}
+\begin{question}{464}
 % [ID gốc: 5.97]
 % [Nguồn: DBI202 Order 5 Q97]
 Which is the SQL statement that creates an updatable view? In this question, all the tables in the SQL
@@ -10220,7 +10250,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. CREATE VIEW Ordered_Product(Product_No) AS SELECT DISTINCT Product_No FROM Order; B. CREATE VIEW Order_List(Order_No, Product_Name, Order_Quantity) AS SELECT Order_No,Product_Name…; C. CREATE VIEW Product_Order(Product_No, Order_Quantity) AS SELECT Product_No,SUM(Order_Quantity)…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{464}
+\begin{question}{465}
 % [ID gốc: 5.112]
 % [Nguồn: DBI202 Order 5 Q112]
 Your database contains a table named Purchases. The table includes a DATETIME column named PurchaseTime that stores the date and time each purchase is made. There is a non-clustered index on the Purchase Time column. The business team wants a report that displays the total number of purchases made on the current day. You need to write a query that will return the correct results in the most efficient manner.Which Transact-SQL query should you use?
@@ -10240,7 +10270,7 @@ Phân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đ
 Đối chiếu phương án: A. SELECT COUNT(*) FROM Purchases WHERE PurchaseTime = CONVERT(DATE, GETDATE()); B. SELECT COUNT(*) FROM Purchases WHERE PurchaseTime = GETDATE(); C. SELECT COUNT(*) FROM Purchases WHERE CONVERT(VARCHAR, PurchaseTime, 112) = CONVERT(VARCHAR, GE…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{465}
+\begin{question}{466}
 % [ID gốc: 5.114]
 % [Nguồn: DBI202 Order 5 Q114]
 Through VIEW, is it possible to update data in the original table (that VIEW sees)?
@@ -10261,7 +10291,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. Always updateable; B. Can never update; D. If the View sees a table, it can be updated; E. All of the mentioned answers are wrong. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{466}
+\begin{question}{467}
 % [ID gốc: 5.115]
 % [Nguồn: DBI202 Order 5 Q115]
 What is the difference between a view and a table in SQL?
@@ -10281,7 +10311,7 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 Đối chiếu phương án: A. Tables can be updated, while the view is displaying data from the query; B. Views can store data permanently, while tables are temporary; D. Views and tables are functionally equivalent in SQL. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{467}
+\begin{question}{468}
 % [ID gốc: 5.126]
 % [Nguồn: DBI202 Order 5 Q126]
 In SQL, what is a view?
@@ -10301,7 +10331,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: B. A physical table containing aggregated data; C. A temporary table used for transactions; D. A stored procedure with read-only access. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{468}
+\begin{question}{469}
 % [ID gốc: 5.137]
 % [Nguồn: DBI202 Order 5 Q137]
 A view's definition can be modified using which statement, while a view's data can be modified using which statement?
@@ -10323,7 +10353,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. ALTER VIEW, ALTER; B. ALTER VIEW, EDIT; D. UPDATE, ALTER VIEW. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{469}
+\begin{question}{470}
 % [ID gốc: 5.170]
 % [Nguồn: DBI202 Order 5 Q170]
 Which SQL statement creates an updatable view?
@@ -10345,7 +10375,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. CREATE VIEW Ordered_Product(Product_No) AS SELECT DISTINCT Product_No FROM "Order"; B. CREATE VIEW Order_List(Order_No, Product_Name, Order_Quantity) AS SELECT Order_No, Product_Nam…; C. CREATE VIEW Product_Order(Product_No, Order_Quantity) AS SELECT Product_No, SUM(Order_Quantity…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{470}
+\begin{question}{471}
 % [ID gốc: 5.171]
 % [Nguồn: DBI202 Order 5 Q171]
 In SQL, a view is a virtual table based on the result-set of an SQL statement. Which statement is NOT correct about a view?
@@ -10367,7 +10397,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: B. The fields in a view are fields from one or more real tables in the database.; C. The database engine recreates the view every time a user queries it.; D. A view always shows up-to-date data.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{471}
+\begin{question}{472}
 % [ID gốc: 5.246]
 % [Nguồn: DBI202 Order 5 Q246]
 Suppose we have defined VIEW ParamountMovies from the Movies table. When we execute the command: DROP TABLE Movies Which of the following statements is correct?
@@ -10389,7 +10419,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. The Movies table goes away, but VIEW ParamountMovies can still be used.; C. The Movies table cannot be dropped because VIEW ParamountMovies still references it.; D. The Movies table cannot be dropped, but VIEW ParamountMovies is dropped.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{472}
+\begin{question}{473}
 % [ID gốc: 5.264]
 % [Nguồn: DBI202 Order 5 Q264]
 Through a VIEW, is it possible to update data in the original table (that the VIEW sees)?
@@ -10412,7 +10442,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. Always updateable; B. Can never update; D. If the VIEW sees a table, it can be updated; E. All of the mentioned answers are wrong. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{473}
+\begin{question}{474}
 % [ID gốc: 7.1]
 % [Nguồn: DBI202 Order 7 Q1]
 Which files are created automatically by SQL Server when you create a new database?
@@ -10435,7 +10465,7 @@ Phân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản g
 Đối chiếu phương án: A. Primary data file and secondary data file; C. Index file and log file; D. Secondary data file and log file; E. Backup file and metadata file. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{474}
+\begin{question}{475}
 % [ID gốc: 8.1]
 % [Nguồn: DBI202 Order 8 Q1]
 The most useful index on a relation is an index on its key. This is because:
@@ -10455,7 +10485,7 @@ Phân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản g
 Đối chiếu phương án: A. The index on non key attribute(s) runs slower; C. The index on non key attribute(s) makes update operations to the relation more complex and tim…; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{475}
+\begin{question}{476}
 % [ID gốc: 8.2]
 % [Nguồn: DBI202 Order 8 Q2]
 What structure can you implement for the database to speed up table reads?
@@ -10475,7 +10505,7 @@ Phân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản g
 Đối chiếu phương án: B. triggers; C. store-procedures; D. synonyms. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{476}
+\begin{question}{477}
 % [ID gốc: 8.3]
 % [Nguồn: DBI202 Order 8 Q3]
 Often, a DBMS allows us to build a single index on multiple attributes. This type of index takes values for several attributes and efficiently finds the tuples with the given values for these attributes. (P.343)
@@ -10497,7 +10527,7 @@ Phân tích: Các hàng dữ liệu của một relation được gọi là tupl
 Đối chiếu phương án: A. only one; B. two; C. three. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{477}
+\begin{question}{478}
 % [ID gốc: 8.4]
 % [Nguồn: DBI202 Order 8 Q4]
 Which SQL statement is used to remove an existing index from a table?
@@ -10517,7 +10547,7 @@ Phân tích: DROP TABLE loại bỏ định nghĩa bảng cùng dữ liệu ph�
 Đối chiếu phương án: B. REMOVE INDEX; C. DELETE INDEX; D. UNINDEX TABLE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{478}
+\begin{question}{479}
 % [ID gốc: 8.5]
 % [Nguồn: DBI202 Order 8 Q5]
 What is not the purpose of the index in MS-SQL Server?
@@ -10537,7 +10567,7 @@ Phân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản g
 Đối chiếu phương án: B. To enhance the query performance; C. To provide an index to a record; D. To perform fast in searching. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{479}
+\begin{question}{480}
 % [ID gốc: 8.6]
 % [Nguồn: DBI202 Order 8 Q6]
 What is NOT a purpose of the index in MS SQL Server?
@@ -10559,7 +10589,7 @@ Phân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản g
 Đối chiếu phương án: B. To enhance query performance; C. To provide an index to a record; D. To perform fast searching. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{480}
+\begin{question}{481}
 % [ID gốc: 8.7]
 % [Nguồn: DBI202 Order 8 Q7]
 Select the most correct answer:
@@ -10581,7 +10611,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. An index is not a data structure used to speed access to tuples of a relation, given values of…; B. The key to an index cannot be any attribute or set of attributes, and need not be the key to t…; C. We can think of the index as a binary search tree of (key, locations) pairs in which a key is…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{481}
+\begin{question}{482}
 % [ID gốc: 8.10]
 % [Nguồn: DBI202 Order 8 Q10]
 What is an index?
@@ -10603,7 +10633,7 @@ Phân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản g
 Đối chiếu phương án: B. An index is the same as an alias.; C. An index is a special way to join 2 or more tables.; D. An index is a database row attribute that speeds up data search within a table.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{482}
+\begin{question}{483}
 % [ID gốc: 8.11]
 % [Nguồn: DBI202 Order 8 Q11]
 Which SQL command is used to create a non-clustered index on the EmployeeName column in the Employees table?
@@ -10625,7 +10655,7 @@ Phân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản g
 Đối chiếu phương án: A. CREATE INDEX EmployeeName_Index ON Employees(EmployeeName);; C. CREATE PRIMARY KEY INDEX EmployeeName_Index ON Employees(EmployeeName);; D. CREATE CLUSTERED INDEX EmployeeName_Index ON Employees(EmployeeName);. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{483}
+\begin{question}{484}
 % [ID gốc: 8.12]
 % [Nguồn: DBI202 Order 8 Q12]
 Which indexes can be automatically created by defining constraints in a table? (Choose two correct answers)
@@ -10647,7 +10677,7 @@ Phân tích: Index lưu cấu trúc tra cứu phụ để tìm vị trí bản g
 Đối chiếu phương án: B. CHECK; D. FOREIGN KEY. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{484}
+\begin{question}{485}
 % [ID gốc: 16.3]
 % [Nguồn: DBI202 Order 16 Q3]
 Which of the following statements is the most correct?
@@ -10667,7 +10697,7 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 Đối chiếu phương án: A. Poorly designed indexes and a lack of indexes are primary sources of database application bott…; B. Designing efficient indexes is paramount to achieve good database and application performance; C. The selection of the right indexes for a database and its workload is a complex balancing act…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{485}
+\begin{question}{486}
 % [ID gốc: 16.4]
 % [Nguồn: DBI202 Order 16 Q4]
 A materialized view is a database object that contains the results of a query. It is a precomputed data set that can be used to replicate data to other locations, eliminating the need to run expensive queries every time you retrieve data from a database. Since materialized views store their output data, querying them is faster than running queries directly on base relations (tables).
@@ -10694,7 +10724,7 @@ Phân tích: View là quan hệ ảo được định nghĩa bằng truy vấn t
 Đối chiếu phương án: A. Insert a new tuple into Studio; B. Delete a tuple from Studio; D. None of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{486}
+\begin{question}{487}
 % [ID gốc: 16.5]
 % [Nguồn: DBI202 Order 16 Q5]
 What is the main disadvantage of having too many indexes on a table?
@@ -10714,7 +10744,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Improved query performance; C. Enhanced data integrity; D. Fast data modification operations. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{487}
+\begin{question}{488}
 % [ID gốc: 16.8]
 % [Nguồn: DBI202 Order 16 Q8]
 In query optimization, why is it beneficial for the database engine to use indexes?
@@ -10735,7 +10765,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. To reduce table size; B. To enforce foreign key constraints. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{488}
+\begin{question}{489}
 % [ID gốc: 16.9]
 % [Nguồn: DBI202 Order 16 Q9]
 In which scenario would denormalization be considered a good design choice?
@@ -10757,7 +10787,7 @@ Phân tích: Denormalization chủ động chấp nhận một phần dư thừa
 Đối chiếu phương án: A. When maximizing disk usage is a priority; B. When minimizing data redundancy is the main goal; D. When multiple developers are working on schema design. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{489}
+\begin{question}{490}
 % [ID gốc: 18.1]
 % [Nguồn: DBI202 Order 18 Q1]
 A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does "Durable" mean?
@@ -10777,7 +10807,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. "Durable" means that: Transactions provide an "all-or-nothing" proposition, stating that each…; B. "Durable" means that: Transactions must not violate any integrity constraints during its execu…; D. All of the others. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{490}
+\begin{question}{491}
 % [ID gốc: 18.2]
 % [Nguồn: DBI202 Order 18 Q2]
 A database transaction, by definition, must be ACID (atomic, consistent, isolated and durable). What does "Isolated" mean?
@@ -10797,7 +10827,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. "Isolated" means that: Transactions provide an "all-or-nothing" proposition, stating that each…; B. "Isolated" means that: Transactions must not violate any integrity constraints during its exec…; C. "Isolated" means that: Transactions that have committed will survive permanently. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{491}
+\begin{question}{492}
 % [ID gốc: 18.3]
 % [Nguồn: DBI202 Order 18 Q3]
 Regardless of whatever any other transaction is doing, a transaction must be able to continue with the exact same data set it started with.
@@ -10818,7 +10848,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Atomic; C. Consistency; D. Durability. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{492}
+\begin{question}{493}
 % [ID gốc: 18.4]
 % [Nguồn: DBI202 Order 18 Q4]
 Choose the in-correct statement:
@@ -10838,7 +10868,7 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 Đối chiếu phương án: A. In SQL Server, every DML operation is a transaction regardless of whether it has a BEGIN TRANS…; B. COMMITTING a transaction makes permanent the changes resulting from all SQL statements in the…; C. ROLLING back a transaction rejects any of the changes resulting from the SQL statements in the…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{493}
+\begin{question}{494}
 % [ID gốc: 18.5]
 % [Nguồn: DBI202 Order 18 Q5]
 How many properties we must use to measure the quality of a transaction?
@@ -10852,7 +10882,7 @@ How many properties we must use to measure the quality of a transaction?
 \textbf{Giải thích:} A transaction is measured by the 4 ACID properties: Atomicity, Consistency, Isolation, Durability.
 \end{question}
 
-\begin{question}{494}
+\begin{question}{495}
 % [ID gốc: 18.6]
 % [Nguồn: DBI202 Order 18 Q6]
 Every row and value must agree with all constraints right after the transaction is complete. The above describes which property of a transaction?
@@ -10872,7 +10902,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Isolation; C. Atomic.; D. Durability. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{495}
+\begin{question}{496}
 % [ID gốc: 18.7]
 % [Nguồn: DBI202 Order 18 Q7]
 What happens if an error occurs during a transaction and it is not explicitly handled or rolled back?
@@ -10892,7 +10922,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. The transaction is automatically committed; C. The database becomes read-only; D. The transaction remains in a pending state. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{496}
+\begin{question}{497}
 % [ID gốc: 18.8]
 % [Nguồn: DBI202 Order 18 Q8]
 The transaction methods is used with the Connection object to save or cancel changes made to the data source.
@@ -10912,7 +10942,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; D. Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{497}
+\begin{question}{498}
 % [ID gốc: 18.9]
 % [Nguồn: DBI202 Order 18 Q9]
 What are the ACID properties of DBMS Transactions?
@@ -10932,7 +10962,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: B. Atomicity, Consistency, Interpolate, Database; C. Atomicity, Consistency, Inconsistent, Durability; D. Automatic, Concurrent, Inconsistent, Deadlock-freedom. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{498}
+\begin{question}{499}
 % [ID gốc: 18.11]
 % [Nguồn: DBI202 Order 18 Q11]
 Which of the following makes the transaction permanent in the database?
@@ -10952,7 +10982,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. View; C. Rollback; D. Flashback. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{499}
+\begin{question}{500}
 % [ID gốc: 18.12]
 % [Nguồn: DBI202 Order 18 Q12]
 In order to undo the work of transaction after last commit which one should be used?
@@ -10972,7 +11002,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. View; B. Commit; D. Flashback. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{500}
+\begin{question}{501}
 % [ID gốc: 18.13]
 % [Nguồn: DBI202 Order 18 Q13]
 The Isolation property in transactions ensures that:
@@ -10994,7 +11024,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Each transaction is encrypted; B. No two transactions run concurrently; D. Only one user accesses the system. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{501}
+\begin{question}{502}
 % [ID gốc: 18.14]
 % [Nguồn: DBI202 Order 18 Q14]
 Which SQL command is used to undo changes made by a transaction?
@@ -11016,7 +11046,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. COMMIT; C. SAVEPOINT; D. UNDO. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{502}
+\begin{question}{503}
 % [ID gốc: 18.17]
 % [Nguồn: DBI202 Order 18 Q17]
 Which property of ACID transactions ensures that a transaction, once committed, remains committed even in the event of a system failure?
@@ -11038,7 +11068,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Atomicity; B. Consistency; C. Isolation. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{503}
+\begin{question}{504}
 % [ID gốc: 18.18]
 % [Nguồn: DBI202 Order 18 Q18]
 Within the context of ACID properties, which property ensures that even if the system crashes during a transaction, the database will eventually reflect either the full completion or the complete rollback of that transaction?
@@ -11060,7 +11090,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: B. Consistency; C. Isolation; D. Durability. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{504}
+\begin{question}{505}
 % [ID gốc: 18.19]
 % [Nguồn: DBI202 Order 18 Q19]
 The transaction methods are used with the Connection object to save or cancel changes made to the data source.
@@ -11082,7 +11112,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; C. Begin Transaction, Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{505}
+\begin{question}{506}
 % [ID gốc: 18.20]
 % [Nguồn: DBI202 Order 18 Q20]
 Which of the following best describes Atomicity in transactions?
@@ -11104,7 +11134,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Transactions run in parallel; B. Transactions are executed step by step; D. Data is stored permanently. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{506}
+\begin{question}{507}
 % [ID gốc: 18.23]
 % [Nguồn: DBI202 Order 18 Q23]
 What is the default behavior if autocommit is ON?
@@ -11126,7 +11156,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Manual COMMIT needed; C. No command is saved; D. Only SELECT works. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{507}
+\begin{question}{508}
 % [ID gốc: 18.24]
 % [Nguồn: DBI202 Order 18 Q24]
 The transaction methods are used with the Connection object to save or cancel changes made to the data source.
@@ -11148,7 +11178,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; D. Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{508}
+\begin{question}{509}
 % [ID gốc: 18.26]
 % [Nguồn: DBI202 Order 18 Q26]
 Which transaction methods are used with the Connection object to save or cancel changes made to the data source?
@@ -11170,7 +11200,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Begin Transaction, Rollback Transaction; B. Begin Transaction, Commit Transaction; D. Commit Transaction, Rollback Transaction. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{509}
+\begin{question}{510}
 % [ID gốc: 18.27]
 % [Nguồn: DBI202 Order 18 Q27]
 In the context of a relational database, what is the correct term for "A set of changes that must all be made together"?
@@ -11192,7 +11222,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. Consistency; B. Concurrency; D. Atom. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{510}
+\begin{question}{511}
 % [ID gốc: 18.28]
 % [Nguồn: DBI202 Order 18 Q28]
 In SQL, what does the acronym ACID stand for concerning transactions?
@@ -11214,7 +11244,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: B. Association, Concurrency, Integrity, Database; C. Aggregate, Criteria, Index, Delete; D. All Columns, Insertion, Deletion. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{511}
+\begin{question}{512}
 % [ID gốc: 18.29]
 % [Nguồn: DBI202 Order 18 Q29]
 In the context of a banking application, which of the following best represents a transaction that violates atomicity? (Choose two answers)
@@ -11236,7 +11266,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: B. A funds transfer request fails before any account is updated, so neither the debit nor the cre…; C. Both the debit from Account A and the credit to Account B are completed successfully.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{512}
+\begin{question}{513}
 % [ID gốc: 18.30]
 % [Nguồn: DBI202 Order 18 Q30]
 Consider the statement: "Once money is transferred, it won't disappear due to a power outage." In database transactions, which property does this statement exemplify?
@@ -11258,7 +11288,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: B. Isolation; C. Consistency; D. Atomicity. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{513}
+\begin{question}{514}
 % [ID gốc: 18.31]
 % [Nguồn: DBI202 Order 18 Q31]
 Which of the following accurately represents the purpose of a transaction in a database system? Choose two answers.
@@ -11280,7 +11310,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: B. To define access permissions; C. To ensure a sequence of operations is completed fully or not at all; D. To allow concurrent modifications without restrictions. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{514}
+\begin{question}{515}
 % [ID gốc: 19.1]
 % [Nguồn: DBI202 Order 19 Q1]
 Three properties of a lock in DBMS are:
@@ -11304,7 +11334,7 @@ Phân tích: Concurrency control điều phối lịch xen kẽ để tránh ano
 Đối chiếu phương án: B. Granularity: the type of the lock; B. (a) and (b) and (d) are true. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{515}
+\begin{question}{516}
 % [ID gốc: 19.2]
 % [Nguồn: DBI202 Order 19 Q2]
 Two concurrent executing transactions T1 and T2 are allowed to update the same record in an uncontrolled manner. In such a scenario. The following problem may not occur if database system has no concurrency module and allows concurrent execution of above two transactions.Which of the following is correct in this case?
@@ -11324,7 +11354,7 @@ Phân tích: Concurrency control điều phối lịch xen kẽ để tránh ano
 Đối chiếu phương án: A. Transaction failure; B. Dirty read problem; D. Inconsistent database state. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{516}
+\begin{question}{517}
 % [ID gốc: 19.3]
 % [Nguồn: DBI202 Order 19 Q3]
 According to the technology deployed by the database management system, which of the following is correct?
@@ -11344,7 +11374,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: B. Cursors are used to maintain transactional integrity and consistency.; C. Procedures are used to maintain transactional integrity and consistency.; D. Functions are used to maintain transactional integrity and consistency.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{517}
+\begin{question}{518}
 % [ID gốc: 19.4]
 % [Nguồn: DBI202 Order 19 Q4]
 The deadlock state can be changed back to stable state by using
@@ -11365,7 +11395,7 @@ Phân tích: Concurrency control điều phối lịch xen kẽ để tránh ano
 Đối chiếu phương án: A. Delete; B. Deadlock; C. Commit. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{518}
+\begin{question}{519}
 % [ID gốc: 19.5]
 % [Nguồn: DBI202 Order 19 Q5]
 Two concurrently executing transactions T1 and T2 are allowed to update the same record in an uncontrolled manner. If the database system has no concurrency module, which of the following problems may occur?
@@ -11387,7 +11417,7 @@ Phân tích: Concurrency control điều phối lịch xen kẽ để tránh ano
 Đối chiếu phương án: A. Transaction failure; B. Dirty read problem; D. Inconsistent database state. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{519}
+\begin{question}{520}
 % [ID gốc: 19.6]
 % [Nguồn: DBI202 Order 19 Q6]
 The deadlock state can be changed back to a stable state by using which statement?
@@ -11409,7 +11439,7 @@ Phân tích: Concurrency control điều phối lịch xen kẽ để tránh ano
 Đối chiếu phương án: A. DELETE; B. DEADLOCK; C. COMMIT. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{520}
+\begin{question}{521}
 % [ID gốc: 19.9]
 % [Nguồn: DBI202 Order 19 Q9]
 In database transactions, which isolation level is most restrictive?
@@ -11431,7 +11461,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. READ UNCOMMITTED; B. READ COMMITTED; C. REPEATABLE READ. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{521}
+\begin{question}{522}
 % [ID gốc: 19.10]
 % [Nguồn: DBI202 Order 19 Q10]
 The deadlock state can be changed back to a stable state by using _ _ _ _ _ statement.
@@ -11453,7 +11483,7 @@ Phân tích: Concurrency control điều phối lịch xen kẽ để tránh ano
 Đối chiếu phương án: A. Delete; B. Deadlock; C. Commit. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{522}
+\begin{question}{523}
 % [ID gốc: 23.1]
 % [Nguồn: DBI202 Order 23 Q1]
 Transaction processing is associated with everything below except.
@@ -11477,7 +11507,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 \newpage
 \section*{Chương 8: Views and Indexes}
 
-\begin{question}{523}
+\begin{question}{524}
 % [ID gốc: 1.11]
 % [Nguồn: DBI202 Order 1 Q11]
 In the three-tier architecture, the database tier's function is to
@@ -11497,7 +11527,7 @@ Phân tích: Kiến trúc ba tầng tách giao diện (presentation), xử lý n
 Đối chiếu phương án: A. All of the others.; B. Execute the business logic of the organization operating the database.; C. Manage the interactions with the user.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{524}
+\begin{question}{525}
 % [ID gốc: 5.19]
 % [Nguồn: DBI202 Order 5 Q19]
 Choose the correct statement.
@@ -11517,7 +11547,7 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 Đối chiếu phương án: A. You can remove a trigger by dropping it or by dropping the trigger table.; B. The syntax to remove a trigger is: DROP TRIGGER; C. Use ALTER TRIGGER to change the definition of a trigger. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{525}
+\begin{question}{526}
 % [ID gốc: 5.36]
 % [Nguồn: DBI202 Order 5 Q36]
 In PSM (Persistent Stored Modules), the difference between a stored procedure and a function is that:
@@ -11537,7 +11567,7 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 Đối chiếu phương án: B. We can declare local variables in a function.; C. Loops are not allowed in a function.; D. All of the others.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{526}
+\begin{question}{527}
 % [ID gốc: 5.44]
 % [Nguồn: DBI202 Order 5 Q44]
 Why we should use stored procedures?
@@ -11558,7 +11588,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: A. They allow faster execution; B. They can reduce network traffic; C. They allow modular programming; D. They can be used as a security mechanism. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{527}
+\begin{question}{528}
 % [ID gốc: 5.58]
 % [Nguồn: DBI202 Order 5 Q58]
 Exception handler in PSM is defined as follows:
@@ -11580,7 +11610,7 @@ Phân tích: Với lựa chọn tổng hợp, không chọn theo cảm tính: ki
 Đối chiếu phương án: A. UNDO; B. EXIT; D. CONTINUE. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{528}
+\begin{question}{529}
 % [ID gốc: 5.65]
 % [Nguồn: DBI202 Order 5 Q65]
 In SQL, what is the primary advantage of using stored procedures?
@@ -11600,7 +11630,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: A. They allow for the creation of tables; B. They enhance security by restricting access to data; D. They are more efficient than regular SQL queries. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{529}
+\begin{question}{530}
 % [ID gốc: 5.66]
 % [Nguồn: DBI202 Order 5 Q66]
 Which type of user-defined function in SQL returns a single value?
@@ -11620,7 +11650,7 @@ Phân tích: Aggregate function tính một kết quả từ một tập nhiều
 Đối chiếu phương án: B. Table-valued function; C. Inline function; D. Aggregate function. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{530}
+\begin{question}{531}
 % [ID gốc: 5.70]
 % [Nguồn: DBI202 Order 5 Q70]
 Which of the following is true about stored procedure in MS-SQL Server?
@@ -11640,7 +11670,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: B. They are stored in Rules folder; C. They do not need to have a unique name; D. They are same as void function. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{531}
+\begin{question}{532}
 % [ID gốc: 5.71]
 % [Nguồn: DBI202 Order 5 Q71]
 ______ A variable is local, and its value is not preserved by the DBMS after a run-ning of the function or
@@ -11661,7 +11691,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: B. RETURN; C. CALL; D. EXEC. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{532}
+\begin{question}{533}
 % [ID gốc: 5.72]
 % [Nguồn: DBI202 Order 5 Q72]
 What is NOT true about the cursor in SQL?
@@ -11681,7 +11711,7 @@ Phân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ n�
 Đối chiếu phương án: B. The cursor allows users to process data from a result set, one row at a time.; C. Cursors are an alternative to commands, which operate on all rows in a result set at the same…; D. Unlike commands, cursors can be used to update data on a row-by-row basis.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{533}
+\begin{question}{534}
 % [ID gốc: 5.73]
 % [Nguồn: DBI202 Order 5 Q73]
 How can you delete a user-defined function in SQL?
@@ -11701,7 +11731,7 @@ Phân tích: DROP FUNCTION xóa đối tượng hàm do người dùng định n
 Đối chiếu phương án: A. DELETE FUNCTION function_name; B. REMOVE FUNCTION function_name; D. ERASE FUNCTION function_name. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{534}
+\begin{question}{535}
 % [ID gốc: 5.98]
 % [Nguồn: DBI202 Order 5 Q98]
 Triggers are stored blocks of code that have to be called in order to operate.
@@ -11719,7 +11749,7 @@ Phân tích: Phân biệt tệp dữ liệu chứa trang/bảng với tệp tran
 Đối chiếu phương án: A. True. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{535}
+\begin{question}{536}
 % [ID gốc: 5.99]
 % [Nguồn: DBI202 Order 5 Q99]
 In SQL, when does a BEFORE INSERT trigger fire
@@ -11739,7 +11769,7 @@ Phân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự 
 Đối chiếu phương án: A. Before the execution of a SELECT statement; C. Before a transaction is committed; D. Before a table is dropped. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{536}
+\begin{question}{537}
 % [ID gốc: 5.100]
 % [Nguồn: DBI202 Order 5 Q100]
 In SQL, what is the purpose of the CLOSE statement in relation to cursors?
@@ -11759,7 +11789,7 @@ Phân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ n�
 Đối chiếu phương án: A. To close the database connection; C. To close the transaction; D. To close the result set. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{537}
+\begin{question}{538}
 % [ID gốc: 5.101]
 % [Nguồn: DBI202 Order 5 Q101]
 Which SQL statement is used to declare a cursor?
@@ -11779,7 +11809,7 @@ Phân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ n�
 Đối chiếu phương án: A. OPEN; C. CREATE CURSOR; D. BEGIN CURSOR. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{538}
+\begin{question}{539}
 % [ID gốc: 5.102]
 % [Nguồn: DBI202 Order 5 Q102]
 How is User-defined function different from Store Procedure?
@@ -11799,7 +11829,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: A. User-defined functions do not have input parameters, Store Procedures do; C. Store Procedure does not have return results, User-defined function does; D. All of the mentioned answers are incorrect. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{539}
+\begin{question}{540}
 % [ID gốc: 5.103]
 % [Nguồn: DBI202 Order 5 Q103]
 How to execute a procedure
@@ -11820,7 +11850,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: B. exe name_sp; C. call name_sp; D. All the answers above; E. a and b are correct. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{540}
+\begin{question}{541}
 % [ID gốc: 5.104]
 % [Nguồn: DBI202 Order 5 Q104]
 A stored procedure in SQL is a
@@ -11840,7 +11870,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: A. Block of functions; C. Group of distinct SQL statements; D. None of the mentioned. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{541}
+\begin{question}{542}
 % [ID gốc: 5.105]
 % [Nguồn: DBI202 Order 5 Q105]
 When is it recommended to use a cursor in SQL?
@@ -11860,7 +11890,7 @@ Phân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ n�
 Đối chiếu phương án: A. Always, as cursors are the most efficient way to process data; C. Only when creating complex joins between tables; D. Never, as set-based operations are always more efficient. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{542}
+\begin{question}{543}
 % [ID gốc: 5.106]
 % [Nguồn: DBI202 Order 5 Q106]
 How can you invoke a user-defined function in a SQL query?
@@ -11880,7 +11910,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Using the EXECUTE statement; B. Using the CALL statement; D. Using the RUN statement. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{543}
+\begin{question}{544}
 % [ID gốc: 5.116]
 % [Nguồn: DBI202 Order 5 Q116]
 Which of the following is not mentioned how does a local variable is defined using T-SQL?
@@ -11900,7 +11930,7 @@ Phân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đ
 Đối chiếu phương án: B. A local variable is defined using T-SQL by using statement "DECLARE".; C. When a variable is first declared, its value is set to NULL. To assign a value to a variable,…; D. The data type of local variable is declared after its name and assigned a system-supplied or u…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{544}
+\begin{question}{545}
 % [ID gốc: 5.117]
 % [Nguồn: DBI202 Order 5 Q117]
 A/An ___ is a statement gives the user a number of different options in the event, condition, and action parts
@@ -11920,7 +11950,7 @@ Phân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự 
 Đối chiếu phương án: B. Stored-function; C. Index; D. Stored-procedure. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{545}
+\begin{question}{546}
 % [ID gốc: 5.118]
 % [Nguồn: DBI202 Order 5 Q118]
 Which of the following describes an SQL cursor?
@@ -11940,7 +11970,7 @@ Phân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ n�
 Đối chiếu phương án: C. A field within a database; B. is a precompiled collection of one or more SQL statements that can be executed as a single unit; D. Cursors are not related to SQL. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{546}
+\begin{question}{547}
 % [ID gốc: 5.119]
 % [Nguồn: DBI202 Order 5 Q119]
 How many types of variables are there in Stored Procedure
@@ -11960,7 +11990,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: A. Default variable and input variable; B. Default variable and output variable; D. Local variables and global variables. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{547}
+\begin{question}{548}
 % [ID gốc: 5.127]
 % [Nguồn: DBI202 Order 5 Q127]
 What are the different events in Triggers?
@@ -11980,7 +12010,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Select, Insert; B. Select, Update; C. Select, Commit. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{548}
+\begin{question}{549}
 % [ID gốc: 5.128]
 % [Nguồn: DBI202 Order 5 Q128]
 Which of the following methods fetch data from cursor to access data?
@@ -12000,7 +12030,7 @@ Phân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ n�
 Đối chiếu phương án: B. First, last, next; C. First, last, next, prior; D. First, absolute, relative. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{549}
+\begin{question}{550}
 % [ID gốc: 5.129]
 % [Nguồn: DBI202 Order 5 Q129]
 When does the Deleted temporary trigger table become populated?
@@ -12020,7 +12050,7 @@ Phân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự 
 Đối chiếu phương án: A. With DELETE and INSERT triggers; B. With DELETE triggers only; C. With DELETE, UPDATE, and INSERT triggers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{550}
+\begin{question}{551}
 % [ID gốc: 5.130]
 % [Nguồn: DBI202 Order 5 Q130]
 Which of the following is used to define code that is fired when certain actions or event occur?
@@ -12040,7 +12070,7 @@ Phân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ n�
 Đối chiếu phương án: B. You use an application Cursor to fire when certain actions or event occur.; C. You use an application Replace to fire when certain actions or event occur.; D. You use an application Keyword to fire when certain actions or event occur.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{551}
+\begin{question}{552}
 % [ID gốc: 5.133]
 % [Nguồn: DBI202 Order 5 Q133]
 Which of the following is not a typical trigger action?
@@ -12062,7 +12092,7 @@ Phân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự 
 Đối chiếu phương án: A. Insert; C. Update; D. Delete. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{552}
+\begin{question}{553}
 % [ID gốc: 5.139]
 % [Nguồn: DBI202 Order 5 Q139]
 Which of the following is NOT mentioned on how a local variable is defined using T-SQL?
@@ -12084,7 +12114,7 @@ Phân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đ
 Đối chiếu phương án: B. A local variable is defined using T-SQL by using statement "DECLARE".; C. When a variable is first declared, its value is set to NULL. To assign a value to a variable,…; D. The data type of local variable is declared after its name and assigned a system-supplied or u…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{553}
+\begin{question}{554}
 % [ID gốc: 5.149]
 % [Nguồn: DBI202 Order 5 Q149]
 When does the Inserted temporary trigger table become populated?
@@ -12106,7 +12136,7 @@ Phân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự 
 Đối chiếu phương án: B. With DELETE triggers only; C. With INSERT, UPDATE, and DELETE triggers; D. With UPDATE and DELETE triggers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{554}
+\begin{question}{555}
 % [ID gốc: 5.163]
 % [Nguồn: DBI202 Order 5 Q163]
 Which of the following is FALSE about database triggers?
@@ -12128,7 +12158,7 @@ Phân tích: DDL (Data Definition Language) khai báo/thay đổi cấu trúc nh
 Đối chiếu phương án: A. It automatically runs when an event occurs in the database server; B. DML triggers are frequently used for enforcing business rules and data integrity; C. The same trigger action cannot be defined for more than one user action (for example, INSERT a…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{555}
+\begin{question}{556}
 % [ID gốc: 5.164]
 % [Nguồn: DBI202 Order 5 Q164]
 Which of the following is used to define code that is fired when certain actions or events occur?
@@ -12150,7 +12180,7 @@ Phân tích: Cursor cho phép duyệt kết quả theo từng hàng và chỉ n�
 Đối chiếu phương án: B. You use an application Cursor to fire when certain actions or events occur.; C. You use an application Replace to fire when certain actions or events occur.; D. You use an application Keyword to fire when certain actions or events occur.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{556}
+\begin{question}{557}
 % [ID gốc: 5.176]
 % [Nguồn: DBI202 Order 5 Q176]
 In which line of the following code is the error? CREATE TRIGGER trigger1 --1 ON dbo.EMPLOYEE -- 2 AFTER FOR INSERT AS -- 3 BEGIN -- 4 INSERT INTO EMPLOYEE BACKUP -- 5 SELECT * FROM INSERTED -- 6 END -- 7
@@ -12174,7 +12204,7 @@ Phân tích: Đọc truy vấn theo các giai đoạn logic: FROM/JOIN tạo d�
 Đối chiếu phương án: A. Line 1; B. Line 2; D. Line 5; E. Line 6 F. There are no lines in error. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{557}
+\begin{question}{558}
 % [ID gốc: 5.182]
 % [Nguồn: DBI202 Order 5 Q182]
 The CREATE TRIGGER statement is used to create a trigger. The ____ clause specifies the table name on which the trigger is to be attached. The ____ specifies that this is an AFTER INSERT trigger.
@@ -12196,7 +12226,7 @@ Phân tích: Trigger là hành động do DBMS tự kích hoạt khi một sự 
 Đối chiếu phương án: A. for insert, on; C. for, insert; D. None of the mentioned. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{558}
+\begin{question}{559}
 % [ID gốc: 5.186]
 % [Nguồn: DBI202 Order 5 Q186]
 How can you pass parameters to a stored procedure in SQL Server?
@@ -12218,7 +12248,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: B. Using ?parameter_name = value; C. Using :parameter_name = value; D. Using param_name = value. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{559}
+\begin{question}{560}
 % [ID gốc: 5.192]
 % [Nguồn: DBI202 Order 5 Q192]
 Consider a recursive CTE with OPTION (MAXRECURSION 100) that would generate 101 levels. What is the result of executing this code?
@@ -12240,7 +12270,7 @@ Phân tích: Trong SQL Server, MAXRECURSION đặt giới hạn mức đệ quy 
 Đối chiếu phương án: A. 101 rows will be returned with no error.; B. 10,001 rows will be returned with no error.; D. 10,001 rows will be returned with a maximum recursion error.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{560}
+\begin{question}{561}
 % [ID gốc: 5.202]
 % [Nguồn: DBI202 Order 5 Q202]
 Which of the following is NOT correct about how a local variable is defined using T-SQL?
@@ -12262,7 +12292,7 @@ Phân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đ
 Đối chiếu phương án: B. A local variable is defined using T-SQL with the statement DECLARE.; C. When a variable is first declared, its value is set to NULL. To assign a value, use the SET st…; D. The data type of a local variable is declared after its name, assigned a system-supplied or us…. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{561}
+\begin{question}{562}
 % [ID gốc: 5.209]
 % [Nguồn: DBI202 Order 5 Q209]
 Which of the following is used to invoke a procedure in SQL?
@@ -12282,7 +12312,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: B. SELECT; C. PERFORM; D. SHOW. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{562}
+\begin{question}{563}
 % [ID gốc: 5.213]
 % [Nguồn: DBI202 Order 5 Q213]
 Which of the following is the correct way to execute a stored procedure?
@@ -12304,7 +12334,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: B. EXECUTE SelectAllCustomers 'London', 'WA11DP' OUTPUT; C. EXEC @City = 'London', @PostalCode = 'WA11DP'; D. EXECUTE SelectAllCustomers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{563}
+\begin{question}{564}
 % [ID gốc: 5.215]
 % [Nguồn: DBI202 Order 5 Q215]
 What makes stored procedures faster than sending a Transact-SQL statement to SQL Server?
@@ -12326,7 +12356,7 @@ Phân tích: Trong T-SQL, biến cục bộ do người dùng khai báo bắt đ
 Đối chiếu phương án: A. They are not faster.; C. The Transact-SQL statements are shorter.; D. There are less commands available, so parsing time is shorter.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{564}
+\begin{question}{565}
 % [ID gốc: 5.220]
 % [Nguồn: DBI202 Order 5 Q220]
 Which of the following statements is true about INSTEAD OF DELETE triggers?
@@ -12348,7 +12378,7 @@ Phân tích: INSTEAD OF DELETE trigger chạy thay cho thao tác DELETE thông t
 Đối chiếu phương án: B. They execute before the standard DELETE operation.; C. They cannot modify the DELETED table.; D. They cannot be used on tables.. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{565}
+\begin{question}{566}
 % [ID gốc: 5.238]
 % [Nguồn: DBI202 Order 5 Q238]
 How do you execute a stored procedure named name_sp?
@@ -12371,7 +12401,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: A. EXECUTE name_sp; B. EXEC name_sp; C. CALL name_sp; D. All of the answers above. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{566}
+\begin{question}{567}
 % [ID gốc: 5.241]
 % [Nguồn: DBI202 Order 5 Q241]
 Can a stored procedure call another stored procedure?
@@ -12393,7 +12423,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: B. No, stored procedures cannot call each other; C. Only if both procedures are in the same schema; D. Only if one procedure is a system procedure. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{567}
+\begin{question}{568}
 % [ID gốc: 5.249]
 % [Nguồn: DBI202 Order 5 Q249]
 Which two statements correctly describe stored procedures? (Choose two correct answers)
@@ -12415,7 +12445,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: B. They are compiled each time they run; D. They replace the need for triggers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{568}
+\begin{question}{569}
 % [ID gốc: 5.254]
 % [Nguồn: DBI202 Order 5 Q254]
 Which is the correct statement about Stored Procedures?
@@ -12437,7 +12467,7 @@ Phân tích: Stored procedure là tập lệnh SQL có tên lưu trong CSDL, đ�
 Đối chiếu phương án: B. It is a single SQL statement used to perform a certain task and works like a function in other…; C. It is a set of SQL statements used to perform many different tasks and works like a function i…; D. a and b are correct. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{569}
+\begin{question}{570}
 % [ID gốc: 5.258]
 % [Nguồn: DBI202 Order 5 Q258]
 Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:
@@ -12471,7 +12501,7 @@ Phân tích: Hàm vô hướng `dbo.GetLaptopPrice(1)` nhận mã model 1 rồi 
 Đối chiếu phương án: A. The average laptop price with model = 1; B. The price of all laptops; D. The model of laptop with price = 1. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{570}
+\begin{question}{571}
 % [ID gốc: 5.263]
 % [Nguồn: DBI202 Order 5 Q263]
 The following SQL statement creates a stored procedure that selects Customers from a particular City with a particular PostalCode from the "Customers" table: CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10) AS BEGIN SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode; END; GO Which of the following is the way to execute a procedure?
@@ -12493,7 +12523,7 @@ Phân tích: NVARCHAR lưu văn bản Unicode nên phù hợp với tiếng Vi�
 Đối chiếu phương án: B. EXECUTE SelectAllCustomers 'London', 'WA11DP' OUTPUT; C. EXEC @City = 'London', @PostalCode = 'WA11DP';; D. EXECUTE SelectAllCustomers. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{571}
+\begin{question}{572}
 % [ID gốc: 5.265]
 % [Nguồn: DBI202 Order 5 Q265]
 The ____ object is used to execute SQL queries and update statements in JDBC.
@@ -12515,7 +12545,7 @@ Phân tích: Trong JDBC, Statement đại diện câu lệnh SQL gửi tới DBM
 Đối chiếu phương án: A. ResultSet; B. Connection; D. CallableStatement. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{572}
+\begin{question}{573}
 % [ID gốc: 18.21]
 % [Nguồn: DBI202 Order 18 Q21]
 In which objects can a Transaction be used?
@@ -12538,7 +12568,7 @@ Phân tích: Đối chiếu đúng thuộc tính ACID được hỏi: atomicity 
 Đối chiếu phương án: A. View, User-defined function; B. User-defined function, Stored Procedure; C. Stored Procedure, Trigger, View; D. User-defined function, Stored Procedure, Trigger. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
 \end{question}
 
-\begin{question}{573}
+\begin{question}{574}
 % [ID gốc: 18.25]
 % [Nguồn: DBI202 Order 18 Q25]
 In which objects can Transaction be used?

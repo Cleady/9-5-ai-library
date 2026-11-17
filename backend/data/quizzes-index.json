@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T17:50:47.850Z",
+  "generatedAt": "2026-11-17T18:05:05.502Z",
   "totalSubjects": 9,
   "totalQuizzes": 120,
   "subjects": [
@@ -352,9 +352,9 @@
       "subjectName": "Database Systems",
       "title": "Chương 6 – The Database Language SQL",
       "order": 6,
-      "durationMin": 261,
+      "durationMin": 263,
       "difficulty": "Medium",
-      "questionCount": 174
+      "questionCount": 175
     },
     {
       "id": 107,
