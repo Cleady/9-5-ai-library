@@ -1849,15 +1849,15 @@
     {
       "id": 5137,
       "quizId": 103,
-      "text": "Which statement is the best represents Armstrong's Axiom of Decomposition?",
+      "text": "Which statement best represents Armstrong's Rule of Decomposition?",
       "options": [
-        "If A B and A → C, then A → BC",
-        "If A B and B → C, then A → C",
-        "If A B, then AC → BC",
-        "If A B, then B → C"
+        "If \\(A \\to B\\) and \\(A \\to C\\), then \\(A \\to BC\\)",
+        "If \\(A \\to B\\) and \\(B \\to C\\), then \\(A \\to C\\)",
+        "If \\(A \\to B\\), then \\(AC \\to BC\\)",
+        "If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\)"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: C — C. If A B, then AC → BC.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z thì suy ra X → Z. Phải kiểm tra hai phụ thuộc nối tiếp cùng vế giữa Y; các tiên đề phản xạ và tăng trưởng mô tả quy tắc khác.\n\nĐối chiếu phương án: A. If A B and A → C, then A → BC; B. If A B and B → C, then A → C; D. If A B, then B → C. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+      "explanation": "Đáp án đúng: D — If \\(A \\to BC\\), then \\(A \\to B\\) and \\(A \\to C\\).\n\nNền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:\n1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu \\(A \\to BC\\) thì suy ra \\(A \\to B\\) và \\(A \\to C\\).\n2. Quy tắc hợp (Union / Additivity Rule): Nếu \\(A \\to B\\) và \\(A \\to C\\) thì suy ra \\(A \\to BC\\).\n3. Tiên đề bắc cầu (Transitivity Axiom): Nếu \\(A \\to B\\) và \\(B \\to C\\) thì suy ra \\(A \\to C\\).\n4. Tiên đề tăng trưởng (Augmentation Axiom): Nếu \\(A \\to B\\) thì suy ra \\(AC \\to BC\\).\n\nPhân tích:\n- Phương án D biểu diễn chính xác Quy tắc phân rã (Decomposition Rule).\n- Phương án A là Quy tắc hợp (Union Rule).\n- Phương án B là Tiên đề bắc cầu (Transitivity Axiom).\n- Phương án C là Tiên đề tăng trưởng (Augmentation Axiom)."
     },
     {
       "id": 5138,

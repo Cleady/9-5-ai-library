@@ -3002,21 +3002,23 @@ Phân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z 
 \begin{question}{137}
 % [ID gốc: 15.26]
 % [Nguồn: DBI202 Order 15 Q26]
-Which statement is the best represents Armstrong's Axiom of Decomposition?
+Which statement best represents Armstrong's Rule of Decomposition?
 \begin{choices}
-\choice If A B and A → C, then A → BC
-\choice If A B and B → C, then A → C
-\choice If A B, then AC → BC
-\choice If A B, then B → C
+\choice If $A \to B$ and $A \to C$, then $A \to BC$
+\choice If $A \to B$ and $B \to C$, then $A \to C$
+\choice If $A \to B$, then $AC \to BC$
+\choice If $A \to BC$, then $A \to B$ and $A \to C$
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Đáp án theo dữ liệu đề: C — C. If A B, then AC → BC.
+\textbf{Giải thích:} Đáp án đúng: D — If $A \to BC$, then $A \to B$ and $A \to C$.
 
-Nền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.
+Nền tảng kiến thức: Hệ tiên đề Armstrong (Armstrong's Axioms) gồm 3 tiên đề cơ bản và các quy tắc dẫn xuất quan trọng:
+1. Quy tắc phân rã (Decomposition / Projectivity Rule): Nếu $A \to BC$ thì suy ra $A \to B$ và $A \to C$.
+2. Quy tắc hợp (Union / Additivity Rule): Nếu $A \to B$ và $A \to C$ thì suy ra $A \to BC$.
+3. Tiên đề bắc cầu (Transitivity Axiom): Nếu $A \to B$ và $B \to C$ thì suy ra $A \to C$.
+4. Tiên đề tăng trưởng (Augmentation Axiom): Nếu $A \to B$ thì suy ra $AC \to BC$.
 
-Phân tích: Tiên đề bắc cầu của Armstrong: nếu X → Y và Y → Z thì suy ra X → Z. Phải kiểm tra hai phụ thuộc nối tiếp cùng vế giữa Y; các tiên đề phản xạ và tăng trưởng mô tả quy tắc khác.
-
-Đối chiếu phương án: A. If A B and A → C, then A → BC; B. If A B and B → C, then A → C; D. If A B, then B → C. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái.
+Phân tích: Phương án D biểu diễn chính xác Quy tắc phân rã (Decomposition Rule). Phương án A là Quy tắc hợp (Union Rule), phương án B là Tiên đề bắc cầu (Transitivity Axiom), và phương án C là Tiên đề tăng trưởng (Augmentation Axiom).
 \end{question}
 
 \begin{question}{138}
