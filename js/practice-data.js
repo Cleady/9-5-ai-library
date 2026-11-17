@@ -9456,8 +9456,8 @@
         "R is not in 2NF",
         "None of the others"
       ],
-      "correctIndex": 2,
-      "explanation": "Xét lược đồ quan hệ \\(R(ABCD)\\) với các phụ thuộc hàm: \\(A \\rightarrow B\\), \\(B \\rightarrow A\\), \\(A \\rightarrow D\\), \\(D \\rightarrow B\\).\r\n- Thuộc tính \\(C\\) không xuất hiện ở bất kỳ vế phải nào của tập phụ thuộc hàm, nên \\(C\\) bắt buộc phải có mặt trong mọi khóa ứng viên (candidate key).\r\n- Tìm các khóa ứng viên: \\(\\{AC\\}^+ = ABCD\\), \\(\\{BC\\}^+ = ABCD\\), \\(\\{DC\\}^+ = ABCD\\). Các khóa ứng viên gồm: \\(\\{AC\\}\\), \\(\\{BC\\}\\), \\(\\{DC\\}\\).\r\n- Xét phụ thuộc hàm \\(A \\rightarrow D\\): Vế trái \\(A\\) là một tập con thực sự (proper subset) của khóa chính/khóa ứng viên \\(\\{AC\\}\\), dẫn đến sự phụ thuộc bộ phận (partial dependency). Vì vậy quan hệ \\(R\\) không đạt dạng chuẩn 2 (R is not in 2NF)."
+      "correctIndex": 0,
+      "explanation": "Xét quan hệ \\(R(ABCD)\\) với tập phụ thuộc hàm: \\(A \\rightarrow B\\), \\(B \\rightarrow A\\), \\(A \\rightarrow D\\), \\(D \\rightarrow B\\).\r\n- Thuộc tính \\(C\\) không xuất hiện ở vế phải của bất kỳ phụ thuộc hàm nào, nên \\(C\\) bắt buộc phải có mặt trong mọi khóa ứng viên (candidate key).\r\n- Tính bao đóng để tìm các khóa ứng viên:\r\n + \\(\\{AC\\}^+ = \\{A, B, C, D\\} \\Rightarrow AC\\) là khóa ứng viên.\r\n + \\(\\{BC\\}^+ = \\{A, B, C, D\\} \\Rightarrow BC\\) là khóa ứng viên.\r\n + \\(\\{DC\\}^+ = \\{A, B, C, D\\} \\Rightarrow DC\\) là khóa ứng viên.\r\n- Tất cả các thuộc tính trong \\(R\\) gồm \\(\\{A, B, C, D\\}\\) đều là thuộc tính khóa (prime attributes).\r\n- Theo định nghĩa dạng chuẩn 3 (3NF): Với mọi phụ thuộc hàm không tầm thường \\(X \\rightarrow Y\\), lược đồ đạt 3NF nếu \\(X\\) là siêu khóa HOẶC mọi thuộc tính trong \\(Y\\) là thuộc tính khóa.\r\n- Do mọi thuộc tính ở vế phải của các phụ thuộc hàm đều là thuộc tính khóa, quan hệ \\(R\\) thỏa mãn dạng chuẩn 3 (R is in 3NF)."
     },
     {
       "id": 5116,
