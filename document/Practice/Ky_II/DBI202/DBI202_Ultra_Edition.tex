@@ -2446,12 +2446,12 @@ Do đó, quan hệ \(H\) chỉ chứa duy nhất 1 bộ là \((3, 5)\). Phương
 \begin{question}{112}
 % [ID gốc: 15.1]
 % [Nguồn: DBI202 Order 15 Q1]
-Given a relation R(A,B,C,D). Which of the followings is trivial?
+Given a relation \(R(A, B, C, D)\). Which of the following dependencies is trivial?
 \begin{choices}
-\choice A->AB
-\choice A->->AB
-\choice A->BCD
-\choice A->->BCD
+\choice \(A \rightarrow AB\)
+\choice \(A \twoheadrightarrow AB\)
+\choice \(A \rightarrow BCD\)
+\choice \(A \twoheadrightarrow BCD\)
 \end{choices}
 \textbf{Đáp án:} D
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: D — D. A->->BCD.
@@ -2489,18 +2489,21 @@ Phân tích: Kiểm tra khóa bằng hai tiêu chí: tập thuộc tính phải 
 \begin{question}{114}
 % [ID gốc: 15.3]
 % [Nguồn: DBI202 Order 15 Q3]
-Consider the following functional dependencies
-a,b -> c,d e,g,h -> f,j
-a,c -> b,d p,q -> r,s
-e,f,g -> h,i s -> t
-f,g -> j q -> u
-g,h -> i
-Which of the following best describes the relation R(e,f,g,h,i,j)?
+Consider the following functional dependencies:
+\(\begin{aligned}
+&a, b \rightarrow c, d &\quad &e, g, h \rightarrow f, j \\
+&a, c \rightarrow b, d &\quad &p, q \rightarrow r, s \\
+&e, f, g \rightarrow h, i &\quad &s \rightarrow t \\
+&f, g \rightarrow j &\quad &q \rightarrow u \\
+&g, h \rightarrow i
+\end{aligned}\)
+
+Which of the following best describes the relation \(R(e, f, g, h, i, j)\)?
 \begin{choices}
-\choice R is in First Normal Form
-\choice R is in Second Normal Form
-\choice R is in Third Normal Form
-\choice R is in Boyce Codd Normal Form
+\choice \(R\) is in First Normal Form (1NF)
+\choice \(R\) is in Second Normal Form (2NF)
+\choice \(R\) is in Third Normal Form (3NF)
+\choice \(R\) is in Boyce-Codd Normal Form (BCNF)
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. R is in First Normal Form.
@@ -2593,10 +2596,10 @@ Phân tích: Phép tập hợp trên quan hệ cần so sánh các tuple theo th
 % [Nguồn: DBI202 Order 15 Q7]
 Which of the following relations is in Boyce-Codd Normal Form (BCNF)?
 \begin{choices}
-\choice R(ABCD) with FD's: BD -> C ; AB -> D ; AC -> B ; BD -> A
-\choice R(ABCD) with FD's: BC -> A ; AD -> C ; CD -> B ; BD -> C
-\choice R(ABCD) with FD's: A -> C ; B -> A ; A -> D ; AD -> C
-\choice R(ABCD) with FD's: A -> D ; C -> A ; D -> B ; AC -> B
+\choice \(R(A, B, C, D)\) with FDs: \(F = \{ BD \rightarrow C, \quad AB \rightarrow D, \quad AC \rightarrow B, \quad BD \rightarrow A \}\)
+\choice \(R(A, B, C, D)\) with FDs: \(F = \{ BC \rightarrow A, \quad AD \rightarrow C, \quad CD \rightarrow B, \quad BD \rightarrow C \}\)
+\choice \(R(A, B, C, D)\) with FDs: \(F = \{ A \rightarrow C, \quad B \rightarrow A, \quad A \rightarrow D, \quad AD \rightarrow C \}\)
+\choice \(R(A, B, C, D)\) with FDs: \(F = \{ A \rightarrow D, \quad C \rightarrow A, \quad D \rightarrow B, \quad AC \rightarrow B \}\)
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. R(ABCD) with FD's: BD -> C ; AB -> D ; AC -> B ; BD -> A.
@@ -2757,12 +2760,12 @@ Phân tích: Decomposition tách một quan hệ thành các quan hệ nhỏ hơ
 \begin{question}{126}
 % [ID gốc: 15.15]
 % [Nguồn: DBI202 Order 15 Q15]
-Given a relation R(A.B.C.D). Which of the followings is trivial?
+Given a relation \(R(A, B, C, D)\). Which of the following dependencies is trivial?
 \begin{choices}
-\choice A->BCD
-\choice A->->BCD
-\choice A->AB
-\choice A->->AB
+\choice \(A \rightarrow BCD\)
+\choice \(A \twoheadrightarrow BCD\)
+\choice \(A \rightarrow AB\)
+\choice \(A \twoheadrightarrow AB\)
 \end{choices}
 \textbf{Đáp án:} B
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: B — B. A->->BCD.
@@ -3418,7 +3421,12 @@ Phân tích: Phân biệt tệp dữ liệu chứa trang/bảng với tệp tran
 \begin{question}{156}
 % [ID gốc: 15.46]
 % [Nguồn: DBI202 Order 15 Q46]
-Consider a relation R(A, B, C, D) and the following rules. Rule 1: If A → C then C → A. Rule 2: If B → C then BC → C. Rule 3: If AB → C then A → C and B → C. Which of the following rules is NOT valid?
+Consider a relation \(R(A, B, C, D)\) and the following rules:
+- Rule 1: If \(A \rightarrow C\) then \(C \rightarrow A\)
+- Rule 2: If \(B \rightarrow C\) then \(BC \rightarrow C\)
+- Rule 3: If \(AB \rightarrow C\) then \(A \rightarrow C\) and \(B \rightarrow C\)
+
+Which of the following rules is NOT valid?
 \begin{choices}
 \choice Only Rule 1
 \choice None of the given rules are valid
@@ -3512,12 +3520,12 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{160}
 % [ID gốc: 15.54]
 % [Nguồn: DBI202 Order 15 Q54]
-Consider a user table with columns ID, NAME, Password, and email. Which functional dependency exists in this table?
+Consider a user table with columns \(\text{ID}\), \(\text{NAME}\), \(\text{Password}\), and \(\text{email}\). Which functional dependency exists in this table?
 \begin{choices}
-\choice ID → NAME
-\choice Password → email
-\choice Password → NAME
-\choice NAME → email
+\choice \(\text{ID} \rightarrow \text{NAME}\)
+\choice \(\text{Password} \rightarrow \text{email}\)
+\choice \(\text{Password} \rightarrow \text{NAME}\)
+\choice \(\text{NAME} \rightarrow \text{email}\)
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. ID → NAME.
@@ -3534,12 +3542,15 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{161}
 % [ID gốc: 15.55]
 % [Nguồn: DBI202 Order 15 Q55]
-Consider a relation R(A,B,C,D) with functional dependencies: A → C, AB → A, C → CB, AD → ABC Which of the following is trivial functional dependency of the relation?
+Consider a relation \(R(A, B, C, D)\) with functional dependencies:
+\(F = \{ A \rightarrow C, \quad AB \rightarrow A, \quad C \rightarrow CB, \quad AD \rightarrow ABC \}\)
+
+Which of the following is a trivial functional dependency of the relation?
 \begin{choices}
-\choice AB → A
-\choice AD → ABC
-\choice C → CB
-\choice AB → A, C→ CB
+\choice \(AB \rightarrow A\)
+\choice \(AD \rightarrow ABC\)
+\choice \(C \rightarrow CB\)
+\choice \(AB \rightarrow A, \quad C \rightarrow CB\)
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: A — A. AB → A.
@@ -3690,7 +3701,10 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{168}
 % [ID gốc: 15.67]
 % [Nguồn: DBI202 Order 15 Q67]
-A relation R(X, Y, Z) has functional dependencies XY → Z and Z → Y. Assuming X, Y, Z are single attributes and {X, Y} is the only candidate key, what is the highest normal form that R satisfies?
+A relation \(R(X, Y, Z)\) has functional dependencies:
+\(F = \{ XY \rightarrow Z, \quad Z \rightarrow Y \}\)
+
+Assuming \(X, Y, Z\) are single attributes and \(\{X, Y\}\) is the only candidate key, what is the highest normal form that \(R\) satisfies?
 \begin{choices}
 \choice First Normal Form (1NF) only
 \choice Second Normal Form (2NF) but not Third Normal Form (3NF)
@@ -3850,20 +3864,21 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{175}
 % [ID gốc: 15.76]
 % [Nguồn: DBI202 Order 15 Q76]
-Consider a relation R(A, B, C, D, E, F) with the following set of functional dependencies:
-$$F = \{ AB \rightarrow C, \quad C \rightarrow D, \quad D \rightarrow E, \quad E \rightarrow F \}$$
+Consider a relation \(R(A, B, C, D, E, F)\) with the following set of functional dependencies:
+\(F = \{ AB \rightarrow C, \quad C \rightarrow D, \quad D \rightarrow E, \quad E \rightarrow F \}\)
+
 Consider the following candidate functional dependencies:
 - \(f_1: A \rightarrow D\)
 - \(f_2: AB \rightarrow D\)
 - \(f_3: AB \rightarrow E\)
 - \(f_4: AB \rightarrow F\)
 
-Based on Armstrong's inference rules, which of the functional dependencies can be derived from F?
+Based on Armstrong's inference rules, which of the functional dependencies can be derived from \(F\)?
 \begin{choices}
-\choice f1, f3, f4
-\choice f1, f2, f3, f4
-\choice f2, f3, f4
-\choice f1, f2, f4
+\choice \(f_1, f_3, f_4\)
+\choice \(f_1, f_2, f_3, f_4\)
+\choice \(f_2, f_3, f_4\)
+\choice \(f_1, f_2, f_4\)
 \end{choices}
 \textbf{Đáp án:} C
 \textbf{Giải thích:} Áp dụng luật bắc cầu (Transitivity) của hệ tiên đề Armstrong: từ AB -> C và C -> D suy ra AB -> D (f2); từ AB -> D và D -> E suy ra AB -> E (f3); từ AB -> E và E -> F suy ra AB -> F (f4). Phụ thuộc hàm f1: A -> D không thể suy diễn được vì thiếu thuộc tính B để suy ra C.
@@ -4010,12 +4025,12 @@ Phân tích: Khóa là thuộc tính hoặc tập thuộc tính dùng để nh�
 \begin{question}{182}
 % [ID gốc: 15.89]
 % [Nguồn: DBI202 Order 15 Q89]
-In a functional dependency A → B, what can be said about B?
+In a functional dependency \(A \rightarrow B\), what can be said about \(B\)?
 \begin{choices}
-\choice B is also a superkey
-\choice B is a determinant
-\choice B is functionally dependent on A
-\choice B is a foreign key
+\choice \(B\) is also a superkey
+\choice \(B\) is a determinant
+\choice \(B\) is functionally dependent on \(A\)
+\choice \(B\) is a foreign key
 \end{choices}
 \textbf{Đáp án:} C
 \textbf{Giải thích:} Đáp án theo dữ liệu đề: C — C. B is functionally dependent on A.
@@ -4377,12 +4392,12 @@ Phân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X 
 \begin{question}{198}
 % [ID gốc: 15.114]
 % [Nguồn: DBI202 Order 15 Q114]
-Suppose that we have a relation $R(A, B, C, D)$ and functional dependency: $D \to BC$. Which of the following is equivalent to the given dependency?
+Suppose that we have a relation \(R(A, B, C, D)\) and functional dependency: \(D \rightarrow BC\). Which of the following is equivalent to the given dependency?
 \begin{choices}
-\choice $D \to B$ and $D \to C$
-\choice $C \to B$ and $C \to B$
-\choice $D \to B$ and $B \to C$
-\choice $C \to D$ and $C \to B$
+\choice \(D \rightarrow B\) and \(D \rightarrow C\)
+\choice \(C \rightarrow B\) and \(C \rightarrow B\)
+\choice \(D \rightarrow B\) and \(B \rightarrow C\)
+\choice \(C \rightarrow D\) and \(C \rightarrow B\)
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} Đáp án đúng: A — $D \to B$ and $D \to C$.

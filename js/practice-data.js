@@ -9038,16 +9038,16 @@
     {
       "id": 5084,
       "quizId": 102,
-      "text": "For the following relation:\n\n\\(\\textbf{Student}\\)\n\\(\\begin{array}{|c|c|c|c|}\n\\hline\n\\text{ID} & \\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{SE1234} & \\text{Le Hong Phong} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{SE1235} & \\text{Le Hong Hanh} & \\text{HCM} & \\text{Female} \\\\\n\\hline\n\\text{SE1236} & \\text{Tran Binh Trong} & \\text{HN} & \\text{Male} \\\\\n\\hline\n\\end{array}\\)\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
+      "text": "For the following relation:\n\n\\(\\textbf{Student}\\)\n$\\beginarray|c|c|c|c|\n\\hline\n\\textID & \\textName & \\textCity & \\textGender \n\n\\hline\n\\textSE1234 & \\textLe Hong Phong & \\textHCM & \\textMale \n\n\\hline\n\\textSE1235 & \\textLe Hong Hanh & \\textHCM & \\textFemale \n\n\\hline\n\\textSE1236 & \\textTran Binh Trong & \\textHN & \\textMale \n\n\\hline\n\\endarray$\n\nUse Algebraic query language to list all name and city of students in HCM and Male?",
       "options": [
-            "\\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
-            "\\(\\pi_{\\text{Name}, \\text{City}}[\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})]\\)",
-            "\\(\\sigma_{\\text{Name}, \\text{City}}(\\pi_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
-            "None of the others"
+        "\\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
+        "\\(\\pi_{\\text{Name}, \\text{City}}[\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})]\\)",
+        "\\(\\sigma_{\\text{Name}, \\text{City}}(\\pi_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)",
+        "None of the others"
       ],
       "correctIndex": 0,
-      "explanation": "**Đáp án đúng: A. \\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)**\n\nYêu cầu đề bài: Lấy danh sách tên (\\text{Name}) và thành phố (\\text{City}) của các sinh viên sống tại HCM và có giới tính Male.\n- **Phép chọn (Selection \\(\\sigma\\))**: Lọc các bộ dữ liệu thỏa mãn điều kiện kết hợp: \\(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})\\).\n- **Phép chiếu (Projection \\(\\pi\\))**: Chiếu lấy các thuộc tính cần hiển thị trên kết quả đã lọc: \\(\\pi_{\\text{Name}, \\text{City}}(...)\\).\n- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \\(\\pi_{\\text{Danh_sách_cột}}(\\sigma_{\\text{Điều_kiện}}(\\text{Bảng}))\\).\n\nDo đó phương án **A** là chính xác. Phương án B dùng sai ngoặc vuông \\([...]\\), phương án C đảo ngược thứ tự chiếu trước khi chọn làm mất thuộc tính \\(\\text{Gender}\\)."
-},
+      "explanation": "**Đáp án đúng: A. \\(\\pi_{\\text{Name}, \\text{City}}(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student}))\\)**\n\nYêu cầu đề bài: Lấy danh sách tên (\\textName) và thành phố (\\textCity) của các sinh viên sống tại HCM và có giới tính Male.\n- **Phép chọn (Selection \\(\\sigma\\))**: Lọc các bộ dữ liệu thỏa mãn điều kiện kết hợp: \\(\\sigma_{\\text{City}=\\text{'HCM'} \\land \\text{Gender}=\\text{'Male'}}(\\text{Student})\\).\n- **Phép chiếu (Projection \\(\\pi\\))**: Chiếu lấy các thuộc tính cần hiển thị trên kết quả đã lọc: \\(\\pi_{\\text{Name}, \\text{City}}(...)\\).\n- Cú pháp chuẩn của biểu thức Đại số quan hệ là: \\(\\pi_{\\text{Danh_sách_cột}}(\\sigma_{\\text{Điều_kiện}}(\\text{Bảng}))\\).\n\nDo đó phương án **A** là chính xác. Phương án B dùng sai ngoặc vuông \\([...]\\), phương án C đảo ngược thứ tự chiếu trước khi chọn làm mất thuộc tính \\(\\text{Gender}\\)."
+    },
     {
       "id": 5085,
       "quizId": 102,
@@ -9064,16 +9064,16 @@
     {
       "id": 5086,
       "quizId": 102,
-      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n\\(\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\end{array}\n\\qquad\n\\begin{array}{|c|c|c|}\n\\hline\n\\text{Name} & \\text{City} & \\text{Gender} \\\\\n\\hline\n\\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\n\\hline\n\\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\n\\hline\n\\end{array}\\)\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
+      "text": "For the following relations:\n\n\\(\\textbf{Employee} \\qquad \\textbf{Customer}\\)\n$\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textLe Hong Son & \\textHCM & \\textMale \n\n\\hline\n\\endarray\n\n\\beginarray|c|c|c|\n\\hline\n\\textName & \\textCity & \\textGender \n\n\\hline\n\\textNguyen Trung Truc & \\textHCM & \\textMale \n\n\\hline\n\\textTran Tuyet Nhi & \\textHN & \\textFemale \n\n\\hline\n\\endarray$\n\nWhat is the result of the Intersection operation (Employee \\cap Customer)?",
       "options": [
-            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
-            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
-            "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\\hline\\end{array}\\)",
-            "None of the others"
+        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Nguyen Trung Truc} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
+        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Le Hong Son} & \\text{HCM} & \\text{Male} \\\\\\hline\\end{array}\\)",
+        "\\(\\begin{array}{|c|c|c|}\\hline \\text{Name} & \\text{City} & \\text{Gender} \\\\\\hline \\text{Tran Tuyet Nhi} & \\text{HN} & \\text{Female} \\\\\\hline\\end{array}\\)",
+        "None of the others"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án đúng: A — Nguyen Trung Truc | HCM | Male.\n\nNền tảng kiến thức: Phép giao (Intersection: \\(R \\cap S\\)) trong đại số quan hệ trả về tập hợp các bộ (tuples) cùng xuất hiện ở cả hai quan hệ \\(R\\) và \\(S\\).\n\nPhân tích bảng dữ liệu:\n- Bảng Employee gồm: (Nguyen Trung Truc, HCM, Male) và (Le Hong Son, HCM, Male).\n- Bảng Customer gồm: (Nguyen Trung Truc, HCM, Male) và (Tran Tuyet Nhi, HN, Female).\n- Phần tử chung duy nhất xuất hiện ở cả 2 bảng là (Nguyen Trung Truc, HCM, Male), tương ứng với phương án A."
-},
+    },
     {
       "id": 5087,
       "quizId": 102,
@@ -9410,12 +9410,12 @@
     {
       "id": 5112,
       "quizId": 103,
-      "text": "Given a relation R(A,B,C,D). Which of the followings is trivial?",
+      "text": "Given a relation \\(R(A, B, C, D)\\). Which of the following dependencies is trivial?",
       "options": [
-        "A->AB",
-        "A->->AB",
-        "A->BCD",
-        "A->->BCD"
+        "\\(A \\rightarrow AB\\)",
+        "\\(A \\twoheadrightarrow AB\\)",
+        "\\(A \\rightarrow BCD\\)",
+        "\\(A \\twoheadrightarrow BCD\\)"
       ],
       "correctIndex": 3,
       "explanation": "Đáp án theo dữ liệu đề: D — D. A->->BCD.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Để xác định một ràng buộc/phụ thuộc tầm thường, kiểm tra xem nó có đúng chỉ từ định nghĩa tập thuộc tính của quan hệ hay không, không cần giả định thêm về dữ liệu. Với MVD X ↠ Y, điều kiện tầm thường là Y ⊆ X hoặc X ∪ Y bằng toàn bộ thuộc tính; cần phân biệt ký hiệu ↠ với phụ thuộc hàm →.\n\nĐối chiếu phương án: A. A->AB; B. A->->AB; C. A->BCD. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
@@ -9436,12 +9436,12 @@
     {
       "id": 5114,
       "quizId": 103,
-      "text": "Consider the following functional dependencies\na,b -> c,d e,g,h -> f,j\na,c -> b,d p,q -> r,s\ne,f,g -> h,i s -> t\nf,g -> j q -> u\ng,h -> i\nWhich of the following best describes the relation R(e,f,g,h,i,j)?",
+      "text": "Consider the following functional dependencies:\n\\(\\begin{aligned}\n&a, b \\rightarrow c, d &\\quad &e, g, h \\rightarrow f, j \\\\\n&a, c \\rightarrow b, d &\\quad &p, q \\rightarrow r, s \\\\\n&e, f, g \\rightarrow h, i &\\quad &s \\rightarrow t \\\\\n&f, g \\rightarrow j &\\quad &q \\rightarrow u \\\\\n&g, h \\rightarrow i\n\\end{aligned}\\)\n\nWhich of the following best describes the relation \\(R(e, f, g, h, i, j)\\)?",
       "options": [
-        "R is in First Normal Form",
-        "R is in Second Normal Form",
-        "R is in Third Normal Form",
-        "R is in Boyce Codd Normal Form"
+        "\\(R\\) is in First Normal Form (1NF)",
+        "\\(R\\) is in Second Normal Form (2NF)",
+        "\\(R\\) is in Third Normal Form (3NF)",
+        "\\(R\\) is in Boyce-Codd Normal Form (BCNF)"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. R is in First Normal Form.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. R is in Second Normal Form; C. R is in Third Normal Form; D. R is in Boyce Codd Normal Form. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
@@ -9487,10 +9487,10 @@
       "quizId": 103,
       "text": "Which of the following relations is in Boyce-Codd Normal Form (BCNF)?",
       "options": [
-        "R(ABCD) with FD's: BD -> C ; AB -> D ; AC -> B ; BD -> A",
-        "R(ABCD) with FD's: BC -> A ; AD -> C ; CD -> B ; BD -> C",
-        "R(ABCD) with FD's: A -> C ; B -> A ; A -> D ; AD -> C",
-        "R(ABCD) with FD's: A -> D ; C -> A ; D -> B ; AC -> B"
+        "\\(R(A, B, C, D)\\) with FDs: \\(F = \\{ BD \\rightarrow C, \\quad AB \\rightarrow D, \\quad AC \\rightarrow B, \\quad BD \\rightarrow A \\}\\)",
+        "\\(R(A, B, C, D)\\) with FDs: \\(F = \\{ BC \\rightarrow A, \\quad AD \\rightarrow C, \\quad CD \\rightarrow B, \\quad BD \\rightarrow C \\}\\)",
+        "\\(R(A, B, C, D)\\) with FDs: \\(F = \\{ A \\rightarrow C, \\quad B \\rightarrow A, \\quad A \\rightarrow D, \\quad AD \\rightarrow C \\}\\)",
+        "\\(R(A, B, C, D)\\) with FDs: \\(F = \\{ A \\rightarrow D, \\quad C \\rightarrow A, \\quad D \\rightarrow B, \\quad AC \\rightarrow B \\}\\)"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. R(ABCD) with FD's: BD -> C ; AB -> D ; AC -> B ; BD -> A.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: B. R(ABCD) with FD's: BC -> A ; AD -> C ; CD -> B ; BD -> C; C. R(ABCD) with FD's: A -> C ; B -> A ; A -> D ; AD -> C; D. R(ABCD) with FD's: A -> D ; C -> A ; D -> B ; AC -> B. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
@@ -9589,12 +9589,12 @@
     {
       "id": 5126,
       "quizId": 103,
-      "text": "Given a relation R(A.B.C.D). Which of the followings is trivial?",
+      "text": "Given a relation \\(R(A, B, C, D)\\). Which of the following dependencies is trivial?",
       "options": [
-        "A->BCD",
-        "A->->BCD",
-        "A->AB",
-        "A->->AB"
+        "\\(A \\rightarrow BCD\\)",
+        "\\(A \\twoheadrightarrow BCD\\)",
+        "\\(A \\rightarrow AB\\)",
+        "\\(A \\twoheadrightarrow AB\\)"
       ],
       "correctIndex": 1,
       "explanation": "Đáp án theo dữ liệu đề: B — B. A->->BCD.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Để xác định một ràng buộc/phụ thuộc tầm thường, kiểm tra xem nó có đúng chỉ từ định nghĩa tập thuộc tính của quan hệ hay không, không cần giả định thêm về dữ liệu. Với MVD X ↠ Y, điều kiện tầm thường là Y ⊆ X hoặc X ∪ Y bằng toàn bộ thuộc tính; cần phân biệt ký hiệu ↠ với phụ thuộc hàm →.\n\nĐối chiếu phương án: A. A->BCD; C. A->AB; D. A->->AB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
@@ -9952,16 +9952,16 @@
     {
       "id": 5154,
       "quizId": 103,
-      "text": "Suppose we have a relation \\(R(\\text{ID}, \\text{full_name}, \\text{address})\\) with functional dependencies:\n\\(F = \\{ \\text{ID} \\to \\text{full_name}, \\quad \\text{ID} \\to \\text{address} \\}\\)\n\nWhat is the highest normal form of \\(R\\) in relational database design?",
+      "text": "Suppose we have a relation \\(R(\\text{ID}, \\text{full\\_name}, \\text{address})\\) with functional dependencies:\n\\(F = \\{ \\text{ID} \\to \\text{full\\_name}, \\quad \\text{ID} \\to \\text{address} \\}\\)\n\nWhat is the highest normal form of \\(R\\) in relational database design?",
       "options": [
-            "2NF",
-            "1NF",
-            "3NF",
-            "BCNF"
+        "2NF",
+        "1NF",
+        "3NF",
+        "BCNF"
       ],
       "correctIndex": 3,
-      "explanation": "Đáp án theo dữ liệu đề: D — D. BCNF.\n\nLời giải gốc: Với khóa chính là ID, mọi phụ thuộc hàm đều có vế trái là siêu khóa (ID → full_name, ID → address), do đó quan hệ đạt dạng chuẩn cao nhất là Boyce-Codd Normal Form (BCNF).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. 2NF; B. 1NF; C. 3NF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-},
+      "explanation": "Đáp án đúng: D — BCNF.\n\nLời giải gốc: Với khóa chính là ID, mọi phụ thuộc hàm đều có vế trái là siêu khóa (ID → full_name, ID → address), do đó quan hệ đạt dạng chuẩn cao nhất là Boyce-Codd Normal Form (BCNF).\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Đánh giá dạng chuẩn theo thứ tự: 1NF yêu cầu giá trị nguyên tố/không lặp theo mô hình quan hệ; 2NF loại phụ thuộc bộ phận của thuộc tính không khóa vào một phần khóa ghép; 3NF kiểm soát phụ thuộc bắc cầu theo điều kiện prime attribute; BCNF yêu cầu mọi determinant không tầm thường là siêu khóa.\n\nĐối chiếu phương án: A. 2NF; B. 1NF; C. 3NF. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
+    },
     {
       "id": 5155,
       "quizId": 103,
@@ -9978,7 +9978,7 @@
     {
       "id": 5156,
       "quizId": 103,
-      "text": "Consider a relation R(A, B, C, D) and the following rules. Rule 1: If A → C then C → A. Rule 2: If B → C then BC → C. Rule 3: If AB → C then A → C and B → C. Which of the following rules is NOT valid?",
+      "text": "Consider a relation \\(R(A, B, C, D)\\) and the following rules:\n- Rule 1: If \\(A \\rightarrow C\\) then \\(C \\rightarrow A\\)\n- Rule 2: If \\(B \\rightarrow C\\) then \\(BC \\rightarrow C\\)\n- Rule 3: If \\(AB \\rightarrow C\\) then \\(A \\rightarrow C\\) and \\(B \\rightarrow C\\)\n\nWhich of the following rules is NOT valid?",
       "options": [
         "Only Rule 1",
         "None of the given rules are valid",
@@ -10030,12 +10030,12 @@
     {
       "id": 5160,
       "quizId": 103,
-      "text": "Consider a user table with columns ID, NAME, Password, and email. Which functional dependency exists in this table?",
+      "text": "Consider a user table with columns \\(\\text{ID}\\), \\(\\text{NAME}\\), \\(\\text{Password}\\), and \\(\\text{email}\\). Which functional dependency exists in this table?",
       "options": [
-        "ID → NAME",
-        "Password → email",
-        "Password → NAME",
-        "NAME → email"
+        "\\(\\text{ID} \\rightarrow \\text{NAME}\\)",
+        "\\(\\text{Password} \\rightarrow \\text{email}\\)",
+        "\\(\\text{Password} \\rightarrow \\text{NAME}\\)",
+        "\\(\\text{NAME} \\rightarrow \\text{email}\\)"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. ID → NAME.\n\nLời giải gốc: Trong cấu trúc quản lý dữ liệu thông thường, mã định danh ID xác định duy nhất tên người dùng NAME.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: B. Password → email; C. Password → NAME; D. NAME → email. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
@@ -10043,12 +10043,12 @@
     {
       "id": 5161,
       "quizId": 103,
-      "text": "Consider a relation R(A,B,C,D) with functional dependencies: A → C, AB → A, C → CB, AD → ABC Which of the following is trivial functional dependency of the relation?",
+      "text": "Consider a relation \\(R(A, B, C, D)\\) with functional dependencies:\n\\(F = \\{ A \\rightarrow C, \\quad AB \\rightarrow A, \\quad C \\rightarrow CB, \\quad AD \\rightarrow ABC \\}\\)\n\nWhich of the following is a trivial functional dependency of the relation?",
       "options": [
-        "AB → A",
-        "AD → ABC",
-        "C → CB",
-        "AB → A, C→ CB"
+        "\\(AB \\rightarrow A\\)",
+        "\\(AD \\rightarrow ABC\\)",
+        "\\(C \\rightarrow CB\\)",
+        "\\(AB \\rightarrow A, \\quad C \\rightarrow CB\\)"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án theo dữ liệu đề: A — A. AB → A.\n\nLời giải gốc: Phụ thuộc hàm \\(X \\rightarrow Y\\) được gọi là hiển nhiên (Trivial) nếu tập thuộc tính \\(Y\\) là tập con của tập thuộc tính \\(X\\) (\\(Y \\subseteq X\\)). Ở đây \\(A \\subseteq AB\\), do đó AB \\(\\rightarrow\\) A là phụ thuộc hàm hiển nhiên.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Để xác định một ràng buộc/phụ thuộc tầm thường, kiểm tra xem nó có đúng chỉ từ định nghĩa tập thuộc tính của quan hệ hay không, không cần giả định thêm về dữ liệu. Với MVD X ↠ Y, điều kiện tầm thường là Y ⊆ X hoặc X ∪ Y bằng toàn bộ thuộc tính; cần phân biệt ký hiệu ↠ với phụ thuộc hàm →.\n\nĐối chiếu phương án: B. AD → ABC; C. C → CB; D. AB → A, C→ CB. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
@@ -10134,7 +10134,7 @@
     {
       "id": 5168,
       "quizId": 103,
-      "text": "A relation R(X, Y, Z) has functional dependencies XY → Z and Z → Y. Assuming X, Y, Z are single attributes and X, Y is the only candidate key, what is the highest normal form that R satisfies?",
+      "text": "A relation \\(R(X, Y, Z)\\) has functional dependencies:\n\\(F = \\{ XY \\rightarrow Z, \\quad Z \\rightarrow Y \\}\\)\n\nAssuming \\(X, Y, Z\\) are single attributes and \\(\\{X, Y\\}\\) is the only candidate key, what is the highest normal form that \\(R\\) satisfies?",
       "options": [
         "First Normal Form (1NF) only",
         "Second Normal Form (2NF) but not Third Normal Form (3NF)",
@@ -10225,12 +10225,12 @@
     {
       "id": 5175,
       "quizId": 103,
-      "text": "Consider a relation R(A, B, C, D, E, F) with the following set of functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad C \\rightarrow D, \\quad D \\rightarrow E, \\quad E \\rightarrow F \\}\\)\nConsider the following candidate functional dependencies:\n- \\(f_1: A \\rightarrow D\\)\n- \\(f_2: AB \\rightarrow D\\)\n- \\(f_3: AB \\rightarrow E\\)\n- \\(f_4: AB \\rightarrow F\\)\n\nBased on Armstrong's inference rules, which of the functional dependencies can be derived from F?",
+      "text": "Consider a relation \\(R(A, B, C, D, E, F)\\) with the following set of functional dependencies:\n\\(F = \\{ AB \\rightarrow C, \\quad C \\rightarrow D, \\quad D \\rightarrow E, \\quad E \\rightarrow F \\}\\)\n\nConsider the following candidate functional dependencies:\n- \\(f_1: A \\rightarrow D\\)\n- \\(f_2: AB \\rightarrow D\\)\n- \\(f_3: AB \\rightarrow E\\)\n- \\(f_4: AB \\rightarrow F\\)\n\nBased on Armstrong's inference rules, which of the functional dependencies can be derived from \\(F\\)?",
       "options": [
-        "f1, f3, f4",
-        "f1, f2, f3, f4",
-        "f2, f3, f4",
-        "f1, f2, f4"
+        "\\(f_1, f_3, f_4\\)",
+        "\\(f_1, f_2, f_3, f_4\\)",
+        "\\(f_2, f_3, f_4\\)",
+        "\\(f_1, f_2, f_4\\)"
       ],
       "correctIndex": 2,
       "explanation": "Áp dụng luật bắc cầu (Transitivity) của hệ tiên đề Armstrong: từ AB -> C và C -> D suy ra AB -> D (f2); từ AB -> D và D -> E suy ra AB -> E (f3); từ AB -> E và E -> F suy ra AB -> F (f4). Phụ thuộc hàm f1: A -> D không thể suy diễn được vì thiếu thuộc tính B để suy ra C."
@@ -10316,12 +10316,12 @@
     {
       "id": 5182,
       "quizId": 103,
-      "text": "In a functional dependency A → B, what can be said about B?",
+      "text": "In a functional dependency \\(A \\rightarrow B\\), what can be said about \\(B\\)?",
       "options": [
-        "B is also a superkey",
-        "B is a determinant",
-        "B is functionally dependent on A",
-        "B is a foreign key"
+        "\\(B\\) is also a superkey",
+        "\\(B\\) is a determinant",
+        "\\(B\\) is functionally dependent on \\(A\\)",
+        "\\(B\\) is a foreign key"
       ],
       "correctIndex": 2,
       "explanation": "Đáp án theo dữ liệu đề: C — C. B is functionally dependent on A.\n\nLời giải gốc: Trong phụ thuộc hàm A → B, thuộc tính B phụ thuộc hàm vào tập thuộc tính A.\n\nNền tảng kiến thức: Chuẩn hóa dùng phụ thuộc hàm và khóa để giảm dư thừa cũng như bất thường cập nhật. Tính bao đóng thuộc tính để tìm khóa; 2NF loại phụ thuộc bộ phận vào một phần khóa ghép, 3NF xử lý phụ thuộc không khóa kiểu bắc cầu, còn BCNF yêu cầu mọi vế trái không tầm thường là siêu khóa.\n\nPhân tích: Với phụ thuộc X → Y, mọi hai bộ có cùng giá trị X phải có cùng giá trị Y. Để kiểm tra khóa, tính X⁺ bằng cách áp dụng lặp các phụ thuộc; nếu bao đóng chứa toàn bộ thuộc tính thì X là siêu khóa, sau đó kiểm tra tính tối thiểu.\n\nĐối chiếu phương án: A. B is also a superkey; B. B is a determinant; D. B is a foreign key. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
@@ -10535,12 +10535,12 @@
     {
       "id": 5198,
       "quizId": 103,
-      "text": "Suppose that we have a relation \\(R(A, B, C, D)\\) and functional dependency: \\(D \\to BC\\). Which of the following is equivalent to the given dependency?",
+      "text": "Suppose that we have a relation \\(R(A, B, C, D)\\) and functional dependency: \\(D \\rightarrow BC\\). Which of the following is equivalent to the given dependency?",
       "options": [
-        "\\(D \\to B\\) and \\(D \\to C\\)",
-        "\\(C \\to B\\) and \\(C \\to B\\)",
-        "\\(D \\to B\\) and \\(B \\to C\\)",
-        "\\(C \\to D\\) and \\(C \\to B\\)"
+        "\\(D \\rightarrow B\\) and \\(D \\rightarrow C\\)",
+        "\\(C \\rightarrow B\\) and \\(C \\rightarrow B\\)",
+        "\\(D \\rightarrow B\\) and \\(B \\rightarrow C\\)",
+        "\\(C \\rightarrow D\\) and \\(C \\rightarrow B\\)"
       ],
       "correctIndex": 0,
       "explanation": "Đáp án đúng: A — \\(D \\to B\\) and \\(D \\to C\\).\n\nNền tảng kiến thức: Theo Quy tắc phân rã (Decomposition Rule) và Quy tắc hợp (Union Rule):\n- \\(D \\to BC \\iff (D \\to B \\text{ và } D \\to C)\\).\n\nPhân tích: Phụ thuộc hàm \\(D \\to BC\\) có vế phải gồm 2 thuộc tính phân biệt \\(B\\) và \\(C\\), do đó hoàn toàn tương đương với cặp phụ thuộc hàm \\(D \\to B\\) và \\(D \\to C\\)."
@@ -11683,16 +11683,16 @@
     {
       "id": 5286,
       "quizId": 106,
-      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{Artist_id} & \\textbf{Artist_Name} \\\\\n\\hline\n1 & \\text{Bono} \\\\\n\\hline\n2 & \\text{Cher} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{artist_id} & \\textbf{Album_name} \\\\\n\\hline\n3 & \\text{Eat the rich} \\\\\n\\hline\n\\end{array}\\)\n\nLook at the tables above and then choose the correct statement:",
+      "text": "Cho hai bảng dữ liệu ARTISTS và ALBUMS:\n\n\\(\\textbf{ARTISTS} \\qquad\\qquad \\textbf{ALBUMS}\\)\n\\(\\begin{array}{|c|c|}\n\\hline\n\\textbf{Artist\\_id} & \\textbf{Artist\\_Name} \\\\\n\\hline\n1 & \\text{Bono} \\\\\n\\hline\n2 & \\text{Cher} \\\\\n\\hline\n\\end{array}\n\\qquad\\qquad\n\\begin{array}{|c|c|}\n\\hline\n\\textbf{artist\\_id} & \\textbf{Album\\_name} \\\\\n\\hline\n3 & \\text{Eat the rich} \\\\\n\\hline\n\\end{array}\\)\n\nLook at the tables above and then choose the correct statement:",
       "options": [
-            "The above picture is an example of a database that has not enforced referential integrity",
-            "The above picture is an example of a database that has not enforced entity integrity",
-            "The above picture is an example of a database that has not enforced domain integrity",
-            "All of the others"
+        "The above picture is an example of a database that has not enforced referential integrity",
+        "The above picture is an example of a database that has not enforced entity integrity",
+        "The above picture is an example of a database that has not enforced domain integrity",
+        "All of the others"
       ],
       "correctIndex": 0,
       "explanation": "Bảng ALBUMS có artist_id = 3 tham chiếu đến Artist_id trong bảng ARTISTS, nhưng giá trị 3 không tồn tại trong bảng ARTISTS. Đây là một ví dụ về việc cơ sở dữ liệu vi phạm ràng buộc toàn vẹn tham chiếu (referential integrity)."
-},
+    },
     {
       "id": 5287,
       "quizId": 106,
@@ -15408,16 +15408,16 @@
     {
       "id": 5569,
       "quizId": 108,
-      "text": "Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:\n\n<pre><code>CREATE FUNCTION dbo.GetLaptopPrice(@model int)\nRETURNS decimal(10,2) AS\nBEGIN\n    DECLARE @price decimal(10,2);\n    SELECT @price = price FROM Laptop WHERE model = @model;\n    RETURN @price;\nEND;</code></pre>\n\nWhat will this function return when called with dbo.GetLaptopPrice(1)?",
+      "text": "Given a relation Laptop(model, speed, ram, hd, price) and the scalar function:\n\n\\beginverbatim\nCREATE FUNCTION dbo.GetLaptopPrice(@model int)\nRETURNS decimal(10,2) AS\nBEGIN\n DECLARE @price decimal(10,2);\n SELECT @price = price FROM Laptop WHERE model = @model;\n RETURN @price;\nEND;\n\\endverbatim\n\nWhat will this function return when called with dbo.GetLaptopPrice(1)?",
       "options": [
-            "The average laptop price with model = 1",
-            "The price of all laptops",
-            "The price of laptop with model = 1",
-            "The model of laptop with price = 1"
+        "The average laptop price with model = 1",
+        "The price of all laptops",
+        "The price of laptop with model = 1",
+        "The model of laptop with price = 1"
       ],
       "correctIndex": 2,
       "explanation": "Đáp án theo dữ liệu đề: C — C. The price of laptop with model = 1.\n\nLời giải gốc: Nhìn vào đoạn code: SELECT @price = price FROM Laptop WHERE model = @model. Khi truyền giá trị tham số đầu vào @model = 1, câu lệnh sẽ tìm hàng có model = 1 và lấy ra giá trị cột giá (price) của máy đó để trả về.\n\nNền tảng kiến thức: SQL tách truy vấn dữ liệu (DML) khỏi định nghĩa cấu trúc (DDL) và quyền truy cập (DCL). Với SELECT, cần xác định bảng nguồn, điều kiện lọc, phép kết hợp, nhóm và điều kiện nhóm; các ràng buộc, view, thủ tục và trigger đảm nhiệm các vai trò khác nhau.\n\nPhân tích: Hàm vô hướng `dbo.GetLaptopPrice(1)` nhận mã model 1 rồi trả về cột `price` của hàng Laptop có model đó. Đối số truyền vào là điều kiện tìm model, không phải tốc độ/RAM/ổ cứng; giá trị số cụ thể phụ thuộc dữ liệu bảng.\n\nĐối chiếu phương án: A. The average laptop price with model = 1; B. The price of all laptops; D. The model of laptop with price = 1. Các lựa chọn này không đáp ứng định nghĩa/điều kiện được hỏi; khi ôn, hãy chỉ ra chính xác điểm lệch của từng lựa chọn thay vì học thuộc mỗi chữ cái."
-},
+    },
     {
       "id": 5570,
       "quizId": 108,
