@@ -14,3 +14,6 @@ backend/storage/resources/
 *.log
 tools/backup/
 tools/shots/
+backup_csd_20261118/
+scratch/
+

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T22:07:25.922Z",
+  "generatedAt": "2026-11-18T14:48:49.312Z",
   "totalSubjects": 9,
   "totalQuizzes": 123,
   "subjects": [
@@ -440,9 +440,9 @@
       "subjectName": "Data Structures and Algorithms",
       "title": "Chương 1 – Mảng (Arrays, Lists, Slicing & Operations)",
       "order": 1,
-      "durationMin": 38,
+      "durationMin": 45,
       "difficulty": "Medium",
-      "questionCount": 25
+      "questionCount": 30
     },
     {
       "id": 302,
@@ -451,9 +451,9 @@
       "subjectName": "Data Structures and Algorithms",
       "title": "Chương 2 – Danh sách liên kết (Linked Lists)",
       "order": 2,
-      "durationMin": 45,
+      "durationMin": 65,
       "difficulty": "Medium",
-      "questionCount": 30
+      "questionCount": 43
     },
     {
       "id": 303,
@@ -462,9 +462,9 @@
       "subjectName": "Data Structures and Algorithms",
       "title": "Chương 3 – Ngăn xếp (Stacks)",
       "order": 3,
-      "durationMin": 29,
+      "durationMin": 41,
       "difficulty": "Medium",
-      "questionCount": 19
+      "questionCount": 27
     },
     {
       "id": 304,
@@ -473,9 +473,9 @@
       "subjectName": "Data Structures and Algorithms",
       "title": "Chương 4 – Hàng đợi (Queues)",
       "order": 4,
-      "durationMin": 24,
+      "durationMin": 29,
       "difficulty": "Medium",
-      "questionCount": 16
+      "questionCount": 19
     },
     {
       "id": 305,
@@ -484,9 +484,9 @@
       "subjectName": "Data Structures and Algorithms",
       "title": "Chương 5 – Bảng băm (Hash Tables)",
       "order": 5,
-      "durationMin": 81,
+      "durationMin": 90,
       "difficulty": "Medium",
-      "questionCount": 54
+      "questionCount": 60
     },
     {
       "id": 306,
@@ -495,9 +495,9 @@
       "subjectName": "Data Structures and Algorithms",
       "title": "Chương 6 – Cây tìm kiếm nhị phân và Đồ thị (Binary Search Tree & Graph)",
       "order": 6,
-      "durationMin": 168,
+      "durationMin": 194,
       "difficulty": "Medium",
-      "questionCount": 112
+      "questionCount": 129
     },
     {
       "id": 307,
@@ -506,9 +506,9 @@
       "subjectName": "Data Structures and Algorithms",
       "title": "Chương 7 – Thuật toán sắp xếp (Sorting Algorithms)",
       "order": 7,
-      "durationMin": 44,
+      "durationMin": 50,
       "difficulty": "Medium",
-      "questionCount": 29
+      "questionCount": 33
     },
     {
       "id": 308,
@@ -517,9 +517,9 @@
       "subjectName": "Data Structures and Algorithms",
       "title": "Chương 8 – Các giải thuật bổ trợ (Độ phức tạp, Đệ quy, Tìm kiếm, Huffman & Xử lý chuỗi)",
       "order": 8,
-      "durationMin": 137,
+      "durationMin": 129,
       "difficulty": "Medium",
-      "questionCount": 91
+      "questionCount": 86
     },
     {
       "id": 400,

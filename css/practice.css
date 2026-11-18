@@ -3284,3 +3284,61 @@ html[data-theme="dark"] .prc-study-summary-item {
   }
 }
 
+/* ========================================================
+   CSD203 & Practice Enhanced Code & Diagram Styling
+   ======================================================== */
+.prc-code-block {
+  margin: 14px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color, #e2e8f0);
+  background: #1e293b;
+}
+
+.prc-code-block pre {
+  margin: 0;
+  padding: 12px 16px;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #f8fafc;
+  background: transparent;
+  white-space: pre;
+}
+
+.prc-inline-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(99, 102, 241, 0.08);
+  color: #4f46e5;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.prc-question-diagram {
+  text-align: center;
+  margin: 16px 0;
+  overflow-x: auto;
+}
+
+.prc-question-diagram img {
+  max-width: 100%;
+  max-height: 380px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border-color, #cbd5e1);
+  background: #ffffff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.prc-question-diagram img:hover {
+  transform: scale(1.02);
+}
+
+

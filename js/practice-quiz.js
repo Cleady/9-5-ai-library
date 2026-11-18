@@ -411,9 +411,20 @@
     if (!text) return '';
     var str = String(text);
 
+    // 0. Bảo vệ các khối Markdown Code Block
+    var codeTokens = [];
+    var withCodeTokens = str.replace(/```(?:([a-z0-9_-]*)\n)?([\s\S]*?)```/g, function (match, lang, code) {
+      var token = '___CODE_BLOCK_TOKEN_' + codeTokens.length + '___';
+      codeTokens.push({
+        lang: lang || 'python',
+        code: escapeHtml(code.trim())
+      });
+      return token;
+    });
+
     // 1. Bảo vệ các khối MathJax
     var mathTokens = [];
-    var withMathTokens = str.replace(/(\\\[[\s\S]*?\\\]|\\\(.*?\\\))/g, function (match) {
+    var withMathTokens = withCodeTokens.replace(/(\\\[[\s\S]*?\\\]|\\\(.*?\\\))/g, function (match) {
       var token = '___MATH_TOKEN_' + mathTokens.length + '___';
       mathTokens.push(match);
       return token;
@@ -435,6 +446,7 @@
       } else {
         var esc = escapeHtml(seg);
         esc = esc.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        esc = esc.replace(/`([^`\n]+)`/g, '<code class="prc-inline-code">$1</code>');
         if (isExplanation) {
           var lines = esc.split('\n');
           var formattedLines = [];
@@ -468,6 +480,12 @@
     // 4. Phục hồi MathJax
     out = out.replace(/___MATH_TOKEN_(\d+)___/g, function (_, idx) {
       return mathTokens[parseInt(idx, 10)];
+    });
+
+    // 5. Phục hồi Code Blocks
+    out = out.replace(/___CODE_BLOCK_TOKEN_(\d+)___/g, function (_, idx) {
+      var item = codeTokens[parseInt(idx, 10)];
+      return '<div class="prc-code-block"><pre><code class="language-' + item.lang + '">' + item.code + '</code></pre></div>';
     });
 
     return out;
@@ -510,9 +528,26 @@
   }
 
   function renderQuestionDiagrams(q) {
-    if (!q || !q.diagrams || !q.diagrams.length) return '';
-    return q.diagrams.map(function (d) {
-      return '<div class="prc-question-diagram" style="text-align:center;margin:16px 0;overflow-x:auto;"><img src="data:image/svg+xml;charset=utf-8,' + encodeURIComponent(d.svg) + '" alt="' + (d.alt || 'Sơ đồ câu hỏi') + '" style="max-width:100%;max-height:360px;background:#ffffff;border-radius:12px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:inline-block;" /></div>';
+    if (!q) return '';
+    var items = [];
+    if (q.image) items.push({ src: q.image, alt: 'Sơ đồ câu hỏi' });
+    if (Array.isArray(q.images)) {
+      q.images.forEach(function (img) {
+        items.push(typeof img === 'string' ? { src: img, alt: 'Sơ đồ câu hỏi' } : img);
+      });
+    }
+    if (q.diagrams && q.diagrams.length) {
+      q.diagrams.forEach(function (d) {
+        if (d.src) {
+          items.push({ src: d.src, alt: d.alt || 'Sơ đồ câu hỏi' });
+        } else if (d.svg) {
+          items.push({ src: 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(d.svg), alt: d.alt || 'Sơ đồ câu hỏi' });
+        }
+      });
+    }
+    if (!items.length) return '';
+    return items.map(function (item) {
+      return '<div class="prc-question-diagram" style="text-align:center;margin:16px 0;overflow-x:auto;"><img src="' + item.src + '" alt="' + (item.alt || 'Sơ đồ câu hỏi') + '" loading="lazy" style="max-width:100%;max-height:380px;height:auto;border-radius:10px;border:1px solid #cbd5e1;background:#ffffff;padding:10px;box-shadow:0 4px 12px rgba(0,0,0,0.08);display:inline-block;" /></div>';
     }).join('');
   }
 

@@ -158,6 +158,14 @@ function cleanTexWithMath(str) {
   if (!str) return '';
   let s = str;
 
+  // 0. Bảo vệ các khối markdown code block
+  const codeBlocks = [];
+  s = s.replace(/```[a-z0-9_-]*\n?[\s\S]*?```/g, m => {
+    const idx = codeBlocks.length;
+    codeBlocks.push(m);
+    return `__CODE_BLOCK_PLACEHOLDER_${idx}__`;
+  });
+
   // Sửa lỗi OCR typo đặc thù nếu có (ví dụ: ident$' -> identify)
   s = s.replace(/ident\$'/g, 'identify');
 
@@ -275,6 +283,11 @@ function cleanTexWithMath(str) {
     return `\\(${mathBlocks[parseInt(idx, 10)]}\\)`;
   });
 
+  // 12. Phục hồi các khối markdown code block
+  s = s.replace(/__CODE_BLOCK_PLACEHOLDER_(\d+)__/g, (m, idx) => {
+    return codeBlocks[parseInt(idx, 10)];
+  });
+
   return s;
 }
 
@@ -330,38 +343,61 @@ if (isChoicesFormat) {
       continue;
     }
 
+    // Trích xuất ID ổn định từ comment: % [ID: 10001]
+    const idM = body.match(/%\s*\[ID:\s*(\d+)\]/i);
+    const qId = idM ? parseInt(idM[1], 10) : undefined;
+
+    // Trích xuất hình ảnh nếu có: \includegraphics{...}
+    const imgM = body.match(/\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\}/);
+    let diagrams = undefined;
+    if (imgM) {
+      const fileName = path.basename(imgM[1].trim());
+      const src = `/assets/images/practice/csd203/${fileName}`;
+      const altM = body.match(/\\figdesc\{([^}]+)\}/);
+      diagrams = [{
+        src,
+        alt: altM ? altM[1].trim() : 'Sơ đồ câu hỏi'
+      }];
+    }
+
     let promptRaw = body.substring(0, cs);
     promptRaw = promptRaw.replace(/^[\t ]*%[^\r\n]*/gm, '');
 
     promptRaw = convertTabularToMarkdown(promptRaw);
-    promptRaw = promptRaw.replace(/\\begin\{codebox\}([\s\S]*?)\\end\{codebox\}/g, (_, code) => '\n' + code.trim() + '\n');
-    promptRaw = promptRaw.replace(/\\begin\{verbatim\}([\s\S]*?)\\end\{verbatim\}/g, (_, code) => '\n' + code.trim() + '\n');
-    promptRaw = promptRaw.replace(/<pre>([\s\S]*?)<\/pre>/gi, (_, code) => '\n' + code.trim() + '\n');
-    promptRaw = promptRaw.replace(/\\begin\{center\}([\s\S]*?)\\end\{center\}/g, (b) => b.includes('tikzpicture') ? '' : b);
+    promptRaw = promptRaw.replace(/\\begin\{codebox\}([\s\S]*?)\\end\{codebox\}/g, (_, code) => '\n```python\n' + code.trim() + '\n```\n');
+    promptRaw = promptRaw.replace(/\\begin\{verbatim\}([\s\S]*?)\\end\{verbatim\}/g, (_, code) => '\n```python\n' + code.trim() + '\n```\n');
+    promptRaw = promptRaw.replace(/<pre>([\s\S]*?)<\/pre>/gi, (_, code) => '\n```python\n' + code.trim() + '\n```\n');
+    promptRaw = promptRaw.replace(/\\begin\{center\}([\s\S]*?)\\end\{center\}/g, (b) => (b.includes('tikzpicture') || b.includes('includegraphics')) ? '' : b);
     promptRaw = promptRaw.replace(/\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/g, '');
+    promptRaw = promptRaw.replace(/\\figdesc\{[^}]*\}/g, '');
 
     const choicesBody = body.substring(cs + '\\begin{choices}'.length, ce);
     const rawChoices = choicesBody.split(/\\choice\b/).map(s => s.trim()).filter(s => s.length > 0);
     const options = rawChoices.map(opt => cleanTexWithMath(opt));
 
     const afterChoices = body.substring(ce + '\\end{choices}'.length);
-    const ansMatch = afterChoices.match(/\\textbf\{Đáp án:\}\s*([A-Za-z]+)/i);
-    let answerLetter = ansMatch ? ansMatch[1].trim().toUpperCase() : 'A';
-    const correctIndex = answerLetter.charCodeAt(0) - 65;
-    const correctIndices = answerLetter.length > 1
-      ? answerLetter.split('').map(c => c.charCodeAt(0) - 65).filter(i => i >= 0 && i < options.length)
-      : undefined;
+    const ansMatch = afterChoices.match(/\\textbf\{Đáp án:\}\s*([A-Za-z,\s&]+)/i);
+    let answerStr = ansMatch ? ansMatch[1].trim().toUpperCase() : 'A';
+    const letters = answerStr.match(/[A-Z]/g) || ['A'];
+    const correctIndices = letters.map(c => c.charCodeAt(0) - 65).filter(i => i >= 0 && i < options.length);
+    const isMultiple = letters.length > 1;
+    const answerLetter = letters.join(', ');
 
     let explanation = '';
     const expMatch = afterChoices.match(/\\textbf\{Giải thích:\}\s*([\s\S]*?)$/i);
     if (expMatch) {
       explanation = cleanTexWithMath(expMatch[1]);
     }
-    if (answerLetter.length > 1) {
-      explanation = `**Đáp án đúng**: ${answerLetter.split('').join(' & ')}\n\n` + explanation;
+    if (isMultiple) {
+      if (!explanation.includes('Đáp án đúng')) {
+        explanation = `**Đáp án đúng**: ${letters.join(' & ')}\n\n` + explanation;
+      }
     }
 
     rawQuestions.push({
+      qId,
+      diagrams,
+      multiple: isMultiple,
       rawQNum: qNum,
       chapterIndex: chIndex,
       chapterNum: chapter.num,
@@ -369,8 +405,8 @@ if (isChoicesFormat) {
       text: cleanTexWithMath(promptRaw),
       options,
       answerLetter,
-      correctIndex: correctIndices && correctIndices.length > 0 ? correctIndices[0] : correctIndex,
-      correctIndices: correctIndices && correctIndices.length > 1 ? correctIndices : undefined,
+      correctIndex: correctIndices && correctIndices.length > 0 ? correctIndices[0] : 0,
+      correctIndices: isMultiple ? correctIndices : undefined,
       explanation
     });
   }
@@ -586,16 +622,19 @@ let nextQId = config.startQuestionId;
 const newQuestions = rawQuestions.map(q => {
   const quizId = config.startQuizId + q.chapterIndex;
   const item = {
-    id: nextQId++,
+    id: q.qId || nextQId++,
     quizId,
     text: q.text,
     options: q.options,
     correctIndex: q.correctIndex,
-    explanation: q.explanation
+    explanation: q.explanation || ''
   };
-  if (q.correctIndices && q.correctIndices.length > 1) {
+  if (q.multiple || (q.correctIndices && q.correctIndices.length > 1)) {
     item.correctIndices = q.correctIndices;
     item.multiple = true;
+  }
+  if (q.diagrams && q.diagrams.length > 0) {
+    item.diagrams = q.diagrams;
   }
   return item;
 });
@@ -622,8 +661,8 @@ newQuestions.forEach(q => {
     console.error(`  [LỖI] Câu hỏi ID ${q.id} chỉ số đáp án đúng ${q.correctIndex} ngoài phạm vi (số phương án: ${q.options.length})!`);
     validationErrors++;
   }
-  if (!q.explanation) {
-    console.error(`  [LỖI] Câu hỏi ID ${q.id} thiếu giải thích chi tiết!`);
+  if (q.explanation === undefined || q.explanation === null) {
+    console.error(`  [LỖI] Câu hỏi ID ${q.id} bị undefined giải thích!`);
     validationErrors++;
   }
 });

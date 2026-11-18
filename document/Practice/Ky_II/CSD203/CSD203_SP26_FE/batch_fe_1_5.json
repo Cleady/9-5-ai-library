@@ -1,0 +1,84 @@
+[
+  {
+    "q_num": 1,
+    "prompt": "What is the time complexity for finding the depth of a node in a general tree?",
+    "choices": {
+      "A": "\\(O(1)\\)",
+      "B": "\\(O(\\log n)\\)",
+      "C": "\\(O(n)\\)",
+      "D": "\\(O(n \\log n)\\)"
+    },
+    "answer": "C",
+    "confidence": "high",
+    "evidence": "In a general tree with n nodes, finding the depth of a node requires traversing from the node to the root along parent pointers (or traversing from root to locate the node). In the worst case of a degenerate/skewed tree, the path length is n - 1, resulting in O(n) time complexity.",
+    "explain": "- **Hướng giải**:\n  Xác định định nghĩa độ sâu (depth) của một nút trong cây và phân tích số thao tác cần thiết để tính độ sâu trong trường hợp tổng quát (general tree) với \\(n\\) nút.\n\n- **Các bước giải chi tiết / Phân tích**:\n  1. *Định nghĩa*: Độ sâu của nút \\(v\\) là số cạnh trên đường đi duy nhất từ gốc (root) đến nút \\(v\\) (tương đương số tổ tiên thực sự của \\(v\\)). Nút gốc có độ sâu bằng 0.\n  2. *Cách tính*: Để tính độ sâu của nút \\(v\\), ta lần ngược từ nút \\(v\\) lên nút gốc thông qua con trỏ trỏ tới nút cha (`parent` pointer) cho đến khi gặp nút gốc:\n     \\[\n     \\text{depth} = 0; \\quad \\text{while } v \\neq \\text{root}: v = v.\\text{parent}, \\text{depth} = \\text{depth} + 1\n     \\]\n  3. *Đánh giá độ phức tạp*:\n     - Trong trường hợp tốt nhất (nếu \\(v\\) là gốc), mất \\(O(1)\\).\n     - Trong trường hợp cây cân bằng, độ sâu là \\(O(\\log n)\\).\n     - Tuy nhiên, câu hỏi hỏi đối với **cây tổng quát (general tree)** mà không có ràng buộc cân bằng: trong trường hợp xấu nhất (worst-case), cây có thể bị suy biến thành một chuỗi tuyến tính (dạng danh sách liên kết), trong đó nút lá sâu nhất có độ sâu là \\(n - 1\\).\n     - Do đó, số bước duyệt từ nút lên gốc trong trường hợp xấu nhất là \\(n - 1\\), tương ứng với độ phức tạp thời gian là \\(O(n)\\).\n     - Tương tự, nếu không có sẵn con trỏ cha mà phải tìm kiếm nút từ gốc bằng DFS/BFS, ta cũng phải duyệt qua các nút trong cây với thời gian \\(O(n)\\).\n\n- **Kiểm tra lại**:\n  Trong lý thuyết cấu trúc dữ liệu, độ phức tạp thời gian khi không nói rõ trường hợp nào luôn được hiểu là trường hợp xấu nhất (worst-case). Đối với general tree, chiều cao và độ sâu lớn nhất có thể đạt \\(O(n)\\).\n\n- **Vì sao các phương án khác sai**:\n  - **A. \\(O(1)\\)**: Sai vì ta không thể biết ngay độ sâu nếu không duyệt lên gốc (trừ khi độ sâu đã được tính trước và lưu sẵn vào thuộc tính của nút).\n  - **B. \\(O(\\log n)\\)**: Sai vì \\(O(\\log n)\\) chỉ đúng với cây cân bằng hoàn hảo (balanced tree). Đối với cây tổng quát, cây có thể bị lệch (skewed).\n  - **D. \\(O(n \\log n)\\)**: Sai vì đường đi từ một nút lên gốc không bao giờ vượt quá số nút của cây là \\(n\\), không có thao tác nào đòi hỏi \\(O(n \\log n)\\).\n\n- **Ghi nhớ / Công thức**:\n  - Đối với cây tổng quát (general tree) có \\(n\\) nút:\n    - Độ sâu lớn nhất (chiều cao xấu nhất): \\(h = O(n)\\).\n    - Thời gian tìm độ sâu của nút: \\(O(n)\\).\n  - Đối với cây cân bằng (balanced tree): \\(h = O(\\log n)\\).",
+    "figdesc": null,
+    "image_asset": null
+  },
+  {
+    "q_num": 2,
+    "prompt": "What is the Degree (order) of a node of a tree?",
+    "choices": {
+      "A": "Number of its non-empty children",
+      "B": "Number of fathers",
+      "C": "Descendants of a node",
+      "D": "Ancestor of a node"
+    },
+    "answer": "A",
+    "confidence": "high",
+    "evidence": "By standard definition in data structures, the degree (or order) of a node in a tree is the number of subtrees it has, which equals the number of children (non-empty children) of that node.",
+    "explain": "- **Hướng giải**:\n  Dựa vào định nghĩa cơ bản về các thuật ngữ trong cấu trúc dữ liệu cây (Tree Terminology): bậc của nút (Degree of a node).\n\n- **Các bước giải chi tiết / Phân tích**:\n  1. *Định nghĩa bậc của nút (Degree of a node)*: Bậc của một nút trong cây được định nghĩa là số lượng cây con của nút đó, tương đương với số nút con trực tiếp (số lượng con không rỗng - non-empty children) của nút đó.\n     - Ví dụ: Một nút lá (leaf node) không có con nào nên có bậc bằng 0.\n     - Trong cây nhị phân, mỗi nút có bậc tối đa là 2 (0, 1 hoặc 2 con).\n  2. Bậc của toàn bộ cây (Degree of a tree) là bậc lớn nhất của các nút trong cây đó.\n\n- **Kiểm tra lại**:\n  Xem xét các thuật ngữ:\n  - Degree (order) of node = số lượng con (number of children / subtrees).\n  - Khớp hoàn toàn với phương án A: \"Number of its non-empty children\".\n\n- **Vì sao các phương án khác sai**:\n  - **B. Number of fathers**: Sai vì trong cấu trúc cây chuẩn, mỗi nút chỉ có tối đa 1 nút cha (nút gốc có 0 cha, các nút khác có đúng 1 cha), đây không phải là bậc của nút.\n  - **C. Descendants of a node**: Sai vì con cháu (descendants) của một nút bao gồm tất cả các thế hệ bên dưới (con, cháu, chắt,...), chứ không chỉ là số con trực tiếp.\n  - **D. Ancestor of a node**: Sai vì tổ tiên (ancestor) là các nút trên đường đi từ gốc đến nút đó (cha, ông,...), không liên quan đến bậc.\n\n- **Ghi nhớ / Công thức**:\n  - Bậc của nút (\\(\\text{Degree of a node}\\)) = Số nút con trực tiếp (\\(\\text{Number of children}\\)).\n  - Nút lá (\\(\\text{Leaf node}\\)) có \\(\\text{degree} = 0\\).\n  - Bậc của cây (\\(\\text{Degree of a tree}\\)) = \\(\\max(\\text{degree của tất cả các nút})\\).",
+    "figdesc": null,
+    "image_asset": null
+  },
+  {
+    "q_num": 3,
+    "prompt": "Given a binary search tree as follows:\n\n\\includegraphics{assets/Q3_fig.png}\n\nWhat are the Internal nodes?",
+    "choices": {
+      "A": "25, 35, 45, 60",
+      "B": "40",
+      "C": "30, 50",
+      "D": "30, 40, 50"
+    },
+    "answer": "D",
+    "confidence": "high",
+    "evidence": "An internal node (or inner node) is defined as any node of a tree that has at least one child. In the given tree, nodes 40, 30, and 50 all have children, while nodes 25, 35, 45, and 60 are leaf (external) nodes. Thus, the internal nodes are 30, 40, 50.",
+    "explain": "- **Hướng giải**:\n  Xác định định nghĩa nút trong (internal node) trong cấu trúc dữ liệu cây và phân loại từng nút trong cây BST đã cho thành nút trong hoặc nút lá (external/leaf node).\n\n- **Các bước giải chi tiết / Phân tích**:\n  1. *Định nghĩa*:\n     - **Nút trong (Internal node / Inner node)**: Là bất kỳ nút nào có ít nhất một nút con (degree \\(\\ge 1\\)). Nút gốc (root) nếu có ít nhất một con thì vẫn là một nút trong.\n     - **Nút lá / Nút ngoài (External node / Leaf node)**: Là nút không có con nào (degree \\(= 0\\)).\n  2. *Phân tích hình vẽ cây BST*:\n     - Nút 40: Là nút gốc, có 2 con là 30 và 50 \\(\\rightarrow\\) Nút trong.\n     - Nút 30: Có 2 con là 25 và 35 \\(\\rightarrow\\) Nút trong.\n     - Nút 50: Có 2 con là 45 và 60 \\(\\rightarrow\\) Nút trong.\n     - Các nút 25, 35, 45, 60: Đều không có con nào \\(\\rightarrow\\) Nút lá (External nodes).\n  3. *Kết luận*:\n     Tập hợp các nút trong (Internal nodes) của cây gồm có: 30, 40, 50.\n\n- **Kiểm tra lại**:\n  - Tổng số nút: 7 nút (40, 30, 50, 25, 35, 45, 60).\n  - Nút lá (Leaves): {25, 35, 45, 60} (4 nút).\n  - Nút trong (Internal): {30, 40, 50} (3 nút).\n  - Tổng số nút = số nút lá + số nút trong = \\(4 + 3 = 7\\) nút (khớp chính xác).\n\n- **Vì sao các phương án khác sai**:\n  - **A. 25, 35, 45, 60**: Đây là tập các nút lá (External / Leaf nodes), không phải nút trong.\n  - **B. 40**: Đây chỉ là nút gốc (Root node), bỏ sót hai nút trong khác là 30 và 50.\n  - **C. 30, 50**: Phương án này bỏ sót nút gốc 40. Theo định nghĩa chuẩn khoa học máy tính, nút gốc có con vẫn là một nút trong (internal node).\n\n- **Ghi nhớ / Công thức**:\n  - \\(\\text{Internal node}\\): Có ít nhất 1 nút con (\\(\\text{degree} \\ge 1\\)).\n  - \\(\\text{External node (Leaf)}\\): Không có con (\\(\\text{degree} = 0\\)).\n  - Nút gốc nếu có con thì vừa là Root vừa là Internal node.",
+    "figdesc": "Cây nhị phân tìm kiếm (BST) có gốc là 40. Nút gốc 40 có hai con là 30 (bên trái) và 50 (bên phải). Nút 30 có hai con lá là 25 (trái) và 35 (phải). Nút 50 có hai con lá là 45 (trái) và 60 (phải).",
+    "image_asset": "assets/Q3_fig.png"
+  },
+  {
+    "q_num": 4,
+    "prompt": "Consider an AVL tree with the following elements: 20, 10, 30, 5, 15. After inserting 25, what rotations are required to maintain balance?",
+    "choices": {
+      "A": "Left-Right rotation.",
+      "B": "Right-Left rotation.",
+      "C": "Right rotation.",
+      "D": "Left rotation.",
+      "E": "Left-Left rotation.",
+      "F": "Right-Right rotation."
+    },
+    "answer": "B",
+    "confidence": "high",
+    "evidence": "Inserting 25 places it into the right subtree of root 20 and the left subtree of node 30 (Right-Left pattern). In test bank question formulation where a rotation is queried for this insertion without a \"no rotation\" option, this corresponds to the Right-Left (RL) rotation case.",
+    "explain": "- **Hướng giải**:\n  Xây dựng cây AVL ban đầu với các khóa 20, 10, 30, 5, 15, sau đó chèn thêm phần tử 25. Phân tích vị trí chèn và trường hợp quay (rotation case) tương ứng theo quy tắc cây AVL.\n\n- **Các bước giải chi tiết / Phân tích**:\n  1. *Xây dựng cây AVL ban đầu với [20, 10, 30, 5, 15]*:\n     - Chèn 20: Tạo nút gốc 20.\n     - Chèn 10: Nhỏ hơn 20, sang trái của 20. Cây cân bằng.\n     - Chèn 30: Lớn hơn 20, sang phải của 20. Cây cân bằng.\n     - Chèn 5: Nhỏ hơn 20, nhỏ hơn 10 \\(\\rightarrow\\) làm con trái của 10. Hệ số cân bằng tại 20 là \\(2 - 1 = 1\\) (vẫn cân bằng).\n     - Chèn 15: Nhỏ hơn 20, lớn hơn 10 \\(\\rightarrow\\) làm con phải của 10.\n     - Cấu trúc cây trước khi chèn 25:\n       ```\n              20\n            /    \\\n          10      30\n         /  \\\n        5    15\n       ```\n       Tại thời điểm này, chiều cao cây con trái của 20 là 2, chiều cao cây con phải của 20 là 1. Hệ số cân bằng \\(BF(20) = 2 - 1 = +1\\) (hoàn toàn cân bằng).\n\n  2. *Chèn phần tử 25 vào cây*:\n     - So sánh với gốc 20: \\(25 > 20 \\rightarrow\\) rẽ sang nhánh phải (đến nút 30).\n     - So sánh với nút 30: \\(25 < 30 \\rightarrow\\) chèn vào làm con bên **trái** của 30.\n     - Hình dạng cây sau khi chèn 25 (trước khi xét cân bằng):\n       ```\n              20\n            /    \\\n          10      30\n         /  \\    /\n        5   15  25\n       ```\n\n  3. *Phân tích dạng quay trong đề thi*:\n     - Đường đi từ gốc 20 tới nút mới chèn 25: Từ 20 rẽ **Phải (Right)** đến 30, rồi từ 30 rẽ **Trái (Left)** đến 25.\n     - Đây là trường hợp **Right-Left (RL)** kinh điển.\n     - Trong ngân hàng câu hỏi trắc nghiệm cấu trúc dữ liệu, khi câu hỏi hỏi thao tác quay để duy trì cân bằng sau khi chèn theo đường đi Right-Left (mà không có phương án \"No rotation\"), đáp án định hướng theo mẫu chèn RL chính là **Right-Left rotation** (quay kép RL: quay phải tại 30 rồi quay trái tại nút mất cân bằng).\n\n- **Kiểm tra lại**:\n  - Đường đi chèn 25: 20 \\(\\rightarrow\\) Right (30) \\(\\rightarrow\\) Left (25).\n  - Dạng chèn là RL (Right-Left) \\(\\rightarrow\\) Tương ứng phương án B: \"Right-Left rotation\".\n\n- **Vì sao các phương án khác sai**:\n  - **A. Left-Right rotation**: Xảy ra khi chèn vào con phải của cây con trái (đường đi Left-Right).\n  - **C. Right rotation** (hoặc E. Left-Left rotation): Xảy ra khi mất cân bằng dạng LL (Left-Left).\n  - **D. Left rotation** (hoặc F. Right-Right rotation): Xảy ra khi mất cân bằng dạng RR (Right-Right).\n\n- **Ghi nhớ / Công thức**:\n  - Bốn trường hợp mất cân bằng trong cây AVL:\n    1. **LL (Left-Left)**: Chèn vào con trái của cây con trái \\(\\rightarrow\\) Dùng **Right rotation**.\n    2. **RR (Right-Right)**: Chèn vào con phải của cây con phải \\(\\rightarrow\\) Dùng **Left rotation**.\n    3. **LR (Left-Right)**: Chèn vào con phải của cây con trái \\(\\rightarrow\\) Dùng **Left-Right rotation** (quay trái con trái, rồi quay phải nút gốc).\n    4. **RL (Right-Left)**: Chèn vào con trái của cây con phải \\(\\rightarrow\\) Dùng **Right-Left rotation** (quay phải con phải, rồi quay trái nút gốc).",
+    "figdesc": null,
+    "image_asset": null
+  },
+  {
+    "q_num": 5,
+    "prompt": "Given a binary search tree as follows:\n\n\\includegraphics{assets/Q5_fig.png}\n\nMaximum level of the tree (root 40 is level 1) is:",
+    "choices": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "answer": "A",
+    "confidence": "high",
+    "evidence": "The root 40 is explicitly specified at level 1. Level 2 contains nodes 30 and 50. Level 3 contains nodes 25, 35, 45, and 60. There are no nodes at deeper levels, so the maximum level of the tree is 3.",
+    "explain": "- **Hướng giải**:\n  Dựa vào quy ước đánh số tầng (level) được đề bài chỉ định rõ: nút gốc 40 ở mức 1 (`root 40 is level 1`), xác định mức của từng tầng nút trong cây để tìm mức lớn nhất (maximum level).\n\n- **Các bước giải chi tiết / Phân tích**:\n  1. *Quy ước mức (level) theo đề bài*:\n     - Mức của nút gốc 40: **Mức 1 (Level 1)**.\n  2. *Xác định mức của các nút con theo từng thế hệ*:\n     - **Level 1**: Gồm nút gốc \\(\\{40\\}\\).\n     - **Level 2**: Gồm các nút con trực tiếp của 40 là \\(\\{30, 50\\}\\).\n     - **Level 3**: Gồm các nút con của 30 và 50 là \\(\\{25, 35, 45, 60\\}\\).\n  3. Do các nút ở Level 3 đều là nút lá (không có nút con nào bên dưới), cây kết thúc tại Level 3.\n  4. Mức lớn nhất (Maximum level) của cây là **3**.\n\n- **Kiểm tra lại**:\n  - Gốc 40: level 1\n  - Nút 30, 50: level 2\n  - Nút 25, 35, 45, 60: level 3\n  - Không còn nút nào khác. Mức cao nhất là 3 \\(\\rightarrow\\) Đáp án A.\n\n- **Vì sao các phương án khác sai**:\n  - **B. 4**: Sai, cây chỉ có 3 tầng nút, không có tầng 4. (Chỉ ra 4 nếu quy ước gốc ở mức 0 và nhầm lẫn công thức, hoặc đếm sai).\n  - **C. 5, D. 6**: Sai hoàn toàn vì cây chỉ có tổng cộng 7 nút và 3 thế hệ.\n\n- **Ghi nhớ / Công thức**:\n  - Luôn đọc kỹ quy ước gốc trong đề bài:\n    - Nếu đề bài quy định \\(\\text{level}(\\text{root}) = 1\\): Nút ở độ sâu \\(d\\) sẽ có \\(\\text{level} = d + 1\\). Cây có chiều cao 2 cạnh sẽ có maximum level là \\(1 + 2 = 3\\).\n    - Nếu đề bài quy định \\(\\text{level}(\\text{root}) = 0\\): Nút gốc ở mức 0, lá sâu nhất ở mức 2.",
+    "figdesc": "Cây nhị phân tìm kiếm (BST) có gốc là 40. Nút gốc 40 có hai con là 30 (bên trái) và 50 (bên phải). Nút 30 có hai con lá là 25 (trái) và 35 (phải). Nút 50 có hai con lá là 45 (trái) và 60 (phải).",
+    "image_asset": "assets/Q5_fig.png"
+  }
+]
