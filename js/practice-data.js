@@ -26309,7 +26309,7 @@
     {
       "id": 30001,
       "quizId": 201,
-      "text": "What is the result of this statement?\n\r\n\n\r\n```python\n\r\nprint(ord('foo'))\n\r\n```",
+      "text": "What is the result of this statement?\n\n```python\n\nprint(ord('foo'))\n\n```",
       "options": [
         "102",
         "It raises an exception",
@@ -26322,7 +26322,7 @@
     {
       "id": 30002,
       "quizId": 201,
-      "text": "Once again consider this dictionary:\n\r\n\n\r\n```python\n\r\nd = 'foo': 100, 'bar': 200, 'baz': 300\n\r\n```\n\r\n\n\r\nWhat is the result of this statement:\n\r\n\n\r\n```python\n\r\nd['bar':'baz']\n\r\n```",
+      "text": "Once again consider this dictionary:\n\n```python\n\nd = 'foo': 100, 'bar': 200, 'baz': 300\n\n```\n\nWhat is the result of this statement:\n\n```python\n\nd['bar':'baz']\n\n```",
       "options": [
         "It raises an exception",
         "200 300",
@@ -26335,7 +26335,7 @@
     {
       "id": 30003,
       "quizId": 201,
-      "text": "What will the following Python code print out?\n\r\n\n\r\n```python\n\r\nfriends = [ 'Joseph', 'Glenn', 'Sally' ]\n\r\nfriends.sort()\n\r\nprint friends[1]\n\r\n```",
+      "text": "What will the following Python code print out?\n\n```python\n\nfriends = [ 'Joseph', 'Glenn', 'Sally' ]\n\nfriends.sort()\n\nprint friends[1]\n\n```",
       "options": [
         "Glenn",
         "Joseph",
@@ -26369,7 +26369,13 @@
         "def function myfunction():"
       ],
       "correctIndex": 0,
-      "explanation": "Trong Python, cú pháp chuẩn xác và duy nhất để định nghĩa một hàm là sử dụng từ khóa `def`, theo sau là tên hàm, danh sách tham số trong ngoặc đơn và dấu hai chấm `:`, ví dụ: `def myFunction():`.\n- Đáp án B (`def myFunction():`) là cú pháp hoàn toàn ĐÚNG.\n- Các đáp án A (`create`), C (`func`), và D (`def function`) đều sử dụng từ khóa sai không tồn tại trong ngữ pháp Python để định nghĩa hàm và sẽ gây lỗi `SyntaxError`.\nVì câu hỏi yêu cầu chọn tất cả các cách KHÔNG ĐÚNG (incorrect ways), nên ta chọn A, C và D."
+      "explanation": "Trong Python, cú pháp chuẩn xác và duy nhất để định nghĩa một hàm là sử dụng từ khóa `def`, theo sau là tên hàm, danh sách tham số trong ngoặc đơn và dấu hai chấm `:`, ví dụ: `def myFunction():`.\n- Đáp án B (`def myFunction():`) là cú pháp hoàn toàn ĐÚNG.\n- Các đáp án A (`create`), C (`func`), và D (`def function`) đều sử dụng từ khóa sai không tồn tại trong ngữ pháp Python để định nghĩa hàm và sẽ gây lỗi `SyntaxError`.\nVì câu hỏi yêu cầu chọn tất cả các cách KHÔNG ĐÚNG (incorrect ways), nên ta chọn A, C và D.",
+      "multiple": true,
+      "correctIndices": [
+        0,
+        2,
+        3
+      ]
     },
     {
       "id": 30006,
@@ -26413,7 +26419,7 @@
     {
       "id": 30009,
       "quizId": 201,
-      "text": "What is the purpose of the following Python code?\n\r\n\n\r\n```python\n\r\nfhand = open('mbox.txt')\n\r\nx = 0\n\r\nfor line in fhand:\n\r\n    x = x + 1\n\r\nprint x\n\r\n```",
+      "text": "What is the purpose of the following Python code?\n\n```python\n\nfhand = open('mbox.txt')\n\nx = 0\n\nfor line in fhand:\n\n    x = x + 1\n\nprint x\n\n```",
       "options": [
         "Remove the leading and trailing spaces from each line in mbox.txt",
         "Count the lines in the file 'mbox.txt'",
@@ -26426,7 +26432,7 @@
     {
       "id": 30010,
       "quizId": 201,
-      "text": "What is the output of the following code?\n\r\n\n\r\n```python\n\r\nclass Pokemon():\n\r\n\n\r\n    def __init__(self, name, type):\n\r\n        self.name = name\n\r\n        self.type = type\n\r\n\n\r\n    def stringPokemon(self):\n\r\n        print(f\"Pokemon name is self.name and type is self.type\")\n\r\n\n\r\nclass GrassType(Pokemon):\n\r\n\n\r\n    # overrides the stringPokemon() function on 'Pokemon' class\n\r\n    def stringPokemon(self):\n\r\n        print(f\"Grass type pokemon name is self.name\")\n\r\n\n\r\npoke1 = GrassType('Bulbasaur', 'Grass')\n\r\npoke1.stringPokemon\n\r\npoke1.stringPokemon()\n\r\npoke2 = Pokemon('Charizard', 'Fire')\n\r\npoke2.stringPokemon\n\r\npoke2.stringPokemon()\n\r\n```",
+      "text": "What is the output of the following code?\n\n```python\n\nclass Pokemon():\n\n    def __init__(self, name, type):\n\n        self.name = name\n\n        self.type = type\n\n    def stringPokemon(self):\n\n        print(f\"Pokemon name is self.name and type is self.type\")\n\nclass GrassType(Pokemon):\n\n    # overrides the stringPokemon() function on 'Pokemon' class\n\n    def stringPokemon(self):\n\n        print(f\"Grass type pokemon name is self.name\")\n\npoke1 = GrassType('Bulbasaur', 'Grass')\n\npoke1.stringPokemon\n\npoke1.stringPokemon()\n\npoke2 = Pokemon('Charizard', 'Fire')\n\npoke2.stringPokemon\n\npoke2.stringPokemon()\n\n```",
       "options": [
         "Grass type pokemon name is Bulbasaur Pokemon name is Charizard and type is Fire",
         "Pokemon name is Bulbasaur and type is Grass Pokemon name is Charizard and type is Fire",
@@ -26439,7 +26445,7 @@
     {
       "id": 30011,
       "quizId": 201,
-      "text": "Assume x and y are assigned as follows:\n\r\n\n\r\n```python\n\r\nx = 5\n\r\ny = -5\n\r\n```\n\r\n\n\r\nWhat is the effect of this statement:\n\r\n\n\r\n```python\n\r\nx, y = (y, x)[::-1]\n\r\n```",
+      "text": "Assume x and y are assigned as follows:\n\n```python\n\nx = 5\n\ny = -5\n\n```\n\nWhat is the effect of this statement:\n\n```python\n\nx, y = (y, x)[::-1]\n\n```",
       "options": [
         "The values of x and y are unchanged",
         "Both x and y are -5",
@@ -26452,7 +26458,7 @@
     {
       "id": 30012,
       "quizId": 201,
-      "text": "What's the output of the following code snippet?\n\r\n\n\r\n```python\n\r\n>>> class Dog:\n\r\n...     def walk(self):\n\r\n...         return \"*walking*\"\n\r\n...\n\r\n...     def speak(self):\n\r\n...         return \"Woof!\"\n\r\n...\n\r\n>>> class JackRussellTerrier(Dog):\n\r\n...     def speak(self):\n\r\n...         return \"Arff!\"\n\r\n...\n\r\n>>> bobo = JackRussellTerrier()\n\r\n>>> bobo.walk()\n\r\n```",
+      "text": "What's the output of the following code snippet?\n\n```python\n\n>>> class Dog:\n\n...     def walk(self):\n\n...         return \"*walking*\"\n\n...\n\n...     def speak(self):\n\n...         return \"Woof!\"\n\n...\n\n>>> class JackRussellTerrier(Dog):\n\n...     def speak(self):\n\n...         return \"Arff!\"\n\n...\n\n>>> bobo = JackRussellTerrier()\n\n>>> bobo.walk()\n\n```",
       "options": [
         "Arff!",
         "*walking*",
@@ -26478,7 +26484,7 @@
     {
       "id": 30014,
       "quizId": 201,
-      "text": "What will be the value of x when the following statement is executed:\n\r\n\n\r\n```python\n\r\nx = int(98.6)\n\r\n```",
+      "text": "What will be the value of x when the following statement is executed:\n\n```python\n\nx = int(98.6)\n\n```",
       "options": [
         "100",
         "6",
@@ -26491,7 +26497,7 @@
     {
       "id": 30015,
       "quizId": 201,
-      "text": "What will the following program print out:\n\r\n\n\r\n```python\n\r\n>>> x = 15\n\r\n>>> x = x + 10\n\r\n>>> print(x)\n\r\n```",
+      "text": "What will the following program print out:\n\n```python\n\n>>> x = 15\n\n>>> x = x + 10\n\n>>> print(x)\n\n```",
       "options": [
         "25",
         "5",
@@ -26504,7 +26510,7 @@
     {
       "id": 30016,
       "quizId": 201,
-      "text": "What does the following Python sequence print out?\n\r\n\n\r\n```python\n\r\nx = 'From: Using the : character'\n\r\ny = re.findall('^F.+:', x)\n\r\nprint(y)\n\r\n```",
+      "text": "What does the following Python sequence print out?\n\n```python\n\nx = 'From: Using the : character'\n\ny = re.findall('^F.+:', x)\n\nprint(y)\n\n```",
       "options": [
         "^F.+:",
         "['From: Using the :']",
@@ -26517,7 +26523,7 @@
     {
       "id": 30017,
       "quizId": 201,
-      "text": "Given a code,\n\r\n\n\r\n```python\n\r\nclass People():\n\r\n    def __init__(self, name):\n\r\n        self.name = name\n\r\n\n\r\n    def namePrint(self):\n\r\n        print(self.name)\n\r\n\n\r\nperson1 = People(\"Sally\")\n\r\nperson2 = People(\"Louise\")\n\r\nperson1.namePrint()\n\r\n```\n\r\n\n\r\nWhat is correct answer?",
+      "text": "Given a code,\n\n```python\n\nclass People():\n\n    def __init__(self, name):\n\n        self.name = name\n\n    def namePrint(self):\n\n        print(self.name)\n\nperson1 = People(\"Sally\")\n\nperson2 = People(\"Louise\")\n\nperson1.namePrint()\n\n```\n\nWhat is correct answer?",
       "options": [
         "person1 and person2 are two different instances of the People class.",
         "The __init__ method is used to set initial values for attributes.",
@@ -26530,7 +26536,7 @@
     {
       "id": 30018,
       "quizId": 201,
-      "text": "For the following code, which of the following statements is true?\n\r\n\n\r\n```python\n\r\ndef printHello():\n\r\n    print(\"Hello\")\n\r\n\n\r\na = printHello()\n\r\n```",
+      "text": "For the following code, which of the following statements is true?\n\n```python\n\ndef printHello():\n\n    print(\"Hello\")\n\na = printHello()\n\n```",
       "options": [
         "PrintHello() is a function and a is a variable. None of them are objects.",
         "Both printHello() and a refer to the same object.",
@@ -26621,7 +26627,7 @@
     {
       "id": 30025,
       "quizId": 201,
-      "text": "What does the following Python code print out?\n\r\n\n\r\n```python\n\r\na = [1, 2, 3, 8]\n\r\nb = [4, 5, 6]\n\r\nc = a + b\n\r\nprint(c)\n\r\n```",
+      "text": "What does the following Python code print out?\n\n```python\n\na = [1, 2, 3, 8]\n\nb = [4, 5, 6]\n\nc = a + b\n\nprint(c)\n\n```",
       "options": [
         "28",
         "[1, 2, 3, 8, 4, 5, 6]",
@@ -26634,7 +26640,7 @@
     {
       "id": 30026,
       "quizId": 201,
-      "text": "You look at the following text:\n\r\n\n\r\n```python\n\r\nif x == 6 :\n\r\n    print('Is 6')\n\r\n    print('Is Still 6')\n\r\n    print('Third 6')\n\r\n```\n\r\n\n\r\nIt looks perfect but Python is giving you an 'Indentation Error' on the second print statement. What is the most likely reason?",
+      "text": "You look at the following text:\n\n```python\n\nif x == 6 :\n\n    print('Is 6')\n\n    print('Is Still 6')\n\n    print('Third 6')\n\n```\n\nIt looks perfect but Python is giving you an 'Indentation Error' on the second print statement. What is the most likely reason?",
       "options": [
         "In order to make humans feel inadequate, Python randomly emits 'Indentation Errors' on perfectly good code - after about an hour the error will just go away without any changes to your program",
         "Python has reached its limit on the largest Python program that can be run",
@@ -26660,7 +26666,7 @@
     {
       "id": 30028,
       "quizId": 201,
-      "text": "Which of the following slicing operations will produce the list [12, 3]?\n\r\n\n\r\n```python\n\r\nt = [9, 41, 12, 3, 74, 15]\n\r\n```",
+      "text": "Which of the following slicing operations will produce the list [12, 3]?\n\n```python\n\nt = [9, 41, 12, 3, 74, 15]\n\n```",
       "options": [
         "t[1:3]",
         "t[2:2]",
@@ -26725,7 +26731,7 @@
     {
       "id": 30033,
       "quizId": 201,
-      "text": "```python\n\r\nclass Dog:\n\r\n    def __init__(self, name, age):\n\r\n        self.name = name\n\r\n        self.age = age\n\r\n\n\r\nclass JackRussellTerrier(Dog):\n\r\n    pass\n\r\n\n\r\nclass Dachshund(Dog):\n\r\n    pass\n\r\n\n\r\nclass Bulldog(Dog):\n\r\n    pass\n\r\n\n\r\nmiles = JackRussellTerrier(\"Miles\", 4)\n\r\nbuddy = Dachshund(\"Buddy\", 9)\n\r\njack = Bulldog(\"Jack\", 3)\n\r\njim = Bulldog(\"Jim\", 5)\n\r\n```\n\r\n\n\r\nGiven the above code snippet, which of the following REPL outputs are correct? (Select all that apply.)",
+      "text": "```python\n\nclass Dog:\n\n    def __init__(self, name, age):\n\n        self.name = name\n\n        self.age = age\n\nclass JackRussellTerrier(Dog):\n\n    pass\n\nclass Dachshund(Dog):\n\n    pass\n\nclass Bulldog(Dog):\n\n    pass\n\nmiles = JackRussellTerrier(\"Miles\", 4)\n\nbuddy = Dachshund(\"Buddy\", 9)\n\njack = Bulldog(\"Jack\", 3)\n\njim = Bulldog(\"Jim\", 5)\n\n```\n\nGiven the above code snippet, which of the following REPL outputs are correct? (Select all that apply.)",
       "options": [
         "isinstance(jack, Dog)",
         "isinstance(miles, Dog)",
@@ -26733,7 +26739,12 @@
         "isinstance(miles, Bulldog)"
       ],
       "correctIndex": 0,
-      "explanation": "Hàm built-in `isinstance(object, classinfo)` trong Python kiểm tra xem đối tượng `object` có phải là thể hiện của lớp `classinfo` hoặc bất kỳ lớp cha nào mà lớp đó kế thừa hay không:\n- Cấu trúc phân cấp kế thừa trong đoạn mã:\n  + `JackRussellTerrier` là lớp con kế thừa từ `Dog`.\n  + `Dachshund` là lớp con kế thừa từ `Dog`.\n  + `Bulldog` là lớp con kế thừa từ `Dog`.\n- Phân tích từng biểu thức:\n  + **A. `isinstance(jack, Dog)`**: `jack` là thể hiện của `Bulldog`, mà `Bulldog` kế thừa từ `Dog`. Do đó biểu thức trả về `True` -> **ĐÚNG**.\n  + **B. `isinstance(miles, Dog)`**: `miles` là thể hiện của `JackRussellTerrier`, mà `JackRussellTerrier` kế thừa từ `Dog`. Do đó biểu thức trả về `True` -> **ĐÚNG**.\n  + **C. `isinstance(jack, Dachshund)`**: `jack` là đối tượng `Bulldog`, hoàn toàn không liên quan đến nhánh kế thừa `Dachshund` -> trả về `False`.\n  + **D. `isinstance(miles, Bulldog)`**: `miles` là đối tượng `JackRussellTerrier`, không liên quan đến nhánh `Bulldog` -> trả về `False`.\n- Do đó, hai biểu thức A và B là các biểu thức cho kết quả đúng (`True`)."
+      "explanation": "Hàm built-in `isinstance(object, classinfo)` trong Python kiểm tra xem đối tượng `object` có phải là thể hiện của lớp `classinfo` hoặc bất kỳ lớp cha nào mà lớp đó kế thừa hay không:\n- Cấu trúc phân cấp kế thừa trong đoạn mã:\n  + `JackRussellTerrier` là lớp con kế thừa từ `Dog`.\n  + `Dachshund` là lớp con kế thừa từ `Dog`.\n  + `Bulldog` là lớp con kế thừa từ `Dog`.\n- Phân tích từng biểu thức:\n  + **A. `isinstance(jack, Dog)`**: `jack` là thể hiện của `Bulldog`, mà `Bulldog` kế thừa từ `Dog`. Do đó biểu thức trả về `True` -> **ĐÚNG**.\n  + **B. `isinstance(miles, Dog)`**: `miles` là thể hiện của `JackRussellTerrier`, mà `JackRussellTerrier` kế thừa từ `Dog`. Do đó biểu thức trả về `True` -> **ĐÚNG**.\n  + **C. `isinstance(jack, Dachshund)`**: `jack` là đối tượng `Bulldog`, hoàn toàn không liên quan đến nhánh kế thừa `Dachshund` -> trả về `False`.\n  + **D. `isinstance(miles, Bulldog)`**: `miles` là đối tượng `JackRussellTerrier`, không liên quan đến nhánh `Bulldog` -> trả về `False`.\n- Do đó, hai biểu thức A và B là các biểu thức cho kết quả đúng (`True`).",
+      "multiple": true,
+      "correctIndices": [
+        0,
+        1
+      ]
     },
     {
       "id": 30034,
@@ -26790,7 +26801,7 @@
     {
       "id": 30038,
       "quizId": 201,
-      "text": "You have the following dictionary definition:\n\r\n\n\r\n```python\n\r\nd = 'foo': 100, 'bar': 200, 'baz': 300\n\r\n```\n\r\n\n\r\nWhat method call will delete the entry whose value is 200?",
+      "text": "You have the following dictionary definition:\n\n```python\n\nd = 'foo': 100, 'bar': 200, 'baz': 300\n\n```\n\nWhat method call will delete the entry whose value is 200?",
       "options": [
         "d.pop(\"bar\")",
         "d.remove(\"bar\")",
@@ -26803,7 +26814,7 @@
     {
       "id": 30039,
       "quizId": 201,
-      "text": "What does the following Python code print out?\n\r\n\n\r\n```python\n\r\na = [1, 2, 3]\n\r\nb = [4, 5, 6]\n\r\nc = a + b\n\r\nprint len(c)\n\r\n```",
+      "text": "What does the following Python code print out?\n\n```python\n\na = [1, 2, 3]\n\nb = [4, 5, 6]\n\nc = a + b\n\nprint len(c)\n\n```",
       "options": [
         "21",
         "[4, 5, 6]",
@@ -26842,12 +26853,12 @@
     {
       "id": 30042,
       "quizId": 202,
-      "text": "Find the output of the given Python program\n\r\n\n\r\n```python\n\r\na = 25\n\r\nif a < 15:\n\r\n    print(\"Hi\")\n\r\nif a <= 30:\n\r\n    print(\"Hello\")\n\r\nelse:\n\r\n    print(\"Know Program\")\n\r\n```",
+      "text": "Find the output of the given Python program\n\n```python\n\na = 25\n\nif a < 15:\n\n    print(\"Hi\")\n\nif a <= 30:\n\n    print(\"Hello\")\n\nelse:\n\n    print(\"Know Program\")\n\n```",
       "options": [
         "Hi",
         "Hello",
-        "Hi",
-        "Hi"
+        "Know Program",
+        "Hi\nHello"
       ],
       "correctIndex": 1,
       "explanation": "Từng bước thực thi chương trình:\n1. Gán giá trị biến `a = 25`.\n2. Cấu trúc rẽ nhánh thứ nhất:\n   `if a < 15:`\n   Điều kiện `25 < 15` trả về `False`, do đó lệnh `print(\"Hi\")` không được thực hiện.\n3. Cấu trúc rẽ nhánh thứ hai (đây là một cấu trúc `if...else` độc lập với khối `if` phía trước):\n   `if a <= 30:`\n   Điều kiện `25 <= 30` trả về `True`, do đó khối lệnh bên trong `if` được thực thi: `print(\"Hello\")` in ra dòng chữ `Hello`.\n   Nhánh `else:` tương ứng bị bỏ qua và không in `Know Program`.\nKết luận: Kết quả hiển thị trên màn hình là `Hello`. Do đó đáp án B là chính xác."
@@ -26881,7 +26892,7 @@
     {
       "id": 30045,
       "quizId": 202,
-      "text": "A bytes object is immutable. If you want a binary sequence that can be modified, you should use a bytearray.\n\r\n\n\r\nIs it possible to create a bytearray object directly from a bytes object, as shown below:\n\r\n\n\r\n```python\n\r\narray_of_bytes = bytearray(b'15x 80a#')\n\r\n```",
+      "text": "A bytes object is immutable. If you want a binary sequence that can be modified, you should use a bytearray.\n\nIs it possible to create a bytearray object directly from a bytes object, as shown below:\n\n```python\n\narray_of_bytes = bytearray(b'15x 80a#')\n\n```",
       "options": [
         "Yes",
         "No"
@@ -26892,7 +26903,7 @@
     {
       "id": 30046,
       "quizId": 202,
-      "text": "How would you use string slicing [:] to print out 'uct' from the following string?\n\r\n\n\r\n```python\n\r\nx = 'From marquard@uct.ac.za'\n\r\n```",
+      "text": "How would you use string slicing [:] to print out 'uct' from the following string?\n\n```python\n\nx = 'From marquard@uct.ac.za'\n\n```",
       "options": [
         "print(x[14/17])",
         "print(x[14:17])",
@@ -26905,7 +26916,7 @@
     {
       "id": 30047,
       "quizId": 202,
-      "text": "```python\n\r\nclass Sales:\n\r\n    def __init__(self, id):\n\r\n        self.id = id\n\r\n        id = 100\n\r\n\n\r\nval = Sales(123)\n\r\nprint (val.id)\n\r\n```",
+      "text": "```python\n\nclass Sales:\n\n    def __init__(self, id):\n\n        self.id = id\n\n        id = 100\n\nval = Sales(123)\n\nprint (val.id)\n\n```",
       "options": [
         "SyntaxError, this program will not run",
         "100",
@@ -26957,7 +26968,7 @@
     {
       "id": 30051,
       "quizId": 202,
-      "text": "What would the following Python code print out?\n\r\n\n\r\n```python\n\r\nstuff = dict()\n\r\nprint(stuff.get('candy',-1))\n\r\n```",
+      "text": "What would the following Python code print out?\n\n```python\n\nstuff = dict()\n\nprint(stuff.get('candy',-1))\n\n```",
       "options": [
         "-1",
         "The program would fail with a traceback",
@@ -26983,7 +26994,7 @@
     {
       "id": 30053,
       "quizId": 202,
-      "text": "What will be the value of x when the following statement is executed:\n\r\n\n\r\n```python\n\r\nx = round (98.6)\n\r\n```",
+      "text": "What will be the value of x when the following statement is executed:\n\n```python\n\nx = round (98.6)\n\n```",
       "options": [
         "100",
         "6",
@@ -27035,7 +27046,7 @@
     {
       "id": 30057,
       "quizId": 202,
-      "text": "Identify the data structure we use in the code given below?\n\r\n# Code starts\n\r\n\n\r\nasthetic1 = 'quizOrbit'\n\r\nasthetic2 = 'QuizOrbit'\n\r\n\n\r\nprint(asthetic1!=asthetic2)\n\r\n\n\r\n# Code Ends",
+      "text": "Identify the data structure we use in the code given below?\n\n```python\n# Code starts\nasthetic1 = 'quizOrbit'\nasthetic2 = 'QuizOrbit'\n\nprint(asthetic1 != asthetic2)\n# Code Ends\n```",
       "options": [
         "HashMap",
         "Tree",
@@ -27074,7 +27085,7 @@
     {
       "id": 30060,
       "quizId": 202,
-      "text": "What is the iteration variable in the following Python code?\n\r\n\n\r\n```python\n\r\nfor letter in 'banana' :\n\r\n    print(letter)\n\r\n```",
+      "text": "What is the iteration variable in the following Python code?\n\n```python\n\nfor letter in 'banana' :\n\n    print(letter)\n\n```",
       "options": [
         "'banana'",
         "for",
@@ -27139,7 +27150,7 @@
     {
       "id": 30065,
       "quizId": 202,
-      "text": "In the following code (numbers added) - which will be the last line to execute successfully?\n\r\n\n\r\n```python\n\r\n(1)  astr = 'Hello Bob'\n\r\n(2)  istr = int(astr)\n\r\n(3)  print('First', istr)\n\r\n(4)  astr = '123'\n\r\n(5)  istr = int(astr)\n\r\n(6)  print('Second', istr)\n\r\n```",
+      "text": "In the following code (numbers added) - which will be the last line to execute successfully?\n\n```python\n\n(1)  astr = 'Hello Bob'\n\n(2)  istr = int(astr)\n\n(3)  print('First', istr)\n\n(4)  astr = '123'\n\n(5)  istr = int(astr)\n\n(6)  print('Second', istr)\n\n```",
       "options": [
         "2",
         "1",
@@ -27152,7 +27163,7 @@
     {
       "id": 30066,
       "quizId": 202,
-      "text": "For the following code:\n\r\n\n\r\n```python\n\r\nastr = 'Hello Bob'\n\r\nistr = 0\n\r\ntry:\n\r\n    istr = int(astr)\n\r\nexcept:\n\r\n    istr = -1\n\r\n```\n\r\n\n\r\nWhat will the value be for istr variable after this code executes?",
+      "text": "For the following code:\n\n```python\n\nastr = 'Hello Bob'\n\nistr = 0\n\ntry:\n\n    istr = int(astr)\n\nexcept:\n\n    istr = -1\n\n```\n\nWhat will the value be for istr variable after this code executes?",
       "options": [
         "-1",
         "It will be the 'Not a number' value (i.e. NaN)",
@@ -27165,7 +27176,7 @@
     {
       "id": 30067,
       "quizId": 202,
-      "text": "What is the result of the following statement:\n\r\n\n\r\n```python\n\r\nlist((b'abcde' + 'fghi')[3:6])\n\r\n```",
+      "text": "What is the result of the following statement:\n\n```python\n\nlist((b'abcde' + 'fghi')[3:6])\n\n```",
       "options": [
         "[b'd', b'e', b'f']",
         "b'def'",
@@ -27191,7 +27202,7 @@
     {
       "id": 30069,
       "quizId": 202,
-      "text": "Assume the variable x has been initialized to an integer value (e.g., x = 3). What does the following statement do?\n\r\n\n\r\n```python\n\r\nx = x + 2\n\r\n```",
+      "text": "Assume the variable x has been initialized to an integer value (e.g., x = 3). What does the following statement do?\n\n```python\n\nx = x + 2\n\n```",
       "options": [
         "This would fail as it is a syntax error",
         "Produce the value \"false\" because \"x\" can never equal \"x+2\"",
@@ -27204,7 +27215,7 @@
     {
       "id": 30070,
       "quizId": 202,
-      "text": "What does the following code print out?\n\r\n\n\r\n```python\n\r\nprint(\"123\" + \"abc\")\n\r\n```",
+      "text": "What does the following code print out?\n\n```python\n\nprint(\"123\" + \"abc\")\n\n```",
       "options": [
         "123abc",
         "123+abc",
@@ -27230,7 +27241,7 @@
     {
       "id": 30072,
       "quizId": 202,
-      "text": "What is output of the sample code?\n\r\n\n\r\n```python\n\r\nclass A:\n\r\n    def __init__(self):\n\r\n        self.calcI(30)\n\r\n\n\r\n    def calcI(self, i):\n\r\n        self.i = 2 * i\n\r\n\n\r\nclass B(A):\n\r\n    def __init__(self):\n\r\n        super().__init__()\n\r\n        print(\"i from B is\", self.i)\n\r\n\n\r\n    def calcI(self, i):\n\r\n        self.i = 3 * i\n\r\n\n\r\nb = B()\n\r\n```",
+      "text": "What is output of the sample code?\n\n```python\n\nclass A:\n\n    def __init__(self):\n\n        self.calcI(30)\n\n    def calcI(self, i):\n\n        self.i = 2 * i\n\nclass B(A):\n\n    def __init__(self):\n\n        super().__init__()\n\n        print(\"i from B is\", self.i)\n\n    def calcI(self, i):\n\n        self.i = 3 * i\n\nb = B()\n\n```",
       "options": [
         "The __init__ method of only class B gets invoked.",
         "The __init__ method of class A gets invoked and it displays \"i from B is 0\".",
@@ -27243,7 +27254,7 @@
     {
       "id": 30073,
       "quizId": 202,
-      "text": "The following code sequence fails with a traceback when the user enters a file that does not exist. How would you avoid the traceback and make it so you could print out your own error message when a bad file name was entered?\n\r\n\n\r\n```python\n\r\nfname = raw_input('Enter the file name: ')\n\r\nfhand = open(fname)\n\r\n```",
+      "text": "The following code sequence fails with a traceback when the user enters a file that does not exist. How would you avoid the traceback and make it so you could print out your own error message when a bad file name was entered?\n\n```python\n\nfname = raw_input('Enter the file name: ')\n\nfhand = open(fname)\n\n```",
       "options": [
         "try / except",
         "signal handlers",
@@ -27269,7 +27280,7 @@
     {
       "id": 30075,
       "quizId": 202,
-      "text": "For the following list, how would you print out 'Sally'?\n\r\n\n\r\n```python\n\r\nfriends = ['Joseph', 'Glenn', 'Sally']\n\r\n```",
+      "text": "For the following list, how would you print out 'Sally'?\n\n```python\n\nfriends = ['Joseph', 'Glenn', 'Sally']\n\n```",
       "options": [
         "print(friends['Sally'])",
         "print(friends[2:1])",
@@ -27282,7 +27293,7 @@
     {
       "id": 30076,
       "quizId": 202,
-      "text": "What would the following Python code print out?\n\r\n\n\r\n```python\n\r\nfruit = 'Banana'\n\r\nfruit[0] = 'b'\n\r\nprint(fruit)\n\r\n```",
+      "text": "What would the following Python code print out?\n\n```python\n\nfruit = 'Banana'\n\nfruit[0] = 'b'\n\nprint(fruit)\n\n```",
       "options": [
         "b",
         "B",
@@ -27295,7 +27306,7 @@
     {
       "id": 30077,
       "quizId": 202,
-      "text": "What is the output of the following code?\n\r\n\n\r\n```python\n\r\nclass Point:\n\r\n    def __init__(self, x = 0, y = 0):\n\r\n        self.x = x+1\n\r\n        self.y = y+1\n\r\n\n\r\np1 = Point()\n\r\nprint(p1.x, p1.y)\n\r\n```",
+      "text": "What is the output of the following code?\n\n```python\n\nclass Point:\n\n    def __init__(self, x = 0, y = 0):\n\n        self.x = x+1\n\n        self.y = y+1\n\np1 = Point()\n\nprint(p1.x, p1.y)\n\n```",
       "options": [
         "None None",
         "Initializes the class for use.",
@@ -27309,7 +27320,7 @@
     {
       "id": 30078,
       "quizId": 202,
-      "text": "What is the output from this print() function call:\n\r\n\n\r\n```python\n\r\nprint(\n\r\n    '100 200 300'.count(''),\n\r\n    '100 200 300'.count('', 5, 10),\n\r\n    '100 200 300'.count('', 5)\n\r\n)\n\r\n```\n\r\n*(Lưu ý: Trong đề thi gốc, do chuỗi chứa các ký tự `$` nên hệ thống web đã tự động render thành các thẻ KaTeX/MathML `<span class=\"katex\">...`)*",
+      "text": "What is the output from this print() function call:\n\n```python\n\nprint(\n\n    '100 200 300'.count(''),\n\n    '100 200 300'.count('', 5, 10),\n\n    '100 200 300'.count('', 5)\n\n)\n\n```\n\n*(Lưu ý: Trong đề thi gốc, do chuỗi chứa các ký tự `$` nên hệ thống web đã tự động render thành các thẻ KaTeX/MathML `<span class=\"katex\">...`)*",
       "options": [
         "310",
         "311",
@@ -27361,7 +27372,7 @@
     {
       "id": 30082,
       "quizId": 203,
-      "text": "What is true about the following code segment:\n\r\n\n\r\n```python\n\r\nif x == 5:\n\r\n    print('Is 5')\n\r\n    print('Is Still 5')\n\r\n    print('Third 5')\n\r\n```",
+      "text": "What is true about the following code segment:\n\n```python\n\nif x == 5:\n\n    print('Is 5')\n\n    print('Is Still 5')\n\n    print('Third 5')\n\n```",
       "options": [
         "The string 'Is 5' will never print out regardless of the value for x.",
         "The string 'Is 5' will always print out regardless of the value for x.",
@@ -27472,7 +27483,12 @@
         "bytes(5)"
       ],
       "correctIndex": 0,
-      "explanation": "Để tạo một đối tượng bytes gồm 5 byte có giá trị null (`0x00`), các phương án hợp lệ gồm:\n- Đáp án A (`bytes('\\x00\\x00\\x00\\x00\\x00', 'utf-8')`): Mã hóa chuỗi gồm 5 ký tự null `\\x00` sang định dạng bytes với mã hóa utf-8. Kết quả thu được là `b'\\x00\\x00\\x00\\x00\\x00'`, gồm chính xác 5 byte null.\n- Đáp án D (`bytes(5)`): Truyền số nguyên `5` vào constructor `bytes()`, Python sẽ khởi tạo một đối tượng `bytes` có độ dài bằng 5 với các byte được lấp đầy bằng giá trị 0 (`b'\\x00\\x00\\x00\\x00\\x00'`).\n- Đáp án B sai vì `bytes()` chỉ nhận tối đa 3 tham số, truyền 5 tham số rời rạc sẽ gây ngoại lệ `TypeError: bytes() takes at most 3 arguments (5 given)`.\n- Đáp án C sai vì `bytes[0:5]` là cú pháp slicing trên lớp `bytes`, không phải cú pháp gọi hàm tạo đối tượng, không tạo ra đối tượng bytes có 5 byte null."
+      "explanation": "Để tạo một đối tượng bytes gồm 5 byte có giá trị null (`0x00`), các phương án hợp lệ gồm:\n- Đáp án A (`bytes('\\x00\\x00\\x00\\x00\\x00', 'utf-8')`): Mã hóa chuỗi gồm 5 ký tự null `\\x00` sang định dạng bytes với mã hóa utf-8. Kết quả thu được là `b'\\x00\\x00\\x00\\x00\\x00'`, gồm chính xác 5 byte null.\n- Đáp án D (`bytes(5)`): Truyền số nguyên `5` vào constructor `bytes()`, Python sẽ khởi tạo một đối tượng `bytes` có độ dài bằng 5 với các byte được lấp đầy bằng giá trị 0 (`b'\\x00\\x00\\x00\\x00\\x00'`).\n- Đáp án B sai vì `bytes()` chỉ nhận tối đa 3 tham số, truyền 5 tham số rời rạc sẽ gây ngoại lệ `TypeError: bytes() takes at most 3 arguments (5 given)`.\n- Đáp án C sai vì `bytes[0:5]` là cú pháp slicing trên lớp `bytes`, không phải cú pháp gọi hàm tạo đối tượng, không tạo ra đối tượng bytes có 5 byte null.",
+      "multiple": true,
+      "correctIndices": [
+        0,
+        3
+      ]
     },
     {
       "id": 30091,
@@ -27516,7 +27532,7 @@
     {
       "id": 30094,
       "quizId": 203,
-      "text": "```python\n\r\nclass Person:\n\r\n    def __init__(self, name, age):\n\r\n        self.name = name\n\r\n        self.age = age\n\r\n```\n\r\n\n\r\nThe correct way to instantiate the above Person class is:",
+      "text": "```python\n\nclass Person:\n\n    def __init__(self, name, age):\n\n        self.name = name\n\n        self.age = age\n\n```\n\nThe correct way to instantiate the above Person class is:",
       "options": [
         "Person (\"Rufus\", 3)",
         "Person ()",
@@ -27542,7 +27558,7 @@
     {
       "id": 30096,
       "quizId": 203,
-      "text": "Which data structure is the output of the code given below?\n\r\n\n\r\n```python\n\r\n# Code starts\n\r\ncol = (2,4,6,3,5,8,7,6,4,3,0,9)\n\r\nl = list(col)\n\r\n\n\r\nfinalAns = list(set(col))\n\r\nprint(type(finalAns))\n\r\n# Code Ends\n\r\n```",
+      "text": "Which data structure is the output of the code given below?\n\n```python\n\n# Code starts\n\ncol = (2,4,6,3,5,8,7,6,4,3,0,9)\n\nl = list(col)\n\nfinalAns = list(set(col))\n\nprint(type(finalAns))\n\n# Code Ends\n\n```",
       "options": [
         "List",
         "Set",
@@ -27621,7 +27637,7 @@
     {
       "id": 30102,
       "quizId": 203,
-      "text": "For the following code\n\r\n\n\r\n```python\n\r\nx = 1\n\r\nif x < 2:\n\r\n    print('Below 2')\n\r\nelif x >= 2:\n\r\n    print('Two or more')\n\r\nelse:\n\r\n    print('Something else')\n\r\n```\n\r\n\n\r\nWhat is the output?",
+      "text": "For the following code\n\n```python\n\nx = 1\n\nif x < 2:\n\n    print('Below 2')\n\nelif x >= 2:\n\n    print('Two or more')\n\nelse:\n\n    print('Something else')\n\n```\n\nWhat is the output?",
       "options": [
         "x = 2.0",
         "x = -2.0",
@@ -27635,7 +27651,7 @@
     {
       "id": 30103,
       "quizId": 203,
-      "text": "Predict the output of the code given below?\n\r\n\n\r\n```python\n\r\n# Code starts\n\r\ncollection1 = ('QuizOrbit', 'Meha', 26, 'India')\n\r\ncollection2 = ('QuizOrbit', 'Divika', 23, 'India')\n\r\nprint(collection1 > collection2)\n\r\n# Code Ends\n\r\n```",
+      "text": "Predict the output of the code given below?\n\n```python\n\n# Code starts\n\ncollection1 = ('QuizOrbit', 'Meha', 26, 'India')\n\ncollection2 = ('QuizOrbit', 'Divika', 23, 'India')\n\nprint(collection1 > collection2)\n\n# Code Ends\n\n```",
       "options": [
         "None of These",
         "Error",
@@ -27661,10 +27677,10 @@
     {
       "id": 30105,
       "quizId": 203,
-      "text": "What is the output of the following code?\n\r\n\n\r\n```python\n\r\nclass Foo:\n\r\n    def printLine(self, line='Python'):\n\r\n        print(line)\n\r\n\n\r\no1 = Foo()\n\r\no1.printLine('Java')\n\r\n```",
+      "text": "What is the output of the following code?\n\n```python\n\nclass Foo:\n\n    def printLine(self, line='Python'):\n\n        print(line)\n\no1 = Foo()\n\no1.printLine('Java')\n\n```",
       "options": [
         "Java",
-        "Java",
+        "None",
         "Python",
         "Line"
       ],
@@ -27771,7 +27787,12 @@
         "a.remove(3)"
       ],
       "correctIndex": 2,
-      "explanation": "Cho danh sách ban đầu `a = [1, 2, 3, 4, 5]`. Phần tử ở giữa là số `3` nằm tại vị trí chỉ mục `index = 2` (`a[0]=1, a[1]=2, a[2]=3, a[3]=4, a[4]=5`).\nKiểm tra từng phương án tác động lên danh sách `a`:\n- **Đáp án C (`del a[2]`)**: Câu lệnh `del` xóa phần tử tại chỉ mục 2 khỏi danh sách. Sau lệnh này, số 3 bị loại bỏ và `a` trở thành `[1, 2, 4, 5]`. => ĐÚNG.\n- **Đáp án D (`a.remove(3)`)**: Phương thức `remove(value)` tìm và xóa phần tử đầu tiên có giá trị bằng `3` trong danh sách. Sau lệnh này, `a` trở thành `[1, 2, 4, 5]`. => ĐÚNG.\n- Phân tích hai phương án sai:\n  + A (`a[2:2] = []`): `a[2:2]` là một lát cắt rỗng (empty slice) tại vị trí 2. Gán lát cắt rỗng bằng danh sách rỗng `[]` không làm thay đổi danh sách, `a` vẫn giữ nguyên là `[1, 2, 3, 4, 5]` (để xóa phần tử số 3 bằng slice assignment, cú pháp phải là `a[2:3] = []`).\n  + B (`a[2] = []`): Gán phần tử tại index 2 bằng danh sách rỗng, biến `a` thành `[1, 2, [], 4, 5]`, không loại bỏ phần tử khỏi danh sách.\nDo đó, có hai câu lệnh thực hiện đúng yêu cầu là C và D."
+      "explanation": "Cho danh sách ban đầu `a = [1, 2, 3, 4, 5]`. Phần tử ở giữa là số `3` nằm tại vị trí chỉ mục `index = 2` (`a[0]=1, a[1]=2, a[2]=3, a[3]=4, a[4]=5`).\nKiểm tra từng phương án tác động lên danh sách `a`:\n- **Đáp án C (`del a[2]`)**: Câu lệnh `del` xóa phần tử tại chỉ mục 2 khỏi danh sách. Sau lệnh này, số 3 bị loại bỏ và `a` trở thành `[1, 2, 4, 5]`. => ĐÚNG.\n- **Đáp án D (`a.remove(3)`)**: Phương thức `remove(value)` tìm và xóa phần tử đầu tiên có giá trị bằng `3` trong danh sách. Sau lệnh này, `a` trở thành `[1, 2, 4, 5]`. => ĐÚNG.\n- Phân tích hai phương án sai:\n  + A (`a[2:2] = []`): `a[2:2]` là một lát cắt rỗng (empty slice) tại vị trí 2. Gán lát cắt rỗng bằng danh sách rỗng `[]` không làm thay đổi danh sách, `a` vẫn giữ nguyên là `[1, 2, 3, 4, 5]` (để xóa phần tử số 3 bằng slice assignment, cú pháp phải là `a[2:3] = []`).\n  + B (`a[2] = []`): Gán phần tử tại index 2 bằng danh sách rỗng, biến `a` thành `[1, 2, [], 4, 5]`, không loại bỏ phần tử khỏi danh sách.\nDo đó, có hai câu lệnh thực hiện đúng yêu cầu là C và D.",
+      "multiple": true,
+      "correctIndices": [
+        2,
+        3
+      ]
     },
     {
       "id": 30114,
@@ -27789,7 +27810,7 @@
     {
       "id": 30115,
       "quizId": 203,
-      "text": "If we open a file as follows:\n\r\n\n\r\n```python\n\r\nxfile = open('mbox.txt')\n\r\n```\n\r\n\n\r\nWhat statement would we use to read the file one line at a time?",
+      "text": "If we open a file as follows:\n\n```python\n\nxfile = open('mbox.txt')\n\n```\n\nWhat statement would we use to read the file one line at a time?",
       "options": [
         "for line in xfile:",
         "while ( getline (xfile,line) )",
@@ -27880,7 +27901,7 @@
     {
       "id": 30122,
       "quizId": 204,
-      "text": "class People():\n\r\n    def __init__(self, name):\n\r\n        self.name = name\n\r\n\n\r\n    def namePrint(self):\n\r\n        print(self.name)\n\r\n\n\r\nperson1 = People(\"Sally\")\n\r\nperson2 = People(\"Louise\")\n\r\nperson1.namePrint()",
+      "text": "What is the output of the following code?\n\n```python\nclass People():\n    def __init__(self, name):\n        self.name = name\n\n    def namePrint(self):\n        print(self.name)\n\nperson1 = People(\"Sally\")\nperson2 = People(\"Louise\")\nperson1.namePrint()\n```",
       "options": [
         "Sally",
         "Louise",
@@ -27932,12 +27953,12 @@
     {
       "id": 30126,
       "quizId": 204,
-      "text": "What will the following code print out?\n\r\n\n\r\nx = 0\n\r\nif x < 2:\n\r\n    print('Small')\n\r\nelif x < 10:\n\r\n    print('Medium')\n\r\nelse:\n\r\n    print('LARGE')\n\r\nprint('All done')",
+      "text": "What will the following code print out?\n\n```python\nx = 0\nif x < 2:\n    print('Small')\nelif x < 10:\n    print('Medium')\nelse:\n    print('LARGE')\nprint('All done')\n```",
       "options": [
-        "LARGE",
-        "Small",
-        "Small",
-        "Small"
+        "LARGE\nAll done",
+        "Medium\nAll done",
+        "Small\nAll done",
+        "All done"
       ],
       "correctIndex": 2,
       "explanation": "Phân tích từng bước thực thi của đoạn mã:\n1. Gán `x = 0`.\n2. Kiểm tra điều kiện `if x < 2:`: vì `0 < 2` cho kết quả `True`, Python thực thi khối lệnh tương ứng và in ra `Small`.\n3. Do nhánh `if` đầu tiên đã thỏa mãn (`True`), toàn bộ các nhánh rẽ sau (`elif x < 10` và `else`) đều bị bỏ qua.\n4. Dòng lệnh `print('All done')` nằm ngoài khối cấu trúc điều kiện `if-elif-else` (không thụt lề) nên luôn được thực thi tuần tự tiếp theo.\n5. Output thực tế hiển thị trên màn hình gồm hai dòng:\n```\nSmall\nAll done\n```\n*Lưu ý đề thi*: Câu hỏi này trích từ ngân hàng đề Coursera Python for Everybody (Chapter 3 Quiz). Trong đề gốc, phương án C tương ứng với đáp án đầy đủ gồm hai dòng 'Small' và 'All done'. Do giao diện trắc nghiệm bị co ngắn (chỉ hiển thị 1 dòng văn bản), các lựa chọn B, C, D đều hiển thị dòng đầu là 'Small'. Hệ thống trắc nghiệm ghi nhận phương án C là đáp án đúng."
@@ -27945,7 +27966,7 @@
     {
       "id": 30127,
       "quizId": 204,
-      "text": "Which data structure is being put to use in the code given below?\n\r\n\n\r\n# Code starts\n\r\norg = 'QuizOrbit'\n\r\ncount = \n\r\nfor i in org:\n\r\n    if i in count:\n\r\n        count[i]+=1\n\r\n    else:\n\r\n        count[i]=1\n\r\nprint(count)\n\r\n# Code Ends",
+      "text": "Which data structure is being put to use in the code given below?\n\n```python\n# Code starts\norg = 'QuizOrbit'\ncount = {}\nfor i in org:\n    if i in count:\n        count[i] += 1\n    else:\n        count[i] = 1\nprint(count)\n# Code Ends\n```",
       "options": [
         "String",
         "List",
@@ -27958,7 +27979,7 @@
     {
       "id": 30128,
       "quizId": 204,
-      "text": "What would the following Python code print out?\n\r\n\n\r\nstuff = dict()\n\r\nprint(stuff['candy'])",
+      "text": "What would the following Python code print out?\n\n```python\nstuff = dict()\nprint(stuff['candy'])\n```",
       "options": [
         "-1",
         "0",
@@ -28010,7 +28031,7 @@
     {
       "id": 30132,
       "quizId": 204,
-      "text": "How would you use the index operator [] to print out the letter q from the following string?\n\r\n\n\r\nx = 'From marquard@uct.ac.za'",
+      "text": "How would you use the index operator [] to print out the letter q from the following string?\n\n```python\nx = 'From marquard@uct.ac.za'\n```",
       "options": [
         "print(x[q])",
         "print x[10]",
@@ -28036,7 +28057,7 @@
     {
       "id": 30134,
       "quizId": 204,
-      "text": "What does the following Python code do?\n\r\n\n\r\nfhand = open('mbox-short.txt')\n\r\ninp = fhand.read()",
+      "text": "What does the following Python code do?\n\nfhand = open('mbox-short.txt')\n\ninp = fhand.read()",
       "options": [
         "Checks to see if the file exists and can be written",
         "Turns the text in the file into a graphic image like a PNG or JPG",
@@ -28062,7 +28083,7 @@
     {
       "id": 30136,
       "quizId": 204,
-      "text": "If you write a Python program to read a text file and you see extra blank lines in the output that are not present in the file input as shown below, what Python string function will likely solve the problem?\n\r\n\n\r\nFrom: stephen.marquard@uct.ac.za\n\r\n\n\r\nFrom: louis@media.berkeley.edu\n\r\n\n\r\nFrom: zqian@umich.edu\n\r\n\n\r\nFrom: rjlowe@iupui.edu\n\r\n\n\r\n...",
+      "text": "If you write a Python program to read a text file and you see extra blank lines in the output that are not present in the file input as shown below, what Python string function will likely solve the problem?\n\nFrom: stephen.marquard@uct.ac.za\n\nFrom: louis@media.berkeley.edu\n\nFrom: zqian@umich.edu\n\nFrom: rjlowe@iupui.edu\n\n...",
       "options": [
         "find()",
         "startswith()",
@@ -28089,7 +28110,7 @@
     {
       "id": 30138,
       "quizId": 204,
-      "text": "What is the output of the following python code snippet?\n\r\n\n\r\n# Code starts\n\r\nemp1 = ('Ajay',25,10000)\n\r\nemp2 = ('Sidhi',23,15000)\n\r\n\n\r\nemp1[2] = 20000\n\r\n\n\r\nprint(emp1[2]+emp2[2])\n\r\n# Code Ends",
+      "text": "What is the output of the following python code snippet?\n\n```python\n# Code starts\nemp1 = ('Ajay', 25, 10000)\nemp2 = ('Sidhi', 23, 15000)\n\nemp1[2] = 20000\n\nprint(emp1[2] + emp2[2])\n# Code Ends\n```",
       "options": [
         "35000",
         "25000",
@@ -28102,7 +28123,7 @@
     {
       "id": 30139,
       "quizId": 204,
-      "text": "Find the output of the code given below?\n\r\n\n\r\n# Code starts\n\r\n\n\r\ncontent = (21, 26, 37, 94)\n\r\ncontent.append( (75, 62, 79) )\n\r\nprint(len(content))\n\r\n\n\r\n# Code Ends",
+      "text": "Find the output of the code given below?\n\n```python\n# Code starts\ncontent = (21, 26, 37, 94)\ncontent.append((75, 62, 79))\nprint(len(content))\n# Code Ends\n```",
       "options": [
         "7",
         "2",
@@ -28129,7 +28150,7 @@
     {
       "id": 30141,
       "quizId": 204,
-      "text": "What is the result of the following statement:\n\r\n\n\r\n```python\n\r\nlist((b'abcde' + b'fghi')[3:6])\n\r\n```",
+      "text": "What is the result of the following statement:\n\n```python\n\nlist((b'abcde' + b'fghi')[3:6])\n\n```",
       "options": [
         "[b'd', b'e', b'f']",
         "b'def'",
@@ -28181,7 +28202,7 @@
     {
       "id": 30145,
       "quizId": 204,
-      "text": "What will be the value of x after the following statement executes:\n\r\n\n\r\n```python\n\r\nx = 2 * 3 - 8 / 4 % 2\n\r\n```",
+      "text": "What will be the value of x after the following statement executes:\n\n```python\n\nx = 2 * 3 - 8 / 4 % 2\n\n```",
       "options": [
         "1",
         "2",
@@ -28207,7 +28228,7 @@
     {
       "id": 30147,
       "quizId": 204,
-      "text": "What is true about the following code segment:\n\r\n\n\r\n```python\n\r\nif x == 5:\n\r\n    print('Is 5')\n\r\n    print('Is Still 5')\n\r\n    print('Third 5')\n\r\n```",
+      "text": "What is true about the following code segment:\n\n```python\n\nif x == 5:\n\n    print('Is 5')\n\n    print('Is Still 5')\n\n    print('Third 5')\n\n```",
       "options": [
         "Depending on the value of x, either all three of the print statements will execute or none of the statements will execute",
         "The string 'Is 5' will always print out regardless of the value for x.",
@@ -28220,7 +28241,7 @@
     {
       "id": 30148,
       "quizId": 204,
-      "text": "```python\n\r\nclass Person:\n\r\n    def __init__(self, id):\n\r\n        self.id = id\n\r\n\n\r\nsam = Person(100)\n\r\nsam.__dict__['age'] = 49\n\r\nprint (sam.age + len(sam.__dict__))\n\r\n```",
+      "text": "```python\n\nclass Person:\n\n    def __init__(self, id):\n\n        self.id = id\n\nsam = Person(100)\n\nsam.__dict__['age'] = 49\n\nprint (sam.age + len(sam.__dict__))\n\n```",
       "options": [
         "49",
         "50",
@@ -28233,7 +28254,7 @@
     {
       "id": 30149,
       "quizId": 204,
-      "text": "What's the output of the following code snippet?\n\r\n\n\r\n```python\n\r\n>>> class Dog:\n\r\n...     def walk(self):\n\r\n...         return \"*walking*\"\n\r\n...\n\r\n...     def speak(self):\n\r\n...         return \"Woof!\"\n\r\n...\n\r\n>>> class JackRussellTerrier(Dog):\n\r\n...     def talk(self):\n\r\n...         return super().speak()\n\r\n...\n\r\n>>> bobo = JackRussellTerrier()\n\r\n>>> bobo.talk()\n\r\n```",
+      "text": "What's the output of the following code snippet?\n\n```python\n\n>>> class Dog:\n\n...     def walk(self):\n\n...         return \"*walking*\"\n\n...\n\n...     def speak(self):\n\n...         return \"Woof!\"\n\n...\n\n>>> class JackRussellTerrier(Dog):\n\n...     def talk(self):\n\n...         return super().speak()\n\n...\n\n>>> bobo = JackRussellTerrier()\n\n>>> bobo.talk()\n\n```",
       "options": [
         "Woof!",
         "walking",
@@ -28258,12 +28279,12 @@
     {
       "id": 30151,
       "quizId": 204,
-      "text": "What does the following Python Program print out?\n\r\n\n\r\n```python\n\r\nstr1 = \"Hello\"\n\r\nstr2 = 'there'\n\r\nbob = str1 + str2\n\r\nprint(bob)\n\r\n```",
+      "text": "What does the following Python Program print out?\n\n```python\n\nstr1 = \"Hello\"\n\nstr2 = 'there'\n\nbob = str1 + str2\n\nprint(bob)\n\n```",
       "options": [
         "Hello",
         "0",
         "Hellothere",
-        "Hello"
+        "Hello there"
       ],
       "correctIndex": 2,
       "explanation": "Trong Python, toán tử `+` khi áp dụng giữa hai chuỗi ký tự (`str`) thực hiện thao tác ghép chuỗi (string concatenation):\n- Biến `str1` mang giá trị `\"Hello\"`.\n- Biến `str2` mang giá trị `'there'`.\n- Biểu thức `str1 + str2` nối hai chuỗi lại với nhau mà không tự động chèn thêm khoảng trắng ở giữa, tạo thành chuỗi `'Hellothere'`.\n- Lệnh `print(bob)` in chuỗi này ra màn hình, kết quả là `Hellothere` (Đáp án C)."
@@ -28362,7 +28383,7 @@
     {
       "id": 30159,
       "quizId": 204,
-      "text": "What is the output of the following code?\n\r\n\n\r\n```python\n\r\nclass Point:\n\r\n    def __init__(self, x = 0, y = 0):\n\r\n        self.x = x\n\r\n        self.y = y\n\r\n\n\r\n    def __sub__(self, other):\n\r\n        x = self.x + other.x\n\r\n        y = self.y + other.y\n\r\n        return Point(x,y)\n\r\n\n\r\np1 = Point(3, 4)\n\r\np2 = Point(1, 2)\n\r\nresult = p1-p2\n\r\nprint(result.x, result.y)\n\r\n```",
+      "text": "What is the output of the following code?\n\n```python\n\nclass Point:\n\n    def __init__(self, x = 0, y = 0):\n\n        self.x = x\n\n        self.y = y\n\n    def __sub__(self, other):\n\n        x = self.x + other.x\n\n        y = self.y + other.y\n\n        return Point(x,y)\n\np1 = Point(3, 4)\n\np2 = Point(1, 2)\n\nresult = p1-p2\n\nprint(result.x, result.y)\n\n```",
       "options": [
         "2 2",
         "4 6",
@@ -28467,7 +28488,7 @@
     {
       "id": 30167,
       "quizId": 205,
-      "text": "What is output for:\n\r\n\n\r\nb = [11,13,15,17,19,21]\n\r\nprint(b[::2])",
+      "text": "What is output for:\n\n```python\nb = [11, 13, 15, 17, 19, 21]\nprint(b[::2])\n```",
       "options": [
         "[19,21]",
         "[11,15]",
@@ -28545,7 +28566,7 @@
     {
       "id": 30173,
       "quizId": 205,
-      "text": "What is the output of the following program?\n\r\n\n\r\ndef outerFunction():\n\r\n    global a\n\r\n    a = 20\n\r\n    def innerFunction():\n\r\n        global a\n\r\n        a = 30\n\r\n        print('a =', a)\n\r\na = 10\n\r\nouterFunction()\n\r\nprint('a =', a)",
+      "text": "What is the output of the following program?\n\n```python\ndef outerFunction():\n    global a\n    a = 20\n    def innerFunction():\n        global a\n        a = 30\n        print('a =', a)\n\na = 10\nouterFunction()\nprint('a =', a)\n```",
       "options": [
         "a = 10 a = 30",
         "a = 10",
@@ -28649,7 +28670,7 @@
     {
       "id": 30181,
       "quizId": 205,
-      "text": "What is the output of the following code?\n\r\n\n\r\n```python\n\r\nclass Point:\n\r\n    def __init__(self, x = 0, y = 0):\n\r\n        self.x = x\n\r\n        self.y = y\n\r\n\n\r\n    def __sub__(self, other):\n\r\n        x = self.x - other.x\n\r\n        y = self.y - other.y\n\r\n        return Point(x,y)\n\r\n\n\r\np1 = Point(3, 4)\n\r\np2 = Point(1, 2)\n\r\nresult = p1-p2\n\r\nprint(result.x, result.y)\n\r\n```",
+      "text": "What is the output of the following code?\n\n```python\n\nclass Point:\n\n    def __init__(self, x = 0, y = 0):\n\n        self.x = x\n\n        self.y = y\n\n    def __sub__(self, other):\n\n        x = self.x - other.x\n\n        y = self.y - other.y\n\n        return Point(x,y)\n\np1 = Point(3, 4)\n\np2 = Point(1, 2)\n\nresult = p1-p2\n\nprint(result.x, result.y)\n\n```",
       "options": [
         "2 2",
         "4 6",
@@ -28688,7 +28709,7 @@
     {
       "id": 30184,
       "quizId": 205,
-      "text": "What does the following Python program print out?\n\r\n\n\r\n```python\n\r\nx = '40'\n\r\ny = int(x) + 2\n\r\nprint(y)\n\r\n```",
+      "text": "What does the following Python program print out?\n\n```python\n\nx = '40'\n\ny = int(x) + 2\n\nprint(y)\n\n```",
       "options": [
         "int402",
         "402",
@@ -28727,7 +28748,7 @@
     {
       "id": 30187,
       "quizId": 205,
-      "text": "What's the output of the following code snippet?\n\r\n\n\r\n```python\n\r\n>>> class Dog:\n\r\n...     def walk(self):\n\r\n...         return \"*walking*\"\n\r\n...\n\r\n...     def speak(self):\n\r\n...         return \"Woof!\"\n\r\n...\n\r\n>>> class JackRussellTerrier(Dog):\n\r\n...     def speak(self):\n\r\n...         return \"Arff!\"\n\r\n...\n\r\n>>> bobo = JackRussellTerrier()\n\r\n>>> bobo.speak()\n\r\n```",
+      "text": "What's the output of the following code snippet?\n\n```python\n\n>>> class Dog:\n\n...     def walk(self):\n\n...         return \"*walking*\"\n\n...\n\n...     def speak(self):\n\n...         return \"Woof!\"\n\n...\n\n>>> class JackRussellTerrier(Dog):\n\n...     def speak(self):\n\n...         return \"Arff!\"\n\n...\n\n>>> bobo = JackRussellTerrier()\n\n>>> bobo.speak()\n\n```",
       "options": [
         "Arff!",
         "walking",
@@ -28741,7 +28762,7 @@
     {
       "id": 30188,
       "quizId": 205,
-      "text": "How would you use string slicing [:] to print out 'uct' from the following string?\n\r\n\n\r\n```python\n\r\nx = 'From marquard@uct.ac.za'\n\r\n```",
+      "text": "How would you use string slicing [:] to print out 'uct' from the following string?\n\n```python\n\nx = 'From marquard@uct.ac.za'\n\n```",
       "options": [
         "print(x[14/17])",
         "print(x[14:17])",
@@ -28767,7 +28788,7 @@
     {
       "id": 30190,
       "quizId": 205,
-      "text": "What will be the output of the following Python code?\n\r\n\n\r\n```python\n\r\nf = None\n\r\nfor i in range (5):\n\r\n    with open(\"data.txt\", \"w\") as f:\n\r\n        if i > 2:\n\r\n            break\n\r\nprint(f.closed)\n\r\n```",
+      "text": "What will be the output of the following Python code?\n\n```python\n\nf = None\n\nfor i in range (5):\n\n    with open(\"data.txt\", \"w\") as f:\n\n        if i > 2:\n\n            break\n\nprint(f.closed)\n\n```",
       "options": [
         "True",
         "False",
@@ -28788,7 +28809,12 @@
         "bytes[0:5]"
       ],
       "correctIndex": 0,
-      "explanation": "Trong Python, để tạo một đối tượng kiểu `bytes` chứa 5 null byte `b'\\x00\\x00\\x00\\x00\\x00'`:\n- **Phương án A: `bytes(5)`** — Hàm khởi tạo `bytes(int)` với một số nguyên `n` sẽ tạo ra một đối tượng byte có độ dài `n` với các byte đều được khởi tạo bằng giá trị null (`0x00`). Do đó `bytes(5)` trả về đúng `b'\\x00\\x00\\x00\\x00\\x00'`. (Đúng)\n- **Phương án B: `bytes(0, 0, 0, 0, 0)`** — Hàm dựng `bytes()` chỉ nhận tối đa 3 tham số `(source, encoding, errors)`. Truyền vào 5 đối số riêng biệt sẽ gây lỗi `TypeError: bytes() takes at most 3 arguments (5 given)`. Nếu muốn khởi tạo từ các số 0 thì phải truyền vào một iterable (ví dụ: `bytes([0, 0, 0, 0, 0])`). (Sai)\n- **Phương án C: `bytes('\\x00\\x00\\x00\\x00\\x00', 'utf-8')`** — Khi truyền vào một chuỗi ký tự (`str`), cần chỉ định bảng mã `encoding`. Ký tự null `\\x00` trong UTF-8 được mã hóa thành byte đơn có giá trị `0x00`, do đó chuỗi 5 ký tự `\\x00` mã hóa UTF-8 tạo ra đối tượng bytes gồm 5 byte null `b'\\x00\\x00\\x00\\x00\\x00'`. (Đúng)\n- **Phương án D: `bytes[0:5]`** — `bytes` là một kiểu dữ liệu (type/class), không phải là đối tượng mảng/danh sách cụ thể để cắt lát bằng dấu ngoặc vuông `[]`, câu lệnh này gây ra lỗi `TypeError: 'type' object is not subscriptable`. (Sai)\nVì vậy, hai lựa chọn đúng là A và C."
+      "explanation": "Trong Python, để tạo một đối tượng kiểu `bytes` chứa 5 null byte `b'\\x00\\x00\\x00\\x00\\x00'`:\n- **Phương án A: `bytes(5)`** — Hàm khởi tạo `bytes(int)` với một số nguyên `n` sẽ tạo ra một đối tượng byte có độ dài `n` với các byte đều được khởi tạo bằng giá trị null (`0x00`). Do đó `bytes(5)` trả về đúng `b'\\x00\\x00\\x00\\x00\\x00'`. (Đúng)\n- **Phương án B: `bytes(0, 0, 0, 0, 0)`** — Hàm dựng `bytes()` chỉ nhận tối đa 3 tham số `(source, encoding, errors)`. Truyền vào 5 đối số riêng biệt sẽ gây lỗi `TypeError: bytes() takes at most 3 arguments (5 given)`. Nếu muốn khởi tạo từ các số 0 thì phải truyền vào một iterable (ví dụ: `bytes([0, 0, 0, 0, 0])`). (Sai)\n- **Phương án C: `bytes('\\x00\\x00\\x00\\x00\\x00', 'utf-8')`** — Khi truyền vào một chuỗi ký tự (`str`), cần chỉ định bảng mã `encoding`. Ký tự null `\\x00` trong UTF-8 được mã hóa thành byte đơn có giá trị `0x00`, do đó chuỗi 5 ký tự `\\x00` mã hóa UTF-8 tạo ra đối tượng bytes gồm 5 byte null `b'\\x00\\x00\\x00\\x00\\x00'`. (Đúng)\n- **Phương án D: `bytes[0:5]`** — `bytes` là một kiểu dữ liệu (type/class), không phải là đối tượng mảng/danh sách cụ thể để cắt lát bằng dấu ngoặc vuông `[]`, câu lệnh này gây ra lỗi `TypeError: 'type' object is not subscriptable`. (Sai)\nVì vậy, hai lựa chọn đúng là A và C.",
+      "multiple": true,
+      "correctIndices": [
+        0,
+        2
+      ]
     },
     {
       "id": 30192,

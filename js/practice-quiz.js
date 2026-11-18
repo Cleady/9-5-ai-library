@@ -406,18 +406,159 @@
     return result.join('\n');
   }
 
+  /* Nhận diện ngôn ngữ lập trình cho khối code */
+  function detectCodeLanguage(code, declaredLang) {
+    if (declaredLang && declaredLang !== 'text') return declaredLang.toLowerCase();
+    var c = code || '';
+    if (/\b(SELECT|FROM|WHERE|INSERT|INTO|UPDATE|CREATE\s+TABLE|CREATE\s+TRIGGER|DECLARE\s+@)\b/i.test(c)) return 'sql';
+    if (/\b(def\s+|class\s+|self\b|import\s+|print\(|elif\b|None\b)/.test(c)) return 'python';
+    return 'python';
+  }
+
+  /* Tô màu cú pháp (Syntax Highlighting) siêu nhẹ, zero-dependency */
+  function highlightCode(code, lang) {
+    if (!code) return '';
+    var l = (lang || 'python').toLowerCase();
+
+    // 1. Escape các ký tự HTML an toàn
+    var text = code
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+
+    var tokens = [];
+    function addToken(cls, content) {
+      var placeholder = '%%PRCHL' + tokens.length + '%%';
+      tokens.push('<span class="prc-hl-' + cls + '">' + content + '</span>');
+      return placeholder;
+    }
+
+    if (l === 'python' || l === 'py') {
+      // 1. Comments
+      text = text.replace(/(#[^\n\r]*)/g, function (m) { return addToken('comment', m); });
+      // 2. Multi-line and single-line strings
+      text = text.replace(/(&quot;&quot;&quot;[\s\S]*?&quot;&quot;&quot;|&#39;&#39;&#39;[\s\S]*?&#39;&#39;&#39;|&quot;(?:\\.|[^&"\\\n\r])*&quot;|&#39;(?:\\.|[^&#\\\n\r])*&#39;)/g, function (m) {
+        return addToken('string', m);
+      });
+      // 3. Numbers
+      text = text.replace(/\b(\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|0x[0-9a-fA-F]+)\b/g, function (m) {
+        return addToken('number', m);
+      });
+      // 4. Function definitions: def <func_name>
+      text = text.replace(/\b(def\s+)([a-zA-Z_][a-zA-Z0-9_]*)/g, function (_, p1, p2) {
+        return p1 + addToken('function', p2);
+      });
+      // 5. Class definitions: class <class_name>
+      text = text.replace(/\b(class\s+)([a-zA-Z_][a-zA-Z0-9_]*)/g, function (_, p1, p2) {
+        return p1 + addToken('class', p2);
+      });
+      // 6. Dunder methods: __init__, __str__, etc.
+      text = text.replace(/\b(__[a-zA-Z0-9_]+__)\b/g, function (m) { return addToken('special', m); });
+      // 7. Keywords
+      var pyKeywords = /\b(def|class|return|if|elif|else|while|for|in|try|except|finally|with|as|pass|break|continue|lambda|yield|import|from|global|nonlocal|raise|assert|del|async|await|and|or|not|is)\b/g;
+      text = text.replace(pyKeywords, function (m) { return addToken('keyword', m); });
+      // 8. Special identifiers & Booleans
+      var pySpecial = /\b(self|cls|True|False|None)\b/g;
+      text = text.replace(pySpecial, function (m) { return addToken('special', m); });
+      // 9. Built-in functions & types
+      var pyBuiltins = /\b(print|len|range|int|str|float|bool|list|dict|set|tuple|type|input|open|min|max|sum|sorted|reversed|enumerate|zip|map|filter|super|isinstance|issubclass|hasattr|getattr|setattr|ord|chr|abs|all|any|round|id|format|hex|bin|oct)\b/g;
+      text = text.replace(pyBuiltins, function (m) { return addToken('builtin', m); });
+    } else if (l === 'sql') {
+      // 1. Comments
+      text = text.replace(/(--[^\n\r]*|\/\*[\s\S]*?\*\/)/g, function (m) { return addToken('comment', m); });
+      // 2. Strings
+      text = text.replace(/(&#39;(?:\\.|[^&#\\\n\r])*&#39;|&quot;(?:\\.|[^&"\\\n\r])*&quot;)/g, function (m) {
+        return addToken('string', m);
+      });
+      // 3. Numbers
+      text = text.replace(/\b(\d+(?:\.\d+)?)\b/g, function (m) { return addToken('number', m); });
+      // 4. Variables: @var, @@var
+      text = text.replace(/(@{1,2}[a-zA-Z0-9_]+)\b/g, function (m) { return addToken('var', m); });
+      // 5. SQL Functions
+      var sqlFuncs = /\b(COUNT|SUM|AVG|MIN|MAX|COALESCE|ISNULL|ROUND|CONVERT|CAST|GETDATE|DATEADD|DATEDIFF|SUBSTRING|LEN|UPPER|LOWER)\b/gi;
+      text = text.replace(sqlFuncs, function (m) { return addToken('builtin', m); });
+      // 6. Keywords
+      var sqlKeywords = /\b(SELECT|FROM|WHERE|INSERT|INTO|UPDATE|SET|DELETE|CREATE|DROP|ALTER|TABLE|VIEW|INDEX|TRIGGER|PROCEDURE|FUNCTION|JOIN|INNER|LEFT|RIGHT|FULL|OUTER|CROSS|ON|GROUP\s+BY|ORDER\s+BY|HAVING|LIMIT|OFFSET|UNION|ALL|DISTINCT|AS|AND|OR|NOT|NULL|IS|IN|LIKE|EXISTS|BETWEEN|CASE|WHEN|THEN|ELSE|END|PRIMARY\s+KEY|FOREIGN\s+KEY|REFERENCES|CONSTRAINT|CHECK|DEFAULT|CASCADE|DECLARE|BEGIN|COMMIT|ROLLBACK|TRANSACTION|EXEC|EXECUTE|VALUES|ADD|MODIFY|COLUMN|DATABASE|USE|DESC|ASC|TOP|AFTER|FOR|INSTEAD\s+OF|ROWCOUNT)\b/gi;
+      text = text.replace(sqlKeywords, function (m) { return addToken('keyword', m); });
+      // 7. Data types
+      var sqlTypes = /\b(INT|INTEGER|BIGINT|SMALLINT|TINYINT|FLOAT|DOUBLE|DECIMAL|NUMERIC|VARCHAR|CHAR|TEXT|DATE|DATETIME|TIMESTAMP|TIME|BOOLEAN|BIT|BLOB|NVARCHAR|NCHAR)\b/gi;
+      text = text.replace(sqlTypes, function (m) { return addToken('special', m); });
+    } else {
+      // Generic C / Java / code
+      text = text.replace(/(\/\/[^\n\r]*|\/\*[\s\S]*?\*\/|#[^\n\r]*)/g, function (m) { return addToken('comment', m); });
+      text = text.replace(/(&quot;(?:\\.|[^&"\\\n\r])*&quot;|&#39;(?:\\.|[^&#\\\n\r])*&#39;)/g, function (m) {
+        return addToken('string', m);
+      });
+      text = text.replace(/\b(\d+(?:\.\d+)?)\b/g, function (m) { return addToken('number', m); });
+      var genKeywords = /\b(int|float|double|char|void|bool|return|if|else|while|for|switch|case|break|continue|default|struct|class|public|private|static|const|new|delete|printf|scanf|include|define)\b/g;
+      text = text.replace(genKeywords, function (m) { return addToken('keyword', m); });
+    }
+
+    // Restore tokens
+    text = text.replace(/%%PRCHL(\d+)%%/g, function (_, idx) {
+      return tokens[parseInt(idx, 10)];
+    });
+    return text;
+  }
+
+  /* Sao chép code từ khung code vào Clipboard */
+  function copyCode(btn) {
+    if (!btn) return;
+    var container = btn.closest('.prc-code-container');
+    var codeEl = container ? container.querySelector('pre code') : null;
+    var text = codeEl ? (codeEl.innerText || codeEl.textContent || '') : '';
+    if (!text) return;
+
+    var textSpan = btn.querySelector('.prc-code-copy-text') || btn;
+    function markCopied() {
+      btn.classList.add('prc-code-copied');
+      var oldText = textSpan.textContent;
+      textSpan.textContent = 'Copied!';
+      setTimeout(function () {
+        btn.classList.remove('prc-code-copied');
+        textSpan.textContent = oldText;
+      }, 2000);
+    }
+
+    function fallbackCopy(str) {
+      var ta = document.createElement('textarea');
+      ta.value = str;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(markCopied).catch(function () {
+        fallbackCopy(text);
+        markCopied();
+      });
+    } else {
+      fallbackCopy(text);
+      markCopied();
+    }
+  }
+
   /* Định dạng an toàn cho chuỗi có công thức toán và bảng dữ liệu */
   function formatMathText(text, isExplanation) {
     if (!text) return '';
     var str = String(text);
 
-    // 0. Bảo vệ các khối Markdown Code Block
+    // 0. Bảo vệ các khối Markdown Code Block và thực hiện Syntax Highlighting
     var codeTokens = [];
-    var withCodeTokens = str.replace(/```(?:([a-z0-9_-]*)\n)?([\s\S]*?)```/g, function (match, lang, code) {
+    var withCodeTokens = str.replace(/```(?:([a-z0-9_-]*)\n)?([\s\S]*?)```/g, function (match, rawLang, code) {
       var token = '___CODE_BLOCK_TOKEN_' + codeTokens.length + '___';
+      var rawCode = (code || '').trim();
+      var lang = detectCodeLanguage(rawCode, rawLang);
+      var highlighted = highlightCode(rawCode, lang);
       codeTokens.push({
-        lang: lang || 'python',
-        code: escapeHtml(code.trim())
+        lang: lang,
+        code: highlighted
       });
       return token;
     });
@@ -482,10 +623,21 @@
       return mathTokens[parseInt(idx, 10)];
     });
 
-    // 5. Phục hồi Code Blocks
+    // 5. Phục hồi Code Blocks với Header (Badge + Copy button) và Container
     out = out.replace(/___CODE_BLOCK_TOKEN_(\d+)___/g, function (_, idx) {
       var item = codeTokens[parseInt(idx, 10)];
-      return '<div class="prc-code-block"><pre><code class="language-' + item.lang + '">' + item.code + '</code></pre></div>';
+      var langLabel = (item.lang || 'code').toUpperCase();
+      var copyIcon = '<svg class="prc-code-copy-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+      return '<div class="prc-code-container">' +
+        '<div class="prc-code-header">' +
+          '<span class="prc-code-lang">' + langLabel + '</span>' +
+          '<button type="button" class="prc-code-copy-btn" onclick="window.Lib95 && window.Lib95.practice && window.Lib95.practice.copyCode(this)" title="Sao chép mã nguồn">' +
+            copyIcon +
+            '<span class="prc-code-copy-text">Copy</span>' +
+          '</button>' +
+        '</div>' +
+        '<div class="prc-code-block"><pre><code class="language-' + item.lang + '">' + item.code + '</code></pre></div>' +
+      '</div>';
     });
 
     return out;
@@ -555,6 +707,8 @@
   window.Lib95.practice.formatMathText = formatMathText;
   window.Lib95.practice.getDisplayQuestionText = getDisplayQuestionText;
   window.Lib95.practice.renderQuestionDiagrams = renderQuestionDiagrams;
+  window.Lib95.practice.highlightCode = highlightCode;
+  window.Lib95.practice.copyCode = copyCode;
 
   /* Helper: Kiểm tra câu hỏi có nhiều đáp án không */
   function isMultiQuestion(q) {

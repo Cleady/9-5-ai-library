@@ -3285,14 +3285,74 @@ html[data-theme="dark"] .prc-study-summary-item {
 }
 
 /* ========================================================
-   CSD203 & Practice Enhanced Code & Diagram Styling
+   CSD203, DBI202, PFP191 & Practice Code Container & Syntax Highlighting
    ======================================================== */
-.prc-code-block {
+.prc-code-container {
   margin: 14px 0;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid var(--border-color, #e2e8f0);
-  background: #1e293b;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.prc-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: #e2e8f0;
+  border-bottom: 1px solid #cbd5e1;
+  user-select: none;
+}
+
+.prc-code-lang {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #475569;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.prc-code-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #475569;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.prc-code-copy-btn:hover {
+  background: #ffffff;
+  color: #1e293b;
+  border-color: #94a3b8;
+}
+
+.prc-code-copy-btn.prc-code-copied {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #059669;
+}
+
+.prc-code-copy-icon {
+  flex-shrink: 0;
+}
+
+.prc-code-block {
+  margin: 0;
+  background: #f8fafc;
 }
 
 .prc-code-block pre {
@@ -3301,11 +3361,77 @@ html[data-theme="dark"] .prc-study-summary-item {
   overflow-x: auto;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.88rem;
-  line-height: 1.5;
-  color: #f8fafc;
+  line-height: 1.55;
+  color: #24292f;
   background: transparent;
   white-space: pre;
+  tab-size: 4;
 }
+
+/* Syntax Highlighting - Light Theme (GitHub / One Light style) */
+.prc-hl-keyword   { color: #cf222e; font-weight: 600; }
+.prc-hl-function  { color: #8250df; font-weight: 600; }
+.prc-hl-class     { color: #953800; font-weight: 600; }
+.prc-hl-string    { color: #0a3069; }
+.prc-hl-number    { color: #0550ae; font-weight: 500; }
+.prc-hl-comment   { color: #6e7781; font-style: italic; }
+.prc-hl-builtin   { color: #0550ae; font-weight: 500; }
+.prc-hl-special   { color: #b76b01; font-weight: 600; }
+.prc-hl-var       { color: #953800; font-weight: 500; }
+
+/* Dark Theme (Catppuccin Mocha / One Dark style) */
+html[data-theme="dark"] .prc-code-container {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #1e1e2e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme="dark"] .prc-code-header {
+  background: #181825;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .prc-code-lang {
+  color: #a6adc8;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .prc-code-copy-btn {
+  color: #bac2de;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .prc-code-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #cdd6f4;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+html[data-theme="dark"] .prc-code-copy-btn.prc-code-copied {
+  background: #a6e3a1;
+  color: #11111b;
+  border-color: #a6e3a1;
+}
+
+html[data-theme="dark"] .prc-code-block {
+  background: #1e1e2e;
+}
+
+html[data-theme="dark"] .prc-code-block pre {
+  color: #cdd6f4;
+}
+
+/* Syntax Highlighting - Dark Theme Tokens */
+html[data-theme="dark"] .prc-hl-keyword   { color: #cba6f7; font-weight: 600; }
+html[data-theme="dark"] .prc-hl-function  { color: #89b4fa; font-weight: 600; }
+html[data-theme="dark"] .prc-hl-class     { color: #f9e2af; font-weight: 600; }
+html[data-theme="dark"] .prc-hl-string    { color: #a6e3a1; }
+html[data-theme="dark"] .prc-hl-number    { color: #fab387; font-weight: 500; }
+html[data-theme="dark"] .prc-hl-comment   { color: #6c7086; font-style: italic; }
+html[data-theme="dark"] .prc-hl-builtin   { color: #94e2d5; font-weight: 500; }
+html[data-theme="dark"] .prc-hl-special   { color: #f38ba8; font-weight: 600; }
+html[data-theme="dark"] .prc-hl-var       { color: #f9e2af; font-weight: 500; }
 
 .prc-inline-code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -3315,6 +3441,12 @@ html[data-theme="dark"] .prc-study-summary-item {
   background: rgba(99, 102, 241, 0.08);
   color: #4f46e5;
   border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+html[data-theme="dark"] .prc-inline-code {
+  background: rgba(99, 102, 241, 0.18);
+  color: #a5b4fc;
+  border-color: rgba(99, 102, 241, 0.35);
 }
 
 .prc-question-diagram {

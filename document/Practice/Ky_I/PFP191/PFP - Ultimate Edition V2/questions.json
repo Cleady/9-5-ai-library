@@ -184,7 +184,7 @@
     ],
     "explanation": "Trong Python, cú pháp chuẩn xác và duy nhất để định nghĩa một hàm là sử dụng từ khóa `def`, theo sau là tên hàm, danh sách tham số trong ngoặc đơn và dấu hai chấm `:`, ví dụ: `def myFunction():`.\n- Đáp án B (`def myFunction():`) là cú pháp hoàn toàn ĐÚNG.\n- Các đáp án A (`create`), C (`func`), và D (`def function`) đều sử dụng từ khóa sai không tồn tại trong ngữ pháp Python để định nghĩa hàm và sẽ gây lỗi `SyntaxError`.\nVì câu hỏi yêu cầu chọn tất cả các cách KHÔNG ĐÚNG (incorrect ways), nên ta chọn A, C và D.",
     "explanationSource": "ai",
-    "type": "multiple-answer",
+    "type": "multiple-choice",
     "image": "0006_q006_Question_6.png"
   },
   {
@@ -1053,7 +1053,7 @@
     ],
     "explanation": "Hàm built-in `isinstance(object, classinfo)` trong Python kiểm tra xem đối tượng `object` có phải là thể hiện của lớp `classinfo` hoặc bất kỳ lớp cha nào mà lớp đó kế thừa hay không:\n- Cấu trúc phân cấp kế thừa trong đoạn mã:\n  + `JackRussellTerrier` là lớp con kế thừa từ `Dog`.\n  + `Dachshund` là lớp con kế thừa từ `Dog`.\n  + `Bulldog` là lớp con kế thừa từ `Dog`.\n- Phân tích từng biểu thức:\n  + **A. `isinstance(jack, Dog)`**: `jack` là thể hiện của `Bulldog`, mà `Bulldog` kế thừa từ `Dog`. Do đó biểu thức trả về `True` -> **ĐÚNG**.\n  + **B. `isinstance(miles, Dog)`**: `miles` là thể hiện của `JackRussellTerrier`, mà `JackRussellTerrier` kế thừa từ `Dog`. Do đó biểu thức trả về `True` -> **ĐÚNG**.\n  + **C. `isinstance(jack, Dachshund)`**: `jack` là đối tượng `Bulldog`, hoàn toàn không liên quan đến nhánh kế thừa `Dachshund` -> trả về `False`.\n  + **D. `isinstance(miles, Bulldog)`**: `miles` là đối tượng `JackRussellTerrier`, không liên quan đến nhánh `Bulldog` -> trả về `False`.\n- Do đó, hai biểu thức A và B là các biểu thức cho kết quả đúng (`True`).",
     "explanationSource": "ai",
-    "type": "multiple-answer",
+    "type": "multiple-choice",
     "image": "0034_q034_Question_34.png"
   },
   {
@@ -1320,11 +1320,11 @@
       },
       {
         "key": "C",
-        "text": "Hi"
+        "text": "Know Program"
       },
       {
         "key": "D",
-        "text": "Hi"
+        "text": "Hi\nHello"
       }
     ],
     "answer": [
@@ -1765,7 +1765,7 @@
     "id": 58,
     "chapter": 2,
     "chapterTitle": "Control Flow & Loops",
-    "question": "Identify the data structure we use in the code given below?\n# Code starts\n\nasthetic1 = 'quizOrbit'\nasthetic2 = 'QuizOrbit'\n\nprint(asthetic1!=asthetic2)\n\n# Code Ends",
+    "question": "Identify the data structure we use in the code given below?\n\n```python\n# Code starts\nasthetic1 = 'quizOrbit'\nasthetic2 = 'QuizOrbit'\n\nprint(asthetic1 != asthetic2)\n# Code Ends\n```",
     "options": [
       {
         "key": "A",
@@ -2813,7 +2813,7 @@
     ],
     "explanation": "Để tạo một đối tượng bytes gồm 5 byte có giá trị null (`0x00`), các phương án hợp lệ gồm:\n- Đáp án A (`bytes('\\x00\\x00\\x00\\x00\\x00', 'utf-8')`): Mã hóa chuỗi gồm 5 ký tự null `\\x00` sang định dạng bytes với mã hóa utf-8. Kết quả thu được là `b'\\x00\\x00\\x00\\x00\\x00'`, gồm chính xác 5 byte null.\n- Đáp án D (`bytes(5)`): Truyền số nguyên `5` vào constructor `bytes()`, Python sẽ khởi tạo một đối tượng `bytes` có độ dài bằng 5 với các byte được lấp đầy bằng giá trị 0 (`b'\\x00\\x00\\x00\\x00\\x00'`).\n- Đáp án B sai vì `bytes()` chỉ nhận tối đa 3 tham số, truyền 5 tham số rời rạc sẽ gây ngoại lệ `TypeError: bytes() takes at most 3 arguments (5 given)`.\n- Đáp án C sai vì `bytes[0:5]` là cú pháp slicing trên lớp `bytes`, không phải cú pháp gọi hàm tạo đối tượng, không tạo ra đối tượng bytes có 5 byte null.",
     "explanationSource": "ai",
-    "type": "multiple-answer",
+    "type": "multiple-choice",
     "image": "0091_q091_Question_91.png"
   },
   {
@@ -3270,7 +3270,7 @@
       },
       {
         "key": "B",
-        "text": "Java"
+        "text": "None"
       },
       {
         "key": "C",
@@ -3527,7 +3527,7 @@
     ],
     "explanation": "Cho danh sách ban đầu `a = [1, 2, 3, 4, 5]`. Phần tử ở giữa là số `3` nằm tại vị trí chỉ mục `index = 2` (`a[0]=1, a[1]=2, a[2]=3, a[3]=4, a[4]=5`).\nKiểm tra từng phương án tác động lên danh sách `a`:\n- **Đáp án C (`del a[2]`)**: Câu lệnh `del` xóa phần tử tại chỉ mục 2 khỏi danh sách. Sau lệnh này, số 3 bị loại bỏ và `a` trở thành `[1, 2, 4, 5]`. => ĐÚNG.\n- **Đáp án D (`a.remove(3)`)**: Phương thức `remove(value)` tìm và xóa phần tử đầu tiên có giá trị bằng `3` trong danh sách. Sau lệnh này, `a` trở thành `[1, 2, 4, 5]`. => ĐÚNG.\n- Phân tích hai phương án sai:\n  + A (`a[2:2] = []`): `a[2:2]` là một lát cắt rỗng (empty slice) tại vị trí 2. Gán lát cắt rỗng bằng danh sách rỗng `[]` không làm thay đổi danh sách, `a` vẫn giữ nguyên là `[1, 2, 3, 4, 5]` (để xóa phần tử số 3 bằng slice assignment, cú pháp phải là `a[2:3] = []`).\n  + B (`a[2] = []`): Gán phần tử tại index 2 bằng danh sách rỗng, biến `a` thành `[1, 2, [], 4, 5]`, không loại bỏ phần tử khỏi danh sách.\nDo đó, có hai câu lệnh thực hiện đúng yêu cầu là C và D.",
     "explanationSource": "ai",
-    "type": "multiple-answer",
+    "type": "multiple-choice",
     "image": "0114_q114_Question_114.png"
   },
   {
@@ -3782,7 +3782,7 @@
     "id": 123,
     "chapter": 4,
     "chapterTitle": "Data Structures & Collections",
-    "question": "class People():\n    def __init__(self, name):\n        self.name = name\n\n    def namePrint(self):\n        print(self.name)\n\nperson1 = People(\"Sally\")\nperson2 = People(\"Louise\")\nperson1.namePrint()",
+    "question": "What is the output of the following code?\n\n```python\nclass People():\n    def __init__(self, name):\n        self.name = name\n\n    def namePrint(self):\n        print(self.name)\n\nperson1 = People(\"Sally\")\nperson2 = People(\"Louise\")\nperson1.namePrint()\n```",
     "options": [
       {
         "key": "A",
@@ -3906,23 +3906,23 @@
     "id": 127,
     "chapter": 4,
     "chapterTitle": "Data Structures & Collections",
-    "question": "What will the following code print out?\n\nx = 0\nif x < 2:\n    print('Small')\nelif x < 10:\n    print('Medium')\nelse:\n    print('LARGE')\nprint('All done')",
+    "question": "What will the following code print out?\n\n```python\nx = 0\nif x < 2:\n    print('Small')\nelif x < 10:\n    print('Medium')\nelse:\n    print('LARGE')\nprint('All done')\n```",
     "options": [
       {
         "key": "A",
-        "text": "LARGE"
+        "text": "LARGE\nAll done"
       },
       {
         "key": "B",
-        "text": "Small"
+        "text": "Medium\nAll done"
       },
       {
         "key": "C",
-        "text": "Small"
+        "text": "Small\nAll done"
       },
       {
         "key": "D",
-        "text": "Small"
+        "text": "All done"
       }
     ],
     "answer": [
@@ -3937,7 +3937,7 @@
     "id": 128,
     "chapter": 4,
     "chapterTitle": "Data Structures & Collections",
-    "question": "Which data structure is being put to use in the code given below?\n\n# Code starts\norg = 'QuizOrbit'\ncount = {}\nfor i in org:\n    if i in count:\n        count[i]+=1\n    else:\n        count[i]=1\nprint(count)\n# Code Ends",
+    "question": "Which data structure is being put to use in the code given below?\n\n```python\n# Code starts\norg = 'QuizOrbit'\ncount = {}\nfor i in org:\n    if i in count:\n        count[i] += 1\n    else:\n        count[i] = 1\nprint(count)\n# Code Ends\n```",
     "options": [
       {
         "key": "A",
@@ -3968,7 +3968,7 @@
     "id": 129,
     "chapter": 4,
     "chapterTitle": "Data Structures & Collections",
-    "question": "What would the following Python code print out?\n\nstuff = dict()\nprint(stuff['candy'])",
+    "question": "What would the following Python code print out?\n\n```python\nstuff = dict()\nprint(stuff['candy'])\n```",
     "options": [
       {
         "key": "A",
@@ -4092,7 +4092,7 @@
     "id": 133,
     "chapter": 4,
     "chapterTitle": "Data Structures & Collections",
-    "question": "How would you use the index operator [] to print out the letter q from the following string?\n\nx = 'From marquard@uct.ac.za'",
+    "question": "How would you use the index operator [] to print out the letter q from the following string?\n\n```python\nx = 'From marquard@uct.ac.za'\n```",
     "options": [
       {
         "key": "A",
@@ -4282,7 +4282,7 @@
     "id": 139,
     "chapter": 4,
     "chapterTitle": "Data Structures & Collections",
-    "question": "What is the output of the following python code snippet?\n\n# Code starts\nemp1 = ('Ajay',25,10000)\nemp2 = ('Sidhi',23,15000)\n\nemp1[2] = 20000\n\nprint(emp1[2]+emp2[2])\n# Code Ends",
+    "question": "What is the output of the following python code snippet?\n\n```python\n# Code starts\nemp1 = ('Ajay', 25, 10000)\nemp2 = ('Sidhi', 23, 15000)\n\nemp1[2] = 20000\n\nprint(emp1[2] + emp2[2])\n# Code Ends\n```",
     "options": [
       {
         "key": "A",
@@ -4313,7 +4313,7 @@
     "id": 140,
     "chapter": 4,
     "chapterTitle": "Data Structures & Collections",
-    "question": "Find the output of the code given below?\n\n# Code starts\n\ncontent = (21, 26, 37, 94)\ncontent.append( (75, 62, 79) )\nprint(len(content))\n\n# Code Ends",
+    "question": "Find the output of the code given below?\n\n```python\n# Code starts\ncontent = (21, 26, 37, 94)\ncontent.append((75, 62, 79))\nprint(len(content))\n# Code Ends\n```",
     "options": [
       {
         "key": "A",
@@ -4701,7 +4701,7 @@
       },
       {
         "key": "D",
-        "text": "Hello"
+        "text": "Hello there"
       }
     ],
     "answer": [
@@ -5185,7 +5185,7 @@
     "id": 168,
     "chapter": 5,
     "chapterTitle": "Strings, Files & Advanced Python",
-    "question": "What is output for:\n\nb = [11,13,15,17,19,21]\nprint(b[::2])",
+    "question": "What is output for:\n\n```python\nb = [11, 13, 15, 17, 19, 21]\nprint(b[::2])\n```",
     "options": [
       {
         "key": "A",
@@ -5371,7 +5371,7 @@
     "id": 174,
     "chapter": 5,
     "chapterTitle": "Strings, Files & Advanced Python",
-    "question": "What is the output of the following program?\n\ndef outerFunction():\n    global a\n    a = 20\n    def innerFunction():\n        global a\n        a = 30\n        print('a =', a)\na = 10\nouterFunction()\nprint('a =', a)",
+    "question": "What is the output of the following program?\n\n```python\ndef outerFunction():\n    global a\n    a = 20\n    def innerFunction():\n        global a\n        a = 30\n        print('a =', a)\n\na = 10\nouterFunction()\nprint('a =', a)\n```",
     "options": [
       {
         "key": "A",
@@ -5958,7 +5958,7 @@
     ],
     "explanation": "Trong Python, để tạo một đối tượng kiểu `bytes` chứa 5 null byte `b'\\x00\\x00\\x00\\x00\\x00'`:\n- **Phương án A: `bytes(5)`** — Hàm khởi tạo `bytes(int)` với một số nguyên `n` sẽ tạo ra một đối tượng byte có độ dài `n` với các byte đều được khởi tạo bằng giá trị null (`0x00`). Do đó `bytes(5)` trả về đúng `b'\\x00\\x00\\x00\\x00\\x00'`. (Đúng)\n- **Phương án B: `bytes(0, 0, 0, 0, 0)`** — Hàm dựng `bytes()` chỉ nhận tối đa 3 tham số `(source, encoding, errors)`. Truyền vào 5 đối số riêng biệt sẽ gây lỗi `TypeError: bytes() takes at most 3 arguments (5 given)`. Nếu muốn khởi tạo từ các số 0 thì phải truyền vào một iterable (ví dụ: `bytes([0, 0, 0, 0, 0])`). (Sai)\n- **Phương án C: `bytes('\\x00\\x00\\x00\\x00\\x00', 'utf-8')`** — Khi truyền vào một chuỗi ký tự (`str`), cần chỉ định bảng mã `encoding`. Ký tự null `\\x00` trong UTF-8 được mã hóa thành byte đơn có giá trị `0x00`, do đó chuỗi 5 ký tự `\\x00` mã hóa UTF-8 tạo ra đối tượng bytes gồm 5 byte null `b'\\x00\\x00\\x00\\x00\\x00'`. (Đúng)\n- **Phương án D: `bytes[0:5]`** — `bytes` là một kiểu dữ liệu (type/class), không phải là đối tượng mảng/danh sách cụ thể để cắt lát bằng dấu ngoặc vuông `[]`, câu lệnh này gây ra lỗi `TypeError: 'type' object is not subscriptable`. (Sai)\nVì vậy, hai lựa chọn đúng là A và C.",
     "explanationSource": "ai",
-    "type": "multiple-answer",
+    "type": "multiple-choice",
     "image": "0192_q192_Question_192.png"
   },
   {
