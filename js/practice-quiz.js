@@ -703,10 +703,41 @@
     }).join('');
   }
 
+  function renderQuestionBody(q, formatMathFn, textClass) {
+    var cls = textClass || 'prc-question-text';
+    var text = (getDisplayQuestionText(q) || '').trim();
+    var fn = formatMathFn || function (s) { return s || ''; };
+    var diagramsHtml = renderQuestionDiagrams(q);
+    if (!diagramsHtml) {
+      return '<div class="' + cls + '">' + fn(text) + '</div>';
+    }
+
+    var parts = text.split(/\r?\n\s*\r?\n/);
+    if (parts.length >= 2) {
+      var intro = parts[0].trim();
+      var prompt = parts.slice(1).join('\n\n').trim();
+      return '<div class="' + cls + ' prc-q-intro" style="margin-bottom:12px;">' + fn(intro) + '</div>' +
+             diagramsHtml +
+             '<div class="' + cls + ' prc-q-prompt" style="margin-top:12px;">' + fn(prompt) + '</div>';
+    }
+
+    var singleLines = text.split(/\r?\n/);
+    if (singleLines.length >= 2 && /:\s*$/.test(singleLines[0].trim())) {
+      var intro = singleLines[0].trim();
+      var prompt = singleLines.slice(1).join('\n').trim();
+      return '<div class="' + cls + ' prc-q-intro" style="margin-bottom:12px;">' + fn(intro) + '</div>' +
+             diagramsHtml +
+             '<div class="' + cls + ' prc-q-prompt" style="margin-top:12px;">' + fn(prompt) + '</div>';
+    }
+
+    return '<div class="' + cls + '">' + fn(text) + '</div>' + diagramsHtml;
+  }
+
   window.Lib95.practice.typesetMath = typesetMath;
   window.Lib95.practice.formatMathText = formatMathText;
   window.Lib95.practice.getDisplayQuestionText = getDisplayQuestionText;
   window.Lib95.practice.renderQuestionDiagrams = renderQuestionDiagrams;
+  window.Lib95.practice.renderQuestionBody = renderQuestionBody;
   window.Lib95.practice.highlightCode = highlightCode;
   window.Lib95.practice.copyCode = copyCode;
 
@@ -760,8 +791,7 @@
 
     var html =
       labelHtml +
-      '<div class="prc-question-text">' + formatMathText(getDisplayQuestionText(q)) + '</div>' +
-      renderQuestionDiagrams(q) +
+      renderQuestionBody(q, formatMathText) +
       '<ul class="prc-options-list' + (isMulti ? ' prc-options-list-multi' : '') + '" role="' + (isMulti ? 'group' : 'radiogroup') + '" aria-label="Đáp án">';
 
     var inputType = isMulti ? 'checkbox' : 'radio';
@@ -1201,8 +1231,7 @@
 
       html += '<div class="prc-review-question">';
       html += '<p class="prc-review-q-num">Question ' + (i + 1) + labelHtml + '</p>';
-      html += '<div class="prc-review-q-text">' + formatMathText(getDisplayQuestionText(q)) + '</div>';
-      html += renderQuestionDiagrams(q);
+      html += renderQuestionBody(q, formatMathText, 'prc-review-q-text');
 
       html += '<ul class="prc-options-list' + (isMulti ? ' prc-options-list-multi' : '') + '" style="pointer-events:none">';
       q.options.forEach(function (opt, j) {

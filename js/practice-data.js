@@ -16811,7 +16811,7 @@
     {
       "id": 10168,
       "quizId": 306,
-      "text": "Given a binary search tree as follows:\r\n\nWhat would be the output of In-order traversal?",
+      "text": "Given a binary search tree as follows:\n\nWhat would be the output of In-order traversal?",
       "options": [
         "40, 30, 25, 35, 50, 45, 60",
         "40, 30, 50, 25, 35, 45, 60",
@@ -16830,7 +16830,7 @@
     {
       "id": 10169,
       "quizId": 306,
-      "text": "Given a binary search tree as follows:\nWhat is the output of Breadth First traversal?",
+      "text": "Given a binary search tree as follows:\n\nWhat is the output of Breadth First traversal?",
       "options": [
         "5, 10, 30, 35, 25, 72, 65, 100, 75, 50",
         "50, 25, 10, 5, 35, 30, 75, 65, 72, 100",
@@ -16901,7 +16901,7 @@
     {
       "id": 10174,
       "quizId": 306,
-      "text": "Given a binary search tree as follows:\r\n\nWhat are the Internal nodes?",
+      "text": "Given a binary search tree as follows:\n\nWhat are the Internal nodes?",
       "options": [
         "25, 35, 45, 60",
         "40",
@@ -17146,7 +17146,7 @@
     {
       "id": 10191,
       "quizId": 306,
-      "text": "Given the sequential representation of the binary tree T in the figure where an one-dimensional array is used to store the elements of tree (the size of T is 16 and the root node of the tree T is the node at the index 1):\r\n\nThe ancestors of the node 30 are:",
+      "text": "Given the sequential representation of the binary tree T in the figure where an one-dimensional array is used to store the elements of tree (the size of T is 16 and the root node of the tree T is the node at the index 1):\n\nThe ancestors of the node 30 are:",
       "options": [
         "15, 20, 12",
         "15, 20, 5",
@@ -17539,7 +17539,7 @@
     {
       "id": 10220,
       "quizId": 306,
-      "text": "Given a binary search tree as follows:\r\n\nWhat would be the output of Pre-order traversal?",
+      "text": "Given a binary search tree as follows:\n\nWhat would be the output of Pre-order traversal?",
       "options": [
         "40, 30, 25, 35, 50, 45, 60",
         "40, 30, 50, 25, 35, 45, 60",
@@ -19568,7 +19568,7 @@
     {
       "id": 10379,
       "quizId": 306,
-      "text": "Given a binary search tree as follows:\r\n\nMaximum level of the tree (root 40 is level 1) is:",
+      "text": "Given a binary search tree as follows:\n\nMaximum level of the tree (root 40 is level 1) is:",
       "options": [
         "3",
         "4",

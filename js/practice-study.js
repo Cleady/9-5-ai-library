@@ -349,8 +349,7 @@
 
     var html =
       labelHtml +
-      '<div class="prc-question-text">' + formatMath(getDisplayQuestionText(q)) + '</div>' +
-      renderQuestionDiagrams(q) +
+      (practiceNS.renderQuestionBody ? practiceNS.renderQuestionBody(q, formatMath) : ('<div class="prc-question-text">' + formatMath(getDisplayQuestionText(q)) + '</div>' + renderQuestionDiagrams(q))) +
       '<ul class="prc-options-list' + (isMulti ? ' prc-options-list-multi' : '') + '" role="' + (isMulti ? 'group' : 'radiogroup') + '" aria-label="Đáp án">';
 
     var inputType = isMulti ? 'checkbox' : 'radio';

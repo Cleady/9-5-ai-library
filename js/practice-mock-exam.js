@@ -441,8 +441,7 @@
 
     var html =
       labelHtml +
-      '<div class="prc-question-text">' + formatMath(getDisplayText(q)) + '</div>' +
-      renderDiagrams(q) +
+      (window.Lib95.practice.renderQuestionBody ? window.Lib95.practice.renderQuestionBody(q, formatMath) : ('<div class="prc-question-text">' + formatMath(getDisplayText(q)) + '</div>' + renderDiagrams(q))) +
       '<ul class="prc-options-list' + (isMulti ? ' prc-options-list-multi' : '') + '" role="' + (isMulti ? 'group' : 'radiogroup') + '" aria-label="Đáp án">';
 
     var inputType = isMulti ? 'checkbox' : 'radio';
