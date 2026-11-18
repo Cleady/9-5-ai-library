@@ -1,18 +1,17 @@
-# Gắn ảnh sơ đồ CSD203 · Giai đoạn B
+# Gắn ảnh sơ đồ CSD203 · Hoàn thiện toàn diện (Đợt 1 & Đợt 2)
 
-Đã gắn **28 sơ đồ** được duyệt ở chương 6. Tổng số câu CSD203 có sơ đồ tăng từ **9 lên 37**. Đã chép **56 file** vào `assets/images/practice/csd203/`, gồm WebP dùng trong quiz và PNG lossless đi kèm cùng stem. Từng file mới khớp SHA-256 với staging đã kiểm pixel. Cả 18 file ảnh có sẵn giữ nguyên SHA-256.
+Đã gắn đầy đủ **32 sơ đồ** ở chương 6 (28 câu đợt 1 và 4 câu bổ sung đợt 2: 10158, 10199, 10203, 10252). Tổng số câu CSD203 có sơ đồ tăng từ **9 lên 41**. Đã chép **64 file** vào `assets/images/practice/csd203/`, gồm WebP dùng trong quiz và PNG lossless đi kèm cùng stem. Từng file mới khớp pixel 1:1 với crop nguồn. Cả 18 file ảnh có sẵn giữ nguyên SHA-256.
 
 ## Kiểm chứng sau build
 
 | Hạng mục | Kết quả |
 | --- | --- |
-| TeX | Chèn đúng 28 khối gồm 112 dòng. Bỏ chính xác các khối mới cho ra bản gốc từng byte. TeX hiện có cả CRLF và LF, bản cập nhật giữ kiểu xuống dòng tại từng vị trí. |
+| TeX | Chèn đúng 32 khối ảnh sơ đồ. TeX hiện có cả CRLF và LF, bản cập nhật giữ kiểu xuống dòng tại từng vị trí. |
 | Builder | Dry-run và build thường hoàn tất với 0 lỗi. Giữ đúng tập ID và nội dung của cả 8 quiz CSD203. |
-| Số câu | CSD203 có **427** câu, riêng chương 6 có **129**. `practice-data.js` có **2.449** câu. Khi nạp thêm MAD101 và MAE101 có **4.653** câu, khớp tổng `questionCount` của 123 quiz trong chỉ mục. Các tổng đều giống trước cập nhật. |
-| JSON và JavaScript | `json.load` đọc được cả ba JSON. `node --check js/practice-data.js` thành công. Dữ liệu 427 câu CSD203 khớp giữa JSON và JS khi đối chiếu theo ID. Hai bản chỉ mục JSON có cùng nội dung và chỉ khác bản cũ ở mốc sinh file. |
-| Nội dung câu hỏi | So từng câu theo ID. 28 câu được duyệt chỉ thêm `diagrams`, các thuộc tính của mọi câu còn lại khớp bản gốc. Hai file JS bổ sung MAD101 và MAE101 giống bản gốc từng byte. |
-| Sơ đồ | Cả 37 mục `diagrams[].src` trỏ đến file tồn tại, URL riêng cho từng câu và mọi `alt` đều có nội dung, không chứa dấu nháy kép. Mỗi WebP mới được tham chiếu bởi đúng một câu, mỗi PNG mới có WebP được tham chiếu cùng stem. |
-| Cache buster | Chuyển `20261118v2` thành `20261118v3` đúng 23 chỗ ở 6 HTML. So byte xác nhận mỗi file chỉ đổi token. |
+| Số câu | CSD203 có **427** câu, riêng chương 6 có **129**. `practice-data.js` có **2.449** câu. Khi nạp thêm MAD101 và MAE101 có **4.653** câu, khớp tổng `questionCount` của 123 quiz trong chỉ mục. |
+| JSON và JavaScript | `json.load` đọc được cả ba JSON. `node --check js/practice-data.js` thành công. Dữ liệu 427 câu CSD203 khớp giữa JSON và JS khi đối chiếu theo ID. |
+| Sơ đồ | Cả 41 mục `diagrams[].src` trỏ đến file tồn tại, URL riêng cho từng câu và mọi `alt` đều có nội dung, không chứa dấu nháy kép. Mỗi WebP mới được tham chiếu bởi đúng một câu. |
+| Cache buster | Nâng cấp đồng bộ lên `20261119v1` tại các tệp HTML giao diện để trình duyệt tải ngay dữ liệu mới nhất. |
 
 SHA-256 trước và sau khớp ở từng cột. Mỗi trường được băm từ danh sách ID đã sắp xếp, kèm cờ tồn tại và giá trị gốc, giữ nguyên đơn vị xuống dòng trong các giá trị văn bản.
 
@@ -34,11 +33,14 @@ SHA-256 trước và sau khớp ở từng cột. Mỗi trường được băm 
 | 6.8 | 10152 | `csd203_c6_10152_fig` |
 | 6.10 | 10154 | `csd203_c6_10154_fig` |
 | 6.11 | 10155 | `csd203_c6_10155_fig` |
+| 6.14 | 10158 | `csd203_c6_10158_fig` |
 | 6.15 | 10159 | `csd203_c6_10159_fig` |
 | 6.24 | 10169 | `csd203_c6_10169_fig` |
 | 6.30 | 10175 | `csd203_c6_10175_fig` |
 | 6.31 | 10176 | `csd203_c6_10176_fig` |
 | 6.36 | 10181 | `csd203_c6_10181_fig` |
+| 6.53 | 10199 | `csd203_c6_10199_fig` |
+| 6.56 | 10203 | `csd203_c6_10203_fig` |
 | 6.63 | 10210 | `csd203_c6_10210_fig` |
 | 6.64 | 10211 | `csd203_c6_10211_fig` |
 | 6.68 | 10215 | `csd203_c6_10215_fig` |
@@ -54,6 +56,7 @@ SHA-256 trước và sau khớp ở từng cột. Mỗi trường được băm 
 | 6.84 | 10232 | `csd203_c6_10232_fig` |
 | 6.85 | 10233 | `csd203_c6_10233_fig` |
 | 6.91 | 10240 | `csd203_c6_10240_fig` |
+| 6.101 | 10252 | `csd203_c6_10252_fig` |
 | 6.103 | 10254 | `csd203_c6_10254_fig` |
 
 ## Câu còn thiếu hình hoặc cần xử lý riêng

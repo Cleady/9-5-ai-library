@@ -4697,6 +4697,10 @@ What is visited first in Breadth First Traversal of a tree?
 Given a binary search tree as follows:
 
 What is this tree?
+\begin{center}
+\includegraphics[max width=0.85\textwidth]{assets/images/practice/csd203/csd203_c6_10158_fig.webp}
+\figdesc{Cây nhị phân tìm kiếm có gốc 40. Nút 30 là con trái của 40, có hai con 25 và 35. Nút 50 là con phải của 40, có hai con 45 và 60.}
+\end{center}
 \begin{choices}
 \choice Complete tree
 \choice Full tree
@@ -4704,7 +4708,7 @@ What is this tree?
 \choice Perfect tree
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Bảng băm dùng phương pháp Separate Chaining không bị ảnh hưởng bởi hiện tượng đầy bảng, nhưng tốn thêm chi phí bộ nhớ cho các con trỏ liên kết.
+\textbf{Giải thích:} Cây nhị phân có tất cả các nút trong đều có đúng 2 con và tất cả các lá đều nằm ở cùng một mức (mức 2), do đó đây là cây nhị phân hoàn hảo (Perfect tree).
 \end{question}
 
 \begin{question}{6.15}
@@ -5553,14 +5557,18 @@ If the pre-order traversal of a full binary tree is A B C D, how many unique ful
 Given a binary search tree as follows:
 
 What is the output of In-order traversal?
+\begin{center}
+\includegraphics[max width=0.85\textwidth]{assets/images/practice/csd203/csd203_c6_10199_fig.webp}
+\figdesc{Cây nhị phân gồm gốc 10, con trái 20 (có con trái 40, con phải 50), con phải 30.}
+\end{center}
 \begin{choices}
 \choice 10 20 30 40 50
 \choice 40 20 50 10 30
 \choice 50 40 20 30 10
 \choice 40 20 50 30 10
 \end{choices}
-\textbf{Đáp án:} A
-\textbf{Giải thích:} Phép duyệt trung thứ tự (in-order traversal) trên cây tìm kiếm nhị phân (BST) luôn cho ra dãy phần tử theo thứ tự tăng dần.
+\textbf{Đáp án:} B
+\textbf{Giải thích:} Duyệt trung thứ tự (In-order: Trái \(\to\) Gốc \(\to\) Phải) trên cây đã cho: duyệt cây con trái gốc 20 cho dãy 40, 20, 50, đến gốc 10, rồi duyệt cây con phải cho 30. Kết quả là 40 20 50 10 30 (Phương án B). Đề bài dùng từ BST chưa chuẩn do cây gốc 10 có khóa con trái 20 > 10.
 \end{question}
 
 \begin{question}{6.54}
@@ -5617,6 +5625,10 @@ What is the Degree (order) of a node of a tree?
 % [ID: 10203]
 % [Nguồn: Ngân hàng CSD203 (Câu #203)]
 What is the postorder traversal of the tree below after removing nodes 50 and 40 in sequence by copying?
+\begin{center}
+\includegraphics[max width=0.85\textwidth]{assets/images/practice/csd203/csd203_c6_10203_fig.webp}
+\figdesc{Cây nhị phân tìm kiếm BST có gốc 50, con trái 40 (có con trái 30 có con trái 20, con phải 45 có hai con 42 và 48), con phải 55 (có con phải 60 có con phải 90).}
+\end{center}
 \begin{choices}
 \choice 20, 42, 48, 90, 30, 45, 60, 55
 \choice 20, 42, 45, 30, 90, 60, 55, 48
@@ -6579,6 +6591,10 @@ Given a graph in the figure, the Depth first traversal from node D is (in ABC or
 % [ID: 10252]
 % [Nguồn: Ngân hàng CSD203 (Câu #252)]
 What is the BFS traversal order of the graph starting from vertex 0?
+\begin{center}
+\includegraphics[max width=0.85\textwidth]{assets/images/practice/csd203/csd203_c6_10252_fig.webp}
+\figdesc{Đồ thị có hướng gồm bảy đỉnh từ 0 đến 6. Các cung một chiều là 0->1, 0->2, 1->3, 2->3 và 3->4. Các cặp 2 và 5, 5 và 6, 4 và 6 đều có cung theo cả hai chiều.}
+\end{center}
 \begin{choices}
 \choice 0, 2, 1, 3, 5, 4, 6
 \choice 0, 2, 1, 3, 5, 6, 4
