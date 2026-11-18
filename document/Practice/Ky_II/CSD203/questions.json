@@ -1,6 +1,6 @@
 {
   "subject": "CSD203",
-  "updatedAt": "2026-11-18T14:48:49.084Z",
+  "updatedAt": "2026-11-18T17:42:24.262Z",
   "totalQuizzes": 8,
   "totalQuestions": 427,
   "quizzes": [
@@ -2452,7 +2452,13 @@
         "7 2 12 20 10 35 50 25 15"
       ],
       "correctIndex": 2,
-      "explanation": "Duyệt tiền thứ tự (Pre-order: Gốc \\(\\to\\) Trái \\(\\to\\) Phải) luôn bắt đầu từ nút gốc, tiếp tục thăm toàn bộ cây con trái rồi đến cây con phải."
+      "explanation": "Duyệt tiền thứ tự (Pre-order: Gốc \\(\\to\\) Trái \\(\\to\\) Phải) luôn bắt đầu từ nút gốc, tiếp tục thăm toàn bộ cây con trái rồi đến cây con phải.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10146_fig.webp",
+          "alt": "Cây nhị phân tìm kiếm BST có gốc 15, con trái 10 (có con trái 2 có con phải 7, con phải 12), con phải 25 (có con trái 20, con phải 50 có con trái 35)."
+        }
+      ]
     },
     {
       "id": 10147,
@@ -2465,7 +2471,13 @@
         "++a*bc*+*defg"
       ],
       "correctIndex": 2,
-      "explanation": "Dựa vào cây nhị phân đã cho, thứ tự các nút hoặc thuộc tính nút thỏa mãn quy tắc duyệt cây tương ứng phương án C."
+      "explanation": "Dựa vào cây nhị phân đã cho, thứ tự các nút hoặc thuộc tính nút thỏa mãn quy tắc duyệt cây tương ứng phương án C.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10147_fig.webp",
+          "alt": "Cây biểu thức có gốc cộng. Nhánh trái là phép cộng với con trái a và con phải là phép nhân của b và c. Nhánh phải là phép nhân với con phải g, con trái là phép cộng có con trái là phép nhân của d và e, con phải là f."
+        }
+      ]
     },
     {
       "id": 10148,
@@ -2478,7 +2490,13 @@
         "75 or 25"
       ],
       "correctIndex": 2,
-      "explanation": "Tính chất cây tìm kiếm nhị phân (BST): mọi nút thuộc cây con trái có khóa nhỏ hơn nút gốc, mọi nút thuộc cây con phải có khóa lớn hơn nút gốc."
+      "explanation": "Tính chất cây tìm kiếm nhị phân (BST): mọi nút thuộc cây con trái có khóa nhỏ hơn nút gốc, mọi nút thuộc cây con phải có khóa lớn hơn nút gốc.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10148_fig.webp",
+          "alt": "Cây nhị phân tìm kiếm BST có gốc 50, con trái 25 (có con trái 10 có con trái 5, con phải 35 có con trái 30), con phải 75 (có con trái 65 có con phải 72, con phải 100)."
+        }
+      ]
     },
     {
       "id": 10149,
@@ -2491,7 +2509,13 @@
         "7 2 12 20 10 35 50 25 15"
       ],
       "correctIndex": 1,
-      "explanation": "Duyệt hậu thứ tự (Post-order: Trái \\(\\to\\) Phải \\(\\to\\) Gốc) duyệt cây con trái, sau đó cây con phải, và cuối cùng mới thăm nút gốc."
+      "explanation": "Duyệt hậu thứ tự (Post-order: Trái \\(\\to\\) Phải \\(\\to\\) Gốc) duyệt cây con trái, sau đó cây con phải, và cuối cùng mới thăm nút gốc.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10149_fig.webp",
+          "alt": "Cây nhị phân tìm kiếm BST có gốc 15, con trái 10 (có con trái 2 có con phải 7, con phải 12), con phải 25 (có con trái 20, con phải 50 có con trái 35)."
+        }
+      ]
     },
     {
       "id": 10150,
@@ -2530,7 +2554,13 @@
         "G, H"
       ],
       "correctIndex": 2,
-      "explanation": "Cây nhị phân đầy đủ (Full binary tree) là cây nhị phân trong đó mỗi nút đều có đúng 0 hoặc 2 nút con."
+      "explanation": "Cây nhị phân đầy đủ (Full binary tree) là cây nhị phân trong đó mỗi nút đều có đúng 0 hoặc 2 nút con.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10152_fig.webp",
+          "alt": "Cây nhị phân có gốc A, con trái B và con phải C. B có con phải D. C có con trái E và con phải F. D có con trái G và con phải H."
+        }
+      ]
     },
     {
       "id": 10153,
@@ -2556,7 +2586,13 @@
         "40 20 50 30 10"
       ],
       "correctIndex": 2,
-      "explanation": "Thao tác append trên mảng động (Python list) có độ phức tạp thời gian trung bình (amortized time) là \\(O(1)\\)."
+      "explanation": "Thao tác append trên mảng động (Python list) có độ phức tạp thời gian trung bình (amortized time) là \\(O(1)\\).",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10154_fig.webp",
+          "alt": "Cây nhị phân gồm gốc 10, con trái 20 (có con trái 40, con phải 50), con phải 30."
+        }
+      ]
     },
     {
       "id": 10155,
@@ -2569,7 +2605,13 @@
         "Right"
       ],
       "correctIndex": 2,
-      "explanation": "Độ phức tạp thời gian của thuật toán sắp xếp chọn (Selection Sort) luôn là \\(O(n^2)\\) trong mọi trường hợp do số phép so sánh luôn là \\(\\frac{n(n-1)}{2}\\)."
+      "explanation": "Độ phức tạp thời gian của thuật toán sắp xếp chọn (Selection Sort) luôn là \\(O(n^2)\\) trong mọi trường hợp do số phép so sánh luôn là \\(\\frac{n(n-1)}{2}\\).",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10155_fig.webp",
+          "alt": "Cây nhị phân có gốc A, con phải B. Nút B có con phải C. Các số 2, 1 và 0 xuất hiện lần lượt cạnh A, B và C."
+        }
+      ]
     },
     {
       "id": 10156,
@@ -2621,7 +2663,13 @@
         "10, 35"
       ],
       "correctIndex": 0,
-      "explanation": ""
+      "explanation": "",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10159_fig.webp",
+          "alt": "Cây nhị phân tìm kiếm BST có gốc 50, con trái 25 (có con trái 10 có con trái 5, con phải 35 có con trái 30), con phải 75 (có con trái 65 có con phải 72, con phải 100)."
+        }
+      ]
     },
     {
       "id": 10160,
@@ -2743,7 +2791,13 @@
         "50, 25, 75, 10, 35, 65, 100, 5, 30, 72"
       ],
       "correctIndex": 3,
-      "explanation": "Gom cụm thứ cấp (Secondary clustering) trong bảng băm xảy ra khi các khóa có cùng giá trị băm ban đầu sẽ duyệt qua cùng một chuỗi vị trí thăm dò."
+      "explanation": "Gom cụm thứ cấp (Secondary clustering) trong bảng băm xảy ra khi các khóa có cùng giá trị băm ban đầu sẽ duyệt qua cùng một chuỗi vị trí thăm dò.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10169_fig.webp",
+          "alt": "Cây nhị phân tìm kiếm BST có gốc 50, con trái 25 (có con trái 10 có con trái 5, con phải 35 có con trái 30), con phải 75 (có con trái 65 có con phải 72, con phải 100)."
+        }
+      ]
     },
     {
       "id": 10170,
@@ -2827,7 +2881,13 @@
         "50, 25, 75, 10, 35, 65, 100, 5, 30, 72"
       ],
       "correctIndex": 2,
-      "explanation": "Thứ tự duyệt trung thứ tự (In-order: Trái \\(\\to\\) Gốc \\(\\to\\) Phải) trên cây tìm kiếm nhị phân luôn cho ra dãy các khóa theo thứ tự tăng dần: 5, 10, 25, 30, 35, 50, 65, 72, 75, 100."
+      "explanation": "Thứ tự duyệt trung thứ tự (In-order: Trái \\(\\to\\) Gốc \\(\\to\\) Phải) trên cây tìm kiếm nhị phân luôn cho ra dãy các khóa theo thứ tự tăng dần: 5, 10, 25, 30, 35, 50, 65, 72, 75, 100.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10175_fig.webp",
+          "alt": "Cây nhị phân tìm kiếm BST có gốc 50, con trái 25 (có con trái 10 có con trái 5, con phải 35 có con trái 30), con phải 75 (có con trái 65 có con phải 72, con phải 100)."
+        }
+      ]
     },
     {
       "id": 10176,
@@ -2840,7 +2900,13 @@
         "50"
       ],
       "correctIndex": 1,
-      "explanation": "Nút anh em (Sibling) là các nút có cùng một nút cha. Nút 25 và nút 75 đều là con trực tiếp của nút gốc 50, do đó nút anh em của 25 là 75."
+      "explanation": "Nút anh em (Sibling) là các nút có cùng một nút cha. Nút 25 và nút 75 đều là con trực tiếp của nút gốc 50, do đó nút anh em của 25 là 75.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10176_fig.webp",
+          "alt": "Cây nhị phân tìm kiếm BST có gốc 50, con trái 25 (có con trái 10 có con trái 5, con phải 35 có con trái 30), con phải 75 (có con trái 65 có con phải 72, con phải 100)."
+        }
+      ]
     },
     {
       "id": 10177,
@@ -2905,7 +2971,13 @@
         "Bread First Order"
       ],
       "correctIndex": 2,
-      "explanation": "Duyệt tiền thứ tự (Pre-order: Gốc \\(\\to\\) Trái \\(\\to\\) Phải) trên cây biểu thức cho ra biểu thức ở dạng tiền tố: \\(+ \\times 2 - a 1 \\times 3 b\\)."
+      "explanation": "Duyệt tiền thứ tự (Pre-order: Gốc \\(\\to\\) Trái \\(\\to\\) Phải) trên cây biểu thức cho ra biểu thức ở dạng tiền tố: \\(+ \\times 2 - a 1 \\times 3 b\\).",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10181_fig.webp",
+          "alt": "Cây biểu thức có gốc là phép cộng. Nhánh trái là phép nhân, với con trái 2 và con phải là phép trừ có hai con a và 1. Nhánh phải là phép nhân có hai con 3 và b."
+        }
+      ]
     },
     {
       "id": 10182,
@@ -3262,7 +3334,13 @@
         "BADCE"
       ],
       "correctIndex": 3,
-      "explanation": "Duyệt DFS từ đỉnh B trên đồ thị, ưu tiên các đỉnh kề theo thứ tự bảng chữ cái ABC, cho kết quả thứ tự duyệt là phương án D."
+      "explanation": "Duyệt DFS từ đỉnh B trên đồ thị, ưu tiên các đỉnh kề theo thứ tự bảng chữ cái ABC, cho kết quả thứ tự duyệt là phương án D.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10210_fig.webp",
+          "alt": "Đồ thị vô hướng gồm 5 đỉnh A, B, C, D, E với các cạnh: A-B, B-C, C-D, D-E, E-A và đường chéo A-D."
+        }
+      ]
     },
     {
       "id": 10211,
@@ -3275,7 +3353,13 @@
         "[[1, 0, 1, 0, 0], [0, 1, 0, 1, 1], [1, 0, 1, 0, 1], [0, 1, 0, 1, 0], [0, 1, 1, 0, 1]]"
       ],
       "correctIndex": 2,
-      "explanation": ""
+      "explanation": "",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10211_fig.webp",
+          "alt": "Đồ thị vô hướng có trọng số gồm các cạnh A-B (2), B-C (7), C-D (8), D-E (5), E-A (4) và A-D (9)."
+        }
+      ]
     },
     {
       "id": 10212,
@@ -3334,7 +3418,13 @@
         "3"
       ],
       "correctIndex": 3,
-      "explanation": ""
+      "explanation": "",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10215_fig.webp",
+          "alt": "Đa đồ thị gồm các đỉnh U, V, W, X, Y, Z với các cạnh có nhãn: a (nối U-V), b (nối V-X), c (nối U-W), d (nối V-W), e (nối W-X), f (nối W-Y), g (nối X-Y), hai cạnh song song h và i (nối X-Z), khuyên j (tại Z)."
+        }
+      ]
     },
     {
       "id": 10216,
@@ -3347,7 +3437,13 @@
         "D, E, A, B, C"
       ],
       "correctIndex": 2,
-      "explanation": ""
+      "explanation": "",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10216_fig.webp",
+          "alt": "Đồ thị vô hướng gồm 5 đỉnh A, B, C, D, E với các cạnh: A-B, B-C, C-D, D-E, E-A và đường chéo A-D."
+        }
+      ]
     },
     {
       "id": 10217,
@@ -3411,7 +3507,13 @@
         "C, A, B, F, E, G, D"
       ],
       "correctIndex": 2,
-      "explanation": "Cận dưới của các thuật toán sắp xếp dựa trên so sánh (Comparison Sort) trong trường hợp xấu nhất là \\(\\Omega(n \\log n)\\)."
+      "explanation": "Cận dưới của các thuật toán sắp xếp dựa trên so sánh (Comparison Sort) trong trường hợp xấu nhất là \\(\\Omega(n \\log n)\\).",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10221_fig.webp",
+          "alt": "Đồ thị vô hướng gồm các cạnh A-B, A-C, B-C, B-E, B-F, C-D, C-F, D-G, E-F và F-G."
+        }
+      ]
     },
     {
       "id": 10222,
@@ -3424,7 +3526,13 @@
         "[[0, 1, 1, 0], [1, 0, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]]"
       ],
       "correctIndex": 0,
-      "explanation": "Danh sách liên kết đơn yêu cầu ít bộ nhớ hơn danh sách liên kết đôi vì mỗi nút chỉ cần lưu trữ một con trỏ duy nhất (next)."
+      "explanation": "Danh sách liên kết đơn yêu cầu ít bộ nhớ hơn danh sách liên kết đôi vì mỗi nút chỉ cần lưu trữ một con trỏ duy nhất (next).",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10222_fig.webp",
+          "alt": "Đồ thị vô hướng gồm bốn đỉnh 1, 2, 3, 4. Các cạnh là 1-2, 1-3, 2-3, 2-4 và 3-4."
+        }
+      ]
     },
     {
       "id": 10223,
@@ -3437,7 +3545,13 @@
         "A, G, D"
       ],
       "correctIndex": 2,
-      "explanation": "Số lượng cạnh của cây tự do có \\(n\\) đỉnh luôn bằng chính xác \\(n - 1\\) cạnh."
+      "explanation": "Số lượng cạnh của cây tự do có \\(n\\) đỉnh luôn bằng chính xác \\(n - 1\\) cạnh.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10223_fig.webp",
+          "alt": "Đồ thị có trọng số gồm 7 đỉnh A, B, C, D, E, F, G với các cạnh: A-B (2), A-C (5), A-G (12), B-F (3), B-E (2), B-C (2), C-E (2), F-D (14), E-D (4), D-G (4), E-G (3)."
+        }
+      ]
     },
     {
       "id": 10224,
@@ -3450,7 +3564,13 @@
         "2, 1, 0, 4, 3"
       ],
       "correctIndex": 3,
-      "explanation": "Thuật toán sắp xếp trộn (Merge Sort) là thuật toán sắp xếp ổn định (stable sort) vì nó bảo toàn thứ tự ban đầu của các phần tử có cùng giá trị."
+      "explanation": "Thuật toán sắp xếp trộn (Merge Sort) là thuật toán sắp xếp ổn định (stable sort) vì nó bảo toàn thứ tự ban đầu của các phần tử có cùng giá trị.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10224_fig.webp",
+          "alt": "Đồ thị vô hướng gồm 5 đỉnh 0, 1, 2, 3, 4 với các cạnh: 0-1, 0-4, 1-2, 1-3, 1-4, 2-3, 3-4."
+        }
+      ]
     },
     {
       "id": 10225,
@@ -3476,7 +3596,13 @@
         "A, D, B, C, E"
       ],
       "correctIndex": 1,
-      "explanation": "Hàng đợi ưu tiên thường được cài đặt hiệu quả nhất bằng cấu trúc dữ liệu Binary Heap với thao tác chèn và xóa đỉnh mất \\(O(\\log n)\\)."
+      "explanation": "Hàng đợi ưu tiên thường được cài đặt hiệu quả nhất bằng cấu trúc dữ liệu Binary Heap với thao tác chèn và xóa đỉnh mất \\(O(\\log n)\\).",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10226_fig.webp",
+          "alt": "Đồ thị vô hướng gồm 5 đỉnh A, B, C, D, E với các cạnh: A-B, A-D, B-C, B-D, C-E, D-E."
+        }
+      ]
     },
     {
       "id": 10227,
@@ -3502,7 +3628,13 @@
         "5, 4, 1, 6, 7, 8, 3, 2"
       ],
       "correctIndex": 0,
-      "explanation": ""
+      "explanation": "",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10228_fig.webp",
+          "alt": "Đồ thị vô hướng gồm 8 đỉnh từ 1 đến 8 với các cạnh: 1-2, 1-3, 1-4, 1-5, 2-6, 3-6, 4-7, 5-7, 6-8, 7-8."
+        }
+      ]
     },
     {
       "id": 10229,
@@ -3515,7 +3647,13 @@
         "A, C, E"
       ],
       "correctIndex": 2,
-      "explanation": "Thuật toán sắp xếp chọn (Selection Sort) thực hiện ít phép hoán đổi nhất trong số các thuật toán cơ bản, tối đa \\(n - 1\\) lần hoán đổi."
+      "explanation": "Thuật toán sắp xếp chọn (Selection Sort) thực hiện ít phép hoán đổi nhất trong số các thuật toán cơ bản, tối đa \\(n - 1\\) lần hoán đổi.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10229_fig.webp",
+          "alt": "Đồ thị có trọng số gồm 7 đỉnh A, B, C, D, E, F, G với các cạnh: A-B (2), A-C (5), A-G (12), B-F (3), B-E (2), B-C (2), C-E (2), F-D (14), E-D (4), D-G (4), E-G (3)."
+        }
+      ]
     },
     {
       "id": 10230,
@@ -3528,7 +3666,13 @@
         "A, D, B, C, E"
       ],
       "correctIndex": 2,
-      "explanation": "Duyệt BFS từ A theo thứ tự bảng chữ cái: thăm A \\(\\to\\) thăm các đỉnh kề B, D \\(\\to\\) thăm các đỉnh kề tiếp theo C, E. Thứ tự duyệt là A, B, D, C, E."
+      "explanation": "Duyệt BFS từ A theo thứ tự bảng chữ cái: thăm A \\(\\to\\) thăm các đỉnh kề B, D \\(\\to\\) thăm các đỉnh kề tiếp theo C, E. Thứ tự duyệt là A, B, D, C, E.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10230_fig.webp",
+          "alt": "Đồ thị vô hướng gồm 5 đỉnh A, B, C, D, E với các cạnh: A-B, A-D, B-C, B-D, C-E, D-E."
+        }
+      ]
     },
     {
       "id": 10231,
@@ -3560,7 +3704,13 @@
         "b"
       ],
       "correctIndex": 0,
-      "explanation": "Các cạnh liên thuộc với đỉnh V trong đồ thị đã cho là các cạnh nối trực tiếp với V: a (nối U), b (nối X), d (nối W)."
+      "explanation": "Các cạnh liên thuộc với đỉnh V trong đồ thị đã cho là các cạnh nối trực tiếp với V: a (nối U), b (nối X), d (nối W).",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10232_fig.webp",
+          "alt": "Đa đồ thị gồm các đỉnh U, V, W, X, Y, Z với các cạnh có nhãn: a (nối U-V), b (nối V-X), c (nối U-W), d (nối V-W), e (nối W-X), f (nối W-Y), g (nối X-Y), hai cạnh song song h và i (nối X-Z), khuyên j (tại Z)."
+        }
+      ]
     },
     {
       "id": 10233,
@@ -3573,7 +3723,13 @@
         "[[0, 2, 0, 0, 4], [2, 0, 7, 0, 0], [0, 7, 0, 8, 0], [0, 0, 8, 0, 5],[4, 0, 0, 5, 0]]"
       ],
       "correctIndex": 3,
-      "explanation": "Ma trận trọng số ghi nhận trọng số cạnh giữa các cặp đỉnh: \\(A-B=2\\), \\(B-C=7\\), \\(C-D=8\\), \\(D-E=5\\), \\(E-A=4\\), các vị trí không có cạnh nối trực tiếp mang giá trị 0, khớp chính xác với ma trận ở phương án D."
+      "explanation": "Ma trận trọng số ghi nhận trọng số cạnh giữa các cặp đỉnh: \\(A-B=2\\), \\(B-C=7\\), \\(C-D=8\\), \\(D-E=5\\), \\(E-A=4\\), các vị trí không có cạnh nối trực tiếp mang giá trị 0, khớp chính xác với ma trận ở phương án D.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10233_fig.webp",
+          "alt": "Đồ thị vô hướng có trọng số tạo thành chu trình A-B-C-D-E-A. Trọng số lần lượt là A-B (2), B-C (7), C-D (8), D-E (5) và E-A (4)."
+        }
+      ]
     },
     {
       "id": 10234,
@@ -3653,7 +3809,13 @@
         "1, 0, 4, 3, 2"
       ],
       "correctIndex": 0,
-      "explanation": "Duyệt BFS từ đỉnh 1: thăm đỉnh 1, đưa các đỉnh kề chưa duyệt của 1 vào hàng đợi theo thứ tự nhãn tăng dần (0, 2, 3, 4), kết quả thứ tự duyệt là 1, 0, 2, 3, 4."
+      "explanation": "Duyệt BFS từ đỉnh 1: thăm đỉnh 1, đưa các đỉnh kề chưa duyệt của 1 vào hàng đợi theo thứ tự nhãn tăng dần (0, 2, 3, 4), kết quả thứ tự duyệt là 1, 0, 2, 3, 4.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10240_fig.webp",
+          "alt": "Đồ thị vô hướng gồm 5 đỉnh 0, 1, 2, 3, 4 với các cạnh: 0-1, 0-4, 1-2, 1-3, 1-4, 2-3, 3-4."
+        }
+      ]
     },
     {
       "id": 10241,
@@ -3815,7 +3977,13 @@
         "3"
       ],
       "correctIndex": 3,
-      "explanation": "Áp dụng thuật toán Kruskal hoặc Prim để chọn các cạnh trọng số nhỏ nhất sao cho không tạo thành chu trình, số lượng cây khung nhỏ nhất (MST) khác nhau tạo được cho đồ thị này là 3."
+      "explanation": "Áp dụng thuật toán Kruskal hoặc Prim để chọn các cạnh trọng số nhỏ nhất sao cho không tạo thành chu trình, số lượng cây khung nhỏ nhất (MST) khác nhau tạo được cho đồ thị này là 3.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10254_fig.webp",
+          "alt": "Đồ thị vô hướng gồm chín đỉnh xếp thành lưới 3×3. Các cặp trọng số ngang từ trái sang phải là 0.1 và 0.1 ở hàng trên, 0.1 và 0.9 ở hàng giữa, 0.9 và 0.1 ở hàng dưới. Ở mỗi cột, cạnh dọc phía trên có trọng số 0.9 và cạnh dọc phía dưới có trọng số 0.1."
+        }
+      ]
     },
     {
       "id": 10255,

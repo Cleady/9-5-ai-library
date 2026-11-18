@@ -17,3 +17,12 @@ tools/shots/
 backup_csd_20261118/
 scratch/
 
+
+# Audit, review, staging and raw working directories
+_backup*/
+_audit/
+_review/
+_tools/
+document/**/Images/
+document/**/_cropped_images/
+document/**/_review/
