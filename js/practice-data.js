@@ -1342,7 +1342,8 @@
         "The instruction set",
         "Interface between the computer and peripherals",
         "Techniques for addressing memory",
-        "The memory technology used\r\nF: I/O mechanisms"
+        "The memory technology used",
+        "I/O mechanisms"
       ],
       "correctIndex": 2,
       "explanation": "**Đáp án đúng**: C & E\n\n**Giải thích**: \n\n Hướng giải:\nPhân biệt giữa Kiến trúc máy tính (Computer Architecture) và Tổ chức máy tính (Computer Organization) theo giáo trình William Stallings.\n\nCác bước:\n1. Kiến trúc máy tính (Architecture): Là những thuộc tính mà lập trình viên có thể nhìn thấy (visible to programmer) hoặc có ảnh hưởng trực tiếp đến việc thực thi logic của chương trình. Bao gồm:\n - Tập lệnh (Instruction set).\n - Số bit dùng biểu diễn kiểu dữ liệu (Number of bits used to represent data types).\n - Cơ chế nhập/xuất (I/O mechanisms).\n - Các kỹ thuật định địa chỉ bộ nhớ (Techniques for addressing memory).\n2. Tổ chức máy tính (Organization): Là các đơn vị vận hành phần cứng và liên kết của chúng để thực thi đặc tả kiến trúc. Bao gồm:\n - Chi tiết phần cứng trong suốt với lập trình viên (transparent to programmer).\n - Tín hiệu điều khiển (Control signals).\n - Giao diện giữa máy tính và thiết bị ngoại vi (Interfaces between computer and peripherals).\n - Công nghệ bộ nhớ được sử dụng (Memory technology used).\n\nKiểm tra:\nCâu hỏi yêu cầu chọn 2 thuộc tính KHÔNG thuộc về kiến trúc máy tính (do not belong to computer architecture). Đó chính là các thuộc tính thuộc về Computer Organization: C và E.\n\nVì sao các phương án khác sai:\n- A, B, D, F đều là các thuộc tính cốt lõi của Computer Architecture.\n\nLưu ý/công thức cần nhớ:\nArchitecture = những gì lập trình viên thấy (tập lệnh, số bit dữ liệu, chế độ địa chỉ, cơ chế I/O). Organization = chi tiết phần cứng thực thi (công nghệ mạch/RAM, giao tiếp vật lý, mạch điều khiển).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt",
