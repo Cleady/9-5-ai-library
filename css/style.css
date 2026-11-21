@@ -509,6 +509,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    transition: opacity 0.2s ease;
 }
 
 .brand-text {
@@ -2963,6 +2964,187 @@ html[data-theme="dark"] .topbar {
         gap: 8px;
     }
 }
+
+/* ==========================================================================
+   SIDEBAR TOGGLE (Thu / Hiện Sidebar)
+   ========================================================================== */
+:root {
+    --sidebar-toggle-top: 26px;
+    --sidebar-toggle-left: 48px;
+    --sidebar-toggle-collapsed-top: 10px;
+    --sidebar-toggle-collapsed-left: 24px;
+}
+
+/* Ẩn logo khi rê chuột vào header sidebar ở trạng thái mở */
+html:not(.sidebar-collapsed).sidebar-toggle-active .sidebar .brand-logo {
+    opacity: 0;
+}
+
+/* Nút toggle thu/hiện sidebar */
+.sidebar-toggle-btn {
+    position: fixed;
+    top: var(--sidebar-toggle-top, 26px);
+    left: var(--sidebar-toggle-left, 48px);
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--card-bg);
+    backdrop-filter: var(--card-blur);
+    -webkit-backdrop-filter: var(--card-blur);
+    border: var(--card-border);
+    box-shadow: var(--card-shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.08));
+    color: var(--color-text);
+    cursor: pointer;
+    z-index: 120;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.15s ease, background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+/* Hiện nút khi hover vào header/nút/hotzone hoặc khi có focus bàn phím */
+html.sidebar-toggle-active .sidebar-toggle-btn,
+.sidebar-toggle-btn:focus-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar-toggle-btn:hover {
+    background: var(--card-bg-elevated, var(--card-bg));
+    color: var(--color-primary);
+    transform: scale(1.04);
+}
+
+.sidebar-toggle-btn:active {
+    transform: scale(0.96);
+}
+
+.sidebar-toggle-btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Vị trí nút khi sidebar đã thu gọn */
+html.sidebar-collapsed .sidebar-toggle-btn {
+    top: var(--sidebar-toggle-collapsed-top, 10px);
+    left: var(--sidebar-toggle-collapsed-left, 24px);
+}
+
+/* Vùng hot-zone vô hình ở góc trên trái khi sidebar thu gọn */
+.sidebar-hotzone {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 68px;
+    height: 56px;
+    z-index: 119;
+    cursor: pointer;
+    background: transparent;
+}
+
+html.sidebar-collapsed .sidebar-hotzone {
+    display: block;
+}
+
+/* Trạng thái thu gọn của Sidebar */
+html.sidebar-collapsed .sidebar {
+    width: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-width: 0 !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+html.sidebar-collapsed .app {
+    gap: 0 !important;
+}
+
+html.sidebar-collapsed .topbar,
+html[data-theme="dark"].sidebar-collapsed .topbar {
+    padding-left: 48px !important;
+}
+
+/* Mở rộng nội dung chính khi sidebar thu gọn */
+html.sidebar-collapsed .main {
+    width: 100%;
+    max-width: 100%;
+}
+
+html.sidebar-collapsed .prc-page,
+html.sidebar-collapsed .fav-page,
+html.sidebar-collapsed .history-container,
+html.sidebar-collapsed .lec-page-container,
+html.sidebar-collapsed .lec-container,
+html.sidebar-collapsed .set-container,
+html.sidebar-collapsed .com-layout {
+    max-width: 100% !important;
+}
+
+/* Hiệu ứng chuyển động mượt mà (chỉ chạy sau khi DOM đã sẵn sàng qua class sidebar-anim-ready) */
+html.sidebar-anim-ready .sidebar {
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                padding 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                border-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.sidebar-anim-ready .app {
+    transition: gap 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.sidebar-anim-ready .topbar {
+    transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.sidebar-anim-ready .sidebar-toggle-btn {
+    transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.2s ease,
+                transform 0.15s ease,
+                background-color 0.2s,
+                border-color 0.2s,
+                color 0.2s;
+}
+
+/* Giảm chuyển động theo cài đặt hệ điều hành */
+@media (prefers-reduced-motion: reduce) {
+    html.sidebar-anim-ready .sidebar,
+    html.sidebar-anim-ready .app,
+    html.sidebar-anim-ready .topbar,
+    html.sidebar-anim-ready .sidebar-toggle-btn {
+        transition: none !important;
+    }
+}
+
+/* Dark theme overrides cho nút toggle */
+html[data-theme="dark"] .sidebar-toggle-btn {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #f1f5f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .sidebar-toggle-btn:hover {
+    background: rgba(30, 41, 59, 0.95);
+    color: #38bdf8;
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* Ẩn hoàn toàn nút và hotzone trên mobile <= 768px */
+@media (max-width: 768px) {
+    .sidebar-toggle-btn,
+    .sidebar-hotzone {
+        display: none !important;
+    }
+}
+
 
 
 

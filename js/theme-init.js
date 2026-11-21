@@ -79,6 +79,15 @@
       htmlNode.setAttribute("data-bgstyle", appearance.backgroundStyle);
     }
 
+    // 5. Khởi tạo trạng thái thu gọn Sidebar chống chớp giật (FOUC)
+    try {
+      if (localStorage.getItem("lib95:sidebar_collapsed") === "true") {
+        htmlNode.classList.add("sidebar-collapsed");
+      }
+    } catch (e) {
+      console.warn("theme-init: sidebar state error", e);
+    }
+
     // Lắng nghe thay đổi theme của hệ điều hành nếu user chọn auto
     if (window.matchMedia) {
       const media = window.matchMedia("(prefers-color-scheme: dark)");
