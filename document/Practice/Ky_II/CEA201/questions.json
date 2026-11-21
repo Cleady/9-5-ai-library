@@ -1,6 +1,6 @@
 {
   "subject": "CEA201",
-  "updatedAt": "2026-11-21T16:11:34.087Z",
+  "updatedAt": "2026-11-21T16:16:16.928Z",
   "totalQuizzes": 21,
   "totalQuestions": 531,
   "quizzes": [
@@ -2722,11 +2722,11 @@
       "options": [
         "0101",
         "0011",
-        "1100",
+        "1001",
         "1010"
       ],
       "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"For the data 10110101100, calculated check bits?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. 1100.\n\n **Kiểm tra**: Chọn C. 1100 \n\n **Vì sao các phương án khác sai**:\n\n- A (0101): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (0011): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (1010): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Tính toán các bit kiểm tra mã Hamming (Error-Correcting Code Check Bits) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Cho từ dữ liệu 11 bit: `10110101100` ($D_1$ đến $D_{11}$ theo thứ tự từ trái sang phải).\n- Phân bổ 11 bit dữ liệu vào các vị trí tương ứng trong từ mã 15 bit (các vị trí lũy thừa của 2 là check bit, còn lại là data bit):\n  - Bit 1 ($C_1$), Bit 2 ($C_2$), Bit 3 ($D_1=1$), Bit 4 ($C_4$), Bit 5 ($D_2=0$), Bit 6 ($D_3=1$), Bit 7 ($D_4=1$)\n  - Bit 8 ($C_8$), Bit 9 ($D_5=0$), Bit 10 ($D_6=1$), Bit 11 ($D_7=0$), Bit 12 ($D_8=1$), Bit 13 ($D_9=1$), Bit 14 ($D_{10}=0$), Bit 15 ($D_{11}=0$)\n- Tính toán 4 bit kiểm tra chẵn lẻ (Even Parity):\n  - $C_1$ (kiểm tra các vị trí 1, 3, 5, 7, 9, 11, 13, 15): Dữ liệu gồm $D_1(1), D_2(0), D_4(1), D_5(0), D_7(0), D_9(1), D_{11}(0) \\implies$ Số lượng bit 1 là 3 (lẻ) $\\implies C_1 = 1$.\n  - $C_2$ (kiểm tra các vị trí 2, 3, 6, 7, 10, 11, 14, 15): Dữ liệu gồm $D_1(1), D_3(1), D_4(1), D_6(1), D_7(0), D_{10}(0), D_{11}(0) \\implies$ Số lượng bit 1 là 4 (chẵn) $\\implies C_2 = 0$.\n  - $C_4$ (kiểm tra các vị trí 4, 5, 6, 7, 12, 13, 14, 15): Dữ liệu gồm $D_2(0), D_3(1), D_4(1), D_8(1), D_9(1), D_{10}(0), D_{11}(0) \\implies$ Số lượng bit 1 là 4 (chẵn) $\\implies C_4 = 0$.\n  - $C_8$ (kiểm tra các vị trí 8, 9, 10, 11, 12, 13, 14, 15): Dữ liệu gồm $D_5(0), D_6(1), D_7(0), D_8(1), D_9(1), D_{10}(0), D_{11}(0) \\implies$ Số lượng bit 1 là 3 (lẻ) $\\implies C_8 = 1$.\n- Tổ hợp 4 bit kiểm tra theo thứ tự trọng số $C_8 C_4 C_2 C_1$ (hoặc $C_1 C_2 C_4 C_8$) là: **`1001`**.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc in nhầm phương án C thành `1100` (lỗi gõ nhầm vị trí bit 0 và 1). Giá trị chuẩn xác tuyệt đối là `1001`.\n\n **Kiểm tra**: Chọn C. 1001 \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
       "id": 1199,
