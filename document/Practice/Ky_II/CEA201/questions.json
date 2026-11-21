@@ -1,6 +1,6 @@
 {
   "subject": "CEA201",
-  "updatedAt": "2026-11-21T19:06:05.202Z",
+  "updatedAt": "2026-11-21T19:20:44.143Z",
   "totalQuizzes": 21,
   "totalQuestions": 531,
   "quizzes": [
@@ -6609,8 +6609,8 @@
         "CLOOP statement.",
         "CALL procedure statement."
       ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân tích thống kê tần suất xuất hiện của các câu lệnh ngôn ngữ bậc cao (High-Level Language Statement Analysis) nghiên cứu bởi Patterson và Hennessy làm cơ sở cho kiến trúc RISC.\n\nCác bước:\n1. Các nghiên cứu thống kê thực nghiệm về các chương trình ngôn ngữ bậc cao cho thấy:\n - Câu lệnh gán (Assignment): Chiếm khoảng 35% - 40%.\n - Câu lệnh điều kiện (IF): Chiếm khoảng 30% - 40%.\n - Câu lệnh lặp (LOOP/WHILE/FOR): Chiếm khoảng 5% - 10%.\n - Lời gọi/trả về thủ tục (CALL/RETURN): Chiếm khoảng 10% - 15%.\n2. Câu lệnh nhảy không điều kiện \\ ( \\ textGOTO \\ ): Bị cấm hoặc rất hạn chế trong lập trình cấu trúc hiện đại (Structured Programming), tần suất sử dụng thực tế là thấp nhất (gần như 0%).\n\nKiểm tra:\nCâu lệnh KHÔNG thuộc nhóm phổ biến nhất là GOTO statement (A).\n\nVì sao các phương án khác sai:\n- B, C, D đều là những cấu trúc điều khiển nền tảng xuất hiện dày đặc trong mọi chương trình.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
+      "correctIndex": 2,
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng câu lệnh của chương trình ngôn ngữ bậc cao (High-Level Language Statement Types) thuộc Chapter 17: Reduced Instruction Set Computers (RISC) (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"In various statement types in a high-level programming language, what is not the most common statement?\" (Trong các loại câu lệnh của ngôn ngữ lập trình bậc cao, câu lệnh nào KHÔNG phải là loại câu lệnh phổ biến?).\n- Theo các nghiên cứu thống kê thực nghiệm kinh điển về hành vi chương trình HLL (Bảng 17.2 trong giáo trình William Stallings COA 11th Edition):\n  - Các loại câu lệnh phổ biến cấu thành nên phần lớn chương trình HLL bao gồm: **ASSIGN** (gán giá trị), **IF** (rẽ nhánh điều kiện), **CALL** (gọi hàm/thủ tục), **LOOP** (vòng lặp) và **GOTO** (nhảy không điều kiện).\n  - **CLOOP statement**: Không phải là một loại câu lệnh chuẩn tắc hay phổ biến trong phân loại ngôn ngữ lập trình bậc cao, mà là phương án nhiễu (distractor) được đưa vào để bẫy thí sinh.\n\n **Kiểm tra**: Chọn C. CLOOP statement. \n\n **Vì sao các phương án khác sai**:\n\n- A (GOTO statement): Là câu lệnh nhảy vô điều kiện, xuất hiện phổ biến trong thống kê các câu lệnh điều khiển dòng lệnh của chương trình HLL.\n- B (IF statement): Là một trong những câu lệnh rẽ nhánh phổ biến nhất trong mọi chương trình HLL (chiếm tỷ trọng rất lớn).\n- D (CALL procedure statement): Là câu lệnh gọi hàm/thủ tục cực kỳ phổ biến và là đối tượng tối ưu trọng tâm của kiến trúc RISC (sử dụng Register Windows).\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 17: Reduced Instruction Set Computers (RISC)"
     },
     {
       "id": 1501,
