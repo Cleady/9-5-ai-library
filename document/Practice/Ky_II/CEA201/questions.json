@@ -1,6 +1,6 @@
 {
   "subject": "CEA201",
-  "updatedAt": "2026-11-21T17:05:22.619Z",
+  "updatedAt": "2026-11-21T18:30:04.645Z",
   "totalQuizzes": 21,
   "totalQuestions": 531,
   "quizzes": [
@@ -4347,13 +4347,13 @@
       "quizId": 10,
       "text": "Convert the 64 from decimal to their binary number equivalents.",
       "options": [
-        "100000",
+        "1000000",
         "100100",
         "111000",
         "101010"
       ],
       "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Convert the 64 from decimal to their binary number equivalents.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 100000.\n\n **Kiểm tra**: Chọn A. 100000 \n\n **Vì sao các phương án khác sai**:\n\n- B (100100): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (111000): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (101010): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Chuyển đổi hệ đếm Thập phân (Decimal) sang Nhị phân (Binary) thuộc Chapter 10: Number Systems (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Chuyển đổi số thập phân $64_{10}$ sang số nhị phân tương đương.\n- Phân tích theo các lũy thừa của 2:\n  $$64 = 2^6 = 1 \\times 2^6 + 0 \\times 2^5 + 0 \\times 2^4 + 0 \\times 2^3 + 0 \\times 2^2 + 0 \\times 2^1 + 0 \\times 2^0$$\n- Đọc các hệ số từ trái sang phải: chữ số 1 đầu tiên tại vị trí $2^6$, theo sau là 6 chữ số 0:\n  $$64_{10} = \\mathbf{1000000}_2$$\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc in thiếu 1 chữ số 0 ở phương án A (`100000` = $32_{10}$). Giá trị nhị phân chuẩn xác tuyệt đối của 64 là `1000000` (gồm 1 chữ số 1 và 6 chữ số 0).\n\n **Kiểm tra**: Chọn A. 1000000 \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 10: Number Systems"
     },
     {
       "id": 1325,
@@ -4371,7 +4371,7 @@
     {
       "id": 1326,
       "quizId": 10,
-      "text": "A computer has memory of 256k words, how many bits are required to specify the address p",
+      "text": "A computer has memory of 256k words, how many bits are required to specify the address?",
       "options": [
         "16 bits",
         "12 bits",
@@ -4380,7 +4380,7 @@
         "10 bits"
       ],
       "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A computer has memory of 256k words, how many bits are required to specify the address p\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. 18 bits.\n\n **Kiểm tra**: Chọn D. 18 bits \n\n **Vì sao các phương án khác sai**:\n\n- A (16 bits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (12 bits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (8 bits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (10 bits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Định địa chỉ bộ nhớ (Memory Addressing Bits) thuộc Chapter 10: Number Systems / Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Bộ nhớ có dung lượng $256\\text{K}$ từ nhớ (words).\n- Biểu diễn dung lượng theo lũy thừa của 2:\n  $$256\\text{K} = 256 \\times 1024 = 2^8 \\times 2^{10} = 2^{18}\\text{ words}$$\n- Để định vị duy nhất $2^{18}$ địa chỉ từ nhớ độc lập, số bit địa chỉ cần thiết là:\n  $$n = \\log_2(2^{18}) = \\mathbf{18\\text{ bits}}$$\n\n **Kiểm tra**: Chọn D. 18 bits \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 10: Number Systems"
     },
     {
       "id": 1327,
