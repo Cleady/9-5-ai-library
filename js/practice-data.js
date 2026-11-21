@@ -4278,13 +4278,13 @@
     {
       "id": 1243,
       "quizId": 8,
-      "text": "I/O channels are commonly seen on microcomputers, whereas I/O controllers are used on m",
+      "text": "I/O channels are commonly seen on microcomputers, whereas I/O controllers are used on mainframes.",
       "options": [
         "False",
         "True"
       ],
       "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"(1) An I/O module must recognize one unique address for each peripheral it controls. (2) I/O channels are commonly seen on microcomputers, whereas I/O controllers are used on mainframes. The statement (1) is ______ and (2) is ______\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. true, false.\n\n **Kiểm tra**: Chọn A. true, false \n\n **Vì sao các phương án khác sai**:\n\n- B (true, true): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (false, true): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (false, false): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc và phân loại Mô-đun vào/ra (I/O Module: I/O Controller vs I/O Channel) thuộc Chapter 08: Input & Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"I/O channels are commonly seen on microcomputers, whereas I/O controllers are used on mainframes.\" (Các kênh I/O thường thấy trên vi máy tính, trong khi các bộ điều khiển I/O được dùng trên máy tính lớn mainframe).\n- Theo giáo trình William Stallings (COA 11th Edition - Chapter 08):\n  - **I/O Controller** (bộ điều khiển I/O): Là mô-đun I/O cấp thấp, yêu cầu CPU can thiệp trực tiếp nhiều vào các lệnh chi tiết, thường được sử dụng phổ biến trên **microcomputers** (máy tính cá nhân / vi máy tính).\n  - **I/O Channel / I/O Processor** (kênh I/O / bộ xử lý I/O): Là mô-đun I/O cấp cao, có kiến trúc vi xử lý và tập lệnh chuyên dụng riêng để thực hiện trọn vẹn các chương trình I/O mà không cần CPU giám sát liên tục, thường được sử dụng trên các hệ thống lớn như **mainframes**.\n- Mệnh đề trong đề bài đã bị **đảo ngược vị trí** của hai khái niệm (viết ngược I/O channels với I/O controllers), do đó nhận định này là sai (False).\n\n **Kiểm tra**: Chọn A. False \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input & Output"
     },
     {
       "id": 1244,
