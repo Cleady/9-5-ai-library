@@ -360,7 +360,7 @@ git push origin main
 #### Bước 2: Đồng bộ lên máy chủ Ubuntu (Terminal Cockpit)
 Chạy 1 dòng lệnh duy nhất:
 ```bash
-cd ~/9-5-ai-library && git pull origin main && pm2 restart 95ai-library
+cd ~/9-5-ai-library && git fetch origin && git reset --hard origin/main && pm2 restart 95ai-library
 ```
 ### tai khoan 
 ```bash
