@@ -47,7 +47,7 @@
     hideTimer = setTimeout(function () {
       if (toggleBtn && document.activeElement === toggleBtn) return;
       document.documentElement.classList.remove('sidebar-toggle-active');
-    }, 150);
+    }, 40);
   }
 
   function updatePositions() {

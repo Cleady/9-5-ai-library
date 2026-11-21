@@ -509,7 +509,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .brand-text {
@@ -3003,7 +3003,7 @@ html:not(.sidebar-collapsed).sidebar-toggle-active .sidebar .brand-logo {
     z-index: 120;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.15s ease, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s ease, background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
 /* Hiện nút khi hover vào header/nút/hotzone hoặc khi có focus bàn phím */
@@ -3106,7 +3106,7 @@ html.sidebar-anim-ready .topbar {
 html.sidebar-anim-ready .sidebar-toggle-btn {
     transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.2s ease,
+                opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1),
                 transform 0.15s ease,
                 background-color 0.2s,
                 border-color 0.2s,
