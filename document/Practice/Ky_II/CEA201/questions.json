@@ -1,6 +1,6 @@
 {
   "subject": "CEA201",
-  "updatedAt": "2026-11-22T00:08:10.347Z",
+  "updatedAt": "2026-11-22T00:44:46.738Z",
   "totalQuizzes": 21,
   "totalQuestions": 531,
   "quizzes": [
@@ -4931,8 +4931,8 @@
         "\\(BC + AB + AB'C'\\)",
         "\\(A'B + B'C\\)"
       ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__Simplify the following Boolean expression: \\((A + B + C)(A + B' + C)(A' + B + C')(A' + B' + C')\\)\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. \\(A'C + AC'\\).\n\n **Kiểm tra**: Chọn B. \\(A'C + AC'\\) \n\n **Vì sao các phương án khác sai**:\n\n- A (\\(A'BC + AB'C'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (\\(A'D + AD'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (\\(AD' + BC'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
+      "correctIndex": 0,
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Rút gọn biểu thức đại số Boolean (Boolean Expression Simplification) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Rút gọn biểu thức Boolean:\n  $$F = AB'C' + A'BC + ABC + ABC'$$\n- Nhóm các số hạng có nhân tử chung để áp dụng tính chất bù $X + X' = 1$:\n  - Nhóm số hạng 1 và 4: $AB'C' + ABC' = AC'(B' + B) = AC'(1) = AC'$\n  - Nhóm số hạng 2 và 3: $A'BC + ABC = BC(A' + A) = BC(1) = BC$\n- Kết hợp hai kết quả rút gọn lại:\n  $$F = AC' + BC$$\n- Đối chiếu các phương án: Phương án C ($BC + AB + AB'C'$) chưa được rút gọn tối giản (vẫn còn số hạng dư thừa $AB$ và chưa triệt tiêu $B'$). Phương án A ($AC' + BC$) là dạng tối giản chuẩn xác nhất.\n\n **Kiểm tra**: Chọn A. AC' + BC \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
       "id": 1369,
