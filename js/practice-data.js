@@ -5602,13 +5602,13 @@
       "quizId": 12,
       "text": "For the following Boolean expression \\(AB + AB'\\) and the truth table:\r\n\n| A | B | B' | Output |\n| :---: | :---: | :---: | :---: |\n| 1 | 0 | 1 | ? |\n| 1 | 1 | 0 | ? |\n| 0 | 0 | 1 | ? |\n| 0 | 1 | 0 | ? |\n\nChoose the correct option to replace at \"?\" (order top to bottom):",
       "options": [
-        "1,1,1,0",
+        "1,1,0,0",
         "1,1,1,1",
         "1,0,1,0",
         "0,1,1,0"
       ],
       "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"For the following Boolean expressions: \\(AB + AB'\\) and the truth table\n\n| A | B | B' | output |\n|---|---|---|---|\n| 1 | 0 | 1 | ? |\n| 1 | 1 | 0 | ? |\n| 0 | 0 | 1 | ? |\n| 0 | 1 | 0 | ? |\n\nChoose the correct option to replace at \"?\" (order top to bottom)\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 1,1,1,0.\n\n **Kiểm tra**: Chọn A. 1,1,1,0 \n\n **Vì sao các phương án khác sai**:\n\n- B (1,1,1,1): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (1,0,1,0): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (0,1,1,0): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Rút gọn biểu thức Boolean & Bảng chân trị (Boolean Algebra & Truth Table) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Cho biểu thức Boolean $F = AB + AB'$ và bảng chân trị tương ứng.\n- Rút gọn biểu thức theo định lý đại số Boolean:\n  $$F = AB + AB' = A(B + B')$$\n  Vì $B + B' = 1$, ta có:\n  $$F = A \\cdot 1 = A$$\n- Như vậy, giá trị ngõ ra $F$ (Output) luôn bằng chính xác giá trị của ngõ vào $A$ cho mọi hàng trong bảng chân trị:\n  - Hàng 1: $A = 1, B = 0 \\implies F = 1$\n  - Hàng 2: $A = 1, B = 1 \\implies F = 1$\n  - Hàng 3: $A = 0, B = 0 \\implies F = 0$\n  - Hàng 4: $A = 0, B = 1 \\implies F = 0$\n- Đọc cột Output từ trên xuống dưới ta được dãy giá trị: **`1, 1, 0, 0`**.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc in nhầm phương án A thành `1,1,1,0` (gõ nhầm số 0 ở hàng 3 thành 1). Đáp án chính xác tuyệt đối là `1,1,0,0`.\n\n **Kiểm tra**: Chọn A. 1,1,0,0 \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
       "id": 1346,
