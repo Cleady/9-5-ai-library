@@ -1,6 +1,6 @@
 {
   "subject": "CEA201",
-  "updatedAt": "2026-11-22T00:44:46.738Z",
+  "updatedAt": "2026-11-22T00:46:58.569Z",
   "totalQuizzes": 21,
   "totalQuestions": 531,
   "quizzes": [
@@ -4957,8 +4957,8 @@
         "A XOR B",
         "Depends on the values of A, B, and C"
       ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__What is the output of the following Boolean expression: \\((A' + B + C)\\text{ AND }(A + B' + C')\\)?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 1.\n\n **Kiểm tra**: Chọn A. 1 \n\n **Vì sao các phương án khác sai**:\n\n- B (0): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (A XOR B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Depends on the values of A, B, and C): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
+      "correctIndex": 3,
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Đánh giá giá trị biểu thức đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Cho biểu thức Boolean:\n  $$F = (A' + B + C) \\cdot (A + B' + C')$$\n- Kiểm tra xem biểu thức có phải là hằng số (luôn bằng 1 hoặc luôn bằng 0) hay không:\n  - Thử trường hợp 1: Cho $(A, B, C) = (1, 0, 0)$:\n    - Ngoặc thứ nhất: $A' + B + C = 0 + 0 + 0 = 0$.\n    - Khi đó $F = 0 \\cdot (1 + 1 + 1) = 0$.\n  - Thử trường hợp 2: Cho $(A, B, C) = (0, 0, 0)$:\n    - Ngoặc thứ nhất: $A' + B + C = 1 + 0 + 0 = 1$.\n    - Ngoặc thứ hai: $A + B' + C' = 0 + 1 + 1 = 1$.\n    - Khi đó $F = 1 \\cdot 1 = 1$.\n- Vì $F$ nhận giá trị 0 ở một số tổ hợp biến và nhận giá trị 1 ở các tổ hợp biến khác, nên $F$ không phải là hằng số (hằng đúng hay hằng sai), cũng không tương đương với phép toán XOR.\n- Do đó, giá trị ngõ ra của biểu thức hoàn toàn phụ thuộc vào giá trị của các biến đầu vào $A, B$ và $C$.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc chọn nhầm phương án A (1 - ngộ nhận là hằng đúng). Đáp án chính xác tuyệt đối là D. Depends on the values of A, B, and C.\n\n **Kiểm tra**: Chọn D. Depends on the values of A, B, and C \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
       "id": 1371,
