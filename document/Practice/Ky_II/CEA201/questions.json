@@ -1,6 +1,6 @@
 {
   "subject": "CEA201",
-  "updatedAt": "2026-11-22T00:46:58.569Z",
+  "updatedAt": "2026-11-22T00:57:23.056Z",
   "totalQuizzes": 21,
   "totalQuestions": 531,
   "quizzes": [
@@ -4963,7 +4963,7 @@
     {
       "id": 1371,
       "quizId": 12,
-      "text": "Write the Boolean expression for each of the logic circuits.",
+      "text": "Write the Boolean expression for the logic circuit shown below:",
       "options": [
         "\\(F = A'C' + AB + AB'C\\)",
         "\\(F = AC + A'B + AB'C\\)",
@@ -4971,7 +4971,13 @@
         "\\(F = AC' + A'B + AB'C\\)"
       ],
       "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Write the Boolean expression for each of the logic circuits.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. \\(F = A'C' + AB + AB'C\\).\n\n **Kiểm tra**: Chọn A. \\(F = A'C' + AB + AB'C\\) \n\n **Vì sao các phương án khác sai**:\n\n- B (\\(F = AC + A'B + AB'C\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (\\(F = A'C' + A'B + AB'C\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (\\(F = AC' + A'B + AB'C\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Đọc và xác định biểu thức Boolean từ sơ đồ mạch logic (Logic Circuit to Boolean Expression) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích sơ đồ mạch**:\n\n1. **Khảo sát các đường tín hiệu đầu vào (Inputs)**:\n   - Mạch có 3 biến ngõ vào chính: $A, B, C$.\n   - Các cổng đảo (NOT gates) tạo ra các đường tín hiệu bù tương ứng: $A'$ (tức $\\overline{A}$), $B'$ (tức $\\overline{B}$), và $C'$ (tức $\\overline{C}$).\n\n2. **Truy vết ngõ ra của từng cổng AND (từ trên xuống dưới)**:\n   - **Cổng AND 1 (2 ngõ vào)**: Điểm nối (dot) kết nối với đường $A'$ và đường $C'$.\n     $$\\text{Ngõ ra cổng 1} = A' \\cdot C' = A'C'$$\n   - **Cổng AND 2 (2 ngõ vào)**: Điểm nối kết nối với đường $A$ và đường $B$.\n     $$\\text{Ngõ ra cổng 2} = A \\cdot B = AB$$\n   - **Cổng AND 3 (3 ngõ vào)**: Điểm nối kết nối với đường $A$, đường $B'$, và đường $C$.\n     $$\\text{Ngõ ra cổng 3} = A \\cdot B' \\cdot C = AB'C$$\n\n3. **Xác định ngõ ra tổng $F$ qua cổng OR**:\n   - Cả 3 ngõ ra của các cổng AND trên được cấp vào một cổng **OR 3 ngõ vào** để tạo thành hàm logic tổng hợp ngõ ra $F$:\n     $$F = A'C' + AB + AB'C$$\n\n **Kiểm tra**: Đối chiếu với các phương án, chọn phương án **A. $F = A'C' + AB + AB'C$**.\n\n **Vì sao các phương án khác sai**:\n\n- B ($F = AC + A'B + AB'C$): Sai vì cổng AND 1 nhận $A'$ và $C'$ (không phải $AC$), cổng AND 2 nhận $A$ và $B$ (không phải $A'B$).\n- C ($F = A'C' + A'B + AB'C$): Sai vì cổng AND 2 nhận $A$ và $B$ (không có cổng đảo ở ngõ vào $A$).\n- D ($F = AC' + A'B + AB'C$): Sai vì cổng AND 1 nhận cả $A'$ và $C'$, cổng 2 nhận $A$ và $B$.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/cea201/cea201_q445_circuit.svg",
+          "alt": "Logic circuit diagram with inputs A, B, C, inverters, three AND gates, and a 3-input OR gate producing output F"
+        }
+      ]
     },
     {
       "id": 1372,

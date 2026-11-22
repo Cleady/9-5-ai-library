@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 370" width="100%" height="auto" style="max-width:740px;background:#ffffff;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <filter id="card-shadow" x="-3%" y="-3%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="736" height="366" fill="#ffffff" rx="12" stroke="#e2e8f0" stroke-width="1.5" />
+
+  <!-- ==================== VERTICAL BUS RAILS ==================== -->
+  <!-- Rail A -->
+  <line x1="55" y1="38" x2="55" y2="345" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+  <!-- Rail A' -->
+  <line x1="95" y1="38" x2="95" y2="345" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Rail B -->
+  <line x1="145" y1="38" x2="145" y2="345" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+  <!-- Rail B' -->
+  <line x1="185" y1="38" x2="185" y2="345" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Rail C -->
+  <line x1="235" y1="38" x2="235" y2="345" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+  <!-- Rail C' -->
+  <line x1="275" y1="38" x2="275" y2="345" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+
+  <!-- ==================== BUS HEADERS / LABELS ==================== -->
+  <!-- A Badge -->
+  <g transform="translate(42, 10)">
+    <rect width="26" height="22" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="13" y="16" text-anchor="middle" fill="#1d4ed8" font-weight="700" font-size="13">A</text>
+  </g>
+  <!-- A' Badge -->
+  <g transform="translate(82, 10)">
+    <rect width="26" height="22" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="13" y="16" text-anchor="middle" fill="#475569" font-weight="700" font-size="12">A'</text>
+  </g>
+
+  <!-- B Badge -->
+  <g transform="translate(132, 10)">
+    <rect width="26" height="22" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="13" y="16" text-anchor="middle" fill="#1d4ed8" font-weight="700" font-size="13">B</text>
+  </g>
+  <!-- B' Badge -->
+  <g transform="translate(172, 10)">
+    <rect width="26" height="22" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="13" y="16" text-anchor="middle" fill="#475569" font-weight="700" font-size="12">B'</text>
+  </g>
+
+  <!-- C Badge -->
+  <g transform="translate(222, 10)">
+    <rect width="26" height="22" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="13" y="16" text-anchor="middle" fill="#1d4ed8" font-weight="700" font-size="13">C</text>
+  </g>
+  <!-- C' Badge -->
+  <g transform="translate(262, 10)">
+    <rect width="26" height="22" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="13" y="16" text-anchor="middle" fill="#475569" font-weight="700" font-size="12">C'</text>
+  </g>
+
+  <!-- ==================== NOT GATES (INVERTERS) ==================== -->
+  <!-- NOT A at y=48 -->
+  <circle cx="55" cy="48" r="3.5" fill="#0f172a" />
+  
+      <!-- NOT Gate from 55 to 95 at y=48 -->
+      <line x1="55" y1="48" x2="61" y2="48" stroke="#334155" stroke-width="1.8" />
+      <polygon points="61,41 61,55 77,48" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-linejoin="round" />
+      <circle cx="79.5" cy="48" r="2.5" fill="#ffffff" stroke="#e11d48" stroke-width="1.5" />
+      <line x1="82" y1="48" x2="95" y2="48" stroke="#334155" stroke-width="1.8" />
+    
+  <circle cx="95" cy="48" r="3.5" fill="#0f172a" />
+
+  <!-- NOT B at y=60 -->
+  <circle cx="145" cy="60" r="3.5" fill="#0f172a" />
+  
+      <!-- NOT Gate from 145 to 185 at y=60 -->
+      <line x1="145" y1="60" x2="151" y2="60" stroke="#334155" stroke-width="1.8" />
+      <polygon points="151,53 151,67 167,60" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-linejoin="round" />
+      <circle cx="169.5" cy="60" r="2.5" fill="#ffffff" stroke="#e11d48" stroke-width="1.5" />
+      <line x1="172" y1="60" x2="185" y2="60" stroke="#334155" stroke-width="1.8" />
+    
+  <circle cx="185" cy="60" r="3.5" fill="#0f172a" />
+
+  <!-- NOT C at y=72 -->
+  <circle cx="235" cy="72" r="3.5" fill="#0f172a" />
+  
+      <!-- NOT Gate from 235 to 275 at y=72 -->
+      <line x1="235" y1="72" x2="241" y2="72" stroke="#334155" stroke-width="1.8" />
+      <polygon points="241,65 241,79 257,72" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-linejoin="round" />
+      <circle cx="259.5" cy="72" r="2.5" fill="#ffffff" stroke="#e11d48" stroke-width="1.5" />
+      <line x1="262" y1="72" x2="275" y2="72" stroke="#334155" stroke-width="1.8" />
+    
+  <circle cx="275" cy="72" r="3.5" fill="#0f172a" />
+
+  <!-- ==================== AND GATE 1: Inputs A' and C' ==================== -->
+  <!-- Input 1 from A' at y=94 -->
+  <line x1="95" y1="94" x2="380" y2="94" stroke="#334155" stroke-width="1.8" />
+  <circle cx="95" cy="94" r="3.5" fill="#0f172a" />
+
+  <!-- Input 2 from C' at y=116 -->
+  <line x1="275" y1="116" x2="380" y2="116" stroke="#334155" stroke-width="1.8" />
+  <circle cx="275" cy="116" r="3.5" fill="#0f172a" />
+
+  <!-- AND1 Body -->
+  <path d="M 380 81 L 411 81 A 24 24 0 0 1 411 129 L 380 129 Z" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#card-shadow)" />
+  <text x="399" y="109" font-size="11" font-weight="700" fill="#15803d">AND</text>
+
+  <!-- ==================== AND GATE 2: Inputs A and B ==================== -->
+  <!-- Input 1 from A at y=184 -->
+  <line x1="55" y1="184" x2="380" y2="184" stroke="#334155" stroke-width="1.8" />
+  <circle cx="55" cy="184" r="3.5" fill="#0f172a" />
+
+  <!-- Input 2 from B at y=206 -->
+  <line x1="145" y1="206" x2="380" y2="206" stroke="#334155" stroke-width="1.8" />
+  <circle cx="145" cy="206" r="3.5" fill="#0f172a" />
+
+  <!-- AND2 Body -->
+  <path d="M 380 171 L 411 171 A 24 24 0 0 1 411 219 L 380 219 Z" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#card-shadow)" />
+  <text x="399" y="199" font-size="11" font-weight="700" fill="#15803d">AND</text>
+
+  <!-- ==================== AND GATE 3: Inputs A, B', C ==================== -->
+  <!-- Input 1 from A at y=276 -->
+  <line x1="55" y1="276" x2="380" y2="276" stroke="#334155" stroke-width="1.8" />
+  <circle cx="55" cy="276" r="3.5" fill="#0f172a" />
+
+  <!-- Input 2 from B' at y=290 -->
+  <line x1="185" y1="290" x2="380" y2="290" stroke="#334155" stroke-width="1.8" />
+  <circle cx="185" cy="290" r="3.5" fill="#0f172a" />
+
+  <!-- Input 3 from C at y=304 -->
+  <line x1="235" y1="304" x2="380" y2="304" stroke="#334155" stroke-width="1.8" />
+  <circle cx="235" cy="304" r="3.5" fill="#0f172a" />
+
+  <!-- AND3 Body -->
+  <path d="M 380 261 L 406 261 A 29 29 0 0 1 406 319 L 380 319 Z" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#card-shadow)" />
+  <text x="399" y="294" font-size="11" font-weight="700" fill="#15803d">AND</text>
+
+  <!-- ==================== INTERCONNECT WIRES TO OR GATE ==================== -->
+  <!-- From AND1 (380+55=435, 105) to OR input 1 (555+7=562, 178) -->
+  <path d="M 435 105 L 495 105 L 495 178 L 562 178" fill="none" stroke="#334155" stroke-width="1.8" />
+
+  <!-- From AND2 (435, 195) to OR input 2 (555+10=565, 195) -->
+  <line x1="435" y1="195" x2="564" y2="195" stroke="#334155" stroke-width="1.8" />
+
+  <!-- From AND3 (435, 290) to OR input 3 (555+7=562, 212) -->
+  <path d="M 435 290 L 495 290 L 495 212 L 562 212" fill="none" stroke="#334155" stroke-width="1.8" />
+
+  <!-- ==================== OR GATE ==================== -->
+  <path d="M 555 153 Q 567 195 555 237 Q 583.8 235 615 195 Q 583.8 155 555 153 Z" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#card-shadow)" />
+  <text x="573" y="199" font-size="12" font-weight="700" fill="#1d4ed8">OR</text>
+
+  <!-- Output wire to F -->
+  <line x1="615" y1="195" x2="663" y2="195" stroke="#334155" stroke-width="2.5" />
+
+  <!-- Output F Badge -->
+  <g transform="translate(663, 181)">
+    <rect width="32" height="28" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.8" />
+    <text x="16" y="19" text-anchor="middle" fill="#b45309" font-weight="800" font-size="15">F</text>
+  </g>
+</svg>

@@ -464,7 +464,16 @@ if (isChoicesFormat) {
 
     "440": `**Giải thích**: \n\n **Hướng giải**: Rút gọn biểu thức đại số Boolean (Boolean Expression Simplification) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Rút gọn biểu thức Boolean:\n  $$F = AB'C' + A'BC + ABC + ABC'$$\n- Nhóm các số hạng có nhân tử chung để áp dụng tính chất bù $X + X' = 1$:\n  - Nhóm số hạng 1 và 4: $AB'C' + ABC' = AC'(B' + B) = AC'(1) = AC'$\n  - Nhóm số hạng 2 và 3: $A'BC + ABC = BC(A' + A) = BC(1) = BC$\n- Kết hợp hai kết quả rút gọn lại:\n  $$F = AC' + BC$$\n- Đối chiếu các phương án: Phương án C ($BC + AB + AB'C'$) chưa được rút gọn tối giản (vẫn còn số hạng dư thừa $AB$ và chưa triệt tiêu $B'$). Phương án A ($AC' + BC$) là dạng tối giản chuẩn xác nhất.\n\n **Kiểm tra**: Chọn A. AC' + BC \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic`,
 
-    "442": `**Giải thích**: \n\n **Hướng giải**: Đánh giá giá trị biểu thức đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Cho biểu thức Boolean:\n  $$F = (A' + B + C) \\cdot (A + B' + C')$$\n- Kiểm tra xem biểu thức có phải là hằng số (luôn bằng 1 hoặc luôn bằng 0) hay không:\n  - Thử trường hợp 1: Cho $(A, B, C) = (1, 0, 0)$:\n    - Ngoặc thứ nhất: $A' + B + C = 0 + 0 + 0 = 0$.\n    - Khi đó $F = 0 \\cdot (1 + 1 + 1) = 0$.\n  - Thử trường hợp 2: Cho $(A, B, C) = (0, 0, 0)$:\n    - Ngoặc thứ nhất: $A' + B + C = 1 + 0 + 0 = 1$.\n    - Ngoặc thứ hai: $A + B' + C' = 0 + 1 + 1 = 1$.\n    - Khi đó $F = 1 \\cdot 1 = 1$.\n- Vì $F$ nhận giá trị 0 ở một số tổ hợp biến và nhận giá trị 1 ở các tổ hợp biến khác, nên $F$ không phải là hằng số (hằng đúng hay hằng sai), cũng không tương đương với phép toán XOR.\n- Do đó, giá trị ngõ ra của biểu thức hoàn toàn phụ thuộc vào giá trị của các biến đầu vào $A, B$ và $C$.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc chọn nhầm phương án A (1 - ngộ nhận là hằng đúng). Đáp án chính xác tuyệt đối là D. Depends on the values of A, B, and C.\n\n **Kiểm tra**: Chọn D. Depends on the values of A, B, and C \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic`
+    "442": `**Giải thích**: \n\n **Hướng giải**: Đánh giá giá trị biểu thức đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Cho biểu thức Boolean:\n  $$F = (A' + B + C) \\cdot (A + B' + C')$$\n- Kiểm tra xem biểu thức có phải là hằng số (luôn bằng 1 hoặc luôn bằng 0) hay không:\n  - Thử trường hợp 1: Cho $(A, B, C) = (1, 0, 0)$:\n    - Ngoặc thứ nhất: $A' + B + C = 0 + 0 + 0 = 0$.\n    - Khi đó $F = 0 \\cdot (1 + 1 + 1) = 0$.\n  - Thử trường hợp 2: Cho $(A, B, C) = (0, 0, 0)$:\n    - Ngoặc thứ nhất: $A' + B + C = 1 + 0 + 0 = 1$.\n    - Ngoặc thứ hai: $A + B' + C' = 0 + 1 + 1 = 1$.\n    - Khi đó $F = 1 \\cdot 1 = 1$.\n- Vì $F$ nhận giá trị 0 ở một số tổ hợp biến và nhận giá trị 1 ở các tổ hợp biến khác, nên $F$ không phải là hằng số (hằng đúng hay hằng sai), cũng không tương đương với phép toán XOR.\n- Do đó, giá trị ngõ ra của biểu thức hoàn toàn phụ thuộc vào giá trị của các biến đầu vào $A, B$ và $C$.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc chọn nhầm phương án A (1 - ngộ nhận là hằng đúng). Đáp án chính xác tuyệt đối là D. Depends on the values of A, B, and C.\n\n **Kiểm tra**: Chọn D. Depends on the values of A, B, and C \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic`,
+
+    "445": `**Giải thích**: \n\n **Hướng giải**: Đọc và xác định biểu thức Boolean từ sơ đồ mạch logic (Logic Circuit to Boolean Expression) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích sơ đồ mạch**:\n\n1. **Khảo sát các đường tín hiệu đầu vào (Inputs)**:\n   - Mạch có 3 biến ngõ vào chính: $A, B, C$.\n   - Các cổng đảo (NOT gates) tạo ra các đường tín hiệu bù tương ứng: $A'$ (tức $\\overline{A}$), $B'$ (tức $\\overline{B}$), và $C'$ (tức $\\overline{C}$).\n\n2. **Truy vết ngõ ra của từng cổng AND (từ trên xuống dưới)**:\n   - **Cổng AND 1 (2 ngõ vào)**: Điểm nối (dot) kết nối với đường $A'$ và đường $C'$.\n     $$\\text{Ngõ ra cổng 1} = A' \\cdot C' = A'C'$$\n   - **Cổng AND 2 (2 ngõ vào)**: Điểm nối kết nối với đường $A$ và đường $B$.\n     $$\\text{Ngõ ra cổng 2} = A \\cdot B = AB$$\n   - **Cổng AND 3 (3 ngõ vào)**: Điểm nối kết nối với đường $A$, đường $B'$, và đường $C$.\n     $$\\text{Ngõ ra cổng 3} = A \\cdot B' \\cdot C = AB'C$$\n\n3. **Xác định ngõ ra tổng $F$ qua cổng OR**:\n   - Cả 3 ngõ ra của các cổng AND trên được cấp vào một cổng **OR 3 ngõ vào** để tạo thành hàm logic tổng hợp ngõ ra $F$:\n     $$F = A'C' + AB + AB'C$$\n\n **Kiểm tra**: Đối chiếu với các phương án, chọn phương án **A. $F = A'C' + AB + AB'C$**.\n\n **Vì sao các phương án khác sai**:\n\n- B ($F = AC + A'B + AB'C$): Sai vì cổng AND 1 nhận $A'$ và $C'$ (không phải $AC$), cổng AND 2 nhận $A$ và $B$ (không phải $A'B$).\n- C ($F = A'C' + A'B + AB'C$): Sai vì cổng AND 2 nhận $A$ và $B$ (không có cổng đảo ở ngõ vào $A$).\n- D ($F = AC' + A'B + AB'C$): Sai vì cổng AND 1 nhận cả $A'$ và $C'$, cổng 2 nhận $A$ và $B$.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic`
+  };
+
+  const specialDiagrams = {
+    "445": [{
+      src: "/assets/images/practice/cea201/cea201_q445_circuit.svg",
+      alt: "Sơ đồ mạch logic cho biểu thức F = A'C' + AB + AB'C"
+    }]
   };
 
   const qPattern = /\\textbf\{Question\s+(\d+):?\}\s*([\s\S]*?)\\begin\{itemize\}([\s\S]*?)\\end\{itemize\}/gi;
@@ -480,6 +489,25 @@ if (isChoicesFormat) {
       return qPos >= c.index && (!nextCh || qPos < nextCh.index);
     });
     const chapter = chapters[chIndex >= 0 ? chIndex : 0];
+
+    // Trích xuất hình ảnh nếu có: \includegraphics{...}
+    const imgM = promptRaw.match(/\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\}/);
+    let diagrams = undefined;
+    if (imgM) {
+      const fileName = path.basename(imgM[1].trim());
+      const altM = promptRaw.match(/\\figdesc\{([^}]+)\}/);
+      diagrams = [{
+        src: `/assets/images/practice/cea201/${fileName}`,
+        alt: altM ? altM[1].trim() : 'Sơ đồ câu hỏi'
+      }];
+    }
+    if (!diagrams && specialDiagrams[String(qNum)]) {
+      diagrams = specialDiagrams[String(qNum)];
+    }
+
+    promptRaw = promptRaw.replace(/\\begin\{center\}([\s\S]*?)\\end\{center\}/g, (b) => (b.includes('tikzpicture') || b.includes('includegraphics')) ? '' : b);
+    promptRaw = promptRaw.replace(/\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/g, '');
+    promptRaw = promptRaw.replace(/\\figdesc\{[^}]*\}/g, '');
 
     // Chuyển đổi bảng tabular trước khi làm sạch chuỗi
     promptRaw = convertTabularToMarkdown(promptRaw);
@@ -541,6 +569,7 @@ if (isChoicesFormat) {
       chapterNum: chapter.num,
       chapterTitle: chapter.title,
       text: promptText,
+      diagrams,
       options,
       correctIndex: Math.max(0, correctIndex),
       correctIndices: correctIndices.length > 1 ? correctIndices : undefined,
