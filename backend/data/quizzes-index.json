@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T01:02:34.392Z",
+  "generatedAt": "2026-11-23T16:28:05.702Z",
   "totalSubjects": 9,
   "totalQuizzes": 123,
   "subjects": [
@@ -66,9 +66,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 1 – Basic Concepts and Computer Evolution",
       "order": 1,
-      "durationMin": 83,
+      "durationMin": 78,
       "difficulty": "Medium",
-      "questionCount": 55
+      "questionCount": 52
     },
     {
       "id": 2,
@@ -77,9 +77,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 2 – Performance Concepts",
       "order": 2,
-      "durationMin": 18,
+      "durationMin": 20,
       "difficulty": "Medium",
-      "questionCount": 12
+      "questionCount": 13
     },
     {
       "id": 3,
@@ -88,9 +88,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 3 – A Top-Level View of Computer Function and Interconnection",
       "order": 3,
-      "durationMin": 77,
+      "durationMin": 69,
       "difficulty": "Medium",
-      "questionCount": 51
+      "questionCount": 46
     },
     {
       "id": 4,
@@ -110,9 +110,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 5 – Cache Memory",
       "order": 5,
-      "durationMin": 38,
+      "durationMin": 36,
       "difficulty": "Medium",
-      "questionCount": 25
+      "questionCount": 24
     },
     {
       "id": 6,
@@ -121,9 +121,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 6 – Internal Memory",
       "order": 6,
-      "durationMin": 56,
+      "durationMin": 54,
       "difficulty": "Medium",
-      "questionCount": 37
+      "questionCount": 36
     },
     {
       "id": 7,
@@ -132,9 +132,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 7 – External Memory",
       "order": 7,
-      "durationMin": 60,
+      "durationMin": 54,
       "difficulty": "Medium",
-      "questionCount": 40
+      "questionCount": 36
     },
     {
       "id": 8,
@@ -143,9 +143,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 8 – Input & Output",
       "order": 8,
-      "durationMin": 63,
+      "durationMin": 60,
       "difficulty": "Medium",
-      "questionCount": 42
+      "questionCount": 40
     },
     {
       "id": 9,
@@ -154,9 +154,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 9 – Operating System Support",
       "order": 9,
-      "durationMin": 65,
+      "durationMin": 63,
       "difficulty": "Medium",
-      "questionCount": 43
+      "questionCount": 42
     },
     {
       "id": 10,
@@ -187,9 +187,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 12 – Digital Logic",
       "order": 12,
-      "durationMin": 69,
+      "durationMin": 71,
       "difficulty": "Medium",
-      "questionCount": 46
+      "questionCount": 47
     },
     {
       "id": 13,
@@ -198,9 +198,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 13 – Instruction Sets: Characteristics and Functions",
       "order": 13,
-      "durationMin": 17,
+      "durationMin": 20,
       "difficulty": "Medium",
-      "questionCount": 11
+      "questionCount": 13
     },
     {
       "id": 14,
@@ -209,9 +209,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 14 – Instruction Sets: Addressing Modes and Formats",
       "order": 14,
-      "durationMin": 51,
+      "durationMin": 53,
       "difficulty": "Medium",
-      "questionCount": 34
+      "questionCount": 35
     },
     {
       "id": 15,
@@ -220,9 +220,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 15 – Assembly Language and Related Topics",
       "order": 15,
-      "durationMin": 6,
+      "durationMin": 9,
       "difficulty": "Medium",
-      "questionCount": 4
+      "questionCount": 6
     },
     {
       "id": 16,
@@ -231,9 +231,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 16 – Processor Structure and Function",
       "order": 16,
-      "durationMin": 80,
+      "durationMin": 69,
       "difficulty": "Medium",
-      "questionCount": 53
+      "questionCount": 46
     },
     {
       "id": 17,
@@ -242,9 +242,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 17 – Reduced Instruction Set Computers (RISC)",
       "order": 17,
-      "durationMin": 29,
+      "durationMin": 30,
       "difficulty": "Medium",
-      "questionCount": 19
+      "questionCount": 20
     },
     {
       "id": 18,
@@ -275,9 +275,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 20 – Parallel Processing",
       "order": 20,
-      "durationMin": 8,
+      "durationMin": 9,
       "difficulty": "Medium",
-      "questionCount": 5
+      "questionCount": 6
     },
     {
       "id": 21,
@@ -286,9 +286,9 @@
       "subjectName": "Computer Architecture",
       "title": "Chương 21 – Multicore Computers",
       "order": 21,
-      "durationMin": 9,
+      "durationMin": 12,
       "difficulty": "Medium",
-      "questionCount": 6
+      "questionCount": 8
     },
     {
       "id": 101,

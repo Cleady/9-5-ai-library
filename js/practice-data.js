@@ -66,27 +66,27 @@
       "subjectId": 1,
       "title": "Chương 1 – Basic Concepts and Computer Evolution",
       "order": 1,
-      "durationMin": 83,
+      "durationMin": 78,
       "difficulty": "Medium",
-      "questionCount": 55
+      "questionCount": 52
     },
     {
       "id": 2,
       "subjectId": 1,
       "title": "Chương 2 – Performance Concepts",
       "order": 2,
-      "durationMin": 18,
+      "durationMin": 20,
       "difficulty": "Medium",
-      "questionCount": 12
+      "questionCount": 13
     },
     {
       "id": 3,
       "subjectId": 1,
       "title": "Chương 3 – A Top-Level View of Computer Function and Interconnection",
       "order": 3,
-      "durationMin": 77,
+      "durationMin": 69,
       "difficulty": "Medium",
-      "questionCount": 51
+      "questionCount": 46
     },
     {
       "id": 4,
@@ -102,45 +102,45 @@
       "subjectId": 1,
       "title": "Chương 5 – Cache Memory",
       "order": 5,
-      "durationMin": 38,
+      "durationMin": 36,
       "difficulty": "Medium",
-      "questionCount": 25
+      "questionCount": 24
     },
     {
       "id": 6,
       "subjectId": 1,
       "title": "Chương 6 – Internal Memory",
       "order": 6,
-      "durationMin": 56,
+      "durationMin": 54,
       "difficulty": "Medium",
-      "questionCount": 37
+      "questionCount": 36
     },
     {
       "id": 7,
       "subjectId": 1,
       "title": "Chương 7 – External Memory",
       "order": 7,
-      "durationMin": 60,
+      "durationMin": 54,
       "difficulty": "Medium",
-      "questionCount": 40
+      "questionCount": 36
     },
     {
       "id": 8,
       "subjectId": 1,
       "title": "Chương 8 – Input & Output",
       "order": 8,
-      "durationMin": 63,
+      "durationMin": 60,
       "difficulty": "Medium",
-      "questionCount": 42
+      "questionCount": 40
     },
     {
       "id": 9,
       "subjectId": 1,
       "title": "Chương 9 – Operating System Support",
       "order": 9,
-      "durationMin": 65,
+      "durationMin": 63,
       "difficulty": "Medium",
-      "questionCount": 43
+      "questionCount": 42
     },
     {
       "id": 10,
@@ -165,54 +165,54 @@
       "subjectId": 1,
       "title": "Chương 12 – Digital Logic",
       "order": 12,
-      "durationMin": 69,
+      "durationMin": 71,
       "difficulty": "Medium",
-      "questionCount": 46
+      "questionCount": 47
     },
     {
       "id": 13,
       "subjectId": 1,
       "title": "Chương 13 – Instruction Sets: Characteristics and Functions",
       "order": 13,
-      "durationMin": 17,
+      "durationMin": 20,
       "difficulty": "Medium",
-      "questionCount": 11
+      "questionCount": 13
     },
     {
       "id": 14,
       "subjectId": 1,
       "title": "Chương 14 – Instruction Sets: Addressing Modes and Formats",
       "order": 14,
-      "durationMin": 51,
+      "durationMin": 53,
       "difficulty": "Medium",
-      "questionCount": 34
+      "questionCount": 35
     },
     {
       "id": 15,
       "subjectId": 1,
       "title": "Chương 15 – Assembly Language and Related Topics",
       "order": 15,
-      "durationMin": 6,
+      "durationMin": 9,
       "difficulty": "Medium",
-      "questionCount": 4
+      "questionCount": 6
     },
     {
       "id": 16,
       "subjectId": 1,
       "title": "Chương 16 – Processor Structure and Function",
       "order": 16,
-      "durationMin": 80,
+      "durationMin": 69,
       "difficulty": "Medium",
-      "questionCount": 53
+      "questionCount": 46
     },
     {
       "id": 17,
       "subjectId": 1,
       "title": "Chương 17 – Reduced Instruction Set Computers (RISC)",
       "order": 17,
-      "durationMin": 29,
+      "durationMin": 30,
       "difficulty": "Medium",
-      "questionCount": 19
+      "questionCount": 20
     },
     {
       "id": 18,
@@ -237,18 +237,18 @@
       "subjectId": 1,
       "title": "Chương 20 – Parallel Processing",
       "order": 20,
-      "durationMin": 8,
+      "durationMin": 9,
       "difficulty": "Medium",
-      "questionCount": 5
+      "questionCount": 6
     },
     {
       "id": 21,
       "subjectId": 1,
       "title": "Chương 21 – Multicore Computers",
       "order": 21,
-      "durationMin": 9,
+      "durationMin": 12,
       "difficulty": "Medium",
-      "questionCount": 6
+      "questionCount": 8
     },
     {
       "id": 101,
@@ -1685,70 +1685,18 @@
     {
       "id": 1041,
       "quizId": 1,
-      "text": "Architectural attributes include _________.",
+      "text": "The _________ stores data.",
       "options": [
-        "I/O mechanisms",
-        "control signals",
-        "interfaces",
-        "memory technology used"
+        "main memory",
+        "I/O",
+        "system bus",
+        "control unit"
       ],
       "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Architectural attributes include _________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. I/O mechanisms.\n\n **Kiểm tra**: Chọn D. I/O mechanisms \n\n **Vì sao các phương án khác sai**:\n\n- A (memory technology used): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (interfaces): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (control signals): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
+      "explanation": "**Giải thích**: \n\n **Hướng giải**: Khối Điều khiển (Control Unit) & Vi chương trình thuộc Chapter 19: Control Unit Operation (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___________ stores data.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối điều khiển sinh ra các tín hiệu điều khiển phần cứng. Điều khiển cứng (Hardwired) cho tốc độ cao; Điều khiển vi chương trình (Microprogrammed) lưu các vi lệnh (microinstructions) trong bộ nhớ điều khiển.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. main memory.\n\n **Kiểm tra**: Chọn A. main memory \n\n **Vì sao các phương án khác sai**:\n\n- B (I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (system bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (control unit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 19: Control Unit Operation"
     },
     {
       "id": 1042,
-      "quizId": 1,
-      "text": "The _________ stores data.",
-      "options": [
-        "main memory",
-        "I/O",
-        "system bus",
-        "control unit"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Khối Điều khiển (Control Unit) & Vi chương trình thuộc Chapter 19: Control Unit Operation (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___________ stores data.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối điều khiển sinh ra các tín hiệu điều khiển phần cứng. Điều khiển cứng (Hardwired) cho tốc độ cao; Điều khiển vi chương trình (Microprogrammed) lưu các vi lệnh (microinstructions) trong bộ nhớ điều khiển.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. main memory.\n\n **Kiểm tra**: Chọn A. main memory \n\n **Vì sao các phương án khác sai**:\n\n- B (I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (system bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (control unit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 19: Control Unit Operation"
-    },
-    {
-      "id": 1043,
-      "quizId": 1,
-      "text": "_________ attributes include hardware details transparent to the programmer.",
-      "options": [
-        "Organizational",
-        "Memory",
-        "Architectural",
-        "Interface"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ attributes include hardware details transparent to the programmer.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Organizational.\n\n **Kiểm tra**: Chọn B. Organizational \n\n **Vì sao các phương án khác sai**:\n\n- A (Interface): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Architectural): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
-    },
-    {
-      "id": 1044,
-      "quizId": 1,
-      "text": "Architectural attributes include _________.",
-      "options": [
-        "interfaces",
-        "I/O mechanisms",
-        "control signals",
-        "memory technology used"
-      ],
-      "correctIndex": 1,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Architectural attributes include _________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. I/O mechanisms.\n\n **Kiểm tra**: Chọn D. I/O mechanisms \n\n **Vì sao các phương án khác sai**:\n\n- A (memory technology used): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (interfaces): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (control signals): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
-    },
-    {
-      "id": 1045,
-      "quizId": 1,
-      "text": "The _________ stores data.",
-      "options": [
-        "system bus",
-        "I/O",
-        "main memory",
-        "control unit"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Khối Điều khiển (Control Unit) & Vi chương trình thuộc Chapter 19: Control Unit Operation (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___________ stores data.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối điều khiển sinh ra các tín hiệu điều khiển phần cứng. Điều khiển cứng (Hardwired) cho tốc độ cao; Điều khiển vi chương trình (Microprogrammed) lưu các vi lệnh (microinstructions) trong bộ nhớ điều khiển.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. main memory.\n\n **Kiểm tra**: Chọn A. main memory \n\n **Vì sao các phương án khác sai**:\n\n- B (I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (system bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (control unit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 19: Control Unit Operation"
-    },
-    {
-      "id": 1046,
       "quizId": 1,
       "text": "Computers are classified into generations based on the fundamental hardware technology employed.",
       "options": [
@@ -1759,7 +1707,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Computers are classified into generations based on the fundamental hardware technology employed.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1047,
+      "id": 1043,
       "quizId": 1,
       "text": "Central processing unit (CPU) of IAS computer consists of _________.",
       "options": [
@@ -1772,7 +1720,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Central processing unit (CPU) of IAS computer consists of ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. ALU (Arithmetic and Logic Unit) and CU (Control Unit).\n\n **Kiểm tra**: Chọn B. ALU (Arithmetic and Logic Unit) and CU (Control Unit) \n\n **Vì sao các phương án khác sai**:\n\n- A (Main memory and ALU (arithmetic and logic unit)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (CU (Control Unit) and IO Module): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (ALU (Arithmetic and Logic Unit) and IO Module): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
     },
     {
-      "id": 1048,
+      "id": 1044,
       "quizId": 1,
       "text": "Which of the following statements is part of the Von Newmann principle?",
       "options": [
@@ -1785,7 +1733,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following statements is true for Von Neumann architecture?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Shared bus between the program memory and data memory.\n\n **Kiểm tra**: Chọn A. Shared bus between the program memory and data memory \n\n **Vì sao các phương án khác sai**:\n\n- B (Separate bus between the program memory and data memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (External bus for program memory and data memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (External bus for data memory only): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1049,
+      "id": 1045,
       "quizId": 1,
       "text": "Which of the following are the four basic functions that a computer performs?",
       "options": [
@@ -1798,7 +1746,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\n4 chức năng cơ bản của máy tính được định nghĩa rõ ràng trong chương mở đầu về chức năng máy tính.\n\nCác bước:\nBốn chức năng cốt lõi của bất kỳ hệ thống máy tính nào gồm:\n1. Xử lý dữ liệu (Data processing).\n2. Lưu trữ dữ liệu (Data storage).\n3. Di chuyển dữ liệu (Data movement / Input-Output).\n4. Điều khiển (Control).\n\nKiểm tra:\nPhương án A liệt kê đầy đủ và chính xác 4 chức năng này.\n\nVì sao các phương án khác sai:\n- Các phương án B, C, D đều chứa 'Interrupt'. Ngắt (Interrupt) chỉ là một cơ chế hỗ trợ điều khiển và quản lý sự kiện I/O, không phải là một trong 4 chức năng cơ bản ở mức kiến trúc.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1050,
+      "id": 1046,
       "quizId": 1,
       "text": "What is true about IAS Memory Formats?",
       "options": [
@@ -1811,33 +1759,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is true about IAS Memory Formats?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Both data and instructions are stored in the memory.\n\n **Kiểm tra**: Chọn C. Both data and instructions are stored in the memory \n\n **Vì sao các phương án khác sai**:\n\n- A (The memory of the IAS consists of 1000 storage locations (called words) of 32 bits each): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Only data is stored in the memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Only instructions are stored in the memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1051,
-      "quizId": 1,
-      "text": "Choose the most four basic functions of a computer.",
-      "options": [
-        "Moving data, storing data, processing data, controlling.",
-        "Supporting operating system, accessing hard disks, supporting network connections, supporting HDMI ports.",
-        "Reading disks, accessing network resources.",
-        "Reading data from keyboard, printing data to monitor, allowing network connections."
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Choose the most four basic functions of a computer.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Moving data, storing data, processing data, controlling..\n\n **Kiểm tra**: Chọn A. Moving data, storing data, processing data, controlling. \n\n **Vì sao các phương án khác sai**:\n\n- B (Supporting operating system, accessing hard disks, supporting network connections, supporting HDMI ports.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Reading disks, accessing network resources.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Reading data from keyboard, printing data to monitor, allowing network connections.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1052,
-      "quizId": 1,
-      "text": "Which of the following are the 4 basic functions of a computer?",
-      "options": [
-        "Data processing; Data storage; Data movement; CPU.",
-        "CPU; Main memory; I/O; System interconnection.",
-        "Control unit; ALU; Registers; CPU interconnection.",
-        "Data processing; Data storage; Data movement; Control."
-      ],
-      "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n Hướng giải:\n4 chức năng cơ bản của máy tính được định nghĩa rõ ràng trong chương mở đầu về chức năng máy tính.\n\nCác bước:\nBốn chức năng cốt lõi của bất kỳ hệ thống máy tính nào gồm:\n1. Xử lý dữ liệu (Data processing).\n2. Lưu trữ dữ liệu (Data storage).\n3. Di chuyển dữ liệu (Data movement / Input-Output).\n4. Điều khiển (Control).\n\nKiểm tra:\nPhương án A liệt kê đầy đủ và chính xác 4 chức năng này.\n\nVì sao các phương án khác sai:\n- Các phương án B, C, D đều chứa 'Interrupt'. Ngắt (Interrupt) chỉ là một cơ chế hỗ trợ điều khiển và quản lý sự kiện I/O, không phải là một trong 4 chức năng cơ bản ở mức kiến trúc.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
-    },
-    {
-      "id": 1053,
+      "id": 1047,
       "quizId": 1,
       "text": "Which of the following are examples of architectural attributes in computer systems? (choose two correct answers)",
       "options": [
@@ -1856,7 +1778,7 @@
       "multiple": true
     },
     {
-      "id": 1054,
+      "id": 1048,
       "quizId": 1,
       "text": "Which of the following is/are NOT part(s) of the CPU?",
       "options": [
@@ -1869,7 +1791,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following is/are NOT part(s) of the CPU?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. System bus.\n\n **Kiểm tra**: Chọn D. System bus \n\n **Vì sao các phương án khác sai**:\n\n- A (ALU): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (The Control unit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (The Registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
     },
     {
-      "id": 1055,
+      "id": 1049,
       "quizId": 1,
       "text": "Which of the following component does not belong to central processing unit?",
       "options": [
@@ -1883,7 +1805,46 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following components was used in the first ENIAC computer?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Vacuum tubes.\n\n **Kiểm tra**: Chọn C. Vacuum tubes \n\n **Vì sao các phương án khác sai**:\n\n- A (Bipolar transistors): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Field transistors): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Semiconductor Ics): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1056,
+      "id": 1050,
+      "quizId": 1,
+      "text": "What does system interconnection refer to in the top-level view of a computer?",
+      "options": [
+        "The mechanism for communication among CPU, main memory, and I/O.",
+        "The electrical power connections inside the computer",
+        "The external network connecting computers together",
+        "The cache memory between CPU and main memory."
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nĐịnh nghĩa thuật ngữ 'Liên kết hệ thống' (System Interconnection) trong mô hình cấu trúc mức đỉnh của máy tính.\n\nCác bước:\n1. Mô hình cấu trúc mức đỉnh của máy tính gồm 4 thành phần cơ bản:\n   - CPU (Central Processing Unit)\n   - Main Memory (Bộ nhớ chính)\n   - I/O (Hệ thống vào/ra)\n   - System Interconnection (Liên kết hệ thống)\n2. Theo định nghĩa chuẩn trong giáo trình William Stallings: System Interconnection là cơ chế cung cấp đường truyền thông và trao đổi dữ liệu giữa CPU, Bộ nhớ chính và các khối I/O.\n3. Trong thực tế, cơ chế liên kết này phổ biến nhất là hệ thống bus (System Bus) hoặc cấu trúc liên kết điểm-điểm (Point-to-point interconnect như QPI/UPI, PCIe).\n\nKiểm tra:\nĐối chiếu nguyên văn định nghĩa từ Section 1.2 Stallings COA: 'System Interconnection: Some mechanism that provides for communication among CPU, main memory, and I/O.' Khớp 100% với phương án A.\n\nVì sao các phương án khác sai:\n- B: Kết nối nguồn điện không phải là thành phần kiến trúc trao đổi thông tin logic.\n- C: Mạng bên ngoài kết nối nhiều máy tính là Computer Network, không phải System Interconnection bên trong một máy tính.\n- D: Bộ nhớ cache là thành phần lưu trữ dữ liệu trung gian, không phải cơ chế liên kết toàn hệ thống.\n\nLưu ý/công thức cần nhớ:\nCấu trúc mức đỉnh: CPU + Main Memory + I/O + System Interconnection."
+    },
+    {
+      "id": 1051,
+      "quizId": 1,
+      "text": "Which of the following best defines computer architecture?",
+      "options": [
+        "Physical components of a computer system",
+        "Attributes visible to the programmer",
+        "Electrical signals in the CPU",
+        "Memory chip design"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nChọn định nghĩa chính xác nhất về 'Kiến trúc máy tính' (Computer Architecture) theo chuẩn học thuật của William Stallings.\n\nCác bước:\n1. Phân biệt cốt lõi trong môn CEA201:\n   - Kiến trúc máy tính (Computer Architecture): Đề cập đến những thuộc tính của hệ thống mà lập trình viên có thể nhìn thấy (Attributes visible to the programmer) hoặc những thuộc tính có tác động trực tiếp đến việc thực thi logic của một chương trình. Ví dụ: Tập lệnh (ISA), số lượng bit biểu diễn dữ liệu, các cơ chế I/O, các chế độ định địa chỉ bộ nhớ.\n   - Tổ chức máy tính (Computer Organization): Đề cập đến các đơn vị vận hành phần cứng và mối liên kết giữa chúng nhằm hiện thực hóa kiến trúc. Ví dụ: Tín hiệu điều khiển phần cứng, công nghệ chế tạo bộ nhớ, thiết kế mạch.\n2. Đối chiếu với câu hỏi, định nghĩa chuẩn xác nhất của Computer Architecture là 'Attributes visible to the programmer' (Phương án B).\n\nKiểm tra:\nKhái niệm này được phát biểu kinh điển bởi Amdahl, Blaauw, và Brooks (1964) tại IBM khi thiết kế dòng System/360: Kiến trúc là hợp đồng giữa lập trình viên và phần cứng.\n\nVì sao các phương án khác sai:\n- A (Physical components): Là thành phần vật lý/phần cứng cụ thể (hardware components).\n- C (Electrical signals): Là tín hiệu điện tử thuộc mức vật lý và tổ chức phần cứng (Organization/Hardware).\n- D (Memory chip design): Là thiết kế mạch vi điện tử của chip nhớ (VLSI design / Organization).\n\nLưu ý/công thức cần nhớ:\nArchitecture: Thuộc tính lập trình viên nhìn thấy (Visible to programmer).\nOrganization: Đơn vị vận hành và kết nối phần cứng (Operational units & interconnections)."
+    },
+    {
+      "id": 1052,
+      "quizId": 1,
+      "text": "Which of the following statements about the IAS computer is correct?",
+      "options": [
+        "It was the first computer to use transistors for logic elements and memory.",
+        "It was based on the stored-program concept developed by John von Neumann.",
+        "It was completed in 1945 at the University of Cambridge",
+        "It could only store data, not instructions, in main memory."
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nChọn khẳng định đúng về máy tính IAS (máy tính của Viện Nghiên cứu Cao cấp Princeton) - cội nguồn của kiến trúc máy tính hiện đại.\n\nCác bước:\n1. Lịch sử máy tính IAS:\n   - Năm 1945, nhà toán học John von Neumann cùng các đồng nghiệp tại Viện Nghiên cứu Cao cấp Princeton (Institute for Advanced Study - IAS) đã công bố bản thiết kế kiến trúc máy tính mới dựa trên khái niệm chương trình được lưu trữ (Stored-program concept).\n   - Máy tính IAS được hoàn thành vào năm 1952 tại Viện IAS (Princeton, New Jersey).\n   - Nguyên lý Stored-program: Cả dữ liệu và các chỉ lệnh chương trình đều được mã hóa dưới dạng số nhị phân và lưu trữ chung trong cùng một bộ nhớ đọc/ghi (Main Memory). CPU thực hiện tuần tự việc tìm nạp lệnh từ bộ nhớ để thực thi.\n2. Như vậy, khẳng định chính xác là: Máy tính IAS được xây dựng dựa trên khái niệm chương trình lưu trữ do John von Neumann phát triển (Phương án B).\n\nKiểm tra:\nKiến trúc IAS chính là nguyên mẫu trực tiếp của cái gọi là 'Kiến trúc Von Neumann' mà đại đa số máy tính ngày nay vẫn đang tuân theo.\n\nVì sao các phương án khác sai:\n- A: Máy tính IAS sử dụng đèn điện tử chân không (vacuum tubes, khoảng 2300 đèn), không phải transistor.\n- C: IAS được chế tạo tại Viện IAS ở Princeton (Mỹ), không phải Đại học Cambridge (ở Cambridge là máy EDSAC do Maurice Wilkes chế tạo).\n- D: Nguyên lý cốt lõi của IAS là lưu trữ cả lệnh và dữ liệu trong bộ nhớ chính; phát biểu 'chỉ lưu dữ liệu' là hoàn toàn sai.\n\nLưu ý/công thức cần nhớ:\nIAS Computer = Stored-program concept (John von Neumann, Princeton)."
+    },
+    {
+      "id": 1053,
       "quizId": 2,
       "text": "The use of multiple processors on the same chip is referred to as _________ and provides the potential to increase performance without increasing the clock rate.",
       "options": [
@@ -1896,7 +1857,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Máy tính Đa nhân (Multicore) & Đa luồng phần cứng thuộc Chapter 21: Multicore Computers (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The use of multiple processors on the same chip is referred to as ________ and provides the potential to increase performance without increasing the clock rate.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Kiến trúc Multicore tích hợp nhiều nhân xử lý độc lập trên cùng một chip, chia sẻ bộ nhớ đệm L2/L3. Đa luồng phần cứng (Hardware multithreading) giúp nhân xử lý luôn bận rộn khi chờ dữ liệu.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. multicore.\n\n **Kiểm tra**: Chọn A. multicore \n\n **Vì sao các phương án khác sai**:\n\n- B (GPU): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (data channels): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (MPC): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 21: Multicore Computers"
     },
     {
-      "id": 1057,
+      "id": 1054,
       "quizId": 2,
       "text": "It is possible to improve pipeline performance by automatically rearranging instructions within a program so that branch instructions occur later than actually desired.",
       "options": [
@@ -1907,7 +1868,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"It is possible to improve pipeline performance by automatically rearranging instructions within a program so that branch instructions occur later than actually desired.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1058,
+      "id": 1055,
       "quizId": 2,
       "text": "Designers wrestle with the challenge of balancing processor performance with that of main memory and other computer components.",
       "options": [
@@ -1918,7 +1879,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Designers wrestle with the challenge of balancing processor performance with that of main memory and other computer components.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1059,
+      "id": 1056,
       "quizId": 2,
       "text": "Follow the Amdahl's law for multiprocessors, if only 10% of the code is inherently serial (f = 0.9), running the program on a multicore system with 4 processors, a performance gain (speedup factor) would be _________.",
       "options": [
@@ -1931,7 +1892,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nÁp dụng công thức định luật Amdahl tính hệ số tăng tốc cho hệ thống đa xử lý 4 nhân.\n\nCác bước:\n1. Định luật Amdahl cho hệ đa xử lý:\n \\ [ S = \\ frac1(1 - f) + \\ dfracfN \\ ]\n2. Các tham số đầu vào:\n - Phần tuần tự không thể song song: \\ (1 - f = 0.10 \\ ) (10%).\n - Phần có thể thực thi song song: \\ (f = 0.90 \\ ) (90%).\n - Số nhân vi xử lý: \\ (N = 4 \\ ).\n3. Tính toán:\n \\ [ S = \\ frac10.10 + \\ dfrac0.904 = \\ frac10.10 + 0.225 = \\ frac10.325 \\ approx 3.0769 \\ ]\n4. Quy đổi sang phần trăm hiệu năng tăng so với đơn nhân:\n \\ [ 3.0769 \\ times 100 \\ % \\ approx 307.7 \\ % \\ approx 307 \\ % \\ ]\n\nKiểm tra:\nKết quả trùng khớp với phương án A (307%).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1060,
+      "id": 1057,
       "quizId": 2,
       "text": "Why is cache design used in high-performance computing (HPC)? (Choose three correct answers)",
       "options": [
@@ -1950,7 +1911,7 @@
       "multiple": true
     },
     {
-      "id": 1061,
+      "id": 1058,
       "quizId": 2,
       "text": "A benchmark program is running on a 400 MHz processor. The executed program consists of 500 instruction executions, with the following instruction mix and clock cycle count in the table below:\r\n\n| Instruction type | Instruction count | Cycles per Instruction |\n| :---: | :---: | :---: |\n| Arithmetic | 300 | 1 |\n| Data transfer | 100 | 2 |\n| Control transfer | 100 | 2 |\n\nCalculate MIPS rate for this case.",
       "options": [
@@ -1963,7 +1924,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A benchmark program is running on a 400 MHz processor. The executed program consists of 500 instruction executions, with the following instruction mix and clock cycle count in Table below:\n\n| Instruction type | Instruction count | Cycles per Instrucion |\n|---|---|---|\n| Arithmetic | 300 | 1 |\n| Data transfer | 100 | 2 |\n| Control transfer | 100 | 2 |\n\nCalculate MIPS rate for this case.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. MIPS rate = 285.7.\n\n **Kiểm tra**: Chọn A. MIPS rate = 285.7 \n\n **Vì sao các phương án khác sai**:\n\n- B (MIPS rate = 275.7): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (MIPS rate = 265.7): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (MIPS rate = 295.7): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1062,
+      "id": 1059,
       "quizId": 2,
       "text": "What is one way to control power density in microprocessor chips?",
       "options": [
@@ -1976,7 +1937,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is one way to control power density in microprocessor chips?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Use more of the chip area for cache memory..\n\n **Kiểm tra**: Chọn B. Use more of the chip area for cache memory. \n\n **Vì sao các phương án khác sai**:\n\n- A (Increase the clock speed of the chip.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Reduce the size of the chip die.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Use more transistors for logic operations.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1063,
+      "id": 1060,
       "quizId": 2,
       "text": "Which of the following types of processors typically offer better performance for parallel processing?",
       "options": [
@@ -1989,7 +1950,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nLựa chọn kiến trúc vi xử lý tối ưu cho xử lý song song (Parallel Processing).\n\nCác bước:\n1. Xử lý song song đòi hỏi phần cứng có khả năng thực thi đồng thời nhiều luồng (threads) hoặc tiến trình độc lập cùng một lúc.\n2. Bộ vi xử lý đa nhân (Multi-core processors): Tích hợp hai hoặc nhiều nhân CPU độc lập trên cùng một vi mạch bán dẫn. Mỗi nhân có đầy đủ ALU, tập thanh ghi, pipeline riêng và chia sẻ cache/bus, cho phép thực thi song song thực thụ các tiến trình độc lập ở cấp độ phần cứng.\n3. Trong khi đó, bộ xử lý đơn nhân (Single-core) chỉ có thể chạy đa nhiệm bằng cách phân chia thời gian (Time-sharing/Context switching), không đạt được hiệu năng tính toán song song phần cứng thực sự.\n\nKiểm tra:\nLoại vi xử lý cung cấp hiệu năng tốt hơn cho xử lý song song là Multi-core processors (B).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1064,
+      "id": 1061,
       "quizId": 2,
       "text": "Follow the Amdahl's law for multiprocessors, if only 20% of the code is inherently serial (f = 0.8), running the program on a multicore system with 8 processors, a performance gain (speedup factor) would be _________.",
       "options": [
@@ -2002,7 +1963,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nÁp dụng công thức định luật Amdahl tính hệ số tăng tốc cho hệ thống đa xử lý 4 nhân.\n\nCác bước:\n1. Định luật Amdahl cho hệ đa xử lý:\n \\ [ S = \\ frac1(1 - f) + \\ dfracfN \\ ]\n2. Các tham số đầu vào:\n - Phần tuần tự không thể song song: \\ (1 - f = 0.10 \\ ) (10%).\n - Phần có thể thực thi song song: \\ (f = 0.90 \\ ) (90%).\n - Số nhân vi xử lý: \\ (N = 4 \\ ).\n3. Tính toán:\n \\ [ S = \\ frac10.10 + \\ dfrac0.904 = \\ frac10.10 + 0.225 = \\ frac10.325 \\ approx 3.0769 \\ ]\n4. Quy đổi sang phần trăm hiệu năng tăng so với đơn nhân:\n \\ [ 3.0769 \\ times 100 \\ % \\ approx 307.7 \\ % \\ approx 307 \\ % \\ ]\n\nKiểm tra:\nKết quả trùng khớp với phương án A (307%).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1065,
+      "id": 1062,
       "quizId": 2,
       "text": "The memory transfer rate has not kept up with increases in processor speed.",
       "options": [
@@ -2013,7 +1974,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hiệu năng máy tính & Chỉ số đo lường thuộc Chapter 02: Performance Concepts (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The memory transfer rate has not kept up with increases in processor speed.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hiệu năng máy tính được đánh giá qua Xung nhịp (Clock rate), Số chu kỳ xung nhịp trên mỗi lệnh (CPI), Tốc độ MIPS/FLOPS và Định luật Amdahl. Bộ chỉ số SPEC được dùng để đo lường hiệu năng tổng thể.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 02: Performance Concepts"
     },
     {
-      "id": 1066,
+      "id": 1063,
       "quizId": 2,
       "text": "The pulse rate in the ck system is known as the _________.",
       "options": [
@@ -2026,7 +1987,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The pulse rate in the ck system is known as the __________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. ck speed.\n\n **Kiểm tra**: Chọn B. ck speed \n\n **Vì sao các phương án khác sai**:\n\n- A (ck cycle): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (ck time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (ck tick): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1067,
+      "id": 1064,
       "quizId": 2,
       "text": "Choose an INCORRECT trend in contemporary processor designs.",
       "options": [
@@ -2039,7 +2000,20 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Choose an INCORRECT trend in contemporary processor designs.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. The number of processes accepted is infinitive..\n\n **Kiểm tra**: Chọn A. The number of processes accepted is infinitive. \n\n **Vì sao các phương án khác sai**:\n\n- B (The number of integrated transistors is getting increasing and more larger.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Higher clock frequency is applied.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (More cores are integrated in one chip.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1068,
+      "id": 1065,
+      "quizId": 2,
+      "text": "Which performance metric is defined as the average number of clock cycles required to execute an instruction?",
+      "options": [
+        "MIPS",
+        "GHz",
+        "CPI",
+        "Throughput"
+      ],
+      "correctIndex": 2,
+      "explanation": "Hướng giải:\nXác định chỉ số đo lường hiệu năng máy tính (performance metric) được định nghĩa là số chu kỳ xung nhịp trung bình cần thiết để thực thi một lệnh.\n\nCác bước:\n1. Các thông số hiệu năng vi xử lý cốt lõi:\n   - (I_c) (Instruction Count): Tổng số lệnh thực thi của một chương trình.\n   - (f) (Clock Frequency, đo bằng (mathrm{GHz}) hoặc (mathrm{MHz})): Tần số xung nhịp của CPU.\n   - (T) (Clock Cycle Time): Chu kỳ xung nhịp, (T = \frac{1}{f}).\n   - CPI (Cycles Per Instruction): Số chu kỳ xung nhịp trung bình để thực thi một chỉ lệnh:\n     [\n     mathrm{CPI} = \frac{\text{Tổng số chu kỳ xung nhịp}}{\text{Tổng số chỉ lệnh}} = \frac{\text{Total Cycles}}{I_c}\n     ]\n2. Thời gian thực thi CPU được tính theo công thức kinh điển:\n   [\n   T_{mathrm{CPU}} = I_c \times mathrm{CPI} \times T = \frac{I_c \times mathrm{CPI}}{f}\n   ]\n3. Khớp định nghĩa với câu hỏi (implies) Chỉ số này là CPI (phương án C).\n\nKiểm tra:\nTrong các bộ xử lý hiện đại:\n- Kiến trúc đơn giản cổ điển: (mathrm{CPI} > 1).\n- Kiến trúc đường ống lý tưởng: (mathrm{CPI} = 1).\n- Kiến trúc siêu phân vô hướng (Superscalar): (mathrm{CPI} < 1) (thường đo bằng IPC = Instructions Per Cycle = (\frac{1}{mathrm{CPI}})).\n\nVì sao các phương án khác sai:\n- A (MIPS): Millions of Instructions Per Second, đo số triệu chỉ lệnh thực thi trong 1 giây ((mathrm{MIPS} = \frac{f}{mathrm{CPI} \times 10^6})).\n- B (GHz): Gigahertz, đơn vị đo tần số xung nhịp của bộ vi xử lý (tỷ chu kỳ/giây).\n- D (Throughput): Thông lượng, là số lượng công việc/tác vụ hoàn thành trong một đơn vị thời gian.\n\nLưu ý/công thức cần nhớ:\nCPI = Cycles Per Instruction = Số chu kỳ trung bình cho mỗi lệnh."
+    },
+    {
+      "id": 1066,
       "quizId": 3,
       "text": "A bus that connects major computer components (processor, memory, I/O) is called a _________",
       "options": [
@@ -2052,7 +2026,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A bus that connects major computer components (processor, memory, I/O) is called a _________\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. system bus.\n\n **Kiểm tra**: Chọn B. system bus \n\n **Vì sao các phương án khác sai**:\n\n- A (control bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (data bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (address bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1069,
+      "id": 1067,
       "quizId": 3,
       "text": "A common example of system interconnection is by means of a _________.",
       "options": [
@@ -2065,7 +2039,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Chu kỳ lệnh & Cấu trúc liên kết Bus thuộc Chapter 03: A Top-Level View of Computer Function and Interconnection (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A common example of system interconnection is by means of a _________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chu kỳ thực thi lệnh bao gồm Fetch Cycle (nạp lệnh), Execute Cycle (thực thi) và Interrupt Cycle (xử lý ngắt). Bus hệ thống bao gồm Bus Dữ liệu, Bus Địa chỉ và Bus Điều khiển.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. system bus.\n\n **Kiểm tra**: Chọn D. system bus \n\n **Vì sao các phương án khác sai**:\n\n- A (data transport): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (control device): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 03: A Top-Level View of Computer Function and Interconnection"
     },
     {
-      "id": 1070,
+      "id": 1068,
       "quizId": 3,
       "text": "The routine executed in response to an interrupt request is called _________ routine.",
       "options": [
@@ -2079,7 +2053,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The routine executed in response to an interrupt request is called _________ routine.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Interrupt Service.\n\n **Kiểm tra**: Chọn A. Interrupt Service \n\n **Vì sao các phương án khác sai**:\n\n- B (Interrupt acknowledge): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Serial interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Vectored interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Sub-routine): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1071,
+      "id": 1069,
       "quizId": 3,
       "text": "The data lines provide a path for moving data among system modules and are collectively called the _________.",
       "options": [
@@ -2092,7 +2066,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The data lines provide a path for moving data among system modules and are collectively called the __________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. data bus.\n\n **Kiểm tra**: Chọn D. data bus \n\n **Vì sao các phương án khác sai**:\n\n- A (control bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (system bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (address bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1072,
+      "id": 1070,
       "quizId": 3,
       "text": "The System bus is made up of _________",
       "options": [
@@ -2106,20 +2080,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The System bus is made up of ___________\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Control bus, Data bus and Address bus.\n\n **Kiểm tra**: Chọn D. Control bus, Data bus and Address bus \n\n **Vì sao các phương án khác sai**:\n\n- A (Control bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Address bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Both Control bus and Address bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Data bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1073,
-      "quizId": 3,
-      "text": "During the _________ the opcode of the next instruction is loaded into the IR and the addres into the MAR.",
-      "options": [
-        "execute cycle",
-        "fetch cycle",
-        "instruction cycle",
-        "clock cycle"
-      ],
-      "correctIndex": 1,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"During the _______ the opcode of the next instruction is loaded into the IR and the addres into the MAR.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. fetch cycle.\n\n **Kiểm tra**: Chọn B. fetch cycle \n\n **Vì sao các phương án khác sai**:\n\n- A (execute cycle): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (instruction cycle): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (clock cycle): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
-    },
-    {
-      "id": 1074,
+      "id": 1071,
       "quizId": 3,
       "text": "Interrupt processing allows an application program to be suspended in order that a variety of conditions can be serviced and later resumed.",
       "options": [
@@ -2130,7 +2091,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Interrupt processing allows an application program to be suspended in order that a variety of conditions can be serviced and later resumed.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1075,
+      "id": 1072,
       "quizId": 3,
       "text": "The _________ is connected to the data lines of the system bus.",
       "options": [
@@ -2143,7 +2104,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ is connected to the data lines of the system bus.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. MBR.\n\n **Kiểm tra**: Chọn C. MBR \n\n **Vì sao các phương án khác sai**:\n\n- A (MAR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (PC): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (IR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1076,
+      "id": 1073,
       "quizId": 3,
       "text": "The interconnection structure must support which transfer?",
       "options": [
@@ -2156,7 +2117,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The interconnection structure must support which transfer?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. all of the above.\n\n **Kiểm tra**: Chọn D. all of the above \n\n **Vì sao các phương án khác sai**:\n\n- A (memory to processor): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (processor to memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (I/O to or from memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1077,
+      "id": 1074,
       "quizId": 3,
       "text": "The _________ are used to designate the source or destination of the data on the data bus.",
       "options": [
@@ -2169,7 +2130,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Chu kỳ lệnh & Cấu trúc liên kết Bus thuộc Chapter 03: A Top-Level View of Computer Function and Interconnection (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___________ are used to designate the source or destination of the data on the data bus.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chu kỳ thực thi lệnh bao gồm Fetch Cycle (nạp lệnh), Execute Cycle (thực thi) và Interrupt Cycle (xử lý ngắt). Bus hệ thống bao gồm Bus Dữ liệu, Bus Địa chỉ và Bus Điều khiển.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. [Không có dữ liệu trong ảnh].\n\n **Kiểm tra**: Chọn B. [Không có dữ liệu trong ảnh] \n\n **Vì sao các phương án khác sai**:\n\n- A ([Không có dữ liệu trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C ([Không có dữ liệu trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D ([Không có dữ liệu trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 03: A Top-Level View of Computer Function and Interconnection"
     },
     {
-      "id": 1078,
+      "id": 1075,
       "quizId": 3,
       "text": "Timing refers to the way in which events are coordinated on the bus.",
       "options": [
@@ -2180,7 +2141,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Timing refers to the way in which events are coordinated on the bus.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1079,
+      "id": 1076,
       "quizId": 3,
       "text": "An interrupt is generated from software and it is provoked by the execution of an instruction.",
       "options": [
@@ -2191,7 +2152,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An interrupt is generated from software and it is provoked by the execution of an instruction.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1080,
+      "id": 1077,
       "quizId": 3,
       "text": "An interrupt is a hardware-generated signal to the processor.",
       "options": [
@@ -2202,7 +2163,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An interrupt is a hardware-generated signal to the processor.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1081,
+      "id": 1078,
       "quizId": 3,
       "text": "The _________ is connected to the address lines of the system bus.",
       "options": [
@@ -2215,7 +2176,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ is connected to the address lines of the system bus.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. MAR.\n\n **Kiểm tra**: Chọn B. MAR \n\n **Vì sao các phương án khác sai**:\n\n- A (MBR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (PC): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (IR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1082,
+      "id": 1079,
       "quizId": 3,
       "text": "With asynchronous timing the occurrence of events on the bus is determined by a clock.",
       "options": [
@@ -2226,31 +2187,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"With asynchronous timing the occurrence of events on the bus is determined by a clock.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. False.\n\n **Kiểm tra**: Chọn A. False \n\n **Vì sao các phương án khác sai**:\n\n- B (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1083,
-      "quizId": 3,
-      "text": "An interrupt is generated from software and it is provoked by the execution of an instruction.",
-      "options": [
-        "False",
-        "True"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An interrupt is generated from software and it is provoked by the execution of an instruction.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1084,
-      "quizId": 3,
-      "text": "The System bus is made up of _________",
-      "options": [
-        "Address bus",
-        "Control bus",
-        "Control bus, Data bus and Address bus",
-        "Both Control bus"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The System bus is made up of ___________\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Control bus, Data bus and Address bus.\n\n **Kiểm tra**: Chọn D. Control bus, Data bus and Address bus \n\n **Vì sao các phương án khác sai**:\n\n- A (Control bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Address bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Both Control bus and Address bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Data bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1085,
+      "id": 1080,
       "quizId": 3,
       "text": "During the _________ the opcode of the next instruction is loaded into the IR and the address portion is loaded into the MAR.",
       "options": [
@@ -2263,33 +2200,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"During the _______ the opcode of the next instruction is loaded into the IR and the addres into the MAR.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. fetch cycle.\n\n **Kiểm tra**: Chọn B. fetch cycle \n\n **Vì sao các phương án khác sai**:\n\n- A (execute cycle): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (instruction cycle): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (clock cycle): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1086,
-      "quizId": 3,
-      "text": "The _________ are used to designate the source or destination of the data on the data bus.",
-      "options": [
-        "system lines",
-        "data lines",
-        "control lines",
-        "address lines"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Chu kỳ lệnh & Cấu trúc liên kết Bus thuộc Chapter 03: A Top-Level View of Computer Function and Interconnection (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___________ are used to designate the source or destination of the data on the data bus.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chu kỳ thực thi lệnh bao gồm Fetch Cycle (nạp lệnh), Execute Cycle (thực thi) và Interrupt Cycle (xử lý ngắt). Bus hệ thống bao gồm Bus Dữ liệu, Bus Địa chỉ và Bus Điều khiển.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. [Không có dữ liệu trong ảnh].\n\n **Kiểm tra**: Chọn B. [Không có dữ liệu trong ảnh] \n\n **Vì sao các phương án khác sai**:\n\n- A ([Không có dữ liệu trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C ([Không có dữ liệu trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D ([Không có dữ liệu trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 03: A Top-Level View of Computer Function and Interconnection"
-    },
-    {
-      "id": 1087,
-      "quizId": 3,
-      "text": "The data lines provide a path for moving data among system modules and are collectively called the _________.",
-      "options": [
-        "system bus",
-        "address bus",
-        "control bus",
-        "data bus"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The data lines provide a path for moving data among system modules and are collectively called the __________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. data bus.\n\n **Kiểm tra**: Chọn D. data bus \n\n **Vì sao các phương án khác sai**:\n\n- A (control bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (system bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (address bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1088,
+      "id": 1081,
       "quizId": 3,
       "text": "Which of the following determines the Bus Width?",
       "options": [
@@ -2303,7 +2214,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nĐịnh nghĩa và yếu tố xác định độ rộng bus (Bus Width).\n\nCác bước:\n1. Bus là tập hợp các đường dây dẫn điện truyền tải tín hiệu song song.\n2. Độ rộng của bus dữ liệu (Data Bus Width) được quyết định trực tiếp bởi số lượng đường dây dẫn song song (The number of parallel lines). Ví dụ, bus 64-bit có 64 đường song song truyền cùng lúc 64 bit (8 byte).\n\nKiểm tra:\nYếu tố quyết định độ rộng bus là số đường dây song song trong bus dữ liệu -> Đáp án D.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1089,
+      "id": 1082,
       "quizId": 3,
       "text": "What is the significance of the program counter (PC) in the fetch phase of the instruction cycle?",
       "options": [
@@ -2316,7 +2227,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nÝ nghĩa và vai trò của thanh ghi đếm chương trình (PC) trong pha tìm nạp lệnh (Fetch Phase).\n\nCác bước:\n1. Khi bước vào pha tìm nạp lệnh (Fetch Phase):\n - CPU đưa nội dung đang lưu trong thanh ghi PC vào thanh ghi MAR và phát tín hiệu đọc bộ nhớ qua bus địa chỉ.\n - Nhờ đó, PC chỉ định chính xác địa chỉ ô nhớ chứa câu lệnh tiếp theo sẽ được nạp vào CPU (holds the memory address of the next instruction to be fetched and executed).\n - Ngay sau khi lệnh được đọc thành công vào MBR/IR, PC tự động được cộng thêm kích thước lệnh để chuẩn bị cho chu trình tiếp theo.\n\nKiểm tra:\nPhương án B phản ánh đầy đủ và chính xác vai trò của PC trong pha nạp lệnh.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1090,
+      "id": 1083,
       "quizId": 3,
       "text": "What is the most important characteristic of the Synchronous Bus?",
       "options": [
@@ -2329,7 +2240,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the most important characteristic of the Synchronous Bus?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. The occurrence of events on the bus is determined by a clock.\n\n **Kiểm tra**: Chọn C. The occurrence of events on the bus is determined by a clock \n\n **Vì sao các phương án khác sai**:\n\n- A (Data is transmitted at the same time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (The occurrence of one event on a bus follows and depends on the occurrence of a previous event.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (No common clock signal controlling operation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1091,
+      "id": 1084,
       "quizId": 3,
       "text": "What is an interrupt vector?",
       "options": [
@@ -2342,7 +2253,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nĐịnh nghĩa thuật ngữ Interrupt Vector (Vectơ ngắt).\n\nCác bước:\n1. Khi xảy ra ngắt, CPU cần biết địa chỉ của chương trình xử lý ngắt (Interrupt Service Routine - ISR / Interrupt Handler) tương ứng trong bộ nhớ.\n2. Bảng vectơ ngắt (Interrupt Vector Table) được đặt ở một vùng nhớ cố định, chứa danh sách các địa chỉ con trỏ này.\n3. Mỗi vectơ ngắt (interrupt vector) chính là địa chỉ (hoặc con trỏ tới địa chỉ) của hàm/trình xử lý ngắt đó.\n\nKiểm tra:\nPhương án A 'Part of memory which contains the addresses of interrupt handlers' là định nghĩa chính xác.\n\nVì sao các phương án khác sai:\n- B, C: Tín hiệu gửi từ thiết bị ngoại vi tới CPU là tín hiệu yêu cầu ngắt (Interrupt Request line / IRQ), không phải là vectơ ngắt.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1092,
+      "id": 1085,
       "quizId": 3,
       "text": "What is the function of the bus system in the computer?",
       "options": [
@@ -2356,21 +2267,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nXác định định nghĩa và chức năng cốt lõi của hệ thống Bus (System Bus) trong máy tính.\n\nCác bước:\n1. Hệ thống Bus là tập hợp các đường dây dẫn điện tử đóng vai trò là môi trường truyền dẫn chia sẻ.\n2. Chức năng căn bản nhất của hệ thống Bus là kết nối các thành phần chính trong máy tính (CPU, Bộ nhớ chính và các module Vào/Ra) lại với nhau để chúng có thể trao đổi dữ liệu, địa chỉ và tín hiệu điều khiển.\n\nKiểm tra:\nPhương án B ('Connect components in the computer') mô tả đúng nhất chức năng định nghĩa của hệ thống Bus.\n\nVì sao các phương án khác không chính xác:\n- C: Điều khiển ngoại vi là nhiệm vụ của I/O Module/Controller, bus chỉ là đường truyền.\n- D: Biến đổi tín hiệu là nhiệm vụ của mạch chuyển đổi (transceiver, DAC/ADC).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1093,
-      "quizId": 3,
-      "text": "The routine executed in response to an interrupt request is called _________ routine.",
-      "options": [
-        "Vectored interrupt",
-        "Sub-routine",
-        "Serial interrupt",
-        "Interrupt acknowledge",
-        "Interrupt Service"
-      ],
-      "correctIndex": 4,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The routine executed in response to an interrupt request is called _________ routine.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Interrupt Service.\n\n **Kiểm tra**: Chọn A. Interrupt Service \n\n **Vì sao các phương án khác sai**:\n\n- B (Interrupt acknowledge): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Serial interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Vectored interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Sub-routine): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
-    },
-    {
-      "id": 1094,
+      "id": 1086,
       "quizId": 3,
       "text": "What is the role of the memory address register (MAR) in a computer system?",
       "options": [
@@ -2383,7 +2280,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the role of the memory address register (MAR) in a computer system?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. It specifies the address in memory for the next read or write operation..\n\n **Kiểm tra**: Chọn B. It specifies the address in memory for the next read or write operation. \n\n **Vì sao các phương án khác sai**:\n\n- A (It holds data being transferred between memory and the processor.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (It performs arithmetic operations on data stored in memory.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (It stores program instructions after they are executed.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1095,
+      "id": 1087,
       "quizId": 3,
       "text": "The instruction, which adds 1 to the value in a memory location, has five stages: fetch opcode (2 bus cycles), fetch operand address (2 bus cycles), fetch operand (2 bus cycles), add 1 to operand (1 bus cycle), and store operand (3 bus cycles). An interrupt sends request at beginning of fetch operand address stage. How many cycles does the processor enter the interrupt processing cycle?",
       "options": [
@@ -2397,7 +2294,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The instruction, which adds 1 to the value in a memory location, has five stages: fetch opcode (2 bus cycles), fetch operand address (2 bus cycles), fetch operand (2 bus cycles), add 1 to operand (1 bus cycle), and store operand (3 bus cycles). An interrupt sends request at beginning of fetch operand address stage. How many cycles does the processor enter the interrupt processing cycle?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. 8.\n\n **Kiểm tra**: Chọn C. 8 \n\n **Vì sao các phương án khác sai**:\n\n- A (6): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (7): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (9): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (5): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1096,
+      "id": 1088,
       "quizId": 3,
       "text": "Which type of interrupt is exemplified by \"division by zero, attempt to execute an illegal machine instruction\"?",
       "options": [
@@ -2410,7 +2307,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải:**\nPhân loại các ngắt (Interrupt Classes) trong kiến trúc máy tính theo Stallings.\n\n**Các bước phân tích:**\n1. Ngắt chương trình (Program interrupt): sinh ra do lỗi hoặc điều kiện đặc biệt khi thực thi lệnh (chia cho 0, tràn số, lệnh không hợp lệ, vi phạm bộ nhớ).\n2. Ngắt định thời (Timer interrupt): sinh ra bởi bộ định thời của bộ xử lý để chuyển đổi tiến trình trong đa nhiệm.\n3. Ngắt vào/ra (I/O interrupt): sinh ra bởi bộ điều khiển I/O báo hiệu hoàn tất thao tác hoặc báo lỗi.\n4. Ngắt lỗi phần cứng (Hardware failure interrupt): sinh ra do lỗi chẵn lẻ bộ nhớ, mất điện.\n5. Do đó, 'division by zero, attempt to execute an illegal machine instruction' thuộc loại Program interrupt.\n\n**Kết luận:** Chọn A.\n\n **Xuất hiện trong**: CEA201_-_SU26_-_RE.txt"
     },
     {
-      "id": 1097,
+      "id": 1089,
       "quizId": 3,
       "text": "Which type is not an Interconnection bus?",
       "options": [
@@ -2423,7 +2320,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which type is not an Interconnection bus?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Signal lines.\n\n **Kiểm tra**: Chọn C. Signal lines \n\n **Vì sao các phương án khác sai**:\n\n- A (Data lines): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Control lines): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Address lines): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1098,
+      "id": 1090,
       "quizId": 3,
       "text": "When an interrupt is about to execute next, where is the Program Counter (PC) positioned?",
       "options": [
@@ -2437,7 +2334,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nHoạt động của con trỏ chương trình (PC) trong chu trình xử lý ngắt.\n\nCác bước:\n1. Khi CPU chấp nhận một ngắt, phần cứng sẽ lưu giá trị hiện tại của PC (địa chỉ của lệnh kế tiếp trong chương trình bị ngắt) vào ngăn xếp (stack).\n2. Sau đó, CPU nạp địa chỉ bắt đầu của chương trình phục vụ ngắt (Interrupt Handler Routine / ISR) vào thanh ghi PC.\n3. Ở chu kỳ tìm lệnh kế tiếp, CPU sẽ bắt đầu thực thi lệnh đầu tiên của hàm xử lý ngắt.\n\nKiểm tra:\nThanh ghi PC được định vị tại địa chỉ bắt đầu của thủ tục phục vụ ngắt -> Đáp án D.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1099,
+      "id": 1091,
       "quizId": 3,
       "text": "A(n) _________ is generated by a failure such as power failure or memory parity error.",
       "options": [
@@ -2450,7 +2347,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A(n) _________ is generated by a failure such as power failure or memory parity error.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. hardware failure interrupt.\n\n **Kiểm tra**: Chọn B. hardware failure interrupt \n\n **Vì sao các phương án khác sai**:\n\n- A (timer interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (I/O interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (program interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1100,
+      "id": 1092,
       "quizId": 3,
       "text": "Program execution consists of repeating the process of instruction fetch and instruction execution",
       "options": [
@@ -2461,7 +2358,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Program execution consists of repeating the process of instruction fetch and instruction execution\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. True.\n\n **Kiểm tra**: Chọn B. True \n\n **Vì sao các phương án khác sai**:\n\n- A (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1101,
+      "id": 1093,
       "quizId": 3,
       "text": "The _________ cycle occurs at the beginning of each instruction cycle and causes an instruction to be fetched from memory.",
       "options": [
@@ -2474,7 +2371,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ________ cycle occurs at the beginning of each instruction cycle and causes an instruction to be fetched from memory.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. fetch.\n\n **Kiểm tra**: Chọn C. fetch \n\n **Vì sao các phương án khác sai**:\n\n- A (execute): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (indirect): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1102,
+      "id": 1094,
       "quizId": 3,
       "text": "Interrupts do not improve processing efficiency.",
       "options": [
@@ -2485,7 +2382,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Interrupts do not improve processing efficiency.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1103,
+      "id": 1095,
       "quizId": 3,
       "text": "The _________ contains a word of data to be written to memory or the word most recently read.",
       "options": [
@@ -2498,7 +2395,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ contains a word of data to be written to memory or the word most recently read.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. MBR.\n\n **Kiểm tra**: Chọn A. MBR \n\n **Vì sao các phương án khác sai**:\n\n- B (IR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (PC): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (MAR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1104,
+      "id": 1096,
       "quizId": 3,
       "text": "A sequence of codes or instructions is called _________.",
       "options": [
@@ -2511,7 +2408,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A sequence of codes or instructions is called ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. software.\n\n **Kiểm tra**: Chọn A. software \n\n **Vì sao các phương án khác sai**:\n\n- B (memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (an interconnect): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (a register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1105,
+      "id": 1097,
       "quizId": 3,
       "text": "Choose the appropriate words to fill in the corresponding blanks in the following definitions:\r\n_________ contains a word to be stored in memory or sent to the I/O unit, or is used to receive a word from memory or from the I/O unit. _________ specifies the address in memory of the word to be written from or read into the MBR. _________ is employed to hold temporarily the right hand instruction from a word in memory.",
       "options": [
@@ -2524,7 +2421,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Choose the appropriate words to fill in the corresponding blanks in the following definitions:\n_____ contains a word to be stored in memory or sent to the I/O unit, or is used to receive a word from memory or from the I/O unit. _____ specifies the address in memory of the word to be written from or read into the MBR. _____ is employed to hold temporarily the right hand instruction from a word in memory.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. MBR; MAR; IBR.\n\n **Kiểm tra**: Chọn A. MBR; MAR; IBR \n\n **Vì sao các phương án khác sai**:\n\n- B (AC; MAR; IR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (MAR; MBR; IBR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (AC; MBR; MAR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1106,
+      "id": 1098,
       "quizId": 3,
       "text": "The stored-program concept means a computer could get its instructions by reading them from memory, and a program could be set or altered by setting the values of a portion of memory.",
       "options": [
@@ -2535,7 +2432,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The stored-program concept means a computer could get its instructions by reading them from memory, and a program could be set or altered by setting the values of a portion of memory.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1107,
+      "id": 1099,
       "quizId": 3,
       "text": "Because all devices on a synchronous bus are tied to a fixed clock rate, the system cannot take advantage of advances in device performance.",
       "options": [
@@ -2546,7 +2443,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hiệu năng máy tính & Chỉ số đo lường thuộc Chapter 02: Performance Concepts (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Because all devices on a synchronous bus are tied to a fixed clock rate, the system cannot take advantage of advances in device performance.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hiệu năng máy tính được đánh giá qua Xung nhịp (Clock rate), Số chu kỳ xung nhịp trên mỗi lệnh (CPI), Tốc độ MIPS/FLOPS và Định luật Amdahl. Bộ chỉ số SPEC được dùng để đo lường hiệu năng tổng thể.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 02: Performance Concepts"
     },
     {
-      "id": 1108,
+      "id": 1100,
       "quizId": 3,
       "text": "The method of using the same lines for multiple purposes is known as time multiplexing.",
       "options": [
@@ -2557,7 +2454,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The method of using the same lines for multiple purposes is known as time multiplexing.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1109,
+      "id": 1101,
       "quizId": 3,
       "text": "The basic function of a computer is to execute programs.",
       "options": [
@@ -2568,20 +2465,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The basic function of a computer is to execute programs.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. True.\n\n **Kiểm tra**: Chọn B. True \n\n **Vì sao các phương án khác sai**:\n\n- A (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1110,
-      "quizId": 3,
-      "text": "The _________ performs the computer's data processing functions.",
-      "options": [
-        "system bus",
-        "Register",
-        "ALU",
-        "CPU interconnection"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ performs the computer's data processing functions.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. ALU.\n\n **Kiểm tra**: Chọn C. ALU \n\n **Vì sao các phương án khác sai**:\n\n- A (system bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (CPU interconnection): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
-    },
-    {
-      "id": 1111,
+      "id": 1102,
       "quizId": 3,
       "text": "A(n) _________ is generated by some condition that occurs as a result of an instruction exec",
       "options": [
@@ -2594,7 +2478,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A(n) ________ is generated by some condition that occurs as a result of an instruction exec\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. program interrupt.\n\n **Kiểm tra**: Chọn C. program interrupt \n\n **Vì sao các phương án khác sai**:\n\n- A (timer interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (I/O interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (hardware failure interrupt): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1112,
+      "id": 1103,
       "quizId": 3,
       "text": "A _________ is a mechanism that provides for communication among CPU, main memory, i",
       "options": [
@@ -2607,7 +2491,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A _________ is a mechanism that provides for communication among CPU, main memory, i\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. system interconnection.\n\n **Kiểm tra**: Chọn A. system interconnection \n\n **Vì sao các phương án khác sai**:\n\n- B (CPU interconnection): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (peripheral): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (processor): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1113,
+      "id": 1104,
       "quizId": 3,
       "text": "The _________ contains the 8-bit opcode instruction being executed.",
       "options": [
@@ -2620,20 +2504,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ________ contains the 8-bit opcode instruction being executed.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. instruction register.\n\n **Kiểm tra**: Chọn C. instruction register \n\n **Vì sao các phương án khác sai**:\n\n- A (memory buffer register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (instruction buffer register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (memory address register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1114,
-      "quizId": 3,
-      "text": "The _________ performs the computer's data processing functions.",
-      "options": [
-        "ALU",
-        "Register",
-        "system bus",
-        "CPU interconnection"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ performs the computer's data processing functions.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. ALU.\n\n **Kiểm tra**: Chọn C. ALU \n\n **Vì sao các phương án khác sai**:\n\n- A (system bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (CPU interconnection): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
-    },
-    {
-      "id": 1115,
+      "id": 1105,
       "quizId": 3,
       "text": "Which register is the memory address register?",
       "options": [
@@ -2646,7 +2517,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nNhận diện tên viết tắt chuẩn của các thanh ghi cơ bản trong CPU.\n\nCác bước:\n1. MAR là viết tắt của Memory Address Register (Thanh ghi địa chỉ bộ nhớ).\n2. MBR là Memory Buffer Register (Thanh ghi đệm dữ liệu bộ nhớ).\n3. IR là Instruction Register (Thanh ghi lệnh).\n4. PC là Program Counter (Bộ đếm chương trình).\n\nKiểm tra:\nThanh ghi địa chỉ bộ nhớ là MAR (A).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1116,
+      "id": 1106,
       "quizId": 3,
       "text": "What is the primary purpose of the \"Fetch instruction\" phase in the operation of a processor?",
       "options": [
@@ -2659,20 +2530,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the primary purpose of cache memory in a computer system?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. To store frequently used data for quick access.\n\n **Kiểm tra**: Chọn A. To store frequently used data for quick access \n\n **Vì sao các phương án khác sai**:\n\n- B (To store the operating system): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (To store user files and documents): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (To store the CPU registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1117,
-      "quizId": 3,
-      "text": "Performs the computer's data processing functions is _________?",
-      "options": [
-        "Arithmetic and logic unit (ALU)",
-        "Control unit",
-        "CPU interconnection",
-        "Registers"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ performs the computer's data processing functions.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. ALU.\n\n **Kiểm tra**: Chọn C. ALU \n\n **Vì sao các phương án khác sai**:\n\n- A (system bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (CPU interconnection): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
-    },
-    {
-      "id": 1118,
+      "id": 1107,
       "quizId": 3,
       "text": "_________: Read instruction from its memory location into the processor.",
       "options": [
@@ -2685,7 +2543,59 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__________: Read instruction from its memory location into the processor.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Instruction fetch.\n\n **Kiểm tra**: Chọn A. Instruction fetch \n\n **Vì sao các phương án khác sai**:\n\n- B (Instruction operation decoding): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Operand address calculation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Data operation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1119,
+      "id": 1108,
+      "quizId": 3,
+      "text": "Why are PCI products from different vendors compatible?",
+      "options": [
+        "PCI specifications are in the public domain and supported by an industry-wide association.",
+        "PCI was designed exclusively for Intel-based systems.",
+        "PCI uses proprietary patents to ensure compatibility.",
+        "PCI products require centralized arbitration for compatibility."
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nGiải thích lý do tại sao các sản phẩm và thiết bị ngoại vi chuẩn PCI (Peripheral Component Interconnect) từ nhiều nhà sản xuất phần cứng khác nhau có thể tương thích hoàn toàn với nhau.\n\nCác bước:\n1. Chuẩn bus PCI ban đầu được khởi xướng bởi Intel, nhưng sau đó toàn bộ đặc tả kỹ thuật (PCI specifications) đã được đưa vào phạm vi công cộng (public domain) và được chuyển giao cho tổ chức hiệp hội công nghiệp mở PCI-SIG (PCI Special Interest Group) quản lý và phát triển.\n2. Hiệp hội PCI-SIG bao gồm hàng trăm công ty công nghệ hàng đầu cùng tham gia đóng góp và tuân thủ các bài kiểm tra tương thích nghiêm ngặt.\n3. Nhờ các tiêu chuẩn kỹ thuật mở, công khai và được một hiệp hội toàn ngành giám sát, bất kỳ nhà cung cấp nào thiết kế card PCI đúng quy chuẩn đều có thể cắm và chạy (Plug and Play) trên mọi bo mạch chủ tương thích.\n4. Do đó, phương án đúng là A.\n\nKiểm tra:\nMọi giáo trình chuẩn đều khẳng định tính tương thích rộng rãi của PCI bắt nguồn từ tính chất phi độc quyền (public domain) và sự đồng thuận của hiệp hội mở PCI-SIG.\n\nVì sao các phương án khác sai:\n- B (Designed exclusively for Intel): Sai, ban đầu Intel phát triển nhưng PCI nhanh chóng trở thành tiêu chuẩn chung cho cả AMD, Apple PowerPC và nhiều kiến trúc khác.\n- C (Uses proprietary patents): Sai, các bằng sáng chế độc quyền sẽ ngăn cản khả năng tương thích của các nhà sản xuất bên thứ ba, trái ngược hoàn toàn với tiêu chuẩn mở của PCI.\n- D (Centralized arbitration): Trọng tài bus tập trung chỉ là cơ chế phần cứng phân xử tranh chấp quyền dùng bus, không phải lý do đảm bảo tính tương thích chuẩn hóa giữa các nhà cung cấp.\n\nLưu ý/công thức cần nhớ:\nPCI tương thích rộng rãi nhờ: Public domain + Hiệp hội toàn ngành (PCI-SIG)."
+    },
+    {
+      "id": 1109,
+      "quizId": 3,
+      "text": "Interrupt signals:",
+      "options": [
+        "Request for CPU attention",
+        "Memory fault",
+        "Cache miss",
+        "Data error"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nNhận diện bản chất và vai trò của tín hiệu ngắt (Interrupt signals) trong hoạt động của hệ thống máy tính.\n\nCác bước:\n1. Ngắt (Interrupt) là cơ chế mà qua đó các mô-đun phần cứng (như thiết bị I/O, bộ đếm thời gian Timer) hoặc các sự kiện phần mềm có thể tạm ngưng chu trình thực thi thông thường của CPU để yêu cầu CPU phục vụ xử lý một sự kiện khẩn cấp (Request for CPU attention).\n2. Khi nhận được tín hiệu yêu cầu ngắt hợp lệ tại cuối chu kỳ lệnh (Interrupt Stage):\n   - CPU lưu lại ngữ cảnh hiện tại (Program Counter và thanh ghi cờ vào Stack).\n   - Chuyển hướng quyền điều khiển sang Chương trình con phục vụ ngắt (Interrupt Service Routine - ISR).\n   - Sau khi thực thi xong ISR, CPU khôi phục lại ngữ cảnh và tiếp tục thực hiện chương trình bị gián đoạn.\n3. Do đó, bản chất của tín hiệu ngắt là yêu cầu sự chú ý/phục vụ của CPU (Request for CPU attention - phương án A).\n\nKiểm tra:\nĐịnh nghĩa chuẩn trong Stallings Section 3.2: 'Virtually all computers provide a mechanism by which other modules (I/O, memory) may interrupt the normal sequencing of the processor.'\n\nVì sao các phương án khác sai:\n- B (Memory fault): Lỗi bộ nhớ là một nguyên nhân cụ thể có thể kích hoạt ngắt ngoại lệ (Trap/Fault), nhưng bản thân khái niệm tín hiệu ngắt không đồng nghĩa với lỗi bộ nhớ.\n- C (Cache miss): Hiện tượng trượt bộ đệm được xử lý bằng phần cứng nạp dòng nhớ, không phải tín hiệu ngắt ngoài.\n- D (Data error): Lỗi dữ liệu chỉ là một dạng sự kiện có thể gây ngắt, không đại diện cho bản chất chung của tín hiệu ngắt.\n\nLưu ý/công thức cần nhớ:\nInterrupt = Tín hiệu yêu cầu CPU tạm dừng để xử lý sự kiện (Request for CPU attention)."
+    },
+    {
+      "id": 1110,
+      "quizId": 3,
+      "text": "In the context of a computer's internal structure, which component is responsible for communication among the CPU, main memory, and I/O?",
+      "options": [
+        "Control Unit",
+        "System Bus",
+        "Arithmetic Logic Unit (ALU)",
+        "Registers"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nXác định thành phần phần cứng chịu trách nhiệm truyền thông và trao đổi dữ liệu giữa CPU, Bộ nhớ chính và các thiết bị I/O trong cấu trúc nội bộ của máy tính.\n\nCác bước:\n1. Trong kiến trúc máy tính Von Neumann truyền thống, đường liên kết hệ thống (System Interconnection) được hiện thực hóa vật lý thông qua Bus hệ thống (System Bus).\n2. Bus hệ thống là một tập hợp các đường dây dẫn điện chia sẻ chung, cho phép truyền tải tín hiệu giữa 3 thành phần phần cứng mức đỉnh cốt lõi:\n   - CPU (Bộ vi xử lý)\n   - Main Memory (Bộ nhớ chính RAM)\n   - I/O Modules (Các mô-đun vào/ra)\n3. Cấu trúc Bus hệ thống bao gồm:\n   - Bus dữ liệu (Data Bus): Truyền tải dữ liệu giữa các khối.\n   - Bus địa chỉ (Address Bus): Xác định nguồn hoặc đích của dữ liệu.\n   - Bus điều khiển (Control Bus): Kiểm soát việc cấp quyền và định thời truy xuất.\n4. Do đó, phương án đúng là B (System Bus).\n\nKiểm tra:\nKhái niệm System Bus là câu trả lời kinh điển cho mọi câu hỏi về cơ chế giao tiếp phần cứng giữa CPU, Memory và I/O.\n\nVì sao các phương án khác sai:\n- A (Control Unit): Là thành phần nội bộ bên trong CPU, chịu trách nhiệm giải mã lệnh và phát tín hiệu điều khiển vi thao tác trong CPU.\n- C (ALU): Là khối tính toán số học và logic bên trong CPU.\n- D (Registers): Là các ô nhớ tạm tốc độ cao bên trong CPU.\n\nLưu ý/công thức cần nhớ:\nSystem Bus = Data Bus + Address Bus + Control Bus (implies) Giao tiếp giữa CPU, Memory và I/O."
+    },
+    {
+      "id": 1111,
+      "quizId": 3,
+      "text": "A system bus consists of",
+      "options": [
+        "CPU + Memory",
+        "Data lines + Address lines + Control lines",
+        "Registers + ALU",
+        "Cache + RAM"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nXác định cấu tạo gồm các nhóm đường truyền chức năng của một Bus hệ thống (System Bus).\n\nCác bước:\n1. Theo giáo trình William Stallings (Chương 3, Mục 3.3 - Bus Interconnection):\n   Về mặt vật lý, một bus hệ thống gồm từ 50 đến hàng trăm đường dây dẫn riêng biệt. Các đường dây này được phân chia thành đúng 3 nhóm chức năng cơ bản:\n   - Đường dữ liệu (Data lines / Data bus): Truyền tải dữ liệu thực tế giữa các mô-đun hệ thống. Số lượng đường xác định độ rộng bus dữ liệu (ví dụ: 32 bit, 64 bit).\n   - Đường địa chỉ (Address lines / Address bus): Chỉ định nguồn hoặc đích của dữ liệu trên bus dữ liệu. Số lượng đường xác định không gian địa chỉ tối đa của hệ thống ((2^k)).\n   - Đường điều khiển (Control lines / Control bus): Điều khiển việc truy cập và sử dụng các đường dữ liệu và địa chỉ (ví dụ: Memory Read, Memory Write, I/O Read, I/O Write, Bus Request, Bus Grant, Clock, Reset).\n2. Do đó, bus hệ thống bao gồm: Data lines + Address lines + Control lines (Phương án B).\n\nKiểm tra:\nSơ đồ cấu trúc Bus hệ thống chuẩn luôn minh họa 3 bó dây: Data bus, Address bus, và Control bus kết nối giữa CPU, Memory và I/O.\n\nVì sao các phương án khác sai:\n- A (CPU + Memory): Là các khối phần cứng kết nối vào bus, không phải là cấu tạo của chính bus.\n- C (Registers + ALU): Là các thành phần nằm bên trong CPU.\n- D (Cache + RAM): Là các cấp bộ nhớ.\n\nLưu ý/công thức cần nhớ:\nSystem Bus = Data lines + Address lines + Control lines."
+    },
+    {
+      "id": 1112,
       "quizId": 4,
       "text": "Within the processor there is a set of registers that function as a level of memory above main memory and cache in the hierarchy.",
       "options": [
@@ -2696,7 +2606,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Within the processor there is a set of registers that function as a level of memory above main memory and cache in the hierarchy.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1120,
+      "id": 1113,
       "quizId": 4,
       "text": "Cache memory is a much faster memory than the register file.",
       "options": [
@@ -2707,7 +2617,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Cache memory is a much faster memory than the register file.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1121,
+      "id": 1114,
       "quizId": 4,
       "text": "Cache is not a form of internal memory.",
       "options": [
@@ -2718,7 +2628,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Cache is not a form of internal memory.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1122,
+      "id": 1115,
       "quizId": 4,
       "text": "Which method of accessing units of data is used to copy a block in main memory into cache memory?",
       "options": [
@@ -2731,7 +2641,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải:**\nXác định phương thức truy cập đơn vị dữ liệu khi mapping giữa bộ nhớ chính và cache.\n\n**Các bước phân tích:**\n1. Có 4 phương thức truy cập bộ nhớ: Sequential (tuần tự), Direct (trực tiếp), Random (ngẫu nhiên), và Associative (kết hợp/liên kết).\n2. Trong hệ thống cache, việc tìm kiếm và nạp block dữ liệu sử dụng phương thức liên kết (Associative / Associative mapping) để so sánh tag nội dung đồng thời và định vị block tương ứng.\n3. Do đó đáp án chuẩn là D (Associative).\n\n**Lưu ý:**\nBộ nhớ chính là Random Access, đĩa từ là Direct Access, băng từ là Sequential Access, và Cache sử dụng Associative Access.\n\n **Xuất hiện trong**: CEA201_-_SU26_-_RE.txt"
     },
     {
-      "id": 1123,
+      "id": 1116,
       "quizId": 4,
       "text": "For internal memory, the _________ is equal to the number of electrical lines into and out of the memory module.",
       "options": [
@@ -2744,7 +2654,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"For internal memory, the ________ is equal to the number of electrical lines into and out of the memory module.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. unit of transfer.\n\n **Kiểm tra**: Chọn B. unit of transfer \n\n **Vì sao các phương án khác sai**:\n\n- A (access time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (capacity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (memory ratio): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1124,
+      "id": 1117,
       "quizId": 4,
       "text": "individual blocks or records have a unique address based on physical location with _________.",
       "options": [
@@ -2757,7 +2667,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"individual blocks or records have a unique address based on physical location with ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. direct access.\n\n **Kiểm tra**: Chọn C. direct access \n\n **Vì sao các phương án khác sai**:\n\n- A (associative): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (physical access): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (sequential access): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1125,
+      "id": 1118,
       "quizId": 4,
       "text": "\"Memory is organized into records and access must be made in a specific linear sequence\" is _________.",
       "options": [
@@ -2770,7 +2680,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"\"Memory is organized into records and access must be made in a specific linear sequence\" is _________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. sequential access.\n\n **Kiểm tra**: Chọn A. sequential access \n\n **Vì sao các phương án khác sai**:\n\n- B (direct access): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (random access): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (associative): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1126,
+      "id": 1119,
       "quizId": 4,
       "text": "_________ refers to whether memory is internal or external to the computer.",
       "options": [
@@ -2783,7 +2693,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__________ refers to whether memory is internal or external to the computer.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Location.\n\n **Kiểm tra**: Chọn A. Location \n\n **Vì sao các phương án khác sai**:\n\n- B (Access): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Hierarchy): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Tag): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1127,
+      "id": 1120,
       "quizId": 4,
       "text": "Which memory has the fastest speed and smallest capacity?",
       "options": [
@@ -2796,7 +2706,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân tích kim tự tháp phân cấp bộ nhớ (Memory Hierarchy).\n\nCác bước:\nKim tự tháp bộ nhớ từ đỉnh xuống đáy:\n1. Registers & Cache memory: Tốc độ cao nhất, giá thành trên bit cao nhất, dung lượng nhỏ nhất.\n2. Bộ nhớ chính (Main memory - RAM): Tốc độ trung bình, dung lượng trung bình.\n3. Bộ nhớ thứ cấp (HDD, Magnetic Disk): Tốc độ thấp nhất, giá thành rẻ nhất, dung lượng lớn nhất.\n\nKiểm tra:\nBộ nhớ có tốc độ nhanh nhất và dung lượng nhỏ nhất trong số các phương án đưa ra là Cache (A).\n\nVì sao các phương án khác sai:\n- B (Main memory): Dung lượng lớn hơn và chậm hơn Cache.\n- C (HDD), D (Magnetic Disk): Là bộ nhớ phụ, tốc độ rất chậm so với Cache.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1128,
+      "id": 1121,
       "quizId": 4,
       "text": "The performance of the cache memory is measured in terms of a quantity called _________",
       "options": [
@@ -2810,7 +2720,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The performance of the cache memory is measured in terms of a quantity called ___________\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Hit Ratio.\n\n **Kiểm tra**: Chọn A. Hit Ratio \n\n **Vì sao các phương án khác sai**:\n\n- B (Instruction Ratio): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Miss Ratio): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Initialization Ratio): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Address Ratio): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1129,
+      "id": 1122,
       "quizId": 4,
       "text": "What is correct about increasing performance and endurance?",
       "options": [
@@ -2823,7 +2733,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSắp xếp các loại bộ nhớ theo thứ tự tăng dần về hiệu năng (tốc độ truy xuất) và độ bền (endurance - số chu kỳ ghi xoá).\n\nCác bước:\n1. Ổ đĩa từ cơ học (Hard Disk): Tốc độ tính bằng mili-giây (ms), chậm nhất trong danh sách.\n2. Bộ nhớ Flash (NAND Flash - dùng trong SSD/USB): Tốc độ truy xuất cỡ micro-giây (µs), độ bền ghi giới hạn (khoảng vài nghìn đến vài chục nghìn chu kỳ ghi).\n3. DRAM: Tốc độ tính bằng nano-giây (khoảng vài chục ns), độ bền ghi đọc gần như vô hạn.\n4. SRAM: Tốc độ cao nhất (dưới 1 - 5 ns), làm bộ nhớ đệm Cache, độ bền vô hạn.\n\nKiểm tra:\nThứ tự tăng dần chuẩn:\n \\ [ \\ textHard Disk < \\ textNAND Flash < \\ textDRAM < \\ textSRAM \\ ]\nTương ứng với phương án B.\n\nVì sao các phương án khác sai:\n- A, D: Đặt DRAM trước NAND Flash là sai vì DRAM có tốc độ và độ bền vượt trội so với NAND Flash.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1130,
+      "id": 1123,
       "quizId": 4,
       "text": "The _________ consists of the access time plus any additional time required before a second commence.",
       "options": [
@@ -2836,20 +2746,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___________ consists of the access time plus any additional time required before a second commence.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. memory cycle time.\n\n **Kiểm tra**: Chọn C. memory cycle time \n\n **Vì sao các phương án khác sai**:\n\n- A (direct access): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (transfer rate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (latency): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1131,
-      "quizId": 4,
-      "text": "The _________ consists of the access time plus any additional time required before a second access can commence.",
-      "options": [
-        "latency",
-        "memory cycle time",
-        "transfer rate",
-        "direct access"
-      ],
-      "correctIndex": 1,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___________ consists of the access time plus any additional time required before a second commence.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. memory cycle time.\n\n **Kiểm tra**: Chọn C. memory cycle time \n\n **Vì sao các phương án khác sai**:\n\n- A (direct access): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (transfer rate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (latency): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
-    },
-    {
-      "id": 1132,
+      "id": 1124,
       "quizId": 4,
       "text": "What is the correct order of memory access speed from fastest to slowest?",
       "options": [
@@ -2863,7 +2760,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSắp xếp tốc độ truy xuất của các loại bộ nhớ trong máy tính từ nhanh nhất đến chậm nhất.\n\nCác bước:\n1. Kim tự tháp phân cấp bộ nhớ (Memory Hierarchy) quy định thứ tự tốc độ giảm dần:\n \\ [ \\ textRegisters > \\ textCache > \\ textRAM (Main Memory) > \\ textSSD > \\ textHDD \\ ]\n2. Thời gian truy cập xấp xỉ:\n - Registers: \\ (< 1 \\ , \\ ns \\ ) (ngay trong xung nhịp CPU).\n - Cache (L1, L2, L3): \\ (1 - 10 \\ , \\ ns \\ ).\n - RAM: \\ (50 - 100 \\ , \\ ns \\ ).\n - SSD: \\ (10 - 100 \\ , \\ mu \\ s \\ ).\n\nKiểm tra:\nThứ tự đúng từ nhanh nhất đến chậm nhất là Registers > Cache > RAM > SSD (A).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1133,
+      "id": 1125,
       "quizId": 4,
       "text": "Sort the following memory types in ascending order by access speed:",
       "options": [
@@ -2876,7 +2773,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSắp xếp theo thứ tự tăng dần về tốc độ truy xuất (từ chậm nhất đến nhanh nhất).\n\nCác bước:\n1. HDD: Ổ đĩa cứng cơ học, chậm nhất.\n2. Main Memory (RAM): Nhanh hơn HDD hàng nghìn lần.\n3. L2 Cache: Bộ nhớ đệm cấp 2, nằm gần/trong chip xử lý, nhanh hơn RAM.\n4. L1 Cache: Bộ nhớ đệm cấp 1, gắn liền trực tiếp với nhân CPU, nhanh nhất.\n\nKiểm tra:\nThứ tự tăng dần chuẩn:\n \\ [ \\ textHDD \\ rightarrow \\ textMain Memory \\ rightarrow \\ textL2 cache \\ rightarrow \\ textL1 cache \\ ]\nPhương án A hoàn toàn chính xác.\n\nVì sao các phương án khác sai:\n- B: Đặt L1 trước L2 (sai vì L1 nhanh hơn L2).\n- C, D: Đặt sai vị trí của Main Memory hoặc HDD.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1134,
+      "id": 1126,
       "quizId": 4,
       "text": "A byte addressable microprocessor has 24 bit address. What is maximum memory capacity?",
       "options": [
@@ -2889,7 +2786,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A byte addressable microprocessor has 24 bit address. What is maximum memory capacity?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. 16 MegaByte.\n\n **Kiểm tra**: Chọn C. 16 MegaByte \n\n **Vì sao các phương án khác sai**:\n\n- A (4 MegaByte): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (8 MegaByte): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (32 MegaByte): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1135,
+      "id": 1127,
       "quizId": 4,
       "text": "In modern computers, which devices among the memory types usually have the smallest capacity?",
       "options": [
@@ -2902,7 +2799,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSo sánh dung lượng giữa các cấp trong kim tự tháp phân cấp bộ nhớ máy tính hiện đại.\n\nCác bước:\n1. Dung lượng thông thường của các loại bộ nhớ trong máy tính hiện đại:\n - Cache Memory: Vài chục KB (L1) đến vài chục MB (L3).\n - RAM: 8 GB - 128 GB.\n - Hard Disk Drive (HDD): 1 TB - 20 TB.\n - Magnetic Tape: Vài TB đến hàng trăm TB.\n2. Trong các lựa chọn được liệt kê, Cache Memory có dung lượng nhỏ nhất vì sử dụng công nghệ SRAM tĩnh trên chip đắt đỏ và cần tối ưu tốc độ phản hồi.\n\nKiểm tra:\nThiết bị có dung lượng nhỏ nhất là Cache Memory (D).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1136,
+      "id": 1128,
       "quizId": 4,
       "text": "What methods can be used to access units of data in memory?",
       "options": [
@@ -2915,7 +2812,20 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\n4 phương thức truy xuất dữ liệu trong hệ thống nhớ máy tính theo chuẩn giáo trình Stallings.\n\nCác bước:\nGiáo trình phân chia các phương thức truy xuất bộ nhớ thành 4 loại:\n1. Sequential access (Truy xuất tuần tự): Ví dụ băng từ (Magnetic Tape), dữ liệu được đọc theo một chuỗi tuyến tính.\n2. Direct access (Truy xuất trực tiếp): Ví dụ ổ đĩa từ (HDD), đầu đọc nhảy đến vùng/khối rồi đọc tuần tự tới vị trí mong muốn.\n3. Random access (Truy xuất ngẫu nhiên): Ví dụ RAM, mỗi vị trí có địa chỉ riêng biệt, thời gian truy xuất là không đổi bất kể vị trí.\n4. Associative (Truy xuất liên kết): Ví dụ Cache memory, tìm kiếm dữ liệu dựa trên nội dung một phần của từ nhớ thay vì địa chỉ tuyệt đối.\n\nKiểm tra:\nPhương án C liệt kê chính xác 4 phương thức này: Sequential access, Direct access, Random access, Associative.\n\nVì sao các phương án khác sai:\n- A, B, D đều đưa 'Indirect access' vào danh sách; 'Indirect' là chế độ định địa chỉ lệnh (addressing mode), không phải phương thức truy xuất bộ nhớ vật lý.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1137,
+      "id": 1129,
+      "quizId": 4,
+      "text": "In the memory hierarchy, which of the following typically represents the fastest and most expensive level of memory, closest to the processor?",
+      "options": [
+        "Registers",
+        "Main memory",
+        "Magnetic disk",
+        "Cache"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nXác định cấp bậc bộ nhớ có tốc độ nhanh nhất, giá thành trên mỗi bit đắt nhất và nằm gần bộ xử lý nhất trong kim tự tháp phân cấp bộ nhớ (Memory Hierarchy).\n\nCác bước:\n1. Sơ đồ hình tháp phân cấp bộ nhớ từ đỉnh xuống đáy:\n   - Cấp 0 (Đỉnh tháp): Các thanh ghi nội bộ của CPU (Registers). Nằm ngay trên đường truyền dữ liệu của ALU, thời gian truy xuất chỉ một phần nhỏ của chu kỳ xung nhịp (< 1 ns), dung lượng nhỏ nhất (vài trăm byte đến vài KB), giá thành/bit cao nhất.\n   - Cấp 1: Bộ nhớ đệm (Cache - L1, L2, L3) sử dụng SRAM.\n   - Cấp 2: Bộ nhớ chính (Main Memory) sử dụng DRAM.\n   - Cấp 3: Lưu trữ thứ cấp (Secondary Storage: SSD, HDD).\n   - Cấp 4: Lưu trữ ngoại tuyến (Offline Storage: Magnetic Tape, Optical Disc).\n2. Như vậy, thành phần nằm ở đỉnh cao nhất, nhanh nhất và đắt nhất chính là Registers (phương án A).\n\nKiểm tra:\nThanh ghi nằm ngay trong lòng vi xử lý, CPU truy xuất thanh ghi trong cùng chu kỳ lệnh mà không cần qua bất kỳ bus hay controller nào.\n\nVì sao các phương án khác sai:\n- B (Main memory): Chậm hơn Cache và Registers hàng chục đến hàng trăm lần.\n- C (Magnetic disk): Thuộc bộ nhớ ngoài, tốc độ cơ học cực chậm.\n- D (Cache): Nhanh thứ hai sau Registers, nhưng vẫn đứng dưới Registers trong tháp phân cấp bộ nhớ.\n\nLưu ý/công thức cần nhớ:\nThứ tự tốc độ & giá thành/bit giảm dần: Registers > Cache > Main Memory > SSD > Magnetic Disk."
+    },
+    {
+      "id": 1130,
       "quizId": 5,
       "text": "A line includes a _________ that identifies which particular block is currently being stored.",
       "options": [
@@ -2928,7 +2838,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A line includes a ________ that identifies which particular block is currently being stored.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. tag.\n\n **Kiểm tra**: Chọn C. tag \n\n **Vì sao các phương án khác sai**:\n\n- A (cache): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (hit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (locality): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1138,
+      "id": 1131,
       "quizId": 5,
       "text": "_________ is the simplest mapping technique and maps each block of main memory into only one possible cache line.",
       "options": [
@@ -2941,7 +2851,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ is the simplest mapping technique and maps each block of main memory into only one possible cache line.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Direct mapping.\n\n **Kiểm tra**: Chọn A. Direct mapping \n\n **Vì sao các phương án khác sai**:\n\n- B (Associative mapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Set associative mapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (None of the above): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1139,
+      "id": 1132,
       "quizId": 5,
       "text": "The cache is capable of handling global as well as local variables.",
       "options": [
@@ -2952,7 +2862,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The cache is capable of handling global as well as local variables.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. True.\n\n **Kiểm tra**: Chọn B. True \n\n **Vì sao các phương án khác sai**:\n\n- A (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1140,
+      "id": 1133,
       "quizId": 5,
       "text": "The correspondence between the main memory blocks and those in the cache is specified by",
       "options": [
@@ -2966,7 +2876,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The correspondence between the main memory blocks and those in the cache is specified by\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Mapping function.\n\n **Kiểm tra**: Chọn D. Mapping function \n\n **Vì sao các phương án khác sai**:\n\n- A (Segment function): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Hit rate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Replacement algorithm): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Miss penalty): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1141,
+      "id": 1134,
       "quizId": 5,
       "text": "The L1 cache is slower than the L3 cache.",
       "options": [
@@ -2977,7 +2887,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The L1 cache is slower than the L3 cache.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1142,
+      "id": 1135,
       "quizId": 5,
       "text": "When using _________ technique, all write operations are made to main memory as well as to the cache, ensuring that main memory is always valid.",
       "options": [
@@ -2990,7 +2900,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"When using ______ technique, all write operations are made to main memory as well as to the cache, ensuring that main memory is always valid.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. write through.\n\n **Kiểm tra**: Chọn C. write through \n\n **Vì sao các phương án khác sai**:\n\n- A (write back): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (LRU): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (unified cache): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1143,
+      "id": 1136,
       "quizId": 5,
       "text": "Cache memory enhances",
       "options": [
@@ -3003,7 +2913,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Cache memory enhances\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Memory access time.\n\n **Kiểm tra**: Chọn B. Memory access time \n\n **Vì sao các phương án khác sai**:\n\n- A (Memory capacity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Secondary storage capacity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Secondary storage access time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1144,
+      "id": 1137,
       "quizId": 5,
       "text": "What is the cache memory level that is integrated into the processor chip and has the lowest latency?",
       "options": [
@@ -3016,7 +2926,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the cache memory level that is integrated into the processor chip and has the lowest latency?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. L1 cache.\n\n **Kiểm tra**: Chọn A. L1 cache \n\n **Vì sao các phương án khác sai**:\n\n- B (L2 cache): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (L3 cache): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (L4 cache): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1145,
+      "id": 1138,
       "quizId": 5,
       "text": "Consider a machine with a byte addressable main memory of \\(2^{16}\\) bytes and block size of 8 bytes. Assume that a direct mapped cache consisting of 32 lines is used with this machine. How many bits are there in the line field of the cache?",
       "options": [
@@ -3030,7 +2940,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Consider a machine with a byte addressable main memory of \\(2^{16}\\) bytes and block size of 8 bytes. Assume that a direct mapped cache consisting of 32 lines is used with this machine. How many bits are there in the line field of the cache?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. 5.\n\n **Kiểm tra**: Chọn C. 5 \n\n **Vì sao các phương án khác sai**:\n\n- A (3): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (6): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (7): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1146,
+      "id": 1139,
       "quizId": 5,
       "text": "What is the primary purpose of cache memory in a computer system?",
       "options": [
@@ -3043,7 +2953,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the primary purpose of cache memory in a computer system?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. To store frequently used data for quick access.\n\n **Kiểm tra**: Chọn A. To store frequently used data for quick access \n\n **Vì sao các phương án khác sai**:\n\n- B (To store the operating system): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (To store user files and documents): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (To store the CPU registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1147,
+      "id": 1140,
       "quizId": 5,
       "text": "A set-associative cache consists of 64 lines, divided into four-line sets. \\(2^{19}\\)-words main memory contains 4K blocks of 128 words each. How many bits are there in the tag field of the cache?",
       "options": [
@@ -3057,7 +2967,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A set-associative cache consists of 64 lines, divided into four-line sets. \\(2^{19}\\)-words main memory contains 4K blocks of 128 words each. How many bits are there in the tag field of the cache?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. 8.\n\n **Kiểm tra**: Chọn D. 8 \n\n **Vì sao các phương án khác sai**:\n\n- A (5): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (6): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (7): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (9): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1148,
+      "id": 1141,
       "quizId": 5,
       "text": "What is the most common mapping technique used in cache memory in modern computers?",
       "options": [
@@ -3070,7 +2980,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the most common mapping technique used in cache memory in modern computers?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Set Associative.\n\n **Kiểm tra**: Chọn C. Set Associative \n\n **Vì sao các phương án khác sai**:\n\n- A (Direct Mapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Fully Associative): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (None of the mentioned): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1149,
+      "id": 1142,
       "quizId": 5,
       "text": "What is the special feature of Memory Cache?",
       "options": [
@@ -3084,7 +2994,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the special feature of Memory Cache?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Allows faster access than DRAM memory.\n\n **Kiểm tra**: Chọn A. Allows faster access than DRAM memory \n\n **Vì sao các phương án khác sai**:\n\n- B (Memory cache is outboard storage memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Allows faster access than CPU registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Fixed memory - Read Only Memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Has a larger capacity than HDD): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1150,
+      "id": 1143,
       "quizId": 5,
       "text": "In the direct mapping method from 256MB main memory with 512KB cache, what is the number of bits for the TAG element in the address?",
       "options": [
@@ -3097,7 +3007,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In the direct mapping method from 256MB main memory with 512KB cache, what is the number of bits for the TAG element in the address?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. 9.\n\n **Kiểm tra**: Chọn D. 9 \n\n **Vì sao các phương án khác sai**:\n\n- A (6): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (7): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (8): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1151,
+      "id": 1144,
       "quizId": 5,
       "text": "Which of the following algorithms is not typically used in cache memory replacement?",
       "options": [
@@ -3110,7 +3020,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following algorithms is not typically used in cache memory replacement?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Round Robin (RR).\n\n **Kiểm tra**: Chọn D. Round Robin (RR) \n\n **Vì sao các phương án khác sai**:\n\n- A (Least Recently Used (LRU)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (First-In-First-Out (FIFO)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Least Frequently Used (LFU)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1152,
+      "id": 1145,
       "quizId": 5,
       "text": "In one-cache system using direct mapping technique, with the cache containing 10 lines, which memory block's data can be transfered to the cache line 7?",
       "options": [
@@ -3123,7 +3033,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nÁp dụng công thức ánh xạ trực tiếp (Direct Mapping) trong bộ nhớ đệm cache.\n\nCác bước:\n1. Trong kỹ thuật ánh xạ trực tiếp, khối nhớ chính số \\ (j \\ ) được ánh xạ vào dòng cache số \\ (i \\ ) theo công thức đồng dư:\n \\ [ i = j \\ pmod m \\ ]\n Trong đó:\n - \\ (i \\ ) là chỉ số dòng cache (ở đây \\ (i = 7 \\ )).\n - \\ (m \\ ) là tổng số dòng trong cache (ở đây \\ (m = 10 \\ )).\n2. Ta có phương trình:\n \\ [ j \\ pmod10 = 7 \\ ]\n Các khối bộ nhớ chính thỏa mãn điều kiện trên là:\n \\ [ j \\ in \\ 7, 17, 27, 37, 47, \\ dots \\ \\ ]\n\nKiểm tra:\n- Khối 0: \\ (0 \\ pmod10 = 0 \\ ne 7 \\ ) (loại các phương án B, C, D vì chứa số 0).\n- Dãy khối hợp lệ là: 7, 17, 27, 37, ... -> Đáp án A.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1153,
+      "id": 1146,
       "quizId": 5,
       "text": "A two-way set-associative cache has lines of 16 bytes and a total size of 8 Kbytes. The 64-Mbyte main memory is byte addressable. What are the values of Tag, Set and Byte offset fields?",
       "options": [
@@ -3137,20 +3047,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A two-way set-associative cache has lines of 16 bytes and a total size of 8 Kbytes. The 64-Mbyte main memory is byte addressable. What are the values of Tag, Set and Byte offset fields?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 14/8/4.\n\n **Kiểm tra**: Chọn A. 14/8/4 \n\n **Vì sao các phương án khác sai**:\n\n- B (16/6/4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (12/10/4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (15/7/4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (13/9/4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1154,
-      "quizId": 5,
-      "text": "Which kind of cache mapping maps each block of main memory into one unique line of the cache?",
-      "options": [
-        "Direct mapping",
-        "Set associative mapping",
-        "Fully associative mapping",
-        "Direct access"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which kind of cache mapping maps each block of main memory into one unique line of the cache?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Direct mapping.\n\n **Kiểm tra**: Chọn A. Direct mapping \n\n **Vì sao các phương án khác sai**:\n\n- B (Set associative mapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Fully associative mapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Direct access): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
-    },
-    {
-      "id": 1155,
+      "id": 1147,
       "quizId": 5,
       "text": "If the address received when accessing the cache memory includes Tag, Line, Word. At that time, what mapping technique is the system using?",
       "options": [
@@ -3163,7 +3060,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"If the address received when accessing the cache memory includes Tag, Line, Word. At that time, what mapping technique is the system using?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Direct mapping.\n\n **Kiểm tra**: Chọn A. Direct mapping \n\n **Vì sao các phương án khác sai**:\n\n- B (Set-direct mapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Associative mapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Set-associative mapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1156,
+      "id": 1148,
       "quizId": 5,
       "text": "In modern processors, why is cache memory typically organized into multiple levels, such as L1, L2, and L3 caches?",
       "options": [
@@ -3176,7 +3073,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nLý do thiết kế phân cấp bộ nhớ đệm nhiều tầng (Multi-level Caching: L1, L2, L3) trong vi xử lý hiện đại.\n\nCác bước:\n1. Có một sự đánh đổi vật lý cơ bản trong thiết kế bộ nhớ: Bộ nhớ càng nhanh thì càng tốn diện tích, đắt tiền và dung lượng càng nhỏ. Bộ nhớ càng lớn thì đường dây dẫn càng dài và độ trễ truy xuất càng cao.\n2. Để giải quyết mâu thuẫn này, các nhà thiết kế chia cache thành nhiều tầng:\n - L1 Cache: Cực nhỏ (vài chục KB), chạy cùng tốc độ xung nhịp CPU, độ trễ 1-2 chu kỳ.\n - L2 Cache: Lớn hơn (vài trăm KB đến vài MB), độ trễ vừa phải (10-15 chu kỳ).\n - L3 Cache: Rất lớn (vài chục đến hàng trăm MB), chia sẻ cho tất cả các nhân.\n3. Cấu trúc nhiều cấp giúp cân bằng tối ưu giữa tốc độ truy xuất và dung lượng lưu trữ (To balance the trade-off between speed and size).\n\nKiểm tra:\nPhương án A giải thích chuẩn xác nhất.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1157,
+      "id": 1149,
       "quizId": 5,
       "text": "How many techniques are there for dealing with an update to a cache line? What are their names?",
       "options": [
@@ -3189,7 +3086,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nChính sách ghi cập nhật dữ liệu của bộ nhớ Cache (Cache Write Policies).\n\nCác bước:\n1. Khi CPU thực hiện thao tác ghi dữ liệu vào một line đang có trong cache (cache hit), có 2 kỹ thuật cơ bản để cập nhật:\n - Ghi xuyên (Write through): Dữ liệu được ghi đồng thời vào cả cache và bộ nhớ chính (Main memory), đảm bảo tính nhất quán tức thì.\n - Ghi lại / Ghi trả (Write back): Dữ liệu chỉ được cập nhật trong cache và bật bit dơ (dirty bit/update bit). Khối nhớ chỉ được ghi trả về Main memory khi nó bị thay thế (replace).\n2. Lưu ý: Write allocate và No-write allocate là chính sách xử lý khi xảy ra trượt ghi (write miss), không phải kỹ thuật cập nhật line khi ghi.\n\nKiểm tra:\nCó 2 kỹ thuật cập nhật là Write through và Write back -> Đáp án A.\n\nVì sao các phương án khác sai:\n- B, C, D gộp lẫn chính sách write miss (write allocate / write not allocate) vào chính sách cập nhật.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1158,
+      "id": 1150,
       "quizId": 5,
       "text": "A two-way set-associative cache has lines of 16 bytes and a total size of 8 Kbytes. The 64-Mbyte main memory is byte addressable. How many bits are there in the set field of the cache?",
       "options": [
@@ -3203,7 +3100,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A two-way set-associative cache has lines of 16 bytes and a total size of 8 Kbytes. The 64-Mbyte main memory is byte addressable. What are the values of Tag, Set and Byte offset fields?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 14/8/4.\n\n **Kiểm tra**: Chọn A. 14/8/4 \n\n **Vì sao các phương án khác sai**:\n\n- B (16/6/4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (12/10/4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (15/7/4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (13/9/4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1159,
+      "id": 1151,
       "quizId": 5,
       "text": "What is the benefit of cache memory in terms of computer performance?",
       "options": [
@@ -3216,7 +3113,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the benefit of cache memory in terms of computer performance?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. It speeds up data access and improves system performance..\n\n **Kiểm tra**: Chọn B. It speeds up data access and improves system performance. \n\n **Vì sao các phương án khác sai**:\n\n- A (It reduces the computer's power consumption.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (It increases the storage capacity of the computer.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (It serves as a backup storage for critical files.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1160,
+      "id": 1152,
       "quizId": 5,
       "text": "A EPROM has 20 address lines and 8 bit data lines, what is maximum memory capacity of this chip?",
       "options": [
@@ -3230,7 +3127,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A EPROM has 20 address lines and 8 bit data lines, what is maximum memory capacity of this chip?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. 8 Mbits.\n\n **Kiểm tra**: Chọn D. 8 Mbits \n\n **Vì sao các phương án khác sai**:\n\n- A (1 Mbits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (2 Mbits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (4 Mbits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (16 Mbits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1161,
+      "id": 1153,
       "quizId": 5,
       "text": "Internal memory capacity is typically expressed in terms of _________",
       "options": [
@@ -3243,7 +3140,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Internal memory capacity is typically expressed in terms of __________\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. bytes.\n\n **Kiểm tra**: Chọn C. bytes \n\n **Vì sao các phương án khác sai**:\n\n- A (hertz): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (nanos): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (LOR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1162,
+      "id": 1154,
       "quizId": 6,
       "text": "RAM must be provided with a constant power supply.",
       "options": [
@@ -3254,7 +3151,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"RAM must be provided with a constant power supply.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1163,
+      "id": 1155,
       "quizId": 6,
       "text": "A characteristic of ROM is that it is volatile.",
       "options": [
@@ -3265,7 +3162,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A characteristic of ROM is that it is volatile.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1164,
+      "id": 1156,
       "quizId": 6,
       "text": "A static RAM will hold its data as long as power is supplied to it.",
       "options": [
@@ -3276,7 +3173,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A static RAM will hold its data as long as power is supplied to it.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1165,
+      "id": 1157,
       "quizId": 6,
       "text": "The two traditional forms of RAM used in computers are DRAM and SRAM.",
       "options": [
@@ -3287,7 +3184,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The two traditional forms of RAM used in computers are DRAM and SRAM.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1166,
+      "id": 1158,
       "quizId": 6,
       "text": "What is the main idea of using Hamming code for error correction?",
       "options": [
@@ -3300,7 +3197,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the main idea of using Hamming code for error correction?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Adding extra parity bits to the data bits such that the parity bits form a binary number indicating the position of the error bit.\n\n **Kiểm tra**: Chọn C. Adding extra parity bits to the data bits such that the parity bits form a binary number indicating the position of the error bit \n\n **Vì sao các phương án khác sai**:\n\n- A (Adding extra parity bits to the data bits such that the number of 1s in each subset of bits is even): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Adding extra parity bits to the data bits such that the number of 1s in each subset of bits is odd): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Adding extra parity bits to the data bits such that the parity bits form a binary number indicating the number of error bits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1167,
+      "id": 1159,
       "quizId": 6,
       "text": "Using Hamming Code with one error corection to store an 12-bit word in memory, the stored word 111001001101 consists of 8 bits data and 4 bit bits parity check. What are the parity bits?",
       "options": [
@@ -3314,7 +3211,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mã sửa lỗi Hamming (Error Correction - Hamming Code) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Từ nhớ 12-bit được lưu trữ là `111001001101`, gồm 8 bit dữ liệu và 4 bit kiểm tra chẵn lẻ (parity check bits).\n- Theo quy ước đánh số vị trí bit từ phải sang trái (hoặc theo trọng số từ bit 1 đến bit 12 trong chuẩn COA William Stallings):\n  - Vị trí các bit parity nằm ở các lũy thừa của 2: vị trí 1 ($2^0$), vị trí 2 ($2^1$), vị trí 4 ($2^2$), vị trí 8 ($2^3$).\n  - Từ nhớ gồm 12 bit (đánh số từ phải sang trái từ 1 đến 12):\n    - Bit 12 = 1, Bit 11 = 1, Bit 10 = 1, Bit 9 = 0\n    - Bit 8 = 0 (Parity bit $P_8$)\n    - Bit 7 = 1, Bit 6 = 0, Bit 5 = 0\n    - Bit 4 = 1 (Parity bit $P_4$)\n    - Bit 3 = 1\n    - Bit 2 = 0 (Parity bit $P_2$)\n    - Bit 1 = 1 (Parity bit $P_1$)\n- Tổ hợp các bit parity theo thứ tự $P_8 P_4 P_2 P_1$ là: 0, 1, 0, 1 $\\to$ **0101**.\n\n **Kiểm tra**: Chọn D. 0101 \n\n **Vì sao các phương án khác sai**:\n\n- A (0110), B (0111), C (1110): Không khớp với giá trị các bit kiểm tra tại các vị trí lũy thừa của 2.\n- E (None of the mentioned): Sai vì đáp án D (0101) là chính xác.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1168,
+      "id": 1160,
       "quizId": 6,
       "text": "Which one of the following is an invalid about RAM?",
       "options": [
@@ -3327,7 +3224,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which one of the following is an invalid about RAM?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Both static and dynamic RAMs requires the supporting refresh circuitry.\n\n **Kiểm tra**: Chọn C. Both static and dynamic RAMs requires the supporting refresh circuitry \n\n **Vì sao các phương án khác sai**:\n\n- A (Both static and dynamic RAMs are volatile; that is, power must be continuously supplied to the memory to preserve the bit values.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (A dynamic memory cell is simpler and smaller than a static memory cell.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (SRAMs are somewhat faster than DRAMs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1169,
+      "id": 1161,
       "quizId": 6,
       "text": "How many check bits are needed if the Hamming error correction code is used to detect single bit errors in a 2030-bit data?",
       "options": [
@@ -3340,7 +3237,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"How many check bits are needed if the Hamming error correction code is used to detect single bit errors in a 2030-bit data?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 11.\n\n **Kiểm tra**: Chọn A. 11 \n\n **Vì sao các phương án khác sai**:\n\n- B (10): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (12): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (9): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1170,
+      "id": 1162,
       "quizId": 6,
       "text": "Given the 11-bit data word 001 0010 1010, generate the corresponding 15-bit Hamming code word.",
       "options": [
@@ -3353,7 +3250,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mã sửa lỗi Hamming (Hamming Error-Correcting Code) cho từ dữ liệu 11-bit thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Cho từ dữ liệu 11 bit: `001 0010 1010` ($D_1$ đến $D_{11}$ theo thứ tự từ trái sang phải).\n- Số bit kiểm tra $K$ cần thiết thỏa mãn $2^K - 1 \\ge 11 + K \\implies K = 4$ bit ($C_1, C_2, C_4, C_8$), tạo thành từ mã dài 15 bit.\n- Phân bổ vào 15 vị trí (vị trí lũy thừa của 2 là check bit, các vị trí còn lại là data bit):\n  - Bit 1 ($C_1$), Bit 2 ($C_2$), Bit 3 ($D_1=0$), Bit 4 ($C_4$), Bit 5 ($D_2=0$), Bit 6 ($D_3=1$), Bit 7 ($D_4=0$)\n  - Bit 8 ($C_8$), Bit 9 ($D_5=0$), Bit 10 ($D_6=1$), Bit 11 ($D_7=0$), Bit 12 ($D_8=1$), Bit 13 ($D_9=0$), Bit 14 ($D_{10}=1$), Bit 15 ($D_{11}=0$)\n- Tính toán 4 bit kiểm tra chẵn lẻ (Even Parity):\n  - $C_1$ (kiểm tra các vị trí 1, 3, 5, 7, 9, 11, 13, 15): Dữ liệu gồm $D_1(0), D_2(0), D_4(0), D_5(0), D_7(0), D_9(0), D_{11}(0) \\implies$ Số bit 1 là 0 (chẵn) $\\implies C_1 = 0$.\n  - $C_2$ (kiểm tra các vị trí 2, 3, 6, 7, 10, 11, 14, 15): Dữ liệu gồm $D_1(0), D_3(1), D_4(0), D_6(1), D_7(0), D_{10}(1), D_{11}(0) \\implies$ Số bit 1 là 3 (lẻ) $\\implies C_2 = 1$.\n  - $C_4$ (kiểm tra các vị trí 4, 5, 6, 7, 12, 13, 14, 15): Dữ liệu gồm $D_2(0), D_3(1), D_4(0), D_8(1), D_9(0), D_{10}(1), D_{11}(0) \\implies$ Số bit 1 là 3 (lẻ) $\\implies C_4 = 1$.\n  - $C_8$ (kiểm tra các vị trí 8, 9, 10, 11, 12, 13, 14, 15): Dữ liệu gồm $D_5(0), D_6(1), D_7(0), D_8(1), D_9(0), D_{10}(1), D_{11}(0) \\implies$ Số bit 1 là 3 (lẻ) $\\implies C_8 = 1$.\n- Ghép toàn bộ 15 bit theo thứ tự từ vị trí 1 đến 15:\n  `0 1 0 1 0 1 0 1 0 1 0 1 0 1 0` $\\to$ Trình bày dạng nhóm (3-4-8): `010 1010 10101010`.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc in sai tiền tố `001 0010 ...` do người ra đề sao chép nhầm 7 bit đầu của từ dữ liệu mà quên chèn các bit parity $C_1, C_2, C_4$ vào vị trí 1, 2, 4. Chuỗi chuẩn xác là `010 1010 10101010` (hoặc `010101010101010`).\n\n **Kiểm tra**: Chọn D. 010 1010 10101010 \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1171,
+      "id": 1163,
       "quizId": 6,
       "text": "How many parity check bits must be included with the data word to achieve single error correction when the data word contains 1023 bits?",
       "options": [
@@ -3366,7 +3263,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"How many parity check bits must be included with the data word to achieve single error correction when the data word contains 1023 bits?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. 11.\n\n **Kiểm tra**: Chọn B. 11 \n\n **Vì sao các phương án khác sai**:\n\n- A (10): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (12): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (9): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1172,
+      "id": 1164,
       "quizId": 6,
       "text": "How many check bits are needed for a Hamming error correction code to detect single-error correction in a 1 Kbyte data word?",
       "options": [
@@ -3380,7 +3277,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"How many check bits are needed if the Hamming error correction code is used to detect single bit errors in a 2030-bit data?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 11.\n\n **Kiểm tra**: Chọn A. 11 \n\n **Vì sao các phương án khác sai**:\n\n- B (10): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (12): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (9): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1173,
+      "id": 1165,
       "quizId": 6,
       "text": "The use of Hamming code on 4-bit words (M = 4) is illustrated in the below Venn diagrams. With three intersecting circles, there are seven compartments. We assign the 4 data bits to the inner compartments. The remaining compartments are filled with what are called parity bits. Each parity bit is chosen so that the total number of 1s in its circle is even. Choose the correct value of the corresponding parity bit in circles A, B, C.",
       "options": [
@@ -3393,7 +3290,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The use of Hamming code on 4-bit words (M = 4) is illustrated in the below Venn diagrams. With three intersecting circles, there are seven compartments. We assign the 4 data bits to the inner compartments. The remaining compartments are filled with what are called parity bits. Each parity bit is chosen so that the total number of 1s in its circle is even. Choose the correct value of the corresponding parity bit in circles A, B, C.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 1; 0; 0.\n\n **Kiểm tra**: Chọn A. 1; 0; 0 \n\n **Vì sao các phương án khác sai**:\n\n- B (0; 1; 0): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (0; 0; 1): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (1; 0; 1): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1174,
+      "id": 1166,
       "quizId": 6,
       "text": "Using Hamming Code with one error correction to store a 12-bit word in memory, the stored word 101001011101 consists of 8 bits data and 4 bits parity check. What are the data bits?",
       "options": [
@@ -3407,7 +3304,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mã sửa lỗi Hamming (Error Correction - Hamming Code) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Từ nhớ 12-bit được lưu trữ là `111001001101`, gồm 8 bit dữ liệu và 4 bit kiểm tra chẵn lẻ (parity check bits).\n- Theo quy ước đánh số vị trí bit từ phải sang trái (hoặc theo trọng số từ bit 1 đến bit 12 trong chuẩn COA William Stallings):\n - Vị trí các bit parity nằm ở các lũy thừa của 2: vị trí 1 (\\(2^0\\)), vị trí 2 (\\(2^1\\)), vị trí 4 (\\(2^2\\)), vị trí 8 (\\(2^3\\)).\n - Từ nhớ gồm 12 bit (đánh số từ phải sang trái từ 1 đến 12):\n - Bit 12 = 1, Bit 11 = 1, Bit 10 = 1, Bit 9 = 0\n - Bit 8 = 0 (Parity bit \\(P_8\\))\n - Bit 7 = 1, Bit 6 = 0, Bit 5 = 0\n - Bit 4 = 1 (Parity bit \\(P_4\\))\n - Bit 3 = 1\n - Bit 2 = 0 (Parity bit \\(P_2\\))\n - Bit 1 = 1 (Parity bit \\(P_1\\))\n- Tổ hợp các bit parity theo thứ tự \\(P_8 P_4 P_2 P_1\\) là: 0, 1, 0, 1 \\(\\to\\) **0101**.\n\n **Kiểm tra**: Chọn D. 0101 \n\n **Vì sao các phương án khác sai**:\n\n- A (0110), B (0111), C (1110): Không khớp với giá trị các bit kiểm tra tại các vị trí lũy thừa của 2.\n- E (None of the mentioned): Sai vì đáp án D (0101) là chính xác.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1175,
+      "id": 1167,
       "quizId": 6,
       "text": "EEPROM is read-mostly-memory and volatile",
       "options": [
@@ -3418,7 +3315,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"EEPROM is read-mostly-memory and volatile\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1176,
+      "id": 1168,
       "quizId": 6,
       "text": "One distinguishing characteristic of memory that is designated as _________ is that it is possible to read data from the memory and to write new data into the memory easily and rapidly.",
       "options": [
@@ -3431,7 +3328,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"One distinguishing characteristic of memory that is designated as ________ is that it is possible to read data from the memory and to write new data into the memory easily and rapidly.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. RAM.\n\n **Kiểm tra**: Chọn A. RAM \n\n **Vì sao các phương án khác sai**:\n\n- B (ROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (EPROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (EEPROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1177,
+      "id": 1169,
       "quizId": 6,
       "text": "In a volatile memory, information decays naturally or is lost when electrical power is switched",
       "options": [
@@ -3442,7 +3339,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In a volatile memory, information decays naturally or is lost when electrical power is switched\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1178,
+      "id": 1170,
       "quizId": 6,
       "text": "A _________ contains a permanent pattern of data that cannot be changed, is nonvolatile, and cannot have new data written into it.",
       "options": [
@@ -3455,33 +3352,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A _________ contains a permanent pattern of data that cannot be changed, is nonvolatile, and cannot have new data written into it.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. ROM.\n\n **Kiểm tra**: Chọn B. ROM \n\n **Vì sao các phương án khác sai**:\n\n- A (flash memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (RAM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (SRAM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1179,
-      "quizId": 6,
-      "text": "One distinguishing characteristic of memory that is designated as _________ is that it is possible both to read data from the memory and to write new data into the memory easily and rapidly.",
-      "options": [
-        "RAM",
-        "EPROM",
-        "ROM",
-        "EEPROM"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"One distinguishing characteristic of memory that is designated as ________ is that it is possible to read data from the memory and to write new data into the memory easily and rapidly.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. RAM.\n\n **Kiểm tra**: Chọn A. RAM \n\n **Vì sao các phương án khác sai**:\n\n- B (ROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (EPROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (EEPROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
-    },
-    {
-      "id": 1180,
-      "quizId": 6,
-      "text": "A _________ contains a permanent pattern of data that cannot be changed, is nonvolatile, and cannot have new data written into it.",
-      "options": [
-        "RAM",
-        "SRAM",
-        "ROM",
-        "flash memory"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A _________ contains a permanent pattern of data that cannot be changed, is nonvolatile, and cannot have new data written into it.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. ROM.\n\n **Kiểm tra**: Chọn B. ROM \n\n **Vì sao các phương án khác sai**:\n\n- A (flash memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (RAM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (SRAM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1181,
+      "id": 1171,
       "quizId": 6,
       "text": "What are the key differences in the architecture of NOR and NAND flash memory?",
       "options": [
@@ -3495,7 +3366,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What are the key differences in the architecture of NOR and NAND flash memory?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. NOR flash memory cells are connected in parallel, while NAND flash memory cells are connected in series.\n\n **Kiểm tra**: Chọn B. NOR flash memory cells are connected in parallel, while NAND flash memory cells are connected in series \n\n **Vì sao các phương án khác sai**:\n\n- A (NOR flash memory cells are connected in series, while NAND flash memory cells are connected in parallel): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Both NOR and NAND flash memory cells are connected in series): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Both NOR and NAND flash memory cells are connected in parallel): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (All of the mentioned are wrong): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1182,
+      "id": 1172,
       "quizId": 6,
       "text": "Which properties do all semiconductor memory cells share?",
       "options": [
@@ -3508,7 +3379,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which properties do all semiconductor memory cells share?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. all of the above.\n\n **Kiểm tra**: Chọn D. all of the above \n\n **Vì sao các phương án khác sai**:\n\n- A (they exhibit two stable states which can be used to represent binary 1 and 0): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (they are capable of being written into to set the state): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (they are capable of being read to sense the state): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1183,
+      "id": 1173,
       "quizId": 6,
       "text": "A number of chips can be grouped together to form a memory bank.",
       "options": [
@@ -3519,7 +3390,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A number of chips can be grouped together to form a memory bank.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1184,
+      "id": 1174,
       "quizId": 6,
       "text": "All DRAMs require a refresh operation.",
       "options": [
@@ -3530,7 +3401,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"All DRAMs require a refresh operation.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1185,
+      "id": 1175,
       "quizId": 6,
       "text": "Which of the following memory types are nonvolatile?",
       "options": [
@@ -3543,7 +3414,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following memory types are nonvolatile?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. all of the above.\n\n **Kiểm tra**: Chọn D. all of the above \n\n **Vì sao các phương án khác sai**:\n\n- A (erasable PROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (programmable ROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (flash memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1186,
+      "id": 1176,
       "quizId": 6,
       "text": "The basic element of a semiconductor memory is the memory cell.",
       "options": [
@@ -3554,7 +3425,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The basic element of a semiconductor memory is the memory cell.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1187,
+      "id": 1177,
       "quizId": 6,
       "text": "Semiconductor memory comes in packaged chips.",
       "options": [
@@ -3565,7 +3436,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Semiconductor memory comes in packaged chips.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1188,
+      "id": 1178,
       "quizId": 6,
       "text": "With _________ the microchip is organized so that a section of memory cells are erased in a single action.",
       "options": [
@@ -3578,18 +3449,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"With ________ the microchip is organized so that a section of memory cells are erased in a single action.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. flash memory.\n\n **Kiểm tra**: Chọn A. flash memory \n\n **Vì sao các phương án khác sai**:\n\n- B (SDRAM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (DRAM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (EEPROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1189,
-      "quizId": 6,
-      "text": "Semiconductor memory comes in packaged chips.",
-      "options": [
-        "False",
-        "True"
-      ],
-      "correctIndex": 1,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Semiconductor memory comes in packaged chips.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1190,
+      "id": 1179,
       "quizId": 6,
       "text": "What is the key advantage of double-data-rate SDRAM compared to standard SDRAM?",
       "options": [
@@ -3602,7 +3462,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the key advantage of double-data-rate SDRAM compared to standard SDRAM?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. It can send data twice per clock cycle..\n\n **Kiểm tra**: Chọn B. It can send data twice per clock cycle. \n\n **Vì sao các phương án khác sai**:\n\n- A (It has a larger memory capacity.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (It uses less power than SDRAM.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (It is only compatible with desktop computers.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1191,
+      "id": 1180,
       "quizId": 6,
       "text": "_________ is made with cells that store data as charge on capacitors.",
       "options": [
@@ -3615,7 +3475,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân biệt công nghệ chế tạo giữa SRAM và DRAM.\n\nCác bước:\n1. DRAM (Dynamic RAM): Lưu trữ mỗi bit dữ liệu dưới dạng điện tích trên các tụ điện (capacitors). Do tụ điện bị rò rỉ điện tích theo thời gian, DRAM phải được làm tươi (refresh) định kỳ.\n2. SRAM (Static RAM): Lưu trữ bit bằng các mạch chốt lật (flip-flop/transistor), giữ dữ liệu liên tục khi còn cấp nguồn mà không cần làm tươi.\n\nKiểm tra:\nĐặc điểm 'store data as charge on capacitors' xác định ngay là DRAM (B).\n\nVì sao các phương án khác sai:\n- A (SRAM): Sử dụng transistor cấu hình flip-flop, không dùng tụ điện lưu điện tích.\n- C (RDRAM), D (CDRAM): Là các biến thể kiến trúc giao tiếp bộ nhớ, không phải định nghĩa cơ bản cấp tế bào nhớ.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1192,
+      "id": 1181,
       "quizId": 6,
       "text": "In terms of organization, what is the basic element of semiconductor memory?",
       "options": [
@@ -3628,7 +3488,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In terms of organization, what is the basic element of semiconductor memory?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Memory cell.\n\n **Kiểm tra**: Chọn C. Memory cell \n\n **Vì sao các phương án khác sai**:\n\n- A (Memory capacity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Memory block): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Memory location): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1193,
+      "id": 1182,
       "quizId": 6,
       "text": "In terms of performance, what is the main advantage of a solid state drive over a magnetic disk?",
       "options": [
@@ -3641,7 +3501,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nƯu điểm về hiệu năng của ổ thể rắn (SSD) so với ổ đĩa từ truyền thống (HDD).\n\nCác bước:\n1. Ổ từ cơ học (HDD) phụ thuộc vào sự chuyển động cơ khí của đĩa quay và cần gạt đọc/ghi, dẫn đến thời gian tìm rãnh (seek time) và độ trễ quay (rotational latency) tính bằng mili-giây.\n2. Ổ thể rắn (SSD) sử dụng bộ nhớ flash bán dẫn điện tử, không chứa các bộ phận chuyển động cơ học:\n - Thời gian truy xuất nhanh hơn (vài micro-giây).\n - Độ trễ cực thấp.\n - Khả năng chống sốc vật lý và độ tin cậy cơ học cao hơn.\n\nKiểm tra:\nPhương án A tóm tắt chính xác các ưu thế hiệu năng của SSD so với HDD.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1194,
+      "id": 1183,
       "quizId": 6,
       "text": "In a _________, binary values are stored using traditional flip-flop logic-gate configurations.",
       "options": [
@@ -3654,7 +3514,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In a ________, binary values are stored using traditional flip-flop logic-gate configurations.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. SRAM.\n\n **Kiểm tra**: Chọn B. SRAM \n\n **Vì sao các phương án khác sai**:\n\n- A (ROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (DRAM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (RAM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1195,
+      "id": 1184,
       "quizId": 6,
       "text": "An error-correcting code enhances the reliability of the memory at the cost of added complexity.",
       "options": [
@@ -3665,7 +3525,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An error-correcting code enhances the reliability of the memory at the cost of added complexity.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1196,
+      "id": 1185,
       "quizId": 6,
       "text": "In error correcting code (single ECC), how many bits are used to correct one bit in 8-bit data?",
       "options": [
@@ -3678,7 +3538,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nÁp dụng bất đẳng thức Hamming để tìm số bit kiểm tra (check bits) cần thiết để sửa 1 bit lỗi đơn (Single Error Correction - SEC).\n\nCác bước:\n1. Bất đẳng thức Hamming cho từ dữ liệu \\ (M \\ ) bit và \\ (K \\ ) bit kiểm tra:\n \\ [ 2^K - 1 \\ ge M + K \\ ]\n2. Với từ dữ liệu 8-bit ( \\ (M = 8 \\ )):\n - Thử \\ (K = 3 \\ ):\n \\ [ 2^3 - 1 = 7 \\ quad \\ textvà \\ quad M + K = 8 + 3 = 11 \\ implies 7 < 11 \\ quad ( \\ textkhông thỏa mãn) \\ ]\n - Thử \\ (K = 4 \\ ):\n \\ [ 2^4 - 1 = 15 \\ quad \\ textvà \\ quad M + K = 8 + 4 = 12 \\ implies 15 \\ ge 12 \\ quad ( \\ textthỏa mãn) \\ ]\n3. Vậy cần tối thiểu 4 bit kiểm tra để phát hiện và sửa sai 1 bit trong khối dữ liệu 8 bit.\n\nKiểm tra:\nSố bit cần dùng là 4 (A).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1197,
+      "id": 1186,
       "quizId": 6,
       "text": "The data word that was read from memory 001001001011110.Show data stored in memory",
       "options": [
@@ -3691,7 +3551,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Giải mã và sửa lỗi từ nhớ đọc ra bằng mã Hamming thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Từ nhớ đọc ra có độ dài 15 bit là `001001001011110`.\n- Bước 1: Gán các bit vào các vị trí từ 1 đến 15:\n  - Vị trí check bits: Bit 1 ($C_1=0$), Bit 2 ($C_2=0$), Bit 4 ($C_4=0$), Bit 8 ($C_8=0$).\n  - Vị trí data bits: Bit 3 ($D_1=1$), Bit 5 ($D_2=0$), Bit 6 ($D_3=1$), Bit 7 ($D_4=0$), Bit 9 ($D_5=1$), Bit 10 ($D_6=0$), Bit 11 ($D_7=1$), Bit 12 ($D_8=1$), Bit 13 ($D_9=1$), Bit 14 ($D_{10}=1$), Bit 15 ($D_{11}=0$).\n- Bước 2: Tính toán các bit hội chứng lỗi (Syndrome bits $p_8, p_4, p_2, p_1$):\n  - $p_1 = \\text{Bit } (1 \\oplus 3 \\oplus 5 \\oplus 7 \\oplus 9 \\oplus 11 \\oplus 13 \\oplus 15) = 0 \\oplus 1 \\oplus 0 \\oplus 0 \\oplus 1 \\oplus 1 \\oplus 1 \\oplus 0 = 0$.\n  - $p_2 = \\text{Bit } (2 \\oplus 3 \\oplus 6 \\oplus 7 \\oplus 10 \\oplus 11 \\oplus 14 \\oplus 15) = 0 \\oplus 1 \\oplus 1 \\oplus 0 \\oplus 0 \\oplus 1 \\oplus 1 \\oplus 0 = 0$.\n  - $p_4 = \\text{Bit } (4 \\oplus 5 \\oplus 6 \\oplus 7 \\oplus 12 \\oplus 13 \\oplus 14 \\oplus 15) = 0 \\oplus 0 \\oplus 1 \\oplus 0 \\oplus 1 \\oplus 1 \\oplus 1 \\oplus 0 = 0$.\n  - $p_8 = \\text{Bit } (8 \\oplus 9 \\oplus 10 \\oplus 11 \\oplus 12 \\oplus 13 \\oplus 14 \\oplus 15) = 0 \\oplus 1 \\oplus 0 \\oplus 1 \\oplus 1 \\oplus 1 \\oplus 1 \\oplus 0 = 1$.\n- Bước 3: Xác định vị trí lỗi:\n  - Syndrome $S = (p_8 p_4 p_2 p_1)_2 = (1 0 0 0)_2 = 8$.\n  - Vị trí bị lỗi là **Bit 8** (chính là bit Parity $C_8$).\n- Bước 4: Trích xuất dữ liệu gốc 11-bit:\n  - Do lỗi xảy ra ở bit Parity 8, toàn bộ 11 bit dữ liệu ($D_1$ đến $D_{11}$) không bị hỏng.\n  - Dữ liệu 11 bit gốc là: $D_1 D_2 D_3 D_4 D_5 D_6 D_7 D_8 D_9 D_{10} D_{11} = 10101011110$.\n  - Trình bày dạng nhóm (3-4-4): `101 0101 1110`.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc bị gõ nhầm chuỗi bit thành `001 0010 1011` (gõ nhầm `0101` thành `0010` và thiếu bit). Đáp án đúng chuẩn xác là `101 0101 1110` (tức `10101011110`).\n\n **Kiểm tra**: Chọn D. 101 0101 1110 \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1198,
+      "id": 1187,
       "quizId": 6,
       "text": "For the data 10110101100, calculated check bits?",
       "options": [
@@ -3704,7 +3564,34 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Tính toán các bit kiểm tra mã Hamming (Error-Correcting Code Check Bits) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Cho từ dữ liệu 11 bit: `10110101100` ($D_1$ đến $D_{11}$ theo thứ tự từ trái sang phải).\n- Phân bổ 11 bit dữ liệu vào các vị trí tương ứng trong từ mã 15 bit (các vị trí lũy thừa của 2 là check bit, còn lại là data bit):\n  - Bit 1 ($C_1$), Bit 2 ($C_2$), Bit 3 ($D_1=1$), Bit 4 ($C_4$), Bit 5 ($D_2=0$), Bit 6 ($D_3=1$), Bit 7 ($D_4=1$)\n  - Bit 8 ($C_8$), Bit 9 ($D_5=0$), Bit 10 ($D_6=1$), Bit 11 ($D_7=0$), Bit 12 ($D_8=1$), Bit 13 ($D_9=1$), Bit 14 ($D_{10}=0$), Bit 15 ($D_{11}=0$)\n- Tính toán 4 bit kiểm tra chẵn lẻ (Even Parity):\n  - $C_1$ (kiểm tra các vị trí 1, 3, 5, 7, 9, 11, 13, 15): Dữ liệu gồm $D_1(1), D_2(0), D_4(1), D_5(0), D_7(0), D_9(1), D_{11}(0) \\implies$ Số lượng bit 1 là 3 (lẻ) $\\implies C_1 = 1$.\n  - $C_2$ (kiểm tra các vị trí 2, 3, 6, 7, 10, 11, 14, 15): Dữ liệu gồm $D_1(1), D_3(1), D_4(1), D_6(1), D_7(0), D_{10}(0), D_{11}(0) \\implies$ Số lượng bit 1 là 4 (chẵn) $\\implies C_2 = 0$.\n  - $C_4$ (kiểm tra các vị trí 4, 5, 6, 7, 12, 13, 14, 15): Dữ liệu gồm $D_2(0), D_3(1), D_4(1), D_8(1), D_9(1), D_{10}(0), D_{11}(0) \\implies$ Số lượng bit 1 là 4 (chẵn) $\\implies C_4 = 0$.\n  - $C_8$ (kiểm tra các vị trí 8, 9, 10, 11, 12, 13, 14, 15): Dữ liệu gồm $D_5(0), D_6(1), D_7(0), D_8(1), D_9(1), D_{10}(0), D_{11}(0) \\implies$ Số lượng bit 1 là 3 (lẻ) $\\implies C_8 = 1$.\n- Tổ hợp 4 bit kiểm tra theo thứ tự trọng số $C_8 C_4 C_2 C_1$ (hoặc $C_1 C_2 C_4 C_8$) là: **`1001`**.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc in nhầm phương án C thành `1100` (lỗi gõ nhầm vị trí bit 0 và 1). Giá trị chuẩn xác tuyệt đối là `1001`.\n\n **Kiểm tra**: Chọn C. 1001 \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1199,
+      "id": 1188,
+      "quizId": 6,
+      "text": "Which memory type is volatile and has high speed access used in internal memory?",
+      "options": [
+        "ROM",
+        "Flash",
+        "SRAM",
+        "DRAM"
+      ],
+      "correctIndex": 2,
+      "explanation": "Hướng giải:\nXác định loại bộ nhớ bán dẫn có tính chất khả biến (volatile - mất dữ liệu khi ngắt điện), tốc độ truy xuất cực nhanh và được sử dụng làm bộ nhớ trong (internal memory / cache memory).\n\nCác bước:\n1. Phân loại theo tính khả biến:\n   - Bộ nhớ không khả biến (Non-volatile): ROM (Read-Only Memory) và Flash Memory giữ nguyên dữ liệu khi mất điện.\n   - Bộ nhớ khả biến (Volatile): SRAM và DRAM mất dữ liệu khi mất nguồn cấp điện.\n2. So sánh SRAM và DRAM:\n   - DRAM (Dynamic RAM): Lưu trữ bit dưới dạng điện tích trên tụ điện. Điện tích bị rò rỉ nên cần mạch làm tươi (refresh) định kỳ. Tốc độ truy xuất chậm hơn, mật độ lưu trữ cao, giá thành rẻ, dùng làm bộ nhớ chính (Main Memory).\n   - SRAM (Static RAM): Cấu tạo từ các mạch chốt flip-flop (4 hoặc 6 transistor), giữ nguyên trạng thái logic chừng nào còn cấp nguồn mà không cần làm tươi. Tốc độ truy xuất cực nhanh (vài ns), giá thành cao hơn, dùng làm bộ nhớ đệm nội bộ (CPU Cache / Internal Memory).\n3. Do đó, bộ nhớ thỏa mãn các điều kiện đề bài là SRAM.\n\nKiểm tra:\nTrong phân cấp bộ nhớ (Memory Hierarchy), Cache nằm trực tiếp trong chip CPU (internal memory) và 100% sử dụng công nghệ SRAM.\n\nVì sao các phương án khác sai:\n- A (ROM): Bộ nhớ chỉ đọc, không khả biến, tốc độ đọc ghi chậm.\n- B (Flash): Bộ nhớ bán dẫn không khả biến, tốc độ chậm hơn nhiều so với SRAM, dùng làm ổ cứng SSD/USB.\n- D (DRAM): Là bộ nhớ khả biến nhưng tốc độ chậm hơn SRAM và được dùng làm bộ nhớ chính (Main Memory), không dùng cho internal cache tốc độ cao.\n\nLưu ý/công thức cần nhớ:\nSRAM: Flip-flop, không cần refresh, tốc độ cao nhất, làm Cache.\nDRAM: Tụ điện, cần refresh định kỳ, làm Main Memory."
+    },
+    {
+      "id": 1189,
+      "quizId": 6,
+      "text": "Error detection and correction in memory is handled by:",
+      "options": [
+        "ALU",
+        "ECC",
+        "DMA",
+        "Cache",
+        "CU"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nXác định cơ chế/thành phần chuyên trách việc phát hiện và sửa lỗi dữ liệu (Error detection and correction) trong bộ nhớ máy tính.\n\nCác bước:\n1. Trong các hệ thống máy tính hiện đại, các ô nhớ bán dẫn có thể bị đảo bit ngẫu nhiên (soft error) do nhiễu nhiệt, nhiễu điện từ hoặc các hạt alpha/tia vũ trụ.\n2. Để bảo vệ tính toàn vẹn của dữ liệu, bộ điều khiển bộ nhớ sử dụng cơ chế ECC (Error-Correcting Code - Mã sửa lỗi).\n3. ECC tính toán các bit kiểm tra khi ghi dữ liệu và kiểm tra lại khi đọc dữ liệu. Phổ biến nhất là mã Hamming SEC-DED (Single Error Correction, Double Error Detection) cho phép:\n   - Sửa tự động lỗi 1 bit (1-bit error).\n   - Phát hiện lỗi 2 bit (2-bit error).\n4. Do đó, phương án đúng là B (ECC).\n\nKiểm tra:\nBộ nhớ ECC (ECC RAM) là thành phần bắt buộc trong các máy chủ (servers) và trung tâm dữ liệu nhằm ngăn chặn sự cố sập hệ thống (system crash).\n\nVì sao các phương án khác sai:\n- A (ALU): Arithmetic Logic Unit, thực hiện các phép toán số học và logic, không quản lý lỗi bộ nhớ.\n- C (DMA): Direct Memory Access, điều khiển chuyển dữ liệu trực tiếp giữa thiết bị I/O và RAM không qua CPU.\n- D (Cache): Bộ nhớ đệm tốc độ cao, là nơi lưu trữ tạm thời, không phải tên cơ chế sửa lỗi.\n- E (CU): Control Unit, đơn vị điều khiển chu kỳ tìm nạp và giải mã lệnh của CPU.\n\nLưu ý/công thức cần nhớ:\nECC = Error-Correcting Code (Cơ chế phát hiện và sửa lỗi bộ nhớ)."
+    },
+    {
+      "id": 1190,
       "quizId": 7,
       "text": "The SSDs now on the market use a type of semiconductor memory referred to as flash memory",
       "options": [
@@ -3715,7 +3602,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The SSDs now on the market use a type of semiconductor memory referred to as flash memory\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1200,
+      "id": 1191,
       "quizId": 7,
       "text": "Which RAID level uses striping technique with a minimum of 3 disks and provides fault tolerance through the use of parity bit?",
       "options": [
@@ -3728,7 +3615,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which RAID level uses striping technique with a minimum of 3 disks and provides fault tolerance through the use of parity bit?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. RAID 3.\n\n **Kiểm tra**: Chọn D. RAID 3 \n\n **Vì sao các phương án khác sai**:\n\n- A (RAID 0): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (RAID 1): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (RAID 2): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1201,
+      "id": 1192,
       "quizId": 7,
       "text": "RAID level 0 is not a true member of the RAID family because it does not include redundancy to improve performance.",
       "options": [
@@ -3739,7 +3626,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"RAID level 0 is not a true member of the RAID family because it does not include redundancy to improve performance.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1202,
+      "id": 1193,
       "quizId": 7,
       "text": "Consider a magnetic disk drive with 4 surfaces, 512 tracks per surface, and 32 sectors per track. If the sector size is 512 byte. What is the disk capacity?",
       "options": [
@@ -3753,7 +3640,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Consider a magnetic disk drive with 4 surfaces, 512 tracks per surface, and 32 sectors per track. If the sector size is 512 byte. What is the disk capacity?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 32 MB.\n\n **Kiểm tra**: Chọn A. 32 MB \n\n **Vì sao các phương án khác sai**:\n\n- B (512 KB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (64 KB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (16 GB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (64 MB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1203,
+      "id": 1194,
       "quizId": 7,
       "text": "Because data are striped in very small strips, RAID 3 cannot achieve very high data transfer",
       "options": [
@@ -3764,7 +3651,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Because data are striped in very small strips, RAID 3 cannot achieve very high data transfer\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. False.\n\n **Kiểm tra**: Chọn A. False \n\n **Vì sao các phương án khác sai**:\n\n- B (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1204,
+      "id": 1195,
       "quizId": 7,
       "text": "What is the purpose of RAID system?",
       "options": [
@@ -3778,7 +3665,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the purpose of RAID system?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. It increases the disk storage capacity and availability.\n\n **Kiểm tra**: Chọn C. It increases the disk storage capacity and availability \n\n **Vì sao các phương án khác sai**:\n\n- A (It increases the processor speed): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (It increases the disk storage capacity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (It increases operating system efficiency): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (It decreases operating system efficiency): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1205,
+      "id": 1196,
       "quizId": 7,
       "text": "In most contemporary systems fixed-length sectors are used, with _________ bytes being the nearly universal sector size.",
       "options": [
@@ -3791,7 +3678,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In most contemporary systems fixed-length sectors are used, with ________ bytes being the nearly universal sector size.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. 512.\n\n **Kiểm tra**: Chọn D. 512 \n\n **Vì sao các phương án khác sai**:\n\n- A (64): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (128): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (256): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1206,
+      "id": 1197,
       "quizId": 7,
       "text": "The sum of the seek time and the rotational delay equals the _________, which is the time it takes to get into position to read or write.",
       "options": [
@@ -3804,7 +3691,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The sum of the seek time and the rotational delay equals the ________, which is the time it takes to get into position to read or write.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. access time.\n\n **Kiểm tra**: Chọn A. access time \n\n **Vì sao các phương án khác sai**:\n\n- B (gap time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (transfer time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (constant angular velocity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1207,
+      "id": 1198,
       "quizId": 7,
       "text": "When the magnetizable coating is applied to both sides of the platter the disk is then referred",
       "options": [
@@ -3817,7 +3704,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"When the magnetizable coating is applied to both sides of the platter the disk is then referred\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. double sided.\n\n **Kiểm tra**: Chọn C. double sided \n\n **Vì sao các phương án khác sai**:\n\n- A (multiple sided): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (substrate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (all of the above): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1208,
+      "id": 1199,
       "quizId": 7,
       "text": "The set of all the tracks in the same relative position on the platter is referred to as a _________",
       "options": [
@@ -3830,34 +3717,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The set of all the tracks in the same relative position on the platter is referred to as a _________\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. cylinder.\n\n **Kiểm tra**: Chọn A. cylinder \n\n **Vì sao các phương án khác sai**:\n\n- B (floppy disk): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (single-sided disk): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (sector): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1209,
-      "quizId": 7,
-      "text": "The sum of the seek time and the rotational delay equals the _________, which is the time it takes to get into position to read or write.",
-      "options": [
-        "constant angular velocity",
-        "transfer time",
-        "access time",
-        "gap time"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The sum of the seek time and the rotational delay equals the ________, which is the time it takes to get into position to read or write.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. access time.\n\n **Kiểm tra**: Chọn A. access time \n\n **Vì sao các phương án khác sai**:\n\n- B (gap time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (transfer time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (constant angular velocity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
-    },
-    {
-      "id": 1210,
-      "quizId": 7,
-      "text": "What is the purpose of RAID system?",
-      "options": [
-        "It increases the disk storage capacity and availability",
-        "It increases the disk storage capacity",
-        "It increases operating system efficiency",
-        "It decreases operating system efficiency",
-        "It increases the processor speed"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the purpose of RAID system?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. It increases the disk storage capacity and availability.\n\n **Kiểm tra**: Chọn C. It increases the disk storage capacity and availability \n\n **Vì sao các phương án khác sai**:\n\n- A (It increases the processor speed): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (It increases the disk storage capacity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (It increases operating system efficiency): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (It decreases operating system efficiency): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
-    },
-    {
-      "id": 1211,
+      "id": 1200,
       "quizId": 7,
       "text": "How many bytes of data does each sector in the Winchester hard drive disk have?",
       "options": [
@@ -3871,20 +3731,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"How many bytes of data does each sector in the Winchester hard drive disk have?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. 512 bytes.\n\n **Kiểm tra**: Chọn C. 512 bytes \n\n **Vì sao các phương án khác sai**:\n\n- A (128 bytes): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (256 bytes): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (1024 bytes): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (4096 bytes): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1212,
-      "quizId": 7,
-      "text": "With the hard disk data layout, the set of all the tracks in the same relative position on the platter, is called _________.",
-      "options": [
-        "Cylinder",
-        "Tracks",
-        "Inter-track gap",
-        "Sector"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The set of all the tracks in the same relative position on the platter is referred to as a _________\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. cylinder.\n\n **Kiểm tra**: Chọn A. cylinder \n\n **Vì sao các phương án khác sai**:\n\n- B (floppy disk): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (single-sided disk): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (sector): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
-    },
-    {
-      "id": 1213,
+      "id": 1201,
       "quizId": 7,
       "text": "Consider a 5-drive, 200 GBytes-per-drive RAID array. What is the available data storage capacity for each of the RAID levels 5?",
       "options": [
@@ -3898,7 +3745,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Consider a 5-drive, 200 GBytes-per-drive RAID array. What is the available data storage capacity for each of the RAID levels 5?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. 800 GBytes.\n\n **Kiểm tra**: Chọn D. 800 GBytes \n\n **Vì sao các phương án khác sai**:\n\n- A (200 GBytes): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (400 GBytes): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (600 GBytes): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (None of the mentioned): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1214,
+      "id": 1202,
       "quizId": 7,
       "text": "The speed of data delivery is your main concern when configuring a RAID drive for a Media Streaming Server. This server has two hard disks installed. What type of RAID should you install, and what type of data will be stored on Disk 1 and Disk 2?",
       "options": [
@@ -3911,7 +3758,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The speed of data delivery is your main concern when configuring a RAID drive for a Media Streaming Server. This server has two hard disks installed. What type of RAID should you install, and what type of data will be stored on Disk 1 and Disk 2?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. RAID 0 - Disk 1 (Stripe) and Disk 2 (Stripe).\n\n **Kiểm tra**: Chọn A. RAID 0 - Disk 1 (Stripe) and Disk 2 (Stripe) \n\n **Vì sao các phương án khác sai**:\n\n- B (RAID 0 - Disk 1 (Mirror) and Disk 2 (Mirror)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (RAID 1 - Disk 1 (Stripe) and Disk 2 (Stripe)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (RAID 1 - Disk 1 (Mirror) and Disk 2 (Mirror)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1215,
+      "id": 1203,
       "quizId": 7,
       "text": "A 6 drive, 320GB-per-drive RAID array. What is the available data storage capacity for each of the RAID levels 5?",
       "options": [
@@ -3924,21 +3771,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A 6 drive, 320GB-per-drive RAID array. What is the available data storage capacity for each of the RAID levels 5?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. 1600 GB.\n\n **Kiểm tra**: Chọn C. 1600 GB \n\n **Vì sao các phương án khác sai**:\n\n- A (960 GB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (1920 GB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (1280 GB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1216,
-      "quizId": 7,
-      "text": "What is the purpose of RAID system?",
-      "options": [
-        "It increases the processor speed",
-        "It increases operating system efficiency",
-        "It decreases operating system efficiency",
-        "It increases the disk storage capacity and availability",
-        "It increases the disk storage capacity"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the purpose of RAID system?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. It increases the disk storage capacity and availability.\n\n **Kiểm tra**: Chọn C. It increases the disk storage capacity and availability \n\n **Vì sao các phương án khác sai**:\n\n- A (It increases the processor speed): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (It increases the disk storage capacity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (It increases operating system efficiency): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (It decreases operating system efficiency): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
-    },
-    {
-      "id": 1217,
+      "id": 1204,
       "quizId": 7,
       "text": "Consider the RAID array, 250GB each. Need 1000 GB storage data memory. How many drives for each RAID level 3?",
       "options": [
@@ -3951,7 +3784,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Consider the RAID array, 250GB each. Need 1000 GB storage data memory. How many drives for each RAID level 3?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 5.\n\n **Kiểm tra**: Chọn A. 5 \n\n **Vì sao các phương án khác sai**:\n\n- B (3): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (6): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (4): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1218,
+      "id": 1205,
       "quizId": 7,
       "text": "In terms of data storage, what is the main distinction between a solid state drive and a magnetic disk?",
       "options": [
@@ -3964,7 +3797,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải:**\nPhân biệt cấu tạo vật lý giữa ổ đĩa thể rắn (SSD) và ổ đĩa từ (HDD).\n\n**Các bước phân tích:**\n1. Đĩa từ (magnetic disk / HDD) sử dụng các phiến đĩa quay cơ học (spinning platters) phủ vật liệu từ tính cùng các đầu đọc/ghi di chuyển cơ học (read/write heads).\n2. Ổ thể rắn (SSD) không có bộ phận chuyển động cơ học nào mà sử dụng các chip nhớ flash bán dẫn (flash memory chips).\n3. Do đó phương án A mô tả chính xác điểm khác biệt cốt lõi.\n\n**Vì sao các phương án khác sai:**\n- B đảo ngược định nghĩa của hai loại.\n- C và D sai vì hai loại thiết bị dùng công nghệ vật lý hoàn toàn khác biệt.\n\n **Xuất hiện trong**: CEA201_-_SU26_-_RE.txt"
     },
     {
-      "id": 1219,
+      "id": 1206,
       "quizId": 7,
       "text": "Which is incorrect about RAID?",
       "options": [
@@ -3977,7 +3810,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which is incorrect about RAID?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. RAID is only used for Windows OS.\n\n **Kiểm tra**: Chọn C. RAID is only used for Windows OS \n\n **Vì sao các phương án khác sai**:\n\n- A (RAID is a set of physical disk drives viewed by the operating system as a single logical drive.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Data are distributed across the physical drives of an array in a scheme known as striping, described subsequently.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Redundant disk capacity is used to store parity information, which guarantees data recoverability in case of a disk failure.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1220,
+      "id": 1207,
       "quizId": 7,
       "text": "_________ is a set of physical disk drives viewed by the operating system as a single logical drive.",
       "options": [
@@ -3990,7 +3823,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nĐịnh nghĩa hệ thống mảng đĩa độc lập dự phòng RAID (Redundant Array of Independent Disks).\n\nCác bước:\n1. Trích nguyên văn định nghĩa từ sách giáo trình Stallings (Chương 6):\n 'RAID is a set of physical disk drives viewed by the operating system as a single logical drive.'\n2. RAID kết hợp nhiều ổ đĩa vật lý riêng biệt lại để hệ điều hành nhìn nhận như một ổ đĩa logic duy nhất, mang lại các lợi ích lớn:\n - Tăng tốc độ đọc/ghi nhờ kỹ thuật phân mảnh dữ liệu (striping).\n - Tăng độ an toàn và khả năng chịu lỗi nhờ sao lưu dữ liệu hoặc tính chẵn lẻ (parity).\n\nKiểm tra:\nKhái niệm được định nghĩa là RAID (C).\n\n **Xuất hiện trong**: CEA201_-_SU26_-_FE.txt"
     },
     {
-      "id": 1221,
+      "id": 1208,
       "quizId": 7,
       "text": "Data are transferred to and from the disk in _________.",
       "options": [
@@ -4003,7 +3836,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Data are transferred to and from the disk in ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. sectors.\n\n **Kiểm tra**: Chọn C. sectors \n\n **Vì sao các phương án khác sai**:\n\n- A (tracks): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (gaps): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (pits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1222,
+      "id": 1209,
       "quizId": 7,
       "text": "There are typically hundreds of sectors per track and they may be either fixed or variable length",
       "options": [
@@ -4014,7 +3847,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"There are typically hundreds of sectors per track and they may be either fixed or variable length\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1223,
+      "id": 1210,
       "quizId": 7,
       "text": "Magnetic disks are the foundation of external memory on virtually all computer systems.",
       "options": [
@@ -4025,7 +3858,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Magnetic disks are the foundation of external memory on virtually all computer systems.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1224,
+      "id": 1211,
       "quizId": 7,
       "text": "Which of the following is an example of sequential access media?",
       "options": [
@@ -4039,7 +3872,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following is an example of sequential access media?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Magnetic tape.\n\n **Kiểm tra**: Chọn C. Magnetic tape \n\n **Vì sao các phương án khác sai**:\n\n- A (Main Memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (CD): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Cache memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Magnetic disk): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1225,
+      "id": 1212,
       "quizId": 7,
       "text": "Which is the correct choice for sorting in increasing speed average of memory?",
       "options": [
@@ -4053,7 +3886,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSắp xếp các cấp bộ nhớ theo thứ tự tốc độ trung bình tăng dần (từ chậm nhất đến nhanh nhất).\n\nCác bước:\n1. Bậc thang phân cấp tốc độ bộ nhớ:\n - Băng từ (Magnetic Tape) & Đĩa từ (Magnetic Disk/HDD): Chậm nhất (thời gian truy cập tính bằng mili-giây, cơ học).\n - Ổ thể rắn (SSD): Nhanh hơn HDD khoảng 100 lần (tính bằng micro-giây, chip nhớ flash).\n - Bộ nhớ chính (Main Memory/RAM): Nhanh hơn SSD hàng trăm lần (tính bằng hàng chục nano-giây, DRAM).\n - Bộ nhớ đệm (Cache Memory): Nhanh nhất trong các loại trên (tính bằng nano-giây, SRAM tĩnh tích hợp trên chip CPU).\n2. Xét chuỗi tăng dần ở phương án C:\n \\ [ \\ textMagnetic Disk < \\ textSSD < \\ textMain Memory < \\ textCache Memory \\ ]\n Chuỗi này hoàn toàn chính xác theo thứ tự tăng dần tốc độ.\n\nKiểm tra:\nPhương án đúng là C.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1226,
+      "id": 1213,
       "quizId": 7,
       "text": "How many parity check bits must be included with the data word to achieve single error correction when the data word contains 2048 bits?",
       "options": [
@@ -4066,7 +3899,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"How many parity check bits must be included with the data word to achieve single error correction when the data word contains 1023 bits?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. 11.\n\n **Kiểm tra**: Chọn B. 11 \n\n **Vì sao các phương án khác sai**:\n\n- A (10): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (12): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (9): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1227,
+      "id": 1214,
       "quizId": 7,
       "text": "Which of the following memory devices has the lowest access speed?",
       "options": [
@@ -4080,7 +3913,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following memory types are nonvolatile?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. all of the above.\n\n **Kiểm tra**: Chọn D. all of the above \n\n **Vì sao các phương án khác sai**:\n\n- A (erasable PROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (programmable ROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (flash memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1228,
+      "id": 1215,
       "quizId": 7,
       "text": "Which of the following issues are peculiar to SSDs compared to HDDs? (choose two correct answers)",
       "options": [
@@ -4099,7 +3932,7 @@
       "multiple": true
     },
     {
-      "id": 1229,
+      "id": 1216,
       "quizId": 7,
       "text": "_________ is when the disk rotates more slowly for accesses near the outer edge than for those near the center.",
       "options": [
@@ -4112,7 +3945,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"___________ is when the disk rotates more slowly for accesses near the outer edge than for those near the center.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Constant linear velocity (CLV).\n\n **Kiểm tra**: Chọn D. Constant linear velocity (CLV) \n\n **Vì sao các phương án khác sai**:\n\n- A (Seek time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Magnetoresistive): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Constant angular velocity (CAV)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1230,
+      "id": 1217,
       "quizId": 7,
       "text": "A _________ disk is permanently mounted in the disk drive, such as the hard disk in a pers",
       "options": [
@@ -4125,7 +3958,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A ___________ disk is permanently mounted in the disk drive, such as the hard disk in a pers\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. nonremovable.\n\n **Kiểm tra**: Chọn C. nonremovable \n\n **Vì sao các phương án khác sai**:\n\n- A (removable): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (double sided): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (movable-head): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1231,
+      "id": 1218,
       "quizId": 7,
       "text": "_________ is the standardized scheme for multiple-disk database design.",
       "options": [
@@ -4138,7 +3971,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__________ is the standardized scheme for multiple-disk database design.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. RAID.\n\n **Kiểm tra**: Chọn A. RAID \n\n **Vì sao các phương án khác sai**:\n\n- B (CAV): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (CLV): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (SSD): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1232,
+      "id": 1219,
       "quizId": 7,
       "text": "Scanning information at the same rate by rotating the disk at a fixed speed is known as the _",
       "options": [
@@ -4151,7 +3984,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Scanning information at the same rate by rotating the disk at a fixed speed is known as the _\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. constant angular velocity.\n\n **Kiểm tra**: Chọn A. constant angular velocity \n\n **Vì sao các phương án khác sai**:\n\n- B (magnetoresistive): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (rotational delay): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (constant linear velocity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1233,
+      "id": 1220,
       "quizId": 7,
       "text": "A _________ is a high-definition video disk that can store 25 Gbytes on a single layer on a single side.",
       "options": [
@@ -4164,7 +3997,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A ________ is a high-definition video disk that can store 25 Gbytes on a single layer on a single side.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Blu-ray DVD.\n\n **Kiểm tra**: Chọn D. Blu-ray DVD \n\n **Vì sao các phương án khác sai**:\n\n- A (DVD): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (DVD-R): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (DVD-RW): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1234,
+      "id": 1221,
       "quizId": 7,
       "text": "External memory is often equated with main memory.",
       "options": [
@@ -4175,7 +4008,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"External memory is often equated with main memory.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1235,
+      "id": 1222,
       "quizId": 7,
       "text": "The disadvantage of _________ is that the amount of data that can be stored on the long outer tracks is the same as what can be stored on the short inner tracks.",
       "options": [
@@ -4188,20 +4021,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The disadvantage of _________ is that the amount of data that can be stored on the long outer tracks is the same as what can be stored on the short inner tracks.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. CAV.\n\n **Kiểm tra**: Chọn A. CAV \n\n **Vì sao các phương án khác sai**:\n\n- B (SSD): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (ROM): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (CLV): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1236,
-      "quizId": 7,
-      "text": "_________ is when the disk rotates more slowly for accesses near the outer edge than for those near the center.",
-      "options": [
-        "Constant linear velocity (CLV)",
-        "Constant angular velocity (CAV)",
-        "Seek time",
-        "Magnetoresistive"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"___________ is when the disk rotates more slowly for accesses near the outer edge than for those near the center.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Constant linear velocity (CLV).\n\n **Kiểm tra**: Chọn D. Constant linear velocity (CLV) \n\n **Vì sao các phương án khác sai**:\n\n- A (Seek time): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Magnetoresistive): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Constant angular velocity (CAV)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
-    },
-    {
-      "id": 1237,
+      "id": 1223,
       "quizId": 7,
       "text": "Adjacent tracks are separated by _________.",
       "options": [
@@ -4214,7 +4034,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Adjacent tracks are separated by ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. gaps.\n\n **Kiểm tra**: Chọn B. gaps \n\n **Vì sao các phương án khác sai**:\n\n- A (sectors): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (pits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (heads): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1238,
+      "id": 1224,
       "quizId": 7,
       "text": "What is incorrect about SSDs have the following advantages over HDDs?",
       "options": [
@@ -4228,7 +4048,20 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ ngoài & Mảng đĩa RAID thuộc Chapter 07: External Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is incorrect about SSDs have the following advantages over HDDs?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ nhớ ngoài bao gồm Đĩa từ, Ổ SSD và Đĩa quang. Kiến trúc RAID kết hợp nhiều ổ đĩa vật lý: RAID 0 (phân mảnh tăng tốc), RAID 1 (soi gương dự phòng), RAID 5 (mã kiểm tra chẵn lẻ rải đều) và RAID 6 (mã kiểm tra kép).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Higher access times and latency rates: Over 10 times slower than the HDD..\n\n **Kiểm tra**: Chọn A. Higher access times and latency rates: Over 10 times slower than the HDD. \n\n **Vì sao các phương án khác sai**:\n\n- B (Durability: Less susceptible to physical shock and vibration.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Longer lifespan: SSDs are not susceptible to mechanical wear.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Lower power consumption: SSDs use considerably less power than comparable-size HDDs.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Quieter and cooler running capabilities: Less space required, lower energy costs, and a greener enterprise.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 07: External Memory"
     },
     {
-      "id": 1239,
+      "id": 1225,
+      "quizId": 7,
+      "text": "Which factor has the most significant impact on the average access time of a magnetic disk drive?",
+      "options": [
+        "The rotational speed of the disk",
+        "The size of the disk platter",
+        "The type of file system used",
+        "The material composition of the disk surface"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nXác định yếu tố phần cứng có ảnh hưởng đáng kể nhất đến thời gian truy xuất trung bình (average access time) của ổ đĩa từ (HDD).\n\nCác bước:\n1. Thời gian truy xuất đĩa từ trung bình bao gồm 3 thành phần chính:\n   [\n   T_{\text{access}} = T_{\text{seek}} + T_{\text{rotational latency}} + T_{\text{transfer}}\n   ]\n   Trong đó:\n   - (T_{\text{seek}}): Thời gian đầu đọc di chuyển đến đúng track (rãnh ghi).\n   - (T_{\text{rotational latency}}): Thời gian chờ sector mong muốn quay đến dưới đầu đọc.\n   - (T_{\text{transfer}}): Thời gian đọc/ghi dữ liệu của sector khi nó đi qua đầu đọc.\n2. Tốc độ quay của đĩa (Rotational speed, đo bằng vòng/phút - RPM):\n   - Xác định trực tiếp thời gian trễ quay trung bình:\n     [\n     T_{mathrm{rotational latency}} = \frac{1}{2 \times r}\n     ]\n     với (r = \frac{mathrm{RPM}}{60}) là tốc độ quay (vòng/giây).\n   - Đồng thời quyết định trực tiếp tốc độ truyền dữ liệu qua đầu đọc ((T_{\text{transfer}})).\n   - Ví dụ: Ổ 15,000 RPM có độ trễ quay chỉ bằng một nửa so với ổ 7,200 RPM và một phần ba so với ổ 5,400 RPM.\n3. Trong các phương án được nêu, tốc độ quay là yếu tố động học quyết định mạnh nhất đến thời gian truy xuất trung bình.\n\nKiểm tra:\nTrong các thông số kỹ thuật thương mại của HDD, RPM là chỉ số chính biểu thị đẳng cấp hiệu năng của ổ đĩa.\n\nVì sao các phương án khác sai:\n- B (The size of the disk platter): Đường kính đĩa (3.5 inch, 2.5 inch) ảnh hưởng đến dung lượng và một phần vận tốc dài ở mép đĩa, nhưng không phải yếu tố chi phối thời gian truy xuất như RPM.\n- C (The type of file system used): Hệ thống tập tin (NTFS, ext4, FAT32) là phần mềm logic, không quyết định thời gian truy xuất cơ học của phần cứng.\n- D (The material composition): Thành phần vật liệu ảnh hưởng đến mật độ từ tính và độ bền, không quyết định thời gian quay và định vị.\n\nLưu ý/công thức cần nhớ:\nĐộ trễ quay trung bình: (T_r = \frac{1}{2 \times (\text{RPM}/60)})."
+    },
+    {
+      "id": 1226,
       "quizId": 8,
       "text": "An I/O device is referred to as a _________.",
       "options": [
@@ -4241,7 +4074,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An I/O device is referred to as a ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. peripheral.\n\n **Kiểm tra**: Chọn C. peripheral \n\n **Vì sao các phương án khác sai**:\n\n- A (CPU): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (control device): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1240,
+      "id": 1227,
       "quizId": 8,
       "text": "The I/O function includes a _________ requirement to coordinate the flow of traffic between internal resources and external devices.",
       "options": [
@@ -4254,7 +4087,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The I/O function includes a ________ requirement to coordinate the flow of traffic between internal resources and external devices.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. control and timing.\n\n **Kiểm tra**: Chọn C. control and timing \n\n **Vì sao các phương án khác sai**:\n\n- A (cycle): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (status reporting): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (data): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1241,
+      "id": 1228,
       "quizId": 8,
       "text": "With isolated I/O there is a single address space for memory locations and I/O devices.",
       "options": [
@@ -4265,7 +4098,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"With isolated I/O there is a single address space for memory locations and I/O devices.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1242,
+      "id": 1229,
       "quizId": 8,
       "text": "An I/O module must recognize one unique address for each peripheral it controls.",
       "options": [
@@ -4276,7 +4109,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An I/O module must recognize one unique address for each peripheral it controls.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1243,
+      "id": 1230,
       "quizId": 8,
       "text": "I/O channels are commonly seen on microcomputers, whereas I/O controllers are used on mainframes.",
       "options": [
@@ -4287,7 +4120,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc và phân loại Mô-đun vào/ra (I/O Module: I/O Controller vs I/O Channel) thuộc Chapter 08: Input & Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"I/O channels are commonly seen on microcomputers, whereas I/O controllers are used on mainframes.\" (Các kênh I/O thường thấy trên vi máy tính, trong khi các bộ điều khiển I/O được dùng trên máy tính lớn mainframe).\n- Theo giáo trình William Stallings (COA 11th Edition - Chapter 08):\n  - **I/O Controller** (bộ điều khiển I/O): Là mô-đun I/O cấp thấp, yêu cầu CPU can thiệp trực tiếp nhiều vào các lệnh chi tiết, thường được sử dụng phổ biến trên **microcomputers** (máy tính cá nhân / vi máy tính).\n  - **I/O Channel / I/O Processor** (kênh I/O / bộ xử lý I/O): Là mô-đun I/O cấp cao, có kiến trúc vi xử lý và tập lệnh chuyên dụng riêng để thực hiện trọn vẹn các chương trình I/O mà không cần CPU giám sát liên tục, thường được sử dụng trên các hệ thống lớn như **mainframes**.\n- Mệnh đề trong đề bài đã bị **đảo ngược vị trí** của hai khái niệm (viết ngược I/O channels với I/O controllers), do đó nhận định này là sai (False).\n\n **Kiểm tra**: Chọn A. False \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input & Output"
     },
     {
-      "id": 1244,
+      "id": 1231,
       "quizId": 8,
       "text": "Because the 82C55A is programmable via the control register, it can be used to control variety of simple peripheral devices.",
       "options": [
@@ -4298,7 +4131,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Because the 82C55A is programmable via the control register, it can be used to control variety of simple peripheral devices.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1245,
+      "id": 1232,
       "quizId": 8,
       "text": "Which one of the following can be called as a peripheral?",
       "options": [
@@ -4312,7 +4145,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Khối Điều khiển (Control Unit) & Vi chương trình thuộc Chapter 19: Control Unit Operation (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which one of the following can be called as a peripheral?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối điều khiển sinh ra các tín hiệu điều khiển phần cứng. Điều khiển cứng (Hardwired) cho tốc độ cao; Điều khiển vi chương trình (Microprogrammed) lưu các vi lệnh (microinstructions) trong bộ nhớ điều khiển.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Speakers.\n\n **Kiểm tra**: Chọn C. Speakers \n\n **Vì sao các phương án khác sai**:\n\n- A (Control Unit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Arithmetic Unit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Logic Unit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Main Memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 19: Control Unit Operation"
     },
     {
-      "id": 1246,
+      "id": 1233,
       "quizId": 8,
       "text": "The _________ command is used to activate a peripheral and tell it what to do.",
       "options": [
@@ -4325,7 +4158,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ________ command is used to activate a peripheral and tell it what to do.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. control.\n\n **Kiểm tra**: Chọn A. control \n\n **Vì sao các phương án khác sai**:\n\n- B (test): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (read): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (write): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1247,
+      "id": 1234,
       "quizId": 8,
       "text": "What interface is used to connect the processor to I/O devices that require transmission of data one bit at a time?",
       "options": [
@@ -4339,7 +4172,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What interface is used to connect the processor to I/O devices that require transmission of data one bit at a time?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Serial.\n\n **Kiểm tra**: Chọn B. Serial \n\n **Vì sao các phương án khác sai**:\n\n- A (Parallel): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Output): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Input): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1248,
+      "id": 1235,
       "quizId": 8,
       "text": "An I/O module cannot exchange data directly with the processor.",
       "options": [
@@ -4350,7 +4183,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An I/O module cannot exchange data directly with the processor.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1249,
+      "id": 1236,
       "quizId": 8,
       "text": "A set of I/O modules is a key element of a computer system.",
       "options": [
@@ -4361,7 +4194,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A set of I/O modules is a key element of a computer system.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1250,
+      "id": 1237,
       "quizId": 8,
       "text": "Swapping is an I/O operation.",
       "options": [
@@ -4372,7 +4205,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Swapping is an I/O operation.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1251,
+      "id": 1238,
       "quizId": 8,
       "text": "The _________ command causes the I/O module to take an item of data from the data bus and transmit that data item to the peripheral.",
       "options": [
@@ -4385,20 +4218,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ________ command causes the I/O module to take an item of data from the data bus and transmit that data item to the peripheral.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. write.\n\n **Kiểm tra**: Chọn A. write \n\n **Vì sao các phương án khác sai**:\n\n- B (test): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (read): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (control): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1252,
-      "quizId": 8,
-      "text": "The _________ command is used to activate a peripheral and tell it what to do.",
-      "options": [
-        "read",
-        "test",
-        "write",
-        "control"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ________ command is used to activate a peripheral and tell it what to do.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. control.\n\n **Kiểm tra**: Chọn A. control \n\n **Vì sao các phương án khác sai**:\n\n- B (test): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (read): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (write): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
-    },
-    {
-      "id": 1253,
+      "id": 1239,
       "quizId": 8,
       "text": "An I/O module that takes on most of the detailed processing burden, presenting a high-level interface to the processor, is usually referred to as an _________.",
       "options": [
@@ -4411,20 +4231,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An I/O module that takes on most of the detailed processing burden, presenting a high-level interface to the processor, is usually referred to as an __________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. I/O channel.\n\n **Kiểm tra**: Chọn B. I/O channel \n\n **Vì sao các phương án khác sai**:\n\n- A (I/O command): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (device controller): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (I/O controller): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1254,
-      "quizId": 8,
-      "text": "An I/O module that takes on most of the detailed processing burden, presenting a high-level interface to the processor, is usually referred to as an _________.",
-      "options": [
-        "I/O channel",
-        "I/O command",
-        "I/O controller",
-        "device controller"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An I/O module that takes on most of the detailed processing burden, presenting a high-level interface to the processor, is usually referred to as an __________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. I/O channel.\n\n **Kiểm tra**: Chọn B. I/O channel \n\n **Vì sao các phương án khác sai**:\n\n- A (I/O command): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (device controller): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (I/O controller): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
-    },
-    {
-      "id": 1255,
+      "id": 1240,
       "quizId": 8,
       "text": "In isolated I/O,_________",
       "options": [
@@ -4438,7 +4245,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In isolated I/O,_________\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. The I/O devices have a separate address space from memory.\n\n **Kiểm tra**: Chọn B. The I/O devices have a separate address space from memory \n\n **Vì sao các phương án khác sai**:\n\n- A (The I/O devices and the memory share the same address space): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (The memory and I/O devices have an associated address space): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (A part of the memory is specifically set aside for the I/O operation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (None of the mentioned): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1256,
+      "id": 1241,
       "quizId": 8,
       "text": "(1) An I/O module must recognize one unique address for each peripheral it controls. (2) I/O channels are commonly seen on microcomputers, whereas I/O controllers are used on mainframes. The statement (1) is _________ and (2) is _________",
       "options": [
@@ -4451,7 +4258,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"An I/O module must recognize one unique address for each peripheral it controls.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1257,
+      "id": 1242,
       "quizId": 8,
       "text": "What is the main distinction between Interrupt-Driven I/O and Direct Memory Access (DMA)?",
       "options": [
@@ -4464,7 +4271,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải:**\nPhân biệt cấu tạo vật lý giữa ổ đĩa thể rắn (SSD) và ổ đĩa từ (HDD).\n\n**Các bước phân tích:**\n1. Đĩa từ (magnetic disk / HDD) sử dụng các phiến đĩa quay cơ học (spinning platters) phủ vật liệu từ tính cùng các đầu đọc/ghi di chuyển cơ học (read/write heads).\n2. Ổ thể rắn (SSD) không có bộ phận chuyển động cơ học nào mà sử dụng các chip nhớ flash bán dẫn (flash memory chips).\n3. Do đó phương án A mô tả chính xác điểm khác biệt cốt lõi.\n\n**Vì sao các phương án khác sai:**\n- B đảo ngược định nghĩa của hai loại.\n- C và D sai vì hai loại thiết bị dùng công nghệ vật lý hoàn toàn khác biệt.\n\n **Xuất hiện trong**: CEA201_-_SU26_-_RE.txt"
     },
     {
-      "id": 1258,
+      "id": 1243,
       "quizId": 8,
       "text": "What are the most basic functions of an I/O module?",
       "options": [
@@ -4477,7 +4284,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What are the most basic functions of an I/O module?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Control and timing, processor communication, device communication, data buffering, error detection..\n\n **Kiểm tra**: Chọn A. Control and timing, processor communication, device communication, data buffering, error detection. \n\n **Vì sao các phương án khác sai**:\n\n- B (Control and timing, processor communication, data buffering, error detection, writing data to memory.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Control and timing, processor communication, device communication, data buffering, blocking device.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Control and timing, processor communication, device communication, error detection, data processing.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1259,
+      "id": 1244,
       "quizId": 8,
       "text": "The I/O technique where the processor busy waits for an I/O operation to complete is called _________",
       "options": [
@@ -4490,7 +4297,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The I/O technique where the processor busy waits for an I/O operation to complete is called ___________\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Programmed I/O.\n\n **Kiểm tra**: Chọn D. Programmed I/O \n\n **Vì sao các phương án khác sai**:\n\n- A (Programmed I/O or DMA): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Interrupt-driven I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Direct Memory Access (DMA)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1260,
+      "id": 1245,
       "quizId": 8,
       "text": "What are basic registers that help CPU establish a connection with an I/O device?",
       "options": [
@@ -4503,7 +4310,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nCác thanh ghi giao tiếp cơ bản giữa CPU và thiết bị Vào/Ra (I/O Modules).\n\nCác bước:\n1. Tương tự như cơ chế giao tiếp với bộ nhớ chính (sử dụng MAR để chỉ định địa chỉ và MBR để đệm dữ liệu):\n2. Khi CPU giao tiếp với hệ thống module Vào/Ra (I/O Module):\n - I/OAR (I/O Address Register): Thanh ghi địa chỉ I/O, dùng để chỉ định cổng hoặc thiết bị I/O cụ thể cần trao đổi.\n - I/OBR (I/O Buffer Register): Thanh ghi đệm dữ liệu I/O, dùng để tạm giữ dữ liệu trao đổi giữa CPU và module I/O.\n3. Cặp thanh ghi cơ bản hỗ trợ kết nối I/O này là I/OAR và I/OBR.\n\nKiểm tra:\nĐáp án đúng là A (I/OAR, I/OBR).\n\n **Xuất hiện trong**: CEA201_-_SU26_-_FE.txt"
     },
     {
-      "id": 1261,
+      "id": 1246,
       "quizId": 8,
       "text": "The decision as to which process's pending I/O request shall be handled by an available I/O device",
       "options": [
@@ -4516,7 +4323,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The decision as to which process's pending I/O request shall be handled by an available I/O device\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. I/O scheduling.\n\n **Kiểm tra**: Chọn C. I/O scheduling \n\n **Vì sao các phương án khác sai**:\n\n- A (Medium-term scheduling): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Short-term scheduling): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Long-term scheduling): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1262,
+      "id": 1247,
       "quizId": 8,
       "text": "In which I/O technique does an I/O channel or processor manage transfer of data, thus freeing the CPU?",
       "options": [
@@ -4529,7 +4336,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân loại các kỹ thuật Vào/Ra nâng cao trong kiến trúc máy tính.\n\nCác bước:\n1. Quá trình tiến hóa của chức năng I/O:\n - Programmed I/O: CPU trực tiếp kiểm soát từng bước, bị chiếm dụng hoàn toàn.\n - Interrupt-driven I/O: CPU không phải đợi nhưng vẫn phải trực tiếp thực hiện lệnh chuyển từng từ dữ liệu.\n - DMA: Module DMA điều khiển truyền khối dữ liệu giữa thiết bị và RAM.\n - Kênh Vào/Ra (I/O Channel / Channel I/O hay I/O Processor): Là một bộ xử lý chuyên dụng có tập lệnh riêng (Channel Command Words - CCW). Kênh I/O thực thi các chương trình I/O độc lập trong bộ nhớ chính, tự quản lý mọi chi tiết truyền tải phức tạp mà không cần CPU can thiệp.\n2. Kỹ thuật sử dụng kênh hoặc bộ vi xử lý I/O chuyên biệt này được gọi là Channel I/O (Vào/Ra bằng kênh).\n\nKiểm tra:\nPhương án đúng là C (Channel I/O).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1263,
+      "id": 1248,
       "quizId": 8,
       "text": "Which of the following is a DISADVANTAGE of using programmed I/O?",
       "options": [
@@ -4542,7 +4349,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following is a DISADVANTAGE of using programmed I/O?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Requires the CPU to be constantly busy with I/O tasks.\n\n **Kiểm tra**: Chọn C. Requires the CPU to be constantly busy with I/O tasks \n\n **Vì sao các phương án khác sai**:\n\n- A (Increases system efficiency): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Reduces CPU involvement in I/O operations): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Increases system complexity): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1264,
+      "id": 1249,
       "quizId": 8,
       "text": "In programmed I/O, who does initialize the transfer of data?",
       "options": [
@@ -4555,7 +4362,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In programmed I/O, who does initialize the transfer of data?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. CPU.\n\n **Kiểm tra**: Chọn B. CPU \n\n **Vì sao các phương án khác sai**:\n\n- A (I/O controller): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (DMA controller): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Operating system): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1265,
+      "id": 1250,
       "quizId": 8,
       "text": "Which statement is correct in memory-mapped I/O?",
       "options": [
@@ -4568,7 +4375,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân biệt giữa Memory-Mapped I/O và Isolated I/O (I/O riêng biệt).\n\nCác bước:\n1. Memory-Mapped I/O (Vào/Ra ánh xạ bộ nhớ):\n - Các cổng và thanh ghi của thiết bị I/O được đối xử như các ô nhớ thông thường.\n - Bộ nhớ chính và các thiết bị I/O chia sẻ chung một không gian địa chỉ duy nhất (Share the same address space).\n - CPU sử dụng các lệnh đọc/ghi bộ nhớ tiêu chuẩn (ví dụ MOV trong x86) để truy xuất cả bộ nhớ và thiết bị ngoại vi.\n2. Isolated I/O (Port-Mapped I/O):\n - Thiết bị I/O có không gian địa chỉ cổng riêng biệt với bộ nhớ chính. Cần có các lệnh chuyên dụng (như IN/OUT).\n\nKiểm tra:\nPhát biểu chính xác về Memory-Mapped I/O là phương án A.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1266,
+      "id": 1251,
       "quizId": 8,
       "text": "The advantage of interrupt driven I/O over programmed I/O is _________.",
       "options": [
@@ -4581,7 +4388,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSo sánh cơ chế Vào/Ra điều khiển bằng ngắt (Interrupt-driven I/O) và Vào/Ra bằng chương trình (Programmed I/O).\n\nCác bước:\n1. Programmed I/O (Vào/Ra bằng chương trình): CPU phải liên tục thăm dò (polling/busy waiting) cờ trạng thái của thiết bị I/O, làm lãng phí chu kỳ xử lý quý giá của CPU trong lúc thiết bị cơ học chậm chạp chuẩn bị dữ liệu.\n2. Interrupt-driven I/O (Vào/Ra bằng ngắt - 'the former'): CPU phát lệnh I/O rồi tiếp tục thực hiện các tác vụ hữu ích khác của chương trình mà không cần phải chờ đợi cho đến khi thao tác I/O hoàn tất. Khi thiết bị ngoại vi sẵn sàng, nó sẽ phát tín hiệu ngắt báo cho CPU xử lý.\n\nKiểm tra:\nƯu điểm của Interrupt-driven I/O là không phải chờ thao tác I/O hoàn tất (B).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1267,
+      "id": 1252,
       "quizId": 8,
       "text": "What is the main advantage of using DMA over Programmed I/O or Interrupt-Driven I/O?",
       "options": [
@@ -4594,7 +4401,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nƯu điểm về hiệu năng của ổ thể rắn (SSD) so với ổ đĩa từ truyền thống (HDD).\n\nCác bước:\n1. Ổ từ cơ học (HDD) phụ thuộc vào sự chuyển động cơ khí của đĩa quay và cần gạt đọc/ghi, dẫn đến thời gian tìm rãnh (seek time) và độ trễ quay (rotational latency) tính bằng mili-giây.\n2. Ổ thể rắn (SSD) sử dụng bộ nhớ flash bán dẫn điện tử, không chứa các bộ phận chuyển động cơ học:\n - Thời gian truy xuất nhanh hơn (vài micro-giây).\n - Độ trễ cực thấp.\n - Khả năng chống sốc vật lý và độ tin cậy cơ học cao hơn.\n\nKiểm tra:\nPhương án A tóm tắt chính xác các ưu thế hiệu năng của SSD so với HDD.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1268,
+      "id": 1253,
       "quizId": 8,
       "text": "When data are moved over longer distances, to or from a remote device, the process is known as _________.",
       "options": [
@@ -4607,7 +4414,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"When data are moved over longer distances, to or from a remote device, the process is known as ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. data communications.\n\n **Kiểm tra**: Chọn A. data communications \n\n **Vì sao các phương án khác sai**:\n\n- B (registering): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (structuring): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (data transport): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1269,
+      "id": 1254,
       "quizId": 8,
       "text": "_________ can exchange data directly with the processor. Just as the processor can initiate a read or write with memory, designating the address of a specific location, the processor can also read data from or write data to _________.",
       "options": [
@@ -4621,7 +4428,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"___________ can exchange data directly with the processor. Just as the processor can initiate a read or write with memory, designating the address of a specific location, the processor can also read data from or write data to ___________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. I/O module / Memory.\n\n **Kiểm tra**: Chọn A. I/O module / Memory \n\n **Vì sao các phương án khác sai**:\n\n- B (Interrupts / I/O module): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (I/O module / Interrupts): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Interrupts / Interrupts): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Memory / I/O module): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1270,
+      "id": 1255,
       "quizId": 8,
       "text": "Cycle stealing is/are used in which concept?",
       "options": [
@@ -4635,21 +4442,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Cycle stealing is/are used in which concept?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. DMA.\n\n **Kiểm tra**: Chọn B. DMA \n\n **Vì sao các phương án khác sai**:\n\n- A (Programmed I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Interrupts): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Memory mapped I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (All of the above): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1271,
-      "quizId": 8,
-      "text": "Cycle stealing is/are used in which concept?",
-      "options": [
-        "Programmed I/O",
-        "DMA",
-        "Interrupts",
-        "Memory mapped I/O",
-        "All of the above"
-      ],
-      "correctIndex": 1,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Cycle stealing is/are used in which concept?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. DMA.\n\n **Kiểm tra**: Chọn B. DMA \n\n **Vì sao các phương án khác sai**:\n\n- A (Programmed I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Interrupts): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Memory mapped I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (All of the above): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
-    },
-    {
-      "id": 1272,
+      "id": 1256,
       "quizId": 8,
       "text": "From a structural point of view, the external devices are controlled by _________.",
       "options": [
@@ -4662,7 +4455,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"From a structural point of view, the external devices are controlled by _____.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. I/O modules.\n\n **Kiểm tra**: Chọn C. I/O modules \n\n **Vì sao các phương án khác sai**:\n\n- A (Control signals): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Peripheral device): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Remote devices): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1273,
+      "id": 1257,
       "quizId": 8,
       "text": "A _________ is a small, very-high-speed memory maintained by the instruction fetch stage of the pipeline and containing the n most recently fetched instructions in sequence.",
       "options": [
@@ -4675,7 +4468,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A _________ is a small, very-high-speed memory maintained by the instruction fetch stage of the pipeline and containing the n most recently fetched instructions in sequence.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. loop buffer.\n\n **Kiểm tra**: Chọn B. loop buffer \n\n **Vì sao các phương án khác sai**:\n\n- A (delayed branch): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (branch prediction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (multiple stream): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1274,
+      "id": 1258,
       "quizId": 8,
       "text": "Which registers can interact with the secondary storage?",
       "options": [
@@ -4689,7 +4482,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which registers can interact with the secondary storage?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. MAR.\n\n **Kiểm tra**: Chọn A. MAR \n\n **Vì sao các phương án khác sai**:\n\n- B (PC): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (IR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (R0): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (All of the mentioned): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1275,
+      "id": 1259,
       "quizId": 8,
       "text": "For interrupts, all I/O modules share a common interrupt request line. When the processor senses an interrupt, it sends out an interrupt acknowledge. This signal propagates through a series of I/O modules until it gets to a requesting module. Which kind of interrupt technique is it?",
       "options": [
@@ -4702,7 +4495,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Mô-đun I/O & Các phương thức trao đổi dữ liệu thuộc Chapter 08: Input/Output (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"For interrupts, all I/O modules share a common interrupt request line. When the processor senses an interrupt, it sends out an interrupt acknowledge. This signal propagates through a series of I/O modules until it gets to a requesting module. Which kind of interrupt technique is it?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Mô-đun I/O quản lý giao tiếp thiết bị ngoại vi. Các phương thức I/O: 1. Programmed I/O (CPU liên tục kiểm tra trạng thái), 2. Interrupt-Driven I/O (I/O gửi tín hiệu ngắt khi sẵn sàng), 3. DMA (truyền dữ liệu trực tiếp giữa I/O và RAM không qua CPU bằng cơ chế cướp chu kỳ bus). Tiến hóa I/O bắt đầu từ CPU trực tiếp điều khiển thiết bị ngoại vi.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Daisy chain.\n\n **Kiểm tra**: Chọn C. Daisy chain \n\n **Vì sao các phương án khác sai**:\n\n- A (Multiple interrupt lines): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Software poll): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Bus arbitration): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 08: Input/Output"
     },
     {
-      "id": 1276,
+      "id": 1260,
       "quizId": 8,
       "text": "When large volumes of data are to be moved, a more efficient technique is direct memory ac",
       "options": [
@@ -4713,7 +4506,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"When large volumes of data are to be moved, a more efficient technique is direct memory ac\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1277,
+      "id": 1261,
       "quizId": 8,
       "text": "In the computer, what categories do external devices include? (choose 3 correct answers)",
       "options": [
@@ -4732,7 +4525,7 @@
       "multiple": true
     },
     {
-      "id": 1278,
+      "id": 1262,
       "quizId": 8,
       "text": "The hardware mechanism that allows a device to notify the CPU is called _________ .",
       "options": [
@@ -4745,7 +4538,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nCơ chế thông báo phần cứng giữa thiết bị ngoại vi và bộ vi xử lý (CPU).\n\nCác bước:\n1. Khi một thiết bị phần cứng (như bàn phím, chuột, card mạng, ổ đĩa) có sự kiện cần được phục vụ, nó sẽ phát một tín hiệu điện trên đường dây ngắt (Interrupt Request line - IRQ).\n2. Cơ chế phần cứng này được gọi là Ngắt (Interrupt). Ngắt cho phép thiết bị thông báo cho CPU một cách bất đồng bộ mà không cần CPU phải liên tục thăm dò.\n\nKiểm tra:\nCơ chế phần cứng đó là ngắt (interrupt - B).\n\nVì sao các phương án khác sai:\n- A (Polling): Là cơ chế phần mềm, CPU chủ động liên tục kiểm tra thiết bị.\n- C (Driver): Trình điều khiển thiết bị (phần mềm).\n- D (Controlling): Thuật ngữ chung chung, không phải cơ chế phần cứng cụ thể.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1279,
+      "id": 1263,
       "quizId": 8,
       "text": "The instruction, which adds 1 to thevalue in a memory location, has five stages: fetch opcode (four cycles), fetch operand address (three cycles), fetch operand (three cycles), add 1 to operand (three cycles), and store operand (three cycles). An interrupt sends request at beginning of fetch operand stage. How many cycles does the processor enter the interrupt processing cycle?",
       "options": [
@@ -4759,7 +4552,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The instruction, which adds 1 to the value in a memory location, has five stages: fetch opcode (2 bus cycles), fetch operand address (2 bus cycles), fetch operand (2 bus cycles), add 1 to operand (1 bus cycle), and store operand (3 bus cycles). An interrupt sends request at beginning of fetch operand address stage. How many cycles does the processor enter the interrupt processing cycle?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. 8.\n\n **Kiểm tra**: Chọn C. 8 \n\n **Vì sao các phương án khác sai**:\n\n- A (6): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (7): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (9): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (5): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1280,
+      "id": 1264,
       "quizId": 8,
       "text": "What is the primary role of the IO module? (choose two correct answers)",
       "options": [
@@ -4777,7 +4570,20 @@
       "multiple": true
     },
     {
-      "id": 1281,
+      "id": 1265,
+      "quizId": 8,
+      "text": "Which I/O technique allows devices to interrupt the CPU asynchronously?",
+      "options": [
+        "Programmed I/O",
+        "Polling",
+        "Interrupt-driven I/O",
+        "Direct Memory Access"
+      ],
+      "correctIndex": 2,
+      "explanation": "Hướng giải:\nXác định kỹ thuật vào/ra (I/O technique) cho phép các thiết bị ngoại vi chủ động gửi tín hiệu ngắt CPU một cách bất đồng bộ (asynchronously) khi đã sẵn sàng truyền nhận dữ liệu.\n\nCác bước:\n1. Có 3 kỹ thuật I/O cơ bản trong kiến trúc máy tính:\n   - Programmed I/O (I/O lập trình): CPU chủ động gửi lệnh I/O và sau đó phải chờ đợi thiết bị hoàn thành bằng cách liên tục kiểm tra cờ trạng thái (vòng lặp bận - busy waiting / polling). Lãng phí thời gian CPU rất lớn.\n   - Interrupt-driven I/O (I/O điều khiển bằng ngắt): CPU ra lệnh bắt đầu tác vụ I/O rồi quay sang làm công việc khác. Khi thiết bị ngoại vi hoàn thành việc chuẩn bị dữ liệu, nó sẽ chủ động phát tín hiệu ngắt bất đồng bộ tới CPU. CPU tạm dừng công việc hiện tại để chuyển dữ liệu rồi quay lại công việc cũ.\n   - DMA (Direct Memory Access): Bộ điều khiển DMA chuyên dụng đảm nhiệm việc truyền trực tiếp các khối dữ liệu lớn giữa I/O và RAM mà không cần CPU tham gia từng byte.\n2. Kỹ thuật được thiết kế chuyên biệt để thiết bị ngắt CPU bất đồng bộ khi sẵn sàng chính là Interrupt-driven I/O (phương án C).\n\nKiểm tra:\nTừ khóa 'interrupt the CPU asynchronously' tương ứng trực tiếp với cơ chế Interrupt-driven I/O trong Stallings Section 7.4.\n\nVì sao các phương án khác sai:\n- A (Programmed I/O): CPU hoàn toàn kiểm soát và chờ đợi tuần tự, thiết bị không thể ngắt CPU.\n- B (Polling): Là kỹ thuật kiểm tra tuần tự trạng thái thiết bị trong Programmed I/O, hoàn toàn đồng bộ theo sự điều khiển của CPU.\n- D (Direct Memory Access): Dù DMA có gửi 1 ngắt khi kết thúc toàn bộ khối truyền, nhưng bản chất của DMA là truyền trực tiếp bỏ qua CPU, không phải là cơ chế I/O tổng quát cho việc ngắt CPU để truyền từng đơn vị dữ liệu như Interrupt-driven I/O.\n\nLưu ý/công thức cần nhớ:\nInterrupt-driven I/O: Thiết bị chủ động ngắt CPU bất đồng bộ khi sẵn sàng trao đổi dữ liệu."
+    },
+    {
+      "id": 1266,
       "quizId": 9,
       "text": "The OS must determine how much processor time is to be devoted to the execution of a particular user program.",
       "options": [
@@ -4788,7 +4594,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The OS must determine how much processor time is to be devoted to the execution of a particular user program.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1282,
+      "id": 1267,
       "quizId": 9,
       "text": "The most important system program is the OS.",
       "options": [
@@ -4799,7 +4605,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The most important system program is the OS.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1283,
+      "id": 1268,
       "quizId": 9,
       "text": "With a batch operating system the user does not have direct access to the processor.",
       "options": [
@@ -4810,20 +4616,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"With a batch operating system the user does not have direct access to the processor.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
     },
     {
-      "id": 1284,
-      "quizId": 9,
-      "text": "_________ is when the processor spends most of its time swapping pages rather than execut",
-      "options": [
-        "Swapping",
-        "Thrashing",
-        "Paging",
-        "Multitasking"
-      ],
-      "correctIndex": 1,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ is when the processor spends most of its time swapping pages rather than execut\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Thrashing.\n\n **Kiểm tra**: Chọn B. Thrashing \n\n **Vì sao các phương án khác sai**:\n\n- A (Swapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Paging): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Multitasking): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
-    },
-    {
-      "id": 1285,
+      "id": 1269,
       "quizId": 9,
       "text": "In a system without virtual memory, the effective address is a virtual address or a register.",
       "options": [
@@ -4834,7 +4627,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In a system without virtual memory, the effective address is a virtual address or a register.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1286,
+      "id": 1270,
       "quizId": 9,
       "text": "With demand paging it is necessary to load an entire process into main memory.",
       "options": [
@@ -4845,7 +4638,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"With demand paging it is necessary to load an entire process into main memory.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
     },
     {
-      "id": 1287,
+      "id": 1271,
       "quizId": 9,
       "text": "The _________ scheduler is also known as the dispatcher.",
       "options": [
@@ -4858,7 +4651,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ scheduler is also known as the dispatcher.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. short-term.\n\n **Kiểm tra**: Chọn C. short-term \n\n **Vì sao các phương án khác sai**:\n\n- A (medium-term): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (long-term): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1288,
+      "id": 1272,
       "quizId": 9,
       "text": "_________ is when the processor spends most of its time swapping pages rather than executing instructions.",
       "options": [
@@ -4871,20 +4664,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ is when the processor spends most of its time swapping pages rather than execut\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Thrashing.\n\n **Kiểm tra**: Chọn B. Thrashing \n\n **Vì sao các phương án khác sai**:\n\n- A (Swapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Paging): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Multitasking): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
     },
     {
-      "id": 1289,
-      "quizId": 9,
-      "text": "The _________ scheduler is also known as the dispatcher.",
-      "options": [
-        "long-term",
-        "medium-term",
-        "short-term",
-        "I/O"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ scheduler is also known as the dispatcher.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. short-term.\n\n **Kiểm tra**: Chọn C. short-term \n\n **Vì sao các phương án khác sai**:\n\n- A (medium-term): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (long-term): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
-    },
-    {
-      "id": 1290,
+      "id": 1273,
       "quizId": 9,
       "text": "Which component defines the system call interface to the operating system and facilitates binary portability?",
       "options": [
@@ -4897,7 +4677,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which component defines the system call interface to the operating system and facilitates binary portability?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Application Binary Interface.\n\n **Kiểm tra**: Chọn A. Application Binary Interface \n\n **Vì sao các phương án khác sai**:\n\n- B (Application Programming Interface): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Instruction Set Architecture): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Central Processing Unit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1291,
+      "id": 1274,
       "quizId": 9,
       "text": "What is the initial state of a process when it is admitted by the high-level scheduler, but not yet ready to execute?",
       "options": [
@@ -4910,7 +4690,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nMô hình các trạng thái tiến trình (Process States) trong hệ điều hành.\n\nCác bước:\n1. Các trạng thái cơ bản trong vòng đời một tiến trình:\n - Mới tạo (New): Tiến trình vừa mới được tạo ra hoặc vừa được bộ lập lịch cấp cao (High-level / Long-term scheduler) tiếp nhận nhưng chưa sẵn sàng nạp hoàn chỉnh vào bộ nhớ để thực thi.\n - Sẵn sàng (Ready): Tiến trình đã nạp vào bộ nhớ và đang đợi bộ lập lịch CPU phân phối thời gian chạy.\n - Đang chạy (Running): Tiến trình đang được CPU thực thi các lệnh.\n - Bị chặn (Blocked/Waiting): Đang đợi sự kiện I/O.\n - Kết thúc (Halted/Terminated): Đã thực thi xong và giải phóng tài nguyên.\n\nKiểm tra:\nTrạng thái ban đầu khi tiến trình vừa được bộ lập lịch cấp cao tiếp nhận là New (A).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1292,
+      "id": 1275,
       "quizId": 9,
       "text": "Which state indicates that a process is currently being executed by the processor?",
       "options": [
@@ -4923,7 +4703,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nMô hình các trạng thái của một tiến trình (Process States) trong hệ điều hành.\n\nCác bước:\nCác trạng thái cơ bản của tiến trình gồm:\n- Running (Đang chạy): Tiến trình hiện đang được CPU thực thi các chỉ thị lệnh.\n- Ready (Sẵn sàng): Tiến trình đã sẵn sàng thực thi và đang đợi bộ điều phối (scheduler) cấp phát CPU.\n- Blocked / Waiting (Bị chặn): Tiến trình đang đợi một sự kiện (như hoàn thành I/O) trước khi có thể chạy tiếp.\n- New / Created: Tiến trình mới được tạo.\n- Terminated / Exit: Tiến trình đã kết thúc thực thi.\n\nKiểm tra:\nTrạng thái chỉ ra tiến trình đang được CPU thực thi là Running (A).\n\nVì sao các phương án khác sai:\n- B (Ready): Đang chờ CPU, chưa được thực thi.\n- C (NewBorn): Mới khởi tạo.\n- D (Halted): Bị tạm dừng hoặc dừng hẳn.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1293,
+      "id": 1276,
       "quizId": 9,
       "text": "The task of subdivision is carried out dynamically by the OS and is known as_________ ?",
       "options": [
@@ -4936,7 +4716,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The task of subdivision is carried out dynamically by the OS and is known as____ ?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Memory management.\n\n **Kiểm tra**: Chọn B. Memory management \n\n **Vì sao các phương án khác sai**:\n\n- A (Scheduling): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Virtual Memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (All of the mentioned): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
     },
     {
-      "id": 1294,
+      "id": 1277,
       "quizId": 9,
       "text": "We have a long-term queue of process requests, typically stored on _________.",
       "options": [
@@ -4949,7 +4729,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"We have a long-term queue of process requests, typically stored on ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. disk.\n\n **Kiểm tra**: Chọn B. disk \n\n **Vì sao các phương án khác sai**:\n\n- A (main memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (cache memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1295,
+      "id": 1278,
       "quizId": 9,
       "text": "Facilities and services provided by the OS that assist the programmer in creating programs are in the form of _ programs that are not actually part of the OS but are accessible through the OS.",
       "options": [
@@ -4962,20 +4742,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Facilities and services provided by the OS that assist the programmer in creating programs are in the form of _ programs that are not actually part of the OS but are accessible through the OS.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. utility.\n\n **Kiểm tra**: Chọn A. utility \n\n **Vì sao các phương án khác sai**:\n\n- B (logical address): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (JCL): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (multitasking): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1296,
-      "quizId": 9,
-      "text": "_________ is when the processor spends most of its time swapping pages rather than executing instructions.",
-      "options": [
-        "Multitasking",
-        "Swapping",
-        "Thrashing",
-        "Paging"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ is when the processor spends most of its time swapping pages rather than execut\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Thrashing.\n\n **Kiểm tra**: Chọn B. Thrashing \n\n **Vì sao các phương án khác sai**:\n\n- A (Swapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Paging): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Multitasking): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
-    },
-    {
-      "id": 1297,
+      "id": 1279,
       "quizId": 9,
       "text": "The _________ defines the system call interface to the operating system and the hardware resources and services available in a system through the user instruction set architecture.",
       "options": [
@@ -4988,7 +4755,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ________ defines the system call interface to the operating system and the hardware resources and services available in a system through the user instruction set architecture.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. ABI.\n\n **Kiểm tra**: Chọn C. ABI \n\n **Vì sao các phương án khác sai**:\n\n- A (HLL): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (API): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (ISA): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1298,
+      "id": 1280,
       "quizId": 9,
       "text": "The ABI is the boundary between hardware and software.",
       "options": [
@@ -4999,7 +4766,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ABI is the boundary between hardware and software.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1299,
+      "id": 1281,
       "quizId": 9,
       "text": "Both batch multiprogramming and time sharing use multiprogramming.",
       "options": [
@@ -5010,7 +4777,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Both batch multiprogramming and time sharing use multiprogramming.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. True.\n\n **Kiểm tra**: Chọn B. True \n\n **Vì sao các phương án khác sai**:\n\n- A (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1300,
+      "id": 1282,
       "quizId": 9,
       "text": "Privileged instructions are certain instructions that are designated special and can be executed only by the monitor.",
       "options": [
@@ -5021,7 +4788,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Privileged instructions are certain instructions that are designated special and can be executed only by the monitor.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1301,
+      "id": 1283,
       "quizId": 9,
       "text": "Techniques that automatically move program and data blocks into the physical main memory when they are required for execution are called _________.",
       "options": [
@@ -5035,7 +4802,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Techniques that automatically move program and data blocks into the physical main memory when they are required for execution are called ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Virtual Memory techniques.\n\n **Kiểm tra**: Chọn C. Virtual Memory techniques \n\n **Vì sao các phương án khác sai**:\n\n- A (Associative-Mapping techniques): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Main Memory techniques): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Cache Memory techniques): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Paging techniques): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1302,
+      "id": 1284,
       "quizId": 9,
       "text": "The _________ is a program that controls the execution of application programs and acts as an interface between applications and the computer hardware.",
       "options": [
@@ -5048,21 +4815,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ is a program that controls the execution of application programs and acts as an interface between applications and the computer hardware.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. operating system.\n\n **Kiểm tra**: Chọn C. operating system \n\n **Vì sao các phương án khác sai**:\n\n- A (nucleus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (batch system): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (job control language): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
     },
     {
-      "id": 1303,
-      "quizId": 9,
-      "text": "Techniques that automatically move program and data blocks into the physical main memory when they are required for execution are called _________.",
-      "options": [
-        "Associative-Mapping techniques",
-        "Main Memory techniques",
-        "Cache Memory techniques",
-        "Paging techniques",
-        "Virtual-memory techniques"
-      ],
-      "correctIndex": 4,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Techniques that automatically move program and data blocks into the physical main memory when they are required for execution are called ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Virtual Memory techniques.\n\n **Kiểm tra**: Chọn C. Virtual Memory techniques \n\n **Vì sao các phương án khác sai**:\n\n- A (Associative-Mapping techniques): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Main Memory techniques): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Cache Memory techniques): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Paging techniques): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
-    },
-    {
-      "id": 1304,
+      "id": 1285,
       "quizId": 9,
       "text": "For reads to and writes from main memory, _________ translates each virtual address into a physical address in main memory.",
       "options": [
@@ -5076,7 +4829,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"For reads to and writes from main memory, ________ translates each virtual address into a physical address in main memory.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. MMU.\n\n **Kiểm tra**: Chọn B. MMU \n\n **Vì sao các phương án khác sai**:\n\n- A (MAR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Overlays): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (TLB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Accumulator): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1305,
+      "id": 1286,
       "quizId": 9,
       "text": "Which method allows the programmer to view memory as consisting of multiple address spaces and is used to map logical addresses of variable length onto physical memory?",
       "options": [
@@ -5089,7 +4842,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which method allows the programmer to view memory as consisting of multiple address spaces and is used to map logical addresses of variable length onto physical memory?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Segmentation.\n\n **Kiểm tra**: Chọn C. Segmentation \n\n **Vì sao các phương án khác sai**:\n\n- A (Paging): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Overlays): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Paging with segmentation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1306,
+      "id": 1287,
       "quizId": 9,
       "text": "The _________ scheduler executes relatively infrequently and makes the coarse-grained decision of whether or not to take on a new process, and which one to take. The _________ scheduler, also known as the dispatcher, executes frequently and makes the fine-grained decision of which job to execute next.",
       "options": [
@@ -5102,7 +4855,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _____ scheduler executes relatively infrequently and makes the coarse-grained decision of whether or not to take on a new process, and which one to take. The _____ scheduler, also known as the dispatcher, executes frequently and makes the fine-grained decision of which job to execute next.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. long-term; short-term.\n\n **Kiểm tra**: Chọn C. long-term; short-term \n\n **Vì sao các phương án khác sai**:\n\n- A (short-term; medium-term): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (medium-term; short-term): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (long-term; medium-term): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1307,
+      "id": 1288,
       "quizId": 9,
       "text": "Which technique involves dividing physical memory into fixed-size or variable-size blocks to allocate memory to processes?",
       "options": [
@@ -5115,7 +4868,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân loại các kỹ thuật cấp phát bộ nhớ chính của hệ điều hành.\n\nCác bước:\n1. Phân vùng bộ nhớ (Partitioning):\n - Phân vùng cố định (Fixed Partitioning): Bộ nhớ được chia sẵn thành các vùng kích thước cố định bằng nhau hoặc khác nhau.\n - Phân vùng động (Variable/Dynamic Partitioning): Các khối nhớ được chia với kích thước biến đổi linh hoạt đúng bằng kích thước tiến trình yêu cầu tại thời điểm nạp.\n2. Phân biệt với các kỹ thuật khác:\n - Paging (Phân trang): Chỉ chia thành các khối kích thước bằng nhau gọi là khung trang (frames).\n - Swapping (Hoán đổi): Kỹ thuật đẩy toàn bộ tiến trình ra đĩa khi thiếu bộ nhớ.\n - TLB: Phần cứng đệm chuyển đổi địa chỉ.\n\nKiểm tra:\nKỹ thuật chia bộ nhớ thành các khối kích thước cố định hoặc biến đổi là Partitioning (A).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1308,
+      "id": 1289,
       "quizId": 9,
       "text": "The chunks of a program, known as pages, could be assigned to available chunks of memory, known as frames, is called _________.",
       "options": [
@@ -5129,7 +4882,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The chunks of a program, known as pages, could be assigned to available chunks of memory, known as frames, is called _________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Paging.\n\n **Kiểm tra**: Chọn C. Paging \n\n **Vì sao các phương án khác sai**:\n\n- A (Swapping): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Partitioning): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Virtual Memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Segmentation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
     },
     {
-      "id": 1309,
+      "id": 1290,
       "quizId": 9,
       "text": "Which of the following statements is incorrect about Translation Look-aside Buffer (TLB)?",
       "options": [
@@ -5142,7 +4895,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following statements is true for Von Neumann architecture?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Shared bus between the program memory and data memory.\n\n **Kiểm tra**: Chọn A. Shared bus between the program memory and data memory \n\n **Vì sao các phương án khác sai**:\n\n- B (Separate bus between the program memory and data memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (External bus for program memory and data memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (External bus for data memory only): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1310,
+      "id": 1291,
       "quizId": 9,
       "text": "Scheduling and memory management are the two OS functions that are most relevant to the computer organization and architecture.",
       "options": [
@@ -5153,7 +4906,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Scheduling and memory management are the two OS functions that are most relevant to the computer organization and architecture.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1311,
+      "id": 1292,
       "quizId": 9,
       "text": "The _________ gives a program access to the hardware resources and services available in a system through the user instruction set architecture supplemented with high-level language library calls.",
       "options": [
@@ -5166,7 +4919,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___ gives a program access to the hardware resources and services available in a system through the user instruction set architecture supplemented with high-level language library calls.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. API.\n\n **Kiểm tra**: Chọn A. API \n\n **Vì sao các phương án khác sai**:\n\n- B (ISA): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (JCL): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (ABI): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1312,
+      "id": 1293,
       "quizId": 9,
       "text": "It is common for programs, both system and application, to continue to exhibit new bugs after years of operation.",
       "options": [
@@ -5177,7 +4930,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"It is common for programs, both system and application, to continue to exhibit new bugs after years of operation.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1313,
+      "id": 1294,
       "quizId": 9,
       "text": "A _________ is an actual location in main memory.",
       "options": [
@@ -5190,7 +4943,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A ________ is an actual location in main memory.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. physical address.\n\n **Kiểm tra**: Chọn D. physical address \n\n **Vì sao các phương án khác sai**:\n\n- A (logical address): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (partition address): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (base address): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1314,
+      "id": 1295,
       "quizId": 9,
       "text": "INT 21h / AH=1 is _________",
       "options": [
@@ -5203,7 +4956,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Lập trình Hợp ngữ & Ngắt hệ thống x86 (DOS Interrupt 21h) thuộc Chapter 15: Assembly Language and Related Topics (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Chức năng của hàm ngắt \"INT 21h / AH=1\".\n- Trong hệ thống ngắt DOS x86, khi gọi INT 21h với thanh ghi AH = 01h, chức năng được thực thi là Single-key character input with echo (đọc một ký tự từ bàn phím/standard input, hiển thị lên màn hình console) và mã ASCII của ký tự đọc được sẽ được lưu vào thanh ghi AL.\n- Khi đối chiếu các phương án, đáp án B mô tả hoàn toàn chuẩn xác chức năng và thanh ghi đích.\n\n **Kiểm tra**: Chọn B. read character from standard input, with echo, result is stored in AL. \n\n **Vì sao các phương án khác sai**:\n\n- A: Ghi (write) ký tự là sai chức năng (hàm ghi là AH=02h).\n- C & D: Kết quả ký tự đọc được trả về thanh ghi AL, không phải AH (AH là thanh ghi truyền mã hàm ngắt).\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 15: Assembly Language and Related Topics"
     },
     {
-      "id": 1315,
+      "id": 1296,
       "quizId": 9,
       "text": "A _________ system works only one program at a time.",
       "options": [
@@ -5216,7 +4969,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A ________ system works only one program at a time.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. uniprogramming.\n\n **Kiểm tra**: Chọn B. uniprogramming \n\n **Vì sao các phương án khác sai**:\n\n- A (batch): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (kernel): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (privileged instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1316,
+      "id": 1297,
       "quizId": 9,
       "text": "A _________ is a special type of programming language used to provide instructions to the monitor.",
       "options": [
@@ -5229,7 +4982,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A ________ is a special type of programming language used to provide instructions to the monitor.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. job control language.\n\n **Kiểm tra**: Chọn A. job control language \n\n **Vì sao các phương án khác sai**:\n\n- B (multiprogram): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (kernel): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (utility): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1317,
+      "id": 1298,
       "quizId": 9,
       "text": "The _________ scheduler determines which programs are admitted to the system for processing",
       "options": [
@@ -5242,7 +4995,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ________ scheduler determines which programs are admitted to the system for processing\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. long-term.\n\n **Kiểm tra**: Chọn A. long-term \n\n **Vì sao các phương án khác sai**:\n\n- B (medium-term): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (short-term): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1318,
+      "id": 1299,
       "quizId": 9,
       "text": "Uniprogramming is the central theme of modern operating systems.",
       "options": [
@@ -5253,7 +5006,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Uniprogramming is the central theme of modern operating systems.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
     },
     {
-      "id": 1319,
+      "id": 1300,
       "quizId": 9,
       "text": "In MASM32, which OPCODE is used to compare two values?",
       "options": [
@@ -5266,7 +5019,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải:**\nXác định lệnh hợp ngữ so sánh hai giá trị trong MASM32 (x86 assembly).\n\n**Các bước phân tích:**\n1. Trong hợp ngữ x86/MASM32, lệnh `CMP destination, source` thực hiện phép trừ ngầm `destination - source` để cập nhật các cờ điều kiện (Zero Flag, Sign Flag, Carry Flag...) mà không lưu kết quả vào ô nhớ/thanh ghi.\n2. Do đó mã thao tác chuẩn để so sánh hai giá trị là `CMP`.\n\n**Vì sao các phương án khác sai:**\n- A: `COM` không phải là lệnh so sánh chuẩn trong x86.\n- C: `IF ... ELSE` là cấu trúc điều khiển cấp cao hoặc directive macro, không phải mã thao tác máy (opcode).\n- D: `TEST` thực hiện phép AND logic từng bit để kiểm tra bit, không phải lệnh so sánh tổng quát.\n\n **Xuất hiện trong**: CEA201_-_SU26_-_RE.txt"
     },
     {
-      "id": 1320,
+      "id": 1301,
       "quizId": 9,
       "text": "What role does an Application Programming Interface (API) play in software development?",
       "options": [
@@ -5279,7 +5032,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ điều hành & Bộ nhớ ảo thuộc Chapter 09: Operating System Support (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What role does an Application Programming Interface (API) play in software development?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Hệ điều hành quản lý tài nguyên phần cứng. Bộ nhớ ảo sử dụng Phân trang (Paging) và Phân đoạn (Segmentation) để mở rộng không gian địa chỉ. Bảng trang (Page Table) và bộ đệm TLB giúp chuyển đổi địa chỉ ảo sang địa chỉ vật lý.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. It allows program access to hardware resources using high-level language libraries.\n\n **Kiểm tra**: Chọn A. It allows program access to hardware resources using high-level language libraries \n\n **Vì sao các phương án khác sai**:\n\n- B (It defines low-level machine instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (It provides a standard for binary portability): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (It manages system resources for the operating system and machine language instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 09: Operating System Support"
     },
     {
-      "id": 1321,
+      "id": 1302,
       "quizId": 9,
       "text": "What is the purpose of using an API?",
       "options": [
@@ -5292,7 +5045,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the purpose of using an API?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. To enable application software to be ported easily to other systems that support the same API.\n\n **Kiểm tra**: Chọn A. To enable application software to be ported easily to other systems that support the same API \n\n **Vì sao các phương án khác sai**:\n\n- B (To define the repertoire of machine language instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (To standardize binary portability across programs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (To manage system resources): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1322,
+      "id": 1303,
       "quizId": 9,
       "text": "If a program accesses data in a specified file, how to manage the file's properties such as disk position, file's attributes?",
       "options": [
@@ -5305,7 +5058,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nVai trò của hệ điều hành trong việc quản lý hệ thống tệp tin (File Management).\n\nCác bước:\n1. Khi một chương trình người dùng mở và truy xuất một tệp, chương trình không trực tiếp điều khiển các cung từ (sectors) hay vị trí vật lý trên đĩa từ/SSD.\n2. Hệ điều hành (thông qua hệ thống quản lý tệp - File System / VFS) chịu trách nhiệm theo dõi và quản lý mọi thuộc tính tệp: cấu trúc thư mục, bảng chỉ mục khối trên đĩa (như inode, FAT table), con trỏ vị trí hiện tại (file offset), và quyền truy cập.\n\nKiểm tra:\nCác thuộc tính và vị trí đĩa của tệp được quản lý bởi hệ điều hành hiện tại (A).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1323,
+      "id": 1304,
       "quizId": 9,
       "text": "In the MASM, how to receive numbers from user?",
       "options": [
@@ -5318,7 +5071,46 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In the MASM, how to receive numbers from user?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Raw data from keyboard are string. The function sval(num-string) will convert num-string to signed number..\n\n **Kiểm tra**: Chọn A. Raw data from keyboard are string. The function sval(num-string) will convert num-string to signed number. \n\n **Vì sao các phương án khác sai**:\n\n- B (Raw data from keyboard are string. The function str$(num-string) will convert num-string to signed number.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Raw data from keyboard are string. The function chr$(num-string) will convert num-string to signed number.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Raw data from keyboard are string. The function chr$(num-string) will convert num-string to unsigned number.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1324,
+      "id": 1305,
+      "quizId": 9,
+      "text": "Which memory management technique divides memory into fixed-size blocks?",
+      "options": [
+        "Paging",
+        "Segmentation",
+        "Virtual memory",
+        "Swapping"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nXác định kỹ thuật quản lý bộ nhớ chia không gian nhớ thành các khối có kích thước cố định (fixed-size blocks).\n\nCác bước:\n1. So sánh hai kỹ thuật phân vùng bộ nhớ cơ bản trong bộ nhớ ảo:\n   - Phân trang (Paging): Không gian địa chỉ logic của tiến trình được chia thành các khối có kích thước cố định gọi là trang (pages, thường là (4,mathrm{KB})). Bộ nhớ vật lý cũng được chia thành các khối cùng kích thước gọi là khung trang (frames hoặc page frames). Việc chia thành các khối cố định giúp loại bỏ phân mảnh ngoại vi (external fragmentation).\n   - Phân đoạn (Segmentation): Chia bộ nhớ logic theo các đơn vị ngữ nghĩa của chương trình (hàm, mảng, ngăn xếp...) thành các khối có kích thước biến thiên (variable-size blocks).\n2. Câu hỏi nêu rõ: 'divides memory into fixed-size blocks' (implies) Paging (Phương án A).\n\nKiểm tra:\nBảng trang (Page Table) ánh xạ từ số trang ảo sang số khung trang vật lý có kích thước cố định hoàn toàn đồng nhất.\n\nVì sao các phương án khác sai:\n- B (Segmentation): Chia thành các đoạn có kích thước biến thiên (variable-size), không phải cố định.\n- C (Virtual memory): Là khái niệm bộ nhớ ảo nói chung, có thể thực hiện bằng Paging, Segmentation hoặc kết hợp cả hai.\n- D (Swapping): Kỹ thuật hoán chuyển toàn bộ tiến trình giữa RAM và đĩa cứng, không phải kỹ thuật chia bộ nhớ thành các khối cố định.\n\nLưu ý/công thức cần nhớ:\nPaging: Khối kích thước cố định (Fixed-size: Pages & Frames).\nSegmentation: Khối kích thước biến thiên (Variable-size)."
+    },
+    {
+      "id": 1306,
+      "quizId": 9,
+      "text": "What is the primary role of an Operating System?",
+      "options": [
+        "Compile programs",
+        "Execute user applications only",
+        "Manage hardware and software resources",
+        "Design computer circuits"
+      ],
+      "correctIndex": 2,
+      "explanation": "Hướng giải:\nXác định vai trò chính yếu (primary role) của Hệ điều hành (Operating System - OS) trong hệ thống máy tính.\n\nCác bước:\n1. Định nghĩa chuẩn về Hệ điều hành:\n   - Hệ điều hành là phần mềm hệ thống hoạt động như một lớp trung gian giữa người dùng / phần mềm ứng dụng và phần cứng máy tính.\n   - Hai chức năng cốt lõi nhất của hệ điều hành:\n     + Bộ quản lý tài nguyên (Resource Manager): Quản lý, điều phối và phân bổ hiệu quả, an toàn các tài nguyên phần cứng (CPU, bộ nhớ RAM, thiết bị I/O, dung lượng đĩa) và tài nguyên phần mềm (tập tin, tiến trình, luồng, bảo mật).\n     + Máy mở rộng / Giao diện trừu tượng (Extended Machine / Abstract Interface): Cung cấp môi trường thuận tiện để người dùng và các chương trình thực thi mà không cần bận tâm đến chi tiết phần cứng phức tạp.\n2. Đối chiếu với các phương án, phương án C ('Manage hardware and software resources') phản ánh chính xác vai trò nền tảng này.\n\nKiểm tra:\nMọi giáo trình tin học cơ sở và kiến trúc hệ thống đều định nghĩa OS là Resource Manager.\n\nVì sao các phương án khác sai:\n- A (Compile programs): Biên dịch chương trình là nhiệm vụ của trình biên dịch (Compiler) - một phần mềm công cụ phát triển, không phải nhiệm vụ chính của OS.\n- B (Execute user applications only): OS không chỉ chạy ứng dụng người dùng mà còn chạy các tiến trình hệ thống, quản lý tài nguyên, bảo vệ an ninh và phục vụ phần cứng.\n- D (Design computer circuits): Thiết kế mạch là công việc của các kỹ sư phần cứng và phần mềm CAD/EDA, không liên quan đến chức năng của OS.\n\nLưu ý/công thức cần nhớ:\nOperating System = Quản lý tài nguyên phần cứng và phần mềm (Resource Manager)."
+    },
+    {
+      "id": 1307,
+      "quizId": 9,
+      "text": "What is the primary function of virtual memory in a computer system?",
+      "options": [
+        "To increase the physical memory available to the system",
+        "To allow programs to address memory logically without regard to physical memory availability.",
+        "To enhance the speed of memory access",
+        "To store data permanently in the system"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nXác định chức năng và mục đích chính của cơ chế bộ nhớ ảo (Virtual Memory) trong hệ thống máy tính.\n\nCác bước:\n1. Bộ nhớ ảo (Virtual Memory) là một cơ chế phối hợp giữa phần cứng quản lý bộ nhớ (MMU) và hệ điều hành:\n   - Cho phép chương trình của người dùng sử dụng một không gian địa chỉ logic liên tục và rộng lớn (địa chỉ ảo - virtual address space).\n   - Tách rời hoàn toàn không gian địa chỉ logic của chương trình khỏi không gian địa chỉ vật lý của RAM.\n   - Lập trình viên và chương trình có thể đánh địa chỉ bộ nhớ theo quan điểm logic mà không cần bận tâm đến việc máy tính đang có bao nhiêu dung lượng RAM vật lý thực tế hoặc chương trình sẽ được đặt ở vị trí nào trong RAM.\n2. Trích dẫn nguyên văn định nghĩa từ William Stallings (Section 8.2):\n   'Virtual memory allows programs to address memory from a logical point of view, without regard to the amount of main memory physically available.'\n3. Do đó, phương án đúng là B.\n\nKiểm tra:\nNhờ bộ nhớ ảo, một chương trình đòi hỏi (16,mathrm{GB}) bộ nhớ vẫn có thể chạy bình thường trên một máy tính chỉ có (8,mathrm{GB}) RAM vật lý thông qua cơ chế phân trang và tráo đổi với đĩa cứng.\n\nVì sao các phương án khác sai:\n- A: Bộ nhớ ảo không làm tăng bộ nhớ vật lý thực tế (physical memory) của hệ thống (dung lượng chip RAM thực tế vẫn giữ nguyên).\n- C: Bộ nhớ ảo không làm tăng tốc độ truy xuất, ngược lại khi có lỗi trang (Page Fault) cần đọc từ đĩa thì tốc độ còn chậm hơn truy cập RAM trực tiếp.\n- D: Lưu trữ vĩnh viễn là chức năng của hệ thống tập tin trên bộ nhớ phụ (Secondary Storage), không phải bộ nhớ ảo.\n\nLưu ý/công thức cần nhớ:\nBộ nhớ ảo: Cho phép định địa chỉ logic không phụ thuộc dung lượng RAM vật lý (Address logically without regard to physical memory)."
+    },
+    {
+      "id": 1308,
       "quizId": 10,
       "text": "Convert the 64 from decimal to their binary number equivalents.",
       "options": [
@@ -5331,7 +5123,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Chuyển đổi hệ đếm Thập phân (Decimal) sang Nhị phân (Binary) thuộc Chapter 10: Number Systems (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Chuyển đổi số thập phân $64_{10}$ sang số nhị phân tương đương.\n- Phân tích theo các lũy thừa của 2:\n  $$64 = 2^6 = 1 \\times 2^6 + 0 \\times 2^5 + 0 \\times 2^4 + 0 \\times 2^3 + 0 \\times 2^2 + 0 \\times 2^1 + 0 \\times 2^0$$\n- Đọc các hệ số từ trái sang phải: chữ số 1 đầu tiên tại vị trí $2^6$, theo sau là 6 chữ số 0:\n  $$64_{10} = \\mathbf{1000000}_2$$\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc in thiếu 1 chữ số 0 ở phương án A (`100000` = $32_{10}$). Giá trị nhị phân chuẩn xác tuyệt đối của 64 là `1000000` (gồm 1 chữ số 1 và 6 chữ số 0).\n\n **Kiểm tra**: Chọn A. 1000000 \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 10: Number Systems"
     },
     {
-      "id": 1325,
+      "id": 1309,
       "quizId": 10,
       "text": "Consider an expression: 1000 0000 OR 1111 1010 What is the result of this expression?",
       "options": [
@@ -5344,7 +5136,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Consider an expression: 1000 0000 OR 1111 1010 What is the result of this expression?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. 1111 1010.\n\n **Kiểm tra**: Chọn B. 1111 1010 \n\n **Vì sao các phương án khác sai**:\n\n- A (1000 0000): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (1001 1010): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (1001 0101): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1326,
+      "id": 1310,
       "quizId": 10,
       "text": "A computer has memory of 256k words, how many bits are required to specify the address?",
       "options": [
@@ -5358,7 +5150,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Định địa chỉ bộ nhớ (Memory Addressing Bits) thuộc Chapter 10: Number Systems / Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Bộ nhớ có dung lượng $256\\text{K}$ từ nhớ (words).\n- Biểu diễn dung lượng theo lũy thừa của 2:\n  $$256\\text{K} = 256 \\times 1024 = 2^8 \\times 2^{10} = 2^{18}\\text{ words}$$\n- Để định vị duy nhất $2^{18}$ địa chỉ từ nhớ độc lập, số bit địa chỉ cần thiết là:\n  $$n = \\log_2(2^{18}) = \\mathbf{18\\text{ bits}}$$\n\n **Kiểm tra**: Chọn D. 18 bits \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 10: Number Systems"
     },
     {
-      "id": 1327,
+      "id": 1311,
       "quizId": 10,
       "text": "Express a sign integer number (+18) in the sign magnitude representation.",
       "options": [
@@ -5371,7 +5163,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Express a sign integer number (+18) in the sign magnitude representation.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 00010010.\n\n **Kiểm tra**: Chọn A. 00010010 \n\n **Vì sao các phương án khác sai**:\n\n- B (10010010): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (11110010): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (01110010): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1328,
+      "id": 1312,
       "quizId": 10,
       "text": "Which representation is most efficient to perform arithmetic operations on the signed integer numbers?",
       "options": [
@@ -5384,7 +5176,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nĐánh giá hiệu quả phần cứng của các hệ thống biểu diễn số nguyên có dấu (Signed Integer Representation).\n\nCác bước:\n1. Biểu diễn số bù 2 (Two's complement):\n - Phép cộng và phép trừ được xử lý bằng cùng một mạch cộng nhị phân tiêu chuẩn (phép trừ \\ (A - B \\ ) được thực hiện như \\ (A + (-B) \\ ) trong đó \\ (-B \\ ) là số bù 2 của \\ (B \\ )).\n - Chỉ có duy nhất một số 0 (không có hiện tượng \\ (+0 \\ ) và \\ (-0 \\ ) gây lãng phí mã nhị phân và phức tạp mạch so sánh như ở Sign-magnitude hay One's complement).\n - Dải biểu diễn đối xứng hơn và tối ưu cho kiến trúc ALU.\n\nKiểm tra:\nDo đó, mã bù 2 (2's complement) là phương pháp hiệu quả nhất để thực hiện các phép toán số học.\n\nVì sao các phương án khác sai:\n- A (Sign-magnitude): Cần mạch riêng để kiểm tra bit dấu và thực hiện phép tính; tồn tại hai số 0.\n- D (1's complement): Cần thực hiện phép cộng vòng (end-around carry); tồn tại hai số 0 (+0 và -0).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1329,
+      "id": 1313,
       "quizId": 10,
       "text": "Express an integer number +18 (using 8-bits length) in twos complement representation.",
       "options": [
@@ -5397,7 +5189,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ thống số & Biểu diễn dữ liệu nhị phân thuộc Chapter 10: Number Systems (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Express an integer number +18 (using 8-bits length) in twos complement representation.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Các hệ thống số cơ bản: Nhị phân (Base 2), Bát phân (Base 8), Thập phân (Base 10) và Thập lục phân (Base 16). Biểu diễn số nguyên có dấu dùng số bù 2 (Two's complement).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 00010010.\n\n **Kiểm tra**: Chọn A. 00010010 \n\n **Vì sao các phương án khác sai**:\n\n- B (10010010): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (00001101): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (10011101): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 10: Number Systems"
     },
     {
-      "id": 1330,
+      "id": 1314,
       "quizId": 10,
       "text": "What is the output of Left Shift Operator << on (00011000<<2)?",
       "options": [
@@ -5410,7 +5202,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nThực hiện thao tác dịch trái logic (Logical Left Shift) 2 vị trí trên chuỗi bit 8-bit.\n\nCác bước:\n1. Chuỗi bit ban đầu:\n \\ [ 0001 \\ ,1000_2 \\ quad (= 24_10) \\ ]\n2. Thực hiện dịch trái 2 bit ( \\ (<< 2 \\ )):\n - Mỗi bit được dịch sang trái 2 vị trí.\n - Hai bit ngoài cùng bên trái \\ (00 \\ ) bị đẩy ra ngoài.\n - Hai bit 0 mới được chèn vào bên phải (LSB).\n \\ [ 0001 \\ ,1000_2 \\ ll 2 = 0110 \\ ,0000_2 \\ quad (= 96_10) \\ ]\n3. Kiểm tra tính chất toán học: Phép dịch trái \\ (k \\ ) bit tương đương với nhân giá trị số với \\ (2^k \\ ):\n \\ [ 24 \\ times 2^2 = 24 \\ times 4 = 96 \\ ]\n Chuyển 96 sang nhị phân: \\ (96 = 64 + 32 = 0110 \\ ,0000_2 \\ ).\n\nKiểm tra:\nKết quả là 01100000 (phương án A).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1331,
+      "id": 1315,
       "quizId": 10,
       "text": "What is the maximum addressable memory of a 32-bit microprocessor with 24-bit address?",
       "options": [
@@ -5423,7 +5215,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the maximum addressable memory of a 32-bit microprocessor with 24-bit address?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. 16 MB.\n\n **Kiểm tra**: Chọn B. 16 MB \n\n **Vì sao các phương án khác sai**:\n\n- A (16 GB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (16 Gbits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (16 Mbits): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1332,
+      "id": 1316,
       "quizId": 10,
       "text": "What is result left rotate of 10110101 by 2 bit?",
       "options": [
@@ -5437,7 +5229,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is result left rotate of 10110101 by 2 bit?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. 11010110.\n\n **Kiểm tra**: Chọn D. 11010110 \n\n **Vì sao các phương án khác sai**:\n\n- A (01101011): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (10101101): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (01101101): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (11010100): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1333,
+      "id": 1317,
       "quizId": 10,
       "text": "What is result logical right shift of 10110000 by 2 bit?",
       "options": [
@@ -5450,7 +5242,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải:**\nThực hiện phép dịch phải logic (Logical Right Shift) một chuỗi nhị phân 8 bit đi 2 bit.\n\n**Các bước tính toán:**\n1. Chuỗi bit ban đầu: `1011 0000`.\n2. Trong phép dịch phải logic (Logical Shift Right), các bit dịch sang phải và các bit 0 luôn được chèn vào bên trái (MSB):\n- Dịch 1 bit: chèn 0 vào đầu, loại bỏ bit cuối bên phải \\ ( \\ implies \\ ) `0101 1000`.\n- Dịch thêm 1 bit nữa (tổng 2 bit): chèn tiếp 0 vào đầu \\ ( \\ implies \\ ) `0010 1100`.\n3. Kết quả thu được là: `00101100`.\n\n**Kết luận:** Phương án A.\n\n **Xuất hiện trong**: CEA201_-_SU26_-_RE.txt"
     },
     {
-      "id": 1334,
+      "id": 1318,
       "quizId": 10,
       "text": "If you have an integer number +18 in sign magnitude representation, which is 00010010, what is the correct option for -18?",
       "options": [
@@ -5463,7 +5255,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nQuy tắc biểu diễn số nguyên có dấu dạng Dấu - Độ lớn (Sign-Magnitude Representation).\n\nCác bước:\n1. Cấu trúc của số nhị phân 8-bit dạng Dấu - Độ lớn:\n - Bit ngoài cùng bên trái (Most Significant Bit - MSB, bit thứ 7) là Bit Dấu (Sign bit):\n - Bit dấu \\ (= 0 \\ ): Số dương ( \\ (+ \\ )).\n - Bit dấu \\ (= 1 \\ ): Số âm ( \\ (- \\ )).\n - 7 bit còn lại (từ bit 6 đến bit 0) biểu diễn độ lớn tuyệt đối (Magnitude) của số:\n \\ [ 18_10 = 16 + 2 = 001 \\ ,0010_2 \\ ]\n2. Với số \\ (+18 \\ ):\n \\ [ \\ textBit dấu = 0 \\ implies 0001 \\ ,0010_2 \\ ]\n3. Với số \\ (-18 \\ ):\n - Ta chỉ việc đổi bit dấu từ 0 thành 1, giữ nguyên 7 bit độ lớn:\n \\ [ \\ textBit dấu = 1 \\ implies 1001 \\ ,0010_2 \\ ]\n\nKiểm tra:\nBiểu diễn dạng sign-magnitude của \\ (-18 \\ ) là 10010010 (phương án B).\n\nLưu ý:\n- Phương án C (11110010) là biểu diễn bù 1 hoặc dạng khác, không phải sign-magnitude.\n- Dạng bù hai (Two's complement) của -18 sẽ là \\ (1110 \\ ,1110_2 \\ ). Đề bài yêu cầu rõ ràng là 'sign magnitude representation'.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1335,
+      "id": 1319,
       "quizId": 10,
       "text": "In an arithmetic left shift operation, what is appended to the rightmost bits?",
       "options": [
@@ -5476,7 +5268,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nQuy tắc thực hiện phép dịch trái số học (Arithmetic Left Shift - SAL/SHL).\n\nCác bước:\n1. Trong biểu diễn số nhị phân có dấu và không dấu:\n - Khi dịch một chuỗi bit sang bên trái (tương đương nhân với 2):\n - Các bit được dịch về phía bên trái (MSB). Bit MSB cũ bị đẩy vào cờ nhớ Carry Flag.\n - Vị trí trống mới được tạo ra ở cực bên phải (bit thấp nhất - LSB) LUÔN LUÔN ĐƯỢC CHÈN SỐ 0 (Zeros).\n2. Lưu ý phân biệt với phép dịch phải số học (Arithmetic Right Shift - SAR): Ở phép dịch phải số học, bit ngoài cùng bên trái được điền bằng bit dấu (Sign bit) để bảo toàn dấu của số. Còn ở phép dịch trái (cả số học lẫn logic), phía bên phải luôn được điền số 0.\n\nKiểm tra:\nPhần tử được chèn vào các bit ngoài cùng bên phải là số 0 (Zeros - A).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1336,
+      "id": 1320,
       "quizId": 11,
       "text": "(R1) = 01110110, (R2) = 11011111, the result of (R1) XOR (R2) is:",
       "options": [
@@ -5489,7 +5281,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nThực hiện phép toán logic XOR (Exclusive OR) từng bit giữa hai thanh ghi 8-bit.\n\nCác bước:\n1. Quy tắc phép toán XOR: Kết quả bằng 1 khi hai bit khác nhau, bằng 0 khi hai bit giống nhau:\n \\ [ 0 \\ oplus 0 = 0, \\ quad 0 \\ oplus 1 = 1, \\ quad 1 \\ oplus 0 = 1, \\ quad 1 \\ oplus 1 = 0 \\ ]\n2. Đặt tính theo từng cột từ trái qua phải:\n\n\"`text\n 0 1 1 1 0 1 1 0\nXOR 1 1 0 1 1 1 1 1\n-----------------\n 1 0 1 0 1 0 0 1\n\"`\n\n - Cột 1 (MSB): \\ (0 \\ oplus 1 = 1 \\ )\n - Cột 2: \\ (1 \\ oplus 1 = 0 \\ )\n - Cột 3: \\ (1 \\ oplus 0 = 1 \\ )\n - Cột 4: \\ (1 \\ oplus 1 = 0 \\ )\n - Cột 5: \\ (0 \\ oplus 1 = 1 \\ )\n - Cột 6: \\ (1 \\ oplus 1 = 0 \\ )\n - Cột 7: \\ (1 \\ oplus 1 = 0 \\ )\n - Cột 8 (LSB): \\ (0 \\ oplus 1 = 1 \\ )\n3. Chuỗi bit kết quả là: \\ (10101001_2 \\ ).\n\nKiểm tra:\nKết quả trùng khớp với phương án C (10101001).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1337,
+      "id": 1321,
       "quizId": 11,
       "text": "What is the primary function of the Arithmetic and Logic Unit (ALU) in a processor?",
       "options": [
@@ -5502,7 +5294,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the primary function of the Arithmetic and Logic Unit (ALU) in a processor?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Perform actual computations and data processing.\n\n **Kiểm tra**: Chọn A. Perform actual computations and data processing \n\n **Vì sao các phương án khác sai**:\n\n- B (Control the movement of data and instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Act as an interface to the system bus): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Manage the internal processor memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
     },
     {
-      "id": 1338,
+      "id": 1322,
       "quizId": 11,
       "text": "What is result of 10100101 xor 11001001?",
       "options": [
@@ -5515,7 +5307,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is result of 10100101 xor 11001001?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. 01101100.\n\n **Kiểm tra**: Chọn C. 01101100 \n\n **Vì sao các phương án khác sai**:\n\n- A (11101101): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (10000001): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (10101100): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1339,
+      "id": 1323,
       "quizId": 11,
       "text": "Regarding the ALU(Arithmetic Logic Unit), besides basic arithmetic operations, what operations can it perform? (choose two correct answers)",
       "options": [
@@ -5533,7 +5325,7 @@
       "multiple": true
     },
     {
-      "id": 1340,
+      "id": 1324,
       "quizId": 11,
       "text": "Consider an expression: NOT (1111 1010) What is the result of this expression?",
       "options": [
@@ -5546,7 +5338,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nThực hiện phép toán phủ định logic từng bit (Bitwise NOT / Bù 1) trên chuỗi 8 bit.\n\nCác bước:\n1. Quy tắc của phép toán NOT:\n \\ [ \\ textNOT(1) = 0, \\ quad \\ textNOT(0) = 1 \\ ]\n2. Đảo từng bit của chuỗi \\ (1111 \\ ,1010_2 \\ ):\n - 4 bit đầu tiên: \\ (1111 \\ longrightarrow 0000 \\ )\n - 4 bit tiếp theo: \\ (1010 \\ longrightarrow 0101 \\ )\n3. Kết quả thu được là:\n \\ [ 0000 \\ ,0101_2 \\ ]\n\nKiểm tra:\nKết quả hoàn toàn trùng khớp với phương án B (0000 0101).\n\n **Xuất hiện trong**: CEA201_-_SU26_-_FE.txt"
     },
     {
-      "id": 1341,
+      "id": 1325,
       "quizId": 12,
       "text": "The operation _________ yields true if either or both of its operands are true.",
       "options": [
@@ -5559,7 +5351,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The operation ________ yields true if either or both of its operands are true.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. OR.\n\n **Kiểm tra**: Chọn D. OR \n\n **Vì sao các phương án khác sai**:\n\n- A (NOT): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (AND): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (NAND): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1342,
+      "id": 1326,
       "quizId": 12,
       "text": "A _________ is an electronic circuit that produces an output signal that is a simple Boolean op signals.",
       "options": [
@@ -5572,20 +5364,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A _______ is an electronic circuit that produces an output signal that is a simple Boolean op signals.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. gate.\n\n **Kiểm tra**: Chọn A. gate \n\n **Vì sao các phương án khác sai**:\n\n- B (decoder): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (counter): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (flip-flop): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1343,
-      "quizId": 12,
-      "text": "The operation _________ yields true if either or both of its operands are true.",
-      "options": [
-        "AND",
-        "NOT",
-        "OR",
-        "NAND"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The operation ________ yields true if either or both of its operands are true.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. OR.\n\n **Kiểm tra**: Chọn D. OR \n\n **Vì sao các phương án khác sai**:\n\n- A (NOT): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (AND): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (NAND): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
-    },
-    {
-      "id": 1344,
+      "id": 1327,
       "quizId": 12,
       "text": "_________ are used in digital circuits to control signal and data routing.",
       "options": [
@@ -5598,7 +5377,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__________ are used in digital circuits to control signal and data routing.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Multiplexers.\n\n **Kiểm tra**: Chọn A. Multiplexers \n\n **Vì sao các phương án khác sai**:\n\n- B (Program counters): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Flip-flops): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Gates): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1345,
+      "id": 1328,
       "quizId": 12,
       "text": "For the following Boolean expression \\(AB + AB'\\) and the truth table:\r\n\n| A | B | B' | Output |\n| :---: | :---: | :---: | :---: |\n| 1 | 0 | 1 | ? |\n| 1 | 1 | 0 | ? |\n| 0 | 0 | 1 | ? |\n| 0 | 1 | 0 | ? |\n\nChoose the correct option to replace at \"?\" (order top to bottom):",
       "options": [
@@ -5611,7 +5390,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Rút gọn biểu thức Boolean & Bảng chân trị (Boolean Algebra & Truth Table) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Cho biểu thức Boolean $F = AB + AB'$ và bảng chân trị tương ứng.\n- Rút gọn biểu thức theo định lý đại số Boolean:\n  $$F = AB + AB' = A(B + B')$$\n  Vì $B + B' = 1$, ta có:\n  $$F = A \\cdot 1 = A$$\n- Như vậy, giá trị ngõ ra $F$ (Output) luôn bằng chính xác giá trị của ngõ vào $A$ cho mọi hàng trong bảng chân trị:\n  - Hàng 1: $A = 1, B = 0 \\implies F = 1$\n  - Hàng 2: $A = 1, B = 1 \\implies F = 1$\n  - Hàng 3: $A = 0, B = 0 \\implies F = 0$\n  - Hàng 4: $A = 0, B = 1 \\implies F = 0$\n- Đọc cột Output từ trên xuống dưới ta được dãy giá trị: **`1, 1, 0, 0`**.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc in nhầm phương án A thành `1,1,1,0` (gõ nhầm số 0 ở hàng 3 thành 1). Đáp án chính xác tuyệt đối là `1,1,0,0`.\n\n **Kiểm tra**: Chọn A. 1,1,0,0 \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1346,
+      "id": 1329,
       "quizId": 12,
       "text": "If you have a boolean function with 3 variables, how may rows are there in the truth table?",
       "options": [
@@ -5624,7 +5403,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"If you have a boolean function with 3 variables, how may rows are there in the truth table?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 8 rows.\n\n **Kiểm tra**: Chọn A. 8 rows \n\n **Vì sao các phương án khác sai**:\n\n- B (3 rows): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (6 rows): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (12 rows): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1347,
+      "id": 1330,
       "quizId": 12,
       "text": "How does Boolean algebra contribute to the design of digital circuits?",
       "options": [
@@ -5637,7 +5416,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nVai trò của Đại số Boole (Boolean algebra) trong thiết kế mạch số.\n\nCác bước:\n1. Đại số Boole cung cấp các công cụ toán học và định lý (như luật phân phối, luật De Morgan, biểu đồ Karnaugh) để rút gọn các biểu thức logic.\n2. Việc tối giản biểu thức logic giúp giảm số lượng cổng logic (gates) và số đường dây dẫn cần thiết, từ đó đơn giản hóa mạch thực thi thực tế, giảm chi phí chế tạo, giảm nhiệt và tăng tốc độ xử lý.\n\nKiểm tra:\nPhương án A: 'It simplifies the implementation of desired functions' là nhận định chính xác nhất.\n\nVì sao các phương án khác sai:\n- B, C, D đề cập đến dữ liệu kinh tế, mạch tương tự (analog circuits), kỹ thuật hóa học - hoàn toàn không phải mục đích của đại số Boole trong máy tính.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1348,
+      "id": 1331,
       "quizId": 12,
       "text": "When both inputs are 1, what is the result of a NAND gate?",
       "options": [
@@ -5651,7 +5430,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"When both inputs are 1, what is the result of a NAND gate?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 0.\n\n **Kiểm tra**: Chọn A. 0 \n\n **Vì sao các phương án khác sai**:\n\n- B (1): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (2): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Undefined): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (#NA): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1349,
+      "id": 1332,
       "quizId": 12,
       "text": "What is the output of a NOT gate when the input is 0?",
       "options": [
@@ -5664,7 +5443,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nBảng chân trị và chức năng của cổng đảo logic (NOT gate / Inverter).\n\nCác bước:\n1. Cổng NOT thực hiện phép phủ định logic trên 1 bit đầu vào.\n2. Bảng chân trị của cổng NOT:\n\n| Đầu vào (Input) | Đầu ra (Output) |\n| :---: | :---: |\n| 0 | 1 |\n| 1 | 0 |\n\n3. Khi đầu vào bằng 0, tín hiệu đảo ở đầu ra bằng 1.\n\nKiểm tra:\nĐầu ra là 1 -> Đáp án B.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1350,
+      "id": 1333,
       "quizId": 12,
       "text": "Consider the expression : NOT(A + B) = ? Apply DeMorgan's Theorem to replace at \"?\"",
       "options": [
@@ -5677,7 +5456,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Consider the expression : NOT(A + B) = ? Apply DeMorgan's Theorem to replace at \"?\"\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. NOT A AND NOT B.\n\n **Kiểm tra**: Chọn A. NOT A AND NOT B \n\n **Vì sao các phương án khác sai**:\n\n- B (NOT A OR NOT B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (NOT A AND B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (A OR NOT B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1351,
+      "id": 1334,
       "quizId": 12,
       "text": "Assume the following truth table:\r\n\n| X | Y | OUTPUT |\n| :---: | :---: | :---: |\n| 1 | 1 | 1 |\n| 1 | 0 | 1 |\n| 0 | 1 | 1 |\n| 0 | 0 | 0 |\n\nWhich basic operator matches the table above?",
       "options": [
@@ -5690,7 +5469,7 @@
       "explanation": "**Giải thích**: \n\n **Đáp án đúng**: **B. OR**\n\n **Cơ sở lý thuyết**: Nội dung câu hỏi thuộc giáo trình William Stallings COA 11th Edition (Chapter 12: Digital Logic)."
     },
     {
-      "id": 1352,
+      "id": 1335,
       "quizId": 12,
       "text": "When both inputs are 0, what is the result of a NOR gate?",
       "options": [
@@ -5704,7 +5483,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"When both inputs are 0, what is the result of a NOR gate?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. 1.\n\n **Kiểm tra**: Chọn B. 1 \n\n **Vì sao các phương án khác sai**:\n\n- A (0): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (2): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Undefined): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (#NA): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1353,
+      "id": 1336,
       "quizId": 12,
       "text": "Consider an expression: 1000 0000 AND 1111 1010 What is the result of this expression?",
       "options": [
@@ -5717,7 +5496,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Consider an expression: 1000 0000 OR 1111 1010 What is the result of this expression?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. 1111 1010.\n\n **Kiểm tra**: Chọn B. 1111 1010 \n\n **Vì sao các phương án khác sai**:\n\n- A (1000 0000): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (1001 1010): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (1001 0101): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1354,
+      "id": 1337,
       "quizId": 12,
       "text": "Consider an expression: NOT (A OR B) Choose the correct expression that is equal to the given expression.",
       "options": [
@@ -5730,7 +5509,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Consider an expression: NOT (A OR B) Choose the correct expression that is equal to the given expression.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. A NOR B.\n\n **Kiểm tra**: Chọn A. A NOR B \n\n **Vì sao các phương án khác sai**:\n\n- B (A NAND B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (NOT A NOR B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (NOT A OR B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1355,
+      "id": 1338,
       "quizId": 12,
       "text": "Which gate can be used to create an inverted output of an input signal in digital logic?",
       "options": [
@@ -5743,7 +5522,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nNhận diện chức năng đảo bit tín hiệu (inverter) của các cổng logic cơ bản.\n\nCác bước:\n1. Cổng NOT (Inverter): Có 1 đầu vào và 1 đầu ra. Nếu đầu vào là 1 thì đầu ra là 0; nếu đầu vào là 0 thì đầu ra là 1. Tín hiệu đầu ra là tín hiệu đảo (inverted output) của đầu vào.\n2. Bảng chân lý cổng NOT:\n\n| In (Đầu vào) | Out (Đầu ra) |\n| :---: | :---: |\n| 0 | 1 |\n| 1 | 0 |\n\nKiểm tra:\nCổng dùng để tạo đầu ra đảo của tín hiệu đầu vào là cổng NOT (A).\n\nVì sao các phương án khác sai:\n- B (OR gate): Cho ra 1 nếu có ít nhất một đầu vào là 1.\n- C (AND gate): Cho ra 1 khi tất cả đầu vào là 1.\n- D (XOR gate): Cho ra 1 khi số lượng đầu vào 1 là lẻ.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1356,
+      "id": 1339,
       "quizId": 12,
       "text": "Which of the following Boolean expressions is equivalent to \\(F(A, B, C) = \\Sigma(0, 1, 3, 4, 5)\\)",
       "options": [
@@ -5756,7 +5535,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following Boolean expressions is equivalent to \\(F(A, B, C) = \\Sigma(0, 1, 3, 4, 5)\\)\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. \\(F = A'C + B'\\).\n\n **Kiểm tra**: Chọn B. \\(F = A'C + B'\\) \n\n **Vì sao các phương án khác sai**:\n\n- A (\\(F = AC + B'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (\\(F = A'C' + B\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (\\(F = AC' + B\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1357,
+      "id": 1340,
       "quizId": 12,
       "text": "_________Simplify the following Boolean expression: \\((A + B + C)(A + B' + C)(A' + B + C')(A' + B' + C')\\)",
       "options": [
@@ -5769,7 +5548,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__Simplify the following Boolean expression: \\((A + B + C)(A + B' + C)(A' + B + C')(A' + B' + C')\\)\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. \\(A'C + AC'\\).\n\n **Kiểm tra**: Chọn B. \\(A'C + AC'\\) \n\n **Vì sao các phương án khác sai**:\n\n- A (\\(A'BC + AB'C'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (\\(A'D + AD'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (\\(AD' + BC'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1358,
+      "id": 1341,
       "quizId": 12,
       "text": "Given the Karnaugh map with inputs \\(CD\\) (rows) and \\(AB\\) (columns) as shown below:\r\n\n| \\(CD \\backslash AB\\) | 00 | 01 | 11 | 10 |\n| :---: | :---: | :---: | :---: | :---: |\n| 00 | 1 | 1 | | |\n| 01 | 1 | 1 | | |\n| 11 | | | 1 | 1 |\n| 10 | | | 1 | 1 |\n\nChoose the corresponding canonical sum-of-products expression:",
       "options": [
@@ -5782,7 +5561,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Bảng Karnaugh map với các biến đầu vào CD (hàng) và AB (cột).\n- Các ô có giá trị 1 nằm tại các tổ hợp biến được chỉ định, tương ứng biểu diễn chuẩn SOP (Sum of Products).\n- Xác định biểu thức chính tắc tổng của các minterm (Canonical Sum-of-Products) tương ứng với các ô mang giá trị 1.\n\n **Kiểm tra**: Chọn B \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1359,
+      "id": 1342,
       "quizId": 12,
       "text": "The Boolean expression \\(F = A'C' + AC' + BC = B + C'\\). true or false",
       "options": [
@@ -5793,7 +5572,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The Boolean expression \\(F = A'C' + AC' + BC = B + C'\\). true or false\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. true.\n\n **Kiểm tra**: Chọn A. true \n\n **Vì sao các phương án khác sai**:\n\n- B (false): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1360,
+      "id": 1343,
       "quizId": 12,
       "text": "Use Boolean algebra to find the most simplified SOP expression for F = ABD + CD + ACD + ABC + ABCD.",
       "options": [
@@ -5806,7 +5585,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Use Boolean algebra to find the most simplified SOP expression for F = ABD + CD + ACD + ABC + ABCD.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. \\(F = ABD + ABC + CD\\).\n\n **Kiểm tra**: Chọn C. \\(F = ABD + ABC + CD\\) \n\n **Vì sao các phương án khác sai**:\n\n- A (\\(F = AC + AD\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (\\(F = CD + AD\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (\\(F = BC + AB\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1361,
+      "id": 1344,
       "quizId": 12,
       "text": "Applying DeMorgan's theorem to the expression \\(((A + B + C)D)'\\), we get _________.",
       "options": [
@@ -5819,7 +5598,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Applying DeMorgan's theorem to the expression (ABC)', we get __.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. A' + B' + C'.\n\n **Kiểm tra**: Chọn C. A' + B' + C' \n\n **Vì sao các phương án khác sai**:\n\n- A ((A+B+C)'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (A+B'+CC'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (A(B+C)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1362,
+      "id": 1345,
       "quizId": 12,
       "text": "Which logic gate has an output of 1 only if both inputs are 0 or both inputs are 1?",
       "options": [
@@ -5832,7 +5611,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which logic gate has an output of 1 only if both inputs are 0 or both inputs are 1?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. XNOR gate.\n\n **Kiểm tra**: Chọn C. XNOR gate \n\n **Vì sao các phương án khác sai**:\n\n- A (NOT gate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (AND gate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (OR gate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1363,
+      "id": 1346,
       "quizId": 12,
       "text": "_________For the SOP expression \\(AB + B'C\\), how many 0s are in the truth table's output column?",
       "options": [
@@ -5845,7 +5624,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__For the SOP expression \\(AB + B'C\\), how many 0s are in the truth table's output column?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 4.\n\n **Kiểm tra**: Chọn A. 4 \n\n **Vì sao các phương án khác sai**:\n\n- B (zero): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (1): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (5): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1364,
+      "id": 1347,
       "quizId": 12,
       "text": "_________Karnaugh map is a systematic way of reducing which type of expression?",
       "options": [
@@ -5858,7 +5637,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__Karnaugh map is a systematic way of reducing which type of expression?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. sum-of-products.\n\n **Kiểm tra**: Chọn B. sum-of-products \n\n **Vì sao các phương án khác sai**:\n\n- A (those with overbars): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (product-of-sums): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (exclusive NOR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1365,
+      "id": 1348,
       "quizId": 12,
       "text": "Which logic gate is also known as a \"buffer\" and simply passes its input to its output?",
       "options": [
@@ -5871,7 +5650,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which logic gate is also known as a \"buffer\" and simply passes its input to its output?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. NOT gate.\n\n **Kiểm tra**: Chọn B. NOT gate \n\n **Vì sao các phương án khác sai**:\n\n- A (XOR gate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (AND gate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (OR gate): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1366,
+      "id": 1349,
       "quizId": 12,
       "text": "Which of the following Boolean expressions is equivalent to F=AB'+ABC'+AB'C",
       "options": [
@@ -5884,7 +5663,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following Boolean expressions is equivalent to \\(F(A, B, C) = \\Sigma(0, 1, 3, 4, 5)\\)\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. \\(F = A'C + B'\\).\n\n **Kiểm tra**: Chọn B. \\(F = A'C + B'\\) \n\n **Vì sao các phương án khác sai**:\n\n- A (\\(F = AC + B'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (\\(F = A'C' + B\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (\\(F = AC' + B\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1367,
+      "id": 1350,
       "quizId": 12,
       "text": "For the SOP expression AB'C+A'BC+ABC', how many 1s are in the truth table's output column?",
       "options": [
@@ -5897,7 +5676,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"For the SOP expression AB'C+A'BC+ABC', how many 1s are in the truth table's output column?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. 3.\n\n **Kiểm tra**: Chọn B. 3 \n\n **Vì sao các phương án khác sai**:\n\n- A (5): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (1): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (2): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1368,
+      "id": 1351,
       "quizId": 12,
       "text": "_________Simplify the following Boolean expression: \\(AB'C' + A'BC + ABC + ABC'\\)",
       "options": [
@@ -5910,7 +5689,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Rút gọn biểu thức đại số Boolean (Boolean Expression Simplification) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Rút gọn biểu thức Boolean:\n  $$F = AB'C' + A'BC + ABC + ABC'$$\n- Nhóm các số hạng có nhân tử chung để áp dụng tính chất bù $X + X' = 1$:\n  - Nhóm số hạng 1 và 4: $AB'C' + ABC' = AC'(B' + B) = AC'(1) = AC'$\n  - Nhóm số hạng 2 và 3: $A'BC + ABC = BC(A' + A) = BC(1) = BC$\n- Kết hợp hai kết quả rút gọn lại:\n  $$F = AC' + BC$$\n- Đối chiếu các phương án: Phương án C ($BC + AB + AB'C'$) chưa được rút gọn tối giản (vẫn còn số hạng dư thừa $AB$ và chưa triệt tiêu $B'$). Phương án A ($AC' + BC$) là dạng tối giản chuẩn xác nhất.\n\n **Kiểm tra**: Chọn A. AC' + BC \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1369,
+      "id": 1352,
       "quizId": 12,
       "text": "Applying DeMorgan's theorem to the expression (ABC)', we get _________.",
       "options": [
@@ -5923,7 +5702,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Applying DeMorgan's theorem to the expression (ABC)', we get __.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. A' + B' + C'.\n\n **Kiểm tra**: Chọn C. A' + B' + C' \n\n **Vì sao các phương án khác sai**:\n\n- A ((A+B+C)'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (A+B'+CC'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (A(B+C)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1370,
+      "id": 1353,
       "quizId": 12,
       "text": "_________What is the output of the following Boolean expression: \\((A' + B + C)\\text{ AND }(A + B' + C')\\)?",
       "options": [
@@ -5936,7 +5715,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đánh giá giá trị biểu thức đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Cho biểu thức Boolean:\n  $$F = (A' + B + C) \\cdot (A + B' + C')$$\n- Kiểm tra xem biểu thức có phải là hằng số (luôn bằng 1 hoặc luôn bằng 0) hay không:\n  - Thử trường hợp 1: Cho $(A, B, C) = (1, 0, 0)$:\n    - Ngoặc thứ nhất: $A' + B + C = 0 + 0 + 0 = 0$.\n    - Khi đó $F = 0 \\cdot (1 + 1 + 1) = 0$.\n  - Thử trường hợp 2: Cho $(A, B, C) = (0, 0, 0)$:\n    - Ngoặc thứ nhất: $A' + B + C = 1 + 0 + 0 = 1$.\n    - Ngoặc thứ hai: $A + B' + C' = 0 + 1 + 1 = 1$.\n    - Khi đó $F = 1 \\cdot 1 = 1$.\n- Vì $F$ nhận giá trị 0 ở một số tổ hợp biến và nhận giá trị 1 ở các tổ hợp biến khác, nên $F$ không phải là hằng số (hằng đúng hay hằng sai), cũng không tương đương với phép toán XOR.\n- Do đó, giá trị ngõ ra của biểu thức hoàn toàn phụ thuộc vào giá trị của các biến đầu vào $A, B$ và $C$.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc chọn nhầm phương án A (1 - ngộ nhận là hằng đúng). Đáp án chính xác tuyệt đối là D. Depends on the values of A, B, and C.\n\n **Kiểm tra**: Chọn D. Depends on the values of A, B, and C \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1371,
+      "id": 1354,
       "quizId": 12,
       "text": "Write the Boolean expression for the logic circuit shown below:",
       "options": [
@@ -5955,20 +5734,7 @@
       ]
     },
     {
-      "id": 1372,
-      "quizId": 12,
-      "text": "A Karnaugh map is a systematic way of reducing which type of expression?",
-      "options": [
-        "product-of-sums",
-        "those with overbars",
-        "exclusive NOR",
-        "sum-of-products"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__Karnaugh map is a systematic way of reducing which type of expression?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. sum-of-products.\n\n **Kiểm tra**: Chọn B. sum-of-products \n\n **Vì sao các phương án khác sai**:\n\n- A (those with overbars): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (product-of-sums): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (exclusive NOR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
-    },
-    {
-      "id": 1373,
+      "id": 1355,
       "quizId": 12,
       "text": "_________Simplify the following Boolean expression using De Morgan's Law: \\((AB')'\\)",
       "options": [
@@ -5981,7 +5747,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__Simplify the following Boolean expression: \\((A + B + C)(A + B' + C)(A' + B + C')(A' + B' + C')\\)\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. \\(A'C + AC'\\).\n\n **Kiểm tra**: Chọn B. \\(A'C + AC'\\) \n\n **Vì sao các phương án khác sai**:\n\n- A (\\(A'BC + AB'C'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (\\(A'D + AD'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (\\(AD' + BC'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1374,
+      "id": 1356,
       "quizId": 12,
       "text": "_________Which of the following is NOT a Boolean identity?",
       "options": [
@@ -5994,7 +5760,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các đồng nhất thức cơ bản của đại số Boolean (Basic Boolean Identities) thuộc Chapter 12: Digital Logic (Bảng 12.1/20.1 trong Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"_________Which of the following is NOT a Boolean identity?\" (Biểu thức nào sau đây KHÔNG phải là một đồng nhất thức Boolean cơ bản?).\n\n- Bảng các đồng nhất thức Boolean cơ bản (Basic Boolean Identities) trong giáo trình chỉ được xây dựng trên 3 phép toán tiên đề nền tảng: **AND ($\\cdot$)**, **OR ($+$)** và **NOT ($'$)**:\n  - **Phương án A ($A \\text{ AND } (A \\text{ OR } B) = A$)**: Đây là **Luật hấp thụ (Absorption Law)** ($A(A + B) = A$) — một đồng nhất thức Boolean cơ bản chuẩn xác.\n  - **Phương án C ($(A \\text{ OR } B)' = A' \\text{ AND } B'$)**: Đây là **Định lý De Morgan** ($\\overline{A + B} = \\overline{A} \\cdot \\overline{B}$) — một đồng nhất thức Boolean cơ bản chuẩn xác.\n  - **Phương án D ($A + A' = 1$)**: Đây là **Luật bù / Nghịch đảo (Complement / Inverse Law)** ($A + \\overline{A} = 1$) — một trong những đồng nhất thức Boolean tiên đề cốt lõi nhất.\n  - **Phương án B ($A \\text{ XOR } B = (A \\text{ AND } B') \\text{ OR } (A' \\text{ AND } B)$)**: Đây là **định nghĩa khai triển hàm logic của cổng XOR** (cổng logic tổ hợp dẫn xuất), KHÔNG nằm trong bảng các tiên đề/đồng nhất thức Boolean cơ bản (Basic Boolean Identities) của đại số Boolean thuần túy.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc đánh dấu nhầm phương án D ($A + A' = 1$ — ngộ nhận luật bù là không phải đồng nhất thức). Đáp án chính xác theo giáo trình và câu hỏi là **B. A XOR B = (A AND B') OR (A' AND B)**.\n\n **Kiểm tra**: Chọn B. A XOR B = (A AND B') OR (A' AND B) \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1375,
+      "id": 1357,
       "quizId": 12,
       "text": "Which of the following is a characteristic of sequential circuits compared to combinational circuits?",
       "options": [
@@ -6007,7 +5773,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following is a characteristic of sequential circuits compared to combinational circuits?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Output depends on current inputs and past inputs.\n\n **Kiểm tra**: Chọn C. Output depends on current inputs and past inputs \n\n **Vì sao các phương án khác sai**:\n\n- A (Do not use gates): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Output depends only on current inputs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Simpler to design and implement): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1376,
+      "id": 1358,
       "quizId": 12,
       "text": "Given the following Karnaugh map, what is the optimal expression in the sum of product format (\\(X'\\) means NOT \\(X\\))?\r\n\n| \\(AB \\backslash CD\\) | 00 | 01 | 11 | 10 |\n| :---: | :---: | :---: | :---: | :---: |\n| 00 | | | | |\n| 01 | 1 | 1 | 1 | 1 |\n| 11 | | 1 | | 1 |\n| 10 | | 1 | | 1 |",
       "options": [
@@ -6020,7 +5786,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Given the following Karnaugh map, what is the optimal expression in the sum of product format (X' means Not X)?\n| AB \\ CD | 00 | 01 | 11 | 10 |\n|---|---|---|---|---|\n| 00 | | | | |\n| 01 | 1 | 1 | 1 | 1 |\n| 11 | | 1 | | 1 |\n| 10 | | 1 | | 1 |\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. A'B + AC'D + ACD'.\n\n **Kiểm tra**: Chọn A. A'B + AC'D + ACD' \n\n **Vì sao các phương án khác sai**:\n\n- B (AB + AC' + ACD'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (AB' + AD + ACD'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (A'B + C'D + BCD'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1377,
+      "id": 1359,
       "quizId": 12,
       "text": "Given the following Karnaugh map, what is the optimal expression in the sum of product format (\\(X'\\) means NOT \\(X\\))?\r\n\n| \\(A \\backslash BC\\) | 00 | 01 | 11 | 10 |\n| :---: | :---: | :---: | :---: | :---: |\n| 0 | 1 | 1 | 1 | 1 |\n| 1 | 1 | | | 1 |",
       "options": [
@@ -6033,7 +5799,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Given the following Karnaugh map, what is the optimal expression in the sum of product format (X' means Not X)?\n| AB \\ CD | 00 | 01 | 11 | 10 |\n|---|---|---|---|---|\n| 00 | | | | |\n| 01 | 1 | 1 | 1 | 1 |\n| 11 | | 1 | | 1 |\n| 10 | | 1 | | 1 |\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. A'B + AC'D + ACD'.\n\n **Kiểm tra**: Chọn A. A'B + AC'D + ACD' \n\n **Vì sao các phương án khác sai**:\n\n- B (AB + AC' + ACD'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (AB' + AD + ACD'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (A'B + C'D + BCD'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1378,
+      "id": 1360,
       "quizId": 12,
       "text": "Consider the truth table:\r\n\n| A | B | F |\n| :---: | :---: | :---: |\n| 0 | 0 | 1 |\n| 0 | 1 | 0 |\n| 1 | 0 | 0 |\n| 1 | 1 | 0 |\n\nChoose the correct Algebraic Function matching the given truth table:",
       "options": [
@@ -6046,7 +5812,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Consider the truth table\n\n| A | B | F |\n|---|---|---|\n| 0 | 0 | 1 |\n| 0 | 1 | 0 |\n| 1 | 0 | 0 |\n| 1 | 1 | 0 |\n\nChoose the correct Algebraic Functions matches with given truth table\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. F = NOT (A + B).\n\n **Kiểm tra**: Chọn A. F = NOT (A + B) \n\n **Vì sao các phương án khác sai**:\n\n- B (F = A XOR B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (F = A AND NOT B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (F = NOT A AND B): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1379,
+      "id": 1361,
       "quizId": 12,
       "text": "Given the following Karnaugh map, what is the optimal expression in the sum of product format (\\(X'\\) means NOT \\(X\\))?\r\n\n| \\(A \\backslash BC\\) | 00 | 01 | 11 | 10 |\n| :---: | :---: | :---: | :---: | :---: |\n| 0 | | | 1 | 1 |\n| 1 | 1 | | 1 | 1 |",
       "options": [
@@ -6059,7 +5825,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Given the following Karnaugh map, what is the optimal expression in the sum of product format (X' means Not X)?\n| AB \\ CD | 00 | 01 | 11 | 10 |\n|---|---|---|---|---|\n| 00 | | | | |\n| 01 | 1 | 1 | 1 | 1 |\n| 11 | | 1 | | 1 |\n| 10 | | 1 | | 1 |\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. A'B + AC'D + ACD'.\n\n **Kiểm tra**: Chọn A. A'B + AC'D + ACD' \n\n **Vì sao các phương án khác sai**:\n\n- B (AB + AC' + ACD'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (AB' + AD + ACD'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (A'B + C'D + BCD'): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1380,
+      "id": 1362,
       "quizId": 12,
       "text": "The operation _________ yields true (binary value 1) if and only if both of its operands are true.",
       "options": [
@@ -6072,7 +5838,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nĐịnh nghĩa các phép toán logic cơ bản (AND, OR, NOT, XOR).\n\nCác bước:\n1. Phép toán AND (VÀ): Cho giá trị đúng (1) khi và chỉ khi cả hai toán hạng đều đúng (1). Nếu một trong hai hoặc cả hai là sai (0), kết quả là 0.\n2. Phép toán OR (HOẶC): Cho giá trị đúng nếu có ít nhất một toán hạng là đúng.\n3. Phép toán NOT (PHỦ ĐỊNH): Phép toán một ngôi đảo giá trị.\n4. Phép toán XOR (HOẶC LOẠI TRỪ): Cho giá trị đúng khi hai toán hạng có giá trị khác nhau.\n\nKiểm tra:\nPhép toán cho giá trị 1 khi và chỉ khi cả hai toán hạng là 1 chính là AND (A).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1381,
+      "id": 1363,
       "quizId": 12,
       "text": "The unary operation _________ inverts the value of its operand.",
       "options": [
@@ -6085,7 +5851,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The unary operation _________ inverts the value of its operand.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. NOT.\n\n **Kiểm tra**: Chọn C. NOT \n\n **Vì sao các phương án khác sai**:\n\n- A (XOR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (NAND): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (OR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
     },
     {
-      "id": 1382,
+      "id": 1364,
       "quizId": 12,
       "text": "Counters can be designated as _________.",
       "options": [
@@ -6098,20 +5864,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Counters can be designated as _________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. both asynchronous and synchronous.\n\n **Kiểm tra**: Chọn D. both asynchronous and synchronous \n\n **Vì sao các phương án khác sai**:\n\n- A (asynchronous): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (neither asynchronous or synchronous): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (synchronous): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1383,
-      "quizId": 12,
-      "text": "Counters can be designated as _________.",
-      "options": [
-        "asynchronous",
-        "synchronous",
-        "both asynchronous and synchronous",
-        "neither asynchronous or synchronous"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Counters can be designated as _________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. both asynchronous and synchronous.\n\n **Kiểm tra**: Chọn D. both asynchronous and synchronous \n\n **Vì sao các phương án khác sai**:\n\n- A (asynchronous): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (neither asynchronous or synchronous): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (synchronous): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
-    },
-    {
-      "id": 1384,
+      "id": 1365,
       "quizId": 12,
       "text": "Consider an expression: \\(A + (B.C)\\) What expression is equal to the given expression?",
       "options": [
@@ -6124,7 +5877,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nÁp dụng định luật phân phối (Distributive Law) trong đại số Boole.\n\nCác bước:\n1. Trong đại số Boole, định luật phân phối áp dụng cho cả phép VÀ đối với phép HOẶC, và phép HOẶC đối với phép VÀ (khác biệt quan trọng so với đại số thông thường):\n \\ [ A \\ cdot (B + C) = (A \\ cdot B) + (A \\ cdot C) \\ ]\n \\ [ A + (B \\ cdot C) = (A + B) \\ cdot (A + C) \\ ]\n2. Chứng minh đẳng thức thứ hai:\n \\ [ (A + B) \\ cdot (A + C) = A \\ cdot A + A \\ cdot C + B \\ cdot A + B \\ cdot C \\ ]\n Vì \\ (A \\ cdot A = A \\ ):\n \\ [ = A + A \\ cdot C + A \\ cdot B + B \\ cdot C = A \\ cdot (1 + C + B) + B \\ cdot C \\ ]\n Vì \\ (1 + X = 1 \\ ):\n \\ [ = A \\ cdot 1 + B \\ cdot C = A + (B \\ cdot C) \\ ]\n3. Như vậy, biểu thức tương đương với \\ (A + (B \\ cdot C) \\ ) là \\ ((A + B) \\ cdot (A + C) \\ ).\n\nKiểm tra:\nBiểu thức tương đương là phương án A.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1385,
+      "id": 1366,
       "quizId": 12,
       "text": "_________Which of the following is an important feature of the sum-of-products (SOP) form of expression?",
       "options": [
@@ -6137,7 +5890,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Dạng biểu thức tổng các tích (Sum-of-Products - SOP) & Mạch logic 2 mức (Two-Level Logic) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"_________Which of the following is an important feature of the sum-of-products (SOP) form of expression?\" (Đặc điểm quan trọng nào sau đây là của dạng biểu thức tổng các tích - SOP?).\n\n- Phân tích nguyên lý mạch logic 2 mức (Two-level logic implementation):\n  - Dạng SOP (Sum of Products) biểu diễn một hàm Boolean dưới dạng tổng (OR) của các số hạng tích (AND) (ví dụ: $F = AB + CD + EF$).\n  - Khi hiện thực bằng phần cứng, mạch luôn có cấu trúc **2 tầng (two-level)** cố định:\n    - **Tầng 1 (First level)**: Các cổng **AND** để tính giá trị từng số hạng tích.\n    - **Tầng 2 (Second level)**: Một cổng **OR** duy nhất gom ngõ ra của các cổng AND để tạo ngõ ra tổng $F$.\n  - **Đặc trưng quan trọng nhất (Important feature)**: Mọi đường truyền tín hiệu từ ngõ vào đến ngõ ra (không tính các cổng đảo NOT ở đầu vào) chỉ đi qua tối đa đúng **hai cổng logic (No signal must pass through more than two gates, not including inverters)**.\n  - Điều này giúp chuẩn hóa và giữ cho độ trễ truyền dẫn (propagation delay) của mạch tổ hợp luôn ở mức nhỏ nhất ($2 \\times t_{\\text{gate}}$) và đồng đều giữa các đường tín hiệu.\n\n **Kiểm tra**: Chọn A. No signal must pass through more than two gates, not including inverters. \n\n **Vì sao các phương án khác sai**:\n\n- B: Sai vì mạch SOP vẫn phải sử dụng cổng đảo (inverters / NOT) đối với các biến ở dạng bù (ví dụ $A'$), chứ không phải \"chỉ thu gọn thành duy nhất AND và OR\".\n- C: Sai vì thời gian trễ của dạng SOP tương đương với dạng POS (Product of Sums - mạch 2 tầng OR-AND), không phải \"giảm mạnh so với mọi dạng khác\".\n- D: Sai vì số tầng cổng cố định là 2, không phải \"giảm đi một nửa (factor of two)\".\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1386,
+      "id": 1367,
       "quizId": 12,
       "text": "Which output expression might indicate a product-of-sums circuit construction?",
       "options": [
@@ -6150,7 +5903,59 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which output expression might indicate a product-of-sums circuit construction?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. \\(X = (C + D)(E + G)\\).\n\n **Kiểm tra**: Chọn D. \\(X = (C + D)(E + G)\\) \n\n **Vì sao các phương án khác sai**:\n\n- A (\\(X = CD + EG\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (\\(X = (CD)'(D + E + F)\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (\\(X = (AC + BD + EF)'\\)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1387,
+      "id": 1368,
+      "quizId": 12,
+      "text": "What does a multiplexer do?",
+      "options": [
+        "Combines signals",
+        "Converts analog to digital",
+        "Stores data",
+        "Selects one input from many"
+      ],
+      "correctIndex": 3,
+      "explanation": "Hướng giải:\nXác định chức năng cốt lõi của mạch dồn kênh (Multiplexer - MUX) trong kỹ thuật số và kiến trúc máy tính.\n\nCác bước:\n1. Bộ dồn kênh (Multiplexer - MUX), hay còn gọi là bộ chọn dữ liệu (data selector), là một mạch logic tổ hợp.\n2. Cấu trúc chuẩn của bộ dồn kênh (2^n)-to-(1):\n   - Có (2^n) đầu vào dữ liệu ((I_0, I_1, dots, I_{2^n-1})).\n   - Có (n) đường tín hiệu điều khiển chọn (Select lines (S_0, dots, S_{n-1})).\n   - Có duy nhất (1) đầu ra dữ liệu ((Y)).\n3. Chức năng: Dựa vào giá trị nhị phân trên các đường chọn, bộ dồn kênh sẽ kết nối và cho phép một tín hiệu đầu vào duy nhất truyền qua đầu ra:\n   [\n   Y = sum_{k=0}^{2^n-1} m_k cdot I_k\n   ]\n   với (m_k) là minterm của các biến chọn.\n4. Do đó, chức năng của multiplexer là chọn một đầu vào từ nhiều đầu vào (Selects one input from many - phương án D).\n\nKiểm tra:\nTrong đường truyền dữ liệu CPU (Datapath), MUX được dùng ở mọi nơi để lựa chọn nguồn dữ liệu đưa vào ALU hoặc nạp vào thanh ghi.\n\nVì sao các phương án khác sai:\n- A (Combines signals): MUX không cộng gộp hay trộn các tín hiệu với nhau, nó chỉ chọn duy nhất 1 tín hiệu tại một thời điểm.\n- B (Converts analog to digital): Đây là chức năng của bộ biến đổi ADC (Analog-to-Digital Converter).\n- C (Stores data): MUX là mạch tổ hợp không có nhớ; việc lưu trữ dữ liệu là chức năng của mạch tuần tự (Flip-flop, thanh ghi, RAM).\n\nLưu ý/công thức cần nhớ:\nMultiplexer (MUX) = Data Selector (Chọn 1 đầu vào trong nhiều đầu vào dựa trên tín hiệu chọn)."
+    },
+    {
+      "id": 1369,
+      "quizId": 12,
+      "text": "What is the primary function of a flip-flop?",
+      "options": [
+        "Perform addition",
+        "Store a single bit of data",
+        "Generate signals",
+        "Execute arithmetic operations"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nXác định chức năng cơ bản nhất của phần tử lật trạng thái (Flip-flop) trong kỹ thuật số và thiết kế máy tính.\n\nCác bước:\n1. Mạch lật (Flip-flop) là phần tử logic tuần tự cơ bản có tính chất ổn định kép (bistable).\n2. Một flip-flop có hai trạng thái ổn định tương ứng với giá trị logic (0) hoặc (1).\n3. Trạng thái của flip-flop được duy trì liên tục cho đến khi có xung kích thích (clock pulse hoặc tín hiệu set/reset) làm thay đổi trạng thái của nó.\n4. Do đó, một flip-flop hoạt động như một ô nhớ cơ sở, có chức năng lưu trữ đúng (1\text{ bit}) dữ liệu (Store a single bit of data - phương án B).\n5. Khi kết hợp nhiều flip-flop lại với nhau, ta tạo nên các thanh ghi (registers) và các ô nhớ tĩnh (SRAM cells).\n\nKiểm tra:\nMọi sách giáo khoa kỹ thuật số đều định nghĩa: 'A flip-flop is a bistable circuit used to store one bit of information.'\n\nVì sao các phương án khác sai:\n- A (Perform addition): Thực hiện phép cộng là chức năng của mạch cộng (Adder: Half Adder, Full Adder).\n- C (Generate signals): Tạo tín hiệu xung nhịp là chức năng của mạch dao động tạo xung (Clock Generator / Oscillator).\n- D (Execute arithmetic operations): Thực hiện các phép tính số học là chức năng của khối ALU.\n\nLưu ý/công thức cần nhớ:\nFlip-flop = 1-bit storage element (Lưu trữ 1 bit dữ liệu)."
+    },
+    {
+      "id": 1370,
+      "quizId": 12,
+      "text": "Regarding a combinational circuit, what expressions are several examples about sum of products (SOP)?\n(A) : \\(F = AB + BC\\)\n(B) : \\(F = A'B'C + AB'C' + ABC\\) (với \\(A'\\) có nghĩa là NOT \\(A\\))\n(C) : \\(F = AB\\)\n(D) : \\(F = (A + B)(A + C)\\)",
+      "options": [
+        "ABC",
+        "ABD",
+        "BCD",
+        "ACD"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nPhân loại các biểu thức đại số Boolean theo dạng chuẩn Tổng các tích (Sum of Products - SOP).\n\nCác bước:\n1. Định nghĩa dạng Tổng các tích (Sum of Products - SOP):\n   - Một biểu thức logic ở dạng SOP là biểu thức gồm phép (+) (phép HOẶC - OR logic) áp dụng giữa hai hay nhiều số hạng tích (AND terms).\n   - Mỗi số hạng tích là phép nhân logic (AND) của các biến (ở dạng nguyên bản hoặc dạng đảo). Một tích đơn biến/đơn số hạng cũng được xem là dạng tích suy biến của SOP.\n2. Kiểm tra từng biểu thức đã cho:\n   - (A) (F = AB + BC): Là phép OR của hai tích (AB) và (BC) (implies) Đúng chuẩn dạng SOP.\n   - (B) (F = A'B'C + AB'C' + ABC): Là phép OR của ba tích (implies) Đúng chuẩn dạng SOP (dạng chính tắc minterm).\n   - (C) (F = AB): Là một số hạng tích đơn lẻ, được công nhận là dạng SOP suy biến (1-term SOP) (implies) Thuộc dạng SOP.\n   - (D) (F = (A + B)(A + C)): Là phép NHÂN (AND) của các tổng (OR terms) (implies) Đây là dạng Tích các tổng (Product of Sums - POS), KHÔNG phải SOP.\n3. Như vậy, các biểu thức thuộc dạng SOP gồm: (A), (B), và (C).\n4. Ghép lại tương ứng với lựa chọn A (ABC).\n\nKiểm tra:\nDạng SOP có thể được triển khai trực tiếp bằng mạng cổng AND-OR hai tầng kinh điển trong mạch logic tổ hợp.\n\nVì sao các phương án khác sai:\n- B, C, D đều chứa biểu thức (D), mà (D) rõ ràng là dạng POS (Product of Sums), không thể là SOP.\n\nLưu ý/công thức cần nhớ:\nSOP (Sum of Products): Dạng (AB + CD) (Phép OR của các tích AND).\nPOS (Product of Sums): Dạng ((A+B)(C+D)) (Phép AND của các tổng OR)."
+    },
+    {
+      "id": 1371,
+      "quizId": 12,
+      "text": "In Boolean algebra, what is the result of \\(A + A \\cdot B\\)?",
+      "options": [
+        "\\(A \\cdot B\\)",
+        "\\(A\\)",
+        "\\(B\\)",
+        "\\(A + B\\)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nRút gọn biểu thức đại số Boolean (A + A cdot B) dựa trên các định lý và tiên đề đại số Boole.\n\nCác bước:\n1. Áp dụng tính chất phân phối của phép nhân đối với phép cộng trong đại số Boole:\n   [\n   A + A cdot B = A cdot 1 + A cdot B = A cdot (1 + B)\n   ]\n2. Theo luật nuốt / định lý phần tử bù của phép toán logic OR:\n   Với mọi biến logic (B), ta luôn có:\n   [\n   1 + B = 1\n   ]\n3. Thay lại vào biểu thức:\n   [\n   A cdot (1 + B) = A cdot 1 = A\n   ]\n4. Đây chính là Định luật hấp thụ (Absorption Law) kinh điển trong đại số Boole:\n   [\n   A + A cdot B = A\n   ]\n5. Phương án đúng là B ((A)).\n\nKiểm tra:\nLập bảng chân trị (Truth Table) để kiểm tra với mọi trường hợp của (A) và (B):\n[\n\begin{array}{|c|c|c|c|}\nhline\nA & B & A cdot B & A + A cdot B hline\n0 & 0 & 0 & 0 0 & 1 & 0 & 0 1 & 0 & 0 & 1 1 & 1 & 1 & 1 hline\nend{array}\n]\nCột kết quả (A + A cdot B) giống hệt cột (A) trong mọi trường hợp.\n\nVì sao các phương án khác sai:\n- A ((A cdot B)): Sai, khi (A = 1, B = 0) thì (A + AB = 1 \ne 0).\n- C ((B)): Sai, khi (A = 1, B = 0) thì (A + AB = 1 \ne 0).\n- D ((A + B)): Sai, đây là kết quả của biểu thức (A + A'B), không phải (A + AB).\n\nLưu ý/công thức cần nhớ:\nĐịnh luật hấp thụ: (A + AB = A) và (A(A + B) = A)."
+    },
+    {
+      "id": 1372,
       "quizId": 13,
       "text": "Question 32: Which of the following is not an operand type?",
       "options": [
@@ -6163,7 +5968,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các đồng nhất thức cơ bản của đại số Boolean (Basic Boolean Identities) thuộc Chapter 12: Digital Logic (Bảng 12.1/20.1 trong Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"_________Which of the following is NOT a Boolean identity?\" (Biểu thức nào sau đây KHÔNG phải là một đồng nhất thức Boolean cơ bản?).\n\n- Bảng các đồng nhất thức Boolean cơ bản (Basic Boolean Identities) trong giáo trình chỉ được xây dựng trên 3 phép toán tiên đề nền tảng: **AND (\\(\\cdot\\))**, **OR (\\(+\\))** và **NOT (\\('\\))**:\n - **Phương án A (\\(A \\text{ AND } (A \\text{ OR } B) = A\\))**: Đây là **Luật hấp thụ (Absorption Law)** (\\(A(A + B) = A\\)) — một đồng nhất thức Boolean cơ bản chuẩn xác.\n - **Phương án C (\\((A \\text{ OR } B)' = A' \\text{ AND } B'\\))**: Đây là **Định lý De Morgan** (\\(\\overline{A + B} = \\overline{A} \\cdot \\overline{B}\\)) — một đồng nhất thức Boolean cơ bản chuẩn xác.\n - **Phương án D (\\(A + A' = 1\\))**: Đây là **Luật bù / Nghịch đảo (Complement / Inverse Law)** (\\(A + \\overline{A} = 1\\)) — một trong những đồng nhất thức Boolean tiên đề cốt lõi nhất.\n - **Phương án B (\\(A \\text{ XOR } B = (A \\text{ AND } B') \\text{ OR } (A' \\text{ AND } B)\\))**: Đây là **định nghĩa khai triển hàm logic của cổng XOR** (cổng logic tổ hợp dẫn xuất), KHÔNG nằm trong bảng các tiên đề/đồng nhất thức Boolean cơ bản (Basic Boolean Identities) của đại số Boolean thuần túy.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc đánh dấu nhầm phương án D (\\(A + A' = 1\\) — ngộ nhận luật bù là không phải đồng nhất thức). Đáp án chính xác theo giáo trình và câu hỏi là **B. A XOR B = (A AND B') OR (A' AND B)**.\n\n **Kiểm tra**: Chọn B. A XOR B = (A AND B') OR (A' AND B) \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1388,
+      "id": 1373,
       "quizId": 13,
       "text": "_________ is a principle by which two variables are independent of each other.",
       "options": [
@@ -6176,7 +5981,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"_________ is a principle by which two variables are independent of each other.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Orthogonality.\n\n **Kiểm tra**: Chọn D. Orthogonality \n\n **Vì sao các phương án khác sai**:\n\n- A (Autoindexing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Opcode): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Completeness): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1389,
+      "id": 1374,
       "quizId": 13,
       "text": "In reference to access time to a two-level memory, a _________ occurs if an accessed word is found in the faster memory.",
       "options": [
@@ -6189,7 +5994,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ thống phân cấp bộ nhớ & Cơ chế Cache Hit/Miss thuộc Chapter 04: The Memory Hierarchy Locality and Performance (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"In reference to access time to a two-level memory, a _________ occurs if an accessed word is found in the faster memory.\".\n- Khi bộ xử lý truy cập một từ nhớ trong hệ thống phân cấp hai mức (ví dụ Cache và Main Memory): Nếu từ nhớ được tìm thấy ngay trong bộ nhớ nhanh hơn (faster memory, tức Cache), sự kiện đó được gọi là **hit** (trúng). Ngược lại, nếu không tìm thấy và phải truy cập bộ nhớ chậm hơn, gọi là **miss** (trượt).\n- Do đó, từ cần điền chính xác vào chỗ trống là hit.\n\n **Kiểm tra**: Chọn B. hit \n\n **Vì sao các phương án khác sai**:\n\n- A (miss): Xảy ra khi dữ liệu KHÔNG được tìm thấy trong bộ nhớ nhanh.\n- C (line): Đơn vị khối dữ liệu (cache line) được chuyển giao giữa các mức bộ nhớ.\n- D (tag): Thẻ địa chỉ dùng để nhận diện khối dữ liệu trong cache.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 04: The Memory Hierarchy Locality and Performance"
     },
     {
-      "id": 1390,
+      "id": 1375,
       "quizId": 13,
       "text": "Backward compatible means that the programs written for the older machines can be executed on the new machine.",
       "options": [
@@ -6200,7 +6005,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Backward compatible means that the programs written for the older machines can be executed on the new machine.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1391,
+      "id": 1376,
       "quizId": 13,
       "text": "The major cost in the life cycle of a system is hardware.",
       "options": [
@@ -6211,7 +6016,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The major cost in the life cycle of a system is hardware.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1392,
+      "id": 1377,
       "quizId": 13,
       "text": "The _________ defines the repertoire of machine language instructions that a computer can follow.",
       "options": [
@@ -6224,7 +6029,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The __________ defines the repertoire of machine language instructions that a computer can follow.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. ISA.\n\n **Kiểm tra**: Chọn D. ISA \n\n **Vì sao các phương án khác sai**:\n\n- A (ABI): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (API): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (HLL): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1393,
+      "id": 1378,
       "quizId": 13,
       "text": "Why is it essential to use symbolic representation of machine instructions?",
       "options": [
@@ -6237,7 +6042,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Why is it essential to use symbolic representation of machine instructions?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. It makes machine instructions more human-readable and understandable.\n\n **Kiểm tra**: Chọn A. It makes machine instructions more human-readable and understandable \n\n **Vì sao các phương án khác sai**:\n\n- B (It reduces the overall complexity of computer systems and user programs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (It minimizes the need for memory storage for the user programs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (It enables fastest execution of high level language instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1394,
+      "id": 1379,
       "quizId": 13,
       "text": "What is a branch instrtuction?",
       "options": [
@@ -6250,7 +6055,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is a branch instrtuction?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. The intructions that have as one of its operands the address of the next instruction to be executed.\n\n **Kiểm tra**: Chọn B. The intructions that have as one of its operands the address of the next instruction to be executed \n\n **Vì sao các phương án khác sai**:\n\n- A (The intructions that are used to divide a program into multiple subprograms): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (The intructions that are used to pause the program): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (The intructions that are used to return to the beginning of the program): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1395,
+      "id": 1380,
       "quizId": 13,
       "text": "What are the most important general categories of data that machine instructions operate on?",
       "options": [
@@ -6263,7 +6068,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What are the most important general categories of data that machine instructions operate on?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Addresses, numbers, characters, and logical data.\n\n **Kiểm tra**: Chọn A. Addresses, numbers, characters, and logical data \n\n **Vì sao các phương án khác sai**:\n\n- B (Text, images, and audio): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Variables, functions, and arrays): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Instructions, control signals, and registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1396,
+      "id": 1381,
       "quizId": 13,
       "text": "What type of instruction is used for converting data formats?",
       "options": [
@@ -6276,7 +6081,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What type of instruction is used for converting data formats?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Conversion.\n\n **Kiểm tra**: Chọn D. Conversion \n\n **Vì sao các phương án khác sai**:\n\n- A (Transfer): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Arithmetic): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Control): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1397,
+      "id": 1382,
       "quizId": 13,
       "text": "With respect to elements of a machine instruction, what does the instruction code mean?",
       "options": [
@@ -6289,7 +6094,38 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân tích các thành phần cấu tạo của một lệnh máy (Machine Instruction Format).\n\nCác bước:\n1. Một lệnh máy nhị phân cơ bản bao gồm hai phần chính:\n - Mã thao tác / mã lệnh (Opcode hay Instruction code): Xác định phép toán hoặc thao tác cần thực hiện (ví dụ: cộng, trừ, nạp dữ liệu, nhảy...).\n - Các trường địa chỉ / toán hạng (Operand specifiers / Addresses): Chỉ định vị trí của dữ liệu nguồn (Source Operands) và nơi lưu trữ kết quả (Result Operand).\n2. Như vậy, Instruction Code (Opcode) có nghĩa là chỉ định phép thao tác cần thực thi (It specifies the operation to be performed).\n\nKiểm tra:\nPhương án A là câu trả lời chính xác.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1398,
+      "id": 1383,
+      "quizId": 13,
+      "text": "Which is true about representing instructions in computers? (Choose two correct answers)",
+      "options": [
+        "Each instruction is represented by a sequence of bits",
+        "A processor contains one or more registers that may be referenced by machine instructions",
+        "The value of the operand is contained in a field in the instruction being executed",
+        "The instruction is divided into fields, corresponding to the constituent elements of the instruction"
+      ],
+      "correctIndex": 0,
+      "explanation": "**Đáp án đúng**: A & D\n\nHướng giải:\nChọn 2 phát biểu chính xác về cách biểu diễn lệnh máy (instruction representation) bên trong hệ thống máy tính theo giáo trình William Stallings.\n\nCác bước:\n1. Trích dẫn nguyên văn hai câu định nghĩa nền tảng trong William Stallings COA (Chương 12, Mục 12.1 - Machine Instruction Characteristics, tiểu mục Instruction Representation):\n   - Câu 1: 'Within the computer, each instruction is represented by a sequence of bits.' (Bên trong máy tính, mỗi lệnh được biểu diễn bằng một chuỗi các bit nhị phân). (implies) Khớp phương án A.\n   - Câu 2: 'The instruction is divided into fields, corresponding to the constituent elements of the instruction.' (Lệnh được chia thành các trường, tương ứng với các thành phần cấu thành nên lệnh, ví dụ: trường Opcode, trường địa chỉ toán hạng Operand References). (implies) Khớp phương án D.\n2. Như vậy, hai phương án đúng cần chọn là A và D.\n\nKiểm tra:\nBố cục định dạng lệnh (Instruction Format) thể hiện rõ ràng các trường bit (Opcode field, Address field, Mode field), minh chứng trực quan cho phương án D.\n\nVì sao các phương án khác không được chọn:\n- B: Mặc dù vi xử lý chứa các thanh ghi và lệnh có thể tham chiếu thanh ghi, nhưng đây là thuộc tính về cấu trúc tài nguyên vi xử lý, không phải phát biểu định nghĩa tổng quát về nguyên lý biểu diễn một lệnh máy (Instruction Representation) trong giáo trình Stallings.\n- C: Toán hạng có thể nằm trong bộ nhớ hoặc thanh ghi, giá trị của toán hạng không nhất thiết nằm trực tiếp trong trường của lệnh (chỉ có chế độ tức thời Immediate Addressing mới chứa trực tiếp giá trị).\n\nLưu ý/công thức cần nhớ:\nBiểu diễn lệnh máy: Biểu diễn bằng chuỗi bit (Sequence of bits) và chia thành các trường (Divided into fields).",
+      "correctIndices": [
+        0,
+        3
+      ],
+      "multiple": true
+    },
+    {
+      "id": 1384,
+      "quizId": 13,
+      "text": "Which instruction type performs data transfer?",
+      "options": [
+        "ADD",
+        "LOAD",
+        "JMP",
+        "CMP"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nXác định chỉ lệnh nào trong các phương án thuộc nhóm lệnh chuyển dữ liệu (Data Transfer Instructions).\n\nCác bước:\n1. Phân loại các thao tác lệnh máy trong tập lệnh CPU (Stallings Chương 12):\n   - Chuyển dữ liệu (Data Transfer): Di chuyển dữ liệu giữa các thanh ghi hoặc giữa bộ nhớ và thanh ghi. Các lệnh tiêu biểu: `LOAD` (nạp từ bộ nhớ vào thanh ghi), `STORE` (lưu từ thanh ghi vào bộ nhớ), `MOV` (sao chép giữa các thanh ghi).\n   - Số học (Arithmetic): Thực hiện phép tính số học trên dữ liệu. Tiêu biểu: `ADD`, `SUB`, `MUL`, `DIV`.\n   - Logic: Thực hiện phép toán Boolean hoặc dịch bit. Tiêu biểu: `AND`, `OR`, `NOT`, `XOR`, `SHL`, `SHR`.\n   - Điều khiển luồng / Chuyển quyền điều khiển (Control Transfer / Branching): Thay đổi con trỏ lệnh PC. Tiêu biểu: `JMP`, `CALL`, `RET`, `BEQ`, `BNE`.\n   - So sánh / Kiểm tra (Comparison / Test): Tiêu biểu: `CMP`, `TEST`.\n2. Trong các phương án đưa ra, `LOAD` là lệnh thực hiện chuyển dữ liệu từ bộ nhớ vào thanh ghi.\n3. Phương án đúng là B (LOAD).\n\nKiểm tra:\nLệnh `LOAD R1, [Address]` chuyển nguyên vẹn nội dung ô nhớ vào thanh ghi R1 mà không làm biến đổi giá trị dữ liệu.\n\nVì sao các phương án khác sai:\n- A (`ADD`): Lệnh số học (Arithmetic instruction).\n- C (`JMP`): Lệnh chuyển quyền điều khiển / nhảy (Branch / Control transfer instruction).\n- D (`CMP`): Lệnh so sánh (thực hiện phép trừ ngầm để cập nhật cờ trạng thái).\n\nLưu ý/công thức cần nhớ:\nData transfer instructions: LOAD, STORE, MOVE."
+    },
+    {
+      "id": 1385,
       "quizId": 14,
       "text": "Three of the most common uses of stack addressing are relative addressing, base-register addressing, and indexing.",
       "options": [
@@ -6300,7 +6136,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Three of the most common uses of stack addressing are relative addressing, base-register addressing, and indexing.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. False.\n\n **Kiểm tra**: Chọn A. False \n\n **Vì sao các phương án khác sai**:\n\n- B (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1399,
+      "id": 1386,
       "quizId": 14,
       "text": "The method of calculating the EA is the same for both base-register addressing and indexing",
       "options": [
@@ -6311,7 +6147,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The method of calculating the EA is the same for both base-register addressing and indexing\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. True.\n\n **Kiểm tra**: Chọn B. True \n\n **Vì sao các phương án khác sai**:\n\n- A (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1400,
+      "id": 1387,
       "quizId": 14,
       "text": "The advantages of _________ addressing are that only a small address field is needed in the instruction and no time-consuming memory references are required.",
       "options": [
@@ -6324,7 +6160,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The advantages of _________ addressing are that only a small address field is needed in the instruction and no time-consuming memory references are required.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. register.\n\n **Kiểm tra**: Chọn D. register \n\n **Vì sao các phương án khác sai**:\n\n- A (indirect): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (displacement): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (direct): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1401,
+      "id": 1388,
       "quizId": 14,
       "text": "In the context of addressing modes with both indirect addressing and indexing, what is postindexing?",
       "options": [
@@ -6337,7 +6173,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân biệt cơ chế Định chỉ mục sau (Postindexing) và Định chỉ mục trước (Preindexing) khi kết hợp định địa chỉ gián tiếp và chỉ mục.\n\nCác bước:\n1. Postindexing (Định địa chỉ chỉ mục sau khi gián tiếp):\n - Thao tác gián tiếp được thực hiện trước: CPU truy xuất ô nhớ \\ (A \\ ) để lấy địa chỉ cơ sở con trỏ \\ ((A) \\ ).\n - Sau đó, giá trị trong thanh ghi chỉ mục \\ (R \\ ) mới được cộng vào con trỏ đó để tạo thành địa chỉ hiệu dụng:\n \\ [ \\ EA = (A) + R \\ ]\n - Như vậy, việc cộng chỉ mục diễn ra SAU khi đã giải tham chiếu gián tiếp (Indexing is performed after the indirection).\n2. Preindexing (Định địa chỉ chỉ mục trước khi gián tiếp):\n - Thanh ghi chỉ mục \\ (R \\ ) được cộng trước với địa chỉ \\ (A \\ ), sau đó mới truy xuất bộ nhớ tại địa chỉ tổng đó để lấy con trỏ:\n \\ [ \\ EA = (A + R) \\ ]\n\nKiểm tra:\nĐịnh nghĩa của postindexing là 'Indexing is performed after the indirection' -> Đáp án A.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1402,
+      "id": 1389,
       "quizId": 14,
       "text": "_________ has the advantage of flexibility, but the disadvantage of complexity.",
       "options": [
@@ -6350,7 +6186,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ has the advantage of flexibility, but the disadvantage of complexity.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Displacement addressing.\n\n **Kiểm tra**: Chọn B. Displacement addressing \n\n **Vì sao các phương án khác sai**:\n\n- A (Stack addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Direct addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Register addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1403,
+      "id": 1390,
       "quizId": 14,
       "text": "Indexing performed after the indirection is _________ .",
       "options": [
@@ -6363,7 +6199,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Indexing performed after the indirection is __________ .\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. postindexing.\n\n **Kiểm tra**: Chọn C. postindexing \n\n **Vì sao các phương án khác sai**:\n\n- A (relative addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (autoindexing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (preindexing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1404,
+      "id": 1391,
       "quizId": 14,
       "text": "_________ has the advantage of large address space, however it has the disadvantage of multiple memory references.",
       "options": [
@@ -6376,7 +6212,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ has the advantage of large address space, however it has the disadvantage of multiple memory references.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Indirect addressing.\n\n **Kiểm tra**: Chọn A. Indirect addressing \n\n **Vì sao các phương án khác sai**:\n\n- B (Direct addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Immediate addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Stack addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1405,
+      "id": 1392,
       "quizId": 14,
       "text": "The principal advantage of _________ addressing is that it is a very simple form of addressing.",
       "options": [
@@ -6389,7 +6225,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The principal advantage of ________ addressing is that it is a very simple form of addressing.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. direct.\n\n **Kiểm tra**: Chọn D. direct \n\n **Vì sao các phương án khác sai**:\n\n- A (displacement): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (stack): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1406,
+      "id": 1393,
       "quizId": 14,
       "text": "The advantage of _________ is that no memory reference other than the instruction fetch is required to obtain the operand.",
       "options": [
@@ -6402,7 +6238,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The advantage of ___________ is that no memory reference other than the instruction fetch is required to obtain the operand.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. [Không có thông tin trong ảnh].\n\n **Kiểm tra**: Chọn B. [Không có thông tin trong ảnh] \n\n **Vì sao các phương án khác sai**:\n\n- A ([Không có thông tin trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C ([Không có thông tin trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D ([Không có thông tin trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1407,
+      "id": 1394,
       "quizId": 14,
       "text": "The only form of addressing for branch instructions is _________ addressing.",
       "options": [
@@ -6415,7 +6251,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The only form of addressing for branch instructions is ________ addressing.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. immediate.\n\n **Kiểm tra**: Chọn D. immediate \n\n **Vì sao các phương án khác sai**:\n\n- A (register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (relative): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (base): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1408,
+      "id": 1395,
       "quizId": 14,
       "text": "The effective address of _________ is\r\n\\(EA = A + (R)\\)\r\n\\((R) \\leftarrow (R) + 1\\)",
       "options": [
@@ -6428,7 +6264,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The effective address of _________ is\n\\(EA = A + (R)\\)\n\\((R) \\leftarrow (R) + 1\\)\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. autoindexing.\n\n **Kiểm tra**: Chọn B. autoindexing \n\n **Vì sao các phương án khác sai**:\n\n- A (relative addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (postindexing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (preindexing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1409,
+      "id": 1396,
       "quizId": 14,
       "text": "Which of the following statement is correct about addressing modes?",
       "options": [
@@ -6441,7 +6277,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following statements is true for Von Neumann architecture?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Shared bus between the program memory and data memory.\n\n **Kiểm tra**: Chọn A. Shared bus between the program memory and data memory \n\n **Vì sao các phương án khác sai**:\n\n- B (Separate bus between the program memory and data memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (External bus for program memory and data memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (External bus for data memory only): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1410,
+      "id": 1397,
       "quizId": 14,
       "text": "With direct addressing, the length of the address field is usually less than the word length, thus limiting the address range.",
       "options": [
@@ -6452,7 +6288,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"With direct addressing, the length of the address field is usually less than the word length, thus limiting the address range.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1411,
+      "id": 1398,
       "quizId": 14,
       "text": "Register indirect addressing uses the same number of memory references as indirect addressing.",
       "options": [
@@ -6463,7 +6299,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Register indirect addressing uses the same number of memory references as indirect addressing.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1412,
+      "id": 1399,
       "quizId": 14,
       "text": "The value of the mode field determines which addressing mode is to be used.",
       "options": [
@@ -6474,7 +6310,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The value of the mode field determines which addressing mode is to be used.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1413,
+      "id": 1400,
       "quizId": 14,
       "text": "The disadvantage of immediate addressing is that the size of the number is restricted to the size of the address field.",
       "options": [
@@ -6485,7 +6321,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The disadvantage of immediate addressing is that the size of the number is restricted to the size of the address field.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1414,
+      "id": 1401,
       "quizId": 14,
       "text": "Register addressing is similar to direct addressing with the only difference being that the address field refers to a register rather than a main memory address.",
       "options": [
@@ -6496,7 +6332,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Register addressing is similar to direct addressing with the only difference being that the address field refers to a register rather than a main memory address.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1415,
+      "id": 1402,
       "quizId": 14,
       "text": "Almost all RISC instructions use simple register addressing.",
       "options": [
@@ -6507,7 +6343,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Almost all RISC instructions use simple register addressing.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1416,
+      "id": 1403,
       "quizId": 14,
       "text": "Which addressing mode allows direct specification of the memory address within the instruction?",
       "options": [
@@ -6520,7 +6356,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which addressing mode allows direct specification of the memory address within the instruction?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Direct.\n\n **Kiểm tra**: Chọn A. Direct \n\n **Vì sao các phương án khác sai**:\n\n- B (Indirect): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Register Indirect): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Displacement): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1417,
+      "id": 1404,
       "quizId": 14,
       "text": "The effective address of Register indirect addressing mode is _________.",
       "options": [
@@ -6533,7 +6369,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nCông thức tính địa chỉ hiệu dụng (Effective Address - EA) trong chế độ định địa chỉ gián tiếp qua thanh ghi (Register Indirect Addressing).\n\nCác bước:\n1. Phân biệt các chế độ định địa chỉ thanh ghi:\n - Định địa chỉ thanh ghi trực tiếp (Register Addressing): Toán hạng nằm ngay trong thanh ghi \\ (R \\ ). Không có địa chỉ bộ nhớ (Toán hạng = \\ (R \\ )).\n - Định địa chỉ gián tiếp qua thanh ghi (Register Indirect Addressing): Thanh ghi \\ (R \\ ) không chứa toán hạng, mà chứa địa chỉ ô nhớ trong bộ nhớ chính nơi lưu toán hạng. Ký hiệu nội dung của thanh ghi \\ (R \\ ) là \\ ((R) \\ ). Do đó, địa chỉ hiệu dụng trong bộ nhớ là:\n \\ [ \\ EA = (R) \\ ]\n2. Dấu ngoặc đơn \\ ((R) \\ ) theo quy ước chuẩn của giáo trình kiến trúc máy tính biểu thị 'nội dung chứa bên trong' thanh ghi \\ (R \\ ).\n\nKiểm tra:\nCông thức đúng là \\ ( \\ EA = (R) \\ ) (Đáp án B).\n\nVì sao các phương án khác sai:\n- A (EA = R): Đây là định địa chỉ trực tiếp thanh ghi, không phải gián tiếp qua bộ nhớ.\n- C (EA = (R) + A): Đây là chế độ định địa chỉ cơ sở kết hợp độ lệch (Displacement/Base-register addressing).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1418,
+      "id": 1405,
       "quizId": 14,
       "text": "What is the primary advantage of indirect addressing mode?",
       "options": [
@@ -6546,7 +6382,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the primary advantage of indirect addressing mode?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Flexibility in data location.\n\n **Kiểm tra**: Chọn C. Flexibility in data location \n\n **Vì sao các phương án khác sai**:\n\n- A (Faster access to operands): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Ability to access a larger data set): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Reduced instruction size): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1419,
+      "id": 1406,
       "quizId": 14,
       "text": "Which type of instruction format is more flexible but can lead to inefficient use of memory?",
       "options": [
@@ -6559,7 +6395,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSo sánh ưu nhược điểm giữa định dạng lệnh có chiều dài cố định (Fixed-length) và chiều dài thay đổi (Variable-length).\n\nCác bước:\n1. Định dạng lệnh có chiều dài thay đổi (Variable-length instruction format):\n - Ưu điểm: Rất linh hoạt (flexible), cho phép hỗ trợ nhiều chế độ định địa chỉ khác nhau và số lượng toán tử tùy biến cho từng loại lệnh (đặc trưng của kiến trúc CISC như x86).\n - Nhược điểm: Phức tạp trong khâu nạp và giải mã lệnh (CPU không biết trước lệnh dài bao nhiêu byte cho đến khi giải mã opcode), có thể dẫn tới căn chỉnh bộ nhớ không tối ưu (memory alignment issues) gây lãng phí dung lượng và chu kỳ truy xuất.\n\nKiểm tra:\nĐịnh dạng vừa linh hoạt nhưng có thể dẫn tới sử dụng bộ nhớ kém hiệu quả là Variable-Length Instruction Format (B).\n\nVì sao các phương án khác sai:\n- A (Fixed-length): Đơn giản, giải mã nhanh, căn chỉnh bộ nhớ hoàn hảo (chuẩn RISC), nhưng kém linh hoạt hơn.\n- C, D: Không phải phân loại tiêu chuẩn về độ dài lệnh trong kiến trúc máy tính.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1420,
+      "id": 1407,
       "quizId": 14,
       "text": "Indirect addressing, the length of the address field is usually greater than the word length, because unlimiting the address range.",
       "options": [
@@ -6570,7 +6406,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân tích đặc điểm kích thước trường địa chỉ trong chế độ định địa chỉ gián tiếp (Indirect Addressing).\n\nCác bước:\n1. Định địa chỉ gián tiếp (Indirect addressing): Trường địa chỉ trong câu lệnh chỉ chứa địa chỉ của một ô nhớ, và ô nhớ đó mới chứa địa chỉ hiệu dụng đầy đủ (full-length effective address) của toán hạng.\n2. Mục đích thiết kế: Trường địa chỉ trong câu lệnh thường NGẮN HƠN độ dài từ nhớ (shorter than word length) nhằm tiết kiệm số bit của lệnh trong khi vẫn có thể mở rộng không gian địa chỉ tới \\ (2^N \\ ) (với \\ (N \\ ) là độ dài từ nhớ).\n3. Câu khẳng định cho rằng trường địa chỉ 'is usually greater than the word length' (thường lớn hơn độ dài từ nhớ) là hoàn toàn sai.\n\nKiểm tra:\nPhát biểu là Sai (False) -> Đáp án B.\n\nVì sao phương án A sai:\n- Trường địa chỉ nằm trong khuôn dạng lệnh không bao giờ lớn hơn kích thước từ nhớ máy tính.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1421,
+      "id": 1408,
       "quizId": 14,
       "text": "When considering the number of pipeline stages, what trade-offs must be made in computer architecture?",
       "options": [
@@ -6583,7 +6419,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSự đánh đổi (trade-offs) khi thiết kế số tầng đường ống lệnh (Pipeline Depth/Stages).\n\nCác bước:\n1. Về mặt lý thuyết, chia đường ống thành càng nhiều tầng con siêu sâu (Superpipelining) thì chu kỳ xung nhịp càng ngắn, tốc độ xử lý tiềm năng (potential speedup) càng lớn.\n2. Tuy nhiên, trong thực tế kiến trúc máy tính, việc tăng số tầng đường ống dẫn đến:\n - Chi phí phần cứng và diện tích mạch tăng lên do cần nhiều thanh ghi đệm (pipeline latches) giữa các tầng.\n - Độ trễ chốt (latch delay) và sự chênh lệch thời gian giữa các tầng làm giảm hiệu năng thực tế.\n - Tổn thất do xung đột nhánh (branch penalty) tăng vọt: Khi dự đoán nhánh sai, phải xóa bỏ (flush) rất nhiều lệnh đang nằm trong đường ống.\n3. Do đó, thiết kế kiến trúc luôn phải đánh đổi giữa tốc độ tăng tốc tiềm năng và chi phí phần cứng cùng các độ trễ phát sinh (Trade-offs between potential speedup and increased cost and delays).\n\nKiểm tra:\nSự đánh đổi then chốt là phương án A.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1422,
+      "id": 1409,
       "quizId": 14,
       "text": "The PC, IR, MAR, MBR registers belong to which of the following groups?",
       "options": [
@@ -6596,7 +6432,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân loại tập thanh ghi bên trong bộ vi xử lý (Processor Register Organization).\n\nCác bước:\n1. Các thanh ghi trong CPU được chia làm 2 nhóm lớn theo Stallings:\n - Thanh ghi người dùng nhìn thấy (User-Visible Registers): Lập trình viên hợp ngữ có thể trực tiếp chỉ định và sử dụng trong câu lệnh (ví dụ: các thanh ghi đa năng GPR, thanh ghi đoạn, thanh ghi chỉ mục).\n - Thanh ghi điều khiển và trạng thái (Control and Status Registers): Được bộ điều khiển CPU sử dụng để điều khiển hoạt động của vi xử lý và chu trình lệnh, không thể được truy xuất trực tiếp bởi các lệnh người dùng thông thường.\n2. Các thanh ghi:\n - PC (Program Counter - Bộ đếm chương trình)\n - IR (Instruction Register - Thanh ghi lệnh)\n - MAR (Memory Address Register - Thanh ghi địa chỉ bộ nhớ)\n - MBR (Memory Buffer Register - Thanh ghi đệm dữ liệu)\n Tất cả đều thuộc nhóm Thanh ghi điều khiển và trạng thái (Control and Status Registers).\n\nKiểm tra:\nNhóm thanh ghi tương ứng là Control and Status Registers (A).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1423,
+      "id": 1410,
       "quizId": 14,
       "text": "For _________, the address field references a main memory address and the referenced register contains a positive displacement from that address.",
       "options": [
@@ -6609,7 +6445,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"For __________, the address field references a main memory address and the referenced register contains a positive displacement from that address.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. indexing.\n\n **Kiểm tra**: Chọn A. indexing \n\n **Vì sao các phương án khác sai**:\n\n- B (base-register addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (relative addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (all of the above): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1424,
+      "id": 1411,
       "quizId": 14,
       "text": "Typically an instruction set will include both preindexing and postindexing.",
       "options": [
@@ -6620,7 +6456,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Typically an instruction set will include both preindexing and postindexing.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1425,
+      "id": 1412,
       "quizId": 14,
       "text": "Assume a stack-oriented processor that includes the stack operations PUSH and POP. Arithmetic operations automatically involve the top one or two stack elements. Begin with an empty stack. What stack elements remain after the following instructions are executed? PUSH 3 ; PUSH 4 ; ADD ; PUSH 5 ; MUL.",
       "options": [
@@ -6634,7 +6470,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Assume a stack-oriented processor that includes the stack operations PUSH and POP. Arithmetic operations automatically involve the top one or two stack elements. Begin with an empty stack. What stack elements remain after the following instructions are executed? PUSH 3 ; PUSH 4 ; ADD ; PUSH 5 ; MUL.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. 35.\n\n **Kiểm tra**: Chọn A. 35 \n\n **Vì sao các phương án khác sai**:\n\n- B (60): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (34): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (39): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (345): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1426,
+      "id": 1413,
       "quizId": 14,
       "text": "Assume an instruction set that uses a fixed 14-bit instruction length. Operand specifiers are 6 bits length. What is the maximum number of one-operand instructions that can be supported?",
       "options": [
@@ -6648,7 +6484,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Assume an instruction set that uses a fixed 14-bit instruction length. Operand specifiers are 6 bits length. What is the maximum number of one-operand instructions that can be supported?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là E. 64.\n\n **Kiểm tra**: Chọn E. 64 \n\n **Vì sao các phương án khác sai**:\n\n- A (256): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (128): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (32): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (512): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1427,
+      "id": 1414,
       "quizId": 14,
       "text": "Which of the following interrelated factors go into determining the use of the addressing bits?",
       "options": [
@@ -6661,20 +6497,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following interrelated factors go into determining the use of the addressing bits?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. all of the above.\n\n **Kiểm tra**: Chọn D. all of the above \n\n **Vì sao các phương án khác sai**:\n\n- A (number of operands): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (number of register sets): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (address range): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1428,
-      "quizId": 14,
-      "text": "The advantage of _________ is that no memory reference other than the instruction fetch is required to obtain the operand.",
-      "options": [
-        "direct addressing",
-        "immediate addressing",
-        "register addressing",
-        "stack addressing"
-      ],
-      "correctIndex": 1,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The advantage of ___________ is that no memory reference other than the instruction fetch is required to obtain the operand.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. [Không có thông tin trong ảnh].\n\n **Kiểm tra**: Chọn B. [Không có thông tin trong ảnh] \n\n **Vì sao các phương án khác sai**:\n\n- A ([Không có thông tin trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C ([Không có thông tin trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D ([Không có thông tin trong ảnh]): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
-    },
-    {
-      "id": 1429,
+      "id": 1415,
       "quizId": 14,
       "text": "The effective address of _________ is EA=top of stack",
       "options": [
@@ -6688,7 +6511,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The effective address of _________ is\n\\(EA = A + (R)\\)\n\\((R) \\leftarrow (R) + 1\\)\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. autoindexing.\n\n **Kiểm tra**: Chọn B. autoindexing \n\n **Vì sao các phương án khác sai**:\n\n- A (relative addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (postindexing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (preindexing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1430,
+      "id": 1416,
       "quizId": 14,
       "text": "In a conditional branch instruction, what happens if the specified condition is met?",
       "options": [
@@ -6701,7 +6524,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In a conditional branch instruction, what happens if the specified condition is met?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. The program counter is updated to equal the address specified in the operand..\n\n **Kiểm tra**: Chọn A. The program counter is updated to equal the address specified in the operand. \n\n **Vì sao các phương án khác sai**:\n\n- B (The program counter increments as usual.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (The instruction is skipped.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (The program terminates.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1431,
+      "id": 1417,
       "quizId": 14,
       "text": "Assume an instruction set that uses a fixed 16-bit instruction length. Operand specifiers are 6 bits in length. What is the maximum number of one-operand instructions that can be supported?",
       "options": [
@@ -6714,7 +6537,35 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Assume an instruction set that uses a fixed 14-bit instruction length. Operand specifiers are 6 bits length. What is the maximum number of one-operand instructions that can be supported?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là E. 64.\n\n **Kiểm tra**: Chọn E. 64 \n\n **Vì sao các phương án khác sai**:\n\n- A (256): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (128): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (32): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (512): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1432,
+      "id": 1418,
+      "quizId": 14,
+      "text": "Consider a CPU with an instruction length of 16 bits and an opcode length of 4 bits. In direct addressing mode, how many unique memory addresses can be directly accessed?",
+      "options": [
+        "4096",
+        "1024",
+        "8192",
+        "2048",
+        "512",
+        "256"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nTính toán số lượng địa chỉ ô nhớ duy nhất có thể được định địa chỉ trực tiếp (directly addressed) dựa trên độ dài lệnh và số bit mã thao tác (opcode).\n\nCác bước:\n1. Phân tích cấu trúc định dạng lệnh (16\text{ bits}):\n   - Tổng độ dài lệnh: (L = 16\text{ bits}).\n   - Độ dài trường mã thao tác (Opcode): (k_{\text{opcode}} = 4\text{ bits}).\n   - Số bit còn lại dành cho trường địa chỉ (Address field):\n     [\n     k_{\text{address}} = 16 - 4 = 12\text{ bits}\n     ]\n2. Trong chế độ định địa chỉ trực tiếp (Direct Addressing Mode):\n   - Trường địa chỉ trong lệnh chứa trực tiếp địa chỉ hiệu dụng của ô nhớ trong bộ nhớ chính:\n     [\n     mathrm{EA} = A\n     ]\n   - Với (12\text{ bits}) địa chỉ, số lượng địa chỉ ô nhớ nhị phân phân biệt có thể biểu diễn được là:\n     [\n     N = 2^{12} = 4096\text{ địa chỉ}\n     ]\n3. Do đó, phương án đúng là A ((4096)).\n\nKiểm tra:\n[\n2^{10} = 1024, quad 2^{11} = 2048, quad 2^{12} = 4096\n]\nPhép tính lũy thừa hoàn toàn chính xác.\n\nVì sao các phương án khác sai:\n- B ((1024 = 2^{10})): Tương ứng với (10\text{ bits}) địa chỉ (opcode (6\text{ bits})).\n- C ((8192 = 2^{13})): Tương ứng với (13\text{ bits}) địa chỉ (opcode (3\text{ bits})).\n- D ((2048 = 2^{11})): Tương ứng với (11\text{ bits}) địa chỉ (opcode (5\text{ bits})).\n- E ((512 = 2^9)), F ((256 = 2^8)) không khớp số bit còn lại.\n\nLưu ý/công thức cần nhớ:\nSố địa chỉ trực tiếp: (2^{\text{Số bit trường địa chỉ}} = 2^{\text{Độ dài lệnh} - \text{Số bit Opcode}})."
+    },
+    {
+      "id": 1419,
+      "quizId": 14,
+      "text": "\"PC-relative\" addressing is a form of:",
+      "options": [
+        "Immediate addressing",
+        "Indirect addressing",
+        "Displacement addressing",
+        "Stack addressing"
+      ],
+      "correctIndex": 2,
+      "explanation": "Hướng giải:\nPhân loại chế độ định địa chỉ tương đối theo con trỏ lệnh (PC-relative addressing) vào nhóm chế độ định địa chỉ tổng quát trong kiến trúc máy tính.\n\nCác bước:\n1. Định địa chỉ dịch chuyển (Displacement Addressing):\n   - Là một nhóm chế độ định địa chỉ mạnh mẽ kết hợp giữa định địa chỉ trực tiếp và định địa chỉ gián tiếp qua thanh ghi.\n   - Công thức tổng quát tính địa chỉ hiệu dụng:\n     [\n     mathrm{EA} = A + (R)\n     ]\n     Trong đó (A) là giá trị độ dời (displacement/offset) trong lệnh, và ((R)) là nội dung của một thanh ghi được chỉ định.\n2. Ba dạng phổ biến nhất của định địa chỉ dịch chuyển:\n   - Định địa chỉ tương đối (Relative Addressing / PC-relative): Thanh ghi được tham chiếu ngầm định là con trỏ lệnh (mathrm{PC}) (Program Counter):\n     [\n     mathrm{EA} = A + (mathrm{PC})\n     ]\n     Thường dùng trong các lệnh nhảy ngắn (branches/jumps).\n   - Định địa chỉ thanh ghi cơ sở (Base-Register Addressing): Thanh ghi được tham chiếu là thanh ghi cơ sở lưu địa chỉ đầu đoạn.\n   - Định chỉ số (Indexing): Thanh ghi được tham chiếu là thanh ghi chỉ số (Index register).\n3. Do đó, PC-relative addressing là một dạng của Displacement addressing (phương án C).\n\nKiểm tra:\nĐối chiếu cấu trúc phân loại trong Stallings Bảng 13.1 (Basic Addressing Modes): Hàng 'Displacement' bao gồm 'Relative, Base-register, Indexing'.\n\nVì sao các phương án khác sai:\n- A (Immediate): Giá trị toán hạng nằm trực tiếp trong lệnh, không có địa chỉ bộ nhớ.\n- B (Indirect): Trường địa chỉ chứa địa chỉ của một ô nhớ khác chứa địa chỉ hiệu dụng.\n- D (Stack): Toán hạng được ngầm định ở đỉnh ngăn xếp (thanh ghi SP).\n\nLưu ý/công thức cần nhớ:\nDisplacement addressing gồm: PC-relative, Base-register, và Indexing."
+    },
+    {
+      "id": 1420,
       "quizId": 15,
       "text": "In MASM32, which command is incorrect?",
       "options": [
@@ -6727,7 +6578,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nKiểm tra tính hợp lệ của câu lệnh trong hợp ngữ x86 / MASM32.\n\nCác bước:\n1. Quy tắc kiến trúc phần cứng x86: Các lệnh số học và chuyển dữ liệu cơ bản (ADD, SUB, MOV...) không hỗ trợ thực thi đồng thời hai toán hạng là ô nhớ trong cùng một lệnh (Không có lệnh `ADD mem, mem`).\n2. Trong đó, `a` và `b` là các biến trong bộ nhớ RAM:\n - Lệnh `ADD a, b` cố gắng đọc ô nhớ `b`, cộng vào ô nhớ `a` và ghi lại vào `a` trực tiếp giữa hai vùng nhớ mà không thông qua thanh ghi CPU. Thao tác này vi phạm kiến trúc x86 và trình biên dịch MASM32 sẽ báo lỗi.\n\nKiểm tra:\nLệnh sai cú pháp là `ADD a, b` (D).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1433,
+      "id": 1421,
       "quizId": 15,
       "text": "What does the x86 assembly instruction \"jmp label\" typically do?",
       "options": [
@@ -6740,7 +6591,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What does the x86 assembly instruction \"jmp label\" typically do?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Moves the label's address to the EIP register.\n\n **Kiểm tra**: Chọn D. Moves the label's address to the EIP register \n\n **Vì sao các phương án khác sai**:\n\n- A (Jumps to the memory address stored in the label): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Jumps to the next instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Jumps to the label if a specific condition is met): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1434,
+      "id": 1422,
       "quizId": 15,
       "text": "Which instruction is used by MASM32 to return from a procedure?",
       "options": [
@@ -6753,7 +6604,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nXác định chỉ thị lệnh hợp ngữ x86/MASM32 dùng để trở về từ một hàm/thủ tục (procedure).\n\nCác bước:\n1. Khi gọi một thủ tục bằng lệnh \\ ( \\ textCALL \\ ), địa chỉ trở về (Return Address) được đẩy vào đỉnh ngăn xếp (Stack).\n2. Khi kết thúc thủ tục, lệnh \\ ( \\ textRET \\ ) (Return) lấy địa chỉ trở về từ đỉnh ngăn xếp nạp lại vào thanh ghi EIP/IP để CPU tiếp tục thực thi lệnh ngay sau lệnh CALL.\n\nKiểm tra:\nLệnh chuẩn của MASM32 là RET (A).\n\nVì sao các phương án khác sai:\n- B (EXIT): Thường là lời gọi macro kết thúc tiến trình, không phải lệnh trở về từ hàm.\n- C (END): Là directive báo kết thúc file mã nguồn hoặc kết thúc khối thủ tục (ENDP), không phải lệnh máy.\n- D (RES): Không tồn tại lệnh này trong x86.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1435,
+      "id": 1423,
       "quizId": 15,
       "text": "What is one of the advantages of using a register file in computer architecture?",
       "options": [
@@ -6766,7 +6617,40 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nLợi ích cốt lõi của tập thanh ghi (Register File) trong kiến trúc máy tính.\n\nCác bước:\n1. Thanh ghi là bộ nhớ nằm trực tiếp trong nhân xử lý với tốc độ truy cập nhanh nhất (1 chu kỳ xung nhịp).\n2. Việc sử dụng tập thanh ghi cho phép lưu trữ cục bộ các biến và toán hạng trung gian, giúp giảm đáng kể số lần CPU phải truy cập vào bộ nhớ chính (RAM) vốn chậm hơn hàng trăm lần.\n3. Việc giảm số lần đọc/ghi bộ nhớ giúp tiết kiệm đáng kể thời gian thực thi của chương trình.\n\nKiểm tra:\nƯu điểm chính là giảm truy xuất bộ nhớ, tiết kiệm thời gian (A).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1436,
+      "id": 1424,
+      "quizId": 15,
+      "text": "In assembly programming language, what instructions are used to jump when the condition is less than or equal to? Choose 2 correct answers",
+      "options": [
+        "jle",
+        "jng",
+        "jnle",
+        "jnge",
+        "jne",
+        "jmp"
+      ],
+      "correctIndex": 0,
+      "explanation": "**Đáp án đúng**: A & B\n\nHướng giải:\nTìm hai lệnh nhảy có điều kiện (conditional jump instructions) trong hợp ngữ x86 được sử dụng khi điều kiện so sánh là 'nhỏ hơn hoặc bằng' (less than or equal to, ký hiệu (le)).\n\nCác bước:\n1. Trong tập lệnh hợp ngữ x86, sau một lệnh so sánh có dấu ((mathrm{CMP})):\n   - Điều kiện 'nhỏ hơn hoặc bằng' (Less than or Equal to): Ký hiệu bằng lệnh (mathrm{JLE}) (Jump if Less or Equal). Lệnh này nhảy khi cờ (mathrm{ZF} = 1) hoặc (mathrm{SF} \ne mathrm{OF}).\n   - Về mặt logic Boolean, 'nhỏ hơn hoặc bằng' tương đương phủ định của 'lớn hơn' (Not Greater): Ký hiệu bằng lệnh (mathrm{JNG}) (Jump if Not Greater). Lệnh này kiểm tra điều kiện y hệt (mathrm{JLE}).\n2. Thực tế trong kiến trúc x86 của Intel, (mathrm{JLE}) và (mathrm{JNG}) là hai tên gọi gợi nhớ (mnemonics) khác nhau của cùng một mã máy duy nhất (Opcode `0x7E` cho short jump và `0x0F 0x8E` cho near jump).\n3. Do đó, hai lệnh đúng là (mathrm{JLE}) (phương án A) và (mathrm{JNG}) (phương án B).\n\nKiểm tra:\nBảng đối chiếu cờ trạng thái của Intel x86:\n[\n\begin{array}{|l|l|l|}\nhline\n\text{Mnemonic} & \text{Ý nghĩa} & \text{Điều kiện cờ} hline\nmathrm{JLE} & \text{Jump if Less or Equal} & mathrm{ZF} = 1 \text{ or } mathrm{SF} \ne mathrm{OF} mathrm{JNG} & \text{Jump if Not Greater} & mathrm{ZF} = 1 \text{ or } mathrm{SF} \ne mathrm{OF} hline\nend{array}\n]\nCả hai hoàn toàn đồng nhất.\n\nVì sao các phương án khác sai:\n- C ((mathrm{JNLE})): Jump if Not Less or Equal, tương đương (mathrm{JG}) (nhảy khi lớn hơn hẳn, (>)).\n- D ((mathrm{JNGE})): Jump if Not Greater or Equal, tương đương (mathrm{JL}) (nhảy khi nhỏ hơn hẳn, (<)).\n- E ((mathrm{JNE})): Jump if Not Equal, nhảy khi không bằng ((\ne)).\n- F ((mathrm{JMP})): Unconditional Jump, nhảy không điều kiện.\n\nLưu ý/công thức cần nhớ:\nNhỏ hơn hoặc bằng ((le)): (mathrm{JLE}) = (mathrm{JNG}) (Jump if Less or Equal / Jump if Not Greater).",
+      "correctIndices": [
+        0,
+        1
+      ],
+      "multiple": true
+    },
+    {
+      "id": 1425,
+      "quizId": 15,
+      "text": "In x86 assembly language, which instruction is used to add the values in the EAX and EBX registers and store the result in EAX?",
+      "options": [
+        "add eax, ebx",
+        "inc eax, ebx",
+        "mov eax, ebx",
+        "add ebx, eax"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nXác định cú pháp lệnh hợp ngữ x86 chuẩn để cộng nội dung thanh ghi (mathrm{EAX}) với thanh ghi (mathrm{EBX}) và lưu kết quả trở lại vào (mathrm{EAX}).\n\nCác bước:\n1. Trong cú pháp hợp ngữ Intel x86 tiêu chuẩn:\n   - Cú pháp lệnh hai toán hạng là: `OPCODE destination, source` (Toán hạng đích đứng trước, toán hạng nguồn đứng sau).\n   - Thao tác thực hiện của lệnh cộng ((mathrm{ADD})) là:\n     [\n     mathrm{destination} leftarrow mathrm{destination} + mathrm{source}\n     ]\n2. Theo yêu cầu đề bài:\n   - Giá trị được cộng: nội dung của (mathrm{EAX}) và (mathrm{EBX}).\n   - Nơi lưu kết quả: thanh ghi (mathrm{EAX}) (implies) (mathrm{EAX}) phải đóng vai trò là toán hạng đích (destination).\n   - Thanh ghi nguồn: (mathrm{EBX}) đóng vai trò toán hạng nguồn (source).\n3. Ghép vào cấu trúc: `add eax, ebx`.\n4. Phương án đúng là A.\n\nKiểm tra:\nLệnh `add eax, ebx` thực hiện:\n[\nmathrm{EAX} = mathrm{EAX} + mathrm{EBX}\n]\nKết quả được lưu vào EAX.\n\nVì sao các phương án khác sai:\n- B (`inc eax, ebx`): Sai cú pháp, lệnh (mathrm{INC}) là lệnh một toán hạng (unary instruction) chỉ nhận 1 tham số (ví dụ `inc eax` tăng EAX lên 1).\n- C (`mov eax, ebx`): Lệnh sao chép dữ liệu từ EBX sang EAX ((mathrm{EAX} leftarrow mathrm{EBX})), không thực hiện phép cộng.\n- D (`add ebx, eax`): Thực hiện cộng và lưu kết quả vào thanh ghi EBX ((mathrm{EBX} leftarrow mathrm{EBX} + mathrm{EAX})), trái với yêu cầu lưu kết quả vào EAX.\n\nLưu ý/công thức cần nhớ:\nCú pháp Intel: `ADD đích, nguồn` (implies) `đích = đích + nguồn`."
+    },
+    {
+      "id": 1426,
       "quizId": 16,
       "text": "The register file employs much shorter addresses than addresses for cache and memory.",
       "options": [
@@ -6777,7 +6661,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The register file employs much shorter addresses than addresses for cache and memory.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1437,
+      "id": 1427,
       "quizId": 16,
       "text": "The _________ is a small cache memory associated with the instruction fetch stage of the pipeline.",
       "options": [
@@ -6790,7 +6674,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ đệm Cache & Ánh xạ bộ nhớ thuộc Chapter 05: Cache Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ is a small cache memory associated with the instruction fetch stage of the pipeline.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Cache giúp giảm khoảng cách tốc độ giữa CPU và RAM. Có 3 phương pháp ánh xạ: Direct Mapping (ánh xạ trực tiếp), Associative Mapping (ánh xạ liên kết hoàn toàn) và Set-Associative Mapping (ánh xạ liên kết tập hợp). Các chính sách ghi bao gồm Write-through và Write-back.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. branch history table.\n\n **Kiểm tra**: Chọn C. branch history table \n\n **Vì sao các phương án khác sai**:\n\n- A (dynamic branch): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (loop table): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (flag): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 05: Cache Memory"
     },
     {
-      "id": 1438,
+      "id": 1428,
       "quizId": 16,
       "text": "The _________ stage includes ALU operations, cache access, and register update.",
       "options": [
@@ -6803,7 +6687,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _______ stage includes ALU operations, cache access, and register update.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. execute.\n\n **Kiểm tra**: Chọn B. execute \n\n **Vì sao các phương án khác sai**:\n\n- A (decode): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (fetch): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (write back): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
     },
     {
-      "id": 1439,
+      "id": 1429,
       "quizId": 16,
       "text": "In the context of instruction execution, how is a product on an assembly line conceptually similar to an instruction in a pipeline?",
       "options": [
@@ -6816,7 +6700,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In the context of instruction execution, how is a product on an assembly line conceptually similar to an instruction in a pipeline?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Both undergo multiple stages of production.\n\n **Kiểm tra**: Chọn A. Both undergo multiple stages of production \n\n **Vì sao các phương án khác sai**:\n\n- B (Both are executed in a single clock cycle): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Both follow a linear sequence of tasks): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Both are processed by the control unit): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1440,
+      "id": 1430,
       "quizId": 16,
       "text": "_________ registers may be used only to hold data and cannot be employed in the calculation of an address.",
       "options": [
@@ -6829,7 +6713,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"_________ registers may be used only to hold data and cannot be employed in the calculation of an address.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Data.\n\n **Kiểm tra**: Chọn C. Data \n\n **Vì sao các phương án khác sai**:\n\n- A (General purpose): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Condition code): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Address): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1441,
+      "id": 1431,
       "quizId": 16,
       "text": "The processor needs to store instructions and data temporarily while an instruction is being executed.",
       "options": [
@@ -6840,7 +6724,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The processor needs to store instructions and data temporarily while an instruction is being executed.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1442,
+      "id": 1432,
       "quizId": 16,
       "text": "How do data registers and address registers differ in some computer systems?",
       "options": [
@@ -6853,7 +6737,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"How do data registers and address registers differ in some computer systems?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Address registers can be employed in calculating operand addresses, while data registers hold data..\n\n **Kiểm tra**: Chọn A. Address registers can be employed in calculating operand addresses, while data registers hold data. \n\n **Vì sao các phương án khác sai**:\n\n- B (Data registers are only used for stack-related operations): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Data registers are used for indexed addressing, while address registers are used for data storage): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Address registers are reserved for segmented addressing, while data registers are general-purpose): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1443,
+      "id": 1433,
       "quizId": 16,
       "text": "Control and status registers are used by which entities to control the operation of the processor?",
       "options": [
@@ -6866,7 +6750,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân loại thanh ghi CPU: Thanh ghi nhìn thấy được bởi người dùng (User-visible registers) và Thanh ghi điều khiển/trạng thái (Control and status registers).\n\nCác bước:\n1. Thanh ghi nhìn thấy được (User-visible registers): Bao gồm thanh ghi đa năng (General-purpose), thanh ghi dữ liệu, thanh ghi địa chỉ... được các lập trình viên hợp ngữ/trình biên dịch sử dụng trực tiếp để tối ưu truy xuất dữ liệu.\n2. Thanh ghi điều khiển và trạng thái (Control and status registers): Bao gồm Program Counter (PC), Instruction Register (IR), Memory Address Register (MAR), Program Status Word (PSW)... được khối điều khiển và các chương trình hệ điều hành có đặc quyền (operating system programs in privileged/supervisor mode) sử dụng để quản lý tiến trình, kiểm soát trạng thái CPU và xử lý ngắt.\n\nKiểm tra:\nThanh ghi điều khiển và trạng thái được sử dụng bởi các chương trình hệ điều hành (operating system programs) -> Phương án A.\n\nVì sao các phương án khác sai:\n- B (Programmers): Chỉ dùng trực tiếp user-visible registers.\n- C, D: Thiết bị I/O và module bộ nhớ không trực tiếp điều khiển các thanh ghi này của CPU.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1444,
+      "id": 1434,
       "quizId": 16,
       "text": "Which portion of a computer consists of an ALU, a control unit, and registers, uses for fetching and executing instructions?",
       "options": [
@@ -6879,7 +6763,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which portion of a computer consists of an ALU, a control unit, and registers, uses for fetching and executing instructions?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. CPU.\n\n **Kiểm tra**: Chọn B. CPU \n\n **Vì sao các phương án khác sai**:\n\n- A (Main memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (I/O): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (System interconnection): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
     },
     {
-      "id": 1445,
+      "id": 1435,
       "quizId": 16,
       "text": "Pipelining is a means of introducing parallelism into the essentially sequential nature of a machine-instruction program.",
       "options": [
@@ -6890,7 +6774,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Pipelining is a means of introducing parallelism into the essentially sequential nature of a machine-instruction program.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1446,
+      "id": 1436,
       "quizId": 16,
       "text": "One of the major problems in designing an instruction pipeline is assuring a steady flow of in initial stages of the pipeline.",
       "options": [
@@ -6901,7 +6785,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"One of the major problems in designing an instruction pipeline is assuring a steady flow of in initial stages of the pipeline.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1447,
+      "id": 1437,
       "quizId": 16,
       "text": "The register file is on the same chip as the ALU and control unit.",
       "options": [
@@ -6912,7 +6796,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The register file is on the same chip as the ALU and control unit.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
     },
     {
-      "id": 1448,
+      "id": 1438,
       "quizId": 16,
       "text": "The cycle time of an instruction pipeline is the time needed to advance a set of instructions one stage through the pipeline.",
       "options": [
@@ -6923,7 +6807,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The cycle time of an instruction pipeline is the time needed to advance a set of instructions one stage through the pipeline.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1449,
+      "id": 1439,
       "quizId": 16,
       "text": "A control hazard occurs when two or more instructions that are already in the pipeline need the same resource.",
       "options": [
@@ -6934,7 +6818,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A control hazard occurs when two or more instructions that are already in the pipeline need the same resource.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1450,
+      "id": 1440,
       "quizId": 16,
       "text": "In the CPU, what is the functionality of the control unit?",
       "options": [
@@ -6947,7 +6831,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"In the CPU, what is the functionality of the control unit?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. To controls the sequence of operations.\n\n **Kiểm tra**: Chọn B. To controls the sequence of operations \n\n **Vì sao các phương án khác sai**:\n\n- A (To decode program instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (To store program instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (To transfer data to primary storage): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1451,
+      "id": 1441,
       "quizId": 16,
       "text": "What is the role of the control unit in a processor?",
       "options": [
@@ -6960,7 +6844,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the role of the control unit in a processor?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. The control unit in a processor directs and coordinates the execution of instructions, interpreting and managing the flow of operations within the CPU.\n\n **Kiểm tra**: Chọn D. The control unit in a processor directs and coordinates the execution of instructions, interpreting and managing the flow of operations within the CPU \n\n **Vì sao các phương án khác sai**:\n\n- A (The control unit's primary role is to perform arithmetic and logical operations within the processor, orchestrating the manipulation of data): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (The control unit only manages the flow of data between the CPU and external devices and does not play a significant role in executing instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (The control unit is solely responsible for managing the flow of instructions from secondary storage to RAM and does not have a role in the internal operation of the CPU): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1452,
+      "id": 1442,
       "quizId": 16,
       "text": "What is the most important function of the control unit (CU)?",
       "options": [
@@ -6973,7 +6857,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nXác định chức năng quan trọng và bao quát nhất của khối điều khiển (Control Unit - CU) trong CPU.\n\nCác bước:\n1. CPU gồm 4 thành phần chính: Khối điều khiển (CU), Khối số học & logic (ALU), Tập thanh ghi (Registers) và Bus nội bộ (CPU Interconnection).\n2. Vai trò cơ bản và tối quan trọng nhất của CU là chỉ đạo, phối hợp và điều khiển hoạt động của tất cả các thành phần khác trong CPU và hệ thống (directs the operation of the other CPU components) thông qua việc phát ra các tín hiệu điều khiển (control signals).\n\nKiểm tra:\nPhương án C mô tả chính xác nhất chức năng của CU.\n\nVì sao các phương án khác sai:\n- A: Quản lý thứ tự lệnh là do Program Counter và mạch rẽ nhánh hỗ trợ.\n- B: Đọc và xử lý dữ liệu từ bộ nhớ là công việc của ALU kết hợp hệ thống bus, CU không trực tiếp tính toán dữ liệu.\n- D: Đọc và giải mã lệnh chỉ là một bước trong chu trình lệnh (fetch/decode), không bao quát toàn bộ vai trò điều phối của CU.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1453,
+      "id": 1443,
       "quizId": 16,
       "text": "Which of the following statement is correct in the context of Instruction Pipelining?",
       "options": [
@@ -6986,7 +6870,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following statements is true for Von Neumann architecture?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Shared bus between the program memory and data memory.\n\n **Kiểm tra**: Chọn A. Shared bus between the program memory and data memory \n\n **Vì sao các phương án khác sai**:\n\n- B (Separate bus between the program memory and data memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (External bus for program memory and data memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (External bus for data memory only): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1454,
+      "id": 1444,
       "quizId": 16,
       "text": "In the context of the basic instruction cycle, when the fifth instruction is executing, which of the following is the correct statement?",
       "options": [
@@ -6999,7 +6883,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải:**\nXem xét cơ chế đón trước lệnh (instruction prefetch / 2-stage pipelining).\n\n**Các bước phân tích:**\n1. Trong chu kỳ lệnh cơ bản có áp dụng đón trước hoặc đường ống lệnh, giai đoạn Execute của lệnh thứ \\ (n \\ ) trùng lặp thời gian với giai đoạn Fetch của lệnh kế tiếp \\ (n+1 \\ ).\n2. Khi lệnh thứ 5 đang ở pha thực thi (executing), lệnh thứ 6 đang được nạp (fetched) vào thanh ghi lệnh.\n3. Do đó, phát biểu A là chính xác.\n\n**Vì sao các phương án khác sai:**\n- B sai: Lệnh thứ 5 đã được nạp xong trước đó rồi mới thực thi.\n- C sai: Lệnh thứ 4 đã hoàn tất xong hoàn toàn.\n- D sai: Lệnh được nạp theo chu kỳ tuần tự/pipeline, không nạp toàn bộ chương trình cùng lúc.\n\n **Xuất hiện trong**: CEA201_-_SU26_-_RE.txt"
     },
     {
-      "id": 1455,
+      "id": 1445,
       "quizId": 16,
       "text": "What is a drawback of Instruction Pipelining?",
       "options": [
@@ -7012,7 +6896,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân tích ưu điểm và nhược điểm (đánh đổi) của kỹ thuật đường ống lệnh (Instruction Pipelining).\n\nCác bước:\n1. Đường ống lệnh chia quá trình thực thi lệnh thành nhiều chặng độc lập chạy gối đầu nhau, giúp tăng thông lượng xử lý lệnh (Instruction Throughput - số lệnh hoàn thành trên một đơn vị thời gian).\n2. Tuy nhiên, đường ống cũng có các nhược điểm (drawbacks):\n - Cần bổ sung các chốt lưu trữ trung gian (pipeline registers/latches) giữa các tầng, làm tăng thời gian truyền tín hiệu và độ phức tạp phần cứng.\n - Độ trễ của mỗi tầng phải bị ép bằng thời gian của tầng chậm nhất (clock period = max stage delay + latch overhead).\n - Vì vậy, thời gian để một lệnh đơn lẻ đi qua từ đầu đến cuối đường ống (Latency) thực tế có thể tăng lên một chút so với khi chạy đơn lẻ không có thanh ghi chốt (Phương án C).\n\nKiểm tra:\nNhược điểm của đường ống là có thể làm tăng độ trễ (latency) của một lệnh do chi phí quản lý đường ống -> Đáp án C.\n\nVì sao các phương án khác sai:\n- A, B: Tăng throughput là ưu điểm lớn nhất, không phải nhược điểm.\n- D: Đường ống làm TĂNG độ phức tạp phần cứng (do phải xử lý các xung đột hazards), không phải giảm.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1456,
+      "id": 1446,
       "quizId": 16,
       "text": "_________ determines the control and pipeline organization.",
       "options": [
@@ -7025,21 +6909,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ determines the control and pipeline organization.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Execution sequencing.\n\n **Kiểm tra**: Chọn B. Execution sequencing \n\n **Vì sao các phương án khác sai**:\n\n- A (Calculation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Operations performed): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Operands used): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1457,
-      "quizId": 16,
-      "text": "_________ interprets the instructions in memory and causes them to be executed.",
-      "options": [
-        "Registers",
-        "CPU interconnection",
-        "Arithmetic and Logic Unit (ALU)",
-        "I/O Modules",
-        "Control Unit (CU)"
-      ],
-      "correctIndex": 4,
-      "explanation": "**Giải thích**: \n\n Hướng giải:\nNhận diện thành phần chịu trách nhiệm giải mã và điều phối thực thi lệnh trong CPU.\n\nCác bước:\n1. Định nghĩa chuẩn trong sách Stallings: 'The Control Unit controls the operation of the CPU and hence the computer; it interprets the instructions in memory and causes them to be executed.'\n2. Khối điều khiển (Control Unit - CU) đọc lệnh từ bộ nhớ, giải mã (interpret/decode) mã thao tác và phát ra chuỗi tín hiệu điều khiển tới ALU, thanh ghi và bus để thực thi lệnh.\n\nKiểm tra:\nBộ phận giải mã lệnh và điều khiển việc thực thi là Control Unit (E).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
-    },
-    {
-      "id": 1458,
+      "id": 1447,
       "quizId": 16,
       "text": "Steps for executing a machine instruction are concerned, choose the correct statement which specifies the role of the fetching instruction step.",
       "options": [
@@ -7052,7 +6922,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân tích các giai đoạn con trong chu trình lệnh khi thực thi lệnh `ADD EAX, V`.\n\nCác bước:\n1. Trong lệnh `ADD EAX, V`:\n - `EAX` là thanh ghi đích (nằm sẵn trong CPU).\n - `V` là một biến lưu trữ trong bộ nhớ chính (RAM).\n2. Các bước chu trình lệnh gồm:\n - Tìm lệnh (Fetch Instruction): Đọc chính câu lệnh `ADD EAX, V` từ bộ nhớ vào thanh ghi lệnh IR.\n - Giải mã lệnh (Interpret/Decode Instruction): Phân tích mã lệnh ADD và địa chỉ của biến V.\n - Tìm nạp dữ liệu / toán hạng (Fetch Data / Operand Fetch): CPU phát tín hiệu đọc bộ nhớ để lấy giá trị chứa trong biến `V` nạp vào thanh ghi tạm thời của CPU.\n - Xử lý dữ liệu (Process Data / Execute): ALU thực hiện phép cộng nội dung `EAX` với giá trị vừa nạp của `V`.\n3. Như vậy, giai đoạn trực tiếp đọc và truy xuất biến `V` là giai đoạn Tìm nạp dữ liệu (The fetch data step).\n\nKiểm tra:\nBước truy xuất biến V là The fetch data step (A).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1459,
+      "id": 1448,
       "quizId": 16,
       "text": "Steps for executing a machine instruction are concerned, choose the most suitable statement for the role of the interpret instruction step.",
       "options": [
@@ -7065,7 +6935,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân tích các giai đoạn con trong chu trình lệnh khi thực thi lệnh `ADD EAX, V`.\n\nCác bước:\n1. Trong lệnh `ADD EAX, V`:\n - `EAX` là thanh ghi đích (nằm sẵn trong CPU).\n - `V` là một biến lưu trữ trong bộ nhớ chính (RAM).\n2. Các bước chu trình lệnh gồm:\n - Tìm lệnh (Fetch Instruction): Đọc chính câu lệnh `ADD EAX, V` từ bộ nhớ vào thanh ghi lệnh IR.\n - Giải mã lệnh (Interpret/Decode Instruction): Phân tích mã lệnh ADD và địa chỉ của biến V.\n - Tìm nạp dữ liệu / toán hạng (Fetch Data / Operand Fetch): CPU phát tín hiệu đọc bộ nhớ để lấy giá trị chứa trong biến `V` nạp vào thanh ghi tạm thời của CPU.\n - Xử lý dữ liệu (Process Data / Execute): ALU thực hiện phép cộng nội dung `EAX` với giá trị vừa nạp của `V`.\n3. Như vậy, giai đoạn trực tiếp đọc và truy xuất biến `V` là giai đoạn Tìm nạp dữ liệu (The fetch data step).\n\nKiểm tra:\nBước truy xuất biến V là The fetch data step (A).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1460,
+      "id": 1449,
       "quizId": 16,
       "text": "The allocation of control information between registers and memory are not considered to be issue.",
       "options": [
@@ -7076,7 +6946,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The allocation of control information between registers and memory are not considered to be issue.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1461,
+      "id": 1450,
       "quizId": 16,
       "text": "Which one of the following CPU registers holds the address of the storage location being accessed?",
       "options": [
@@ -7089,7 +6959,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which one of the following CPU registers holds the address of the storage location being accessed?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. MAR (Memory address register).\n\n **Kiểm tra**: Chọn A. MAR (Memory address register) \n\n **Vì sao các phương án khác sai**:\n\n- B (MBR (Memory Buffer Register)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (AC (Accumulator)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (IR (Instruction Register)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1462,
+      "id": 1451,
       "quizId": 16,
       "text": "The predict-never-taken approach is the most popular of all the branch prediction methods.",
       "options": [
@@ -7100,7 +6970,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Kiến trúc Superscalar & Xử lý song song mức lệnh thuộc Chapter 18: Instruction-Level Parallelism and Superscalar Processors (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The predict-never-taken approach is the most popular of all the branch prediction methods.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Kiến trúc Superscalar cho phép phát nhiều lệnh trong cùng một chu kỳ xung nhịp. Khai thác tính song song mức lệnh (ILP) nhờ thực thi ngoài thứ tự (Out-of-order execution), đổi tên thanh ghi và dự đoán rẽ nhánh.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 18: Instruction-Level Parallelism and Superscalar Processors"
     },
     {
-      "id": 1463,
+      "id": 1452,
       "quizId": 16,
       "text": "What is stored in the Stack Pointer?",
       "options": [
@@ -7114,7 +6984,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is stored in the Stack Pointer?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là E. Address of top item.\n\n **Kiểm tra**: Chọn E. Address of top item \n\n **Vì sao các phương án khác sai**:\n\n- A (Address of next instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Stack data values): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Addressing method): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Operations): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1464,
+      "id": 1453,
       "quizId": 16,
       "text": "The _________ determines the opcode and the operand specifiers.",
       "options": [
@@ -7127,7 +6997,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___________ determines the opcode and the operand specifiers.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. decode instruction.\n\n **Kiểm tra**: Chọn A. decode instruction \n\n **Vì sao các phương án khác sai**:\n\n- B (fetch operands): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (calculate operands): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (execute instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1465,
+      "id": 1454,
       "quizId": 16,
       "text": "_________ are a set of storage locations.",
       "options": [
@@ -7140,7 +7010,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"_________ are a set of storage locations.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Registers.\n\n **Kiểm tra**: Chọn A. Registers \n\n **Vì sao các phương án khác sai**:\n\n- B (Control units): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (PSWs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Processors): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1466,
+      "id": 1455,
       "quizId": 16,
       "text": "The _________ holds the address of the next instruction to be fetched.",
       "options": [
@@ -7153,33 +7023,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The _________ holds the address of the next instruction to be fetched.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. PC.\n\n **Kiểm tra**: Chọn C. PC \n\n **Vì sao các phương án khác sai**:\n\n- A (MBR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (IR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (MAR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1467,
-      "quizId": 16,
-      "text": "_________ are a set of storage locations.",
-      "options": [
-        "Processors",
-        "PSWs",
-        "Registers",
-        "Control units"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"_________ are a set of storage locations.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Registers.\n\n **Kiểm tra**: Chọn A. Registers \n\n **Vì sao các phương án khác sai**:\n\n- B (Control units): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (PSWs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Processors): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
-    },
-    {
-      "id": 1468,
-      "quizId": 16,
-      "text": "The _________ contains the address of an instruction to be fetched.",
-      "options": [
-        "instruction register",
-        "memory address register",
-        "memory buffer register",
-        "program counter"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ________ contains the address of an instruction to be fetched.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. program counter.\n\n **Kiểm tra**: Chọn D. program counter \n\n **Vì sao các phương án khác sai**:\n\n- A (instruction register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (memory address register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (memory buffer register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1469,
+      "id": 1456,
       "quizId": 16,
       "text": "The disadvantage of the software poll is that it is time consuming.",
       "options": [
@@ -7190,21 +7034,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The disadvantage of the software poll is that it is time consuming.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1470,
-      "quizId": 16,
-      "text": "What is stored in the Stack Pointer?",
-      "options": [
-        "Operations",
-        "Addressing method",
-        "Stack data values",
-        "Address of top item",
-        "Address of next instruction"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is stored in the Stack Pointer?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là E. Address of top item.\n\n **Kiểm tra**: Chọn E. Address of top item \n\n **Vì sao các phương án khác sai**:\n\n- A (Address of next instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Stack data values): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Addressing method): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Operations): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1471,
+      "id": 1457,
       "quizId": 16,
       "text": "_________ provide storage internal to the CPU.",
       "options": [
@@ -7217,7 +7047,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ provide storage internal to the CPU.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Registers.\n\n **Kiểm tra**: Chọn D. Registers \n\n **Vì sao các phương án khác sai**:\n\n- A (Control units): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (ALUs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Main memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
     },
     {
-      "id": 1472,
+      "id": 1458,
       "quizId": 16,
       "text": "The register that keeps the address of next instruction to be executed is _________.",
       "options": [
@@ -7231,7 +7061,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The register that keeps the address of next instruction to be executed is ________.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. PC.\n\n **Kiểm tra**: Chọn B. PC \n\n **Vì sao các phương án khác sai**:\n\n- A (AC): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (IR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (MBR): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (MQ): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1473,
+      "id": 1459,
       "quizId": 16,
       "text": "Instruction register stores_________",
       "options": [
@@ -7244,59 +7074,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Instruction register stores_________\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Instruction which is currently executed.\n\n **Kiểm tra**: Chọn C. Instruction which is currently executed \n\n **Vì sao các phương án khác sai**:\n\n- A (Data of the current instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Address of the next instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Address of the current instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1474,
-      "quizId": 16,
-      "text": "The _________ determines the opcode and the operand specifiers.",
-      "options": [
-        "fetch operands",
-        "calculate operands",
-        "decode instruction",
-        "execute instruction"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The ___________ determines the opcode and the operand specifiers.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. decode instruction.\n\n **Kiểm tra**: Chọn A. decode instruction \n\n **Vì sao các phương án khác sai**:\n\n- B (fetch operands): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (calculate operands): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (execute instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
-    },
-    {
-      "id": 1475,
-      "quizId": 16,
-      "text": "_________ provide storage internal to the CPU.",
-      "options": [
-        "Control units",
-        "ALUs",
-        "Main memory",
-        "Registers"
-      ],
-      "correctIndex": 3,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Số học máy tính & Thuật toán ALU thuộc Chapter 11: Computer Arithmetic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"________ provide storage internal to the CPU.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối ALU thực hiện các phép tính số học và logic. Thuật toán Booth tối ưu hóa phép nhân số nguyên có dấu bù 2. Chuẩn IEEE 754 định dạng số thực chấm động (Floating-point) gồm bit dấu, phần mũ và phần lẻ (significand).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Registers.\n\n **Kiểm tra**: Chọn D. Registers \n\n **Vì sao các phương án khác sai**:\n\n- A (Control units): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (ALUs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Main memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 11: Computer Arithmetic"
-    },
-    {
-      "id": 1476,
-      "quizId": 16,
-      "text": "Which one of the following CPU registers holds the address of the storage location being accessed?",
-      "options": [
-        "MBR (Memory Buffer Register)",
-        "IR (Instruction Register)",
-        "MAR (Memory address register)",
-        "AC (Accumulator)"
-      ],
-      "correctIndex": 2,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which one of the following CPU registers holds the address of the storage location being accessed?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. MAR (Memory address register).\n\n **Kiểm tra**: Chọn A. MAR (Memory address register) \n\n **Vì sao các phương án khác sai**:\n\n- B (MBR (Memory Buffer Register)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (AC (Accumulator)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (IR (Instruction Register)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1477,
-      "quizId": 16,
-      "text": "Instruction register stores_________",
-      "options": [
-        "Address of the next instruction",
-        "Instruction which is currently executed",
-        "Address of the current instruction",
-        "Data of the current instruction"
-      ],
-      "correctIndex": 1,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Instruction register stores_________\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Instruction which is currently executed.\n\n **Kiểm tra**: Chọn C. Instruction which is currently executed \n\n **Vì sao các phương án khác sai**:\n\n- A (Data of the current instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Address of the next instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Address of the current instruction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
-    },
-    {
-      "id": 1478,
+      "id": 1460,
       "quizId": 16,
       "text": "Condition codes facilitate multiway branches.",
       "options": [
@@ -7307,7 +7085,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Condition codes facilitate multiway branches.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1479,
+      "id": 1461,
       "quizId": 16,
       "text": "Which of the following components of CPU is responsible to direct the system to execute instructions?",
       "options": [
@@ -7320,7 +7098,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following components was used in the first ENIAC computer?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Vacuum tubes.\n\n **Kiểm tra**: Chọn C. Vacuum tubes \n\n **Vì sao các phương án khác sai**:\n\n- A (Bipolar transistors): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Field transistors): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Semiconductor Ics): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1480,
+      "id": 1462,
       "quizId": 16,
       "text": "_________ : Determine the address of the next instruction to be executed. Usually, this involves adding a fixed number to the address of the previous instruction.",
       "options": [
@@ -7334,7 +7112,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"______________ : Determine the address of the next instruction to be executed. Usually, this involves adding a fixed number to the address of the previous instruction.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Instruction address calculation.\n\n **Kiểm tra**: Chọn C. Instruction address calculation \n\n **Vì sao các phương án khác sai**:\n\n- A (Instruction fetch): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Instruction operation decoding): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Operand fetch): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- E (Operand address calculation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1481,
+      "id": 1463,
       "quizId": 16,
       "text": "Which registers can be assigned to a variety of functions by the programmer?",
       "options": [
@@ -7347,7 +7125,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which registers can be assigned to a variety of functions by the programmer?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. General purpose registers.\n\n **Kiểm tra**: Chọn B. General purpose registers \n\n **Vì sao các phương án khác sai**:\n\n- A (Data registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Address registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Condition codes (flags)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1482,
+      "id": 1464,
       "quizId": 16,
       "text": "_________: If the operation involves reference to an operand in memory or available via I/O, then determine the address of the operand.",
       "options": [
@@ -7360,7 +7138,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"___________________: If the operation involves reference to an operand in memory or available via I/O, then determine the address of the operand.\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. Operand address calculation.\n\n **Kiểm tra**: Chọn D. Operand address calculation \n\n **Vì sao các phương án khác sai**:\n\n- A (Operand fetch): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Data operation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Operand store): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1483,
+      "id": 1465,
       "quizId": 16,
       "text": "What is the role of the registers in a processor?",
       "options": [
@@ -7373,7 +7151,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Bộ nhớ bán dẫn trong (SRAM & DRAM) thuộc Chapter 06: Internal Memory (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the role of the registers in a processor?\".\n\n- Phân tích nguyên lý phần cứng liên quan: SRAM làm bằng Flip-flop (nhanh, dùng làm Cache, không cần làm tươi), DRAM dùng Tụ điện (cần làm tươi liên tục, dùng làm RAM chính). Ô nhớ (Memory cell) là phần tử bán dẫn cơ sở. Bộ nhớ ROM/PROM/EPROM/Flash lưu trữ không mất dữ liệu. Mã Hamming dùng để kiểm tra và sửa lỗi bit.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Registers in a processor provide fast, temporary storage for data and instructions, facilitating efficient access during instruction execution.\n\n **Kiểm tra**: Chọn A. Registers in a processor provide fast, temporary storage for data and instructions, facilitating efficient access during instruction execution \n\n **Vì sao các phương án khác sai**:\n\n- B (Registers are only used to store data temporarily during the execution of a program and do not contribute to the processing of instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Registers are solely responsible for storing data from the main memory and have no involvement in holding instructions or facilitating data manipulation): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Registers are only necessary when the CPU is idle and have no impact on the speed or efficiency of instruction execution): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 06: Internal Memory"
     },
     {
-      "id": 1484,
+      "id": 1466,
       "quizId": 16,
       "text": "How many general-purpose registers are there in the Microprocessor Register Organizations of Intel 80386–Pentium 4 ?",
       "options": [
@@ -7386,7 +7164,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nTổ chức tập thanh ghi vi xử lý kiến trúc IA-32 (từ Intel 80386 đến Pentium 4).\n\nCác bước:\n1. Kiến trúc IA-32 (32-bit x86) của Intel kế thừa từ 80386 mở rộng lên Pentium 4 định nghĩa đúng 8 thanh ghi đa năng 32-bit (General-Purpose Registers - GPRs):\n - `EAX` (Accumulator)\n - `EBX` (Base)\n - `ECX` (Count)\n - `EDX` (Data)\n - `ESI` (Source Index)\n - `EDI` (Destination Index)\n - `EBP` (Base Pointer)\n - `ESP` (Stack Pointer)\n2. Lưu ý: Lên kiến trúc 64-bit (x86-64 / AMD64), số lượng thanh ghi đa năng mới được mở rộng thành 16 thanh ghi (`RAX` đến `R15`). Đối với IA-32 32-bit, số lượng luôn là 8.\n\nKiểm tra:\nSố thanh ghi đa năng là 8 (phương án A).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1485,
+      "id": 1467,
       "quizId": 16,
       "text": "Choose the register that controls sequential execution.",
       "options": [
@@ -7399,7 +7177,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nChức năng điều khiển thứ tự thực thi tuần tự của thanh ghi bộ đếm chương trình (Program Counter - PC).\n\nCác bước:\n1. Trong kiến trúc máy tính Von Neumann, các câu lệnh của chương trình được sắp xếp tuần tự tại các ô nhớ kế tiếp nhau.\n2. Thanh ghi Program Counter (PC) lưu giữ địa chỉ của lệnh tiếp theo cần được tìm nạp. Sau mỗi lần nạp một lệnh, phần cứng sẽ tự động tăng giá trị của PC lên kích thước của lệnh đó, qua đó đảm bảo chương trình được thực thi tuần tự từ đầu đến cuối.\n3. Khi gặp các lệnh nhảy hoặc rẽ nhánh (JMP, CALL), địa chỉ đích mới sẽ được ghi đè vào PC.\n\nKiểm tra:\nThanh ghi điều khiển việc thực thi tuần tự là Program Counter (PC) -> Đáp án A.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1486,
+      "id": 1468,
       "quizId": 16,
       "text": "What is the primary purpose of index registers within the processor?",
       "options": [
@@ -7412,7 +7190,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the primary purpose of cache memory in a computer system?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. To store frequently used data for quick access.\n\n **Kiểm tra**: Chọn A. To store frequently used data for quick access \n\n **Vì sao các phương án khác sai**:\n\n- B (To store the operating system): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (To store user files and documents): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (To store the CPU registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1487,
+      "id": 1469,
       "quizId": 16,
       "text": "Steps for executing a machine instruction are concerned, given an assembly code: ADD EAX, V. What step will access the variable V?",
       "options": [
@@ -7425,7 +7203,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân tích các giai đoạn con trong chu trình lệnh khi thực thi lệnh `ADD EAX, V`.\n\nCác bước:\n1. Trong lệnh `ADD EAX, V`:\n - `EAX` là thanh ghi đích (nằm sẵn trong CPU).\n - `V` là một biến lưu trữ trong bộ nhớ chính (RAM).\n2. Các bước chu trình lệnh gồm:\n - Tìm lệnh (Fetch Instruction): Đọc chính câu lệnh `ADD EAX, V` từ bộ nhớ vào thanh ghi lệnh IR.\n - Giải mã lệnh (Interpret/Decode Instruction): Phân tích mã lệnh ADD và địa chỉ của biến V.\n - Tìm nạp dữ liệu / toán hạng (Fetch Data / Operand Fetch): CPU phát tín hiệu đọc bộ nhớ để lấy giá trị chứa trong biến `V` nạp vào thanh ghi tạm thời của CPU.\n - Xử lý dữ liệu (Process Data / Execute): ALU thực hiện phép cộng nội dung `EAX` với giá trị vừa nạp của `V`.\n3. Như vậy, giai đoạn trực tiếp đọc và truy xuất biến `V` là giai đoạn Tìm nạp dữ liệu (The fetch data step).\n\nKiểm tra:\nBước truy xuất biến V là The fetch data step (A).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1488,
+      "id": 1470,
       "quizId": 16,
       "text": "What electronic component is used to govern operations such as fetching, decoding, and performing arithmetic operations executed by a processor?",
       "options": [
@@ -7438,7 +7216,21 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nXác định thành phần điều phối nhịp độ hoạt động của bộ xử lý (processor timing & synchronization).\n\nCác bước:\n1. Tất cả các thao tác của vi xử lý (nạp lệnh, giải mã, thực thi phép toán ALU, ghi kết quả) diễn ra theo từng chu kỳ nhịp đồng bộ.\n2. Xung nhịp hệ thống (System clock) tạo ra các xung nhịp tuần hoàn với tần số xác định để điều khiển và phối hợp tất cả các hoạt động này.\n\nKiểm tra:\nPhương án A 'Using a system clock' là câu trả lời chính xác.\n\nVì sao các phương án khác sai:\n- B: Tinh thể thạch anh (quartz crystal) là linh kiện vật lý tạo dao động, nhưng thành phần hệ thống điều khiển chu kỳ máy là xung nhịp hệ thống (system clock).\n- C: Bộ chuyển đổi tương tự - số (ADC) dùng để đọc tín hiệu cảm biến/âm thanh.\n- D: Bộ đếm (counter) dùng đếm sự kiện/chu kỳ, không trực tiếp điều khiển toàn bộ hoạt động nạp/giải mã của CPU.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1489,
+      "id": 1471,
+      "quizId": 16,
+      "text": "What is the Instruction Register (IR)?",
+      "options": [
+        "Stores next instruction",
+        "Stores currently executing instruction",
+        "Stores memory address",
+        "Stores output",
+        "Store data"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nXác định chức năng chính xác của Thanh ghi chỉ lệnh (Instruction Register - IR) trong bộ vi xử lý.\n\nCác bước:\n1. Trong chu trình thực thi lệnh của CPU (Instruction Cycle):\n   - Bước 1 (Fetch): CPU đọc lệnh từ bộ nhớ chính (tại địa chỉ do thanh ghi PC chỉ tới) thông qua MAR và MBR, rồi nạp mã lệnh này vào Thanh ghi chỉ lệnh (Instruction Register - IR).\n   - Bước 2 (Decode): Khối điều khiển (Control Unit) giải mã lệnh đang nằm trong IR để chuẩn bị phát các tín hiệu vi thao tác.\n   - Bước 3 (Execute): Thực thi các thao tác theo mã lệnh trong IR.\n2. Như vậy, trong suốt quá trình giải mã và thực thi, thanh ghi IR lưu trữ chỉ lệnh hiện đang được thực thi (Stores currently executing instruction - phương án B).\n\nKiểm tra:\nPhân biệt rõ ràng giữa IR và PC:\n- PC (Program Counter): Lưu địa chỉ của lệnh tiếp theo cần tìm nạp.\n- IR (Instruction Register): Lưu mã nhị phân của lệnh hiện đang được thực thi.\n\nVì sao các phương án khác sai:\n- A (Stores next instruction): Đây là chức năng của Program Counter (PC).\n- C (Stores memory address): Đây là chức năng của Memory Address Register (MAR).\n- D, E (Stores output / Store data): Đây là chức năng của Memory Buffer Register (MBR) hoặc thanh ghi tích lũy Accumulator (AC).\n\nLưu ý/công thức cần nhớ:\nPC = Lưu địa chỉ lệnh tiếp theo.\nIR = Lưu lệnh hiện đang thực thi (Currently executing instruction)."
+    },
+    {
+      "id": 1472,
       "quizId": 17,
       "text": "In the concept of Register Windows, how many register groups are there?",
       "options": [
@@ -7451,7 +7243,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nCấu trúc cửa sổ thanh ghi (Register Windows) trong kiến trúc bộ vi xử lý RISC (tiêu biểu như SPARC).\n\nCác bước:\n1. Để tăng tốc độ gọi hàm và truyền tham số mà không phải liên tục lưu/phục hồi từ ngăn xếp (stack) trong bộ nhớ, kiến trúc RISC sử dụng tập thanh ghi mở rộng dạng cửa sổ trượt.\n2. Mỗi cửa sổ thanh ghi của một thủ tục gồm 3 nhóm thanh ghi riêng biệt:\n - Parameter registers (In registers): Nhận tham số truyền vào từ hàm cha và trả kết quả về.\n - Local registers: Dùng cho các biến cục bộ của riêng thủ tục hiện tại.\n - Temporary registers (Out registers): Dùng truyền tham số cho hàm con được gọi tiếp theo (và nhóm này chồng lấn với nhóm In của hàm con).\n (Ngoài ra có nhóm Global registers dùng chung cho toàn hệ thống bên ngoài các window).\n\nKiểm tra:\nBên trong mỗi cửa sổ thanh ghi, có 3 nhóm thanh ghi (Ins, Locals, Outs) -> Đáp án là 3 (B).\n\nVì sao các phương án khác sai:\n- A, C, D: Không phản ánh đúng mô hình phân nhóm thanh ghi chuẩn của cơ chế Register Window.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1490,
+      "id": 1473,
       "quizId": 17,
       "text": "What is a primary disadvantage of CISC (Complex Instruction Set Computer) architectures?",
       "options": [
@@ -7464,7 +7256,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: So sánh Kiến trúc RISC và CISC thuộc Chapter 17: Reduced Instruction Set Computers (RISC) (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"What is a primary disadvantage of CISC (Complex Instruction Set Computer) architectures?\" (Nhược điểm chính của kiến trúc CISC là gì?).\n- Phân tích đặc tính kiến trúc CISC:\n  - Kiến trúc CISC sở hữu tập lệnh lớn, độ dài lệnh thay đổi và nhiều chế độ định địa chỉ phức tạp.\n  - Nhược điểm cốt lõi lớn nhất (primary disadvantage) của CISC chính là **Độ phức tạp hiện thực phần cứng tăng vọt (Increased implementation complexity)**: Bộ giải mã lệnh và khối điều khiển (control unit / vi chương trình) trở nên cồng kềnh, chiếm nhiều diện tích chip silicon, kéo dài thời gian thiết kế và gây khó khăn lớn cho việc tối ưu hóa đường ống lệnh (pipelining).\n  - Đây chính là lý do cốt lõi thúc đẩy sự ra đời của triết lý thiết kế RISC (giảm độ phức tạp phần cứng, đồng nhất độ dài lệnh để tối ưu hóa pipeline).\n\n **Kiểm tra**: Chọn A. Increased implementation complexity \n\n **Vì sao các phương án khác sai**:\n\n- B (Limited instruction set): Sai, CISC có tập lệnh rất phong phú, không hề bị giới hạn (Limited instruction set là đặc trưng của RISC).\n- C (Slower execution due to complex instructions): Không phải định nghĩa nhược điểm cốt lõi về mặt thiết kế phần cứng.\n- D (Higher energy consumption): Mặc dù CISC tiêu thụ nhiều năng lượng hơn, nhưng về mặt kiến trúc máy tính nền tảng, nhược điểm gốc rễ và cơ bản nhất được nhấn mạnh trong giáo trình luôn là sự phức tạp trong hiện thực phần cứng (implementation complexity).\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 17: Reduced Instruction Set Computers (RISC)"
     },
     {
-      "id": 1491,
+      "id": 1474,
       "quizId": 17,
       "text": "The instruction location immediately following the delayed branch is referred to as the _________",
       "options": [
@@ -7477,7 +7269,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"The instruction location immediately following the delayed branch is referred to as the _________\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là D. delay slot.\n\n **Kiểm tra**: Chọn D. delay slot \n\n **Vì sao các phương án khác sai**:\n\n- A (delay load): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (delay file): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (delay register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1492,
+      "id": 1475,
       "quizId": 17,
       "text": "A tactic similar to the delayed branch is the _________, which can be used on LOAD instructions",
       "options": [
@@ -7490,7 +7282,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A tactic similar to the delayed branch is the ________, which can be used on LOAD instructions\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. delayed load.\n\n **Kiểm tra**: Chọn A. delayed load \n\n **Vì sao các phương án khác sai**:\n\n- B (delayed program): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (delayed slot): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (delayed register): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1493,
+      "id": 1476,
       "quizId": 17,
       "text": "Which statement is incorrect about RISC and CISC architecture?",
       "options": [
@@ -7503,7 +7295,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSo sánh số lượng thanh ghi đa năng giữa kiến trúc RISC và CISC.\n\nCác bước:\n1. Đặc điểm then chốt của kiến trúc RISC:\n - Sử dụng mô hình kiến trúc Load/Store: Chỉ có lệnh LOAD và STORE mới được truy xuất bộ nhớ; toàn bộ các phép tính số học và logic đều phải thực hiện trên thanh ghi.\n - Do đó, vi xử lý RISC LUÔN YÊU CẦU MỘT TẬP THANH GHI ĐA NĂNG RẤT LỚN (thường từ 32, 64 hoặc hàng trăm thanh ghi trong Register Windows) để giảm tối đa việc truy xuất bộ nhớ ngoài.\n2. Ngược lại, kiến trúc CISC (như x86 IA-32) cho phép các lệnh thao tác trực tiếp với bộ nhớ nên số lượng thanh ghi đa năng thường rất ít (chỉ có 8 thanh ghi đa năng trong IA-32).\n3. Do đó, phát biểu D khẳng định 'CISC yêu cầu nhiều thanh ghi đa năng hơn RISC' là HOÀN TOÀN SAI.\n\nKiểm tra:\nPhát biểu không đúng là phương án D.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1494,
+      "id": 1477,
       "quizId": 17,
       "text": "What is the main benefit of using RISC over CISC?",
       "options": [
@@ -7516,7 +7308,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the main benefit of using ARM processors over other processors?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Low cost and low power consumption.\n\n **Kiểm tra**: Chọn A. Low cost and low power consumption \n\n **Vì sao các phương án khác sai**:\n\n- B (Higher degree of multi-tasking): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Lower error or glitches): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Efficient memory management): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1495,
+      "id": 1478,
       "quizId": 17,
       "text": "What does CISC stand for?",
       "options": [
@@ -7529,7 +7321,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải:**\nTên đầy đủ của thuật ngữ viết tắt CISC.\n\n**Phân tích:**\n1. CISC viết tắt của **Complex Instruction Set Computer** (Máy tính với tập lệnh phức tạp).\n2. CISC hướng tới việc cung cấp các lệnh đơn lẻ mạnh mẽ có khả năng thực hiện nhiều tác vụ cấp thấp (như nạp từ bộ nhớ, tính toán và lưu kết quả) để giảm số dòng mã nguồn.\n**Kết luận:** Phương án A.\n\n **Xuất hiện trong**: CEA201_-_SU26_-_RE.txt"
     },
     {
-      "id": 1496,
+      "id": 1479,
       "quizId": 17,
       "text": "What type of addressing is primarily used by almost all RISC instructions?",
       "options": [
@@ -7542,7 +7334,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What type of addressing is primarily used by almost all RISC instructions?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Register addressing.\n\n **Kiểm tra**: Chọn B. Register addressing \n\n **Vì sao các phương án khác sai**:\n\n- A (Immediate addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Indirect addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Direct addressing): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1497,
+      "id": 1480,
       "quizId": 17,
       "text": "Which of the following describes a RISC (Reduced Instruction Set Computer) architecture?",
       "options": [
@@ -7555,7 +7347,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Các Chế độ Định địa chỉ & Định dạng câu lệnh thuộc Chapter 14: Instruction Sets: Addressing Modes and Formats (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which of the following describes a RISC (Reduced Instruction Set Computer) architecture?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Chế độ định địa chỉ quy định cách tính Địa chỉ hiệu dụng (EA): Immediate (dữ liệu trong lệnh), Direct (EA = A), Indirect (EA = (A)), Register (EA = R), Register Indirect (EA = (R)), Displacement (EA = A + (R) gồm Relative và Indexing).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Fixed instruction length.\n\n **Kiểm tra**: Chọn B. Fixed instruction length \n\n **Vì sao các phương án khác sai**:\n\n- A (Many complex instructions): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Extensive use of memory addressing modes): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Emphasis on multi-tasking capabilities): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 14: Instruction Sets: Addressing Modes and Formats"
     },
     {
-      "id": 1498,
+      "id": 1481,
       "quizId": 17,
       "text": "How does pipelining in a RISC architecture handle branch instruction?",
       "options": [
@@ -7568,7 +7360,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nKỹ thuật xử lý xung đột rẽ nhánh trong kiến trúc đường ống RISC (Delayed Branching).\n\nCác bước:\n1. Trong kiến trúc RISC, kỹ thuật rẽ nhánh trễ (Delayed Branch) quy định rằng lệnh nằm ngay sau lệnh rẽ nhánh (gọi là khe trễ rẽ nhánh - branch delay slot) sẽ luôn luôn được thực thi trước khi lệnh rẽ nhánh thực sự có hiệu lực.\n2. Trình biên dịch (compiler) hoặc trình dịch hợp ngữ (assembler) sẽ cố gắng tìm một lệnh hữu ích và độc lập đặt vào khe trễ này.\n3. Nếu không tìm được lệnh thích hợp, trình biên dịch/assembler bắt buộc phải chèn một lệnh rỗng NOOP (No Operation) vào khe trễ để tránh xung đột đường ống.\n\nKiểm tra:\nPhương án A: 'By using NOOP instructions inserted by the compiler or assembler' là phương pháp chuẩn mực.\n\nVì sao các phương án khác sai:\n- B: Không thể loại bỏ lệnh rẽ nhánh vì logic rẽ nhánh là cần thiết cho thuật toán.\n- C: RISC đơn thuần không xây dựng đường ống riêng chỉ cho branch.\n- D: Làm dừng toàn bộ máy tính, đi ngược lại nguyên lý tăng tốc của pipelining.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1499,
+      "id": 1482,
       "quizId": 17,
       "text": "To enhance performance in a superscalar processor, which method(s) should we apply?",
       "options": [
@@ -7581,7 +7373,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nCác kỹ thuật phần cứng tối ưu hóa hiệu năng trong bộ vi xử lý siêu hướng lượng (Superscalar Processor).\n\nCác bước:\n1. Duplication of resources (Nhân bản tài nguyên): Trang bị nhiều đơn vị chức năng song song (ví dụ: nhiều bộ ALU số nguyên, nhiều bộ xử lý số thực FPU, nhiều cổng Load/Store).\n2. Out-of-order issue/execution (Phát lệnh và thực thi ngoài thứ tự): Lệnh nào đã sẵn sàng dữ liệu thì được đưa vào đơn vị thực thi ngay, không bị nghẽn bởi lệnh đi trước đang chờ dữ liệu từ bộ nhớ.\n3. Register Renaming (Đổi tên thanh ghi): Sử dụng tập thanh ghi vật lý lớn hơn để xóa bỏ các phụ thuộc dữ liệu giả (anti-dependency WAR và output dependency WAW).\n4. Cả 3 phương pháp trên đều là những trụ cột công nghệ thiết yếu của bộ xử lý superscalar hiện đại.\n\nKiểm tra:\nPhương án đúng là Tất cả các phương án trên (D - All of the mentioned).\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1500,
+      "id": 1483,
       "quizId": 17,
       "text": "In various statement types in a high-level programming language, what is not the most common statement?",
       "options": [
@@ -7594,7 +7386,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng câu lệnh của chương trình ngôn ngữ bậc cao (High-Level Language Statement Types) thuộc Chapter 17: Reduced Instruction Set Computers (RISC) (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"In various statement types in a high-level programming language, what is not the most common statement?\" (Trong các loại câu lệnh của ngôn ngữ lập trình bậc cao, câu lệnh nào KHÔNG phải là loại câu lệnh phổ biến?).\n- Theo các nghiên cứu thống kê thực nghiệm kinh điển về hành vi chương trình HLL (Bảng 17.2 trong giáo trình William Stallings COA 11th Edition):\n  - Các loại câu lệnh phổ biến cấu thành nên phần lớn chương trình HLL bao gồm: **ASSIGN** (gán giá trị), **IF** (rẽ nhánh điều kiện), **CALL** (gọi hàm/thủ tục), **LOOP** (vòng lặp) và **GOTO** (nhảy không điều kiện).\n  - **CLOOP statement**: Không phải là một loại câu lệnh chuẩn tắc hay phổ biến trong phân loại ngôn ngữ lập trình bậc cao, mà là phương án nhiễu (distractor) được đưa vào để bẫy thí sinh.\n\n **Kiểm tra**: Chọn C. CLOOP statement. \n\n **Vì sao các phương án khác sai**:\n\n- A (GOTO statement): Là câu lệnh nhảy vô điều kiện, xuất hiện phổ biến trong thống kê các câu lệnh điều khiển dòng lệnh của chương trình HLL.\n- B (IF statement): Là một trong những câu lệnh rẽ nhánh phổ biến nhất trong mọi chương trình HLL (chiếm tỷ trọng rất lớn).\n- D (CALL procedure statement): Là câu lệnh gọi hàm/thủ tục cực kỳ phổ biến và là đối tượng tối ưu trọng tâm của kiến trúc RISC (sử dụng Register Windows).\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 17: Reduced Instruction Set Computers (RISC)"
     },
     {
-      "id": 1501,
+      "id": 1484,
       "quizId": 17,
       "text": "When using graph coloring, nodes that share the same color cannot be assigned to the same [register]",
       "options": [
@@ -7605,20 +7397,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"When using graph coloring, nodes that share the same color cannot be assigned to the same [register]\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. False.\n\n **Kiểm tra**: Chọn B. False \n\n **Vì sao các phương án khác sai**:\n\n- A (True): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1502,
-      "quizId": 17,
-      "text": "_________ instructions are used to position quantities in registers temporarily for computational operations.",
-      "options": [
-        "Load-and-store",
-        "Window",
-        "Complex",
-        "Branch"
-      ],
-      "correctIndex": 0,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"_________ instructions are used to position quantities in registers temporarily for computational operations.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Load-and-store.\n\n **Kiểm tra**: Chọn A. Load-and-store \n\n **Vì sao các phương án khác sai**:\n\n- B (Window): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Complex): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Branch): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
-    },
-    {
-      "id": 1503,
+      "id": 1485,
       "quizId": 17,
       "text": "_________ instructions are used to position quantities in registers temporarily for computational operations.",
       "options": [
@@ -7631,7 +7410,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Kiến trúc tập lệnh RISC (Load-and-Store architecture) thuộc Chapter 17: Reduced Instruction Set Computers (RISC) (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: \"_________ instructions are used to position quantities in registers temporarily for computational operations.\".\n- Trong kiến trúc RISC và các bộ vi xử lý hiện đại, các phép toán số học và logic chỉ thực hiện trực tiếp trên thanh ghi (register-to-register). Các lệnh Load (nạp từ bộ nhớ vào thanh ghi) và Store (lưu từ thanh ghi ra bộ nhớ) - gọi là cơ chế Load-and-store - được sử dụng để định vị dữ liệu tạm thời trong thanh ghi cho các tác vụ tính toán.\n- Khi đối chiếu các phương án đưa ra, đáp án chuẩn xác là A. Load-and-store.\n\n **Kiểm tra**: Chọn A. Load-and-store \n\n **Vì sao các phương án khác sai**:\n\n- B (Branch): Lệnh rẽ nhánh điều khiển luồng thực thi (PC).\n- C (Arithmetic): Lệnh số học thực thi tính toán trên thanh ghi.\n- D (Shift): Lệnh dịch bit thao tác trên thanh ghi.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 17: Reduced Instruction Set Computers (RISC)"
     },
     {
-      "id": 1504,
+      "id": 1486,
       "quizId": 17,
       "text": "_________ are bits set by the processor hardware as the result of operations.",
       "options": [
@@ -7644,7 +7423,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"__________ are bits set by the processor hardware as the result of operations.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Condition codes.\n\n **Kiểm tra**: Chọn B. Condition codes \n\n **Vì sao các phương án khác sai**:\n\n- A (MIPS): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Stacks): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (PSWs): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1505,
+      "id": 1487,
       "quizId": 17,
       "text": "What is the main benefit of using ARM processors over other processors?",
       "options": [
@@ -7657,7 +7436,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the main benefit of using ARM processors over other processors?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. Low cost and low power consumption.\n\n **Kiểm tra**: Chọn A. Low cost and low power consumption \n\n **Vì sao các phương án khác sai**:\n\n- B (Higher degree of multi-tasking): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Lower error or glitches): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Efficient memory management): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1506,
+      "id": 1488,
       "quizId": 17,
       "text": "What is the main difference between x86 and ARM instruction formats?",
       "options": [
@@ -7670,7 +7449,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the main difference between x86 and ARM instruction formats?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. x86 instructions are variable in length, while ARM instructions are fixed.\n\n **Kiểm tra**: Chọn A. x86 instructions are variable in length, while ARM instructions are fixed \n\n **Vì sao các phương án khác sai**:\n\n- B (x86 instructions are fixed in length, while ARM instructions are variable): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Both x86 and ARM instructions are fixed in length): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Both x86 and ARM instructions are variable in length): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1507,
+      "id": 1489,
       "quizId": 17,
       "text": "Choose an INCORRECT statement about high-level programming languages (HLLs).",
       "options": [
@@ -7683,7 +7462,33 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nĐặc trưng và sự trừu tượng hóa của ngôn ngữ lập trình bậc cao (High-Level Languages - HLLs).\n\nCác bước:\n1. Mục tiêu cốt lõi của ngôn ngữ bậc cao (như C, Java, Python):\n - Trừu tượng hóa hoàn toàn chi tiết phần cứng của vi xử lý cụ thể, giúp mã nguồn có tính độc lập nền tảng (portability).\n - Lập trình viên không cần và cú pháp chuẩn của ngôn ngữ không cung cấp chỉ thị trực tiếp truy xuất các thanh ghi phần cứng của CPU (việc gán biến nào vào thanh ghi nào hoàn toàn do bộ biên dịch - Compiler quản lý tự động).\n2. Do đó, phát biểu A khẳng định 'HLLs hỗ trợ chỉ thị để truy xuất thanh ghi của CPU' là phát biểu SAI.\n\nKiểm tra:\nPhát biểu không đúng về HLLs là A.\n\nVì sao các phát biểu khác đúng:\n- B: Ngôn ngữ bậc cao giúp diễn đạt thuật toán ngắn gọn, trong sáng hơn hợp ngữ.\n- C: Trình biên dịch tự động tối ưu hóa và quản lý chi tiết phần cứng.\n- D: Ngôn ngữ bậc cao hỗ trợ lập trình cấu trúc và hướng đối tượng.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1508,
+      "id": 1490,
+      "quizId": 17,
+      "text": "Which RISC architecture includes delayed branch as a feature?",
+      "options": [
+        "Intel x86",
+        "SPARC",
+        "ARM",
+        "VAX"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nXác định kiến trúc vi xử lý RISC nào tích hợp kỹ thuật rẽ nhánh trễ (delayed branch) như một đặc trưng kiến trúc nổi tiếng.\n\nCác bước:\n1. Kỹ thuật rẽ nhánh trễ (Delayed Branch):\n   - Trong các bộ xử lý đường ống (pipelined processors), khi gặp lệnh rẽ nhánh, bộ xử lý có thể bị trừng phạt mất chu kỳ (branch penalty) do phải chờ giải mã và tính địa chỉ đích.\n   - Để tối ưu hóa, các kiến trúc RISC cổ điển áp dụng kỹ thuật rẽ nhánh trễ: lệnh nằm ngay sau lệnh rẽ nhánh (gọi là khe trễ rẽ nhánh - branch delay slot) luôn luôn được tìm nạp và thực thi bất kể lệnh rẽ nhánh có xảy ra hay không.\n2. Khảo sát các kiến trúc được liệt kê:\n   - SPARC (Scalable Processor Architecture do Sun Microsystems phát triển) và MIPS là hai kiến trúc RISC kinh điển nổi tiếng nhất triển khai rẽ nhánh trễ ngay trong phần cứng ISA.\n   - Intel x86 và VAX là các kiến trúc CISC phức tạp, không sử dụng khe trễ rẽ nhánh kiểu RISC.\n   - ARM là kiến trúc RISC nhưng không sử dụng rẽ nhánh trễ (ARM sử dụng thực thi có điều kiện - conditional execution trên mọi lệnh và dự đoán nhánh - branch prediction).\n3. Do đó, phương án đúng là B (SPARC).\n\nKiểm tra:\nGiáo trình William Stallings (Chương 15, Mục 15.6 - SPARC) dành riêng một phần phân tích cấu trúc thanh ghi cửa sổ (Register Windows) và rẽ nhánh trễ (Delayed Branch) của SPARC.\n\nVì sao các phương án khác sai:\n- A (Intel x86): Kiến trúc CISC.\n- C (ARM): Kiến trúc RISC nhưng không sử dụng delayed branch.\n- D (VAX): Điển hình kinh điển của kiến trúc CISC phức tạp thế kỷ 20.\n\nLưu ý/công thức cần nhớ:\nSPARC và MIPS là 2 kiến trúc RISC tiêu biểu ứng dụng Delayed Branch (Branch delay slot)."
+    },
+    {
+      "id": 1491,
+      "quizId": 17,
+      "text": "What is a disadvantage of RISC?",
+      "options": [
+        "Slow execution",
+        "Larger program size",
+        "Complex hardware",
+        "No pipelining"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nChỉ ra nhược điểm (disadvantage) đặc trưng của kiến trúc máy tính có tập lệnh thu giảm (Reduced Instruction Set Computer - RISC).\n\nCác bước:\n1. Triết lý thiết kế của RISC:\n   - Đơn giản hóa tập lệnh: Các lệnh có độ dài cố định, thực hiện trong 1 chu kỳ máy, chỉ dùng các lệnh đơn giản (Load/Store architecture).\n   - Phần cứng vi xử lý đơn giản hơn, tiết kiệm diện tích bán dẫn và năng lượng, dễ tối ưu hóa đường ống siêu sâu (deep pipelining) và xung nhịp cao.\n2. Nhược điểm tương ứng của RISC:\n   - Vì mỗi lệnh chỉ làm một thao tác rất đơn giản, một công việc phức tạp mà ở kiến trúc CISC (như x86) chỉ cần 1 lệnh thực hiện thì ở RISC phải cần từ 3 đến 5 lệnh ghép lại.\n   - Điều này dẫn đến hiện tượng mở rộng mã (code expansion) hay mật độ mã thấp (lower code density).\n   - Hậu quả: Kích thước tệp chương trình sau khi biên dịch của RISC lớn hơn đáng kể (Larger program size) và chiếm dụng nhiều băng thông bộ nhớ hơn để nạp lệnh.\n3. Do đó, phương án đúng là B (Larger program size).\n\nKiểm tra:\nĐể khắc phục nhược điểm này của RISC, các kiến trúc như ARM đã phát triển tập lệnh nén ARM Thumb (16-bit) để tăng mật độ mã.\n\nVì sao các phương án khác sai:\n- A (Slow execution): Sai, RISC được thiết kế để thực thi nhanh hơn CISC nhờ tối ưu hóa chu kỳ xung nhịp và đường ống.\n- C (Complex hardware): Sai, phần cứng của RISC rất đơn giản; CISC mới có phần cứng phức tạp (Complex hardware).\n- D (No pipelining): Sai, RISC cực kỳ thuận lợi cho đường ống (pipelining) nhờ độ dài lệnh cố định và định dạng chuẩn hóa.\n\nLưu ý/công thức cần nhớ:\nƯu điểm RISC: Phần cứng đơn giản, thực thi nhanh, đường ống tối ưu.\nNhược điểm RISC: Kích thước chương trình lớn hơn (Larger program size / Code expansion)."
+    },
+    {
+      "id": 1492,
       "quizId": 18,
       "text": "_________ there are multiple functional units, each of which is implemented as a pipeline.",
       "options": [
@@ -7696,7 +7501,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"___________ there are multiple functional units, each of which is implemented as a pipeline.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Superscalar.\n\n **Kiểm tra**: Chọn C. Superscalar \n\n **Vì sao các phương án khác sai**:\n\n- A (Scalar): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Superpipelined): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Vector): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1509,
+      "id": 1493,
       "quizId": 18,
       "text": "What role does branch prediction play in superscalar processors?",
       "options": [
@@ -7709,7 +7514,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What role does branch prediction play in superscalar processors?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. It minimizes pipeline stalling by guessing the paths of branches.\n\n **Kiểm tra**: Chọn C. It minimizes pipeline stalling by guessing the paths of branches \n\n **Vì sao các phương án khác sai**:\n\n- A (It reduces the need for registers): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (It prevents the execution of any branches): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (It reduces the number of functional units required): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1510,
+      "id": 1494,
       "quizId": 18,
       "text": "A _________ architecture is one that makes use of more, and more fine-grained pipeline stages.",
       "options": [
@@ -7722,7 +7527,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A ________ architecture is one that makes use of more, and more fine-grained pipeline stages.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. superpipelined.\n\n **Kiểm tra**: Chọn B. superpipelined \n\n **Vì sao các phương án khác sai**:\n\n- A (parallel): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (superscalar): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (hybrid): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1511,
+      "id": 1495,
       "quizId": 18,
       "text": "What is the benefit of using a superscalar organization over a scalar organization?",
       "options": [
@@ -7736,7 +7541,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nLợi ích cốt lõi của kiến trúc siêu vô hướng (Superscalar Organization) so với kiến trúc vô hướng (Scalar).\n\nCác bước:\n1. Kiến trúc vô hướng (Scalar processor): Chỉ có thể phát (issue) và thực thi tối đa 1 lệnh trong mỗi chu kỳ xung nhịp (CPI \\ ( \\ ge 1 \\ ), IPC \\ ( \\ le 1 \\ )).\n2. Kiến trúc siêu vô hướng (Superscalar processor): Sở hữu nhiều đường ống thực thi song song (multiple execution pipelines), cho phép nạp, giải mã và thực thi đồng thời 2 lệnh trở lên trong cùng một chu kỳ nhịp (IPC > 1).\n3. Lợi ích căn bản nhất: Tăng đáng kể thông lượng lệnh (instruction throughput) và nâng cao hiệu năng tổng thể của bộ vi xử lý.\n\nKiểm tra:\nPhương án A: 'It increases the instruction throughput and improves the performance' là lợi ích chuẩn xác.\n\nVì sao các phương án khác sai:\n- B sai: Kiến trúc siêu vô hướng phức tạp hơn nhiều nên tiêu thụ nhiều năng lượng và tỏa nhiều nhiệt hơn scalar.\n- C sai: Kiến trúc superscalar làm phức tạp hóa đáng kể thiết kế trình biên dịch (compiler scheduling) và logic phần cứng.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1512,
+      "id": 1496,
       "quizId": 18,
       "text": "What does the term \"instruction-level parallelism\" refer to in computer architecture?",
       "options": [
@@ -7749,7 +7554,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải:**\nĐịnh nghĩa thuật ngữ tính song song mức lệnh (Instruction-Level Parallelism - ILP).\n\n**Các bước phân tích:**\n1. ILP chỉ mức độ mà các lệnh độc lập bên trong cùng một luồng chương trình có thể được thực thi đồng thời (in parallel / simultaneously) bằng kỹ thuật pipeline sâu hoặc siêu vô hướng (superscalar).\n2. Phương án A phản ánh chính xác nhất định nghĩa này: 'The degree to which instructions in a program can be executed in parallel'.\n\n**Vì sao các phương án khác sai:**\n- B là song song mức luồng / đa nhân (Thread-Level Parallelism / Multicore).\n- C, D không liên quan đến khái niệm song song.\n\n **Xuất hiện trong**: CEA201_-_SU26_-_RE.txt"
     },
     {
-      "id": 1513,
+      "id": 1497,
       "quizId": 18,
       "text": "In SuperScalar computer architecture, the primary goal of utilizing multiple processors concurrently is to",
       "options": [
@@ -7762,20 +7567,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nĐịnh nghĩa và mục tiêu cốt lõi của kiến trúc siêu hướng lượng (Superscalar Architecture).\n\nCác bước:\n1. Kiến trúc Superscalar cho phép phát lệnh (issue) và thực thi (execute) nhiều hơn một lệnh độc lập trong cùng một chu kỳ nhịp máy (Clock cycle) nhờ việc trang bị nhiều đơn vị thực thi (ALU, FPU, Load/Store) song song trong cùng một nhân xử lý.\n2. Mục tiêu chính là vượt qua giới hạn thông lượng của đường ống thông thường (vốn có \\ ( \\ textIPC \\ le 1 \\ )), đạt được số lệnh thực thi trên mỗi chu kỳ \\ ( \\ textIPC > 1 \\ ).\n\nKiểm tra:\nMục tiêu là cải thiện hiệu năng bằng cách thực thi nhiều hơn một lệnh trong một chu kỳ máy (executing more than one instruction per machine cycle) -> Đáp án B.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1514,
-      "quizId": 18,
-      "text": "A _________ is a small, very-high-speed memory maintained by the instruction fetch stage of the pipeline and containing the n most recently fetched instructions in sequence.",
-      "options": [
-        "delayed branch",
-        "loop buffer",
-        "branch prediction",
-        "multiple stream"
-      ],
-      "correctIndex": 1,
-      "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A _________ is a small, very-high-speed memory maintained by the instruction fetch stage of the pipeline and containing the n most recently fetched instructions in sequence.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. loop buffer.\n\n **Kiểm tra**: Chọn B. loop buffer \n\n **Vì sao các phương án khác sai**:\n\n- A (delayed branch): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (branch prediction): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (multiple stream): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
-    },
-    {
-      "id": 1515,
+      "id": 1498,
       "quizId": 18,
       "text": "_________ is (are) determined by the number of instructions that can be fetched and executed at the same time (the number of parallel pipelines) and by the speed and sophistication of the mechanisms that the processor uses to find independent instructions.",
       "options": [
@@ -7788,7 +7580,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nĐịnh nghĩa thuật ngữ tính song song mức máy (Machine Parallelism) trong kiến trúc siêu hướng lượng.\n\nCác bước:\n1. Phân biệt hai khái niệm quan trọng trong Chương 16 sách Stallings:\n - Instruction-level parallelism (ILP - Song song mức lệnh): Là đặc tính thuộc về chương trình, phản ánh mức độ độc lập giữa các lệnh trong luồng thực thi của mã nguồn.\n - Machine parallelism (Song song mức máy): Là khả năng của phần cứng bộ vi xử lý nhằm khai thác ILP.\n2. Trích nguyên văn định nghĩa từ giáo trình:\n 'Machine parallelism is determined by the number of instructions that can be fetched and executed at the same time (the number of parallel pipelines) and by the speed and sophistication of the mechanisms that the processor uses to find independent instructions.'\n\nKiểm tra:\nThuật ngữ chính xác được định nghĩa là Machine parallelism (B).\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1516,
+      "id": 1499,
       "quizId": 18,
       "text": "A _________ hazard occurs when there is a conflict in the access of an operand location.",
       "options": [
@@ -7801,7 +7593,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A __________ hazard occurs when there is a conflict in the access of an operand location.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. data.\n\n **Kiểm tra**: Chọn B. data \n\n **Vì sao các phương án khác sai**:\n\n- A (resource): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (structural): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (control): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1517,
+      "id": 1500,
       "quizId": 18,
       "text": "What is the primary method used to cope with storage conflicts in registers?",
       "options": [
@@ -7814,7 +7606,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Đặc trưng Tập lệnh & Kiểu toán hạng thuộc Chapter 13: Instruction Sets: Characteristics and Functions (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is the primary method used to cope with storage conflicts in registers?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Tập lệnh máy tính bao gồm Mã thao tác (Opcode) và Toán hạng (Operand). Các kiểu toán hạng chuẩn: Addresses (Địa chỉ), Numbers (Số), Characters (Ký tự ASCII) và Logical Data (Chuỗi bit). Thứ tự Byte bao gồm Big-endian và Little-endian. Thứ tự thực thi lệnh (Execution sequencing) quyết định cấu trúc khối điều khiển và pipeline.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. Register renaming.\n\n **Kiểm tra**: Chọn B. Register renaming \n\n **Vì sao các phương án khác sai**:\n\n- A (Increasing the size of the instruction set): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (Using shared memory): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Using technique of out-of-order issue with out-of-order completion): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 13: Instruction Sets: Characteristics and Functions"
     },
     {
-      "id": 1518,
+      "id": 1501,
       "quizId": 18,
       "text": "A _________ instruction can be used to account for data and branch delays.",
       "options": [
@@ -7827,7 +7619,20 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Nguyên lý Von Neumann & Tiến trình phát triển phần cứng thuộc Chapter 01: Basic Concepts and Computer Evolution (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"A __________ instruction can be used to account for data and branch delays.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Máy tính phát triển qua 4 thế thế hệ chính: Thế hệ 1 (Đèn chân không như ENIAC, IAS), Thế hệ 2 (Transistors), Thế hệ 3 (Mạch tích hợp IC), Thế hệ 4 (VLSI / Vi xử lý). Nguyên lý Von Neumann bao gồm bộ nhớ đọc/ghi duy nhất lưu cả lệnh và dữ liệu, đánh địa chỉ theo vị trí và thực thi lệnh tuần tự.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. NOOP.\n\n **Kiểm tra**: Chọn B. NOOP \n\n **Vì sao các phương án khác sai**:\n\n- A (SUB): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (JUMP): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (all of the above): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 01: Basic Concepts and Computer Evolution"
     },
     {
-      "id": 1519,
+      "id": 1502,
+      "quizId": 18,
+      "text": "Choose a description that is suitable for instruction super-pipeline.",
+      "options": [
+        "It allows instructions to be executed in a non-fully overlapping manner.",
+        "It allows instructions to be executed in a consecutively manner only.",
+        "It allows instructions to be executed in both fully overlapping and non-fully overlapping manners.",
+        "Instruction pipelines operate in a fully independent manner."
+      ],
+      "correctIndex": 0,
+      "explanation": "Hướng giải:\nChọn phát biểu phù hợp nhất mô tả đặc điểm vận hành của kiến trúc siêu đường ống chỉ lệnh (instruction super-pipeline).\n\nCác bước:\n1. Phân biệt Super-pipeline và Superscalar (William Stallings Chương 16 - Hình 16.1):\n   - Đường ống cơ bản (Base pipeline): Mỗi giai đoạn chiếm 1 chu kỳ xung nhịp cơ sở.\n   - Siêu đường ống (Super-pipeline): Chia nhỏ các giai đoạn đường ống cơ bản thành các phân đoạn nhỏ hơn (sub-stages), cho phép phát lệnh với chu kỳ xung nhịp nội bộ ngắn hơn (ví dụ: phát lệnh ở mỗi nửa chu kỳ xung nhịp). Các lệnh được gối đầu so le theo thời gian ở mức độ chia nhỏ, tức là thực thi gối đầu lệch pha nhau (non-fully overlapping at base cycle boundaries).\n   - Siêu phân vô hướng (Superscalar): Nhân bản nhiều đơn vị thực thi phần cứng song song, cho phép phát đồng thời nhiều lệnh hoàn chỉnh trong cùng một chu kỳ xung nhịp (fully overlapping).\n2. Trong ngân hàng câu hỏi kiến trúc máy tính, phát biểu đặc trưng cho super-pipeline là: 'It allows instructions to be executed in a non-fully overlapping manner' (Phương án A), nhằm phân biệt với tính chất song song hoàn toàn (fully overlapping/parallel) của superscalar.\n3. Đồng thời ghi nhận: Một số tài liệu trắc nghiệm mở rộng có thể nhắc đến phương án C ('in both fully overlapping and non-fully overlapping manners') khi xem xét super-pipeline kết hợp superscalar. Tuy nhiên phương án chuẩn tắc đơn kiến trúc là A.\n\nKiểm tra:\nĐối chiếu sơ đồ thời gian Hình 16.1 (Comparison of Superscalar and Superpipeline Approaches): Các lệnh trong superpipeline được khởi động so le từng nửa chu kỳ, tạo nên sự gối đầu bán phần (non-fully overlapping in base time).\n\nVì sao các phương án khác sai:\n- B (Consecutively manner only): Sai, đây là đặc tính của xử lý tuần tự không có đường ống.\n- D (Fully independent manner): Các giai đoạn trong một đường ống phụ thuộc chặt chẽ về dữ liệu và xung nhịp, không hoạt động độc lập hoàn toàn.\n\nLưu ý/công thức cần nhớ:\nSuper-pipeline: Tăng độ sâu đường ống, rút ngắn chu kỳ xung nhịp, gối đầu so le (non-fully overlapping).\nSuperscalar: Nhân bản đường ống, phát nhiều lệnh cùng chu kỳ."
+    },
+    {
+      "id": 1503,
       "quizId": 19,
       "text": "How does multithreading improve the performance of a processor?",
       "options": [
@@ -7840,7 +7645,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân tích các cơ chế mà kỹ thuật đa luồng phần cứng (Hardware Multithreading / Simultaneous Multithreading) cải thiện hiệu năng bộ xử lý.\n\nCác bước:\n1. Tăng mức độ song song cấp lệnh (ILP) bằng cách phát lệnh từ nhiều luồng khác nhau trong cùng một chu kỳ nhịp (SMT / Hyper-Threading) -> Phương án A đúng.\n2. Khai thác mức độ song song cấp luồng (Thread-Level Parallelism - TLP) -> Phương án B đúng.\n3. Ẩn độ trễ (Latency hiding): Khi một luồng gặp sự kiện trễ dài (như cache miss phải đợi nạp dữ liệu từ RAM hàng trăm chu kỳ), bộ xử lý chuyển sang thực thi lệnh của luồng khác, giúp tối đa hóa hiệu suất sử dụng các đơn vị chức năng của CPU -> Phương án C đúng.\n\nKiểm tra:\nCả 3 cơ chế A, B, C đều đúng, do đó đáp án là All of the mentioned (D).\n\nVì sao phương án D là lựa chọn duy nhất:\n- Vì A, B, C đều là những đặc tính chính xác của multithreading.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1520,
+      "id": 1504,
       "quizId": 19,
       "text": "With respect to multi-threading technique, choose an INCORRECT statement.",
       "options": [
@@ -7853,7 +7658,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nKhái niệm luồng (Thread) và cơ chế đa luồng (Multi-threading) trong hệ thống máy tính.\n\nCác bước:\n1. Luồng (Thread) là một đơn vị xử lý nhỏ nhất mà hệ điều hành có thể phân phối thời gian chạy (dispatchable unit of work).\n2. Mỗi luồng sở hữu ngữ cảnh riêng: Bộ đếm chương trình (PC), con trỏ ngăn xếp (SP), tập thanh ghi, và một vùng ngăn xếp riêng để gọi hàm con (subroutine branching).\n3. Trong các hệ điều hành đa nhiệm đa luồng hiện đại, luồng thực thi tuần tự nhưng HOÀN TOÀN CÓ THỂ BỊ NGẮT (can be interrupted/preempted) bởi ngắt thời gian của hệ điều hành để chuyển đổi ngữ cảnh sang luồng khác.\n4. Do đó, khẳng định 'interrupts cannot be allowed' (không cho phép ngắt) là HOÀN TOÀN SAI.\n\nKiểm tra:\nPhát biểu sai là phương án D.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1521,
+      "id": 1505,
       "quizId": 20,
       "text": "Which architectural concept involves replicating register banks to facilitate the sharing of pipeline resources among multiple threads?",
       "options": [
@@ -7866,7 +7671,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Cấu trúc Bộ xử lý & Chu kỳ đường ống Pipeline thuộc Chapter 16: Processor Structure and Function (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which architectural concept involves replicating register banks to facilitate the sharing of pipeline resources among multiple threads?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Bộ xử lý bao gồm các thanh ghi điều khiển (PC, IR, MAR, MBR, PSW). Kỹ thuật Pipelining giúp tăng tốc độ thực thi lệnh song song nhưng có thể gặp các xung đột (Hazards): Structural, Data và Control hazards.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Simultaneous multithreading.\n\n **Kiểm tra**: Chọn C. Simultaneous multithreading \n\n **Vì sao các phương án khác sai**:\n\n- A (Pipelining): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Superscalar): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Superpipelining): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 16: Processor Structure and Function"
     },
     {
-      "id": 1522,
+      "id": 1506,
       "quizId": 20,
       "text": "What is one advantage of Nonuniform Memory Access (NUMA) over Uniform Memory Access (UMA)?",
       "options": [
@@ -7879,7 +7684,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSo sánh kiến trúc NUMA (Nonuniform Memory Access) và UMA (Uniform Memory Access) trong hệ thống đa xử lý.\n\nCác bước:\n1. UMA (Symmetric Multiprocessing - SMP): Tất cả các bộ xử lý chia sẻ chung một bộ nhớ chính qua một bus hệ thống duy nhất. Khi số lượng vi xử lý tăng lên, bus trở thành điểm nghẽn cổ chai nghiêm trọng.\n2. NUMA: Hệ thống được chia thành nhiều nút (nodes), mỗi nút chứa bộ xử lý và khối bộ nhớ cục bộ (Local Memory) riêng của nó:\n - Bộ xử lý truy xuất vào bộ nhớ cục bộ của chính nó cực kỳ nhanh chóng và không bị cạnh tranh bus với các bộ xử lý khác.\n - Nhờ đó, thời gian truy xuất bộ nhớ cục bộ giảm mạnh (reducing memory access times) và hệ thống có khả năng mở rộng (scalability) tốt hơn nhiều so với UMA.\n\nKiểm tra:\nƯu điểm của NUMA là cung cấp bộ nhớ cục bộ cho từng bộ xử lý, giúp giảm thời gian truy xuất bộ nhớ -> Đáp án A.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_RE.txt"
     },
     {
-      "id": 1523,
+      "id": 1507,
       "quizId": 20,
       "text": "\"Multiple processors share a single memory or pool of memory by means of a shared bus or other interconnection mechanism; a distinguishing feature is that the memory access time to any region of memory is approximately the same for each processor\". Which concept does the statement belong to?",
       "options": [
@@ -7892,7 +7697,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nNhận diện kiến trúc hệ đa xử lý đối xứng SMP (Symmetric Multiprocessor) / UMA (Uniform Memory Access).\n\nCác bước:\n1. Định nghĩa chuẩn giáo trình:\n 'Multiple processors share a single memory or pool of memory by means of a shared bus or other interconnection mechanism; a distinguishing feature is that the memory access time to any region of memory is approximately the same for each processor.'\n2. Đặc điểm thời gian truy xuất bộ nhớ tới bất kỳ vùng nhớ nào đều gần như bằng nhau đối với mọi bộ xử lý (Uniform Memory Access) chính là thuộc tính định danh của hệ đa xử lý đối xứng SMP.\n3. Phân biệt với NUMA: Trong NUMA, thời gian truy xuất bộ nhớ cục bộ nhanh hơn nhiều so với bộ nhớ từ xa.\n\nKiểm tra:\nKhái niệm được trích dẫn là Symmetric multiprocessor (SMP - A).\n\n **Xuất hiện trong**: CEA201_-_SU26_-_FE.txt"
     },
     {
-      "id": 1524,
+      "id": 1508,
       "quizId": 20,
       "text": "What is a scalar instruction?",
       "options": [
@@ -7905,7 +7710,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân biệt lệnh vô hướng (Scalar Instruction) và lệnh hướng lượng/vector (Vector Instruction).\n\nCác bước:\n1. Khái niệm vô hướng (Scalar): Đại diện cho một giá trị số học đơn lẻ (Single value).\n2. Lệnh vô hướng (Scalar instruction): Là lệnh máy mà tất cả các toán hạng đầu vào và đầu ra đều là các giá trị đơn lẻ (ví dụ: cộng hai số nguyên \\ (A + B = C \\ )).\n3. Phân biệt với Lệnh vector (Vector instruction / SIMD): Một lệnh đơn lẻ thực hiện thao tác đồng thời trên một mảng/tập hợp gồm nhiều phần tử dữ liệu cùng lúc.\n\nKiểm tra:\nLệnh vô hướng là lệnh mà tất cả toán hạng đều là các giá trị đơn lẻ -> Đáp án A.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1525,
+      "id": 1509,
       "quizId": 20,
       "text": "Microprogramming eases the task of designing and implementing the control unit and provid family concept.",
       "options": [
@@ -7916,7 +7721,20 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Khối Điều khiển (Control Unit) & Vi chương trình thuộc Chapter 19: Control Unit Operation (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Microprogramming eases the task of designing and implementing the control unit and provid family concept.\".\n\n- Phân tích nguyên lý phần cứng liên quan: Khối điều khiển sinh ra các tín hiệu điều khiển phần cứng. Điều khiển cứng (Hardwired) cho tốc độ cao; Điều khiển vi chương trình (Microprogrammed) lưu các vi lệnh (microinstructions) trong bộ nhớ điều khiển.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là A. True.\n\n **Kiểm tra**: Chọn A. True \n\n **Vì sao các phương án khác sai**:\n\n- B (False): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 19: Control Unit Operation"
     },
     {
-      "id": 1526,
+      "id": 1510,
+      "quizId": 20,
+      "text": "The \"MESI\" protocol is used in SMPs to solve the problem of:",
+      "options": [
+        "Instruction decoding",
+        "Disk latency",
+        "Bus arbitration",
+        "Cache coherence"
+      ],
+      "correctIndex": 3,
+      "explanation": "Hướng giải:\nNhận diện bài toán kiến trúc máy tính mà giao thức MESI được thiết kế để giải quyết trong các hệ thống đa xử lý đối xứng (SMP).\n\nCác bước:\n1. Trong hệ thống đa xử lý đối xứng (Symmetric Multiprocessors - SMP), mỗi vi xử lý/nhân có một hoặc nhiều tầng bộ nhớ đệm (L1, L2 cache) riêng biệt nhưng dùng chung một bộ nhớ chính (Main Memory).\n2. Khi nhiều bộ xử lý cùng đọc và ghi vào cùng một biến/ô nhớ, dữ liệu giữa các cache riêng và RAM có thể không đồng nhất (Cache Incoherence).\n3. Giao thức MESI là giao thức giám sát bus (snooping-based protocol) duy trì tính nhất quán bộ đệm (Cache Coherence) bằng cách gán cho mỗi dòng cache một trong 4 trạng thái:\n   - (M) (Modified): Dòng cache đã bị sửa đổi, chỉ có ở cache hiện tại, dữ liệu trong RAM đã cũ.\n   - (E) (Exclusive): Dòng cache giống hệt RAM, chỉ tồn tại duy nhất ở cache hiện tại.\n   - (S) (Shared): Dòng cache giống hệt RAM, có thể đang được chia sẻ đồng thời ở các cache khác.\n   - (I) (Invalid): Dòng cache không còn hợp lệ (đã bị vô hiệu hóa khi nhân khác ghi đè).\n4. Do đó, phương án đúng là D (Cache coherence).\n\nKiểm tra:\nGiao thức MESI (và các biến thể MOESI, MESIF) là chuẩn mực kinh điển được giảng dạy trong mọi khóa học COA về Cache Coherence.\n\nVì sao các phương án khác sai:\n- A (Instruction decoding): Giải mã lệnh do khối giải mã lệnh bên trong CPU thực hiện.\n- B (Disk latency): Độ trễ đĩa thuộc về thiết bị lưu trữ thứ cấp.\n- C (Bus arbitration): Trọng tài bus do vi mạch điều khiển bus giải quyết xung đột khi nhiều master cùng yêu cầu bus.\n\nLưu ý/công thức cần nhớ:\nMESI = Modified, Exclusive, Shared, Invalid (implies) Giao thức Cache Coherence."
+    },
+    {
+      "id": 1511,
       "quizId": 21,
       "text": "Which cache is not a shared cache?",
       "options": [
@@ -7929,7 +7747,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nPhân biệt giữa bộ nhớ đệm riêng (Dedicated / Private Cache) và bộ nhớ đệm chia sẻ (Shared Cache) trong kiến trúc vi xử lý đa nhân hiện đại.\n\nCác bước:\n1. L1 Cache (Level 1): Được chia thành L1 Instruction Cache và L1 Data Cache, được tích hợp trực tiếp sâu bên trong từng nhân vi xử lý (core). Mỗi nhân sở hữu một bộ L1 Cache riêng biệt hoàn toàn (Private Cache), tuyệt đối không dùng chung với các nhân khác để đảm bảo độ trễ truy xuất thấp nhất (1 - 2 chu kỳ nhịp).\n2. L2 Cache / L3 Cache: Thường là bộ nhớ đệm chia sẻ giữa các nhân hoặc chia sẻ cho toàn bộ chip (Shared Cache).\n\nKiểm tra:\nBộ nhớ đệm KHÔNG phải là shared cache chính là L1 cache (D).\n\nVì sao các phương án khác sai:\n- A (L4), B (L3), C (L2): Thường là các cấp cache dùng chung giữa các nhân xử lý.\n\n **Xuất hiện trong**: CEA201_-_FA25_-_FE.txt"
     },
     {
-      "id": 1527,
+      "id": 1512,
       "quizId": 21,
       "text": "What is a characteristic of Many Integrated Core (MIC) chips?",
       "options": [
@@ -7942,7 +7760,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"What is a characteristic of Many Integrated Core (MIC) chips?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là B. They consist of homogeneous general-purpose processors on a single chip..\n\n **Kiểm tra**: Chọn B. They consist of homogeneous general-purpose processors on a single chip. \n\n **Vì sao các phương án khác sai**:\n\n- A (They include only specialized cores for specific tasks.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- C (They are designed to eliminate the need for GPUs in high-performance applications.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (They have limited scalability beyond four cores per chip.): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1528,
+      "id": 1513,
       "quizId": 21,
       "text": "Which is the correct choice for the decription: \"A single machine instruction controls the simultaneous execution of a number of processing elements such as vector and array processors\"?",
       "options": [
@@ -7955,7 +7773,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSắp xếp các cấp bộ nhớ theo thứ tự tốc độ trung bình tăng dần (từ chậm nhất đến nhanh nhất).\n\nCác bước:\n1. Bậc thang phân cấp tốc độ bộ nhớ:\n - Băng từ (Magnetic Tape) & Đĩa từ (Magnetic Disk/HDD): Chậm nhất (thời gian truy cập tính bằng mili-giây, cơ học).\n - Ổ thể rắn (SSD): Nhanh hơn HDD khoảng 100 lần (tính bằng micro-giây, chip nhớ flash).\n - Bộ nhớ chính (Main Memory/RAM): Nhanh hơn SSD hàng trăm lần (tính bằng hàng chục nano-giây, DRAM).\n - Bộ nhớ đệm (Cache Memory): Nhanh nhất trong các loại trên (tính bằng nano-giây, SRAM tĩnh tích hợp trên chip CPU).\n2. Xét chuỗi tăng dần ở phương án C:\n \\ [ \\ textMagnetic Disk < \\ textSSD < \\ textMain Memory < \\ textCache Memory \\ ]\n Chuỗi này hoàn toàn chính xác theo thứ tự tăng dần tốc độ.\n\nKiểm tra:\nPhương án đúng là C.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1529,
+      "id": 1514,
       "quizId": 21,
       "text": "How many common classifications of parallel systems are there as proposed by Flynn?",
       "options": [
@@ -7968,7 +7786,7 @@
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"How many common classifications of parallel systems are there as proposed by Flynn?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Đại số Boolean ứng dụng các cổng logic (AND, OR, NOT, NAND, NOR, XOR). Phương pháp Karnaugh Map (K-map) giúp tối thiểu hóa biểu thức logic. Mạch tổ hợp bao gồm Mux, Demux, Decoder; Mạch tuần hoàn dùng Flip-flop (SR, JK, D, T) có trạng thái nhớ.\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. 4.\n\n **Kiểm tra**: Chọn C. 4 \n\n **Vì sao các phương án khác sai**:\n\n- A (2): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (3): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (5): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic"
     },
     {
-      "id": 1530,
+      "id": 1515,
       "quizId": 21,
       "text": "Which is the correct choice for the description: \"A single processor executes a single instruction stream to operate on data stored in a single memory. \"?",
       "options": [
@@ -7981,7 +7799,7 @@
       "explanation": "**Giải thích**: \n\n Hướng giải:\nSắp xếp các cấp bộ nhớ theo thứ tự tốc độ trung bình tăng dần (từ chậm nhất đến nhanh nhất).\n\nCác bước:\n1. Bậc thang phân cấp tốc độ bộ nhớ:\n - Băng từ (Magnetic Tape) & Đĩa từ (Magnetic Disk/HDD): Chậm nhất (thời gian truy cập tính bằng mili-giây, cơ học).\n - Ổ thể rắn (SSD): Nhanh hơn HDD khoảng 100 lần (tính bằng micro-giây, chip nhớ flash).\n - Bộ nhớ chính (Main Memory/RAM): Nhanh hơn SSD hàng trăm lần (tính bằng hàng chục nano-giây, DRAM).\n - Bộ nhớ đệm (Cache Memory): Nhanh nhất trong các loại trên (tính bằng nano-giây, SRAM tĩnh tích hợp trên chip CPU).\n2. Xét chuỗi tăng dần ở phương án C:\n \\ [ \\ textMagnetic Disk < \\ textSSD < \\ textMain Memory < \\ textCache Memory \\ ]\n Chuỗi này hoàn toàn chính xác theo thứ tự tăng dần tốc độ.\n\nKiểm tra:\nPhương án đúng là C.\n\n **Xuất hiện trong**: CEA201_-_SP26_-_RE.txt"
     },
     {
-      "id": 1531,
+      "id": 1516,
       "quizId": 21,
       "text": "Which computing model is characterized by a large number of processors working on different parts of a problem simultaneously?",
       "options": [
@@ -7992,6 +7810,33 @@
       ],
       "correctIndex": 2,
       "explanation": "**Giải thích**: \n\n **Hướng giải**: Hệ thống Xử lý Song song & Kiến trúc Đa xử lý thuộc Chapter 20: Parallel Processing (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi yêu cầu xác định đặc tính kỹ thuật: \"Which computing model is characterized by a large number of processors working on different parts of a problem simultaneously?\".\n\n- Phân tích nguyên lý phần cứng liên quan: Phân loại Flynn chia làm SISD, SIMD, MISD, MIMD. Các hệ thống đa xử lý bao gồm SMP (Symmetric Multiprocessor), NUMA (Non-Uniform Memory Access) và Mảng máy tính (Cluster).\n\n- Khi đối chiếu các phương án đưa ra, đáp án chính xác đáp ứng hoàn toàn chuẩn mực thiết kế là C. Multiple instruction, multiple data (MIMD).\n\n **Kiểm tra**: Chọn C. Multiple instruction, multiple data (MIMD) \n\n **Vì sao các phương án khác sai**:\n\n- A (Single instruction, single data (SISD)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- B (Single instruction, multiple data (SIMD)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n- D (Multiple instruction, single data (MISD)): Phương án nhiễu không phản ánh đúng định nghĩa hoặc đặc tính kỹ thuật được truy vấn.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 20: Parallel Processing"
+    },
+    {
+      "id": 1517,
+      "quizId": 21,
+      "text": "What is the main performance benefit of multicore processors?",
+      "options": [
+        "Reduced power consumption",
+        "Higher clock speed",
+        "Improved serial performance",
+        "Parallel task execution"
+      ],
+      "correctIndex": 3,
+      "explanation": "Hướng giải:\nXác định lợi ích hiệu năng cốt lõi (main performance benefit) của bộ vi xử lý đa nhân (multicore processors).\n\nCác bước:\n1. Bộ vi xử lý đa nhân tích hợp hai hoặc nhiều nhân xử lý độc lập trên cùng một phiến bán dẫn (die).\n2. Mỗi nhân có đầy đủ các đơn vị tìm nạp lệnh, giải mã, thực thi và bộ đệm L1 riêng.\n3. Khi hệ điều hành và phần mềm hỗ trợ đa nhiệm hoặc đa luồng (multithreading), các nhân có thể thực thi đồng thời các tiến trình/luồng khác nhau:\n   [\n   mathrm{Throughput} propto N\n   ]\n   với (N) là số nhân xử lý song song.\n4. Do đó, lợi ích hiệu năng lớn nhất là khả năng thực thi song song các tác vụ (Parallel task execution).\n\nKiểm tra:\nĐịnh luật Amdahl chỉ ra rằng hiệu năng của hệ thống đa nhân tăng tỷ lệ thuận với mức độ song song hóa ((f)) của chương trình:\n[\n\text{Speedup} = \frac{1}{(1 - f) + \frac{f}{N}}\n]\n\nVì sao các phương án khác sai:\n- A (Reduced power consumption): Việc trang bị nhiều nhân làm tăng công suất tiêu thụ tổng thể; dù hiệu suất năng lượng trên mỗi tác vụ có thể tối ưu hơn, đây không phải lợi ích hiệu năng chính.\n- B (Higher clock speed): Sai, xung nhịp của bộ xử lý đa nhân thường phải giữ ở mức vừa phải để tránh vượt quá giới hạn tản nhiệt (Thermal Design Power - TDP).\n- C (Improved serial performance): Sai, các tác vụ tuần tự thuần túy không chạy nhanh hơn trên nhiều nhân.\n\nLưu ý/công thức cần nhớ:\nMulticore tăng hiệu năng thông qua khai thác song song mức luồng (Thread-Level Parallelism - TLP)."
+    },
+    {
+      "id": 1518,
+      "quizId": 21,
+      "text": "In a multicore system, what is the primary purpose of a Cache Coherence Protocol (such as MESI)?",
+      "options": [
+        "To ensure that all cores operate at the same clock frequency to prevent data corruption",
+        "To manage and synchronize the data stored in private local caches so that all cores see a consistent view of main memory",
+        "To allow multiple cores to access the same L1 cache simultaneously without latency",
+        "To automatically overclock the most active core while putting idle cores into sleep mode.",
+        "To partition the physical RAM into equal segments dedicated to each individual core."
+      ],
+      "correctIndex": 1,
+      "explanation": "Hướng giải:\nGiải thích mục đích chính của Giao thức duy trì tính nhất quán bộ đệm (Cache Coherence Protocol, ví dụ MESI) trong các hệ thống xử lý đa nhân (multicore systems).\n\nCác bước:\n1. Vấn đề mất tính nhất quán bộ đệm (Cache Incoherence):\n   - Trong hệ thống đa nhân, mỗi nhân có bộ đệm cục bộ riêng (private L1/L2 cache).\n   - Nếu Nhân 1 sửa đổi giá trị của một biến trong cache riêng của nó mà không thông báo, thì Nhân 2 khi đọc biến đó từ cache của chính nó sẽ đọc phải giá trị cũ (stale data).\n2. Mục đích của giao thức nhất quán bộ đệm (như MESI, MOESI):\n   - Theo dõi trạng thái của các dòng cache trên hệ thống bus (Snooping/Directory-based).\n   - Quản lý và đồng bộ hóa việc đọc/ghi dữ liệu giữa các bộ nhớ đệm riêng lẻ để mọi nhân xử lý đều nhìn thấy một hình ảnh bộ nhớ duy nhất, chính xác và nhất quán (consistent view of main memory).\n3. Do đó, phương án đúng là B.\n\nKiểm tra:\nKhái niệm 'consistent view of memory' là định nghĩa học thuật chuẩn mực trong thiết kế bộ nhớ hệ thống đa xử lý đối xứng.\n\nVì sao các phương án khác sai:\n- A: Tần số xung nhịp không liên quan đến tính nhất quán dữ liệu bộ nhớ; nhiều vi xử lý hiện đại điều chỉnh xung nhịp độc lập trên từng nhân (per-core DVFS).\n- C: Các nhân có bộ đệm L1 riêng biệt, không dùng chung 1 L1 cache.\n- D: Ép xung tự động và ngủ nhân là tính năng quản lý điện năng (như Intel Turbo Boost), không phải Cache Coherence.\n- E: Phân chia RAM thành các vùng độc lập thuộc về cơ chế phân phối bộ nhớ của HĐH hoặc NUMA, không phải mục đích của MESI.\n\nLưu ý/công thức cần nhớ:\nCache Coherence Protocol = Đảm bảo mọi nhân đều nhìn thấy dữ liệu bộ nhớ nhất quán (Consistent view of memory)."
     },
     {
       "id": 5001,

@@ -438,7 +438,7 @@ if (isChoicesFormat) {
 
     "104": `**Giải thích**: \n\n **Hướng giải**: Lập trình Hợp ngữ & Ngắt hệ thống x86 (DOS Interrupt 21h) thuộc Chapter 15: Assembly Language and Related Topics (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Chức năng của hàm ngắt "INT 21h / AH=1".\n- Trong hệ thống ngắt DOS x86, khi gọi INT 21h với thanh ghi AH = 01h, chức năng được thực thi là Single-key character input with echo (đọc một ký tự từ bàn phím/standard input, hiển thị lên màn hình console) và mã ASCII của ký tự đọc được sẽ được lưu vào thanh ghi AL.\n- Khi đối chiếu các phương án, đáp án B mô tả hoàn toàn chuẩn xác chức năng và thanh ghi đích.\n\n **Kiểm tra**: Chọn B. read character from standard input, with echo, result is stored in AL. \n\n **Vì sao các phương án khác sai**:\n\n- A: Ghi (write) ký tự là sai chức năng (hàm ghi là AH=02h).\n- C & D: Kết quả ký tự đọc được trả về thanh ghi AL, không phải AH (AH là thanh ghi truyền mã hàm ngắt).\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 15: Assembly Language and Related Topics`,
 
-    "219": `**Giải thích**: \n\n **Hướng giải**: Kiến trúc tập lệnh RISC (Load-and-Store architecture) thuộc Chapter 17: Reduced Instruction Set Computers (RISC) (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: "_________ instructions are used to position quantities in registers temporarily for computational operations.".\n- Trong kiến trúc RISC và các bộ vi xử lý hiện đại, các phép toán số học và logic chỉ thực hiện trực tiếp trên thanh ghi (register-to-register). Các lệnh Load (nạp từ bộ nhớ vào thanh ghi) và Store (lưu từ thanh ghi ra bộ nhớ) - gọi là cơ chế Load-and-store - được sử dụng để định vị dữ liệu tạm thời trong thanh ghi cho các tác vụ tính toán.\n- Khi đối chiếu các phương án đưa ra, đáp án chuẩn xác là A. Load-and-store.\n\n **Kiểm tra**: Chọn A. Load-and-store \n\n **Vì sao các phương án khác sai**:\n\n- B (Branch): Lệnh rẽ nhánh điều khiển luồng thực thi (PC).\n- C (Arithmetic): Lệnh số học thực thi tính toán trên thanh ghi.\n- D (Shift): Lệnh dịch bit thao tác trên thanh ghi.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 17: Reduced Instruction Set Computers (RISC)`,
+    "83": `**Giải thích**: \n\n **Hướng giải**: Kiến trúc tập lệnh RISC (Load-and-Store architecture) thuộc Chapter 17: Reduced Instruction Set Computers (RISC) (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: "_________ instructions are used to position quantities in registers temporarily for computational operations.".\n- Trong kiến trúc RISC và các bộ vi xử lý hiện đại, các phép toán số học và logic chỉ thực hiện trực tiếp trên thanh ghi (register-to-register). Các lệnh Load (nạp từ bộ nhớ vào thanh ghi) và Store (lưu từ thanh ghi ra bộ nhớ) - gọi là cơ chế Load-and-store - được sử dụng để định vị dữ liệu tạm thời trong thanh ghi cho các tác vụ tính toán.\n- Khi đối chiếu các phương án đưa ra, đáp án chuẩn xác là A. Load-and-store.\n\n **Kiểm tra**: Chọn A. Load-and-store \n\n **Vì sao các phương án khác sai**:\n\n- B (Branch): Lệnh rẽ nhánh điều khiển luồng thực thi (PC).\n- C (Arithmetic): Lệnh số học thực thi tính toán trên thanh ghi.\n- D (Shift): Lệnh dịch bit thao tác trên thanh ghi.\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 17: Reduced Instruction Set Computers (RISC)`,
 
     "426": `**Giải thích**: \n\n **Hướng giải**: Thiết kế Mạch số & Đại số Boolean thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: Bảng Karnaugh map với các biến đầu vào CD (hàng) và AB (cột).\n- Các ô có giá trị 1 nằm tại các tổ hợp biến được chỉ định, tương ứng biểu diễn chuẩn SOP (Sum of Products).\n- Xác định biểu thức chính tắc tổng của các minterm (Canonical Sum-of-Products) tương ứng với các ô mang giá trị 1.\n\n **Kiểm tra**: Chọn B \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic`,
 
@@ -470,7 +470,857 @@ if (isChoicesFormat) {
 
     "452": `**Giải thích**: \n\n **Hướng giải**: Các đồng nhất thức cơ bản của đại số Boolean (Basic Boolean Identities) thuộc Chapter 12: Digital Logic (Bảng 12.1/20.1 trong Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: "_________Which of the following is NOT a Boolean identity?" (Biểu thức nào sau đây KHÔNG phải là một đồng nhất thức Boolean cơ bản?).\n\n- Bảng các đồng nhất thức Boolean cơ bản (Basic Boolean Identities) trong giáo trình chỉ được xây dựng trên 3 phép toán tiên đề nền tảng: **AND ($\\cdot$)**, **OR ($+$)** và **NOT ($'$)**:\n  - **Phương án A ($A \\text{ AND } (A \\text{ OR } B) = A$)**: Đây là **Luật hấp thụ (Absorption Law)** ($A(A + B) = A$) — một đồng nhất thức Boolean cơ bản chuẩn xác.\n  - **Phương án C ($(A \\text{ OR } B)' = A' \\text{ AND } B'$)**: Đây là **Định lý De Morgan** ($\\overline{A + B} = \\overline{A} \\cdot \\overline{B}$) — một đồng nhất thức Boolean cơ bản chuẩn xác.\n  - **Phương án D ($A + A' = 1$)**: Đây là **Luật bù / Nghịch đảo (Complement / Inverse Law)** ($A + \\overline{A} = 1$) — một trong những đồng nhất thức Boolean tiên đề cốt lõi nhất.\n  - **Phương án B ($A \\text{ XOR } B = (A \\text{ AND } B') \\text{ OR } (A' \\text{ AND } B)$)**: Đây là **định nghĩa khai triển hàm logic của cổng XOR** (cổng logic tổ hợp dẫn xuất), KHÔNG nằm trong bảng các tiên đề/đồng nhất thức Boolean cơ bản (Basic Boolean Identities) của đại số Boolean thuần túy.\n\n **Lưu ý lỗi ngân hàng đề gốc**: Đề gốc đánh dấu nhầm phương án D ($A + A' = 1$ — ngộ nhận luật bù là không phải đồng nhất thức). Đáp án chính xác theo giáo trình và câu hỏi là **B. A XOR B = (A AND B') OR (A' AND B)**.\n\n **Kiểm tra**: Chọn B. A XOR B = (A AND B') OR (A' AND B) \n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic`,
 
-    "443": `**Giải thích**: \n\n **Hướng giải**: Dạng biểu thức tổng các tích (Sum-of-Products - SOP) & Mạch logic 2 mức (Two-Level Logic) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: "_________Which of the following is an important feature of the sum-of-products (SOP) form of expression?" (Đặc điểm quan trọng nào sau đây là của dạng biểu thức tổng các tích - SOP?).\n\n- Phân tích nguyên lý mạch logic 2 mức (Two-level logic implementation):\n  - Dạng SOP (Sum of Products) biểu diễn một hàm Boolean dưới dạng tổng (OR) của các số hạng tích (AND) (ví dụ: $F = AB + CD + EF$).\n  - Khi hiện thực bằng phần cứng, mạch luôn có cấu trúc **2 tầng (two-level)** cố định:\n    - **Tầng 1 (First level)**: Các cổng **AND** để tính giá trị từng số hạng tích.\n    - **Tầng 2 (Second level)**: Một cổng **OR** duy nhất gom ngõ ra của các cổng AND để tạo ngõ ra tổng $F$.\n  - **Đặc trưng quan trọng nhất (Important feature)**: Mọi đường truyền tín hiệu từ ngõ vào đến ngõ ra (không tính các cổng đảo NOT ở đầu vào) chỉ đi qua tối đa đúng **hai cổng logic (No signal must pass through more than two gates, not including inverters)**.\n  - Điều này giúp chuẩn hóa và giữ cho độ trễ truyền dẫn (propagation delay) của mạch tổ hợp luôn ở mức nhỏ nhất ($2 \\times t_{\\text{gate}}$) và đồng đều giữa các đường tín hiệu.\n\n **Kiểm tra**: Chọn A. No signal must pass through more than two gates, not including inverters. \n\n **Vì sao các phương án khác sai**:\n\n- B: Sai vì mạch SOP vẫn phải sử dụng cổng đảo (inverters / NOT) đối với các biến ở dạng bù (ví dụ $A'$), chứ không phải "chỉ thu gọn thành duy nhất AND và OR".\n- C: Sai vì thời gian trễ của dạng SOP tương đương với dạng POS (Product of Sums - mạch 2 tầng OR-AND), không phải "giảm mạnh so với mọi dạng khác".\n- D: Sai vì số tầng cổng cố định là 2, không phải "giảm đi một nửa (factor of two)".\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic`
+    "443": `**Giải thích**: \n\n **Hướng giải**: Dạng biểu thức tổng các tích (Sum-of-Products - SOP) & Mạch logic 2 mức (Two-Level Logic) thuộc Chapter 12: Digital Logic (Giáo trình William Stallings COA 11th Edition). \n\n **Các bước phân tích**:\n\n- Dữ kiện câu hỏi: "_________Which of the following is an important feature of the sum-of-products (SOP) form of expression?" (Đặc điểm quan trọng nào sau đây là của dạng biểu thức tổng các tích - SOP?).\n\n- Phân tích nguyên lý mạch logic 2 mức (Two-level logic implementation):\n  - Dạng SOP (Sum of Products) biểu diễn một hàm Boolean dưới dạng tổng (OR) của các số hạng tích (AND) (ví dụ: $F = AB + CD + EF$).\n  - Khi hiện thực bằng phần cứng, mạch luôn có cấu trúc **2 tầng (two-level)** cố định:\n    - **Tầng 1 (First level)**: Các cổng **AND** để tính giá trị từng số hạng tích.\n    - **Tầng 2 (Second level)**: Một cổng **OR** duy nhất gom ngõ ra của các cổng AND để tạo ngõ ra tổng $F$.\n  - **Đặc trưng quan trọng nhất (Important feature)**: Mọi đường truyền tín hiệu từ ngõ vào đến ngõ ra (không tính các cổng đảo NOT ở đầu vào) chỉ đi qua tối đa đúng **hai cổng logic (No signal must pass through more than two gates, not including inverters)**.\n  - Điều này giúp chuẩn hóa và giữ cho độ trễ truyền dẫn (propagation delay) của mạch tổ hợp luôn ở mức nhỏ nhất ($2 \\times t_{\\text{gate}}$) và đồng đều giữa các đường tín hiệu.\n\n **Kiểm tra**: Chọn A. No signal must pass through more than two gates, not including inverters. \n\n **Vì sao các phương án khác sai**:\n\n- B: Sai vì mạch SOP vẫn phải sử dụng cổng đảo (inverters / NOT) đối với các biến ở dạng bù (ví dụ $A'$), chứ không phải "chỉ thu gọn thành duy nhất AND và OR".\n- C: Sai vì thời gian trễ của dạng SOP tương đương với dạng POS (Product of Sums - mạch 2 tầng OR-AND), không phải "giảm mạnh so với mọi dạng khác".\n- D: Sai vì số tầng cổng cố định là 2, không phải "giảm đi một nửa (factor of two)".\n\n **Xuất hiện trong**: Giáo trình COA 11th Edition - Chapter 12: Digital Logic`,
+
+    "538": `Hướng giải:
+Xác định loại bộ nhớ bán dẫn có tính chất khả biến (volatile - mất dữ liệu khi ngắt điện), tốc độ truy xuất cực nhanh và được sử dụng làm bộ nhớ trong (internal memory / cache memory).
+
+Các bước:
+1. Phân loại theo tính khả biến:
+   - Bộ nhớ không khả biến (Non-volatile): ROM (Read-Only Memory) và Flash Memory giữ nguyên dữ liệu khi mất điện.
+   - Bộ nhớ khả biến (Volatile): SRAM và DRAM mất dữ liệu khi mất nguồn cấp điện.
+2. So sánh SRAM và DRAM:
+   - DRAM (Dynamic RAM): Lưu trữ bit dưới dạng điện tích trên tụ điện. Điện tích bị rò rỉ nên cần mạch làm tươi (refresh) định kỳ. Tốc độ truy xuất chậm hơn, mật độ lưu trữ cao, giá thành rẻ, dùng làm bộ nhớ chính (Main Memory).
+   - SRAM (Static RAM): Cấu tạo từ các mạch chốt flip-flop (4 hoặc 6 transistor), giữ nguyên trạng thái logic chừng nào còn cấp nguồn mà không cần làm tươi. Tốc độ truy xuất cực nhanh (vài ns), giá thành cao hơn, dùng làm bộ nhớ đệm nội bộ (CPU Cache / Internal Memory).
+3. Do đó, bộ nhớ thỏa mãn các điều kiện đề bài là SRAM.
+
+Kiểm tra:
+Trong phân cấp bộ nhớ (Memory Hierarchy), Cache nằm trực tiếp trong chip CPU (internal memory) và 100% sử dụng công nghệ SRAM.
+
+Vì sao các phương án khác sai:
+- A (ROM): Bộ nhớ chỉ đọc, không khả biến, tốc độ đọc ghi chậm.
+- B (Flash): Bộ nhớ bán dẫn không khả biến, tốc độ chậm hơn nhiều so với SRAM, dùng làm ổ cứng SSD/USB.
+- D (DRAM): Là bộ nhớ khả biến nhưng tốc độ chậm hơn SRAM và được dùng làm bộ nhớ chính (Main Memory), không dùng cho internal cache tốc độ cao.
+
+Lưu ý/công thức cần nhớ:
+SRAM: Flip-flop, không cần refresh, tốc độ cao nhất, làm Cache.
+DRAM: Tụ điện, cần refresh định kỳ, làm Main Memory.`,
+
+    "539": `Hướng giải:
+Xác định lợi ích hiệu năng cốt lõi (main performance benefit) của bộ vi xử lý đa nhân (multicore processors).
+
+Các bước:
+1. Bộ vi xử lý đa nhân tích hợp hai hoặc nhiều nhân xử lý độc lập trên cùng một phiến bán dẫn (die).
+2. Mỗi nhân có đầy đủ các đơn vị tìm nạp lệnh, giải mã, thực thi và bộ đệm L1 riêng.
+3. Khi hệ điều hành và phần mềm hỗ trợ đa nhiệm hoặc đa luồng (multithreading), các nhân có thể thực thi đồng thời các tiến trình/luồng khác nhau:
+   \[
+   \mathrm{Throughput} \propto N
+   \]
+   với \(N\) là số nhân xử lý song song.
+4. Do đó, lợi ích hiệu năng lớn nhất là khả năng thực thi song song các tác vụ (Parallel task execution).
+
+Kiểm tra:
+Định luật Amdahl chỉ ra rằng hiệu năng của hệ thống đa nhân tăng tỷ lệ thuận với mức độ song song hóa (\(f\)) của chương trình:
+\[
+	ext{Speedup} = rac{1}{(1 - f) + rac{f}{N}}
+\]
+
+Vì sao các phương án khác sai:
+- A (Reduced power consumption): Việc trang bị nhiều nhân làm tăng công suất tiêu thụ tổng thể; dù hiệu suất năng lượng trên mỗi tác vụ có thể tối ưu hơn, đây không phải lợi ích hiệu năng chính.
+- B (Higher clock speed): Sai, xung nhịp của bộ xử lý đa nhân thường phải giữ ở mức vừa phải để tránh vượt quá giới hạn tản nhiệt (Thermal Design Power - TDP).
+- C (Improved serial performance): Sai, các tác vụ tuần tự thuần túy không chạy nhanh hơn trên nhiều nhân.
+
+Lưu ý/công thức cần nhớ:
+Multicore tăng hiệu năng thông qua khai thác song song mức luồng (Thread-Level Parallelism - TLP).`,
+
+    "540": `Hướng giải:
+Định nghĩa thuật ngữ 'Liên kết hệ thống' (System Interconnection) trong mô hình cấu trúc mức đỉnh của máy tính.
+
+Các bước:
+1. Mô hình cấu trúc mức đỉnh của máy tính gồm 4 thành phần cơ bản:
+   - CPU (Central Processing Unit)
+   - Main Memory (Bộ nhớ chính)
+   - I/O (Hệ thống vào/ra)
+   - System Interconnection (Liên kết hệ thống)
+2. Theo định nghĩa chuẩn trong giáo trình William Stallings: System Interconnection là cơ chế cung cấp đường truyền thông và trao đổi dữ liệu giữa CPU, Bộ nhớ chính và các khối I/O.
+3. Trong thực tế, cơ chế liên kết này phổ biến nhất là hệ thống bus (System Bus) hoặc cấu trúc liên kết điểm-điểm (Point-to-point interconnect như QPI/UPI, PCIe).
+
+Kiểm tra:
+Đối chiếu nguyên văn định nghĩa từ Section 1.2 Stallings COA: 'System Interconnection: Some mechanism that provides for communication among CPU, main memory, and I/O.' Khớp 100% với phương án A.
+
+Vì sao các phương án khác sai:
+- B: Kết nối nguồn điện không phải là thành phần kiến trúc trao đổi thông tin logic.
+- C: Mạng bên ngoài kết nối nhiều máy tính là Computer Network, không phải System Interconnection bên trong một máy tính.
+- D: Bộ nhớ cache là thành phần lưu trữ dữ liệu trung gian, không phải cơ chế liên kết toàn hệ thống.
+
+Lưu ý/công thức cần nhớ:
+Cấu trúc mức đỉnh: CPU + Main Memory + I/O + System Interconnection.`,
+
+    "541": `Hướng giải:
+Xác định cơ chế/thành phần chuyên trách việc phát hiện và sửa lỗi dữ liệu (Error detection and correction) trong bộ nhớ máy tính.
+
+Các bước:
+1. Trong các hệ thống máy tính hiện đại, các ô nhớ bán dẫn có thể bị đảo bit ngẫu nhiên (soft error) do nhiễu nhiệt, nhiễu điện từ hoặc các hạt alpha/tia vũ trụ.
+2. Để bảo vệ tính toàn vẹn của dữ liệu, bộ điều khiển bộ nhớ sử dụng cơ chế ECC (Error-Correcting Code - Mã sửa lỗi).
+3. ECC tính toán các bit kiểm tra khi ghi dữ liệu và kiểm tra lại khi đọc dữ liệu. Phổ biến nhất là mã Hamming SEC-DED (Single Error Correction, Double Error Detection) cho phép:
+   - Sửa tự động lỗi 1 bit (1-bit error).
+   - Phát hiện lỗi 2 bit (2-bit error).
+4. Do đó, phương án đúng là B (ECC).
+
+Kiểm tra:
+Bộ nhớ ECC (ECC RAM) là thành phần bắt buộc trong các máy chủ (servers) và trung tâm dữ liệu nhằm ngăn chặn sự cố sập hệ thống (system crash).
+
+Vì sao các phương án khác sai:
+- A (ALU): Arithmetic Logic Unit, thực hiện các phép toán số học và logic, không quản lý lỗi bộ nhớ.
+- C (DMA): Direct Memory Access, điều khiển chuyển dữ liệu trực tiếp giữa thiết bị I/O và RAM không qua CPU.
+- D (Cache): Bộ nhớ đệm tốc độ cao, là nơi lưu trữ tạm thời, không phải tên cơ chế sửa lỗi.
+- E (CU): Control Unit, đơn vị điều khiển chu kỳ tìm nạp và giải mã lệnh của CPU.
+
+Lưu ý/công thức cần nhớ:
+ECC = Error-Correcting Code (Cơ chế phát hiện và sửa lỗi bộ nhớ).`,
+
+    "542": `Hướng giải:
+Xác định yếu tố phần cứng có ảnh hưởng đáng kể nhất đến thời gian truy xuất trung bình (average access time) của ổ đĩa từ (HDD).
+
+Các bước:
+1. Thời gian truy xuất đĩa từ trung bình bao gồm 3 thành phần chính:
+   \[
+   T_{	ext{access}} = T_{	ext{seek}} + T_{	ext{rotational latency}} + T_{	ext{transfer}}
+   \]
+   Trong đó:
+   - \(T_{	ext{seek}}\): Thời gian đầu đọc di chuyển đến đúng track (rãnh ghi).
+   - \(T_{	ext{rotational latency}}\): Thời gian chờ sector mong muốn quay đến dưới đầu đọc.
+   - \(T_{	ext{transfer}}\): Thời gian đọc/ghi dữ liệu của sector khi nó đi qua đầu đọc.
+2. Tốc độ quay của đĩa (Rotational speed, đo bằng vòng/phút - RPM):
+   - Xác định trực tiếp thời gian trễ quay trung bình:
+     \[
+     T_{\mathrm{rotational\ latency}} = rac{1}{2 	imes r}
+     \]
+     với \(r = rac{\mathrm{RPM}}{60}\) là tốc độ quay (vòng/giây).
+   - Đồng thời quyết định trực tiếp tốc độ truyền dữ liệu qua đầu đọc (\(T_{	ext{transfer}}\)).
+   - Ví dụ: Ổ 15,000 RPM có độ trễ quay chỉ bằng một nửa so với ổ 7,200 RPM và một phần ba so với ổ 5,400 RPM.
+3. Trong các phương án được nêu, tốc độ quay là yếu tố động học quyết định mạnh nhất đến thời gian truy xuất trung bình.
+
+Kiểm tra:
+Trong các thông số kỹ thuật thương mại của HDD, RPM là chỉ số chính biểu thị đẳng cấp hiệu năng của ổ đĩa.
+
+Vì sao các phương án khác sai:
+- B (The size of the disk platter): Đường kính đĩa (3.5 inch, 2.5 inch) ảnh hưởng đến dung lượng và một phần vận tốc dài ở mép đĩa, nhưng không phải yếu tố chi phối thời gian truy xuất như RPM.
+- C (The type of file system used): Hệ thống tập tin (NTFS, ext4, FAT32) là phần mềm logic, không quyết định thời gian truy xuất cơ học của phần cứng.
+- D (The material composition): Thành phần vật liệu ảnh hưởng đến mật độ từ tính và độ bền, không quyết định thời gian quay và định vị.
+
+Lưu ý/công thức cần nhớ:
+Độ trễ quay trung bình: \(T_r = rac{1}{2 	imes (	ext{RPM}/60)}\).`,
+
+    "543": `Hướng giải:
+Nhận diện bài toán kiến trúc máy tính mà giao thức MESI được thiết kế để giải quyết trong các hệ thống đa xử lý đối xứng (SMP).
+
+Các bước:
+1. Trong hệ thống đa xử lý đối xứng (Symmetric Multiprocessors - SMP), mỗi vi xử lý/nhân có một hoặc nhiều tầng bộ nhớ đệm (L1, L2 cache) riêng biệt nhưng dùng chung một bộ nhớ chính (Main Memory).
+2. Khi nhiều bộ xử lý cùng đọc và ghi vào cùng một biến/ô nhớ, dữ liệu giữa các cache riêng và RAM có thể không đồng nhất (Cache Incoherence).
+3. Giao thức MESI là giao thức giám sát bus (snooping-based protocol) duy trì tính nhất quán bộ đệm (Cache Coherence) bằng cách gán cho mỗi dòng cache một trong 4 trạng thái:
+   - \(M\) (Modified): Dòng cache đã bị sửa đổi, chỉ có ở cache hiện tại, dữ liệu trong RAM đã cũ.
+   - \(E\) (Exclusive): Dòng cache giống hệt RAM, chỉ tồn tại duy nhất ở cache hiện tại.
+   - \(S\) (Shared): Dòng cache giống hệt RAM, có thể đang được chia sẻ đồng thời ở các cache khác.
+   - \(I\) (Invalid): Dòng cache không còn hợp lệ (đã bị vô hiệu hóa khi nhân khác ghi đè).
+4. Do đó, phương án đúng là D (Cache coherence).
+
+Kiểm tra:
+Giao thức MESI (và các biến thể MOESI, MESIF) là chuẩn mực kinh điển được giảng dạy trong mọi khóa học COA về Cache Coherence.
+
+Vì sao các phương án khác sai:
+- A (Instruction decoding): Giải mã lệnh do khối giải mã lệnh bên trong CPU thực hiện.
+- B (Disk latency): Độ trễ đĩa thuộc về thiết bị lưu trữ thứ cấp.
+- C (Bus arbitration): Trọng tài bus do vi mạch điều khiển bus giải quyết xung đột khi nhiều master cùng yêu cầu bus.
+
+Lưu ý/công thức cần nhớ:
+MESI = Modified, Exclusive, Shared, Invalid \(\implies\) Giao thức Cache Coherence.`,
+
+    "544": `Hướng giải:
+Chọn định nghĩa chính xác nhất về 'Kiến trúc máy tính' (Computer Architecture) theo chuẩn học thuật của William Stallings.
+
+Các bước:
+1. Phân biệt cốt lõi trong môn CEA201:
+   - Kiến trúc máy tính (Computer Architecture): Đề cập đến những thuộc tính của hệ thống mà lập trình viên có thể nhìn thấy (Attributes visible to the programmer) hoặc những thuộc tính có tác động trực tiếp đến việc thực thi logic của một chương trình. Ví dụ: Tập lệnh (ISA), số lượng bit biểu diễn dữ liệu, các cơ chế I/O, các chế độ định địa chỉ bộ nhớ.
+   - Tổ chức máy tính (Computer Organization): Đề cập đến các đơn vị vận hành phần cứng và mối liên kết giữa chúng nhằm hiện thực hóa kiến trúc. Ví dụ: Tín hiệu điều khiển phần cứng, công nghệ chế tạo bộ nhớ, thiết kế mạch.
+2. Đối chiếu với câu hỏi, định nghĩa chuẩn xác nhất của Computer Architecture là 'Attributes visible to the programmer' (Phương án B).
+
+Kiểm tra:
+Khái niệm này được phát biểu kinh điển bởi Amdahl, Blaauw, và Brooks (1964) tại IBM khi thiết kế dòng System/360: Kiến trúc là hợp đồng giữa lập trình viên và phần cứng.
+
+Vì sao các phương án khác sai:
+- A (Physical components): Là thành phần vật lý/phần cứng cụ thể (hardware components).
+- C (Electrical signals): Là tín hiệu điện tử thuộc mức vật lý và tổ chức phần cứng (Organization/Hardware).
+- D (Memory chip design): Là thiết kế mạch vi điện tử của chip nhớ (VLSI design / Organization).
+
+Lưu ý/công thức cần nhớ:
+Architecture: Thuộc tính lập trình viên nhìn thấy (Visible to programmer).
+Organization: Đơn vị vận hành và kết nối phần cứng (Operational units & interconnections).`,
+
+    "545": `Hướng giải:
+Giải thích lý do tại sao các sản phẩm và thiết bị ngoại vi chuẩn PCI (Peripheral Component Interconnect) từ nhiều nhà sản xuất phần cứng khác nhau có thể tương thích hoàn toàn với nhau.
+
+Các bước:
+1. Chuẩn bus PCI ban đầu được khởi xướng bởi Intel, nhưng sau đó toàn bộ đặc tả kỹ thuật (PCI specifications) đã được đưa vào phạm vi công cộng (public domain) và được chuyển giao cho tổ chức hiệp hội công nghiệp mở PCI-SIG (PCI Special Interest Group) quản lý và phát triển.
+2. Hiệp hội PCI-SIG bao gồm hàng trăm công ty công nghệ hàng đầu cùng tham gia đóng góp và tuân thủ các bài kiểm tra tương thích nghiêm ngặt.
+3. Nhờ các tiêu chuẩn kỹ thuật mở, công khai và được một hiệp hội toàn ngành giám sát, bất kỳ nhà cung cấp nào thiết kế card PCI đúng quy chuẩn đều có thể cắm và chạy (Plug and Play) trên mọi bo mạch chủ tương thích.
+4. Do đó, phương án đúng là A.
+
+Kiểm tra:
+Mọi giáo trình chuẩn đều khẳng định tính tương thích rộng rãi của PCI bắt nguồn từ tính chất phi độc quyền (public domain) và sự đồng thuận của hiệp hội mở PCI-SIG.
+
+Vì sao các phương án khác sai:
+- B (Designed exclusively for Intel): Sai, ban đầu Intel phát triển nhưng PCI nhanh chóng trở thành tiêu chuẩn chung cho cả AMD, Apple PowerPC và nhiều kiến trúc khác.
+- C (Uses proprietary patents): Sai, các bằng sáng chế độc quyền sẽ ngăn cản khả năng tương thích của các nhà sản xuất bên thứ ba, trái ngược hoàn toàn với tiêu chuẩn mở của PCI.
+- D (Centralized arbitration): Trọng tài bus tập trung chỉ là cơ chế phần cứng phân xử tranh chấp quyền dùng bus, không phải lý do đảm bảo tính tương thích chuẩn hóa giữa các nhà cung cấp.
+
+Lưu ý/công thức cần nhớ:
+PCI tương thích rộng rãi nhờ: Public domain + Hiệp hội toàn ngành (PCI-SIG).`,
+
+    "546": `Hướng giải:
+Xác định kỹ thuật quản lý bộ nhớ chia không gian nhớ thành các khối có kích thước cố định (fixed-size blocks).
+
+Các bước:
+1. So sánh hai kỹ thuật phân vùng bộ nhớ cơ bản trong bộ nhớ ảo:
+   - Phân trang (Paging): Không gian địa chỉ logic của tiến trình được chia thành các khối có kích thước cố định gọi là trang (pages, thường là \(4\,\mathrm{KB}\)). Bộ nhớ vật lý cũng được chia thành các khối cùng kích thước gọi là khung trang (frames hoặc page frames). Việc chia thành các khối cố định giúp loại bỏ phân mảnh ngoại vi (external fragmentation).
+   - Phân đoạn (Segmentation): Chia bộ nhớ logic theo các đơn vị ngữ nghĩa của chương trình (hàm, mảng, ngăn xếp...) thành các khối có kích thước biến thiên (variable-size blocks).
+2. Câu hỏi nêu rõ: 'divides memory into fixed-size blocks' \(\implies\) Paging (Phương án A).
+
+Kiểm tra:
+Bảng trang (Page Table) ánh xạ từ số trang ảo sang số khung trang vật lý có kích thước cố định hoàn toàn đồng nhất.
+
+Vì sao các phương án khác sai:
+- B (Segmentation): Chia thành các đoạn có kích thước biến thiên (variable-size), không phải cố định.
+- C (Virtual memory): Là khái niệm bộ nhớ ảo nói chung, có thể thực hiện bằng Paging, Segmentation hoặc kết hợp cả hai.
+- D (Swapping): Kỹ thuật hoán chuyển toàn bộ tiến trình giữa RAM và đĩa cứng, không phải kỹ thuật chia bộ nhớ thành các khối cố định.
+
+Lưu ý/công thức cần nhớ:
+Paging: Khối kích thước cố định (Fixed-size: Pages & Frames).
+Segmentation: Khối kích thước biến thiên (Variable-size).`,
+
+    "547": `Hướng giải:
+Tìm hai lệnh nhảy có điều kiện (conditional jump instructions) trong hợp ngữ x86 được sử dụng khi điều kiện so sánh là 'nhỏ hơn hoặc bằng' (less than or equal to, ký hiệu \(\le\)).
+
+Các bước:
+1. Trong tập lệnh hợp ngữ x86, sau một lệnh so sánh có dấu (\(\mathrm{CMP}\)):
+   - Điều kiện 'nhỏ hơn hoặc bằng' (Less than or Equal to): Ký hiệu bằng lệnh \(\mathrm{JLE}\) (Jump if Less or Equal). Lệnh này nhảy khi cờ \(\mathrm{ZF} = 1\) hoặc \(\mathrm{SF} 
+e \mathrm{OF}\).
+   - Về mặt logic Boolean, 'nhỏ hơn hoặc bằng' tương đương phủ định của 'lớn hơn' (Not Greater): Ký hiệu bằng lệnh \(\mathrm{JNG}\) (Jump if Not Greater). Lệnh này kiểm tra điều kiện y hệt \(\mathrm{JLE}\).
+2. Thực tế trong kiến trúc x86 của Intel, \(\mathrm{JLE}\) và \(\mathrm{JNG}\) là hai tên gọi gợi nhớ (mnemonics) khác nhau của cùng một mã máy duy nhất (Opcode \`0x7E\` cho short jump và \`0x0F 0x8E\` cho near jump).
+3. Do đó, hai lệnh đúng là \(\mathrm{JLE}\) (phương án A) và \(\mathrm{JNG}\) (phương án B).
+
+Kiểm tra:
+Bảng đối chiếu cờ trạng thái của Intel x86:
+\[
+\begin{array}{|l|l|l|}
+\hline
+	ext{Mnemonic} & 	ext{Ý nghĩa} & 	ext{Điều kiện cờ} \
+\hline
+\mathrm{JLE} & 	ext{Jump if Less or Equal} & \mathrm{ZF} = 1 	ext{ or } \mathrm{SF} 
+e \mathrm{OF} \
+\mathrm{JNG} & 	ext{Jump if Not Greater} & \mathrm{ZF} = 1 	ext{ or } \mathrm{SF} 
+e \mathrm{OF} \
+\hline
+\end{array}
+\]
+Cả hai hoàn toàn đồng nhất.
+
+Vì sao các phương án khác sai:
+- C (\(\mathrm{JNLE}\)): Jump if Not Less or Equal, tương đương \(\mathrm{JG}\) (nhảy khi lớn hơn hẳn, \(>\)).
+- D (\(\mathrm{JNGE}\)): Jump if Not Greater or Equal, tương đương \(\mathrm{JL}\) (nhảy khi nhỏ hơn hẳn, \(<\)).
+- E (\(\mathrm{JNE}\)): Jump if Not Equal, nhảy khi không bằng (\(
+e\)).
+- F (\(\mathrm{JMP}\)): Unconditional Jump, nhảy không điều kiện.
+
+Lưu ý/công thức cần nhớ:
+Nhỏ hơn hoặc bằng (\(\le\)): \(\mathrm{JLE}\) = \(\mathrm{JNG}\) (Jump if Less or Equal / Jump if Not Greater).`,
+
+    "548": `Hướng giải:
+Xác định cấp bậc bộ nhớ có tốc độ nhanh nhất, giá thành trên mỗi bit đắt nhất và nằm gần bộ xử lý nhất trong kim tự tháp phân cấp bộ nhớ (Memory Hierarchy).
+
+Các bước:
+1. Sơ đồ hình tháp phân cấp bộ nhớ từ đỉnh xuống đáy:
+   - Cấp 0 (Đỉnh tháp): Các thanh ghi nội bộ của CPU (Registers). Nằm ngay trên đường truyền dữ liệu của ALU, thời gian truy xuất chỉ một phần nhỏ của chu kỳ xung nhịp (< 1 ns), dung lượng nhỏ nhất (vài trăm byte đến vài KB), giá thành/bit cao nhất.
+   - Cấp 1: Bộ nhớ đệm (Cache - L1, L2, L3) sử dụng SRAM.
+   - Cấp 2: Bộ nhớ chính (Main Memory) sử dụng DRAM.
+   - Cấp 3: Lưu trữ thứ cấp (Secondary Storage: SSD, HDD).
+   - Cấp 4: Lưu trữ ngoại tuyến (Offline Storage: Magnetic Tape, Optical Disc).
+2. Như vậy, thành phần nằm ở đỉnh cao nhất, nhanh nhất và đắt nhất chính là Registers (phương án A).
+
+Kiểm tra:
+Thanh ghi nằm ngay trong lòng vi xử lý, CPU truy xuất thanh ghi trong cùng chu kỳ lệnh mà không cần qua bất kỳ bus hay controller nào.
+
+Vì sao các phương án khác sai:
+- B (Main memory): Chậm hơn Cache và Registers hàng chục đến hàng trăm lần.
+- C (Magnetic disk): Thuộc bộ nhớ ngoài, tốc độ cơ học cực chậm.
+- D (Cache): Nhanh thứ hai sau Registers, nhưng vẫn đứng dưới Registers trong tháp phân cấp bộ nhớ.
+
+Lưu ý/công thức cần nhớ:
+Thứ tự tốc độ & giá thành/bit giảm dần: Registers > Cache > Main Memory > SSD > Magnetic Disk.`,
+
+    "549": `Hướng giải:
+Xác định chức năng cốt lõi của mạch dồn kênh (Multiplexer - MUX) trong kỹ thuật số và kiến trúc máy tính.
+
+Các bước:
+1. Bộ dồn kênh (Multiplexer - MUX), hay còn gọi là bộ chọn dữ liệu (data selector), là một mạch logic tổ hợp.
+2. Cấu trúc chuẩn của bộ dồn kênh \(2^n\)-to-\(1\):
+   - Có \(2^n\) đầu vào dữ liệu (\(I_0, I_1, \dots, I_{2^n-1}\)).
+   - Có \(n\) đường tín hiệu điều khiển chọn (Select lines \(S_0, \dots, S_{n-1}\)).
+   - Có duy nhất \(1\) đầu ra dữ liệu (\(Y\)).
+3. Chức năng: Dựa vào giá trị nhị phân trên các đường chọn, bộ dồn kênh sẽ kết nối và cho phép một tín hiệu đầu vào duy nhất truyền qua đầu ra:
+   \[
+   Y = \sum_{k=0}^{2^n-1} m_k \cdot I_k
+   \]
+   với \(m_k\) là minterm của các biến chọn.
+4. Do đó, chức năng của multiplexer là chọn một đầu vào từ nhiều đầu vào (Selects one input from many - phương án D).
+
+Kiểm tra:
+Trong đường truyền dữ liệu CPU (Datapath), MUX được dùng ở mọi nơi để lựa chọn nguồn dữ liệu đưa vào ALU hoặc nạp vào thanh ghi.
+
+Vì sao các phương án khác sai:
+- A (Combines signals): MUX không cộng gộp hay trộn các tín hiệu với nhau, nó chỉ chọn duy nhất 1 tín hiệu tại một thời điểm.
+- B (Converts analog to digital): Đây là chức năng của bộ biến đổi ADC (Analog-to-Digital Converter).
+- C (Stores data): MUX là mạch tổ hợp không có nhớ; việc lưu trữ dữ liệu là chức năng của mạch tuần tự (Flip-flop, thanh ghi, RAM).
+
+Lưu ý/công thức cần nhớ:
+Multiplexer (MUX) = Data Selector (Chọn 1 đầu vào trong nhiều đầu vào dựa trên tín hiệu chọn).`,
+
+    "550": `Hướng giải:
+Nhận diện bản chất và vai trò của tín hiệu ngắt (Interrupt signals) trong hoạt động của hệ thống máy tính.
+
+Các bước:
+1. Ngắt (Interrupt) là cơ chế mà qua đó các mô-đun phần cứng (như thiết bị I/O, bộ đếm thời gian Timer) hoặc các sự kiện phần mềm có thể tạm ngưng chu trình thực thi thông thường của CPU để yêu cầu CPU phục vụ xử lý một sự kiện khẩn cấp (Request for CPU attention).
+2. Khi nhận được tín hiệu yêu cầu ngắt hợp lệ tại cuối chu kỳ lệnh (Interrupt Stage):
+   - CPU lưu lại ngữ cảnh hiện tại (Program Counter và thanh ghi cờ vào Stack).
+   - Chuyển hướng quyền điều khiển sang Chương trình con phục vụ ngắt (Interrupt Service Routine - ISR).
+   - Sau khi thực thi xong ISR, CPU khôi phục lại ngữ cảnh và tiếp tục thực hiện chương trình bị gián đoạn.
+3. Do đó, bản chất của tín hiệu ngắt là yêu cầu sự chú ý/phục vụ của CPU (Request for CPU attention - phương án A).
+
+Kiểm tra:
+Định nghĩa chuẩn trong Stallings Section 3.2: 'Virtually all computers provide a mechanism by which other modules (I/O, memory) may interrupt the normal sequencing of the processor.'
+
+Vì sao các phương án khác sai:
+- B (Memory fault): Lỗi bộ nhớ là một nguyên nhân cụ thể có thể kích hoạt ngắt ngoại lệ (Trap/Fault), nhưng bản thân khái niệm tín hiệu ngắt không đồng nghĩa với lỗi bộ nhớ.
+- C (Cache miss): Hiện tượng trượt bộ đệm được xử lý bằng phần cứng nạp dòng nhớ, không phải tín hiệu ngắt ngoài.
+- D (Data error): Lỗi dữ liệu chỉ là một dạng sự kiện có thể gây ngắt, không đại diện cho bản chất chung của tín hiệu ngắt.
+
+Lưu ý/công thức cần nhớ:
+Interrupt = Tín hiệu yêu cầu CPU tạm dừng để xử lý sự kiện (Request for CPU attention).`,
+
+    "551": `Hướng giải:
+Xác định chức năng cơ bản nhất của phần tử lật trạng thái (Flip-flop) trong kỹ thuật số và thiết kế máy tính.
+
+Các bước:
+1. Mạch lật (Flip-flop) là phần tử logic tuần tự cơ bản có tính chất ổn định kép (bistable).
+2. Một flip-flop có hai trạng thái ổn định tương ứng với giá trị logic \(0\) hoặc \(1\).
+3. Trạng thái của flip-flop được duy trì liên tục cho đến khi có xung kích thích (clock pulse hoặc tín hiệu set/reset) làm thay đổi trạng thái của nó.
+4. Do đó, một flip-flop hoạt động như một ô nhớ cơ sở, có chức năng lưu trữ đúng \(1	ext{ bit}\) dữ liệu (Store a single bit of data - phương án B).
+5. Khi kết hợp nhiều flip-flop lại với nhau, ta tạo nên các thanh ghi (registers) và các ô nhớ tĩnh (SRAM cells).
+
+Kiểm tra:
+Mọi sách giáo khoa kỹ thuật số đều định nghĩa: 'A flip-flop is a bistable circuit used to store one bit of information.'
+
+Vì sao các phương án khác sai:
+- A (Perform addition): Thực hiện phép cộng là chức năng của mạch cộng (Adder: Half Adder, Full Adder).
+- C (Generate signals): Tạo tín hiệu xung nhịp là chức năng của mạch dao động tạo xung (Clock Generator / Oscillator).
+- D (Execute arithmetic operations): Thực hiện các phép tính số học là chức năng của khối ALU.
+
+Lưu ý/công thức cần nhớ:
+Flip-flop = 1-bit storage element (Lưu trữ 1 bit dữ liệu).`,
+
+    "552": `Hướng giải:
+Xác định kỹ thuật vào/ra (I/O technique) cho phép các thiết bị ngoại vi chủ động gửi tín hiệu ngắt CPU một cách bất đồng bộ (asynchronously) khi đã sẵn sàng truyền nhận dữ liệu.
+
+Các bước:
+1. Có 3 kỹ thuật I/O cơ bản trong kiến trúc máy tính:
+   - Programmed I/O (I/O lập trình): CPU chủ động gửi lệnh I/O và sau đó phải chờ đợi thiết bị hoàn thành bằng cách liên tục kiểm tra cờ trạng thái (vòng lặp bận - busy waiting / polling). Lãng phí thời gian CPU rất lớn.
+   - Interrupt-driven I/O (I/O điều khiển bằng ngắt): CPU ra lệnh bắt đầu tác vụ I/O rồi quay sang làm công việc khác. Khi thiết bị ngoại vi hoàn thành việc chuẩn bị dữ liệu, nó sẽ chủ động phát tín hiệu ngắt bất đồng bộ tới CPU. CPU tạm dừng công việc hiện tại để chuyển dữ liệu rồi quay lại công việc cũ.
+   - DMA (Direct Memory Access): Bộ điều khiển DMA chuyên dụng đảm nhiệm việc truyền trực tiếp các khối dữ liệu lớn giữa I/O và RAM mà không cần CPU tham gia từng byte.
+2. Kỹ thuật được thiết kế chuyên biệt để thiết bị ngắt CPU bất đồng bộ khi sẵn sàng chính là Interrupt-driven I/O (phương án C).
+
+Kiểm tra:
+Từ khóa 'interrupt the CPU asynchronously' tương ứng trực tiếp với cơ chế Interrupt-driven I/O trong Stallings Section 7.4.
+
+Vì sao các phương án khác sai:
+- A (Programmed I/O): CPU hoàn toàn kiểm soát và chờ đợi tuần tự, thiết bị không thể ngắt CPU.
+- B (Polling): Là kỹ thuật kiểm tra tuần tự trạng thái thiết bị trong Programmed I/O, hoàn toàn đồng bộ theo sự điều khiển của CPU.
+- D (Direct Memory Access): Dù DMA có gửi 1 ngắt khi kết thúc toàn bộ khối truyền, nhưng bản chất của DMA là truyền trực tiếp bỏ qua CPU, không phải là cơ chế I/O tổng quát cho việc ngắt CPU để truyền từng đơn vị dữ liệu như Interrupt-driven I/O.
+
+Lưu ý/công thức cần nhớ:
+Interrupt-driven I/O: Thiết bị chủ động ngắt CPU bất đồng bộ khi sẵn sàng trao đổi dữ liệu.`,
+
+    "553": `Hướng giải:
+Chọn 2 phát biểu chính xác về cách biểu diễn lệnh máy (instruction representation) bên trong hệ thống máy tính theo giáo trình William Stallings.
+
+Các bước:
+1. Trích dẫn nguyên văn hai câu định nghĩa nền tảng trong William Stallings COA (Chương 12, Mục 12.1 - Machine Instruction Characteristics, tiểu mục Instruction Representation):
+   - Câu 1: 'Within the computer, each instruction is represented by a sequence of bits.' (Bên trong máy tính, mỗi lệnh được biểu diễn bằng một chuỗi các bit nhị phân). \(\implies\) Khớp phương án A.
+   - Câu 2: 'The instruction is divided into fields, corresponding to the constituent elements of the instruction.' (Lệnh được chia thành các trường, tương ứng với các thành phần cấu thành nên lệnh, ví dụ: trường Opcode, trường địa chỉ toán hạng Operand References). \(\implies\) Khớp phương án D.
+2. Như vậy, hai phương án đúng cần chọn là A và D.
+
+Kiểm tra:
+Bố cục định dạng lệnh (Instruction Format) thể hiện rõ ràng các trường bit (Opcode field, Address field, Mode field), minh chứng trực quan cho phương án D.
+
+Vì sao các phương án khác không được chọn:
+- B: Mặc dù vi xử lý chứa các thanh ghi và lệnh có thể tham chiếu thanh ghi, nhưng đây là thuộc tính về cấu trúc tài nguyên vi xử lý, không phải phát biểu định nghĩa tổng quát về nguyên lý biểu diễn một lệnh máy (Instruction Representation) trong giáo trình Stallings.
+- C: Toán hạng có thể nằm trong bộ nhớ hoặc thanh ghi, giá trị của toán hạng không nhất thiết nằm trực tiếp trong trường của lệnh (chỉ có chế độ tức thời Immediate Addressing mới chứa trực tiếp giá trị).
+
+Lưu ý/công thức cần nhớ:
+Biểu diễn lệnh máy: Biểu diễn bằng chuỗi bit (Sequence of bits) và chia thành các trường (Divided into fields).`,
+
+    "554": `Hướng giải:
+Tính toán số lượng địa chỉ ô nhớ duy nhất có thể được định địa chỉ trực tiếp (directly addressed) dựa trên độ dài lệnh và số bit mã thao tác (opcode).
+
+Các bước:
+1. Phân tích cấu trúc định dạng lệnh \(16	ext{ bits}\):
+   - Tổng độ dài lệnh: \(L = 16	ext{ bits}\).
+   - Độ dài trường mã thao tác (Opcode): \(k_{	ext{opcode}} = 4	ext{ bits}\).
+   - Số bit còn lại dành cho trường địa chỉ (Address field):
+     \[
+     k_{	ext{address}} = 16 - 4 = 12	ext{ bits}
+     \]
+2. Trong chế độ định địa chỉ trực tiếp (Direct Addressing Mode):
+   - Trường địa chỉ trong lệnh chứa trực tiếp địa chỉ hiệu dụng của ô nhớ trong bộ nhớ chính:
+     \[
+     \mathrm{EA} = A
+     \]
+   - Với \(12	ext{ bits}\) địa chỉ, số lượng địa chỉ ô nhớ nhị phân phân biệt có thể biểu diễn được là:
+     \[
+     N = 2^{12} = 4096	ext{ địa chỉ}
+     \]
+3. Do đó, phương án đúng là A (\(4096\)).
+
+Kiểm tra:
+\[
+2^{10} = 1024, \quad 2^{11} = 2048, \quad 2^{12} = 4096
+\]
+Phép tính lũy thừa hoàn toàn chính xác.
+
+Vì sao các phương án khác sai:
+- B (\(1024 = 2^{10}\)): Tương ứng với \(10	ext{ bits}\) địa chỉ (opcode \(6	ext{ bits}\)).
+- C (\(8192 = 2^{13}\)): Tương ứng với \(13	ext{ bits}\) địa chỉ (opcode \(3	ext{ bits}\)).
+- D (\(2048 = 2^{11}\)): Tương ứng với \(11	ext{ bits}\) địa chỉ (opcode \(5	ext{ bits}\)).
+- E (\(512 = 2^9\)), F (\(256 = 2^8\)) không khớp số bit còn lại.
+
+Lưu ý/công thức cần nhớ:
+Số địa chỉ trực tiếp: \(2^{	ext{Số bit trường địa chỉ}} = 2^{	ext{Độ dài lệnh} - 	ext{Số bit Opcode}}\).`,
+
+    "555": `Hướng giải:
+Xác định kiến trúc vi xử lý RISC nào tích hợp kỹ thuật rẽ nhánh trễ (delayed branch) như một đặc trưng kiến trúc nổi tiếng.
+
+Các bước:
+1. Kỹ thuật rẽ nhánh trễ (Delayed Branch):
+   - Trong các bộ xử lý đường ống (pipelined processors), khi gặp lệnh rẽ nhánh, bộ xử lý có thể bị trừng phạt mất chu kỳ (branch penalty) do phải chờ giải mã và tính địa chỉ đích.
+   - Để tối ưu hóa, các kiến trúc RISC cổ điển áp dụng kỹ thuật rẽ nhánh trễ: lệnh nằm ngay sau lệnh rẽ nhánh (gọi là khe trễ rẽ nhánh - branch delay slot) luôn luôn được tìm nạp và thực thi bất kể lệnh rẽ nhánh có xảy ra hay không.
+2. Khảo sát các kiến trúc được liệt kê:
+   - SPARC (Scalable Processor Architecture do Sun Microsystems phát triển) và MIPS là hai kiến trúc RISC kinh điển nổi tiếng nhất triển khai rẽ nhánh trễ ngay trong phần cứng ISA.
+   - Intel x86 và VAX là các kiến trúc CISC phức tạp, không sử dụng khe trễ rẽ nhánh kiểu RISC.
+   - ARM là kiến trúc RISC nhưng không sử dụng rẽ nhánh trễ (ARM sử dụng thực thi có điều kiện - conditional execution trên mọi lệnh và dự đoán nhánh - branch prediction).
+3. Do đó, phương án đúng là B (SPARC).
+
+Kiểm tra:
+Giáo trình William Stallings (Chương 15, Mục 15.6 - SPARC) dành riêng một phần phân tích cấu trúc thanh ghi cửa sổ (Register Windows) và rẽ nhánh trễ (Delayed Branch) của SPARC.
+
+Vì sao các phương án khác sai:
+- A (Intel x86): Kiến trúc CISC.
+- C (ARM): Kiến trúc RISC nhưng không sử dụng delayed branch.
+- D (VAX): Điển hình kinh điển của kiến trúc CISC phức tạp thế kỷ 20.
+
+Lưu ý/công thức cần nhớ:
+SPARC và MIPS là 2 kiến trúc RISC tiêu biểu ứng dụng Delayed Branch (Branch delay slot).`,
+
+    "556": `Hướng giải:
+Xác định cú pháp lệnh hợp ngữ x86 chuẩn để cộng nội dung thanh ghi \(\mathrm{EAX}\) với thanh ghi \(\mathrm{EBX}\) và lưu kết quả trở lại vào \(\mathrm{EAX}\).
+
+Các bước:
+1. Trong cú pháp hợp ngữ Intel x86 tiêu chuẩn:
+   - Cú pháp lệnh hai toán hạng là: \`OPCODE destination, source\` (Toán hạng đích đứng trước, toán hạng nguồn đứng sau).
+   - Thao tác thực hiện của lệnh cộng (\(\mathrm{ADD}\)) là:
+     \[
+     \mathrm{destination} \leftarrow \mathrm{destination} + \mathrm{source}
+     \]
+2. Theo yêu cầu đề bài:
+   - Giá trị được cộng: nội dung của \(\mathrm{EAX}\) và \(\mathrm{EBX}\).
+   - Nơi lưu kết quả: thanh ghi \(\mathrm{EAX}\) \(\implies\) \(\mathrm{EAX}\) phải đóng vai trò là toán hạng đích (destination).
+   - Thanh ghi nguồn: \(\mathrm{EBX}\) đóng vai trò toán hạng nguồn (source).
+3. Ghép vào cấu trúc: \`add eax, ebx\`.
+4. Phương án đúng là A.
+
+Kiểm tra:
+Lệnh \`add eax, ebx\` thực hiện:
+\[
+\mathrm{EAX} = \mathrm{EAX} + \mathrm{EBX}
+\]
+Kết quả được lưu vào EAX.
+
+Vì sao các phương án khác sai:
+- B (\`inc eax, ebx\`): Sai cú pháp, lệnh \(\mathrm{INC}\) là lệnh một toán hạng (unary instruction) chỉ nhận 1 tham số (ví dụ \`inc eax\` tăng EAX lên 1).
+- C (\`mov eax, ebx\`): Lệnh sao chép dữ liệu từ EBX sang EAX (\(\mathrm{EAX} \leftarrow \mathrm{EBX}\)), không thực hiện phép cộng.
+- D (\`add ebx, eax\`): Thực hiện cộng và lưu kết quả vào thanh ghi EBX (\(\mathrm{EBX} \leftarrow \mathrm{EBX} + \mathrm{EAX}\)), trái với yêu cầu lưu kết quả vào EAX.
+
+Lưu ý/công thức cần nhớ:
+Cú pháp Intel: \`ADD đích, nguồn\` \(\implies\) \`đích = đích + nguồn\`.`,
+
+    "557": `Hướng giải:
+Xác định thành phần phần cứng chịu trách nhiệm truyền thông và trao đổi dữ liệu giữa CPU, Bộ nhớ chính và các thiết bị I/O trong cấu trúc nội bộ của máy tính.
+
+Các bước:
+1. Trong kiến trúc máy tính Von Neumann truyền thống, đường liên kết hệ thống (System Interconnection) được hiện thực hóa vật lý thông qua Bus hệ thống (System Bus).
+2. Bus hệ thống là một tập hợp các đường dây dẫn điện chia sẻ chung, cho phép truyền tải tín hiệu giữa 3 thành phần phần cứng mức đỉnh cốt lõi:
+   - CPU (Bộ vi xử lý)
+   - Main Memory (Bộ nhớ chính RAM)
+   - I/O Modules (Các mô-đun vào/ra)
+3. Cấu trúc Bus hệ thống bao gồm:
+   - Bus dữ liệu (Data Bus): Truyền tải dữ liệu giữa các khối.
+   - Bus địa chỉ (Address Bus): Xác định nguồn hoặc đích của dữ liệu.
+   - Bus điều khiển (Control Bus): Kiểm soát việc cấp quyền và định thời truy xuất.
+4. Do đó, phương án đúng là B (System Bus).
+
+Kiểm tra:
+Khái niệm System Bus là câu trả lời kinh điển cho mọi câu hỏi về cơ chế giao tiếp phần cứng giữa CPU, Memory và I/O.
+
+Vì sao các phương án khác sai:
+- A (Control Unit): Là thành phần nội bộ bên trong CPU, chịu trách nhiệm giải mã lệnh và phát tín hiệu điều khiển vi thao tác trong CPU.
+- C (ALU): Là khối tính toán số học và logic bên trong CPU.
+- D (Registers): Là các ô nhớ tạm tốc độ cao bên trong CPU.
+
+Lưu ý/công thức cần nhớ:
+System Bus = Data Bus + Address Bus + Control Bus \(\implies\) Giao tiếp giữa CPU, Memory và I/O.`,
+
+    "558": `Hướng giải:
+Phân loại chế độ định địa chỉ tương đối theo con trỏ lệnh (PC-relative addressing) vào nhóm chế độ định địa chỉ tổng quát trong kiến trúc máy tính.
+
+Các bước:
+1. Định địa chỉ dịch chuyển (Displacement Addressing):
+   - Là một nhóm chế độ định địa chỉ mạnh mẽ kết hợp giữa định địa chỉ trực tiếp và định địa chỉ gián tiếp qua thanh ghi.
+   - Công thức tổng quát tính địa chỉ hiệu dụng:
+     \[
+     \mathrm{EA} = A + (R)
+     \]
+     Trong đó \(A\) là giá trị độ dời (displacement/offset) trong lệnh, và \((R)\) là nội dung của một thanh ghi được chỉ định.
+2. Ba dạng phổ biến nhất của định địa chỉ dịch chuyển:
+   - Định địa chỉ tương đối (Relative Addressing / PC-relative): Thanh ghi được tham chiếu ngầm định là con trỏ lệnh \(\mathrm{PC}\) (Program Counter):
+     \[
+     \mathrm{EA} = A + (\mathrm{PC})
+     \]
+     Thường dùng trong các lệnh nhảy ngắn (branches/jumps).
+   - Định địa chỉ thanh ghi cơ sở (Base-Register Addressing): Thanh ghi được tham chiếu là thanh ghi cơ sở lưu địa chỉ đầu đoạn.
+   - Định chỉ số (Indexing): Thanh ghi được tham chiếu là thanh ghi chỉ số (Index register).
+3. Do đó, PC-relative addressing là một dạng của Displacement addressing (phương án C).
+
+Kiểm tra:
+Đối chiếu cấu trúc phân loại trong Stallings Bảng 13.1 (Basic Addressing Modes): Hàng 'Displacement' bao gồm 'Relative, Base-register, Indexing'.
+
+Vì sao các phương án khác sai:
+- A (Immediate): Giá trị toán hạng nằm trực tiếp trong lệnh, không có địa chỉ bộ nhớ.
+- B (Indirect): Trường địa chỉ chứa địa chỉ của một ô nhớ khác chứa địa chỉ hiệu dụng.
+- D (Stack): Toán hạng được ngầm định ở đỉnh ngăn xếp (thanh ghi SP).
+
+Lưu ý/công thức cần nhớ:
+Displacement addressing gồm: PC-relative, Base-register, và Indexing.`,
+
+    "559": `Hướng giải:
+Chọn phát biểu phù hợp nhất mô tả đặc điểm vận hành của kiến trúc siêu đường ống chỉ lệnh (instruction super-pipeline).
+
+Các bước:
+1. Phân biệt Super-pipeline và Superscalar (William Stallings Chương 16 - Hình 16.1):
+   - Đường ống cơ bản (Base pipeline): Mỗi giai đoạn chiếm 1 chu kỳ xung nhịp cơ sở.
+   - Siêu đường ống (Super-pipeline): Chia nhỏ các giai đoạn đường ống cơ bản thành các phân đoạn nhỏ hơn (sub-stages), cho phép phát lệnh với chu kỳ xung nhịp nội bộ ngắn hơn (ví dụ: phát lệnh ở mỗi nửa chu kỳ xung nhịp). Các lệnh được gối đầu so le theo thời gian ở mức độ chia nhỏ, tức là thực thi gối đầu lệch pha nhau (non-fully overlapping at base cycle boundaries).
+   - Siêu phân vô hướng (Superscalar): Nhân bản nhiều đơn vị thực thi phần cứng song song, cho phép phát đồng thời nhiều lệnh hoàn chỉnh trong cùng một chu kỳ xung nhịp (fully overlapping).
+2. Trong ngân hàng câu hỏi kiến trúc máy tính, phát biểu đặc trưng cho super-pipeline là: 'It allows instructions to be executed in a non-fully overlapping manner' (Phương án A), nhằm phân biệt với tính chất song song hoàn toàn (fully overlapping/parallel) của superscalar.
+3. Đồng thời ghi nhận: Một số tài liệu trắc nghiệm mở rộng có thể nhắc đến phương án C ('in both fully overlapping and non-fully overlapping manners') khi xem xét super-pipeline kết hợp superscalar. Tuy nhiên phương án chuẩn tắc đơn kiến trúc là A.
+
+Kiểm tra:
+Đối chiếu sơ đồ thời gian Hình 16.1 (Comparison of Superscalar and Superpipeline Approaches): Các lệnh trong superpipeline được khởi động so le từng nửa chu kỳ, tạo nên sự gối đầu bán phần (non-fully overlapping in base time).
+
+Vì sao các phương án khác sai:
+- B (Consecutively manner only): Sai, đây là đặc tính của xử lý tuần tự không có đường ống.
+- D (Fully independent manner): Các giai đoạn trong một đường ống phụ thuộc chặt chẽ về dữ liệu và xung nhịp, không hoạt động độc lập hoàn toàn.
+
+Lưu ý/công thức cần nhớ:
+Super-pipeline: Tăng độ sâu đường ống, rút ngắn chu kỳ xung nhịp, gối đầu so le (non-fully overlapping).
+Superscalar: Nhân bản đường ống, phát nhiều lệnh cùng chu kỳ.`,
+
+    "560": `Hướng giải:
+Xác định chỉ số đo lường hiệu năng máy tính (performance metric) được định nghĩa là số chu kỳ xung nhịp trung bình cần thiết để thực thi một lệnh.
+
+Các bước:
+1. Các thông số hiệu năng vi xử lý cốt lõi:
+   - \(I_c\) (Instruction Count): Tổng số lệnh thực thi của một chương trình.
+   - \(f\) (Clock Frequency, đo bằng \(\mathrm{GHz}\) hoặc \(\mathrm{MHz}\)): Tần số xung nhịp của CPU.
+   - \(T\) (Clock Cycle Time): Chu kỳ xung nhịp, \(T = rac{1}{f}\).
+   - CPI (Cycles Per Instruction): Số chu kỳ xung nhịp trung bình để thực thi một chỉ lệnh:
+     \[
+     \mathrm{CPI} = rac{	ext{Tổng số chu kỳ xung nhịp}}{	ext{Tổng số chỉ lệnh}} = rac{	ext{Total Cycles}}{I_c}
+     \]
+2. Thời gian thực thi CPU được tính theo công thức kinh điển:
+   \[
+   T_{\mathrm{CPU}} = I_c 	imes \mathrm{CPI} 	imes T = rac{I_c 	imes \mathrm{CPI}}{f}
+   \]
+3. Khớp định nghĩa với câu hỏi \(\implies\) Chỉ số này là CPI (phương án C).
+
+Kiểm tra:
+Trong các bộ xử lý hiện đại:
+- Kiến trúc đơn giản cổ điển: \(\mathrm{CPI} > 1\).
+- Kiến trúc đường ống lý tưởng: \(\mathrm{CPI} = 1\).
+- Kiến trúc siêu phân vô hướng (Superscalar): \(\mathrm{CPI} < 1\) (thường đo bằng IPC = Instructions Per Cycle = \(rac{1}{\mathrm{CPI}}\)).
+
+Vì sao các phương án khác sai:
+- A (MIPS): Millions of Instructions Per Second, đo số triệu chỉ lệnh thực thi trong 1 giây (\(\mathrm{MIPS} = rac{f}{\mathrm{CPI} 	imes 10^6}\)).
+- B (GHz): Gigahertz, đơn vị đo tần số xung nhịp của bộ vi xử lý (tỷ chu kỳ/giây).
+- D (Throughput): Thông lượng, là số lượng công việc/tác vụ hoàn thành trong một đơn vị thời gian.
+
+Lưu ý/công thức cần nhớ:
+CPI = Cycles Per Instruction = Số chu kỳ trung bình cho mỗi lệnh.`,
+
+    "561": `Hướng giải:
+Xác định chức năng chính xác của Thanh ghi chỉ lệnh (Instruction Register - IR) trong bộ vi xử lý.
+
+Các bước:
+1. Trong chu trình thực thi lệnh của CPU (Instruction Cycle):
+   - Bước 1 (Fetch): CPU đọc lệnh từ bộ nhớ chính (tại địa chỉ do thanh ghi PC chỉ tới) thông qua MAR và MBR, rồi nạp mã lệnh này vào Thanh ghi chỉ lệnh (Instruction Register - IR).
+   - Bước 2 (Decode): Khối điều khiển (Control Unit) giải mã lệnh đang nằm trong IR để chuẩn bị phát các tín hiệu vi thao tác.
+   - Bước 3 (Execute): Thực thi các thao tác theo mã lệnh trong IR.
+2. Như vậy, trong suốt quá trình giải mã và thực thi, thanh ghi IR lưu trữ chỉ lệnh hiện đang được thực thi (Stores currently executing instruction - phương án B).
+
+Kiểm tra:
+Phân biệt rõ ràng giữa IR và PC:
+- PC (Program Counter): Lưu địa chỉ của lệnh tiếp theo cần tìm nạp.
+- IR (Instruction Register): Lưu mã nhị phân của lệnh hiện đang được thực thi.
+
+Vì sao các phương án khác sai:
+- A (Stores next instruction): Đây là chức năng của Program Counter (PC).
+- C (Stores memory address): Đây là chức năng của Memory Address Register (MAR).
+- D, E (Stores output / Store data): Đây là chức năng của Memory Buffer Register (MBR) hoặc thanh ghi tích lũy Accumulator (AC).
+
+Lưu ý/công thức cần nhớ:
+PC = Lưu địa chỉ lệnh tiếp theo.
+IR = Lưu lệnh hiện đang thực thi (Currently executing instruction).`,
+
+    "562": `Hướng giải:
+Giải thích mục đích chính của Giao thức duy trì tính nhất quán bộ đệm (Cache Coherence Protocol, ví dụ MESI) trong các hệ thống xử lý đa nhân (multicore systems).
+
+Các bước:
+1. Vấn đề mất tính nhất quán bộ đệm (Cache Incoherence):
+   - Trong hệ thống đa nhân, mỗi nhân có bộ đệm cục bộ riêng (private L1/L2 cache).
+   - Nếu Nhân 1 sửa đổi giá trị của một biến trong cache riêng của nó mà không thông báo, thì Nhân 2 khi đọc biến đó từ cache của chính nó sẽ đọc phải giá trị cũ (stale data).
+2. Mục đích của giao thức nhất quán bộ đệm (như MESI, MOESI):
+   - Theo dõi trạng thái của các dòng cache trên hệ thống bus (Snooping/Directory-based).
+   - Quản lý và đồng bộ hóa việc đọc/ghi dữ liệu giữa các bộ nhớ đệm riêng lẻ để mọi nhân xử lý đều nhìn thấy một hình ảnh bộ nhớ duy nhất, chính xác và nhất quán (consistent view of main memory).
+3. Do đó, phương án đúng là B.
+
+Kiểm tra:
+Khái niệm 'consistent view of memory' là định nghĩa học thuật chuẩn mực trong thiết kế bộ nhớ hệ thống đa xử lý đối xứng.
+
+Vì sao các phương án khác sai:
+- A: Tần số xung nhịp không liên quan đến tính nhất quán dữ liệu bộ nhớ; nhiều vi xử lý hiện đại điều chỉnh xung nhịp độc lập trên từng nhân (per-core DVFS).
+- C: Các nhân có bộ đệm L1 riêng biệt, không dùng chung 1 L1 cache.
+- D: Ép xung tự động và ngủ nhân là tính năng quản lý điện năng (như Intel Turbo Boost), không phải Cache Coherence.
+- E: Phân chia RAM thành các vùng độc lập thuộc về cơ chế phân phối bộ nhớ của HĐH hoặc NUMA, không phải mục đích của MESI.
+
+Lưu ý/công thức cần nhớ:
+Cache Coherence Protocol = Đảm bảo mọi nhân đều nhìn thấy dữ liệu bộ nhớ nhất quán (Consistent view of memory).`,
+
+    "563": `Hướng giải:
+Xác định cấu tạo gồm các nhóm đường truyền chức năng của một Bus hệ thống (System Bus).
+
+Các bước:
+1. Theo giáo trình William Stallings (Chương 3, Mục 3.3 - Bus Interconnection):
+   Về mặt vật lý, một bus hệ thống gồm từ 50 đến hàng trăm đường dây dẫn riêng biệt. Các đường dây này được phân chia thành đúng 3 nhóm chức năng cơ bản:
+   - Đường dữ liệu (Data lines / Data bus): Truyền tải dữ liệu thực tế giữa các mô-đun hệ thống. Số lượng đường xác định độ rộng bus dữ liệu (ví dụ: 32 bit, 64 bit).
+   - Đường địa chỉ (Address lines / Address bus): Chỉ định nguồn hoặc đích của dữ liệu trên bus dữ liệu. Số lượng đường xác định không gian địa chỉ tối đa của hệ thống (\(2^k\)).
+   - Đường điều khiển (Control lines / Control bus): Điều khiển việc truy cập và sử dụng các đường dữ liệu và địa chỉ (ví dụ: Memory Read, Memory Write, I/O Read, I/O Write, Bus Request, Bus Grant, Clock, Reset).
+2. Do đó, bus hệ thống bao gồm: Data lines + Address lines + Control lines (Phương án B).
+
+Kiểm tra:
+Sơ đồ cấu trúc Bus hệ thống chuẩn luôn minh họa 3 bó dây: Data bus, Address bus, và Control bus kết nối giữa CPU, Memory và I/O.
+
+Vì sao các phương án khác sai:
+- A (CPU + Memory): Là các khối phần cứng kết nối vào bus, không phải là cấu tạo của chính bus.
+- C (Registers + ALU): Là các thành phần nằm bên trong CPU.
+- D (Cache + RAM): Là các cấp bộ nhớ.
+
+Lưu ý/công thức cần nhớ:
+System Bus = Data lines + Address lines + Control lines.`,
+
+    "564": `Hướng giải:
+Chọn khẳng định đúng về máy tính IAS (máy tính của Viện Nghiên cứu Cao cấp Princeton) - cội nguồn của kiến trúc máy tính hiện đại.
+
+Các bước:
+1. Lịch sử máy tính IAS:
+   - Năm 1945, nhà toán học John von Neumann cùng các đồng nghiệp tại Viện Nghiên cứu Cao cấp Princeton (Institute for Advanced Study - IAS) đã công bố bản thiết kế kiến trúc máy tính mới dựa trên khái niệm chương trình được lưu trữ (Stored-program concept).
+   - Máy tính IAS được hoàn thành vào năm 1952 tại Viện IAS (Princeton, New Jersey).
+   - Nguyên lý Stored-program: Cả dữ liệu và các chỉ lệnh chương trình đều được mã hóa dưới dạng số nhị phân và lưu trữ chung trong cùng một bộ nhớ đọc/ghi (Main Memory). CPU thực hiện tuần tự việc tìm nạp lệnh từ bộ nhớ để thực thi.
+2. Như vậy, khẳng định chính xác là: Máy tính IAS được xây dựng dựa trên khái niệm chương trình lưu trữ do John von Neumann phát triển (Phương án B).
+
+Kiểm tra:
+Kiến trúc IAS chính là nguyên mẫu trực tiếp của cái gọi là 'Kiến trúc Von Neumann' mà đại đa số máy tính ngày nay vẫn đang tuân theo.
+
+Vì sao các phương án khác sai:
+- A: Máy tính IAS sử dụng đèn điện tử chân không (vacuum tubes, khoảng 2300 đèn), không phải transistor.
+- C: IAS được chế tạo tại Viện IAS ở Princeton (Mỹ), không phải Đại học Cambridge (ở Cambridge là máy EDSAC do Maurice Wilkes chế tạo).
+- D: Nguyên lý cốt lõi của IAS là lưu trữ cả lệnh và dữ liệu trong bộ nhớ chính; phát biểu 'chỉ lưu dữ liệu' là hoàn toàn sai.
+
+Lưu ý/công thức cần nhớ:
+IAS Computer = Stored-program concept (John von Neumann, Princeton).`,
+
+    "565": `Hướng giải:
+Phân loại các biểu thức đại số Boolean theo dạng chuẩn Tổng các tích (Sum of Products - SOP).
+
+Các bước:
+1. Định nghĩa dạng Tổng các tích (Sum of Products - SOP):
+   - Một biểu thức logic ở dạng SOP là biểu thức gồm phép \(+\) (phép HOẶC - OR logic) áp dụng giữa hai hay nhiều số hạng tích (AND terms).
+   - Mỗi số hạng tích là phép nhân logic (AND) của các biến (ở dạng nguyên bản hoặc dạng đảo). Một tích đơn biến/đơn số hạng cũng được xem là dạng tích suy biến của SOP.
+2. Kiểm tra từng biểu thức đã cho:
+   - (A) \(F = AB + BC\): Là phép OR của hai tích \(AB\) và \(BC\) \(\implies\) Đúng chuẩn dạng SOP.
+   - (B) \(F = A'B'C + AB'C' + ABC\): Là phép OR của ba tích \(\implies\) Đúng chuẩn dạng SOP (dạng chính tắc minterm).
+   - (C) \(F = AB\): Là một số hạng tích đơn lẻ, được công nhận là dạng SOP suy biến (1-term SOP) \(\implies\) Thuộc dạng SOP.
+   - (D) \(F = (A + B)(A + C)\): Là phép NHÂN (AND) của các tổng (OR terms) \(\implies\) Đây là dạng Tích các tổng (Product of Sums - POS), KHÔNG phải SOP.
+3. Như vậy, các biểu thức thuộc dạng SOP gồm: (A), (B), và (C).
+4. Ghép lại tương ứng với lựa chọn A (ABC).
+
+Kiểm tra:
+Dạng SOP có thể được triển khai trực tiếp bằng mạng cổng AND-OR hai tầng kinh điển trong mạch logic tổ hợp.
+
+Vì sao các phương án khác sai:
+- B, C, D đều chứa biểu thức (D), mà (D) rõ ràng là dạng POS (Product of Sums), không thể là SOP.
+
+Lưu ý/công thức cần nhớ:
+SOP (Sum of Products): Dạng \(AB + CD\) (Phép OR của các tích AND).
+POS (Product of Sums): Dạng \((A+B)(C+D)\) (Phép AND của các tổng OR).`,
+
+    "566": `Hướng giải:
+Xác định chỉ lệnh nào trong các phương án thuộc nhóm lệnh chuyển dữ liệu (Data Transfer Instructions).
+
+Các bước:
+1. Phân loại các thao tác lệnh máy trong tập lệnh CPU (Stallings Chương 12):
+   - Chuyển dữ liệu (Data Transfer): Di chuyển dữ liệu giữa các thanh ghi hoặc giữa bộ nhớ và thanh ghi. Các lệnh tiêu biểu: \`LOAD\` (nạp từ bộ nhớ vào thanh ghi), \`STORE\` (lưu từ thanh ghi vào bộ nhớ), \`MOV\` (sao chép giữa các thanh ghi).
+   - Số học (Arithmetic): Thực hiện phép tính số học trên dữ liệu. Tiêu biểu: \`ADD\`, \`SUB\`, \`MUL\`, \`DIV\`.
+   - Logic: Thực hiện phép toán Boolean hoặc dịch bit. Tiêu biểu: \`AND\`, \`OR\`, \`NOT\`, \`XOR\`, \`SHL\`, \`SHR\`.
+   - Điều khiển luồng / Chuyển quyền điều khiển (Control Transfer / Branching): Thay đổi con trỏ lệnh PC. Tiêu biểu: \`JMP\`, \`CALL\`, \`RET\`, \`BEQ\`, \`BNE\`.
+   - So sánh / Kiểm tra (Comparison / Test): Tiêu biểu: \`CMP\`, \`TEST\`.
+2. Trong các phương án đưa ra, \`LOAD\` là lệnh thực hiện chuyển dữ liệu từ bộ nhớ vào thanh ghi.
+3. Phương án đúng là B (LOAD).
+
+Kiểm tra:
+Lệnh \`LOAD R1, [Address]\` chuyển nguyên vẹn nội dung ô nhớ vào thanh ghi R1 mà không làm biến đổi giá trị dữ liệu.
+
+Vì sao các phương án khác sai:
+- A (\`ADD\`): Lệnh số học (Arithmetic instruction).
+- C (\`JMP\`): Lệnh chuyển quyền điều khiển / nhảy (Branch / Control transfer instruction).
+- D (\`CMP\`): Lệnh so sánh (thực hiện phép trừ ngầm để cập nhật cờ trạng thái).
+
+Lưu ý/công thức cần nhớ:
+Data transfer instructions: LOAD, STORE, MOVE.`,
+
+    "567": `Hướng giải:
+Xác định vai trò chính yếu (primary role) của Hệ điều hành (Operating System - OS) trong hệ thống máy tính.
+
+Các bước:
+1. Định nghĩa chuẩn về Hệ điều hành:
+   - Hệ điều hành là phần mềm hệ thống hoạt động như một lớp trung gian giữa người dùng / phần mềm ứng dụng và phần cứng máy tính.
+   - Hai chức năng cốt lõi nhất của hệ điều hành:
+     + Bộ quản lý tài nguyên (Resource Manager): Quản lý, điều phối và phân bổ hiệu quả, an toàn các tài nguyên phần cứng (CPU, bộ nhớ RAM, thiết bị I/O, dung lượng đĩa) và tài nguyên phần mềm (tập tin, tiến trình, luồng, bảo mật).
+     + Máy mở rộng / Giao diện trừu tượng (Extended Machine / Abstract Interface): Cung cấp môi trường thuận tiện để người dùng và các chương trình thực thi mà không cần bận tâm đến chi tiết phần cứng phức tạp.
+2. Đối chiếu với các phương án, phương án C ('Manage hardware and software resources') phản ánh chính xác vai trò nền tảng này.
+
+Kiểm tra:
+Mọi giáo trình tin học cơ sở và kiến trúc hệ thống đều định nghĩa OS là Resource Manager.
+
+Vì sao các phương án khác sai:
+- A (Compile programs): Biên dịch chương trình là nhiệm vụ của trình biên dịch (Compiler) - một phần mềm công cụ phát triển, không phải nhiệm vụ chính của OS.
+- B (Execute user applications only): OS không chỉ chạy ứng dụng người dùng mà còn chạy các tiến trình hệ thống, quản lý tài nguyên, bảo vệ an ninh và phục vụ phần cứng.
+- D (Design computer circuits): Thiết kế mạch là công việc của các kỹ sư phần cứng và phần mềm CAD/EDA, không liên quan đến chức năng của OS.
+
+Lưu ý/công thức cần nhớ:
+Operating System = Quản lý tài nguyên phần cứng và phần mềm (Resource Manager).`,
+
+    "568": `Hướng giải:
+Chỉ ra nhược điểm (disadvantage) đặc trưng của kiến trúc máy tính có tập lệnh thu giảm (Reduced Instruction Set Computer - RISC).
+
+Các bước:
+1. Triết lý thiết kế của RISC:
+   - Đơn giản hóa tập lệnh: Các lệnh có độ dài cố định, thực hiện trong 1 chu kỳ máy, chỉ dùng các lệnh đơn giản (Load/Store architecture).
+   - Phần cứng vi xử lý đơn giản hơn, tiết kiệm diện tích bán dẫn và năng lượng, dễ tối ưu hóa đường ống siêu sâu (deep pipelining) và xung nhịp cao.
+2. Nhược điểm tương ứng của RISC:
+   - Vì mỗi lệnh chỉ làm một thao tác rất đơn giản, một công việc phức tạp mà ở kiến trúc CISC (như x86) chỉ cần 1 lệnh thực hiện thì ở RISC phải cần từ 3 đến 5 lệnh ghép lại.
+   - Điều này dẫn đến hiện tượng mở rộng mã (code expansion) hay mật độ mã thấp (lower code density).
+   - Hậu quả: Kích thước tệp chương trình sau khi biên dịch của RISC lớn hơn đáng kể (Larger program size) và chiếm dụng nhiều băng thông bộ nhớ hơn để nạp lệnh.
+3. Do đó, phương án đúng là B (Larger program size).
+
+Kiểm tra:
+Để khắc phục nhược điểm này của RISC, các kiến trúc như ARM đã phát triển tập lệnh nén ARM Thumb (16-bit) để tăng mật độ mã.
+
+Vì sao các phương án khác sai:
+- A (Slow execution): Sai, RISC được thiết kế để thực thi nhanh hơn CISC nhờ tối ưu hóa chu kỳ xung nhịp và đường ống.
+- C (Complex hardware): Sai, phần cứng của RISC rất đơn giản; CISC mới có phần cứng phức tạp (Complex hardware).
+- D (No pipelining): Sai, RISC cực kỳ thuận lợi cho đường ống (pipelining) nhờ độ dài lệnh cố định và định dạng chuẩn hóa.
+
+Lưu ý/công thức cần nhớ:
+Ưu điểm RISC: Phần cứng đơn giản, thực thi nhanh, đường ống tối ưu.
+Nhược điểm RISC: Kích thước chương trình lớn hơn (Larger program size / Code expansion).`,
+
+    "569": `Hướng giải:
+Xác định chức năng và mục đích chính của cơ chế bộ nhớ ảo (Virtual Memory) trong hệ thống máy tính.
+
+Các bước:
+1. Bộ nhớ ảo (Virtual Memory) là một cơ chế phối hợp giữa phần cứng quản lý bộ nhớ (MMU) và hệ điều hành:
+   - Cho phép chương trình của người dùng sử dụng một không gian địa chỉ logic liên tục và rộng lớn (địa chỉ ảo - virtual address space).
+   - Tách rời hoàn toàn không gian địa chỉ logic của chương trình khỏi không gian địa chỉ vật lý của RAM.
+   - Lập trình viên và chương trình có thể đánh địa chỉ bộ nhớ theo quan điểm logic mà không cần bận tâm đến việc máy tính đang có bao nhiêu dung lượng RAM vật lý thực tế hoặc chương trình sẽ được đặt ở vị trí nào trong RAM.
+2. Trích dẫn nguyên văn định nghĩa từ William Stallings (Section 8.2):
+   'Virtual memory allows programs to address memory from a logical point of view, without regard to the amount of main memory physically available.'
+3. Do đó, phương án đúng là B.
+
+Kiểm tra:
+Nhờ bộ nhớ ảo, một chương trình đòi hỏi \(16\,\mathrm{GB}\) bộ nhớ vẫn có thể chạy bình thường trên một máy tính chỉ có \(8\,\mathrm{GB}\) RAM vật lý thông qua cơ chế phân trang và tráo đổi với đĩa cứng.
+
+Vì sao các phương án khác sai:
+- A: Bộ nhớ ảo không làm tăng bộ nhớ vật lý thực tế (physical memory) của hệ thống (dung lượng chip RAM thực tế vẫn giữ nguyên).
+- C: Bộ nhớ ảo không làm tăng tốc độ truy xuất, ngược lại khi có lỗi trang (Page Fault) cần đọc từ đĩa thì tốc độ còn chậm hơn truy cập RAM trực tiếp.
+- D: Lưu trữ vĩnh viễn là chức năng của hệ thống tập tin trên bộ nhớ phụ (Secondary Storage), không phải bộ nhớ ảo.
+
+Lưu ý/công thức cần nhớ:
+Bộ nhớ ảo: Cho phép định địa chỉ logic không phụ thuộc dung lượng RAM vật lý (Address logically without regard to physical memory).`,
+
+    "570": `Hướng giải:
+Rút gọn biểu thức đại số Boolean \(A + A \cdot B\) dựa trên các định lý và tiên đề đại số Boole.
+
+Các bước:
+1. Áp dụng tính chất phân phối của phép nhân đối với phép cộng trong đại số Boole:
+   \[
+   A + A \cdot B = A \cdot 1 + A \cdot B = A \cdot (1 + B)
+   \]
+2. Theo luật nuốt / định lý phần tử bù của phép toán logic OR:
+   Với mọi biến logic \(B\), ta luôn có:
+   \[
+   1 + B = 1
+   \]
+3. Thay lại vào biểu thức:
+   \[
+   A \cdot (1 + B) = A \cdot 1 = A
+   \]
+4. Đây chính là Định luật hấp thụ (Absorption Law) kinh điển trong đại số Boole:
+   \[
+   A + A \cdot B = A
+   \]
+5. Phương án đúng là B (\(A\)).
+
+Kiểm tra:
+Lập bảng chân trị (Truth Table) để kiểm tra với mọi trường hợp của \(A\) và \(B\):
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+A & B & A \cdot B & A + A \cdot B \
+\hline
+0 & 0 & 0 & 0 \
+0 & 1 & 0 & 0 \
+1 & 0 & 0 & 1 \
+1 & 1 & 1 & 1 \
+\hline
+\end{array}
+\]
+Cột kết quả \(A + A \cdot B\) giống hệt cột \(A\) trong mọi trường hợp.
+
+Vì sao các phương án khác sai:
+- A (\(A \cdot B\)): Sai, khi \(A = 1, B = 0\) thì \(A + AB = 1 
+e 0\).
+- C (\(B\)): Sai, khi \(A = 1, B = 0\) thì \(A + AB = 1 
+e 0\).
+- D (\(A + B\)): Sai, đây là kết quả của biểu thức \(A + A'B\), không phải \(A + AB\).
+
+Lưu ý/công thức cần nhớ:
+Định luật hấp thụ: \(A + AB = A\) và \(A(A + B) = A\).`
   };
 
   const specialDiagrams = {
