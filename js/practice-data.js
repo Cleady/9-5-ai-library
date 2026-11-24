@@ -372,72 +372,72 @@
       "subjectId": 4,
       "title": "Chương 1 – Mảng (Arrays, Lists, Slicing & Operations)",
       "order": 1,
-      "durationMin": 45,
+      "durationMin": 44,
       "difficulty": "Medium",
-      "questionCount": 30
+      "questionCount": 29
     },
     {
       "id": 302,
       "subjectId": 4,
       "title": "Chương 2 – Danh sách liên kết (Linked Lists)",
       "order": 2,
-      "durationMin": 65,
+      "durationMin": 60,
       "difficulty": "Medium",
-      "questionCount": 43
+      "questionCount": 40
     },
     {
       "id": 303,
       "subjectId": 4,
       "title": "Chương 3 – Ngăn xếp (Stacks)",
       "order": 3,
-      "durationMin": 41,
+      "durationMin": 44,
       "difficulty": "Medium",
-      "questionCount": 27
+      "questionCount": 29
     },
     {
       "id": 304,
       "subjectId": 4,
       "title": "Chương 4 – Hàng đợi (Queues)",
       "order": 4,
-      "durationMin": 29,
+      "durationMin": 27,
       "difficulty": "Medium",
-      "questionCount": 19
+      "questionCount": 18
     },
     {
       "id": 305,
       "subjectId": 4,
       "title": "Chương 5 – Bảng băm (Hash Tables)",
       "order": 5,
-      "durationMin": 90,
+      "durationMin": 87,
       "difficulty": "Medium",
-      "questionCount": 60
+      "questionCount": 58
     },
     {
       "id": 306,
       "subjectId": 4,
       "title": "Chương 6 – Cây tìm kiếm nhị phân và Đồ thị (Binary Search Tree & Graph)",
       "order": 6,
-      "durationMin": 194,
+      "durationMin": 191,
       "difficulty": "Medium",
-      "questionCount": 129
+      "questionCount": 127
     },
     {
       "id": 307,
       "subjectId": 4,
       "title": "Chương 7 – Thuật toán sắp xếp (Sorting Algorithms)",
       "order": 7,
-      "durationMin": 50,
+      "durationMin": 47,
       "difficulty": "Medium",
-      "questionCount": 33
+      "questionCount": 31
     },
     {
       "id": 308,
       "subjectId": 4,
       "title": "Chương 8 – Các giải thuật bổ trợ (Độ phức tạp, Đệ quy, Tìm kiếm, Huffman & Xử lý chuỗi)",
       "order": 8,
-      "durationMin": 129,
+      "durationMin": 126,
       "difficulty": "Medium",
-      "questionCount": 86
+      "questionCount": 84
     },
     {
       "id": 400,
@@ -14766,19 +14766,6 @@
       "explanation": "Phương thức '-'.join(['Hello', 'Python']) nối các chuỗi trong danh sách bằng dấu gạch nối, kết quả là 'Hello-Python'."
     },
     {
-      "id": 10020,
-      "quizId": 301,
-      "text": "What will be the output of the following code?\n\n```python\nlist = [1, 2, 3]\nlist.append([4, 5])\nprint(len(list))\n```",
-      "options": [
-        "5",
-        "4",
-        "3",
-        "2"
-      ],
-      "correctIndex": 1,
-      "explanation": "Lệnh list.append([4, 5]) thêm cả danh sách [4, 5] làm một phần tử đơn lẻ vào cuối [1, 2, 3], độ dài danh sách mới là 4."
-    },
-    {
       "id": 10021,
       "quizId": 301,
       "text": "What is the output of the following list operation?\n\n```python\nlist = [1, 3, 5, 2, 0, 7, 4]\nprint(list[:2])\n```",
@@ -14831,19 +14818,6 @@
       "explanation": "Phương thức append([4, 5]) chèn cả danh sách [4, 5] làm một phần tử duy nhất vào cuối my_list. Danh sách mới là [1, 2, 3, [4, 5]] có độ dài 4."
     },
     {
-      "id": 10026,
-      "quizId": 302,
-      "text": "What does the following code do?\n\n```python\ndef Operation(self, newdata):\n    NewNode = Node(newdata)\n    if self.head is None:\n        self.head = NewNode\n        return\n    laste = self.head\n    while(laste.next):\n        laste = laste.next\n    laste.next=NewNode\n```",
-      "options": [
-        "Insert a new node at the tail of the list",
-        "Remove the last node",
-        "Traverse the list",
-        "Insert a new node at the beginning of the list"
-      ],
-      "correctIndex": 0,
-      "explanation": "Đoạn mã duyệt đến cuối danh sách liên kết qua vòng lặp while laste.next rồi gán laste.next = NewNode, tức chèn nút mới vào cuối danh sách."
-    },
-    {
       "id": 10027,
       "quizId": 302,
       "text": "Which is the correct code to access data of the second node in a linked list?",
@@ -14881,19 +14855,6 @@
       ],
       "correctIndex": 0,
       "explanation": "Khởi đầu p trỏ nút 1. Vòng 1: p.next (2) và p.next.next (3) khác None \\(\\to\\) p nhảy 2 bước đến nút 3. Vòng 2: p.next (4) và p.next.next (5) khác None \\(\\to\\) p nhảy 2 bước đến nút 5. Đến nút 5 thì p.next là None nên vòng lặp dừng. Giá trị p.data tại thời điểm dừng bằng 5."
-    },
-    {
-      "id": 10030,
-      "quizId": 302,
-      "text": "You are given pointers to first node of a singly linked list, which of the following operations are dependent on the length of the linked list?",
-      "options": [
-        "Delete the first element",
-        "Insert a new element as a first element",
-        "Add a new element at the end of the list",
-        "None of these"
-      ],
-      "correctIndex": 2,
-      "explanation": "Trong danh sách liên kết đơn chỉ có con trỏ trỏ đến nút đầu tiên (head), để xóa nút cuối cùng (delete last node) ta phải duyệt qua toàn bộ \\(n\\) nút từ đầu đến nút áp chót (\\(O(n)\\) thao tác). Do đó thao tác này phụ thuộc trực tiếp vào độ dài của danh sách liên kết."
     },
     {
       "id": 10031,
@@ -15039,19 +15000,6 @@
       "explanation": "- **Hướng giải**:\r\n Nhắc lại định nghĩa cốt lõi của Danh sách liên kết vòng (Circular Linked List).\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Khác với danh sách liên kết tuyến tính thông thường nơi nút cuối cùng trỏ tới `NULL` / `None`.\r\n 2. Trong danh sách liên kết vòng, nút cuối cùng (last node / tail) có con trỏ `next` trỏ ngược trở lại nút đầu tiên của danh sách (The head node).\r\n 3. Nhờ đó, việc duyệt danh sách tạo thành một chu trình khép kín.\r\n\n- **Kiểm tra lại**:\r\n Khớp hoàn toàn với phương án B.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **A. NULL**: Đây là đặc điểm của danh sách liên kết đơn thông thường.\r\n - **C. The previous node**: Sai, liên kết ngược là con trỏ `prev` trong danh sách đôi.\r\n - **D. Itself**: Chỉ xảy ra khi danh sách vòng chỉ có duy nhất 1 nút.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Danh sách vòng: `tail.next == head`."
     },
     {
-      "id": 10042,
-      "quizId": 302,
-      "text": "What is the main advantage of a doubly linked list over a singly linked list?",
-      "options": [
-        "Easier insertion at the beginning of the list",
-        "Ability to traverse the list in both directions",
-        "Reduced memory usage",
-        "Faster access to elements by index"
-      ],
-      "correctIndex": 1,
-      "explanation": "Ưu điểm lớn nhất của danh sách liên kết đôi (Doubly Linked List) so với danh sách liên kết đơn là khả năng duyệt danh sách theo cả hai chiều (tiến và lùi) nhờ có hai con trỏ next và prev."
-    },
-    {
       "id": 10043,
       "quizId": 302,
       "text": "In a doubly linked list, what does the prev pointer of the head node point to?",
@@ -15105,19 +15053,6 @@
       "explanation": "Vòng lặp while printval.next is not None: dừng lại khi con trỏ tới nút cuối cùng (nút 5) mà không in giá trị của nút 5, do đó chỉ in ra các giá trị 1, 2, 3, 4."
     },
     {
-      "id": 10047,
-      "quizId": 302,
-      "text": "In Linked List implementation, a node carries information regarding:",
-      "options": [
-        "Data",
-        "Link",
-        "Data and Link",
-        "Node"
-      ],
-      "correctIndex": 2,
-      "explanation": "Một nút trong danh sách liên kết bao gồm hai thành phần cơ bản: phần lưu trữ dữ liệu (Data) và phần lưu địa chỉ liên kết tới nút tiếp theo (Link)."
-    },
-    {
       "id": 10048,
       "quizId": 302,
       "text": "How to remove an element x after element y of a non-empty singly linked list?",
@@ -15131,19 +15066,6 @@
       "explanation": "- **Hướng giải**:\r\n Xác định phép gán con trỏ để xóa nút \\(x\\) đứng ngay sau nút \\(y\\) trong danh sách liên kết đơn.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Ban đầu, chuỗi liên kết có thứ tự: \\(y \\rightarrow x \\rightarrow x.\\text{next}\\).\r\n 2. Để loại bỏ nút \\(x\\) ra khỏi chuỗi liên kết, ta cần nối tắt liên kết từ \\(y\\) bỏ qua \\(x\\) và trỏ thẳng tới nút đứng sau \\(x\\).\r\n 3. Nút đứng sau \\(x\\) là `x.next`.\r\n 4. Do đó, lệnh cập nhật là: `y.next = x.next`.\r\n 5. Sau lệnh này, \\(x\\) bị tách khỏi danh sách và có thể được giải phóng bộ nhớ (garbage collected).\r\n\n- **Kiểm tra lại**:\r\n Khớp hoàn toàn với phương án A.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **B. x.next = y.next**: Gán sai chiều, không làm thay đổi liên kết trong danh sách.\r\n - **C, D**: Sửa con trỏ của `head`, làm đứt gãy phần đầu danh sách.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Xóa nút sau `y`: `y.next = y.next.next` (hoặc `y.next = x.next` với `x = y.next`)."
     },
     {
-      "id": 10049,
-      "quizId": 302,
-      "text": "You are given a pointer to the first node of a singly linked list. Which of the following operations is dependent on the length of the linked list?",
-      "options": [
-        "Delete the first element",
-        "Insert a new element as a first element",
-        "Add a new element at the end of the list",
-        "None of these"
-      ],
-      "correctIndex": 2,
-      "explanation": "Thêm một phần tử vào cuối danh sách liên kết đơn (khi chỉ có con trỏ đầu) đòi hỏi phải duyệt qua toàn bộ danh sách, do đó thời gian phụ thuộc vào độ dài n."
-    },
-    {
       "id": 10050,
       "quizId": 302,
       "text": "What additional memory does a doubly linked list require per node compared to a singly linked list?",
@@ -15155,19 +15077,6 @@
       ],
       "correctIndex": 0,
       "explanation": "- **Hướng giải**:\r\n So sánh kích thước bộ nhớ của một nút trong Danh sách liên kết đôi (DLL) so với Danh sách liên kết đơn (SLL).\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Cấu trúc một nút trong Singly Linked List gồm:\r\n - 1 trường dữ liệu (`data`).\r\n - 1 con trỏ trỏ tới nút kế tiếp (`next`).\r\n 2. Cấu trúc một nút trong Doubly Linked List gồm:\r\n - 1 trường dữ liệu (`data`).\r\n - 1 con trỏ trỏ tới nút kế tiếp (`next`).\r\n - 1 con trỏ trỏ tới nút phía trước (`prev`).\r\n 3. So sánh phần bộ nhớ bổ sung (additional memory per node): DLL chỉ cần thêm duy nhất 1 con trỏ (`prev`).\r\n\n- **Kiểm tra lại**:\r\n Khớp hoàn toàn với phương án A.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **B. 2 pointers**: DLL có tổng cộng 2 con trỏ, nhưng phần bộ nhớ cần thêm (additional) so với SLL chỉ là 1 con trỏ.\r\n - **C. 3 pointers**: Sai.\r\n - **D. 0 pointer**: Sai, DLL chắc chắn tốn nhiều bộ nhớ hơn SLL.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Dung lượng thêm của DLL trên mỗi nút = 1 pointer (kích thước thường là 4 bytes trên kiến trúc 32-bit hoặc 8 bytes trên kiến trúc 64-bit)."
-    },
-    {
-      "id": 10052,
-      "quizId": 302,
-      "text": "In a circularly linked list with n nodes, how can you efficiently check if the list is circular when given access to the head node?",
-      "options": [
-        "Traverse the entire list and check if any node's next pointer points back to the head",
-        "Use two pointers, where one moves faster than the other, and check if they meet",
-        "Count the number of nodes in the list and compare it to a predefined value",
-        "Check the tail node directly to see if its next pointer points to the head"
-      ],
-      "correctIndex": 3,
-      "explanation": "Trong trường hợp danh sách vòng chuẩn, việc kiểm tra tính chất vòng có thể xác định trực tiếp bằng cách nhìn vào liên kết của nút cuối cùng (tail node) trỏ về head, hoặc qua việc duy trì con trỏ tail."
     },
     {
       "id": 10053,
@@ -15579,19 +15488,6 @@
       "explanation": "- **Hướng giải**:\r\n Xác định giao diện phương thức (API methods) của lớp `queue.Queue` trong thư viện chuẩn của Python.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Module `queue` trong thư viện chuẩn Python cung cấp lớp `Queue` đồng bộ hóa đa luồng với các phương thức chính:\r\n - `put(item)`: Thêm một phần tử vào hàng đợi (tương đương enqueue).\r\n - `get()`: Lấy và xóa một phần tử khỏi hàng đợi (tương đương dequeue).\r\n - `empty()`: Kiểm tra hàng đợi có rỗng không (trả về `True`/`False`).\r\n - `full()`: Kiểm tra hàng đợi có đầy không.\r\n - `qsize()`: Trả về số lượng phần tử.\r\n 2. Lớp `Queue` không có phương thức nào tên là `push()` (`push` là thuật ngữ quen thuộc trong C++ `std::queue` hoặc `std::stack`, nhưng Python dùng `put`).\r\n 3. Vì vậy, `push()` không thuộc module Queue trong Python.\r\n\n- **Kiểm tra lại**:\r\n Chạy thử trong Python: `hasattr(queue.Queue(), 'push') == False`.\r\n Khớp hoàn toàn với phương án C.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **A. put()**, **B. get()**, **D. empty()**: Đều là các phương thức cốt lõi chuẩn của `queue.Queue`.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Python `queue.Queue`: Dùng `put()` để thêm, `get()` để lấy, không có `push()`."
     },
     {
-      "id": 10085,
-      "quizId": 304,
-      "text": "If popleft() is used on an empty deque, what happens?",
-      "options": [
-        "Raises error",
-        "Appends None",
-        "Returns null",
-        "Removes nothing"
-      ],
-      "correctIndex": 0,
-      "explanation": "Khi gọi phương thức xóa phần tử bên trái trên một hàng đợi hai đầu (collections.deque) rỗng, Python phát sinh ngoại lệ IndexError."
-    },
-    {
       "id": 10086,
       "quizId": 304,
       "text": "What will be the output of the following code?\n\n```python\nfrom queue import Queue\nq = Queue(maxsize=3)\nq.put(10)\nq.put(20)\nq.put(30)\nprint(q.full())\nq.get()\nprint(q.full())\n```",
@@ -15603,19 +15499,6 @@
       ],
       "correctIndex": 2,
       "explanation": "- **Hướng giải**:\r\n Truy vết trạng thái đầy/chưa đầy (`full()`) của hàng đợi giới hạn dung lượng `queue.Queue(maxsize=3)` trong Python.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. `q = Queue(maxsize=3)`: Tạo hàng đợi có sức chứa tối đa là 3 phần tử.\r\n 2. Thêm liên tiếp 3 phần tử: `q.put(10)`, `q.put(20)`, `q.put(30)`.\r\n - Số lượng phần tử hiện tại là 3, bằng với `maxsize`.\r\n - `q.full()` trả về `True`.\r\n - Lệnh `print(q.full())` in ra dòng 1: `True`.\r\n 3. Lấy ra 1 phần tử: `q.get()` (lấy số 10 ra khỏi hàng đợi).\r\n - Số lượng phần tử hiện tại giảm xuống còn 2, nhỏ hơn `maxsize=3`.\r\n - `q.full()` trả về `False`.\r\n - Lệnh `print(q.full())` in ra dòng 2: `False`.\r\n 4. Kết quả xuất hiện trên màn hình là:\r\n `True`\r\n `False`\r\n\n- **Kiểm tra lại**:\r\n Chạy trực tiếp đoạn mã trên trong Python cho ra chính xác `True` rồi `False`.\r\n Khớp hoàn toàn với phương án C.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **A, B, D**: Sai trạng thái logic của phương thức `full()` trước và sau khi `get()`.\r\n\n- **Ghi nhớ / Công thức**:\r\n - `q.full()` trả về `True` khi số lượng phần tử \\(==\\) `maxsize`."
-    },
-    {
-      "id": 10087,
-      "quizId": 304,
-      "text": "What does the following function do when given an array of integers as input?\n\n```python\nfrom collections import deque\n\ndef fn(arr, k):\n    queue = deque(arr)\n    for _ in range(k):\n        queue.append(queue.popleft())\n    return list(queue)\n```\n\nIf the input is [10, 20, 30, 40, 50] and \\(k = 2\\), what will be the output?",
-      "options": [
-        "[40, 50, 10, 20, 30]",
-        "[30, 40, 50, 10, 20]",
-        "[20, 30, 40, 50, 10]",
-        "[50, 10, 20, 30, 40]"
-      ],
-      "correctIndex": 1,
-      "explanation": "Hàm thực hiện xoay trái mảng k lần (chuyển phần tử đầu xuống cuối). Sau lần 1: [20, 30, 40, 50, 10]. Sau lần 2: [30, 40, 50, 10, 20]."
     },
     {
       "id": 10088,
@@ -15943,19 +15826,6 @@
       "explanation": "Trong bảng băm địa chỉ mở, khi xóa một phần tử ta phải đánh dấu ô đó là 'Đã xóa' (Deleted marker) thay vì để trống để không ngắt chuỗi dò."
     },
     {
-      "id": 10113,
-      "quizId": 305,
-      "text": "A chained hash table has an array size of N (separate chaining for solving collision). What is the maximum number of elements that can be placed in the table?",
-      "options": [
-        "\\(N\\)",
-        "\\(N + 1\\)",
-        "\\(N - 1\\)",
-        "There is no limit"
-      ],
-      "correctIndex": 3,
-      "explanation": "Thuật toán sắp xếp nhanh (QuickSort) thường không ổn định (unstable) do các phép hoán đổi cách xa nhau qua pivot."
-    },
-    {
       "id": 10114,
       "quizId": 305,
       "text": "Given a hash table T with 10 slots that stores 5 elements, the load factor \\(\\alpha\\) for T is",
@@ -16060,32 +15930,6 @@
       "explanation": "Nhược điểm chính của phương pháp nối chuỗi (Chaining) là tiêu tốn thêm bộ nhớ cho các con trỏ liên kết trong danh sách và phân bổ bộ nhớ không liên tục."
     },
     {
-      "id": 10122,
-      "quizId": 305,
-      "text": "What is the load factor in the context of hash tables?",
-      "options": [
-        "The ratio of the number of elements to the total available slots.",
-        "The average number of probes required for each search.",
-        "The number of collisions that have occurred.",
-        "The number of slots available for new elements."
-      ],
-      "correctIndex": 0,
-      "explanation": "Hệ số tải (Load factor \\(\\alpha\\)) trong bảng băm là tỷ số giữa số lượng phần tử hiện có trong bảng và tổng số ô chứa có sẵn (\\(\\alpha = n/m\\))."
-    },
-    {
-      "id": 10123,
-      "quizId": 305,
-      "text": "Which collision resolution technique involves storing multiple elements at the same index in a hash table?",
-      "options": [
-        "Linear probing",
-        "Chaining",
-        "Quadratic probing",
-        "Double hashing"
-      ],
-      "correctIndex": 1,
-      "explanation": "Kỹ thuật nối chuỗi (Chaining) giải quyết đụng độ trong bảng băm bằng cách lưu trữ tất cả các phần tử có cùng chỉ số băm vào một danh sách liên kết tại ô đó."
-    },
-    {
       "id": 10124,
       "quizId": 305,
       "text": "What is the purpose of a hash function in hash tables?",
@@ -16151,19 +15995,6 @@
       ],
       "correctIndex": 3,
       "explanation": "Thuật toán sắp xếp theo cơ số (Radix Sort) là thuật toán sắp xếp không dựa trên so sánh (non-comparison based), phân chia các phần tử vào các xô dựa trên từng chữ số của chúng."
-    },
-    {
-      "id": 10129,
-      "quizId": 305,
-      "text": "Which of the following method is not a collision resolution strategy for open addressing in hash table?",
-      "options": [
-        "Linear probing",
-        "Quadratic probing",
-        "Double hashing",
-        "Chaining"
-      ],
-      "correctIndex": 3,
-      "explanation": "Chaining (nối chuỗi) là phương pháp giải quyết xung đột bằng cách sử dụng danh sách liên kết bên ngoài bảng băm (separate chaining), không thuộc nhóm phương pháp địa chỉ mở (open addressing)."
     },
     {
       "id": 10130,
@@ -16467,25 +16298,6 @@
       ],
       "correctIndex": 2,
       "explanation": "Thuật toán Merge Sort chia mảng thành hai nửa, đệ quy sắp xếp từng nửa rồi trộn lại với thời gian luôn là \\(O(n \\log n)\\) trong mọi trường hợp."
-    },
-    {
-      "id": 10154,
-      "quizId": 306,
-      "text": "Given a binary search tree as follows:\n\nWhat is the output of In-order traversal?",
-      "options": [
-        "10 20 30 40 50",
-        "50 40 20 30 10",
-        "40 20 50 10 30",
-        "40 20 50 30 10"
-      ],
-      "correctIndex": 2,
-      "explanation": "Thao tác append trên mảng động (Python list) có độ phức tạp thời gian trung bình (amortized time) là \\(O(1)\\).",
-      "diagrams": [
-        {
-          "src": "/assets/images/practice/csd203/csd203_c6_10154_fig.webp",
-          "alt": "Cây nhị phân gồm gốc 10, con trái 20 (có con trái 40, con phải 50), con phải 30."
-        }
-      ]
     },
     {
       "id": 10155,
@@ -16970,19 +16782,6 @@
       "explanation": "Trong ngăn xếp, thao tác lấy phần tử ra khỏi một ngăn xếp đang rỗng được gọi là hiện tượng tràn dưới (Underflow)."
     },
     {
-      "id": 10189,
-      "quizId": 306,
-      "text": "What is the output dictionary after processing the substring \"AB\" in the LZW compression process for the input string \"ABABAABA\"? Initial Dictionary: \"A\": 1, \"B\": 2.",
-      "options": [
-        "\"A\": 1, \"B\": 2, \"AB\": 3",
-        "\"A\": 1, \"B\": 2, \"AA\": 3",
-        "\"A\": 1, \"B\": 2, \"A\": 3",
-        "\"A\": 1, \"B\": 2, \"BA\": 3"
-      ],
-      "correctIndex": 3,
-      "explanation": "Trong danh sách liên kết đôi, mỗi nút có hai liên kết: trỏ đến nút kế tiếp (next) và trỏ đến nút phía trước (prev)."
-    },
-    {
       "id": 10190,
       "quizId": 306,
       "text": "What is a Singly Linked List?",
@@ -17026,32 +16825,6 @@
       ],
       "correctIndex": 0,
       "explanation": "- **Hướng giải**:\r\n Áp dụng định lý cơ bản về số cạnh của một cây (Tree) trong Lý thuyết Đồ thị.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Cây là một đồ thị liên thông không có chu trình (chu kỳ).\r\n 2. Trong bất kỳ cây có gốc (rooted tree) nào có \\(N\\) đỉnh:\r\n - Nút gốc không có cạnh đi vào từ phía trên (không có nút cha).\r\n - Mọi nút còn lại trong \\(N - 1\\) nút đều có đúng 1 cạnh nối duy nhất đi từ nút cha của nó.\r\n 3. Do đó, tổng số cạnh trong cây luôn luôn là \\(N - 1\\).\r\n 4. Tính chất này đúng với mọi cây nhị phân có \\(N\\) nút.\r\n\n- **Kiểm tra lại**:\r\n Ví dụ cây có 3 nút: số cạnh là \\(3 - 1 = 2\\). Khớp hoàn toàn với phương án A.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **B. N**: Một đồ thị liên thông có \\(N\\) đỉnh và \\(N\\) cạnh sẽ tạo thành đúng 1 chu trình (không còn là cây).\r\n - **C. N + 1**: Nhiều cạnh hơn cây, chắc chắn chứa chu trình.\r\n - **D. 2N**: Sai.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Với mọi cây có \\(N\\) nút: Số cạnh \\(|E| = N - 1\\)."
-    },
-    {
-      "id": 10194,
-      "quizId": 306,
-      "text": "In implementing a task scheduler where tasks are processed by priority, which of the following structures is suitable?",
-      "options": [
-        "Tree",
-        "Heap",
-        "Stack",
-        "Queue"
-      ],
-      "correctIndex": 1,
-      "explanation": "Cấu trúc dữ liệu Heap (đặc biệt là Priority Queue được cài đặt bằng Heap) rất phù hợp cho các bài toán lập lịch tác vụ theo độ ưu tiên."
-    },
-    {
-      "id": 10195,
-      "quizId": 306,
-      "text": "Given the following pseudo code for a binary tree structure, what is the output of the inorder traversal?\n\n```python\nroot = TreeNode('R')\nroot.left = nodeA\nroot.right = nodeB\nnodeA.left = nodeC\nnodeA.right = nodeD\nnodeB.left = nodeE\nnodeB.right = nodeF\nnodeF.left = nodeG\n```",
-      "options": [
-        "CADREBGF",
-        "CDABEGFR",
-        "CADREGFB",
-        "GFEBRDAC"
-      ],
-      "correctIndex": 0,
-      "explanation": "Duyệt trung thứ tự (Inorder: Trái → Gốc → Phải) cho cây trên sẽ đi qua các nút theo thứ tự: C, A, D, R, E, B, G, F."
     },
     {
       "id": 10196,
@@ -17376,19 +17149,6 @@
       ]
     },
     {
-      "id": 10218,
-      "quizId": 306,
-      "text": "The number of elements in the weighted matrix of a graph having 5 vertices is?",
-      "options": [
-        "5",
-        "16",
-        "25",
-        "36"
-      ],
-      "correctIndex": 2,
-      "explanation": ""
-    },
-    {
       "id": 10220,
       "quizId": 306,
       "text": "Given a binary search tree as follows:\n\nWhat would be the output of Pre-order traversal?",
@@ -17643,19 +17403,6 @@
       ]
     },
     {
-      "id": 10234,
-      "quizId": 306,
-      "text": "What does an adjacency list represent in a graph data structure?",
-      "options": [
-        "It represents the vertices of the graph.",
-        "It represents the edges of the graph.",
-        "It stores the adjacent vertices for each vertex.",
-        "It stores the weights of the edges in the graph."
-      ],
-      "correctIndex": 2,
-      "explanation": "Danh sách kề (Adjacency List) biểu diễn đồ thị bằng cách lưu trữ danh sách các đỉnh kề (adjacent vertices) cho mỗi đỉnh trong đồ thị."
-    },
-    {
       "id": 10235,
       "quizId": 306,
       "text": "What is the minimum spanning tree (MST)?",
@@ -17755,32 +17502,6 @@
       "explanation": "- **Hướng giải**:\r\n Áp dụng công thức tổ hợp đếm số lượng đồ thị vô hướng có thể tạo thành từ tập \\(n\\) đỉnh phân biệt.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Cho tập đỉnh gồm \\(n\\) đỉnh phân biệt \\(V = \\{V_1, V_2, \\dots, V_n\\}\\).\r\n 2. Một cạnh vô hướng là một cặp gồm 2 đỉnh phân biệt không kể thứ tự. Tổng số cạnh tối đa có thể có giữa \\(n\\) đỉnh là tổ hợp chập 2 của \\(n\\):\r\n \\(M = \\binom{n}{2} = \\frac{n(n - 1)}{2}\\)\r\n 3. Với mỗi cạnh tiềm năng trong số \\(M\\) cạnh này, ta có đúng 2 khả năng độc lập: cạnh đó có tồn tại trong đồ thị hoặc không tồn tại (có hoặc không).\r\n 4. Theo quy tắc nhân của giải tích tổ hợp, tổng số đồ thị vô hướng khác nhau có thể tạo thành là:\r\n \\(2^M = 2^{\\frac{n(n - 1)}{2}}\\)\r\n\n- **Kiểm tra lại**:\r\n - Ví dụ với \\(n = 3\\): \\(M = 3 \\times 2 / 2 = 3\\). Số đồ thị là \\(2^3 = 8\\).\r\n - Khớp với đáp án D: `2^(n(n-1)/2)`.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **A. n(n-1)/2**: Đây là số cạnh tối đa của đồ thị đầy đủ \\(K_n\\), không phải số lượng đồ thị.\r\n - **B. 2^n**: Số tập con của tập đỉnh.\r\n - **C. n!**: Số hoán vị của \\(n\\) đỉnh.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Số đồ thị vô hướng từ \\(n\\) đỉnh: \\(2^{\\binom{n}{2}} = 2^{n(n - 1)/2}\\).\r\n - Số đồ thị có hướng từ \\(n\\) đỉnh: \\(2^{n(n - 1)}\\)."
     },
     {
-      "id": 10243,
-      "quizId": 306,
-      "text": "A graph in which exists a path between any two nodes is called:",
-      "options": [
-        "Complete graph",
-        "Connected graph",
-        "Digraph",
-        "In-directed graph"
-      ],
-      "correctIndex": 1,
-      "explanation": "Đồ thị liên thông (connected graph) là đồ thị mà giữa bất kỳ hai đỉnh nào cũng tồn tại ít nhất một đường đi nối liền chúng."
-    },
-    {
-      "id": 10244,
-      "quizId": 306,
-      "text": "The data structure required for Breadth First Traversal on a graph is:",
-      "options": [
-        "Stack",
-        "Queue",
-        "Array",
-        "Linked list"
-      ],
-      "correctIndex": 1,
-      "explanation": "Thuật toán duyệt theo chiều rộng (Breadth First Search - BFS) trên đồ thị sử dụng cấu trúc dữ liệu hàng đợi (queue) để quản lý thứ tự thăm các đỉnh."
-    },
-    {
       "id": 10245,
       "quizId": 306,
       "text": "Which algorithm is used in route finding on maps?",
@@ -17818,19 +17539,6 @@
       ],
       "correctIndex": 1,
       "explanation": "- **Hướng giải**:\r\n Đọc hiểu mã giả giải thuật duyệt đồ thị và phân biệt giữa DFS (duyệt theo chiều sâu) và BFS (duyệt theo chiều rộng).\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Đoạn mã giả xét đỉnh \\(u\\). Với mỗi cạnh đi ra \\(e = (u, v)\\), nếu đỉnh kề \\(v\\) chưa thăm, nó đánh dấu \\(v\\) và ngay lập tức gọi đệ quy `Traversal(G, v)`.\r\n 2. Việc gọi đệ quy đi sâu vào đỉnh con trước khi xét tiếp các đỉnh kề khác của \\(u\\) chính là cơ chế duyệt theo chiều sâu (Depth-First Search - DFS).\r\n 3. DFS khám phá sâu nhất có thể dọc theo mỗi nhánh trước khi quay lui (backtracking).\r\n\n- **Kiểm tra lại**:\r\n Khớp hoàn toàn với phương án B.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **A. BFS**: Sử dụng hàng đợi (Queue) duyệt theo từng mức (level by level), không dùng đệ quy trực tiếp như trên.\r\n - **C. Shortest path**: Thuật toán tìm đường đi ngắn nhất (Dijkstra/BFS) cần ghi nhận khoảng cách, không phải hàm duyệt DFS thuần túy.\r\n - **D. Detect cycles**: Mặc dù DFS có thể mở rộng để phát hiện chu trình, mục tiêu của hàm này như mô tả ở Output là duyệt các đỉnh tới được từ \\(u\\).\r\n\n- **Ghi nhớ / Công thức**:\r\n - DFS cài đặt tự nhiên bằng Đệ quy hoặc Ngăn xếp (Stack).\r\n - BFS cài đặt bằng Hàng đợi (Queue)."
-    },
-    {
-      "id": 10248,
-      "quizId": 306,
-      "text": "Given a set V = V1, V2, ..., Vn of n vertices, how many undirected graphs (not necessarily connected) can be constructed out of V?",
-      "options": [
-        "\\(\\frac{n(n-1)}{2}\\)",
-        "\\(2^n\\)",
-        "n!",
-        "\\(2^{\\frac{n(n-1)}{2}}\\)"
-      ],
-      "correctIndex": 3,
-      "explanation": "Một đồ thị vô hướng với n đỉnh có tối đa \\(\\frac{n(n-1)}{2}\\) cạnh có thể xảy ra. Mỗi cạnh có 2 trạng thái (tồn tại hoặc không), nên tổng số đồ thị có thể tạo ra là \\(2^{\\frac{n(n-1)}{2}}\\)."
     },
     {
       "id": 10250,
@@ -18103,32 +17811,6 @@
       "explanation": "- **Hướng giải**:\r\n Mô phỏng thuật toán phân hoạch (Partitioning) trong Quick Sort theo giáo trình CSD203 với chốt `pivot = 4` trên mảng ban đầu `[6, 7, 4, 1, 2, 9]`.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Mảng ban đầu: `[6, 7, 4, 1, 2, 9]`. Phần tử chốt là `pivot = 4` (nằm ở chỉ số 2).\r\n 2. Trong thuật toán phân hoạch 2 con trỏ hai đầu (con trỏ `left` đi từ đầu mảng tìm phần tử \\(\\ge 4\\), con trỏ `right` đi từ cuối mảng tìm phần tử \\(\\le 4\\)):\r\n - Con trỏ `left` dừng tại phần tử đầu tiên `6` (vì \\(6 > 4\\)).\r\n - Con trỏ `right` đi từ cuối lùi lại: bỏ qua 9 (vì \\(9 > 4\\)), dừng tại `2` (vì \\(2 < 4\\)).\r\n - Đổi chỗ 6 và 2: Mảng trở thành `[2, 7, 4, 1, 6, 9]`.\r\n - Con trỏ `left` tiếp tục tăng, dừng tại `7` (vì \\(7 > 4\\)).\r\n - Con trỏ `right` tiếp tục lùi, dừng tại `1` (vì \\(1 < 4\\)).\r\n - Đổi chỗ 7 và 1: Mảng trở thành `[2, 1, 4, 7, 6, 9]`.\r\n - Hai con trỏ gặp nhau tại vị trí của pivot `4`.\r\n 3. Sau pha phân hoạch đầu tiên, dãy số có dạng: `2 1 4 7 6 9` (tất cả các số bên trái 4 đều \\(\\le 4\\), các số bên phải 4 đều \\(\\ge 4\\)).\r\n\n- **Kiểm tra lại**:\r\n Dãy thu được là `2 1 4 7 6 9` khớp chính xác với phương án B.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **A**: Chưa phân hoạch.\r\n - **C**: `1 2 4 7 6 9` đã sắp xếp luôn nửa trái, không khớp với bước hoán đổi trực tiếp của thuật toán phân hoạch.\r\n - **D**: Đây là mảng đã sắp xếp hoàn chỉnh."
     },
     {
-      "id": 10270,
-      "quizId": 307,
-      "text": "What is the worst-case time complexity of QuickSort?",
-      "options": [
-        "\\(O(n^2)\\)",
-        "\\(O(n \\log n)\\)",
-        "\\(O(n)\\)",
-        "\\(O(2^n)\\)"
-      ],
-      "correctIndex": 0,
-      "explanation": "Trường hợp xấu nhất của QuickSort xảy ra khi pivot chọn luôn là phần tử nhỏ nhất hoặc lớn nhất, dẫn đến độ phức tạp thời gian là \\(O(n^2)\\)."
-    },
-    {
-      "id": 10271,
-      "quizId": 307,
-      "text": "Which is sorting algorithms that maintain two sub-lists, one sorted and one to be sorted?",
-      "options": [
-        "Selection Sort",
-        "Merge Sort",
-        "Quick Sort",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "explanation": "Thuật toán sắp xếp chọn (Selection Sort) chia danh sách thành hai phần: danh sách con đã sắp xếp và danh sách con chưa sắp xếp."
-    },
-    {
       "id": 10272,
       "quizId": 307,
       "text": "A sorting algorithm that uses the divide and conquer technique is?",
@@ -18153,19 +17835,6 @@
       ],
       "correctIndex": 3,
       "explanation": "Trong thuật toán sắp xếp nhanh (Quick Sort), các phần tử trong mảng được so sánh và phân hoạch dựa trên một giá trị phần tử chốt (pivot value)."
-    },
-    {
-      "id": 10274,
-      "quizId": 307,
-      "text": "Which sorting algorithm use the divide-and-conquer approach?",
-      "options": [
-        "Quick Sort",
-        "Insertion Sort",
-        "Bubble Sort",
-        "Selection Sort"
-      ],
-      "correctIndex": 0,
-      "explanation": "Thuật toán Quick Sort là thuật toán sắp xếp kinh điển áp dụng phương pháp chia để trị (Divide-and-Conquer)."
     },
     {
       "id": 10275,
@@ -18298,19 +17967,6 @@
       "explanation": "Trong Python 3, hàm sorted() dùng tham số key= để nhận một hàm định nghĩa quy tắc sắp xếp tùy chỉnh. Tham số cmp= đã bị loại bỏ từ Python 3."
     },
     {
-      "id": 10285,
-      "quizId": 307,
-      "text": "The number of swappings needed to sort the numbers 8, 22, 7, 9, 31 in ascending order, using bubble sort is _____",
-      "options": [
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
-      "correctIndex": 1,
-      "explanation": "Mảng ban đầu [8, 22, 7, 9, 31]. Lượt 1: đổi 22 và 7 → [8, 7, 22, 9, 31]; đổi 22 và 9 → [8, 7, 9, 22, 31] (2 lần đổi). Lượt 2: đổi 8 và 7 → [7, 8, 9, 22, 31] (lần thứ 3). Mảng đã sắp xếp xong, tổng số lần hoán đổi là 3."
-    },
-    {
       "id": 10286,
       "quizId": 308,
       "text": "Given a string S = \"ABCDEFABCD\" and a pattern P = \"BC\". What is the return value when applying KMP algorithm? (the string is indexed from 0)",
@@ -18428,19 +18084,6 @@
       "explanation": "Độ phức tạp thời gian của thuật toán tìm kiếm nhị phân trên mảng đã sắp xếp là \\(O(\\log n)\\)."
     },
     {
-      "id": 10295,
-      "quizId": 308,
-      "text": "Which search algorithm would be best to use with ordered data?",
-      "options": [
-        "A binary search",
-        "Neither binary search nor a linear search",
-        "Either binary search or a linear search",
-        "A linear search"
-      ],
-      "correctIndex": 0,
-      "explanation": "Trong cấu trúc dữ liệu Heap nhị phân, mỗi nút cha luôn thỏa mãn điều kiện lớn hơn hoặc bằng các con (Max-Heap) hoặc nhỏ hơn hoặc bằng các con (Min-Heap)."
-    },
-    {
       "id": 10296,
       "quizId": 308,
       "text": "Given a list of 64 elements, how many elements will be checked to look for a value that is larger than the largest value in the list using binary search?",
@@ -18530,19 +18173,6 @@
       ],
       "correctIndex": 0,
       "explanation": "Ma trận kề của đồ thị vô hướng \\(n\\) đỉnh luôn là ma trận đối xứng qua đường chéo chính với kích thước \\(n \\times n\\)."
-    },
-    {
-      "id": 10303,
-      "quizId": 308,
-      "text": "What is disadvantage of Recursion?",
-      "options": [
-        "Recursive calls are expensive (inefficient) as they take up a lot of memory and time",
-        "Sequence generation is more difficult with recursion than using some nested iteration.",
-        "A complex task can not be broken down into simpler sub-problems using recursion.",
-        "None of these"
-      ],
-      "correctIndex": 0,
-      "explanation": "Thuật toán Prim bắt đầu từ một đỉnh tùy ý và mở rộng dần cây khung bằng cách chọn cạnh có trọng số nhỏ nhất nối cây với một đỉnh chưa thuộc cây."
     },
     {
       "id": 10304,
@@ -18660,19 +18290,6 @@
       ],
       "correctIndex": 0,
       "explanation": "- **Hướng giải**:\r\n Thiết lập phương trình đệ quy và tính độ phức tạp thời gian của thuật toán tìm kiếm nhị phân (Binary Search).\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Thuật toán tìm kiếm nhị phân chia đôi không gian tìm kiếm sau mỗi phép so sánh với phần tử ở giữa.\r\n 2. Phương trình đệ quy biểu diễn thời gian thực thi:\r\n \\(T(n) = T\\left(\\frac{n}{2}\\right) + O(1)\\)\r\n 3. Áp dụng định lý thợ (Master Theorem) hoặc khai triển lặp:\r\n \\(T(n) = O(1) + O(1) + \\dots + O(1) = O(\\log_2 n)\\)\r\n 4. Do đó, độ phức tạp thời gian trường hợp xấu nhất là \\(O(\\log n)\\).\r\n\n- **Kiểm tra lại**:\r\n Độ phức tạp của Binary Search luôn là \\(O(\\log n)\\).\r\n\n- **Vì sao các phương án khác sai**:\r\n - **B. \\(O(n)\\)**: Là độ phức tạp của Linear Search.\r\n - **C. \\(O(n \\log n)\\)**: Là độ phức tạp của Merge Sort hoặc Quick Sort.\r\n - **D. \\(O(n^2)\\)**: Là độ phức tạp của Bubble Sort, Selection Sort."
-    },
-    {
-      "id": 10314,
-      "quizId": 308,
-      "text": "The average number of key comparisons done in a successful linear search in an array of length n is",
-      "options": [
-        "\\(n\\)",
-        "\\(n/2\\)",
-        "\\(n * n\\)",
-        "\\((n + 1)/2\\)"
-      ],
-      "correctIndex": 3,
-      "explanation": "Cây nhị phân có chiều cao \\(h\\) có số nút tối đa là \\(2^{h+1} - 1\\) khi cây là cây nhị phân hoàn hảo (Perfect binary tree)."
     },
     {
       "id": 10315,
@@ -18831,19 +18448,6 @@
       "explanation": "Biểu diễn đồ thị bằng ma trận kề tốn bộ nhớ \\(O(V^2)\\), phù hợp và hiệu quả khi đồ thị là đồ thị dày đặc (Dense graph)."
     },
     {
-      "id": 10328,
-      "quizId": 308,
-      "text": "What will be the output of the following code?\n\n```python\ndef func(n):\n    if (n > 0):\n        func(int(n/2))\n        print(n%2)\n\nfunc(11)\n```",
-      "options": [
-        "11",
-        "1011",
-        "1101",
-        "0"
-      ],
-      "correctIndex": 1,
-      "explanation": ""
-    },
-    {
       "id": 10329,
       "quizId": 308,
       "text": "What is the time complexity to insert a new node at the end of a singly linked list if the tail pointer is not maintained?",
@@ -18948,19 +18552,6 @@
       "explanation": "Tìm kiếm tuyến tính giá trị 9 (không tồn tại) trong mảng 5 phần tử [6, 1, 5, 3, 7] phải so sánh lần lượt với tất cả 5 phần tử trong mảng."
     },
     {
-      "id": 10338,
-      "quizId": 308,
-      "text": "What will be the output of the following code?\n\n```python\ndef func(n):\n    if (n > 0):\n        print(n%2)\n        func(int(n/2))\n\nfunc(11)\n```",
-      "options": [
-        "11",
-        "1011",
-        "1101",
-        "0"
-      ],
-      "correctIndex": 2,
-      "explanation": "Hàm func(11) in phần dư nhị phân: \\(11\\%2=1, 5\\%2=1, 2\\%2=0, 1\\%2=1\\). Kết quả in ra theo thứ tự gọi là 1101."
-    },
-    {
       "id": 10339,
       "quizId": 308,
       "text": "Given a string S = \"ABCDEFABCD\" and a pattern P = \"CD\". What is KMP algorithm returns? (the string is indexed from 0)",
@@ -19024,19 +18615,6 @@
       ],
       "correctIndex": 0,
       "explanation": "Trong thuật toán đệ quy, câu lệnh kiểm tra điều kiện dừng như if (n == 0): được gọi là trường hợp cơ sở (Base case), ngăn chặn đệ quy vô hạn."
-    },
-    {
-      "id": 10344,
-      "quizId": 308,
-      "text": "What is the time complexity of searching for an element in a linked list with 'n' elements in the worst case?",
-      "options": [
-        "\\(O(n)\\)",
-        "\\(O(\\log n)\\)",
-        "\\(O(1)\\)",
-        "\\(O(n^2)\\)"
-      ],
-      "correctIndex": 0,
-      "explanation": "Trong danh sách liên kết có \\(n\\) phần tử, trường hợp xấu nhất phần tử cần tìm nằm ở cuối danh sách hoặc không tồn tại, thuật toán phải duyệt qua toàn bộ \\(n\\) nút, có độ phức tạp là \\(O(n)\\)."
     },
     {
       "id": 10345,
@@ -19271,19 +18849,6 @@
       ],
       "correctIndex": 2,
       "explanation": "- **Hướng giải**:\r\n Phân tích độ phức tạp thời gian của các thao tác cơ bản trên mảng tĩnh / mảng động.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Mảng lưu trữ các phần tử tại các ô nhớ liên tiếp nhau.\r\n 2. Thao tác truy xuất phần tử theo chỉ số (Indexing an element, e.g. `arr[i]`):\r\n - Địa chỉ ô nhớ được tính trực tiếp qua công thức: \\(\\text{Address} = \\text{Base} + i \\times \\text{Size}\\).\r\n - Phép tính số học này mất thời gian hằng số \\(O(1)\\).\r\n\n- **Kiểm tra lại**:\r\n Khớp hoàn toàn với phương án C.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **A. Inserting at the front**: Phải dời tất cả \\(n\\) phần tử sang phải 1 vị trí, mất \\(O(n)\\).\r\n - **B. Removing an element**: Phải dời các phần tử phía sau sang trái để lấp chỗ trống, mất \\(O(n)\\).\r\n - **D. Growing the array**: Phải cấp phát vùng nhớ mới lớn hơn và sao chép \\(n\\) phần tử sang vùng nhớ mới, mất \\(O(n)\\).\r\n\n- **Ghi nhớ / Công thức**:\r\n - Truy cập mảng theo index: \\(O(1)\\).\r\n - Chèn/xóa ở đầu hoặc giữa mảng: \\(O(n)\\)."
-    },
-    {
-      "id": 10365,
-      "quizId": 308,
-      "text": "Given the following code, the recursion ends when the number reduces to 1. This is called?\n\n```python\ndef f(n):\n    if n == 1:\n        return 1\n    return n * f(n - 1)\n```",
-      "options": [
-        "The base case",
-        "The conductive case",
-        "Function call",
-        "Nothing"
-      ],
-      "correctIndex": 0,
-      "explanation": "Điều kiện dừng của hàm đệ quy để ngăn chặn việc gọi vô hạn được gọi là trường hợp cơ sở (base case)."
     },
     {
       "id": 10366,
@@ -20347,6 +19912,299 @@
       ],
       "correctIndex": 0,
       "explanation": "- **Hướng giải**:\r\n Xác định hành vi ném lỗi ngoại lệ khi gọi phương thức lấy phần tử từ một hàng đợi hai đầu (`collections.deque`) đang rỗng trong Python.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Trong Python, cấu trúc dữ liệu `collections.deque` định nghĩa phương thức `popleft()` để lấy phần tử bên trái.\r\n 2. Khi `deque` không chứa phần tử nào (empty deque), việc gọi `popleft()` không thể trả về giá trị hợp lệ.\r\n 3. Trình thông dịch Python sẽ lập tức kích hoạt và ném ra một ngoại lệ lỗi: `IndexError: pop from an empty deque` (Raises error).\r\n\n- **Kiểm tra lại**:\r\n Thực thi trong Python: `from collections import deque; deque().popleft()` \\(\\rightarrow\\) ném `IndexError`.\r\n Khớp hoàn toàn với phương án A.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **B. Appends None**: Không có cơ chế tự động thêm `None` khi pop.\r\n - **C. Returns null**: Python không trả về `None`/`null` mà chủ động ném ngoại lệ.\r\n - **D. Removes nothing**: Không thể bỏ qua lệnh khi pop rỗng.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Gọi `pop()` hoặc `popleft()` trên `list`/`deque` rỗng luôn ném ngoại lệ `IndexError`."
+    },
+    {
+      "id": 10449,
+      "quizId": 306,
+      "text": "What is the purpose of the method T.replace(p, e) in a linked binary tree?",
+      "options": [
+        "Replace the element stored at position p with element e, and return the previously stored element.",
+        "Replace the element stored at position p with element e, and return the p position.",
+        "Replace the element stored at position p with element e, and return None.",
+        "Replace the element stored at position p with element e, and return the currently stored element.",
+        "None of the others"
+      ],
+      "correctIndex": 0,
+      "explanation": "- **Hướng giải**:\nNhớ lại quy chuẩn của các phương thức cập nhật trong Tree ADT theo giáo trình Goodrich, Tamassia.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Phương thức replace(p, e) nhận vào một vị trí (Position) \\(p\\) và một phần tử mới \\(e\\).\n2. Nó ghi nhận giá trị cũ: old = p.element().\n3. Gán giá trị mới: nút tại \\(p\\) nhận phần tử \\(e\\).\n4. Trả về giá trị cũ old để người gọi có thể lưu lại hoặc giải phóng nếu cần.\n\n- **Kiểm tra lại**:\nĐặc tả phương thức trong sách giáo trình:\nT.replace(p, e): Replace the element stored at position p with element e, and return the previously stored element.\n\n- **Vì sao các phương án khác sai**:\n- Phương án B: Không trả về Position \\(p\\).\n- Phương án C: Không trả về None.\n- Phương án D: Trả về phần tử cũ trước đó chứ không phải phần tử vừa mới gán.\n- Phương án E: Sai vì phương án A là đúng chuẩn.\n\n- **Ghi nhớ / Công thức**:\nTrong cấu trúc dữ liệu dựa trên vị trí (Positional Tree ADT), các phương thức chỉnh sửa giá trị nút (replace) luôn trả về phần tử cũ đã bị thay thế."
+    },
+    {
+      "id": 10450,
+      "quizId": 306,
+      "text": "What is a binary tree?",
+      "options": [
+        "A tree data structure where each node can have up to three children",
+        "A tree data structure where each node can have only two children",
+        "A tree data structure where each node has exactly one child",
+        "A tree data structure where nodes are arranged in a circular manner"
+      ],
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**:\nDựa vào định nghĩa toán học và cấu trúc dữ liệu của cây nhị phân (Binary Tree).\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Trong lý thuyết cây, tiền tố binary (nhị phân) biểu thị bậc tối đa bằng 2.\n2. Mỗi nút trong cây nhị phân có nhiều nhất 2 nút con (at most two children / only two children): con trái và con phải.\n3. Một nút có thể có 0, 1 hoặc 2 con.\n\n- **Kiểm tra lại**:\nĐịnh nghĩa: A binary tree is a proper or improper tree where each internal node has at most two children. Câu hỏi dùng diễn đạt thông dụng can have only two children mang nghĩa mỗi nút chỉ có thể có tối đa hai con.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A: Có tối đa 3 con là cây tam phân (Ternary Tree).\n- Phương án C: Mỗi nút có đúng 1 con là danh sách tuyến tính thoái hóa (Degenerate tree / Linked list).\n- Phương án D: Sắp xếp theo vòng tròn là danh sách liên kết vòng (Circular list), không phải cây.\n\n- **Ghi nhớ / Công thức**:\nCây nhị phân đầy đủ độ cao \\(h\\) có tối đa \\(2^{h+1}-1\\) nút."
+    },
+    {
+      "id": 10451,
+      "quizId": 306,
+      "text": "Given a binary tree as follows:\n\nWhat is the output of Breadth First Traversal?",
+      "options": [
+        "40 50 20 30 10",
+        "40 20 50 10 30",
+        "50 40 20 30 10",
+        "10 20 30 40 50"
+      ],
+      "correctIndex": 3,
+      "explanation": "- **Hướng giải**:\nDuyệt theo chiều rộng (Breadth-First Traversal hay Level-Order Traversal) sử dụng hàng đợi (Queue), thăm các nút theo từng mức từ trên xuống dưới, và trong cùng một mức thì duyệt từ trái sang phải.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Xác định cấu trúc các mức (levels) của cây:\n - Mức 0 (Level 0): Gốc gồm nút \\(\\{10\\}\\).\n - Mức 1 (Level 1): Các con của nút 10 gồm nút \\(\\{20, 30\\}\\).\n - Mức 2 (Level 2): Các con của nút 20 gồm nút \\(\\{40, 50\\}\\).\n2. Tiến hành duyệt theo hàng đợi:\n - Khởi tạo Queue: \\([10]\\)\n - Lấy 10 ra \\(\\rightarrow\\) In: 10. Đưa các con của 10 vào: Queue = \\([20, 30]\\)\n - Lấy 20 ra \\(\\rightarrow\\) In: 20. Đưa các con của 20 vào: Queue = \\([30, 40, 50]\\)\n - Lấy 30 ra \\(\\rightarrow\\) In: 30. Nút 30 không có con: Queue = \\([40, 50]\\)\n - Lấy 40 ra \\(\\rightarrow\\) In: 40. Queue = \\([50]\\)\n - Lấy 50 ra \\(\\rightarrow\\) In: 50. Queue rỗng, kết thúc duyệt.\n3. Thứ tự thăm: 10 20 30 40 50.\n\n- **Kiểm tra lại**:\nĐối chiếu với 4 phương án, thứ tự 10 20 30 40 50 khớp tuyệt đối với phương án D.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A, B, C: Bắt đầu bằng 40 hoặc 50 (duyệt từ lá lên gốc), không tuân theo thứ tự BFS chuẩn từ gốc xuống lá.\n\n- **Ghi nhớ / Công thức**:\nBFS trên cây luôn bắt đầu từ nút gốc (Level 0), sau đó duyệt trọn vẹn toàn bộ các nút ở Level 1, rồi mới tới Level 2.",
+      "diagrams": [
+        {
+          "src": "/assets/images/practice/csd203/csd203_c6_10154_fig.webp",
+          "alt": "Cây nhị phân gồm gốc 10, con trái 20 (có con trái 40, con phải 50), con phải 30."
+        }
+      ]
+    },
+    {
+      "id": 10452,
+      "quizId": 306,
+      "text": "What technique is used to maintain the balance of an AVL tree after insertion?",
+      "options": [
+        "Rearrange nodes using pre-order traversal",
+        "Perform rotations to adjust subtree heights",
+        "Remove unbalanced nodes",
+        "Randomly shuffle nodes"
+      ],
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**:\nDựa vào cơ chế tự cân bằng của cây AVL (Adelson-Velsky and Landis Tree).\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Cây AVL là cây nhị phân tìm kiếm mà tại mọi nút, độ chênh lệch chiều cao giữa cây con trái và cây con phải (gọi là Balance Factor) luôn thuộc \\(\\{-1, 0, 1\\}\\).\n2. Sau khi chèn thêm một phần tử mới, chiều cao của một số cây con có thể tăng lên, làm Balance Factor tại một số nút vượt ra ngoài khoảng \\([-1, 1]\\).\n3. Để khôi phục trạng thái cân bằng mà vẫn bảo toàn tính chất thứ tự của BST, cây AVL thực hiện các phép quay (Rotations):\n - Quay đơn: Quay trái (Left Rotation - RR) hoặc Quay phải (Right Rotation - LL).\n - Quay kép: Quay trái-phải (LR) hoặc Quay phải-trái (RL).\n\n- **Kiểm tra lại**:\nMỗi phép quay chỉ mất thời gian \\(\\mathcal{O}(1)\\) và giúp tái cấu trúc chiều cao cây con trở lại trạng thái cân bằng.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A: Sắp xếp lại bằng duyệt tiền thứ tự không có ý nghĩa cân bằng cây.\n- Phương án C: Cây AVL không bao giờ tự ý xóa nút của người dùng để cân bằng.\n- Phương án D: Xáo trộn ngẫu nhiên sẽ phá vỡ hoàn toàn tính chất BST.\n\n- **Ghi nhớ / Công thức**:\nHệ số cân bằng: \\(\\mathrm{BF}(v) = \\mathrm{height}(v.\\text{left}) - \\mathrm{height}(v.\\text{right})\\). Sau khi chèn chỉ cần tối đa 1 phép quay đơn hoặc 1 phép quay kép để tái cân bằng toàn cây."
+    },
+    {
+      "id": 10453,
+      "quizId": 302,
+      "text": "What will the following function do in a doubly linked list?\n\n```python\ndef fn(head):\n    current = head\n    temp = None\n    while current is not None:\n        temp = current.prev\n        current.prev = current.next\n        current.next = temp\n        current = current.prev\n    if temp is not None:\n        head = temp.prev\n    return head\n```",
+      "options": [
+        "Reverse the doubly linked list and return the new head.",
+        "Reverse the doubly linked list but return the same head.",
+        "Create a copy of the reversed list and return the new head.",
+        "It will corrupt the list as it does not update the head correctly."
+      ],
+      "correctIndex": 0,
+      "explanation": "- **Hướng giải**:\nPhân tích thuật toán thao tác trên con trỏ của danh sách liên kết đôi từng bước.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Xét một nút current:\n - Lưu lại con trỏ prev ban đầu: temp = current.prev.\n - Hoán đổi: current.prev = current.next.\n - Hoán đổi: current.next = temp.\n - Bước tiếp: Vì current.prev hiện đang trỏ tới nút kế tiếp ban đầu (current.next cũ), lệnh current = current.prev thực chất di chuyển con trỏ current sang nút tiếp theo trong danh sách ban đầu.\n2. Vòng lặp while lặp qua toàn bộ các nút cho đến khi current is None.\n3. Tại thời điểm dừng, temp lưu con trỏ prev của nút cuối cùng (sau khi hoán đổi nó trỏ tới nút đứng trước nó). Do đó nút cuối ban đầu có prev mới (trỏ về phía trước) là temp.prev.\n4. Câu lệnh head = temp.prev cập nhật con trỏ head trỏ vào nút cuối cùng ban đầu (nay là nút đầu tiên của danh sách đảo ngược).\n5. Trả về head mới.\n\n- **Kiểm tra lại**:\nGiả sử danh sách là \\(1 \\rightleftarrows 2 \\rightleftarrows 3\\):\n- Sau vòng lặp: các liên kết trở thành \\(3 \\rightleftarrows 2 \\rightleftarrows 1\\).\n- head trỏ vào nút 3. Danh sách được đảo ngược hoàn hảo và trả về đúng nút đầu mới.\n\n- **Vì sao các phương án khác sai**:\n- Phương án B: Sai vì biến head đã được cập nhật lại thành temp.prev chứ không giữ nguyên nút đầu cũ.\n- Phương án C: Không hề cấp phát nút mới nào (không tạo bản sao).\n- Phương án D: Khẳng định làm hỏng danh sách là sai vì logic cập nhật con trỏ hoàn toàn chính xác.\n\n- **Ghi nhớ / Công thức**:\nĐảo ngược danh sách liên kết đôi có độ phức tạp thời gian \\(\\mathcal{O}(n)\\) và không gian bộ nhớ \\(\\mathcal{O}(1)\\)."
+    },
+    {
+      "id": 10454,
+      "quizId": 302,
+      "text": "In Linked List implementation, what is the link field used for?",
+      "options": [
+        "Store data",
+        "Store the head",
+        "Link to the next node",
+        "Link to the first node"
+      ],
+      "correctIndex": 2,
+      "explanation": "- **Hướng giải**:\nXem xét vai trò cấu tạo của các trường trong một nút của danh sách liên kết.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Mỗi nút cơ bản trong danh sách liên kết gồm:\n - Trường dữ liệu (data/info): chứa thông tin của phần tử.\n - Trường liên kết (link/next): chứa con trỏ hoặc tham chiếu địa chỉ đến nút tiếp theo trong chuỗi.\n2. Mục đích của trường link là tạo mối liên kết để di chuyển từ nút hiện tại sang nút kế tiếp (Link to the next node).\n\n- **Kiểm tra lại**:\nĐặc tả cấu trúc: current = current.link dùng để bước sang nút tiếp theo.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A (Store data): Đó là nhiệm vụ của trường data/info.\n- Phương án B (Store the head): Biến head bên ngoài danh sách mới lưu nút đầu tiên.\n- Phương án D (Link to the first node): Nút chỉ trỏ tới nút đầu tiên nếu nó là nút cuối cùng của danh sách liên kết vòng.\n\n- **Ghi nhớ / Công thức**:\nTrường link của nút cuối cùng trong danh sách liên kết đơn thông thường luôn có giá trị None (hoặc NULL)."
+    },
+    {
+      "id": 10455,
+      "quizId": 302,
+      "text": "Which of the following operations can be performed efficiently on a Singly Linked List?",
+      "options": [
+        "Accessing elements by index",
+        "Removing the first element",
+        "Traversing in reverse order",
+        "Inserting at a specific position without traversal"
+      ],
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**:\nXem xét độ phức tạp thời gian của từng thao tác trên danh sách liên kết đơn (Singly Linked List).\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Thao tác xóa phần tử đầu tiên (Removing the first element):\n - Chỉ cần cập nhật head = head.next.\n - Số phép toán là hằng số, đạt hiệu năng tối đa với độ phức tạp \\(\\mathcal{O}(1)\\).\n2. Phân tích các thao tác khác:\n - Truy cập theo chỉ số (Accessing elements by index): Không có chỉ mục trực tiếp, phải duyệt tuần tự từ đầu tới vị trí cần tìm \\(\\rightarrow\\) mất \\(\\mathcal{O}(n)\\).\n - Duyệt ngược (Traversing in reverse order): Do các nút chỉ có con trỏ next trỏ về phía trước, không thể đi lùi trực tiếp, phải dùng đệ quy, ngăn xếp phụ hoặc đảo danh sách \\(\\rightarrow\\) kém hiệu quả.\n - Chèn tại vị trí cụ thể mà không duyệt (Inserting at a specific position without traversal): Không thể thực hiện được vì bắt buộc phải duyệt đến nút đứng trước vị trí đó.\n3. Do đó, thao tác được thực hiện hiệu quả nhất là xóa phần tử đầu tiên.\n\n- **Kiểm tra lại**:\nBảng độ phức tạp thời gian Singly Linked List:\n\\(\\begin{aligned}\n\\text{Remove first (Head):} & \\quad \\mathcal{O}(1) \\\\\n\\text{Access by index:} & \\quad \\mathcal{O}(n) \\\\\n\\text{Traverse reverse:} & \\quad \\mathcal{O}(n) \\\\\n\\text{Insert at position } k: & \\quad \\mathcal{O}(k) \\le \\mathcal{O}(n)\n\\end{aligned}\\)\n\n- **Vì sao các phương án khác sai**:\n- Phương án A, C, D đều đòi hỏi thời gian \\(\\mathcal{O}(n)\\), không thể đạt hiệu quả \\(\\mathcal{O}(1)\\).\n\n- **Ghi nhớ / Công thức**:\nCấu trúc Singly Linked List lý tưởng nhất khi đóng vai trò làm Ngăn xếp (Stack) hoặc Hàng đợi (Queue với con trỏ tail)."
+    },
+    {
+      "id": 10456,
+      "quizId": 305,
+      "text": "What is the output of the following Python code snippet?\n\n```python\nhash_table = [None] * 10\n\ndef hash_function(key):\n    return key % 10\n\ndef insert(hash_table, key, value):\n    index = hash_function(key)\n    if hash_table[index] is not None:\n        hash_table[index].append((key, value))\n    else:\n        hash_table[index] = [(key, value)]\n\ninsert(hash_table, 5, \"apple\")\ninsert(hash_table, 15, \"banana\")\ninsert(hash_table, 25, \"cherry\")\n\nprint(hash_table)\n```",
+      "options": [
+        "[None, None, None, None, None, None, None, None, None, [(5, 'apple'), (15, 'banana'), (25, 'cherry')]]",
+        "[None, None, None, None, None, [(5, 'apple')], [(15, 'banana')], [(25, 'cherry')], None, None]",
+        "[None, None, None, None, None, [(5, 'apple'), (15, 'banana'), (25, 'cherry')], None, None, None, None]",
+        "[[(5, 'apple'), (15, 'banana'), (25, 'cherry')], None, None, None, None, None, None, None, None, None]"
+      ],
+      "correctIndex": 2,
+      "explanation": "- **Hướng giải**:\nLần theo từng bước thực thi của giải thuật nối chuỗi (Chaining) trong bảng băm Python.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Mảng hash_table được khởi tạo gồm 10 phần tử None với các chỉ số từ 0 đến 9.\n2. Hàm băm hash_function(key) tính key % 10:\n - Khóa 5: \\(5 \\bmod 10 = 5\\).\n - Khóa 15: \\(15 \\bmod 10 = 5\\).\n - Khóa 25: \\(25 \\bmod 10 = 5\\).\n3. Thực hiện chèn:\n - insert(hash_table, 5, \"apple\"):\n Tại chỉ số 5 đang là None, gán:\n hash_table[5] = [(5, 'apple')].\n - insert(hash_table, 15, \"banana\"):\n Tại chỉ số 5 không phải None, gọi append:\n hash_table[5] = [(5, 'apple'), (15, 'banana')].\n - insert(hash_table, 25, \"cherry\"):\n Tại chỉ số 5 gọi append:\n hash_table[5] = [(5, 'apple'), (15, 'banana'), (25, 'cherry')].\n4. Kiểm tra cấu trúc của toàn bộ mảng độ dài 10:\n - Chỉ số 0, 1, 2, 3, 4: gồm 5 giá trị None.\n - Chỉ số 5: danh sách [(5, 'apple'), (15, 'banana'), (25, 'cherry')].\n - Chỉ số 6, 7, 8, 9: gồm 4 giá trị None.\n5. Tổng cộng mảng in ra đúng khớp với cấu trúc trong phương án C.\n\n- **Kiểm tra lại**:\nChạy mã trực tiếp bằng trình thông dịch Python cho kết quả hoàn toàn trùng khớp với phương án C.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A: Đặt danh sách tại chỉ số 9 (cuối mảng) thay vì chỉ số 5.\n- Phương án B, D: Đặt các phần tử vào các ô kế tiếp nhau (nhầm lẫn với giải quyết xung đột bằng Linear Probing thay vì Separate Chaining).\n\n- **Ghi nhớ / Công thức**:\nCơ chế nối chuỗi (Separate Chaining) sử dụng một danh sách phụ tại mỗi ô của bảng băm. Tất cả các phần tử có cùng giá trị hàm băm sẽ được lưu vào cùng một danh sách tại ô đó."
+    },
+    {
+      "id": 10457,
+      "quizId": 305,
+      "text": "What is a good hash function?",
+      "options": [
+        "Generating randomly values.",
+        "Generating randomly and uniformly values.",
+        "Generating good values.",
+        "Generating randomly and small values."
+      ],
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**:\nDựa vào các tiêu chuẩn đánh giá chất lượng của một hàm băm trong cấu trúc dữ liệu.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Một hàm băm tốt (Good Hash Function) cần thỏa mãn các tiêu chí:\n - Tính toán nhanh: độ phức tạp \\(\\mathcal{O}(1)\\).\n - Phân bố đều (Uniformity): Các giá trị băm được trải đều trên toàn dải chỉ số từ \\(0\\) đến \\(m-1\\), tránh việc tập trung vào một số ô nhất định.\n - Giả ngẫu nhiên (Randomness): Hai khóa tương tự nhau vẫn cho ra hai giá trị băm hoàn toàn khác biệt (hiệu ứng tuyết lở - avalanche effect).\n2. Do đó tiêu chí cốt lõi được mô tả là tạo ra các giá trị ngẫu nhiên và phân bố đều: Generating randomly and uniformly values.\n\n- **Kiểm tra lại**:\nGiáo trình chuẩn DSA: A good hash function satisfies the condition of simple uniform hashing, distributing keys uniformly and randomly across all table slots.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A: Chỉ ngẫu nhiên mà không phân bố đều thì vẫn có thể gom cụm.\n- Phương án C: Diễn đạt mơ hồ (good values).\n- Phương án D: Tạo giá trị nhỏ (small values) sẽ chỉ tập trung vào đầu mảng và gây xung đột trầm trọng.\n\n- **Ghi nhớ / Công thức**:\nHàm băm lý tưởng phân phối đều \\(n\\) khóa vào \\(m\\) ô, sao cho mỗi ô nhận xấp xỉ \\(\\frac{n}{m}\\) khóa."
+    },
+    {
+      "id": 10458,
+      "quizId": 306,
+      "text": "Which data structure is typically used to implement a priority queue?",
+      "options": [
+        "Binary Heap",
+        "Linked List",
+        "Queue",
+        "Stack"
+      ],
+      "correctIndex": 0,
+      "explanation": "- **Hướng giải**:\nXem xét cấu trúc dữ liệu tối ưu nhất và được sử dụng rộng rãi nhất để hiện thực hóa hàng đợi ưu tiên (Priority Queue ADT).\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Hàng đợi ưu tiên hỗ trợ hai thao tác cốt lõi:\n - insert(e): Thêm một phần tử có độ ưu tiên.\n - remove_min() / remove_max(): Rút phần tử có độ ưu tiên cao nhất.\n2. So sánh các cấu trúc cài đặt:\n - Danh sách liên kết chưa sắp xếp (Unsorted List): Chèn \\(\\mathcal{O}(1)\\), nhưng xóa cực trị mất \\(\\mathcal{O}(n)\\).\n - Danh sách liên kết đã sắp xếp (Sorted List): Chèn mất \\(\\mathcal{O}(n)\\), xóa cực trị \\(\\mathcal{O}(1)\\).\n - Binary Heap: Cân bằng hoàn hảo giữa chèn \\(\\mathcal{O}(\\log n)\\) và xóa cực trị \\(\\mathcal{O}(\\log n)\\).\n3. Do đó, Binary Heap là lựa chọn tiêu chuẩn và điển hình nhất cho Priority Queue.\n\n- **Kiểm tra lại**:\nCác thư viện chuẩn như heapq trong Python, PriorityQueue trong Java và C++ std::priority_queue đều được xây dựng trên nền tảng Binary Heap.\n\n- **Vì sao các phương án khác sai**:\n- Phương án B (Linked List): Hiệu năng kém (\\(\\mathcal{O}(n)\\) cho một trong hai thao tác).\n- Phương án C (Queue): Hàng đợi thông thường chỉ hỗ trợ FIFO, không hỗ trợ độ ưu tiên.\n- Phương án D (Stack): Ngăn xếp chỉ hỗ trợ LIFO.\n\n- **Ghi nhớ / Công thức**:\nBinary Heap có thể biểu diễn gọn gàng trong mảng một chiều: cha tại \\(i\\), con trái tại \\(2i+1\\), con phải tại \\(2i+2\\)."
+    },
+    {
+      "id": 10459,
+      "quizId": 304,
+      "text": "In an unsorted priority queue, what is the time complexity of remove_min operation?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctIndex": 2,
+      "explanation": "- **Hướng giải**:\nPhân tích chi phí thời gian thực hiện thao tác remove_min trên cấu trúc hàng đợi ưu tiên cài đặt bằng mảng hoặc danh sách liên kết không có thứ tự.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Trong một Unsorted Priority Queue:\n - Thao tác chèn (insert): Chỉ cần nối phần tử vào cuối danh sách, mất thời gian \\(\\mathcal{O}(1)\\).\n - Thao tác tìm/xóa phần tử nhỏ nhất (remove_min):\n - Vì danh sách chưa được sắp xếp, phần tử có giá trị nhỏ nhất có thể nằm ở bất kỳ vị trí nào trong số \\(n\\) phần tử.\n - Thuật toán phải duyệt tuần tự từ đầu đến cuối danh sách để tìm vị trí của giá trị nhỏ nhất.\n - Số phép so sánh cần thiết là \\(n - 1\\), tỷ lệ tuyến tính với \\(n\\).\n - Sau khi tìm thấy, phần tử được xóa bỏ khỏi danh sách.\n2. Do đó, độ phức tạp thời gian của remove_min là \\(\\mathcal{O}(n)\\).\n\n- **Kiểm tra lại**:\nBảng so sánh cấu trúc Priority Queue chuẩn:\n\\(\\begin{aligned}\n\\text{Cài đặt Unsorted List: } & \\text{insert} = \\mathcal{O}(1), \\quad \\text{remove\\_min} = \\mathcal{O}(n) \\\\\n\\text{Cài đặt Sorted List: } & \\text{insert} = \\mathcal{O}(n), \\quad \\text{remove\\_min} = \\mathcal{O}(1) \\\\\n\\text{Cài đặt Binary Heap: } & \\text{insert} = \\mathcal{O}(\\log n), \\quad \\text{remove\\_min} = \\mathcal{O}(\\log n)\n\\end{aligned}\\)\n\n- **Vì sao các phương án khác sai**:\n- Phương án A (\\(\\mathcal{O}(1)\\)): Chỉ đúng với Sorted List hoặc tìm min trong Heap.\n- Phương án B (\\(\\mathcal{O}(\\log n)\\)): Chỉ đúng với Binary Heap.\n- Phương án D (\\(\\mathcal{O}(n \\log n)\\)): Quá lớn, không phù hợp cho một thao tác đơn lẻ.\n\n- **Ghi nhớ / Công thức**:\nNguyên lý đánh đổi (Trade-off): Unsorted Priority Queue tối ưu hóa thao tác chèn (\\(\\mathcal{O}(1)\\)) nhưng chịu chi phí đắt đỏ khi xóa cực trị (\\(\\mathcal{O}(n)\\))."
+    },
+    {
+      "id": 10460,
+      "quizId": 303,
+      "text": "What built-in Python data type is commonly used to represent a stack?",
+      "options": [
+        "list",
+        "set",
+        "string",
+        "hash"
+      ],
+      "correctIndex": 0,
+      "explanation": "- **Hướng giải**:\nXem xét các kiểu dữ liệu tích hợp sẵn (built-in data types) trong Python và mức độ phù hợp với các đặc tả của Ngăn xếp (Stack ADT).\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Ngăn xếp đòi hỏi hai thao tác cơ bản:\n - push(e): Thêm phần tử vào đỉnh ngăn xếp.\n - pop(): Lấy phần tử ra khỏi đỉnh ngăn xếp.\n2. Trong Python, kiểu dữ liệu mảng động tích hợp sẵn là list:\n - Phương thức list.append(e) thêm vào cuối danh sách với thời gian \\(\\mathcal{O}(1)\\) khấu hao.\n - Phương thức list.pop() xóa và trả về phần tử ở cuối danh sách với thời gian \\(\\mathcal{O}(1)\\).\n - Cuối danh sách đóng vai trò tự nhiên là đỉnh của ngăn xếp (top of the stack).\n3. Do đó, list là kiểu dữ liệu phổ biến và thuận tiện nhất để cài đặt ngăn xếp trong Python.\n\n- **Kiểm tra lại**:\nTài liệu chính thức của Python (Python Docs - Data Structures): \"The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved ('last-in, first-out').\"\n\n- **Vì sao các phương án khác sai**:\n- Phương án B (set): Tập hợp không duy trì thứ tự và không cho phép trùng lặp, không thể làm ngăn xếp.\n- Phương án C (string): Bất biến (immutable), không thể thêm/xóa phần tử linh hoạt.\n- Phương án D (hash): Không phải là kiểu dữ liệu tích hợp sẵn trong Python (Python dùng dict).\n\n- **Ghi nhớ / Công thức**:\nMặc dù list cài đặt stack rất tốt, nhưng không nên dùng list làm queue vì pop(0) mất thời gian \\(\\mathcal{O}(n)\\); khi làm queue nên dùng collections.deque."
+    },
+    {
+      "id": 10461,
+      "quizId": 308,
+      "text": "Which of the following is NOT a heuristic used in the Boyer-Moore algorithm?",
+      "options": [
+        "Rolling Hash Heuristic",
+        "Looking-Glass Heuristic",
+        "Character-Jump Heuristic",
+        "Reverse Heuristic"
+      ],
+      "correctIndex": 0,
+      "explanation": "- **Hướng giải**:\nPhân tích các cơ chế heuristic được sử dụng trong các thuật toán tìm kiếm chuỗi mẫu (Pattern Matching).\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Thuật toán Boyer-Moore là thuật toán so khớp chuỗi hiệu năng cao dựa trên hai cơ chế chính:\n - Looking-Glass Heuristic: So khớp các ký tự của mẫu từ phải sang trái (bắt đầu từ đuôi mẫu ngược về đầu).\n - Character-Jump Heuristic (hay Bad-Character Heuristic / Mismatch Heuristic): Khi phát hiện ký tự sai khác giữa văn bản và mẫu, dịch chuyển mẫu sang phải dựa trên vị trí xuất hiện cuối cùng của ký tự đó trong mẫu.\n2. Rolling Hash Heuristic:\n - Đây là kỹ thuật băm cuộn số học dùng để tính giá trị băm của cửa sổ trượt trong thời gian \\(\\mathcal{O}(1)\\).\n - Kỹ thuật này là cốt lõi của Thuật toán Rabin-Karp, hoàn toàn không được sử dụng trong Boyer-Moore.\n3. Do đó, Rolling Hash Heuristic KHÔNG PHẢI là heuristic của thuật toán Boyer-Moore.\n\n- **Kiểm tra lại**:\nGiáo trình Goodrich, Chương 13 (Text Processing): The Boyer-Moore algorithm uses two main heuristics: the looking-glass heuristic and the character-jump heuristic.\n\n- **Vì sao các phương án khác sai**:\n- Phương án B: Là heuristic chuẩn của Boyer-Moore.\n- Phương án C: Là heuristic chuẩn của Boyer-Moore.\n- Phương án D: Reverse Heuristic là tên gọi khác phản ánh việc duyệt đảo ngược (tương đồng với looking-glass).\n\n- **Ghi nhớ / Công thức**:\nThuật toán Boyer-Moore có thể đạt tốc độ siêu tuyến tính trường hợp tốt nhất \\(\\mathcal{O}(n/m)\\) khi bảng chữ cái lớn và các bước nhảy dài."
+    },
+    {
+      "id": 10462,
+      "quizId": 308,
+      "text": "What does the KMP algorithm optimize?",
+      "options": [
+        "Time complexity",
+        "Memory usage",
+        "Length of the input",
+        "Length of the output"
+      ],
+      "correctIndex": 0,
+      "explanation": "- **Hướng giải**:\nPhân tích mục tiêu tối ưu và đóng góp lớn nhất của thuật toán so khớp chuỗi KMP (Knuth-Morris-Pratt).\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Thuật toán so khớp chuỗi ngây thơ (Brute-force / Naive pattern matching) có thể mất thời gian trong trường hợp xấu nhất lên tới \\(\\mathcal{O}(n \\cdot m)\\), do mỗi lần không khớp phải lùi con trỏ duyệt văn bản lại từ đầu.\n2. Thuật toán KMP tiền xử lý chuỗi mẫu để xây dựng mảng \\(\\pi\\) (bảng tiền tố / failure function / LPS array) trong thời gian \\(\\mathcal{O}(m)\\).\n3. Trong quá trình so khớp, khi gặp ký tự không khớp, KMP sử dụng thông tin trong bảng LPS để trượt mẫu sang vị trí tối ưu mà không bao giờ phải lùi con trỏ trên văn bản.\n4. Tổng thời gian tìm kiếm được giảm xuống \\(\\mathcal{O}(n + m)\\), tối ưu hóa vượt bậc về độ phức tạp thời gian (Time complexity).\n\n- **Kiểm tra lại**:\nKMP thực chất phải dùng thêm bộ nhớ \\(\\mathcal{O}(m)\\) để lưu bảng LPS, do đó nó đánh đổi thêm một lượng bộ nhớ nhỏ để tối ưu hóa thời gian chạy.\n\n- **Vì sao các phương án khác sai**:\n- Phương án B (Memory usage): KMP tốn thêm bộ nhớ cho mảng tiền tố chứ không tối ưu bộ nhớ.\n- Phương án C, D: Độ dài chuỗi đầu vào/đầu ra là dữ liệu cố định của bài toán, thuật toán không thể thay đổi được.\n\n- **Ghi nhớ / Công thức**:\nĐộ phức tạp thời gian của KMP:\n\\(\\begin{aligned}\nT(n, m) = \\mathcal{O}(n + m)\n\\end{aligned}\\)\ntrong đó \\(n\\) là độ dài văn bản và \\(m\\) là độ dài chuỗi mẫu."
+    },
+    {
+      "id": 10463,
+      "quizId": 308,
+      "text": "Which of the following techniques does NOT use brute force?",
+      "options": [
+        "Dynamic programming",
+        "Greedy string matching",
+        "Naive string matching",
+        "Backtracking"
+      ],
+      "correctIndex": 0,
+      "explanation": "- **Hướng giải**:\nPhân biệt bản chất chiến lược thiết kế giải thuật: Vét cạn (Brute Force) so với Quy hoạch động (Dynamic Programming).\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Phương pháp vét cạn (Brute force):\n - Thử nghiệm tất cả các khả năng có thể xảy ra trong không gian tìm kiếm mà không tận dụng cấu trúc bài toán để loại bỏ các tính toán trùng lặp.\n - Ví dụ: Naive string matching thử mọi vị trí căn chỉnh; Backtracking trong trường hợp tổng quát duyệt qua cây không gian trạng thái đầy đủ.\n2. Quy hoạch động (Dynamic Programming - DP):\n - Dựa trên hai tính chất: Cấu trúc con tối ưu (Optimal Substructure) và Các bài toán con gối nhau (Overlapping Subproblems).\n - Giải quyết mỗi bài toán con đúng một lần và lưu trữ nghiệm trong bảng nhớ (bảng quy hoạch động hoặc memoization table).\n - Khi gặp lại bài toán con đó, chỉ cần tra cứu kết quả trong \\(\\mathcal{O}(1)\\) thay vì duyệt lại từ đầu.\n3. Do đó, Quy hoạch động là kỹ thuật hoàn toàn KHÔNG sử dụng vét cạn.\n\n- **Kiểm tra lại**:\nVí dụ tính số Fibonacci: Vét cạn đệ quy ngây thơ mất \\(\\mathcal{O}(2^n)\\), trong khi quy hoạch động giảm xuống \\(\\mathcal{O}(n)\\) và \\(\\mathcal{O}(1)\\) không gian.\n\n- **Vì sao các phương án khác sai**:\n- Phương án C: Naive string matching là định nghĩa kinh điển của vét cạn.\n- Phương án D: Backtracking là kỹ thuật vét cạn có chọn lọc (thử và sai).\n- Phương án B: So khớp tham lam ngây thơ cũng duyệt thử các khả năng.\n\n- **Ghi nhớ / Công thức**:\nHai cách tiếp cận chính của Quy hoạch động:\n1. Top-down với Memoization (Ghi nhớ từ trên xuống).\n2. Bottom-up với Tabulation (Lập bảng từ dưới lên)."
+    },
+    {
+      "id": 10464,
+      "quizId": 306,
+      "text": "Which statement correctly distinguishes Prim's algorithm from Kruskal's algorithm when finding a Minimum Spanning Tree (MST)?",
+      "options": [
+        "Prim's works on directed graphs; Kruskal's works only on undirected graphs.",
+        "Prim's uses a stack; Kruskal's uses a priority queue.",
+        "Prim's grows the MST by expanding from a starting vertex; Kruskal's repeatedly adds the globally cheapest edge that does not form a cycle.",
+        "Prim's finds the shortest path; Kruskal's finds the longest path."
+      ],
+      "correctIndex": 2,
+      "explanation": "- **Hướng giải**:\nPhân tích nguyên lý vận hành khác biệt giữa hai thuật toán tìm cây khung nhỏ nhất (MST) là Prim và Kruskal.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Thuật toán Prim:\n - Tiếp cận theo đỉnh (vertex-based approach).\n - Bắt đầu từ một đỉnh nguồn bất kỳ, cây khung phát triển dần dần qua từng bước.\n - Tại mỗi bước, thuật toán chọn cạnh nhẹ nhất kết nối giữa một đỉnh đã nằm trong cây với một đỉnh chưa nằm trong cây.\n2. Thuật toán Kruskal:\n - Tiếp cận theo cạnh (edge-based approach).\n - Coi mỗi đỉnh ban đầu là một cây riêng biệt (rừng cây khung).\n - Sắp xếp toàn bộ các cạnh theo trọng số tăng dần.\n - Lần lượt lấy ra cạnh có trọng số nhỏ nhất trên toàn cục; nếu cạnh đó nối hai cây khác nhau (không tạo chu trình), ta gộp hai cây lại.\n3. So sánh với các phương án: Phương án C mô tả chính xác tuyệt đối sự khác biệt này: Prim's grows the MST by expanding from a starting vertex; Kruskal's repeatedly adds the globally cheapest edge that does not form a cycle.\n\n- **Kiểm tra lại**:\n- Cả hai đều giải bài toán MST trên đồ thị vô hướng liên thông.\n- Cả hai đều thuộc lớp thuật toán tham lam (Greedy).\n- Khác biệt nằm ở cách xây dựng tập hợp cạnh thuộc MST.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A: Cả hai đều áp dụng cho đồ thị vô hướng.\n- Phương án B: Cả hai thuật toán đều dùng cấu trúc hàng đợi ưu tiên (Priority Queue).\n- Phương án D: Cả hai đều tìm cây khung nhỏ nhất, không tìm đường đi ngắn nhất hay dài nhất.\n\n- **Ghi nhớ / Công thức**:\nĐộ phức tạp:\n\\(\\begin{aligned}\n\\text{Prim (với Binary Heap): } & \\mathcal{O}(E \\log V) \\\\\n\\text{Kruskal (với Union-Find): } & \\mathcal{O}(E \\log E) = \\mathcal{O}(E \\log V)\n\\end{aligned}\\)"
+    },
+    {
+      "id": 10465,
+      "quizId": 306,
+      "text": "In Kruskal's algorithm for finding a Minimum Spanning Tree, how are edges selected and added to the tree?",
+      "options": [
+        "By selecting the edge with the highest weight",
+        "By selecting the edge with the lowest weight",
+        "By selecting edges randomly",
+        "By selecting the longest edge"
+      ],
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**:\nDựa vào các bước thực thi chuẩn mực của thuật toán Kruskal.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Đầu tiên, thuật toán Kruskal sắp xếp toàn bộ các cạnh của đồ thị theo thứ tự trọng số tăng dần: \\(w(e_1) \\le w(e_2) \\le \\dots \\le w(e_m)\\).\n2. Duyệt tuần tự qua danh sách đã sắp xếp:\n - Luôn ưu tiên chọn cạnh có trọng số nhỏ nhất hiện có (the edge with the lowest weight).\n - Kiểm tra xem cạnh này có tạo chu trình với các cạnh đã chọn trước đó hay không (bằng Disjoint-Set / Union-Find).\n - Nếu không tạo chu trình, thêm cạnh này vào cây khung.\n - Nếu tạo chu trình, bỏ qua cạnh này.\n3. Quá trình dừng khi cây khung đã gom đủ \\(V - 1\\) cạnh.\n4. Do đó, tiêu chí chọn cạnh là chọn cạnh có trọng số nhỏ nhất (By selecting the edge with the lowest weight).\n\n- **Kiểm tra lại**:\nNguyên lý tham lam của Kruskal: Chọn nghiệm cục bộ tốt nhất tại mỗi bước (cạnh có trọng số nhỏ nhất khả dĩ) để đạt được nghiệm tối ưu toàn cục (tổng trọng số cây nhỏ nhất).\n\n- **Vì sao các phương án khác sai**:\n- Phương án A, D: Chọn cạnh có trọng số lớn nhất sẽ tạo thành cây khung lớn nhất (Maximum Spanning Tree), vi phạm tính chất MST.\n- Phương án C: Chọn ngẫu nhiên không đảm bảo được cây khung thu được có tổng trọng số nhỏ nhất.\n\n- **Ghi nhớ / Công thức**:\nCấu trúc Disjoint-Set Union (DSU) với kỹ thuật nén đường đi (Path Compression) và hợp nhất theo hạng (Union by Rank) giúp kiểm tra chu trình trong thuật toán Kruskal với thời gian gần như hằng số \\(\\mathcal{O}(\\alpha(V))\\)."
+    },
+    {
+      "id": 10466,
+      "quizId": 303,
+      "text": "If a stack is implemented with a singly linked list, which end should be used for push/pop to achieve O(1)?",
+      "options": [
+        "Tail for push and head for pop",
+        "Head for both push and pop",
+        "Tail for both push and pop",
+        "Either head or tail is O(1)"
+      ],
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**:\nPhân tích chi phí thời gian thao tác tại hai đầu (Head và Tail) của danh sách liên kết đơn khi đóng vai trò làm đỉnh ngăn xếp.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Ngăn xếp yêu cầu cả hai thao tác push và pop đều phải diễn ra tại cùng một đầu (đỉnh ngăn xếp - Top).\n2. Phân tích chi phí tại đầu danh sách (Head):\n - Thao tác push (chèn vào đầu): Tạo nút mới, liên kết với head hiện tại, cập nhật head mới \\(\\rightarrow \\mathcal{O}(1)\\).\n - Thao tác pop (xóa ở đầu): Cập nhật head = head.next \\(\\rightarrow \\mathcal{O}(1)\\).\n - Cả hai thao tác đều đạt \\(\\mathcal{O}(1)\\).\n3. Phân tích chi phí tại đuôi danh sách (Tail):\n - Thao tác push (chèn ở đuôi): Dùng con trỏ tail gán tail.next = new_node \\(\\rightarrow \\mathcal{O}(1)\\).\n - Thao tác pop (xóa ở đuôi): Trong danh sách liên kết đơn, ta không thể đi lùi từ tail về nút kế trước tail. Muốn xóa tail, thuật toán bắt buộc phải duyệt từ head qua toàn bộ danh sách để tìm nút áp chót \\(\\rightarrow \\mathcal{O}(n)\\).\n4. Do đó, để cả push và pop đều đạt \\(\\mathcal{O}(1)\\), bắt buộc phải sử dụng Head cho cả hai thao tác (Head for both push and pop).\n\n- **Kiểm tra lại**:\nBảng đối chiếu hiệu năng Singly Linked List:\n\\(\\begin{aligned}\n\\text{Thao tác tại Head: } & \\text{Push } = \\mathcal{O}(1), \\quad \\text{Pop } = \\mathcal{O}(1) \\\\\n\\text{Thao tác tại Tail: } & \\text{Push } = \\mathcal{O}(1), \\quad \\text{Pop } = \\mathcal{O}(n)\n\\end{aligned}\\)\n\n- **Vì sao các phương án khác sai**:\n- Phương án A, C, D: Đều dính thao tác xóa tại Tail (mất \\(\\mathcal{O}(n)\\)), không đạt được yêu cầu \\(\\mathcal{O}(1)\\).\n\n- **Ghi nhớ / Công thức**:\nNếu muốn dùng Tail cho thao tác xóa \\(\\mathcal{O}(1)\\), bắt buộc phải nâng cấp lên danh sách liên kết đôi (Doubly Linked List)."
+    },
+    {
+      "id": 10467,
+      "quizId": 307,
+      "text": "What is the worst-case time complexity of HeapSort?",
+      "options": [
+        "O(n^2)",
+        "O(n log n)",
+        "O(n)",
+        "O(2^n)"
+      ],
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**:\nPhân tích hai giai đoạn thực thi của thuật toán sắp xếp vun đống (HeapSort).\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Giai đoạn 1 - Xây dựng đống (Heap construction / Bottom-up heapify):\n - Biến đổi mảng \\(n\\) phần tử thành một max-heap.\n - Chi phí thời gian giai đoạn này là \\(\\mathcal{O}(n)\\).\n2. Giai đoạn 2 - Trích xuất và sắp xếp (Extraction phase):\n - Lặp \\(n - 1\\) lần:\n - Hoán đổi phần tử lớn nhất tại gốc (\\(\\text{heap}[0]\\)) với phần tử cuối cùng chưa sắp xếp.\n - Giảm kích thước đống đi 1.\n - Thực hiện thao tác heapify (down-heap) để khôi phục tính chất đống.\n - Thao tác down-heap trên cây có độ cao \\(\\mathcal{O}(\\log n)\\) mất thời gian \\(\\mathcal{O}(\\log n)\\).\n - Với \\(n\\) lần thực hiện, tổng chi phí giai đoạn 2 là \\(\\mathcal{O}(n \\log n)\\).\n3. Tổng thời gian thực thi:\n \\(\\begin{aligned}\n   T(n) = \\mathcal{O}(n) + \\mathcal{O}(n \\log n) = \\mathcal{O}(n \\log n)\n   \\end{aligned}\\)\n4. Do cấu trúc cây nhị phân hoàn chỉnh luôn có chiều cao cố định \\(\\lfloor \\log_2 n \\rfloor\\), trong trường hợp xấu nhất HeapSort vẫn luôn bảo đảm thời gian \\(\\mathcal{O}(n \\log n)\\).\n\n- **Kiểm tra lại**:\nHeapSort không bao giờ bị suy biến về \\(\\mathcal{O}(n^2)\\) như QuickSort.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A (\\(\\mathcal{O}(n^2)\\)): Là trường hợp xấu nhất của QuickSort, BubbleSort, SelectionSort.\n- Phương án C (\\(\\mathcal{O}(n)\\)): Không thể đạt được đối với thuật toán sắp xếp dựa trên so sánh tổng quát.\n- Phương án D (\\(\\mathcal{O}(2^n)\\)): Độ phức tạp hàm mũ không thực tế.\n\n- **Ghi nhớ / Công thức**:\nHeapSort có độ phức tạp thời gian trong cả 3 trường hợp Tốt nhất, Trung bình và Xấu nhất đều là:\n\\(\\begin{aligned}\nT_{\\text{best}} = T_{\\text{avg}} = T_{\\text{worst}} = \\mathcal{O}(n \\log n)\n\\end{aligned}\\)\nvới ưu điểm lớn là sắp xếp tại chỗ (in-place) với không gian phụ \\(\\mathcal{O}(1)\\)."
+    },
+    {
+      "id": 10468,
+      "quizId": 307,
+      "text": "What is the purpose of heapify in the context of heapsort?",
+      "options": [
+        "To sort the array in ascending order",
+        "To maintain the heap property",
+        "To adjust the size of the heap",
+        "To remove duplicate elements"
+      ],
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**:\nXem xét định nghĩa và vai trò chức năng của thao tác heapify trong giải thuật sắp xếp vun đống.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Tính chất đống (Heap Property):\n - Trong Max-Heap: Giá trị tại nút cha luôn lớn hơn hoặc bằng giá trị tại các nút con của nó (\\(A[\\text{parent}] \\ge A[\\text{child}]\\)).\n - Trong Min-Heap: Giá trị tại nút cha luôn nhỏ hơn hoặc bằng giá trị tại các nút con của nó (\\(A[\\text{parent}] \\le A[\\text{child}]\\)).\n2. Khi phần tử tại gốc bị thay đổi hoặc hoán đổi với phần tử cuối, tính chất đống tại gốc có thể bị vi phạm.\n3. Hàm heapify (thao tác chìm nút xuống - sift-down / down-heap):\n - So sánh phần tử hiện tại với các con của nó.\n - Hoán đổi với con lớn nhất (trong max-heap) nếu phần tử nhỏ hơn con.\n - Tiếp tục đệ quy hoặc lặp xuống dưới cho đến khi thỏa mãn tính chất đống hoặc chạm tới nút lá.\n4. Do đó, mục đích cốt lõi của heapify là duy trì/khôi phục tính chất đống (To maintain the heap property).\n\n- **Kiểm tra lại**:\nĐặc tả giải thuật CLRS: MAX-HEAPIFY is an important subroutine for manipulating max-heaps. Its inputs are an array A and an index i. When it is called, MAX-HEAPIFY assumes that the binary trees rooted at LEFT(i) and RIGHT(i) are max-heaps, but that A[i] might be smaller than its children. The purpose is to let the value at A[i] float down so that the subtree rooted at index i obeys the max-heap property.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A: Sắp xếp toàn bộ mảng là nhiệm vụ của toàn bộ thuật toán heapsort, hàm heapify chỉ là một hàm con hỗ trợ.\n- Phương án C: Điều chỉnh kích thước đống do biến quản lý kích thước kiểm soát.\n- Phương án D: heapify không dùng để loại bỏ phần tử trùng lặp.\n\n- **Ghi nhớ / Công thức**:\nĐộ phức tạp thời gian của một lần gọi heapify trên nút ở độ cao \\(h\\) là \\(\\mathcal{O}(h) \\le \\mathcal{O}(\\log n)\\)."
+    },
+    {
+      "id": 10469,
+      "quizId": 308,
+      "text": "What is a potential problem of using recursion excessively?",
+      "options": [
+        "Infinite loops",
+        "Stack overflow",
+        "Memory leaks",
+        "Runtime errors"
+      ],
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**:\nXem xét cơ chế cấp phát bộ nhớ của ngăn xếp thực thi (Call Stack) khi gọi hàm trong máy tính.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Mỗi khi một hàm được gọi, hệ điều hành cấp phát một khung ngăn xếp (Stack Frame / Activation Record) trên Call Stack để lưu trữ:\n - Các tham số truyền vào hàm.\n - Các biến cục bộ.\n - Địa chỉ lệnh quay về sau khi hoàn thành hàm.\n2. Vùng nhớ Call Stack có dung lượng hữu hạn (thường chỉ vài MB).\n3. Khi sử dụng đệ quy quá mức (excessive recursion) hoặc đệ quy quá sâu:\n - Hàng nghìn hoặc hàng triệu stack frame được đẩy liên tục vào ngăn xếp mà chưa được giải phóng.\n - Vượt quá giới hạn dung lượng Call Stack được phép.\n - Hệ quả trực tiếp là dẫn đến lỗi Tràn ngăn xếp (Stack Overflow / RecursionError).\n\n- **Kiểm tra lại**:\nTrong Python, giới hạn độ sâu đệ quy mặc định là 1000 (sys.getrecursionlimit()). Vượt quá giới hạn này sẽ ném ngoại lệ RecursionError: maximum recursion depth exceeded.\n\n- **Vì sao các phương án khác sai**:\n- Phương án A (Infinite loops): Vòng lặp vô hạn là vấn đề của cấu trúc lặp (while/for), đệ quy không có vòng lặp mà là đệ quy vô hạn (infinite recursion).\n- Phương án C (Memory leaks): Rò rỉ bộ nhớ liên quan tới vùng nhớ Heap khi không giải phóng đối tượng động, không phải là vấn đề đặc trưng của Call Stack.\n- Phương án D (Runtime errors): Là thuật ngữ chung chung bao hàm nhiều loại lỗi.\n\n- **Ghi nhớ / Công thức**:\nĐể phòng tránh tràn ngăn xếp, các hàm đệ quy có độ sâu lớn nên được chuyển đổi sang dạng lặp (iteration) hoặc tối ưu đệ quy đuôi (tail recursion)."
+    },
+    {
+      "id": 10470,
+      "quizId": 308,
+      "text": "Which of the following recursive functions correctly implements the computation of the nth term of the geometric series\n\\(a + ar + ar^2 + ar^3 + \\dots + ar^n\\)\nin Python?",
+      "options": [
+        "```python\ndef geometric_series(a, r, n):\n    if n == 0:\n        return a\n    else:\n        return r * geometric_series(a, r, n-1)\n```",
+        "```python\ndef geometric_series(a, r, n):\n    if n == 0:\n        return a\n    else:\n        return a + r * geometric_series(a, r, n-1)\n```",
+        "```python\ndef geometric_series(a, r, n):\n    if n == 0:\n        return 1\n    else:\n        return a * geometric_series(a, r, n-1) + r\n```",
+        "```python\ndef geometric_series(a, r, n):\n    if n == 0:\n        return a\n    else:\n        return a * r * geometric_series(a, r, n-1)\n```"
+      ],
+      "correctIndex": 0,
+      "explanation": "- **Hướng giải**:\nPhân tích công thức toán học của số hạng thứ \\(n\\) trong cấp số nhân (Geometric Sequence/Series) và đối chiếu với định nghĩa đệ quy.\n\n- **Các bước giải chi tiết / Phân tích**:\n1. Dãy cấp số nhân có dạng:\n \\(\\begin{aligned}\n   T_0 &= a \\\\\n   T_1 &= a \\cdot r \\\\\n   T_2 &= a \\cdot r^2 \\\\\n   &\\dots \\\\\n   T_n &= a \\cdot r^n\n   \\end{aligned}\\)\n2. Xây dựng công thức truy hồi đệ quy cho số hạng thứ \\(n\\) (\\(T_n\\)):\n \\(\\begin{aligned}\n   T_n = \\begin{cases}\n   a & \\text{khi } n = 0 \\\\\n   r \\cdot T_{n-1} & \\text{khi } n > 0\n   \\end{cases}\n   \\end{aligned}\\)\n3. Kiểm tra mã nguồn phương án A:\n - Trường hợp cơ sở: if n == 0: return a \\(\\rightarrow\\) Đúng với \\(T_0 = a\\).\n - Lời gọi đệ quy: return r * geometric_series(a, r, n - 1) \\(\\rightarrow\\) Đúng với \\(T_n = r \\cdot T_{n-1}\\).\n - Tính thử:\n - Với \\(n = 1\\): trả về \\(r \\cdot a = a \\cdot r\\).\n - Với \\(n = 2\\): trả về \\(r \\cdot (a \\cdot r) = a \\cdot r^2\\).\n - Với \\(n\\): trả về \\(a \\cdot r^n\\).\n4. Do đó, phương án A cài đặt chính xác số hạng thứ \\(n\\).\n\n- **Kiểm tra lại**:\nThử nghiệm với \\(a = 2, r = 3, n = 2\\):\n\\(T_2 = 2 \\times 3^2 = 18\\).\nPhương án A:\ngeometric_series(2, 3, 2) = 3 * geometric_series(2, 3, 1) = 3 * (3 * 2) = 18. Đúng tuyệt đối.\n\n- **Vì sao các phương án khác sai**:\n- Phương án B: Cộng thêm \\(a\\) ở mỗi bước, sinh ra công thức sai.\n- Phương án C: Cơ sở trả về 1 và nhân sai số hạng.\n- Phương án D: Nhân thêm \\(a\\) tại mỗi bước, khiến lũy thừa của \\(a\\) tăng theo bậc \\(n\\) (\\(a^n \\cdot r^n\\)).\n\n- **Ghi nhớ / Công thức**:\nĐệ quy số hạng cấp số nhân: \\(T(n) = r \\cdot T(n-1)\\) với \\(T(0) = a\\)."
     },
     {
       "id": 20000,
