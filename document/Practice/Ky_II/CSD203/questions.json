@@ -1,6 +1,6 @@
 {
   "subject": "CSD203",
-  "updatedAt": "2026-11-24T09:03:37.400Z",
+  "updatedAt": "2026-11-27T09:23:17.701Z",
   "totalQuizzes": 8,
   "totalQuestions": 416,
   "quizzes": [
@@ -3131,8 +3131,8 @@
         "20, 30, 90, 60, 55, 42, 45, 48",
         "20, 30, 42, 45, 48, 90, 60, 55"
       ],
-      "correctIndex": 0,
-      "explanation": "Sau khi lần lượt xóa các nút 50 và 40 bằng phương pháp sao chép (copying), cấu trúc cây tìm kiếm nhị phân được cập nhật lại. Phép duyệt hậu thứ tự (postorder: trái - phải - gốc) cho ra thứ tự 20, 42, 48, 90, 30, 45, 60, 55.",
+      "correctIndex": 1,
+      "explanation": "- **Hướng giải**: Áp dụng phương pháp xóa bằng sao chép (Deletion by Copying — thay nút bị xóa bằng nút phải nhất của cây con trái, tức *in-order predecessor*) lần lượt cho nút `50` và `40`, sau đó duyệt hậu thứ tự (Postorder: Trái \\(\\to\\) Phải \\(\\to\\) Gốc).\n\n- **Các bước giải chi tiết**:\n 1. **Xóa nút 50 bằng sao chép**: Nút phải nhất trong cây con trái của 50 là **48**. Sao chép `48` lên thay thế gốc `50` và xóa nút lá `48` (lúc này nút `45` chỉ còn con trái `42`).\n 2. **Xóa nút 40 bằng sao chép**: Nút phải nhất trong cây con trái của 40 là **30**. Sao chép `30` lên thay thế `40` và nối con trái `20` của `30` cũ thành con trái trực tiếp của `30` mới.\n 3. **Cấu trúc cây BST sau khi xóa**: Gốc là `48`; nhánh trái gốc `30` (con trái `20`, con phải `45` có con trái `42`); nhánh phải gốc `55` (con phải `60` có con phải `90`).\n 4. **Duyệt Postorder (Trái \\(\\to\\) Phải \\(\\to\\) Gốc)**:\n - Nhánh trái (gốc `30`): `20` \\(\\to\\) (`42` \\(\\to\\) `45`) \\(\\to\\) `30` \\(\\implies\\) `20, 42, 45, 30`.\n - Nhánh phải (gốc `55`): `90` \\(\\to\\) `60` \\(\\to\\) `55` \\(\\implies\\) `90, 60, 55`.\n - Gốc cuối cùng: `48`.\n - Kết quả: **20, 42, 45, 30, 90, 60, 55, 48** (Chọn **B**).",
       "diagrams": [
         {
           "src": "/assets/images/practice/csd203/csd203_c6_10203_fig.webp",
