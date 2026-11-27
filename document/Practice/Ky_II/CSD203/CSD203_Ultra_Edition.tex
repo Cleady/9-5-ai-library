@@ -5867,13 +5867,23 @@ Given a graph in the figure, the adjacency matrix of the graph is:
 \figdesc{Đồ thị vô hướng có trọng số gồm các cạnh A-B (2), B-C (7), C-D (8), D-E (5), E-A (4) và A-D (9).}
 \end{center}
 \begin{choices}
-\choice [[0, 2, 0, 9, 4], [1, 0, 1, 0, 0], [0, 1, 0, 1, 0], [9, 0, 8, 0, 5], [4, 0, 0, 5, 0]]
-\choice [[0, 2, 0, 1, 4], [1, 0, 1, 0, 0], [0, 7, 0, 8, 5], [9, 0, 8, 0, 5], [4, 0, 0, 5, 0]]
-\choice [[0, 1, 0, 1, 1], [1, 0, 1, 0, 0], [0, 1, 0, 1, 0], [1, 0, 1, 0, 1], [1, 0, 0, 1, 0]]
-\choice [[1, 0, 1, 0, 0], [0, 1, 0, 1, 1], [1, 0, 1, 0, 1], [0, 1, 0, 1, 0], [0, 1, 1, 0, 1]]
+\choice \(\begin{bmatrix} 0 & 2 & 0 & 9 & 4 \\ 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 9 & 0 & 8 & 0 & 5 \\ 4 & 0 & 0 & 5 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 2 & 0 & 1 & 4 \\ 1 & 0 & 1 & 0 & 0 \\ 0 & 7 & 0 & 8 & 5 \\ 9 & 0 & 8 & 0 & 5 \\ 4 & 0 & 0 & 5 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 1 & 0 & 1 & 0 & 1 \\ 1 & 0 & 0 & 1 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 0 & 1 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & 0 & 1 \end{bmatrix}\)
 \end{choices}
 \textbf{Đáp án:} C
-\textbf{Giải thích:} 
+\textbf{Giải thích:} - **Hướng giải**: Xác định ma trận kề (Adjacency Matrix — chỉ ghi `1` khi có cạnh nối và `0` khi không có cạnh, không ghi trọng số) của đồ thị vô hướng 5 đỉnh A, B, C, D, E.
+
+- **Các bước giải chi tiết**:
+  - Đỉnh A kề với B, D, E \(\rightarrow\) dòng A: `[0, 1, 0, 1, 1]`.
+  - Đỉnh B kề với A, C \(\rightarrow\) dòng B: `[1, 0, 1, 0, 0]`.
+  - Đỉnh C kề với B, D \(\rightarrow\) dòng C: `[0, 1, 0, 1, 0]`.
+  - Đỉnh D kề với A, C, E \(\rightarrow\) dòng D: `[1, 0, 1, 0, 1]`.
+  - Đỉnh E kề với A, D \(\rightarrow\) dòng E: `[1, 0, 0, 1, 0]`.
+  - Ghép thành ma trận kề:
+    \[ \begin{bmatrix} 0 & 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 1 & 0 & 1 & 0 & 1 \\ 1 & 0 & 0 & 1 & 0 \end{bmatrix} \]
+- **Kiểm tra lại**: Khớp chính xác với phương án **C**.
 \end{question}
 
 \begin{question}{6.61}
@@ -6013,10 +6023,10 @@ Given a graph in the figure, the weighted matrix of the graph is (visit nodes in
 \figdesc{Đồ thị có trọng số gồm 4 đỉnh A, B, C, D với các cạnh: A->B (5), A->D (40), B-C (10), C->D (10).}
 \end{center}
 \begin{choices}
-\choice [[0, 1, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0]]
-\choice [[0, 1, 0, 0], [0, 0, 10, 0], [0, 1, 1, 0], [0, 0, 0, 0]]
-\choice [[0, 5, 0, 40], [0, 0, 10, 0], [0, 10, 0, 10], [0, 0, 0, 0]]
-\choice [[0, 1, 0, 1], [1, 0, 1, 1], [0, 1, 0, 1], [1, 1, 1, 0]]
+\choice \(\begin{bmatrix} 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 10 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 5 & 0 & 40 \\ 0 & 0 & 10 & 0 \\ 0 & 10 & 0 & 10 \\ 0 & 0 & 0 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 1 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 0 & 1 & 0 & 1 \\ 1 & 1 & 1 & 0 \end{bmatrix}\)
 \end{choices}
 \textbf{Đáp án:} C
 \textbf{Giải thích:} - **Hướng giải**:
@@ -6029,7 +6039,7 @@ Given a graph in the figure, the weighted matrix of the graph is (visit nodes in
      - Từ C: cạnh nối B có trọng số 10, cạnh \(C \rightarrow D\) có trọng số 10 \(\rightarrow\) Dòng C: `[0, 10, 0, 10]`.
      - Từ D: không có cạnh đi ra \(\rightarrow\) Dòng D: `[0, 0, 0, 0]`.
   2. Ghép 4 dòng thành ma trận:
-     \[ \begin{pmatrix} 0 & 5 & 0 & 40 \\ 0 & 0 & 10 & 0 \\ 0 & 10 & 0 & 10 \\ 0 & 0 & 0 & 0 \end{pmatrix} \]
+     \[ \begin{bmatrix} 0 & 5 & 0 & 40 \\ 0 & 0 & 10 & 0 \\ 0 & 10 & 0 & 10 \\ 0 & 0 & 0 & 0 \end{bmatrix} \]
   3. Trực tiếp khớp với biểu diễn trong phương án C: `[[0, 5, 0, 40], [0, 0, 10, 0], [0, 10, 0, 10], [0, 0, 0, 0]]`.
 
 - **Kiểm tra lại**:
@@ -6112,13 +6122,22 @@ Given a graph in the figure, the adjacency matrix of the graph is:
 \figdesc{Đồ thị vô hướng gồm bốn đỉnh 1, 2, 3, 4. Các cạnh là 1-2, 1-3, 2-3, 2-4 và 3-4.}
 \end{center}
 \begin{choices}
-\choice [[0, 1, 1, 0], [1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]]
-\choice [[1, 1, 1, 0], [1, 1, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]]
-\choice [[0, 1, 1, 1], [1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]]
-\choice [[0, 1, 1, 0], [1, 0, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]]
+\choice \(\begin{bmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 0 & 1 & 1 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 1 & 1 & 1 & 0 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 0 & 1 & 1 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 0 & 1 & 1 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \end{bmatrix}\)
 \end{choices}
 \textbf{Đáp án:} A
-\textbf{Giải thích:} Danh sách liên kết đơn yêu cầu ít bộ nhớ hơn danh sách liên kết đôi vì mỗi nút chỉ cần lưu trữ một con trỏ duy nhất (next).
+\textbf{Giải thích:} - **Hướng giải**: Xác định ma trận kề (Adjacency Matrix) của đồ thị vô hướng 4 đỉnh 1, 2, 3, 4 với các cạnh `(1,2), (1,3), (2,3), (2,4), (3,4)`.
+
+- **Các bước giải chi tiết**:
+  - Đỉnh 1 kề 2, 3 \(\rightarrow\) `[0, 1, 1, 0]`.
+  - Đỉnh 2 kề 1, 3, 4 \(\rightarrow\) `[1, 0, 1, 1]`.
+  - Đỉnh 3 kề 1, 2, 4 \(\rightarrow\) `[1, 1, 0, 1]`.
+  - Đỉnh 4 kề 2, 3 \(\rightarrow\) `[0, 1, 1, 0]`.
+  - Ghép thành ma trận kề đối xứng (đường chéo chính toàn số 0 vì không có khuyên):
+    \[ \begin{bmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \\ 0 & 1 & 1 & 0 \end{bmatrix} \]
+- **Kiểm tra lại**: Khớp chính xác với phương án **A**.
 \end{question}
 
 \begin{question}{6.70}
@@ -6266,10 +6285,10 @@ Given a graph in the figure, the adjacency matrix of the graph is (visit nodes i
 \figdesc{Đồ thị có hướng gồm 4 đỉnh A, B, C, D với các cung có hướng: A trỏ tới B và D; B trỏ tới C; D trỏ tới B và C; C không có cung đi ra.}
 \end{center}
 \begin{choices}
-\choice [[0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 0], [0, 1, 1, 0]]
-\choice [[0, 2, 0, 0], [0, 0, 7, 0], [0, 0, 0, 0], [0, 4, 8, 0]]
-\choice [[0, 2, 0, 9], [0, 0, 7, 4], [0, 7, 0, 8], [9, 4, 8, 0]]
-\choice [[0, 1, 0, 1], [1, 0, 1, 1], [0, 1, 0, 1], [1, 1, 1, 0]]
+\choice \(\begin{bmatrix} 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 2 & 0 & 0 \\ 0 & 0 & 7 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 4 & 8 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 2 & 0 & 9 \\ 0 & 0 & 7 & 4 \\ 0 & 7 & 0 & 8 \\ 9 & 4 & 8 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 1 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 0 & 1 & 0 & 1 \\ 1 & 1 & 1 & 0 \end{bmatrix}\)
 \end{choices}
 \textbf{Đáp án:} A
 \textbf{Giải thích:} - **Hướng giải**:
@@ -6282,7 +6301,7 @@ Given a graph in the figure, the adjacency matrix of the graph is (visit nodes i
      - Đỉnh C không có cung đi ra nào \(\rightarrow\) Dòng C: `[0, 0, 0, 0]`.
      - Đỉnh D có cung đi tới B và C \(\rightarrow\) Dòng D: `[0, 1, 1, 0]`.
   2. Ghép 4 dòng theo thứ tự ABCD:
-     \[ \begin{pmatrix} 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \end{pmatrix} \]
+     \[ \begin{bmatrix} 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \end{bmatrix} \]
   3. Viết dạng danh sách lồng: `[[0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 0], [0, 1, 1, 0]]`.
 
 - **Kiểm tra lại**:
@@ -6323,13 +6342,15 @@ Given a graph in the figure, the weighted matrix of the graph is:
 \figdesc{Đồ thị vô hướng có trọng số tạo thành chu trình A-B-C-D-E-A. Trọng số lần lượt là A-B (2), B-C (7), C-D (8), D-E (5) và E-A (4).}
 \end{center}
 \begin{choices}
-\choice [[1, 0, 1, 0, 0], [0, 1, 0, 1, 1], [1, 0, 1, 0, 1], [0, 1, 0, 1, 0],[0, 1, 1, 0, 1]]
-\choice [[0, 2, 0, 1, 4], [1, 0, 1, 0, 0], [0, 7, 0, 8, 5], [9, 0, 8, 0, 5],[4, 0, 0, 5, 0]]
-\choice [[0, 1, 0, 1, 1], [1, 0, 1, 0, 0], [0, 1, 0, 1, 0], [1, 0, 1, 0, 1],[1, 0, 0, 1, 0]]
-\choice [[0, 2, 0, 0, 4], [2, 0, 7, 0, 0], [0, 7, 0, 8, 0], [0, 0, 8, 0, 5],[4, 0, 0, 5, 0]]
+\choice \(\begin{bmatrix} 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 0 & 1 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & 0 & 1 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 2 & 0 & 1 & 4 \\ 1 & 0 & 1 & 0 & 0 \\ 0 & 7 & 0 & 8 & 5 \\ 9 & 0 & 8 & 0 & 5 \\ 4 & 0 & 0 & 5 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 1 & 0 & 1 & 0 & 1 \\ 1 & 0 & 0 & 1 & 0 \end{bmatrix}\)
+\choice \(\begin{bmatrix} 0 & 2 & 0 & 0 & 4 \\ 2 & 0 & 7 & 0 & 0 \\ 0 & 7 & 0 & 8 & 0 \\ 0 & 0 & 8 & 0 & 5 \\ 4 & 0 & 0 & 5 & 0 \end{bmatrix}\)
 \end{choices}
 \textbf{Đáp án:} D
-\textbf{Giải thích:} Ma trận trọng số ghi nhận trọng số cạnh giữa các cặp đỉnh: \(A-B=2\), \(B-C=7\), \(C-D=8\), \(D-E=5\), \(E-A=4\), các vị trí không có cạnh nối trực tiếp mang giá trị 0, khớp chính xác với ma trận ở phương án D.
+\textbf{Giải thích:} Ma trận trọng số ghi nhận trọng số cạnh giữa các cặp đỉnh theo thứ tự A, B, C, D, E: \(A-B=2\), \(B-C=7\), \(C-D=8\), \(D-E=5\), \(E-A=4\), các vị trí không có cạnh nối trực tiếp mang giá trị 0:
+\[ \begin{bmatrix} 0 & 2 & 0 & 0 & 4 \\ 2 & 0 & 7 & 0 & 0 \\ 0 & 7 & 0 & 8 & 0 \\ 0 & 0 & 8 & 0 & 5 \\ 4 & 0 & 0 & 5 & 0 \end{bmatrix} \]
+Khớp chính xác với ma trận ở phương án **D**.
 \end{question}
 
 \begin{question}{6.81}

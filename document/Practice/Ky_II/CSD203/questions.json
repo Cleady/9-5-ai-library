@@ -1,6 +1,6 @@
 {
   "subject": "CSD203",
-  "updatedAt": "2026-11-27T09:23:17.701Z",
+  "updatedAt": "2026-11-27T13:31:33.181Z",
   "totalQuizzes": 8,
   "totalQuestions": 416,
   "quizzes": [
@@ -3242,13 +3242,13 @@
       "quizId": 306,
       "text": "Given a graph in the figure, the adjacency matrix of the graph is:",
       "options": [
-        "[[0, 2, 0, 9, 4], [1, 0, 1, 0, 0], [0, 1, 0, 1, 0], [9, 0, 8, 0, 5], [4, 0, 0, 5, 0]]",
-        "[[0, 2, 0, 1, 4], [1, 0, 1, 0, 0], [0, 7, 0, 8, 5], [9, 0, 8, 0, 5], [4, 0, 0, 5, 0]]",
-        "[[0, 1, 0, 1, 1], [1, 0, 1, 0, 0], [0, 1, 0, 1, 0], [1, 0, 1, 0, 1], [1, 0, 0, 1, 0]]",
-        "[[1, 0, 1, 0, 0], [0, 1, 0, 1, 1], [1, 0, 1, 0, 1], [0, 1, 0, 1, 0], [0, 1, 1, 0, 1]]"
+        "\\(\\begin{bmatrix} 0 & 2 & 0 & 9 & 4 \\\\ 1 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 0 & 1 & 0 \\\\ 9 & 0 & 8 & 0 & 5 \\\\ 4 & 0 & 0 & 5 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 2 & 0 & 1 & 4 \\\\ 1 & 0 & 1 & 0 & 0 \\\\ 0 & 7 & 0 & 8 & 5 \\\\ 9 & 0 & 8 & 0 & 5 \\\\ 4 & 0 & 0 & 5 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 1 & 0 & 1 & 1 \\\\ 1 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 0 & 1 & 0 \\\\ 1 & 0 & 1 & 0 & 1 \\\\ 1 & 0 & 0 & 1 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 0 & 1 & 1 \\\\ 1 & 0 & 1 & 0 & 1 \\\\ 0 & 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 & 1 \\end{bmatrix}\\)"
       ],
       "correctIndex": 2,
-      "explanation": "",
+      "explanation": "- **Hướng giải**: Xác định ma trận kề (Adjacency Matrix — chỉ ghi `1` khi có cạnh nối và `0` khi không có cạnh, không ghi trọng số) của đồ thị vô hướng 5 đỉnh A, B, C, D, E.\n\n- **Các bước giải chi tiết**:\n - Đỉnh A kề với B, D, E \\(\\rightarrow\\) dòng A: `[0, 1, 0, 1, 1]`.\n - Đỉnh B kề với A, C \\(\\rightarrow\\) dòng B: `[1, 0, 1, 0, 0]`.\n - Đỉnh C kề với B, D \\(\\rightarrow\\) dòng C: `[0, 1, 0, 1, 0]`.\n - Đỉnh D kề với A, C, E \\(\\rightarrow\\) dòng D: `[1, 0, 1, 0, 1]`.\n - Đỉnh E kề với A, D \\(\\rightarrow\\) dòng E: `[1, 0, 0, 1, 0]`.\n - Ghép thành ma trận kề:\n \\(\\begin{bmatrix} 0 & 1 & 0 & 1 & 1 \\\\ 1 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 0 & 1 & 0 \\\\ 1 & 0 & 1 & 0 & 1 \\\\ 1 & 0 & 0 & 1 & 0 \\end{bmatrix}\\)\n- **Kiểm tra lại**: Khớp chính xác với phương án **C**.",
       "diagrams": [
         {
           "src": "/assets/images/practice/csd203/csd203_c6_10211_fig.webp",
@@ -3345,13 +3345,13 @@
       "quizId": 306,
       "text": "Given a graph in the figure, the weighted matrix of the graph is (visit nodes in ABC order):",
       "options": [
-        "[[0, 1, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [0, 0, 1, 0]]",
-        "[[0, 1, 0, 0], [0, 0, 10, 0], [0, 1, 1, 0], [0, 0, 0, 0]]",
-        "[[0, 5, 0, 40], [0, 0, 10, 0], [0, 10, 0, 10], [0, 0, 0, 0]]",
-        "[[0, 1, 0, 1], [1, 0, 1, 1], [0, 1, 0, 1], [1, 1, 1, 0]]"
+        "\\(\\begin{bmatrix} 0 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 1 & 0 & 0 \\\\ 0 & 0 & 10 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 5 & 0 & 40 \\\\ 0 & 0 & 10 & 0 \\\\ 0 & 10 & 0 & 10 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 1 & 0 & 1 \\\\ 1 & 0 & 1 & 1 \\\\ 0 & 1 & 0 & 1 \\\\ 1 & 1 & 1 & 0 \\end{bmatrix}\\)"
       ],
       "correctIndex": 2,
-      "explanation": "- **Hướng giải**:\r\n Xác định ma trận trọng số (Weighted Matrix) của đồ thị theo thứ tự các đỉnh A, B, C, D.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Đọc trọng số của các cạnh xuất phát từ từng đỉnh trên hình vẽ:\r\n - Từ A: cạnh \\(A \\rightarrow B\\) có trọng số 5, cạnh \\(A \\rightarrow D\\) có trọng số 40 \\(\\rightarrow\\) Dòng A: `[0, 5, 0, 40]`.\r\n - Từ B: cạnh nối giữa B và C có trọng số 10 (hướng sang C) \\(\\rightarrow\\) Dòng B: `[0, 0, 10, 0]`.\r\n - Từ C: cạnh nối B có trọng số 10, cạnh \\(C \\rightarrow D\\) có trọng số 10 \\(\\rightarrow\\) Dòng C: `[0, 10, 0, 10]`.\r\n - Từ D: không có cạnh đi ra \\(\\rightarrow\\) Dòng D: `[0, 0, 0, 0]`.\r\n 2. Ghép 4 dòng thành ma trận:\r\n \\(\\begin{pmatrix} 0 & 5 & 0 & 40 \\\\ 0 & 0 & 10 & 0 \\\\ 0 & 10 & 0 & 10 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix}\\)\r\n 3. Trực tiếp khớp với biểu diễn trong phương án C: `[[0, 5, 0, 40], [0, 0, 10, 0], [0, 10, 0, 10], [0, 0, 0, 0]]`.\r\n\n- **Kiểm tra lại**:\r\n Khớp chính xác với phương án C.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **A, B, D**: Chỉ chứa các giá trị 0 và 1 (ma trận kề thông thường), hoàn toàn bỏ qua các giá trị trọng số 5, 10, 40.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Ma trận trọng số: \\(W[u][v] = w(u, v)\\) nếu có cạnh từ \\(u\\) đến \\(v\\), và bằng 0 (hoặc \\(\\infty\\)) nếu không có cạnh nối.",
+      "explanation": "- **Hướng giải**:\r\n Xác định ma trận trọng số (Weighted Matrix) của đồ thị theo thứ tự các đỉnh A, B, C, D.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Đọc trọng số của các cạnh xuất phát từ từng đỉnh trên hình vẽ:\r\n - Từ A: cạnh \\(A \\rightarrow B\\) có trọng số 5, cạnh \\(A \\rightarrow D\\) có trọng số 40 \\(\\rightarrow\\) Dòng A: `[0, 5, 0, 40]`.\r\n - Từ B: cạnh nối giữa B và C có trọng số 10 (hướng sang C) \\(\\rightarrow\\) Dòng B: `[0, 0, 10, 0]`.\r\n - Từ C: cạnh nối B có trọng số 10, cạnh \\(C \\rightarrow D\\) có trọng số 10 \\(\\rightarrow\\) Dòng C: `[0, 10, 0, 10]`.\r\n - Từ D: không có cạnh đi ra \\(\\rightarrow\\) Dòng D: `[0, 0, 0, 0]`.\r\n 2. Ghép 4 dòng thành ma trận:\r\n \\(\\begin{bmatrix} 0 & 5 & 0 & 40 \\\\ 0 & 0 & 10 & 0 \\\\ 0 & 10 & 0 & 10 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}\\)\r\n 3. Trực tiếp khớp với biểu diễn trong phương án C: `[[0, 5, 0, 40], [0, 0, 10, 0], [0, 10, 0, 10], [0, 0, 0, 0]]`.\r\n\n- **Kiểm tra lại**:\r\n Khớp chính xác với phương án C.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **A, B, D**: Chỉ chứa các giá trị 0 và 1 (ma trận kề thông thường), hoàn toàn bỏ qua các giá trị trọng số 5, 10, 40.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Ma trận trọng số: \\(W[u][v] = w(u, v)\\) nếu có cạnh từ \\(u\\) đến \\(v\\), và bằng 0 (hoặc \\(\\infty\\)) nếu không có cạnh nối.",
       "diagrams": [
         {
           "src": "/assets/images/practice/csd203/csd203_sp26_re_q26_fig.webp",
@@ -3402,13 +3402,13 @@
       "quizId": 306,
       "text": "Given a graph in the figure, the adjacency matrix of the graph is:",
       "options": [
-        "[[0, 1, 1, 0], [1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]]",
-        "[[1, 1, 1, 0], [1, 1, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]]",
-        "[[0, 1, 1, 1], [1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0]]",
-        "[[0, 1, 1, 0], [1, 0, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1]]"
+        "\\(\\begin{bmatrix} 0 & 1 & 1 & 0 \\\\ 1 & 0 & 1 & 1 \\\\ 1 & 1 & 0 & 1 \\\\ 0 & 1 & 1 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 1 & 1 & 0 \\\\ 1 & 1 & 1 & 1 \\\\ 1 & 1 & 0 & 1 \\\\ 0 & 1 & 1 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 1 & 1 & 1 \\\\ 1 & 0 & 1 & 1 \\\\ 1 & 1 & 0 & 1 \\\\ 0 & 1 & 1 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 1 & 1 & 0 \\\\ 1 & 0 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\end{bmatrix}\\)"
       ],
       "correctIndex": 0,
-      "explanation": "Danh sách liên kết đơn yêu cầu ít bộ nhớ hơn danh sách liên kết đôi vì mỗi nút chỉ cần lưu trữ một con trỏ duy nhất (next).",
+      "explanation": "- **Hướng giải**: Xác định ma trận kề (Adjacency Matrix) của đồ thị vô hướng 4 đỉnh 1, 2, 3, 4 với các cạnh `(1,2), (1,3), (2,3), (2,4), (3,4)`.\n\n- **Các bước giải chi tiết**:\n - Đỉnh 1 kề 2, 3 \\(\\rightarrow\\) `[0, 1, 1, 0]`.\n - Đỉnh 2 kề 1, 3, 4 \\(\\rightarrow\\) `[1, 0, 1, 1]`.\n - Đỉnh 3 kề 1, 2, 4 \\(\\rightarrow\\) `[1, 1, 0, 1]`.\n - Đỉnh 4 kề 2, 3 \\(\\rightarrow\\) `[0, 1, 1, 0]`.\n - Ghép thành ma trận kề đối xứng (đường chéo chính toàn số 0 vì không có khuyên):\n \\(\\begin{bmatrix} 0 & 1 & 1 & 0 \\\\ 1 & 0 & 1 & 1 \\\\ 1 & 1 & 0 & 1 \\\\ 0 & 1 & 1 & 0 \\end{bmatrix}\\)\n- **Kiểm tra lại**: Khớp chính xác với phương án **A**.",
       "diagrams": [
         {
           "src": "/assets/images/practice/csd203/csd203_c6_10222_fig.webp",
@@ -3561,13 +3561,13 @@
       "quizId": 306,
       "text": "Given a graph in the figure, the adjacency matrix of the graph is (visit nodes in ABCD order):",
       "options": [
-        "[[0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 0], [0, 1, 1, 0]]",
-        "[[0, 2, 0, 0], [0, 0, 7, 0], [0, 0, 0, 0], [0, 4, 8, 0]]",
-        "[[0, 2, 0, 9], [0, 0, 7, 4], [0, 7, 0, 8], [9, 4, 8, 0]]",
-        "[[0, 1, 0, 1], [1, 0, 1, 1], [0, 1, 0, 1], [1, 1, 1, 0]]"
+        "\\(\\begin{bmatrix} 0 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 1 & 1 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 2 & 0 & 0 \\\\ 0 & 0 & 7 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 4 & 8 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 2 & 0 & 9 \\\\ 0 & 0 & 7 & 4 \\\\ 0 & 7 & 0 & 8 \\\\ 9 & 4 & 8 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 1 & 0 & 1 \\\\ 1 & 0 & 1 & 1 \\\\ 0 & 1 & 0 & 1 \\\\ 1 & 1 & 1 & 0 \\end{bmatrix}\\)"
       ],
       "correctIndex": 0,
-      "explanation": "- **Hướng giải**:\r\n Xác định ma trận kề (Adjacency Matrix) của đồ thị có hướng gồm 4 đỉnh A, B, C, D được sắp theo thứ tự dòng và cột là A, B, C, D.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Xét các cạnh có hướng xuất phát từ từng đỉnh trong hình vẽ:\r\n - Đỉnh A có cung đi tới B và D \\(\\rightarrow\\) Dòng A: `[0, 1, 0, 1]`.\r\n - Đỉnh B có cung đi tới C \\(\\rightarrow\\) Dòng B: `[0, 0, 1, 0]`.\r\n - Đỉnh C không có cung đi ra nào \\(\\rightarrow\\) Dòng C: `[0, 0, 0, 0]`.\r\n - Đỉnh D có cung đi tới B và C \\(\\rightarrow\\) Dòng D: `[0, 1, 1, 0]`.\r\n 2. Ghép 4 dòng theo thứ tự ABCD:\r\n \\(\\begin{pmatrix} 0 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 1 & 1 & 0 \\end{pmatrix}\\)\r\n 3. Viết dạng danh sách lồng: `[[0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 0], [0, 1, 1, 0]]`.\r\n\n- **Kiểm tra lại**:\r\n Khớp chính xác với phương án A.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **B, C**: Chứa các số 2, 7, 4, 8... (đây là ma trận trọng số ngụy tạo, đồ thị ở đây là đồ thị đơn không trọng số).\r\n - **D**: Coi đồ thị là vô hướng đối xứng, trong khi hình vẽ thể hiện rõ các mũi tên có hướng.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Ma trận kề đồ thị có hướng: \\(M[u][v] = 1\\) nếu có cung từ \\(u \\rightarrow v\\), ngược lại bằng 0.",
+      "explanation": "- **Hướng giải**:\r\n Xác định ma trận kề (Adjacency Matrix) của đồ thị có hướng gồm 4 đỉnh A, B, C, D được sắp theo thứ tự dòng và cột là A, B, C, D.\r\n\n- **Các bước giải chi tiết / Phân tích**:\r\n 1. Xét các cạnh có hướng xuất phát từ từng đỉnh trong hình vẽ:\r\n - Đỉnh A có cung đi tới B và D \\(\\rightarrow\\) Dòng A: `[0, 1, 0, 1]`.\r\n - Đỉnh B có cung đi tới C \\(\\rightarrow\\) Dòng B: `[0, 0, 1, 0]`.\r\n - Đỉnh C không có cung đi ra nào \\(\\rightarrow\\) Dòng C: `[0, 0, 0, 0]`.\r\n - Đỉnh D có cung đi tới B và C \\(\\rightarrow\\) Dòng D: `[0, 1, 1, 0]`.\r\n 2. Ghép 4 dòng theo thứ tự ABCD:\r\n \\(\\begin{bmatrix} 0 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 1 & 1 & 0 \\end{bmatrix}\\)\r\n 3. Viết dạng danh sách lồng: `[[0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 0], [0, 1, 1, 0]]`.\r\n\n- **Kiểm tra lại**:\r\n Khớp chính xác với phương án A.\r\n\n- **Vì sao các phương án khác sai**:\r\n - **B, C**: Chứa các số 2, 7, 4, 8... (đây là ma trận trọng số ngụy tạo, đồ thị ở đây là đồ thị đơn không trọng số).\r\n - **D**: Coi đồ thị là vô hướng đối xứng, trong khi hình vẽ thể hiện rõ các mũi tên có hướng.\r\n\n- **Ghi nhớ / Công thức**:\r\n - Ma trận kề đồ thị có hướng: \\(M[u][v] = 1\\) nếu có cung từ \\(u \\rightarrow v\\), ngược lại bằng 0.",
       "diagrams": [
         {
           "src": "/assets/images/practice/csd203/csd203_sp26_re_q25_fig.webp",
@@ -3599,13 +3599,13 @@
       "quizId": 306,
       "text": "Given a graph in the figure, the weighted matrix of the graph is:",
       "options": [
-        "[[1, 0, 1, 0, 0], [0, 1, 0, 1, 1], [1, 0, 1, 0, 1], [0, 1, 0, 1, 0],[0, 1, 1, 0, 1]]",
-        "[[0, 2, 0, 1, 4], [1, 0, 1, 0, 0], [0, 7, 0, 8, 5], [9, 0, 8, 0, 5],[4, 0, 0, 5, 0]]",
-        "[[0, 1, 0, 1, 1], [1, 0, 1, 0, 0], [0, 1, 0, 1, 0], [1, 0, 1, 0, 1],[1, 0, 0, 1, 0]]",
-        "[[0, 2, 0, 0, 4], [2, 0, 7, 0, 0], [0, 7, 0, 8, 0], [0, 0, 8, 0, 5],[4, 0, 0, 5, 0]]"
+        "\\(\\begin{bmatrix} 1 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 0 & 1 & 1 \\\\ 1 & 0 & 1 & 0 & 1 \\\\ 0 & 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 & 1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 2 & 0 & 1 & 4 \\\\ 1 & 0 & 1 & 0 & 0 \\\\ 0 & 7 & 0 & 8 & 5 \\\\ 9 & 0 & 8 & 0 & 5 \\\\ 4 & 0 & 0 & 5 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 1 & 0 & 1 & 1 \\\\ 1 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 0 & 1 & 0 \\\\ 1 & 0 & 1 & 0 & 1 \\\\ 1 & 0 & 0 & 1 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 2 & 0 & 0 & 4 \\\\ 2 & 0 & 7 & 0 & 0 \\\\ 0 & 7 & 0 & 8 & 0 \\\\ 0 & 0 & 8 & 0 & 5 \\\\ 4 & 0 & 0 & 5 & 0 \\end{bmatrix}\\)"
       ],
       "correctIndex": 3,
-      "explanation": "Ma trận trọng số ghi nhận trọng số cạnh giữa các cặp đỉnh: \\(A-B=2\\), \\(B-C=7\\), \\(C-D=8\\), \\(D-E=5\\), \\(E-A=4\\), các vị trí không có cạnh nối trực tiếp mang giá trị 0, khớp chính xác với ma trận ở phương án D.",
+      "explanation": "Ma trận trọng số ghi nhận trọng số cạnh giữa các cặp đỉnh theo thứ tự A, B, C, D, E: \\(A-B=2\\), \\(B-C=7\\), \\(C-D=8\\), \\(D-E=5\\), \\(E-A=4\\), các vị trí không có cạnh nối trực tiếp mang giá trị 0:\n\\(\\begin{bmatrix} 0 & 2 & 0 & 0 & 4 \\\\ 2 & 0 & 7 & 0 & 0 \\\\ 0 & 7 & 0 & 8 & 0 \\\\ 0 & 0 & 8 & 0 & 5 \\\\ 4 & 0 & 0 & 5 & 0 \\end{bmatrix}\\)\nKhớp chính xác với ma trận ở phương án **D**.",
       "diagrams": [
         {
           "src": "/assets/images/practice/csd203/csd203_c6_10233_fig.webp",
