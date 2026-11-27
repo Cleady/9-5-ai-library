@@ -16739,8 +16739,8 @@
         "\\((m + 1)^h - 1\\)",
         "\\((m - 1)^h - 1\\)"
       ],
-      "correctIndex": 3,
-      "explanation": "Số nút tối đa trong cây tổng quát chiều cao \\(h\\) mà mỗi nút có tối đa \\(m\\) con là tổng cấp số nhân \\(1 + m + m^2 + \\dots + m^h = \\frac{m^{h+1} - 1}{m - 1}\\). (Theo quy ước câu hỏi trắc nghiệm, chọn phương án tương ứng)."
+      "correctIndex": 1,
+      "explanation": "Số nút tối đa trong cây tổng quát chiều cao \\(h\\) mà mỗi nút có tối đa \\(m\\) con là tổng cấp số nhân \\(1 + m + m^2 + \\dots + m^h = \\frac{m^{h+1} - 1}{m - 1}\\), tương ứng với đáp án B."
     },
     {
       "id": 10186,
