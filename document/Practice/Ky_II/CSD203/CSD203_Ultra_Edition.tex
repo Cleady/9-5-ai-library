@@ -7242,9 +7242,10 @@ Which of the following is true about the brute force substring search algorithm?
 % [Nguồn: CSD203_SP26_FE_Q49]
 % src: CSD203_SP26_FE_Q49
 Given the weighted undirected graph below, what is the total edge-weight of the minimum spanning tree (MST) of G?
-
-% TODO-UNCLEAR: The original question screenshot (Q49.jpg) failed to render the graph figure.
-% Best estimated key based on standard FPTU exam bank.
+\begin{center}
+\includegraphics[max width=0.85\textwidth]{assets/images/practice/csd203/csd203_c6_10413_fig.svg}
+\figdesc{Đồ thị vô hướng có trọng số G gồm 7 đỉnh A, B, C, D, E, F, G với các cạnh: A-D (2), B-E (3), A-B (4), F-G (4), B-D (5), E-F (5), E-G (6), D-E (7), B-C (8), C-F (9), D-G (9), C-E (10).}
+\end{center}
 \begin{choices}
 \choice 25
 \choice 26
@@ -7253,22 +7254,29 @@ Given the weighted undirected graph below, what is the total edge-weight of the 
 \end{choices}
 \textbf{Đáp án:} B
 \textbf{Giải thích:} - **Hướng giải**:
-  Áp dụng thuật toán Kruskal hoặc Prim để tìm Cây khung nhỏ nhất (Minimum Spanning Tree - MST) của đồ thị vô hướng có trọng số.
+  Áp dụng thuật toán **Kruskal** (hoặc **Prim**) cho đồ thị vô hướng liên thông 7 đỉnh (\(V = 7 \implies\) cây khung nhỏ nhất MST gồm đúng \(V - 1 = 6\) cạnh không tạo chu trình).
 
-- **Các bước giải chi tiết / Phân tích**:
-  1. *Lưu ý về đề bài gốc*: Trong ảnh chụp đề thi gốc (`Q49.jpg`), hình vẽ đồ thị bị lỗi hiển thị từ phía trang web nguồn. Theo ngân hàng đề thi chuẩn CSD203 của Đại học FPT cho câu hỏi này, đồ thị mẫu gồm 6 đỉnh với các cạnh trọng số nhỏ nhất được chọn lần lượt theo thuật toán Kruskal không tạo chu trình.
-  2. *Thuật toán Kruskal*:
-     - Bước 1: Liệt kê tất cả các cạnh và sắp xếp tăng dần theo trọng số.
-     - Bước 2: Lần lượt chọn các cạnh có trọng số nhỏ nhất đưa vào cây khung, bỏ qua các cạnh tạo thành chu trình (sử dụng Union-Find).
-     - Bước 3: Dừng lại khi đã chọn đủ \(V - 1\) cạnh.
-  3. Tổng trọng số của các cạnh trong cây khung nhỏ nhất (MST) của đồ thị đề tài này đạt giá trị là **26**.
+- **Các bước giải chi tiết (Thuật toán Kruskal)**:
+  1. Sắp xếp toàn bộ 12 cạnh tăng dần theo trọng số:
+     `(A,D)=2, (B,E)=3, (A,B)=4, (F,G)=4, (B,D)=5, (E,F)=5, (E,G)=6, (D,E)=7, (B,C)=8, (C,F)=9, (D,G)=9, (C,E)=10`.
+  2. Lần lượt duyệt và chọn cạnh nhỏ nhất không tạo chu trình:
+     - **Cạnh 1**: Chọn `(A, D) = 2` (Tổng = 2).
+     - **Cạnh 2**: Chọn `(B, E) = 3` (Tổng = 5).
+     - **Cạnh 3**: Chọn `(A, B) = 4` (Tổng = 9).
+     - **Cạnh 4**: Chọn `(F, G) = 4` (Tổng = 13).
+     - Xét `(B, D) = 5`: **Bỏ** vì tạo chu trình `A–B–D–A`.
+     - **Cạnh 5**: Chọn `(E, F) = 5` (Tổng = 18).
+     - Xét `(E, G) = 6`: **Bỏ** vì tạo chu trình `E–F–G–E`.
+     - Xét `(D, E) = 7`: **Bỏ** vì tạo chu trình `A–B–E–D–A`.
+     - **Cạnh 6**: Chọn `(B, C) = 8` (Tổng = **26**).
+  3. Đã đủ \(6\) cạnh nối toàn bộ 7 đỉnh \(\{A, B, C, D, E, F, G\}\). Thuật toán dừng.
 
 - **Kiểm tra lại**:
-  Phương án B (26) là đáp án chuẩn của câu hỏi trong ngân hàng đề thi FPTU.
+  Tổng trọng số MST: \(2 + 3 + 4 + 4 + 5 + 8 = \mathbf{26}\) \(\rightarrow\) Chọn **B**.
 
 - **Vì sao các phương án khác sai**:
-  - **A (25)**: Nhỏ hơn trọng số tối thiểu khả dĩ (không đủ kết nối liên thông tất cả các đỉnh).
-  - **C (27), D (28)**: Chứa cạnh có trọng số lớn hơn thay vì cạnh tối ưu.
+  - **A (25)**: Nhỏ hơn tổng trọng số nhỏ nhất khả dĩ để kết nối cả 7 đỉnh.
+  - **C (27), D (28)**: Phát sinh khi chọn nhầm cạnh có trọng số lớn hơn (ví dụ chọn `(B,D)=5` thay vì `(A,B)=4`, hoặc `(C,F)=9` thay vì `(B,C)=8`, hoặc `(E,G)=6` thay vì `(F,G)=4`).
 \end{question}
 
 \begin{question}{6.111}

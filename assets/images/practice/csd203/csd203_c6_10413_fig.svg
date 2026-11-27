@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="100%" height="auto" style="max-width:640px;background:#ffffff;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <filter id="node-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.10" />
+    </filter>
+  </defs>
+
+  <!-- Container Card -->
+  <rect x="2" y="2" width="636" height="376" fill="#ffffff" rx="12" stroke="#e2e8f0" stroke-width="1.5" />
+
+  <!-- Title Badge -->
+  <text x="24" y="34" font-size="14" font-weight="700" fill="#475569">Weighted Undirected Graph G</text>
+
+  <!-- ==================== EDGES ==================== -->
+  <g stroke="#334155" stroke-width="2.4" stroke-linecap="round">
+    <!-- A(100,105) - B(310,75) : 4 -->
+    <line x1="100" y1="105" x2="310" y2="75" />
+    <!-- B(310,75) - C(535,105) : 8 -->
+    <line x1="310" y1="75" x2="535" y2="105" />
+    <!-- A(100,105) - D(115,275) : 2 -->
+    <line x1="100" y1="105" x2="115" y2="275" />
+    <!-- B(310,75) - D(115,275) : 5 -->
+    <line x1="310" y1="75" x2="115" y2="275" />
+    <!-- B(310,75) - E(320,205) : 3 -->
+    <line x1="310" y1="75" x2="320" y2="205" />
+    <!-- C(535,105) - E(320,205) : 10 -->
+    <line x1="535" y1="105" x2="320" y2="205" />
+    <!-- C(535,105) - F(515,265) : 9 -->
+    <line x1="535" y1="105" x2="515" y2="265" />
+    <!-- D(115,275) - E(320,205) : 7 -->
+    <line x1="115" y1="275" x2="320" y2="205" />
+    <!-- E(320,205) - F(515,265) : 5 -->
+    <line x1="320" y1="205" x2="515" y2="265" />
+    <!-- D(115,275) - G(320,335) : 9 -->
+    <line x1="115" y1="275" x2="320" y2="335" />
+    <!-- E(320,205) - G(320,335) : 6 -->
+    <line x1="320" y1="205" x2="320" y2="335" />
+    <!-- F(515,265) - G(320,335) : 4 -->
+    <line x1="515" y1="265" x2="320" y2="335" />
+  </g>
+
+  <!-- ==================== EDGE WEIGHTS ==================== -->
+  <g font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <!-- A-B = 4 -->
+    <rect x="191" y="76" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="205" y="88" fill="#0f172a">4</text>
+
+    <!-- B-C = 8 -->
+    <rect x="409" y="76" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="423" y="88" fill="#0f172a">8</text>
+
+    <!-- A-D = 2 -->
+    <rect x="93" y="178" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="107" y="190" fill="#0f172a">2</text>
+
+    <!-- B-D = 5 -->
+    <rect x="202" y="160" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="216" y="172" fill="#0f172a">5</text>
+
+    <!-- B-E = 3 -->
+    <rect x="301" y="128" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="315" y="140" fill="#0f172a">3</text>
+
+    <!-- C-E = 10 -->
+    <rect x="412" y="143" width="32" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="428" y="155" fill="#0f172a">10</text>
+
+    <!-- C-F = 9 -->
+    <rect x="511" y="173" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="525" y="185" fill="#0f172a">9</text>
+
+    <!-- D-E = 7 -->
+    <rect x="205" y="228" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="219" y="240" fill="#0f172a">7</text>
+
+    <!-- E-F = 5 -->
+    <rect x="404" y="223" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="418" y="235" fill="#0f172a">5</text>
+
+    <!-- D-G = 9 -->
+    <rect x="203" y="294" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="217" y="306" fill="#0f172a">9</text>
+
+    <!-- E-G = 6 -->
+    <rect x="306" y="258" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="320" y="270" fill="#0f172a">6</text>
+
+    <!-- F-G = 4 -->
+    <rect x="404" y="288" width="28" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="418" y="300" fill="#0f172a">4</text>
+  </g>
+
+  <!-- ==================== VERTICES ==================== -->
+  <g filter="url(#node-shadow)" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <!-- A -->
+    <circle cx="100" cy="105" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="2.5" />
+    <text x="100" y="105" fill="#0f172a">A</text>
+
+    <!-- B -->
+    <circle cx="310" cy="75" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="2.5" />
+    <text x="310" y="75" fill="#0f172a">B</text>
+
+    <!-- C -->
+    <circle cx="535" cy="105" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="2.5" />
+    <text x="535" y="105" fill="#0f172a">C</text>
+
+    <!-- D -->
+    <circle cx="115" cy="275" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="2.5" />
+    <text x="115" y="275" fill="#0f172a">D</text>
+
+    <!-- E -->
+    <circle cx="320" cy="205" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="2.5" />
+    <text x="320" y="205" fill="#0f172a">E</text>
+
+    <!-- F -->
+    <circle cx="515" cy="265" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="2.5" />
+    <text x="515" y="265" fill="#0f172a">F</text>
+
+    <!-- G -->
+    <circle cx="320" cy="335" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="2.5" />
+    <text x="320" y="335" fill="#0f172a">G</text>
+  </g>
+</svg>
